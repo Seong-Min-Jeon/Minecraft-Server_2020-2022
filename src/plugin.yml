@@ -1,0 +1,47 @@
+name: MyPlugin
+main: testPack.Main
+version: 1.0
+commands:
+  killMe:
+   description: Player kill command
+   usage: /killMe
+  ChangeAir:
+   description: ChangeAir command
+   usage: /ChangeAir
+  WallPaint:
+   description: WallPaint command
+   usage: /WallPaint
+  Where:
+   description: Where are you
+   usage: /Where
+  ServerChat:
+   description: ServerChat
+   usage: /ServerChat
+  Msg:
+   description: message
+   usage: /msg
+  C:
+   description: creative
+   usage: /c
+  Party:
+   description: party
+   usage: /party
+  SetBiome:
+   description: setBiome
+   usage: /setBiome
+  VilTp:
+   description: VilTp
+   usage: /VilTp
+  SpawnVil:
+   description: SpawnVil
+   usage: /SpawnVil
+  EmeraldToggle:
+   description: Emerald Change Toggle
+   usage: /EmeraldToggle
+  Chest:
+   description: Chest
+   usage: /chest
+  ItemLock:
+   description: ItemLock
+   usage: /ItemLock
+api-version: 1.16

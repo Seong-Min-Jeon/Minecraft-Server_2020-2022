@@ -1,0 +1,93 @@
+package testPack;
+
+import java.util.List;
+
+import org.bukkit.ChatColor;
+import org.bukkit.Location;
+import org.bukkit.Material;
+import org.bukkit.Sound;
+import org.bukkit.entity.Entity;
+import org.bukkit.entity.EntityType;
+import org.bukkit.entity.LivingEntity;
+import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
+
+
+public class ExtraSkill {
+
+	public ExtraSkill(Player player, ItemStack item1, ItemStack item2) {
+		
+		int i = 0;
+		for (ItemStack is : player.getInventory().getContents()) {
+			if (is == null)
+				continue;
+			if (is.getType() == Material.HEART_OF_THE_SEA) {
+				i = i + is.getAmount();
+			}
+		}
+		
+		try {
+			// 소아온
+			if(item1.getType() == Material.OAK_PLANKS && item2.getType() == Material.SPRUCE_PLANKS) {
+				if(item1.getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "일루시데이터") && item2.getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "다크 리펄서")) {
+					skill1(player, i, item1, item2);
+				}
+			}
+			
+			// 요정셋
+			if(item1.getType() == Material.STONE && item2.getType() == Material.CYAN_WOOL) {
+				if(item1.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "요정왕의 검") && item2.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "요정여왕의 검")) {
+					skill2(player, i, item1, item2);
+				}
+			}
+		} catch(Exception e) {
+			
+		}
+		
+	}
+	
+	public void skill1(Player player, int i, ItemStack item1, ItemStack item2) {
+		
+	}
+	
+	public void skill2(Player player, int i, ItemStack item1, ItemStack item2) {
+		if (i >= 5) {
+			player.getInventory().remove(Material.HEART_OF_THE_SEA);
+			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 5);
+			ItemMeta itemIm = item.getItemMeta();
+			itemIm.setDisplayName(ChatColor.BLUE + "마나");
+			item.setItemMeta(itemIm);
+			player.getInventory().setItem(8, item);
+			Location loc = player.getLocation();
+			List<Entity> entitylist = player.getNearbyEntities(5, 5, 5);
+			for (Entity nearEntity : entitylist) {
+				if (nearEntity.getType() != EntityType.PLAYER) {
+					if (nearEntity instanceof LivingEntity) {
+						LivingEntity nearMob = (LivingEntity) nearEntity;
+						nearMob.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 100, 32700));
+					}
+				}
+			}
+			// ===============================================================
+			ParticleData pd = new ParticleData(player.getUniqueId());
+			if (pd.hasID()) {
+				pd.endTask();
+				pd.removeID();
+			}
+			ParticleEffect pe = new ParticleEffect(player);
+			pe.startE29();
+			// ================================================================
+			player.sendMessage(ChatColor.GREEN + "[스킬]요정의 속박을 발동합니다.");
+			player.sendMessage(ChatColor.GREEN + "5초간 적의 움직임을 멈춥니다.");
+			player.getWorld().playSound(loc, Sound.ENTITY_WOLF_SHAKE, 1.0f, 1.0f);
+		} else {
+			player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
+			player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+			return;
+		}
+	}
+	
+}
