@@ -1,11 +1,14 @@
 package testPack;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Effect;
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.Particle;
 import org.bukkit.Sound;
 import org.bukkit.block.Block;
@@ -31,6 +34,7 @@ import net.minecraft.server.v1_16_R1.WorldServer;
 public class PlayerHitDebuff {
 	
 	Random rnd = new Random();
+	static int taskID;
 
 	public void playerHitDebuff(Player player, Entity mob) {
 		mob1(player, mob);
@@ -196,24 +200,69 @@ public class PlayerHitDebuff {
 					((Zombie) mob).setTarget(player);
 				} 
 				if(num == 1) {
-					// ===============================================================
-					ParticleData pd = new ParticleData(player.getUniqueId());
-					if (pd.hasID()) {
-						pd.endTask();
-						pd.removeID();
-					}
-					ParticleEffect pe = new ParticleEffect(player, mob);
-					pe.startE30();
-					// ================================================================
-					List<Entity> nearPlayer = mob.getNearbyEntities(30, 10, 30);
-					for(Entity p : nearPlayer) {
-						if(p instanceof Player) {
-							((Player) p).damage(350);
-							p.setFireTicks(200);
+					
+					mob.teleport(player);
+					
+					player.sendMessage(ChatColor.RED + "발로르가 헬파이어를 시전합니다.");
+					sendMessage(player, ChatColor.RED + "발로르가 헬파이어를 시전합니다.");
+					
+					ArrayList<FallingBlock> ary = new ArrayList<>();
+					Location loc = mob.getLocation();
+					for(int x = -8 ; x < 9 ; x++) {
+						for(int y = -1 ; y < 0 ; y++) {
+							for(int z = -8 ; z < 9 ; z++) {
+								Location loc2 = loc.clone().add(new Vector(x,y+0.05,z));
+								if(loc2.getBlock().getType() != Material.AIR) {
+									FallingBlock fb = (FallingBlock) mob.getWorld().spawnFallingBlock(loc2, Material.RED_WOOL, (byte)0);
+									fb.setVelocity(new Vector(0,0,0));
+									fb.setDropItem(false);
+									fb.setGravity(false);
+									ary.add(fb);
+								}
+							}
 						}
 					}
-					player.sendMessage(ChatColor.RED + "발로르가 헬파이어를 사용하였습니다.");
-					sendMessage(player, ChatColor.RED + "발로르가 헬파이어를 사용하였습니다.");
+					
+					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+						int time = 0;
+						ArrayList<FallingBlock> ary2 = ary;
+
+						@Override
+						public void run() {
+							
+							if (time >= 30) {
+								// ===============================================================
+								ParticleData pd = new ParticleData(player.getUniqueId());
+								if (pd.hasID()) {
+									pd.endTask();
+									pd.removeID();
+								}
+								ParticleEffect pe = new ParticleEffect(player, mob);
+								pe.startE30();
+								// ================================================================
+								for(FallingBlock fb : ary2) {
+									fb.remove();
+								}
+								List<Entity> nearPlayer = mob.getNearbyEntities(8, 10, 8);
+								for(Entity p : nearPlayer) {
+									if(p instanceof Player) {
+										((Player) p).damage(500);
+										p.setFireTicks(200);
+									}
+								}
+								player.sendMessage(ChatColor.RED + "발로르가 헬파이어를 사용하였습니다.");
+								sendMessage(player, ChatColor.RED + "발로르가 헬파이어를 사용하였습니다.");
+								
+								Bukkit.getScheduler().cancelTask(taskID);
+							}
+							
+							time++;
+
+						}
+
+					}, 0, 1);
+					
 				}
 			} else {
 				int num = rnd.nextInt(13);
@@ -341,23 +390,66 @@ public class PlayerHitDebuff {
 					((Skeleton) mob).setTarget(player);
 				}
 				if (num == 1) {
-					// ===============================================================
-					ParticleData pd = new ParticleData(player.getUniqueId());
-					if (pd.hasID()) {
-						pd.endTask();
-						pd.removeID();
-					}
-					ParticleEffect pe = new ParticleEffect(player, mob);
-					pe.startE33();
-					// ================================================================
-					List<Entity> nearPlayer = mob.getNearbyEntities(20, 10, 20);
-					for (Entity p : nearPlayer) {
-						if (p instanceof Player) {
-							((Player) p).damage(300);
+					
+					player.sendMessage(ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
+					sendMessage(player, ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
+					
+					ArrayList<FallingBlock> ary = new ArrayList<>();
+					Location loc = mob.getLocation();
+					for(int x = -20 ; x < 21 ; x++) {
+						for(int y = -1 ; y < 0 ; y++) {
+							for(int z = -20 ; z < 21 ; z++) {
+								Location loc2 = loc.clone().add(new Vector(x,y+0.05,z));
+								if(loc2.getBlock().getType() != Material.AIR) {
+									FallingBlock fb = (FallingBlock) mob.getWorld().spawnFallingBlock(loc2, Material.RED_WOOL, (byte)0);
+									fb.setVelocity(new Vector(0,0,0));
+									fb.setDropItem(false);
+									fb.setGravity(false);
+									ary.add(fb);
+								}
+							}
 						}
 					}
-					player.sendMessage(ChatColor.RED + "지배자가 심판I을 사용하였습니다.");
-					sendMessage(player, ChatColor.RED + "지배자가 심판I을 사용하였습니다.");
+					
+					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+						int time = 0;
+						ArrayList<FallingBlock> ary2 = ary;
+
+						@Override
+						public void run() {
+							
+							if (time >= 40) {
+								// ===============================================================
+								ParticleData pd = new ParticleData(player.getUniqueId());
+								if (pd.hasID()) {
+									pd.endTask();
+									pd.removeID();
+								}
+								ParticleEffect pe = new ParticleEffect(player, mob);
+								pe.startE33();
+								// ================================================================
+								for(FallingBlock fb : ary2) {
+									fb.remove();
+								}
+								List<Entity> nearPlayer = mob.getNearbyEntities(20, 10, 20);
+								for (Entity p : nearPlayer) {
+									if (p instanceof Player) {
+										((Player) p).damage(300);
+									}
+								}
+								player.sendMessage(ChatColor.RED + "지배자가 심판I을 사용하였습니다.");
+								sendMessage(player, ChatColor.RED + "지배자가 심판I을 사용하였습니다.");
+								
+								Bukkit.getScheduler().cancelTask(taskID);
+							}
+							
+							time++;
+
+						}
+
+					}, 0, 1);
+					
 				}
 			} else {
 				int num = rnd.nextInt(12);
@@ -394,23 +486,66 @@ public class PlayerHitDebuff {
 					((Skeleton) mob).setTarget(player);
 				}
 				if (num == 1) {
-					// ===============================================================
-					ParticleData pd = new ParticleData(player.getUniqueId());
-					if (pd.hasID()) {
-						pd.endTask();
-						pd.removeID();
+					
+					player.sendMessage(ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
+					sendMessage(player, ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
+					
+					ArrayList<FallingBlock> ary = new ArrayList<>();
+					Location loc = mob.getLocation();
+					for(int x = -20 ; x < 21 ; x++) {
+						for(int y = -1 ; y < 0 ; y++) {
+							for(int z = -20 ; z < 21 ; z++) {
+								Location loc2 = loc.clone().add(new Vector(x,y+0.05,z));
+								if(loc2.getBlock().getType() != Material.AIR) {
+									FallingBlock fb = (FallingBlock) mob.getWorld().spawnFallingBlock(loc2, Material.RED_WOOL, (byte)0);
+									fb.setVelocity(new Vector(0,0,0));
+									fb.setDropItem(false);
+									fb.setGravity(false);
+									ary.add(fb);
+								}
+							}
+						}
 					}
-					ParticleEffect pe = new ParticleEffect(player, mob);
-					pe.startE33();
-					// ================================================================
-					List<Entity> nearPlayer = mob.getNearbyEntities(20, 10, 20);
-					for (Entity p : nearPlayer) {
-						if (p instanceof Player) {
-							((Player) p).damage(400);
-						} 
-					}
-					player.sendMessage(ChatColor.RED + "지배자가 심판II을 사용하였습니다.");
-					sendMessage(player, ChatColor.RED + "지배자가 심판II을 사용하였습니다.");
+					
+					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+						int time = 0;
+						ArrayList<FallingBlock> ary2 = ary;
+
+						@Override
+						public void run() {
+							
+							if (time >= 40) {
+								// ===============================================================
+								ParticleData pd = new ParticleData(player.getUniqueId());
+								if (pd.hasID()) {
+									pd.endTask();
+									pd.removeID();
+								}
+								ParticleEffect pe = new ParticleEffect(player, mob);
+								pe.startE33();
+								// ================================================================
+								for(FallingBlock fb : ary2) {
+									fb.remove();
+								}
+								List<Entity> nearPlayer = mob.getNearbyEntities(20, 10, 20);
+								for (Entity p : nearPlayer) {
+									if (p instanceof Player) {
+										((Player) p).damage(400);
+									} 
+								}
+								player.sendMessage(ChatColor.RED + "지배자가 심판II을 사용하였습니다.");
+								sendMessage(player, ChatColor.RED + "지배자가 심판II을 사용하였습니다.");
+								
+								Bukkit.getScheduler().cancelTask(taskID);
+							}
+							
+							time++;
+
+						}
+
+					}, 0, 1);
+					
 				}
 			} else {
 				int num = rnd.nextInt(12);

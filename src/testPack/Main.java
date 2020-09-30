@@ -3464,9 +3464,9 @@ public class Main extends JavaPlugin implements Listener{
 						ArrayList<FallingBlock> ary = new ArrayList<>();
 						Location loc = player.getLocation();
 						for(int x = -2 ; x < 3 ; x++) {
-							for(int y = -2 ; y < 2 ; y++) {
+							for(int y = -1 ; y < 1 ; y++) {
 								for(int z = -2 ; z < 3 ; z++) {
-									Location loc2 = loc.clone().add(new Vector(x,y+0.5,z));
+									Location loc2 = loc.clone().add(new Vector(x,y+0.01,z));
 									if(loc2.getBlock().getType() != Material.AIR) {
 										FallingBlock fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, Material.RED_WOOL, (byte)0);
 										fb.setVelocity(new Vector(0,0,0));
