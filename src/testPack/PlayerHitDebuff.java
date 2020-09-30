@@ -34,7 +34,7 @@ import net.minecraft.server.v1_16_R1.WorldServer;
 public class PlayerHitDebuff {
 	
 	Random rnd = new Random();
-	static int taskID;
+	private int taskID;
 
 	public void playerHitDebuff(Player player, Entity mob) {
 		mob1(player, mob);
@@ -227,9 +227,14 @@ public class PlayerHitDebuff {
 
 						int time = 0;
 						ArrayList<FallingBlock> ary2 = ary;
+						ThreadData td = new ThreadData(player.getUniqueId());
 
 						@Override
 						public void run() {
+							
+							if (!td.hasID()) {
+								td.setID(taskID);
+							}
 							
 							if (time >= 30) {
 								// ===============================================================
@@ -254,7 +259,8 @@ public class PlayerHitDebuff {
 								player.sendMessage(ChatColor.RED + "발로르가 헬파이어를 사용하였습니다.");
 								sendMessage(player, ChatColor.RED + "발로르가 헬파이어를 사용하였습니다.");
 								
-								Bukkit.getScheduler().cancelTask(taskID);
+								td.endTask();
+								td.removeID();
 							}
 							
 							time++;
@@ -377,6 +383,7 @@ public class PlayerHitDebuff {
 	// 1층의 지배자
 	public void mob8(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("1층의 지배자" + ChatColor.YELLOW + " [Lv.??]")) {
+
 			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
 				int num = rnd.nextInt(12);
 				if (num == 0) {
@@ -415,9 +422,14 @@ public class PlayerHitDebuff {
 
 						int time = 0;
 						ArrayList<FallingBlock> ary2 = ary;
+						ThreadData td = new ThreadData(player.getUniqueId());
 
 						@Override
 						public void run() {
+							
+							if (!td.hasID()) {
+								td.setID(taskID);
+							}
 							
 							if (time >= 40) {
 								// ===============================================================
@@ -441,7 +453,8 @@ public class PlayerHitDebuff {
 								player.sendMessage(ChatColor.RED + "지배자가 심판I을 사용하였습니다.");
 								sendMessage(player, ChatColor.RED + "지배자가 심판I을 사용하였습니다.");
 								
-								Bukkit.getScheduler().cancelTask(taskID);
+								td.endTask();
+								td.removeID();
 							}
 							
 							time++;
@@ -511,9 +524,14 @@ public class PlayerHitDebuff {
 
 						int time = 0;
 						ArrayList<FallingBlock> ary2 = ary;
+						ThreadData td = new ThreadData(player.getUniqueId());
 
 						@Override
 						public void run() {
+							
+							if (!td.hasID()) {
+								td.setID(taskID);
+							}
 							
 							if (time >= 40) {
 								// ===============================================================
@@ -537,7 +555,8 @@ public class PlayerHitDebuff {
 								player.sendMessage(ChatColor.RED + "지배자가 심판II을 사용하였습니다.");
 								sendMessage(player, ChatColor.RED + "지배자가 심판II을 사용하였습니다.");
 								
-								Bukkit.getScheduler().cancelTask(taskID);
+								td.endTask();
+								td.removeID();
 							}
 							
 							time++;
