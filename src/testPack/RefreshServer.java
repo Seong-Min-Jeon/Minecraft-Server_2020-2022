@@ -224,7 +224,7 @@ public class RefreshServer {
 						player.sendMessage(ChatColor.BLUE + "=============================");
 						player.sendMessage(ChatColor.GOLD + "서버 홈페이지에서 많은 정보를 얻을 수 있습니다!");
 						try {
-							IChatBaseComponent comp = ChatSerializer.a("{\"text\":\"" + "\",\"extra\":[{\"text\":\"" + ChatColor.UNDERLINE + "https://aile-server.netlify.app/"
+							IChatBaseComponent comp = ChatSerializer.a("{\"text\":\"" + "\",\"extra\":[{\"text\":\"" + ChatColor.UNDERLINE + "" + ChatColor.LIGHT_PURPLE + "https://aile-server.netlify.app/"
 				                    + "\",\"clickEvent\": {\"action\":\"open_url\",\"value\":\"" + "https://aile-server.netlify.app/"
 				                    +  "\",\"hoverEvent\": {\"action\":\"show_text\",\"value\":\"" + ""
 				                    + "\"}}}]}"); 
@@ -235,6 +235,7 @@ public class RefreshServer {
 						} catch(Exception e) {
 							
 						}
+						player.sendMessage("");
 						player.sendMessage(ChatColor.GOLD + "링크를 클릭해 홈페이지로 이동!");
 						player.sendMessage(ChatColor.BLUE + "=============================");
 					}
