@@ -82,17 +82,9 @@ public class MainQuest {
 		} else if(lvl == 320) {
 			main34(player);
 		} else if(lvl == 330) {
-			//마법탑 대화
-			//죽음의 탑에 관한 이야기를 해준다고 함. 죽음의 탑에 대해 물어봄.
-			//꼭대기에는 빛의 성물이 있고, 자신도 가본적은 없다고 말함. 
-			//화제전환. ??를 가져오면 마법탑의 힘으로 신비한 공간에 보내줄 수 있다고 함
-			//상급 포보르? + ? => 티켓
-			//티켓하나를 소모해서 이동
+			main35(player);
 		} else if(lvl == 340) {
-			//마법탑 대화 && 티켓 사용
-			//아무것도 보이지 않는 미로로 워프됨
-			//못깨는 보스(포보르의 왕)
-			//포보르의 뇌를 통해 과거에 그들을 통치하던 왕을 재현함
+			main36(player);
 		} else if(lvl == 350) {
 			
 		} else if(lvl == 360) {
@@ -706,6 +698,38 @@ public class MainQuest {
 		scrollIm.setDisplayName(ChatColor.GOLD + "메인퀘스트 34장");
 		ArrayList<String> scrollLore = new ArrayList();
 		scrollLore.add(ChatColor.GRAY + "'또다시 빨간모자' 퀘스트를 진행할 수 있다.");
+		scrollIm.setLore(scrollLore);
+		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		scrollIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		scrollIm.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
+		scrollIm.setUnbreakable(true);
+		scroll.setItemMeta(scrollIm);		
+		player.getInventory().addItem(scroll);
+	}
+	
+	public void main35(Player player) {
+		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
+		ItemMeta scrollIm = scroll.getItemMeta();
+		scrollIm.setDisplayName(ChatColor.GOLD + "메인퀘스트 35장");
+		ArrayList<String> scrollLore = new ArrayList();
+		scrollLore.add(ChatColor.GRAY + "'마법탑을 향해' 퀘스트를 진행할 수 있다.");
+		scrollIm.setLore(scrollLore);
+		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		scrollIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		scrollIm.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
+		scrollIm.setUnbreakable(true);
+		scroll.setItemMeta(scrollIm);		
+		player.getInventory().addItem(scroll);
+	}
+	
+	public void main36(Player player) {
+		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
+		ItemMeta scrollIm = scroll.getItemMeta();
+		scrollIm.setDisplayName(ChatColor.GOLD + "메인퀘스트 36장");
+		ArrayList<String> scrollLore = new ArrayList();
+		scrollLore.add(ChatColor.GRAY + "'이것이 포보르 왕?' 퀘스트를 진행할 수 있다.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);

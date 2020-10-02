@@ -41,7 +41,7 @@ public class InteractVillager {
 			return true;
 		}
 		
-		return vil1() || vil2() || vil3() || vil4() || vil5() || vil6() || vil7() || vil8() || vil9() || vil10() || vil11();
+		return vil1() || vil2() || vil3() || vil4() || vil5() || vil6() || vil7() || vil8() || vil9() || vil10() || vil11() || vil12();
 	}
 	
 	public boolean vil1() {
@@ -276,6 +276,26 @@ public class InteractVillager {
 				}
 			} catch(Exception e) {
 				player.sendMessage("관장: 헛헛. 하앗.");
+			}
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean vil12() {
+		//마법탑 225 724  226 726
+		if(loc.getX() <= 226 && loc.getZ() <= 726
+				&& loc.getX() >= 224 && loc.getZ() >= 724) {
+			QuestBoard cb = new QuestBoard();
+			try {
+				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===마법탑을 향해===")) {
+					int qNum = cb.getNum(player);
+					cb.mq35(player, qNum+1);	
+				} else {
+					player.sendMessage("카타리나: 여기는 마법탑입니다. 마나의 가호가 있기를.");
+				}
+			} catch(Exception e) {
+				player.sendMessage("카타리나: 여기는 마법탑입니다. 마나의 가호가 있기를.");
 			}
 			return true;
 		}

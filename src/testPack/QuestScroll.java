@@ -71,6 +71,8 @@ public class QuestScroll {
 				mq32(player, itemArg, world);
 				mq33(player, itemArg, world);
 				mq34(player, itemArg, world);
+				mq35(player, itemArg, world);
+				mq36(player, itemArg, world);
 			} else {
 				itemArg.remove();
 				player.getInventory().addItem(itemArg.getItemStack());
@@ -527,6 +529,22 @@ public class QuestScroll {
 			msg.msg(player, "빨간소녀: 하위!%빨간소녀: 나를 잊지 않았겠지영?%빨간모자: 또 의뢰할께 있으니 나한테 와줘여.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq34(player, 0);
+		}	
+	}
+	
+	public void mq35(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "메인퀘스트 35장")) {
+			msg.msg(player, "???: 에일을 구원할 영웅이시여.%???: 죽음의 탑을 조사한다는 소문을 들었어요.%???: 저는 §e마법탑§f의 카타리나라고 합니다.%카타리나: 우선.. 마법탑으로 와주시겠어요?");
+			QuestBoard qb = new QuestBoard();
+			qb.mq35(player, 0);
+		}	
+	}
+	
+	public void mq36(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "메인퀘스트 36장")) {
+			msg.msg(player, "카타리나: 좋아요.%카타리나: 이제 §e포보르 왕을 가둔 미궁§f으로 들어갈 준비가 된 것 같군요.%카타리나: 마법탑에서 어느정도의 에메랄드와 포보르의 마나로 워프 스크롤을 살 수 있을 껍니다.");
+			QuestBoard qb = new QuestBoard();
+			qb.mq36(player, 0);
 		}	
 	}
 	

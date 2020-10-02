@@ -1691,6 +1691,78 @@ public class QuestBoard {
 		new NPCManager(player);
 	}
 	
+	public void mq35(Player player, int num) {
+		if(num>=1) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 6000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "카타리나: 죽음의 탑 위에는 §e빛의 성물§f이라는 것이 있다고 합니다.%카타리나: 그 성물을 얻게 된다면 포보르들을 멸하고 개벽이 도래한다고 합니다.%카타리나: 당신이라면 분명히 가능할 겁니다.%"
+					+ "카타리나: 이제 본론으로 넘어가죠.%카타리나: 마법탑의 연구로 과거의 포보르 왕을 재림시킬 수 있는 방법을 알아냈습니다.%카타리나: 다만 저희는 포보르의 마나를 사용할 수 없었기 때문에%카타리나: 연성 과정에서 불완전한 마나를 사용해야했고%"
+					+ "카타리나: 그 결과로 포보르 왕이 완전한 힘을 얻지는 못했습니다.%카타리나: 그래도 포보르 왕의 데이터를 충분히 축적할 수는 있을 겁니다.%카타리나: 그의 패턴이라던지, 습성이라던지, 부하들이라던지..%카타리나: 이번 퀘스트는 그를 재림시키기 위한 재료는 모으는 것.%"
+					+ "카타리나: 거기까지만 하죠.%카타리나: §e마법에 타락한 자§f를 사냥하십시오.%카라리나: 그들을 사냥하다보면 §e포보르의 마나§f를 얻을 수 있을 겁니다.%카타리나: 재료로는 딱 1개의 마나만 필요하니, 우선 1개만 얻어주십쇼.");
+			QuestBoard qb = new QuestBoard();
+			qb.mq35_1(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 35장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===마법탑을 향해===");
+		score.setScore(3);
+		Score score2 = obj.getScore("마법탑에서 카타리나와 대화");
+		score2.setScore(2);
+		Score score3 = obj.getScore("(221,80,725)");
+		score3.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/1)");
+		score4.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq35_1(Player player, int num) {
+		if(num>=1) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 6000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "카타리나: 얻으셨군요.%카타리나: 잘 보관해두시면 제가 연락을 드리겠습니다.");
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 35장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===포보르의 마나===");
+		score.setScore(2);
+		Score score2 = obj.getScore("포보르의 마나 획득");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/1)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+		new NPCManager(player);
+	}
+	
+	public void mq36(Player player, int num) {
+		if(num>=1) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 7000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "카타리나: 괜찮으세요?%카타리나: 아무리 불완전한 힘을 가지고 있어도 왕은 왕이군요..%카타리나: 그래도 좋은 전투 데이터를 얻었어요.%카타리나: 감사합니다.");
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 36장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===이것이 포보르 왕?===");
+		score.setScore(2);
+		Score score2 = obj.getScore("포보르 왕에게 승리");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/1)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+		new NPCManager(player);
+	}
+	
 	public int getNum(Player player) {
 		try {
 			ArrayList<String> list = new ArrayList<String>(player.getScoreboard().getEntries());

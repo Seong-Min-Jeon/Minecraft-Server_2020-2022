@@ -622,6 +622,18 @@ public class Main extends JavaPlugin implements Listener{
                     	QuestBoard qb = new QuestBoard();
                 		qb.mq34_1(event.getPlayer(), Integer.parseInt(num));
                     }
+                    if(quest.equals("mq35")) {
+                    	QuestBoard qb = new QuestBoard();
+                		qb.mq35(event.getPlayer(), Integer.parseInt(num));
+                    }
+                    if(quest.equals("mq35_1")) {
+                    	QuestBoard qb = new QuestBoard();
+                		qb.mq35_1(event.getPlayer(), Integer.parseInt(num));
+                    }
+                    if(quest.equals("mq36")) {
+                    	QuestBoard qb = new QuestBoard();
+                		qb.mq36(event.getPlayer(), Integer.parseInt(num));
+                    }
                     bufReader.close();
                 }
             }
@@ -5236,7 +5248,19 @@ public class Main extends JavaPlugin implements Listener{
         				int number =  qb.getNum(player);
         				fw.write("mq34_1\n");
         				fw.write(Integer.toString(number));
-            		}          		
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===마법탑을 향해===")) {
+        				int number =  qb.getNum(player);
+        				fw.write("mq35\n");
+        				fw.write(Integer.toString(number));
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===포보르의 마나===")) {
+        				int number =  qb.getNum(player);
+        				fw.write("mq35_1\n");
+        				fw.write(Integer.toString(number));
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===이것이 포보르 왕?===")) {
+        				int number =  qb.getNum(player);
+        				fw.write("mq36\n");
+        				fw.write(Integer.toString(number));
+            		}         		
                     fw.close();
                     bufReader.close();
                 }
