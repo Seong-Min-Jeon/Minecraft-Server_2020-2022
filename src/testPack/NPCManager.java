@@ -62,7 +62,7 @@ public class NPCManager {
 		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "기사");
 		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
 		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
-		String[] name = getSkin("_Koka_");
+		String[] name = getSkin("_Goblin_Slayer_");
 		if(name == null) {
 			System.out.println("기사 확인 불가");
 		} else {

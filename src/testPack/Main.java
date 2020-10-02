@@ -76,6 +76,7 @@ import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.event.entity.EntityExplodeEvent;
 import org.bukkit.event.entity.EntityRegainHealthEvent;
 import org.bukkit.event.entity.EntityRegainHealthEvent.RegainReason;
+import org.bukkit.event.entity.EntityShootBowEvent;
 import org.bukkit.event.entity.EntityTransformEvent;
 import org.bukkit.event.entity.ExplosionPrimeEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
@@ -100,6 +101,7 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerItemConsumeEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerLevelChangeEvent;
+import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.event.player.PlayerPickupArrowEvent;
 import org.bukkit.event.player.PlayerPickupItemEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
@@ -243,7 +245,8 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("woolring")) { 
 			
 		} else {
-			player.setResourcePack("https://cdn.discordapp.com/attachments/698152850349490176/759643644381626388/tutorial_resource_pack_40.zip");
+//			player.setResourcePack("https://cdn.discordapp.com/attachments/698152850349490176/759643644381626388/tutorial_resource_pack_40.zip");
+			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/761486039536762890/tutorial_resource_pack_42.zip");
 		}
 		
 		//Message
@@ -1965,6 +1968,18 @@ public class Main extends JavaPlugin implements Listener{
 				event.setCancelled(true);
 			}			
 		} catch(Exception e3) {
+			
+		}
+	}
+	
+	@EventHandler
+	public void arrowShootEvent(EntityShootBowEvent event) {
+		try {
+			Entity entity = event.getProjectile();
+			if(entity.getType() == EntityType.ARROW) {
+				new ShootArrow(entity);
+			}
+		} catch(Exception e) {
 			
 		}
 	}
@@ -5259,6 +5274,11 @@ public class Main extends JavaPlugin implements Listener{
 	
 	@EventHandler
 	public void arrowRemove(ProjectileHitEvent event) {
+		try {
+			event.getEntity().getPassenger().remove(); 
+		} catch(Exception e) {
+			
+		}
 		event.getEntity().remove();
 	}
 	
@@ -5518,6 +5538,11 @@ public class Main extends JavaPlugin implements Listener{
 		if(new RenameCraftingItem().renameCraftingItem(player, msg) == false) {
 			event.setCancelled(true);
 		}
+	}
+	
+	@EventHandler
+	public void moveEvent(PlayerMoveEvent event) {
+		
 	}
 	
 	@EventHandler

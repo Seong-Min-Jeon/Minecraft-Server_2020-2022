@@ -12,6 +12,7 @@ import org.bukkit.World;
 import org.bukkit.block.Biome;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
+import org.bukkit.entity.Item;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
@@ -19,6 +20,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
+import org.bukkit.util.Vector;
 
 import net.minecraft.server.v1_16_R1.ChatMessageType;
 import net.minecraft.server.v1_16_R1.IChatBaseComponent;
@@ -265,6 +267,20 @@ public class RefreshServer {
 				if(time >= 6000) {
 					time = 0;
 				}
+				
+//				if(time >= 0) {
+//					for(Entity ent : Bukkit.getWorld("world").getEntities()) {
+//						if(ent.getType() == EntityType.DROPPED_ITEM) {
+//							Item item = (Item) ent;
+//							if(item.getPickupDelay() > 1000000) {
+//								Vector v = new Vector(0, 0, 0);
+//								if(item.getVelocity() == v) {
+//									item.remove();
+//								}
+//							}
+//						}
+//					}
+//				}
 			
 				time++;
 				

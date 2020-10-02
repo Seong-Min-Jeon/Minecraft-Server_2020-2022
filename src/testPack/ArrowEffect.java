@@ -11,8 +11,10 @@ import org.bukkit.Particle;
 import org.bukkit.Sound;
 import org.bukkit.World;
 import org.bukkit.entity.Arrow;
+import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.SmallFireball;
+import org.bukkit.entity.SpectralArrow;
 
 public class ArrowEffect {
 	
@@ -49,6 +51,9 @@ public class ArrowEffect {
 				arrow.setVelocity(player.getLocation().getDirection().multiply(3.0f));
 				player.getWorld().spawnParticle(Particle.FIREWORKS_SPARK, loc.add(0,1,0), 0);			
 				world.playSound(player.getLocation(), Sound.ENTITY_ARROW_SHOOT, 1.0f, 1.0f);
+				
+				SpectralArrow sarrow = (SpectralArrow) arrow.getWorld().spawnEntity(loc, EntityType.SPECTRAL_ARROW);
+				sarrow.setVelocity(arrow.getVelocity());
 			}			
 		}
 	}
