@@ -143,6 +143,7 @@ public class TPScroll {
 		// ¹Ì±Ã
 		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "¹Ì±Ã ¿öÇÁ ½ºÅ©·Ñ")) {
 			if(player.getLevel() >= 340) {
+				itemArg.remove();	
 				Location loc = new Location(world, 96.5, 54, 695.5, 180, 0);
 				player.teleport(loc);
 				player.getWorld().playSound(loc, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);

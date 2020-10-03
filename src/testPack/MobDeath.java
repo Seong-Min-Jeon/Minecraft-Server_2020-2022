@@ -655,6 +655,18 @@ public class MobDeath {
 			if (name.equalsIgnoreCase("전생한 슬라임" + ChatColor.YELLOW + " [Lv.336]")) {
 				mobloot.mob138(lootPlayer);
 			}
+			// 재앙
+			if (name.equalsIgnoreCase("재앙" + ChatColor.YELLOW + " [Lv.343]")) {
+				mobloot.mob139(lootPlayer);
+			}
+			// 타락한 모험가
+			if (name.equalsIgnoreCase("타락한 모험가" + ChatColor.YELLOW + " [Lv.347]")) {
+				mobloot.mob140(lootPlayer);
+			}
+			// 코낭그
+			if (name.equalsIgnoreCase("코낭그" + ChatColor.YELLOW + " [Lv.??]")) {
+				mobloot.mob141(lootPlayer);
+			}
 			
 			
 //================================================================================================================================

@@ -57,6 +57,7 @@ public class PlayerHitDebuff {
 		mob18(player, mob);
 		mob19(player, mob);
 		mob20(player, mob);
+		mob21(player, mob);
 	}
 
 	// 시련의 형상
@@ -645,7 +646,111 @@ public class PlayerHitDebuff {
 		}
 	}
 
+	// 코낭그
 	public void mob21(Player player, Entity mob) {
+		
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("코낭그" + ChatColor.YELLOW + " [Lv.??]")) {
+			
+			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
+				int num = rnd.nextInt(12);
+				if (num == 0) {
+					player.teleport(mob.getLocation());
+					player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 100, 100, true, false, false));
+					player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 100, 200, true, false, false));
+					player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 100, 200, true, false, false));
+					player.setVelocity(player.getEyeLocation().getDirection().multiply(-10.0f));
+					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_NETHERRACK_STEP, 3.0f, 1.0f);
+					player.sendMessage(ChatColor.RED + "지배자가 당신을 밀어냅니다.");
+					((Skeleton) mob).setTarget(player);
+				}
+				if (num == 1) {
+					
+					player.sendMessage(ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
+					sendMessage(player, ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
+					
+					ArrayList<FallingBlock> ary = new ArrayList<>();
+					Location loc = mob.getLocation();
+					for(int x = -20 ; x < 21 ; x++) {
+						for(int y = -1 ; y < 0 ; y++) {
+							for(int z = -20 ; z < 21 ; z++) {
+								Location loc2 = loc.clone().add(new Vector(x,y+0.05,z));
+								if(loc2.getBlock().getType() != Material.AIR) {
+									FallingBlock fb = (FallingBlock) mob.getWorld().spawnFallingBlock(loc2, Material.RED_WOOL, (byte)0);
+									fb.setVelocity(new Vector(0,0,0));
+									fb.setDropItem(false);
+									fb.setGravity(false);
+									ary.add(fb);
+								}
+							}
+						}
+					}
+					
+					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+						int time = 0;
+						ArrayList<FallingBlock> ary2 = ary;
+						ThreadData td = new ThreadData(player.getUniqueId());
+
+						@Override
+						public void run() {
+							
+							if (!td.hasID()) {
+								td.setID(taskID);
+							}
+							
+							if (time >= 40) {
+								// ===============================================================
+								ParticleData pd = new ParticleData(player.getUniqueId());
+								if (pd.hasID()) {
+									pd.endTask();
+									pd.removeID();
+								}
+								ParticleEffect pe = new ParticleEffect(player, mob);
+								pe.startE33();
+								// ================================================================
+								for(FallingBlock fb : ary2) {
+									fb.remove();
+								}
+								List<Entity> nearPlayer = mob.getNearbyEntities(20, 10, 20);
+								for (Entity p : nearPlayer) {
+									if (p instanceof Player) {
+										((Player) p).damage(300);
+									}
+								}
+								player.sendMessage(ChatColor.RED + "지배자가 심판I을 사용하였습니다.");
+								sendMessage(player, ChatColor.RED + "지배자가 심판I을 사용하였습니다.");
+								
+								td.endTask();
+								td.removeID();
+							}
+							
+							time++;
+
+						}
+
+					}, 0, 1);
+					
+				}
+			} else {
+				int num = rnd.nextInt(12);
+				if (num == 0) {
+					// ===============================================================
+					ParticleData pd = new ParticleData(player.getUniqueId());
+					if (pd.hasID()) {
+						pd.endTask();
+						pd.removeID();
+					}
+					ParticleEffect pe = new ParticleEffect(player, mob);
+					pe.startE32();
+					// ================================================================
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 200, true, false, false));
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, 100, 0, true, false, false));
+					player.sendMessage(ChatColor.RED + "탑의 저주로 지배자가 강화됩니다.");
+					sendMessage(player, ChatColor.RED + "탑의 저주로 지배자가 강화됩니다.");
+					((Skeleton) mob).setTarget(player);
+				}
+			}
+		}
 
 	}
 

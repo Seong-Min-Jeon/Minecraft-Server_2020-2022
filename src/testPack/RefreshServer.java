@@ -46,9 +46,36 @@ public class RefreshServer {
 			@Override
 			public void run() {
 				
+				if(time % 20 == 0) {
+					List<Entity> list1 = world.getEntities();
+					for(Entity ent : list1) {
+						try {
+							String str = ent.getCustomName().split("\\.")[1];
+							String num = str.split("]")[0];
+							if(num.equals("??")) {
+								LivingEntity mob = (LivingEntity) ent; 
+								continue;
+							}
+						} catch(Exception e) {
+							
+						}
+					}
+				}
+				
 				if(time % 600 == 0) {
 					List<Entity> list1 = world.getEntities();
 					for(Entity ent : list1) {
+						
+						try {
+							String str = ent.getCustomName().split("\\.")[1];
+							String num = str.split("]")[0];
+							if(num.equals("??")) {
+								continue;
+							}
+						} catch(Exception e) {
+							
+						}
+						
 						int cnt = 0;
 						List<Entity> list2 = ent.getNearbyEntities(30, 15, 30);
 						for(Entity ent2 : list2) {

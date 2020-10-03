@@ -53,12 +53,17 @@ public class ShootArrow {
 	public ShootArrow(Entity ent) {
 		Arrow arrow = (Arrow) ent;
 		Location loc = arrow.getLocation();
-		SpectralArrow sarrow = (SpectralArrow) arrow.getWorld().spawnEntity(loc, EntityType.SPECTRAL_ARROW);
-		sarrow.setVelocity(arrow.getVelocity());
 		if(arrow.getShooter() instanceof Player) {
+			SpectralArrow sarrow = (SpectralArrow) arrow.getWorld().spawnEntity(loc, EntityType.SPECTRAL_ARROW);
+			sarrow.setGlowingTicks(0);
+			sarrow.setVelocity(arrow.getVelocity());
 			return;
 		}
-		arrow1(arrow, loc);
+		if(arrow1(arrow, loc) && arrow2(arrow, loc)) {
+			SpectralArrow sarrow = (SpectralArrow) arrow.getWorld().spawnEntity(loc, EntityType.SPECTRAL_ARROW);
+			sarrow.setGlowingTicks(0);
+			sarrow.setVelocity(arrow.getVelocity());
+		}
 		return;
 	}
 
@@ -73,7 +78,22 @@ public class ShootArrow {
 			Item item = arrow.getWorld().dropItem(loc, new ItemStack(Material.BLUE_ICE));
 			item.setPickupDelay(10000000);
 			arrow.addPassenger(item);
-
+			return false;
+		}
+		return true;
+	}
+	
+	public boolean arrow2(Arrow arrow, Location loc) {
+		// ¹Ì±Ãº¸½º 48 61 654  16 51 696
+		if (loc.getX() <= 48 && loc.getY() <= 61 && loc.getZ() <= 696 
+				&& loc.getX() >= 16 && loc.getY() >= 51 && loc.getZ() >= 654) {
+			if(arrow.getPassenger() != null) {
+				arrow.removePassenger(arrow.getPassenger());
+			}
+			Item item = arrow.getWorld().dropItem(loc, new ItemStack(Material.END_CRYSTAL));
+			item.setPickupDelay(10000000);
+			arrow.addPassenger(item);
+			return false;
 		}
 		return true;
 	}

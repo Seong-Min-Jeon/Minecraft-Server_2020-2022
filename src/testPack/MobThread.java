@@ -284,6 +284,9 @@ public class MobThread {
 						} else if(loc.getX() <= 146 && loc.getY() <= 164 && loc.getZ() <= 697 
 								&& loc.getX() >= 8 && loc.getY() >= 78 && loc.getZ() >= 502) {
 							magicTower3(player, loc);
+						} else if(loc.getX() <= 96 && loc.getY() <= 62 && loc.getZ() <= 695 
+								&& loc.getX() >= 50 && loc.getY() >= 53 && loc.getZ() >= 615) {
+							darkMaze(player, loc);
 						}
 					} 
 					
@@ -1686,6 +1689,21 @@ public class MobThread {
 		
 		if (num == 0) {
 			loc.getWorld().spawnEntity(loc, EntityType.BLAZE);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.HUSK);
+		}
+	}
+	
+	public void darkMaze(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 96 && loc.getY() <= 62 && loc.getZ() <= 695 
+				&& loc.getX() >= 50 && loc.getY() >= 53 && loc.getZ() >= 615)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.ENDERMITE);
 		} else if (num == 1) {
 			loc.getWorld().spawnEntity(loc, EntityType.HUSK);
 		}

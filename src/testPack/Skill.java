@@ -3295,7 +3295,7 @@ public class Skill {
 					ParticleEffect pe = new ParticleEffect(player);
 					pe.startE26();
 					// ================================================================
-					List<Entity> entitylist = player.getNearbyEntities(5, 4, 5);
+					List<Entity> entitylist = player.getNearbyEntities(10, 4, 10);
 					for (Entity nearEntity : entitylist) {
 						if (nearEntity.getType() != EntityType.PLAYER) {
 							if (nearEntity instanceof LivingEntity) {

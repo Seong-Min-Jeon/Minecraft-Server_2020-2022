@@ -80,7 +80,7 @@ public class ExpSystemByMob {
 						if(isOk == true) {
 							int partyPlayerLvl = partyPlayer.getLevel();
 							int differ = Math.abs(currentLevel - partyPlayerLvl);
-							partyGiveExp(partyPlayer, (int)(natExp*((100-3*differ)*0.01)));
+							partyGiveExp(partyPlayer, (int)(natExp*((100-2*differ)*0.01)));
 						}
 					}
 				}

@@ -8,6 +8,7 @@ import net.minecraft.server.v1_16_R1.EntityHuman;
 import net.minecraft.server.v1_16_R1.EntitySkeleton;
 import net.minecraft.server.v1_16_R1.EntityTypes;
 import net.minecraft.server.v1_16_R1.EntityWither;
+import net.minecraft.server.v1_16_R1.PathfinderGoalArrowAttack;
 import net.minecraft.server.v1_16_R1.PathfinderGoalAvoidTarget;
 import net.minecraft.server.v1_16_R1.PathfinderGoalFloat;
 import net.minecraft.server.v1_16_R1.PathfinderGoalHurtByTarget;
@@ -33,7 +34,7 @@ public class CustomSkeleton extends EntitySkeleton{
 		this.goalSelector.a(5, new PathfinderGoalMoveTowardsRestriction(this, 0.2D));
 		this.goalSelector.a(7, new PathfinderGoalRandomStroll(this, 0.2D));
 		this.goalSelector.a(8, new PathfinderGoalRandomLookaround(this));
-		this.goalSelector.a(8, new PathfinderGoalLookAtPlayer(this, EntityHuman.class, 35.0F));
+		this.goalSelector.a(8, new PathfinderGoalLookAtPlayer(this, EntityHuman.class, 50.0F));
 		
 		this.targetSelector.a(1, new PathfinderGoalHurtByTarget(this));
 		this.targetSelector.a(2, new PathfinderGoalNearestAttackableTarget<EntityHuman>(this, EntityHuman.class, true));

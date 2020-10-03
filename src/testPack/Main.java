@@ -137,6 +137,7 @@ import org.bukkit.util.Vector;
 
 import net.minecraft.server.v1_16_R1.IChatBaseComponent.ChatSerializer;
 import net.minecraft.server.v1_16_R1.PacketPlayOutTitle;
+import net.minecraft.server.v1_16_R1.WorldGenDecoratorNetherGlowstone;
 import net.minecraft.server.v1_16_R1.PacketPlayOutTitle.EnumTitleAction;
 
 import java.util.Random;
@@ -1613,6 +1614,7 @@ public class Main extends JavaPlugin implements Listener{
 	@EventHandler
 	public void die(PlayerDeathEvent event) {
 		event.setDeathMessage(null);
+		// 퀘스트 관련
 		try {
 			Player player = (Player) event.getEntity();
 			QuestBoard cb = new QuestBoard();
@@ -1623,6 +1625,14 @@ public class Main extends JavaPlugin implements Listener{
 		} catch(Exception e) {
 			
 		}
+		// 보스바 관련
+		try {
+			Player player = (Player) event.getEntity();
+			new BossHealth().removePlayer(player);
+		} catch(Exception e) {
+			
+		}
+		// 안건드려도 됨
 		try {
 			Player player = (Player) event.getEntity();
 			Cmd8Party cp = new Cmd8Party();
@@ -1648,53 +1658,40 @@ public class Main extends JavaPlugin implements Listener{
 			
 		}
 		try { 
-			Player player = (Player)event.getEntity();			
-			int i = 0;
-			int j = 0;			
+			Player player = (Player)event.getEntity();		
 			if(player.getInventory().contains(Material.EMERALD)) {
 				for (ItemStack is : player.getInventory().getContents()) {
 					if(is == null) continue;
 				    if (is.getType() == Material.EMERALD) {			
-				         i = i + is.getAmount();
+				         is.setAmount(is.getAmount()/3);
 				    }
 				}
-				if(player.getInventory().contains(Material.EMERALD_BLOCK)) { 
-					for (ItemStack is : player.getInventory().getContents()) {
-						if(is == null) continue;
-					    if (is.getType() == Material.EMERALD_BLOCK) {			
-					         j = j + is.getAmount();
-					    }
-					}
-				}
-				int random = rnd.nextInt(30) + 30;
-				int leaveAll = (i+j*64) * random / 100;
-				player.getInventory().remove(Material.EMERALD);
-				player.getInventory().remove(Material.EMERALD_BLOCK);
-				int leaveEmeraldBlock = leaveAll / 64;
-				if(j < leaveEmeraldBlock) {
-					leaveEmeraldBlock = j;
-				}
-				int leaveEmerald = leaveAll - leaveEmeraldBlock*64;
-				player.getInventory().addItem(new ItemStack(Material.EMERALD,leaveEmerald));
-				
-				ItemStack item = new ItemStack(Material.EMERALD_BLOCK, leaveEmeraldBlock);
-        		ItemMeta im = item.getItemMeta();
-        		im.setDisplayName(ChatColor.YELLOW + "에메랄드 주머니");
-        		item.setItemMeta(im);
-				player.getInventory().addItem(item);
 			}
-			player.getInventory().remove(Material.SCUTE);
-			player.getInventory().remove(Material.RABBIT_HIDE);
-//			if(player.getInventory().contains(Material.PLAYER_HEAD)) {
-//				for (ItemStack is : player.getInventory().getContents()) {
-//					if(is == null) continue;
-//				    if (is.getType() == Material.PLAYER_HEAD) {			
-//				        if (is.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+")) {
-//				        	 is.setAmount(0);
-//				        }
-//				    }
-//				}
-//			}
+			if(player.getInventory().contains(Material.EMERALD_BLOCK)) {
+				for (ItemStack is : player.getInventory().getContents()) {
+					if(is == null) continue;
+				    if (is.getType() == Material.EMERALD_BLOCK) {			
+				         is.setAmount(is.getAmount()/3);
+				    }
+				}
+			}
+			if(player.getInventory().contains(Material.SCUTE)) {
+				for (ItemStack is : player.getInventory().getContents()) {
+					if(is == null) continue;
+				    if (is.getType() == Material.SCUTE) {			
+				         is.setAmount(is.getAmount()/3);
+				    }
+				}
+			}
+			if(player.getInventory().contains(Material.RABBIT_HIDE)) {
+				for (ItemStack is : player.getInventory().getContents()) {
+					if(is == null) continue;
+				    if (is.getType() == Material.RABBIT_HIDE) {			
+				         is.setAmount(is.getAmount()/3);
+				    }
+				}
+			}
+
 			if(player.getInventory().contains(Material.COAL_ORE)) {
 				for (ItemStack is : player.getInventory().getContents()) {
 					if(is == null) continue;
@@ -3474,6 +3471,25 @@ public class Main extends JavaPlugin implements Listener{
 			event.getEntity().setCustomName(Integer.toString((int) event.getFinalDamage()));
 			event.getEntity().setCustomNameVisible(true);
 		}
+		
+		// 보스바
+		if(!(event.getEntity() instanceof Player)) {
+			Entity mob = event.getEntity();
+			// 코낭그
+			if (mob.getCustomName().substring(2).equalsIgnoreCase("코낭그" + ChatColor.YELLOW + " [Lv.??]")) {
+
+				LivingEntity boss = (LivingEntity) mob;
+				
+				if(boss.getHealth() <= 0) {
+					for(Player p : new BossHealth().getBar1().getPlayers()) {
+						new BossHealth().getBar1().removePlayer(p);
+					}
+				} else {
+					new BossHealth().getBar1().setProgress(boss.getHealth() / 700000.0);
+				}
+			}
+		}
+		
 		
 	}
 	
@@ -5300,6 +5316,13 @@ public class Main extends JavaPlugin implements Listener{
 	public void arrowRemove(ProjectileHitEvent event) {
 		try {
 			event.getEntity().getPassenger().remove(); 
+			Entity ent = event.getEntity().getPassenger();
+			Item item = (Item) ent;
+			if(item.getItemStack().getType() == Material.BLUE_ICE) {
+				ent.getWorld().playSound(ent.getLocation(), Sound.BLOCK_GLASS_BREAK, 1.0f, 1.0f);
+			} else if(item.getItemStack().getType() == Material.END_CRYSTAL) {
+				ent.getWorld().playSound(ent.getLocation(), Sound.ENTITY_BLAZE_DEATH, 1.0f, 1.0f);
+			}
 		} catch(Exception e) {
 			
 		}
@@ -5553,6 +5576,12 @@ public class Main extends JavaPlugin implements Listener{
 		Player player = event.getPlayer();
 		Location loc = event.getTo();
 		new TPMobSpawn(player, loc);
+		// 보스바 관련
+		try {
+			new BossHealth().removePlayer(player);
+		} catch (Exception e) {
+
+		}
 	}
 	
 	@EventHandler
@@ -5566,7 +5595,8 @@ public class Main extends JavaPlugin implements Listener{
 	
 	@EventHandler
 	public void moveEvent(PlayerMoveEvent event) {
-		
+		Player player = event.getPlayer();
+		new MoveEvent(player);
 	}
 	
 	@EventHandler
