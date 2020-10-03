@@ -207,6 +207,8 @@ public class PlayerHitDebuff {
 					player.sendMessage(ChatColor.RED + "발로르가 헬파이어를 시전합니다.");
 					sendMessage(player, ChatColor.RED + "발로르가 헬파이어를 시전합니다.");
 					
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true, false, false));
+					
 					ArrayList<FallingBlock> ary = new ArrayList<>();
 					Location loc = mob.getLocation();
 					for(int x = -8 ; x < 9 ; x++) {
@@ -237,7 +239,9 @@ public class PlayerHitDebuff {
 								td.setID(taskID);
 							}
 							
-							if (time >= 30) {
+							if (time >= 40) {
+								player.sendMessage(ChatColor.RED + "발로르가 헬파이어를 사용하였습니다.");
+								sendMessage(player, ChatColor.RED + "발로르가 헬파이어를 사용하였습니다.");
 								// ===============================================================
 								ParticleData pd = new ParticleData(player.getUniqueId());
 								if (pd.hasID()) {
@@ -257,8 +261,6 @@ public class PlayerHitDebuff {
 										p.setFireTicks(200);
 									}
 								}
-								player.sendMessage(ChatColor.RED + "발로르가 헬파이어를 사용하였습니다.");
-								sendMessage(player, ChatColor.RED + "발로르가 헬파이어를 사용하였습니다.");
 								
 								td.endTask();
 								td.removeID();
@@ -402,6 +404,8 @@ public class PlayerHitDebuff {
 					player.sendMessage(ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
 					sendMessage(player, ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
 					
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true, false, false));
+					
 					ArrayList<FallingBlock> ary = new ArrayList<>();
 					Location loc = mob.getLocation();
 					for(int x = -20 ; x < 21 ; x++) {
@@ -433,6 +437,8 @@ public class PlayerHitDebuff {
 							}
 							
 							if (time >= 40) {
+								player.sendMessage(ChatColor.RED + "지배자가 심판I을 사용하였습니다.");
+								sendMessage(player, ChatColor.RED + "지배자가 심판I을 사용하였습니다.");
 								// ===============================================================
 								ParticleData pd = new ParticleData(player.getUniqueId());
 								if (pd.hasID()) {
@@ -451,8 +457,6 @@ public class PlayerHitDebuff {
 										((Player) p).damage(300);
 									}
 								}
-								player.sendMessage(ChatColor.RED + "지배자가 심판I을 사용하였습니다.");
-								sendMessage(player, ChatColor.RED + "지배자가 심판I을 사용하였습니다.");
 								
 								td.endTask();
 								td.removeID();
@@ -504,6 +508,8 @@ public class PlayerHitDebuff {
 					player.sendMessage(ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
 					sendMessage(player, ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
 					
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true, false, false));
+					
 					ArrayList<FallingBlock> ary = new ArrayList<>();
 					Location loc = mob.getLocation();
 					for(int x = -20 ; x < 21 ; x++) {
@@ -535,6 +541,8 @@ public class PlayerHitDebuff {
 							}
 							
 							if (time >= 40) {
+								player.sendMessage(ChatColor.RED + "지배자가 심판II을 사용하였습니다.");
+								sendMessage(player, ChatColor.RED + "지배자가 심판II을 사용하였습니다.");
 								// ===============================================================
 								ParticleData pd = new ParticleData(player.getUniqueId());
 								if (pd.hasID()) {
@@ -553,8 +561,6 @@ public class PlayerHitDebuff {
 										((Player) p).damage(400);
 									} 
 								}
-								player.sendMessage(ChatColor.RED + "지배자가 심판II을 사용하였습니다.");
-								sendMessage(player, ChatColor.RED + "지배자가 심판II을 사용하였습니다.");
 								
 								td.endTask();
 								td.removeID();
@@ -654,25 +660,28 @@ public class PlayerHitDebuff {
 			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
 				int num = rnd.nextInt(12);
 				if (num == 0) {
-					player.teleport(mob.getLocation());
-					player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 100, 100, true, false, false));
-					player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 100, 200, true, false, false));
-					player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 100, 200, true, false, false));
-					player.setVelocity(player.getEyeLocation().getDirection().multiply(-10.0f));
-					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_NETHERRACK_STEP, 3.0f, 1.0f);
-					player.sendMessage(ChatColor.RED + "지배자가 당신을 밀어냅니다.");
+					player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 100, 200, true, false, false));
+					player.getWorld().playSound(player.getLocation(), Sound.AMBIENT_CAVE, 3.0f, 1.0f);
+					player.sendMessage(ChatColor.RED + "어둠의 기운이 덮칩니다.");
 					((Skeleton) mob).setTarget(player);
+					player.getWorld().spawnEntity(mob.getLocation(), EntityType.ENDERMITE);
+					player.getWorld().spawnEntity(mob.getLocation(), EntityType.ENDERMITE);
+					player.getWorld().spawnEntity(mob.getLocation(), EntityType.ENDERMITE);
+					player.getWorld().spawnEntity(mob.getLocation(), EntityType.ENDERMITE);
+					player.getWorld().spawnEntity(mob.getLocation(), EntityType.ENDERMITE);
 				}
 				if (num == 1) {
 					
-					player.sendMessage(ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
-					sendMessage(player, ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
+					player.sendMessage(ChatColor.RED + "멸망의 주문이 들려옵니다.");
+					sendMessage(player, ChatColor.RED + "멸망의 주문이 들려옵니다.");
+					
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 210, 200, true, false, false));
 					
 					ArrayList<FallingBlock> ary = new ArrayList<>();
 					Location loc = mob.getLocation();
-					for(int x = -20 ; x < 21 ; x++) {
+					for(int x = -25 ; x < 26 ; x++) {
 						for(int y = -1 ; y < 0 ; y++) {
-							for(int z = -20 ; z < 21 ; z++) {
+							for(int z = -25 ; z < 26 ; z++) {
 								Location loc2 = loc.clone().add(new Vector(x,y+0.05,z));
 								if(loc2.getBlock().getType() != Material.AIR) {
 									FallingBlock fb = (FallingBlock) mob.getWorld().spawnFallingBlock(loc2, Material.RED_WOOL, (byte)0);
@@ -698,7 +707,9 @@ public class PlayerHitDebuff {
 								td.setID(taskID);
 							}
 							
-							if (time >= 40) {
+							if (time >= 200) {
+								player.sendMessage(ChatColor.RED + "멸망의 주문이 발동되었습니다.");
+								sendMessage(player, ChatColor.RED + "멸망의 주문이 발동되었습니다.");
 								// ===============================================================
 								ParticleData pd = new ParticleData(player.getUniqueId());
 								if (pd.hasID()) {
@@ -706,19 +717,21 @@ public class PlayerHitDebuff {
 									pd.removeID();
 								}
 								ParticleEffect pe = new ParticleEffect(player, mob);
-								pe.startE33();
+								pe.startE34();
 								// ================================================================
 								for(FallingBlock fb : ary2) {
 									fb.remove();
 								}
-								List<Entity> nearPlayer = mob.getNearbyEntities(20, 10, 20);
+								List<Entity> nearPlayer = mob.getNearbyEntities(25, 10, 25);
 								for (Entity p : nearPlayer) {
 									if (p instanceof Player) {
 										((Player) p).damage(300);
+										QuestBoard cb = new QuestBoard();
+										if (cb.getQuestName((Player) p).equals(ChatColor.LIGHT_PURPLE + "===이것이 포보르 왕?===")) {
+											((Player) p).damage(999999);
+										}
 									}
 								}
-								player.sendMessage(ChatColor.RED + "지배자가 심판I을 사용하였습니다.");
-								sendMessage(player, ChatColor.RED + "지배자가 심판I을 사용하였습니다.");
 								
 								td.endTask();
 								td.removeID();
@@ -732,21 +745,10 @@ public class PlayerHitDebuff {
 					
 				}
 			} else {
-				int num = rnd.nextInt(12);
+				int num = rnd.nextInt(10);
 				if (num == 0) {
-					// ===============================================================
-					ParticleData pd = new ParticleData(player.getUniqueId());
-					if (pd.hasID()) {
-						pd.endTask();
-						pd.removeID();
-					}
-					ParticleEffect pe = new ParticleEffect(player, mob);
-					pe.startE32();
-					// ================================================================
-					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 200, true, false, false));
-					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, 100, 0, true, false, false));
-					player.sendMessage(ChatColor.RED + "탑의 저주로 지배자가 강화됩니다.");
-					sendMessage(player, ChatColor.RED + "탑의 저주로 지배자가 강화됩니다.");
+					Vector vec = player.getEyeLocation().getDirection().multiply(1.5f);
+					mob.setVelocity(vec);
 					((Skeleton) mob).setTarget(player);
 				}
 			}

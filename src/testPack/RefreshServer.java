@@ -54,6 +54,12 @@ public class RefreshServer {
 							String num = str.split("]")[0];
 							if(num.equals("??")) {
 								LivingEntity mob = (LivingEntity) ent; 
+								if(mob.getHealth() < 0) {
+									mob.remove();
+								} 
+								if(mob.getHealth() + (mob.getMaxHealth() / 200.0) <= mob.getMaxHealth()) {
+									mob.setHealth(mob.getHealth() + (mob.getMaxHealth() / 200.0));
+								}
 								continue;
 							}
 						} catch(Exception e) {

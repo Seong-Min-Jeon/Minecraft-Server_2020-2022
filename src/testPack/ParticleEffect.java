@@ -1067,8 +1067,6 @@ public class ParticleEffect {
 	public void startE28() {
 		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
-			final int points = 30;
-			final double radius = 1.2d;
 			int time = 0;
 			double var = 0;
 			Location loc, first, second;
@@ -1286,4 +1284,43 @@ public class ParticleEffect {
 		}, 0, 1);
 	}
 
+	// ÄÚ³¶±×
+	public void startE34() {
+		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+			int time = 0;
+			double var = 0;
+			Location loc, first, second, first2, second2;
+			ParticleData pd = new ParticleData(player.getUniqueId());
+
+			@Override
+			public void run() {
+				if (!pd.hasID()) {
+					pd.setID(taskID);
+				}
+
+				if (time >= 10) {
+					pd.endTask();
+					pd.removeID();
+				}
+
+				time++;
+				var += Math.PI / 8;
+
+				loc = ent.getLocation();
+
+				first = loc.clone().add(Math.cos(var) * 3, 1, Math.sin(var) * 3);
+				second = loc.clone().add(Math.cos(var) * 3, 1, Math.sin(var) * -3);
+				first2 = loc.clone().add(Math.cos(var) * -3, 1, Math.sin(var) * 3);
+				second2 = loc.clone().add(Math.cos(var) * -3, 1, Math.sin(var) * -3);
+
+				player.getWorld().spawnParticle(Particle.SOUL_FIRE_FLAME, first, 10);
+				player.getWorld().spawnParticle(Particle.SOUL_FIRE_FLAME, second, 10);
+				player.getWorld().spawnParticle(Particle.SOUL_FIRE_FLAME, first2, 10);
+				player.getWorld().spawnParticle(Particle.SOUL_FIRE_FLAME, second2, 10);
+
+			}
+		}, 0, 1);
+	}
+	
 }

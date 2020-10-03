@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
+import org.bukkit.Sound;
 import org.bukkit.block.Block;
 import org.bukkit.block.Chest;
 import org.bukkit.craftbukkit.v1_16_R1.CraftWorld;
@@ -35,6 +36,7 @@ public class MoveEvent {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS,40,1,true,false,false));
 			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION,40,1,true,false,false));
 			player.teleport(new Location(player.getWorld(), 48, 53, 676, 90, 0));
+			player.getWorld().playSound(player.getLocation(), Sound.AMBIENT_CAVE, 3.0f, 1.0f);
 			player.sendMessage(ChatColor.RED + "∏‘¿’∞®¿Ã ¡¶πﬂ∑Œ ø‘±∫.");
 			
 			int num = 0;
@@ -66,7 +68,6 @@ public class MoveEvent {
 				}
 			}
 
-//			loc.getWorld().spawnEntity(new Location(player.getWorld(), 25, 54, 675), EntityType.SKELETON);
 			CustomSkeleton2 cs = new CustomSkeleton2(new Location(player.getWorld(), 25, 54, 675));
 			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
 			world.addEntity(cs);

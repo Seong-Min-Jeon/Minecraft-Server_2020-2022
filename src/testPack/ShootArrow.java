@@ -84,8 +84,8 @@ public class ShootArrow {
 	}
 	
 	public boolean arrow2(Arrow arrow, Location loc) {
-		// ¹Ì±Ãº¸½º 48 61 654  16 51 696
-		if (loc.getX() <= 48 && loc.getY() <= 61 && loc.getZ() <= 696 
+		// ¹Ì±Ãº¸½º 49 61 654  16 51 696
+		if (loc.getX() <= 49 && loc.getY() <= 61 && loc.getZ() <= 696 
 				&& loc.getX() >= 16 && loc.getY() >= 51 && loc.getZ() >= 654) {
 			if(arrow.getPassenger() != null) {
 				arrow.removePassenger(arrow.getPassenger());

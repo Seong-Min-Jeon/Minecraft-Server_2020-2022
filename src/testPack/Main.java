@@ -1621,6 +1621,13 @@ public class Main extends JavaPlugin implements Listener{
 			if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===마신왕의 계약3===")) {
 				int qNum = cb.getNum(player);
 				cb.eq2_2(player, qNum + 1);
+			} else if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===이것이 포보르 왕?===")) {
+				Location loc = player.getLocation();
+				if (loc.getX() <= 49 && loc.getY() <= 61 && loc.getZ() <= 696 
+						&& loc.getX() >= 16 && loc.getY() >= 51 && loc.getZ() >= 654) {
+					int qNum = cb.getNum(player);
+					cb.mq36(player, qNum + 1);
+				}
 			}
 		} catch(Exception e) {
 			
@@ -3485,7 +3492,7 @@ public class Main extends JavaPlugin implements Listener{
 						new BossHealth().getBar1().removePlayer(p);
 					}
 				} else {
-					new BossHealth().getBar1().setProgress(boss.getHealth() / 700000.0);
+					new BossHealth().getBar1().setProgress(boss.getHealth() / 500000.0);
 				}
 			}
 		}
