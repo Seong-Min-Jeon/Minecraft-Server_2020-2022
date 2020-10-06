@@ -214,7 +214,7 @@ public class PlayerHitDebuff {
 					for(int x = -8 ; x < 9 ; x++) {
 						for(int y = -1 ; y < 0 ; y++) {
 							for(int z = -8 ; z < 9 ; z++) {
-								Location loc2 = loc.clone().add(new Vector(x,y+0.05,z));
+								Location loc2 = loc.clone().add(new Vector(x,y+0.1,z));
 								if(loc2.getBlock().getType() != Material.AIR) {
 									FallingBlock fb = (FallingBlock) mob.getWorld().spawnFallingBlock(loc2, Material.RED_WOOL, (byte)0);
 									fb.setVelocity(new Vector(0,0,0));
@@ -411,7 +411,7 @@ public class PlayerHitDebuff {
 					for(int x = -20 ; x < 21 ; x++) {
 						for(int y = -1 ; y < 0 ; y++) {
 							for(int z = -20 ; z < 21 ; z++) {
-								Location loc2 = loc.clone().add(new Vector(x,y+0.05,z));
+								Location loc2 = loc.clone().add(new Vector(x,y+0.1,z));
 								if(loc2.getBlock().getType() != Material.AIR) {
 									FallingBlock fb = (FallingBlock) mob.getWorld().spawnFallingBlock(loc2, Material.RED_WOOL, (byte)0);
 									fb.setVelocity(new Vector(0,0,0));
@@ -515,7 +515,7 @@ public class PlayerHitDebuff {
 					for(int x = -20 ; x < 21 ; x++) {
 						for(int y = -1 ; y < 0 ; y++) {
 							for(int z = -20 ; z < 21 ; z++) {
-								Location loc2 = loc.clone().add(new Vector(x,y+0.05,z));
+								Location loc2 = loc.clone().add(new Vector(x,y+0.1,z));
 								if(loc2.getBlock().getType() != Material.AIR) {
 									FallingBlock fb = (FallingBlock) mob.getWorld().spawnFallingBlock(loc2, Material.RED_WOOL, (byte)0);
 									fb.setVelocity(new Vector(0,0,0));
@@ -682,7 +682,7 @@ public class PlayerHitDebuff {
 					for(int x = -25 ; x < 26 ; x++) {
 						for(int y = -1 ; y < 0 ; y++) {
 							for(int z = -25 ; z < 26 ; z++) {
-								Location loc2 = loc.clone().add(new Vector(x,y+0.05,z));
+								Location loc2 = loc.clone().add(new Vector(x,y+0.1,z));
 								if(loc2.getBlock().getType() != Material.AIR) {
 									FallingBlock fb = (FallingBlock) mob.getWorld().spawnFallingBlock(loc2, Material.RED_WOOL, (byte)0);
 									fb.setVelocity(new Vector(0,0,0));
@@ -725,11 +725,12 @@ public class PlayerHitDebuff {
 								List<Entity> nearPlayer = mob.getNearbyEntities(25, 10, 25);
 								for (Entity p : nearPlayer) {
 									if (p instanceof Player) {
-										((Player) p).damage(300);
+										p.getWorld().playEffect(p.getLocation(), Effect.END_GATEWAY_SPAWN, 2);
 										QuestBoard cb = new QuestBoard();
 										if (cb.getQuestName((Player) p).equals(ChatColor.LIGHT_PURPLE + "===이것이 포보르 왕?===")) {
 											((Player) p).damage(999999);
 										}
+										((Player) p).damage(5000);
 									}
 								}
 								
@@ -747,9 +748,10 @@ public class PlayerHitDebuff {
 			} else {
 				int num = rnd.nextInt(10);
 				if (num == 0) {
-					Vector vec = player.getEyeLocation().getDirection().multiply(1.5f);
+					Vector vec = ((LivingEntity) mob).getEyeLocation().getDirection().multiply(5.0f);
 					mob.setVelocity(vec);
 					((Skeleton) mob).setTarget(player);
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 3.0f, 1.0f);
 				}
 			}
 		}

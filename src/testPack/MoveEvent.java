@@ -28,16 +28,18 @@ public class MoveEvent {
 		loc = player.getLocation();
 		
 		move1(player);
+		move2(player);
 	}
 	
 	public void move1(Player player) {
+		// πÃ±√ ¥¯¿¸
 		if(loc.getX() <= 51 && loc.getY() <= 54 && loc.getZ() <= 677 &&
 				loc.getX() >= 49 && loc.getY() >= 52 && loc.getZ() >= 675) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS,40,1,true,false,false));
 			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION,40,1,true,false,false));
 			player.teleport(new Location(player.getWorld(), 48, 53, 676, 90, 0));
 			player.getWorld().playSound(player.getLocation(), Sound.AMBIENT_CAVE, 3.0f, 1.0f);
-			player.sendMessage(ChatColor.RED + "∏‘¿’∞®¿Ã ¡¶πﬂ∑Œ ø‘±∫.");
+			player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "∏‘¿’∞®¿Ã ¡¶πﬂ∑Œ ø‘±∫.");
 			
 			int num = 0;
 			List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
@@ -75,6 +77,17 @@ public class MoveEvent {
 			new BossHealth().getBar1().setProgress(1.0);
 			new BossHealth().getBar1().addPlayer(player);
 			
+		}
+	}
+	
+	public void move2(Player player) {
+		// 27 61 697  29 65 698
+		if(loc.getX() <= 29 && loc.getY() <= 65 && loc.getZ() <= 698 &&
+				loc.getX() >= 27 && loc.getY() >= 61 && loc.getZ() >= 697) {
+			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS,40,1,true,false,false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION,40,1,true,false,false));
+			player.teleport(new Location(player.getWorld(), 221, 81, 725, 90, 0));
+			player.getWorld().playSound(player.getLocation(), Sound.AMBIENT_CAVE, 3.0f, 1.0f);
 		}
 	}
 	

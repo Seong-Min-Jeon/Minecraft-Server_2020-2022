@@ -1,6 +1,5 @@
 package testPack;
 
-import java.util.List;
 import java.util.Random;
 
 import org.bukkit.Bukkit;
@@ -11,15 +10,11 @@ import org.bukkit.block.Chest;
 import org.bukkit.craftbukkit.v1_16_R1.CraftWorld;
 import org.bukkit.entity.Blaze;
 import org.bukkit.entity.CaveSpider;
-import org.bukkit.entity.Drowned;
 import org.bukkit.entity.Enderman;
-import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Evoker;
 import org.bukkit.entity.Husk;
-import org.bukkit.entity.IronGolem;
 import org.bukkit.entity.Player;
-import org.bukkit.entity.PolarBear;
 import org.bukkit.entity.Ravager;
 import org.bukkit.entity.Silverfish;
 import org.bukkit.entity.Skeleton;
@@ -30,10 +25,7 @@ import org.bukkit.entity.Vex;
 import org.bukkit.entity.Vindicator;
 import org.bukkit.entity.Witch;
 import org.bukkit.entity.WitherSkeleton;
-import org.bukkit.entity.Zoglin;
 import org.bukkit.entity.Zombie;
-import org.bukkit.entity.PigZombie;
-import org.bukkit.entity.Piglin;
 import org.bukkit.inventory.EntityEquipment;
 import org.bukkit.inventory.ItemStack;
 
@@ -287,6 +279,15 @@ public class MobThread {
 						} else if(loc.getX() <= 96 && loc.getY() <= 62 && loc.getZ() <= 695 
 								&& loc.getX() >= 50 && loc.getY() >= 53 && loc.getZ() >= 615) {
 							darkMaze(player, loc);
+						} else if(loc.getX() <= 625 && loc.getY() <= 200 && loc.getZ() <= 887 && 
+								loc.getX() >= 493 && loc.getY() >= 40 && loc.getZ() >= 389) {
+							castleWest(player, loc);
+						} else if(loc.getX() <= 810 && loc.getY() <= 150 && loc.getZ() <= 891 && 
+								loc.getX() >= 627 && loc.getY() >= 45 && loc.getZ() >= 661) {
+							castleSouth(player, loc);
+						} else if(loc.getX() <= 967 && loc.getY() <= 150 && loc.getZ() <= 656 && 
+								loc.getX() >= 758 && loc.getY() >= 45 && loc.getZ() >= 620) {
+							castleSouthEast(player, loc);
 						}
 					} 
 					
@@ -1706,6 +1707,53 @@ public class MobThread {
 			loc.getWorld().spawnEntity(loc, EntityType.ENDERMITE);
 		} else if (num == 1) {
 			loc.getWorld().spawnEntity(loc, EntityType.HUSK);
+		}
+	}
+	
+	public void castleWest(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 625 && loc.getY() <= 200 && loc.getZ() <= 887 && 
+				loc.getX() >= 493 && loc.getY() >= 40 && loc.getZ() >= 389)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.SILVERFISH);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		}
+	}
+	
+	public void castleSouth(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 810 && loc.getY() <= 150 && loc.getZ() <= 891 && 
+				loc.getX() >= 627 && loc.getY() >= 45 && loc.getZ() >= 661)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
+		} else if (num == 1) {
+			CustomSkeleton2 cs = new CustomSkeleton2(loc);
+			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
+			world.addEntity(cs);
+		}
+	}
+	
+	public void castleSouthEast(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 967 && loc.getY() <= 150 && loc.getZ() <= 656 && 
+				loc.getX() >= 758 && loc.getY() >= 45 && loc.getZ() >= 620)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.RAVAGER);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.CREEPER);
 		}
 	}
 	

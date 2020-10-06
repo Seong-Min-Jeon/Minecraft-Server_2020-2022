@@ -151,6 +151,11 @@ public class LootChest {
 //					tower1(player);
 //				}				
 //			}
+			if(block.getX()==28 && block.getY()==62 && block.getZ()==689) {
+				if(removeKey(player, "미궁 보상 열쇠")) {
+					dungeon7(player);
+				}				
+			}
 			
 		}
 	}
@@ -1482,6 +1487,165 @@ public class LootChest {
 		if(num5==0) {
 			idx = rnd.nextInt(9);
 			inv.setItem(idx, var5);
+		}
+		player.openInventory(inv);	
+	}
+	
+	public void dungeon7(Player player) {
+		Inventory inv = Bukkit.createInventory(player, 9, "Dungeon Reward");
+		int idx;
+		int num1 = rnd.nextInt(100); // 해골 지팡이
+		int num2 = rnd.nextInt(30); // 세트
+		int num3 = rnd.nextInt(30); // 세트
+		int num4 = rnd.nextInt(30); // 세트
+		int num5 = rnd.nextInt(30);	// 세트
+		int num6 = rnd.nextInt(10);	// 광석1
+		int num7 = rnd.nextInt(10); // 광석2  
+		int num8 = rnd.nextInt(10);	// 광석3
+		int num9 = rnd.nextInt(10);	// 광석4
+		int num10 = rnd.nextInt(20) + 30;
+		
+		ItemStack var1 = new ItemStack(Material.MUSIC_DISC_CAT);
+		ItemMeta var1Im = var1.getItemMeta();
+		var1Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,350");
+		var1Im.setDisplayName(ChatColor.AQUA + "죽음의 서약");
+		ArrayList<String> var1Lore = new ArrayList();
+		var1Lore.add(ChatColor.GRAY + "레벨 제한: 350");
+		var1Lore.add(ChatColor.GRAY + " ");
+		var1Lore.add(ChatColor.GRAY + "기분나쁜 마나가 느껴지는 스태프");
+		var1Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		var1Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		var1Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var1Im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
+		var1Im.setUnbreakable(true);
+		var1Im.setLore(var1Lore);
+		var1.setItemMeta(var1Im);
+		
+		ItemStack var2 = new ItemStack(Material.IRON_HELMET);
+		ItemMeta var2Im = var2.getItemMeta();
+		var2Im.setLocalizedName("0,0,0,0,0,800,500,500,500,0,350");
+		var2Im.setDisplayName(ChatColor.GREEN + "법술 -「유」");
+		ArrayList<String> var2Lore = new ArrayList();
+		var2Lore.add(ChatColor.GRAY + "레벨 제한: 350");
+		var2Lore.add(ChatColor.GRAY + " ");
+		var2Lore.add(ChatColor.GRAY + "마법으로 구현된 헬멧");
+		var2Lore.add(ChatColor.GRAY + "(세트 아이템)");
+		var2Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		var2Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		var2Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var2Im.setUnbreakable(true);
+		var2Im.setLore(var2Lore);
+		var2.setItemMeta(var2Im);
+
+		ItemStack var3 = new ItemStack(Material.IRON_CHESTPLATE);
+		ItemMeta var3Im = var3.getItemMeta();
+		var3Im.setLocalizedName("0,0,0,0,0,800,500,500,500,0,350");
+		var3Im.setDisplayName(ChatColor.GREEN + "법술 -「메」");
+		ArrayList<String> var3Lore = new ArrayList();
+		var3Lore.add(ChatColor.GRAY + "레벨 제한: 350");
+		var3Lore.add(ChatColor.GRAY + " ");
+		var3Lore.add(ChatColor.GRAY + "마법으로 구현된 갑옷");
+		var3Lore.add(ChatColor.GRAY + "(세트 아이템)");
+		var3Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		var3Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		var3Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var3Im.setUnbreakable(true);
+		var3Im.setLore(var3Lore);
+		var3.setItemMeta(var3Im);
+
+		ItemStack var4 = new ItemStack(Material.IRON_LEGGINGS);
+		ItemMeta var4Im = var4.getItemMeta();
+		var4Im.setLocalizedName("0,0,0,0,0,800,500,500,500,0,350");
+		var4Im.setDisplayName(ChatColor.GREEN + "법술 -「하」");
+		ArrayList<String> var4Lore = new ArrayList();
+		var4Lore.add(ChatColor.GRAY + "레벨 제한: 350");
+		var4Lore.add(ChatColor.GRAY + " ");
+		var4Lore.add(ChatColor.GRAY + "마법으로 구현된 각반");
+		var4Lore.add(ChatColor.GRAY + "(세트 아이템)");
+		var4Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		var4Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		var4Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var4Im.setUnbreakable(true);
+		var4Im.setLore(var4Lore);
+		var4.setItemMeta(var4Im);
+
+		ItemStack var5 = new ItemStack(Material.IRON_BOOTS);
+		ItemMeta var5Im = var5.getItemMeta();
+		var5Im.setLocalizedName("0,0,0,0,0,800,500,500,500,0,350");
+		var5Im.setDisplayName(ChatColor.GREEN + "법술 -「마」");
+		ArrayList<String> var5Lore = new ArrayList();
+		var5Lore.add(ChatColor.GRAY + "레벨 제한: 350");
+		var5Lore.add(ChatColor.GRAY + " ");
+		var5Lore.add(ChatColor.GRAY + "마법으로 구현된 신발");
+		var5Lore.add(ChatColor.GRAY + "(세트 아이템)");
+		var5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		var5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		var5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var5Im.setUnbreakable(true);
+		var5Im.setLore(var5Lore);
+		var5.setItemMeta(var5Im);
+		
+		ItemStack var6 = new ItemStack(Material.IRON_ORE);
+		ItemMeta var6Im = var6.getItemMeta();
+		var6Im.setDisplayName(ChatColor.YELLOW + "철광석");
+		var6.setItemMeta(var6Im);
+		
+		ItemStack var7 = new ItemStack(Material.COAL_ORE);
+		ItemMeta var7Im = var7.getItemMeta();
+		var7Im.setDisplayName(ChatColor.YELLOW + "깨끗한 석탄 광석");
+		var7.setItemMeta(var7Im);
+		
+		ItemStack var8 = new ItemStack(Material.GOLD_ORE);
+		ItemMeta var8Im = var8.getItemMeta();
+		var8Im.setDisplayName(ChatColor.YELLOW + "가치가 떨어진 금광석");
+		var8.setItemMeta(var8Im);
+		
+		ItemStack var9 = new ItemStack(Material.GOLD_ORE);
+		ItemMeta var9Im = var9.getItemMeta();
+		var9Im.setDisplayName(ChatColor.YELLOW + "가치가 떨어진 금광석");
+		var9.setItemMeta(var9Im);
+		
+		ItemStack emerald = new ItemStack(Material.SCUTE, num10);
+		ItemMeta im = emerald.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		emerald.setItemMeta(im);
+		inv.setItem(0, emerald);
+		
+		if(num1==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, var1);
+		}
+		if(num2==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, var2);
+		}
+		if(num3==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, var3);
+		}
+		if(num4==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, var4);
+		}
+		if(num5==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, var5);
+		}
+		if(num6==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, var6);
+		}
+		if(num7==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, var7);
+		}
+		if(num8==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, var8);
+		}
+		if(num9==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, var9);
 		}
 		player.openInventory(inv);	
 	}

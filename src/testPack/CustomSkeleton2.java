@@ -36,7 +36,7 @@ public class CustomSkeleton2 extends EntitySkeleton{
 		this.goalSelector.a(5, new PathfinderGoalMoveTowardsRestriction(this, 0.2D));
 		this.goalSelector.a(1, new PathfinderGoalRandomStroll(this, 1.0D));
 		this.goalSelector.a(8, new PathfinderGoalRandomLookaround(this));
-		this.goalSelector.a(8, new PathfinderGoalLookAtPlayer(this, EntityHuman.class, 100.0F));
+		this.goalSelector.a(8, new PathfinderGoalLookAtPlayer(this, EntityHuman.class, 8.0F));
 		this.goalSelector.a(2, new PathfinderGoalArrowAttack(this, 1.0D, 40, 20, 15.0F)); //none, 최대 범위에서 공격 당 틱, 공격 당 최소 틱, 최대범위 
 		this.goalSelector.a(10, new PathfinderGoalMoveTowardsTarget(this, 30.0D, 25.0F));
 

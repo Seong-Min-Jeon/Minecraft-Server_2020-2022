@@ -3216,30 +3216,150 @@ public class MobLoot {
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 5000000);
+		
+		ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
+		ItemMeta rewardKeyIm = rewardKey.getItemMeta();
+		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "미궁 보상 열쇠");
+		rewardKey.setItemMeta(rewardKeyIm);
+		player.getInventory().addItem(rewardKey);
+		player.sendMessage(ChatColor.YELLOW + "미궁 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+
+		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
+		for (Entity nearEntity : entitylist) {
+			if (nearEntity.getType() == EntityType.PLAYER) {
+				Player nearPlayer = (Player) nearEntity;
+				Location loc = nearPlayer.getLocation();
+				// 49 61 654  16 51 696 
+				if (loc.getX() <= 49 && loc.getY() <= 61 && loc.getZ() <= 696 
+						&& loc.getX() >= 16 && loc.getY() >= 51 && loc.getZ() >= 654) {
+					nearPlayer.getInventory().addItem(rewardKey);
+					nearPlayer.sendMessage(ChatColor.YELLOW + "미궁 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					nearPlayer.teleport(new Location(nearPlayer.getWorld(), 28.5, 63, 681));
+				}
+			}
+		}
+		player.teleport(new Location(player.getWorld(), 28.5, 63, 681));
+		
 	}
 	
+	// 요정의 파편
 	public void mob142(Player player) {
-
+		int num = rnd.nextInt(4) + 2;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 861234);
 	}
 	
+	// 초마도용기사
 	public void mob143(Player player) {
-
+		int num = rnd.nextInt(4) + 2;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 888888);
 	}
 	
+	// 떠도는 망령 전사
 	public void mob144(Player player) {
-
+		int num = rnd.nextInt(3) + 3;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 895000);
+		
+		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
+		ItemMeta var1im = var1.getItemMeta();
+		var1im.setDisplayName(ChatColor.YELLOW + "상급 포보르의 피");
+		var1.setItemMeta(var1im);
+		
+		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
+		ItemMeta var2im = var2.getItemMeta();
+		var2im.setDisplayName(ChatColor.YELLOW + "상급 포보르의 쓸개");
+		var2.setItemMeta(var2im);
+		
+		ItemStack var3 = new ItemStack(Material.CRACKED_POLISHED_BLACKSTONE_BRICKS);
+		ItemMeta var3im = var3.getItemMeta();
+		var3im.setDisplayName(ChatColor.YELLOW + "상급 포보르의 살점");
+		var3.setItemMeta(var3im);
+		
+		int tmp = rnd.nextInt(10);
+		if(tmp == 0) {
+			player.getInventory().addItem(var1);
+			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.YELLOW + "를 획득했다.");
+		} else if(tmp == 1) {
+			player.getInventory().addItem(var2);
+			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.YELLOW + "를 획득했다.");
+		} else if(tmp == 2) {
+			player.getInventory().addItem(var3);
+			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 살점" + ChatColor.YELLOW + "을 획득했다.");
+		}
 	}
 	
+	// 떠도는 망령 마법사
 	public void mob145(Player player) {
-
+		int num = rnd.nextInt(3) + 3;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 916000);
+		
+		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
+		ItemMeta var1im = var1.getItemMeta();
+		var1im.setDisplayName(ChatColor.YELLOW + "상급 포보르의 피");
+		var1.setItemMeta(var1im);
+		
+		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
+		ItemMeta var2im = var2.getItemMeta();
+		var2im.setDisplayName(ChatColor.YELLOW + "상급 포보르의 쓸개");
+		var2.setItemMeta(var2im);
+		
+		ItemStack var3 = new ItemStack(Material.CRACKED_POLISHED_BLACKSTONE_BRICKS);
+		ItemMeta var3im = var3.getItemMeta();
+		var3im.setDisplayName(ChatColor.YELLOW + "상급 포보르의 살점");
+		var3.setItemMeta(var3im);
+		
+		int tmp = rnd.nextInt(10);
+		if(tmp == 0) {
+			player.getInventory().addItem(var1);
+			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.YELLOW + "를 획득했다.");
+		} else if(tmp == 1) {
+			player.getInventory().addItem(var2);
+			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.YELLOW + "를 획득했다.");
+		} else if(tmp == 2) {
+			player.getInventory().addItem(var3);
+			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 살점" + ChatColor.YELLOW + "을 획득했다.");
+		}
 	}
 	
+	// 그리즐리 베어
 	public void mob146(Player player) {
-
+		int num = rnd.nextInt(3) + 4;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 951200);
 	}
 	
+	// 에밀
 	public void mob147(Player player) {
-
+		int num = rnd.nextInt(3) + 4;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1444444);
 	}
 	
 	public void mob148(Player player) {
@@ -3250,4 +3370,35 @@ public class MobLoot {
 
 	}
 	
+	public void mob150(Player player) {
+
+	}
+	
+	public void mob151(Player player) {
+
+	}
+	
+	public void mob152(Player player) {
+
+	}
+	
+	public void mob153(Player player) {
+
+	}
+	
+	public void mob154(Player player) {
+
+	}
+	
+	public void mob155(Player player) {
+
+	}
+	
+	public void mob156(Player player) {
+
+	}
+	
+	public void mob157(Player player) {
+
+	}
 }

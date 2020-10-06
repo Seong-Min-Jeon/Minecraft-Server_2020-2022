@@ -50,10 +50,12 @@ import org.bukkit.entity.Mob;
 import org.bukkit.entity.Pig;
 import org.bukkit.entity.Piglin;
 import org.bukkit.entity.Player;
+import org.bukkit.entity.PolarBear;
 import org.bukkit.entity.Sheep;
 import org.bukkit.entity.Skeleton;
 import org.bukkit.entity.SmallFireball;
 import org.bukkit.entity.Snowball;
+import org.bukkit.entity.SpectralArrow;
 import org.bukkit.entity.Spider;
 import org.bukkit.entity.Villager;
 import org.bukkit.entity.Wolf;
@@ -242,19 +244,23 @@ public class Main extends JavaPlugin implements Listener{
 	public void onPlayerJoin(PlayerJoinEvent event) {
 		Player player = event.getPlayer(); 
 
+//		if(player.getDisplayName().equalsIgnoreCase("_nanoboost_")) { 
+//			System.out.println(player.getLocation().toString());
+//			player.teleport(new Location(world,-478,55,1302));
+//		}
+		
 		//리소스팩 적용
 		if(player.getDisplayName().equalsIgnoreCase("woolring")) { 
 			
 		} else {
-//			player.setResourcePack("https://cdn.discordapp.com/attachments/698152850349490176/759643644381626388/tutorial_resource_pack_40.zip");
-			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/761486039536762890/tutorial_resource_pack_42.zip");
+			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/762220131073130536/tutorial_resource_pack_43.zip");
 		}
 		
 		//Message
 		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.DARK_RED + "'더 게임 종결자' 유메하마.");
 		} else if(player.getDisplayName().equalsIgnoreCase("WoolRing")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.GREEN + "'도트 갤러리 눈팅러' 울링.");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.GREEN + "'도트랑 도트가 제일 좋아' 울링.");
 		} else if(player.getDisplayName().equalsIgnoreCase("_nanoboost_")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.RED + "'0렙부터 고인물' 나노부스트.");
 		} else if(player.getDisplayName().equalsIgnoreCase("why9196")) {
@@ -2257,6 +2263,15 @@ public class Main extends JavaPlugin implements Listener{
 		} catch(Exception e) {
 			
 		}
+		// SpectralArrow hit
+		try {
+			if (event.getDamager() instanceof SpectralArrow) {
+				event.setCancelled(true);
+				return;
+			}
+		} catch (Exception e) {
+
+		}
 		//villager hit
 		try {
 			if (event.getDamager() instanceof Player) {
@@ -2286,6 +2301,59 @@ public class Main extends JavaPlugin implements Listener{
 			}
 		} catch(Exception e) {
 			
+		}
+		//polar bear target
+		try {
+			if (event.getEntity() instanceof PolarBear) {
+				if (event.getDamager() instanceof Player) {
+					Player player = (Player) event.getDamager();
+					((PolarBear) event.getEntity()).setTarget(player);
+					List<Entity> entitylist = event.getEntity().getNearbyEntities(30, 10, 30);
+					for (Entity nearEntity : entitylist) {
+						if (nearEntity instanceof PolarBear) {
+							((PolarBear) nearEntity).setTarget(player);
+						}
+					}
+				} else if(event.getDamager() instanceof Arrow) {
+					Arrow proj = (Arrow) event.getDamager();
+					if(proj.getShooter() instanceof Player) {
+						Player player = (Player) proj.getShooter();
+						((PolarBear) event.getEntity()).setTarget(player);
+						List<Entity> entitylist = event.getEntity().getNearbyEntities(30, 10, 30);
+						for (Entity nearEntity : entitylist) {
+							if (nearEntity instanceof PolarBear) {
+								((PolarBear) nearEntity).setTarget(player);
+							}
+						}
+					}
+				} else if(event.getDamager() instanceof SmallFireball) {
+					SmallFireball proj = (SmallFireball) event.getDamager();
+					if(proj.getShooter() instanceof Player) {
+						Player player = (Player) proj.getShooter();
+						((PolarBear) event.getEntity()).setTarget(player);
+						List<Entity> entitylist = event.getEntity().getNearbyEntities(30, 10, 30);
+						for (Entity nearEntity : entitylist) {
+							if (nearEntity instanceof PolarBear) {
+								((PolarBear) nearEntity).setTarget(player);
+							}
+						}
+					}
+				} else if(event.getDamager() instanceof Snowball) {
+					Snowball proj = (Snowball) event.getDamager();
+					if(proj.getShooter() instanceof Player) {
+						Player player = (Player) proj.getShooter();
+						((PolarBear) event.getEntity()).setTarget(player);
+						List<Entity> entitylist = event.getEntity().getNearbyEntities(30, 10, 30);
+						for (Entity nearEntity : entitylist) {
+							if (nearEntity instanceof PolarBear) {
+								((PolarBear) nearEntity).setTarget(player);
+							}
+						}
+					}
+				}
+			}
+		} catch (Exception e) {
+
 		}
 		//spider target
 		try {
@@ -2635,6 +2703,13 @@ public class Main extends JavaPlugin implements Listener{
 						skillMul = 20;
 					}
 					double damage = (lvl * jobMul * skillMul * weaponMul) + enchMul;
+					try {
+						if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "죽음의 서약")) {
+							damage = player.getLevel() * 50;
+						}
+					} catch(Exception e) {
+	
+					}
 					event.setDamage(damage);
 				}
 				
@@ -3480,23 +3555,26 @@ public class Main extends JavaPlugin implements Listener{
 		}
 		
 		// 보스바
-		if(!(event.getEntity() instanceof Player)) {
-			Entity mob = event.getEntity();
-			// 코낭그
-			if (mob.getCustomName().substring(2).equalsIgnoreCase("코낭그" + ChatColor.YELLOW + " [Lv.??]")) {
+		try {
+			if(!(event.getEntity() instanceof Player)) {
+				Entity mob = event.getEntity();
+				// 코낭그
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("코낭그" + ChatColor.YELLOW + " [Lv.??]")) {
 
-				LivingEntity boss = (LivingEntity) mob;
-				
-				if(boss.getHealth() <= 0) {
-					for(Player p : new BossHealth().getBar1().getPlayers()) {
-						new BossHealth().getBar1().removePlayer(p);
+					LivingEntity boss = (LivingEntity) mob;
+					
+					if(boss.getHealth() <= 0) {
+						for(Player p : new BossHealth().getBar1().getPlayers()) {
+							new BossHealth().getBar1().removePlayer(p);
+						}
+					} else {
+						new BossHealth().getBar1().setProgress(boss.getHealth() / 400000.0);
 					}
-				} else {
-					new BossHealth().getBar1().setProgress(boss.getHealth() / 500000.0);
 				}
 			}
+		} catch(Exception e) {
+			
 		}
-		
 		
 	}
 	
@@ -3788,6 +3866,7 @@ public class Main extends JavaPlugin implements Listener{
 		    			ArrowEffect ae = new ArrowEffect();
 		    			ae.useBow(player);
 		    			ae.useGun(player);
+		    			ae.useStaff(player);
 	    			}	    			
 	    		} catch(Exception e1) {
 	    			
@@ -4821,7 +4900,14 @@ public class Main extends JavaPlugin implements Listener{
 		if (player.getDisplayName().equalsIgnoreCase("yumehama")) {
 			event.setQuitMessage(ChatColor.DARK_RED + "'더 게임 종결자' 유메하마" + ChatColor.WHITE + "님이 로그아웃 하였습니다.");
 		} else if (player.getDisplayName().equalsIgnoreCase("WoolRing")) {
-			event.setQuitMessage(ChatColor.GREEN + "'그린 일렉트로닉 전사' 울링" + ChatColor.WHITE + "님이 EMP로 로그아웃 되었습니다.");
+			event.setQuitMessage(ChatColor.GREEN + "'그린 일렉트로닉 전사' 울링" + ChatColor.WHITE + "님이 정신나갈것같애정신나갈것같애"
+					+ "정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애"
+					+ "정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애"
+					+ "정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애"
+					+ "정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애"
+					+ "정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애"
+					+ "정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애"
+					+ "정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애정신나갈것같애");
 		} else if (player.getDisplayName().equalsIgnoreCase("_nanoboost_")) {
 			event.setQuitMessage(ChatColor.RED + "류크가 지쳐 잠에 들었습니다.");
 		} else if(player.getDisplayName().equalsIgnoreCase("why9196")) {

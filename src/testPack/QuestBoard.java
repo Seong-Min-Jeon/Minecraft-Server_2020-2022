@@ -1746,7 +1746,7 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 7000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "카타리나: 괜찮으세요?%카타리나: 아무리 불완전한 힘을 가지고 있어도 왕은 왕이군요..%카타리나: 그래도 좋은 전투 데이터를 얻었어요.%카타리나: 감사합니다.");
+			msg.msg(player, "카타리나: 괜찮으세요?%카타리나: 아무리 불완전한 힘을 가지고 있어도 왕은 왕이군요..%카타리나: 그래도 좋은 전투 데이터를 얻었어요.%카타리나: 감사합니다.%카라티나: 아! 참고로 미궁 끝에는 저희가 준비한 선물이 있어요.%카타리나: 기회가 된다면 끝까지 가봅시다!");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();

@@ -667,7 +667,30 @@ public class MobDeath {
 			if (name.equalsIgnoreCase("코낭그" + ChatColor.YELLOW + " [Lv.??]")) {
 				mobloot.mob141(lootPlayer);
 			}
-			
+			// 요정의 파편
+			if (name.equalsIgnoreCase("요정의 파편" + ChatColor.YELLOW + " [Lv.338]")) {
+				mobloot.mob142(lootPlayer);
+			}
+			// 초마도용기사
+			if (name.equalsIgnoreCase("초마도용기사" + ChatColor.YELLOW + " [Lv.342]")) {
+				mobloot.mob143(lootPlayer);
+			}
+			// 떠도는 망령 전사
+			if (name.equalsIgnoreCase("떠도는 망령 전사" + ChatColor.YELLOW + " [Lv.344]")) {
+				mobloot.mob144(lootPlayer);
+			}
+			// 떠도는 망령 마법사
+			if (name.equalsIgnoreCase("떠도는 망령 마법사" + ChatColor.YELLOW + " [Lv.349]")) {
+				mobloot.mob145(lootPlayer);
+			}
+			// 그리즐리 베어
+			if (name.equalsIgnoreCase("그리즐리 베어" + ChatColor.YELLOW + " [Lv.347]")) {
+				mobloot.mob146(lootPlayer);
+			}
+			// 에밀
+			if (name.equalsIgnoreCase("에밀" + ChatColor.YELLOW + " [Lv.350]")) {
+				mobloot.mob147(lootPlayer);
+			}
 			
 //================================================================================================================================
 			int cnt = 0;
