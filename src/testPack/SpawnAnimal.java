@@ -11,7 +11,7 @@ public class SpawnAnimal {
 
 	public boolean spawn(Entity animal) {
 		LivingEntity entity = (LivingEntity) animal;				
-		if(animal1(entity) && animal2(entity) && animal3(entity) && animal4(entity) && animal5(entity)) {
+		if(animal1(entity) && animal2(entity) && animal3(entity) && animal4(entity) && animal5(entity) && animal6(entity) && animal7(entity)) {
 			return true;
 		} 
 		return false;
@@ -111,6 +111,50 @@ public class SpawnAnimal {
 				&& entity.getLocation().getX()>=27 && entity.getLocation().getY()>=100 && entity.getLocation().getZ()>=-303) { 
 			if (entity.getType() == (EntityType) EntityType.PIG) {
 				entity.setCustomName(ChatColor.GREEN + "蹬瘤");
+				entity.setCustomNameVisible(true);
+				((LivingEntity) entity).setMaxHealth(99999);
+				((LivingEntity) entity).setHealth(99999);
+				entity.setNoDamageTicks(Integer.MAX_VALUE);
+				entity.setCollidable(false);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, Integer.MAX_VALUE, 32700));
+				return true;
+			} else if(entity.getType() == (EntityType) EntityType.IRON_GOLEM || entity.getType() == (EntityType) EntityType.SALMON) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	public boolean animal6(LivingEntity entity) {
+		//氛霸 家 868 58 479  914 65 562  
+		if(entity.getLocation().getX()<=914 && entity.getLocation().getY()<=65 && entity.getLocation().getZ()<=562
+				&& entity.getLocation().getX()>=868 && entity.getLocation().getY()>=58 && entity.getLocation().getZ()>=479) { 
+			if (entity.getType() == (EntityType) EntityType.COW) {
+				entity.setCustomName(ChatColor.GREEN + "家");
+				entity.setCustomNameVisible(true);
+				((LivingEntity) entity).setMaxHealth(99999);
+				((LivingEntity) entity).setHealth(99999);
+				entity.setNoDamageTicks(Integer.MAX_VALUE);
+				entity.setCollidable(false);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, Integer.MAX_VALUE, 32700));
+				return true;
+			} else if(entity.getType() == (EntityType) EntityType.IRON_GOLEM || entity.getType() == (EntityType) EntityType.SALMON) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	public boolean animal7(LivingEntity entity) {
+		//氛霸 家2 984 72 543  904 59 605
+		if(entity.getLocation().getX()<=984 && entity.getLocation().getY()<=72 && entity.getLocation().getZ()<=605
+				&& entity.getLocation().getX()>=904 && entity.getLocation().getY()>=59 && entity.getLocation().getZ()>=543) { 
+			if (entity.getType() == (EntityType) EntityType.COW) {
+				entity.setCustomName(ChatColor.GREEN + "家");
 				entity.setCustomNameVisible(true);
 				((LivingEntity) entity).setMaxHealth(99999);
 				((LivingEntity) entity).setHealth(99999);

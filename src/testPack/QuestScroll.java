@@ -35,6 +35,9 @@ public class QuestScroll {
 				q13(player, itemArg, world);
 				q14(player, itemArg, world);
 				q15(player, itemArg, world);
+				q16(player, itemArg, world);
+				q17(player, itemArg, world);
+				q18(player, itemArg, world);
 				eq1(player, itemArg, world);
 				eq2(player, itemArg, world);
 				mq1(player, itemArg, world);
@@ -209,6 +212,23 @@ public class QuestScroll {
 			msg.msg(player, "§7묘지기 몬스터들은 묘지를 지키는 습성이 있다.%§7하지만 그들은 자신들의 무덤을 이용해 모험가들을 혼란에 빠뜨리고 있다.");
 			QuestBoard qb = new QuestBoard();
 			qb.q16(player, 0);
+		}	
+	}
+	
+	public void q17(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "퀘스트: 폭탄병")) {
+			msg.msg(player, "TNTZ 터진다.%퍼퍼펖퍼ㅓㅍ퍼퍼퍼퍼퍼펑%§7...이라고 써있다.");
+			QuestBoard qb = new QuestBoard();
+			qb.q17(player, 0);
+		}	
+	}
+	
+	public void q18(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "퀘스트: 에밀의 결의")) {
+			msg.msg(player, "§7에밀은 원래 순수한 소년이었다.%§7하지만 포보르들이 나타난 이후, 에밀은 소중한 것을 지키기 위해%§7포보르와 싸워오게 되었다.%§7혼자서는 역부족이라 자기를 분할하여 다양한 형태로 자신을 수없이 늘렸다.%"
+					+ "§7그러나 그 여파로 기억이 누락되거나 희미해져 누가 오리지널인지 잊게 되었다.");
+			QuestBoard qb = new QuestBoard();
+			qb.q18(player, 0);
 		}	
 	}
 	

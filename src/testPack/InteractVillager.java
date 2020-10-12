@@ -41,7 +41,7 @@ public class InteractVillager {
 			return true;
 		}
 		
-		return vil1() || vil2() || vil3() || vil4() || vil5() || vil6() || vil7() || vil8() || vil9() || vil10() || vil11() || vil12();
+		return vil1() || vil2() || vil3() || vil4() || vil5() || vil6() || vil7() || vil8() || vil9() || vil10() || vil11() || vil12() || vil13();
 	}
 	
 	public boolean vil1() {
@@ -297,6 +297,16 @@ public class InteractVillager {
 			} catch(Exception e) {
 				player.sendMessage("카타리나: 여기는 마법탑입니다. 마나의 가호가 있기를.");
 			}
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean vil13() {
+		//롱게 929 528  932 530
+		if(loc.getX() <= 932 && loc.getZ() <= 530
+				&& loc.getX() >= 929 && loc.getZ() >= 528) {
+			player.sendMessage("주민: 이곳은 자유로운 채굴장이오.");
 			return true;
 		}
 		return false;

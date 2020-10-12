@@ -424,6 +424,59 @@ public class QuestBoard {
 		player.setScoreboard(board);
 	}
 	
+	public void q17(Player player, int num) {
+		//상점
+		if(num>=30) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard ());
+			ItemStack var1 = new ItemStack(Material.GOLD_ORE, 64);
+			ItemMeta var1Im = var1.getItemMeta();
+			var1Im.setDisplayName(ChatColor.YELLOW + "가치가 떨어진 금광석");
+			var1.setItemMeta(var1Im);
+			player.getInventory().addItem(var1);
+			es.giveExp(player, 4000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.LIGHT_PURPLE + "S급 퀘스트");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===폭탄병===");
+		score.setScore(2);
+		Score score2 = obj.getScore("TNTZ 30마리 사냥");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/30)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void q18(Player player, int num) {
+		//상점
+		if(num>=1000) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard ());	
+			Location chestLoc = new Location(player.getWorld(), -1833, 92, 3036);
+			Block block = chestLoc.getBlock();
+			Chest chest = (Chest) block.getState();
+			ItemStack weapon1 = chest.getInventory().getItem(13);
+			player.getInventory().addItem(weapon1);
+			player.sendMessage(ChatColor.AQUA + "에밀의 헤드" + ChatColor.WHITE + "를 획득했다.");
+			es.giveExp(player, 9999999);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.AQUA + "SS급 퀘스트");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===에밀의 결의===");
+		score.setScore(2);
+		Score score2 = obj.getScore("에밀 1000마리 사냥");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/1000)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
 	public void eq1(Player player, int num) {
 		// mq23 보상
 		if (num >= 1) {

@@ -99,7 +99,7 @@ public class JobScroll {
 			item5Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0");
 			item5Im.setDisplayName(ChatColor.GRAY + "나뭇가지");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "누군가 오래 사용한 것 같은 목검");
+			item5Lore.add(ChatColor.GRAY + "그저 하찮은 나뭇가지");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -151,7 +151,7 @@ public class JobScroll {
 			item5Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0");
 			item5Im.setDisplayName(ChatColor.GRAY + "나뭇가지");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "누군가 오래 사용한 것 같은 목검");
+			item5Lore.add(ChatColor.GRAY + "그저 하찮은 나뭇가지");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -203,7 +203,7 @@ public class JobScroll {
 			item5Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0");
 			item5Im.setDisplayName(ChatColor.GRAY + "나뭇가지");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "누군가 오래 사용한 것 같은 목검");
+			item5Lore.add(ChatColor.GRAY + "그저 하찮은 나뭇가지");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -255,7 +255,7 @@ public class JobScroll {
 			item5Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0");
 			item5Im.setDisplayName(ChatColor.GRAY + "나뭇가지");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "누군가 오래 사용한 것 같은 목검");
+			item5Lore.add(ChatColor.GRAY + "그저 하찮은 나뭇가지");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -302,7 +302,7 @@ public class JobScroll {
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);	
 			//무기
-			ItemStack item5 = new ItemStack(Material.DIAMOND_SWORD);
+			ItemStack item5 = new ItemStack(Material.JUNGLE_PLANKS);
 			ItemMeta item5Im = item5.getItemMeta();
 			item5Im.setLocalizedName("100,0,0,0,10,100,0,0,0,0");
 			item5Im.setDisplayName(ChatColor.DARK_RED + "데빌 스워드");
@@ -351,7 +351,7 @@ public class JobScroll {
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);	
 			//무기
-			ItemStack item5 = new ItemStack(Material.DIAMOND_SWORD);
+			ItemStack item5 = new ItemStack(Material.BIRCH_PLANKS);
 			ItemMeta item5Im = item5.getItemMeta();
 			item5Im.setLocalizedName("100,0,0,0,0,100,0,0,0,50");
 			item5Im.setDisplayName(ChatColor.DARK_RED + "엔젤 스워드");
@@ -398,7 +398,7 @@ public class JobScroll {
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);	
 			//무기
-			ItemStack item5 = new ItemStack(Material.DIAMOND_SWORD);
+			ItemStack item5 = new ItemStack(Material.BIRCH_LOG);
 			ItemMeta item5Im = item5.getItemMeta();
 			item5Im.setLocalizedName("100,0,0,0,5,100,0,0,0,30");
 			item5Im.setDisplayName(ChatColor.DARK_RED + "신의 힘을 담은 검");
@@ -445,7 +445,7 @@ public class JobScroll {
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);	
 			//무기
-			ItemStack item5 = new ItemStack(Material.GOLDEN_SWORD);
+			ItemStack item5 = new ItemStack(Material.SPRUCE_LOG);
 			ItemMeta item5Im = item5.getItemMeta();
 			item5Im.setLocalizedName("30,5,5,5,0,0,0,0,0,0");
 			item5Im.setDisplayName(ChatColor.AQUA + "죽음의 무도");
@@ -492,7 +492,7 @@ public class JobScroll {
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);	
 			//무기
-			ItemStack item5 = new ItemStack(Material.GOLDEN_SWORD);
+			ItemStack item5 = new ItemStack(Material.SPRUCE_LEAVES);
 			ItemMeta item5Im = item5.getItemMeta();
 			item5Im.setLocalizedName("50,0,0,0,5,0,0,0,0,0");
 			item5Im.setDisplayName(ChatColor.AQUA + "반란군의 대검");

@@ -22,6 +22,7 @@ public class INNTicket {
 		karce(player, itemArg, world);
 		kuredrat(player, itemArg, world);
 		beiag(player, itemArg, world);
+		longue(player, itemArg, world);
 	}
 
 	public void wargunil(Player player, Item itemArg, World world) {	
@@ -155,7 +156,7 @@ public class INNTicket {
 			//Å©·¹µå¶óÆ® -72 56 106  -55 74 97
 			if (player.getLocation().getX() <= -55 && player.getLocation().getY() <= 74 && player.getLocation().getZ() <= 106 && 
 					player.getLocation().getX() >= -72 && player.getLocation().getY() >= 55 && player.getLocation().getZ() >= 97) {
-				Location loc = new Location(world,-68,60,102);
+				Location loc = new Location(world,-65,61,101);
 				player.teleport(loc);
 				itemArg.remove();
 				player.getWorld().playSound(loc, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);
@@ -170,6 +171,20 @@ public class INNTicket {
 			if (player.getLocation().getX() <= 131 && player.getLocation().getY() <= 113 && player.getLocation().getZ() <= -316 && 
 					player.getLocation().getX() >= 109 && player.getLocation().getY() >= 85 && player.getLocation().getZ() >= -334) {
 				Location loc = new Location(world,114,97,-331);
+				player.teleport(loc);
+				itemArg.remove();
+				player.getWorld().playSound(loc, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);
+				player.setHealth(player.getMaxHealth());
+			}
+		}	
+	}
+	
+	public void longue(Player player, Item itemArg, World world) {	
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "·Õ°Ô ¼÷¹Ú Æ¼ÄÏ")) {
+			//·Õ°Ô 852 63 511  823 96 548
+			if (player.getLocation().getX() <= 852 && player.getLocation().getY() <= 96 && player.getLocation().getZ() <= 548 && 
+					player.getLocation().getX() >= 823 && player.getLocation().getY() >= 63 && player.getLocation().getZ() >= 511) {
+				Location loc = new Location(world,829,74,525);
 				player.teleport(loc);
 				itemArg.remove();
 				player.getWorld().playSound(loc, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);

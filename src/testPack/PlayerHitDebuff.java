@@ -6,11 +6,13 @@ import java.util.Random;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.Color;
 import org.bukkit.Effect;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Particle;
 import org.bukkit.Sound;
+import org.bukkit.Particle.DustOptions;
 import org.bukkit.block.Block;
 import org.bukkit.block.Chest;
 import org.bukkit.craftbukkit.v1_16_R1.CraftWorld;
@@ -209,27 +211,11 @@ public class PlayerHitDebuff {
 					
 					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true, false, false));
 					
-					ArrayList<FallingBlock> ary = new ArrayList<>();
 					Location loc = mob.getLocation();
-					for(int x = -8 ; x < 9 ; x++) {
-						for(int y = -1 ; y < 0 ; y++) {
-							for(int z = -8 ; z < 9 ; z++) {
-								Location loc2 = loc.clone().add(new Vector(x,y+0.1,z));
-								if(loc2.getBlock().getType() != Material.AIR) {
-									FallingBlock fb = (FallingBlock) mob.getWorld().spawnFallingBlock(loc2, Material.RED_WOOL, (byte)0);
-									fb.setVelocity(new Vector(0,0,0));
-									fb.setDropItem(false);
-									fb.setGravity(false);
-									ary.add(fb);
-								}
-							}
-						}
-					}
 					
 					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
 						int time = 0;
-						ArrayList<FallingBlock> ary2 = ary;
 						ThreadData td = new ThreadData(player.getUniqueId());
 
 						@Override
@@ -237,6 +223,17 @@ public class PlayerHitDebuff {
 							
 							if (!td.hasID()) {
 								td.setID(taskID);
+							}
+							
+							if (time % 20 == 0) {
+								for(int x = -8 ; x < 9 ; x++) {
+									for(int y = -1 ; y < 0 ; y++) {
+										for(int z = -8 ; z < 9 ; z++) {
+											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
+											player.getWorld().spawnParticle(Particle.REDSTONE, loc2, 0, new DustOptions(Color.RED, 1));
+										}
+									}
+								}
 							}
 							
 							if (time >= 40) {
@@ -251,9 +248,6 @@ public class PlayerHitDebuff {
 								ParticleEffect pe = new ParticleEffect(player, mob);
 								pe.startE30();
 								// ================================================================
-								for(FallingBlock fb : ary2) {
-									fb.remove();
-								}
 								List<Entity> nearPlayer = mob.getNearbyEntities(8, 10, 8);
 								for(Entity p : nearPlayer) {
 									if(p instanceof Player) {
@@ -406,27 +400,11 @@ public class PlayerHitDebuff {
 					
 					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true, false, false));
 					
-					ArrayList<FallingBlock> ary = new ArrayList<>();
 					Location loc = mob.getLocation();
-					for(int x = -20 ; x < 21 ; x++) {
-						for(int y = -1 ; y < 0 ; y++) {
-							for(int z = -20 ; z < 21 ; z++) {
-								Location loc2 = loc.clone().add(new Vector(x,y+0.1,z));
-								if(loc2.getBlock().getType() != Material.AIR) {
-									FallingBlock fb = (FallingBlock) mob.getWorld().spawnFallingBlock(loc2, Material.RED_WOOL, (byte)0);
-									fb.setVelocity(new Vector(0,0,0));
-									fb.setDropItem(false);
-									fb.setGravity(false);
-									ary.add(fb);
-								}
-							}
-						}
-					}
-					
+
 					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
 						int time = 0;
-						ArrayList<FallingBlock> ary2 = ary;
 						ThreadData td = new ThreadData(player.getUniqueId());
 
 						@Override
@@ -434,6 +412,17 @@ public class PlayerHitDebuff {
 							
 							if (!td.hasID()) {
 								td.setID(taskID);
+							}
+							
+							if (time % 20 == 0) {
+								for(int x = -20 ; x < 21 ; x++) {
+									for(int y = -1 ; y < 0 ; y++) {
+										for(int z = -20 ; z < 21 ; z++) {
+											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
+											player.getWorld().spawnParticle(Particle.REDSTONE, loc2, 0, new DustOptions(Color.RED, 1));
+										}
+									}
+								}
 							}
 							
 							if (time >= 40) {
@@ -448,9 +437,6 @@ public class PlayerHitDebuff {
 								ParticleEffect pe = new ParticleEffect(player, mob);
 								pe.startE33();
 								// ================================================================
-								for(FallingBlock fb : ary2) {
-									fb.remove();
-								}
 								List<Entity> nearPlayer = mob.getNearbyEntities(20, 10, 20);
 								for (Entity p : nearPlayer) {
 									if (p instanceof Player) {
@@ -508,29 +494,11 @@ public class PlayerHitDebuff {
 					player.sendMessage(ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
 					sendMessage(player, ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
 					
-					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true, false, false));
-					
-					ArrayList<FallingBlock> ary = new ArrayList<>();
 					Location loc = mob.getLocation();
-					for(int x = -20 ; x < 21 ; x++) {
-						for(int y = -1 ; y < 0 ; y++) {
-							for(int z = -20 ; z < 21 ; z++) {
-								Location loc2 = loc.clone().add(new Vector(x,y+0.1,z));
-								if(loc2.getBlock().getType() != Material.AIR) {
-									FallingBlock fb = (FallingBlock) mob.getWorld().spawnFallingBlock(loc2, Material.RED_WOOL, (byte)0);
-									fb.setVelocity(new Vector(0,0,0));
-									fb.setDropItem(false);
-									fb.setGravity(false);
-									ary.add(fb);
-								}
-							}
-						}
-					}
 					
 					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
 						int time = 0;
-						ArrayList<FallingBlock> ary2 = ary;
 						ThreadData td = new ThreadData(player.getUniqueId());
 
 						@Override
@@ -538,6 +506,17 @@ public class PlayerHitDebuff {
 							
 							if (!td.hasID()) {
 								td.setID(taskID);
+							}
+							
+							if (time % 20 == 0) {
+								for(int x = -20 ; x < 21 ; x++) {
+									for(int y = -1 ; y < 0 ; y++) {
+										for(int z = -20 ; z < 21 ; z++) {
+											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
+											player.getWorld().spawnParticle(Particle.REDSTONE, loc2, 0, new DustOptions(Color.RED, 1));
+										}
+									}
+								}
 							}
 							
 							if (time >= 40) {
@@ -552,9 +531,6 @@ public class PlayerHitDebuff {
 								ParticleEffect pe = new ParticleEffect(player, mob);
 								pe.startE33();
 								// ================================================================
-								for(FallingBlock fb : ary2) {
-									fb.remove();
-								}
 								List<Entity> nearPlayer = mob.getNearbyEntities(20, 10, 20);
 								for (Entity p : nearPlayer) {
 									if (p instanceof Player) {
@@ -677,27 +653,11 @@ public class PlayerHitDebuff {
 					
 					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 210, 200, true, false, false));
 					
-					ArrayList<FallingBlock> ary = new ArrayList<>();
 					Location loc = mob.getLocation();
-					for(int x = -25 ; x < 26 ; x++) {
-						for(int y = -1 ; y < 0 ; y++) {
-							for(int z = -25 ; z < 26 ; z++) {
-								Location loc2 = loc.clone().add(new Vector(x,y+0.1,z));
-								if(loc2.getBlock().getType() != Material.AIR) {
-									FallingBlock fb = (FallingBlock) mob.getWorld().spawnFallingBlock(loc2, Material.RED_WOOL, (byte)0);
-									fb.setVelocity(new Vector(0,0,0));
-									fb.setDropItem(false);
-									fb.setGravity(false);
-									ary.add(fb);
-								}
-							}
-						}
-					}
 					
 					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
 						int time = 0;
-						ArrayList<FallingBlock> ary2 = ary;
 						ThreadData td = new ThreadData(player.getUniqueId());
 
 						@Override
@@ -707,7 +667,18 @@ public class PlayerHitDebuff {
 								td.setID(taskID);
 							}
 							
-							if (time >= 200) {
+							if (time % 20 == 0) {
+								for(int x = -20 ; x < 21 ; x++) {
+									for(int y = -1 ; y < 0 ; y++) {
+										for(int z = -20 ; z < 21 ; z++) {
+											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
+											player.getWorld().spawnParticle(Particle.REDSTONE, loc2, 0, new DustOptions(Color.RED, 1));
+										}
+									}
+								}
+							}
+							
+							if (time >= 140) {
 								player.sendMessage(ChatColor.RED + "멸망의 주문이 발동되었습니다.");
 								sendMessage(player, ChatColor.RED + "멸망의 주문이 발동되었습니다.");
 								// ===============================================================
@@ -719,18 +690,20 @@ public class PlayerHitDebuff {
 								ParticleEffect pe = new ParticleEffect(player, mob);
 								pe.startE34();
 								// ================================================================
-								for(FallingBlock fb : ary2) {
-									fb.remove();
-								}
-								List<Entity> nearPlayer = mob.getNearbyEntities(25, 10, 25);
+								List<Entity> nearPlayer = mob.getNearbyEntities(20, 10, 20);
 								for (Entity p : nearPlayer) {
 									if (p instanceof Player) {
 										p.getWorld().playEffect(p.getLocation(), Effect.END_GATEWAY_SPAWN, 2);
-										QuestBoard cb = new QuestBoard();
-										if (cb.getQuestName((Player) p).equals(ChatColor.LIGHT_PURPLE + "===이것이 포보르 왕?===")) {
-											((Player) p).damage(999999);
+										try {
+											QuestBoard cb = new QuestBoard();
+											if (cb.getQuestName((Player) p).equals(ChatColor.LIGHT_PURPLE + "===이것이 포보르 왕?===")) {
+												((Player) p).damage(999999);
+											}
+											((Player) p).damage(5000);
+										} catch(Exception e) {
+											
 										}
-										((Player) p).damage(5000);
+										
 									}
 								}
 								
@@ -812,6 +785,67 @@ public class PlayerHitDebuff {
 
 	public void mob35(Player player, Entity mob) {
 
+	}
+	
+	public static ArrayList<FallingBlock> summonWool(ArrayList<FallingBlock> ary, Location loc, int num) {
+		
+		int x1 = num;
+		for (int y1 = -1; y1 < 0; y1++) {
+			for (int z1 = -num; z1 < num+1; z1++) {
+				Location loc2 = loc.clone().add(new Vector(x1, y1 + 0.5, z1));
+				if (loc2.getBlock().getType() != Material.AIR) {
+					FallingBlock fb = (FallingBlock) loc.getWorld().spawnFallingBlock(loc2, Material.RED_WOOL, (byte) 0);
+					fb.setVelocity(new Vector(0, 0, 0));
+					fb.setDropItem(false);
+					fb.setGravity(false);
+					ary.add(fb);
+				}
+			}
+		}
+		
+		x1 = num * -1;
+		for (int y1 = -1; y1 < 0; y1++) {
+			for (int z1 = -num; z1 < num+1; z1++) {
+				Location loc2 = loc.clone().add(new Vector(x1, y1 + 0.5, z1));
+				if (loc2.getBlock().getType() != Material.AIR) {
+					FallingBlock fb = (FallingBlock) loc.getWorld().spawnFallingBlock(loc2, Material.RED_WOOL, (byte) 0);
+					fb.setVelocity(new Vector(0, 0, 0));
+					fb.setDropItem(false);
+					fb.setGravity(false);
+					ary.add(fb);
+				}
+			}
+		}
+		
+		int z2 = num;
+		for (int x2 = -25; x2 < 26; x2++) {
+			for (int y2 = -1; y2 < 0; y2++) {
+				Location loc2 = loc.clone().add(new Vector(x2, y2 + 0.5, z2));
+				if (loc2.getBlock().getType() != Material.AIR) {
+					FallingBlock fb = (FallingBlock) loc.getWorld().spawnFallingBlock(loc2, Material.RED_WOOL, (byte) 0);
+					fb.setVelocity(new Vector(0, 0, 0));
+					fb.setDropItem(false);
+					fb.setGravity(false);
+					ary.add(fb);
+				}
+			}
+		}
+		
+		z2 = num * -1;
+		for (int x2 = -25; x2 < 26; x2++) {
+			for (int y2 = -1; y2 < 0; y2++) {
+				Location loc2 = loc.clone().add(new Vector(x2, y2 + 0.5, z2));
+				if (loc2.getBlock().getType() != Material.AIR) {
+					FallingBlock fb = (FallingBlock) loc.getWorld().spawnFallingBlock(loc2, Material.RED_WOOL, (byte) 0);
+					fb.setVelocity(new Vector(0, 0, 0));
+					fb.setDropItem(false);
+					fb.setGravity(false);
+					ary.add(fb);
+				}
+			}
+		}
+		
+		return ary;
 	}
 
 	public void sendMessage(Player player, String msg) {

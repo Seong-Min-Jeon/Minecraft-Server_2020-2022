@@ -275,45 +275,31 @@ public class RefreshServer {
 						player.sendMessage(ChatColor.BLUE + "=============================");
 					}
 					
-					if(map.size() == 0) {
-						for(Player allPlayer : Bukkit.getOnlinePlayers()) {
-							map.put(allPlayer.getDisplayName(), (int)(allPlayer.getLocation().getX()*2 + allPlayer.getLocation().getY()*3 + allPlayer.getLocation().getZ()*5));
-						}
-					} else {
-						for(Player allPlayer : Bukkit.getOnlinePlayers()) {
-							if(!(allPlayer.getDisplayName().equals("yumehama") || allPlayer.getDisplayName().equals("WoolRing"))) {
-								if(map.containsKey(allPlayer.getDisplayName())) {
-									int num = map.get(allPlayer.getDisplayName());
-									if(num == (int)(allPlayer.getLocation().getX()*2 + allPlayer.getLocation().getY()*3 + allPlayer.getLocation().getZ()*5)) {
-										allPlayer.kickPlayer("잠수 플레이어로 추정되어 서버에서 나가졌습니다.");
-									}
-								}
-							}
-						}						
-						map.clear();
-						for(Player allPlayer : Bukkit.getOnlinePlayers()) {
-							map.put(allPlayer.getDisplayName(), (int)(allPlayer.getLocation().getX()*2 + allPlayer.getLocation().getY()*3 + allPlayer.getLocation().getZ()*4));
-						}
-					}
+//					if(map.size() == 0) {
+//						for(Player allPlayer : Bukkit.getOnlinePlayers()) {
+//							map.put(allPlayer.getDisplayName(), (int)(allPlayer.getLocation().getX()*2 + allPlayer.getLocation().getY()*3 + allPlayer.getLocation().getZ()*5));
+//						}
+//					} else {
+//						for(Player allPlayer : Bukkit.getOnlinePlayers()) {
+//							if(!(allPlayer.getDisplayName().equals("yumehama") || allPlayer.getDisplayName().equals("WoolRing"))) {
+//								if(map.containsKey(allPlayer.getDisplayName())) {
+//									int num = map.get(allPlayer.getDisplayName());
+//									if(num == (int)(allPlayer.getLocation().getX()*2 + allPlayer.getLocation().getY()*3 + allPlayer.getLocation().getZ()*5)) {
+//										allPlayer.kickPlayer("잠수 플레이어로 추정되어 서버에서 나가졌습니다.");
+//									}
+//								}
+//							}
+//						}						
+//						map.clear();
+//						for(Player allPlayer : Bukkit.getOnlinePlayers()) {
+//							map.put(allPlayer.getDisplayName(), (int)(allPlayer.getLocation().getX()*2 + allPlayer.getLocation().getY()*3 + allPlayer.getLocation().getZ()*5));
+//						}
+//					}
 				}
 				
 				if(time >= 6000) {
 					time = 0;
 				}
-				
-//				if(time >= 0) {
-//					for(Entity ent : Bukkit.getWorld("world").getEntities()) {
-//						if(ent.getType() == EntityType.DROPPED_ITEM) {
-//							Item item = (Item) ent;
-//							if(item.getPickupDelay() > 1000000) {
-//								Vector v = new Vector(0, 0, 0);
-//								if(item.getVelocity() == v) {
-//									item.remove();
-//								}
-//							}
-//						}
-//					}
-//				}
 			
 				time++;
 				

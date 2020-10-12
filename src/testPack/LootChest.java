@@ -1585,22 +1585,22 @@ public class LootChest {
 		var5Im.setLore(var5Lore);
 		var5.setItemMeta(var5Im);
 		
-		ItemStack var6 = new ItemStack(Material.IRON_ORE);
+		ItemStack var6 = new ItemStack(Material.IRON_ORE, 64);
 		ItemMeta var6Im = var6.getItemMeta();
 		var6Im.setDisplayName(ChatColor.YELLOW + "Ã¶±¤¼®");
 		var6.setItemMeta(var6Im);
 		
-		ItemStack var7 = new ItemStack(Material.COAL_ORE);
+		ItemStack var7 = new ItemStack(Material.COAL_ORE, 64);
 		ItemMeta var7Im = var7.getItemMeta();
 		var7Im.setDisplayName(ChatColor.YELLOW + "±ú²ýÇÑ ¼®Åº ±¤¼®");
 		var7.setItemMeta(var7Im);
 		
-		ItemStack var8 = new ItemStack(Material.GOLD_ORE);
+		ItemStack var8 = new ItemStack(Material.GOLD_ORE, 64);
 		ItemMeta var8Im = var8.getItemMeta();
 		var8Im.setDisplayName(ChatColor.YELLOW + "°¡Ä¡°¡ ¶³¾îÁø ±Ý±¤¼®");
 		var8.setItemMeta(var8Im);
 		
-		ItemStack var9 = new ItemStack(Material.GOLD_ORE);
+		ItemStack var9 = new ItemStack(Material.GOLD_ORE, 64);
 		ItemMeta var9Im = var9.getItemMeta();
 		var9Im.setDisplayName(ChatColor.YELLOW + "°¡Ä¡°¡ ¶³¾îÁø ±Ý±¤¼®");
 		var9.setItemMeta(var9Im);

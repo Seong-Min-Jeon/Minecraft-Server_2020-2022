@@ -275,6 +275,16 @@ public class WeaponBuff {
 							}
 						}
 						
+						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "법술 -「유」")) {
+							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "법술 -「메」")) {
+								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "법술 -「하」")) {
+									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "법술 -「마」")) {
+										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 5,true,false,false));
+									}
+								}
+							}
+						}
+						
 					}
 				}
 			}

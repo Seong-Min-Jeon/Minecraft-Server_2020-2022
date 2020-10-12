@@ -68,7 +68,7 @@ public class SweepingCal {
 			double num3 = player.getLocation().getDirection().getZ();
 			Location mobLoc = loc.add(num1, num2, num3);
 			player.getWorld().spawnParticle(Particle.SWEEP_ATTACK, mobLoc, 0);
-			List<Entity> entitylist = player.getNearbyEntities(10, 5, 10);				
+			List<Entity> entitylist = player.getNearbyEntities(5, 5, 5);				
 			for (Entity nearEntity : entitylist) {
 				if (nearEntity.getType() != EntityType.PLAYER) {
 					if (nearEntity instanceof LivingEntity) {

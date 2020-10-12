@@ -3351,7 +3351,7 @@ public class MobLoot {
 		es.giveExp(player, 951200);
 	}
 	
-	// 에밀
+	// TNTZ
 	public void mob147(Player player) {
 		int num = rnd.nextInt(3) + 4;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
@@ -3359,15 +3359,41 @@ public class MobLoot {
 		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
-		es.giveExp(player, 1444444);
+		es.giveExp(player, 999999);
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===폭탄병===")) {
+			int qNum = cb.getNum(player);
+			cb.q17(player, qNum + 1);
+		}
 	}
 	
+	// 파스칼
 	public void mob148(Player player) {
-
+		int num = rnd.nextInt(3) + 4;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1000000);
 	}
 	
+	// 에밀
 	public void mob149(Player player) {
-
+		int num = rnd.nextInt(3) + 4;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1444444);
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===에밀의 결의===")) {
+			int qNum = cb.getNum(player);
+			cb.q18(player, qNum + 1);
+		}
 	}
 	
 	public void mob150(Player player) {

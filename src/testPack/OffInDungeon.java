@@ -48,6 +48,12 @@ public class OffInDungeon {
 			player.setHealth(0);
 			return;
 		}
+		// ÄÚ³¶±× ¹Ì±Ã 10 61 609  102 50 702
+		if (loc.getX() <= 102 && loc.getY() <= 68 && loc.getZ() <= 702 && loc.getX() >= 10 && loc.getY() >= 50
+				&& loc.getZ() >= 609) {
+			player.setHealth(0);
+			return;
+		}
 	}
 	
 }

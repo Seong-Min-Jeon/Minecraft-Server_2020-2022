@@ -29,6 +29,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.entity.Salmon;
 import org.bukkit.entity.Skeleton;
 import org.bukkit.entity.Snowball;
+import org.bukkit.entity.SpectralArrow;
 import org.bukkit.entity.WitherSkeleton;
 import org.bukkit.entity.Zombie;
 import org.bukkit.inventory.ItemFlag;
@@ -2098,10 +2099,12 @@ public class Skill {
 				player.setNoDamageTicks(400);				
 				List<Entity> entitylist = player.getNearbyEntities(10, 5, 10);
 				for (Entity nearEntity : entitylist) {
-					if (nearEntity instanceof LivingEntity) {
-						LivingEntity nearMob = (LivingEntity) nearEntity;
-						nearMob.damage(player.getLevel()*5 + damNum*10);
-					}					
+					if(!(nearEntity instanceof Player)) {
+						if (nearEntity instanceof LivingEntity) {
+							LivingEntity nearMob = (LivingEntity) nearEntity;
+							nearMob.damage(player.getLevel()*10 + damNum*15);
+						}
+					}
 				}
 				player.sendMessage(ChatColor.GREEN + "[스킬]데빌 블레스터가 발동됩니다.");
 				world.playSound(player.getLocation(), Sound.BLOCK_PORTAL_TRIGGER, 1.0f, 1.0f);
@@ -2178,7 +2181,7 @@ public class Skill {
 						golem.setCustomNameVisible(true);
 						((LivingEntity) golem).setMaxHealth((20 + player.getLevel() * 30) / 2);
 						((LivingEntity) golem).setHealth((20 + player.getLevel() * 30) / 2);
-						int golemLv = (player.getLevel() / 10);
+						int golemLv = (player.getLevel() / 2);
 						golem.addPotionEffect(
 								new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, golemLv));						
 						go.put(golem.getUniqueId(), player);
@@ -2188,7 +2191,7 @@ public class Skill {
 					golem.setCustomNameVisible(true);
 					((LivingEntity) golem).setMaxHealth((20 + player.getLevel() * 30));
 					((LivingEntity) golem).setHealth((20 + player.getLevel() * 30));
-					int golemLv = (player.getLevel() / 10);
+					int golemLv = player.getLevel();
 					golem.addPotionEffect(
 							new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, golemLv));
 					golem.addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, Integer.MAX_VALUE, 0));
@@ -2241,7 +2244,7 @@ public class Skill {
 							} else {
 								nearPlayer.setHealth(nearPlayer.getMaxHealth());
 							}
-							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 3));
+							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 2));
 							nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 회복되었습니다.");
 							nearPlayer.sendMessage(
 									ChatColor.GREEN + player.getDisplayName() + "님에 의해 10초 동안 방어력이 상승합니다.");
@@ -2285,7 +2288,7 @@ public class Skill {
 						} else {
 							nearPlayer.setHealth(nearPlayer.getMaxHealth());
 						}
-						nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 3));
+						nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 2));
 						nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 회복되었습니다.");
 						nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 10초 동안 방어력이 상승합니다.");
 					}
@@ -2309,7 +2312,7 @@ public class Skill {
 				}
 				ParticleEffect pe = new ParticleEffect(player);
 				pe.startE12();
-				// ================================================================
+				// ===============================================================
 			} else {
 				player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
 				world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
@@ -2396,9 +2399,9 @@ public class Skill {
 						if(time > 40) {
 							if (num == 0) {
 								if (time > 40) {
-									player.setHealth(player.getHealth()/2);
-									player.sendMessage(ChatColor.RED + "신의 경고가 발동됩니다.");
-									player.sendMessage(ChatColor.RED + "고통을 받습니다.");
+									player.setHealth(20);
+									player.sendMessage(ChatColor.GREEN + "신의 경고가 발동됩니다.");
+									player.sendMessage(ChatColor.GREEN + "다시 한번 시작할 수 있습니다.");
 									world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);									
 								}
 							} else if (num == 1) {
@@ -2678,7 +2681,7 @@ public class Skill {
 					Location loc = player.getLocation();
 					player.setHealth(player.getMaxHealth());
 					player.setNoDamageTicks(200);
-					player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 200, 10));
+					player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 200, 20));
 					// ===============================================================
 					ParticleData pd = new ParticleData(player.getUniqueId());
 					if (pd.hasID()) {
@@ -2696,7 +2699,7 @@ public class Skill {
 					Location loc = player.getLocation();
 					player.setHealth(player.getMaxHealth());
 					player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 2));
-					player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_FALLING, 200, 1));
+					player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_FALLING, 200, 0));
 					// ===============================================================
 					ParticleData pd = new ParticleData(player.getUniqueId());
 					if (pd.hasID()) {
@@ -2720,7 +2723,7 @@ public class Skill {
 				Location loc = player.getLocation();
 				player.setHealth(player.getMaxHealth());
 				player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 2));
-				player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_FALLING, 200, 1));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_FALLING, 200, 0));
 				world.playSound(loc, Sound.ENTITY_WANDERING_TRADER_DRINK_POTION, 1.0f, 1.0f);
 				// ===============================================================
 				ParticleData pd = new ParticleData(player.getUniqueId());
@@ -3560,6 +3563,9 @@ public class Skill {
 								arrow.setVelocity(player.getLocation().getDirection().multiply(1.8f));		
 								world.spawnParticle(Particle.FLAME, arrow.getLocation(), 5);
 								world.playSound(player.getLocation(), Sound.ENTITY_ARROW_SHOOT, 1.0f, 1.0f);
+								
+								SpectralArrow sarrow = (SpectralArrow) arrow.getWorld().spawnEntity(arrow.getLocation(), EntityType.SPECTRAL_ARROW);
+								sarrow.setVelocity(arrow.getVelocity());
 							}
 							
 							time++;
@@ -3587,6 +3593,9 @@ public class Skill {
 					arrow.setVelocity(player.getLocation().getDirection().multiply(1.8f));		
 					world.spawnParticle(Particle.FLAME, arrow.getLocation(), 5);
 					world.playSound(player.getLocation(), Sound.ENTITY_ARROW_SHOOT, 1.0f, 1.0f);
+					
+					SpectralArrow sarrow = (SpectralArrow) arrow.getWorld().spawnEntity(arrow.getLocation(), EntityType.SPECTRAL_ARROW);
+					sarrow.setVelocity(arrow.getVelocity());
 					
 					Thread t = new Thread(player.getUniqueId());
 					sleep = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
@@ -3745,7 +3754,10 @@ public class Skill {
 								arrow.setDamage(1);
 								arrow.setVelocity(player.getLocation().getDirection().multiply(1.8f));		
 								world.spawnParticle(Particle.FLAME, arrow.getLocation(), 5);
-								world.playSound(player.getLocation(), Sound.ENTITY_ARROW_SHOOT, 1.0f, 1.0f);								
+								world.playSound(player.getLocation(), Sound.ENTITY_ARROW_SHOOT, 1.0f, 1.0f);	
+								
+								SpectralArrow sarrow = (SpectralArrow) arrow.getWorld().spawnEntity(arrow.getLocation(), EntityType.SPECTRAL_ARROW);
+								sarrow.setVelocity(arrow.getVelocity());
 							}
 							
 							time++;
@@ -3773,6 +3785,9 @@ public class Skill {
 					arrow.setVelocity(player.getLocation().getDirection().multiply(1.8f));		
 					world.spawnParticle(Particle.FLAME, arrow.getLocation(), 5);
 					world.playSound(player.getLocation(), Sound.ENTITY_ARROW_SHOOT, 1.0f, 1.0f);
+					
+					SpectralArrow sarrow = (SpectralArrow) arrow.getWorld().spawnEntity(arrow.getLocation(), EntityType.SPECTRAL_ARROW);
+					sarrow.setVelocity(arrow.getVelocity());
 					
 					Thread t = new Thread(player.getUniqueId());
 					sleep = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {

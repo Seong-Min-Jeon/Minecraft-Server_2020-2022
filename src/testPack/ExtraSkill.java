@@ -9,11 +9,13 @@ import org.bukkit.Sound;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.LivingEntity;
+import org.bukkit.entity.Mob;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
+import org.bukkit.util.Vector;
 
 
 public class ExtraSkill {
@@ -50,7 +52,39 @@ public class ExtraSkill {
 	}
 	
 	public void skill1(Player player, int i, ItemStack item1, ItemStack item2) {
-		
+		if (i >= 2) {
+			if (player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) {
+				player.getInventory().remove(Material.HEART_OF_THE_SEA);
+				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 2);
+				ItemMeta itemIm = item.getItemMeta();
+				itemIm.setDisplayName(ChatColor.BLUE + "마나");
+				item.setItemMeta(itemIm);
+				player.getInventory().setItem(8, item);
+				Location loc = player.getLocation();
+				
+				Vector vec = player.getEyeLocation().add(0,2,0).getDirection().multiply(2.0f);
+				player.setVelocity(vec);						
+				double num1 = player.getLocation().getDirection().getX();
+				double num2 = player.getLocation().getDirection().getY() + 1;
+				double num3 = player.getLocation().getDirection().getZ();
+				Location mobLoc = loc.add(num1, num2, num3);						
+				List<Entity> entitylist = player.getNearbyEntities(3, 3, 3);				
+				for (Entity nearEntity : entitylist) {
+					if (nearEntity instanceof Mob) {
+						LivingEntity ent = (LivingEntity) nearEntity;
+						ent.setVelocity(vec);
+						ent.damage(player.getLevel()*20);
+					}
+				}
+				player.sendMessage(ChatColor.GREEN + "[스킬]더블 서큘러를 발동합니다.");
+				player.getWorld().playSound(player.getLocation(), Sound.ENTITY_LIGHTNING_BOLT_IMPACT, 1.0f, 1.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
+			}
+		} else {
+			player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
+			player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+			return;
+		}
 	}
 	
 	public void skill2(Player player, int i, ItemStack item1, ItemStack item2) {

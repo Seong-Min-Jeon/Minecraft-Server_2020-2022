@@ -16,7 +16,7 @@ public class Reinforcement {
 	Random rnd = new Random();
 	private final int percent = 30; //30  18
 	private final int percentDia = 50; //50  33
-	private final int percentArmor = 50; //50  28
+	private final int percentArmor = 50; //50  42
 	private final int percentArrow = 10000; //10000  6000
 	private final int percentArrowKami = 100; //100  70
 
@@ -3406,7 +3406,7 @@ public class Reinforcement {
 		
 		//철 1
 		if(itemResource.getDisplayName().equals(ChatColor.WHITE + "상태가 좋지 않은 철")) {
-			int num = rnd.nextInt(percentArmor);
+			int num = rnd.nextInt(percentArmor - 5);
 			if(num<5) {
 				int lvl = Integer.parseInt(ary[5]);
 				if (lvl == 30000) {
@@ -3572,7 +3572,7 @@ public class Reinforcement {
 		} 
 		//철 2
 		if(itemResource.getDisplayName().equals(ChatColor.YELLOW + "철")) {
-			int num = rnd.nextInt(percentArmor);
+			int num = rnd.nextInt(percentArmor - 5);
 			if(num<5) {
 				int lvl = Integer.parseInt(ary[5]);
 				if (lvl == 30000) {
@@ -3738,7 +3738,7 @@ public class Reinforcement {
 		}  
 		//철 3
 		if(itemResource.getDisplayName().equals(ChatColor.LIGHT_PURPLE + "빛이나는 철")) {
-			int num = rnd.nextInt(percentArmor);
+			int num = rnd.nextInt(percentArmor - 5);
 			if(num<5) {
 				int lvl = Integer.parseInt(ary[5]);
 				if (lvl == 30000) {
@@ -3904,7 +3904,7 @@ public class Reinforcement {
 		}  
 		//철 4
 		if(itemResource.getDisplayName().equals(ChatColor.AQUA + "순백의 철")) {
-			int num = rnd.nextInt(percentArmor);
+			int num = rnd.nextInt(percentArmor - 5);
 			if(num<5) {
 				int lvl = Integer.parseInt(ary[5]);
 				if (lvl == 30000) {
@@ -4070,7 +4070,7 @@ public class Reinforcement {
 		}                      			
 		//철 5
 		if(itemResource.getDisplayName().equals(ChatColor.DARK_RED + "신의 힘이 담긴 철")) {
-			int num = rnd.nextInt(percentArmor);
+			int num = rnd.nextInt(percentArmor - 5);
 			if(num<5) {
 				int lvl = Integer.parseInt(ary[5]);
 				if (lvl == 30000) {
@@ -4243,7 +4243,7 @@ public class Reinforcement {
 		
 		//금 1
 		if(itemResource.getDisplayName().equals(ChatColor.YELLOW + "가치가 떨어진 금")) {
-			int num = rnd.nextInt(percentArmor);
+			int num = rnd.nextInt(percentArmor - 10);
 			if(num<5) {
 				int lvl = Integer.parseInt(ary[5]);
 				if (lvl == 30000) {
@@ -4409,7 +4409,7 @@ public class Reinforcement {
 		}  
 		//금 2
 		if(itemResource.getDisplayName().equals(ChatColor.LIGHT_PURPLE + "금")) {
-			int num = rnd.nextInt(percentArmor);
+			int num = rnd.nextInt(percentArmor - 10);
 			if(num<5) {
 				int lvl = Integer.parseInt(ary[5]);
 				if (lvl == 30000) {
@@ -4575,7 +4575,7 @@ public class Reinforcement {
 		}  
 		//금 3
 		if(itemResource.getDisplayName().equals(ChatColor.AQUA + "쉽게 녹지 않는 금")) {
-			int num = rnd.nextInt(percentArmor);
+			int num = rnd.nextInt(percentArmor - 10);
 			if(num<5) {
 				int lvl = Integer.parseInt(ary[5]);
 				if (lvl == 30000) {
@@ -4741,7 +4741,7 @@ public class Reinforcement {
 		}   			
 		//금 4
 		if(itemResource.getDisplayName().equals(ChatColor.DARK_RED + "신의 힘이 담긴 금")) {
-			int num = rnd.nextInt(percentArmor);
+			int num = rnd.nextInt(percentArmor - 10);
 			if(num<5) {
 				int lvl = Integer.parseInt(ary[5]);
 				if (lvl == 30000) {
@@ -4914,7 +4914,7 @@ public class Reinforcement {
 		
 		//다야 1
 		if(itemResource.getDisplayName().equals(ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드")) {
-			int num = rnd.nextInt(percentArmor);
+			int num = rnd.nextInt(percentArmor - 15);
 			if(num<5) {
 				int lvl = Integer.parseInt(ary[5]);
 				if (lvl == 30000) {
@@ -5080,7 +5080,7 @@ public class Reinforcement {
 		}  
 		//다야 2
 		if(itemResource.getDisplayName().equals(ChatColor.AQUA + "다이아몬드")) {
-			int num = rnd.nextInt(percentArmor);
+			int num = rnd.nextInt(percentArmor - 15);
 			if(num<5) {
 				int lvl = Integer.parseInt(ary[5]);
 				if (lvl == 30000) {
@@ -5246,7 +5246,7 @@ public class Reinforcement {
 		}  
 		//다야 3
 		if(itemResource.getDisplayName().equals(ChatColor.AQUA + "빛나는 다이아몬드")) {
-			int num = rnd.nextInt(percentArmor);
+			int num = rnd.nextInt(percentArmor - 15);
 			if(num<5) {
 				int lvl = Integer.parseInt(ary[5]);
 				if (lvl == 30000) {
@@ -5412,7 +5412,7 @@ public class Reinforcement {
 		}
 		//다야 4
 		if(itemResource.getDisplayName().equals(ChatColor.DARK_RED + "신의 힘이 담긴 다이아몬드")) {
-			int num = rnd.nextInt(percentArmor);
+			int num = rnd.nextInt(percentArmor - 15);
 			if(num<5) {
 				int lvl = Integer.parseInt(ary[5]);
 				if (lvl == 30000) {
@@ -5578,7 +5578,7 @@ public class Reinforcement {
 		}
 		//다야 5
 		if (itemResource.getDisplayName().equals(ChatColor.DARK_RED + "" + ChatColor.MAGIC + "The Item from God")) {
-			int num = rnd.nextInt(percentArmor);
+			int num = rnd.nextInt(percentArmor - 15);
 			if(num<5) {
 				int lvl = Integer.parseInt(ary[5]);
 				if (lvl == 30000) {

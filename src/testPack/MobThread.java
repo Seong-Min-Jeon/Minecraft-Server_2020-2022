@@ -288,6 +288,9 @@ public class MobThread {
 						} else if(loc.getX() <= 967 && loc.getY() <= 150 && loc.getZ() <= 656 && 
 								loc.getX() >= 758 && loc.getY() >= 45 && loc.getZ() >= 620) {
 							castleSouthEast(player, loc);
+						} else if(loc.getX() <= 1105 && loc.getY() <= 104 && loc.getZ() <= 895 && 
+								loc.getX() >= 908 && loc.getY() >= 40 && loc.getZ() >= 747) {
+							castleNearVil(player, loc);
 						}
 					} 
 					
@@ -1752,6 +1755,21 @@ public class MobThread {
 		
 		if (num == 0) {
 			loc.getWorld().spawnEntity(loc, EntityType.RAVAGER);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.ZOMBIE);
+		}
+	}
+	
+	public void castleNearVil(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 1105 && loc.getY() <= 104 && loc.getZ() <= 895 && 
+				loc.getX() >= 908 && loc.getY() >= 40 && loc.getZ() >= 747)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
 		} else if (num == 1) {
 			loc.getWorld().spawnEntity(loc, EntityType.CREEPER);
 		}

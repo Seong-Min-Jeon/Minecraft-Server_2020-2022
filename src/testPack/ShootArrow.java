@@ -75,19 +75,6 @@ public class ShootArrow {
 			return false;
 		}
 		return true;
-//		// 아란모어 -1789 200 931 -2964 30 443
-//		if (loc.getX() <= -1789 && loc.getY() <= 200
-//				&& loc.getZ() <= 931 && loc.getX() >= -2964
-//				&& loc.getY() >= 30 && loc.getZ() >= 443) {
-//			if(arrow.getPassenger() != null) {
-//				arrow.removePassenger(arrow.getPassenger());
-//			}
-//			Item item = arrow.getWorld().dropItem(loc, new ItemStack(Material.BLUE_ICE));
-//			item.setPickupDelay(10000000);
-//			arrow.addPassenger(item);
-//			return false;
-//		}
-//		return true;
 	}
 	
 	public boolean arrow2(Arrow arrow, Entity mob, Location loc) {
@@ -101,18 +88,6 @@ public class ShootArrow {
 			return false;
 		}
 		return true;
-//		// 미궁보스 49 61 654  16 51 696
-//		if (loc.getX() <= 49 && loc.getY() <= 61 && loc.getZ() <= 696 
-//				&& loc.getX() >= 16 && loc.getY() >= 51 && loc.getZ() >= 654) {
-//			if(arrow.getPassenger() != null) {
-//				arrow.removePassenger(arrow.getPassenger());
-//			}
-//			Item item = arrow.getWorld().dropItem(loc, new ItemStack(Material.END_CRYSTAL));
-//			item.setPickupDelay(10000000);
-//			arrow.addPassenger(item);
-//			return false;
-//		}
-//		return true;
 	}
 	
 	public boolean arrow3(Arrow arrow, Entity mob, Location loc) {
@@ -126,18 +101,6 @@ public class ShootArrow {
 			return false;
 		}
 		return true;
-//		// 고성 서쪽 625 200 887  493 40 389
-//		if (loc.getX() <= 625 && loc.getY() <= 200 && loc.getZ() <= 887 && 
-//				loc.getX() >= 493 && loc.getY() >= 40 && loc.getZ() >= 389) {
-//			if(arrow.getPassenger() != null) {
-//				arrow.removePassenger(arrow.getPassenger());
-//			}
-//			Item item = arrow.getWorld().dropItem(loc, new ItemStack(Material.ENDER_PEARL));
-//			item.setPickupDelay(10000000);
-//			arrow.addPassenger(item);
-//			return false;
-//		}
-//		return true;
 	}
 	
 	public boolean arrow4(Arrow arrow, Entity mob, Location loc) {
@@ -151,18 +114,6 @@ public class ShootArrow {
 			return false;
 		}
 		return true;
-//		// 고성 남쪽 627 150 661  810 45 891
-//		if (loc.getX() <= 810 && loc.getY() <= 150 && loc.getZ() <= 891 && 
-//				loc.getX() >= 627 && loc.getY() >= 45 && loc.getZ() >= 661) {
-//			if(arrow.getPassenger() != null) {
-//				arrow.removePassenger(arrow.getPassenger());
-//			}
-//			Item item = arrow.getWorld().dropItem(loc, new ItemStack(Material.ENDER_PEARL));
-//			item.setPickupDelay(10000000);
-//			arrow.addPassenger(item);
-//			return false;
-//		}
-//		return true;
 	}
 
 }

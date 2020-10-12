@@ -687,9 +687,18 @@ public class MobDeath {
 			if (name.equalsIgnoreCase("그리즐리 베어" + ChatColor.YELLOW + " [Lv.347]")) {
 				mobloot.mob146(lootPlayer);
 			}
-			// 에밀
-			if (name.equalsIgnoreCase("에밀" + ChatColor.YELLOW + " [Lv.350]")) {
+			// TNTZ
+			if (name.equalsIgnoreCase("TNTZ" + ChatColor.YELLOW + " [Lv.351]")) {
 				mobloot.mob147(lootPlayer);
+				mob.getWorld().createExplosion(mob.getLocation(), 5, false, false);
+			}
+			// 파스칼
+			if (name.equalsIgnoreCase("파스칼" + ChatColor.YELLOW + " [Lv.354]")) {
+				mobloot.mob148(lootPlayer);
+			}
+			// 에밀
+			if (name.equalsIgnoreCase("에밀" + ChatColor.YELLOW + " [Lv.357]")) {
+				mobloot.mob149(lootPlayer);
 			}
 			
 //================================================================================================================================
