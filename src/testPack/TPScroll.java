@@ -20,6 +20,13 @@ public class TPScroll {
 		ticket4(player, itemArg, world);
 		ticket5(player, itemArg, world);
 		ticket6(player, itemArg, world);
+		
+		// 보스바 관련
+		try {
+			new BossHealth().removePlayer(player);
+		} catch (Exception e) {
+
+		}
 	}
 	
 	public void ticket1(Player player, Item itemArg, World world) {

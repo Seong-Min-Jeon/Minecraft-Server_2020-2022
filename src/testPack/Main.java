@@ -308,6 +308,10 @@ public class Main extends JavaPlugin implements Listener{
 //			player.kickPlayer("서버 점검 중 입니다.");
 //		}
 		
+		if ((player.getUniqueId().toString().equalsIgnoreCase("5d5f3cf5-bbec-4dba-b97c-fe2ddf900191"))) {
+			player.kickPlayer("You are Banned");
+		}
+		
 		//증표 오류 수정
 		for (ItemStack is : player.getInventory().getContents()) {
 			if(is == null) continue;
@@ -667,6 +671,30 @@ public class Main extends JavaPlugin implements Listener{
                     if(quest.equals("mq36")) {
                     	QuestBoard qb = new QuestBoard();
                 		qb.mq36(event.getPlayer(), Integer.parseInt(num));
+                    }
+                    if(quest.equals("mq37")) {
+                    	QuestBoard qb = new QuestBoard();
+                		qb.mq37(event.getPlayer(), Integer.parseInt(num));
+                    }
+                    if(quest.equals("mq37_1")) {
+                    	QuestBoard qb = new QuestBoard();
+                		qb.mq37_1(event.getPlayer(), Integer.parseInt(num));
+                    }
+                    if(quest.equals("mq37_2")) {
+                    	QuestBoard qb = new QuestBoard();
+                		qb.mq37_2(event.getPlayer(), Integer.parseInt(num));
+                    }
+                    if(quest.equals("mq38")) {
+                    	QuestBoard qb = new QuestBoard();
+                		qb.mq38(event.getPlayer(), Integer.parseInt(num));
+                    }
+                    if(quest.equals("mq38_1")) {
+                    	QuestBoard qb = new QuestBoard();
+                		qb.mq38_1(event.getPlayer(), Integer.parseInt(num));
+                    }
+                    if(quest.equals("mq38_2")) {
+                    	QuestBoard qb = new QuestBoard();
+                		qb.mq38_2(event.getPlayer(), Integer.parseInt(num));
                     }
                     bufReader.close();
                 }
@@ -3602,12 +3630,51 @@ public class Main extends JavaPlugin implements Listener{
 
 					LivingEntity boss = (LivingEntity) mob;
 					
-					if(boss.getHealth() <= 0) {
+					if(boss.getHealth() - event.getFinalDamage() <= 0) {
 						for(Player p : new BossHealth().getBar1().getPlayers()) {
 							new BossHealth().getBar1().removePlayer(p);
 						}
 					} else {
 						new BossHealth().getBar1().setProgress(boss.getHealth() / 700000.0);
+					}
+				}
+				// 탑 1층
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("1층의 지배자" + ChatColor.YELLOW + " [Lv.??]")) {
+
+					LivingEntity boss = (LivingEntity) mob;
+					
+					if(boss.getHealth() - event.getFinalDamage() <= 0) {
+						for(Player p : new BossHealth().getBar2().getPlayers()) {
+							new BossHealth().getBar2().removePlayer(p);
+						}
+					} else {
+						new BossHealth().getBar2().setProgress(boss.getHealth() / 250000.0);
+					}
+				}
+				// 탑 2층
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("2층의 지배자" + ChatColor.YELLOW + " [Lv.??]")) {
+
+					LivingEntity boss = (LivingEntity) mob;
+					
+					if(boss.getHealth() - event.getFinalDamage() <= 0) {
+						for(Player p : new BossHealth().getBar3().getPlayers()) {
+							new BossHealth().getBar3().removePlayer(p);
+						}
+					} else {
+						new BossHealth().getBar3().setProgress(boss.getHealth() / 550000.0);
+					}
+				}
+				// 탑 3층
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("3층의 지배자" + ChatColor.YELLOW + " [Lv.??]")) {
+
+					LivingEntity boss = (LivingEntity) mob;
+					
+					if(boss.getHealth() - event.getFinalDamage() <= 0) {
+						for(Player p : new BossHealth().getBar4().getPlayers()) {
+							new BossHealth().getBar4().removePlayer(p);
+						}
+					} else {
+						new BossHealth().getBar4().setProgress(boss.getHealth() / 1000000.0);
 					}
 				}
 			}
@@ -5409,7 +5476,31 @@ public class Main extends JavaPlugin implements Listener{
         				int number =  qb.getNum(player);
         				fw.write("mq36\n");
         				fw.write(Integer.toString(number));
-            		}         		
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===누가 우는 소리를 내었는가===")) {
+        				int number =  qb.getNum(player);
+        				fw.write("mq37\n");
+        				fw.write(Integer.toString(number));
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===떠도는 망령===")) {
+        				int number =  qb.getNum(player);
+        				fw.write("mq37_1\n");
+        				fw.write(Integer.toString(number));
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===아이 달래기===")) {
+        				int number =  qb.getNum(player);
+        				fw.write("mq37_2\n");
+        				fw.write(Integer.toString(number));
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===누가 또 우는 소리를 내었는가===")) {
+        				int number =  qb.getNum(player);
+        				fw.write("mq38\n");
+        				fw.write(Integer.toString(number));
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===수상한 몬스터===")) {
+        				int number =  qb.getNum(player);
+        				fw.write("mq38_1\n");
+        				fw.write(Integer.toString(number));
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===아이에게 보답을===")) {
+        				int number =  qb.getNum(player);
+        				fw.write("mq38_2\n");
+        				fw.write(Integer.toString(number));
+            		}            		
                     fw.close();
                     bufReader.close();
                 }
@@ -5722,12 +5813,6 @@ public class Main extends JavaPlugin implements Listener{
 		Player player = event.getPlayer();
 		Location loc = event.getTo();
 		new TPMobSpawn(player, loc);
-		// 보스바 관련
-		try {
-			new BossHealth().removePlayer(player);
-		} catch (Exception e) {
-
-		}
 	}
 	
 	@EventHandler

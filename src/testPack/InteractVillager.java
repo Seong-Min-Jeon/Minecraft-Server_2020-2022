@@ -41,7 +41,7 @@ public class InteractVillager {
 			return true;
 		}
 		
-		return vil1() || vil2() || vil3() || vil4() || vil5() || vil6() || vil7() || vil8() || vil9() || vil10() || vil11() || vil12() || vil13();
+		return vil1() || vil2() || vil3() || vil4() || vil5() || vil6() || vil7() || vil8() || vil9() || vil10() || vil11() || vil12() || vil13() || vil14();
 	}
 	
 	public boolean vil1() {
@@ -307,6 +307,35 @@ public class InteractVillager {
 		if(loc.getX() <= 932 && loc.getZ() <= 530
 				&& loc.getX() >= 929 && loc.getZ() >= 528) {
 			player.sendMessage("주민: 이곳은 자유로운 채굴장이오.");
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean vil14() {
+		//롱게 꼬마 836 523  837 525
+		if(loc.getX() <= 838 && loc.getZ() <= 525 
+				&& loc.getX() >= 836 && loc.getZ() >= 523) {
+			QuestBoard cb = new QuestBoard();
+			try {
+				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===누가 우는 소리를 내었는가===")) {
+					int qNum = cb.getNum(player);
+					cb.mq37(player, qNum+1);		
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===아이 달래기===")) {
+					int qNum = cb.getNum(player);
+					cb.mq37_2(player, qNum+1);		
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===누가 또 우는 소리를 내었는가===")) {
+					int qNum = cb.getNum(player);
+					cb.mq38(player, qNum+1);		
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===아이에게 보답을===")) {
+					int qNum = cb.getNum(player);
+					cb.mq38_2(player, qNum+1);		
+				} else {
+					player.sendMessage("꼬마: 후에엥.");
+				}
+			} catch(Exception e) {
+				player.sendMessage("꼬마: 후에엥.");
+			}
 			return true;
 		}
 		return false;

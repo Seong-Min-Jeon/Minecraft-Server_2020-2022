@@ -1791,7 +1791,6 @@ public class QuestBoard {
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
 		player.setScoreboard(board);
-		new NPCManager(player);
 	}
 	
 	public void mq36(Player player, int num) {
@@ -1799,7 +1798,7 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 7000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "카타리나: 괜찮으세요?%카타리나: 아무리 불완전한 힘을 가지고 있어도 왕은 왕이군요..%카타리나: 그래도 좋은 전투 데이터를 얻었어요.%카타리나: 감사합니다.%카라티나: 아! 참고로 미궁 끝에는 저희가 준비한 선물이 있어요.%카타리나: 기회가 된다면 끝까지 가봅시다!");
+			msg.msg(player, "카타리나: 괜찮으세요?%카타리나: 아무리 불완전한 힘을 가지고 있어도 왕은 왕이군요..%카타리나: 그래도 좋은 전투 데이터를 얻었어요.%카타리나: 감사합니다.%카라티나: 아! 참고로 미궁 끝에는 저희가 준비한 §e선물§f이 있어요.%카타리나: 기회가 된다면 끝까지 가봅시다!");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
@@ -1813,7 +1812,143 @@ public class QuestBoard {
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
 		player.setScoreboard(board);
-		new NPCManager(player);
+	}
+	
+	public void mq37(Player player, int num) {
+		if(num>=1) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 5000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "꼬마: 다름이 아니라..%꼬마: 제 장난감을 §e떠도는 망령들§f이 부쉈어요.%꼬마: 그들은 절 공격하진 않지만 제가 복수하기엔 힘이 부족한걸요.%꼬마: 제 복수를 도와주세요. 모험가님.");
+			QuestBoard qb = new QuestBoard();
+			qb.mq37_1(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 37장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===누가 우는 소리를 내었는가===");
+		score.setScore(2);
+		Score score2 = obj.getScore("롱게 마을 숙소의 꼬마와 대화");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/1)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq37_1(Player player, int num) {
+		if(num>=30) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 5000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			QuestBoard qb = new QuestBoard();
+			qb.mq37_2(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 37장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===떠도는 망령===");
+		score.setScore(2);
+		Score score2 = obj.getScore("떠도는 망령 몬스터 30마리 사냥");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/30)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq37_2(Player player, int num) {
+		if(num>=1) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 5000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "꼬마: 감사합니다. 모험가님.%꼬마: 덕분에 복수를 했네요.");
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 37장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===아이 달래기===");
+		score.setScore(2);
+		Score score2 = obj.getScore("꼬마에게 돌아가 보고하기");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/1)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq38(Player player, int num) {
+		if(num>=1) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 5000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "꼬마: 밤마다 §e남쪽 부락§f에서 이상한 소리가 나요.%꼬마: 잘 자야 키가 클텐데..%꼬마: 모험가님이 해결할 수 있는 일이라면 부탁드려요!");
+			QuestBoard qb = new QuestBoard();
+			qb.mq38_1(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 38장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===누가 또 우는 소리를 내었는가===");
+		score.setScore(2);
+		Score score2 = obj.getScore("롱게 마을 숙소의 꼬마와 대화");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/1)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq38_1(Player player, int num) {
+		if(num>=5) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 5000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			QuestBoard qb = new QuestBoard();
+			qb.mq38_2(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 38장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===수상한 몬스터===");
+		score.setScore(2);
+		Score score2 = obj.getScore("에밀 5마리 사냥");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/5)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq38_2(Player player, int num) {
+		if(num>=1) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			Location chestLoc = new Location(player.getWorld(), -1833, 92, 3036);
+			Block block = chestLoc.getBlock();
+			Chest chest = (Chest) block.getState();
+			ItemStack weapon1 = chest.getInventory().getItem(13);
+			player.getInventory().addItem(weapon1);
+			es.giveExp(player, 5000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "꼬마: 고마워요.%꼬마: 이거 길에서 주운건데 가지실래요?%§b에밀의 헤드§f를 획득했다.");
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 38장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===아이에게 보답을===");
+		score.setScore(2);
+		Score score2 = obj.getScore("꼬마에게 돌아가 보고하기");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/1)");
+		score3.setScore(0);
+		player.setScoreboard(board);
 	}
 	
 	public int getNum(Player player) {

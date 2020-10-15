@@ -76,6 +76,8 @@ public class QuestScroll {
 				mq34(player, itemArg, world);
 				mq35(player, itemArg, world);
 				mq36(player, itemArg, world);
+				mq37(player, itemArg, world);
+				mq38(player, itemArg, world);
 			} else {
 				itemArg.remove();
 				player.getInventory().addItem(itemArg.getItemStack());
@@ -565,6 +567,23 @@ public class QuestScroll {
 			msg.msg(player, "카타리나: 좋아요.%카타리나: 이제 §e포보르 왕을 가둔 미궁§f으로 들어갈 준비가 된 것 같군요.%카타리나: 마법탑에서 어느정도의 에메랄드와 포보르의 마나로 워프 스크롤을 살 수 있을 껍니다.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq36(player, 0);
+		}	
+	}
+	
+	public void mq37(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "메인퀘스트 37장")) {
+			msg.msg(player, "네비: 오랜만!%네비: 이번에도 좋은 퀘스트를 찾았지 뭐야.%네비: 마법탑에서 §e동쪽§f으로 쭉 가면 §e롱게§f라는 마을이 있는건 아니?%네비: 찾기가 좀 어려운 마을이라 잘 찾을지 모르겠넹..%"
+					+ "네비: 정 모르겠으면 마법탑에서 동쪽으로 쭉 가다가 한번 죽어봐!%네비: 혹시라도 롱게에서 부활할지 누가 알아?");
+			QuestBoard qb = new QuestBoard();
+			qb.mq37(player, 0);
+		}	
+	}
+	
+	public void mq38(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "메인퀘스트 38장")) {
+			msg.msg(player, "꼬마: 후에엥.%꼬마: 후에엥.%꼬마: 모험가님 저를 한번 더 도와주세요.");
+			QuestBoard qb = new QuestBoard();
+			qb.mq38(player, 0);
 		}	
 	}
 	

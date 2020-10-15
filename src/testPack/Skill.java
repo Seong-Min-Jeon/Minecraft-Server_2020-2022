@@ -2571,7 +2571,7 @@ public class Skill {
 					player.setHealth((int) (player.getHealth() / 2));
 					int num = (player.getLevel() / 10);
 					player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 400, num * 3));
-					player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 400, num * 3));
+					player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 400, 5));
 					// ===============================================================
 					ParticleData pd = new ParticleData(player.getUniqueId());
 					if (pd.hasID()) {

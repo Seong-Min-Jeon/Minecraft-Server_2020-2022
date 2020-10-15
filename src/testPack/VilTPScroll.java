@@ -26,6 +26,13 @@ public class VilTPScroll {
 		beiag(player,itemArg);
 		magicTower(player, itemArg);
 		longue(player, itemArg);
+		
+		// 보스바 관련
+		try {
+			new BossHealth().removePlayer(player);
+		} catch (Exception e) {
+
+		}
 	}
 
 	public void wargunil(Player player, Item itemArg) {

@@ -101,11 +101,11 @@ public class LootChest {
 					tower2(player);
 				}				
 			}
-//			if(block.getX()==3713 && block.getY()==17 && block.getZ()==3156) {
-//				if(removeKey(player, "죽음의 탑 3층 보상 열쇠")) {
-//					tower1(player);
-//				}				
-//			}
+			if(block.getX()==75 && block.getY()==240 && block.getZ()==-15) {
+				if(removeKey(player, "죽음의 탑 3층 보상 열쇠")) {
+					tower3(player);
+				}				
+			}
 //			if(block.getX()==3713 && block.getY()==17 && block.getZ()==3156) {
 //				if(removeKey(player, "죽음의 탑 4층 보상 열쇠")) {
 //					tower1(player);
@@ -1381,7 +1381,7 @@ public class LootChest {
 		int num3 = rnd.nextInt(44); // 세트
 		int num4 = rnd.nextInt(44); // 세트
 		int num5 = rnd.nextInt(44);	// 세트
-		int num6 = 4;
+		int num6 = 8;
 		
 		ItemStack var1 = new ItemStack(Material.GREEN_CARPET);
 		ItemMeta var1Im = var1.getItemMeta();
@@ -1487,6 +1487,39 @@ public class LootChest {
 		if(num5==0) {
 			idx = rnd.nextInt(9);
 			inv.setItem(idx, var5);
+		}
+		player.openInventory(inv);	
+	}
+	
+	public void tower3(Player player) {
+		Inventory inv = Bukkit.createInventory(player, 9, "Dungeon Reward");
+		int idx;
+		int num1 = rnd.nextInt(44); // 초월템
+		int num2 = 16;
+		
+		ItemStack var1 = new ItemStack(Material.CHARCOAL);
+		ItemMeta var1Im = var1.getItemMeta();
+		var1Im.setDisplayName(ChatColor.AQUA + "화염의 돌");
+		ArrayList<String> var1Lore = new ArrayList();
+		var1Lore.add(ChatColor.GRAY + "죽음의 탑 3층에서 발견한 보물");
+		var1Lore.add(ChatColor.GRAY + "탑의 초심자, 탑의 도전자 아이템들을");
+		var1Lore.add(ChatColor.GRAY + "초월시킬 수 있을 것 같다.");
+		var1Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		var1Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		var1Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var1Im.setUnbreakable(true);
+		var1Im.setLore(var1Lore);
+		var1.setItemMeta(var1Im);
+		
+		ItemStack emerald = new ItemStack(Material.SCUTE, num2);
+		ItemMeta im = emerald.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		emerald.setItemMeta(im);
+		inv.setItem(0, emerald);
+		
+		if(num1==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, var1);
 		}
 		player.openInventory(inv);	
 	}

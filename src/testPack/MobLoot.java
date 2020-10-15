@@ -3300,6 +3300,12 @@ public class MobLoot {
 			player.getInventory().addItem(var3);
 			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 살점" + ChatColor.YELLOW + "을 획득했다.");
 		}
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===떠도는 망령===")) {
+			int qNum = cb.getNum(player);
+			cb.mq37_1(player, qNum + 1);
+		}
 	}
 	
 	// 떠도는 망령 마법사
@@ -3337,6 +3343,12 @@ public class MobLoot {
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
 			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 살점" + ChatColor.YELLOW + "을 획득했다.");
+		}
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===떠도는 망령===")) {
+			int qNum = cb.getNum(player);
+			cb.mq37_1(player, qNum + 1);
 		}
 	}
 	
@@ -3393,6 +3405,9 @@ public class MobLoot {
 		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===에밀의 결의===")) {
 			int qNum = cb.getNum(player);
 			cb.q18(player, qNum + 1);
+		} else if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===수상한 몬스터===")) {
+			int qNum = cb.getNum(player);
+			cb.mq38_1(player, qNum + 1);
 		}
 	}
 	

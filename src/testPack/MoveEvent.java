@@ -74,8 +74,8 @@ public class MoveEvent {
 			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
 			world.addEntity(cs);
 
-			new BossHealth().getBar1().setProgress(1.0);
-			new BossHealth().getBar1().addPlayer(player);
+			new BossHealth().getBar2().setProgress(1.0);
+			new BossHealth().getBar2().addPlayer(player);
 			
 		}
 	}

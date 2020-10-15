@@ -199,6 +199,212 @@ public class Transcendence {
 			}
 			player.sendMessage(ChatColor.WHITE + "조건에 맞는 장비, 소재를 넣어주세요.");
 		}
+		
+		if(is2.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "화염의 돌")) {
+			if(is1.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "탑의 초심자 검")) {
+				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
+				ItemStack weapon = new ItemStack(Material.BIRCH_LOG);
+				ItemMeta weaponIm = weapon.getItemMeta();
+				weaponIm.setLocalizedName("500,0,0,800,100,300,0,0,0,3000,400");
+				weaponIm.setDisplayName(ChatColor.AQUA + "불타는 여명의 검");
+				ArrayList<String> weaponLore = new ArrayList();
+				weaponLore.add(ChatColor.GRAY + "레벨 제한: 400");
+				weaponLore.add(ChatColor.GRAY + " ");
+				weaponLore.add(ChatColor.GRAY + "탑의 초심자 검이 진정한 모습을 찾았다.");
+				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+				weaponIm.setUnbreakable(true);
+				weaponIm.setLore(weaponLore);
+				weapon.setItemMeta(weaponIm);
+				inv.setItem(0, weapon);
+				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				return;
+			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 초심자 헬멧")) {
+				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
+				ItemStack weapon = new ItemStack(Material.IRON_HELMET);
+				ItemMeta weaponIm = weapon.getItemMeta();
+				weaponIm.setLocalizedName("500,0,0,0,0,800,0,0,0,0,400");
+				weaponIm.setDisplayName(ChatColor.GREEN + "불타는 여명의 헬멧");
+				ArrayList<String> weaponLore = new ArrayList();
+				weaponLore.add(ChatColor.GRAY + "레벨 제한: 400");
+				weaponLore.add(ChatColor.GRAY + " ");
+				weaponLore.add(ChatColor.GRAY + "탑의 초심자 헬멧이 진정한 모습을 찾았다.");
+				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+				weaponIm.setUnbreakable(true);
+				weaponIm.setLore(weaponLore);
+				weapon.setItemMeta(weaponIm);
+				inv.setItem(0, weapon);
+				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				return;
+			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 초심자 갑옷")) {
+				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
+				ItemStack weapon = new ItemStack(Material.IRON_CHESTPLATE);
+				ItemMeta weaponIm = weapon.getItemMeta();
+				weaponIm.setLocalizedName("0,500,0,0,0,800,0,0,0,0,400");
+				weaponIm.setDisplayName(ChatColor.GREEN + "불타는 여명의 갑옷");
+				ArrayList<String> weaponLore = new ArrayList();
+				weaponLore.add(ChatColor.GRAY + "레벨 제한: 400");
+				weaponLore.add(ChatColor.GRAY + " ");
+				weaponLore.add(ChatColor.GRAY + "탑의 초심자 갑옷이 진정한 모습을 찾았다.");
+				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+				weaponIm.setUnbreakable(true);
+				weaponIm.setLore(weaponLore);
+				weapon.setItemMeta(weaponIm);
+				inv.setItem(0, weapon);
+				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				return;
+			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 초심자 각반")) {
+				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
+				ItemStack weapon = new ItemStack(Material.IRON_LEGGINGS);
+				ItemMeta weaponIm = weapon.getItemMeta();
+				weaponIm.setLocalizedName("0,0,500,0,0,800,0,0,0,0,400");
+				weaponIm.setDisplayName(ChatColor.GREEN + "불타는 여명의 각반");
+				ArrayList<String> weaponLore = new ArrayList();
+				weaponLore.add(ChatColor.GRAY + "레벨 제한: 400");
+				weaponLore.add(ChatColor.GRAY + " ");
+				weaponLore.add(ChatColor.GRAY + "탑의 초심자 각반이 진정한 모습을 찾았다.");
+				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+				weaponIm.setUnbreakable(true);
+				weaponIm.setLore(weaponLore);
+				weapon.setItemMeta(weaponIm);
+				inv.setItem(0, weapon);
+				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				return;
+			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 초심자 신발")) {
+				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
+				ItemStack weapon = new ItemStack(Material.IRON_BOOTS);
+				ItemMeta weaponIm = weapon.getItemMeta();
+				weaponIm.setLocalizedName("0,0,0,500,0,800,0,0,0,0,400");
+				weaponIm.setDisplayName(ChatColor.GREEN + "불타는 여명의 신발");
+				ArrayList<String> weaponLore = new ArrayList();
+				weaponLore.add(ChatColor.GRAY + "레벨 제한: 400");
+				weaponLore.add(ChatColor.GRAY + " ");
+				weaponLore.add(ChatColor.GRAY + "탑의 초심자 신발이 진정한 모습을 찾았다.");
+				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+				weaponIm.setUnbreakable(true);
+				weaponIm.setLore(weaponLore);
+				weapon.setItemMeta(weaponIm);
+				inv.setItem(0, weapon);
+				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				return;
+			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "탑의 도전자 도끼")) {
+				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
+				ItemStack weapon = new ItemStack(Material.GREEN_CARPET);
+				ItemMeta weaponIm = weapon.getItemMeta();
+				weaponIm.setLocalizedName("300,0,0,0,1500,500,0,0,0,500,400");
+				weaponIm.setDisplayName(ChatColor.AQUA + "불타는 의지의 도끼");
+				ArrayList<String> weaponLore = new ArrayList();
+				weaponLore.add(ChatColor.GRAY + "레벨 제한: 400");
+				weaponLore.add(ChatColor.GRAY + " ");
+				weaponLore.add(ChatColor.GRAY + "탑의 도전자 도끼가 진정한 모습을 찾았다.");
+				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+				weaponIm.setUnbreakable(true);
+				weaponIm.setLore(weaponLore);
+				weapon.setItemMeta(weaponIm);
+				inv.setItem(0, weapon);
+				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				return;
+			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 도전자 헬멧")) {
+				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
+				ItemStack weapon = new ItemStack(Material.IRON_HELMET);
+				ItemMeta weaponIm = weapon.getItemMeta();
+				weaponIm.setLocalizedName("0,0,0,0,0,0,0,0,0,0,400");
+				weaponIm.setDisplayName(ChatColor.GREEN + "불타는 의지의 헬멧");
+				ArrayList<String> weaponLore = new ArrayList();
+				weaponLore.add(ChatColor.GRAY + "레벨 제한: 400");
+				weaponLore.add(ChatColor.GRAY + " ");
+				weaponLore.add(ChatColor.GRAY + "탑의 도전자 헬멧이 진정한 모습을 찾았다.");
+				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+				weaponIm.setUnbreakable(true);
+				weaponIm.setLore(weaponLore);
+				weapon.setItemMeta(weaponIm);
+				inv.setItem(0, weapon);
+				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				return;
+			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 도전자 갑옷")) {
+				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
+				ItemStack weapon = new ItemStack(Material.IRON_CHESTPLATE);
+				ItemMeta weaponIm = weapon.getItemMeta();
+				weaponIm.setLocalizedName("0,0,0,0,0,0,0,0,0,0,400");
+				weaponIm.setDisplayName(ChatColor.GREEN + "불타는 의지의 갑옷");
+				ArrayList<String> weaponLore = new ArrayList();
+				weaponLore.add(ChatColor.GRAY + "레벨 제한: 400");
+				weaponLore.add(ChatColor.GRAY + " ");
+				weaponLore.add(ChatColor.GRAY + "탑의 도전자 갑옷이 진정한 모습을 찾았다.");
+				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+				weaponIm.setUnbreakable(true);
+				weaponIm.setLore(weaponLore);
+				weapon.setItemMeta(weaponIm);
+				inv.setItem(0, weapon);
+				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				return;
+			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 도전자 각반")) {
+				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
+				ItemStack weapon = new ItemStack(Material.IRON_LEGGINGS);
+				ItemMeta weaponIm = weapon.getItemMeta();
+				weaponIm.setLocalizedName("0,0,0,0,0,0,0,0,0,0,400");
+				weaponIm.setDisplayName(ChatColor.GREEN + "불타는 의지의 각반");
+				ArrayList<String> weaponLore = new ArrayList();
+				weaponLore.add(ChatColor.GRAY + "레벨 제한: 400");
+				weaponLore.add(ChatColor.GRAY + " ");
+				weaponLore.add(ChatColor.GRAY + "탑의 도전자 각반이 진정한 모습을 찾았다.");
+				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+				weaponIm.setUnbreakable(true);
+				weaponIm.setLore(weaponLore);
+				weapon.setItemMeta(weaponIm);
+				inv.setItem(0, weapon);
+				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				return;
+			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 도전자 신발")) {
+				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
+				ItemStack weapon = new ItemStack(Material.IRON_BOOTS);
+				ItemMeta weaponIm = weapon.getItemMeta();
+				weaponIm.setLocalizedName("0,0,0,0,0,0,0,0,0,0,400");
+				weaponIm.setDisplayName(ChatColor.GREEN + "불타는 의지의 신발");
+				ArrayList<String> weaponLore = new ArrayList();
+				weaponLore.add(ChatColor.GRAY + "레벨 제한: 400");
+				weaponLore.add(ChatColor.GRAY + " ");
+				weaponLore.add(ChatColor.GRAY + "탑의 도전자 신발이 진정한 모습을 찾았다.");
+				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+				weaponIm.setUnbreakable(true);
+				weaponIm.setLore(weaponLore);
+				weapon.setItemMeta(weaponIm);
+				inv.setItem(0, weapon);
+				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				return;
+			}
+			player.sendMessage(ChatColor.WHITE + "조건에 맞는 장비, 소재를 넣어주세요.");
+		}
+		
 	}
 	
 	public String makeEnch(String[] ary, String str, int num) {

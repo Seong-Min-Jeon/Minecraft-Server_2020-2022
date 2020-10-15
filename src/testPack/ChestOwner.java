@@ -14,6 +14,8 @@ public class ChestOwner {
 			yumehama(player, num, inv);
 		} else if(player.getUniqueId().toString().equals("60e679de-acf9-4eb4-8e98-ea1efacad6ff")) {
 			espina_id(player, num, inv);
+		} else if(player.getUniqueId().toString().equals("e2c3d778-b9f7-42b2-b39d-163b93d4ab89")) {
+			_nanoboost_(player, num, inv);
 		} 
 		
 	}
@@ -46,6 +48,31 @@ public class ChestOwner {
 			closeInv(chestLoc.getBlock(), inv);
 		} else if(num == 3) {
 			Location chestLoc = new Location(player.getWorld(), 3782, 3, 3745);
+			if(inv == null) {
+				openInv(player, chestLoc.getBlock());
+				return;
+			}
+			closeInv(chestLoc.getBlock(), inv);
+		} else if(num == 4) {
+			Location chestLoc = new Location(player.getWorld(), 3780, 3, 3745);
+			if(inv == null) {
+				openInv(player, chestLoc.getBlock());
+				return;
+			}
+			closeInv(chestLoc.getBlock(), inv);
+		}
+	}
+	
+	public void _nanoboost_(Player player, int num, Inventory inv) {
+		if(num == 2) {
+			Location chestLoc = new Location(player.getWorld(), 3778, 3, 3745);
+			if(inv == null) {
+				openInv(player, chestLoc.getBlock());
+				return;
+			}
+			closeInv(chestLoc.getBlock(), inv);
+		} else if(num == 3) {
+			Location chestLoc = new Location(player.getWorld(), 3776, 3, 3745);
 			if(inv == null) {
 				openInv(player, chestLoc.getBlock());
 				return;

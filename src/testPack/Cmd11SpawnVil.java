@@ -73,6 +73,13 @@ public class Cmd11SpawnVil implements CommandExecutor {
 						villager.setAI(false);
 						villager.setVillagerType(Villager.Type.valueOf(args[1]));
 						villager.setProfession(Villager.Profession.valueOf(args[2]));
+						try {
+							if(args[3].equalsIgnoreCase("1")) {
+								villager.setBaby();
+							}
+						} catch(Exception e) {
+							
+						}
 						villager.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, Integer.MAX_VALUE, 255));
 						villager.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, Integer.MAX_VALUE, Integer.MAX_VALUE));
 					} catch(Exception e) {

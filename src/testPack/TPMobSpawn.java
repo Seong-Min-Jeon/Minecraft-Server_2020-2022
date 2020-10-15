@@ -435,6 +435,7 @@ public class TPMobSpawn {
 		// Á×À½ÀÇ Å¾ 1Ãþ
 		if (loc.getX() == 72.5 && loc.getY() == 75 && loc.getZ() == -3.5) {
 			player.teleport(new Location(player.getWorld(), 72.5, 75, -3.51));
+			
 			int num = 0;
 			List<Entity> entitylist = player.getNearbyEntities(40, 10, 40);
 			for (Entity nearEntity : entitylist) {
@@ -445,6 +446,7 @@ public class TPMobSpawn {
 					if (loc2.getX() <= 90 && loc2.getY() <= 87 && loc2.getZ() <= -5 && 
 							loc2.getX() >= 54 && loc2.getY() >= 75 && loc2.getZ() >= -41) {
 						num++;
+						new BossHealth().getBar2().addPlayer(player);
 						return;
 					}
 				}
@@ -464,6 +466,9 @@ public class TPMobSpawn {
 			CustomSkeleton cs = new CustomSkeleton(new Location(player.getWorld(), 72, 75, -22));
 			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
 			world.addEntity(cs);
+			
+			new BossHealth().getBar2().setProgress(1.0);
+			new BossHealth().getBar2().addPlayer(player);
 			return;
 		}
 		
@@ -479,6 +484,7 @@ public class TPMobSpawn {
 					if (loc2.getX() <= 90 && loc2.getY() <= 100 && loc2.getZ() <= -5 && 
 							loc2.getX() >= 54 && loc2.getY() >= 88 && loc2.getZ() >= -41) {
 						num++;
+						new BossHealth().getBar3().addPlayer(player);
 						return;
 					}
 				}
@@ -497,6 +503,9 @@ public class TPMobSpawn {
 			CustomSkeleton cs = new CustomSkeleton(new Location(player.getWorld(), 72, 88, -22));
 			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
 			world.addEntity(cs);
+			
+			new BossHealth().getBar3().setProgress(1.0);
+			new BossHealth().getBar3().addPlayer(player);
 			return;
 		}
 		
@@ -512,6 +521,7 @@ public class TPMobSpawn {
 					if (loc2.getX() <= 90 && loc2.getY() <= 115 && loc2.getZ() <= -5 && 
 							loc2.getX() >= 54 && loc2.getY() >= 101 && loc2.getZ() >= -41) {
 						num++;
+						new BossHealth().getBar4().addPlayer(player);
 						return;
 					}
 				}
@@ -530,6 +540,9 @@ public class TPMobSpawn {
 			CustomSkeleton cs = new CustomSkeleton(new Location(player.getWorld(), 72, 101, -22));
 			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
 			world.addEntity(cs);
+			
+			new BossHealth().getBar4().setProgress(1.0);
+			new BossHealth().getBar4().addPlayer(player);
 			return;
 		}
 		
