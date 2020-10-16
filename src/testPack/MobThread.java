@@ -291,6 +291,12 @@ public class MobThread {
 						} else if(loc.getX() <= 1105 && loc.getY() <= 104 && loc.getZ() <= 895 && 
 								loc.getX() >= 908 && loc.getY() >= 40 && loc.getZ() >= 747) {
 							castleNearVil(player, loc);
+						} else if(loc.getX() <= 901 && loc.getY() <= 80 && loc.getZ() <= 911 && 
+								loc.getX() >= 819 && loc.getY() >= 50 && loc.getZ() >= 774) {
+							castleNearVilNearGround(player, loc);
+						} else if(loc.getX() <= 847 && loc.getY() <= 57 && loc.getZ() <= 739 && 
+								loc.getX() >= 777 && loc.getY() >= 29 && loc.getZ() >= 683) {
+							castleNearVilNearCave(player, loc);
 						}
 					} 
 					
@@ -1749,7 +1755,7 @@ public class MobThread {
 		int num = rnd.nextInt(2);
 		loc = location(loc);
 		if (!(loc.getX() <= 967 && loc.getY() <= 150 && loc.getZ() <= 656 && 
-				loc.getX() >= 758 && loc.getY() >= 45 && loc.getZ() >= 620)) {
+				loc.getX() >= 758 && loc.getY() >= 55 && loc.getZ() >= 620)) {
 			return;
 		}
 		
@@ -1772,6 +1778,34 @@ public class MobThread {
 			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
 		} else if (num == 1) {
 			loc.getWorld().spawnEntity(loc, EntityType.CREEPER);
+		}
+	}
+	
+	public void castleNearVilNearGround(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 901 && loc.getY() <= 80 && loc.getZ() <= 911 && 
+				loc.getX() >= 819 && loc.getY() >= 50 && loc.getZ() >= 774)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.WITCH);
+		}
+	}
+	
+	public void castleNearVilNearCave(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 847 && loc.getY() <= 57 && loc.getZ() <= 739 && 
+				loc.getX() >= 777 && loc.getY() >= 29 && loc.getZ() >= 683)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.MAGMA_CUBE);
 		}
 	}
 	

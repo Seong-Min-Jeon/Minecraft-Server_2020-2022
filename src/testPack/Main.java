@@ -3598,14 +3598,12 @@ public class Main extends JavaPlugin implements Listener{
 		//Change Name Color
 		try {
 			if(!(event.getEntity() instanceof Player)) {
-				if (((LivingEntity) event.getEntity()).getHealth() <= ((LivingEntity) event.getEntity()).getMaxHealth()
-						/ 2) {
+				if (((LivingEntity) event.getEntity()).getHealth() - event.getFinalDamage() <= ((LivingEntity) event.getEntity()).getMaxHealth() / 2) {
 					String name = event.getEntity().getCustomName().substring(2);
 					String[] nameAry = name.split("L");
 					event.getEntity().setCustomName(ChatColor.YELLOW + nameAry[0] + "L" + nameAry[1]);
 				}
-				if (((LivingEntity) event.getEntity()).getHealth() <= ((LivingEntity) event.getEntity()).getMaxHealth()
-						/ 5) {
+				if (((LivingEntity) event.getEntity()).getHealth() - event.getFinalDamage() <= ((LivingEntity) event.getEntity()).getMaxHealth() / 5) {
 					String name = event.getEntity().getCustomName().substring(2);
 					String[] nameAry = name.split("L");
 					event.getEntity().setCustomName(ChatColor.RED + nameAry[0] + "L" + nameAry[1]);

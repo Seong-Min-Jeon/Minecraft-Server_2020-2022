@@ -13,6 +13,7 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Husk;
 import org.bukkit.entity.LivingEntity;
+import org.bukkit.entity.MagmaCube;
 import org.bukkit.entity.Phantom;
 import org.bukkit.entity.PigZombie;
 import org.bukkit.entity.Piglin;
@@ -6236,7 +6237,7 @@ public class SpawnMob {
 	public boolean mob104(LivingEntity entity, Location loc) {
 		// 고성 동남쪽 758 150 656  967 45 620
 		if (loc.getX() <= 967 && loc.getY() <= 150 && loc.getZ() <= 656 && 
-				loc.getX() >= 758 && loc.getY() >= 45 && loc.getZ() >= 620) {
+				loc.getX() >= 758 && loc.getY() >= 55 && loc.getZ() >= 620) {
 			if (entity.getType() == (EntityType) EntityType.RAVAGER) {
 				entity.setCustomName(ChatColor.GRAY + "그리즐리 베어" + ChatColor.YELLOW + " [Lv.347]");
 				entity.setCustomNameVisible(true);
@@ -6302,10 +6303,10 @@ public class SpawnMob {
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "파스칼" + ChatColor.YELLOW + " [Lv.354]");
+				entity.setCustomName(ChatColor.GRAY + "파스칼" + ChatColor.YELLOW + " [Lv.359]");
 				entity.setCustomNameVisible(true);
-				entity.setMaxHealth(41000);
-				entity.setHealth(41000);
+				entity.setMaxHealth(42500);
+				entity.setHealth(42500);
 				EntityEquipment weapon = entity.getEquipment();
 				ItemStack weaponItem = new ItemStack(Material.SPRUCE_SLAB);
 				weapon.setItemInMainHand(weaponItem);
@@ -6330,14 +6331,14 @@ public class SpawnMob {
 				bootsmeta.setColor(Color.fromRGB(63, 33, 31));
 				bootsItem.setItemMeta(bootsmeta);
 				boots.setBoots(bootsItem);
-				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 113));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 116));
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.CREEPER) {
-				entity.setCustomName(ChatColor.GRAY + "에밀" + ChatColor.YELLOW + " [Lv.357]");
+				entity.setCustomName(ChatColor.GRAY + "에밀" + ChatColor.YELLOW + " [Lv.363]");
 				entity.setCustomNameVisible(true);
-				entity.setMaxHealth(42000);
-				entity.setHealth(42000);
+				entity.setMaxHealth(43000);
+				entity.setHealth(43000);
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM
@@ -6356,81 +6357,40 @@ public class SpawnMob {
 	}
 	
 	public boolean mob106(LivingEntity entity, Location loc) {
-		// 고성 741 160 654  643 40 486
-		if (loc.getX() <= 33 && loc.getY() <= 41 && loc.getZ() <= -487 && 
-				loc.getX() >= -40 && loc.getY() >= 4 && loc.getZ() >= -568) {
+		// 부락 앞 평지 819 80 774  901 50 911
+		if (loc.getX() <= 901 && loc.getY() <= 80 && loc.getZ() <= 911 && 
+				loc.getX() >= 819 && loc.getY() >= 50 && loc.getZ() >= 774) {
 			Location chestLoc = new Location(entity.getWorld(), -1830, 92, 3045);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
-			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "지하의 파수꾼" + ChatColor.YELLOW + " [Lv.320]");
+			if (entity.getType() == (EntityType) EntityType.SKELETON) {
+				entity.setCustomName(ChatColor.GRAY + "포보르 세력 플레이어" + ChatColor.YELLOW + " [Lv.354]");
 				entity.setCustomNameVisible(true);
-				entity.setMaxHealth(31000);
-				entity.setHealth(31000);
-				Zombie zombie = (Zombie) entity;
-				zombie.setBaby(false);
+				entity.setMaxHealth(41000);
+				entity.setHealth(41000);
 				EntityEquipment weapon = entity.getEquipment();
-				ItemStack weaponItem = new ItemStack(Material.JUNGLE_PLANKS);
+				ItemStack weaponItem = new ItemStack(Material.ACACIA_PLANKS);
 				weapon.setItemInMainHand(weaponItem);
 				EntityEquipment head = entity.getEquipment();
-				ItemStack headItem = chest.getInventory().getItem(18);
+				ItemStack headItem = chest.getInventory().getItem(3);
 				head.setHelmet(headItem);
 				EntityEquipment chestplate = entity.getEquipment();
-				ItemStack chestplateItem = new ItemStack(Material.LEATHER_CHESTPLATE);
-				LeatherArmorMeta chestmeta = (LeatherArmorMeta) chestplateItem.getItemMeta();
-				chestmeta.setColor(Color.fromRGB(255, 255, 255));
-				chestplateItem.setItemMeta(chestmeta);
+				ItemStack chestplateItem = new ItemStack(Material.IRON_CHESTPLATE);
 				chestplate.setChestplate(chestplateItem);
 				EntityEquipment leggings = entity.getEquipment();
-				ItemStack leggingsItem = new ItemStack(Material.LEATHER_LEGGINGS);
-				LeatherArmorMeta leggingsmeta = (LeatherArmorMeta) leggingsItem.getItemMeta();
-				leggingsmeta.setColor(Color.fromRGB(255, 255, 255));
-				leggingsItem.setItemMeta(leggingsmeta);
+				ItemStack leggingsItem = new ItemStack(Material.CHAINMAIL_LEGGINGS);
 				leggings.setLeggings(leggingsItem);
 				EntityEquipment boots = entity.getEquipment();
-				ItemStack bootsItem = new ItemStack(Material.LEATHER_BOOTS);
-				LeatherArmorMeta bootsmeta = (LeatherArmorMeta) bootsItem.getItemMeta();
-				bootsmeta.setColor(Color.fromRGB(255, 255, 255));
-				bootsItem.setItemMeta(bootsmeta);
+				ItemStack bootsItem = new ItemStack(Material.GOLDEN_BOOTS);
 				boots.setBoots(bootsItem);
-				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 96));
-				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 113));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;
-			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "지하의 파수꾼" + ChatColor.YELLOW + " [Lv.324]");
+			} else if (entity.getType() == (EntityType) EntityType.WITCH) {
+				entity.setCustomName(ChatColor.GRAY + "마법소녀" + ChatColor.YELLOW + " [Lv.357]");
 				entity.setCustomNameVisible(true);
-				entity.setMaxHealth(31000);
-				entity.setHealth(31000);
-				EntityEquipment weapon = entity.getEquipment();
-				ItemStack weaponItem = new ItemStack(Material.BOW);
-				ItemMeta im = weaponItem.getItemMeta();
-				im.setLocalizedName("96");
-				weaponItem.setItemMeta(im);
-				weapon.setItemInMainHand(weaponItem);
-				EntityEquipment mobBow = entity.getEquipment();
-				ItemStack mobBowItem = new ItemStack(Material.DEAD_BRAIN_CORAL_BLOCK);
-				mobBow.setItemInOffHand(mobBowItem);
-				EntityEquipment head = entity.getEquipment();
-				ItemStack headItem = chest.getInventory().getItem(18);
-				head.setHelmet(headItem);
-				EntityEquipment chestplate = entity.getEquipment();
-				ItemStack chestplateItem = new ItemStack(Material.LEATHER_CHESTPLATE);
-				LeatherArmorMeta chestmeta = (LeatherArmorMeta) chestplateItem.getItemMeta();
-				chestmeta.setColor(Color.fromRGB(255, 255, 255));
-				chestplateItem.setItemMeta(chestmeta);
-				chestplate.setChestplate(chestplateItem);
-				EntityEquipment leggings = entity.getEquipment();
-				ItemStack leggingsItem = new ItemStack(Material.LEATHER_LEGGINGS);
-				LeatherArmorMeta leggingsmeta = (LeatherArmorMeta) leggingsItem.getItemMeta();
-				leggingsmeta.setColor(Color.fromRGB(255, 255, 255));
-				leggingsItem.setItemMeta(leggingsmeta);
-				leggings.setLeggings(leggingsItem);
-				EntityEquipment boots = entity.getEquipment();
-				ItemStack bootsItem = new ItemStack(Material.LEATHER_BOOTS);
-				LeatherArmorMeta bootsmeta = (LeatherArmorMeta) bootsItem.getItemMeta();
-				bootsmeta.setColor(Color.fromRGB(255, 255, 255));
-				bootsItem.setItemMeta(bootsmeta);
-				boots.setBoots(bootsItem);
+				entity.setMaxHealth(42000);
+				entity.setHealth(42000);
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM
@@ -6450,80 +6410,16 @@ public class SpawnMob {
 	
 	public boolean mob107(LivingEntity entity, Location loc) {
 		// 부락 근처 동굴 847 57 739  777 29 683
-		if (loc.getX() <= 33 && loc.getY() <= 41 && loc.getZ() <= -487 && 
-				loc.getX() >= -40 && loc.getY() >= 4 && loc.getZ() >= -568) {
-			Location chestLoc = new Location(entity.getWorld(), -1830, 92, 3045);
-			Block block = chestLoc.getBlock();
-			Chest chest = (Chest) block.getState();
-			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "지하의 파수꾼" + ChatColor.YELLOW + " [Lv.320]");
+		if (loc.getX() <= 847 && loc.getY() <= 57 && loc.getZ() <= 739 && 
+				loc.getX() >= 777 && loc.getY() >= 29 && loc.getZ() >= 683) {
+			if (entity.getType() == (EntityType) EntityType.MAGMA_CUBE) {
+				entity.setCustomName(ChatColor.GRAY + "진흙 요정" + ChatColor.YELLOW + " [Lv.366]");
 				entity.setCustomNameVisible(true);
-				entity.setMaxHealth(31000);
-				entity.setHealth(31000);
-				Zombie zombie = (Zombie) entity;
-				zombie.setBaby(false);
-				EntityEquipment weapon = entity.getEquipment();
-				ItemStack weaponItem = new ItemStack(Material.JUNGLE_PLANKS);
-				weapon.setItemInMainHand(weaponItem);
-				EntityEquipment head = entity.getEquipment();
-				ItemStack headItem = chest.getInventory().getItem(18);
-				head.setHelmet(headItem);
-				EntityEquipment chestplate = entity.getEquipment();
-				ItemStack chestplateItem = new ItemStack(Material.LEATHER_CHESTPLATE);
-				LeatherArmorMeta chestmeta = (LeatherArmorMeta) chestplateItem.getItemMeta();
-				chestmeta.setColor(Color.fromRGB(255, 255, 255));
-				chestplateItem.setItemMeta(chestmeta);
-				chestplate.setChestplate(chestplateItem);
-				EntityEquipment leggings = entity.getEquipment();
-				ItemStack leggingsItem = new ItemStack(Material.LEATHER_LEGGINGS);
-				LeatherArmorMeta leggingsmeta = (LeatherArmorMeta) leggingsItem.getItemMeta();
-				leggingsmeta.setColor(Color.fromRGB(255, 255, 255));
-				leggingsItem.setItemMeta(leggingsmeta);
-				leggings.setLeggings(leggingsItem);
-				EntityEquipment boots = entity.getEquipment();
-				ItemStack bootsItem = new ItemStack(Material.LEATHER_BOOTS);
-				LeatherArmorMeta bootsmeta = (LeatherArmorMeta) bootsItem.getItemMeta();
-				bootsmeta.setColor(Color.fromRGB(255, 255, 255));
-				bootsItem.setItemMeta(bootsmeta);
-				boots.setBoots(bootsItem);
-				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 96));
-				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
-				return true;
-			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "지하의 파수꾼" + ChatColor.YELLOW + " [Lv.324]");
-				entity.setCustomNameVisible(true);
-				entity.setMaxHealth(31000);
-				entity.setHealth(31000);
-				EntityEquipment weapon = entity.getEquipment();
-				ItemStack weaponItem = new ItemStack(Material.BOW);
-				ItemMeta im = weaponItem.getItemMeta();
-				im.setLocalizedName("96");
-				weaponItem.setItemMeta(im);
-				weapon.setItemInMainHand(weaponItem);
-				EntityEquipment mobBow = entity.getEquipment();
-				ItemStack mobBowItem = new ItemStack(Material.DEAD_BRAIN_CORAL_BLOCK);
-				mobBow.setItemInOffHand(mobBowItem);
-				EntityEquipment head = entity.getEquipment();
-				ItemStack headItem = chest.getInventory().getItem(18);
-				head.setHelmet(headItem);
-				EntityEquipment chestplate = entity.getEquipment();
-				ItemStack chestplateItem = new ItemStack(Material.LEATHER_CHESTPLATE);
-				LeatherArmorMeta chestmeta = (LeatherArmorMeta) chestplateItem.getItemMeta();
-				chestmeta.setColor(Color.fromRGB(255, 255, 255));
-				chestplateItem.setItemMeta(chestmeta);
-				chestplate.setChestplate(chestplateItem);
-				EntityEquipment leggings = entity.getEquipment();
-				ItemStack leggingsItem = new ItemStack(Material.LEATHER_LEGGINGS);
-				LeatherArmorMeta leggingsmeta = (LeatherArmorMeta) leggingsItem.getItemMeta();
-				leggingsmeta.setColor(Color.fromRGB(255, 255, 255));
-				leggingsItem.setItemMeta(leggingsmeta);
-				leggings.setLeggings(leggingsItem);
-				EntityEquipment boots = entity.getEquipment();
-				ItemStack bootsItem = new ItemStack(Material.LEATHER_BOOTS);
-				LeatherArmorMeta bootsmeta = (LeatherArmorMeta) bootsItem.getItemMeta();
-				bootsmeta.setColor(Color.fromRGB(255, 255, 255));
-				bootsItem.setItemMeta(bootsmeta);
-				boots.setBoots(bootsItem);
+				entity.setMaxHealth(44000);
+				entity.setHealth(44000);
+				MagmaCube magma = (MagmaCube) entity;
+				magma.setSize(4);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 118));
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM

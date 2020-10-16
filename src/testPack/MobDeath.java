@@ -692,13 +692,25 @@ public class MobDeath {
 				mobloot.mob147(lootPlayer);
 				mob.getWorld().createExplosion(mob.getLocation(), 5, false, false);
 			}
+			// 포보르 세력 플레이어
+			if (name.equalsIgnoreCase("포보르 세력 플레이어" + ChatColor.YELLOW + " [Lv.354]")) {
+				mobloot.mob150(lootPlayer);
+			}
+			// 마법소녀
+			if (name.equalsIgnoreCase("마법소녀" + ChatColor.YELLOW + " [Lv.357]")) {
+				mobloot.mob151(lootPlayer);
+			}
 			// 파스칼
-			if (name.equalsIgnoreCase("파스칼" + ChatColor.YELLOW + " [Lv.354]")) {
+			if (name.equalsIgnoreCase("파스칼" + ChatColor.YELLOW + " [Lv.359]")) {
 				mobloot.mob148(lootPlayer);
 			}
 			// 에밀
-			if (name.equalsIgnoreCase("에밀" + ChatColor.YELLOW + " [Lv.357]")) {
+			if (name.equalsIgnoreCase("에밀" + ChatColor.YELLOW + " [Lv.363]")) {
 				mobloot.mob149(lootPlayer);
+			}
+			// 진흙 요정
+			if (name.equalsIgnoreCase("진흙 요정" + ChatColor.YELLOW + " [Lv.366]")) {
+				mobloot.mob152(lootPlayer);
 			}
 			
 //================================================================================================================================

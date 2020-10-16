@@ -391,7 +391,29 @@ public class PlayerHitDebuff {
 					player.setVelocity(player.getEyeLocation().getDirection().multiply(-10.0f));
 					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_NETHERRACK_STEP, 3.0f, 1.0f);
 					player.sendMessage(ChatColor.RED + "지배자가 당신을 밀어냅니다.");
-					((Skeleton) mob).setTarget(player);
+					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+						int time = 0;
+						ThreadData td = new ThreadData(player.getUniqueId());
+
+						@Override
+						public void run() {
+							
+							if (!td.hasID()) {
+								td.setID(taskID);
+							}
+							
+							if (time >= 15) {
+								((Skeleton) mob).setTarget(player);
+								td.endTask();
+								td.removeID();
+							}
+							
+							time++;
+
+						}
+
+					}, 0, 1);
 				}
 				if (num == 1) {
 					
