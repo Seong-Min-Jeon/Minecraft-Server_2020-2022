@@ -6438,10 +6438,65 @@ public class SpawnMob {
 	}
 	
 	public boolean mob108(LivingEntity entity, Location loc) {
+		// 아라크네의 저주1 699 56 551  782 34 633
+		if (loc.getX() <= 782 && loc.getY() <= 56 && loc.getZ() <= 633 
+				&& loc.getX() >= 699 && loc.getY() >= 34 && loc.getZ() >= 551) {
+			if (entity.getType() == (EntityType) EntityType.PHANTOM) {
+				entity.setCustomName(ChatColor.GRAY + "푸른 가오리" + ChatColor.YELLOW + " [Lv.380]");
+				entity.setCustomNameVisible(true);
+				entity.setMaxHealth(48000);
+				entity.setHealth(48000);
+				Phantom magma = (Phantom) entity;
+				magma.setSize(1);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 120));
+				return true;
+			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM
+					|| entity.getType() == (EntityType) EntityType.SALMON
+					|| entity.getType() == (EntityType) EntityType.ITEM_FRAME
+					|| entity.getType() == (EntityType) EntityType.DROPPED_ITEM
+					|| entity.getType() == (EntityType) EntityType.ARMOR_STAND
+					|| entity.getType() == (EntityType) EntityType.VILLAGER
+					|| entity.getType() == (EntityType) EntityType.SKELETON_HORSE) {
+				return true;
+			} else {
+				return false;
+			}
+		}
 		return true;
 	}
 	
 	public boolean mob109(LivingEntity entity, Location loc) {
+		// 아라크네의 저주 보스방 727 31 555  776 0 605
+		if (loc.getX() <= 776 && loc.getY() <= 31 && loc.getZ() <= 605 
+				&& loc.getX() >= 727 && loc.getY() >= 0 && loc.getZ() >= 555) {
+			if (entity.getType() == (EntityType) EntityType.CAVE_SPIDER) {
+				entity.setCustomName(ChatColor.GRAY + "아라크네" + ChatColor.YELLOW + " [Lv.??]");
+				entity.setCustomNameVisible(true);
+				entity.setMaxHealth(4800000);
+				entity.setHealth(4800000);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 400));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
+				return true;
+			} else if (entity.getType() == (EntityType) EntityType.SPIDER) {
+				entity.setCustomName(ChatColor.GRAY + "아라크네의 하수인" + ChatColor.YELLOW + " [Lv.383]");
+				entity.setCustomNameVisible(true);
+				entity.setMaxHealth(4800000);
+				entity.setHealth(4800000);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 400));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
+				return true;
+			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM
+					|| entity.getType() == (EntityType) EntityType.SALMON
+					|| entity.getType() == (EntityType) EntityType.ITEM_FRAME
+					|| entity.getType() == (EntityType) EntityType.DROPPED_ITEM
+					|| entity.getType() == (EntityType) EntityType.ARMOR_STAND
+					|| entity.getType() == (EntityType) EntityType.VILLAGER
+					|| entity.getType() == (EntityType) EntityType.SKELETON_HORSE) {
+				return true;
+			} else {
+				return false;
+			}
+		}
 		return true;
 	}
 
@@ -6486,6 +6541,46 @@ public class SpawnMob {
 	}
 	
 	public boolean mob120(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob121(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob122(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob123(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob124(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob125(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob126(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob127(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob128(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob129(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob130(LivingEntity entity, Location loc) {
 		return true;
 	}
 

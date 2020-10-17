@@ -2096,7 +2096,7 @@ public class Skill {
 				Location loc = player.getLocation();
 				player.teleport(loc.add(0, 1, 0));
 				player.addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, 100, 0));
-				player.setNoDamageTicks(400);				
+				player.setNoDamageTicks(100);				
 				List<Entity> entitylist = player.getNearbyEntities(10, 5, 10);
 				for (Entity nearEntity : entitylist) {
 					if(!(nearEntity instanceof Player)) {
@@ -2238,19 +2238,19 @@ public class Skill {
 					for (Entity nearEntity : entitylist) {
 						if (nearEntity.getType() == EntityType.PLAYER) {
 							Player nearPlayer = (Player) nearEntity;
-							int addHealth = (int) (player.getMaxHealth() * 30 / 100);
+							int addHealth = (int) (player.getMaxHealth() * 40 / 100);
 							if (nearPlayer.getHealth() + addHealth <= nearPlayer.getMaxHealth()) {
 								nearPlayer.setHealth(nearPlayer.getHealth() + addHealth);
 							} else {
 								nearPlayer.setHealth(nearPlayer.getMaxHealth());
 							}
-							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 2));
+							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 400, 2));
 							nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 회복되었습니다.");
 							nearPlayer.sendMessage(
 									ChatColor.GREEN + player.getDisplayName() + "님에 의해 10초 동안 방어력이 상승합니다.");
 						}
 					}
-					int addHealth = (int) (player.getMaxHealth() * 30 / 100);
+					int addHealth = (int) (player.getMaxHealth() * 50 / 100);
 					if (player.getHealth() + addHealth <= player.getMaxHealth()) {
 						player.setHealth(player.getHealth() + addHealth);
 					} else {
@@ -2282,18 +2282,18 @@ public class Skill {
 				for (Entity nearEntity : entitylist) {
 					if (nearEntity.getType() == EntityType.PLAYER) {
 						Player nearPlayer = (Player) nearEntity;
-						int addHealth = (int) (player.getMaxHealth() * 30 / 100);
+						int addHealth = (int) (player.getMaxHealth() * 40 / 100);
 						if (nearPlayer.getHealth() + addHealth <= nearPlayer.getMaxHealth()) {
 							nearPlayer.setHealth(nearPlayer.getHealth() + addHealth);
 						} else {
 							nearPlayer.setHealth(nearPlayer.getMaxHealth());
 						}
-						nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 2));
+						nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 400, 2));
 						nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 회복되었습니다.");
 						nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 10초 동안 방어력이 상승합니다.");
 					}
 				}
-				int addHealth = (int) (player.getMaxHealth() * 30 / 100);
+				int addHealth = (int) (player.getMaxHealth() * 50 / 100);
 				if (player.getHealth() + addHealth <= player.getMaxHealth()) {
 					player.setHealth(player.getHealth() + addHealth);
 				} else {
@@ -2401,7 +2401,7 @@ public class Skill {
 								if (time > 40) {
 									player.setHealth(20);
 									player.sendMessage(ChatColor.GREEN + "신의 경고가 발동됩니다.");
-									player.sendMessage(ChatColor.GREEN + "다시 한번 시작할 수 있습니다.");
+									player.sendMessage(ChatColor.GREEN + "정신이 번쩍 듭니다.");
 									world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);									
 								}
 							} else if (num == 1) {

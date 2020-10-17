@@ -712,6 +712,18 @@ public class MobDeath {
 			if (name.equalsIgnoreCase("진흙 요정" + ChatColor.YELLOW + " [Lv.366]")) {
 				mobloot.mob152(lootPlayer);
 			}
+			// 푸른 가오리
+			if (name.equalsIgnoreCase("푸른 가오리" + ChatColor.YELLOW + " [Lv.380]")) {
+				mobloot.mob153(lootPlayer);
+			}
+			// 아라크네의 하수인
+			if (name.equalsIgnoreCase("아라크네의 하수인" + ChatColor.YELLOW + " [Lv.383]")) {
+				mobloot.mob154(lootPlayer);
+			}
+			// 아라크네
+			if (name.equalsIgnoreCase("아라크네" + ChatColor.YELLOW + " [Lv.??]")) {
+				mobloot.mob155(lootPlayer);
+			}
 			
 //================================================================================================================================
 			int cnt = 0;

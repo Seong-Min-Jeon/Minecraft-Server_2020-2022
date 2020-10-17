@@ -3465,16 +3465,57 @@ public class MobLoot {
 		es.giveExp(player, 1100000);
 	}
 	
+	// 푸른 가오리
 	public void mob153(Player player) {
-
+//		int num = rnd.nextInt(3) + 4;
+//		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+//		ItemMeta im = item.getItemMeta();
+//		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+//		item.setItemMeta(im);
+//		player.getInventory().addItem(item);
+//		es.giveExp(player, 1100000);
 	}
 	
+	// 아라크네의 하수인
 	public void mob154(Player player) {
-
+		int num = rnd.nextInt(3) + 2;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1000000);
 	}
 	
+	// 아라크네
 	public void mob155(Player player) {
+		int num = 10;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 7000000);
+		
+		ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
+		ItemMeta rewardKeyIm = rewardKey.getItemMeta();
+		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "아라크네의 저주 보상 열쇠");
+		rewardKey.setItemMeta(rewardKeyIm);
+		player.getInventory().addItem(rewardKey);
+		player.sendMessage(ChatColor.YELLOW + "아라크네의 저주 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 
+		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
+		for (Entity nearEntity : entitylist) {
+			if (nearEntity.getType() == EntityType.PLAYER) {
+				Player nearPlayer = (Player) nearEntity;
+				Location loc = nearPlayer.getLocation();
+				if (loc.getX() <= 776 && loc.getY() <= 31 && loc.getZ() <= 605 
+						&& loc.getX() >= 727 && loc.getY() >= 0 && loc.getZ() >= 555) {
+					nearPlayer.getInventory().addItem(rewardKey);
+					nearPlayer.sendMessage(ChatColor.YELLOW + "아라크네의 저주 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+				}
+			}
+		}
 	}
 	
 	public void mob156(Player player) {
@@ -3482,6 +3523,58 @@ public class MobLoot {
 	}
 	
 	public void mob157(Player player) {
+
+	}
+	
+	public void mob158(Player player) {
+
+	}
+	
+	public void mob159(Player player) {
+
+	}
+	
+	public void mob160(Player player) {
+
+	}
+	
+	public void mob161(Player player) {
+
+	}
+	
+	public void mob162(Player player) {
+
+	}
+	
+	public void mob163(Player player) {
+
+	}
+	
+	public void mob164(Player player) {
+
+	}
+	
+	public void mob165(Player player) {
+
+	}
+	
+	public void mob166(Player player) {
+
+	}
+	
+	public void mob167(Player player) {
+
+	}
+	
+	public void mob168(Player player) {
+
+	}
+	
+	public void mob169(Player player) {
+
+	}
+	
+	public void mob170(Player player) {
 
 	}
 }

@@ -16,6 +16,7 @@ import org.bukkit.Particle.DustOptions;
 import org.bukkit.block.Block;
 import org.bukkit.block.Chest;
 import org.bukkit.craftbukkit.v1_16_R1.CraftWorld;
+import org.bukkit.entity.CaveSpider;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.FallingBlock;
@@ -60,6 +61,7 @@ public class PlayerHitDebuff {
 		mob19(player, mob);
 		mob20(player, mob);
 		mob21(player, mob);
+		mob22(player, mob);
 	}
 
 	// 시련의 형상
@@ -754,6 +756,7 @@ public class PlayerHitDebuff {
 					player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 100, 200, true, false, false));
 					player.getWorld().playSound(player.getLocation(), Sound.AMBIENT_CAVE, 3.0f, 1.0f);
 					player.sendMessage(ChatColor.RED + "어둠의 기운이 덮칩니다.");
+					sendMessage(player, ChatColor.RED + "어둠의 기운이 덮칩니다.");
 					((Skeleton) mob).setTarget(player);
 					player.getWorld().spawnEntity(mob.getLocation(), EntityType.ENDERMITE);
 					player.getWorld().spawnEntity(mob.getLocation(), EntityType.ENDERMITE);
@@ -846,7 +849,166 @@ public class PlayerHitDebuff {
 
 	}
 
+	// 아라크네
 	public void mob22(Player player, Entity mob) {
+		
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("아라크네" + ChatColor.YELLOW + " [Lv.??]")) {
+			
+			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
+				int num = rnd.nextInt(12);
+				if (num == 0) {
+					player.getWorld().playSound(player.getLocation(), Sound.AMBIENT_CAVE, 2.0f, 3.0f);
+					player.sendMessage(ChatColor.RED + "아라크네가 알까기를 시전했습니다.");
+					sendMessage(player, ChatColor.RED + "아라크네가 알까기를 시전했습니다.");
+					((CaveSpider) mob).setTarget(player);
+					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+						int time = 0;
+						ThreadData td = new ThreadData(player.getUniqueId());
+
+						@Override
+						public void run() {
+							
+							if (!td.hasID()) {
+								td.setID(taskID);
+							}
+							
+							if (time >= 80) {
+								player.sendMessage(ChatColor.RED + "아라크네가 알을 깝니다.");
+								sendMessage(player, ChatColor.RED + "아라크네가 알을 깝니다.");
+								player.getWorld().spawnEntity(mob.getLocation(), EntityType.SPIDER);
+								player.getWorld().spawnEntity(mob.getLocation(), EntityType.SPIDER);
+								player.getWorld().spawnEntity(mob.getLocation(), EntityType.SPIDER);
+								player.getWorld().spawnEntity(mob.getLocation(), EntityType.SPIDER);
+								player.getWorld().spawnEntity(mob.getLocation(), EntityType.SPIDER);
+								td.endTask();
+								td.removeID();
+							}
+							
+							time++;
+
+						}
+
+					}, 0, 1);
+				}
+				if (num == 1) {
+					Location loc = mob.getLocation();
+					int r = 20;
+					for (int x = (r * -1); x <= r; x++) {
+						for (int z = (r * -1); z <= r; z++) {
+							Block b1 = loc.getWorld().getBlockAt(loc.getBlockX() + x, 16, loc.getBlockZ() + z);
+							if(b1.getX() <= 766 && b1.getZ() <= 595 && b1.getX() >= 734 && b1.getZ() >= 563) {
+								int random = rnd.nextInt(100);
+								if (10 >= random) {
+									Block b2 = loc.getWorld().getBlockAt(loc.getBlockX() + x, 15, loc.getBlockZ() + z);
+									if (b2.getType() != Material.AIR) {
+										b1.setType(Material.LIGHT_WEIGHTED_PRESSURE_PLATE);
+									}
+								}
+							}
+						}
+					}
+					player.sendMessage(ChatColor.RED + "아라크네가 함정을 파놓습니다.");
+					sendMessage(player, ChatColor.RED + "아라크네가 함정을 파놓습니다.");
+					((CaveSpider) mob).setTarget(player);
+					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+						int time = 0;
+						ThreadData td = new ThreadData(player.getUniqueId());
+
+						@Override
+						public void run() {
+							
+							if (!td.hasID()) {
+								td.setID(taskID);
+							}
+							
+							if (time >= 100) {
+								
+								Location loc = mob.getLocation();
+								int r = 40;
+								for (int x = (r * -1); x <= r; x++) {
+									for (int z = (r * -1); z <= r; z++) {
+										Block b1 = loc.getWorld().getBlockAt(loc.getBlockX() + x, 16, loc.getBlockZ() + z);
+										if (b1.getType() == Material.LIGHT_WEIGHTED_PRESSURE_PLATE) {
+											b1.setType(Material.AIR);
+										}
+									}
+								}
+								
+								td.endTask();
+								td.removeID();
+							}
+							
+							time++;
+
+						}
+
+					}, 0, 1);
+				}
+			} else {
+				int num = rnd.nextInt(13);
+				if (num == 0) {
+					Location loc = mob.getLocation();
+					int r = 20;
+					for (int x = (r * -1); x <= r; x++) {
+						for (int z = (r * -1); z <= r; z++) {
+							Block b1 = loc.getWorld().getBlockAt(loc.getBlockX() + x, 16, loc.getBlockZ() + z);
+							if(b1.getX() <= 766 && b1.getZ() <= 595 && b1.getX() >= 734 && b1.getZ() >= 563) {
+								int random = rnd.nextInt(100);
+								if (10 >= random) {
+									Block b2 = loc.getWorld().getBlockAt(loc.getBlockX() + x, 15, loc.getBlockZ() + z);
+									if (b2.getType() != Material.AIR) {
+										b1.setType(Material.LIGHT_WEIGHTED_PRESSURE_PLATE);
+									}
+								}
+							}
+						}
+					}
+					player.sendMessage(ChatColor.RED + "아라크네가 함정을 파놓습니다.");
+					sendMessage(player, ChatColor.RED + "아라크네가 함정을 파놓습니다.");
+					((CaveSpider) mob).setTarget(player);
+					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+						int time = 0;
+						ThreadData td = new ThreadData(player.getUniqueId());
+
+						@Override
+						public void run() {
+							
+							if (!td.hasID()) {
+								td.setID(taskID);
+							}
+							
+							if (time >= 100) {
+								
+								Location loc = mob.getLocation();
+								int r = 40;
+								for (int x = (r * -1); x <= r; x++) {
+									for (int z = (r * -1); z <= r; z++) {
+										Block b1 = loc.getWorld().getBlockAt(loc.getBlockX() + x, 16, loc.getBlockZ() + z);
+										if (b1.getType() == Material.LIGHT_WEIGHTED_PRESSURE_PLATE) {
+											b1.setType(Material.AIR);
+										}
+									}
+								}
+								
+								td.endTask();
+								td.removeID();
+							}
+							
+							time++;
+
+						}
+
+					}, 0, 1);
+				} else if (num == 1) {
+					player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 200, 200, true, false, false));
+					player.sendMessage(ChatColor.RED + "아라크네가 당신을 속박합니다.");
+					((CaveSpider) mob).setTarget(player);
+				}
+			}
+		}
 
 	}
 

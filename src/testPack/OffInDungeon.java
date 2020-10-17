@@ -54,6 +54,12 @@ public class OffInDungeon {
 			player.setHealth(0);
 			return;
 		}
+		// 아라크네의 저주 699 59 552  789 0 634
+		if (loc.getX() <= 789 && loc.getY() <= 59 && loc.getZ() <= 634 && loc.getX() >= 699 && loc.getY() >= 0
+				&& loc.getZ() >= 552) {
+			player.setHealth(0);
+			return;
+		}
 	}
 	
 }

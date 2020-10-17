@@ -41,8 +41,24 @@ public class ArrowEffect {
 				boolean bool = false;
 				if(im.getDisplayName().equals(ChatColor.AQUA + "죽음의 서약")) {
 					if(player.getLevel() >= 350) {
-						if(removeMana(player, 1)) {
+						if(removeMana(player, 5)) {
 							bool = reload(player, 1000);
+						}
+					} 
+				}
+				if(im.getDisplayName().equals(ChatColor.YELLOW + "질풍의 지팡이")) {
+					if(player.getLevel() >= 300) {
+						if(removeMana(player, 1)) {
+							player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 1, true, false, false));
+							player.sendMessage(ChatColor.GREEN + "신속이 부여됩니다.");
+						}
+					} 
+				}
+				if(im.getDisplayName().equals(ChatColor.LIGHT_PURPLE + "고목나무 지팡이")) {
+					if(player.getLevel() >= 300) {
+						if(removeMana(player, 2)) {
+							player.setHealth(player.getHealth()+2);
+							player.sendMessage(ChatColor.GREEN + "체력이 회복되었습니다.");
 						}
 					} 
 				}

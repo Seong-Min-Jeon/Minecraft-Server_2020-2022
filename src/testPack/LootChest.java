@@ -156,6 +156,11 @@ public class LootChest {
 					dungeon7(player);
 				}				
 			}
+			if(block.getX()==709 && block.getY()==59 && block.getZ()==589) {
+				if(removeKey(player, "아라크네의 저주 보상 열쇠")) {
+					dungeon8(player);
+				}				
+			}
 			
 		}
 	}
@@ -1636,6 +1641,205 @@ public class LootChest {
 		ItemStack var9 = new ItemStack(Material.GOLD_ORE, 64);
 		ItemMeta var9Im = var9.getItemMeta();
 		var9Im.setDisplayName(ChatColor.YELLOW + "가치가 떨어진 금광석");
+		var9.setItemMeta(var9Im);
+		
+		ItemStack emerald = new ItemStack(Material.SCUTE, num10);
+		ItemMeta im = emerald.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		emerald.setItemMeta(im);
+		inv.setItem(0, emerald);
+		
+		if(num1==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, var1);
+		}
+		if(num2==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, var2);
+		}
+		if(num3==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, var3);
+		}
+		if(num4==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, var4);
+		}
+		if(num5==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, var5);
+		}
+		if(num6==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, var6);
+		}
+		if(num7==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, var7);
+		}
+		if(num8==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, var8);
+		}
+		if(num9==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, var9);
+		}
+		player.openInventory(inv);	
+	}
+	
+	public void dungeon8(Player player) {
+		Inventory inv = Bukkit.createInventory(player, 9, "Dungeon Reward");
+		int idx;
+		int num1 = rnd.nextInt(70); // 거미 여왕의 검
+		int num2 = rnd.nextInt(30); // 세트
+		int num3 = rnd.nextInt(18); // 세트
+		int num4 = rnd.nextInt(13); // 세트
+		int num5 = rnd.nextInt(24);	// 세트
+		int num6 = rnd.nextInt(13);	// 리벨리온
+		int num7 = rnd.nextInt(15); // 베놈 
+		int num8 = rnd.nextInt(20);	// 오드아이즈
+		int num9 = rnd.nextInt(10);	// 클리어윙
+		int num10 = rnd.nextInt(14) + 50;
+		
+		ItemStack var1 = new ItemStack(Material.JUNGLE_PLANKS);
+		ItemMeta var1Im = var1.getItemMeta();
+		var1Im.setLocalizedName("700,0,1000,0,500,0,0,0,0,0,390");
+		var1Im.setDisplayName(ChatColor.GREEN + "거미 여왕의 검");
+		ArrayList<String> var1Lore = new ArrayList();
+		var1Lore.add(ChatColor.GRAY + "레벨 제한: 390");
+		var1Lore.add(ChatColor.GRAY + " ");
+		var1Lore.add(ChatColor.GRAY + "아라크네의 이빨로 만든 검");
+		var1Lore.add(ChatColor.GRAY + "(세트 아이템)");
+		var1Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		var1Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		var1Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var1Im.setUnbreakable(true);
+		var1Im.setLore(var1Lore);
+		var1.setItemMeta(var1Im);
+		
+		ItemStack var2 = new ItemStack(Material.IRON_HELMET);
+		ItemMeta var2Im = var2.getItemMeta();
+		var2Im.setLocalizedName("300,0,0,0,0,300,0,0,0,3000,390");
+		var2Im.setDisplayName(ChatColor.GREEN + "거미 여왕의 헬멧");
+		ArrayList<String> var2Lore = new ArrayList();
+		var2Lore.add(ChatColor.GRAY + "레벨 제한: 390");
+		var2Lore.add(ChatColor.GRAY + " ");
+		var2Lore.add(ChatColor.GRAY + "아라크네의 껍질로 만든 헬멧");
+		var2Lore.add(ChatColor.GRAY + "(세트 아이템)");
+		var2Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		var2Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		var2Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var2Im.setUnbreakable(true);
+		var2Im.setLore(var2Lore);
+		var2.setItemMeta(var2Im);
+		
+		ItemStack var3 = new ItemStack(Material.IRON_CHESTPLATE);
+		ItemMeta var3Im = var3.getItemMeta();
+		var3Im.setLocalizedName("300,0,0,0,0,300,0,0,0,3000,390");
+		var3Im.setDisplayName(ChatColor.GREEN + "거미 여왕의 갑옷");
+		ArrayList<String> var3Lore = new ArrayList();
+		var3Lore.add(ChatColor.GRAY + "레벨 제한: 390");
+		var3Lore.add(ChatColor.GRAY + " ");
+		var3Lore.add(ChatColor.GRAY + "아라크네의 껍질로 만든 갑옷");
+		var3Lore.add(ChatColor.GRAY + "(세트 아이템)");
+		var3Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		var3Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		var3Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var3Im.setUnbreakable(true);
+		var3Im.setLore(var3Lore);
+		var3.setItemMeta(var3Im);
+		
+		ItemStack var4 = new ItemStack(Material.IRON_LEGGINGS);
+		ItemMeta var4Im = var4.getItemMeta();
+		var4Im.setLocalizedName("300,0,0,0,0,300,0,0,0,3000,390");
+		var4Im.setDisplayName(ChatColor.GREEN + "거미 여왕의 각반");
+		ArrayList<String> var4Lore = new ArrayList();
+		var4Lore.add(ChatColor.GRAY + "레벨 제한: 390");
+		var4Lore.add(ChatColor.GRAY + " ");
+		var4Lore.add(ChatColor.GRAY + "아라크네의 껍질로 만든 각반");
+		var4Lore.add(ChatColor.GRAY + "(세트 아이템)");
+		var4Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		var4Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		var4Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var4Im.setUnbreakable(true);
+		var4Im.setLore(var4Lore);
+		var4.setItemMeta(var4Im);
+		
+		ItemStack var5 = new ItemStack(Material.IRON_BOOTS);
+		ItemMeta var5Im = var5.getItemMeta();
+		var5Im.setLocalizedName("300,0,0,0,0,300,0,0,0,3000,390");
+		var5Im.setDisplayName(ChatColor.GREEN + "거미 여왕의 신발");
+		ArrayList<String> var5Lore = new ArrayList();
+		var5Lore.add(ChatColor.GRAY + "레벨 제한: 390");
+		var5Lore.add(ChatColor.GRAY + " ");
+		var5Lore.add(ChatColor.GRAY + "아라크네의 껍질로 만든 신발");
+		var5Lore.add(ChatColor.GRAY + "(세트 아이템)");
+		var5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		var5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		var5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var5Im.setUnbreakable(true);
+		var5Im.setLore(var5Lore);
+		var5.setItemMeta(var5Im);
+		
+		ItemStack var6 = new ItemStack(Material.IRON_HELMET);
+		ItemMeta var6Im = var6.getItemMeta();
+		var6Im.setLocalizedName("250,300,300,0,0,200,500,500,500,500,390");
+		var6Im.setDisplayName(ChatColor.YELLOW + "리벨리온");
+		ArrayList<String> var6Lore = new ArrayList();
+		var6Lore.add(ChatColor.GRAY + "레벨 제한: 390");
+		var6Lore.add(ChatColor.GRAY + " ");
+		var6Lore.add(ChatColor.GRAY + "검은 용의 각인이 붙은 헬멧");
+		var6Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		var6Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		var6Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var6Im.setUnbreakable(true);
+		var6Im.setLore(var6Lore);
+		var6.setItemMeta(var6Im);
+		
+		ItemStack var7 = new ItemStack(Material.IRON_CHESTPLATE);
+		ItemMeta var7Im = var7.getItemMeta();
+		var7Im.setLocalizedName("280,0,0,0,0,200,0,0,0,2800,390");
+		var7Im.setDisplayName(ChatColor.YELLOW + "베놈");
+		ArrayList<String> var7Lore = new ArrayList();
+		var7Lore.add(ChatColor.GRAY + "레벨 제한: 390");
+		var7Lore.add(ChatColor.GRAY + " ");
+		var7Lore.add(ChatColor.GRAY + "보라빛 용의 각인이 붙은 갑옷");
+		var7Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		var7Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		var7Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var7Im.setUnbreakable(true);
+		var7Im.setLore(var7Lore);
+		var7.setItemMeta(var7Im);
+		
+		ItemStack var8 = new ItemStack(Material.IRON_LEGGINGS);
+		ItemMeta var8Im = var8.getItemMeta();
+		var8Im.setLocalizedName("250,200,200,300,100,200,0,0,0,0,390");
+		var8Im.setDisplayName(ChatColor.YELLOW + "오드아이즈");
+		ArrayList<String> var8Lore = new ArrayList();
+		var8Lore.add(ChatColor.GRAY + "레벨 제한: 390");
+		var8Lore.add(ChatColor.GRAY + " ");
+		var8Lore.add(ChatColor.GRAY + "적색, 녹색 눈을 가진 용의 각인이 붙은 각반");
+		var8Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		var8Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		var8Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var8Im.setUnbreakable(true);
+		var8Im.setLore(var8Lore);
+		var8.setItemMeta(var8Im);
+		
+		ItemStack var9 = new ItemStack(Material.IRON_BOOTS);
+		ItemMeta var9Im = var9.getItemMeta();
+		var9Im.setLocalizedName("250,0,0,0,0,200,500,500,500,0,390");
+		var9Im.setDisplayName(ChatColor.YELLOW + "클리어윙");
+		ArrayList<String> var9Lore = new ArrayList();
+		var9Lore.add(ChatColor.GRAY + "레벨 제한: 390");
+		var9Lore.add(ChatColor.GRAY + " ");
+		var9Lore.add(ChatColor.GRAY + "하얀 용의 각인이 붙은 신발");
+		var9Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		var9Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		var9Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var9Im.setUnbreakable(true);
+		var9Im.setLore(var9Lore);
 		var9.setItemMeta(var9Im);
 		
 		ItemStack emerald = new ItemStack(Material.SCUTE, num10);

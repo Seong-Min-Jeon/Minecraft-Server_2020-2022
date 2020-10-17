@@ -297,6 +297,12 @@ public class MobThread {
 						} else if(loc.getX() <= 847 && loc.getY() <= 57 && loc.getZ() <= 739 && 
 								loc.getX() >= 777 && loc.getY() >= 29 && loc.getZ() >= 683) {
 							castleNearVilNearCave(player, loc);
+						} else if(loc.getX() <= 782 && loc.getY() <= 56 && loc.getZ() <= 633 
+								&& loc.getX() >= 699 && loc.getY() >= 34 && loc.getZ() >= 551) {
+							aracunePhan(player, loc);
+						} else if(loc.getX() <= 759 && loc.getY() <= 30 && loc.getZ() <= 588 
+								&& loc.getX() >= 741 && loc.getY() >= 5 && loc.getZ() >= 570) {
+							aracuneSpi(player, loc);
 						}
 					} 
 					
@@ -1797,7 +1803,7 @@ public class MobThread {
 	}
 	
 	public void castleNearVilNearCave(Player player, Location loc) {
-		int num = rnd.nextInt(2);
+		int num = rnd.nextInt(1);
 		loc = location(loc);
 		if (!(loc.getX() <= 847 && loc.getY() <= 57 && loc.getZ() <= 739 && 
 				loc.getX() >= 777 && loc.getY() >= 29 && loc.getZ() >= 683)) {
@@ -1806,6 +1812,32 @@ public class MobThread {
 		
 		if (num == 0) {
 			loc.getWorld().spawnEntity(loc, EntityType.MAGMA_CUBE);
+		}
+	}
+	
+	public void aracunePhan(Player player, Location loc) {
+		int num = rnd.nextInt(1);
+		loc = location(loc);
+		if (!(loc.getX() <= 782 && loc.getY() <= 56 && loc.getZ() <= 633 
+				&& loc.getX() >= 699 && loc.getY() >= 34 && loc.getZ() >= 551)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.PHANTOM);
+		}
+	}
+	
+	public void aracuneSpi(Player player, Location loc) {
+		int num = rnd.nextInt(1);
+		loc = location(loc);
+		if (!(loc.getX() <= 759 && loc.getY() <= 30 && loc.getZ() <= 588 
+				&& loc.getX() >= 741 && loc.getY() >= 5 && loc.getZ() >= 570)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.SPIDER);
 		}
 	}
 	

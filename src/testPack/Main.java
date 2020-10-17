@@ -272,7 +272,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("woolring")) { 
 			
 		} else {
-			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/764366569165815828/tutorial_resource_pack_44.zip");
+			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/766543594399596564/tutorial_resource_pack_45.zip");
 		}
 		
 		//Message
@@ -736,6 +736,24 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("yumehama") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
 		if(player.getDisplayName().equalsIgnoreCase("WoolRing") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
 		
+		ItemStack var1 = new ItemStack(Material.MUSIC_DISC_CAT);
+		ItemMeta var1Im = var1.getItemMeta();
+		var1Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,300");
+		var1Im.setDisplayName(ChatColor.AQUA + "죽음의 서약");
+		ArrayList<String> var1Lore = new ArrayList();
+		var1Lore.add(ChatColor.GRAY + "레벨 제한: 300");
+		var1Lore.add(ChatColor.GRAY + " ");
+		var1Lore.add(ChatColor.GRAY + "바람의 결정으로 만들어진 지팡이");
+		var1Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		var1Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		var1Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var1Im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
+		var1Im.setUnbreakable(true);
+		var1Im.setLore(var1Lore);
+		var1.setItemMeta(var1Im);
+		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var1);}
+		
+		
 //		ItemStack helmet = new ItemStack(Material.MOSSY_COBBLESTONE_WALL);
 //		ItemMeta helmetIm = helmet.getItemMeta();
 //		helmetIm.setLocalizedName("300,100,100,100,100,100,100,100,100,100,250");
@@ -917,8 +935,6 @@ public class Main extends JavaPlugin implements Listener{
 	@EventHandler
 	public void levelUp(PlayerLevelChangeEvent event) {
 		Player player = (Player)event.getPlayer();	
-		//MainQuest
-		MainQuest mq = new MainQuest(player);
 		if(player.getLevel() >= 1000) {
 			player.setLevel(1000);
 			player.setExp(0);
@@ -2428,7 +2444,7 @@ public class Main extends JavaPlugin implements Listener{
 				if (event.getDamager() instanceof Player) {
 					Player player = (Player) event.getDamager();
 					((Spider) event.getEntity()).setTarget(player);
-					List<Entity> entitylist = event.getEntity().getNearbyEntities(30, 10, 30);
+					List<Entity> entitylist = event.getEntity().getNearbyEntities(20, 20, 20);
 					for (Entity nearEntity : entitylist) {
 						if (nearEntity instanceof Spider) {
 							((Spider) nearEntity).setTarget(player);
@@ -2442,7 +2458,7 @@ public class Main extends JavaPlugin implements Listener{
 					if(proj.getShooter() instanceof Player) {
 						Player player = (Player) proj.getShooter();
 						((Spider) event.getEntity()).setTarget(player);
-						List<Entity> entitylist = event.getEntity().getNearbyEntities(30, 10, 30);
+						List<Entity> entitylist = event.getEntity().getNearbyEntities(20, 20, 20);
 						for (Entity nearEntity : entitylist) {
 							if (nearEntity instanceof Spider) {
 								((Spider) nearEntity).setTarget(player);
@@ -2457,7 +2473,7 @@ public class Main extends JavaPlugin implements Listener{
 					if(proj.getShooter() instanceof Player) {
 						Player player = (Player) proj.getShooter();
 						((Spider) event.getEntity()).setTarget(player);
-						List<Entity> entitylist = event.getEntity().getNearbyEntities(30, 10, 30);
+						List<Entity> entitylist = event.getEntity().getNearbyEntities(20, 20, 20);
 						for (Entity nearEntity : entitylist) {
 							if (nearEntity instanceof Spider) {
 								((Spider) nearEntity).setTarget(player);
@@ -2472,7 +2488,7 @@ public class Main extends JavaPlugin implements Listener{
 					if(proj.getShooter() instanceof Player) {
 						Player player = (Player) proj.getShooter();
 						((Spider) event.getEntity()).setTarget(player);
-						List<Entity> entitylist = event.getEntity().getNearbyEntities(30, 10, 30);
+						List<Entity> entitylist = event.getEntity().getNearbyEntities(20, 20, 20);
 						for (Entity nearEntity : entitylist) {
 							if (nearEntity instanceof Spider) {
 								((Spider) nearEntity).setTarget(player);
@@ -2488,7 +2504,7 @@ public class Main extends JavaPlugin implements Listener{
 				if (event.getDamager() instanceof Player) {
 					Player player = (Player) event.getDamager();
 					((CaveSpider) event.getEntity()).setTarget(player);
-					List<Entity> entitylist = event.getEntity().getNearbyEntities(30, 10, 30);
+					List<Entity> entitylist = event.getEntity().getNearbyEntities(20, 20, 20);
 					for (Entity nearEntity : entitylist) {
 						if (nearEntity instanceof Spider) {
 							((Spider) nearEntity).setTarget(player);
@@ -2502,7 +2518,7 @@ public class Main extends JavaPlugin implements Listener{
 					if(proj.getShooter() instanceof Player) {
 						Player player = (Player) proj.getShooter();
 						((CaveSpider) event.getEntity()).setTarget(player);
-						List<Entity> entitylist = event.getEntity().getNearbyEntities(30, 10, 30);
+						List<Entity> entitylist = event.getEntity().getNearbyEntities(20, 20, 20);
 						for (Entity nearEntity : entitylist) {
 							if (nearEntity instanceof Spider) {
 								((Spider) nearEntity).setTarget(player);
@@ -2517,7 +2533,7 @@ public class Main extends JavaPlugin implements Listener{
 					if(proj.getShooter() instanceof Player) {
 						Player player = (Player) proj.getShooter();
 						((CaveSpider) event.getEntity()).setTarget(player);
-						List<Entity> entitylist = event.getEntity().getNearbyEntities(30, 10, 30);
+						List<Entity> entitylist = event.getEntity().getNearbyEntities(20, 20, 20);
 						for (Entity nearEntity : entitylist) {
 							if (nearEntity instanceof Spider) {
 								((Spider) nearEntity).setTarget(player);
@@ -2532,7 +2548,7 @@ public class Main extends JavaPlugin implements Listener{
 					if(proj.getShooter() instanceof Player) {
 						Player player = (Player) proj.getShooter();
 						((CaveSpider) event.getEntity()).setTarget(player);
-						List<Entity> entitylist = event.getEntity().getNearbyEntities(30, 10, 30);
+						List<Entity> entitylist = event.getEntity().getNearbyEntities(20, 20, 20);
 						for (Entity nearEntity : entitylist) {
 							if (nearEntity instanceof Spider) {
 								((Spider) nearEntity).setTarget(player);

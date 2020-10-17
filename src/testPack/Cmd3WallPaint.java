@@ -75,7 +75,7 @@ public class Cmd3WallPaint implements CommandExecutor {
 				}
 				try { 
 					String name = args[3].toUpperCase();
-					if(name.equalsIgnoreCase("yumehama")) {
+					if(name.equalsIgnoreCase("YUMEHAMA")) {
 						player.sendMessage(ChatColor.AQUA + "안녕 나를 소환하려는 거니?");
 						player.sendMessage(ChatColor.AQUA + "내가 선물을 하나 줄께");
 						player.sendMessage(ChatColor.AQUA + "사실 거짓말이야");
