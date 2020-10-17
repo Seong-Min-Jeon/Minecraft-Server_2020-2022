@@ -78,6 +78,8 @@ public class QuestScroll {
 				mq36(player, itemArg, world);
 				mq37(player, itemArg, world);
 				mq38(player, itemArg, world);
+				mq39(player, itemArg, world);
+				mq40(player, itemArg, world);
 			} else {
 				itemArg.remove();
 				player.getInventory().addItem(itemArg.getItemStack());
@@ -584,6 +586,22 @@ public class QuestScroll {
 			msg.msg(player, "꼬마: 후에엥.%꼬마: 후에엥.%꼬마: 모험가님 저를 한번 더 도와주세요.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq38(player, 0);
+		}	
+	}
+	
+	public void mq39(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "메인퀘스트 39장")) {
+			msg.msg(player, "네비: 이 근처에서 나와 비슷한 힘이 느껴지는데..?%네비: 이건 무조건 가야돼.%네비: 힘의 좌표는 §e'694 67 618'§f인 것 같아.");
+			QuestBoard qb = new QuestBoard();
+			qb.mq39(player, 0);
+		}	
+	}
+	
+	public void mq40(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "메인퀘스트 40장")) {
+			msg.msg(player, "네비: §e고성 지하§f에서 §e던전§f을 찾았어.%네비: 던전 입구에서 기다릴테니까 같이 가자.");
+			QuestBoard qb = new QuestBoard();
+			qb.mq40(player, 0);
 		}	
 	}
 	

@@ -696,6 +696,22 @@ public class Main extends JavaPlugin implements Listener{
                     	QuestBoard qb = new QuestBoard();
                 		qb.mq38_2(event.getPlayer(), Integer.parseInt(num));
                     }
+                    if(quest.equals("mq39")) {
+                    	QuestBoard qb = new QuestBoard();
+                		qb.mq39(event.getPlayer(), Integer.parseInt(num));
+                    }
+                    if(quest.equals("mq39_1")) {
+                    	QuestBoard qb = new QuestBoard();
+                		qb.mq39_1(event.getPlayer(), Integer.parseInt(num));
+                    }
+                    if(quest.equals("mq39_2")) {
+                    	QuestBoard qb = new QuestBoard();
+                		qb.mq39_2(event.getPlayer(), Integer.parseInt(num));
+                    }
+                    if(quest.equals("mq40")) {
+                    	QuestBoard qb = new QuestBoard();
+                		qb.mq40(event.getPlayer(), Integer.parseInt(num));
+                    }
                     bufReader.close();
                 }
             }
@@ -3691,6 +3707,84 @@ public class Main extends JavaPlugin implements Listener{
 						new BossHealth().getBar4().setProgress(boss.getHealth() / 1000000.0);
 					}
 				}
+				// 아덴
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("아덴" + ChatColor.YELLOW + " [Lv.??]")) {
+
+					LivingEntity boss = (LivingEntity) mob;
+					
+					if(boss.getHealth() - event.getFinalDamage() <= 0) {
+						for(Player p : new BossHealth().getBar5().getPlayers()) {
+							new BossHealth().getBar5().removePlayer(p);
+						}
+					} else {
+						new BossHealth().getBar5().setProgress(boss.getHealth() / 20000.0);
+					}
+				}
+				// 특급 요리사
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("특급 요리사" + ChatColor.YELLOW + " [Lv.??]")) {
+
+					LivingEntity boss = (LivingEntity) mob;
+					
+					if(boss.getHealth() - event.getFinalDamage() <= 0) {
+						for(Player p : new BossHealth().getBar6().getPlayers()) {
+							new BossHealth().getBar6().removePlayer(p);
+						}
+					} else {
+						new BossHealth().getBar6().setProgress(boss.getHealth() / 60000.0);
+					}
+				}
+				// 케흘렌
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("케흘렌" + ChatColor.YELLOW + " [Lv.??]")) {
+
+					LivingEntity boss = (LivingEntity) mob;
+					
+					if(boss.getHealth() - event.getFinalDamage() <= 0) {
+						for(Player p : new BossHealth().getBar7().getPlayers()) {
+							new BossHealth().getBar7().removePlayer(p);
+						}
+					} else {
+						new BossHealth().getBar7().setProgress(boss.getHealth() / 70000.0);
+					}
+				}
+				// 발로르
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("발로르" + ChatColor.YELLOW + " [Lv.??]")) {
+
+					LivingEntity boss = (LivingEntity) mob;
+					
+					if(boss.getHealth() - event.getFinalDamage() <= 0) {
+						for(Player p : new BossHealth().getBar8().getPlayers()) {
+							new BossHealth().getBar8().removePlayer(p);
+						}
+					} else {
+						new BossHealth().getBar8().setProgress(boss.getHealth() / 150000.0);
+					}
+				}
+				// 티타니아
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("요정여왕 티타니아" + ChatColor.YELLOW + " [Lv.??]")) {
+
+					LivingEntity boss = (LivingEntity) mob;
+					
+					if(boss.getHealth() - event.getFinalDamage() <= 0) {
+						for(Player p : new BossHealth().getBar9().getPlayers()) {
+							new BossHealth().getBar9().removePlayer(p);
+						}
+					} else {
+						new BossHealth().getBar9().setProgress(boss.getHealth() / 30000.0);
+					}
+				}
+				// 오베론
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("요정왕 오베론" + ChatColor.YELLOW + " [Lv.??]")) {
+
+					LivingEntity boss = (LivingEntity) mob;
+					
+					if(boss.getHealth() - event.getFinalDamage() <= 0) {
+						for(Player p : new BossHealth().getBar10().getPlayers()) {
+							new BossHealth().getBar10().removePlayer(p);
+						}
+					} else {
+						new BossHealth().getBar10().setProgress(boss.getHealth() / 30000.0);
+					}
+				}
 			}
 		} catch(Exception e) {
 			
@@ -5513,6 +5607,22 @@ public class Main extends JavaPlugin implements Listener{
             		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===아이에게 보답을===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq38_2\n");
+        				fw.write(Integer.toString(number));
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===네비의 힘1===")) {
+        				int number =  qb.getNum(player);
+        				fw.write("mq39\n");
+        				fw.write(Integer.toString(number));
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===네비의 힘2===")) {
+        				int number =  qb.getNum(player);
+        				fw.write("mq39_1\n");
+        				fw.write(Integer.toString(number));
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===네비의 힘3===")) {
+        				int number =  qb.getNum(player);
+        				fw.write("mq39_2\n");
+        				fw.write(Integer.toString(number));
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===아라크네의 저주===")) {
+        				int number =  qb.getNum(player);
+        				fw.write("mq40\n");
         				fw.write(Integer.toString(number));
             		}            		
                     fw.close();

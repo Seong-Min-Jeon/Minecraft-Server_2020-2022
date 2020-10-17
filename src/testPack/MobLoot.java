@@ -3484,7 +3484,7 @@ public class MobLoot {
 		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
-		es.giveExp(player, 1000000);
+		es.giveExp(player, 1160000);
 	}
 	
 	// 아라크네
@@ -3518,36 +3518,182 @@ public class MobLoot {
 		}
 	}
 	
+	// 네오아쿠아 마돌
 	public void mob156(Player player) {
-
+		int num = rnd.nextInt(3) + 4;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1000000);
+		
+		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
+		ItemMeta var1im = var1.getItemMeta();
+		var1im.setDisplayName(ChatColor.YELLOW + "상급 포보르의 피");
+		var1.setItemMeta(var1im);
+		
+		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
+		ItemMeta var2im = var2.getItemMeta();
+		var2im.setDisplayName(ChatColor.YELLOW + "상급 포보르의 쓸개");
+		var2.setItemMeta(var2im);
+		
+		ItemStack var3 = new ItemStack(Material.CRACKED_POLISHED_BLACKSTONE_BRICKS);
+		ItemMeta var3im = var3.getItemMeta();
+		var3im.setDisplayName(ChatColor.YELLOW + "상급 포보르의 살점");
+		var3.setItemMeta(var3im);
+		
+		int tmp = rnd.nextInt(7);
+		if(tmp == 0) {
+			player.getInventory().addItem(var1);
+			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.YELLOW + "를 획득했다.");
+		} else if(tmp == 1) {
+			player.getInventory().addItem(var2);
+			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.YELLOW + "를 획득했다.");
+		} else if(tmp == 2) {
+			player.getInventory().addItem(var3);
+			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 살점" + ChatColor.YELLOW + "을 획득했다.");
+		}
 	}
 	
+	// 라이트레이 마돌
 	public void mob157(Player player) {
-
+		int num = rnd.nextInt(3) + 4;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1030000);
+		
+		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
+		ItemMeta var1im = var1.getItemMeta();
+		var1im.setDisplayName(ChatColor.YELLOW + "상급 포보르의 피");
+		var1.setItemMeta(var1im);
+		
+		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
+		ItemMeta var2im = var2.getItemMeta();
+		var2im.setDisplayName(ChatColor.YELLOW + "상급 포보르의 쓸개");
+		var2.setItemMeta(var2im);
+		
+		ItemStack var3 = new ItemStack(Material.CRACKED_POLISHED_BLACKSTONE_BRICKS);
+		ItemMeta var3im = var3.getItemMeta();
+		var3im.setDisplayName(ChatColor.YELLOW + "상급 포보르의 살점");
+		var3.setItemMeta(var3im);
+		
+		int tmp = rnd.nextInt(7);
+		if(tmp == 0) {
+			player.getInventory().addItem(var1);
+			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.YELLOW + "를 획득했다.");
+		} else if(tmp == 1) {
+			player.getInventory().addItem(var2);
+			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.YELLOW + "를 획득했다.");
+		} else if(tmp == 2) {
+			player.getInventory().addItem(var3);
+			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 살점" + ChatColor.YELLOW + "을 획득했다.");
+		}
 	}
 	
+	// 방황하는 요정
 	public void mob158(Player player) {
-
+		int num = rnd.nextInt(3) + 5;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1060000);
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===네비의 힘1===")) {
+			int qNum = cb.getNum(player);
+			cb.mq39(player, qNum + 1);
+		}
 	}
 	
+	// 방황하는 요정
 	public void mob159(Player player) {
-
+		int num = rnd.nextInt(3) + 5;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1100000);
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===네비의 힘1===")) {
+			int qNum = cb.getNum(player);
+			cb.mq39(player, qNum + 1);
+		}
 	}
 	
+	// 분노하는 요정
 	public void mob160(Player player) {
-
+		int num = rnd.nextInt(3) + 5;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1120000);
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===네비의 힘2===")) {
+			int qNum = cb.getNum(player);
+			cb.mq39_1(player, qNum + 1);
+		}
 	}
 	
+	// 분노하는 요정
 	public void mob161(Player player) {
-
+		int num = rnd.nextInt(3) + 5;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1150000);
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===네비의 힘2===")) {
+			int qNum = cb.getNum(player);
+			cb.mq39_1(player, qNum + 1);
+		}
 	}
 	
+	// 뒤틀린 요정
 	public void mob162(Player player) {
-
+		int num = rnd.nextInt(3) + 5;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1160000);
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===네비의 힘3===")) {
+			int qNum = cb.getNum(player);
+			cb.mq39_2(player, qNum + 1);
+		}
 	}
 	
+	// 뒤틀린 요정
 	public void mob163(Player player) {
-
+		int num = rnd.nextInt(3) + 5;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1172000);
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===네비의 힘3===")) {
+			int qNum = cb.getNum(player);
+			cb.mq39_2(player, qNum + 1);
+		}
 	}
 	
 	public void mob164(Player player) {

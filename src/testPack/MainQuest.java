@@ -90,13 +90,9 @@ public class MainQuest {
 		} else if(lvl == 360) {
 			main38(player);
 		} else if(lvl == 370) {
-			// 고성 지상층
-			// 뒤틀린 요정 병사
-			// 뒤틀린 검은 요정 병사
+			main39(player);
 		} else if(lvl == 380) {
-			// 고성 던전
-			// 푸른 가오리
-			// 아라크네 + 고성 거미
+			main40(player);
 		} else if(lvl == 390) {
 			// 전직퀘
 			// 선, 악, 운에 맡긴다.
@@ -776,6 +772,38 @@ public class MainQuest {
 		scrollIm.setDisplayName(ChatColor.GOLD + "메인퀘스트 38장");
 		ArrayList<String> scrollLore = new ArrayList();
 		scrollLore.add(ChatColor.GRAY + "'누가 또 우는 소리를 내었는가' 퀘스트를 진행할 수 있다.");
+		scrollIm.setLore(scrollLore);
+		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		scrollIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		scrollIm.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
+		scrollIm.setUnbreakable(true);
+		scroll.setItemMeta(scrollIm);		
+		player.getInventory().addItem(scroll);
+	}
+	
+	public void main39(Player player) {
+		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
+		ItemMeta scrollIm = scroll.getItemMeta();
+		scrollIm.setDisplayName(ChatColor.GOLD + "메인퀘스트 39장");
+		ArrayList<String> scrollLore = new ArrayList();
+		scrollLore.add(ChatColor.GRAY + "'네비의 힘' 퀘스트를 진행할 수 있다.");
+		scrollIm.setLore(scrollLore);
+		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		scrollIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		scrollIm.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
+		scrollIm.setUnbreakable(true);
+		scroll.setItemMeta(scrollIm);		
+		player.getInventory().addItem(scroll);
+	}
+	
+	public void main40(Player player) {
+		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
+		ItemMeta scrollIm = scroll.getItemMeta();
+		scrollIm.setDisplayName(ChatColor.GOLD + "메인퀘스트 40장");
+		ArrayList<String> scrollLore = new ArrayList();
+		scrollLore.add(ChatColor.GRAY + "'아라크네의 저주' 퀘스트를 진행할 수 있다.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);

@@ -303,6 +303,9 @@ public class MobThread {
 						} else if(loc.getX() <= 759 && loc.getY() <= 30 && loc.getZ() <= 588 
 								&& loc.getX() >= 741 && loc.getY() >= 5 && loc.getZ() >= 570) {
 							aracuneSpi(player, loc);
+						} else if(loc.getX() <= 744 && loc.getY() <= 120 && loc.getZ() <= 659 && 
+								loc.getX() >= 710 && loc.getY() >= 60 && loc.getZ() >= 617) {
+							sumukwon(player, loc);
 						}
 					} 
 					
@@ -1838,6 +1841,23 @@ public class MobThread {
 		
 		if (num == 0) {
 			loc.getWorld().spawnEntity(loc, EntityType.SPIDER);
+		}
+	}
+	
+	public void sumukwon(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 744 && loc.getY() <= 120 && loc.getZ() <= 659 && 
+				loc.getX() >= 710 && loc.getY() >= 60 && loc.getZ() >= 617)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.ZOMBIE);
+		} else if (num == 1) {
+			CustomSkeleton2 cs = new CustomSkeleton2(loc);
+			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
+			world.addEntity(cs);
 		}
 	}
 	

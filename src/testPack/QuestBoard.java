@@ -1951,6 +1951,94 @@ public class QuestBoard {
 		player.setScoreboard(board);
 	}
 	
+	public void mq39(Player player, int num) {
+		if(num>=50) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 6500000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "네비: 여기서 더 올라가 볼 수 있을 것 같은데?%네비: 한번 가보자.");
+			QuestBoard qb = new QuestBoard();
+			qb.mq39_1(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 39장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===네비의 힘1===");
+		score.setScore(2);
+		Score score2 = obj.getScore("고성에서 방황하는 몬스터 50마리 사냥");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/50)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq39_1(Player player, int num) {
+		if(num>=50) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 6500000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "네비: 이번에도 더 올라갈 수 있을 것 같아.");
+			QuestBoard qb = new QuestBoard();
+			qb.mq39_2(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 39장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===네비의 힘2===");
+		score.setScore(2);
+		Score score2 = obj.getScore("고성에서 분노하는 몬스터 50마리 사냥");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/50)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq39_2(Player player, int num) {
+		if(num>=50) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 6500000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "네비: 아무래도 모르겠단 말이지.%네비: 나는 잠깐 여기서 조사해볼테니까%네비: 너는 다른 곳 가서 놀고 있어봐.");
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 39장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===네비의 힘3===");
+		score.setScore(2);
+		Score score2 = obj.getScore("고성에서 뒤틀린 몬스터 50마리 사냥");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/50)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq40(Player player, int num) {
+		if(num>=1) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 8000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "네비: 오홍!?%네비: 이것 좀 봐봐 §e검은 흐름§f이야.%네비: 쉽게 구할 수 있는 물건이 아니니까 일단 가져가자.");
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 40장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===아라크네의 저주===");
+		score.setScore(2);
+		Score score2 = obj.getScore("아라크네의 저주 던전 클리어");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/1)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
 	public int getNum(Player player) {
 		try {
 			ArrayList<String> list = new ArrayList<String>(player.getScoreboard().getEntries());

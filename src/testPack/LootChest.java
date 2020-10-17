@@ -159,6 +159,12 @@ public class LootChest {
 			if(block.getX()==709 && block.getY()==59 && block.getZ()==589) {
 				if(removeKey(player, "아라크네의 저주 보상 열쇠")) {
 					dungeon8(player);
+					
+					QuestBoard cb = new QuestBoard();
+					if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===아라크네의 저주===")) {
+						int qNum = cb.getNum(player);
+						cb.mq40(player, qNum + 1);
+					}
 				}				
 			}
 			

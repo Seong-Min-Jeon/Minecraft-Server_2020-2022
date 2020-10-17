@@ -93,6 +93,8 @@ public class TPMobSpawn {
 					if (loc2.getX() <= 3797 && loc2.getY() <= 91 && loc2.getZ() <= 3497 && loc2.getX() >= 3754
 							&& loc2.getY() >= 75 && loc2.getZ() >= 3456) {
 						num++;
+						new BossHealth().getBar9().addPlayer(player);
+						new BossHealth().getBar10().addPlayer(player);
 						return;
 					}
 				}
@@ -126,6 +128,11 @@ public class TPMobSpawn {
 			EntityEquipment head2 = mob2.getEquipment();
 			ItemStack headItem2 = chest.getInventory().getItem(16);
 			head2.setHelmet(headItem2);
+			
+			new BossHealth().getBar9().setProgress(1.0);
+			new BossHealth().getBar9().addPlayer(player);
+			new BossHealth().getBar10().setProgress(1.0);
+			new BossHealth().getBar10().addPlayer(player);
 			return;
 		}
 	}
@@ -202,6 +209,7 @@ public class TPMobSpawn {
 					if (loc2.getX() <= 3807 && loc2.getY() <= 93 && loc2.getZ() <= 3227 && loc2.getX() >= 3783
 							&& loc2.getY() >= 63 && loc2.getZ() >= 3201) {
 						num++;
+						new BossHealth().getBar7().addPlayer(player);
 						return;
 					}
 				}
@@ -220,6 +228,9 @@ public class TPMobSpawn {
 				}
 			}
 			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3791, 69, 3215),EntityType.WITHER_SKELETON);
+			
+			new BossHealth().getBar7().setProgress(1.0);
+			new BossHealth().getBar7().addPlayer(player);
 			return;
 		}
 		
@@ -239,6 +250,7 @@ public class TPMobSpawn {
 					if (loc2.getX() <= 3769 && loc2.getY() <= 163 && loc2.getZ() <= 3254 && loc2.getX() >= 3711
 							&& loc2.getY() >= 133 && loc2.getZ() >= 3217) {
 						num++;
+						new BossHealth().getBar8().addPlayer(player);
 						return;
 					}
 				}
@@ -257,6 +269,9 @@ public class TPMobSpawn {
 				}
 			}
 			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3740, 140, 3236), EntityType.ZOMBIE);
+			
+			new BossHealth().getBar8().setProgress(1.0);
+			new BossHealth().getBar8().addPlayer(player);
 			return;
 		}
 	}
@@ -372,6 +387,7 @@ public class TPMobSpawn {
 					if (loc2.getX() <= 3336 && loc2.getY() <= 45 && loc2.getZ() <= 3762 && loc2.getX() >= 3299
 							&& loc2.getY() >= 10 && loc2.getZ() >= 3725) {
 						num++;
+						new BossHealth().getBar5().addPlayer(player);
 						return;
 					}
 				}
@@ -390,6 +406,9 @@ public class TPMobSpawn {
 				}
 			}
 			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3317, 15, 3744),EntityType.WITHER_SKELETON);
+			
+			new BossHealth().getBar5().setProgress(1.0);
+			new BossHealth().getBar5().addPlayer(player);
 			return;
 		}
 		
@@ -409,6 +428,7 @@ public class TPMobSpawn {
 					if (loc2.getX() <= 3383 && loc2.getY() <= 32 && loc2.getZ() <= 3803 && loc2.getX() >= 3355
 							&& loc2.getY() >= 11 && loc2.getZ() >= 3766) {
 						num++;
+						new BossHealth().getBar6().addPlayer(player);
 						return;
 					}
 				}
@@ -427,6 +447,9 @@ public class TPMobSpawn {
 				}
 			}
 			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3369, 14, 3783), EntityType.ZOMBIE);
+			
+			new BossHealth().getBar6().setProgress(1.0);
+			new BossHealth().getBar6().addPlayer(player);
 			return;
 		}
 	}

@@ -724,6 +724,38 @@ public class MobDeath {
 			if (name.equalsIgnoreCase("아라크네" + ChatColor.YELLOW + " [Lv.??]")) {
 				mobloot.mob155(lootPlayer);
 			}
+			// 네오아쿠아 마돌
+			if (name.equalsIgnoreCase("네오아쿠아 마돌" + ChatColor.YELLOW + " [Lv.365]")) {
+				mobloot.mob156(lootPlayer);
+			}
+			// 라이트레이 마돌
+			if (name.equalsIgnoreCase("라이트레이 마돌" + ChatColor.YELLOW + " [Lv.369]")) {
+				mobloot.mob157(lootPlayer);
+			}
+			// 방황하는 요정
+			if (name.equalsIgnoreCase("방황하는 요정" + ChatColor.YELLOW + " [Lv.372]")) {
+				mobloot.mob158(lootPlayer);
+			}
+			// 방황하는 요정
+			if (name.equalsIgnoreCase("방황하는 요정" + ChatColor.YELLOW + " [Lv.376]")) {
+				mobloot.mob159(lootPlayer);
+			}
+			// 분노하는 요정
+			if (name.equalsIgnoreCase("분노하는 요정" + ChatColor.YELLOW + " [Lv.379]")) {
+				mobloot.mob160(lootPlayer);
+			}
+			// 분노하는 요정
+			if (name.equalsIgnoreCase("분노하는 요정" + ChatColor.YELLOW + " [Lv.383]")) {
+				mobloot.mob161(lootPlayer);
+			}
+			// 뒤틀린 요정
+			if (name.equalsIgnoreCase("뒤틀린 요정" + ChatColor.YELLOW + " [Lv.384]")) {
+				mobloot.mob162(lootPlayer);
+			}
+			// 뒤틀린 요정
+			if (name.equalsIgnoreCase("뒤틀린 요정" + ChatColor.YELLOW + " [Lv.386]")) {
+				mobloot.mob163(lootPlayer);
+			}
 			
 //================================================================================================================================
 			int cnt = 0;
