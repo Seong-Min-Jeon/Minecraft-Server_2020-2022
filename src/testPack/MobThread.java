@@ -306,6 +306,15 @@ public class MobThread {
 						} else if(loc.getX() <= 744 && loc.getY() <= 120 && loc.getZ() <= 659 && 
 								loc.getX() >= 710 && loc.getY() >= 60 && loc.getZ() >= 617) {
 							sumukwon(player, loc);
+						} else if(loc.getX() <= 718 && loc.getY() <= 75 && loc.getZ() <= 617 && 
+								loc.getX() >= 675 && loc.getY() >= 65 && loc.getZ() >= 566) {
+							castle1F(player, loc);
+						} else if(loc.getX() <= 712 && loc.getY() <= 91 && loc.getZ() <= 609 && 
+								loc.getX() >= 668 && loc.getY() >= 82 && loc.getZ() >= 566) {
+							castle2F(player, loc);
+						} else if(loc.getX() <= 713 && loc.getY() <= 116 && loc.getZ() <= 605 && 
+								loc.getX() >= 672 && loc.getY() >= 100 && loc.getZ() >= 572) {
+							castle3F(player, loc);
 						}
 					} 
 					
@@ -1860,6 +1869,52 @@ public class MobThread {
 			world.addEntity(cs);
 		}
 	}
+	
+	public void castle1F(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 718 && loc.getY() <= 75 && loc.getZ() <= 617 && 
+				loc.getX() >= 675 && loc.getY() >= 65 && loc.getZ() >= 566)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
+		}
+	}
+	
+	public void castle2F(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 712 && loc.getY() <= 91 && loc.getZ() <= 609 && 
+				loc.getX() >= 668 && loc.getY() >= 82 && loc.getZ() >= 566)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
+		}
+	}
+	
+	public void castle3F(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 713 && loc.getY() <= 116 && loc.getZ() <= 605 && 
+				loc.getX() >= 672 && loc.getY() >= 100 && loc.getZ() >= 572)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
+		}
+	}
+	
 	
 	public Location location(Location loc) {
 		int x = rnd.nextInt(10) - 5;

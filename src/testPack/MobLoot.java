@@ -3215,7 +3215,7 @@ public class MobLoot {
 		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
-		es.giveExp(player, 5000000);
+		es.giveExp(player, 3000000);
 		
 		ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
 		ItemMeta rewardKeyIm = rewardKey.getItemMeta();

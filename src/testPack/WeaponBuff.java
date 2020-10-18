@@ -62,6 +62,7 @@ public class WeaponBuff {
 												if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "거미 여왕의 신발")) {
 													player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 6,true,false,false));
 													player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 2,true,false,false));
+													player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0,true,false,false));
 												}
 											}
 										}

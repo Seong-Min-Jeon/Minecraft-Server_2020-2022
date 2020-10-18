@@ -6420,7 +6420,9 @@ public class SpawnMob {
 				entity.setMaxHealth(44000);
 				entity.setHealth(44000);
 				MagmaCube magma = (MagmaCube) entity;
-				magma.setSize(4);
+				magma.setSize(2);
+				entity.setMaxHealth(44000);
+				entity.setHealth(44000);
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 118));
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
 				return true;

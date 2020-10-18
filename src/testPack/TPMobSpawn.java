@@ -869,4 +869,44 @@ public class TPMobSpawn {
 		
 	}
 	
+	public void aracune(Player player, Location loc) {
+		// È÷µç º¸½º
+		if (loc.getX() == 31369.59 && loc.getY() == 14 && loc.getZ() == 3803.7) {
+			player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "¾ºÀÕ¾ºÀÍ¾ºÀÌ");
+
+			player.teleport(new Location(player.getWorld(), 31369.6, 14, 3803.71));
+			int num = 0;
+			List<Entity> entitylist = player.getNearbyEntities(50, 50, 50);
+			for (Entity nearEntity : entitylist) {
+				if (nearEntity.getType() == EntityType.PLAYER) {
+					Player nearPlayer = (Player) nearEntity;
+					Location loc2 = nearPlayer.getLocation();
+					if (loc2.getX() <= 776 && loc2.getY() <= 31 && loc2.getZ() <= 605 
+							&& loc2.getX() >= 727 && loc2.getY() >= 0 && loc2.getZ() >= 555) {
+						num++;
+						new BossHealth().getBar11().addPlayer(player);
+						return;
+					}
+				}
+			}
+
+			if (num == 0) {
+				for (Entity nearEntity : entitylist) {
+					if (nearEntity instanceof Mob) {
+						Location loc2 = nearEntity.getLocation();
+						if (loc2.getX() <= 776 && loc2.getY() <= 31 && loc2.getZ() <= 605 
+								&& loc2.getX() >= 727 && loc2.getY() >= 0 && loc2.getZ() >= 555) {
+							nearEntity.remove();
+						}
+					}
+				}
+			}
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 31369, 14, 3783), EntityType.CAVE_SPIDER);
+			
+			new BossHealth().getBar11().setProgress(1.0);
+			new BossHealth().getBar11().addPlayer(player);
+			return;
+		}
+	}
+	
 }

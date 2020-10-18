@@ -786,9 +786,9 @@ public class PlayerHitDebuff {
 							}
 							
 							if (time % 20 == 0) {
-								for(int x = -20 ; x < 21 ; x++) {
+								for(int x = -12 ; x < 13 ; x++) {
 									for(int y = -1 ; y < 0 ; y++) {
-										for(int z = -20 ; z < 21 ; z++) {
+										for(int z = -12 ; z < 13 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
 											player.getWorld().spawnParticle(Particle.REDSTONE, loc2, 0, new DustOptions(Color.RED, 1));
 										}
@@ -796,7 +796,7 @@ public class PlayerHitDebuff {
 								}
 							}
 							
-							if (time >= 140) {
+							if (time >= 80) {
 								player.sendMessage(ChatColor.RED + "멸망의 주문이 발동되었습니다.");
 								sendMessage(player, ChatColor.RED + "멸망의 주문이 발동되었습니다.");
 								// ===============================================================
@@ -808,7 +808,7 @@ public class PlayerHitDebuff {
 								ParticleEffect pe = new ParticleEffect(player, mob);
 								pe.startE34();
 								// ================================================================
-								List<Entity> nearPlayer = mob.getNearbyEntities(20, 10, 20);
+								List<Entity> nearPlayer = mob.getNearbyEntities(12, 10, 12);
 								for (Entity p : nearPlayer) {
 									if (p instanceof Player) {
 										p.getWorld().playEffect(p.getLocation(), Effect.END_GATEWAY_SPAWN, 2);

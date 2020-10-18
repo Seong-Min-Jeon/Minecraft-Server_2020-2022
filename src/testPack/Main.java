@@ -712,6 +712,14 @@ public class Main extends JavaPlugin implements Listener{
                     	QuestBoard qb = new QuestBoard();
                 		qb.mq40(event.getPlayer(), Integer.parseInt(num));
                     }
+                    if(quest.equals("mq41")) {
+                    	QuestBoard qb = new QuestBoard();
+                		qb.mq41(event.getPlayer(), Integer.parseInt(num));
+                    }
+                    if(quest.equals("mq41_1")) {
+                    	QuestBoard qb = new QuestBoard();
+                		qb.mq41_1(event.getPlayer(), Integer.parseInt(num));
+                    }
                     bufReader.close();
                 }
             }
@@ -751,24 +759,6 @@ public class Main extends JavaPlugin implements Listener{
 		master.setItemMeta(masterIm);
 		if(player.getDisplayName().equalsIgnoreCase("yumehama") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
 		if(player.getDisplayName().equalsIgnoreCase("WoolRing") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
-		
-		ItemStack var1 = new ItemStack(Material.MUSIC_DISC_CAT);
-		ItemMeta var1Im = var1.getItemMeta();
-		var1Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,300");
-		var1Im.setDisplayName(ChatColor.AQUA + "죽음의 서약");
-		ArrayList<String> var1Lore = new ArrayList();
-		var1Lore.add(ChatColor.GRAY + "레벨 제한: 300");
-		var1Lore.add(ChatColor.GRAY + " ");
-		var1Lore.add(ChatColor.GRAY + "바람의 결정으로 만들어진 지팡이");
-		var1Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-		var1Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-		var1Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
-		var1Im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
-		var1Im.setUnbreakable(true);
-		var1Im.setLore(var1Lore);
-		var1.setItemMeta(var1Im);
-		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var1);}
-		
 		
 //		ItemStack helmet = new ItemStack(Material.MOSSY_COBBLESTONE_WALL);
 //		ItemMeta helmetIm = helmet.getItemMeta();
@@ -973,6 +963,9 @@ public class Main extends JavaPlugin implements Listener{
 			return;
 		}
 		player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 0.5f);
+		
+		//메인퀘스트
+		new MainQuest(player);
 		
 		if(player.getLevel() >= 1) {
 			//본 파이터
@@ -3319,7 +3312,7 @@ public class Main extends JavaPlugin implements Listener{
 		//특수뎀
 		try {
 			DamageRatio dr = new DamageRatio();
-			if (event.getCause() == DamageCause.FIRE_TICK || event.getCause() == DamageCause.FIRE) {
+			if (event.getCause() == DamageCause.FIRE_TICK || event.getCause() == DamageCause.FIRE || event.getCause() == DamageCause.HOT_FLOOR) {
 				if (event.getEntity() instanceof Player) {
 					Player player = (Player) event.getEntity();
 					int resist = 0;
@@ -3783,6 +3776,19 @@ public class Main extends JavaPlugin implements Listener{
 						}
 					} else {
 						new BossHealth().getBar10().setProgress(boss.getHealth() / 30000.0);
+					}
+				}
+				// 아라크네
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("아라크네" + ChatColor.YELLOW + " [Lv.??]")) {
+
+					LivingEntity boss = (LivingEntity) mob;
+					
+					if(boss.getHealth() - event.getFinalDamage() <= 0) {
+						for(Player p : new BossHealth().getBar11().getPlayers()) {
+							new BossHealth().getBar11().removePlayer(p);
+						}
+					} else {
+						new BossHealth().getBar11().setProgress(boss.getHealth() / 800000.0);
 					}
 				}
 			}
@@ -5623,6 +5629,14 @@ public class Main extends JavaPlugin implements Listener{
             		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===아라크네의 저주===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq40\n");
+        				fw.write(Integer.toString(number));
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===검은 흐름의 힘===")) {
+        				int number =  qb.getNum(player);
+        				fw.write("mq41\n");
+        				fw.write(Integer.toString(number));
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===흐름의 봉인을 위해===")) {
+        				int number =  qb.getNum(player);
+        				fw.write("mq41_1\n");
         				fw.write(Integer.toString(number));
             		}            		
                     fw.close();

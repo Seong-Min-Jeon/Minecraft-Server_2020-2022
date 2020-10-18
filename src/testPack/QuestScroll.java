@@ -80,6 +80,7 @@ public class QuestScroll {
 				mq38(player, itemArg, world);
 				mq39(player, itemArg, world);
 				mq40(player, itemArg, world);
+				mq41(player, itemArg, world);
 			} else {
 				itemArg.remove();
 				player.getInventory().addItem(itemArg.getItemStack());
@@ -602,6 +603,15 @@ public class QuestScroll {
 			msg.msg(player, "네비: §e고성 지하§f에서 §e던전§f을 찾았어.%네비: 던전 입구에서 기다릴테니까 같이 가자.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq40(player, 0);
+		}	
+	}
+	
+	public void mq41(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "메인퀘스트 41장")) {
+			msg.msg(player, "§7고성에서 발견한 검은 흐름이 반응하기 시작했다.%네비: 아니. 이게 갑자기 왜 반응하지?%§7검은 흐름이 담은 힘은 너무 매혹적이라 빠져들 것 같은 기분이다.%tp3810 17 3797%"
+					+ "§7이제 어떻게 할까?");
+			QuestBoard qb = new QuestBoard();
+			qb.mq41(player, 0);
 		}	
 	}
 	

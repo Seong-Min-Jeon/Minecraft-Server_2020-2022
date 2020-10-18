@@ -94,17 +94,7 @@ public class MainQuest {
 		} else if(lvl == 380) {
 			main40(player);
 		} else if(lvl == 390) {
-			// 전직퀘
-			// 선, 악, 운에 맡긴다.
-			// 고성에서 찾은 검은 흐름이 반응하기 시작했다.
-			// 네비도 놀라는 모습
-			// 검은 흐름을 제어한다 -> 마법탑 -> 엔젤
-			// 검은 흐름에 빠져든다 -> 데빌
-			// 나의 운을 믿고 무시한다. -> 대행자
-			// 선택하는건 내면에 들어가서 버튼 3개 중 하나를 누르는 식
-			// 1. 마법탑에 가서 카타리나와 대화 -> 어마나 그 힘은..? -> 저희 측에서 이것을 봉인시켜 드리겠습니다. -> ... -> ... -> 봉인하는 과정에서 흐름에서 순수한 힘이 추출되었어요. -> 000님이 가져오신 거니까 가져가셔도 괜찮아요.
-			// 2. 검은 흐름에 빠져든다. -> 머리가 멍해지는 기분이 든다. -> (빨간글씨)???: 그래 내가 너에게 힘을 주지..
-			// 3. 어쩌다보니 검은 흐름에서 새로운 힘을 찾은 것 같다. -> 나는 참 운이 좋다.
+			main41(player);
 		} else if(lvl == 400) {
 			
 		} else if(lvl == 410) {
@@ -804,6 +794,22 @@ public class MainQuest {
 		scrollIm.setDisplayName(ChatColor.GOLD + "메인퀘스트 40장");
 		ArrayList<String> scrollLore = new ArrayList();
 		scrollLore.add(ChatColor.GRAY + "'아라크네의 저주' 퀘스트를 진행할 수 있다.");
+		scrollIm.setLore(scrollLore);
+		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		scrollIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		scrollIm.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
+		scrollIm.setUnbreakable(true);
+		scroll.setItemMeta(scrollIm);		
+		player.getInventory().addItem(scroll);
+	}
+	
+	public void main41(Player player) {
+		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
+		ItemMeta scrollIm = scroll.getItemMeta();
+		scrollIm.setDisplayName(ChatColor.GOLD + "메인퀘스트 41장");
+		ArrayList<String> scrollLore = new ArrayList();
+		scrollLore.add(ChatColor.GRAY + "'검은 흐름의 힘' 퀘스트를 진행할 수 있다.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);

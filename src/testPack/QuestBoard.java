@@ -2039,6 +2039,88 @@ public class QuestBoard {
 		player.setScoreboard(board);
 	}
 	
+	public void mq41(Player player, int num) {
+		if(num==1) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 10000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "§7검은 흐름을 제어하기로 마음먹었다.%§7카타리나에게 가서 의견을 구하자.%tp822 71 511");
+			QuestBoard qb = new QuestBoard();
+			qb.mq41_1(player, 0);
+			return;
+		} else if(num==2) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 10000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "§7검은 흐름에 몸을 맡긴다.%§7정신이 아득해진다.%§4???: 그래. 내가 너에게 힘을 빌려주지.%§7!!!%tp822 71 511%§b데빌의 별§f을 획득했다.");
+			ItemStack star6 = new ItemStack(Material.NETHER_STAR);
+			ItemMeta star6Im = star6.getItemMeta();
+			star6Im.setDisplayName(ChatColor.AQUA + "데빌의 별");
+			ArrayList<String> star6Lore = new ArrayList();
+			star6Lore.add(ChatColor.WHITE + "데빌의 힘을 얻을 수 있다.");
+			star6Im.setLore(star6Lore);
+			star6.setItemMeta(star6Im);
+			player.getInventory().addItem(star6);
+			return;
+		} else if(num==3) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 10000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "§7어쩌다보니 검은 흐름에서 새로운 힘을 찾은 것 같다.%§7나는 참 운이 좋은 것 같다.%tp822 71 511%§b대행자의 별§f을 획득했다.");
+			ItemStack star6 = new ItemStack(Material.NETHER_STAR);
+			ItemMeta star6Im = star6.getItemMeta();
+			star6Im.setDisplayName(ChatColor.AQUA + "대행자의 별");
+			ArrayList<String> star6Lore = new ArrayList();
+			star6Lore.add(ChatColor.WHITE + "신의 힘을 빌려 싸울 수 있다.");
+			star6Im.setLore(star6Lore);
+			star6.setItemMeta(star6Im);
+			player.getInventory().addItem(star6);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 41장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===검은 흐름의 힘===");
+		score.setScore(2);
+		Score score2 = obj.getScore("운명을 정하기");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/1)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq41_1(Player player, int num) {
+		if(num>=1) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 8000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "카타리나: 어머나 그 힘은..?%카타리나: 매우 위험한 냄새가 나는군요.%카타리나: 저희 측에서 이걸 봉인시켜 드리겠습니다.%...%...%"
+					+ "카타리나: 봉인하는 과정에서 흐름에서 순수한 힘이 정제되었어요.%카타리나: " + player.getDisplayName() + "님이 가져오신거니 가져가셔도 괜찮아요.%"
+							+ "§b엔젤의 별§f을 획득했다.");
+			ItemStack star6 = new ItemStack(Material.NETHER_STAR);
+			ItemMeta star6Im = star6.getItemMeta();
+			star6Im.setDisplayName(ChatColor.AQUA + "엔젤의 별");
+			ArrayList<String> star6Lore = new ArrayList();
+			star6Lore.add(ChatColor.WHITE + "엔젤의 힘을 얻을 수 있다.");
+			star6Im.setLore(star6Lore);
+			star6.setItemMeta(star6Im);
+			player.getInventory().addItem(star6);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 41장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===흐름의 봉인을 위해===");
+		score.setScore(2);
+		Score score2 = obj.getScore("마법탑의 카타리나와 대화");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/1)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
 	public int getNum(Player player) {
 		try {
 			ArrayList<String> list = new ArrayList<String>(player.getScoreboard().getEntries());

@@ -304,7 +304,7 @@ public class JobScroll {
 			//무기
 			ItemStack item5 = new ItemStack(Material.JUNGLE_PLANKS);
 			ItemMeta item5Im = item5.getItemMeta();
-			item5Im.setLocalizedName("100,0,0,0,10,100,0,0,0,0");
+			item5Im.setLocalizedName("666,300,0,0,100,666,0,0,0,666,0");
 			item5Im.setDisplayName(ChatColor.DARK_RED + "데빌 스워드");
 			ArrayList<String> item5Lore = new ArrayList();
 			item5Lore.add(ChatColor.GRAY + "상위 악마에게 하사 받은 검");
@@ -353,7 +353,7 @@ public class JobScroll {
 			//무기
 			ItemStack item5 = new ItemStack(Material.BIRCH_PLANKS);
 			ItemMeta item5Im = item5.getItemMeta();
-			item5Im.setLocalizedName("100,0,0,0,0,100,0,0,0,50");
+			item5Im.setLocalizedName("500,0,0,0,0,1000,200,200,200,500,0");
 			item5Im.setDisplayName(ChatColor.DARK_RED + "엔젤 스워드");
 			ArrayList<String> item5Lore = new ArrayList();
 			item5Lore.add(ChatColor.GRAY + "대천사에게 하사 받은 성검");
@@ -400,7 +400,7 @@ public class JobScroll {
 			//무기
 			ItemStack item5 = new ItemStack(Material.BIRCH_LOG);
 			ItemMeta item5Im = item5.getItemMeta();
-			item5Im.setLocalizedName("100,0,0,0,5,100,0,0,0,30");
+			item5Im.setLocalizedName("777,77,77,77,77,777,777,777,777,777,0");
 			item5Im.setDisplayName(ChatColor.DARK_RED + "신의 힘을 담은 검");
 			ArrayList<String> item5Lore = new ArrayList();
 			item5Lore.add(ChatColor.GRAY + "안바르의 비늘로 만들어진 성검");

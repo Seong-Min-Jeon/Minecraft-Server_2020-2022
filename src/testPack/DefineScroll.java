@@ -93,7 +93,7 @@ public class DefineScroll {
 						}
 						if(Integer.parseInt(ench[5]) != 0) {
 							int lvl = Integer.parseInt(ench[5]);
-							list.add(ChatColor.BLUE + "보호(모든 데미지): " + lvl);
+							list.add(ChatColor.BLUE + "보호(일반 데미지): " + lvl);
 						}
 						if(Integer.parseInt(ench[6]) != 0) {
 							int lvl = Integer.parseInt(ench[6]);
