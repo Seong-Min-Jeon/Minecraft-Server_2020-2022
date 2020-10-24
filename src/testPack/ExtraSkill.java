@@ -53,7 +53,8 @@ public class ExtraSkill {
 	
 	public void skill1(Player player, int i, ItemStack item1, ItemStack item2) {
 		if (i >= 2) {
-			if (player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) {
+			if ((player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) || (player.getLocation().getBlock().getType() != Material.AIR)
+					|| (player.getLocation().add(0,1,0).getBlock().getType() != Material.AIR)) {
 				player.getInventory().remove(Material.HEART_OF_THE_SEA);
 				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 2);
 				ItemMeta itemIm = item.getItemMeta();

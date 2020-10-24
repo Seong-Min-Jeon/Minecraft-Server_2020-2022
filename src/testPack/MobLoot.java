@@ -102,7 +102,7 @@ public class MobLoot {
 		int num = rnd.nextInt(10) + 5;
 		ItemStack item = new ItemStack(Material.EMERALD, num * multyEme);
 		player.getInventory().addItem(item);
-		es.giveExp(player, 2734);
+		es.giveExp(player, 3334);
 	}
 
 	// 검은 수염 간부
@@ -122,7 +122,7 @@ public class MobLoot {
 			player.getInventory().addItem(rein);
 			player.sendMessage(ChatColor.AQUA + "검은 수염의 증표" + ChatColor.WHITE + "을 획득했다.");
 		}
-		es.giveExp(player, 3168);
+		es.giveExp(player, 3768);
 	}
 
 	// 포레스트 고스트

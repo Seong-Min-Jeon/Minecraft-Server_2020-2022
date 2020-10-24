@@ -7,6 +7,11 @@ public class OffInDungeon {
 
 	public OffInDungeon(Player player) {
 		Location loc = player.getLocation();
+		// 퀘스트 방 3787 29 3795  3826 0 3804
+		if(loc.getX() <= 3826 && loc.getY() <= 29 && loc.getZ() <= 3804 &&
+				loc.getX() >= 3787 && loc.getY() >= 0 && loc.getZ() >= 3795) {
+			return;
+		}
 		//잊혀진 바다 신전 3815 62 3747  3599 0 3812
 		if(loc.getX() <= 3815 && loc.getY() <= 62 && loc.getZ() <= 3812 &&
 				loc.getX() >= 3599 && loc.getY() >= 0 && loc.getZ() >= 3747) {

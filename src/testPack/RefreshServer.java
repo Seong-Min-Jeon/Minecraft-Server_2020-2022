@@ -32,6 +32,7 @@ public class RefreshServer {
 	int sleep;
 	Random rnd = new Random();
 	World world;
+	int change = 0;
 	
 	private HashMap<String, Integer> map = new HashMap<String, Integer>();
 
@@ -255,25 +256,51 @@ public class RefreshServer {
 				
 				if(time % 6000 == 0) {
 					
-					for(Player player : Bukkit.getOnlinePlayers()) {
-						player.sendMessage(ChatColor.BLUE + "=============================");
-						player.sendMessage(ChatColor.GOLD + "서버 홈페이지에서 많은 정보를 얻을 수 있습니다!");
-						try {
-							IChatBaseComponent comp = ChatSerializer.a("{\"text\":\"" + "\",\"extra\":[{\"text\":\"" + ChatColor.LIGHT_PURPLE + "" + ChatColor.UNDERLINE + "https://aile-server.netlify.app/"
-				                    + "\",\"clickEvent\": {\"action\":\"open_url\",\"value\":\"" + "https://aile-server.netlify.app/"
-				                    +  "\",\"hoverEvent\": {\"action\":\"show_text\",\"value\":\"" + ""
-				                    + "\"}}}]}"); 
-							PacketPlayOutChat chat = new PacketPlayOutChat(comp, ChatMessageType.CHAT, player.getUniqueId());
-							Object handle = player.getClass().getMethod("getHandle").invoke(player);
-					        Object playerConnection = handle.getClass().getField("playerConnection").get(handle);
-					        playerConnection.getClass().getMethod("sendPacket", getNMSClass("Packet")).invoke(playerConnection, chat);
-						} catch(Exception e) {
-							
+					if(change == 0) {
+						for(Player player : Bukkit.getOnlinePlayers()) {
+							player.sendMessage(ChatColor.BLUE + "=============================");
+							player.sendMessage(ChatColor.GOLD + "아래 공식 홈페이지에서 많은 정보를 얻을 수 있습니다!");
+							try {
+								IChatBaseComponent comp = ChatSerializer.a("{\"text\":\"" + "\",\"extra\":[{\"text\":\"" + ChatColor.LIGHT_PURPLE + "" + ChatColor.UNDERLINE + "https://aile-server.netlify.app/"
+					                    + "\",\"clickEvent\": {\"action\":\"open_url\",\"value\":\"" + "https://aile-server.netlify.app/"
+					                    +  "\",\"hoverEvent\": {\"action\":\"show_text\",\"value\":\"" + ""
+					                    + "\"}}}]}"); 
+								PacketPlayOutChat chat = new PacketPlayOutChat(comp, ChatMessageType.CHAT, player.getUniqueId());
+								Object handle = player.getClass().getMethod("getHandle").invoke(player);
+						        Object playerConnection = handle.getClass().getField("playerConnection").get(handle);
+						        playerConnection.getClass().getMethod("sendPacket", getNMSClass("Packet")).invoke(playerConnection, chat);
+							} catch(Exception e) {
+								
+							}
+							player.sendMessage("");
+							player.sendMessage(ChatColor.GOLD + "링크를 클릭해 바로 이동!");
+							player.sendMessage(ChatColor.BLUE + "=============================");
 						}
-						player.sendMessage("");
-						player.sendMessage(ChatColor.GOLD + "링크를 클릭해 홈페이지로 이동!");
-						player.sendMessage(ChatColor.BLUE + "=============================");
+						change = 1;
+					} else if(change == 1) {
+						for(Player player : Bukkit.getOnlinePlayers()) {
+							player.sendMessage(ChatColor.BLUE + "=============================");
+							player.sendMessage(ChatColor.GOLD + "아래 공식 카페에서 많은 정보를 얻을 수 있습니다!");
+							try {
+								IChatBaseComponent comp = ChatSerializer.a("{\"text\":\"" + "\",\"extra\":[{\"text\":\"" + ChatColor.LIGHT_PURPLE + "" + ChatColor.UNDERLINE + "https://cafe.naver.com/yumehamaserver"
+					                    + "\",\"clickEvent\": {\"action\":\"open_url\",\"value\":\"" + "https://cafe.naver.com/yumehamaserver"
+					                    +  "\",\"hoverEvent\": {\"action\":\"show_text\",\"value\":\"" + ""
+					                    + "\"}}}]}"); 
+								PacketPlayOutChat chat = new PacketPlayOutChat(comp, ChatMessageType.CHAT, player.getUniqueId());
+								Object handle = player.getClass().getMethod("getHandle").invoke(player);
+						        Object playerConnection = handle.getClass().getField("playerConnection").get(handle);
+						        playerConnection.getClass().getMethod("sendPacket", getNMSClass("Packet")).invoke(playerConnection, chat);
+							} catch(Exception e) {
+								
+							}
+							player.sendMessage("");
+							player.sendMessage(ChatColor.GOLD + "링크를 클릭해 바로 이동!");
+							player.sendMessage(ChatColor.BLUE + "=============================");
+						}
+						change = 0;
 					}
+					
+					
 					
 //					if(map.size() == 0) {
 //						for(Player allPlayer : Bukkit.getOnlinePlayers()) {

@@ -2095,7 +2095,7 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 8000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "카타리나: 어머나 그 힘은..?%카타리나: 매우 위험한 냄새가 나는군요.%카타리나: 저희 측에서 이걸 봉인시켜 드리겠습니다.%...%...%"
+			msg.msg(player, "카타리나: 어머나 그 힘은..?%카타리나: 매우 위험한 냄새가 나는군요.%카타리나: 저희 측에서 이걸 봉인시켜 드리겠습니다.%카타리나: 흐으음.%카타리나: 후우우.%"
 					+ "카타리나: 봉인하는 과정에서 흐름에서 순수한 힘이 정제되었어요.%카타리나: " + player.getDisplayName() + "님이 가져오신거니 가져가셔도 괜찮아요.%"
 							+ "§b엔젤의 별§f을 획득했다.");
 			ItemStack star6 = new ItemStack(Material.NETHER_STAR);

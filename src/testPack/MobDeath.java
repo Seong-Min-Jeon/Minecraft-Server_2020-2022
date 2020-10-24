@@ -391,10 +391,12 @@ public class MobDeath {
 				// 요정왕 오베론
 				if (name.equalsIgnoreCase("요정왕 오베론" + ChatColor.YELLOW + " [Lv.??]")) {
 					mobloot.mob77(lootPlayer);
+					mob.remove();
 				}
 				// 요정여왕 티타니아
 				if (name.equalsIgnoreCase("요정여왕 티타니아" + ChatColor.YELLOW + " [Lv.??]")) {
 					mobloot.mob78(lootPlayer);
+					mob.remove();
 				}
 				// 나비
 				if (name.equalsIgnoreCase("나비" + ChatColor.YELLOW + " [Lv.253]")) {
@@ -690,8 +692,8 @@ public class MobDeath {
 				}
 				// TNTZ
 				if (name.equalsIgnoreCase("TNTZ" + ChatColor.YELLOW + " [Lv.351]")) {
-					mobloot.mob147(lootPlayer);
 					mob.getWorld().createExplosion(mob.getLocation(), 5, false, false);
+					mobloot.mob147(lootPlayer);
 				}
 				// 포보르 세력 플레이어
 				if (name.equalsIgnoreCase("포보르 세력 플레이어" + ChatColor.YELLOW + " [Lv.354]")) {

@@ -44,6 +44,10 @@ public class Cmd8Party implements CommandExecutor {
 						for(ArrayList<Player> allParty : party) {
 							if(allParty.contains(player)) {
 								allParty.remove(player);
+								player.sendMessage(ChatColor.RED + "Leave the party.");
+								for(Player p : allParty) {
+									p.sendMessage(ChatColor.RED + "" + player.getDisplayName() + " leave your party.");
+								}
 								return true;
 							}
 						}
@@ -70,11 +74,17 @@ public class Cmd8Party implements CommandExecutor {
 							isOk = true;
 							player2 = allPlayer;
 							break;
+						} else {
+							player.sendMessage(ChatColor.RED + "Undefined Player!");
+							return true;
 						}
 					}
 					if(isOk == true && player!=player2) {				
-						player.sendMessage("파티 신청을 보냈습니다.");
+						player.sendMessage(ChatColor.GREEN + "Send party to " + player2.getDisplayName() + ".");
 						party(player, player2);
+					} else {
+						player.sendMessage(ChatColor.RED + "뭘 기대하신겁니까 휴먼.");
+						return true;
 					}
 				} catch(Exception e) {
 					
@@ -94,22 +104,22 @@ public class Cmd8Party implements CommandExecutor {
 		for(ArrayList<Player> allParty : party) {
 			if(allParty.contains(player2)) {
 				if(allParty.contains(player)) {
-					player.sendMessage("이미 파티에 가입되어 있는 플레이어입니다.");
+					player.sendMessage(ChatColor.RED + player2.getDisplayName() + " already in your party.");
 					return;
 				}
-				player.sendMessage("다른 파티에 가입되어 있는 플레이어입니다.");
+				player.sendMessage(ChatColor.RED + player2.getDisplayName() + " already in another party.");
 				return;
 			}
 		}
 		if(playersParty.size() > 5) {
-			player.sendMessage("파티의 최대 인원 수는 5명입니다.");
+			player.sendMessage(ChatColor.RED + "Your party is full!");
 			return;
 		} else if(playersParty.size() == 0) {
 			party.remove(playersParty);
 			playersParty.add(player);
 			party.add(playersParty);
 			try {
-				IChatBaseComponent comp = ChatSerializer.a("{\"text\":\"" + "\",\"extra\":[{\"text\":\"" + ChatColor.UNDERLINE + player.getDisplayName() + "님이 파티에 초대하였습니다. 클릭해 파티에 가입하다!"
+				IChatBaseComponent comp = ChatSerializer.a("{\"text\":\"" + "\",\"extra\":[{\"text\":\"" + ChatColor.GREEN + ChatColor.UNDERLINE + "Click the message to join " + player.getDisplayName() + "'s party!"
 	                    + "\",\"clickEvent\": {\"action\":\"run_command\",\"value\":\"" + "/party agreePlayerParty " + player.getDisplayName() + " " + player2.getDisplayName()
 	                    +  "\",\"hoverEvent\": {\"action\":\"show_text\",\"value\":\"" + ""
 	                    + "\"}}}]}"); 
@@ -123,7 +133,7 @@ public class Cmd8Party implements CommandExecutor {
 			return;
 		} else { 
 			try {
-				IChatBaseComponent comp = ChatSerializer.a("{\"text\":\"" + "\",\"extra\":[{\"text\":\"" + ChatColor.UNDERLINE + player.getDisplayName() + "님이 파티에 초대하였습니다. 클릭해 파티에 가입하다!"
+				IChatBaseComponent comp = ChatSerializer.a("{\"text\":\"" + "\",\"extra\":[{\"text\":\"" + ChatColor.GREEN + "" + ChatColor.UNDERLINE + "Click the message to join " + player.getDisplayName() + "'s party!"
 	                    + "\",\"clickEvent\": {\"action\":\"run_command\",\"value\":\"" + "/party agreePlayerParty " + player.getDisplayName() + " " + player2.getDisplayName()
 	                    +  "\",\"hoverEvent\": {\"action\":\"show_text\",\"value\":\"" + ""
 	                    + "\"}}}]}"); 
@@ -160,16 +170,16 @@ public class Cmd8Party implements CommandExecutor {
 			}
 		}
 		if(playersParty.size() > 5) {
-			player2.sendMessage("파티에 남은 자리가 없습니다.");
+			player2.sendMessage(ChatColor.RED + "The party is full!");
 			return;
 		}
 		for(Player allPlayerInParty : playersParty) {
 			if(!(playersParty.contains(player2))) {
-				allPlayerInParty.sendMessage("파티에 " + player2.getDisplayName() + "님이 가입되었습니다.");
+				allPlayerInParty.sendMessage(ChatColor.GREEN + "" + player2.getDisplayName() + " join the party!");
 			}
 		}
 		if(!(playersParty.contains(player2))) {
-			player2.sendMessage("파티에 가입되었습니다.");
+			player2.sendMessage(ChatColor.GREEN + "Join the party!");
 			party.remove(playersParty);
 			playersParty.add(player2);
 			party.add(playersParty);

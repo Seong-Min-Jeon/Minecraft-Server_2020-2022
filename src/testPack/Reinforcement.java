@@ -5755,6 +5755,11 @@ public class Reinforcement {
 			result = result + "," + ary[i];
 		}
 		String data = result.substring(1);
+		try {
+			data = data.concat("," + ary[10]);
+		} catch(Exception e) {
+			
+		}
 		return data;
 	}
 	

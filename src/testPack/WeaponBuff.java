@@ -321,6 +321,17 @@ public class WeaponBuff {
 							}
 						}
 						
+						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "∞≈πÃ ø©ø’¿« «Ô∏‰")) {
+							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "∞≈πÃ ø©ø’¿« ∞©ø ")) {
+								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "∞≈πÃ ø©ø’¿« ∞¢π›")) {
+									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "∞≈πÃ ø©ø’¿« Ω≈πﬂ")) {
+										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 6,true,false,false));
+										player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 1,true,false,false));
+									}
+								}
+							}
+						}
+						
 					}
 				}
 			}

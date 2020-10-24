@@ -316,7 +316,7 @@ public class JobScroll {
 			item5.setItemMeta(item5Im);
 			player.getInventory().addItem(item5);	
 			//tp
-			Location loc = new Location(world,-800,300,1400);
+			Location loc = new Location(world,-1844,70,3012);
 			player.teleport(loc);
 			player.getWorld().playSound(loc, Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 1.0f);
 			itemArg.remove();

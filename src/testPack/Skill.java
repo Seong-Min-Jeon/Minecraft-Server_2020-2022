@@ -1316,6 +1316,7 @@ public class Skill {
 			}
 			if (i == 3) {
 				player.getInventory().remove(Material.HEART_OF_THE_SEA);
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 0,true,false,false));
 				List<Entity> entitylist1 = player.getNearbyEntities(5, 5, 5);
 				List<Entity> entitylist2 = player.getNearbyEntities(10, 10, 10);
 				int num = 0;
@@ -1359,6 +1360,7 @@ public class Skill {
 				itemIm.setDisplayName(ChatColor.BLUE + "마나");
 				item.setItemMeta(itemIm);
 				player.getInventory().setItem(8, item);
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 0,true,false,false));
 				Location loc = player.getLocation();
 				List<Entity> entitylist = player.getNearbyEntities(5, 5, 5);
 				for (Entity nearEntity : entitylist) {
@@ -1609,8 +1611,7 @@ public class Skill {
 										} else {
 											nearPlayer.setHealth(nearPlayer.getMaxHealth());
 										}
-										nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 "
-												+ (int) player.getMaxHealth() * 20 / 100 + "만큼 회복되었습니다.");
+										nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 회복되었습니다.");
 									}
 								}
 								if (player.getHealth() < player.getMaxHealth() * 10 / 100) {
@@ -1648,9 +1649,7 @@ public class Skill {
 									// ================================================================
 									world.playSound(loc, Sound.ENTITY_ENDER_DRAGON_FLAP, 1.0f, 1.0f);
 									player.sendMessage(ChatColor.GREEN + "[스킬]성스러운 힘이 발동됩니다.");
-									player.sendMessage(ChatColor.GREEN + "주변 아군의 체력이 회복됩니다.");
-									player.sendMessage(ChatColor.GREEN + "" + (int) player.getMaxHealth() * 20 / 100
-											+ "만큼 회복되었습니다.");
+									player.sendMessage(ChatColor.GREEN + "자신과 주변 아군의 체력이 회복됩니다.");
 								}
 							} else if (num == 30) {
 								int num2 = player.getLevel();
@@ -2987,7 +2986,8 @@ public class Skill {
 			}
 			if(key.equals("RRR")) {
 				if(i>=1) {
-					if (player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) {						
+					if ((player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) || (player.getLocation().getBlock().getType() != Material.AIR)
+							|| (player.getLocation().add(0,1,0).getBlock().getType() != Material.AIR)) {						
 						player.getInventory().remove(Material.HEART_OF_THE_SEA);
 						ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 1);
 						ItemMeta itemIm = item.getItemMeta();
@@ -3248,7 +3248,8 @@ public class Skill {
 			}
 			if(key.equals("RRR")) {
 				if(i>=2) {
-					if (player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) {						
+					if ((player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) || (player.getLocation().getBlock().getType() != Material.AIR)
+							|| (player.getLocation().add(0,1,0).getBlock().getType() != Material.AIR)) {						
 						player.getInventory().remove(Material.HEART_OF_THE_SEA);
 						ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 2);
 						ItemMeta itemIm = item.getItemMeta();
@@ -3341,55 +3342,58 @@ public class Skill {
 				}
 			} else if(key.equals("RLR")) {
 				if(i>=1) {
-					player.getInventory().remove(Material.HEART_OF_THE_SEA);
-					ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 1);
-					ItemMeta itemIm = item.getItemMeta();
-					itemIm.setDisplayName(ChatColor.BLUE + "마나");
-					item.setItemMeta(itemIm);
-					player.getInventory().setItem(8, item);								
-					player.sendMessage(ChatColor.GREEN + "[스킬]점프가 발동됩니다.");	
-					world.playSound(player.getLocation(), Sound.ENTITY_BLAZE_AMBIENT, 1.0f, 1.0f);
-					Vector vec = new Vector(0, 1, 0);
-					player.setVelocity(vec.multiply(1.5f));
-					Thread t = new Thread(player.getUniqueId());
-					sleep = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
-						
-						int time;
-						
-						@Override
-						public void run() {
-							if (!t.hasID()) {
-								t.setID(sleep);
-							}
-						
-							if((player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR)) {	
-								if(player.getVelocity().getY() < 0) {
-									if(time >= 20) {
-										List<Entity> entitylist = player.getNearbyEntities(5, 4, 5);
-										for (Entity nearEntity : entitylist) {
-											if (nearEntity.getType() != EntityType.PLAYER) {
-												if (nearEntity instanceof LivingEntity) {
-													LivingEntity nearMob = (LivingEntity) nearEntity;
-													nearMob.damage(player.getLevel()*30);											
+					if ((player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) || (player.getLocation().getBlock().getType() != Material.AIR)
+							|| (player.getLocation().add(0,1,0).getBlock().getType() != Material.AIR)) {
+						player.getInventory().remove(Material.HEART_OF_THE_SEA);
+						ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 1);
+						ItemMeta itemIm = item.getItemMeta();
+						itemIm.setDisplayName(ChatColor.BLUE + "마나");
+						item.setItemMeta(itemIm);
+						player.getInventory().setItem(8, item);								
+						player.sendMessage(ChatColor.GREEN + "[스킬]점프가 발동됩니다.");	
+						world.playSound(player.getLocation(), Sound.ENTITY_BLAZE_AMBIENT, 1.0f, 1.0f);
+						Vector vec = new Vector(0, 1, 0);
+						player.setVelocity(vec.multiply(1.5f));
+						Thread t = new Thread(player.getUniqueId());
+						sleep = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+							
+							int time;
+							
+							@Override
+							public void run() {
+								if (!t.hasID()) {
+									t.setID(sleep);
+								}
+							
+								if((player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR)) {	
+									if(player.getVelocity().getY() < 0) {
+										if(time >= 20) {
+											List<Entity> entitylist = player.getNearbyEntities(5, 4, 5);
+											for (Entity nearEntity : entitylist) {
+												if (nearEntity.getType() != EntityType.PLAYER) {
+													if (nearEntity instanceof LivingEntity) {
+														LivingEntity nearMob = (LivingEntity) nearEntity;
+														nearMob.damage(player.getLevel()*30);											
+													}
 												}
 											}
+											world.playSound(player.getLocation(), Sound.ENTITY_WITHER_SHOOT, 1.0f, 1.0f);
+											player.getWorld().spawnParticle(Particle.DRAGON_BREATH, loc, 30);
+											t.endTask();
+											t.removeID();
+										} else {
+											t.endTask();
+											t.removeID();
 										}
-										world.playSound(player.getLocation(), Sound.ENTITY_WITHER_SHOOT, 1.0f, 1.0f);
-										player.getWorld().spawnParticle(Particle.DRAGON_BREATH, loc, 30);
-										t.endTask();
-										t.removeID();
-									} else {
-										t.endTask();
-										t.removeID();
 									}
 								}
-							}
+								
+								time++;
+								
+							}						
 							
-							time++;
-							
-						}						
-						
-					}, 0, 1);
+						}, 0, 1);
+					}
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
 					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
@@ -3633,7 +3637,8 @@ public class Skill {
 				}
 			} else if(key.equals("LLL")) {
 				if(i>=3) {
-					if (player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) {
+					if ((player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) || (player.getLocation().getBlock().getType() != Material.AIR)
+							|| (player.getLocation().add(0,1,0).getBlock().getType() != Material.AIR)) {
 						player.getInventory().remove(Material.HEART_OF_THE_SEA);
 						ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 3);
 						ItemMeta itemIm = item.getItemMeta();
@@ -3825,7 +3830,8 @@ public class Skill {
 				}
 			} else if(key.equals("LLL")) {
 				if(i>=1) {
-					if (player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) {
+					if ((player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) || (player.getLocation().getBlock().getType() != Material.AIR)
+							|| (player.getLocation().add(0,1,0).getBlock().getType() != Material.AIR)) {
 						player.getInventory().remove(Material.HEART_OF_THE_SEA);
 						ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 1);
 						ItemMeta itemIm = item.getItemMeta();

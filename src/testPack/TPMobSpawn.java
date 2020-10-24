@@ -26,12 +26,13 @@ public class TPMobSpawn {
 
 	public TPMobSpawn(Player player, Location loc) {
 
-		//System.out.println(loc.toString());
+//		System.out.println(loc.toString());
 
 		fairy(player, loc);
 		snow(player, loc);
 		senmag(player, loc);
 		tower(player, loc);
+		aracune(player, loc);
 	}
 
 	public void fairy(Player player, Location loc) {
@@ -870,11 +871,11 @@ public class TPMobSpawn {
 	}
 	
 	public void aracune(Player player, Location loc) {
-		// È÷µç º¸½º
-		if (loc.getX() == 31369.59 && loc.getY() == 14 && loc.getZ() == 3803.7) {
+		// ¾Æ¶óÅ©³×
+		if (loc.getX() == 750.44 && loc.getY() == 28.44 && loc.getZ() == 591.93) {
 			player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "¾ºÀÕ¾ºÀÍ¾ºÀÌ");
 
-			player.teleport(new Location(player.getWorld(), 31369.6, 14, 3803.71));
+			player.teleport(new Location(player.getWorld(), 750.43, 28.44, 591.93));
 			int num = 0;
 			List<Entity> entitylist = player.getNearbyEntities(50, 50, 50);
 			for (Entity nearEntity : entitylist) {
@@ -901,7 +902,7 @@ public class TPMobSpawn {
 					}
 				}
 			}
-			loc.getWorld().spawnEntity(new Location(player.getWorld(), 31369, 14, 3783), EntityType.CAVE_SPIDER);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 750, 17, 579), EntityType.CAVE_SPIDER);
 			
 			new BossHealth().getBar11().setProgress(1.0);
 			new BossHealth().getBar11().addPlayer(player);

@@ -84,10 +84,11 @@ public class BossHealth {
 			bar8.removePlayer(player);
 		} else if(bar9.getPlayers().contains(player)) { 
 			bar9.removePlayer(player);
-		} else if(bar10.getPlayers().contains(player)) { 
-			bar10.removePlayer(player);
 		} else if(bar11.getPlayers().contains(player)) { 
 			bar11.removePlayer(player);
+		}
+		if(bar10.getPlayers().contains(player)) { 
+			bar10.removePlayer(player);
 		}
 	}
 	

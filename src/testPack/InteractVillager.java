@@ -41,7 +41,27 @@ public class InteractVillager {
 			return true;
 		}
 		
-		return vil1() || vil2() || vil3() || vil4() || vil5() || vil6() || vil7() || vil8() || vil9() || vil10() || vil11() || vil12() || vil13() || vil14();
+		return vil0() || vil1() || vil2() || vil3() || vil4() || vil5() || vil6() || vil7() || vil8() || vil9() || vil10() || vil11() || vil12() || vil13() || vil14();
+	}
+	
+	public boolean vil0() {
+		//전설의 시작 -1494 2037  -1491 2033
+		if(loc.getX() <= -1489 && loc.getZ() <= 2037 
+				&& loc.getX() >= -1495 && loc.getZ() >= 2032) {
+			QuestBoard cb = new QuestBoard();
+			try {
+				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===전설의 시작===")) {
+					int qNum = cb.getNum(player);
+					cb.mq7(player, qNum+1);		
+				} else {
+					player.sendMessage(ChatColor.GRAY + "빛나는 검이 있다.");
+				}
+			} catch(Exception e) {
+				player.sendMessage(ChatColor.GRAY + "빛나는 검이 있다.");
+			}
+			return true;
+		}
+		return false;
 	}
 	
 	public boolean vil1() {
@@ -291,6 +311,9 @@ public class InteractVillager {
 				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===마법탑을 향해===")) {
 					int qNum = cb.getNum(player);
 					cb.mq35(player, qNum+1);	
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===흐름의 봉인을 위해===")) {
+					int qNum = cb.getNum(player);
+					cb.mq41_1(player, qNum+1);	
 				} else {
 					player.sendMessage("카타리나: 여기는 마법탑입니다. 마나의 가호가 있기를.");
 				}
