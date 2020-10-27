@@ -11,7 +11,7 @@ import org.bukkit.inventory.Inventory;
 public class ExpSystemByMob {
 	
 	Cmd8Party cp = new Cmd8Party();
-	private final int multyExp = 2;
+	private final int multyExp = 1;
 	
 	public void giveExp(Player player, int exp) {
 		int currentLevel = player.getLevel();

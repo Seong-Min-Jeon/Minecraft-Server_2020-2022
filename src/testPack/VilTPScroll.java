@@ -26,13 +26,6 @@ public class VilTPScroll {
 		beiag(player,itemArg);
 		magicTower(player, itemArg);
 		longue(player, itemArg);
-		
-		// 보스바 관련
-		try {
-			new BossHealth().removePlayer(player);
-		} catch (Exception e) {
-
-		}
 	}
 
 	public void wargunil(Player player, Item itemArg) {
@@ -60,6 +53,12 @@ public class VilTPScroll {
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
 				}
+				// 보스바 관련
+				try {
+					new BossHealth().removePlayer(player);
+				} catch (Exception e) {
+
+				}
 			} else if (i > 5) {
 				player.getInventory().remove(Material.HEART_OF_THE_SEA);
 				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 5);
@@ -71,6 +70,12 @@ public class VilTPScroll {
 				player.teleport(loc);
 				itemArg.remove();
 				player.getWorld().playSound(loc, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
+				// 보스바 관련
+				try {
+					new BossHealth().removePlayer(player);
+				} catch (Exception e) {
+
+				}
 			} else {
 				player.sendMessage(ChatColor.RED + "워프에 필요한 마나가 부족합니다.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
@@ -103,6 +108,12 @@ public class VilTPScroll {
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
 				}
+				// 보스바 관련
+				try {
+					new BossHealth().removePlayer(player);
+				} catch (Exception e) {
+
+				}
 			} else if (i > 5) {
 				player.getInventory().remove(Material.HEART_OF_THE_SEA);
 				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 5);
@@ -114,6 +125,12 @@ public class VilTPScroll {
 				player.teleport(loc);
 				itemArg.remove();
 				player.getWorld().playSound(loc, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
+				// 보스바 관련
+				try {
+					new BossHealth().removePlayer(player);
+				} catch (Exception e) {
+
+				}
 			} else {
 				player.sendMessage(ChatColor.RED + "워프에 필요한 마나가 부족합니다.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
@@ -146,6 +163,12 @@ public class VilTPScroll {
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
 				}
+				// 보스바 관련
+				try {
+					new BossHealth().removePlayer(player);
+				} catch (Exception e) {
+
+				}
 			} else if (i > 5) {
 				player.getInventory().remove(Material.HEART_OF_THE_SEA);
 				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 5);
@@ -157,6 +180,12 @@ public class VilTPScroll {
 				player.teleport(loc);
 				itemArg.remove();
 				player.getWorld().playSound(loc, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
+				// 보스바 관련
+				try {
+					new BossHealth().removePlayer(player);
+				} catch (Exception e) {
+
+				}
 			} else {
 				player.sendMessage(ChatColor.RED + "워프에 필요한 마나가 부족합니다.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
@@ -189,6 +218,12 @@ public class VilTPScroll {
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
 				}
+				// 보스바 관련
+				try {
+					new BossHealth().removePlayer(player);
+				} catch (Exception e) {
+
+				}
 			} else if (i > 5) {
 				player.getInventory().remove(Material.HEART_OF_THE_SEA);
 				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 5);
@@ -200,6 +235,12 @@ public class VilTPScroll {
 				player.teleport(loc);
 				itemArg.remove();
 				player.getWorld().playSound(loc, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
+				// 보스바 관련
+				try {
+					new BossHealth().removePlayer(player);
+				} catch (Exception e) {
+
+				}
 			} else {
 				player.sendMessage(ChatColor.RED + "워프에 필요한 마나가 부족합니다.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
@@ -232,6 +273,12 @@ public class VilTPScroll {
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
 				}
+				// 보스바 관련
+				try {
+					new BossHealth().removePlayer(player);
+				} catch (Exception e) {
+
+				}
 			} else if (i > 5) {
 				player.getInventory().remove(Material.HEART_OF_THE_SEA);
 				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 5);
@@ -243,6 +290,12 @@ public class VilTPScroll {
 				player.teleport(loc);
 				itemArg.remove();
 				player.getWorld().playSound(loc, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
+				// 보스바 관련
+				try {
+					new BossHealth().removePlayer(player);
+				} catch (Exception e) {
+
+				}
 			} else {
 				player.sendMessage(ChatColor.RED + "워프에 필요한 마나가 부족합니다.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
@@ -275,6 +328,12 @@ public class VilTPScroll {
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
 				}
+				// 보스바 관련
+				try {
+					new BossHealth().removePlayer(player);
+				} catch (Exception e) {
+
+				}
 			} else if (i > 5) {
 				player.getInventory().remove(Material.HEART_OF_THE_SEA);
 				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 5);
@@ -286,6 +345,12 @@ public class VilTPScroll {
 				player.teleport(loc);
 				itemArg.remove();
 				player.getWorld().playSound(loc, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
+				// 보스바 관련
+				try {
+					new BossHealth().removePlayer(player);
+				} catch (Exception e) {
+
+				}
 			} else {
 				player.sendMessage(ChatColor.RED + "워프에 필요한 마나가 부족합니다.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
@@ -318,6 +383,12 @@ public class VilTPScroll {
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
 				}
+				// 보스바 관련
+				try {
+					new BossHealth().removePlayer(player);
+				} catch (Exception e) {
+
+				}
 			} else if (i > 5) {
 				player.getInventory().remove(Material.HEART_OF_THE_SEA);
 				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 5);
@@ -329,6 +400,12 @@ public class VilTPScroll {
 				player.teleport(loc);
 				itemArg.remove();
 				player.getWorld().playSound(loc, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
+				// 보스바 관련
+				try {
+					new BossHealth().removePlayer(player);
+				} catch (Exception e) {
+
+				}
 			} else {
 				player.sendMessage(ChatColor.RED + "워프에 필요한 마나가 부족합니다.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
@@ -361,6 +438,12 @@ public class VilTPScroll {
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
 				}
+				// 보스바 관련
+				try {
+					new BossHealth().removePlayer(player);
+				} catch (Exception e) {
+
+				}
 			} else if (i > 5) {
 				player.getInventory().remove(Material.HEART_OF_THE_SEA);
 				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 5);
@@ -372,6 +455,12 @@ public class VilTPScroll {
 				player.teleport(loc);
 				itemArg.remove();
 				player.getWorld().playSound(loc, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
+				// 보스바 관련
+				try {
+					new BossHealth().removePlayer(player);
+				} catch (Exception e) {
+
+				}
 			} else {
 				player.sendMessage(ChatColor.RED + "워프에 필요한 마나가 부족합니다.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
@@ -404,6 +493,12 @@ public class VilTPScroll {
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
 				}
+				// 보스바 관련
+				try {
+					new BossHealth().removePlayer(player);
+				} catch (Exception e) {
+
+				}
 			} else if (i > 5) {
 				player.getInventory().remove(Material.HEART_OF_THE_SEA);
 				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 5);
@@ -415,6 +510,12 @@ public class VilTPScroll {
 				player.teleport(loc);
 				itemArg.remove();
 				player.getWorld().playSound(loc, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
+				// 보스바 관련
+				try {
+					new BossHealth().removePlayer(player);
+				} catch (Exception e) {
+
+				}
 			} else {
 				player.sendMessage(ChatColor.RED + "워프에 필요한 마나가 부족합니다.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
@@ -447,6 +548,12 @@ public class VilTPScroll {
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
 				}
+				// 보스바 관련
+				try {
+					new BossHealth().removePlayer(player);
+				} catch (Exception e) {
+
+				}
 			} else if (i > 5) {
 				player.getInventory().remove(Material.HEART_OF_THE_SEA);
 				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 5);
@@ -458,6 +565,12 @@ public class VilTPScroll {
 				player.teleport(loc);
 				itemArg.remove();
 				player.getWorld().playSound(loc, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
+				// 보스바 관련
+				try {
+					new BossHealth().removePlayer(player);
+				} catch (Exception e) {
+
+				}
 			} else {
 				player.sendMessage(ChatColor.RED + "워프에 필요한 마나가 부족합니다.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
@@ -490,6 +603,12 @@ public class VilTPScroll {
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
 				}
+				// 보스바 관련
+				try {
+					new BossHealth().removePlayer(player);
+				} catch (Exception e) {
+
+				}
 			} else if (i > 5) {
 				player.getInventory().remove(Material.HEART_OF_THE_SEA);
 				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 5);
@@ -501,6 +620,12 @@ public class VilTPScroll {
 				player.teleport(loc);
 				itemArg.remove();
 				player.getWorld().playSound(loc, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
+				// 보스바 관련
+				try {
+					new BossHealth().removePlayer(player);
+				} catch (Exception e) {
+
+				}
 			} else {
 				player.sendMessage(ChatColor.RED + "워프에 필요한 마나가 부족합니다.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
@@ -533,6 +658,12 @@ public class VilTPScroll {
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
 				}
+				// 보스바 관련
+				try {
+					new BossHealth().removePlayer(player);
+				} catch (Exception e) {
+
+				}
 			} else if (i > 1) {
 				player.getInventory().remove(Material.HEART_OF_THE_SEA);
 				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 1);
@@ -544,6 +675,12 @@ public class VilTPScroll {
 				player.teleport(loc);
 				itemArg.remove();
 				player.getWorld().playSound(loc, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
+				// 보스바 관련
+				try {
+					new BossHealth().removePlayer(player);
+				} catch (Exception e) {
+
+				}
 			} else {
 				player.sendMessage(ChatColor.RED + "워프에 필요한 마나가 부족합니다.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
@@ -576,6 +713,12 @@ public class VilTPScroll {
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
 				}
+				// 보스바 관련
+				try {
+					new BossHealth().removePlayer(player);
+				} catch (Exception e) {
+
+				}
 			} else if (i > 5) {
 				player.getInventory().remove(Material.HEART_OF_THE_SEA);
 				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 5);
@@ -587,6 +730,12 @@ public class VilTPScroll {
 				player.teleport(loc);
 				itemArg.remove();
 				player.getWorld().playSound(loc, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
+				// 보스바 관련
+				try {
+					new BossHealth().removePlayer(player);
+				} catch (Exception e) {
+
+				}
 			} else {
 				player.sendMessage(ChatColor.RED + "워프에 필요한 마나가 부족합니다.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);

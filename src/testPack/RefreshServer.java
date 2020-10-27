@@ -196,9 +196,9 @@ public class RefreshServer {
 						Location loc = allPlayer.getLocation();
 						if(loc.getBlock().getBiome() == Biome.BASALT_DELTAS || loc.getBlock().getBiome() == Biome.SNOWY_TUNDRA) {
 							
-							if(allPlayer.getDisplayName().equalsIgnoreCase("yumehama") || allPlayer.getDisplayName().equalsIgnoreCase("woolring")) {
-								continue;
-							}
+//							if(allPlayer.getDisplayName().equalsIgnoreCase("yumehama") || allPlayer.getDisplayName().equalsIgnoreCase("woolring")) {
+//								continue;
+//							}
 							
 							if(allPlayer.getInventory().contains(Material.ORANGE_DYE)) {
 								continue;

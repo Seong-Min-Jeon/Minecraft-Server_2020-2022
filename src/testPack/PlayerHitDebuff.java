@@ -148,7 +148,7 @@ public class PlayerHitDebuff {
 	public void mob4(Player player, Entity mob) {
 		if(mob.getCustomName().substring(2).equalsIgnoreCase("ƒ…»Í∑ª" + ChatColor.YELLOW + " [Lv.??]")) {
 			int num = rnd.nextInt(8);
-			if(num < 2) {
+			if(num < 1) {
 				for(int i = 0 ; i < 10 ; i++) {
 					player.getWorld().spawnParticle(Particle.ASH, mob.getLocation(), 10);
 				}

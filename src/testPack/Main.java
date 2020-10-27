@@ -193,7 +193,7 @@ public class Main extends JavaPlugin implements Listener{
 		getCommand("ItemLock").setExecutor(new Cmd14ItemLock());
 		
 		new RefreshServer();
-		new NPCHitBox();
+//		new NPCHitBox();
 		
 		
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
@@ -265,19 +265,18 @@ public class Main extends JavaPlugin implements Listener{
 		Player player = event.getPlayer(); 
 		
 //		if (player.getDisplayName().equalsIgnoreCase("yumehama")) {
-//			for (int x = 1400; x < 1600; x++) {
-//				for (int y = 0; y < 55; y++) {
-//					for (int z = 3328; z < 3584; z++) {
+//			for (int x = 1300; x < 1501; x++) {
+//				for (int y = 0; y < 255; y++) {
+//					for (int z = 50; z < 200; z++) {
 //						player.getWorld().getBlockAt(x, y, z).setType(Material.AIR);
 //					}
 //				}
 //			}
-//			// z = 1928~2050 스타트
 //
-//			if (player.getDisplayName().equalsIgnoreCase("yumehama")) {
-//				System.out.println(player.getLocation().toString());
-//				player.teleport(new Location(world, -478, 55, 1302));
-//			}
+////			if (player.getDisplayName().equalsIgnoreCase("yumehama")) {
+////				System.out.println(player.getLocation().toString());
+////				player.teleport(new Location(world, -478, 55, 1302));
+////			}
 //		}
 		
 		// 접속가능한 플레이어
@@ -341,7 +340,7 @@ public class Main extends JavaPlugin implements Listener{
 		
 		//bar
 		BossBar bar = Bukkit.createBossBar(ChatColor.BOLD + "" + ChatColor.AQUA + "전투 경험치 2배", BarColor.BLUE, BarStyle.SOLID);
-		bar.setVisible(true);
+		bar.setVisible(false);
 		bar.addPlayer(player);
 		BossBar bar2 = Bukkit.createBossBar(ChatColor.BOLD + "" + ChatColor.DARK_PURPLE + "강화확률 증가", BarColor.PURPLE, BarStyle.SOLID);
 		bar2.setVisible(false);
@@ -1903,50 +1902,8 @@ public class Main extends JavaPlugin implements Listener{
 	@EventHandler
 	public void consumeItem(PlayerItemConsumeEvent event) {
 		Player player = (Player)event.getPlayer();
-		//Cheat
-		if (player.getInventory().getChestplate() != null) {
-			if(player.getInventory().getChestplate().getItemMeta().getDisplayName().equals("§6Operator ChestPlate")) {
-				ItemStack potion1 = new ItemStack(Material.POTION,64);
-				ItemMeta potion1IM = potion1.getItemMeta();
-				potion1IM.setDisplayName(ChatColor.WHITE + "힐링 포션 I");
-				ArrayList<String> lore1 = new ArrayList();
-				lore1.add(ChatColor.YELLOW + "효과");
-				lore1.add(ChatColor.YELLOW + "- " + ChatColor.GRAY + "10만큼 체력을 회복합니다.");
-				potion1IM.setLore(lore1);
-				potion1.setItemMeta(potion1IM);	
-				player.getInventory().addItem(potion1);	
-				
-				ItemStack potion2 = new ItemStack(Material.POTION,64);
-				ItemMeta potion2IM = potion2.getItemMeta();
-				potion2IM.setDisplayName(ChatColor.WHITE + "힐링 포션 II");
-				ArrayList<String> lore2 = new ArrayList();
-				lore2.add(ChatColor.YELLOW + "효과");
-				lore2.add(ChatColor.YELLOW + "- " + ChatColor.GRAY + "30만큼 체력을 회복합니다.");
-				potion2IM.setLore(lore2);
-				potion2.setItemMeta(potion2IM);
-				player.getInventory().addItem(potion2);	
-				
-				ItemStack potion3 = new ItemStack(Material.POTION,64);
-				ItemMeta potion3IM = potion3.getItemMeta();
-				potion3IM.setDisplayName(ChatColor.WHITE + "힐링 포션 III");
-				ArrayList<String> lore3 = new ArrayList();
-				lore3.add(ChatColor.YELLOW + "효과");
-				lore3.add(ChatColor.YELLOW + "- " + ChatColor.GRAY + "100만큼 체력을 회복합니다.");
-				potion3IM.setLore(lore3);
-				potion3.setItemMeta(potion3IM);
-				player.getInventory().addItem(potion3);
-				
-				ItemStack potion4 = new ItemStack(Material.POTION,64);
-				ItemMeta potion4IM = potion4.getItemMeta();
-				potion4IM.setDisplayName(ChatColor.WHITE + "힐링 포션 IV");
-				ArrayList<String> lore4 = new ArrayList();
-				lore4.add(ChatColor.YELLOW + "효과");
-				lore4.add(ChatColor.YELLOW + "- " + ChatColor.GRAY + "200만큼 체력을 회복합니다.");
-				potion4IM.setLore(lore4);
-				potion4.setItemMeta(potion4IM);
-				player.getInventory().addItem(potion4);
-			}
-		}
+		event.setCancelled(true);
+		player.getInventory().getItemInMainHand().setAmount(player.getInventory().getItemInMainHand().getAmount()-1);
 		//HP포션
 		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "힐링 포션 I")) {
 			PotionRatio pr = new PotionRatio();
@@ -3946,6 +3903,11 @@ public class Main extends JavaPlugin implements Listener{
 					mob.remove();
 				}
 			} else if (event.getCause() == DamageCause.SUFFOCATION) {
+				if (event.getEntity() instanceof Mob) {
+					Mob mob = (Mob) event.getEntity();
+					mob.remove();
+				}
+			} else if (event.getCause() == DamageCause.VOID) {
 				if (event.getEntity() instanceof Mob) {
 					Mob mob = (Mob) event.getEntity();
 					mob.remove();

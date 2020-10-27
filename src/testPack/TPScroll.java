@@ -20,13 +20,6 @@ public class TPScroll {
 		ticket4(player, itemArg, world);
 		ticket5(player, itemArg, world);
 		ticket6(player, itemArg, world);
-		
-		// 보스바 관련
-		try {
-			new BossHealth().removePlayer(player);
-		} catch (Exception e) {
-
-		}
 	}
 	
 	public void ticket1(Player player, Item itemArg, World world) {
@@ -154,6 +147,12 @@ public class TPScroll {
 				Location loc = new Location(world, 96.5, 54, 695.5, 180, 0);
 				player.teleport(loc);
 				player.getWorld().playSound(loc, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
+				// 보스바 관련
+				try {
+					new BossHealth().removePlayer(player);
+				} catch (Exception e) {
+
+				}
 			} else {
 				player.sendMessage(ChatColor.RED + "이 아이템을 사용하기에는 레벨이 낮다.");
 			}

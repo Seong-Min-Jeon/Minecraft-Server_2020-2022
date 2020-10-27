@@ -4047,7 +4047,7 @@ public class SpawnMob {
 			Location chestLoc = new Location(entity.getWorld(), -1830, 92, 3043);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
-			if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
+			if (entity.getType() == (EntityType) EntityType.SKELETON) {
 				entity.setCustomName(ChatColor.GRAY + "포보르 세력 플레이어" + ChatColor.YELLOW + " [Lv.279]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(20000);

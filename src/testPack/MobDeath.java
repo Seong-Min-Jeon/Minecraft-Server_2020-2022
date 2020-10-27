@@ -399,7 +399,7 @@ public class MobDeath {
 					mob.remove();
 				}
 				// 나비
-				if (name.equalsIgnoreCase("나비" + ChatColor.YELLOW + " [Lv.253]")) {
+				if (name.equalsIgnoreCase("나비" + ChatColor.YELLOW + " [Lv.254]")) {
 					mobloot.mob79(lootPlayer);
 				}
 				// 설원 정찰자

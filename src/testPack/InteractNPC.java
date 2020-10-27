@@ -124,7 +124,9 @@ public class InteractNPC {
 					}
 					
 					if(player.getInventory().contains(Material.ORANGE_DYE)) {
-						wear = true;
+						int qNum = cb.getNum(player);
+						cb.eq1_4(player, qNum+1);
+						return true;
 					}
 					
 					if(wear == true) {

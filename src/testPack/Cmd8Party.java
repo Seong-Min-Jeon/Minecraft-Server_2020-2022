@@ -74,9 +74,6 @@ public class Cmd8Party implements CommandExecutor {
 							isOk = true;
 							player2 = allPlayer;
 							break;
-						} else {
-							player.sendMessage(ChatColor.RED + "Undefined Player!");
-							return true;
 						}
 					}
 					if(isOk == true && player!=player2) {				

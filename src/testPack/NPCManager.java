@@ -87,7 +87,7 @@ public class NPCManager {
 	}
 	
 	public EntityPlayer npc4() {
-		Location loc = new Location(Bukkit.getWorld("world"), -3728, 140, 3146, 270, 0);
+		Location loc = new Location(Bukkit.getWorld("world"), 3728, 140, 3146, 270, 0);
 		
 		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "ÀÇ¹®ÀÇ ¼Ò³à");
 		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));

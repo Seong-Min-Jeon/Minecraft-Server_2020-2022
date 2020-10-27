@@ -1399,8 +1399,8 @@ public class QuestBoard {
 			es.giveExp(player, 1900000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			msg.msg(player, "모험가: 여기까지 오느라 수고했다.%모험가: 이곳을 지키는 보스는 §e발로르§f더군.%모험가: 물론 진짜 발로르일리가 없지.%모험가: 그저 포보르들이 연성해낸 불안정한 가짜 일 뿐.%모험가: 아.. 네 녀석이 뭘 생각하는진 모르겠지만%모험가: 나는 몬스터들과 싸우는 §e플레이어§f라고?%"
-					+ "모험가: 그렇게 이상하게 쳐다보지마.%모험가: 나 또한 너와같은 플레이어. 이름은 §e데히테라§f다.%데히테라: 몬스터를 죽이며 강해지는건 당연한 일 아닌가?%데히테라: 우린 앞으로도 많이 만나게 될 운명이야.%데히테라: 그러니 친하게 지내는게 좋지.%데히테라: 나는 이만 퀘스트를 달성했기 때문에 가보겠어.%"
-					+ "데히테라: 그럼...%데히테라: 씨 유 넥스트 타임 바~이!%tp-2465 52 543");
+					+ "모험가: 그렇게 이상하게 쳐다보지마.%모험가: 나 또한 너와같은 플레이어. 이름은 §e데히트라§f다.%데히트라: 몬스터를 죽이며 강해지는건 당연한 일 아닌가?%데히트라: 우린 앞으로도 많이 만나게 될 운명이야.%데히트라: 그러니 친하게 지내는게 좋지.%데히트라: 나는 이만 퀘스트를 달성했기 때문에 가보겠어.%"
+					+ "데히트라: 그럼...%데히트라: 씨 유 넥스트 타임 바~이!%tp-2465 52 543");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
@@ -1515,7 +1515,6 @@ public class QuestBoard {
 		Score score3 = obj.getScore("(" + num + "/30)");
 		score3.setScore(0);
 		player.setScoreboard(board);
-		new NPCManager(player);
 	}
 	
 	public void mq28(Player player, int num) {

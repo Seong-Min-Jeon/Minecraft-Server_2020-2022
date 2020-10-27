@@ -485,6 +485,7 @@ public class QuestScroll {
 	
 	public void mq27(Player player, Item itemArg, World world) {	
 		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "메인퀘스트 27장")) {
+			new NPCManager(player);
 			msg.msg(player, "bl120%§7머리가 희미해진다.%§7누군가의 기억을 엿보는 듯한 기분이 든다.%tp-2223 64 -2435%데히트라: " + player.getDisplayName() + " 녀석이 더욱 성장하고 있습니다.%데히트라: 모든 것은 계획대로입니다.%의문의 남성: 그래.%"
 					+ "의문의 남성: 그 녀석이 제 발로 찾아온다면, 굳이 --를 반복하지 않아도 되겠군.%데히트라: 드디어 그 분의 뜻을 이루게 되는 것입니까.%의문의 남성: 끌끌끌.. 죽어도 죽지 않는 육체를 가진 §e플레이어§f라..%의문의 남성: 아주 좋은 연구가 될 것 같구나.%"
 					+ "의문의 남성: 이제 슬슬 이동해 보자고.%의문의 남성: 지금부터 --으로 간다.%데히트라: " + player.getDisplayName() + " 녀석이 오는 것을 기다리지 않는 것입니까?%의문의 남성: 지금까지 그랬던 것처럼 그 녀석은 --를 보고 우리쪽으로 오게 될거다.%"

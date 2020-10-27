@@ -48,7 +48,7 @@ public class WeaponBuff {
 												if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "황혼의 용사 신발")) {
 													player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 3,true,false,false));
 													player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 1200, 1,true,false,false));
-													player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 300,true,false,false));
+													player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 400,true,false,false));
 												}
 											}
 										}
@@ -63,6 +63,7 @@ public class WeaponBuff {
 													player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 6,true,false,false));
 													player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 2,true,false,false));
 													player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0,true,false,false));
+													player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 100,true,false,false));
 												}
 											}
 										}
@@ -147,7 +148,7 @@ public class WeaponBuff {
 								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "백호")) {
 									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "현무")) {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 1,true,false,false));
-										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 600, 4,true,false,false));
+										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 600, 15,true,false,false));
 									}
 								}
 							}
@@ -158,7 +159,7 @@ public class WeaponBuff {
 								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "미들시프트 각반")) {
 									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "미들시프트 신발")) {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 1,true,false,false));
-										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 600, 20,true,false,false));
+										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 600, 100,true,false,false));
 									}
 								}
 							}
@@ -224,7 +225,7 @@ public class WeaponBuff {
 								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "우울한 절망의 각반")) {
 									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "우울한 절망의 신발")) {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 2,true,false,false));
-										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 20,true,false,false));
+										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 150,true,false,false));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 1,true,false,false));
 									}
 								}
@@ -236,7 +237,7 @@ public class WeaponBuff {
 								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "하급 기사의 각반")) {
 									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "하급 기사의 신발")) {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 1,true,false,false));
-										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 30,true,false,false));
+										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 50,true,false,false));
 									}
 								}
 							}
@@ -258,7 +259,7 @@ public class WeaponBuff {
 								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 초심자 각반")) {
 									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 초심자 신발")) {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 2,true,false,false));
-										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 60,true,false,false));
+										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 100,true,false,false));
 										mob.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 0,true,false,false));
 									}
 								}
@@ -270,7 +271,7 @@ public class WeaponBuff {
 								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 도전자 각반")) {
 									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 도전자 신발")) {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 3,true,false,false));
-										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 80,true,false,false));
+										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 200,true,false,false));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 200, 0,true,false,false));
 									}
 								}
@@ -282,7 +283,7 @@ public class WeaponBuff {
 								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "에보니 각반")) {
 									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "에보니 신발")) {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0,true,false,false));
-										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 140,true,false,false));
+										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 150,true,false,false));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 2,true,false,false));
 									}
 								}
@@ -303,7 +304,7 @@ public class WeaponBuff {
 							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "불타는 여명의 갑옷")) {
 								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "불타는 여명의 각반")) {
 									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "불타는 여명의 신발")) {
-										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 300,true,false,false));
+										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 400,true,false,false));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 3,true,false,false));
 									}
 								}
