@@ -824,6 +824,28 @@ public class MobDeath {
     		emeIm3.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
     		eme3.setItemMeta(emeIm3);
         	lootPlayer.getInventory().addItem(eme3);
+        	
+        	
+        	int cnt4 = 0;
+        	for(ItemStack item : lootPlayer.getInventory().getContents()) {
+        		if(item == null) continue;
+        		if(item.getType() == Material.RABBIT_HIDE) {
+        			cnt4 += item.getAmount();
+        		}
+        	}
+        	lootPlayer.getInventory().remove(Material.RABBIT_HIDE);
+        	if(cnt4/64 != 0) {
+        		ItemStack item = new ItemStack(Material.RABBIT_FOOT, cnt4/64);
+        		ItemMeta im = item.getItemMeta();
+        		im.setDisplayName(ChatColor.DARK_RED + "에메랄드 결정+");
+        		item.setItemMeta(im);
+        		lootPlayer.getInventory().addItem(item);
+        	}
+        	ItemStack eme4 = new ItemStack(Material.RABBIT_HIDE, cnt4%64);
+    		ItemMeta emeIm4 = eme4.getItemMeta();
+    		emeIm4.setDisplayName(ChatColor.AQUA + "에메랄드 결정");
+    		eme4.setItemMeta(emeIm4);
+        	lootPlayer.getInventory().addItem(eme4);
 			
 		}
 	}

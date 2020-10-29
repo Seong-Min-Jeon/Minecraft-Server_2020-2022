@@ -72,7 +72,7 @@ public class ReinforcementMakeEvent {
             						int lvl = Integer.parseInt(item.getLocalizedName());
             						if(lvl==0) {
             							if(!(itemResource.getDisplayName().equals(ChatColor.GRAY + "깨질 듯한 석영"))) {
-                							player.sendMessage("이 수준의 석영으로는 강화를 할 수 없을 것 같다.");
+                							player.sendMessage("이 수준의 석영으로는 개방을 할 수 없을 것 같다.");
                 							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
                 						} else {
                 							newMeta = rein.bowRein1(player, item, itemResource);
@@ -81,7 +81,7 @@ public class ReinforcementMakeEvent {
                 						}
             						} else if(lvl==1) {
             							if(!(itemResource.getDisplayName().equals(ChatColor.WHITE + "석영"))) {
-                							player.sendMessage("이 수준의 석영으로는 강화를 할 수 없을 것 같다.");
+                							player.sendMessage("이 수준의 석영으로는 개방을 할 수 없을 것 같다.");
                 							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
                 						} else {
                 							newMeta = rein.bowRein2(player, item, itemResource);
@@ -90,7 +90,7 @@ public class ReinforcementMakeEvent {
                 						}
             						} else if(lvl==5) {
             							if(!(itemResource.getDisplayName().equals(ChatColor.YELLOW + "반듯한 석영"))) {
-                							player.sendMessage("이 수준의 석영으로는 강화를 할 수 없을 것 같다.");
+                							player.sendMessage("이 수준의 석영으로는 개방을 할 수 없을 것 같다.");
                 							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
                 						} else {
                 							newMeta = rein.bowRein3(player, item, itemResource);
@@ -99,7 +99,7 @@ public class ReinforcementMakeEvent {
                 						}
             						} else if(lvl==20) {
             							if(!(itemResource.getDisplayName().equals(ChatColor.LIGHT_PURPLE + "매혹적인 석영"))) {
-                							player.sendMessage("이 수준의 석영으로는 강화를 할 수 없을 것 같다.");
+                							player.sendMessage("이 수준의 석영으로는 개방을 할 수 없을 것 같다.");
                 							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
                 						} else {
                 							newMeta = rein.bowRein4(player, item, itemResource);
@@ -108,7 +108,7 @@ public class ReinforcementMakeEvent {
                 						}
             						} else if(lvl==100) {
             							if(!(itemResource.getDisplayName().equals(ChatColor.AQUA + "보석같은 석영"))) {
-                							player.sendMessage("이 수준의 석영으로는 강화를 할 수 없을 것 같다.");
+                							player.sendMessage("이 수준의 석영으로는 개방을 할 수 없을 것 같다.");
                 							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
                 						} else {
                 							newMeta = rein.bowRein5(player, item, itemResource);
@@ -117,7 +117,7 @@ public class ReinforcementMakeEvent {
                 						}
             						} else if(lvl>=300) {
             							if(!(itemResource.getDisplayName().equals(ChatColor.DARK_RED + "신의 힘이 담긴 석영"))) {
-                							player.sendMessage("이 수준의 석영으로는 강화를 할 수 없을 것 같다.");
+                							player.sendMessage("이 수준의 석영으로는 개방을 할 수 없을 것 같다.");
                 							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
                 						} else {
                 							newMeta = rein.bowRein6(player, item, itemResource);
@@ -127,7 +127,7 @@ public class ReinforcementMakeEvent {
             						}
             					}
                 			} else {
-                				player.sendMessage(ChatColor.WHITE + "활 강화에는 특수한 광물이 필요합니다.");
+                				player.sendMessage(ChatColor.WHITE + "활 개방에는 특수한 광물이 필요합니다.");
                 				return false;
                 			}
             			} else {

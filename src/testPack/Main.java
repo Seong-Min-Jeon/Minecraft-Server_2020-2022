@@ -264,21 +264,6 @@ public class Main extends JavaPlugin implements Listener{
 	public void onPlayerJoin(PlayerJoinEvent event) {
 		Player player = event.getPlayer(); 
 		
-//		if (player.getDisplayName().equalsIgnoreCase("yumehama")) {
-//			for (int x = 1300; x < 1501; x++) {
-//				for (int y = 0; y < 255; y++) {
-//					for (int z = 50; z < 200; z++) {
-//						player.getWorld().getBlockAt(x, y, z).setType(Material.AIR);
-//					}
-//				}
-//			}
-//
-////			if (player.getDisplayName().equalsIgnoreCase("yumehama")) {
-////				System.out.println(player.getLocation().toString());
-////				player.teleport(new Location(world, -478, 55, 1302));
-////			}
-//		}
-		
 		// 접속가능한 플레이어
 		try {
 //			if (!(player.getDisplayName().equalsIgnoreCase("yumehama"))) {
@@ -1860,6 +1845,14 @@ public class Main extends JavaPlugin implements Listener{
 				    }
 				}
 			}
+			if(player.getInventory().contains(Material.RABBIT_FOOT)) {
+				for (ItemStack is : player.getInventory().getContents()) {
+					if(is == null) continue;
+				    if (is.getType() == Material.RABBIT_FOOT) {			
+				         is.setAmount(is.getAmount()/3 + 1);
+				    }
+				}
+			}
 
 			if(player.getInventory().contains(Material.COAL_ORE)) {
 				for (ItemStack is : player.getInventory().getContents()) {
@@ -1902,8 +1895,6 @@ public class Main extends JavaPlugin implements Listener{
 	@EventHandler
 	public void consumeItem(PlayerItemConsumeEvent event) {
 		Player player = (Player)event.getPlayer();
-		event.setCancelled(true);
-		player.getInventory().getItemInMainHand().setAmount(player.getInventory().getItemInMainHand().getAmount()-1);
 		//HP포션
 		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "힐링 포션 I")) {
 			PotionRatio pr = new PotionRatio();
@@ -2091,7 +2082,12 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "티본 스테이크")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 300, 2,true,false,false));
 		}
-
+		
+		if(player.getInventory().getItemInMainHand().getType() == Material.POTION) {
+			event.setCancelled(true);
+			player.getInventory().getItemInMainHand().setAmount(player.getInventory().getItemInMainHand().getAmount()-1);
+		}
+		
 	}
 	
 	@EventHandler
@@ -3919,15 +3915,18 @@ public class Main extends JavaPlugin implements Listener{
 		//Change Name Color
 		try {
 			if(!(event.getEntity() instanceof Player)) {
-				if (((LivingEntity) event.getEntity()).getHealth() - event.getFinalDamage() <= ((LivingEntity) event.getEntity()).getMaxHealth() / 2) {
-					String name = event.getEntity().getCustomName().substring(2);
-					String[] nameAry = name.split("L");
-					event.getEntity().setCustomName(ChatColor.YELLOW + nameAry[0] + "L" + nameAry[1]);
-				}
 				if (((LivingEntity) event.getEntity()).getHealth() - event.getFinalDamage() <= ((LivingEntity) event.getEntity()).getMaxHealth() / 5) {
 					String name = event.getEntity().getCustomName().substring(2);
 					String[] nameAry = name.split("L");
 					event.getEntity().setCustomName(ChatColor.RED + nameAry[0] + "L" + nameAry[1]);
+				} else if (((LivingEntity) event.getEntity()).getHealth() - event.getFinalDamage() <= ((LivingEntity) event.getEntity()).getMaxHealth() / 2) {
+					String name = event.getEntity().getCustomName().substring(2);
+					String[] nameAry = name.split("L");
+					event.getEntity().setCustomName(ChatColor.YELLOW + nameAry[0] + "L" + nameAry[1]);
+				} else if (((LivingEntity) event.getEntity()).getHealth() - event.getFinalDamage() <= ((LivingEntity) event.getEntity()).getMaxHealth()) {
+					String name = event.getEntity().getCustomName().substring(2);
+					String[] nameAry = name.split("L");
+					event.getEntity().setCustomName(ChatColor.WHITE + nameAry[0] + "L" + nameAry[1]);
 				}
 			}
 		} catch (Exception e) {
@@ -5098,6 +5097,27 @@ public class Main extends JavaPlugin implements Listener{
 	        		emeIm3.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
 	        		eme3.setItemMeta(emeIm3);
 		        	player.getInventory().addItem(eme3);
+		        	
+		        	int cnt4 = 0;
+		        	for(ItemStack item : player.getInventory().getContents()) {
+		        		if(item == null) continue;
+		        		if(item.getType() == Material.RABBIT_HIDE) {
+		        			cnt4 += item.getAmount();
+		        		}
+		        	}
+		        	player.getInventory().remove(Material.RABBIT_HIDE);
+		        	if(cnt4/64 != 0) {
+		        		ItemStack item = new ItemStack(Material.RABBIT_FOOT, cnt4/64);
+		        		ItemMeta im = item.getItemMeta();
+		        		im.setDisplayName(ChatColor.DARK_RED + "에메랄드 결정+");
+		        		item.setItemMeta(im);
+		        		player.getInventory().addItem(item);
+		        	}
+		        	ItemStack eme4 = new ItemStack(Material.RABBIT_HIDE, cnt4%64);
+	        		ItemMeta emeIm4 = eme4.getItemMeta();
+	        		emeIm4.setDisplayName(ChatColor.AQUA + "에메랄드 결정");
+	        		eme4.setItemMeta(emeIm4);
+		        	player.getInventory().addItem(eme4);
 	        	}
 		    	
 	        }
@@ -6007,13 +6027,13 @@ public class Main extends JavaPlugin implements Listener{
 		}
 	}
 	
-//	@EventHandler
-//	public void blockPhysicsEvent(BlockPhysicsEvent event) {
-//		if(event.getBlock().getType() == Material.SAND) {
-//			Location loc = event.getBlock().getLocation().add(0,-1,0);
-//			loc.getBlock().setType(Material.SANDSTONE);
-//		}
-//	}
+	@EventHandler
+	public void blockPhysicsEvent(BlockPhysicsEvent event) {
+		if(event.getBlock().getType() == Material.SAND) {
+			Location loc = event.getBlock().getLocation().add(0,-1,0);
+			loc.getBlock().setType(Material.SANDSTONE);
+		}
+	}
 	
 	@EventHandler
 	public void arrowRemove(ProjectileHitEvent event) {
