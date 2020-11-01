@@ -101,6 +101,7 @@ import org.bukkit.event.inventory.PrepareItemCraftEvent;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.event.player.PlayerAnimationEvent;
 import org.bukkit.event.player.PlayerAnimationType;
+import org.bukkit.event.player.PlayerArmorStandManipulateEvent;
 import org.bukkit.event.player.PlayerChangedWorldEvent;
 import org.bukkit.event.player.PlayerChatEvent;
 import org.bukkit.event.player.PlayerDropItemEvent;
@@ -5135,10 +5136,6 @@ public class Main extends JavaPlugin implements Listener{
 				event.setCancelled(true);
 				return;
 			}
-			if(event.getRightClicked().getType() == EntityType.ARMOR_STAND && player.getGameMode() == GameMode.ADVENTURE) {
-				event.setCancelled(true);
-				return;
-			}
 			// 빌리저 대화
 			if(event.getRightClicked().getType() == EntityType.VILLAGER || event.getRightClicked().getType() == EntityType.ARMOR_STAND) {
 				InteractVillager iv = new InteractVillager();
@@ -6121,6 +6118,14 @@ public class Main extends JavaPlugin implements Listener{
 	@EventHandler
 	public void slimeEvent(SlimeSplitEvent event) {
 		event.setCancelled(true);
+	}
+	
+	@EventHandler
+	public void armorstandEvent(PlayerArmorStandManipulateEvent event) {
+		if(event.getPlayer().getGameMode() != GameMode.CREATIVE) {
+			event.setCancelled(true);
+			return;
+		}
 	}
 	
 	@EventHandler
