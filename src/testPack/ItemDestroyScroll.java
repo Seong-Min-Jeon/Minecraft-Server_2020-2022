@@ -15,14 +15,14 @@ import org.bukkit.inventory.meta.ItemMeta;
 public class ItemDestroyScroll {
 
 	public void openInv(Player player, Item itemArg) {
-		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "¾ÆÀÌÅÛ ÆÄ±â ½ºÅ©·Ñ")) {
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "ì•„ì´í…œ íŒŒê¸° ìŠ¤í¬ë¡¤")) {
 			itemArg.remove();
 			Inventory inv = Bukkit.createInventory(player, 54, "Item Destroy Table");
 			ItemStack no = new ItemStack(Material.SHULKER_SHELL);
 			ItemMeta noIm = no.getItemMeta();
-			noIm.setDisplayName(ChatColor.RED + "³ª°¡±â");
+			noIm.setDisplayName(ChatColor.RED + "ë‚˜ê°€ê¸°");
 			ArrayList<String> noLore = new ArrayList();
-			noLore.add(ChatColor.GRAY + "³ª°¡±â¸¦ ´©¸£°Å³ª Ã¢À» ´İÀ¸¸é Å×ÀÌºí À§ÀÇ ¾ÆÀÌÅÛÀº »ç¶óÁı´Ï´Ù.");
+			noLore.add(ChatColor.GRAY + "ë‚˜ê°€ê¸°ë¥¼ ëˆ„ë¥´ê±°ë‚˜ ì°½ì„ ë‹«ìœ¼ë©´ í…Œì´ë¸” ìœ„ì˜ ì•„ì´í…œì€ ì‚¬ë¼ì§‘ë‹ˆë‹¤.");
 			noIm.setLore(noLore);
 			noIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			noIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);

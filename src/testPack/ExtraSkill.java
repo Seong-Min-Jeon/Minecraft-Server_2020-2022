@@ -32,16 +32,16 @@ public class ExtraSkill {
 		}
 		
 		try {
-			// ¼Ò¾Æ¿Â
+			// ì†Œì•„ì˜¨
 			if(item1.getType() == Material.OAK_PLANKS && item2.getType() == Material.SPRUCE_PLANKS) {
-				if(item1.getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "ÀÏ·ç½Ãµ¥ÀÌÅÍ") && item2.getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "´ÙÅ© ¸®ÆŞ¼­")) {
+				if(item1.getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "ì¼ë£¨ì‹œë°ì´í„°") && item2.getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "ë‹¤í¬ ë¦¬í„ì„œ")) {
 					skill1(player, i, item1, item2);
 				}
 			}
 			
-			// ¿äÁ¤¼Â
+			// ìš”ì •ì…‹
 			if(item1.getType() == Material.STONE && item2.getType() == Material.CYAN_WOOL) {
-				if(item1.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "¿äÁ¤¿ÕÀÇ °Ë") && item2.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "¿äÁ¤¿©¿ÕÀÇ °Ë")) {
+				if(item1.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "ìš”ì •ì™•ì˜ ê²€") && item2.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "ìš”ì •ì—¬ì™•ì˜ ê²€")) {
 					skill2(player, i, item1, item2);
 				}
 			}
@@ -58,7 +58,7 @@ public class ExtraSkill {
 				player.getInventory().remove(Material.HEART_OF_THE_SEA);
 				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 2);
 				ItemMeta itemIm = item.getItemMeta();
-				itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+				itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 				item.setItemMeta(itemIm);
 				player.getInventory().setItem(8, item);
 				Location loc = player.getLocation();
@@ -77,12 +77,12 @@ public class ExtraSkill {
 						ent.damage(player.getLevel()*20);
 					}
 				}
-				player.sendMessage(ChatColor.GREEN + "[½ºÅ³]´õºí ¼­Å§·¯¸¦ ¹ßµ¿ÇÕ´Ï´Ù.");
+				player.sendMessage(ChatColor.GREEN + "[ìŠ¤í‚¬]ë”ë¸” ì„œí˜ëŸ¬ë¥¼ ë°œë™í•©ë‹ˆë‹¤.");
 				player.getWorld().playSound(player.getLocation(), Sound.ENTITY_LIGHTNING_BOLT_IMPACT, 1.0f, 1.0f);
 				player.getWorld().playSound(player.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
 			}
 		} else {
-			player.sendMessage(ChatColor.RED + "¸¶³ª°¡ ºÎÁ·ÇÕ´Ï´Ù.");
+			player.sendMessage(ChatColor.RED + "ë§ˆë‚˜ê°€ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 			player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
 			return;
 		}
@@ -93,7 +93,7 @@ public class ExtraSkill {
 			player.getInventory().remove(Material.HEART_OF_THE_SEA);
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 5);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);
 			player.getInventory().setItem(8, item);
 			Location loc = player.getLocation();
@@ -115,11 +115,11 @@ public class ExtraSkill {
 			ParticleEffect pe = new ParticleEffect(player);
 			pe.startE29();
 			// ================================================================
-			player.sendMessage(ChatColor.GREEN + "[½ºÅ³]¿äÁ¤ÀÇ ¼Ó¹ÚÀ» ¹ßµ¿ÇÕ´Ï´Ù.");
-			player.sendMessage(ChatColor.GREEN + "5ÃÊ°£ ÀûÀÇ ¿òÁ÷ÀÓÀ» ¸ØÃä´Ï´Ù.");
+			player.sendMessage(ChatColor.GREEN + "[ìŠ¤í‚¬]ìš”ì •ì˜ ì†ë°•ì„ ë°œë™í•©ë‹ˆë‹¤.");
+			player.sendMessage(ChatColor.GREEN + "5ì´ˆê°„ ì ì˜ ì›€ì§ì„ì„ ë©ˆì¶¥ë‹ˆë‹¤.");
 			player.getWorld().playSound(loc, Sound.ENTITY_WOLF_SHAKE, 1.0f, 1.0f);
 		} else {
-			player.sendMessage(ChatColor.RED + "¸¶³ª°¡ ºÎÁ·ÇÕ´Ï´Ù.");
+			player.sendMessage(ChatColor.RED + "ë§ˆë‚˜ê°€ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 			player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
 			return;
 		}

@@ -12,7 +12,7 @@ public class WeaponBuff {
 		//main
 		try {
 			if (player.getInventory().getItemInMainHand().getItemMeta() != null) {
-				if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals("¡×6Operator Sword")) {
+				if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals("Â§6Operator Sword")) {
 					mob.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 600, 9));
 					mob.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 600, 9));
 					player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 600, 9));
@@ -25,13 +25,13 @@ public class WeaponBuff {
 					player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 9));
 					player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 600, 9));
 				}
-				if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "" + ChatColor.MAGIC + "½ÅÀÇ °Ë")) {
+				if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "" + ChatColor.MAGIC + "ì‹ ì˜ ê²€")) {
 					mob.remove();				
 				}
-				if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "" + ChatColor.MAGIC + "½ÅÀÇ °Ë[¹üÀ§ Ãà¼ÒÇü]")) {
+				if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "" + ChatColor.MAGIC + "ì‹ ì˜ ê²€[ë²”ìœ„ ì¶•ì†Œí˜•]")) {
 					mob.remove();				
 				}
-				if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "ÀúÁÖ¹ŞÀº °Ë+")) {
+				if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "ì €ì£¼ë°›ì€ ê²€+")) {
 					player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 200, 0,true,false,false));				
 				}
 				
@@ -41,11 +41,11 @@ public class WeaponBuff {
 						if (player.getInventory().getLeggings() != null) {
 							if (player.getInventory().getBoots() != null) {
 								
-								if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "È²È¥ÀÇ ¿ë»ç °Ë")) {
-									if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "È²È¥ÀÇ ¿ë»ç Çï¸ä")) {
-										if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "È²È¥ÀÇ ¿ë»ç °©¿Ê")) {
-											if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "È²È¥ÀÇ ¿ë»ç °¢¹İ")) {
-												if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "È²È¥ÀÇ ¿ë»ç ½Å¹ß")) {
+								if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "í™©í˜¼ì˜ ìš©ì‚¬ ê²€")) {
+									if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "í™©í˜¼ì˜ ìš©ì‚¬ í—¬ë©§")) {
+										if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "í™©í˜¼ì˜ ìš©ì‚¬ ê°‘ì˜·")) {
+											if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "í™©í˜¼ì˜ ìš©ì‚¬ ê°ë°˜")) {
+												if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "í™©í˜¼ì˜ ìš©ì‚¬ ì‹ ë°œ")) {
 													player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 3,true,false,false));
 													player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 1200, 1,true,false,false));
 													player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 400,true,false,false));
@@ -55,11 +55,11 @@ public class WeaponBuff {
 									}
 								}
 								
-								if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "°Å¹Ì ¿©¿ÕÀÇ °Ë")) {
-									if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "°Å¹Ì ¿©¿ÕÀÇ Çï¸ä")) {
-										if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "°Å¹Ì ¿©¿ÕÀÇ °©¿Ê")) {
-											if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "°Å¹Ì ¿©¿ÕÀÇ °¢¹İ")) {
-												if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "°Å¹Ì ¿©¿ÕÀÇ ½Å¹ß")) {
+								if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ê±°ë¯¸ ì—¬ì™•ì˜ ê²€")) {
+									if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ê±°ë¯¸ ì—¬ì™•ì˜ í—¬ë©§")) {
+										if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ê±°ë¯¸ ì—¬ì™•ì˜ ê°‘ì˜·")) {
+											if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ê±°ë¯¸ ì—¬ì™•ì˜ ê°ë°˜")) {
+												if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ê±°ë¯¸ ì—¬ì™•ì˜ ì‹ ë°œ")) {
 													player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 6,true,false,false));
 													player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 2,true,false,false));
 													player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0,true,false,false));
@@ -91,7 +91,7 @@ public class WeaponBuff {
 		try {
 			//chestplate
 			if (player.getInventory().getChestplate() != null) {					
-				if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "Å½¿åÀÇ °©¿Ê")) {
+				if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "íƒìš•ì˜ ê°‘ì˜·")) {
 					player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 600, 4));
 					player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 600, 140));
 				}
@@ -112,13 +112,13 @@ public class WeaponBuff {
 		try {
 			//boots
 			if (player.getInventory().getBoots() != null) {
-				if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "¾Æ¶óÅ©³×ÀÇ ½Å¹ß")) {
+				if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "ì•„ë¼í¬ë„¤ì˜ ì‹ ë°œ")) {
 					player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 200, 1));
 				}
-				if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "Å¬¸®¾îÀ®")) {
+				if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "í´ë¦¬ì–´ìœ™")) {
 					player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 100, 1));
 				}
-				if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "¹«°£³ú½Å")) {
+				if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "ë¬´ê°„ë‡Œì‹ ")) {
 					player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 200, 1,true,false,false));
 				}
 			}
@@ -132,10 +132,10 @@ public class WeaponBuff {
 				if (player.getInventory().getLeggings() != null) {
 					if (player.getInventory().getBoots() != null) {
 						
-						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "½£ÀÇ °¡È£°¡ ´ã±ä Çï¸ä")) {
-							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "½£ÀÇ °¡È£°¡ ´ã±ä °©¿Ê")) {
-								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "½£ÀÇ °¡È£°¡ ´ã±ä °¢¹İ")) {
-									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "½£ÀÇ °¡È£°¡ ´ã±ä ½Å¹ß")) {
+						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ìˆ²ì˜ ê°€í˜¸ê°€ ë‹´ê¸´ í—¬ë©§")) {
+							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ìˆ²ì˜ ê°€í˜¸ê°€ ë‹´ê¸´ ê°‘ì˜·")) {
+								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ìˆ²ì˜ ê°€í˜¸ê°€ ë‹´ê¸´ ê°ë°˜")) {
+									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ìˆ²ì˜ ê°€í˜¸ê°€ ë‹´ê¸´ ì‹ ë°œ")) {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 600, 1,true,false,false));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 600, 0,true,false,false));
 									}
@@ -143,10 +143,10 @@ public class WeaponBuff {
 							}
 						}
 						
-						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ÁÖÀÛ")) {
-							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "Ã»·æ")) {
-								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "¹éÈ£")) {
-									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "Çö¹«")) {
+						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ì£¼ì‘")) {
+							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ì²­ë£¡")) {
+								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ë°±í˜¸")) {
+									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "í˜„ë¬´")) {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 1,true,false,false));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 600, 15,true,false,false));
 									}
@@ -154,10 +154,10 @@ public class WeaponBuff {
 							}
 						}
 						
-						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "¹Ìµé½ÃÇÁÆ® Çï¸ä")) {
-							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "¹Ìµé½ÃÇÁÆ® °©¿Ê")) {
-								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "¹Ìµé½ÃÇÁÆ® °¢¹İ")) {
-									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "¹Ìµé½ÃÇÁÆ® ½Å¹ß")) {
+						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ë¯¸ë“¤ì‹œí”„íŠ¸ í—¬ë©§")) {
+							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ë¯¸ë“¤ì‹œí”„íŠ¸ ê°‘ì˜·")) {
+								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ë¯¸ë“¤ì‹œí”„íŠ¸ ê°ë°˜")) {
+									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ë¯¸ë“¤ì‹œí”„íŠ¸ ì‹ ë°œ")) {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 1,true,false,false));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 600, 100,true,false,false));
 									}
@@ -165,10 +165,10 @@ public class WeaponBuff {
 							}
 						}
 						
-						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "¾Æ´Ù¸¶½º Çï¸ä")) {
-							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "¾Æ´Ù¸¶½º °©¿Ê")) {
-								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "¾Æ´Ù¸¶½º °¢¹İ")) {
-									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "¾Æ´Ù¸¶½º ½Å¹ß")) {
+						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ì•„ë‹¤ë§ˆìŠ¤ í—¬ë©§")) {
+							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ì•„ë‹¤ë§ˆìŠ¤ ê°‘ì˜·")) {
+								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ì•„ë‹¤ë§ˆìŠ¤ ê°ë°˜")) {
+									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ì•„ë‹¤ë§ˆìŠ¤ ì‹ ë°œ")) {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0,true,false,false));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 2,true,false,false));
 									}
@@ -176,20 +176,20 @@ public class WeaponBuff {
 							}
 						}
 						
-						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "·ç³ª Æä¾î¸® Çï¸ä")) {
-							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "·ç³ª Æä¾î¸® °©¿Ê")) {
-								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "·ç³ª Æä¾î¸® °¢¹İ")) {
-									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "·ç³ª Æä¾î¸® ½Å¹ß")) {
+						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ë£¨ë‚˜ í˜ì–´ë¦¬ í—¬ë©§")) {
+							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ë£¨ë‚˜ í˜ì–´ë¦¬ ê°‘ì˜·")) {
+								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ë£¨ë‚˜ í˜ì–´ë¦¬ ê°ë°˜")) {
+									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ë£¨ë‚˜ í˜ì–´ë¦¬ ì‹ ë°œ")) {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 300, 3,true,false,false));
 									}
 								}
 							}
 						}
 						
-						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "Ä«ÀÌ¸¸ ÀüÅë Çï¸ä")) {
-							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "Ä«ÀÌ¸¸ ÀüÅë °©¿Ê")) {
-								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "Ä«ÀÌ¸¸ ÀüÅë °¢¹İ")) {
-									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "Ä«ÀÌ¸¸ ÀüÅë ½Å¹ß")) {
+						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ì¹´ì´ë§Œ ì „í†µ í—¬ë©§")) {
+							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ì¹´ì´ë§Œ ì „í†µ ê°‘ì˜·")) {
+								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ì¹´ì´ë§Œ ì „í†µ ê°ë°˜")) {
+									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ì¹´ì´ë§Œ ì „í†µ ì‹ ë°œ")) {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 600, 0,true,false,false));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 0,true,false,false));
 									}
@@ -197,10 +197,10 @@ public class WeaponBuff {
 							}
 						}
 						
-						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "³ÃÈ¤ÇÑ ¹Ì¸íÀÇ Çï¸ä")) {
-							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "³ÃÈ¤ÇÑ ¹Ì¸íÀÇ °©¿Ê")) {
-								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "³ÃÈ¤ÇÑ ¹Ì¸íÀÇ °¢¹İ")) {
-									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "³ÃÈ¤ÇÑ ¹Ì¸íÀÇ ½Å¹ß")) {
+						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ëƒ‰í˜¹í•œ ë¯¸ëª…ì˜ í—¬ë©§")) {
+							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ëƒ‰í˜¹í•œ ë¯¸ëª…ì˜ ê°‘ì˜·")) {
+								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ëƒ‰í˜¹í•œ ë¯¸ëª…ì˜ ê°ë°˜")) {
+									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ëƒ‰í˜¹í•œ ë¯¸ëª…ì˜ ì‹ ë°œ")) {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 200, 0,true,false,false));
 										mob.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 1,true,false,false));
 									}
@@ -208,10 +208,10 @@ public class WeaponBuff {
 							}
 						}
 						
-						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ÀÜÈ¤ÇÑ µ¿È­ÀÇ Çï¸ä")) {
-							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ÀÜÈ¤ÇÑ µ¿È­ÀÇ °©¿Ê")) {
-								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ÀÜÈ¤ÇÑ µ¿È­ÀÇ °¢¹İ")) {
-									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ÀÜÈ¤ÇÑ µ¿È­ÀÇ ½Å¹ß")) {
+						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ì”í˜¹í•œ ë™í™”ì˜ í—¬ë©§")) {
+							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ì”í˜¹í•œ ë™í™”ì˜ ê°‘ì˜·")) {
+								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ì”í˜¹í•œ ë™í™”ì˜ ê°ë°˜")) {
+									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ì”í˜¹í•œ ë™í™”ì˜ ì‹ ë°œ")) {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_FALLING, 200, 0,true,false,false));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, 200, 0,true,false,false));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 1,true,false,false));
@@ -220,10 +220,10 @@ public class WeaponBuff {
 							}
 						}
 						
-						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "¿ì¿ïÇÑ Àı¸ÁÀÇ Çï¸ä")) {
-							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "¿ì¿ïÇÑ Àı¸ÁÀÇ °©¿Ê")) {
-								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "¿ì¿ïÇÑ Àı¸ÁÀÇ °¢¹İ")) {
-									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "¿ì¿ïÇÑ Àı¸ÁÀÇ ½Å¹ß")) {
+						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ìš°ìš¸í•œ ì ˆë§ì˜ í—¬ë©§")) {
+							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ìš°ìš¸í•œ ì ˆë§ì˜ ê°‘ì˜·")) {
+								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ìš°ìš¸í•œ ì ˆë§ì˜ ê°ë°˜")) {
+									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ìš°ìš¸í•œ ì ˆë§ì˜ ì‹ ë°œ")) {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 2,true,false,false));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 150,true,false,false));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 1,true,false,false));
@@ -232,10 +232,10 @@ public class WeaponBuff {
 							}
 						}
 						
-						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ÇÏ±Ş ±â»çÀÇ Çï¸ä")) {
-							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ÇÏ±Ş ±â»çÀÇ °©¿Ê")) {
-								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ÇÏ±Ş ±â»çÀÇ °¢¹İ")) {
-									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ÇÏ±Ş ±â»çÀÇ ½Å¹ß")) {
+						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "í•˜ê¸‰ ê¸°ì‚¬ì˜ í—¬ë©§")) {
+							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "í•˜ê¸‰ ê¸°ì‚¬ì˜ ê°‘ì˜·")) {
+								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "í•˜ê¸‰ ê¸°ì‚¬ì˜ ê°ë°˜")) {
+									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "í•˜ê¸‰ ê¸°ì‚¬ì˜ ì‹ ë°œ")) {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 1,true,false,false));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 50,true,false,false));
 									}
@@ -243,10 +243,10 @@ public class WeaponBuff {
 							}
 						}
 						
-						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "È²È¥ÀÇ ¿ë»ç Çï¸ä")) {
-							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "È²È¥ÀÇ ¿ë»ç °©¿Ê")) {
-								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "È²È¥ÀÇ ¿ë»ç °¢¹İ")) {
-									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "È²È¥ÀÇ ¿ë»ç ½Å¹ß")) {
+						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "í™©í˜¼ì˜ ìš©ì‚¬ í—¬ë©§")) {
+							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "í™©í˜¼ì˜ ìš©ì‚¬ ê°‘ì˜·")) {
+								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "í™©í˜¼ì˜ ìš©ì‚¬ ê°ë°˜")) {
+									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "í™©í˜¼ì˜ ìš©ì‚¬ ì‹ ë°œ")) {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 2,true,false,false));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 1200, 1,true,false,false));
 									}
@@ -254,10 +254,10 @@ public class WeaponBuff {
 							}
 						}
 						
-						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "Å¾ÀÇ ÃÊ½ÉÀÚ Çï¸ä")) {
-							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "Å¾ÀÇ ÃÊ½ÉÀÚ °©¿Ê")) {
-								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "Å¾ÀÇ ÃÊ½ÉÀÚ °¢¹İ")) {
-									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "Å¾ÀÇ ÃÊ½ÉÀÚ ½Å¹ß")) {
+						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "íƒ‘ì˜ ì´ˆì‹¬ì í—¬ë©§")) {
+							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "íƒ‘ì˜ ì´ˆì‹¬ì ê°‘ì˜·")) {
+								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "íƒ‘ì˜ ì´ˆì‹¬ì ê°ë°˜")) {
+									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "íƒ‘ì˜ ì´ˆì‹¬ì ì‹ ë°œ")) {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 2,true,false,false));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 100,true,false,false));
 										mob.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 0,true,false,false));
@@ -266,10 +266,10 @@ public class WeaponBuff {
 							}
 						}
 						
-						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "Å¾ÀÇ µµÀüÀÚ Çï¸ä")) {
-							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "Å¾ÀÇ µµÀüÀÚ °©¿Ê")) {
-								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "Å¾ÀÇ µµÀüÀÚ °¢¹İ")) {
-									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "Å¾ÀÇ µµÀüÀÚ ½Å¹ß")) {
+						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "íƒ‘ì˜ ë„ì „ì í—¬ë©§")) {
+							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "íƒ‘ì˜ ë„ì „ì ê°‘ì˜·")) {
+								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "íƒ‘ì˜ ë„ì „ì ê°ë°˜")) {
+									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "íƒ‘ì˜ ë„ì „ì ì‹ ë°œ")) {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 3,true,false,false));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 200,true,false,false));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 200, 0,true,false,false));
@@ -278,10 +278,10 @@ public class WeaponBuff {
 							}
 						}
 						
-						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "¿¡º¸´Ï Çï¸ä")) {
-							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "¿¡º¸´Ï °©¿Ê")) {
-								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "¿¡º¸´Ï °¢¹İ")) {
-									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "¿¡º¸´Ï ½Å¹ß")) {
+						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ì—ë³´ë‹ˆ í—¬ë©§")) {
+							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ì—ë³´ë‹ˆ ê°‘ì˜·")) {
+								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ì—ë³´ë‹ˆ ê°ë°˜")) {
+									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ì—ë³´ë‹ˆ ì‹ ë°œ")) {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0,true,false,false));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 150,true,false,false));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 2,true,false,false));
@@ -290,20 +290,20 @@ public class WeaponBuff {
 							}
 						}
 						
-						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "¹ı¼ú -¡¸À¯¡¹")) {
-							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "¹ı¼ú -¡¸¸Ş¡¹")) {
-								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "¹ı¼ú -¡¸ÇÏ¡¹")) {
-									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "¹ı¼ú -¡¸¸¶¡¹")) {
+						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ë²•ìˆ  -ã€Œìœ ã€")) {
+							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ë²•ìˆ  -ã€Œë©”ã€")) {
+								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ë²•ìˆ  -ã€Œí•˜ã€")) {
+									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ë²•ìˆ  -ã€Œë§ˆã€")) {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 5,true,false,false));
 									}
 								}
 							}
 						}
 						
-						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ºÒÅ¸´Â ¿©¸íÀÇ Çï¸ä")) {
-							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ºÒÅ¸´Â ¿©¸íÀÇ °©¿Ê")) {
-								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ºÒÅ¸´Â ¿©¸íÀÇ °¢¹İ")) {
-									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ºÒÅ¸´Â ¿©¸íÀÇ ½Å¹ß")) {
+						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ë¶ˆíƒ€ëŠ” ì—¬ëª…ì˜ í—¬ë©§")) {
+							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ë¶ˆíƒ€ëŠ” ì—¬ëª…ì˜ ê°‘ì˜·")) {
+								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ë¶ˆíƒ€ëŠ” ì—¬ëª…ì˜ ê°ë°˜")) {
+									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ë¶ˆíƒ€ëŠ” ì—¬ëª…ì˜ ì‹ ë°œ")) {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 400,true,false,false));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 3,true,false,false));
 									}
@@ -311,10 +311,10 @@ public class WeaponBuff {
 							}
 						}
 						
-						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ºÒÅ¸´Â ÀÇÁöÀÇ Çï¸ä")) {
-							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ºÒÅ¸´Â ÀÇÁöÀÇ °©¿Ê")) {
-								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ºÒÅ¸´Â ÀÇÁöÀÇ °¢¹İ")) {
-									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ºÒÅ¸´Â ÀÇÁöÀÇ ½Å¹ß")) {
+						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ë¶ˆíƒ€ëŠ” ì˜ì§€ì˜ í—¬ë©§")) {
+							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ë¶ˆíƒ€ëŠ” ì˜ì§€ì˜ ê°‘ì˜·")) {
+								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ë¶ˆíƒ€ëŠ” ì˜ì§€ì˜ ê°ë°˜")) {
+									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ë¶ˆíƒ€ëŠ” ì˜ì§€ì˜ ì‹ ë°œ")) {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, 200, 0,true,false,false));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 3,true,false,false));
 									}
@@ -322,10 +322,10 @@ public class WeaponBuff {
 							}
 						}
 						
-						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "°Å¹Ì ¿©¿ÕÀÇ Çï¸ä")) {
-							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "°Å¹Ì ¿©¿ÕÀÇ °©¿Ê")) {
-								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "°Å¹Ì ¿©¿ÕÀÇ °¢¹İ")) {
-									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "°Å¹Ì ¿©¿ÕÀÇ ½Å¹ß")) {
+						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ê±°ë¯¸ ì—¬ì™•ì˜ í—¬ë©§")) {
+							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ê±°ë¯¸ ì—¬ì™•ì˜ ê°‘ì˜·")) {
+								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ê±°ë¯¸ ì—¬ì™•ì˜ ê°ë°˜")) {
+									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ê±°ë¯¸ ì—¬ì™•ì˜ ì‹ ë°œ")) {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 6,true,false,false));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 1,true,false,false));
 									}
@@ -337,25 +337,25 @@ public class WeaponBuff {
 				}
 			}
 		}
-//		if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals("¡×4Weapon1")) {
+//		if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals("Â§4Weapon1")) {
 //			player.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, 600, 1));
 //		}
-//		if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals("¡×4Weapon2")) {
+//		if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals("Â§4Weapon2")) {
 //			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 600, 1));
 //		}
-//		if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals("¡×4Weapon3")) {
+//		if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals("Â§4Weapon3")) {
 //			player.addPotionEffect(new PotionEffect(PotionEffectType.HEALTH_BOOST, 600, 1));
 //		}
-//		if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals("¡×4Weapon4")) {
+//		if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals("Â§4Weapon4")) {
 //			mob.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 600, 9));
 //		}
-//		if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals("¡×4Weapon5")) {
+//		if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals("Â§4Weapon5")) {
 //			mob.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 600, 1));
 //		}
 	}
 	
 	public void hitBuff(Player player) {
-		if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "¾Æ¶óÅ©³×ÀÇ ½Å¹ß")) {
+		if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "ì•„ë¼í¬ë„¤ì˜ ì‹ ë°œ")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 200, 1));
 		}
 	}

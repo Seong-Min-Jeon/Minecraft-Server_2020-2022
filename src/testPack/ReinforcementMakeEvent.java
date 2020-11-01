@@ -45,7 +45,7 @@ public class ReinforcementMakeEvent {
         			inv.getItem(0).getType()==Material.NETHERITE_CHESTPLATE || inv.getItem(0).getType()==Material.NETHERITE_LEGGINGS || inv.getItem(0).getType()==Material.NETHERITE_BOOTS) {
 				if(inv.getItem(1).getType()==Material.CHARCOAL || inv.getItem(1).getType() == Material.PLAYER_HEAD || inv.getItem(1).getType() == Material.STICK || inv.getItem(1).getType() == Material.NETHERITE_INGOT) {
 					if(inv.getItem(1).getAmount() < 1) { 
-            			player.sendMessage(ChatColor.WHITE + "¾ğµğÆÄÀÎµå ¿¡·¯ÀÔ´Ï´Ù.");
+            			player.sendMessage(ChatColor.WHITE + "ì–¸ë””íŒŒì¸ë“œ ì—ëŸ¬ì…ë‹ˆë‹¤.");
             		} else {
             			ItemStack itemStack = inv.getItem(0);
             			ItemStack itemStack2 = inv.getItem(1);              
@@ -56,7 +56,7 @@ public class ReinforcementMakeEvent {
 				} else if(inv.getItem(1).getType()==Material.COAL || inv.getItem(1).getType()==Material.IRON_INGOT || inv.getItem(1).getType()==Material.GOLD_INGOT ||
             			inv.getItem(1).getType()==Material.DIAMOND || inv.getItem(1).getType()==Material.QUARTZ) {
             		if(inv.getItem(1).getAmount() < 5) {
-            			player.sendMessage(ChatColor.WHITE + "±¤¹°Àº 5°³ ÀÌ»ó ³Ö¾îÁÖ¼¼¿ä.");
+            			player.sendMessage(ChatColor.WHITE + "ê´‘ë¬¼ì€ 5ê°œ ì´ìƒ ë„£ì–´ì£¼ì„¸ìš”.");
             		} else {
             			ItemStack itemStack = inv.getItem(0);
             			ItemMeta item = itemStack.getItemMeta();
@@ -71,8 +71,8 @@ public class ReinforcementMakeEvent {
             					if(item.getLocalizedName() != null) {
             						int lvl = Integer.parseInt(item.getLocalizedName());
             						if(lvl==0) {
-            							if(!(itemResource.getDisplayName().equals(ChatColor.GRAY + "±úÁú µíÇÑ ¼®¿µ"))) {
-                							player.sendMessage("ÀÌ ¼öÁØÀÇ ¼®¿µÀ¸·Î´Â °³¹æÀ» ÇÒ ¼ö ¾øÀ» °Í °°´Ù.");
+            							if(!(itemResource.getDisplayName().equals(ChatColor.GRAY + "ê¹¨ì§ˆ ë“¯í•œ ì„ì˜"))) {
+                							player.sendMessage("ì´ ìˆ˜ì¤€ì˜ ì„ì˜ìœ¼ë¡œëŠ” ê°œë°©ì„ í•  ìˆ˜ ì—†ì„ ê²ƒ ê°™ë‹¤.");
                 							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
                 						} else {
                 							newMeta = rein.bowRein1(player, item, itemResource);
@@ -80,8 +80,8 @@ public class ReinforcementMakeEvent {
 			                    			inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 5);
                 						}
             						} else if(lvl==1) {
-            							if(!(itemResource.getDisplayName().equals(ChatColor.WHITE + "¼®¿µ"))) {
-                							player.sendMessage("ÀÌ ¼öÁØÀÇ ¼®¿µÀ¸·Î´Â °³¹æÀ» ÇÒ ¼ö ¾øÀ» °Í °°´Ù.");
+            							if(!(itemResource.getDisplayName().equals(ChatColor.WHITE + "ì„ì˜"))) {
+                							player.sendMessage("ì´ ìˆ˜ì¤€ì˜ ì„ì˜ìœ¼ë¡œëŠ” ê°œë°©ì„ í•  ìˆ˜ ì—†ì„ ê²ƒ ê°™ë‹¤.");
                 							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
                 						} else {
                 							newMeta = rein.bowRein2(player, item, itemResource);
@@ -89,8 +89,8 @@ public class ReinforcementMakeEvent {
 			                    			inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 5);
                 						}
             						} else if(lvl==5) {
-            							if(!(itemResource.getDisplayName().equals(ChatColor.YELLOW + "¹İµíÇÑ ¼®¿µ"))) {
-                							player.sendMessage("ÀÌ ¼öÁØÀÇ ¼®¿µÀ¸·Î´Â °³¹æÀ» ÇÒ ¼ö ¾øÀ» °Í °°´Ù.");
+            							if(!(itemResource.getDisplayName().equals(ChatColor.YELLOW + "ë°˜ë“¯í•œ ì„ì˜"))) {
+                							player.sendMessage("ì´ ìˆ˜ì¤€ì˜ ì„ì˜ìœ¼ë¡œëŠ” ê°œë°©ì„ í•  ìˆ˜ ì—†ì„ ê²ƒ ê°™ë‹¤.");
                 							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
                 						} else {
                 							newMeta = rein.bowRein3(player, item, itemResource);
@@ -98,8 +98,8 @@ public class ReinforcementMakeEvent {
 			                    			inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 5);
                 						}
             						} else if(lvl==20) {
-            							if(!(itemResource.getDisplayName().equals(ChatColor.LIGHT_PURPLE + "¸ÅÈ¤ÀûÀÎ ¼®¿µ"))) {
-                							player.sendMessage("ÀÌ ¼öÁØÀÇ ¼®¿µÀ¸·Î´Â °³¹æÀ» ÇÒ ¼ö ¾øÀ» °Í °°´Ù.");
+            							if(!(itemResource.getDisplayName().equals(ChatColor.LIGHT_PURPLE + "ë§¤í˜¹ì ì¸ ì„ì˜"))) {
+                							player.sendMessage("ì´ ìˆ˜ì¤€ì˜ ì„ì˜ìœ¼ë¡œëŠ” ê°œë°©ì„ í•  ìˆ˜ ì—†ì„ ê²ƒ ê°™ë‹¤.");
                 							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
                 						} else {
                 							newMeta = rein.bowRein4(player, item, itemResource);
@@ -107,8 +107,8 @@ public class ReinforcementMakeEvent {
 			                    			inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 5);
                 						}
             						} else if(lvl==100) {
-            							if(!(itemResource.getDisplayName().equals(ChatColor.AQUA + "º¸¼®°°Àº ¼®¿µ"))) {
-                							player.sendMessage("ÀÌ ¼öÁØÀÇ ¼®¿µÀ¸·Î´Â °³¹æÀ» ÇÒ ¼ö ¾øÀ» °Í °°´Ù.");
+            							if(!(itemResource.getDisplayName().equals(ChatColor.AQUA + "ë³´ì„ê°™ì€ ì„ì˜"))) {
+                							player.sendMessage("ì´ ìˆ˜ì¤€ì˜ ì„ì˜ìœ¼ë¡œëŠ” ê°œë°©ì„ í•  ìˆ˜ ì—†ì„ ê²ƒ ê°™ë‹¤.");
                 							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
                 						} else {
                 							newMeta = rein.bowRein5(player, item, itemResource);
@@ -116,8 +116,8 @@ public class ReinforcementMakeEvent {
 			                    			inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 5);
                 						}
             						} else if(lvl>=300) {
-            							if(!(itemResource.getDisplayName().equals(ChatColor.DARK_RED + "½ÅÀÇ ÈûÀÌ ´ã±ä ¼®¿µ"))) {
-                							player.sendMessage("ÀÌ ¼öÁØÀÇ ¼®¿µÀ¸·Î´Â °³¹æÀ» ÇÒ ¼ö ¾øÀ» °Í °°´Ù.");
+            							if(!(itemResource.getDisplayName().equals(ChatColor.DARK_RED + "ì‹ ì˜ í˜ì´ ë‹´ê¸´ ì„ì˜"))) {
+                							player.sendMessage("ì´ ìˆ˜ì¤€ì˜ ì„ì˜ìœ¼ë¡œëŠ” ê°œë°©ì„ í•  ìˆ˜ ì—†ì„ ê²ƒ ê°™ë‹¤.");
                 							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
                 						} else {
                 							newMeta = rein.bowRein6(player, item, itemResource);
@@ -127,7 +127,7 @@ public class ReinforcementMakeEvent {
             						}
             					}
                 			} else {
-                				player.sendMessage(ChatColor.WHITE + "È° °³¹æ¿¡´Â Æ¯¼öÇÑ ±¤¹°ÀÌ ÇÊ¿äÇÕ´Ï´Ù.");
+                				player.sendMessage(ChatColor.WHITE + "í™œ ê°œë°©ì—ëŠ” íŠ¹ìˆ˜í•œ ê´‘ë¬¼ì´ í•„ìš”í•©ë‹ˆë‹¤.");
                 				return false;
                 			}
             			} else {
@@ -164,19 +164,19 @@ public class ReinforcementMakeEvent {
             					itemStack.setItemMeta(newMeta);
                     			inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 5);
             				} else {
-            					player.sendMessage("Àß¸øµÈ °­È­¹æ¹ıÀÔ´Ï´Ù.");
+            					player.sendMessage("ì˜ëª»ëœ ê°•í™”ë°©ë²•ì…ë‹ˆë‹¤.");
             					return false;
             				}
             			}	                                  			
             		}
             	} else {
-            		player.sendMessage(ChatColor.WHITE + "µÎ¹øÂ° Ä­¿¡´Â Àç·á¸¦ ³Ö¾îÁÖ¼¼¿ä.");
+            		player.sendMessage(ChatColor.WHITE + "ë‘ë²ˆì§¸ ì¹¸ì—ëŠ” ì¬ë£Œë¥¼ ë„£ì–´ì£¼ì„¸ìš”.");
             	}
         	} else {
-        		player.sendMessage(ChatColor.WHITE + "Ã¹¹øÂ° Ä­¿¡´Â °­È­ÇÒ Àåºñ¸¦ ³Ö¾îÁÖ¼¼¿ä.(»ıÈ° µµ±¸´Â °­È­ ºÒ°¡)");
+        		player.sendMessage(ChatColor.WHITE + "ì²«ë²ˆì§¸ ì¹¸ì—ëŠ” ê°•í™”í•  ì¥ë¹„ë¥¼ ë„£ì–´ì£¼ì„¸ìš”.(ìƒí™œ ë„êµ¬ëŠ” ê°•í™” ë¶ˆê°€)");
         	}
 		} catch(Exception e) {
-			player.sendMessage(ChatColor.WHITE + "Ã¹¹øÂ° Ä­¿¡´Â °­È­ÇÒ Àåºñ, µÎ¹øÂ° Ä­¿¡´Â Àç·á¸¦ ³Ö¾îÁÖ¼¼¿ä.");
+			player.sendMessage(ChatColor.WHITE + "ì²«ë²ˆì§¸ ì¹¸ì—ëŠ” ê°•í™”í•  ì¥ë¹„, ë‘ë²ˆì§¸ ì¹¸ì—ëŠ” ì¬ë£Œë¥¼ ë„£ì–´ì£¼ì„¸ìš”.");
 		}
 		return true;
 	}

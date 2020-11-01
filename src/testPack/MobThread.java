@@ -14,6 +14,7 @@ import org.bukkit.entity.Enderman;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Evoker;
 import org.bukkit.entity.Husk;
+import org.bukkit.entity.Phantom;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Ravager;
 import org.bukkit.entity.Silverfish;
@@ -315,6 +316,18 @@ public class MobThread {
 						} else if(loc.getX() <= 713 && loc.getY() <= 116 && loc.getZ() <= 605 && 
 								loc.getX() >= 672 && loc.getY() >= 100 && loc.getZ() >= 572) {
 							castle3F(player, loc);
+						} else if(loc.getX() <= 860 && loc.getY() <= 100 && loc.getZ() <= 165 && 
+								loc.getX() >= 695 && loc.getY() >= 40 && loc.getZ() >= 6) {
+							wheatEast(player, loc);
+						} else if(loc.getX() <= 860 && loc.getY() <= 100 && loc.getZ() <= 415 && 
+								loc.getX() >= 695 && loc.getY() >= 50 && loc.getZ() >= 167) {
+							kleahWest(player, loc);
+						} else if(loc.getX() <= 1082 && loc.getY() <= 165 && loc.getZ() <= 312 && 
+								loc.getX() >= 901 && loc.getY() >= 60 && loc.getZ() >= 248) {
+							kleah1(player, loc);
+						} else if(loc.getX() <= 1072 && loc.getY() <= 165 && loc.getZ() <= 247 && 
+								loc.getX() >= 904 && loc.getY() >= 60 && loc.getZ() >= 110) {
+							kleah2(player, loc);
 						}
 					} 
 					
@@ -1912,6 +1925,71 @@ public class MobThread {
 			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
 		} else if (num == 1) {
 			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
+		}
+	}
+	
+	public void wheatEast(Player player, Location loc) {
+		int num = rnd.nextInt(3);
+		loc = location(loc);
+		if (!(loc.getX() <= 860 && loc.getY() <= 100 && loc.getZ() <= 165 && 
+				loc.getX() >= 695 && loc.getY() >= 40 && loc.getZ() >= 6)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
+		} else if (num == 2) {
+			loc.getWorld().spawnEntity(loc, EntityType.ZOMBIE);
+		}
+	}
+	
+	public void kleahWest(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 860 && loc.getY() <= 100 && loc.getZ() <= 415 && 
+				loc.getX() >= 695 && loc.getY() >= 50 && loc.getZ() >= 167)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.ENDERMAN);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.ENDERMITE);
+		}
+	}
+	
+	public void kleah1(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 1082 && loc.getY() <= 165 && loc.getZ() <= 312 && 
+				loc.getX() >= 901 && loc.getY() >= 60 && loc.getZ() >= 248)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		} else if (num == 1) {
+			if (player.getWorld().getTime() >= 13000 && player.getWorld().getTime() <= 23000) {
+				Silverfish s = (Silverfish) loc.getWorld().spawnEntity(loc, EntityType.SILVERFISH);
+				s.setPassenger(loc.getWorld().spawnEntity(loc, EntityType.PHANTOM));
+			}
+		}
+	}
+	
+	public void kleah2(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 1072 && loc.getY() <= 165 && loc.getZ() <= 247 && 
+				loc.getX() >= 904 && loc.getY() >= 60 && loc.getZ() >= 110)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.HUSK);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.VINDICATOR);
 		}
 	}
 	

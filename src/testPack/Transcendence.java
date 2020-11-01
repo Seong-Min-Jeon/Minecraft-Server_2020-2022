@@ -19,17 +19,17 @@ public class Transcendence {
 	}
 	
 	public void t(Player player, ItemStack is1, ItemStack is2, Inventory inv) {
-		if(is2.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "°ËÀº ¼ö¿°ÀÇ ÁõÇ¥")) {
-			if(is1.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "°ËÀº ¼ö¿°´ÜÀÇ °Ë")) {
+		if(is2.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "ê²€ì€ ìˆ˜ì—¼ì˜ ì¦í‘œ")) {
+			if(is1.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "ê²€ì€ ìˆ˜ì—¼ë‹¨ì˜ ê²€")) {
 				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
 				ItemStack weapon = new ItemStack(Material.ACACIA_LEAVES);
 				ItemMeta weaponIm = weapon.getItemMeta();
 				weaponIm.setLocalizedName("50,0,0,50,0,0,0,0,0,0,100");
-				weaponIm.setDisplayName(ChatColor.AQUA + "°ËÀº ¼ö¿° °£ºÎÀÇ °Ë");
+				weaponIm.setDisplayName(ChatColor.AQUA + "ê²€ì€ ìˆ˜ì—¼ ê°„ë¶€ì˜ ê²€");
 				ArrayList<String> weaponLore = new ArrayList();
-				weaponLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 100");
+				weaponLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 100");
 				weaponLore.add(ChatColor.GRAY + " ");
-				weaponLore.add(ChatColor.GRAY + "°ËÀº ¼ö¿° °£ºÎ¸¸ÀÌ °¡Áú ¼ö ÀÖ´Â °Ë");
+				weaponLore.add(ChatColor.GRAY + "ê²€ì€ ìˆ˜ì—¼ ê°„ë¶€ë§Œì´ ê°€ì§ˆ ìˆ˜ ìˆëŠ” ê²€");
 				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -37,24 +37,24 @@ public class Transcendence {
 				weaponIm.setLore(weaponLore);
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
-				player.sendMessage(ChatColor.GREEN + "Àåºñ ÃÊ¿ù¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.");
+				player.sendMessage(ChatColor.GREEN + "ì¥ë¹„ ì´ˆì›”ì— ì„±ê³µí•˜ì˜€ìŠµë‹ˆë‹¤.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
 				return;
 			}
-			player.sendMessage(ChatColor.WHITE + "Á¶°Ç¿¡ ¸Â´Â Àåºñ, ¼ÒÀç¸¦ ³Ö¾îÁÖ¼¼¿ä.");
+			player.sendMessage(ChatColor.WHITE + "ì¡°ê±´ì— ë§ëŠ” ì¥ë¹„, ì†Œì¬ë¥¼ ë„£ì–´ì£¼ì„¸ìš”.");
 		}
 		
-		if(is2.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "´ŞÀÇ Èû")) {
-			if(is1.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "¿ë»çÀÇ °Ë")) {
+		if(is2.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "ë‹¬ì˜ í˜")) {
+			if(is1.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "ìš©ì‚¬ì˜ ê²€")) {
 				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
 				ItemStack weapon = new ItemStack(Material.MOSSY_COBBLESTONE_WALL);
 				ItemMeta weaponIm = weapon.getItemMeta();
 				weaponIm.setLocalizedName("100,40,0,0,0,30,0,10,10,70,100");
-				weaponIm.setDisplayName(ChatColor.LIGHT_PURPLE + "´ŞÀÇ ÈûÀÌ ±êµç °Ë");
+				weaponIm.setDisplayName(ChatColor.LIGHT_PURPLE + "ë‹¬ì˜ í˜ì´ ê¹ƒë“  ê²€");
 				ArrayList<String> weaponLore = new ArrayList();
-				weaponLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 100");
+				weaponLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 100");
 				weaponLore.add(ChatColor.GRAY + " ");
-				weaponLore.add(ChatColor.GRAY + "´ŞÀÇ Á¤±â¸¦ ¹ŞÀº ¿ë»çÀÇ °Ë");
+				weaponLore.add(ChatColor.GRAY + "ë‹¬ì˜ ì •ê¸°ë¥¼ ë°›ì€ ìš©ì‚¬ì˜ ê²€");
 				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -62,24 +62,24 @@ public class Transcendence {
 				weaponIm.setLore(weaponLore);
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
-				player.sendMessage(ChatColor.GREEN + "Àåºñ ÃÊ¿ù¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.");
+				player.sendMessage(ChatColor.GREEN + "ì¥ë¹„ ì´ˆì›”ì— ì„±ê³µí•˜ì˜€ìŠµë‹ˆë‹¤.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
 				return;
 			}
-			player.sendMessage(ChatColor.WHITE + "Á¶°Ç¿¡ ¸Â´Â Àåºñ, ¼ÒÀç¸¦ ³Ö¾îÁÖ¼¼¿ä.");
+			player.sendMessage(ChatColor.WHITE + "ì¡°ê±´ì— ë§ëŠ” ì¥ë¹„, ì†Œì¬ë¥¼ ë„£ì–´ì£¼ì„¸ìš”.");
 		}
 		
-		if(is2.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "ÅÂ¾çÀÇ Èû")) {
-			if(is1.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "¿ë»çÀÇ °Ë")) {
+		if(is2.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "íƒœì–‘ì˜ í˜")) {
+			if(is1.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "ìš©ì‚¬ì˜ ê²€")) {
 				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
 				ItemStack weapon = new ItemStack(Material.MOSSY_COBBLESTONE_WALL);
 				ItemMeta weaponIm = weapon.getItemMeta();
 				weaponIm.setLocalizedName("100,0,40,0,0,30,10,0,10,70,100");
-				weaponIm.setDisplayName(ChatColor.LIGHT_PURPLE + "ÅÂ¾çÀÇ ÈûÀÌ ±êµç °Ë");
+				weaponIm.setDisplayName(ChatColor.LIGHT_PURPLE + "íƒœì–‘ì˜ í˜ì´ ê¹ƒë“  ê²€");
 				ArrayList<String> weaponLore = new ArrayList();
-				weaponLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 100");
+				weaponLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 100");
 				weaponLore.add(ChatColor.GRAY + " ");
-				weaponLore.add(ChatColor.GRAY + "ÅÂ¾çÀÇ Á¤±â¸¦ ¹ŞÀº ¿ë»çÀÇ °Ë");
+				weaponLore.add(ChatColor.GRAY + "íƒœì–‘ì˜ ì •ê¸°ë¥¼ ë°›ì€ ìš©ì‚¬ì˜ ê²€");
 				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -87,25 +87,25 @@ public class Transcendence {
 				weaponIm.setLore(weaponLore);
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
-				player.sendMessage(ChatColor.GREEN + "Àåºñ ÃÊ¿ù¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.");
+				player.sendMessage(ChatColor.GREEN + "ì¥ë¹„ ì´ˆì›”ì— ì„±ê³µí•˜ì˜€ìŠµë‹ˆë‹¤.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
 				return;
 			}
-			player.sendMessage(ChatColor.WHITE + "Á¶°Ç¿¡ ¸Â´Â Àåºñ, ¼ÒÀç¸¦ ³Ö¾îÁÖ¼¼¿ä.");
+			player.sendMessage(ChatColor.WHITE + "ì¡°ê±´ì— ë§ëŠ” ì¥ë¹„, ì†Œì¬ë¥¼ ë„£ì–´ì£¼ì„¸ìš”.");
 		}
 		
-		if(is2.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "°ËÀÇ ¼ÕÀâÀÌ")) {
-			if(is1.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "´ŞÀÇ ÈûÀÌ ±êµç °Ë")) {
+		if(is2.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "ê²€ì˜ ì†ì¡ì´")) {
+			if(is1.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "ë‹¬ì˜ í˜ì´ ê¹ƒë“  ê²€")) {
 				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
 				ItemStack weapon = new ItemStack(Material.MOSSY_COBBLESTONE_WALL);
 				ItemMeta weaponIm = weapon.getItemMeta();
 				weaponIm.setLocalizedName("200,100,100,100,0,0,0,0,0,100,240");
-				weaponIm.setDisplayName(ChatColor.LIGHT_PURPLE + "´ŞÀÇ ÈûÀÌ ±êµç °Ë+");
+				weaponIm.setDisplayName(ChatColor.LIGHT_PURPLE + "ë‹¬ì˜ í˜ì´ ê¹ƒë“  ê²€+");
 				ArrayList<String> weaponLore = new ArrayList();
-				weaponLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 240");
+				weaponLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 240");
 				weaponLore.add(ChatColor.GRAY + " ");
-				weaponLore.add(ChatColor.GRAY + "´ŞÀÇ Á¤±â¸¦ ¹ŞÀº ¿ë»çÀÇ °Ë");
-				weaponLore.add(ChatColor.GRAY + "¼ÕÀâÀÌ¸¦ ±³Ã¼ÇØ ´õ¿í °­ÇØÁ³´Ù.");
+				weaponLore.add(ChatColor.GRAY + "ë‹¬ì˜ ì •ê¸°ë¥¼ ë°›ì€ ìš©ì‚¬ì˜ ê²€");
+				weaponLore.add(ChatColor.GRAY + "ì†ì¡ì´ë¥¼ êµì²´í•´ ë”ìš± ê°•í•´ì¡Œë‹¤.");
 				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -113,25 +113,25 @@ public class Transcendence {
 				weaponIm.setLore(weaponLore);
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
-				player.sendMessage(ChatColor.GREEN + "Àåºñ ÃÊ¿ù¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.");
+				player.sendMessage(ChatColor.GREEN + "ì¥ë¹„ ì´ˆì›”ì— ì„±ê³µí•˜ì˜€ìŠµë‹ˆë‹¤.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
 				return;
 			}
-			player.sendMessage(ChatColor.WHITE + "Á¶°Ç¿¡ ¸Â´Â Àåºñ, ¼ÒÀç¸¦ ³Ö¾îÁÖ¼¼¿ä.");
+			player.sendMessage(ChatColor.WHITE + "ì¡°ê±´ì— ë§ëŠ” ì¥ë¹„, ì†Œì¬ë¥¼ ë„£ì–´ì£¼ì„¸ìš”.");
 		}
 		
-		if(is2.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "°ËÀÇ ¼ÕÀâÀÌ")) {
-			if(is1.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "ÅÂ¾çÀÇ ÈûÀÌ ±êµç °Ë")) {
+		if(is2.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "ê²€ì˜ ì†ì¡ì´")) {
+			if(is1.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "íƒœì–‘ì˜ í˜ì´ ê¹ƒë“  ê²€")) {
 				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
 				ItemStack weapon = new ItemStack(Material.MOSSY_COBBLESTONE_WALL);
 				ItemMeta weaponIm = weapon.getItemMeta();
 				weaponIm.setLocalizedName("150,0,0,0,0,100,100,100,100,100,240");
-				weaponIm.setDisplayName(ChatColor.LIGHT_PURPLE + "ÅÂ¾çÀÇ ÈûÀÌ ±êµç °Ë+");
+				weaponIm.setDisplayName(ChatColor.LIGHT_PURPLE + "íƒœì–‘ì˜ í˜ì´ ê¹ƒë“  ê²€+");
 				ArrayList<String> weaponLore = new ArrayList();
-				weaponLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 240");
+				weaponLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 240");
 				weaponLore.add(ChatColor.GRAY + " ");
-				weaponLore.add(ChatColor.GRAY + "ÅÂ¾çÀÇ Á¤±â¸¦ ¹ŞÀº ¿ë»çÀÇ °Ë");
-				weaponLore.add(ChatColor.GRAY + "¼ÕÀâÀÌ¸¦ ±³Ã¼ÇØ ´õ¿í °­ÇØÁ³´Ù.");
+				weaponLore.add(ChatColor.GRAY + "íƒœì–‘ì˜ ì •ê¸°ë¥¼ ë°›ì€ ìš©ì‚¬ì˜ ê²€");
+				weaponLore.add(ChatColor.GRAY + "ì†ì¡ì´ë¥¼ êµì²´í•´ ë”ìš± ê°•í•´ì¡Œë‹¤.");
 				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -139,25 +139,25 @@ public class Transcendence {
 				weaponIm.setLore(weaponLore);
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
-				player.sendMessage(ChatColor.GREEN + "Àåºñ ÃÊ¿ù¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.");
+				player.sendMessage(ChatColor.GREEN + "ì¥ë¹„ ì´ˆì›”ì— ì„±ê³µí•˜ì˜€ìŠµë‹ˆë‹¤.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
 				return;
 			}
-			player.sendMessage(ChatColor.WHITE + "Á¶°Ç¿¡ ¸Â´Â Àåºñ, ¼ÒÀç¸¦ ³Ö¾îÁÖ¼¼¿ä.");
+			player.sendMessage(ChatColor.WHITE + "ì¡°ê±´ì— ë§ëŠ” ì¥ë¹„, ì†Œì¬ë¥¼ ë„£ì–´ì£¼ì„¸ìš”.");
 		}
 		
-		if(is2.getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "Å©¸®½ºÅ»¶óÀÌÁî ÁÖ±«")) {
-			if(is1.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "ºÎÁ¶È­ÀÇ °Ë")) {
+		if(is2.getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "í¬ë¦¬ìŠ¤íƒˆë¼ì´ì¦ˆ ì£¼ê´´")) {
+			if(is1.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "ë¶€ì¡°í™”ì˜ ê²€")) {
 				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
 				ItemStack weapon = new ItemStack(Material.SPRUCE_PLANKS);
 				ItemMeta weaponIm = weapon.getItemMeta();
 				weaponIm.setLocalizedName("300,0,0,100,300,200,100,0,0,0,250");
-				weaponIm.setDisplayName(ChatColor.DARK_RED + "´ÙÅ© ¸®ÆŞ¼­");
+				weaponIm.setDisplayName(ChatColor.DARK_RED + "ë‹¤í¬ ë¦¬í„ì„œ");
 				ArrayList<String> weaponLore = new ArrayList();
-				weaponLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 250");
+				weaponLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 250");
 				weaponLore.add(ChatColor.GRAY + " ");
-				weaponLore.add(ChatColor.GRAY + "Å©¸®½ºÅ»¶óÀÌÁî ÁÖ±«·Î ¸¸µé¾îÁø Á÷°Ë");
-				weaponLore.add(ChatColor.GRAY + "ÀÌ¸§ÀÇ ¶æÀº '¾îµÒÀ» ¹°¸®Ä¡´Â ÀÚ'ÀÌ´Ù.");
+				weaponLore.add(ChatColor.GRAY + "í¬ë¦¬ìŠ¤íƒˆë¼ì´ì¦ˆ ì£¼ê´´ë¡œ ë§Œë“¤ì–´ì§„ ì§ê²€");
+				weaponLore.add(ChatColor.GRAY + "ì´ë¦„ì˜ ëœ»ì€ 'ì–´ë‘ ì„ ë¬¼ë¦¬ì¹˜ëŠ” ì'ì´ë‹¤.");
 				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -165,27 +165,27 @@ public class Transcendence {
 				weaponIm.setLore(weaponLore);
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
-				player.sendMessage(ChatColor.GREEN + "Àåºñ ÃÊ¿ù¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.");
+				player.sendMessage(ChatColor.GREEN + "ì¥ë¹„ ì´ˆì›”ì— ì„±ê³µí•˜ì˜€ìŠµë‹ˆë‹¤.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
 				return;
 			}
-			player.sendMessage(ChatColor.WHITE + "Á¶°Ç¿¡ ¸Â´Â Àåºñ, ¼ÒÀç¸¦ ³Ö¾îÁÖ¼¼¿ä.");
+			player.sendMessage(ChatColor.WHITE + "ì¡°ê±´ì— ë§ëŠ” ì¥ë¹„, ì†Œì¬ë¥¼ ë„£ì–´ì£¼ì„¸ìš”.");
 		}
 		
-		if(is2.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "¾îµÒÀÇ °áÁ¤¼®")) {
-			if(is1.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "¿ë»çÀÇ °Ë")) {
+		if(is2.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "ì–´ë‘ ì˜ ê²°ì •ì„")) {
+			if(is1.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "ìš©ì‚¬ì˜ ê²€")) {
 				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
 				ItemStack weapon = new ItemStack(Material.MOSSY_COBBLESTONE_WALL);
 				ItemMeta weaponIm = weapon.getItemMeta();
 				weaponIm.setLocalizedName("300,100,100,100,100,100,100,100,100,100,250");
-				weaponIm.setDisplayName(ChatColor.GREEN + "È²È¥ÀÇ ¿ë»ç °Ë");
+				weaponIm.setDisplayName(ChatColor.GREEN + "í™©í˜¼ì˜ ìš©ì‚¬ ê²€");
 				ArrayList<String> weaponLore = new ArrayList();
-				weaponLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 250");
+				weaponLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 250");
 				weaponLore.add(ChatColor.GRAY + " ");
-				weaponLore.add(ChatColor.GRAY + "È²È¥ÀÇ ¼¼°è¿¡¼­ ¹ß°ßÇÑ ¹°Áú·Î °­È­µÈ ¿ë»çÀÇ °Ë");
-				weaponLore.add(ChatColor.GRAY + "¿ë»çÀÇ °ËÀÌ °¡Áø ÀáÀç·Â Áß ÇÏ³ª¸¦");
-				weaponLore.add(ChatColor.GRAY + "ÃÖ´ëÄ¡·Î ²ø¾î³½ µí ÇÏ´Ù.");
-				weaponLore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+				weaponLore.add(ChatColor.GRAY + "í™©í˜¼ì˜ ì„¸ê³„ì—ì„œ ë°œê²¬í•œ ë¬¼ì§ˆë¡œ ê°•í™”ëœ ìš©ì‚¬ì˜ ê²€");
+				weaponLore.add(ChatColor.GRAY + "ìš©ì‚¬ì˜ ê²€ì´ ê°€ì§„ ì ì¬ë ¥ ì¤‘ í•˜ë‚˜ë¥¼");
+				weaponLore.add(ChatColor.GRAY + "ìµœëŒ€ì¹˜ë¡œ ëŒì–´ë‚¸ ë“¯ í•˜ë‹¤.");
+				weaponLore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -193,24 +193,24 @@ public class Transcendence {
 				weaponIm.setLore(weaponLore);
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
-				player.sendMessage(ChatColor.GREEN + "Àåºñ ÃÊ¿ù¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.");
+				player.sendMessage(ChatColor.GREEN + "ì¥ë¹„ ì´ˆì›”ì— ì„±ê³µí•˜ì˜€ìŠµë‹ˆë‹¤.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
 				return;
 			}
-			player.sendMessage(ChatColor.WHITE + "Á¶°Ç¿¡ ¸Â´Â Àåºñ, ¼ÒÀç¸¦ ³Ö¾îÁÖ¼¼¿ä.");
+			player.sendMessage(ChatColor.WHITE + "ì¡°ê±´ì— ë§ëŠ” ì¥ë¹„, ì†Œì¬ë¥¼ ë„£ì–´ì£¼ì„¸ìš”.");
 		}
 		
-		if(is2.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "È­¿°ÀÇ µ¹")) {
-			if(is1.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "Å¾ÀÇ ÃÊ½ÉÀÚ °Ë")) {
+		if(is2.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "í™”ì—¼ì˜ ëŒ")) {
+			if(is1.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "íƒ‘ì˜ ì´ˆì‹¬ì ê²€")) {
 				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
 				ItemStack weapon = new ItemStack(Material.BIRCH_LOG);
 				ItemMeta weaponIm = weapon.getItemMeta();
 				weaponIm.setLocalizedName("500,0,0,800,100,300,0,0,0,3000,400");
-				weaponIm.setDisplayName(ChatColor.AQUA + "ºÒÅ¸´Â ¿©¸íÀÇ °Ë");
+				weaponIm.setDisplayName(ChatColor.AQUA + "ë¶ˆíƒ€ëŠ” ì—¬ëª…ì˜ ê²€");
 				ArrayList<String> weaponLore = new ArrayList();
-				weaponLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 400");
+				weaponLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 400");
 				weaponLore.add(ChatColor.GRAY + " ");
-				weaponLore.add(ChatColor.GRAY + "Å¾ÀÇ ÃÊ½ÉÀÚ °ËÀÌ ÁøÁ¤ÇÑ ¸ğ½ÀÀ» Ã£¾Ò´Ù.");
+				weaponLore.add(ChatColor.GRAY + "íƒ‘ì˜ ì´ˆì‹¬ì ê²€ì´ ì§„ì •í•œ ëª¨ìŠµì„ ì°¾ì•˜ë‹¤.");
 				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -218,19 +218,19 @@ public class Transcendence {
 				weaponIm.setLore(weaponLore);
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
-				player.sendMessage(ChatColor.GREEN + "Àåºñ ÃÊ¿ù¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.");
+				player.sendMessage(ChatColor.GREEN + "ì¥ë¹„ ì´ˆì›”ì— ì„±ê³µí•˜ì˜€ìŠµë‹ˆë‹¤.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
 				return;
-			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "Å¾ÀÇ ÃÊ½ÉÀÚ Çï¸ä")) {
+			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "íƒ‘ì˜ ì´ˆì‹¬ì í—¬ë©§")) {
 				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
 				ItemStack weapon = new ItemStack(Material.IRON_HELMET);
 				ItemMeta weaponIm = weapon.getItemMeta();
 				weaponIm.setLocalizedName("500,0,0,0,0,800,0,0,0,0,400");
-				weaponIm.setDisplayName(ChatColor.GREEN + "ºÒÅ¸´Â ¿©¸íÀÇ Çï¸ä");
+				weaponIm.setDisplayName(ChatColor.GREEN + "ë¶ˆíƒ€ëŠ” ì—¬ëª…ì˜ í—¬ë©§");
 				ArrayList<String> weaponLore = new ArrayList();
-				weaponLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 400");
+				weaponLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 400");
 				weaponLore.add(ChatColor.GRAY + " ");
-				weaponLore.add(ChatColor.GRAY + "Å¾ÀÇ ÃÊ½ÉÀÚ Çï¸äÀÌ ÁøÁ¤ÇÑ ¸ğ½ÀÀ» Ã£¾Ò´Ù.");
+				weaponLore.add(ChatColor.GRAY + "íƒ‘ì˜ ì´ˆì‹¬ì í—¬ë©§ì´ ì§„ì •í•œ ëª¨ìŠµì„ ì°¾ì•˜ë‹¤.");
 				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -238,19 +238,19 @@ public class Transcendence {
 				weaponIm.setLore(weaponLore);
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
-				player.sendMessage(ChatColor.GREEN + "Àåºñ ÃÊ¿ù¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.");
+				player.sendMessage(ChatColor.GREEN + "ì¥ë¹„ ì´ˆì›”ì— ì„±ê³µí•˜ì˜€ìŠµë‹ˆë‹¤.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
 				return;
-			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "Å¾ÀÇ ÃÊ½ÉÀÚ °©¿Ê")) {
+			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "íƒ‘ì˜ ì´ˆì‹¬ì ê°‘ì˜·")) {
 				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
 				ItemStack weapon = new ItemStack(Material.IRON_CHESTPLATE);
 				ItemMeta weaponIm = weapon.getItemMeta();
 				weaponIm.setLocalizedName("0,500,0,0,0,800,0,0,0,0,400");
-				weaponIm.setDisplayName(ChatColor.GREEN + "ºÒÅ¸´Â ¿©¸íÀÇ °©¿Ê");
+				weaponIm.setDisplayName(ChatColor.GREEN + "ë¶ˆíƒ€ëŠ” ì—¬ëª…ì˜ ê°‘ì˜·");
 				ArrayList<String> weaponLore = new ArrayList();
-				weaponLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 400");
+				weaponLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 400");
 				weaponLore.add(ChatColor.GRAY + " ");
-				weaponLore.add(ChatColor.GRAY + "Å¾ÀÇ ÃÊ½ÉÀÚ °©¿ÊÀÌ ÁøÁ¤ÇÑ ¸ğ½ÀÀ» Ã£¾Ò´Ù.");
+				weaponLore.add(ChatColor.GRAY + "íƒ‘ì˜ ì´ˆì‹¬ì ê°‘ì˜·ì´ ì§„ì •í•œ ëª¨ìŠµì„ ì°¾ì•˜ë‹¤.");
 				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -258,19 +258,19 @@ public class Transcendence {
 				weaponIm.setLore(weaponLore);
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
-				player.sendMessage(ChatColor.GREEN + "Àåºñ ÃÊ¿ù¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.");
+				player.sendMessage(ChatColor.GREEN + "ì¥ë¹„ ì´ˆì›”ì— ì„±ê³µí•˜ì˜€ìŠµë‹ˆë‹¤.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
 				return;
-			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "Å¾ÀÇ ÃÊ½ÉÀÚ °¢¹İ")) {
+			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "íƒ‘ì˜ ì´ˆì‹¬ì ê°ë°˜")) {
 				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
 				ItemStack weapon = new ItemStack(Material.IRON_LEGGINGS);
 				ItemMeta weaponIm = weapon.getItemMeta();
 				weaponIm.setLocalizedName("0,0,500,0,0,800,0,0,0,0,400");
-				weaponIm.setDisplayName(ChatColor.GREEN + "ºÒÅ¸´Â ¿©¸íÀÇ °¢¹İ");
+				weaponIm.setDisplayName(ChatColor.GREEN + "ë¶ˆíƒ€ëŠ” ì—¬ëª…ì˜ ê°ë°˜");
 				ArrayList<String> weaponLore = new ArrayList();
-				weaponLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 400");
+				weaponLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 400");
 				weaponLore.add(ChatColor.GRAY + " ");
-				weaponLore.add(ChatColor.GRAY + "Å¾ÀÇ ÃÊ½ÉÀÚ °¢¹İÀÌ ÁøÁ¤ÇÑ ¸ğ½ÀÀ» Ã£¾Ò´Ù.");
+				weaponLore.add(ChatColor.GRAY + "íƒ‘ì˜ ì´ˆì‹¬ì ê°ë°˜ì´ ì§„ì •í•œ ëª¨ìŠµì„ ì°¾ì•˜ë‹¤.");
 				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -278,19 +278,19 @@ public class Transcendence {
 				weaponIm.setLore(weaponLore);
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
-				player.sendMessage(ChatColor.GREEN + "Àåºñ ÃÊ¿ù¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.");
+				player.sendMessage(ChatColor.GREEN + "ì¥ë¹„ ì´ˆì›”ì— ì„±ê³µí•˜ì˜€ìŠµë‹ˆë‹¤.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
 				return;
-			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "Å¾ÀÇ ÃÊ½ÉÀÚ ½Å¹ß")) {
+			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "íƒ‘ì˜ ì´ˆì‹¬ì ì‹ ë°œ")) {
 				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
 				ItemStack weapon = new ItemStack(Material.IRON_BOOTS);
 				ItemMeta weaponIm = weapon.getItemMeta();
 				weaponIm.setLocalizedName("0,0,0,500,0,800,0,0,0,0,400");
-				weaponIm.setDisplayName(ChatColor.GREEN + "ºÒÅ¸´Â ¿©¸íÀÇ ½Å¹ß");
+				weaponIm.setDisplayName(ChatColor.GREEN + "ë¶ˆíƒ€ëŠ” ì—¬ëª…ì˜ ì‹ ë°œ");
 				ArrayList<String> weaponLore = new ArrayList();
-				weaponLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 400");
+				weaponLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 400");
 				weaponLore.add(ChatColor.GRAY + " ");
-				weaponLore.add(ChatColor.GRAY + "Å¾ÀÇ ÃÊ½ÉÀÚ ½Å¹ßÀÌ ÁøÁ¤ÇÑ ¸ğ½ÀÀ» Ã£¾Ò´Ù.");
+				weaponLore.add(ChatColor.GRAY + "íƒ‘ì˜ ì´ˆì‹¬ì ì‹ ë°œì´ ì§„ì •í•œ ëª¨ìŠµì„ ì°¾ì•˜ë‹¤.");
 				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -298,19 +298,19 @@ public class Transcendence {
 				weaponIm.setLore(weaponLore);
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
-				player.sendMessage(ChatColor.GREEN + "Àåºñ ÃÊ¿ù¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.");
+				player.sendMessage(ChatColor.GREEN + "ì¥ë¹„ ì´ˆì›”ì— ì„±ê³µí•˜ì˜€ìŠµë‹ˆë‹¤.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
 				return;
-			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "Å¾ÀÇ µµÀüÀÚ µµ³¢")) {
+			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "íƒ‘ì˜ ë„ì „ì ë„ë¼")) {
 				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
 				ItemStack weapon = new ItemStack(Material.GREEN_CARPET);
 				ItemMeta weaponIm = weapon.getItemMeta();
 				weaponIm.setLocalizedName("300,0,0,0,1500,500,0,0,0,500,400");
-				weaponIm.setDisplayName(ChatColor.AQUA + "ºÒÅ¸´Â ÀÇÁöÀÇ µµ³¢");
+				weaponIm.setDisplayName(ChatColor.AQUA + "ë¶ˆíƒ€ëŠ” ì˜ì§€ì˜ ë„ë¼");
 				ArrayList<String> weaponLore = new ArrayList();
-				weaponLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 400");
+				weaponLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 400");
 				weaponLore.add(ChatColor.GRAY + " ");
-				weaponLore.add(ChatColor.GRAY + "Å¾ÀÇ µµÀüÀÚ µµ³¢°¡ ÁøÁ¤ÇÑ ¸ğ½ÀÀ» Ã£¾Ò´Ù.");
+				weaponLore.add(ChatColor.GRAY + "íƒ‘ì˜ ë„ì „ì ë„ë¼ê°€ ì§„ì •í•œ ëª¨ìŠµì„ ì°¾ì•˜ë‹¤.");
 				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -318,19 +318,19 @@ public class Transcendence {
 				weaponIm.setLore(weaponLore);
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
-				player.sendMessage(ChatColor.GREEN + "Àåºñ ÃÊ¿ù¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.");
+				player.sendMessage(ChatColor.GREEN + "ì¥ë¹„ ì´ˆì›”ì— ì„±ê³µí•˜ì˜€ìŠµë‹ˆë‹¤.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
 				return;
-			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "Å¾ÀÇ µµÀüÀÚ Çï¸ä")) {
+			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "íƒ‘ì˜ ë„ì „ì í—¬ë©§")) {
 				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
 				ItemStack weapon = new ItemStack(Material.IRON_HELMET);
 				ItemMeta weaponIm = weapon.getItemMeta();
 				weaponIm.setLocalizedName("0,0,0,0,0,0,0,0,0,0,400");
-				weaponIm.setDisplayName(ChatColor.GREEN + "ºÒÅ¸´Â ÀÇÁöÀÇ Çï¸ä");
+				weaponIm.setDisplayName(ChatColor.GREEN + "ë¶ˆíƒ€ëŠ” ì˜ì§€ì˜ í—¬ë©§");
 				ArrayList<String> weaponLore = new ArrayList();
-				weaponLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 400");
+				weaponLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 400");
 				weaponLore.add(ChatColor.GRAY + " ");
-				weaponLore.add(ChatColor.GRAY + "Å¾ÀÇ µµÀüÀÚ Çï¸äÀÌ ÁøÁ¤ÇÑ ¸ğ½ÀÀ» Ã£¾Ò´Ù.");
+				weaponLore.add(ChatColor.GRAY + "íƒ‘ì˜ ë„ì „ì í—¬ë©§ì´ ì§„ì •í•œ ëª¨ìŠµì„ ì°¾ì•˜ë‹¤.");
 				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -338,19 +338,19 @@ public class Transcendence {
 				weaponIm.setLore(weaponLore);
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
-				player.sendMessage(ChatColor.GREEN + "Àåºñ ÃÊ¿ù¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.");
+				player.sendMessage(ChatColor.GREEN + "ì¥ë¹„ ì´ˆì›”ì— ì„±ê³µí•˜ì˜€ìŠµë‹ˆë‹¤.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
 				return;
-			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "Å¾ÀÇ µµÀüÀÚ °©¿Ê")) {
+			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "íƒ‘ì˜ ë„ì „ì ê°‘ì˜·")) {
 				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
 				ItemStack weapon = new ItemStack(Material.IRON_CHESTPLATE);
 				ItemMeta weaponIm = weapon.getItemMeta();
 				weaponIm.setLocalizedName("0,0,0,0,0,0,0,0,0,0,400");
-				weaponIm.setDisplayName(ChatColor.GREEN + "ºÒÅ¸´Â ÀÇÁöÀÇ °©¿Ê");
+				weaponIm.setDisplayName(ChatColor.GREEN + "ë¶ˆíƒ€ëŠ” ì˜ì§€ì˜ ê°‘ì˜·");
 				ArrayList<String> weaponLore = new ArrayList();
-				weaponLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 400");
+				weaponLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 400");
 				weaponLore.add(ChatColor.GRAY + " ");
-				weaponLore.add(ChatColor.GRAY + "Å¾ÀÇ µµÀüÀÚ °©¿ÊÀÌ ÁøÁ¤ÇÑ ¸ğ½ÀÀ» Ã£¾Ò´Ù.");
+				weaponLore.add(ChatColor.GRAY + "íƒ‘ì˜ ë„ì „ì ê°‘ì˜·ì´ ì§„ì •í•œ ëª¨ìŠµì„ ì°¾ì•˜ë‹¤.");
 				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -358,19 +358,19 @@ public class Transcendence {
 				weaponIm.setLore(weaponLore);
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
-				player.sendMessage(ChatColor.GREEN + "Àåºñ ÃÊ¿ù¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.");
+				player.sendMessage(ChatColor.GREEN + "ì¥ë¹„ ì´ˆì›”ì— ì„±ê³µí•˜ì˜€ìŠµë‹ˆë‹¤.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
 				return;
-			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "Å¾ÀÇ µµÀüÀÚ °¢¹İ")) {
+			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "íƒ‘ì˜ ë„ì „ì ê°ë°˜")) {
 				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
 				ItemStack weapon = new ItemStack(Material.IRON_LEGGINGS);
 				ItemMeta weaponIm = weapon.getItemMeta();
 				weaponIm.setLocalizedName("0,0,0,0,0,0,0,0,0,0,400");
-				weaponIm.setDisplayName(ChatColor.GREEN + "ºÒÅ¸´Â ÀÇÁöÀÇ °¢¹İ");
+				weaponIm.setDisplayName(ChatColor.GREEN + "ë¶ˆíƒ€ëŠ” ì˜ì§€ì˜ ê°ë°˜");
 				ArrayList<String> weaponLore = new ArrayList();
-				weaponLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 400");
+				weaponLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 400");
 				weaponLore.add(ChatColor.GRAY + " ");
-				weaponLore.add(ChatColor.GRAY + "Å¾ÀÇ µµÀüÀÚ °¢¹İÀÌ ÁøÁ¤ÇÑ ¸ğ½ÀÀ» Ã£¾Ò´Ù.");
+				weaponLore.add(ChatColor.GRAY + "íƒ‘ì˜ ë„ì „ì ê°ë°˜ì´ ì§„ì •í•œ ëª¨ìŠµì„ ì°¾ì•˜ë‹¤.");
 				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -378,19 +378,19 @@ public class Transcendence {
 				weaponIm.setLore(weaponLore);
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
-				player.sendMessage(ChatColor.GREEN + "Àåºñ ÃÊ¿ù¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.");
+				player.sendMessage(ChatColor.GREEN + "ì¥ë¹„ ì´ˆì›”ì— ì„±ê³µí•˜ì˜€ìŠµë‹ˆë‹¤.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
 				return;
-			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "Å¾ÀÇ µµÀüÀÚ ½Å¹ß")) {
+			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "íƒ‘ì˜ ë„ì „ì ì‹ ë°œ")) {
 				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
 				ItemStack weapon = new ItemStack(Material.IRON_BOOTS);
 				ItemMeta weaponIm = weapon.getItemMeta();
 				weaponIm.setLocalizedName("0,0,0,0,0,0,0,0,0,0,400");
-				weaponIm.setDisplayName(ChatColor.GREEN + "ºÒÅ¸´Â ÀÇÁöÀÇ ½Å¹ß");
+				weaponIm.setDisplayName(ChatColor.GREEN + "ë¶ˆíƒ€ëŠ” ì˜ì§€ì˜ ì‹ ë°œ");
 				ArrayList<String> weaponLore = new ArrayList();
-				weaponLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 400");
+				weaponLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 400");
 				weaponLore.add(ChatColor.GRAY + " ");
-				weaponLore.add(ChatColor.GRAY + "Å¾ÀÇ µµÀüÀÚ ½Å¹ßÀÌ ÁøÁ¤ÇÑ ¸ğ½ÀÀ» Ã£¾Ò´Ù.");
+				weaponLore.add(ChatColor.GRAY + "íƒ‘ì˜ ë„ì „ì ì‹ ë°œì´ ì§„ì •í•œ ëª¨ìŠµì„ ì°¾ì•˜ë‹¤.");
 				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -398,11 +398,11 @@ public class Transcendence {
 				weaponIm.setLore(weaponLore);
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
-				player.sendMessage(ChatColor.GREEN + "Àåºñ ÃÊ¿ù¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.");
+				player.sendMessage(ChatColor.GREEN + "ì¥ë¹„ ì´ˆì›”ì— ì„±ê³µí•˜ì˜€ìŠµë‹ˆë‹¤.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
 				return;
 			}
-			player.sendMessage(ChatColor.WHITE + "Á¶°Ç¿¡ ¸Â´Â Àåºñ, ¼ÒÀç¸¦ ³Ö¾îÁÖ¼¼¿ä.");
+			player.sendMessage(ChatColor.WHITE + "ì¡°ê±´ì— ë§ëŠ” ì¥ë¹„, ì†Œì¬ë¥¼ ë„£ì–´ì£¼ì„¸ìš”.");
 		}
 		
 	}

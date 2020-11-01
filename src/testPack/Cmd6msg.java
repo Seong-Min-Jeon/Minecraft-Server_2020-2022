@@ -30,11 +30,11 @@ public class Cmd6msg implements CommandExecutor {
 			Player player = (Player) sender;
 			if(cmd.getName().equalsIgnoreCase("msg")) {
 				if(args.length == 0) {
-					player.sendMessage(ChatColor.GREEN + "/msg ¹Þ´Â»ç¶÷ ¹®Àå");
+					player.sendMessage(ChatColor.GREEN + "/msg ë°›ëŠ”ì‚¬ëžŒ ë¬¸ìž¥");
 					return true;
 				}
 				if(args[0].equalsIgnoreCase("help")) {
-					player.sendMessage(ChatColor.GREEN + "/msg ¹Þ´Â»ç¶÷ ¹®Àå");
+					player.sendMessage(ChatColor.GREEN + "/msg ë°›ëŠ”ì‚¬ëžŒ ë¬¸ìž¥");
 					return true;
 				}
 				for(int i = 1 ; i < args.length ; i++) {
@@ -49,7 +49,7 @@ public class Cmd6msg implements CommandExecutor {
 					}
 				}
 				if(cnt==0) {
-					player.sendMessage(ChatColor.RED + "¹Þ´Â »ç¶÷ÀÇ ÀÌ¸§À» È®ÀÎÇØÁÖ¼¼¿ä.");
+					player.sendMessage(ChatColor.RED + "ë°›ëŠ” ì‚¬ëžŒì˜ ì´ë¦„ì„ í™•ì¸í•´ì£¼ì„¸ìš”.");
 				}
 			}
 		}	

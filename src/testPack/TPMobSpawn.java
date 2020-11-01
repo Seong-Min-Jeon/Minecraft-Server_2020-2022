@@ -36,7 +36,7 @@ public class TPMobSpawn {
 	}
 
 	public void fairy(Player player, Location loc) {
-		// Å¸¶ôÇÑ ¿äÁ¤ ¿Õ±¹ ÀÔ±¸
+		// íƒ€ë½í•œ ìš”ì • ì™•êµ­ ì…êµ¬
 		if (loc.getX() == 3745.57 && loc.getY() == 77 && loc.getZ() == 3430.3) {
 			player.teleport(new Location(player.getWorld(), 3745.56, 77, 3430.3));
 			int num = 0;
@@ -79,9 +79,9 @@ public class TPMobSpawn {
 		}
 		
 
-		// Å¸¶ôÇÑ ¿äÁ¤ ¿Õ±¹ º¸½º
+		// íƒ€ë½í•œ ìš”ì • ì™•êµ­ ë³´ìŠ¤
 		if (loc.getX() == 3775.61 && loc.getY() == 90.2 && loc.getZ() == 3461.38) {
-			player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "´Ï ³à¼®µµ ³» º¸¹°À» ÈÉÄ¡·¯ ¿Â °ÍÀÌ³Ä. Á×¾î¶ó.");
+			player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "ë‹ˆ ë…€ì„ë„ ë‚´ ë³´ë¬¼ì„ í›”ì¹˜ëŸ¬ ì˜¨ ê²ƒì´ëƒ. ì£½ì–´ë¼.");
 
 			player.teleport(new Location(player.getWorld(), 3775.6, 90.2, 3461.38));
 			int num = 0;
@@ -139,7 +139,7 @@ public class TPMobSpawn {
 	}
 	
 	public void snow(Player player, Location loc) {
-		// Ä«·ç ´øÀü ÀÔ±¸
+		// ì¹´ë£¨ ë˜ì „ ì…êµ¬
 		if (loc.getX() == 3826.7 && loc.getY() == 16 && loc.getZ() == 3211.44) {
 			player.teleport(new Location(player.getWorld(), 3826.71, 16, 3211.43));
 			int num = 0;
@@ -195,9 +195,9 @@ public class TPMobSpawn {
 		}
 		
 		
-		// Ä«·ç ´øÀü Áß°£º¸½º
+		// ì¹´ë£¨ ë˜ì „ ì¤‘ê°„ë³´ìŠ¤
 		if (loc.getX() == 3808.5 && loc.getY() == 69.5 && loc.getZ() == 3215.5) {
-			player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "³× ³ğ¿¡°Ô ³ª¶ôÀ» º¸¿©ÁÖµµ·Ï ÇÏÁö.");
+			player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "ë„¤ ë†ˆì—ê²Œ ë‚˜ë½ì„ ë³´ì—¬ì£¼ë„ë¡ í•˜ì§€.");
 
 			player.teleport(new Location(player.getWorld(), 3808, 69, 3215));
 			int num = 0;
@@ -236,9 +236,9 @@ public class TPMobSpawn {
 		}
 		
 
-		// Ä«·ç ´øÀü º¸½º
+		// ì¹´ë£¨ ë˜ì „ ë³´ìŠ¤
 		if (loc.getX() == 3730 && loc.getY() == 179 && loc.getZ() == 3236) {
-			player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "³ªÀÇ Á¦¹°ÀÌ µÇ¾î¶ó. ¾Ö¼ÛÀÌ.");
+			player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "ë‚˜ì˜ ì œë¬¼ì´ ë˜ì–´ë¼. ì• ì†¡ì´.");
 
 			player.teleport(new Location(player.getWorld(), 3730.1, 179, 3236));
 			int num = 0;
@@ -278,7 +278,7 @@ public class TPMobSpawn {
 	}
 	
 	public void senmag(Player player, Location loc) {
-		// ¼¾ ¸¶±× ´øÀü ÀÔ±¸
+		// ì„¼ ë§ˆê·¸ ë˜ì „ ì…êµ¬
 		if (loc.getX() == 3407.63 && loc.getY() == 16 && loc.getZ() == 3823.35) {
 			player.teleport(new Location(player.getWorld(), 3407.62, 16, 3823.34));
 			int num = 0;
@@ -333,7 +333,7 @@ public class TPMobSpawn {
 			return;
 		}
 		
-		// º¹µµ¹æ
+		// ë³µë„ë°©
 		if (loc.getX() == 3405.5 && loc.getY() == 13 && loc.getZ() == 3766.5) {
 			player.teleport(new Location(player.getWorld(), 3405.6, 13, 3766.4));
 			int num = 0;
@@ -373,9 +373,9 @@ public class TPMobSpawn {
 		}
 		
 		
-		// º¸½º
+		// ë³´ìŠ¤
 		if (loc.getX() == 3317.46 && loc.getY() == 13 && loc.getZ() == 3725.51) {
-			player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "³» ¼Õ ³¡ ÇÏ³ªµµ ¸ø °Çµå¸±°É.");
+			player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "ë‚´ ì† ë í•˜ë‚˜ë„ ëª» ê±´ë“œë¦´ê±¸.");
 
 			player.teleport(new Location(player.getWorld(), 3317.45, 13, 3725.5));
 			int num = 0;
@@ -414,9 +414,9 @@ public class TPMobSpawn {
 		}
 		
 
-		// È÷µç º¸½º
+		// íˆë“  ë³´ìŠ¤
 		if (loc.getX() == 3369.59 && loc.getY() == 14 && loc.getZ() == 3803.7) {
-			player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "ÁÁÀº ½ÄÀç·á°¡ Á¦ ¹ß·Î Ã£¾Æ¿Ô±º.");
+			player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "ì¢‹ì€ ì‹ì¬ë£Œê°€ ì œ ë°œë¡œ ì°¾ì•„ì™”êµ°.");
 
 			player.teleport(new Location(player.getWorld(), 3369.6, 14, 3803.71));
 			int num = 0;
@@ -456,7 +456,7 @@ public class TPMobSpawn {
 	}
 	
 	public void tower(Player player, Location loc) {
-		// Á×À½ÀÇ Å¾ 1Ãş
+		// ì£½ìŒì˜ íƒ‘ 1ì¸µ
 		if (loc.getX() == 72.5 && loc.getY() == 75 && loc.getZ() == -3.5) {
 			player.teleport(new Location(player.getWorld(), 72.5, 75, -3.51));
 			
@@ -496,7 +496,7 @@ public class TPMobSpawn {
 			return;
 		}
 		
-		// Á×À½ÀÇ Å¾ 2Ãş
+		// ì£½ìŒì˜ íƒ‘ 2ì¸µ
 		if (loc.getX() == 72.5 && loc.getY() == 88 && loc.getZ() == -4.5) {
 			player.teleport(new Location(player.getWorld(), 72.5, 88, -4.51));
 			int num = 0;
@@ -533,7 +533,7 @@ public class TPMobSpawn {
 			return;
 		}
 		
-		// Á×À½ÀÇ Å¾ 3Ãş
+		// ì£½ìŒì˜ íƒ‘ 3ì¸µ
 		if (loc.getX() == 72.5 && loc.getY() == 101 && loc.getZ() == -8.5) {
 			player.teleport(new Location(player.getWorld(), 72.5, 101, -8.51));
 			int num = 0;
@@ -570,7 +570,7 @@ public class TPMobSpawn {
 			return;
 		}
 		
-		// Á×À½ÀÇ Å¾ 4Ãş
+		// ì£½ìŒì˜ íƒ‘ 4ì¸µ
 		if (loc.getX() == 72.5 && loc.getY() == 116 && loc.getZ() == -4.5) {
 			player.teleport(new Location(player.getWorld(), 72.5, 116, -4.51));
 			int num = 0;
@@ -603,7 +603,7 @@ public class TPMobSpawn {
 			return;
 		}
 		
-		// Á×À½ÀÇ Å¾ 5Ãş
+		// ì£½ìŒì˜ íƒ‘ 5ì¸µ
 		if (loc.getX() == 72.5 && loc.getY() == 129 && loc.getZ() == -4.5) {
 			player.teleport(new Location(player.getWorld(), 72.5, 129, -4.51));
 			int num = 0;
@@ -636,7 +636,7 @@ public class TPMobSpawn {
 			return;
 		}
 		
-		// Á×À½ÀÇ Å¾ 6Ãş
+		// ì£½ìŒì˜ íƒ‘ 6ì¸µ
 		if (loc.getX() == 72.5 && loc.getY() == 142 && loc.getZ() == -8.5) {
 			player.teleport(new Location(player.getWorld(), 72.5, 142, -8.51));
 			int num = 0;
@@ -669,7 +669,7 @@ public class TPMobSpawn {
 			return;
 		}
 		
-		// Á×À½ÀÇ Å¾ 7Ãş
+		// ì£½ìŒì˜ íƒ‘ 7ì¸µ
 		if (loc.getX() == 72.5 && loc.getY() == 157 && loc.getZ() == -4.5) {
 			player.teleport(new Location(player.getWorld(), 72.5, 157, -4.51));
 			int num = 0;
@@ -702,7 +702,7 @@ public class TPMobSpawn {
 			return;
 		}
 		
-		// Á×À½ÀÇ Å¾ 8Ãş
+		// ì£½ìŒì˜ íƒ‘ 8ì¸µ
 		if (loc.getX() == 72.5 && loc.getY() == 170 && loc.getZ() == -4.5) {
 			player.teleport(new Location(player.getWorld(), 72.5, 170, -4.51));
 			int num = 0;
@@ -735,7 +735,7 @@ public class TPMobSpawn {
 			return;
 		}
 		
-		// Á×À½ÀÇ Å¾ 9Ãş
+		// ì£½ìŒì˜ íƒ‘ 9ì¸µ
 		if (loc.getX() == 72.5 && loc.getY() == 183 && loc.getZ() == -8.5) {
 			player.teleport(new Location(player.getWorld(), 72.5, 183, -8.51));
 			int num = 0;
@@ -768,7 +768,7 @@ public class TPMobSpawn {
 			return;
 		}
 		
-		// Á×À½ÀÇ Å¾ 10Ãş
+		// ì£½ìŒì˜ íƒ‘ 10ì¸µ
 		if (loc.getX() == 72.5 && loc.getY() == 198 && loc.getZ() == -4.5) {
 			player.teleport(new Location(player.getWorld(), 72.5, 198, -4.51));
 			int num = 0;
@@ -801,7 +801,7 @@ public class TPMobSpawn {
 			return;
 		}
 		
-		// Á×À½ÀÇ Å¾ 11Ãş
+		// ì£½ìŒì˜ íƒ‘ 11ì¸µ
 		if (loc.getX() == 72.5 && loc.getY() == 211 && loc.getZ() == -4.5) {
 			player.teleport(new Location(player.getWorld(), 72.5, 211, -4.51));
 			int num = 0;
@@ -834,7 +834,7 @@ public class TPMobSpawn {
 			return;
 		}
 		
-		// Á×À½ÀÇ Å¾ 12Ãş
+		// ì£½ìŒì˜ íƒ‘ 12ì¸µ
 		if (loc.getX() == 72.5 && loc.getY() == 224 && loc.getZ() == -7.5) {
 			player.teleport(new Location(player.getWorld(), 72.5, 224, -8.51));
 			int num = 0;
@@ -871,9 +871,9 @@ public class TPMobSpawn {
 	}
 	
 	public void aracune(Player player, Location loc) {
-		// ¾Æ¶óÅ©³×
+		// ì•„ë¼í¬ë„¤
 		if (loc.getX() == 750.44 && loc.getY() == 28.44 && loc.getZ() == 591.93) {
-			player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "¾ºÀÕ¾ºÀÍ¾ºÀÌ");
+			player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "ì”Œì‡ì”Œìµì”Œì´");
 
 			player.teleport(new Location(player.getWorld(), 750.43, 28.44, 591.93));
 			int num = 0;

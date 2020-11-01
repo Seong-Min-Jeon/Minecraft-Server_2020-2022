@@ -8,62 +8,62 @@ import org.bukkit.inventory.ItemStack;
 public class ChangeJobClick {
 
 	public void click(Player player, ItemStack item) {
-		if (item.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "±×¸²ÀÚ ¹«»çÀÇ º°")) {
+		if (item.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "ê·¸ë¦¼ì ë¬´ì‚¬ì˜ ë³„")) {
 			player.getInventory().addItem(item);
-			player.sendMessage(ChatColor.RED + "Á÷¾÷À» ¹Ù²Ù¸é ÀÎº¥Åä¸®¿Í ·¹º§ÀÌ ÃÊ±âÈ­ µË´Ï´Ù. Áß¿äÇÑ ¹°°ÇÀº Ã¢°í¿¡ ³Ö¾îµÎ½Ã±æ ¹Ù¶ø´Ï´Ù.");
+			player.sendMessage(ChatColor.RED + "ì§ì—…ì„ ë°”ê¾¸ë©´ ì¸ë²¤í† ë¦¬ì™€ ë ˆë²¨ì´ ì´ˆê¸°í™” ë©ë‹ˆë‹¤. ì¤‘ìš”í•œ ë¬¼ê±´ì€ ì°½ê³ ì— ë„£ì–´ë‘ì‹œê¸¸ ë°”ëë‹ˆë‹¤.");
 			player.teleport(new Location(player.getWorld(), -699, 52, 2135));
 		}
-		if (item.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "¹ö¼­Ä¿ÀÇ º°")) {
+		if (item.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "ë²„ì„œì»¤ì˜ ë³„")) {
 			player.getInventory().addItem(item); 
-			player.sendMessage(ChatColor.RED + "Á÷¾÷À» ¹Ù²Ù¸é ÀÎº¥Åä¸®¿Í ·¹º§ÀÌ ÃÊ±âÈ­ µË´Ï´Ù. Áß¿äÇÑ ¹°°ÇÀº Ã¢°í¿¡ ³Ö¾îµÎ½Ã±æ ¹Ù¶ø´Ï´Ù.");
+			player.sendMessage(ChatColor.RED + "ì§ì—…ì„ ë°”ê¾¸ë©´ ì¸ë²¤í† ë¦¬ì™€ ë ˆë²¨ì´ ì´ˆê¸°í™” ë©ë‹ˆë‹¤. ì¤‘ìš”í•œ ë¬¼ê±´ì€ ì°½ê³ ì— ë„£ì–´ë‘ì‹œê¸¸ ë°”ëë‹ˆë‹¤.");
 			player.teleport(new Location(player.getWorld(), -699, 52, 2135));
 		}
-		if (item.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "±ºÀÎÀÇ º°")) {
+		if (item.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "êµ°ì¸ì˜ ë³„")) {
 			player.getInventory().addItem(item); 
-			player.sendMessage(ChatColor.RED + "Á÷¾÷À» ¹Ù²Ù¸é ÀÎº¥Åä¸®¿Í ·¹º§ÀÌ ÃÊ±âÈ­ µË´Ï´Ù. Áß¿äÇÑ ¹°°ÇÀº Ã¢°í¿¡ ³Ö¾îµÎ½Ã±æ ¹Ù¶ø´Ï´Ù.");
+			player.sendMessage(ChatColor.RED + "ì§ì—…ì„ ë°”ê¾¸ë©´ ì¸ë²¤í† ë¦¬ì™€ ë ˆë²¨ì´ ì´ˆê¸°í™” ë©ë‹ˆë‹¤. ì¤‘ìš”í•œ ë¬¼ê±´ì€ ì°½ê³ ì— ë„£ì–´ë‘ì‹œê¸¸ ë°”ëë‹ˆë‹¤.");
 			player.teleport(new Location(player.getWorld(), -699, 52, 2135));
 		}
-		if (item.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "±×¸² ¸®ÆÛÀÇ º°")) {
+		if (item.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "ê·¸ë¦¼ ë¦¬í¼ì˜ ë³„")) {
 			player.getInventory().addItem(item); 
-			player.sendMessage(ChatColor.RED + "Á÷¾÷À» ¹Ù²Ù¸é ÀÎº¥Åä¸®¿Í ·¹º§ÀÌ ÃÊ±âÈ­ µË´Ï´Ù. Áß¿äÇÑ ¹°°ÇÀº Ã¢°í¿¡ ³Ö¾îµÎ½Ã±æ ¹Ù¶ø´Ï´Ù.");
+			player.sendMessage(ChatColor.RED + "ì§ì—…ì„ ë°”ê¾¸ë©´ ì¸ë²¤í† ë¦¬ì™€ ë ˆë²¨ì´ ì´ˆê¸°í™” ë©ë‹ˆë‹¤. ì¤‘ìš”í•œ ë¬¼ê±´ì€ ì°½ê³ ì— ë„£ì–´ë‘ì‹œê¸¸ ë°”ëë‹ˆë‹¤.");
 			player.teleport(new Location(player.getWorld(), -699, 52, 2135));
 		}
-		if (item.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "¾ÆÃ³ÀÇ º°")) {
+		if (item.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "ì•„ì²˜ì˜ ë³„")) {
 			player.getInventory().addItem(item); 
-			player.sendMessage(ChatColor.RED + "Á÷¾÷À» ¹Ù²Ù¸é ÀÎº¥Åä¸®¿Í ·¹º§ÀÌ ÃÊ±âÈ­ µË´Ï´Ù. Áß¿äÇÑ ¹°°ÇÀº Ã¢°í¿¡ ³Ö¾îµÎ½Ã±æ ¹Ù¶ø´Ï´Ù.");
+			player.sendMessage(ChatColor.RED + "ì§ì—…ì„ ë°”ê¾¸ë©´ ì¸ë²¤í† ë¦¬ì™€ ë ˆë²¨ì´ ì´ˆê¸°í™” ë©ë‹ˆë‹¤. ì¤‘ìš”í•œ ë¬¼ê±´ì€ ì°½ê³ ì— ë„£ì–´ë‘ì‹œê¸¸ ë°”ëë‹ˆë‹¤.");
 			player.teleport(new Location(player.getWorld(), -699, 52, 2135));
 		}
-		if (item.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "µ¥ºôÀÇ º°")) {
+		if (item.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "ë°ë¹Œì˜ ë³„")) {
 			player.getInventory().addItem(item); 
-			player.sendMessage(ChatColor.RED + "Á÷¾÷À» ¹Ù²Ù¸é ÀÎº¥Åä¸®¿Í ·¹º§ÀÌ ÃÊ±âÈ­ µË´Ï´Ù. Áß¿äÇÑ ¹°°ÇÀº Ã¢°í¿¡ ³Ö¾îµÎ½Ã±æ ¹Ù¶ø´Ï´Ù.");
+			player.sendMessage(ChatColor.RED + "ì§ì—…ì„ ë°”ê¾¸ë©´ ì¸ë²¤í† ë¦¬ì™€ ë ˆë²¨ì´ ì´ˆê¸°í™” ë©ë‹ˆë‹¤. ì¤‘ìš”í•œ ë¬¼ê±´ì€ ì°½ê³ ì— ë„£ì–´ë‘ì‹œê¸¸ ë°”ëë‹ˆë‹¤.");
 			player.teleport(new Location(player.getWorld(), -699, 52, 2135));
 		}
-		if (item.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "¿£Á©ÀÇ º°")) {
+		if (item.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "ì—”ì ¤ì˜ ë³„")) {
 			player.getInventory().addItem(item); 
-			player.sendMessage(ChatColor.RED + "Á÷¾÷À» ¹Ù²Ù¸é ÀÎº¥Åä¸®¿Í ·¹º§ÀÌ ÃÊ±âÈ­ µË´Ï´Ù. Áß¿äÇÑ ¹°°ÇÀº Ã¢°í¿¡ ³Ö¾îµÎ½Ã±æ ¹Ù¶ø´Ï´Ù.");
+			player.sendMessage(ChatColor.RED + "ì§ì—…ì„ ë°”ê¾¸ë©´ ì¸ë²¤í† ë¦¬ì™€ ë ˆë²¨ì´ ì´ˆê¸°í™” ë©ë‹ˆë‹¤. ì¤‘ìš”í•œ ë¬¼ê±´ì€ ì°½ê³ ì— ë„£ì–´ë‘ì‹œê¸¸ ë°”ëë‹ˆë‹¤.");
 			player.teleport(new Location(player.getWorld(), -699, 52, 2135));
 		}
-		if (item.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "´ëÇàÀÚÀÇ º°")) {
+		if (item.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "ëŒ€í–‰ìì˜ ë³„")) {
 			player.getInventory().addItem(item); 
-			player.sendMessage(ChatColor.RED + "Á÷¾÷À» ¹Ù²Ù¸é ÀÎº¥Åä¸®¿Í ·¹º§ÀÌ ÃÊ±âÈ­ µË´Ï´Ù. Áß¿äÇÑ ¹°°ÇÀº Ã¢°í¿¡ ³Ö¾îµÎ½Ã±æ ¹Ù¶ø´Ï´Ù.");
+			player.sendMessage(ChatColor.RED + "ì§ì—…ì„ ë°”ê¾¸ë©´ ì¸ë²¤í† ë¦¬ì™€ ë ˆë²¨ì´ ì´ˆê¸°í™” ë©ë‹ˆë‹¤. ì¤‘ìš”í•œ ë¬¼ê±´ì€ ì°½ê³ ì— ë„£ì–´ë‘ì‹œê¸¸ ë°”ëë‹ˆë‹¤.");
 			player.teleport(new Location(player.getWorld(), -699, 52, 2135));
 		}
-		if (item.getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "¿ë±â»çÀÇ º°")) {
+		if (item.getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "ìš©ê¸°ì‚¬ì˜ ë³„")) {
 			player.getInventory().addItem(item); 
-			player.sendMessage(ChatColor.RED + "Á÷¾÷À» ¹Ù²Ù¸é ÀÎº¥Åä¸®¿Í ·¹º§ÀÌ ÃÊ±âÈ­ µË´Ï´Ù. Áß¿äÇÑ ¹°°ÇÀº Ã¢°í¿¡ ³Ö¾îµÎ½Ã±æ ¹Ù¶ø´Ï´Ù.");
+			player.sendMessage(ChatColor.RED + "ì§ì—…ì„ ë°”ê¾¸ë©´ ì¸ë²¤í† ë¦¬ì™€ ë ˆë²¨ì´ ì´ˆê¸°í™” ë©ë‹ˆë‹¤. ì¤‘ìš”í•œ ë¬¼ê±´ì€ ì°½ê³ ì— ë„£ì–´ë‘ì‹œê¸¸ ë°”ëë‹ˆë‹¤.");
 			player.teleport(new Location(player.getWorld(), -699, 52, 2135));
 		}
-		if (item.getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "ÆÈ¶óµòÀÇ º°")) {
+		if (item.getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "íŒ”ë¼ë”˜ì˜ ë³„")) {
 			player.getInventory().addItem(item); 
-			player.sendMessage(ChatColor.RED + "Á÷¾÷À» ¹Ù²Ù¸é ÀÎº¥Åä¸®¿Í ·¹º§ÀÌ ÃÊ±âÈ­ µË´Ï´Ù. Áß¿äÇÑ ¹°°ÇÀº Ã¢°í¿¡ ³Ö¾îµÎ½Ã±æ ¹Ù¶ø´Ï´Ù.");
+			player.sendMessage(ChatColor.RED + "ì§ì—…ì„ ë°”ê¾¸ë©´ ì¸ë²¤í† ë¦¬ì™€ ë ˆë²¨ì´ ì´ˆê¸°í™” ë©ë‹ˆë‹¤. ì¤‘ìš”í•œ ë¬¼ê±´ì€ ì°½ê³ ì— ë„£ì–´ë‘ì‹œê¸¸ ë°”ëë‹ˆë‹¤.");
 			player.teleport(new Location(player.getWorld(), -699, 52, 2135));
 		}
-		if (item.getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "¸¶ÀÎÀÇ º°")) {
+		if (item.getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "ë§ˆì¸ì˜ ë³„")) {
 			player.getInventory().addItem(item); 
-			player.sendMessage(ChatColor.RED + "Á÷¾÷À» ¹Ù²Ù¸é ÀÎº¥Åä¸®¿Í ·¹º§ÀÌ ÃÊ±âÈ­ µË´Ï´Ù. Áß¿äÇÑ ¹°°ÇÀº Ã¢°í¿¡ ³Ö¾îµÎ½Ã±æ ¹Ù¶ø´Ï´Ù.");
+			player.sendMessage(ChatColor.RED + "ì§ì—…ì„ ë°”ê¾¸ë©´ ì¸ë²¤í† ë¦¬ì™€ ë ˆë²¨ì´ ì´ˆê¸°í™” ë©ë‹ˆë‹¤. ì¤‘ìš”í•œ ë¬¼ê±´ì€ ì°½ê³ ì— ë„£ì–´ë‘ì‹œê¸¸ ë°”ëë‹ˆë‹¤.");
 			player.teleport(new Location(player.getWorld(), -699, 52, 2135));
 		}
-		if (item.getItemMeta().getDisplayName().equals(ChatColor.WHITE + "µ¹¾Æ°¡±â")) {
+		if (item.getItemMeta().getDisplayName().equals(ChatColor.WHITE + "ëŒì•„ê°€ê¸°")) {
 			player.teleport(new Location(player.getWorld(), -699, 52, 2135));
 		}
 	}

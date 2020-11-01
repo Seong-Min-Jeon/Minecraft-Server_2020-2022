@@ -18,49 +18,49 @@ public class ChangeJob {
 		
 		ItemStack star9 = new ItemStack(Material.NETHER_STAR);
 		ItemMeta star9Im = star9.getItemMeta();
-		star9Im.setDisplayName(ChatColor.LIGHT_PURPLE + "±×¸²ÀÚ ¹«»çÀÇ º°");
+		star9Im.setDisplayName(ChatColor.LIGHT_PURPLE + "ê·¸ë¦¼ì ë¬´ì‚¬ì˜ ë³„");
 		ArrayList<String> star9Lore = new ArrayList();
-		star9Lore.add(ChatColor.WHITE + "ºü¸¥ ¿òÁ÷ÀÓÀ¸·Î ÀûÀ» °ø°İÇÒ ¼ö ÀÖ´Ù.");
+		star9Lore.add(ChatColor.WHITE + "ë¹ ë¥¸ ì›€ì§ì„ìœ¼ë¡œ ì ì„ ê³µê²©í•  ìˆ˜ ìˆë‹¤.");
 		star9Im.setLore(star9Lore);
 		star9.setItemMeta(star9Im);
 		
 		ItemStack star10 = new ItemStack(Material.NETHER_STAR);
 		ItemMeta star10Im = star10.getItemMeta();
-		star10Im.setDisplayName(ChatColor.LIGHT_PURPLE + "¹ö¼­Ä¿ÀÇ º°");
+		star10Im.setDisplayName(ChatColor.LIGHT_PURPLE + "ë²„ì„œì»¤ì˜ ë³„");
 		ArrayList<String> star10Lore = new ArrayList();
-		star10Lore.add(ChatColor.WHITE + "¾ĞµµÀûÀÎ ÈûÀ¸·Î ÀûÀ» ¼¶¸êÇÒ ¼ö ÀÖ´Ù.");
+		star10Lore.add(ChatColor.WHITE + "ì••ë„ì ì¸ í˜ìœ¼ë¡œ ì ì„ ì„¬ë©¸í•  ìˆ˜ ìˆë‹¤.");
 		star10Im.setLore(star10Lore);
 		star10.setItemMeta(star10Im);
 		
 		ItemStack star11 = new ItemStack(Material.NETHER_STAR);
 		ItemMeta star11Im = star11.getItemMeta();
-		star11Im.setDisplayName(ChatColor.LIGHT_PURPLE + "±ºÀÎÀÇ º°");
+		star11Im.setDisplayName(ChatColor.LIGHT_PURPLE + "êµ°ì¸ì˜ ë³„");
 		ArrayList<String> star11Lore = new ArrayList();
-		star11Lore.add(ChatColor.WHITE + "²ö±âÀÖ°Ô Ã¤±¤À» ÇÒ ¼ö ÀÖ´Â Á÷¾÷ÀÌ´Ù.");
-		star11Lore.add(ChatColor.WHITE + "(°î±ªÀÌ ÀÌ¿ÜÀÇ ±ÙÁ¢¹«±â·Î °ø°İÀ» ÇÒ ¼ö ¾ø´Ù.)");
+		star11Lore.add(ChatColor.WHITE + "ëˆê¸°ìˆê²Œ ì±„ê´‘ì„ í•  ìˆ˜ ìˆëŠ” ì§ì—…ì´ë‹¤.");
+		star11Lore.add(ChatColor.WHITE + "(ê³¡ê´­ì´ ì´ì™¸ì˜ ê·¼ì ‘ë¬´ê¸°ë¡œ ê³µê²©ì„ í•  ìˆ˜ ì—†ë‹¤.)");
 		star11Im.setLore(star11Lore);
 		star11.setItemMeta(star11Im);
 		
 		ItemStack star12 = new ItemStack(Material.NETHER_STAR);
 		ItemMeta star12Im = star12.getItemMeta();
-		star12Im.setDisplayName(ChatColor.LIGHT_PURPLE + "±×¸² ¸®ÆÛÀÇ º°");
+		star12Im.setDisplayName(ChatColor.LIGHT_PURPLE + "ê·¸ë¦¼ ë¦¬í¼ì˜ ë³„");
 		ArrayList<String> star12Lore = new ArrayList();
-		star12Lore.add(ChatColor.WHITE + "³´À» µé°í ½Î¿ì´Â »ç½ÅÀÇ ÈÄ¼ÕÀÌ µÈ´Ù.");
-		star12Lore.add(ChatColor.WHITE + "(³´ ÀÌ¿ÜÀÇ ±ÙÁ¢¹«±â·Î °ø°İÀ» ÇÒ ¼ö ¾ø´Ù.)");
+		star12Lore.add(ChatColor.WHITE + "ë‚«ì„ ë“¤ê³  ì‹¸ìš°ëŠ” ì‚¬ì‹ ì˜ í›„ì†ì´ ëœë‹¤.");
+		star12Lore.add(ChatColor.WHITE + "(ë‚« ì´ì™¸ì˜ ê·¼ì ‘ë¬´ê¸°ë¡œ ê³µê²©ì„ í•  ìˆ˜ ì—†ë‹¤.)");
 		star12Im.setLore(star12Lore);
 		star12.setItemMeta(star12Im);
 		
 		ItemStack star16 = new ItemStack(Material.NETHER_STAR);
 		ItemMeta star16Im = star16.getItemMeta();
-		star16Im.setDisplayName(ChatColor.LIGHT_PURPLE + "¾ÆÃ³ÀÇ º°");
+		star16Im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì•„ì²˜ì˜ ë³„");
 		ArrayList<String> star16Lore = new ArrayList();
-		star16Lore.add(ChatColor.WHITE + "È°¿¡ Æ¯È­µÈ Á÷¾÷ÀÌ´Ù.");
+		star16Lore.add(ChatColor.WHITE + "í™œì— íŠ¹í™”ëœ ì§ì—…ì´ë‹¤.");
 		star16Im.setLore(star16Lore);
 		star16.setItemMeta(star16Im);
 		
 		ItemStack star17 = new ItemStack(Material.SHULKER_SHELL);
 		ItemMeta star17Im = star17.getItemMeta();
-		star17Im.setDisplayName(ChatColor.WHITE + "µ¹¾Æ°¡±â");
+		star17Im.setDisplayName(ChatColor.WHITE + "ëŒì•„ê°€ê¸°");
 		star17.setItemMeta(star17Im);
 		
 		inv.setItem(0, star9);

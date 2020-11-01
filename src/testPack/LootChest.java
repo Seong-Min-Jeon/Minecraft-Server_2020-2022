@@ -24,53 +24,53 @@ public class LootChest {
 	public void open(Player player, Block block) {
 		if(block.getType() == Material.CHEST) {
 			if(block.getX()==3619 && block.getY()==44 && block.getZ()==3792) {
-				if(removeKey(player, "ÀØÇôÁø ¹Ù´Ù ½ÅÀü º¸»ó ¿­¼è")) {
+				if(removeKey(player, "ìŠí˜€ì§„ ë°”ë‹¤ ì‹ ì „ ë³´ìƒ ì—´ì‡ ")) {
 					dungeon1(player);
 					
 					QuestBoard cb = new QuestBoard();
-					if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¼ö·ÃÀÇ ½ÃÀÛ===")) {
+					if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ìˆ˜ë ¨ì˜ ì‹œì‘===")) {
 						int qNum = cb.getNum(player);
 						cb.mq2(player, qNum + 1);
 					}
 				}				
 			}
 			if((block.getX()==3469 && block.getY()==35 && block.getZ()==3760) || (block.getX()==3469 && block.getY()==35 && block.getZ()==3739)){
-				if(removeKey(player, "½£ÀÇ À¯Àû º¸»ó ¿­¼è")) {
+				if(removeKey(player, "ìˆ²ì˜ ìœ ì  ë³´ìƒ ì—´ì‡ ")) {
 					dungeon2(player);
 					
 					QuestBoard cb = new QuestBoard();
-					if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===À¯ÀûÀ» Á¤È­ÇÏ´Â ÀÚ===")) {
+					if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ìœ ì ì„ ì •í™”í•˜ëŠ” ì===")) {
 						int qNum = cb.getNum(player);
 						cb.q7(player, qNum + 1);
 					}
-					if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===½£ ±íÀº °÷===")) {
+					if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ìˆ² ê¹Šì€ ê³³===")) {
 						int qNum = cb.getNum(player);
 						cb.q6(player, qNum + 1);
 					}
-					if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ÃÌÀåÀÇ ºÎÅ¹2===")) {
+					if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì´Œì¥ì˜ ë¶€íƒ2===")) {
 						int qNum = cb.getNum(player);
 						cb.mq5(player, qNum + 1);
 					}
 				}				
 			}
 			if(block.getX()==3775 && block.getY()==74 && block.getZ()==3561) {
-				if(removeKey(player, "Å¸¶ôÇÑ ¿äÁ¤ ¿Õ±¹ º¸»ó ¿­¼è")) {
+				if(removeKey(player, "íƒ€ë½í•œ ìš”ì • ì™•êµ­ ë³´ìƒ ì—´ì‡ ")) {
 					dungeon3(player);
 					
 					QuestBoard cb = new QuestBoard();
-					if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Áø½ÇÀ» ¾Æ´Â ÀÚ4===")) {
+					if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì§„ì‹¤ì„ ì•„ëŠ” ì4===")) {
 						int qNum = cb.getNum(player);
 						cb.mq20_1(player, qNum + 1);
 					}
 				}				
 			}
 			if(block.getX()==3724 && block.getY()==145 && block.getZ()==3194) {
-				if(removeKey(player, "Ä«·ç ´øÀü º¸»ó ¿­¼è")) {
+				if(removeKey(player, "ì¹´ë£¨ ë˜ì „ ë³´ìƒ ì—´ì‡ ")) {
 					dungeon4(player);
 				}				
 			}
 			if(block.getX()==3713 && block.getY()==17 && block.getZ()==3156) {
-				if(removeKey(player, "¿ëµµ¸¦ ¸ğ¸£´Â ¿­¼è")) {
+				if(removeKey(player, "ìš©ë„ë¥¼ ëª¨ë¥´ëŠ” ì—´ì‡ ")) {
 					dungeon4(player);
 				}				
 			}
@@ -84,84 +84,84 @@ public class LootChest {
 					|| block.getX()==3316 && block.getY()==14 && block.getZ()==3799 || block.getX()==3315 && block.getY()==16 && block.getZ()==3809) {
 				int num = rnd.nextInt(10);
 				if(num == 0) {
-					if(removeKey(player, "¾Æµ§ÀÇ ÀúÅÃ º¸»ó ¿­¼è")) {
+					if(removeKey(player, "ì•„ë´ì˜ ì €íƒ ë³´ìƒ ì—´ì‡ ")) {
 						dungeon5(player);
-					} else if(removeKey(player, "¼û°ÜÁø ¾Æµ§ÀÇ ÀúÅÃ º¸»ó ¿­¼è")) {
+					} else if(removeKey(player, "ìˆ¨ê²¨ì§„ ì•„ë´ì˜ ì €íƒ ë³´ìƒ ì—´ì‡ ")) {
 						dungeon6(player);
 					}
 				}
 			}
 			if(block.getX()==75 && block.getY()==240 && block.getZ()==-10) {
-				if(removeKey(player, "Á×À½ÀÇ Å¾ 1Ãş º¸»ó ¿­¼è")) {
+				if(removeKey(player, "ì£½ìŒì˜ íƒ‘ 1ì¸µ ë³´ìƒ ì—´ì‡ ")) {
 					tower1(player);
 				}				
 			}
 			if(block.getX()==69 && block.getY()==240 && block.getZ()==-10) {
-				if(removeKey(player, "Á×À½ÀÇ Å¾ 2Ãş º¸»ó ¿­¼è")) {
+				if(removeKey(player, "ì£½ìŒì˜ íƒ‘ 2ì¸µ ë³´ìƒ ì—´ì‡ ")) {
 					tower2(player);
 				}				
 			}
 			if(block.getX()==75 && block.getY()==240 && block.getZ()==-15) {
-				if(removeKey(player, "Á×À½ÀÇ Å¾ 3Ãş º¸»ó ¿­¼è")) {
+				if(removeKey(player, "ì£½ìŒì˜ íƒ‘ 3ì¸µ ë³´ìƒ ì—´ì‡ ")) {
 					tower3(player);
 				}				
 			}
 //			if(block.getX()==3713 && block.getY()==17 && block.getZ()==3156) {
-//				if(removeKey(player, "Á×À½ÀÇ Å¾ 4Ãş º¸»ó ¿­¼è")) {
+//				if(removeKey(player, "ì£½ìŒì˜ íƒ‘ 4ì¸µ ë³´ìƒ ì—´ì‡ ")) {
 //					tower1(player);
 //				}				
 //			}
 //			if(block.getX()==3713 && block.getY()==17 && block.getZ()==3156) {
-//				if(removeKey(player, "Á×À½ÀÇ Å¾ 5Ãş º¸»ó ¿­¼è")) {
+//				if(removeKey(player, "ì£½ìŒì˜ íƒ‘ 5ì¸µ ë³´ìƒ ì—´ì‡ ")) {
 //					tower1(player);
 //				}				
 //			}
 //			if(block.getX()==3713 && block.getY()==17 && block.getZ()==3156) {
-//				if(removeKey(player, "Á×À½ÀÇ Å¾ 6Ãş º¸»ó ¿­¼è")) {
+//				if(removeKey(player, "ì£½ìŒì˜ íƒ‘ 6ì¸µ ë³´ìƒ ì—´ì‡ ")) {
 //					tower1(player);
 //				}				
 //			}
 //			if(block.getX()==3713 && block.getY()==17 && block.getZ()==3156) {
-//				if(removeKey(player, "Á×À½ÀÇ Å¾ 7Ãş º¸»ó ¿­¼è")) {
+//				if(removeKey(player, "ì£½ìŒì˜ íƒ‘ 7ì¸µ ë³´ìƒ ì—´ì‡ ")) {
 //					tower1(player);
 //				}				
 //			}
 //			if(block.getX()==3713 && block.getY()==17 && block.getZ()==3156) {
-//				if(removeKey(player, "Á×À½ÀÇ Å¾ 8Ãş º¸»ó ¿­¼è")) {
+//				if(removeKey(player, "ì£½ìŒì˜ íƒ‘ 8ì¸µ ë³´ìƒ ì—´ì‡ ")) {
 //					tower1(player);
 //				}				
 //			}
 //			if(block.getX()==3713 && block.getY()==17 && block.getZ()==3156) {
-//				if(removeKey(player, "Á×À½ÀÇ Å¾ 9Ãş º¸»ó ¿­¼è")) {
+//				if(removeKey(player, "ì£½ìŒì˜ íƒ‘ 9ì¸µ ë³´ìƒ ì—´ì‡ ")) {
 //					tower1(player);
 //				}				
 //			}
 //			if(block.getX()==3713 && block.getY()==17 && block.getZ()==3156) {
-//				if(removeKey(player, "Á×À½ÀÇ Å¾ 10Ãş º¸»ó ¿­¼è")) {
+//				if(removeKey(player, "ì£½ìŒì˜ íƒ‘ 10ì¸µ ë³´ìƒ ì—´ì‡ ")) {
 //					tower1(player);
 //				}				
 //			}
 //			if(block.getX()==3713 && block.getY()==17 && block.getZ()==3156) {
-//				if(removeKey(player, "Á×À½ÀÇ Å¾ 11Ãş º¸»ó ¿­¼è")) {
+//				if(removeKey(player, "ì£½ìŒì˜ íƒ‘ 11ì¸µ ë³´ìƒ ì—´ì‡ ")) {
 //					tower1(player);
 //				}				
 //			}
 //			if(block.getX()==3713 && block.getY()==17 && block.getZ()==3156) {
-//				if(removeKey(player, "Á×À½ÀÇ Å¾ 12Ãş º¸»ó ¿­¼è")) {
+//				if(removeKey(player, "ì£½ìŒì˜ íƒ‘ 12ì¸µ ë³´ìƒ ì—´ì‡ ")) {
 //					tower1(player);
 //				}				
 //			}
 			if(block.getX()==28 && block.getY()==62 && block.getZ()==689) {
-				if(removeKey(player, "¹Ì±Ã º¸»ó ¿­¼è")) {
+				if(removeKey(player, "ë¯¸ê¶ ë³´ìƒ ì—´ì‡ ")) {
 					dungeon7(player);
 				}				
 			}
 			if(block.getX()==709 && block.getY()==59 && block.getZ()==589) {
-				if(removeKey(player, "¾Æ¶óÅ©³×ÀÇ ÀúÁÖ º¸»ó ¿­¼è")) {
+				if(removeKey(player, "ì•„ë¼í¬ë„¤ì˜ ì €ì£¼ ë³´ìƒ ì—´ì‡ ")) {
 					dungeon8(player);
 					
 					QuestBoard cb = new QuestBoard();
-					if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¾Æ¶óÅ©³×ÀÇ ÀúÁÖ===")) {
+					if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì•„ë¼í¬ë„¤ì˜ ì €ì£¼===")) {
 						int qNum = cb.getNum(player);
 						cb.mq40(player, qNum + 1);
 					}
@@ -185,11 +185,11 @@ public class LootChest {
 		ItemStack var1 = new ItemStack(Material.OAK_LEAVES);
 		ItemMeta var1Im = var1.getItemMeta();
 		var1Im.setLocalizedName("7,0,0,0,0,0,0,0,0,0,15");
-		var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "¼¶±¤¿­±Ç");
+		var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì„¬ê´‘ì—´ê¶Œ");
 		ArrayList<String> var1Lore = new ArrayList();
-		var1Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 15");
+		var1Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 15");
 		var1Lore.add(ChatColor.GRAY + " ");
-		var1Lore.add(ChatColor.GRAY + "Æò¹üÇÏ°Ô »ı±ä °Ë");
+		var1Lore.add(ChatColor.GRAY + "í‰ë²”í•˜ê²Œ ìƒê¸´ ê²€");
 		var1Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var1Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var1Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -200,11 +200,11 @@ public class LootChest {
 		ItemStack var2 = new ItemStack(Material.COBBLESTONE_WALL);
 		ItemMeta var2Im = var2.getItemMeta();
 		var2Im.setLocalizedName("0,0,0,0,0,0,0,0,0,7,15");
-		var2Im.setDisplayName(ChatColor.LIGHT_PURPLE + "±Í°î¿¬±Ç");
+		var2Im.setDisplayName(ChatColor.LIGHT_PURPLE + "ê·€ê³¡ì—°ê¶Œ");
 		ArrayList<String> var2Lore = new ArrayList();
-		var2Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 15");
+		var2Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 15");
 		var2Lore.add(ChatColor.GRAY + " ");
-		var2Lore.add(ChatColor.GRAY + "¿ö±×´Ò ±â»ç´ÜÀÌ »ç¿ëÇÏ´ø °Ë");
+		var2Lore.add(ChatColor.GRAY + "ì›Œê·¸ë‹ ê¸°ì‚¬ë‹¨ì´ ì‚¬ìš©í•˜ë˜ ê²€");
 		var2Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var2Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var2Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -218,11 +218,11 @@ public class LootChest {
 		var3.setItemMeta(var3meta);
 		ItemMeta var3Im = var3.getItemMeta();
 		var3Im.setLocalizedName("0,0,0,0,0,10,0,0,0,0,20");
-		var3Im.setDisplayName(ChatColor.LIGHT_PURPLE + "¹é·Î");
+		var3Im.setDisplayName(ChatColor.LIGHT_PURPLE + "ë°±ë¡œ");
 		ArrayList<String> var3Lore = new ArrayList();
-		var3Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 20");
+		var3Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 20");
 		var3Lore.add(ChatColor.GRAY + " ");
-		var3Lore.add(ChatColor.GRAY + "±êÅĞ·Î ¸¸µé¾îÁø °©¿Ê");
+		var3Lore.add(ChatColor.GRAY + "ê¹ƒí„¸ë¡œ ë§Œë“¤ì–´ì§„ ê°‘ì˜·");
 		var3Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var3Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var3Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -236,9 +236,9 @@ public class LootChest {
 		var4.setItemMeta(var4meta);
 		ItemMeta var4Im = var4.getItemMeta();
 		var4Im.setLocalizedName("0,0,0,0,0,0,0,0,0,5");
-		var4Im.setDisplayName(ChatColor.YELLOW + "ÆÄµµ");
+		var4Im.setDisplayName(ChatColor.YELLOW + "íŒŒë„");
 		ArrayList<String> var4Lore = new ArrayList();
-		var4Lore.add(ChatColor.GRAY + "½ÉÇØÀÇ Æ¯¼öÇÑ ±¤¹°·Î ¸¸µé¾îÁø ½Å¹ß");
+		var4Lore.add(ChatColor.GRAY + "ì‹¬í•´ì˜ íŠ¹ìˆ˜í•œ ê´‘ë¬¼ë¡œ ë§Œë“¤ì–´ì§„ ì‹ ë°œ");
 		var4Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var4Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var4Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -249,11 +249,11 @@ public class LootChest {
 		ItemStack var5 = new ItemStack(Material.BLACK_CARPET);
 		ItemMeta var5Im = var5.getItemMeta();
 		var5Im.setLocalizedName("20,0,0,0,5,0,0,0,0,0,25");
-		var5Im.setDisplayName(ChatColor.AQUA + "±ÍÇ³¹®");
+		var5Im.setDisplayName(ChatColor.AQUA + "ê·€í’ë¬¸");
 		ArrayList<String> var5Lore = new ArrayList();
-		var5Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 25");
+		var5Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 25");
 		var5Lore.add(ChatColor.GRAY + " ");
-		var5Lore.add(ChatColor.GRAY + "¹Ù´ÙÀÇ ºĞ³ë°¡ ´ã±ä µµ³¢");
+		var5Lore.add(ChatColor.GRAY + "ë°”ë‹¤ì˜ ë¶„ë…¸ê°€ ë‹´ê¸´ ë„ë¼");
 		var5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -263,9 +263,9 @@ public class LootChest {
 		
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.LIGHT_PURPLE + "Äù½ºÆ®: ÇØÀû¼±ÀÇ º¸¹°");
+		scrollIm.setDisplayName(ChatColor.LIGHT_PURPLE + "í€˜ìŠ¤íŠ¸: í•´ì ì„ ì˜ ë³´ë¬¼");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'ÇØÀû¼±ÀÇ º¸¹°' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'í•´ì ì„ ì˜ ë³´ë¬¼' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -320,11 +320,11 @@ public class LootChest {
 		ItemStack var1 = new ItemStack(Material.GREEN_CARPET);
 		ItemMeta var1Im = var1.getItemMeta();
 		var1Im.setLocalizedName("30,0,0,0,10,0,0,0,0,0,50");
-		var1Im.setDisplayName(ChatColor.AQUA + "ÁÖ¸¶À±È¸");
+		var1Im.setDisplayName(ChatColor.AQUA + "ì£¼ë§ˆìœ¤íšŒ");
 		ArrayList<String> var1Lore = new ArrayList();
-		var1Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 50");
+		var1Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 50");
 		var1Lore.add(ChatColor.GRAY + " ");
-		var1Lore.add(ChatColor.GRAY + "¾Ç¸¶ÀÇ ÈûÀÌ Àáµé¾îÀÖ´Â µµ³¢");
+		var1Lore.add(ChatColor.GRAY + "ì•…ë§ˆì˜ í˜ì´ ì ë“¤ì–´ìˆëŠ” ë„ë¼");
 		var1Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var1Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var1Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -338,12 +338,12 @@ public class LootChest {
 		var2.setItemMeta(var2meta);
 		ItemMeta var2Im = var2.getItemMeta();
 		var2Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,60");
-		var2Im.setDisplayName(ChatColor.GREEN + "½£ÀÇ °¡È£°¡ ´ã±ä Çï¸ä");
+		var2Im.setDisplayName(ChatColor.GREEN + "ìˆ²ì˜ ê°€í˜¸ê°€ ë‹´ê¸´ í—¬ë©§");
 		ArrayList<String> var2Lore = new ArrayList();
-		var2Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 60");
+		var2Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 60");
 		var2Lore.add(ChatColor.GRAY + " ");
-		var2Lore.add(ChatColor.GRAY + "½Ì±×·¯¿î ´À³¦ÀÌ ³ª´Â Çï¸ä");
-		var2Lore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+		var2Lore.add(ChatColor.GRAY + "ì‹±ê·¸ëŸ¬ìš´ ëŠë‚Œì´ ë‚˜ëŠ” í—¬ë©§");
+		var2Lore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 		var2Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var2Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var2Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -357,12 +357,12 @@ public class LootChest {
 		var3.setItemMeta(var3meta);
 		ItemMeta var3Im = var3.getItemMeta();
 		var3Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,60");
-		var3Im.setDisplayName(ChatColor.GREEN + "½£ÀÇ °¡È£°¡ ´ã±ä °©¿Ê");
+		var3Im.setDisplayName(ChatColor.GREEN + "ìˆ²ì˜ ê°€í˜¸ê°€ ë‹´ê¸´ ê°‘ì˜·");
 		ArrayList<String> var3Lore = new ArrayList();
-		var3Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 60");
+		var3Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 60");
 		var3Lore.add(ChatColor.GRAY + " ");
-		var3Lore.add(ChatColor.GRAY + "½Ì±×·¯¿î ´À³¦ÀÌ ³ª´Â °©¿Ê");
-		var3Lore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+		var3Lore.add(ChatColor.GRAY + "ì‹±ê·¸ëŸ¬ìš´ ëŠë‚Œì´ ë‚˜ëŠ” ê°‘ì˜·");
+		var3Lore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 		var3Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var3Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var3Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -376,12 +376,12 @@ public class LootChest {
 		var4.setItemMeta(var4meta);
 		ItemMeta var4Im = var4.getItemMeta();
 		var4Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,60");
-		var4Im.setDisplayName(ChatColor.GREEN + "½£ÀÇ °¡È£°¡ ´ã±ä °¢¹İ");
+		var4Im.setDisplayName(ChatColor.GREEN + "ìˆ²ì˜ ê°€í˜¸ê°€ ë‹´ê¸´ ê°ë°˜");
 		ArrayList<String> var4Lore = new ArrayList();
-		var4Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 60");
+		var4Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 60");
 		var4Lore.add(ChatColor.GRAY + " ");
-		var4Lore.add(ChatColor.GRAY + "½Ì±×·¯¿î ´À³¦ÀÌ ³ª´Â °¢¹İ");
-		var4Lore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+		var4Lore.add(ChatColor.GRAY + "ì‹±ê·¸ëŸ¬ìš´ ëŠë‚Œì´ ë‚˜ëŠ” ê°ë°˜");
+		var4Lore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 		var4Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var4Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var4Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -395,12 +395,12 @@ public class LootChest {
 		var5.setItemMeta(var5meta);
 		ItemMeta var5Im = var5.getItemMeta();
 		var5Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,60");
-		var5Im.setDisplayName(ChatColor.GREEN + "½£ÀÇ °¡È£°¡ ´ã±ä ½Å¹ß");
+		var5Im.setDisplayName(ChatColor.GREEN + "ìˆ²ì˜ ê°€í˜¸ê°€ ë‹´ê¸´ ì‹ ë°œ");
 		ArrayList<String> var5Lore = new ArrayList();
-		var5Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 60");
+		var5Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 60");
 		var5Lore.add(ChatColor.GRAY + " ");
-		var5Lore.add(ChatColor.GRAY + "½Ì±×·¯¿î ´À³¦ÀÌ ³ª´Â ½Å¹ß");
-		var5Lore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+		var5Lore.add(ChatColor.GRAY + "ì‹±ê·¸ëŸ¬ìš´ ëŠë‚Œì´ ë‚˜ëŠ” ì‹ ë°œ");
+		var5Lore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 		var5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -410,9 +410,9 @@ public class LootChest {
 		
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.LIGHT_PURPLE + "Äù½ºÆ®: À¯ÀûÀ» Á¤È­ÇÏ´Â ÀÚ");
+		scrollIm.setDisplayName(ChatColor.LIGHT_PURPLE + "í€˜ìŠ¤íŠ¸: ìœ ì ì„ ì •í™”í•˜ëŠ” ì");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'À¯ÀûÀ» Á¤È­ÇÏ´Â ÀÚ' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ìœ ì ì„ ì •í™”í•˜ëŠ” ì' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -471,11 +471,11 @@ public class LootChest {
 		ItemStack var1 = new ItemStack(Material.STONE);
 		ItemMeta var1Im = var1.getItemMeta();
 		var1Im.setLocalizedName("250,100,0,100,10,200,100,100,100,200,200");
-		var1Im.setDisplayName(ChatColor.AQUA + "¿äÁ¤¿ÕÀÇ °Ë");
+		var1Im.setDisplayName(ChatColor.AQUA + "ìš”ì •ì™•ì˜ ê²€");
 		ArrayList<String> var1Lore = new ArrayList();
-		var1Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 200");
+		var1Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 200");
 		var1Lore.add(ChatColor.GRAY + " ");
-		var1Lore.add(ChatColor.GRAY + "¿äÁ¤¿ÕÀÌ »ç¿ëÇÏ´Â °ËÀÌ´Ù.");
+		var1Lore.add(ChatColor.GRAY + "ìš”ì •ì™•ì´ ì‚¬ìš©í•˜ëŠ” ê²€ì´ë‹¤.");
 		var1Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var1Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var1Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -486,12 +486,12 @@ public class LootChest {
 		ItemStack var2 = new ItemStack(Material.IRON_HELMET);
 		ItemMeta var2Im = var2.getItemMeta();
 		var2Im.setLocalizedName("100,0,0,0,0,0,0,0,0,0,210");
-		var2Im.setDisplayName(ChatColor.GREEN + "·ç³ª Æä¾î¸® Çï¸ä");
+		var2Im.setDisplayName(ChatColor.GREEN + "ë£¨ë‚˜ í˜ì–´ë¦¬ í—¬ë©§");
 		ArrayList<String> var2Lore = new ArrayList();
-		var2Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 210");
+		var2Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 210");
 		var2Lore.add(ChatColor.GRAY + " ");
-		var2Lore.add(ChatColor.GRAY + "¿äÁ¤ °¡·çÀÇ ÈûÀ¸·Î ¸¸µé¾îÁø Çï¸ä");
-		var2Lore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+		var2Lore.add(ChatColor.GRAY + "ìš”ì • ê°€ë£¨ì˜ í˜ìœ¼ë¡œ ë§Œë“¤ì–´ì§„ í—¬ë©§");
+		var2Lore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 		var2Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var2Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var2Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -502,12 +502,12 @@ public class LootChest {
 		ItemStack var3 = new ItemStack(Material.IRON_CHESTPLATE);
 		ItemMeta var3Im = var3.getItemMeta();
 		var3Im.setLocalizedName("100,0,0,0,0,0,0,0,0,0,210");
-		var3Im.setDisplayName(ChatColor.GREEN + "·ç³ª Æä¾î¸® °©¿Ê");
+		var3Im.setDisplayName(ChatColor.GREEN + "ë£¨ë‚˜ í˜ì–´ë¦¬ ê°‘ì˜·");
 		ArrayList<String> var3Lore = new ArrayList();
-		var3Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 210");
+		var3Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 210");
 		var3Lore.add(ChatColor.GRAY + " ");
-		var3Lore.add(ChatColor.GRAY + "¿äÁ¤ °¡·çÀÇ ÈûÀ¸·Î ¸¸µé¾îÁø °©¿Ê");
-		var3Lore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+		var3Lore.add(ChatColor.GRAY + "ìš”ì • ê°€ë£¨ì˜ í˜ìœ¼ë¡œ ë§Œë“¤ì–´ì§„ ê°‘ì˜·");
+		var3Lore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 		var3Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var3Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var3Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -518,12 +518,12 @@ public class LootChest {
 		ItemStack var4 = new ItemStack(Material.IRON_LEGGINGS);
 		ItemMeta var4Im = var4.getItemMeta();
 		var4Im.setLocalizedName("100,0,0,0,0,0,0,0,0,0,210");
-		var4Im.setDisplayName(ChatColor.GREEN + "·ç³ª Æä¾î¸® °¢¹İ");
+		var4Im.setDisplayName(ChatColor.GREEN + "ë£¨ë‚˜ í˜ì–´ë¦¬ ê°ë°˜");
 		ArrayList<String> var4Lore = new ArrayList();
-		var4Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 210");
+		var4Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 210");
 		var4Lore.add(ChatColor.GRAY + " ");
-		var4Lore.add(ChatColor.GRAY + "¿äÁ¤ °¡·çÀÇ ÈûÀ¸·Î ¸¸µé¾îÁø °¢¹İ");
-		var4Lore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+		var4Lore.add(ChatColor.GRAY + "ìš”ì • ê°€ë£¨ì˜ í˜ìœ¼ë¡œ ë§Œë“¤ì–´ì§„ ê°ë°˜");
+		var4Lore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 		var4Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var4Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var4Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -534,12 +534,12 @@ public class LootChest {
 		ItemStack var5 = new ItemStack(Material.IRON_BOOTS);
 		ItemMeta var5Im = var5.getItemMeta();
 		var5Im.setLocalizedName("100,0,0,0,0,0,0,0,0,0,210");
-		var5Im.setDisplayName(ChatColor.GREEN + "·ç³ª Æä¾î¸® ½Å¹ß");
+		var5Im.setDisplayName(ChatColor.GREEN + "ë£¨ë‚˜ í˜ì–´ë¦¬ ì‹ ë°œ");
 		ArrayList<String> var5Lore = new ArrayList();
-		var5Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 210");
+		var5Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 210");
 		var5Lore.add(ChatColor.GRAY + " ");
-		var5Lore.add(ChatColor.GRAY + "¿äÁ¤ °¡·çÀÇ ÈûÀ¸·Î ¸¸µé¾îÁø ½Å¹ß");
-		var5Lore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+		var5Lore.add(ChatColor.GRAY + "ìš”ì • ê°€ë£¨ì˜ í˜ìœ¼ë¡œ ë§Œë“¤ì–´ì§„ ì‹ ë°œ");
+		var5Lore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 		var5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -549,9 +549,9 @@ public class LootChest {
 		
 		ItemStack var6 = new ItemStack(Material.POTION);
 		ItemMeta var6Im = var6.getItemMeta();
-		var6Im.setDisplayName(ChatColor.LIGHT_PURPLE + "»ç¶ûÀÇ ¹¦¾à");
+		var6Im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì‚¬ë‘ì˜ ë¬˜ì•½");
 		ArrayList<String> var6Lore = new ArrayList();
-		var6Lore.add(ChatColor.GRAY + "´« ¹Ø¿¡ ¹Ù¸£¸é º¸ÀÌ´Â »ç¶÷°ú »ç¶û¿¡ ºüÁö°Ô µÈ´Ù°í ÇÑ´Ù.");
+		var6Lore.add(ChatColor.GRAY + "ëˆˆ ë°‘ì— ë°”ë¥´ë©´ ë³´ì´ëŠ” ì‚¬ëŒê³¼ ì‚¬ë‘ì— ë¹ ì§€ê²Œ ëœë‹¤ê³  í•œë‹¤.");
 		var6Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var6Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var6Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -567,12 +567,12 @@ public class LootChest {
 		ItemStack var7 = new ItemStack(Material.OAK_PLANKS);
 		ItemMeta var7Im = var7.getItemMeta();
 		var7Im.setLocalizedName("500,0,0,300,400,500,0,0,0,0,250");
-		var7Im.setDisplayName(ChatColor.DARK_RED + "ÀÏ·ç½Ãµ¥ÀÌÅÍ");
+		var7Im.setDisplayName(ChatColor.DARK_RED + "ì¼ë£¨ì‹œë°ì´í„°");
 		ArrayList<String> var7Lore = new ArrayList();
-		var7Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 250");
+		var7Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 250");
 		var7Lore.add(ChatColor.GRAY + " ");
-		var7Lore.add(ChatColor.GRAY + "ºÎÀ¯¼º 50Ãş º¸½º¿¡°Ô µå¶øµÈ ¸¶°Ë");
-		var7Lore.add(ChatColor.GRAY + "Æò¹üÇÑ ¸¶½ºÅÍ Å¬·¡½ºÀÇ °Ëº¸´Ùµµ ¼º´ÉÀÌ ÁÁ´Ù.");
+		var7Lore.add(ChatColor.GRAY + "ë¶€ìœ ì„± 50ì¸µ ë³´ìŠ¤ì—ê²Œ ë“œëëœ ë§ˆê²€");
+		var7Lore.add(ChatColor.GRAY + "í‰ë²”í•œ ë§ˆìŠ¤í„° í´ë˜ìŠ¤ì˜ ê²€ë³´ë‹¤ë„ ì„±ëŠ¥ì´ ì¢‹ë‹¤.");
 		var7Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var7Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var7Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -583,11 +583,11 @@ public class LootChest {
 		ItemStack var8 = new ItemStack(Material.CHAINMAIL_CHESTPLATE);
 		ItemMeta var8Im = var8.getItemMeta();
 		var8Im.setLocalizedName("200,0,0,0,0,200,0,0,0,200,180");
-		var8Im.setDisplayName(ChatColor.LIGHT_PURPLE + "¾îÇ»Áî");
+		var8Im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì–´í“¨ì¦ˆ");
 		ArrayList<String> var8Lore = new ArrayList();
-		var8Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 180");
+		var8Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 180");
 		var8Lore.add(ChatColor.GRAY + " ");
-		var8Lore.add(ChatColor.GRAY + "¿äÁ¤ ´ëÀåÀåÀÌ°¡ ¸¸µç °©¿Ê");
+		var8Lore.add(ChatColor.GRAY + "ìš”ì • ëŒ€ì¥ì¥ì´ê°€ ë§Œë“  ê°‘ì˜·");
 		var8Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var8Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var8Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -598,12 +598,12 @@ public class LootChest {
 		ItemStack var9 = new ItemStack(Material.CHAINMAIL_HELMET);
 		ItemMeta var9Im = var9.getItemMeta();
 		var9Im.setLocalizedName("0,0,0,0,0,500,0,0,0,0,180");
-		var9Im.setDisplayName(ChatColor.YELLOW + "¹«°£³ªÂû");
+		var9Im.setDisplayName(ChatColor.YELLOW + "ë¬´ê°„ë‚˜ì°°");
 		ArrayList<String> var9Lore = new ArrayList();
-		var9Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 180");
+		var9Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 180");
 		var9Lore.add(ChatColor.GRAY + " ");
-		var9Lore.add(ChatColor.GRAY + "Çâ½Å·áÀÇ ³ª¶ó¿¡¼­ ¼öÀÔÇÑ Çï¸ä");
-		var9Lore.add(ChatColor.GRAY + "±İ°­ºÒ±«ÀÇ ÈûÀ» ´À³¥ ¼ö ÀÖ´Ù.");
+		var9Lore.add(ChatColor.GRAY + "í–¥ì‹ ë£Œì˜ ë‚˜ë¼ì—ì„œ ìˆ˜ì…í•œ í—¬ë©§");
+		var9Lore.add(ChatColor.GRAY + "ê¸ˆê°•ë¶ˆê´´ì˜ í˜ì„ ëŠë‚„ ìˆ˜ ìˆë‹¤.");
 		var9Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var9Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var9Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -614,11 +614,11 @@ public class LootChest {
 		ItemStack var10 = new ItemStack(Material.CYAN_WOOL);
 		ItemMeta var10Im = var10.getItemMeta();
 		var10Im.setLocalizedName("250,100,0,100,10,200,100,100,100,200,200");
-		var10Im.setDisplayName(ChatColor.AQUA + "¿äÁ¤¿©¿ÕÀÇ °Ë");
+		var10Im.setDisplayName(ChatColor.AQUA + "ìš”ì •ì—¬ì™•ì˜ ê²€");
 		ArrayList<String> var10Lore = new ArrayList();
-		var10Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 200");
+		var10Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 200");
 		var10Lore.add(ChatColor.GRAY + " ");
-		var10Lore.add(ChatColor.GRAY + "¿äÁ¤¿©¿ÕÀÌ »ç¿ëÇÏ´Â °ËÀÌ´Ù.");
+		var10Lore.add(ChatColor.GRAY + "ìš”ì •ì—¬ì™•ì´ ì‚¬ìš©í•˜ëŠ” ê²€ì´ë‹¤.");
 		var10Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var10Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var10Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -628,7 +628,7 @@ public class LootChest {
 		
 		ItemStack emerald = new ItemStack(Material.EMERALD_BLOCK, num11);
 		ItemMeta im = emerald.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		emerald.setItemMeta(im);
 		inv.setItem(0, emerald);
 		
@@ -678,25 +678,25 @@ public class LootChest {
 	public void dungeon4(Player player) {
 		Inventory inv = Bukkit.createInventory(player, 9, "Dungeon Reward");
 		int idx;
-		int num1 = rnd.nextInt(20); // ±ÍÆÈ¹®
-		int num2 = rnd.nextInt(20); // ¼¼Æ®
-		int num3 = rnd.nextInt(15); // ¼¼Æ®
-		int num4 = rnd.nextInt(8); // ¼¼Æ®
-		int num5 = rnd.nextInt(10);	// ¼¼Æ®
-		int num6 = rnd.nextInt(50);	// ¹«°£³ú½Å
-		int num7 = rnd.nextInt(500); //Å©¸®½ºÅ»¶óÀÌÁî ÁÖ±«	
-		int num8 = rnd.nextInt(50);	// ºÎÁ¶È­ÀÇ °Ë
-		int num9 = rnd.nextInt(40);	// ¾óÀ½ È°
+		int num1 = rnd.nextInt(20); // ê·€íŒ”ë¬¸
+		int num2 = rnd.nextInt(20); // ì„¸íŠ¸
+		int num3 = rnd.nextInt(15); // ì„¸íŠ¸
+		int num4 = rnd.nextInt(8); // ì„¸íŠ¸
+		int num5 = rnd.nextInt(10);	// ì„¸íŠ¸
+		int num6 = rnd.nextInt(50);	// ë¬´ê°„ë‡Œì‹ 
+		int num7 = rnd.nextInt(500); //í¬ë¦¬ìŠ¤íƒˆë¼ì´ì¦ˆ ì£¼ê´´	
+		int num8 = rnd.nextInt(50);	// ë¶€ì¡°í™”ì˜ ê²€
+		int num9 = rnd.nextInt(40);	// ì–¼ìŒ í™œ
 		int num10 = rnd.nextInt(2) + 1;
 		
 		ItemStack var1 = new ItemStack(Material.CYAN_WOOL);
 		ItemMeta var1Im = var1.getItemMeta();
 		var1Im.setLocalizedName("0,0,200,0,0,400,400,0,0,0,230");
-		var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "±ÍÆÈ¹®");
+		var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "ê·€íŒ”ë¬¸");
 		ArrayList<String> var1Lore = new ArrayList();
-		var1Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 230");
+		var1Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 230");
 		var1Lore.add(ChatColor.GRAY + " ");
-		var1Lore.add(ChatColor.GRAY + "³Ã±â¸¦ ÀÌ¿ëÇØ ¹ú·¹µé¿¡°Ô ÇÇÇØ¸¦ ÁÖ±â ½¬¿î °Ë");
+		var1Lore.add(ChatColor.GRAY + "ëƒ‰ê¸°ë¥¼ ì´ìš©í•´ ë²Œë ˆë“¤ì—ê²Œ í”¼í•´ë¥¼ ì£¼ê¸° ì‰¬ìš´ ê²€");
 		var1Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var1Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var1Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -707,13 +707,13 @@ public class LootChest {
 		ItemStack var2 = new ItemStack(Material.IRON_HELMET);
 		ItemMeta var2Im = var2.getItemMeta();
 		var2Im.setLocalizedName("0,0,0,0,0,0,0,0,0,300,250");
-		var2Im.setDisplayName(ChatColor.GREEN + "³ÃÈ¤ÇÑ ¹Ì¸íÀÇ Çï¸ä");
+		var2Im.setDisplayName(ChatColor.GREEN + "ëƒ‰í˜¹í•œ ë¯¸ëª…ì˜ í—¬ë©§");
 		ArrayList<String> var2Lore = new ArrayList();
-		var2Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 250");
+		var2Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 250");
 		var2Lore.add(ChatColor.GRAY + " ");
-		var2Lore.add(ChatColor.GRAY + "Â÷°¡¿î ±â¿îÀÌ ´À²¸Áö´Â Çï¸ä");
-		var2Lore.add(ChatColor.GRAY + "Âø¿ëÇÏ¸é Ãß¿î °÷¿¡¼­µµ ¹öÆ¿ ¼ö ÀÖÀ» °Í °°´Ù.");
-		var2Lore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+		var2Lore.add(ChatColor.GRAY + "ì°¨ê°€ìš´ ê¸°ìš´ì´ ëŠê»´ì§€ëŠ” í—¬ë©§");
+		var2Lore.add(ChatColor.GRAY + "ì°©ìš©í•˜ë©´ ì¶”ìš´ ê³³ì—ì„œë„ ë²„í‹¸ ìˆ˜ ìˆì„ ê²ƒ ê°™ë‹¤.");
+		var2Lore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 		var2Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var2Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var2Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -724,13 +724,13 @@ public class LootChest {
 		ItemStack var3 = new ItemStack(Material.IRON_CHESTPLATE);
 		ItemMeta var3Im = var3.getItemMeta();
 		var3Im.setLocalizedName("0,0,0,0,0,0,0,0,0,300,250");
-		var3Im.setDisplayName(ChatColor.GREEN + "³ÃÈ¤ÇÑ ¹Ì¸íÀÇ °©¿Ê");
+		var3Im.setDisplayName(ChatColor.GREEN + "ëƒ‰í˜¹í•œ ë¯¸ëª…ì˜ ê°‘ì˜·");
 		ArrayList<String> var3Lore = new ArrayList();
-		var3Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 250");
+		var3Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 250");
 		var3Lore.add(ChatColor.GRAY + " ");
-		var3Lore.add(ChatColor.GRAY + "Â÷°¡¿î ±â¿îÀÌ ´À²¸Áö´Â °©¿Ê");
-		var3Lore.add(ChatColor.GRAY + "Âø¿ëÇÏ¸é Ãß¿î °÷¿¡¼­µµ ¹öÆ¿ ¼ö ÀÖÀ» °Í °°´Ù.");
-		var3Lore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+		var3Lore.add(ChatColor.GRAY + "ì°¨ê°€ìš´ ê¸°ìš´ì´ ëŠê»´ì§€ëŠ” ê°‘ì˜·");
+		var3Lore.add(ChatColor.GRAY + "ì°©ìš©í•˜ë©´ ì¶”ìš´ ê³³ì—ì„œë„ ë²„í‹¸ ìˆ˜ ìˆì„ ê²ƒ ê°™ë‹¤.");
+		var3Lore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 		var3Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var3Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var3Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -741,13 +741,13 @@ public class LootChest {
 		ItemStack var4 = new ItemStack(Material.IRON_LEGGINGS);
 		ItemMeta var4Im = var4.getItemMeta();
 		var4Im.setLocalizedName("0,0,0,0,0,0,0,0,0,300,250");
-		var4Im.setDisplayName(ChatColor.GREEN + "³ÃÈ¤ÇÑ ¹Ì¸íÀÇ °¢¹İ");
+		var4Im.setDisplayName(ChatColor.GREEN + "ëƒ‰í˜¹í•œ ë¯¸ëª…ì˜ ê°ë°˜");
 		ArrayList<String> var4Lore = new ArrayList();
-		var4Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 250");
+		var4Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 250");
 		var4Lore.add(ChatColor.GRAY + " ");
-		var4Lore.add(ChatColor.GRAY + "Â÷°¡¿î ±â¿îÀÌ ´À²¸Áö´Â °¢¹İ");
-		var4Lore.add(ChatColor.GRAY + "Âø¿ëÇÏ¸é Ãß¿î °÷¿¡¼­µµ ¹öÆ¿ ¼ö ÀÖÀ» °Í °°´Ù.");
-		var4Lore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+		var4Lore.add(ChatColor.GRAY + "ì°¨ê°€ìš´ ê¸°ìš´ì´ ëŠê»´ì§€ëŠ” ê°ë°˜");
+		var4Lore.add(ChatColor.GRAY + "ì°©ìš©í•˜ë©´ ì¶”ìš´ ê³³ì—ì„œë„ ë²„í‹¸ ìˆ˜ ìˆì„ ê²ƒ ê°™ë‹¤.");
+		var4Lore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 		var4Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var4Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var4Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -758,13 +758,13 @@ public class LootChest {
 		ItemStack var5 = new ItemStack(Material.IRON_BOOTS);
 		ItemMeta var5Im = var5.getItemMeta();
 		var5Im.setLocalizedName("0,0,0,0,0,0,0,0,0,300,250");
-		var5Im.setDisplayName(ChatColor.GREEN + "³ÃÈ¤ÇÑ ¹Ì¸íÀÇ ½Å¹ß");
+		var5Im.setDisplayName(ChatColor.GREEN + "ëƒ‰í˜¹í•œ ë¯¸ëª…ì˜ ì‹ ë°œ");
 		ArrayList<String> var5Lore = new ArrayList();
-		var5Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 250");
+		var5Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 250");
 		var5Lore.add(ChatColor.GRAY + " ");
-		var5Lore.add(ChatColor.GRAY + "Â÷°¡¿î ±â¿îÀÌ ´À²¸Áö´Â ½Å¹ß");
-		var5Lore.add(ChatColor.GRAY + "Âø¿ëÇÏ¸é Ãß¿î °÷¿¡¼­µµ ¹öÆ¿ ¼ö ÀÖÀ» °Í °°´Ù.");
-		var5Lore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+		var5Lore.add(ChatColor.GRAY + "ì°¨ê°€ìš´ ê¸°ìš´ì´ ëŠê»´ì§€ëŠ” ì‹ ë°œ");
+		var5Lore.add(ChatColor.GRAY + "ì°©ìš©í•˜ë©´ ì¶”ìš´ ê³³ì—ì„œë„ ë²„í‹¸ ìˆ˜ ìˆì„ ê²ƒ ê°™ë‹¤.");
+		var5Lore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 		var5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -775,11 +775,11 @@ public class LootChest {
 		ItemStack var6 = new ItemStack(Material.IRON_BOOTS);
 		ItemMeta var6Im = var6.getItemMeta();
 		var6Im.setLocalizedName("1,1,1,1,1,1,1,1,1,1,250");
-		var6Im.setDisplayName(ChatColor.AQUA + "¹«°£³ú½Å");
+		var6Im.setDisplayName(ChatColor.AQUA + "ë¬´ê°„ë‡Œì‹ ");
 		ArrayList<String> var6Lore = new ArrayList();
-		var6Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 250");
+		var6Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 250");
 		var6Lore.add(ChatColor.GRAY + " ");
-		var6Lore.add(ChatColor.GRAY + "¾Ë ¼ö ¾ø´Â Àç·á·Î ¸¸µé¾îÁø Æ¯º°ÇÑ ½Å¹ß");
+		var6Lore.add(ChatColor.GRAY + "ì•Œ ìˆ˜ ì—†ëŠ” ì¬ë£Œë¡œ ë§Œë“¤ì–´ì§„ íŠ¹ë³„í•œ ì‹ ë°œ");
 		var6Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var6Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var6Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -789,9 +789,9 @@ public class LootChest {
 		
 		ItemStack var7 = new ItemStack(Material.NETHERITE_INGOT);
 		ItemMeta var7Im = var7.getItemMeta();
-		var7Im.setDisplayName(ChatColor.DARK_RED + "Å©¸®½ºÅ»¶óÀÌÁî ÁÖ±«");
+		var7Im.setDisplayName(ChatColor.DARK_RED + "í¬ë¦¬ìŠ¤íƒˆë¼ì´ì¦ˆ ì£¼ê´´");
 		ArrayList<String> var7Lore = new ArrayList();
-		var7Lore.add(ChatColor.GRAY + "ºÎÁ¶È­ÀÇ °ËÀÇ ÃÊ¿ù ¼ÒÀç");
+		var7Lore.add(ChatColor.GRAY + "ë¶€ì¡°í™”ì˜ ê²€ì˜ ì´ˆì›” ì†Œì¬");
 		var7Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var7Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var7Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -802,9 +802,9 @@ public class LootChest {
 		ItemStack var8 = new ItemStack(Material.BIRCH_LOG);
 		ItemMeta var8Im = var8.getItemMeta();
 		var8Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,0");
-		var8Im.setDisplayName(ChatColor.LIGHT_PURPLE + "ºÎÁ¶È­ÀÇ °Ë");
+		var8Im.setDisplayName(ChatColor.LIGHT_PURPLE + "ë¶€ì¡°í™”ì˜ ê²€");
 		ArrayList<String> var8Lore = new ArrayList();
-		var8Lore.add(ChatColor.GRAY + "¾Æ¹« Èûµµ ´À²¸ÁöÁö ¾Ê´Â °Ë");
+		var8Lore.add(ChatColor.GRAY + "ì•„ë¬´ í˜ë„ ëŠê»´ì§€ì§€ ì•ŠëŠ” ê²€");
 		var8Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var8Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var8Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -815,9 +815,9 @@ public class LootChest {
 		ItemStack var9 = new ItemStack(Material.DEAD_BRAIN_CORAL_BLOCK);
 		ItemMeta var9Im = var9.getItemMeta();
 		var9Im.setLocalizedName("0");
-		var9Im.setDisplayName(ChatColor.GOLD + "¸şºñ¿ì½º");
+		var9Im.setDisplayName(ChatColor.GOLD + "ë«¼ë¹„ìš°ìŠ¤");
 		ArrayList<String> var9Lore = new ArrayList();
-		var9Lore.add(ChatColor.GRAY + "³Ã±â°¡ ´À²¸Áö´Â È°");
+		var9Lore.add(ChatColor.GRAY + "ëƒ‰ê¸°ê°€ ëŠê»´ì§€ëŠ” í™œ");
 		var9Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var9Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var9Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -827,7 +827,7 @@ public class LootChest {
 		
 		ItemStack emerald = new ItemStack(Material.SCUTE, num10);
 		ItemMeta im = emerald.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		emerald.setItemMeta(im);
 		inv.setItem(0, emerald);
 		
@@ -873,25 +873,25 @@ public class LootChest {
 	public void dungeon5(Player player) {
 		Inventory inv = Bukkit.createInventory(player, 9, "Dungeon Reward");
 		int idx;
-		int num1 = rnd.nextInt(80); // ÀúÁÖ¹ŞÀº °Ë
-		int num2 = rnd.nextInt(30); // ¼¼Æ®
-		int num3 = rnd.nextInt(18); // ¼¼Æ®
-		int num4 = rnd.nextInt(13); // ¼¼Æ®
-		int num5 = rnd.nextInt(24);	// ¼¼Æ®
-		int num6 = rnd.nextInt(13);	// ¿ª¸°
-		int num7 = rnd.nextInt(15); // ±Í½Å¸ê¿­  
-		int num8 = rnd.nextInt(20);	// À±È¸
-		int num9 = rnd.nextInt(10);	// È¸Çâ
+		int num1 = rnd.nextInt(80); // ì €ì£¼ë°›ì€ ê²€
+		int num2 = rnd.nextInt(30); // ì„¸íŠ¸
+		int num3 = rnd.nextInt(18); // ì„¸íŠ¸
+		int num4 = rnd.nextInt(13); // ì„¸íŠ¸
+		int num5 = rnd.nextInt(24);	// ì„¸íŠ¸
+		int num6 = rnd.nextInt(13);	// ì—­ë¦°
+		int num7 = rnd.nextInt(15); // ê·€ì‹ ë©¸ì—´  
+		int num8 = rnd.nextInt(20);	// ìœ¤íšŒ
+		int num9 = rnd.nextInt(10);	// íšŒí–¥
 		int num10 = rnd.nextInt(20) + 10;
 		
 		ItemStack var1 = new ItemStack(Material.SPRUCE_LOG);
 		ItemMeta var1Im = var1.getItemMeta();
 		var1Im.setLocalizedName("30,100,50,0,0,0,0,0,0,0,100");
-		var1Im.setDisplayName(ChatColor.AQUA + "ÀúÁÖ¹ŞÀº °Ë");
+		var1Im.setDisplayName(ChatColor.AQUA + "ì €ì£¼ë°›ì€ ê²€");
 		ArrayList<String> var1Lore = new ArrayList();
-		var1Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 100");
+		var1Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 100");
 		var1Lore.add(ChatColor.GRAY + " ");
-		var1Lore.add(ChatColor.GRAY + "Æ÷º¸¸£µéÀÌ °¡Áö°í ÀÖ´ø ÀúÁÖ°¡ ´À²¸Áö´Â °Ë");
+		var1Lore.add(ChatColor.GRAY + "í¬ë³´ë¥´ë“¤ì´ ê°€ì§€ê³  ìˆë˜ ì €ì£¼ê°€ ëŠê»´ì§€ëŠ” ê²€");
 		var1Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var1Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var1Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -902,12 +902,12 @@ public class LootChest {
 		ItemStack var2 = new ItemStack(Material.CHAINMAIL_HELMET);
 		ItemMeta var2Im = var2.getItemMeta();
 		var2Im.setLocalizedName("0,0,0,0,0,0,0,0,0,100,120");
-		var2Im.setDisplayName(ChatColor.GREEN + "ÀÜÈ¤ÇÑ µ¿È­ÀÇ Çï¸ä");
+		var2Im.setDisplayName(ChatColor.GREEN + "ì”í˜¹í•œ ë™í™”ì˜ í—¬ë©§");
 		ArrayList<String> var2Lore = new ArrayList();
-		var2Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 120");
+		var2Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 120");
 		var2Lore.add(ChatColor.GRAY + " ");
-		var2Lore.add(ChatColor.GRAY + "´©±º°¡ÀÇ ¼Ò¿øÀÌ ´ã±ä Çï¸ä");
-		var2Lore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+		var2Lore.add(ChatColor.GRAY + "ëˆ„êµ°ê°€ì˜ ì†Œì›ì´ ë‹´ê¸´ í—¬ë©§");
+		var2Lore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 		var2Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var2Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var2Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -918,12 +918,12 @@ public class LootChest {
 		ItemStack var3 = new ItemStack(Material.CHAINMAIL_CHESTPLATE);
 		ItemMeta var3Im = var3.getItemMeta();
 		var3Im.setLocalizedName("0,0,0,0,0,0,0,0,0,100,120");
-		var3Im.setDisplayName(ChatColor.GREEN + "ÀÜÈ¤ÇÑ µ¿È­ÀÇ °©¿Ê");
+		var3Im.setDisplayName(ChatColor.GREEN + "ì”í˜¹í•œ ë™í™”ì˜ ê°‘ì˜·");
 		ArrayList<String> var3Lore = new ArrayList();
-		var3Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 120");
+		var3Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 120");
 		var3Lore.add(ChatColor.GRAY + " ");
-		var3Lore.add(ChatColor.GRAY + "´©±º°¡ÀÇ ¼Ò¿øÀÌ ´ã±ä °©¿Ê");
-		var3Lore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+		var3Lore.add(ChatColor.GRAY + "ëˆ„êµ°ê°€ì˜ ì†Œì›ì´ ë‹´ê¸´ ê°‘ì˜·");
+		var3Lore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 		var3Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var3Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var3Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -934,12 +934,12 @@ public class LootChest {
 		ItemStack var4 = new ItemStack(Material.CHAINMAIL_LEGGINGS);
 		ItemMeta var4Im = var4.getItemMeta();
 		var4Im.setLocalizedName("0,0,0,0,0,0,0,0,0,100,120");
-		var4Im.setDisplayName(ChatColor.GREEN + "ÀÜÈ¤ÇÑ µ¿È­ÀÇ °¢¹İ");
+		var4Im.setDisplayName(ChatColor.GREEN + "ì”í˜¹í•œ ë™í™”ì˜ ê°ë°˜");
 		ArrayList<String> var4Lore = new ArrayList();
-		var4Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 120");
+		var4Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 120");
 		var4Lore.add(ChatColor.GRAY + " ");
-		var4Lore.add(ChatColor.GRAY + "´©±º°¡ÀÇ ¼Ò¿øÀÌ ´ã±ä °¢¹İ");
-		var4Lore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+		var4Lore.add(ChatColor.GRAY + "ëˆ„êµ°ê°€ì˜ ì†Œì›ì´ ë‹´ê¸´ ê°ë°˜");
+		var4Lore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 		var4Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var4Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var4Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -950,12 +950,12 @@ public class LootChest {
 		ItemStack var5 = new ItemStack(Material.CHAINMAIL_BOOTS);
 		ItemMeta var5Im = var5.getItemMeta();
 		var5Im.setLocalizedName("0,0,0,0,0,0,0,0,0,100,120");
-		var5Im.setDisplayName(ChatColor.GREEN + "ÀÜÈ¤ÇÑ µ¿È­ÀÇ ½Å¹ß");
+		var5Im.setDisplayName(ChatColor.GREEN + "ì”í˜¹í•œ ë™í™”ì˜ ì‹ ë°œ");
 		ArrayList<String> var5Lore = new ArrayList();
-		var5Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 120");
+		var5Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 120");
 		var5Lore.add(ChatColor.GRAY + " ");
-		var5Lore.add(ChatColor.GRAY + "´©±º°¡ÀÇ ¼Ò¿øÀÌ ´ã±ä ½Å¹ß");
-		var5Lore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+		var5Lore.add(ChatColor.GRAY + "ëˆ„êµ°ê°€ì˜ ì†Œì›ì´ ë‹´ê¸´ ì‹ ë°œ");
+		var5Lore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 		var5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -966,11 +966,11 @@ public class LootChest {
 		ItemStack var6 = new ItemStack(Material.CHAINMAIL_HELMET);
 		ItemMeta var6Im = var6.getItemMeta();
 		var6Im.setLocalizedName("10,0,0,0,0,80,0,0,0,0,110");
-		var6Im.setDisplayName(ChatColor.YELLOW + "¿ª¸°");
+		var6Im.setDisplayName(ChatColor.YELLOW + "ì—­ë¦°");
 		ArrayList<String> var6Lore = new ArrayList();
-		var6Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 110");
+		var6Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 110");
 		var6Lore.add(ChatColor.GRAY + " ");
-		var6Lore.add(ChatColor.GRAY + "Æ÷º¸¸£ÀÇ ´ëÀåÀåÀÌ°¡ ¿ëÀÇ ¿ª¸°À» ÀÌ¿ëÇØ ¸¸µç Çï¸ä");
+		var6Lore.add(ChatColor.GRAY + "í¬ë³´ë¥´ì˜ ëŒ€ì¥ì¥ì´ê°€ ìš©ì˜ ì—­ë¦°ì„ ì´ìš©í•´ ë§Œë“  í—¬ë©§");
 		var6Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var6Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var6Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -981,11 +981,11 @@ public class LootChest {
 		ItemStack var7 = new ItemStack(Material.CHAINMAIL_CHESTPLATE);
 		ItemMeta var7Im = var7.getItemMeta();
 		var7Im.setLocalizedName("0,0,0,0,50,0,0,0,0,50,110");
-		var7Im.setDisplayName(ChatColor.YELLOW + "±Í½Å¸ê¿­");
+		var7Im.setDisplayName(ChatColor.YELLOW + "ê·€ì‹ ë©¸ì—´");
 		ArrayList<String> var7Lore = new ArrayList();
-		var7Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 110");
+		var7Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 110");
 		var7Lore.add(ChatColor.GRAY + " ");
-		var7Lore.add(ChatColor.GRAY + "°ø°İ À§ÁÖÀÇ ÈûÀ» ´ãÀº °©¿Ê");
+		var7Lore.add(ChatColor.GRAY + "ê³µê²© ìœ„ì£¼ì˜ í˜ì„ ë‹´ì€ ê°‘ì˜·");
 		var7Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var7Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var7Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -996,11 +996,11 @@ public class LootChest {
 		ItemStack var8 = new ItemStack(Material.CHAINMAIL_LEGGINGS);
 		ItemMeta var8Im = var8.getItemMeta();
 		var8Im.setLocalizedName("0,0,0,0,0,130,0,0,0,0,110");
-		var8Im.setDisplayName(ChatColor.LIGHT_PURPLE + "À±È¸");
+		var8Im.setDisplayName(ChatColor.LIGHT_PURPLE + "ìœ¤íšŒ");
 		ArrayList<String> var8Lore = new ArrayList();
-		var8Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 110");
+		var8Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 110");
 		var8Lore.add(ChatColor.GRAY + " ");
-		var8Lore.add(ChatColor.GRAY + "±è°úÀå´Ô ¿©±â¿¡ À±È¸ ¼³¸í Àû¾îÁÖ½Ã¸é µË´Ï´Ù.");
+		var8Lore.add(ChatColor.GRAY + "ê¹€ê³¼ì¥ë‹˜ ì—¬ê¸°ì— ìœ¤íšŒ ì„¤ëª… ì ì–´ì£¼ì‹œë©´ ë©ë‹ˆë‹¤.");
 		var8Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var8Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var8Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1011,11 +1011,11 @@ public class LootChest {
 		ItemStack var9 = new ItemStack(Material.CHAINMAIL_BOOTS);
 		ItemMeta var9Im = var9.getItemMeta();
 		var9Im.setLocalizedName("0,0,0,0,0,40,40,40,40,0,110");
-		var9Im.setDisplayName(ChatColor.YELLOW + "È¸Çâ");
+		var9Im.setDisplayName(ChatColor.YELLOW + "íšŒí–¥");
 		ArrayList<String> var9Lore = new ArrayList();
-		var9Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 110");
+		var9Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 110");
 		var9Lore.add(ChatColor.GRAY + " ");
-		var9Lore.add(ChatColor.GRAY + "À¯¸í ºê·£µå¸¦ ¸ğ¹æÇÑ ½Å¹ß");
+		var9Lore.add(ChatColor.GRAY + "ìœ ëª… ë¸Œëœë“œë¥¼ ëª¨ë°©í•œ ì‹ ë°œ");
 		var9Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var9Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var9Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1025,7 +1025,7 @@ public class LootChest {
 		
 		ItemStack emerald = new ItemStack(Material.EMERALD_BLOCK, num10);
 		ItemMeta im = emerald.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		emerald.setItemMeta(im);
 		inv.setItem(0, emerald);
 		
@@ -1071,25 +1071,25 @@ public class LootChest {
 	public void dungeon6(Player player) {
 		Inventory inv = Bukkit.createInventory(player, 9, "Dungeon Reward");
 		int idx;
-		int num1 = rnd.nextInt(100); // ÀúÁÖ¹ŞÀº °Ë+
-		int num2 = rnd.nextInt(40); // ¼¼Æ®
-		int num3 = rnd.nextInt(21); // ¼¼Æ®
-		int num4 = rnd.nextInt(17); // ¼¼Æ®
-		int num5 = rnd.nextInt(28);	// ¼¼Æ®
-		int num6 = rnd.nextInt(20);	// Å¸¶ôÇÑ ¿ª¸°
-		int num7 = rnd.nextInt(20); // Å¸¶ôÇÑ ±Í½Å¸ê¿­  
-		int num8 = rnd.nextInt(20);	// Å¸¶ôÇÑ À±È¸
-		int num9 = rnd.nextInt(20);	// Å¸¶ôÇÑ È¸Çâ
+		int num1 = rnd.nextInt(100); // ì €ì£¼ë°›ì€ ê²€+
+		int num2 = rnd.nextInt(40); // ì„¸íŠ¸
+		int num3 = rnd.nextInt(21); // ì„¸íŠ¸
+		int num4 = rnd.nextInt(17); // ì„¸íŠ¸
+		int num5 = rnd.nextInt(28);	// ì„¸íŠ¸
+		int num6 = rnd.nextInt(20);	// íƒ€ë½í•œ ì—­ë¦°
+		int num7 = rnd.nextInt(20); // íƒ€ë½í•œ ê·€ì‹ ë©¸ì—´  
+		int num8 = rnd.nextInt(20);	// íƒ€ë½í•œ ìœ¤íšŒ
+		int num9 = rnd.nextInt(20);	// íƒ€ë½í•œ íšŒí–¥
 		int num10 = rnd.nextInt(2) + 3;
 		
 		ItemStack var1 = new ItemStack(Material.SPRUCE_LOG);
 		ItemMeta var1Im = var1.getItemMeta();
 		var1Im.setLocalizedName("400,100,50,0,0,0,0,0,0,200,200");
-		var1Im.setDisplayName(ChatColor.AQUA + "ÀúÁÖ¹ŞÀº °Ë+");
+		var1Im.setDisplayName(ChatColor.AQUA + "ì €ì£¼ë°›ì€ ê²€+");
 		ArrayList<String> var1Lore = new ArrayList();
-		var1Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 200");
+		var1Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 200");
 		var1Lore.add(ChatColor.GRAY + " ");
-		var1Lore.add(ChatColor.GRAY + "Æ÷º¸¸£µéÀÌ °¡Áö°í ÀÖ´ø ÀúÁÖ°¡ ´À²¸Áö´Â °Ë");
+		var1Lore.add(ChatColor.GRAY + "í¬ë³´ë¥´ë“¤ì´ ê°€ì§€ê³  ìˆë˜ ì €ì£¼ê°€ ëŠê»´ì§€ëŠ” ê²€");
 		var1Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var1Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var1Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1100,12 +1100,12 @@ public class LootChest {
 		ItemStack var2 = new ItemStack(Material.IRON_HELMET);
 		ItemMeta var2Im = var2.getItemMeta();
 		var2Im.setLocalizedName("0,0,0,0,0,0,0,0,0,300,220");
-		var2Im.setDisplayName(ChatColor.GREEN + "¿ì¿ïÇÑ Àı¸ÁÀÇ Çï¸ä");
+		var2Im.setDisplayName(ChatColor.GREEN + "ìš°ìš¸í•œ ì ˆë§ì˜ í—¬ë©§");
 		ArrayList<String> var2Lore = new ArrayList();
-		var2Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 220");
+		var2Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 220");
 		var2Lore.add(ChatColor.GRAY + " ");
-		var2Lore.add(ChatColor.GRAY + "´©±º°¡ÀÇ ÀúÁÖ°¡ ´ã±ä Çï¸ä");
-		var2Lore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+		var2Lore.add(ChatColor.GRAY + "ëˆ„êµ°ê°€ì˜ ì €ì£¼ê°€ ë‹´ê¸´ í—¬ë©§");
+		var2Lore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 		var2Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var2Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var2Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1116,12 +1116,12 @@ public class LootChest {
 		ItemStack var3 = new ItemStack(Material.IRON_CHESTPLATE);
 		ItemMeta var3Im = var3.getItemMeta();
 		var3Im.setLocalizedName("0,0,0,0,0,0,0,0,0,300,220");
-		var3Im.setDisplayName(ChatColor.GREEN + "¿ì¿ïÇÑ Àı¸ÁÀÇ °©¿Ê");
+		var3Im.setDisplayName(ChatColor.GREEN + "ìš°ìš¸í•œ ì ˆë§ì˜ ê°‘ì˜·");
 		ArrayList<String> var3Lore = new ArrayList();
-		var3Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 220");
+		var3Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 220");
 		var3Lore.add(ChatColor.GRAY + " ");
-		var3Lore.add(ChatColor.GRAY + "´©±º°¡ÀÇ ÀúÁÖ°¡ ´ã±ä °©¿Ê");
-		var3Lore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+		var3Lore.add(ChatColor.GRAY + "ëˆ„êµ°ê°€ì˜ ì €ì£¼ê°€ ë‹´ê¸´ ê°‘ì˜·");
+		var3Lore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 		var3Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var3Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var3Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1132,12 +1132,12 @@ public class LootChest {
 		ItemStack var4 = new ItemStack(Material.IRON_LEGGINGS);
 		ItemMeta var4Im = var4.getItemMeta();
 		var4Im.setLocalizedName("0,0,0,0,0,0,0,0,0,300,220");
-		var4Im.setDisplayName(ChatColor.GREEN + "¿ì¿ïÇÑ Àı¸ÁÀÇ °¢¹İ");
+		var4Im.setDisplayName(ChatColor.GREEN + "ìš°ìš¸í•œ ì ˆë§ì˜ ê°ë°˜");
 		ArrayList<String> var4Lore = new ArrayList();
-		var4Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 220");
+		var4Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 220");
 		var4Lore.add(ChatColor.GRAY + " ");
-		var4Lore.add(ChatColor.GRAY + "´©±º°¡ÀÇ ÀúÁÖ°¡ ´ã±ä °¢¹İ");
-		var4Lore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+		var4Lore.add(ChatColor.GRAY + "ëˆ„êµ°ê°€ì˜ ì €ì£¼ê°€ ë‹´ê¸´ ê°ë°˜");
+		var4Lore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 		var4Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var4Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var4Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1148,12 +1148,12 @@ public class LootChest {
 		ItemStack var5 = new ItemStack(Material.IRON_BOOTS);
 		ItemMeta var5Im = var5.getItemMeta();
 		var5Im.setLocalizedName("0,0,0,0,0,0,0,0,0,300,220");
-		var5Im.setDisplayName(ChatColor.GREEN + "¿ì¿ïÇÑ Àı¸ÁÀÇ ½Å¹ß");
+		var5Im.setDisplayName(ChatColor.GREEN + "ìš°ìš¸í•œ ì ˆë§ì˜ ì‹ ë°œ");
 		ArrayList<String> var5Lore = new ArrayList();
-		var5Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 220");
+		var5Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 220");
 		var5Lore.add(ChatColor.GRAY + " ");
-		var5Lore.add(ChatColor.GRAY + "´©±º°¡ÀÇ ÀúÁÖ°¡ ´ã±ä ½Å¹ß");
-		var5Lore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+		var5Lore.add(ChatColor.GRAY + "ëˆ„êµ°ê°€ì˜ ì €ì£¼ê°€ ë‹´ê¸´ ì‹ ë°œ");
+		var5Lore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 		var5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1164,11 +1164,11 @@ public class LootChest {
 		ItemStack var6 = new ItemStack(Material.IRON_HELMET);
 		ItemMeta var6Im = var6.getItemMeta();
 		var6Im.setLocalizedName("310,0,0,0,0,180,0,0,0,0,210");
-		var6Im.setDisplayName(ChatColor.LIGHT_PURPLE + "Å¸¶ôÇÑ ¿ª¸°");
+		var6Im.setDisplayName(ChatColor.LIGHT_PURPLE + "íƒ€ë½í•œ ì—­ë¦°");
 		ArrayList<String> var6Lore = new ArrayList();
-		var6Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 210");
+		var6Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 210");
 		var6Lore.add(ChatColor.GRAY + " ");
-		var6Lore.add(ChatColor.GRAY + "Æ÷º¸¸£ÀÇ ´ëÀåÀåÀÌ°¡ ¿ëÀÇ ¿ª¸°À» ÀÌ¿ëÇØ ¸¸µç Çï¸ä");
+		var6Lore.add(ChatColor.GRAY + "í¬ë³´ë¥´ì˜ ëŒ€ì¥ì¥ì´ê°€ ìš©ì˜ ì—­ë¦°ì„ ì´ìš©í•´ ë§Œë“  í—¬ë©§");
 		var6Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var6Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var6Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1179,11 +1179,11 @@ public class LootChest {
 		ItemStack var7 = new ItemStack(Material.IRON_CHESTPLATE);
 		ItemMeta var7Im = var7.getItemMeta();
 		var7Im.setLocalizedName("0,0,0,0,150,0,0,0,0,350,210");
-		var7Im.setDisplayName(ChatColor.LIGHT_PURPLE + "Å¸¶ôÇÑ ±Í½Å¸ê¿­");
+		var7Im.setDisplayName(ChatColor.LIGHT_PURPLE + "íƒ€ë½í•œ ê·€ì‹ ë©¸ì—´");
 		ArrayList<String> var7Lore = new ArrayList();
-		var7Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 210");
+		var7Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 210");
 		var7Lore.add(ChatColor.GRAY + " ");
-		var7Lore.add(ChatColor.GRAY + "°ø°İ À§ÁÖÀÇ ÈûÀ» ´ãÀº °©¿Ê");
+		var7Lore.add(ChatColor.GRAY + "ê³µê²© ìœ„ì£¼ì˜ í˜ì„ ë‹´ì€ ê°‘ì˜·");
 		var7Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var7Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var7Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1194,11 +1194,11 @@ public class LootChest {
 		ItemStack var8 = new ItemStack(Material.IRON_LEGGINGS);
 		ItemMeta var8Im = var8.getItemMeta();
 		var8Im.setLocalizedName("0,0,0,0,0,430,0,0,0,0,210");
-		var8Im.setDisplayName(ChatColor.LIGHT_PURPLE + "Å¸¶ôÇÑ À±È¸");
+		var8Im.setDisplayName(ChatColor.LIGHT_PURPLE + "íƒ€ë½í•œ ìœ¤íšŒ");
 		ArrayList<String> var8Lore = new ArrayList();
-		var8Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 210");
+		var8Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 210");
 		var8Lore.add(ChatColor.GRAY + " ");
-		var8Lore.add(ChatColor.GRAY + "±è°úÀå´Ô ¿©±â¿¡ À±È¸ ¼³¸í Àû¾îÁÖ½Ã¸é µË´Ï´Ù.");
+		var8Lore.add(ChatColor.GRAY + "ê¹€ê³¼ì¥ë‹˜ ì—¬ê¸°ì— ìœ¤íšŒ ì„¤ëª… ì ì–´ì£¼ì‹œë©´ ë©ë‹ˆë‹¤.");
 		var8Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var8Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var8Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1209,11 +1209,11 @@ public class LootChest {
 		ItemStack var9 = new ItemStack(Material.IRON_BOOTS);
 		ItemMeta var9Im = var9.getItemMeta();
 		var9Im.setLocalizedName("0,0,0,0,0,140,140,140,140,0,210");
-		var9Im.setDisplayName(ChatColor.LIGHT_PURPLE + "Å¸¶ôÇÑ È¸Çâ");
+		var9Im.setDisplayName(ChatColor.LIGHT_PURPLE + "íƒ€ë½í•œ íšŒí–¥");
 		ArrayList<String> var9Lore = new ArrayList();
-		var9Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 210");
+		var9Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 210");
 		var9Lore.add(ChatColor.GRAY + " ");
-		var9Lore.add(ChatColor.GRAY + "À¯¸í ºê·£µå¸¦ ¸ğ¹æÇÑ ½Å¹ß");
+		var9Lore.add(ChatColor.GRAY + "ìœ ëª… ë¸Œëœë“œë¥¼ ëª¨ë°©í•œ ì‹ ë°œ");
 		var9Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var9Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var9Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1223,7 +1223,7 @@ public class LootChest {
 		
 		ItemStack emerald = new ItemStack(Material.SCUTE, num10);
 		ItemMeta im = emerald.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		emerald.setItemMeta(im);
 		inv.setItem(0, emerald);
 		
@@ -1269,21 +1269,21 @@ public class LootChest {
 	public void tower1(Player player) {
 		Inventory inv = Bukkit.createInventory(player, 9, "Dungeon Reward");
 		int idx;
-		int num1 = rnd.nextInt(44); // ¹«±â
-		int num2 = rnd.nextInt(44); // ¼¼Æ®
-		int num3 = rnd.nextInt(44); // ¼¼Æ®
-		int num4 = rnd.nextInt(44); // ¼¼Æ®
-		int num5 = rnd.nextInt(44);	// ¼¼Æ®
+		int num1 = rnd.nextInt(44); // ë¬´ê¸°
+		int num2 = rnd.nextInt(44); // ì„¸íŠ¸
+		int num3 = rnd.nextInt(44); // ì„¸íŠ¸
+		int num4 = rnd.nextInt(44); // ì„¸íŠ¸
+		int num5 = rnd.nextInt(44);	// ì„¸íŠ¸
 		int num6 = 4;
 		
 		ItemStack var1 = new ItemStack(Material.BIRCH_LOG);
 		ItemMeta var1Im = var1.getItemMeta();
 		var1Im.setLocalizedName("300,0,0,500,0,0,0,0,0,2000,300");
-		var1Im.setDisplayName(ChatColor.AQUA + "Å¾ÀÇ ÃÊ½ÉÀÚ °Ë");
+		var1Im.setDisplayName(ChatColor.AQUA + "íƒ‘ì˜ ì´ˆì‹¬ì ê²€");
 		ArrayList<String> var1Lore = new ArrayList();
-		var1Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 300");
+		var1Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 300");
 		var1Lore.add(ChatColor.GRAY + " ");
-		var1Lore.add(ChatColor.GRAY + "Á×À½ÀÇ Å¾ 1Ãş¿¡¼­ ¹ß°ßÇÑ °Ë");
+		var1Lore.add(ChatColor.GRAY + "ì£½ìŒì˜ íƒ‘ 1ì¸µì—ì„œ ë°œê²¬í•œ ê²€");
 		var1Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var1Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var1Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1294,12 +1294,12 @@ public class LootChest {
 		ItemStack var2 = new ItemStack(Material.IRON_HELMET);
 		ItemMeta var2Im = var2.getItemMeta();
 		var2Im.setLocalizedName("300,0,0,0,0,300,0,0,0,0,300");
-		var2Im.setDisplayName(ChatColor.GREEN + "Å¾ÀÇ ÃÊ½ÉÀÚ Çï¸ä");
+		var2Im.setDisplayName(ChatColor.GREEN + "íƒ‘ì˜ ì´ˆì‹¬ì í—¬ë©§");
 		ArrayList<String> var2Lore = new ArrayList();
-		var2Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 300");
+		var2Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 300");
 		var2Lore.add(ChatColor.GRAY + " ");
-		var2Lore.add(ChatColor.GRAY + "Á×À½ÀÇ Å¾ 1Ãş¿¡¼­ ¹ß°ßÇÑ Çï¸ä");
-		var2Lore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+		var2Lore.add(ChatColor.GRAY + "ì£½ìŒì˜ íƒ‘ 1ì¸µì—ì„œ ë°œê²¬í•œ í—¬ë©§");
+		var2Lore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 		var2Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var2Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var2Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1310,12 +1310,12 @@ public class LootChest {
 		ItemStack var3 = new ItemStack(Material.IRON_CHESTPLATE);
 		ItemMeta var3Im = var3.getItemMeta();
 		var3Im.setLocalizedName("0,300,0,0,0,300,0,0,0,0,300");
-		var3Im.setDisplayName(ChatColor.GREEN + "Å¾ÀÇ ÃÊ½ÉÀÚ °©¿Ê");
+		var3Im.setDisplayName(ChatColor.GREEN + "íƒ‘ì˜ ì´ˆì‹¬ì ê°‘ì˜·");
 		ArrayList<String> var3Lore = new ArrayList();
-		var3Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 300");
+		var3Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 300");
 		var3Lore.add(ChatColor.GRAY + " ");
-		var3Lore.add(ChatColor.GRAY + "Á×À½ÀÇ Å¾ 1Ãş¿¡¼­ ¹ß°ßÇÑ °©¿Ê");
-		var3Lore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+		var3Lore.add(ChatColor.GRAY + "ì£½ìŒì˜ íƒ‘ 1ì¸µì—ì„œ ë°œê²¬í•œ ê°‘ì˜·");
+		var3Lore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 		var3Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var3Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var3Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1326,12 +1326,12 @@ public class LootChest {
 		ItemStack var4 = new ItemStack(Material.IRON_LEGGINGS);
 		ItemMeta var4Im = var4.getItemMeta();
 		var4Im.setLocalizedName("0,0,300,0,0,300,0,0,0,0,300");
-		var4Im.setDisplayName(ChatColor.GREEN + "Å¾ÀÇ ÃÊ½ÉÀÚ °¢¹İ");
+		var4Im.setDisplayName(ChatColor.GREEN + "íƒ‘ì˜ ì´ˆì‹¬ì ê°ë°˜");
 		ArrayList<String> var4Lore = new ArrayList();
-		var4Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 300");
+		var4Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 300");
 		var4Lore.add(ChatColor.GRAY + " ");
-		var4Lore.add(ChatColor.GRAY + "Á×À½ÀÇ Å¾ 1Ãş¿¡¼­ ¹ß°ßÇÑ °¢¹İ");
-		var4Lore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+		var4Lore.add(ChatColor.GRAY + "ì£½ìŒì˜ íƒ‘ 1ì¸µì—ì„œ ë°œê²¬í•œ ê°ë°˜");
+		var4Lore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 		var4Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var4Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var4Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1342,12 +1342,12 @@ public class LootChest {
 		ItemStack var5 = new ItemStack(Material.IRON_BOOTS);
 		ItemMeta var5Im = var5.getItemMeta();
 		var5Im.setLocalizedName("0,0,0,300,0,300,0,0,0,0,300");
-		var5Im.setDisplayName(ChatColor.GREEN + "Å¾ÀÇ ÃÊ½ÉÀÚ ½Å¹ß");
+		var5Im.setDisplayName(ChatColor.GREEN + "íƒ‘ì˜ ì´ˆì‹¬ì ì‹ ë°œ");
 		ArrayList<String> var5Lore = new ArrayList();
-		var5Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 300");
+		var5Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 300");
 		var5Lore.add(ChatColor.GRAY + " ");
-		var5Lore.add(ChatColor.GRAY + "Á×À½ÀÇ Å¾ 1Ãş¿¡¼­ ¹ß°ßÇÑ ½Å¹ß");
-		var5Lore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+		var5Lore.add(ChatColor.GRAY + "ì£½ìŒì˜ íƒ‘ 1ì¸µì—ì„œ ë°œê²¬í•œ ì‹ ë°œ");
+		var5Lore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 		var5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1357,7 +1357,7 @@ public class LootChest {
 		
 		ItemStack emerald = new ItemStack(Material.SCUTE, num6);
 		ItemMeta im = emerald.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		emerald.setItemMeta(im);
 		inv.setItem(0, emerald);
 		
@@ -1387,21 +1387,21 @@ public class LootChest {
 	public void tower2(Player player) {
 		Inventory inv = Bukkit.createInventory(player, 9, "Dungeon Reward");
 		int idx;
-		int num1 = rnd.nextInt(44); // ¹«±â
-		int num2 = rnd.nextInt(44); // ¼¼Æ®
-		int num3 = rnd.nextInt(44); // ¼¼Æ®
-		int num4 = rnd.nextInt(44); // ¼¼Æ®
-		int num5 = rnd.nextInt(44);	// ¼¼Æ®
+		int num1 = rnd.nextInt(44); // ë¬´ê¸°
+		int num2 = rnd.nextInt(44); // ì„¸íŠ¸
+		int num3 = rnd.nextInt(44); // ì„¸íŠ¸
+		int num4 = rnd.nextInt(44); // ì„¸íŠ¸
+		int num5 = rnd.nextInt(44);	// ì„¸íŠ¸
 		int num6 = 8;
 		
 		ItemStack var1 = new ItemStack(Material.GREEN_CARPET);
 		ItemMeta var1Im = var1.getItemMeta();
 		var1Im.setLocalizedName("0,0,0,0,1000,0,0,0,0,0,350");
-		var1Im.setDisplayName(ChatColor.AQUA + "Å¾ÀÇ µµÀüÀÚ µµ³¢");
+		var1Im.setDisplayName(ChatColor.AQUA + "íƒ‘ì˜ ë„ì „ì ë„ë¼");
 		ArrayList<String> var1Lore = new ArrayList();
-		var1Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 350");
+		var1Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 350");
 		var1Lore.add(ChatColor.GRAY + " ");
-		var1Lore.add(ChatColor.GRAY + "Á×À½ÀÇ Å¾ 2Ãş¿¡¼­ ¹ß°ßÇÑ µµ³¢");
+		var1Lore.add(ChatColor.GRAY + "ì£½ìŒì˜ íƒ‘ 2ì¸µì—ì„œ ë°œê²¬í•œ ë„ë¼");
 		var1Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var1Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var1Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1412,12 +1412,12 @@ public class LootChest {
 		ItemStack var2 = new ItemStack(Material.IRON_HELMET);
 		ItemMeta var2Im = var2.getItemMeta();
 		var2Im.setLocalizedName("350,100,50,50,0,350,0,0,0,0,350");
-		var2Im.setDisplayName(ChatColor.GREEN + "Å¾ÀÇ µµÀüÀÚ Çï¸ä");
+		var2Im.setDisplayName(ChatColor.GREEN + "íƒ‘ì˜ ë„ì „ì í—¬ë©§");
 		ArrayList<String> var2Lore = new ArrayList();
-		var2Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 350");
+		var2Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 350");
 		var2Lore.add(ChatColor.GRAY + " ");
-		var2Lore.add(ChatColor.GRAY + "Á×À½ÀÇ Å¾ 2Ãş¿¡¼­ ¹ß°ßÇÑ Çï¸ä");
-		var2Lore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+		var2Lore.add(ChatColor.GRAY + "ì£½ìŒì˜ íƒ‘ 2ì¸µì—ì„œ ë°œê²¬í•œ í—¬ë©§");
+		var2Lore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 		var2Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var2Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var2Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1428,12 +1428,12 @@ public class LootChest {
 		ItemStack var3 = new ItemStack(Material.IRON_CHESTPLATE);
 		ItemMeta var3Im = var3.getItemMeta();
 		var3Im.setLocalizedName("0,0,0,0,0,350,100,100,100,0,350");
-		var3Im.setDisplayName(ChatColor.GREEN + "Å¾ÀÇ µµÀüÀÚ °©¿Ê");
+		var3Im.setDisplayName(ChatColor.GREEN + "íƒ‘ì˜ ë„ì „ì ê°‘ì˜·");
 		ArrayList<String> var3Lore = new ArrayList();
-		var3Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 350");
+		var3Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 350");
 		var3Lore.add(ChatColor.GRAY + " ");
-		var3Lore.add(ChatColor.GRAY + "Á×À½ÀÇ Å¾ 2Ãş¿¡¼­ ¹ß°ßÇÑ °©¿Ê");
-		var3Lore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+		var3Lore.add(ChatColor.GRAY + "ì£½ìŒì˜ íƒ‘ 2ì¸µì—ì„œ ë°œê²¬í•œ ê°‘ì˜·");
+		var3Lore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 		var3Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var3Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var3Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1444,12 +1444,12 @@ public class LootChest {
 		ItemStack var4 = new ItemStack(Material.IRON_LEGGINGS);
 		ItemMeta var4Im = var4.getItemMeta();
 		var4Im.setLocalizedName("0,100,100,100,0,350,0,0,0,0,350");
-		var4Im.setDisplayName(ChatColor.GREEN + "Å¾ÀÇ µµÀüÀÚ °¢¹İ");
+		var4Im.setDisplayName(ChatColor.GREEN + "íƒ‘ì˜ ë„ì „ì ê°ë°˜");
 		ArrayList<String> var4Lore = new ArrayList();
-		var4Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 350");
+		var4Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 350");
 		var4Lore.add(ChatColor.GRAY + " ");
-		var4Lore.add(ChatColor.GRAY + "Á×À½ÀÇ Å¾ 2Ãş¿¡¼­ ¹ß°ßÇÑ °¢¹İ");
-		var4Lore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+		var4Lore.add(ChatColor.GRAY + "ì£½ìŒì˜ íƒ‘ 2ì¸µì—ì„œ ë°œê²¬í•œ ê°ë°˜");
+		var4Lore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 		var4Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var4Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var4Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1460,12 +1460,12 @@ public class LootChest {
 		ItemStack var5 = new ItemStack(Material.IRON_BOOTS);
 		ItemMeta var5Im = var5.getItemMeta();
 		var5Im.setLocalizedName("0,0,0,0,0,350,0,0,0,1000,350");
-		var5Im.setDisplayName(ChatColor.GREEN + "Å¾ÀÇ µµÀüÀÚ ½Å¹ß");
+		var5Im.setDisplayName(ChatColor.GREEN + "íƒ‘ì˜ ë„ì „ì ì‹ ë°œ");
 		ArrayList<String> var5Lore = new ArrayList();
-		var5Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 350");
+		var5Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 350");
 		var5Lore.add(ChatColor.GRAY + " ");
-		var5Lore.add(ChatColor.GRAY + "Á×À½ÀÇ Å¾ 2Ãş¿¡¼­ ¹ß°ßÇÑ ½Å¹ß");
-		var5Lore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+		var5Lore.add(ChatColor.GRAY + "ì£½ìŒì˜ íƒ‘ 2ì¸µì—ì„œ ë°œê²¬í•œ ì‹ ë°œ");
+		var5Lore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 		var5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1475,7 +1475,7 @@ public class LootChest {
 		
 		ItemStack emerald = new ItemStack(Material.SCUTE, num6);
 		ItemMeta im = emerald.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		emerald.setItemMeta(im);
 		inv.setItem(0, emerald);
 		
@@ -1505,16 +1505,16 @@ public class LootChest {
 	public void tower3(Player player) {
 		Inventory inv = Bukkit.createInventory(player, 9, "Dungeon Reward");
 		int idx;
-		int num1 = rnd.nextInt(44); // ÃÊ¿ùÅÛ
+		int num1 = rnd.nextInt(44); // ì´ˆì›”í…œ
 		int num2 = 16;
 		
 		ItemStack var1 = new ItemStack(Material.CHARCOAL);
 		ItemMeta var1Im = var1.getItemMeta();
-		var1Im.setDisplayName(ChatColor.AQUA + "È­¿°ÀÇ µ¹");
+		var1Im.setDisplayName(ChatColor.AQUA + "í™”ì—¼ì˜ ëŒ");
 		ArrayList<String> var1Lore = new ArrayList();
-		var1Lore.add(ChatColor.GRAY + "Á×À½ÀÇ Å¾ 3Ãş¿¡¼­ ¹ß°ßÇÑ º¸¹°");
-		var1Lore.add(ChatColor.GRAY + "Å¾ÀÇ ÃÊ½ÉÀÚ, Å¾ÀÇ µµÀüÀÚ ¾ÆÀÌÅÛµéÀ»");
-		var1Lore.add(ChatColor.GRAY + "ÃÊ¿ù½ÃÅ³ ¼ö ÀÖÀ» °Í °°´Ù.");
+		var1Lore.add(ChatColor.GRAY + "ì£½ìŒì˜ íƒ‘ 3ì¸µì—ì„œ ë°œê²¬í•œ ë³´ë¬¼");
+		var1Lore.add(ChatColor.GRAY + "íƒ‘ì˜ ì´ˆì‹¬ì, íƒ‘ì˜ ë„ì „ì ì•„ì´í…œë“¤ì„");
+		var1Lore.add(ChatColor.GRAY + "ì´ˆì›”ì‹œí‚¬ ìˆ˜ ìˆì„ ê²ƒ ê°™ë‹¤.");
 		var1Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var1Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var1Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1524,7 +1524,7 @@ public class LootChest {
 		
 		ItemStack emerald = new ItemStack(Material.SCUTE, num2);
 		ItemMeta im = emerald.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		emerald.setItemMeta(im);
 		inv.setItem(0, emerald);
 		
@@ -1538,25 +1538,25 @@ public class LootChest {
 	public void dungeon7(Player player) {
 		Inventory inv = Bukkit.createInventory(player, 9, "Dungeon Reward");
 		int idx;
-		int num1 = rnd.nextInt(100); // ÇØ°ñ ÁöÆÎÀÌ
-		int num2 = rnd.nextInt(30); // ¼¼Æ®
-		int num3 = rnd.nextInt(30); // ¼¼Æ®
-		int num4 = rnd.nextInt(30); // ¼¼Æ®
-		int num5 = rnd.nextInt(30);	// ¼¼Æ®
-		int num6 = rnd.nextInt(10);	// ±¤¼®1
-		int num7 = rnd.nextInt(10); // ±¤¼®2  
-		int num8 = rnd.nextInt(10);	// ±¤¼®3
-		int num9 = rnd.nextInt(10);	// ±¤¼®4
+		int num1 = rnd.nextInt(100); // í•´ê³¨ ì§€íŒ¡ì´
+		int num2 = rnd.nextInt(30); // ì„¸íŠ¸
+		int num3 = rnd.nextInt(30); // ì„¸íŠ¸
+		int num4 = rnd.nextInt(30); // ì„¸íŠ¸
+		int num5 = rnd.nextInt(30);	// ì„¸íŠ¸
+		int num6 = rnd.nextInt(10);	// ê´‘ì„1
+		int num7 = rnd.nextInt(10); // ê´‘ì„2  
+		int num8 = rnd.nextInt(10);	// ê´‘ì„3
+		int num9 = rnd.nextInt(10);	// ê´‘ì„4
 		int num10 = rnd.nextInt(20) + 30;
 		
 		ItemStack var1 = new ItemStack(Material.MUSIC_DISC_CAT);
 		ItemMeta var1Im = var1.getItemMeta();
 		var1Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,350");
-		var1Im.setDisplayName(ChatColor.AQUA + "Á×À½ÀÇ ¼­¾à");
+		var1Im.setDisplayName(ChatColor.AQUA + "ì£½ìŒì˜ ì„œì•½");
 		ArrayList<String> var1Lore = new ArrayList();
-		var1Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 350");
+		var1Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 350");
 		var1Lore.add(ChatColor.GRAY + " ");
-		var1Lore.add(ChatColor.GRAY + "±âºĞ³ª»Û ¸¶³ª°¡ ´À²¸Áö´Â ½ºÅÂÇÁ");
+		var1Lore.add(ChatColor.GRAY + "ê¸°ë¶„ë‚˜ìœ ë§ˆë‚˜ê°€ ëŠê»´ì§€ëŠ” ìŠ¤íƒœí”„");
 		var1Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var1Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var1Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1568,12 +1568,12 @@ public class LootChest {
 		ItemStack var2 = new ItemStack(Material.IRON_HELMET);
 		ItemMeta var2Im = var2.getItemMeta();
 		var2Im.setLocalizedName("0,0,0,0,0,800,500,500,500,0,350");
-		var2Im.setDisplayName(ChatColor.GREEN + "¹ı¼ú -¡¸À¯¡¹");
+		var2Im.setDisplayName(ChatColor.GREEN + "ë²•ìˆ  -ã€Œìœ ã€");
 		ArrayList<String> var2Lore = new ArrayList();
-		var2Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 350");
+		var2Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 350");
 		var2Lore.add(ChatColor.GRAY + " ");
-		var2Lore.add(ChatColor.GRAY + "¸¶¹ıÀ¸·Î ±¸ÇöµÈ Çï¸ä");
-		var2Lore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+		var2Lore.add(ChatColor.GRAY + "ë§ˆë²•ìœ¼ë¡œ êµ¬í˜„ëœ í—¬ë©§");
+		var2Lore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 		var2Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var2Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var2Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1584,12 +1584,12 @@ public class LootChest {
 		ItemStack var3 = new ItemStack(Material.IRON_CHESTPLATE);
 		ItemMeta var3Im = var3.getItemMeta();
 		var3Im.setLocalizedName("0,0,0,0,0,800,500,500,500,0,350");
-		var3Im.setDisplayName(ChatColor.GREEN + "¹ı¼ú -¡¸¸Ş¡¹");
+		var3Im.setDisplayName(ChatColor.GREEN + "ë²•ìˆ  -ã€Œë©”ã€");
 		ArrayList<String> var3Lore = new ArrayList();
-		var3Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 350");
+		var3Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 350");
 		var3Lore.add(ChatColor.GRAY + " ");
-		var3Lore.add(ChatColor.GRAY + "¸¶¹ıÀ¸·Î ±¸ÇöµÈ °©¿Ê");
-		var3Lore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+		var3Lore.add(ChatColor.GRAY + "ë§ˆë²•ìœ¼ë¡œ êµ¬í˜„ëœ ê°‘ì˜·");
+		var3Lore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 		var3Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var3Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var3Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1600,12 +1600,12 @@ public class LootChest {
 		ItemStack var4 = new ItemStack(Material.IRON_LEGGINGS);
 		ItemMeta var4Im = var4.getItemMeta();
 		var4Im.setLocalizedName("0,0,0,0,0,800,500,500,500,0,350");
-		var4Im.setDisplayName(ChatColor.GREEN + "¹ı¼ú -¡¸ÇÏ¡¹");
+		var4Im.setDisplayName(ChatColor.GREEN + "ë²•ìˆ  -ã€Œí•˜ã€");
 		ArrayList<String> var4Lore = new ArrayList();
-		var4Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 350");
+		var4Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 350");
 		var4Lore.add(ChatColor.GRAY + " ");
-		var4Lore.add(ChatColor.GRAY + "¸¶¹ıÀ¸·Î ±¸ÇöµÈ °¢¹İ");
-		var4Lore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+		var4Lore.add(ChatColor.GRAY + "ë§ˆë²•ìœ¼ë¡œ êµ¬í˜„ëœ ê°ë°˜");
+		var4Lore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 		var4Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var4Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var4Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1616,12 +1616,12 @@ public class LootChest {
 		ItemStack var5 = new ItemStack(Material.IRON_BOOTS);
 		ItemMeta var5Im = var5.getItemMeta();
 		var5Im.setLocalizedName("0,0,0,0,0,800,500,500,500,0,350");
-		var5Im.setDisplayName(ChatColor.GREEN + "¹ı¼ú -¡¸¸¶¡¹");
+		var5Im.setDisplayName(ChatColor.GREEN + "ë²•ìˆ  -ã€Œë§ˆã€");
 		ArrayList<String> var5Lore = new ArrayList();
-		var5Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 350");
+		var5Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 350");
 		var5Lore.add(ChatColor.GRAY + " ");
-		var5Lore.add(ChatColor.GRAY + "¸¶¹ıÀ¸·Î ±¸ÇöµÈ ½Å¹ß");
-		var5Lore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+		var5Lore.add(ChatColor.GRAY + "ë§ˆë²•ìœ¼ë¡œ êµ¬í˜„ëœ ì‹ ë°œ");
+		var5Lore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 		var5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1631,27 +1631,27 @@ public class LootChest {
 		
 		ItemStack var6 = new ItemStack(Material.IRON_ORE, 64);
 		ItemMeta var6Im = var6.getItemMeta();
-		var6Im.setDisplayName(ChatColor.YELLOW + "Ã¶±¤¼®");
+		var6Im.setDisplayName(ChatColor.YELLOW + "ì² ê´‘ì„");
 		var6.setItemMeta(var6Im);
 		
 		ItemStack var7 = new ItemStack(Material.COAL_ORE, 64);
 		ItemMeta var7Im = var7.getItemMeta();
-		var7Im.setDisplayName(ChatColor.YELLOW + "±ú²ıÇÑ ¼®Åº ±¤¼®");
+		var7Im.setDisplayName(ChatColor.YELLOW + "ê¹¨ë—í•œ ì„íƒ„ ê´‘ì„");
 		var7.setItemMeta(var7Im);
 		
 		ItemStack var8 = new ItemStack(Material.GOLD_ORE, 64);
 		ItemMeta var8Im = var8.getItemMeta();
-		var8Im.setDisplayName(ChatColor.YELLOW + "°¡Ä¡°¡ ¶³¾îÁø ±İ±¤¼®");
+		var8Im.setDisplayName(ChatColor.YELLOW + "ê°€ì¹˜ê°€ ë–¨ì–´ì§„ ê¸ˆê´‘ì„");
 		var8.setItemMeta(var8Im);
 		
 		ItemStack var9 = new ItemStack(Material.GOLD_ORE, 64);
 		ItemMeta var9Im = var9.getItemMeta();
-		var9Im.setDisplayName(ChatColor.YELLOW + "°¡Ä¡°¡ ¶³¾îÁø ±İ±¤¼®");
+		var9Im.setDisplayName(ChatColor.YELLOW + "ê°€ì¹˜ê°€ ë–¨ì–´ì§„ ê¸ˆê´‘ì„");
 		var9.setItemMeta(var9Im);
 		
 		ItemStack emerald = new ItemStack(Material.SCUTE, num10);
 		ItemMeta im = emerald.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		emerald.setItemMeta(im);
 		inv.setItem(0, emerald);
 		
@@ -1697,26 +1697,26 @@ public class LootChest {
 	public void dungeon8(Player player) {
 		Inventory inv = Bukkit.createInventory(player, 9, "Dungeon Reward");
 		int idx;
-		int num1 = rnd.nextInt(70); // °Å¹Ì ¿©¿ÕÀÇ °Ë
-		int num2 = rnd.nextInt(30); // ¼¼Æ®
-		int num3 = rnd.nextInt(18); // ¼¼Æ®
-		int num4 = rnd.nextInt(13); // ¼¼Æ®
-		int num5 = rnd.nextInt(24);	// ¼¼Æ®
-		int num6 = rnd.nextInt(13);	// ¸®º§¸®¿Â
-		int num7 = rnd.nextInt(15); // º£³ğ 
-		int num8 = rnd.nextInt(20);	// ¿Àµå¾ÆÀÌÁî
-		int num9 = rnd.nextInt(10);	// Å¬¸®¾îÀ®
+		int num1 = rnd.nextInt(70); // ê±°ë¯¸ ì—¬ì™•ì˜ ê²€
+		int num2 = rnd.nextInt(30); // ì„¸íŠ¸
+		int num3 = rnd.nextInt(18); // ì„¸íŠ¸
+		int num4 = rnd.nextInt(13); // ì„¸íŠ¸
+		int num5 = rnd.nextInt(24);	// ì„¸íŠ¸
+		int num6 = rnd.nextInt(13);	// ë¦¬ë²¨ë¦¬ì˜¨
+		int num7 = rnd.nextInt(15); // ë² ë†ˆ 
+		int num8 = rnd.nextInt(20);	// ì˜¤ë“œì•„ì´ì¦ˆ
+		int num9 = rnd.nextInt(10);	// í´ë¦¬ì–´ìœ™
 		int num10 = rnd.nextInt(14) + 50;
 		
 		ItemStack var1 = new ItemStack(Material.JUNGLE_PLANKS);
 		ItemMeta var1Im = var1.getItemMeta();
 		var1Im.setLocalizedName("700,0,1000,0,500,0,0,0,0,0,390");
-		var1Im.setDisplayName(ChatColor.GREEN + "°Å¹Ì ¿©¿ÕÀÇ °Ë");
+		var1Im.setDisplayName(ChatColor.GREEN + "ê±°ë¯¸ ì—¬ì™•ì˜ ê²€");
 		ArrayList<String> var1Lore = new ArrayList();
-		var1Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 390");
+		var1Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 390");
 		var1Lore.add(ChatColor.GRAY + " ");
-		var1Lore.add(ChatColor.GRAY + "¾Æ¶óÅ©³×ÀÇ ÀÌ»¡·Î ¸¸µç °Ë");
-		var1Lore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+		var1Lore.add(ChatColor.GRAY + "ì•„ë¼í¬ë„¤ì˜ ì´ë¹¨ë¡œ ë§Œë“  ê²€");
+		var1Lore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 		var1Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var1Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var1Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1727,12 +1727,12 @@ public class LootChest {
 		ItemStack var2 = new ItemStack(Material.IRON_HELMET);
 		ItemMeta var2Im = var2.getItemMeta();
 		var2Im.setLocalizedName("300,0,0,0,0,300,0,0,0,3000,390");
-		var2Im.setDisplayName(ChatColor.GREEN + "°Å¹Ì ¿©¿ÕÀÇ Çï¸ä");
+		var2Im.setDisplayName(ChatColor.GREEN + "ê±°ë¯¸ ì—¬ì™•ì˜ í—¬ë©§");
 		ArrayList<String> var2Lore = new ArrayList();
-		var2Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 390");
+		var2Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 390");
 		var2Lore.add(ChatColor.GRAY + " ");
-		var2Lore.add(ChatColor.GRAY + "¾Æ¶óÅ©³×ÀÇ ²®Áú·Î ¸¸µç Çï¸ä");
-		var2Lore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+		var2Lore.add(ChatColor.GRAY + "ì•„ë¼í¬ë„¤ì˜ ê»ì§ˆë¡œ ë§Œë“  í—¬ë©§");
+		var2Lore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 		var2Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var2Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var2Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1743,12 +1743,12 @@ public class LootChest {
 		ItemStack var3 = new ItemStack(Material.IRON_CHESTPLATE);
 		ItemMeta var3Im = var3.getItemMeta();
 		var3Im.setLocalizedName("300,0,0,0,0,300,0,0,0,3000,390");
-		var3Im.setDisplayName(ChatColor.GREEN + "°Å¹Ì ¿©¿ÕÀÇ °©¿Ê");
+		var3Im.setDisplayName(ChatColor.GREEN + "ê±°ë¯¸ ì—¬ì™•ì˜ ê°‘ì˜·");
 		ArrayList<String> var3Lore = new ArrayList();
-		var3Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 390");
+		var3Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 390");
 		var3Lore.add(ChatColor.GRAY + " ");
-		var3Lore.add(ChatColor.GRAY + "¾Æ¶óÅ©³×ÀÇ ²®Áú·Î ¸¸µç °©¿Ê");
-		var3Lore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+		var3Lore.add(ChatColor.GRAY + "ì•„ë¼í¬ë„¤ì˜ ê»ì§ˆë¡œ ë§Œë“  ê°‘ì˜·");
+		var3Lore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 		var3Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var3Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var3Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1759,12 +1759,12 @@ public class LootChest {
 		ItemStack var4 = new ItemStack(Material.IRON_LEGGINGS);
 		ItemMeta var4Im = var4.getItemMeta();
 		var4Im.setLocalizedName("300,0,0,0,0,300,0,0,0,3000,390");
-		var4Im.setDisplayName(ChatColor.GREEN + "°Å¹Ì ¿©¿ÕÀÇ °¢¹İ");
+		var4Im.setDisplayName(ChatColor.GREEN + "ê±°ë¯¸ ì—¬ì™•ì˜ ê°ë°˜");
 		ArrayList<String> var4Lore = new ArrayList();
-		var4Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 390");
+		var4Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 390");
 		var4Lore.add(ChatColor.GRAY + " ");
-		var4Lore.add(ChatColor.GRAY + "¾Æ¶óÅ©³×ÀÇ ²®Áú·Î ¸¸µç °¢¹İ");
-		var4Lore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+		var4Lore.add(ChatColor.GRAY + "ì•„ë¼í¬ë„¤ì˜ ê»ì§ˆë¡œ ë§Œë“  ê°ë°˜");
+		var4Lore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 		var4Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var4Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var4Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1775,12 +1775,12 @@ public class LootChest {
 		ItemStack var5 = new ItemStack(Material.IRON_BOOTS);
 		ItemMeta var5Im = var5.getItemMeta();
 		var5Im.setLocalizedName("300,0,0,0,0,300,0,0,0,3000,390");
-		var5Im.setDisplayName(ChatColor.GREEN + "°Å¹Ì ¿©¿ÕÀÇ ½Å¹ß");
+		var5Im.setDisplayName(ChatColor.GREEN + "ê±°ë¯¸ ì—¬ì™•ì˜ ì‹ ë°œ");
 		ArrayList<String> var5Lore = new ArrayList();
-		var5Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 390");
+		var5Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 390");
 		var5Lore.add(ChatColor.GRAY + " ");
-		var5Lore.add(ChatColor.GRAY + "¾Æ¶óÅ©³×ÀÇ ²®Áú·Î ¸¸µç ½Å¹ß");
-		var5Lore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+		var5Lore.add(ChatColor.GRAY + "ì•„ë¼í¬ë„¤ì˜ ê»ì§ˆë¡œ ë§Œë“  ì‹ ë°œ");
+		var5Lore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 		var5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1791,11 +1791,11 @@ public class LootChest {
 		ItemStack var6 = new ItemStack(Material.IRON_HELMET);
 		ItemMeta var6Im = var6.getItemMeta();
 		var6Im.setLocalizedName("250,300,300,0,0,200,500,500,500,500,390");
-		var6Im.setDisplayName(ChatColor.YELLOW + "¸®º§¸®¿Â");
+		var6Im.setDisplayName(ChatColor.YELLOW + "ë¦¬ë²¨ë¦¬ì˜¨");
 		ArrayList<String> var6Lore = new ArrayList();
-		var6Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 390");
+		var6Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 390");
 		var6Lore.add(ChatColor.GRAY + " ");
-		var6Lore.add(ChatColor.GRAY + "°ËÀº ¿ëÀÇ °¢ÀÎÀÌ ºÙÀº Çï¸ä");
+		var6Lore.add(ChatColor.GRAY + "ê²€ì€ ìš©ì˜ ê°ì¸ì´ ë¶™ì€ í—¬ë©§");
 		var6Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var6Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var6Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1806,11 +1806,11 @@ public class LootChest {
 		ItemStack var7 = new ItemStack(Material.IRON_CHESTPLATE);
 		ItemMeta var7Im = var7.getItemMeta();
 		var7Im.setLocalizedName("280,0,0,0,0,200,0,0,0,2800,390");
-		var7Im.setDisplayName(ChatColor.YELLOW + "º£³ğ");
+		var7Im.setDisplayName(ChatColor.YELLOW + "ë² ë†ˆ");
 		ArrayList<String> var7Lore = new ArrayList();
-		var7Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 390");
+		var7Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 390");
 		var7Lore.add(ChatColor.GRAY + " ");
-		var7Lore.add(ChatColor.GRAY + "º¸¶óºû ¿ëÀÇ °¢ÀÎÀÌ ºÙÀº °©¿Ê");
+		var7Lore.add(ChatColor.GRAY + "ë³´ë¼ë¹› ìš©ì˜ ê°ì¸ì´ ë¶™ì€ ê°‘ì˜·");
 		var7Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var7Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var7Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1821,11 +1821,11 @@ public class LootChest {
 		ItemStack var8 = new ItemStack(Material.IRON_LEGGINGS);
 		ItemMeta var8Im = var8.getItemMeta();
 		var8Im.setLocalizedName("250,200,200,300,100,200,0,0,0,0,390");
-		var8Im.setDisplayName(ChatColor.YELLOW + "¿Àµå¾ÆÀÌÁî");
+		var8Im.setDisplayName(ChatColor.YELLOW + "ì˜¤ë“œì•„ì´ì¦ˆ");
 		ArrayList<String> var8Lore = new ArrayList();
-		var8Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 390");
+		var8Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 390");
 		var8Lore.add(ChatColor.GRAY + " ");
-		var8Lore.add(ChatColor.GRAY + "Àû»ö, ³ì»ö ´«À» °¡Áø ¿ëÀÇ °¢ÀÎÀÌ ºÙÀº °¢¹İ");
+		var8Lore.add(ChatColor.GRAY + "ì ìƒ‰, ë…¹ìƒ‰ ëˆˆì„ ê°€ì§„ ìš©ì˜ ê°ì¸ì´ ë¶™ì€ ê°ë°˜");
 		var8Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var8Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var8Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1836,11 +1836,11 @@ public class LootChest {
 		ItemStack var9 = new ItemStack(Material.IRON_BOOTS);
 		ItemMeta var9Im = var9.getItemMeta();
 		var9Im.setLocalizedName("250,0,0,0,0,200,500,500,500,0,390");
-		var9Im.setDisplayName(ChatColor.YELLOW + "Å¬¸®¾îÀ®");
+		var9Im.setDisplayName(ChatColor.YELLOW + "í´ë¦¬ì–´ìœ™");
 		ArrayList<String> var9Lore = new ArrayList();
-		var9Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 390");
+		var9Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 390");
 		var9Lore.add(ChatColor.GRAY + " ");
-		var9Lore.add(ChatColor.GRAY + "ÇÏ¾á ¿ëÀÇ °¢ÀÎÀÌ ºÙÀº ½Å¹ß");
+		var9Lore.add(ChatColor.GRAY + "í•˜ì–€ ìš©ì˜ ê°ì¸ì´ ë¶™ì€ ì‹ ë°œ");
 		var9Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var9Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var9Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1850,7 +1850,7 @@ public class LootChest {
 		
 		ItemStack emerald = new ItemStack(Material.SCUTE, num10);
 		ItemMeta im = emerald.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		emerald.setItemMeta(im);
 		inv.setItem(0, emerald);
 		

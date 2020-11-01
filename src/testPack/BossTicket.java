@@ -27,15 +27,15 @@ public class BossTicket {
 	}
 
 	public void bossSkelE(Player player, Item itemArg, World world) {
-		//╨╦╫╨ ╫╨длюл 3686 39 3730  3712 47 3672
+		//КЁ╢Л┼╓ Л┼╓Л╪┬Л²╢ 3686 39 3730  3712 47 3672
 		if (itemArg.getItemStack().getItemMeta().getDisplayName()
-				.equalsIgnoreCase(ChatColor.YELLOW + "╨╦╫╨ ╫╨длюл ╪рх╞ ф╪до")) {
+				.equalsIgnoreCase(ChatColor.YELLOW + "КЁ╢Л┼╓ Л┼╓Л╪┬Л²╢ Л├▄М≥≤ М▀╟Л╪⌠")) {
 			if (player.getLocation().getX() <= 3712 && player.getLocation().getY() <= 47
 					&& player.getLocation().getZ() <= 3730 && player.getLocation().getX() >= 3686
 					&& player.getLocation().getY() >= 39 && player.getLocation().getZ() >= 3672) {
 				Location loc = new Location(world, 3707, 44, 3712);
 				Skeleton Boss = (Skeleton) world.spawnEntity(loc, EntityType.SKELETON);
-				Boss.setCustomName(ChatColor.GRAY + "╨╦╫╨ ╫╨длюл" + ChatColor.YELLOW + " [Lv.0]");
+				Boss.setCustomName(ChatColor.GRAY + "КЁ╢Л┼╓ Л┼╓Л╪┬Л²╢" + ChatColor.YELLOW + " [Lv.0]");
 				Boss.setCustomNameVisible(true);
 				((LivingEntity) Boss).setMaxHealth(3);
 				((LivingEntity) Boss).setHealth(3);
@@ -58,15 +58,15 @@ public class BossTicket {
 	}
 	
 	public void arachne(Player player, Item itemArg, World world) {
-		//╬ф╤Се╘Ёв  708 27 293  726 27 312
+		//Л∙└К²╪М│╛К└╓  708 27 293  726 27 312
 		if (player.getLocation().getX() <= 727 && player.getLocation().getY() <= 30
 				&& player.getLocation().getZ() <= 313 && player.getLocation().getX() >= 707
 				&& player.getLocation().getY() >= 10 && player.getLocation().getZ() >= 292) {
 			if (itemArg.getItemStack().getItemMeta().getDisplayName()
-					.equalsIgnoreCase(ChatColor.YELLOW + "╬ф╤Се╘Ёв ╪рх╞ ф╪до")) {
+					.equalsIgnoreCase(ChatColor.YELLOW + "Л∙└К²╪М│╛К└╓ Л├▄М≥≤ М▀╟Л╪⌠")) {
 				Location loc = new Location(world, 723, 24, 304);
 				Spider Boss = (Spider) world.spawnEntity(loc, EntityType.CAVE_SPIDER);
-				Boss.setCustomName(ChatColor.GRAY + "╬ф╤Се╘Ёв" + ChatColor.YELLOW + " [Lv.23]");
+				Boss.setCustomName(ChatColor.GRAY + "Л∙└К²╪М│╛К└╓" + ChatColor.YELLOW + " [Lv.23]");
 				Boss.setCustomNameVisible(true);
 				((LivingEntity) Boss).setMaxHealth(50);
 				((LivingEntity) Boss).setHealth(50);
@@ -95,15 +95,15 @@ public class BossTicket {
 	}
 	
 	public void hardArachne(Player player, Item itemArg, World world) {
-		//[го╣Е]╬ф╤Се╘Ёв 777 42 -6  796 48 -27
+		//[М∙≤К⌠°]Л∙└К²╪М│╛К└╓ 777 42 -6  796 48 -27
 		if (player.getLocation().getX() <= 797 && player.getLocation().getY() <= 50 && player.getLocation().getZ() <= -5
 				&& player.getLocation().getX() >= 776 && player.getLocation().getY() >= 40
 				&& player.getLocation().getZ() >= -28) {
 			if (itemArg.getItemStack().getItemMeta().getDisplayName()
-					.equalsIgnoreCase(ChatColor.YELLOW + "[го╣Е]╬ф╤Се╘Ёв ╪рх╞ ф╪до")) {
+					.equalsIgnoreCase(ChatColor.YELLOW + "[М∙≤К⌠°]Л∙└К²╪М│╛К└╓ Л├▄М≥≤ М▀╟Л╪⌠")) {
 				Location loc = new Location(world, 791, 42, -17);
 				Spider Boss = (Spider) world.spawnEntity(loc, EntityType.CAVE_SPIDER);
-				Boss.setCustomName(ChatColor.GRAY + "╬ф╤Се╘Ёв" + ChatColor.YELLOW + " [Lv.196]");
+				Boss.setCustomName(ChatColor.GRAY + "Л∙└К²╪М│╛К└╓" + ChatColor.YELLOW + " [Lv.196]");
 				Boss.setCustomNameVisible(true);
 				((LivingEntity) Boss).setMaxHealth(1000);
 				((LivingEntity) Boss).setHealth(1000);

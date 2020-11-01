@@ -66,7 +66,7 @@ public class ShootArrow {
 	}
 
 	public boolean arrow1(Arrow arrow, Entity mob, Location loc) {
-		if(mob.getCustomName().substring(2).equalsIgnoreCase("¼³¿ø Á¤ÂûÀÚ" + ChatColor.YELLOW + " [Lv.224]")) {
+		if(mob.getCustomName().substring(2).equalsIgnoreCase("ì„¤ì› ì •ì°°ì" + ChatColor.YELLOW + " [Lv.224]")) {
 			if (arrow.getPassenger() != null) {
 				arrow.removePassenger(arrow.getPassenger());
 			}
@@ -79,7 +79,7 @@ public class ShootArrow {
 	}
 	
 	public boolean arrow2(Arrow arrow, Entity mob, Location loc) {
-		if(mob.getCustomName().substring(2).equalsIgnoreCase("ÄÚ³¶±×" + ChatColor.YELLOW + " [Lv.??]")) {
+		if(mob.getCustomName().substring(2).equalsIgnoreCase("ì½”ë‚­ê·¸" + ChatColor.YELLOW + " [Lv.??]")) {
 			if (arrow.getPassenger() != null) {
 				arrow.removePassenger(arrow.getPassenger());
 			}
@@ -92,7 +92,7 @@ public class ShootArrow {
 	}
 	
 	public boolean arrow3(Arrow arrow, Entity mob, Location loc) {
-		if(mob.getCustomName().substring(2).equalsIgnoreCase("ÃÊ¸¶µµ¿ë±â»ç" + ChatColor.YELLOW + " [Lv.342]")) {
+		if(mob.getCustomName().substring(2).equalsIgnoreCase("ì´ˆë§ˆë„ìš©ê¸°ì‚¬" + ChatColor.YELLOW + " [Lv.342]")) {
 			if (arrow.getPassenger() != null) {
 				arrow.removePassenger(arrow.getPassenger());
 			}
@@ -105,7 +105,7 @@ public class ShootArrow {
 	}
 	
 	public boolean arrow4(Arrow arrow, Entity mob, Location loc) {
-		if(mob.getCustomName().substring(2).equalsIgnoreCase("¶°µµ´Â ¸Á·É ¸¶¹ı»ç" + ChatColor.YELLOW + " [Lv.349]")) {
+		if(mob.getCustomName().substring(2).equalsIgnoreCase("ë– ë„ëŠ” ë§ë ¹ ë§ˆë²•ì‚¬" + ChatColor.YELLOW + " [Lv.349]")) {
 			if (arrow.getPassenger() != null) {
 				arrow.removePassenger(arrow.getPassenger());
 			}
@@ -118,7 +118,7 @@ public class ShootArrow {
 	}
 	
 	public boolean arrow5(Arrow arrow, Entity mob, Location loc) {
-		if(mob.getCustomName().substring(2).equalsIgnoreCase("³×¿À¾ÆÄí¾Æ ¸¶µ¹" + ChatColor.YELLOW + " [Lv.365]")) {
+		if(mob.getCustomName().substring(2).equalsIgnoreCase("ë„¤ì˜¤ì•„ì¿ ì•„ ë§ˆëŒ" + ChatColor.YELLOW + " [Lv.365]")) {
 			if (arrow.getPassenger() != null) {
 				arrow.removePassenger(arrow.getPassenger());
 			}
@@ -131,7 +131,7 @@ public class ShootArrow {
 	}
 	
 	public boolean arrow6(Arrow arrow, Entity mob, Location loc) {
-		if(mob.getCustomName().substring(2).equalsIgnoreCase("¹æÈ²ÇÏ´Â ¿äÁ¤" + ChatColor.YELLOW + " [Lv.372]")) {
+		if(mob.getCustomName().substring(2).equalsIgnoreCase("ë°©í™©í•˜ëŠ” ìš”ì •" + ChatColor.YELLOW + " [Lv.372]")) {
 			if (arrow.getPassenger() != null) {
 				arrow.removePassenger(arrow.getPassenger());
 			}

@@ -16,21 +16,21 @@ import org.bukkit.inventory.meta.ItemMeta;
 public class ReinforcementScroll {
 
 	public void openInv(Player player, Item itemArg) {
-		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "°­È­ ÁÖ¹®¼­")) {
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "ê°•í™” ì£¼ë¬¸ì„œ")) {
 			itemArg.remove();
 			Inventory inv = Bukkit.createInventory(player, 9, "Reinforcement table");
 			ItemStack ok = new ItemStack(Material.SLIME_BALL);
 			ItemMeta okIm = ok.getItemMeta();
-			okIm.setDisplayName(ChatColor.GREEN + "°­È­ÇÏ±â");
+			okIm.setDisplayName(ChatColor.GREEN + "ê°•í™”í•˜ê¸°");
 			ArrayList<String> okLore = new ArrayList();
-			okLore.add(ChatColor.GRAY + "¿ŞÂÊ¿¡ Àåºñ(»ıÈ° Àåºñ´Â °­È­ ºÒ°¡), ¿À¸¥ÂÊ¿¡ Àç·á¸¦ ³Ö°í ´­·¯ÁÖ¼¼¿ä.");
+			okLore.add(ChatColor.GRAY + "ì™¼ìª½ì— ì¥ë¹„(ìƒí™œ ì¥ë¹„ëŠ” ê°•í™” ë¶ˆê°€), ì˜¤ë¥¸ìª½ì— ì¬ë£Œë¥¼ ë„£ê³  ëˆŒëŸ¬ì£¼ì„¸ìš”.");
 			okIm.setLore(okLore);
 			okIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			okIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			ok.setItemMeta(okIm);
 			ItemStack no = new ItemStack(Material.SHULKER_SHELL);
 			ItemMeta noIm = no.getItemMeta();
-			noIm.setDisplayName(ChatColor.RED + "³ª°¡±â");
+			noIm.setDisplayName(ChatColor.RED + "ë‚˜ê°€ê¸°");
 			noIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			noIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			no.setItemMeta(noIm);

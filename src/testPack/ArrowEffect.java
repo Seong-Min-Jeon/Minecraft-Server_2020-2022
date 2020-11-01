@@ -39,30 +39,30 @@ public class ArrowEffect {
 				ItemStack item = player.getInventory().getItemInMainHand();
 				ItemMeta im = item.getItemMeta();
 				boolean bool = false;
-				if(im.getDisplayName().equals(ChatColor.AQUA + "Á×À½ÀÇ ¼­¾à")) {
+				if(im.getDisplayName().equals(ChatColor.AQUA + "ì£½ìŒì˜ ì„œì•½")) {
 					if(player.getLevel() >= 350) {
 						if(removeMana(player, 5)) {
 							bool = reload(player, 1000);
 						}
 					} 
 				}
-				if(im.getDisplayName().equals(ChatColor.YELLOW + "ÁúÇ³ÀÇ ÁöÆÎÀÌ")) {
+				if(im.getDisplayName().equals(ChatColor.YELLOW + "ì§ˆí’ì˜ ì§€íŒ¡ì´")) {
 					if(player.getLevel() >= 300) {
 						if(removeMana(player, 1)) {
 							player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 1, true, false, false));
-							player.sendMessage(ChatColor.GREEN + "½Å¼ÓÀÌ ºÎ¿©µË´Ï´Ù.");
+							player.sendMessage(ChatColor.GREEN + "ì‹ ì†ì´ ë¶€ì—¬ë©ë‹ˆë‹¤.");
 						}
 					} 
 				}
-				if(im.getDisplayName().equals(ChatColor.LIGHT_PURPLE + "°í¸ñ³ª¹« ÁöÆÎÀÌ")) {
+				if(im.getDisplayName().equals(ChatColor.LIGHT_PURPLE + "ê³ ëª©ë‚˜ë¬´ ì§€íŒ¡ì´")) {
 					if(player.getLevel() >= 300) {
 						if(removeMana(player, 2)) {
 							player.setHealth(player.getHealth()+2);
-							player.sendMessage(ChatColor.GREEN + "Ã¼·ÂÀÌ È¸º¹µÇ¾ú½À´Ï´Ù.");
+							player.sendMessage(ChatColor.GREEN + "ì²´ë ¥ì´ íšŒë³µë˜ì—ˆìŠµë‹ˆë‹¤.");
 						}
 					} 
 				}
-				if(im.getDisplayName().equals(ChatColor.AQUA + "Å×½ºÆ®¿ë")) {
+				if(im.getDisplayName().equals(ChatColor.AQUA + "í…ŒìŠ¤íŠ¸ìš©")) {
 					player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 1, true, false, false));
 				}
 				if(bool) {
@@ -74,7 +74,7 @@ public class ArrowEffect {
 					arrow.setVelocity(player.getLocation().getDirection().multiply(5.0f));
 					world.playSound(player.getLocation(), Sound.BLOCK_BEACON_ACTIVATE, 6.0f, 8.0f);
 					
-					if(im.getDisplayName().equals(ChatColor.AQUA + "Á×À½ÀÇ ¼­¾à")) {
+					if(im.getDisplayName().equals(ChatColor.AQUA + "ì£½ìŒì˜ ì„œì•½")) {
 						Item passenger = arrow.getWorld().dropItem(arrow.getLocation(), new ItemStack(Material.END_CRYSTAL));
 						passenger.setPickupDelay(10000000);
 						arrow.addPassenger(passenger);
@@ -178,7 +178,7 @@ public class ArrowEffect {
 			player.getInventory().remove(Material.HEART_OF_THE_SEA);
 			ItemStack item = new ItemStack(Material.MAGMA_CREAM);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.RED + "¸¶³ª¾øÀ½");
+			itemIm.setDisplayName(ChatColor.RED + "ë§ˆë‚˜ì—†ìŒ");
 			item.setItemMeta(itemIm);
 			player.getInventory().setItem(8, item);
 			return true;
@@ -186,12 +186,12 @@ public class ArrowEffect {
 			player.getInventory().remove(Material.HEART_OF_THE_SEA);
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - num);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);
 			player.getInventory().setItem(8, item);
 			return true;
 		} else {
-			player.sendMessage(ChatColor.RED + "¸¶³ª°¡ ºÎÁ·ÇÕ´Ï´Ù.");
+			player.sendMessage(ChatColor.RED + "ë§ˆë‚˜ê°€ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 			player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
 			return false;
 		}

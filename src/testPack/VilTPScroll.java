@@ -29,9 +29,9 @@ public class VilTPScroll {
 	}
 
 	public void wargunil(Player player, Item itemArg) {
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "¿ö±×´Ò ¿öÇÁ ½ºÅ©·Ñ")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "ì›Œê·¸ë‹ ì›Œí”„ ìŠ¤í¬ë¡¤")) {
 			World world = player.getWorld();
-			// ¿ö±×´Ò
+			// ì›Œê·¸ë‹
 			int i = 0;
 			for (ItemStack is : player.getInventory().getContents()) {
 				if (is == null)
@@ -49,11 +49,11 @@ public class VilTPScroll {
 				if (!player.getInventory().contains(Material.HEART_OF_THE_SEA)) {
 					ItemStack item = new ItemStack(Material.MAGMA_CREAM);
 					ItemMeta itemIm = item.getItemMeta();
-					itemIm.setDisplayName(ChatColor.RED + "¸¶³ª¾øÀ½");
+					itemIm.setDisplayName(ChatColor.RED + "ë§ˆë‚˜ì—†ìŒ");
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
 				}
-				// º¸½º¹Ù °ü·Ã
+				// ë³´ìŠ¤ë°” ê´€ë ¨
 				try {
 					new BossHealth().removePlayer(player);
 				} catch (Exception e) {
@@ -63,30 +63,30 @@ public class VilTPScroll {
 				player.getInventory().remove(Material.HEART_OF_THE_SEA);
 				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 5);
 				ItemMeta itemIm = item.getItemMeta();
-				itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+				itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 				item.setItemMeta(itemIm);
 				player.getInventory().setItem(8, item);
 				Location loc = new Location(world, -1848, 71, 3019);
 				player.teleport(loc);
 				itemArg.remove();
 				player.getWorld().playSound(loc, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
-				// º¸½º¹Ù °ü·Ã
+				// ë³´ìŠ¤ë°” ê´€ë ¨
 				try {
 					new BossHealth().removePlayer(player);
 				} catch (Exception e) {
 
 				}
 			} else {
-				player.sendMessage(ChatColor.RED + "¿öÇÁ¿¡ ÇÊ¿äÇÑ ¸¶³ª°¡ ºÎÁ·ÇÕ´Ï´Ù.");
+				player.sendMessage(ChatColor.RED + "ì›Œí”„ì— í•„ìš”í•œ ë§ˆë‚˜ê°€ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
 			}
 		}
 	}
 	
 	public void forgan(Player player, Item itemArg) {
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "Æ÷¸£°£ ¿öÇÁ ½ºÅ©·Ñ")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "í¬ë¥´ê°„ ì›Œí”„ ìŠ¤í¬ë¡¤")) {
 			World world = player.getWorld();
-			// Æ÷¸£°£
+			// í¬ë¥´ê°„
 			int i = 0;
 			for (ItemStack is : player.getInventory().getContents()) {
 				if (is == null)
@@ -104,11 +104,11 @@ public class VilTPScroll {
 				if (!player.getInventory().contains(Material.HEART_OF_THE_SEA)) {
 					ItemStack item = new ItemStack(Material.MAGMA_CREAM);
 					ItemMeta itemIm = item.getItemMeta();
-					itemIm.setDisplayName(ChatColor.RED + "¸¶³ª¾øÀ½");
+					itemIm.setDisplayName(ChatColor.RED + "ë§ˆë‚˜ì—†ìŒ");
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
 				}
-				// º¸½º¹Ù °ü·Ã
+				// ë³´ìŠ¤ë°” ê´€ë ¨
 				try {
 					new BossHealth().removePlayer(player);
 				} catch (Exception e) {
@@ -118,30 +118,30 @@ public class VilTPScroll {
 				player.getInventory().remove(Material.HEART_OF_THE_SEA);
 				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 5);
 				ItemMeta itemIm = item.getItemMeta();
-				itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+				itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 				item.setItemMeta(itemIm);
 				player.getInventory().setItem(8, item);
 				Location loc = new Location(world, -1573, 53, 2458);
 				player.teleport(loc);
 				itemArg.remove();
 				player.getWorld().playSound(loc, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
-				// º¸½º¹Ù °ü·Ã
+				// ë³´ìŠ¤ë°” ê´€ë ¨
 				try {
 					new BossHealth().removePlayer(player);
 				} catch (Exception e) {
 
 				}
 			} else {
-				player.sendMessage(ChatColor.RED + "¿öÇÁ¿¡ ÇÊ¿äÇÑ ¸¶³ª°¡ ºÎÁ·ÇÕ´Ï´Ù.");
+				player.sendMessage(ChatColor.RED + "ì›Œí”„ì— í•„ìš”í•œ ë§ˆë‚˜ê°€ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
 			}
 		}
 	}
 
 	public void tiru(Player player, Item itemArg) {
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "Æ¼¸£ ¿öÇÁ ½ºÅ©·Ñ")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "í‹°ë¥´ ì›Œí”„ ìŠ¤í¬ë¡¤")) {
 			World world = player.getWorld();
-			// Æ¼¸£
+			// í‹°ë¥´
 			int i = 0;
 			for (ItemStack is : player.getInventory().getContents()) {
 				if (is == null)
@@ -159,11 +159,11 @@ public class VilTPScroll {
 				if (!player.getInventory().contains(Material.HEART_OF_THE_SEA)) {
 					ItemStack item = new ItemStack(Material.MAGMA_CREAM);
 					ItemMeta itemIm = item.getItemMeta();
-					itemIm.setDisplayName(ChatColor.RED + "¸¶³ª¾øÀ½");
+					itemIm.setDisplayName(ChatColor.RED + "ë§ˆë‚˜ì—†ìŒ");
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
 				}
-				// º¸½º¹Ù °ü·Ã
+				// ë³´ìŠ¤ë°” ê´€ë ¨
 				try {
 					new BossHealth().removePlayer(player);
 				} catch (Exception e) {
@@ -173,30 +173,30 @@ public class VilTPScroll {
 				player.getInventory().remove(Material.HEART_OF_THE_SEA);
 				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 5);
 				ItemMeta itemIm = item.getItemMeta();
-				itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+				itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 				item.setItemMeta(itemIm);
 				player.getInventory().setItem(8, item);
 				Location loc = new Location(world, -672, 46, 1942);
 				player.teleport(loc);
 				itemArg.remove();
 				player.getWorld().playSound(loc, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
-				// º¸½º¹Ù °ü·Ã
+				// ë³´ìŠ¤ë°” ê´€ë ¨
 				try {
 					new BossHealth().removePlayer(player);
 				} catch (Exception e) {
 
 				}
 			} else {
-				player.sendMessage(ChatColor.RED + "¿öÇÁ¿¡ ÇÊ¿äÇÑ ¸¶³ª°¡ ºÎÁ·ÇÕ´Ï´Ù.");
+				player.sendMessage(ChatColor.RED + "ì›Œí”„ì— í•„ìš”í•œ ë§ˆë‚˜ê°€ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
 			}
 		}
 	}
 	
 	public void miyu(Player player, Item itemArg) {
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "¹ÌÇ£¸£À¯ ¿öÇÁ ½ºÅ©·Ñ")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "ë¯¸í‘€ë¥´ìœ  ì›Œí”„ ìŠ¤í¬ë¡¤")) {
 			World world = player.getWorld();
-			// ¹ÌÀ¯
+			// ë¯¸ìœ 
 			int i = 0;
 			for (ItemStack is : player.getInventory().getContents()) {
 				if (is == null)
@@ -214,11 +214,11 @@ public class VilTPScroll {
 				if (!player.getInventory().contains(Material.HEART_OF_THE_SEA)) {
 					ItemStack item = new ItemStack(Material.MAGMA_CREAM);
 					ItemMeta itemIm = item.getItemMeta();
-					itemIm.setDisplayName(ChatColor.RED + "¸¶³ª¾øÀ½");
+					itemIm.setDisplayName(ChatColor.RED + "ë§ˆë‚˜ì—†ìŒ");
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
 				}
-				// º¸½º¹Ù °ü·Ã
+				// ë³´ìŠ¤ë°” ê´€ë ¨
 				try {
 					new BossHealth().removePlayer(player);
 				} catch (Exception e) {
@@ -228,30 +228,30 @@ public class VilTPScroll {
 				player.getInventory().remove(Material.HEART_OF_THE_SEA);
 				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 5);
 				ItemMeta itemIm = item.getItemMeta();
-				itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+				itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 				item.setItemMeta(itemIm);
 				player.getInventory().setItem(8, item);
 				Location loc = new Location(world,-1143,181,1461);
 				player.teleport(loc);
 				itemArg.remove();
 				player.getWorld().playSound(loc, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
-				// º¸½º¹Ù °ü·Ã
+				// ë³´ìŠ¤ë°” ê´€ë ¨
 				try {
 					new BossHealth().removePlayer(player);
 				} catch (Exception e) {
 
 				}
 			} else {
-				player.sendMessage(ChatColor.RED + "¿öÇÁ¿¡ ÇÊ¿äÇÑ ¸¶³ª°¡ ºÎÁ·ÇÕ´Ï´Ù.");
+				player.sendMessage(ChatColor.RED + "ì›Œí”„ì— í•„ìš”í•œ ë§ˆë‚˜ê°€ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
 			}
 		}
 	}
 	
 	public void kaiman(Player player, Item itemArg) {
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "Ä«ÀÌ¸¸ ¿öÇÁ ½ºÅ©·Ñ")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "ì¹´ì´ë§Œ ì›Œí”„ ìŠ¤í¬ë¡¤")) {
 			World world = player.getWorld();
-			// Ä«ÀÌ¸¸
+			// ì¹´ì´ë§Œ
 			int i = 0;
 			for (ItemStack is : player.getInventory().getContents()) {
 				if (is == null)
@@ -269,11 +269,11 @@ public class VilTPScroll {
 				if (!player.getInventory().contains(Material.HEART_OF_THE_SEA)) {
 					ItemStack item = new ItemStack(Material.MAGMA_CREAM);
 					ItemMeta itemIm = item.getItemMeta();
-					itemIm.setDisplayName(ChatColor.RED + "¸¶³ª¾øÀ½");
+					itemIm.setDisplayName(ChatColor.RED + "ë§ˆë‚˜ì—†ìŒ");
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
 				}
-				// º¸½º¹Ù °ü·Ã
+				// ë³´ìŠ¤ë°” ê´€ë ¨
 				try {
 					new BossHealth().removePlayer(player);
 				} catch (Exception e) {
@@ -283,30 +283,30 @@ public class VilTPScroll {
 				player.getInventory().remove(Material.HEART_OF_THE_SEA);
 				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 5);
 				ItemMeta itemIm = item.getItemMeta();
-				itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+				itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 				item.setItemMeta(itemIm);
 				player.getInventory().setItem(8, item);
 				Location loc = new Location(world,-478,55,1302);
 				player.teleport(loc);
 				itemArg.remove();
 				player.getWorld().playSound(loc, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
-				// º¸½º¹Ù °ü·Ã
+				// ë³´ìŠ¤ë°” ê´€ë ¨
 				try {
 					new BossHealth().removePlayer(player);
 				} catch (Exception e) {
 
 				}
 			} else {
-				player.sendMessage(ChatColor.RED + "¿öÇÁ¿¡ ÇÊ¿äÇÑ ¸¶³ª°¡ ºÎÁ·ÇÕ´Ï´Ù.");
+				player.sendMessage(ChatColor.RED + "ì›Œí”„ì— í•„ìš”í•œ ë§ˆë‚˜ê°€ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
 			}
 		}
 	}
 	
 	public void osu(Player player, Item itemArg) {
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "¿À½º ¿öÇÁ ½ºÅ©·Ñ")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "ì˜¤ìŠ¤ ì›Œí”„ ìŠ¤í¬ë¡¤")) {
 			World world = player.getWorld();
-			// ¿À½º
+			// ì˜¤ìŠ¤
 			int i = 0;
 			for (ItemStack is : player.getInventory().getContents()) {
 				if (is == null)
@@ -324,11 +324,11 @@ public class VilTPScroll {
 				if (!player.getInventory().contains(Material.HEART_OF_THE_SEA)) {
 					ItemStack item = new ItemStack(Material.MAGMA_CREAM);
 					ItemMeta itemIm = item.getItemMeta();
-					itemIm.setDisplayName(ChatColor.RED + "¸¶³ª¾øÀ½");
+					itemIm.setDisplayName(ChatColor.RED + "ë§ˆë‚˜ì—†ìŒ");
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
 				}
-				// º¸½º¹Ù °ü·Ã
+				// ë³´ìŠ¤ë°” ê´€ë ¨
 				try {
 					new BossHealth().removePlayer(player);
 				} catch (Exception e) {
@@ -338,30 +338,30 @@ public class VilTPScroll {
 				player.getInventory().remove(Material.HEART_OF_THE_SEA);
 				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 5);
 				ItemMeta itemIm = item.getItemMeta();
-				itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+				itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 				item.setItemMeta(itemIm);
 				player.getInventory().setItem(8, item);
 				Location loc = new Location(world,-1370,51,976);
 				player.teleport(loc);
 				itemArg.remove();
 				player.getWorld().playSound(loc, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
-				// º¸½º¹Ù °ü·Ã
+				// ë³´ìŠ¤ë°” ê´€ë ¨
 				try {
 					new BossHealth().removePlayer(player);
 				} catch (Exception e) {
 
 				}
 			} else {
-				player.sendMessage(ChatColor.RED + "¿öÇÁ¿¡ ÇÊ¿äÇÑ ¸¶³ª°¡ ºÎÁ·ÇÕ´Ï´Ù.");
+				player.sendMessage(ChatColor.RED + "ì›Œí”„ì— í•„ìš”í•œ ë§ˆë‚˜ê°€ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
 			}
 		}
 	}
 	
 	public void konno(Player player, Item itemArg) {
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "ÄÜ³ë ¿öÇÁ ½ºÅ©·Ñ")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "ì½˜ë…¸ ì›Œí”„ ìŠ¤í¬ë¡¤")) {
 			World world = player.getWorld();
-			// ÄÜ³ë
+			// ì½˜ë…¸
 			int i = 0;
 			for (ItemStack is : player.getInventory().getContents()) {
 				if (is == null)
@@ -379,11 +379,11 @@ public class VilTPScroll {
 				if (!player.getInventory().contains(Material.HEART_OF_THE_SEA)) {
 					ItemStack item = new ItemStack(Material.MAGMA_CREAM);
 					ItemMeta itemIm = item.getItemMeta();
-					itemIm.setDisplayName(ChatColor.RED + "¸¶³ª¾øÀ½");
+					itemIm.setDisplayName(ChatColor.RED + "ë§ˆë‚˜ì—†ìŒ");
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
 				}
-				// º¸½º¹Ù °ü·Ã
+				// ë³´ìŠ¤ë°” ê´€ë ¨
 				try {
 					new BossHealth().removePlayer(player);
 				} catch (Exception e) {
@@ -393,30 +393,30 @@ public class VilTPScroll {
 				player.getInventory().remove(Material.HEART_OF_THE_SEA);
 				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 5);
 				ItemMeta itemIm = item.getItemMeta();
-				itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+				itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 				item.setItemMeta(itemIm);
 				player.getInventory().setItem(8, item);
 				Location loc = new Location(world,-2465,52,543);
 				player.teleport(loc);
 				itemArg.remove();
 				player.getWorld().playSound(loc, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
-				// º¸½º¹Ù °ü·Ã
+				// ë³´ìŠ¤ë°” ê´€ë ¨
 				try {
 					new BossHealth().removePlayer(player);
 				} catch (Exception e) {
 
 				}
 			} else {
-				player.sendMessage(ChatColor.RED + "¿öÇÁ¿¡ ÇÊ¿äÇÑ ¸¶³ª°¡ ºÎÁ·ÇÕ´Ï´Ù.");
+				player.sendMessage(ChatColor.RED + "ì›Œí”„ì— í•„ìš”í•œ ë§ˆë‚˜ê°€ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
 			}
 		}
 	}
 	
 	public void fuhidmeh(Player player, Item itemArg) {
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "ÇÁÈÖ µå ¸ŞÈå ¿öÇÁ ½ºÅ©·Ñ")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "í”„íœ˜ ë“œ ë©”í ì›Œí”„ ìŠ¤í¬ë¡¤")) {
 			World world = player.getWorld();
-			// ÇÁÈÖ µå ¸ŞÈå
+			// í”„íœ˜ ë“œ ë©”í
 			int i = 0;
 			for (ItemStack is : player.getInventory().getContents()) {
 				if (is == null)
@@ -434,11 +434,11 @@ public class VilTPScroll {
 				if (!player.getInventory().contains(Material.HEART_OF_THE_SEA)) {
 					ItemStack item = new ItemStack(Material.MAGMA_CREAM);
 					ItemMeta itemIm = item.getItemMeta();
-					itemIm.setDisplayName(ChatColor.RED + "¸¶³ª¾øÀ½");
+					itemIm.setDisplayName(ChatColor.RED + "ë§ˆë‚˜ì—†ìŒ");
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
 				}
-				// º¸½º¹Ù °ü·Ã
+				// ë³´ìŠ¤ë°” ê´€ë ¨
 				try {
 					new BossHealth().removePlayer(player);
 				} catch (Exception e) {
@@ -448,30 +448,30 @@ public class VilTPScroll {
 				player.getInventory().remove(Material.HEART_OF_THE_SEA);
 				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 5);
 				ItemMeta itemIm = item.getItemMeta();
-				itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+				itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 				item.setItemMeta(itemIm);
 				player.getInventory().setItem(8, item);
 				Location loc = new Location(world,-429,98,721);
 				player.teleport(loc);
 				itemArg.remove();
 				player.getWorld().playSound(loc, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
-				// º¸½º¹Ù °ü·Ã
+				// ë³´ìŠ¤ë°” ê´€ë ¨
 				try {
 					new BossHealth().removePlayer(player);
 				} catch (Exception e) {
 
 				}
 			} else {
-				player.sendMessage(ChatColor.RED + "¿öÇÁ¿¡ ÇÊ¿äÇÑ ¸¶³ª°¡ ºÎÁ·ÇÕ´Ï´Ù.");
+				player.sendMessage(ChatColor.RED + "ì›Œí”„ì— í•„ìš”í•œ ë§ˆë‚˜ê°€ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
 			}
 		}
 	}
 	
 	public void karce(Player player, Item itemArg) {
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "Ä®½º ¿öÇÁ ½ºÅ©·Ñ")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "ì¹¼ìŠ¤ ì›Œí”„ ìŠ¤í¬ë¡¤")) {
 			World world = player.getWorld();
-			// Ä®½º
+			// ì¹¼ìŠ¤
 			int i = 0;
 			for (ItemStack is : player.getInventory().getContents()) {
 				if (is == null)
@@ -489,11 +489,11 @@ public class VilTPScroll {
 				if (!player.getInventory().contains(Material.HEART_OF_THE_SEA)) {
 					ItemStack item = new ItemStack(Material.MAGMA_CREAM);
 					ItemMeta itemIm = item.getItemMeta();
-					itemIm.setDisplayName(ChatColor.RED + "¸¶³ª¾øÀ½");
+					itemIm.setDisplayName(ChatColor.RED + "ë§ˆë‚˜ì—†ìŒ");
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
 				}
-				// º¸½º¹Ù °ü·Ã
+				// ë³´ìŠ¤ë°” ê´€ë ¨
 				try {
 					new BossHealth().removePlayer(player);
 				} catch (Exception e) {
@@ -503,30 +503,30 @@ public class VilTPScroll {
 				player.getInventory().remove(Material.HEART_OF_THE_SEA);
 				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 5);
 				ItemMeta itemIm = item.getItemMeta();
-				itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+				itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 				item.setItemMeta(itemIm);
 				player.getInventory().setItem(8, item);
 				Location loc = new Location(world,-199,67,541);
 				player.teleport(loc);
 				itemArg.remove();
 				player.getWorld().playSound(loc, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
-				// º¸½º¹Ù °ü·Ã
+				// ë³´ìŠ¤ë°” ê´€ë ¨
 				try {
 					new BossHealth().removePlayer(player);
 				} catch (Exception e) {
 
 				}
 			} else {
-				player.sendMessage(ChatColor.RED + "¿öÇÁ¿¡ ÇÊ¿äÇÑ ¸¶³ª°¡ ºÎÁ·ÇÕ´Ï´Ù.");
+				player.sendMessage(ChatColor.RED + "ì›Œí”„ì— í•„ìš”í•œ ë§ˆë‚˜ê°€ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
 			}
 		}
 	}
 	
 	public void kuredrat(Player player, Item itemArg) {
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "Å©·¹µå¶óÆ® ¿öÇÁ ½ºÅ©·Ñ")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "í¬ë ˆë“œë¼íŠ¸ ì›Œí”„ ìŠ¤í¬ë¡¤")) {
 			World world = player.getWorld();
-			// Å©·¹µå¶óÆ®
+			// í¬ë ˆë“œë¼íŠ¸
 			int i = 0;
 			for (ItemStack is : player.getInventory().getContents()) {
 				if (is == null)
@@ -544,11 +544,11 @@ public class VilTPScroll {
 				if (!player.getInventory().contains(Material.HEART_OF_THE_SEA)) {
 					ItemStack item = new ItemStack(Material.MAGMA_CREAM);
 					ItemMeta itemIm = item.getItemMeta();
-					itemIm.setDisplayName(ChatColor.RED + "¸¶³ª¾øÀ½");
+					itemIm.setDisplayName(ChatColor.RED + "ë§ˆë‚˜ì—†ìŒ");
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
 				}
-				// º¸½º¹Ù °ü·Ã
+				// ë³´ìŠ¤ë°” ê´€ë ¨
 				try {
 					new BossHealth().removePlayer(player);
 				} catch (Exception e) {
@@ -558,30 +558,30 @@ public class VilTPScroll {
 				player.getInventory().remove(Material.HEART_OF_THE_SEA);
 				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 5);
 				ItemMeta itemIm = item.getItemMeta();
-				itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+				itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 				item.setItemMeta(itemIm);
 				player.getInventory().setItem(8, item);
 				Location loc = new Location(world,-62,55,80);
 				player.teleport(loc);
 				itemArg.remove();
 				player.getWorld().playSound(loc, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
-				// º¸½º¹Ù °ü·Ã
+				// ë³´ìŠ¤ë°” ê´€ë ¨
 				try {
 					new BossHealth().removePlayer(player);
 				} catch (Exception e) {
 
 				}
 			} else {
-				player.sendMessage(ChatColor.RED + "¿öÇÁ¿¡ ÇÊ¿äÇÑ ¸¶³ª°¡ ºÎÁ·ÇÕ´Ï´Ù.");
+				player.sendMessage(ChatColor.RED + "ì›Œí”„ì— í•„ìš”í•œ ë§ˆë‚˜ê°€ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
 			}
 		}
 	}
 	
 	public void beiag(Player player, Item itemArg) {
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "º£¾Æ±× ¿öÇÁ ½ºÅ©·Ñ")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "ë² ì•„ê·¸ ì›Œí”„ ìŠ¤í¬ë¡¤")) {
 			World world = player.getWorld();
-			// º£¾Æ±×
+			// ë² ì•„ê·¸
 			int i = 0;
 			for (ItemStack is : player.getInventory().getContents()) {
 				if (is == null)
@@ -599,11 +599,11 @@ public class VilTPScroll {
 				if (!player.getInventory().contains(Material.HEART_OF_THE_SEA)) {
 					ItemStack item = new ItemStack(Material.MAGMA_CREAM);
 					ItemMeta itemIm = item.getItemMeta();
-					itemIm.setDisplayName(ChatColor.RED + "¸¶³ª¾øÀ½");
+					itemIm.setDisplayName(ChatColor.RED + "ë§ˆë‚˜ì—†ìŒ");
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
 				}
-				// º¸½º¹Ù °ü·Ã
+				// ë³´ìŠ¤ë°” ê´€ë ¨
 				try {
 					new BossHealth().removePlayer(player);
 				} catch (Exception e) {
@@ -613,30 +613,30 @@ public class VilTPScroll {
 				player.getInventory().remove(Material.HEART_OF_THE_SEA);
 				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 5);
 				ItemMeta itemIm = item.getItemMeta();
-				itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+				itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 				item.setItemMeta(itemIm);
 				player.getInventory().setItem(8, item);
 				Location loc = new Location(world,141,87,-329);
 				player.teleport(loc);
 				itemArg.remove();
 				player.getWorld().playSound(loc, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
-				// º¸½º¹Ù °ü·Ã
+				// ë³´ìŠ¤ë°” ê´€ë ¨
 				try {
 					new BossHealth().removePlayer(player);
 				} catch (Exception e) {
 
 				}
 			} else {
-				player.sendMessage(ChatColor.RED + "¿öÇÁ¿¡ ÇÊ¿äÇÑ ¸¶³ª°¡ ºÎÁ·ÇÕ´Ï´Ù.");
+				player.sendMessage(ChatColor.RED + "ì›Œí”„ì— í•„ìš”í•œ ë§ˆë‚˜ê°€ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
 			}
 		}
 	}
 	
 	public void magicTower(Player player, Item itemArg) {
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "¸¶¹ıÅ¾ ¿öÇÁ ½ºÅ©·Ñ")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "ë§ˆë²•íƒ‘ ì›Œí”„ ìŠ¤í¬ë¡¤")) {
 			World world = player.getWorld();
-			// ¸¶¹ıÅ¾
+			// ë§ˆë²•íƒ‘
 			int i = 0;
 			for (ItemStack is : player.getInventory().getContents()) {
 				if (is == null)
@@ -654,11 +654,11 @@ public class VilTPScroll {
 				if (!player.getInventory().contains(Material.HEART_OF_THE_SEA)) {
 					ItemStack item = new ItemStack(Material.MAGMA_CREAM);
 					ItemMeta itemIm = item.getItemMeta();
-					itemIm.setDisplayName(ChatColor.RED + "¸¶³ª¾øÀ½");
+					itemIm.setDisplayName(ChatColor.RED + "ë§ˆë‚˜ì—†ìŒ");
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
 				}
-				// º¸½º¹Ù °ü·Ã
+				// ë³´ìŠ¤ë°” ê´€ë ¨
 				try {
 					new BossHealth().removePlayer(player);
 				} catch (Exception e) {
@@ -668,30 +668,30 @@ public class VilTPScroll {
 				player.getInventory().remove(Material.HEART_OF_THE_SEA);
 				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 1);
 				ItemMeta itemIm = item.getItemMeta();
-				itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+				itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 				item.setItemMeta(itemIm);
 				player.getInventory().setItem(8, item);
 				Location loc = new Location(world,221,81,725,90,0);
 				player.teleport(loc);
 				itemArg.remove();
 				player.getWorld().playSound(loc, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
-				// º¸½º¹Ù °ü·Ã
+				// ë³´ìŠ¤ë°” ê´€ë ¨
 				try {
 					new BossHealth().removePlayer(player);
 				} catch (Exception e) {
 
 				}
 			} else {
-				player.sendMessage(ChatColor.RED + "¿öÇÁ¿¡ ÇÊ¿äÇÑ ¸¶³ª°¡ ºÎÁ·ÇÕ´Ï´Ù.");
+				player.sendMessage(ChatColor.RED + "ì›Œí”„ì— í•„ìš”í•œ ë§ˆë‚˜ê°€ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
 			}
 		}
 	}
 	
 	public void longue(Player player, Item itemArg) {
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "·Õ°Ô ¿öÇÁ ½ºÅ©·Ñ")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "ë¡±ê²Œ ì›Œí”„ ìŠ¤í¬ë¡¤")) {
 			World world = player.getWorld();
-			// ·Õ°Ô
+			// ë¡±ê²Œ
 			int i = 0;
 			for (ItemStack is : player.getInventory().getContents()) {
 				if (is == null)
@@ -709,11 +709,11 @@ public class VilTPScroll {
 				if (!player.getInventory().contains(Material.HEART_OF_THE_SEA)) {
 					ItemStack item = new ItemStack(Material.MAGMA_CREAM);
 					ItemMeta itemIm = item.getItemMeta();
-					itemIm.setDisplayName(ChatColor.RED + "¸¶³ª¾øÀ½");
+					itemIm.setDisplayName(ChatColor.RED + "ë§ˆë‚˜ì—†ìŒ");
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
 				}
-				// º¸½º¹Ù °ü·Ã
+				// ë³´ìŠ¤ë°” ê´€ë ¨
 				try {
 					new BossHealth().removePlayer(player);
 				} catch (Exception e) {
@@ -723,21 +723,21 @@ public class VilTPScroll {
 				player.getInventory().remove(Material.HEART_OF_THE_SEA);
 				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 5);
 				ItemMeta itemIm = item.getItemMeta();
-				itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+				itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 				item.setItemMeta(itemIm);
 				player.getInventory().setItem(8, item);
 				Location loc = new Location(world,822,71,511,270,0);
 				player.teleport(loc);
 				itemArg.remove();
 				player.getWorld().playSound(loc, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
-				// º¸½º¹Ù °ü·Ã
+				// ë³´ìŠ¤ë°” ê´€ë ¨
 				try {
 					new BossHealth().removePlayer(player);
 				} catch (Exception e) {
 
 				}
 			} else {
-				player.sendMessage(ChatColor.RED + "¿öÇÁ¿¡ ÇÊ¿äÇÑ ¸¶³ª°¡ ºÎÁ·ÇÕ´Ï´Ù.");
+				player.sendMessage(ChatColor.RED + "ì›Œí”„ì— í•„ìš”í•œ ë§ˆë‚˜ê°€ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
 			}
 		}

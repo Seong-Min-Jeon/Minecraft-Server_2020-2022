@@ -30,7 +30,7 @@ public class InteractNPC {
 			}
 		}
 		if(i == 0) {
-			player.sendMessage(ChatColor.RED + "ÀÎº¥Åä¸®¿¡ ºóÄ­ÀÌ ¾ø½À´Ï´Ù.");
+			player.sendMessage(ChatColor.RED + "ì¸ë²¤í† ë¦¬ì— ë¹ˆì¹¸ì´ ì—†ìŠµë‹ˆë‹¤.");
 			return true;
 		}
 		
@@ -38,19 +38,19 @@ public class InteractNPC {
 	}
 	
 	public boolean npc1() {
-		//ÀÇ¹®ÀÇ ¼Ò³à -2503 53 531
+		//ì˜ë¬¸ì˜ ì†Œë…€ -2503 53 531
 		if(loc.getX() == -2503 && loc.getY() == 53 && loc.getZ() == 531) {
 			QuestBoard cb = new QuestBoard();
 			try {
-				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¼³¿øÀÇ °¡Èñ3===")) {
-					player.sendMessage("ÀÇ¹®ÀÇ ¼Ò³à: ...");
+				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì„¤ì›ì˜ ê°€í¬3===")) {
+					player.sendMessage("ì˜ë¬¸ì˜ ì†Œë…€: ...");
 				}
-				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¼³¿øÀÇ °¡Èñ2===")) {
+				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì„¤ì›ì˜ ê°€í¬2===")) {
 					if(player.getWorld().getTime() >= 13000 && player.getWorld().getTime() <= 23000) {
 						int qNum = cb.getNum(player);
 						cb.eq1_1(player, qNum+1);	
 					} else {
-						player.sendMessage("ÀÇ¹®ÀÇ ¼Ò³à: ...");
+						player.sendMessage("ì˜ë¬¸ì˜ ì†Œë…€: ...");
 					}
 				}
 			} catch(Exception e) {
@@ -62,14 +62,14 @@ public class InteractNPC {
 	}
 	
 	public boolean npc2() {
-		//±â»ç -2453 84 751
+		//ê¸°ì‚¬ -2453 84 751
 		if(loc.getX() == -2453 && loc.getY() == 84 && loc.getZ() == 751) {
 			QuestBoard cb = new QuestBoard();
 			try {
-				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¼³¿øÀÇ °¡Èñ5===")) {
-					player.sendMessage("±â»ç: ÀÇÀå²²¼­´Â ¡×eÄ«·ç ´øÀü¡×f¿¡ °è½Ç °ÍÀÌ´Ù.");
+				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì„¤ì›ì˜ ê°€í¬5===")) {
+					player.sendMessage("ê¸°ì‚¬: ì˜ìž¥ê»˜ì„œëŠ” Â§eì¹´ë£¨ ë˜ì „Â§fì— ê³„ì‹¤ ê²ƒì´ë‹¤.");
 				}
-				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¼³¿øÀÇ °¡Èñ4===")) {
+				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì„¤ì›ì˜ ê°€í¬4===")) {
 					int qNum = cb.getNum(player);
 					cb.eq1_3(player, qNum+1);	
 				}
@@ -82,15 +82,15 @@ public class InteractNPC {
 	}
 	
 	public boolean npc3() {
-		//ÀÇÀå -2433 28 796
+		//ì˜ìž¥ -2433 28 796
 		if(loc.getX() == -2433 && loc.getY() == 28 && loc.getZ() == 796) {
 			QuestBoard cb = new QuestBoard();
 			try {
-				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¼³¿øÀÇ °¡Èñ6===")) {
+				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì„¤ì›ì˜ ê°€í¬6===")) {
 					int qNum = cb.getNum(player);
 					cb.eq1_5(player, qNum+1);
 				}
-				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¼³¿øÀÇ °¡Èñ5===")) {
+				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì„¤ì›ì˜ ê°€í¬5===")) {
 					
 					boolean wear = false;
 					
@@ -99,19 +99,19 @@ public class InteractNPC {
 							if (player.getInventory().getLeggings() != null) {
 								if (player.getInventory().getBoots() != null) {
 									
-									if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "¹æÇÑ Çï¸ä")) {
-										if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "¹æÇÑ °©¿Ê")) {
-											if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "¹æÇÑ °¢¹Ý")) {
-												if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "¹æÇÑ ½Å¹ß")) {
+									if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ë°©í•œ í—¬ë©§")) {
+										if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ë°©í•œ ê°‘ì˜·")) {
+											if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ë°©í•œ ê°ë°˜")) {
+												if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ë°©í•œ ì‹ ë°œ")) {
 													wear = true;
 												}
 											}
 										}
 									}
-									if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "´©±º°¡ÀÇ ¹æÇÑ Çï¸ä")) {
-										if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "´©±º°¡ÀÇ ¹æÇÑ °©¿Ê")) {
-											if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "´©±º°¡ÀÇ ¹æÇÑ °¢¹Ý")) {
-												if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "´©±º°¡ÀÇ ¹æÇÑ ½Å¹ß")) {
+									if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ëˆ„êµ°ê°€ì˜ ë°©í•œ í—¬ë©§")) {
+										if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ëˆ„êµ°ê°€ì˜ ë°©í•œ ê°‘ì˜·")) {
+											if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ëˆ„êµ°ê°€ì˜ ë°©í•œ ê°ë°˜")) {
+												if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ëˆ„êµ°ê°€ì˜ ë°©í•œ ì‹ ë°œ")) {
 													wear = true;
 												}
 											}
@@ -138,7 +138,7 @@ public class InteractNPC {
 						int qNum = cb.getNum(player);
 						cb.eq1_4(player, qNum+1);
 					} else {
-						player.sendMessage("¡×7ÀÇÀå²²¼­´Â ¹Ùºüº¸ÀÎ´Ù. ³ªÁß¿¡ ´Ù½Ã ¿ÀÀÚ.");
+						player.sendMessage("Â§7ì˜ìž¥ê»˜ì„œëŠ” ë°”ë¹ ë³´ì¸ë‹¤. ë‚˜ì¤‘ì— ë‹¤ì‹œ ì˜¤ìž.");
 					}
 					
 				}
@@ -151,15 +151,15 @@ public class InteractNPC {
 	}
 	
 	public boolean npc4() {
-		//»¡°£¸ðÀÚ 
+		//ë¹¨ê°„ëª¨ìž 
 		if(loc.getX() == 291 && loc.getY() == 55 && loc.getZ() == 153) {
 			QuestBoard cb = new QuestBoard();
 			try {
-				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===±×´ë´Â »¡°£¸ðÀÚ===")) {
+				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ê·¸ëŒ€ëŠ” ë¹¨ê°„ëª¨ìž===")) {
 					int qNum = cb.getNum(player);
 					cb.mq33(player, qNum+1);	
 				}
-				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¶Ç´Ù½Ã »¡°£¸ðÀÚ===")) {
+				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë˜ë‹¤ì‹œ ë¹¨ê°„ëª¨ìž===")) {
 					int qNum = cb.getNum(player);
 					cb.mq34(player, qNum+1);	
 				}

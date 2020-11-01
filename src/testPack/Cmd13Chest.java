@@ -23,7 +23,7 @@ public class Cmd13Chest implements CommandExecutor {
 		
 			if(cmd.getName().equalsIgnoreCase("chest")) {
 				if(args.length == 0) {
-					player.sendMessage(ChatColor.WHITE + "chest 1 / chest 2 µîÀ¸·Î ¿­ ¼ö ÀÖ´Â ÀºÇà »óÀÚ¸¦ ¼±ÅÃÇÒ ¼ö ÀÖ½À´Ï´Ù. chest 1Àº ±âº» »óÀÚÀÔ´Ï´Ù.");
+					player.sendMessage(ChatColor.WHITE + "chest 1 / chest 2 ë“±ìœ¼ë¡œ ì—´ ìˆ˜ ìˆëŠ” ì€í–‰ ìƒìë¥¼ ì„ íƒí•  ìˆ˜ ìˆìŠµë‹ˆë‹¤. chest 1ì€ ê¸°ë³¸ ìƒìì…ë‹ˆë‹¤.");
 					return true;
 				}
 				try { 

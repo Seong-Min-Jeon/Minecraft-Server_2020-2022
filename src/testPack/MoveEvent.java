@@ -32,14 +32,14 @@ public class MoveEvent {
 	}
 	
 	public void move1(Player player) {
-		// ¹Ì±Ã ´øÀü
+		// ë¯¸ê¶ ë˜ì „
 		if(loc.getX() <= 51 && loc.getY() <= 54 && loc.getZ() <= 677 &&
 				loc.getX() >= 49 && loc.getY() >= 52 && loc.getZ() >= 675) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS,40,1,true,false,false));
 			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION,40,1,true,false,false));
 			player.teleport(new Location(player.getWorld(), 48, 53, 676, 90, 0));
 			player.getWorld().playSound(player.getLocation(), Sound.AMBIENT_CAVE, 3.0f, 1.0f);
-			player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "¸ÔÀÕ°¨ÀÌ Á¦¹ß·Î ¿Ô±º.");
+			player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "ë¨¹ì‡ê°ì´ ì œë°œë¡œ ì™”êµ°.");
 			
 			int num = 0;
 			List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);

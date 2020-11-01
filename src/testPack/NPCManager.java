@@ -44,12 +44,12 @@ public class NPCManager {
 	public EntityPlayer npc1() {
 		Location loc = new Location(Bukkit.getWorld("world"), -2503, 53, 531, 0, 0);
 		
-		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "ÀÇ¹®ÀÇ ¼Ò³à");
+		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "ì˜ë¬¸ì˜ ì†Œë…€");
 		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
 		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
 		String[] name = getSkin("_Shirayuki");
 		if(name == null) {
-			System.out.println("ÀÇ¹®ÀÇ ¼Ò³à È®ÀÎ ºÒ°¡");
+			System.out.println("ì˜ë¬¸ì˜ ì†Œë…€ í™•ì¸ ë¶ˆê°€");
 		} else {
 			gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
 		}
@@ -59,12 +59,12 @@ public class NPCManager {
 	public EntityPlayer npc2() {
 		Location loc = new Location(Bukkit.getWorld("world"), -2453, 84, 751, 0, 0);
 		
-		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "±â»ç");
+		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "ê¸°ì‚¬");
 		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
 		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
 		String[] name = getSkin("_Goblin_Slayer_");
 		if(name == null) {
-			System.out.println("±â»ç È®ÀÎ ºÒ°¡");
+			System.out.println("ê¸°ì‚¬ í™•ì¸ ë¶ˆê°€");
 		} else {
 			gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
 		}
@@ -74,12 +74,12 @@ public class NPCManager {
 	public EntityPlayer npc3() {
 		Location loc = new Location(Bukkit.getWorld("world"), -2433, 28, 796, 180, 0);
 		
-		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "ÀÇÀå");
+		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "ì˜ì¥");
 		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
 		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
 		String[] name = getSkin("7Voo");
 		if(name == null) {
-			System.out.println("ÀÇÀå È®ÀÎ ºÒ°¡");
+			System.out.println("ì˜ì¥ í™•ì¸ ë¶ˆê°€");
 		} else {
 			gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
 		}
@@ -89,12 +89,12 @@ public class NPCManager {
 	public EntityPlayer npc4() {
 		Location loc = new Location(Bukkit.getWorld("world"), 3728, 140, 3146, 270, 0);
 		
-		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "ÀÇ¹®ÀÇ ¼Ò³à");
+		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "ì˜ë¬¸ì˜ ì†Œë…€");
 		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
 		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
 		String[] name = getSkin("_Shirayuki");
 		if(name == null) {
-			System.out.println("ÀÇ¹®ÀÇ ¼Ò³à È®ÀÎ ºÒ°¡");
+			System.out.println("ì˜ë¬¸ì˜ ì†Œë…€ í™•ì¸ ë¶ˆê°€");
 		} else {
 			gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
 		}
@@ -104,12 +104,12 @@ public class NPCManager {
 	public EntityPlayer npc5() {
 		Location loc = new Location(Bukkit.getWorld("world"), 3728, 140, 3146, 270, 0);
 		
-		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "¸ğÇè°¡");
+		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "ëª¨í—˜ê°€");
 		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
 		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
 		String[] name = getSkin("SkyQC");
 		if(name == null) {
-			System.out.println("¸ğÇè°¡ È®ÀÎ ºÒ°¡");
+			System.out.println("ëª¨í—˜ê°€ í™•ì¸ ë¶ˆê°€");
 		} else {
 			gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
 		}
@@ -119,12 +119,12 @@ public class NPCManager {
 	public EntityPlayer npc6() {
 		Location loc = new Location(Bukkit.getWorld("world"), -2246, 51, -2415, 90, 0);
 		
-		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "µ¥È÷Æ®¶ó");
+		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "ë°íˆíŠ¸ë¼");
 		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
 		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
 		String[] name = getSkin("SkyQC");
 		if(name == null) {
-			System.out.println("µ¥È÷Æ®¶ó È®ÀÎ ºÒ°¡");
+			System.out.println("ë°íˆíŠ¸ë¼ í™•ì¸ ë¶ˆê°€");
 		} else {
 			gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
 		}
@@ -134,12 +134,12 @@ public class NPCManager {
 	public EntityPlayer npc7() {
 		Location loc = new Location(Bukkit.getWorld("world"), -2250, 51, -2415, 270, 0);
 		
-		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "ÀÇ¹®ÀÇ ³²¼º");
+		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "ì˜ë¬¸ì˜ ë‚¨ì„±");
 		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
 		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
 		String[] name = getSkin("SkyQC");
 		if(name == null) {
-			System.out.println("ÀÇ¹®ÀÇ ³²¼º È®ÀÎ ºÒ°¡");
+			System.out.println("ì˜ë¬¸ì˜ ë‚¨ì„± í™•ì¸ ë¶ˆê°€");
 		} else {
 			gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
 		}
@@ -149,12 +149,12 @@ public class NPCManager {
 	public EntityPlayer npc8() {
 		Location loc = new Location(Bukkit.getWorld("world"), 291, 55, 153, 90, 0);
 		
-		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "»¡°£¸ğÀÚ ¼Ò³à");
+		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "ë¹¨ê°„ëª¨ì ì†Œë…€");
 		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
 		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
 		String[] name = getSkin("_Blue__Apple_");
 		if(name == null) {
-			System.out.println("»¡°£¸ğÀÚ È®ÀÎ ºÒ°¡");
+			System.out.println("ë¹¨ê°„ëª¨ì í™•ì¸ ë¶ˆê°€");
 		} else {
 			gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
 		}
@@ -163,46 +163,46 @@ public class NPCManager {
 	
 	public void questNPC(Player player) {
 		try {
-			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¼³¿øÀÇ °¡Èñ2===")) {
+			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì„¤ì›ì˜ ê°€í¬2===")) {
 				addNPCPacket(player, npc1());
 	 		}
-			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¼³¿øÀÇ °¡Èñ3===")) {
+			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì„¤ì›ì˜ ê°€í¬3===")) {
 				addNPCPacket(player, npc1());
 	 		}
-			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¼³¿øÀÇ °¡Èñ4===")) {
+			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì„¤ì›ì˜ ê°€í¬4===")) {
 				addNPCPacket(player, npc2());
 				removeNPCPacket(player, npc1());
 	 		}
-			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¼³¿øÀÇ °¡Èñ5===")) {
+			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì„¤ì›ì˜ ê°€í¬5===")) {
 				addNPCPacket(player, npc2());
 				addNPCPacket(player, npc3());
 	 		}
-			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¼³¿øÀÇ °¡Èñ6===")) {
+			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì„¤ì›ì˜ ê°€í¬6===")) {
 				addNPCPacket(player, npc2());
 				addNPCPacket(player, npc3());
 	 		}
-			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¼³¿øÀÇ °¡Èñ7===")) {
+			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì„¤ì›ì˜ ê°€í¬7===")) {
 				addNPCPacket(player, npc2());
 				addNPCPacket(player, npc3());
 				addNPCPacket(player, npc4());
 	 		}
-			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Ä«·ç ´øÀü===")) {
+			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì¹´ë£¨ ë˜ì „===")) {
 				addNPCPacket(player, npc5());
 	 		}
-			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===»õ·Î¿î ¸¸³²===")) {
+			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ìƒˆë¡œìš´ ë§Œë‚¨===")) {
 				addNPCPacket(player, npc6());
 				addNPCPacket(player, npc7());
 	 		}
-			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===±×´ë´Â »¡°£¸ğÀÚ===")) {
+			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ê·¸ëŒ€ëŠ” ë¹¨ê°„ëª¨ì===")) {
 				addNPCPacket(player, npc8());
 	 		}
-			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===»¡°£¸ğÀÚ ÀÌ¾ß±â1===")) {
+			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë¹¨ê°„ëª¨ì ì´ì•¼ê¸°1===")) {
 				addNPCPacket(player, npc8());
 	 		}
-			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¶Ç´Ù½Ã »¡°£¸ğÀÚ===")) {
+			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë˜ë‹¤ì‹œ ë¹¨ê°„ëª¨ì===")) {
 				addNPCPacket(player, npc8());
 	 		}
-			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===»¡°£¸ğÀÚ ÀÌ¾ß±â2===")) {
+			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë¹¨ê°„ëª¨ì ì´ì•¼ê¸°2===")) {
 				addNPCPacket(player, npc8());
 	 		}
 		} catch(Exception e) {
@@ -211,7 +211,7 @@ public class NPCManager {
 	}
 	
 	public void defineQuest(Player player, String str) {
-		if(str.equals("¼³¿øÀÇ °¡Èñ ÀÇ¹®ÀÇ ¼Ò³à")) {
+		if(str.equals("ì„¤ì›ì˜ ê°€í¬ ì˜ë¬¸ì˜ ì†Œë…€")) {
 			addNPCPacket(player, npc1());
 		}
 	}

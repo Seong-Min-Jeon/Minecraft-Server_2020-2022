@@ -29,7 +29,7 @@ public class QuestBoard {
 	ExpSystem es = new ExpSystem();
 
 	public void q1(Player player, int num) {
-		//»óÁ¡
+		//ìƒì 
 		if(num>=10) {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard ());
 			ItemStack item = new ItemStack(Material.EMERALD,20);
@@ -40,11 +40,11 @@ public class QuestBoard {
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GRAY + "C±Ş Äù½ºÆ®");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GRAY + "Cê¸‰ í€˜ìŠ¤íŠ¸");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ÇØ¾ÈÀÇ À§Çù===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===í•´ì•ˆì˜ ìœ„í˜‘===");
 		score.setScore(2);
-		Score score2 = obj.getScore("ÇØ¾È°¡ Á»ºñ 10¸¶¸® »ç³É");
+		Score score2 = obj.getScore("í•´ì•ˆê°€ ì¢€ë¹„ 10ë§ˆë¦¬ ì‚¬ëƒ¥");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/10)");
 		score3.setScore(0);
@@ -52,7 +52,7 @@ public class QuestBoard {
 	}
 	
 	public void q2(Player player, int num) {
-		//ÀØÇôÁø ÇØ¾È ´øÀü º¸»ó
+		//ìŠí˜€ì§„ í•´ì•ˆ ë˜ì „ ë³´ìƒ
 		if(num>=1) {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard ());
 			Location chestLoc = new Location(player.getWorld(), -1833, 92, 3036);
@@ -60,19 +60,19 @@ public class QuestBoard {
 			Chest chest = (Chest) block.getState();
 			ItemStack weapon = chest.getInventory().getItem(1);
 			player.getInventory().addItem(weapon);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "°ËÀº ÇØÀû´ÜÀÇ º¸¹°" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "ê²€ì€ í•´ì ë‹¨ì˜ ë³´ë¬¼" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.LIGHT_PURPLE + "S±Ş Äù½ºÆ®");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.LIGHT_PURPLE + "Sê¸‰ í€˜ìŠ¤íŠ¸");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ÇØÀû¼±ÀÇ º¸¹°===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===í•´ì ì„ ì˜ ë³´ë¬¼===");
 		score.setScore(3);
-		Score score2 = obj.getScore("¿ö±×´Ò ¹Ù´ÙÀÇ ÇØÀû¼±¿¡¼­");
+		Score score2 = obj.getScore("ì›Œê·¸ë‹ ë°”ë‹¤ì˜ í•´ì ì„ ì—ì„œ");
 		score2.setScore(2);
-		Score score3 = obj.getScore("º¸¹° »óÀÚ¸¦ Ã£¾Æº¸ÀÚ");
+		Score score3 = obj.getScore("ë³´ë¬¼ ìƒìë¥¼ ì°¾ì•„ë³´ì");
 		score3.setScore(1);
 		Score score4 = obj.getScore("(" + num + "/1)");
 		score4.setScore(0);
@@ -80,7 +80,7 @@ public class QuestBoard {
 	}
 	
 	public void q3(Player player, int num) {
-		//»óÁ¡
+		//ìƒì 
 		if(num>=10) {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard ());
 			ItemStack item = new ItemStack(Material.EMERALD,50);
@@ -91,11 +91,11 @@ public class QuestBoard {
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GRAY + "C±Ş Äù½ºÆ®");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GRAY + "Cê¸‰ í€˜ìŠ¤íŠ¸");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===Æ÷º¸¸£ÀÇ ¸»´Ü===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===í¬ë³´ë¥´ì˜ ë§ë‹¨===");
 		score.setScore(2);
-		Score score2 = obj.getScore("Å©¸®½ºÅ» ¿ö¸®¾î 10¸¶¸® »ç³É");
+		Score score2 = obj.getScore("í¬ë¦¬ìŠ¤íƒˆ ì›Œë¦¬ì–´ 10ë§ˆë¦¬ ì‚¬ëƒ¥");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/10)");
 		score3.setScore(0);
@@ -103,26 +103,26 @@ public class QuestBoard {
 	}
 	
 	public void q4(Player player, int num) {
-		//Æ÷·¹½ºÆ® °í½ºÆ® µå¶ø
+		//í¬ë ˆìŠ¤íŠ¸ ê³ ìŠ¤íŠ¸ ë“œë
 		if(num>=10) {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard ());
 			ItemStack var1 = new ItemStack(Material.WHEAT, 64);
 			ItemMeta var1Im = var1.getItemMeta();
-			var1Im.setDisplayName(ChatColor.GRAY + "»óÃ³°¡ ¸¹Àº ¹Ğ");
+			var1Im.setDisplayName(ChatColor.GRAY + "ìƒì²˜ê°€ ë§ì€ ë°€");
 			var1.setItemMeta(var1Im);
 			player.getInventory().addItem(var1);
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.GRAY + "»óÃ³°¡ ¸¹Àº ¹Ğ" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "ìƒì²˜ê°€ ë§ì€ ë°€" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.WHITE + "B±Ş Äù½ºÆ®");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.WHITE + "Bê¸‰ í€˜ìŠ¤íŠ¸");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===¹Ğ »ç³É²Û===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ë°€ ì‚¬ëƒ¥ê¾¼===");
 		score.setScore(2);
-		Score score2 = obj.getScore("Æ÷·¹½ºÆ® °í½ºÆ® 10¸¶¸® »ç³É");
+		Score score2 = obj.getScore("í¬ë ˆìŠ¤íŠ¸ ê³ ìŠ¤íŠ¸ 10ë§ˆë¦¬ ì‚¬ëƒ¥");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/10)");
 		score3.setScore(0);
@@ -130,25 +130,25 @@ public class QuestBoard {
 	}
 	
 	public void q5(Player player, int num) {
-		//»óÁ¡
+		//ìƒì 
 		if(num>=30) {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard ());
 			ItemStack var1 = new ItemStack(Material.COAL_ORE, 64);
 			ItemMeta var1Im = var1.getItemMeta();
-			var1Im.setDisplayName(ChatColor.GRAY + "ÈìÁıÀÌ »ı±ä ¼®Åº ±¤¼®");
+			var1Im.setDisplayName(ChatColor.GRAY + "í ì§‘ì´ ìƒê¸´ ì„íƒ„ ê´‘ì„");
 			var1.setItemMeta(var1Im);
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.GRAY + "ÈìÁıÀÌ »ı±ä ¼®Åº ±¤¼®" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í ì§‘ì´ ìƒê¸´ ì„íƒ„ ê´‘ì„" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.WHITE + "B±Ş Äù½ºÆ®");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.WHITE + "Bê¸‰ í€˜ìŠ¤íŠ¸");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===Ä§·«ÀÚ===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ì¹¨ëµì===");
 		score.setScore(2);
-		Score score2 = obj.getScore("Ä§·«ÀÚ 30¸¶¸® »ç³É");
+		Score score2 = obj.getScore("ì¹¨ëµì 30ë§ˆë¦¬ ì‚¬ëƒ¥");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/30)");
 		score3.setScore(0);
@@ -156,7 +156,7 @@ public class QuestBoard {
 	}
 	
 	public void q6(Player player, int num) {
-		//½£ÀÇ È²¼Ò µå¶ø
+		//ìˆ²ì˜ í™©ì†Œ ë“œë
 		if(num>=1) {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard ());
 			Location chestLoc = new Location(player.getWorld(), -1833, 92, 3036);
@@ -164,17 +164,17 @@ public class QuestBoard {
 			Chest chest = (Chest) block.getState();
 			ItemStack weapon = chest.getInventory().getItem(2);
 			player.getInventory().addItem(weapon);
-			player.sendMessage(ChatColor.YELLOW + "½£ÀÇ Á¤±â°¡ ´À²¸Áö´Â º¸¹°" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.YELLOW + "ìˆ²ì˜ ì •ê¸°ê°€ ëŠê»´ì§€ëŠ” ë³´ë¬¼" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.YELLOW + "A±Ş Äù½ºÆ®");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.YELLOW + "Aê¸‰ í€˜ìŠ¤íŠ¸");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===½£ ±íÀº °÷===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ìˆ² ê¹Šì€ ê³³===");
 		score.setScore(2);
-		Score score2 = obj.getScore("½£ÀÇ À¯Àû Å¬¸®¾î");
+		Score score2 = obj.getScore("ìˆ²ì˜ ìœ ì  í´ë¦¬ì–´");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -182,7 +182,7 @@ public class QuestBoard {
 	}
 	
 	public void q7(Player player, int num) {
-		//ÆÄ¸£È¦·ĞÀÇ À¯·É µå¶ø
+		//íŒŒë¥´í™€ë¡ ì˜ ìœ ë ¹ ë“œë
 		if(num>=10) {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard ());
 			Location chestLoc = new Location(player.getWorld(), -1833, 92, 3036);
@@ -190,17 +190,17 @@ public class QuestBoard {
 			Chest chest = (Chest) block.getState();
 			ItemStack weapon = chest.getInventory().getItem(3);
 			player.getInventory().addItem(weapon);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "±íÀº ½£ÀÇ Á¤±â°¡ ´À²¸Áö´Â º¸¹°" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "ê¹Šì€ ìˆ²ì˜ ì •ê¸°ê°€ ëŠê»´ì§€ëŠ” ë³´ë¬¼" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.LIGHT_PURPLE + "S±Ş Äù½ºÆ®");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.LIGHT_PURPLE + "Sê¸‰ í€˜ìŠ¤íŠ¸");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===À¯ÀûÀ» Á¤È­ÇÏ´Â ÀÚ===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ìœ ì ì„ ì •í™”í•˜ëŠ” ì===");
 		score.setScore(2);
-		Score score2 = obj.getScore("½£ÀÇ À¯Àû 10¹ø Å¬¸®¾î");
+		Score score2 = obj.getScore("ìˆ²ì˜ ìœ ì  10ë²ˆ í´ë¦¬ì–´");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/10)");
 		score3.setScore(0);
@@ -208,12 +208,12 @@ public class QuestBoard {
 	}
 	
 	public void q8(Player player, int num) {
-		//°íºí¸° µå¶ø
+		//ê³ ë¸”ë¦° ë“œë
 		if(num>=5) {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard ());
 			ItemStack item = new ItemStack(Material.EMERALD_BLOCK);
 			ItemMeta im = item.getItemMeta();
-			im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+			im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 			item.setItemMeta(im);
 			player.getInventory().addItem(item);
 			es.giveExp(player, 30000);
@@ -222,11 +222,11 @@ public class QuestBoard {
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.WHITE + "B±Ş Äù½ºÆ®");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.WHITE + "Bê¸‰ í€˜ìŠ¤íŠ¸");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===°°¾Æº¸ÀÌÁö¸¸ ´Ù¸¥===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ê°™ì•„ë³´ì´ì§€ë§Œ ë‹¤ë¥¸===");
 		score.setScore(2);
-		Score score2 = obj.getScore("¿ÀÅ© 5¸¶¸® »ç³É");
+		Score score2 = obj.getScore("ì˜¤í¬ 5ë§ˆë¦¬ ì‚¬ëƒ¥");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/5)");
 		score3.setScore(0);
@@ -234,12 +234,12 @@ public class QuestBoard {
 	}
 	
 	public void q9(Player player, int num) {
-		//»óÁ¡
+		//ìƒì 
 		if(num>=10) {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard ());
 			ItemStack item = new ItemStack(Material.EMERALD_BLOCK, 3);
 			ItemMeta im = item.getItemMeta();
-			im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+			im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 			item.setItemMeta(im);
 			player.getInventory().addItem(item);
 			es.giveExp(player, 50000);
@@ -248,11 +248,11 @@ public class QuestBoard {
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.WHITE + "B±Ş Äù½ºÆ®");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.WHITE + "Bê¸‰ í€˜ìŠ¤íŠ¸");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===Æ÷º¸¸£ÀÇ À§Çù===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===í¬ë³´ë¥´ì˜ ìœ„í˜‘===");
 		score.setScore(2);
-		Score score2 = obj.getScore("Æ÷º¸¸£ Á¤Âûº´ 10¸¶¸® »ç³É");
+		Score score2 = obj.getScore("í¬ë³´ë¥´ ì •ì°°ë³‘ 10ë§ˆë¦¬ ì‚¬ëƒ¥");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/10)");
 		score3.setScore(0);
@@ -260,7 +260,7 @@ public class QuestBoard {
 	}
 	
 	public void q10(Player player, int num) {
-		//»óÁ¡
+		//ìƒì 
 		if(num>=100) {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard ());			
 			es.giveExp(player, 700000);
@@ -269,11 +269,11 @@ public class QuestBoard {
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.WHITE + "B±Ş Äù½ºÆ®");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.WHITE + "Bê¸‰ í€˜ìŠ¤íŠ¸");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===Å»È¯===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===íƒˆí™˜===");
 		score.setScore(2);
-		Score score2 = obj.getScore("¼º ¾ÈÀÇ ¸ó½ºÅÍ 100¸¶¸® »ç³É");
+		Score score2 = obj.getScore("ì„± ì•ˆì˜ ëª¬ìŠ¤í„° 100ë§ˆë¦¬ ì‚¬ëƒ¥");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/100)");
 		score3.setScore(0);
@@ -281,7 +281,7 @@ public class QuestBoard {
 	}
 	
 	public void q11(Player player, int num) {
-		//»óÁ¡
+		//ìƒì 
 		if(num>=30) {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard ());		
 			Location chestLoc = new Location(player.getWorld(), -1833, 92, 3036);
@@ -289,18 +289,18 @@ public class QuestBoard {
 			Chest chest = (Chest) block.getState();
 			ItemStack weapon1 = chest.getInventory().getItem(8);
 			player.getInventory().addItem(weapon1);
-			player.sendMessage(ChatColor.WHITE + "¿Õ°¡ÀÇ Á¦¹°" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.WHITE + "ì™•ê°€ì˜ ì œë¬¼" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 			es.giveExp(player, 1600000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.WHITE + "B±Ş Äù½ºÆ®");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.WHITE + "Bê¸‰ í€˜ìŠ¤íŠ¸");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===³×Å©·Îº§¸®===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ë„¤í¬ë¡œë²¨ë¦¬===");
 		score.setScore(2);
-		Score score2 = obj.getScore("¹¦Áö±â ¸ó½ºÅÍ 30¸¶¸® »ç³É");
+		Score score2 = obj.getScore("ë¬˜ì§€ê¸° ëª¬ìŠ¤í„° 30ë§ˆë¦¬ ì‚¬ëƒ¥");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/30)");
 		score3.setScore(0);
@@ -308,7 +308,7 @@ public class QuestBoard {
 	}
 	
 	public void q12(Player player, int num) {
-		//»óÁ¡
+		//ìƒì 
 		if(num>=50) {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard ());	
 			Location chestLoc = new Location(player.getWorld(), -1833, 92, 3036);
@@ -316,18 +316,18 @@ public class QuestBoard {
 			Chest chest = (Chest) block.getState();
 			ItemStack weapon1 = chest.getInventory().getItem(9);
 			player.getInventory().addItem(weapon1);
-			player.sendMessage(ChatColor.YELLOW + "µ¥ºô ÀÎÀÚ" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.YELLOW + "ë°ë¹Œ ì¸ì" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 			es.giveExp(player, 2000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.YELLOW + "A±Ş Äù½ºÆ®");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.YELLOW + "Aê¸‰ í€˜ìŠ¤íŠ¸");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===µ¥ºô ÀÎÀÚ===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ë°ë¹Œ ì¸ì===");
 		score.setScore(2);
-		Score score2 = obj.getScore("µ¥ºô ¸ó½ºÅÍ 50¸¶¸® »ç³É");
+		Score score2 = obj.getScore("ë°ë¹Œ ëª¬ìŠ¤í„° 50ë§ˆë¦¬ ì‚¬ëƒ¥");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/50)");
 		score3.setScore(0);
@@ -335,7 +335,7 @@ public class QuestBoard {
 	}
 	
 	public void q13(Player player, int num) {
-		//»óÁ¡
+		//ìƒì 
 		if(num>=30) {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard ());	
 			es.giveExp(player, 2300000);
@@ -344,11 +344,11 @@ public class QuestBoard {
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.WHITE + "B±Ş Äù½ºÆ®");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.WHITE + "Bê¸‰ í€˜ìŠ¤íŠ¸");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===»õ·Î¿î °íºí¸°===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ìƒˆë¡œìš´ ê³ ë¸”ë¦°===");
 		score.setScore(2);
-		Score score2 = obj.getScore("Çª¸£ °íºí¸° 30¸¶¸® »ç³É");
+		Score score2 = obj.getScore("í‘¸ë¥´ ê³ ë¸”ë¦° 30ë§ˆë¦¬ ì‚¬ëƒ¥");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/30)");
 		score3.setScore(0);
@@ -356,7 +356,7 @@ public class QuestBoard {
 	}
 	
 	public void q14(Player player, int num) {
-		//»óÁ¡
+		//ìƒì 
 		if(num>=30) {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard ());	
 			es.giveExp(player, 2550000);
@@ -365,11 +365,11 @@ public class QuestBoard {
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.YELLOW + "A±Ş Äù½ºÆ®");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.YELLOW + "Aê¸‰ í€˜ìŠ¤íŠ¸");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ºÒÀÇ ¾Ç¸¶===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ë¶ˆì˜ ì•…ë§ˆ===");
 		score.setScore(2);
-		Score score2 = obj.getScore("Ä¶½ÃÆÛ 30¸¶¸® »ç³É");
+		Score score2 = obj.getScore("ìº˜ì‹œí¼ 30ë§ˆë¦¬ ì‚¬ëƒ¥");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/30)");
 		score3.setScore(0);
@@ -377,7 +377,7 @@ public class QuestBoard {
 	}
 	
 	public void q15(Player player, int num) {
-		//»óÁ¡
+		//ìƒì 
 		if(num>=30) {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard ());	
 			Location chestLoc = new Location(player.getWorld(), -1833, 92, 3036);
@@ -385,18 +385,18 @@ public class QuestBoard {
 			Chest chest = (Chest) block.getState();
 			ItemStack weapon1 = chest.getInventory().getItem(11);
 			player.getInventory().addItem(weapon1);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "ÇÏ±Ş ÆÄ±«¼öÀÇ ¿øÃµ" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "í•˜ê¸‰ íŒŒê´´ìˆ˜ì˜ ì›ì²œ" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 			es.giveExp(player, 2700000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.LIGHT_PURPLE + "S±Ş Äù½ºÆ®");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.LIGHT_PURPLE + "Sê¸‰ í€˜ìŠ¤íŠ¸");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===¹æÇØ¹ŞÀº ÆÄ±«¼öÀÇ ÀáI===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ë°©í•´ë°›ì€ íŒŒê´´ìˆ˜ì˜ ì I===");
 		score.setScore(2);
-		Score score2 = obj.getScore("ÇÏ±Ş ÆÄ±«¼ö 30¸¶¸® »ç³É");
+		Score score2 = obj.getScore("í•˜ê¸‰ íŒŒê´´ìˆ˜ 30ë§ˆë¦¬ ì‚¬ëƒ¥");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/30)");
 		score3.setScore(0);
@@ -404,7 +404,7 @@ public class QuestBoard {
 	}
 	
 	public void q16(Player player, int num) {
-		//»óÁ¡
+		//ìƒì 
 		if(num>=30) {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard ());	
 			es.giveExp(player, 3600000);
@@ -413,11 +413,11 @@ public class QuestBoard {
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.YELLOW + "A±Ş Äù½ºÆ®");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.YELLOW + "Aê¸‰ í€˜ìŠ¤íŠ¸");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===¹¦Áö¸¦ ÁöÅ°´Â ÀÚ===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ë¬˜ì§€ë¥¼ ì§€í‚¤ëŠ” ì===");
 		score.setScore(2);
-		Score score2 = obj.getScore("³×Å©·Îº§¸® ¸ó½ºÅÍ 30¸¶¸® »ç³É");
+		Score score2 = obj.getScore("ë„¤í¬ë¡œë²¨ë¦¬ ëª¬ìŠ¤í„° 30ë§ˆë¦¬ ì‚¬ëƒ¥");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/30)");
 		score3.setScore(0);
@@ -425,12 +425,12 @@ public class QuestBoard {
 	}
 	
 	public void q17(Player player, int num) {
-		//»óÁ¡
+		//ìƒì 
 		if(num>=30) {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard ());
 			ItemStack var1 = new ItemStack(Material.GOLD_ORE, 64);
 			ItemMeta var1Im = var1.getItemMeta();
-			var1Im.setDisplayName(ChatColor.YELLOW + "°¡Ä¡°¡ ¶³¾îÁø ±İ±¤¼®");
+			var1Im.setDisplayName(ChatColor.YELLOW + "ê°€ì¹˜ê°€ ë–¨ì–´ì§„ ê¸ˆê´‘ì„");
 			var1.setItemMeta(var1Im);
 			player.getInventory().addItem(var1);
 			es.giveExp(player, 4000000);
@@ -439,11 +439,11 @@ public class QuestBoard {
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.LIGHT_PURPLE + "S±Ş Äù½ºÆ®");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.LIGHT_PURPLE + "Sê¸‰ í€˜ìŠ¤íŠ¸");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ÆøÅºº´===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===í­íƒ„ë³‘===");
 		score.setScore(2);
-		Score score2 = obj.getScore("TNTZ 30¸¶¸® »ç³É");
+		Score score2 = obj.getScore("TNTZ 30ë§ˆë¦¬ ì‚¬ëƒ¥");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/30)");
 		score3.setScore(0);
@@ -451,7 +451,7 @@ public class QuestBoard {
 	}
 	
 	public void q18(Player player, int num) {
-		//»óÁ¡
+		//ìƒì 
 		if(num>=1000) {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard ());	
 			Location chestLoc = new Location(player.getWorld(), -1833, 92, 3036);
@@ -459,18 +459,18 @@ public class QuestBoard {
 			Chest chest = (Chest) block.getState();
 			ItemStack weapon1 = chest.getInventory().getItem(13);
 			player.getInventory().addItem(weapon1);
-			player.sendMessage(ChatColor.AQUA + "¿¡¹ĞÀÇ Çìµå" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.AQUA + "ì—ë°€ì˜ í—¤ë“œ" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 			es.giveExp(player, 9999999);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.AQUA + "SS±Ş Äù½ºÆ®");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.AQUA + "SSê¸‰ í€˜ìŠ¤íŠ¸");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===¿¡¹ĞÀÇ °áÀÇ===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ì—ë°€ì˜ ê²°ì˜===");
 		score.setScore(2);
-		Score score2 = obj.getScore("¿¡¹Ğ 1000¸¶¸® »ç³É");
+		Score score2 = obj.getScore("ì—ë°€ 1000ë§ˆë¦¬ ì‚¬ëƒ¥");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1000)");
 		score3.setScore(0);
@@ -478,25 +478,25 @@ public class QuestBoard {
 	}
 	
 	public void eq1(Player player, int num) {
-		// mq23 º¸»ó
+		// mq23 ë³´ìƒ
 		if (num >= 1) {
 			player.setScoreboard(Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 1000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "¾óÀ½ ÀåÀÎ: ±×·¡.%¾óÀ½ ÀåÀÎ: ³×°¡ ´Ù¸¥ °÷¿¡¼­ ¿Â ¸ğÇè°¡±¸³ª.%¾óÀ½ ÀåÀÎ: ÀÌ°÷¿¡ ÀûÀÀÀº ÇÏ¿´´Â°¡?%¾óÀ½ ÀåÀÎ: ¿©±â¼± µû¶æÇÏ°Ô ÀÔ°í ´Ù´Ï´Â°Ô ¾ÈÀüÇÏ´Ù³×.%¾óÀ½ ÀåÀÎ: Å©Èì. ±×°Ç ÀÚ³×°¡ ¾Ë¾Æ¼­ ÇÒ°ÍÀÌ°í..%¾óÀ½ ÀåÀÎ: º»·ĞÀ» ¸»ÇÏµµ·Ï ÇÏÁö.%"
-					+ "¾óÀ½ ÀåÀÎ: ¾ó¸¶ÀüºÎÅÍ ¹ã¸¸ µÇ¸é ¿ì¸® ¸¶À»¿¡¼­ ¼Ò³à°¡ Èå´À³¢´Â ¼Ò¸®°¡ µé¸®Áö ¹º°¡.%¾óÀ½ ÀåÀÎ: »ç¶÷µéÀº ±×³à°¡ ±Í½ÅÀÌ¶ó°í »ı°¢ÇÏ°í ÀÖ´Ù³×.%¾óÀ½ ÀåÀÎ: ³ª´Â ±Í½ÅÀÌ ³Ê¹« ¹«¼­¿ö..%¾óÀ½ ÀåÀÎ: ÀÚ³×°¡ ±× ÁøÀ§¸¦ ¾Ë¾Æ³×ÁÖ±æ ¹Ù¶ó³×.%"
-					+ "¾óÀ½ ÀåÀÎ: ¼Ò¸®´Â ¡×eÀºÇà µÚÀÇ Å« ³ª¹«¡×f¿¡¼­ µé¸°´Ù³×.");
+			msg.msg(player, "ì–¼ìŒ ì¥ì¸: ê·¸ë˜.%ì–¼ìŒ ì¥ì¸: ë„¤ê°€ ë‹¤ë¥¸ ê³³ì—ì„œ ì˜¨ ëª¨í—˜ê°€êµ¬ë‚˜.%ì–¼ìŒ ì¥ì¸: ì´ê³³ì— ì ì‘ì€ í•˜ì˜€ëŠ”ê°€?%ì–¼ìŒ ì¥ì¸: ì—¬ê¸°ì„  ë”°ëœ»í•˜ê²Œ ì…ê³  ë‹¤ë‹ˆëŠ”ê²Œ ì•ˆì „í•˜ë‹¤ë„¤.%ì–¼ìŒ ì¥ì¸: í¬í . ê·¸ê±´ ìë„¤ê°€ ì•Œì•„ì„œ í• ê²ƒì´ê³ ..%ì–¼ìŒ ì¥ì¸: ë³¸ë¡ ì„ ë§í•˜ë„ë¡ í•˜ì§€.%"
+					+ "ì–¼ìŒ ì¥ì¸: ì–¼ë§ˆì „ë¶€í„° ë°¤ë§Œ ë˜ë©´ ìš°ë¦¬ ë§ˆì„ì—ì„œ ì†Œë…€ê°€ íëŠë¼ëŠ” ì†Œë¦¬ê°€ ë“¤ë¦¬ì§€ ë­”ê°€.%ì–¼ìŒ ì¥ì¸: ì‚¬ëŒë“¤ì€ ê·¸ë…€ê°€ ê·€ì‹ ì´ë¼ê³  ìƒê°í•˜ê³  ìˆë‹¤ë„¤.%ì–¼ìŒ ì¥ì¸: ë‚˜ëŠ” ê·€ì‹ ì´ ë„ˆë¬´ ë¬´ì„œì›Œ..%ì–¼ìŒ ì¥ì¸: ìë„¤ê°€ ê·¸ ì§„ìœ„ë¥¼ ì•Œì•„ë„¤ì£¼ê¸¸ ë°”ë¼ë„¤.%"
+					+ "ì–¼ìŒ ì¥ì¸: ì†Œë¦¬ëŠ” Â§eì€í–‰ ë’¤ì˜ í° ë‚˜ë¬´Â§fì—ì„œ ë“¤ë¦°ë‹¤ë„¤.");
 			QuestBoard qb = new QuestBoard();
 			qb.eq1_1(player, 0);
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¿¢½ºÆ®¶ó Äù½ºÆ®");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ì—‘ìŠ¤íŠ¸ë¼ í€˜ìŠ¤íŠ¸");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===¼³¿øÀÇ °¡Èñ1===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ì„¤ì›ì˜ ê°€í¬1===");
 		score.setScore(2);
-		Score score2 = obj.getScore("ÄÜ³ë ¸¶À»ÀÇ ¾óÀ½ ÀåÀÎ°ú ´ëÈ­");
+		Score score2 = obj.getScore("ì½˜ë…¸ ë§ˆì„ì˜ ì–¼ìŒ ì¥ì¸ê³¼ ëŒ€í™”");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -504,24 +504,24 @@ public class QuestBoard {
 	}
 	
 	public void eq1_1(Player player, int num) {
-		// eq1 º¸»ó
+		// eq1 ë³´ìƒ
 		if (num >= 1) {
 			player.setScoreboard(Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 1000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "¡×7Çª¸¥ ´ŞºûÀÌ ¿¬»óµÇ´Â ¼Ò³à°¡ ÀÖ´Ù.%ÀÇ¹®ÀÇ ¼Ò³à: ...%ÀÇ¹®ÀÇ ¼Ò³à: ´ç½ÅÀº ´©±¸..?%¡×7±Í½ÅÀÌ³Ä°í ¹°¾ú´Ù.%ÀÇ¹®ÀÇ ¼Ò³à: ±Í½Å..?%ÀÇ¹®ÀÇ ¼Ò³à: ³ª´Â ³» ÀÌ¸§µµ, ¾îµğ »ç´ÂÁöµµ ¸ğµÎ ±â¾ïÀÌ ³ªÁö ¾Ê¾Æ..%"
-					+ "¡×7¾Æ¹«·¡µµ ¼Ò³à´Â ±â¾ïÀ» ÀÒÀº °Í °°´Ù.%¡×7ÀÏ´Ü ¾óÀ½ ÀåÀÎ¿¡°Ô º¸°í¸¦ ÇÏ´Â °ÍÀÌ ÁÁÀ» °Í °°´Ù.");
+			msg.msg(player, "Â§7í‘¸ë¥¸ ë‹¬ë¹›ì´ ì—°ìƒë˜ëŠ” ì†Œë…€ê°€ ìˆë‹¤.%ì˜ë¬¸ì˜ ì†Œë…€: ...%ì˜ë¬¸ì˜ ì†Œë…€: ë‹¹ì‹ ì€ ëˆ„êµ¬..?%Â§7ê·€ì‹ ì´ëƒê³  ë¬¼ì—ˆë‹¤.%ì˜ë¬¸ì˜ ì†Œë…€: ê·€ì‹ ..?%ì˜ë¬¸ì˜ ì†Œë…€: ë‚˜ëŠ” ë‚´ ì´ë¦„ë„, ì–´ë”” ì‚¬ëŠ”ì§€ë„ ëª¨ë‘ ê¸°ì–µì´ ë‚˜ì§€ ì•Šì•„..%"
+					+ "Â§7ì•„ë¬´ë˜ë„ ì†Œë…€ëŠ” ê¸°ì–µì„ ìƒì€ ê²ƒ ê°™ë‹¤.%Â§7ì¼ë‹¨ ì–¼ìŒ ì¥ì¸ì—ê²Œ ë³´ê³ ë¥¼ í•˜ëŠ” ê²ƒì´ ì¢‹ì„ ê²ƒ ê°™ë‹¤.");
 			QuestBoard qb = new QuestBoard();
 			qb.eq1_2(player, 0);
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¿¢½ºÆ®¶ó Äù½ºÆ®");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ì—‘ìŠ¤íŠ¸ë¼ í€˜ìŠ¤íŠ¸");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===¼³¿øÀÇ °¡Èñ2===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ì„¤ì›ì˜ ê°€í¬2===");
 		score.setScore(2);
-		Score score2 = obj.getScore("¹ã Áß¿¡ ¼Ò³à¿Í ´ëÈ­");
+		Score score2 = obj.getScore("ë°¤ ì¤‘ì— ì†Œë…€ì™€ ëŒ€í™”");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -530,25 +530,25 @@ public class QuestBoard {
 	}
 	
 	public void eq1_2(Player player, int num) {
-		// eq1_1º¸»ó
+		// eq1_1ë³´ìƒ
 		if (num >= 1) {
 			player.setScoreboard(Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 1000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "¾óÀ½ ÀåÀÎ: ¹¹?%¾óÀ½ ÀåÀÎ: ±Í½ÅÀÇ Á¤Ã¼°¡ ¡×e±â¾ïÀ» ÀÒÀº ¿©ÀÚ ¾ÆÀÌ¡×f¶ó°í?%¾óÀ½ ÀåÀÎ: ...%¾óÀ½ ÀåÀÎ: ÀÌ ¸¶À»¿£ 10³â ÀüºÎÅÍ ¿©ÀÚ°¡ Á¸ÀçÇÏÁö ¾Ê¾Ò´Ü´Ù..%¾óÀ½ ÀåÀÎ: ÀÌ°Å Á¤¸» Å« ÀÏÀÌ±º.%"
-					+ "¾óÀ½ ÀåÀÎ: ³» »ı°¢¿¡´Â ¿ø·Î¿ø¿¡ ÀÌ »óÈ²À» ¾Ë¸®´Â°Ô ÁÁÀ» °Í °°±¸³ª.%¾óÀ½ ÀåÀÎ: ÀÇÀå²²¼­´Â Áö±İ ¾îµğ¿¡ °è½ÅÁö ¸ğ¸£°Ú°í..%¾óÀ½ ÀåÀÎ: ±×ÀÇ Á÷¼Ó ±â»ç°¡ ¡×e¾Æ¶õ¸ğ¾î Á¤Âû Ä·ÇÁ¡×f¿¡ ÀÖ´Ù´Â±¸³ª.%¾óÀ½ ÀåÀÎ: °Å±â·Î ÇÑ¹ø °¡º¸°Ô³ª.%"
-					+ "¾óÀ½ ÀåÀÎ: Á¤ÂûÄ·ÇÁ´Â ¸¶À»ÀÇ ±æÀ» µû¶ó ¾ğ´öÀ» ¿Ã¶ó°¡¸é º¸ÀÌ´Â °è´Ü À§¿¡ ÀÖ´Ü´Ù.");
+			msg.msg(player, "ì–¼ìŒ ì¥ì¸: ë­?%ì–¼ìŒ ì¥ì¸: ê·€ì‹ ì˜ ì •ì²´ê°€ Â§eê¸°ì–µì„ ìƒì€ ì—¬ì ì•„ì´Â§fë¼ê³ ?%ì–¼ìŒ ì¥ì¸: ...%ì–¼ìŒ ì¥ì¸: ì´ ë§ˆì„ì—” 10ë…„ ì „ë¶€í„° ì—¬ìê°€ ì¡´ì¬í•˜ì§€ ì•Šì•˜ë‹¨ë‹¤..%ì–¼ìŒ ì¥ì¸: ì´ê±° ì •ë§ í° ì¼ì´êµ°.%"
+					+ "ì–¼ìŒ ì¥ì¸: ë‚´ ìƒê°ì—ëŠ” ì›ë¡œì›ì— ì´ ìƒí™©ì„ ì•Œë¦¬ëŠ”ê²Œ ì¢‹ì„ ê²ƒ ê°™êµ¬ë‚˜.%ì–¼ìŒ ì¥ì¸: ì˜ì¥ê»˜ì„œëŠ” ì§€ê¸ˆ ì–´ë””ì— ê³„ì‹ ì§€ ëª¨ë¥´ê² ê³ ..%ì–¼ìŒ ì¥ì¸: ê·¸ì˜ ì§ì† ê¸°ì‚¬ê°€ Â§eì•„ë€ëª¨ì–´ ì •ì°° ìº í”„Â§fì— ìˆë‹¤ëŠ”êµ¬ë‚˜.%ì–¼ìŒ ì¥ì¸: ê±°ê¸°ë¡œ í•œë²ˆ ê°€ë³´ê²Œë‚˜.%"
+					+ "ì–¼ìŒ ì¥ì¸: ì •ì°°ìº í”„ëŠ” ë§ˆì„ì˜ ê¸¸ì„ ë”°ë¼ ì–¸ë•ì„ ì˜¬ë¼ê°€ë©´ ë³´ì´ëŠ” ê³„ë‹¨ ìœ„ì— ìˆë‹¨ë‹¤.");
 			QuestBoard qb = new QuestBoard();
 			qb.eq1_3(player, 0);
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¿¢½ºÆ®¶ó Äù½ºÆ®");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ì—‘ìŠ¤íŠ¸ë¼ í€˜ìŠ¤íŠ¸");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===¼³¿øÀÇ °¡Èñ3===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ì„¤ì›ì˜ ê°€í¬3===");
 		score.setScore(2);
-		Score score2 = obj.getScore("´Ù½Ã ¾óÀ½ ÀåÀÎ°ú ´ëÈ­");
+		Score score2 = obj.getScore("ë‹¤ì‹œ ì–¼ìŒ ì¥ì¸ê³¼ ëŒ€í™”");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -556,25 +556,25 @@ public class QuestBoard {
 	}
 	
 	public void eq1_3(Player player, int num) {
-		// eq1_2º¸»ó
+		// eq1_2ë³´ìƒ
 		if (num >= 1) {
 			player.setScoreboard(Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 1000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "±â»ç: ÀÇÀå´ÔÀ» ¸¸³ªºË°í ½Í´Ù°í?%±â»ç: ÀÌÀ¯¸¦ ¸ÕÀú µèµµ·Ï ÇÏÁö.%¡×7ÀÇ¹®ÀÇ ¼Ò³à¿¡ ´ëÇØ ¼³¸íÇÏ¿´´Ù.%±â»ç: ¸¶À»¿¡¼± ±×·± ÀÏÀÌ ÀÖ¾ú±º.%±â»ç: ´Ù¸¸. ÀÌÂÊµµ Áö±İ ÇÑ°¡ÇÏÁö¸¸Àº ¾Ê´Ù.%"
-					+ "±â»ç: ÀÇÀå²²¼­´Â Á¶±İ Æ¯ÀÌÇÏ½Å ºĞÀÌ¶ó..%±â»ç: Áö±İ ¡×eÄ«·ç ´øÀü¡×f¿¡ °¡¼­ ¿ÀÁú ¾Ê°í °è½Ã´Ù³×.%±â»ç: ¹«¾ğ°¡¸¦ ²À Ã£¾Æ¾ßÇÑ´Ù´Â ¸»°ú ÇÔ²² °¡¼ÌÁö.%±â»ç: ±×¸®°í ´©±º°¡ ¿Ã Áö ¸ğ¸£´Ï ³ª´Â ÀÌ°÷¿¡¼­ ´ë±âÇÏ¶ó ¸íÇÏ¼Ì³×.%"
-					+ "±â»ç: ÀÇÀå²²¼­µµ ¾Æ¸¶ È¥ÀÚ ´øÀü¿¡ µé¾î°¡Áö´Â ¾ÊÀ¸¼ÌÀ» °Í °°´Ù.%±â»ç: ÀÇÀå´ÔÀ» ¸¸³ªºË°í ½Í´Ù¸é ´øÀüÀ¸·Î °¡º¸°Ô.");
+			msg.msg(player, "ê¸°ì‚¬: ì˜ì¥ë‹˜ì„ ë§Œë‚˜ëµ™ê³  ì‹¶ë‹¤ê³ ?%ê¸°ì‚¬: ì´ìœ ë¥¼ ë¨¼ì € ë“£ë„ë¡ í•˜ì§€.%Â§7ì˜ë¬¸ì˜ ì†Œë…€ì— ëŒ€í•´ ì„¤ëª…í•˜ì˜€ë‹¤.%ê¸°ì‚¬: ë§ˆì„ì—ì„  ê·¸ëŸ° ì¼ì´ ìˆì—ˆêµ°.%ê¸°ì‚¬: ë‹¤ë§Œ. ì´ìª½ë„ ì§€ê¸ˆ í•œê°€í•˜ì§€ë§Œì€ ì•Šë‹¤.%"
+					+ "ê¸°ì‚¬: ì˜ì¥ê»˜ì„œëŠ” ì¡°ê¸ˆ íŠ¹ì´í•˜ì‹  ë¶„ì´ë¼..%ê¸°ì‚¬: ì§€ê¸ˆ Â§eì¹´ë£¨ ë˜ì „Â§fì— ê°€ì„œ ì˜¤ì§ˆ ì•Šê³  ê³„ì‹œë‹¤ë„¤.%ê¸°ì‚¬: ë¬´ì–¸ê°€ë¥¼ ê¼­ ì°¾ì•„ì•¼í•œë‹¤ëŠ” ë§ê³¼ í•¨ê»˜ ê°€ì…¨ì§€.%ê¸°ì‚¬: ê·¸ë¦¬ê³  ëˆ„êµ°ê°€ ì˜¬ ì§€ ëª¨ë¥´ë‹ˆ ë‚˜ëŠ” ì´ê³³ì—ì„œ ëŒ€ê¸°í•˜ë¼ ëª…í•˜ì…¨ë„¤.%"
+					+ "ê¸°ì‚¬: ì˜ì¥ê»˜ì„œë„ ì•„ë§ˆ í˜¼ì ë˜ì „ì— ë“¤ì–´ê°€ì§€ëŠ” ì•Šìœ¼ì…¨ì„ ê²ƒ ê°™ë‹¤.%ê¸°ì‚¬: ì˜ì¥ë‹˜ì„ ë§Œë‚˜ëµ™ê³  ì‹¶ë‹¤ë©´ ë˜ì „ìœ¼ë¡œ ê°€ë³´ê²Œ.");
 			QuestBoard qb = new QuestBoard();
 			qb.eq1_4(player, 0);
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¿¢½ºÆ®¶ó Äù½ºÆ®");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ì—‘ìŠ¤íŠ¸ë¼ í€˜ìŠ¤íŠ¸");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===¼³¿øÀÇ °¡Èñ4===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ì„¤ì›ì˜ ê°€í¬4===");
 		score.setScore(2);
-		Score score2 = obj.getScore("¾Æ¶õ¸ğ¾î Á¤ÂûÄ·ÇÁ¿¡¼­ ±â»ç¿Í ´ëÈ­");
+		Score score2 = obj.getScore("ì•„ë€ëª¨ì–´ ì •ì°°ìº í”„ì—ì„œ ê¸°ì‚¬ì™€ ëŒ€í™”");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -583,23 +583,23 @@ public class QuestBoard {
 	}
 	
 	public void eq1_4(Player player, int num) {
-		// eq1_3º¸»ó
+		// eq1_3ë³´ìƒ
 		if (num >= 1) {
 			player.setScoreboard(Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 1000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "tp-2465 52 543%ÀÇÀå: È£¿À¿Ë??%ÀÇÀå: ÀÚ³×.%ÀÇÀå: ±× ¿ÊÀº ¸Å¿ì µû¶æÇØº¸ÀÌ´Â±¸¸¸!%ÀÇÀå: ¾ÆÁÖ °í¸¿³×!");
+			msg.msg(player, "tp-2465 52 543%ì˜ì¥: í˜¸ì˜¤ì˜¹??%ì˜ì¥: ìë„¤.%ì˜ì¥: ê·¸ ì˜·ì€ ë§¤ìš° ë”°ëœ»í•´ë³´ì´ëŠ”êµ¬ë§Œ!%ì˜ì¥: ì•„ì£¼ ê³ ë§™ë„¤!");
 			QuestBoard qb = new QuestBoard();
 			qb.eq1_5(player, 0);
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¿¢½ºÆ®¶ó Äù½ºÆ®");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ì—‘ìŠ¤íŠ¸ë¼ í€˜ìŠ¤íŠ¸");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===¼³¿øÀÇ °¡Èñ5===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ì„¤ì›ì˜ ê°€í¬5===");
 		score.setScore(2);
-		Score score2 = obj.getScore("Ä«·ç ´øÀü ÀÔ±¸¿¡¼­ ÀÇÀå°ú ´ëÈ­");
+		Score score2 = obj.getScore("ì¹´ë£¨ ë˜ì „ ì…êµ¬ì—ì„œ ì˜ì¥ê³¼ ëŒ€í™”");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -608,24 +608,24 @@ public class QuestBoard {
 	}
 	
 	public void eq1_5(Player player, int num) {
-		// eq1_4º¸»ó
+		// eq1_4ë³´ìƒ
 		if (num >= 1) {
 			player.setScoreboard(Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 1000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "ÀÇÀå: Å©ÈåÈì.%ÀÇÀå: ÀÚ³× ¿ÊÀº ³»°¡ Àß ÀÔ°Ú³×.%ÀÇÀå: ´ë½Å ±× ¼Ò³àÀÇ ¡×eºñ¹Ğ¡×fÀ» Ç® ´Ü¼­¸¦ ÁÖÁö.%ÀÇÀå: ³ª´Â ÀÚ³×°¡ ¸»ÇÏÁö ¾Ê¾Æµµ ´Ù ¾Ë°í ÀÖ´Ù³×.%"
-					+ "ÀÇÀå: ÀÌ ´øÀü¿¡ µé¾î°¡½Ã°Ô.%ÀÇÀå: ±×·³ µµ¿òÀÌ µÉ°Ô¾ß.");
+			msg.msg(player, "ì˜ì¥: í¬íí .%ì˜ì¥: ìë„¤ ì˜·ì€ ë‚´ê°€ ì˜ ì…ê² ë„¤.%ì˜ì¥: ëŒ€ì‹  ê·¸ ì†Œë…€ì˜ Â§eë¹„ë°€Â§fì„ í’€ ë‹¨ì„œë¥¼ ì£¼ì§€.%ì˜ì¥: ë‚˜ëŠ” ìë„¤ê°€ ë§í•˜ì§€ ì•Šì•„ë„ ë‹¤ ì•Œê³  ìˆë‹¤ë„¤.%"
+					+ "ì˜ì¥: ì´ ë˜ì „ì— ë“¤ì–´ê°€ì‹œê²Œ.%ì˜ì¥: ê·¸ëŸ¼ ë„ì›€ì´ ë ê²Œì•¼.");
 			QuestBoard qb = new QuestBoard();
 			qb.eq1_6(player, 0);
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¿¢½ºÆ®¶ó Äù½ºÆ®");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ì—‘ìŠ¤íŠ¸ë¼ í€˜ìŠ¤íŠ¸");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===¼³¿øÀÇ °¡Èñ6===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ì„¤ì›ì˜ ê°€í¬6===");
 		score.setScore(2);
-		Score score2 = obj.getScore("ÀÇÀå°ú ´Ù½Ã ´ëÈ­");
+		Score score2 = obj.getScore("ì˜ì¥ê³¼ ë‹¤ì‹œ ëŒ€í™”");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -634,20 +634,20 @@ public class QuestBoard {
 	}
 	
 	public void eq1_6(Player player, int num) {
-		// eq1_5º¸»ó
+		// eq1_5ë³´ìƒ
 		if (num >= 1) {
 			player.setScoreboard(Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 1000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "ÀÇ¹®ÀÇ ¼Ò³à?: °á±¹... ¿À¼Ì±º¿ä%ÀÇ¹®ÀÇ ¼Ò³à?: ´ç½ÅÀÌ¾î¼­. Æ¯º°ÇÑ ´ç½Å¸¸ÀÌ ÇÒ ¼ö ÀÖ¾ú¾î¿ä.%ÀÇ¹®ÀÇ ¼Ò³à?: ¾Æ¹«µµ º¼ ¼ö ¾ø¾ú´ø ÀúÀÇ ¸ğ½ÀÀ»..%ÀÇ¹®ÀÇ ¼Ò³à?: ´ç½ÅÀÌ Àú¸¦ º¸°í ¸»À» °É¾îÁØ ¼ø°£..%"
-					+ "ÀÇ¹®ÀÇ ¼Ò³à?: Àú´Â Àá¿¡¼­ ±ú¾î³µ°í..%ÀÇ¹®ÀÇ ¼Ò³à?: ´Ù½Ã ÇÑ¹ø Çö½ÅÇÒ ¼ö ÀÖ¾ú¾î¿ä.%ÀÇ¹®ÀÇ ¼Ò³à?: Âü, Á¦ ¼Ò°³°¡ ´Ê¾ú±º¿ä.%½ºÄ«µğ: Àú´Â °Ü¿ïÀÇ ¿©½Å ½ºÄ«µğÀÔ´Ï´Ù.%½ºÄ«µğ: ¾Æ¶õ¸ğ¾î¿¡ »ç½Ã»çÃ¶ ´«ÀÌ ¿À´Â °Íµµ Á¦ ¿µÇâÀÌÁÒ.%"
-					+ "½ºÄ«µğ: Àú´Â ¡×e½ÅÀÇ °ø°£ÀÎ ÆÈ¸®¾Æ½º¡×f°¡ ¹«³ÊÁö´ø ±× ³¯.%½ºÄ«µğ: ¡×e±× ³à¼®¡×fÀ» ¸·±â À§ÇØ Áö³ªÄ£ ÈûÀ» ½á¹ö·Á¼­%½ºÄ«µğ: ±× ÈÄ·Î ½ÇÃ¼¸¦ ÀÒ°í ±â³ª±ä Àá¿¡ ºüÁö°Ô µÇ¾ú½À´Ï´Ù.%½ºÄ«µğ: ´ç½ÅÀº ±×·± Àú¸¦ ±ú¿öÁØ ÀºÀÎÀÌ´Ï ÀÌ°ÍÀ» µå¸®°Ú½À´Ï´Ù.%"
-					+ "½ºÄ«µğ: ¡×eÅ©¸®½ºÅ»¶óÀÌÆ® ÁÖ±«¡×fÀÔ´Ï´Ù.%½ºÄ«µğ: ÀÌ°ÍÀ¸·Î ¡×eºÎÁ¶È­ÀÇ °Ë¡×fÀÇ ÈûÀ» °¢¼º½ÃÅ³ ¼ö ÀÖÀ» °Ì´Ï´Ù.%½ºÄ«µğ: ºÎÁ¶È­ÀÇ °ËÀº ÀÌ Ä«·ç ´øÀü¿¡¼­ ¾òÀ» ¼ö ÀÖÀ» °ÍÀÔ´Ï´Ù.%½ºÄ«µğ: ±×·³ °¨»çÇß½À´Ï´Ù..%tp-2465 52 543");
+			msg.msg(player, "ì˜ë¬¸ì˜ ì†Œë…€?: ê²°êµ­... ì˜¤ì…¨êµ°ìš”%ì˜ë¬¸ì˜ ì†Œë…€?: ë‹¹ì‹ ì´ì–´ì„œ. íŠ¹ë³„í•œ ë‹¹ì‹ ë§Œì´ í•  ìˆ˜ ìˆì—ˆì–´ìš”.%ì˜ë¬¸ì˜ ì†Œë…€?: ì•„ë¬´ë„ ë³¼ ìˆ˜ ì—†ì—ˆë˜ ì €ì˜ ëª¨ìŠµì„..%ì˜ë¬¸ì˜ ì†Œë…€?: ë‹¹ì‹ ì´ ì €ë¥¼ ë³´ê³  ë§ì„ ê±¸ì–´ì¤€ ìˆœê°„..%"
+					+ "ì˜ë¬¸ì˜ ì†Œë…€?: ì €ëŠ” ì ì—ì„œ ê¹¨ì–´ë‚¬ê³ ..%ì˜ë¬¸ì˜ ì†Œë…€?: ë‹¤ì‹œ í•œë²ˆ í˜„ì‹ í•  ìˆ˜ ìˆì—ˆì–´ìš”.%ì˜ë¬¸ì˜ ì†Œë…€?: ì°¸, ì œ ì†Œê°œê°€ ëŠ¦ì—ˆêµ°ìš”.%ìŠ¤ì¹´ë””: ì €ëŠ” ê²¨ìš¸ì˜ ì—¬ì‹  ìŠ¤ì¹´ë””ì…ë‹ˆë‹¤.%ìŠ¤ì¹´ë””: ì•„ë€ëª¨ì–´ì— ì‚¬ì‹œì‚¬ì²  ëˆˆì´ ì˜¤ëŠ” ê²ƒë„ ì œ ì˜í–¥ì´ì£ .%"
+					+ "ìŠ¤ì¹´ë””: ì €ëŠ” Â§eì‹ ì˜ ê³µê°„ì¸ íŒ”ë¦¬ì•„ìŠ¤Â§fê°€ ë¬´ë„ˆì§€ë˜ ê·¸ ë‚ .%ìŠ¤ì¹´ë””: Â§eê·¸ ë…€ì„Â§fì„ ë§‰ê¸° ìœ„í•´ ì§€ë‚˜ì¹œ í˜ì„ ì¨ë²„ë ¤ì„œ%ìŠ¤ì¹´ë””: ê·¸ í›„ë¡œ ì‹¤ì²´ë¥¼ ìƒê³  ê¸°ë‚˜ê¸´ ì ì— ë¹ ì§€ê²Œ ë˜ì—ˆìŠµë‹ˆë‹¤.%ìŠ¤ì¹´ë””: ë‹¹ì‹ ì€ ê·¸ëŸ° ì €ë¥¼ ê¹¨ì›Œì¤€ ì€ì¸ì´ë‹ˆ ì´ê²ƒì„ ë“œë¦¬ê² ìŠµë‹ˆë‹¤.%"
+					+ "ìŠ¤ì¹´ë””: Â§eí¬ë¦¬ìŠ¤íƒˆë¼ì´íŠ¸ ì£¼ê´´Â§fì…ë‹ˆë‹¤.%ìŠ¤ì¹´ë””: ì´ê²ƒìœ¼ë¡œ Â§eë¶€ì¡°í™”ì˜ ê²€Â§fì˜ í˜ì„ ê°ì„±ì‹œí‚¬ ìˆ˜ ìˆì„ ê²ë‹ˆë‹¤.%ìŠ¤ì¹´ë””: ë¶€ì¡°í™”ì˜ ê²€ì€ ì´ ì¹´ë£¨ ë˜ì „ì—ì„œ ì–»ì„ ìˆ˜ ìˆì„ ê²ƒì…ë‹ˆë‹¤.%ìŠ¤ì¹´ë””: ê·¸ëŸ¼ ê°ì‚¬í–ˆìŠµë‹ˆë‹¤..%tp-2465 52 543");
 			ItemStack var7 = new ItemStack(Material.NETHERITE_INGOT);
 			ItemMeta var7Im = var7.getItemMeta();
-			var7Im.setDisplayName(ChatColor.DARK_RED + "Å©¸®½ºÅ»¶óÀÌÁî ÁÖ±«");
+			var7Im.setDisplayName(ChatColor.DARK_RED + "í¬ë¦¬ìŠ¤íƒˆë¼ì´ì¦ˆ ì£¼ê´´");
 			ArrayList<String> var7Lore = new ArrayList();
-			var7Lore.add(ChatColor.GRAY + "ºÎÁ¶È­ÀÇ °ËÀÇ ÃÊ¿ù ¼ÒÀç");
+			var7Lore.add(ChatColor.GRAY + "ë¶€ì¡°í™”ì˜ ê²€ì˜ ì´ˆì›” ì†Œì¬");
 			var7Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			var7Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			var7Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -659,11 +659,11 @@ public class QuestBoard {
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¿¢½ºÆ®¶ó Äù½ºÆ®");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ì—‘ìŠ¤íŠ¸ë¼ í€˜ìŠ¤íŠ¸");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===¼³¿øÀÇ °¡Èñ7===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ì„¤ì›ì˜ ê°€í¬7===");
 		score.setScore(2);
-		Score score2 = obj.getScore("Ä«·ç ´øÀü Å¬¸®¾î");
+		Score score2 = obj.getScore("ì¹´ë£¨ ë˜ì „ í´ë¦¬ì–´");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -672,23 +672,23 @@ public class QuestBoard {
 	}
 
 	public void eq2(Player player, int num) {
-		// ´ËÁöÀÇ ¸¶½Å¿Õ º¸»ó
+		// ëŠªì§€ì˜ ë§ˆì‹ ì™• ë³´ìƒ
 		if (num >= 10) {
 			player.setScoreboard(Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 1500000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "¸¶½Å¿Õ: ÈÊÈÊÈÊ. ÀßÇÏ¿´´Ù. ¸ğÇè°¡¿©.%¸¶½Å¿Õ: µÎ¹øÂ° ¸í·ÉÀ» ³»·ÁÁÖµµ·Ï ÇÏÁö.%¸¶½Å¿Õ: ³¯ Ã³À½ º» ´Ë¿¡¼­ ¡×eºÏµ¿ÂÊ¡×fÀ¸·Î °¡¸é ¾ğ´ö¿¡ ¹Î°¡°¡ ÀÖÀ» °ÍÀÌ´Ù.%¸¶½Å¿Õ: ±×°÷ »êÀåÀÇ ÁÖÀÎ°ú ¸¸³ª¾ß°Ú±¸³ª.");
+			msg.msg(player, "ë§ˆì‹ ì™•: í›—í›—í›—. ì˜í•˜ì˜€ë‹¤. ëª¨í—˜ê°€ì—¬.%ë§ˆì‹ ì™•: ë‘ë²ˆì§¸ ëª…ë ¹ì„ ë‚´ë ¤ì£¼ë„ë¡ í•˜ì§€.%ë§ˆì‹ ì™•: ë‚  ì²˜ìŒ ë³¸ ëŠªì—ì„œ Â§eë¶ë™ìª½Â§fìœ¼ë¡œ ê°€ë©´ ì–¸ë•ì— ë¯¼ê°€ê°€ ìˆì„ ê²ƒì´ë‹¤.%ë§ˆì‹ ì™•: ê·¸ê³³ ì‚°ì¥ì˜ ì£¼ì¸ê³¼ ë§Œë‚˜ì•¼ê² êµ¬ë‚˜.");
 			QuestBoard qb = new QuestBoard();
 			qb.eq2_1(player, 0);
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¿¢½ºÆ®¶ó Äù½ºÆ®");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ì—‘ìŠ¤íŠ¸ë¼ í€˜ìŠ¤íŠ¸");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===¸¶½Å¿ÕÀÇ °è¾à1===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ë§ˆì‹ ì™•ì˜ ê³„ì•½1===");
 		score.setScore(2);
-		Score score2 = obj.getScore("´Ë¿¡¼­ °Å¹Ì 10¸¶¸® »ç³É");
+		Score score2 = obj.getScore("ëŠªì—ì„œ ê±°ë¯¸ 10ë§ˆë¦¬ ì‚¬ëƒ¥");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/10)");
 		score3.setScore(0);
@@ -696,23 +696,23 @@ public class QuestBoard {
 	}
 	
 	public void eq2_1(Player player, int num) {
-		// ´ËÁöÀÇ ¸¶½Å¿Õ º¸»ó
+		// ëŠªì§€ì˜ ë§ˆì‹ ì™• ë³´ìƒ
 		if (num >= 1) {
 			player.setScoreboard(Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 1500000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "¸¶½Å¿Õ: Å©ÇÏÇÏÇÏÇÏÇÏ. ³î¶ú´À³Ä.%¸¶½Å¿Õ: ±× ³à¼®Àº ³¯ ºÀÀÎÇÏ·ÁÇÑ ÀÎ°£ÀÌ´Ù.%¸¶½Å¿Õ: ³ÊÀÇ ÈûÀ» ºô¸®´Ï ³ªÀÇ ÈûÀÌ ´õ¿í °­ÇØÁö´Â °Í °°±¸³ª.%¸¶½Å¿Õ: ÀÌÁ¦ È¸º¹µµ ¾î´ÀÁ¤µµ µÇ¾úÀ¸´Ï ´Ï ¸ö¿¡¼­ ³ª°¡¾ß°Ú±¸³ª.%¸¶½Å¿Õ: ³¯ À§ÇØ Á×¾î¶ó.");
+			msg.msg(player, "ë§ˆì‹ ì™•: í¬í•˜í•˜í•˜í•˜í•˜. ë†€ëëŠëƒ.%ë§ˆì‹ ì™•: ê·¸ ë…€ì„ì€ ë‚  ë´‰ì¸í•˜ë ¤í•œ ì¸ê°„ì´ë‹¤.%ë§ˆì‹ ì™•: ë„ˆì˜ í˜ì„ ë¹Œë¦¬ë‹ˆ ë‚˜ì˜ í˜ì´ ë”ìš± ê°•í•´ì§€ëŠ” ê²ƒ ê°™êµ¬ë‚˜.%ë§ˆì‹ ì™•: ì´ì œ íšŒë³µë„ ì–´ëŠì •ë„ ë˜ì—ˆìœ¼ë‹ˆ ë‹ˆ ëª¸ì—ì„œ ë‚˜ê°€ì•¼ê² êµ¬ë‚˜.%ë§ˆì‹ ì™•: ë‚  ìœ„í•´ ì£½ì–´ë¼.");
 			QuestBoard qb = new QuestBoard();
 			qb.eq2_2(player, 0);
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¿¢½ºÆ®¶ó Äù½ºÆ®");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ì—‘ìŠ¤íŠ¸ë¼ í€˜ìŠ¤íŠ¸");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===¸¶½Å¿ÕÀÇ °è¾à2===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ë§ˆì‹ ì™•ì˜ ê³„ì•½2===");
 		score.setScore(2);
-		Score score2 = obj.getScore("»êÀåÀÇ ÁÖÀÎ°ú ´ëÈ­");
+		Score score2 = obj.getScore("ì‚°ì¥ì˜ ì£¼ì¸ê³¼ ëŒ€í™”");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -720,20 +720,20 @@ public class QuestBoard {
 	}
 	
 	public void eq2_2(Player player, int num) {
-		// ´ËÁöÀÇ ¸¶½Å¿Õ º¸»ó
+		// ëŠªì§€ì˜ ë§ˆì‹ ì™• ë³´ìƒ
 		if (num >= 1) {
 			player.setScoreboard(Bukkit.getScoreboardManager().getNewScoreboard());
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "¸¶½Å¿Õ: ³­ ÀÌÁ¦ ¶°³ª°¡°Ú´Ù.%¸¶½Å¿Õ: ¾ğÁ¨°¡ ´Ù½Ã ¸¸³ª°Ô µÈ´Ù¸é ¶Ç ÇÑ¹ø °Ü·ç¾îÁÖÁö.");
+			msg.msg(player, "ë§ˆì‹ ì™•: ë‚œ ì´ì œ ë– ë‚˜ê°€ê² ë‹¤.%ë§ˆì‹ ì™•: ì–¸ì  ê°€ ë‹¤ì‹œ ë§Œë‚˜ê²Œ ëœë‹¤ë©´ ë˜ í•œë²ˆ ê²¨ë£¨ì–´ì£¼ì§€.");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¿¢½ºÆ®¶ó Äù½ºÆ®");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ì—‘ìŠ¤íŠ¸ë¼ í€˜ìŠ¤íŠ¸");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===¸¶½Å¿ÕÀÇ °è¾à3===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ë§ˆì‹ ì™•ì˜ ê³„ì•½3===");
 		score.setScore(2);
-		Score score2 = obj.getScore("»ç¸ÁÇÏ±â");
+		Score score2 = obj.getScore("ì‚¬ë§í•˜ê¸°");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -751,11 +751,11 @@ public class QuestBoard {
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 1Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 1ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===¿ö±×´Ò ¼¶ÀÇ ºñ¹Ğ===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ì›Œê·¸ë‹ ì„¬ì˜ ë¹„ë°€===");
 		score.setScore(2);
-		Score score2 = obj.getScore("¿ö±×´Ò¿¡ ¹è½Å´çÇÑ ÀÚ 5¸¶¸® »ç³É");
+		Score score2 = obj.getScore("ì›Œê·¸ë‹ì— ë°°ì‹ ë‹¹í•œ ì 5ë§ˆë¦¬ ì‚¬ëƒ¥");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/5)");
 		score3.setScore(0);
@@ -767,7 +767,7 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard ());
 			ItemStack item = new ItemStack(Material.EMERALD_BLOCK);
 			ItemMeta im = item.getItemMeta();
-			im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+			im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 			item.setItemMeta(im);
 			player.getInventory().addItem(item);
 			es.giveExp(player, 1000);
@@ -776,11 +776,11 @@ public class QuestBoard {
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 2Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 2ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===¼ö·ÃÀÇ ½ÃÀÛ===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ìˆ˜ë ¨ì˜ ì‹œì‘===");
 		score.setScore(2);
-		Score score2 = obj.getScore("ÀØÇôÁø ¹Ù´Ù ½ÅÀü Å¬¸®¾î");
+		Score score2 = obj.getScore("ìŠí˜€ì§„ ë°”ë‹¤ ì‹ ì „ í´ë¦¬ì–´");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -794,18 +794,18 @@ public class QuestBoard {
 			player.getInventory().addItem(item);
 			es.giveExp(player, 3000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "Æ÷¸£°£ ÃÌÀå: ÇãÇã ¾î¼­¿À½Ã°Ô..%Æ÷¸£°£ ÃÌÀå: ±æÀ» µû¶ó ¡×e¿À¸¥ÂÊ¡×fÀ¸·Î °¡¸é ¿ì¸® ¸¶À»ÀÌ ³ª¿Ã²¬¼¼.");
+			msg.msg(player, "í¬ë¥´ê°„ ì´Œì¥: í—ˆí—ˆ ì–´ì„œì˜¤ì‹œê²Œ..%í¬ë¥´ê°„ ì´Œì¥: ê¸¸ì„ ë”°ë¼ Â§eì˜¤ë¥¸ìª½Â§fìœ¼ë¡œ ê°€ë©´ ìš°ë¦¬ ë§ˆì„ì´ ë‚˜ì˜¬ê»„ì„¸.");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 3Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 3ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===¿¡ÀÏ ¶¥À¸·Î===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ì—ì¼ ë•…ìœ¼ë¡œ===");
 		score.setScore(3);
-		Score score2 = obj.getScore("¿ö±×´Ò¿¡¼­ ¹è¸¦ Å¸°í ¿¡ÀÏ ¶¥À¸·Î ÀÌµ¿ÇØ");
+		Score score2 = obj.getScore("ì›Œê·¸ë‹ì—ì„œ ë°°ë¥¼ íƒ€ê³  ì—ì¼ ë•…ìœ¼ë¡œ ì´ë™í•´");
 		score2.setScore(2);
-		Score score3 = obj.getScore("¼±ÂøÀå ÁÖº¯ÀÇ Æ÷¸£°£ ÃÌÀå°ú ´ëÈ­");
+		Score score3 = obj.getScore("ì„ ì°©ì¥ ì£¼ë³€ì˜ í¬ë¥´ê°„ ì´Œì¥ê³¼ ëŒ€í™”");
 		score3.setScore(1);
 		Score score4 = obj.getScore("(" + num + "/1)");
 		score4.setScore(0);
@@ -819,16 +819,16 @@ public class QuestBoard {
 			player.getInventory().addItem(item);
 			es.giveExp(player, 5000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "Æ÷¸£°£ ÃÌÀå: ¸¶³àµéÀº Ã»³âµéÀÌ ¾îµğ¿¡ ÀÖ´ÂÁö ¸ğ¸¥´Ù°í Çß´Ù¶ó..%Æ÷¸£°£ ÃÌÀå: ¾Ë°Ú³×. ³»°¡ Á¤º¸¸¦ ´õ ¸ğ¾Æº¸Áö.");
+			msg.msg(player, "í¬ë¥´ê°„ ì´Œì¥: ë§ˆë…€ë“¤ì€ ì²­ë…„ë“¤ì´ ì–´ë””ì— ìˆëŠ”ì§€ ëª¨ë¥¸ë‹¤ê³  í–ˆë‹¤ë¼..%í¬ë¥´ê°„ ì´Œì¥: ì•Œê² ë„¤. ë‚´ê°€ ì •ë³´ë¥¼ ë” ëª¨ì•„ë³´ì§€.");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 4Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 4ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ÃÌÀåÀÇ ºÎÅ¹1===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ì´Œì¥ì˜ ë¶€íƒ1===");
 		score.setScore(2);
-		Score score2 = obj.getScore("½£ÀÇ ¸¶³à 10¸¶¸® »ç³É");
+		Score score2 = obj.getScore("ìˆ²ì˜ ë§ˆë…€ 10ë§ˆë¦¬ ì‚¬ëƒ¥");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/10)");
 		score3.setScore(0);
@@ -842,16 +842,16 @@ public class QuestBoard {
 			player.getInventory().addItem(item);
 			es.giveExp(player, 10000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "Æ÷¸£°£ ÃÌÀå: ¼ö°íÇß³×.%Æ÷¸£°£ ÃÌÀå: ³» ¸¶À» ÀÏÀÌ Á¤¸®µÇ¸é ¹Ù·Î ¿¬¶ôÀ» ÁÖ°Ú³×.");
+			msg.msg(player, "í¬ë¥´ê°„ ì´Œì¥: ìˆ˜ê³ í–ˆë„¤.%í¬ë¥´ê°„ ì´Œì¥: ë‚´ ë§ˆì„ ì¼ì´ ì •ë¦¬ë˜ë©´ ë°”ë¡œ ì—°ë½ì„ ì£¼ê² ë„¤.");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 5Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 5ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ÃÌÀåÀÇ ºÎÅ¹2===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ì´Œì¥ì˜ ë¶€íƒ2===");
 		score.setScore(2);
-		Score score2 = obj.getScore("½£ÀÇ À¯Àû Å¬¸®¾î");
+		Score score2 = obj.getScore("ìˆ²ì˜ ìœ ì  í´ë¦¬ì–´");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -863,16 +863,16 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard ());
 			es.giveExp(player, 20000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "Æ÷¸£°£ ÃÌÀå: ÇãÇãÇã.. ¿ª½Ã ¼º°øÇß±¸¸¸%Æ÷¸£°£ ÃÌÀå: ÇÏÁö¸¸ ¾ÆÁ÷ ¸ğÀÚ¸¥ µíÇÏ³×.%Æ÷¸£°£ ÃÌÀå: ÀÚ³×°¡ ´õ¿í °­ÇØÁö¸é ¿¬¶ôÇÏµµ·Ï ÇÏÁö.");
+			msg.msg(player, "í¬ë¥´ê°„ ì´Œì¥: í—ˆí—ˆí—ˆ.. ì—­ì‹œ ì„±ê³µí–ˆêµ¬ë§Œ%í¬ë¥´ê°„ ì´Œì¥: í•˜ì§€ë§Œ ì•„ì§ ëª¨ìë¥¸ ë“¯í•˜ë„¤.%í¬ë¥´ê°„ ì´Œì¥: ìë„¤ê°€ ë”ìš± ê°•í•´ì§€ë©´ ì—°ë½í•˜ë„ë¡ í•˜ì§€.");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 6Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 6ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ÃÌÀåÀÇ ºÎÅ¹3===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ì´Œì¥ì˜ ë¶€íƒ3===");
 		score.setScore(2);
-		Score score2 = obj.getScore("°íºí¸° 5¸¶¸® »ç³É");
+		Score score2 = obj.getScore("ê³ ë¸”ë¦° 5ë§ˆë¦¬ ì‚¬ëƒ¥");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/5)");
 		score3.setScore(0);
@@ -885,11 +885,11 @@ public class QuestBoard {
 			ItemStack item5 = new ItemStack(Material.MOSSY_COBBLESTONE_WALL);
 			ItemMeta item5Im = item5.getItemMeta();
 			item5Im.setLocalizedName("30,10,0,0,0,10,0,0,0,10,50");
-			item5Im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿ë»çÀÇ °Ë");
+			item5Im.setDisplayName(ChatColor.LIGHT_PURPLE + "ìš©ì‚¬ì˜ ê²€");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 50");
+			item5Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 50");
 			item5Lore.add(ChatColor.GRAY + " ");
-			item5Lore.add(ChatColor.GRAY + "ÆÄ¸£È¦·ĞÀÇ ¼öÀåÀÌ ½Å¿¡°Ô¼­ ¹Ş¾Ò´Ù°í ¾Ë·ÁÁø °Ë");
+			item5Lore.add(ChatColor.GRAY + "íŒŒë¥´í™€ë¡ ì˜ ìˆ˜ì¥ì´ ì‹ ì—ê²Œì„œ ë°›ì•˜ë‹¤ê³  ì•Œë ¤ì§„ ê²€");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -899,16 +899,16 @@ public class QuestBoard {
 			player.getWorld().dropItem(player.getLocation(), item5);
 			es.giveExp(player, 40000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "Æ÷¸£°£ ÃÌÀå: ÃàÇÏÇÏ³×. ´õ ³ĞÀº ¼¼»óÀ¸·Î ¶°³ª ÀÌ ¼¼°Ô¸¦ ±¸ÇØÁÖ±æ ¹Ù¶ó³×.");
+			msg.msg(player, "í¬ë¥´ê°„ ì´Œì¥: ì¶•í•˜í•˜ë„¤. ë” ë„“ì€ ì„¸ìƒìœ¼ë¡œ ë– ë‚˜ ì´ ì„¸ê²Œë¥¼ êµ¬í•´ì£¼ê¸¸ ë°”ë¼ë„¤.");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 7Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 7ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===Àü¼³ÀÇ ½ÃÀÛ===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ì „ì„¤ì˜ ì‹œì‘===");
 		score.setScore(2);
-		Score score2 = obj.getScore("¼¾ ¸¶±× Æò¿ø¿¡¼­ Àü¼³ÀÇ °ËÀ» Ã£±â");
+		Score score2 = obj.getScore("ì„¼ ë§ˆê·¸ í‰ì›ì—ì„œ ì „ì„¤ì˜ ê²€ì„ ì°¾ê¸°");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -924,11 +924,11 @@ public class QuestBoard {
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 8Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 8ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ÆÄ¸£È¦·ĞÀÇ ¿ª»ç===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===íŒŒë¥´í™€ë¡ ì˜ ì—­ì‚¬===");
 		score.setScore(2);
-		Score score2 = obj.getScore("¼¾ ¸¶±× Æò¿ø ¾îµò°¡ÀÇ Å¾¿¡¼­ ÆÄ¸£È¦·ĞÀÇ ÈçÀû Ã£±â");
+		Score score2 = obj.getScore("ì„¼ ë§ˆê·¸ í‰ì› ì–´ë”˜ê°€ì˜ íƒ‘ì—ì„œ íŒŒë¥´í™€ë¡ ì˜ í”ì  ì°¾ê¸°");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -940,16 +940,16 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard ());
 			es.giveExp(player, 80000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "Æ÷¸£°£ ÃÌÀå: ¡×eÆ¼¸£¡×f¿¡ °¡º»ÀûÀÌ ÀÖ´Â°¡?%Æ÷¸£°£ ÃÌÀå: Æ¼¸£¿¡¼­ µî´ëÁö±â¸¦ »Ì´Â´Ù´Â ¼Ò½ÄÀ» µé¾ú³×.%Æ÷¸£°£ ÃÌÀå: µî´ë¿¡´Â ¼ö¸¹Àº Áö½Ä°ú ºñ¹ĞÀÌ ³²¾ÆÀÖÀ¸´Ï Âü°íÇÏ½Ã°Ô.");
+			msg.msg(player, "í¬ë¥´ê°„ ì´Œì¥: Â§eí‹°ë¥´Â§fì— ê°€ë³¸ì ì´ ìˆëŠ”ê°€?%í¬ë¥´ê°„ ì´Œì¥: í‹°ë¥´ì—ì„œ ë“±ëŒ€ì§€ê¸°ë¥¼ ë½‘ëŠ”ë‹¤ëŠ” ì†Œì‹ì„ ë“¤ì—ˆë„¤.%í¬ë¥´ê°„ ì´Œì¥: ë“±ëŒ€ì—ëŠ” ìˆ˜ë§ì€ ì§€ì‹ê³¼ ë¹„ë°€ì´ ë‚¨ì•„ìˆìœ¼ë‹ˆ ì°¸ê³ í•˜ì‹œê²Œ.");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 9Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 9ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===¾ÕÀ¸·Î ³ª¾Æ°¡±â À§ÇÑ ¿©Á¤===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ì•ìœ¼ë¡œ ë‚˜ì•„ê°€ê¸° ìœ„í•œ ì—¬ì •===");
 		score.setScore(2);
-		Score score2 = obj.getScore("Æ÷º¸¸£ Á¤Âûº´ 10¸¶¸® »ç³É");
+		Score score2 = obj.getScore("í¬ë³´ë¥´ ì •ì°°ë³‘ 10ë§ˆë¦¬ ì‚¬ëƒ¥");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/10)");
 		score3.setScore(0);
@@ -961,16 +961,16 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard ());
 			es.giveExp(player, 100000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "Æ¼¸£ÀÇ »ıÁ¸ÀÚ: ±×·¡.%Æ¼¸£ÀÇ »ıÁ¸ÀÚ: ´ç½ÅÀ» ¹Ï¾îº¸°Ú´Ù.%Æ¼¸£ÀÇ »ıÁ¸ÀÚ: ¸¶À» »ç¶÷µé°ú »óÀÇ¸¦ ÇØ¼­ ¿¬¶ôÀ» ÁÖµµ·Ï ÇÏÁö.");
+			msg.msg(player, "í‹°ë¥´ì˜ ìƒì¡´ì: ê·¸ë˜.%í‹°ë¥´ì˜ ìƒì¡´ì: ë‹¹ì‹ ì„ ë¯¿ì–´ë³´ê² ë‹¤.%í‹°ë¥´ì˜ ìƒì¡´ì: ë§ˆì„ ì‚¬ëŒë“¤ê³¼ ìƒì˜ë¥¼ í•´ì„œ ì—°ë½ì„ ì£¼ë„ë¡ í•˜ì§€.");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 10Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 10ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===µî´ëÁö±â ½ÃÇè===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ë“±ëŒ€ì§€ê¸° ì‹œí—˜===");
 		score.setScore(2);
-		Score score2 = obj.getScore("¿Ü´«ÀÇ Æ÷º¸¸£ 10¸¶¸® »ç³É");
+		Score score2 = obj.getScore("ì™¸ëˆˆì˜ í¬ë³´ë¥´ 10ë§ˆë¦¬ ì‚¬ëƒ¥");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/10)");
 		score3.setScore(0);
@@ -982,16 +982,16 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 150000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "¡×7°ú¿¬ ¿©±â´Â ¾îµğÀÏ±î.");
+			msg.msg(player, "Â§7ê³¼ì—° ì—¬ê¸°ëŠ” ì–´ë””ì¼ê¹Œ.");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 11Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 11ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===µî´ë¿¡ ¼û°ÜÁø ºñ¹Ğ===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ë“±ëŒ€ì— ìˆ¨ê²¨ì§„ ë¹„ë°€===");
 		score.setScore(2);
-		Score score2 = obj.getScore("µî´ë¿¡¼­ ºñ¹Ğ Ã£±â");
+		Score score2 = obj.getScore("ë“±ëŒ€ì—ì„œ ë¹„ë°€ ì°¾ê¸°");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -1008,23 +1008,23 @@ public class QuestBoard {
 			ItemStack weapon2 = chest.getInventory().getItem(5);
 			if(player.getWorld().getTime() >= 13000 && player.getWorld().getTime() <= 23000) {
 				player.getInventory().addItem(weapon1);
-				player.sendMessage(ChatColor.LIGHT_PURPLE + "´ŞÀÇ Èû" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+				player.sendMessage(ChatColor.LIGHT_PURPLE + "ë‹¬ì˜ í˜" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 			} else {
 				player.getInventory().addItem(weapon2);
-				player.sendMessage(ChatColor.LIGHT_PURPLE + "ÅÂ¾çÀÇ Èû" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+				player.sendMessage(ChatColor.LIGHT_PURPLE + "íƒœì–‘ì˜ í˜" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 			}
 			es.giveExp(player, 200000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "¡×7ÀÌ°ÍÀ¸·Î ¡×e¿ë»çÀÇ °Ë¡×7À» ÃÊ¿ùÇØº¸ÀÚ.");
+			msg.msg(player, "Â§7ì´ê²ƒìœ¼ë¡œ Â§eìš©ì‚¬ì˜ ê²€Â§7ì„ ì´ˆì›”í•´ë³´ì.");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 12Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 12ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===µî´ë¸¦ ¹àÈ÷´Â Èû===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ë“±ëŒ€ë¥¼ ë°íˆëŠ” í˜===");
 		score.setScore(2);
-		Score score2 = obj.getScore("µî´ë¿¡¼­ ´ŞÀÇ Èû ¶Ç´Â ÅÂ¾çÀÇ Èû ¾ò±â");
+		Score score2 = obj.getScore("ë“±ëŒ€ì—ì„œ ë‹¬ì˜ í˜ ë˜ëŠ” íƒœì–‘ì˜ í˜ ì–»ê¸°");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -1040,11 +1040,11 @@ public class QuestBoard {
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 13Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 13ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===½Ãµå ±¤»êÀ¸·Î °¡´Â ±æ===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ì‹œë“œ ê´‘ì‚°ìœ¼ë¡œ ê°€ëŠ” ê¸¸===");
 		score.setScore(2);
-		Score score2 = obj.getScore("Æ÷º¸¸£ ¼¼·Â ÇÃ·¹ÀÌ¾î [Lv.96] 10¸í »ç³É");
+		Score score2 = obj.getScore("í¬ë³´ë¥´ ì„¸ë ¥ í”Œë ˆì´ì–´ [Lv.96] 10ëª… ì‚¬ëƒ¥");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/10)");
 		score3.setScore(0);
@@ -1056,16 +1056,16 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 500000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "±¤ºÎ: ½Ãµå ±¤»êÀº °ªºñ½Ñ ±¤¹°Àº ³ª¿ÀÁö ¾Ê¾ÒÁö¸¸ ²Ï³ª ºÕºñ´ø ±¤»êÀÌ¾ú³×.%±¤ºÎ: ÇÏÁö¸¸ Æ÷º¸¸£µéÀÌ ±¤»êÀ» Á¡·ÉÇÏ°í ÀÎ°£µéÀ» ³ë¿¹·Î »ï¾Æ ÀÏÀ» ½ÃÅ°´Â ¹Ù¶÷¿¡%±¤ºÎ: ÀÌ°÷ »ç¶÷µéÀº °ÅÀÇ µµ¸Á°¡¹ö·È´Ù³×.%±¤ºÎ: ¶§¹®¿¡ ÀÌ ±¤»êÀº ÅÖ ºñ°Ô µÇ¾úÁö..%±¤ºÎ: ÀÌ°÷À» µÑ·¯º¸°í ½Í´Ù°í?%±¤ºÎ: ¸¶À½´ë·Î ÇÏ½Ã°Ô³ª.");
+			msg.msg(player, "ê´‘ë¶€: ì‹œë“œ ê´‘ì‚°ì€ ê°’ë¹„ì‹¼ ê´‘ë¬¼ì€ ë‚˜ì˜¤ì§€ ì•Šì•˜ì§€ë§Œ ê½¤ë‚˜ ë¶ë¹„ë˜ ê´‘ì‚°ì´ì—ˆë„¤.%ê´‘ë¶€: í•˜ì§€ë§Œ í¬ë³´ë¥´ë“¤ì´ ê´‘ì‚°ì„ ì ë ¹í•˜ê³  ì¸ê°„ë“¤ì„ ë…¸ì˜ˆë¡œ ì‚¼ì•„ ì¼ì„ ì‹œí‚¤ëŠ” ë°”ëŒì—%ê´‘ë¶€: ì´ê³³ ì‚¬ëŒë“¤ì€ ê±°ì˜ ë„ë§ê°€ë²„ë ¸ë‹¤ë„¤.%ê´‘ë¶€: ë•Œë¬¸ì— ì´ ê´‘ì‚°ì€ í…… ë¹„ê²Œ ë˜ì—ˆì§€..%ê´‘ë¶€: ì´ê³³ì„ ë‘˜ëŸ¬ë³´ê³  ì‹¶ë‹¤ê³ ?%ê´‘ë¶€: ë§ˆìŒëŒ€ë¡œ í•˜ì‹œê²Œë‚˜.");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 14Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 14ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===½Ãµå ±¤»ê===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ì‹œë“œ ê´‘ì‚°===");
 		score.setScore(2);
-		Score score2 = obj.getScore("½Ãµå ±¤»ê¿¡ ³²¾ÆÀÖ´Â ±¤ºÎ¿Í ´ëÈ­");
+		Score score2 = obj.getScore("ì‹œë“œ ê´‘ì‚°ì— ë‚¨ì•„ìˆëŠ” ê´‘ë¶€ì™€ ëŒ€í™”");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -1080,7 +1080,7 @@ public class QuestBoard {
 			Chest chest = (Chest) block.getState();
 			ItemStack weapon1 = chest.getInventory().getItem(6);
 			player.getInventory().addItem(weapon1);
-			player.sendMessage(ChatColor.WHITE + "¾Ë ¼ö ¾ø´Â ±¤¼®" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.WHITE + "ì•Œ ìˆ˜ ì—†ëŠ” ê´‘ì„" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 			es.giveExp(player, 800000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			QuestBoard qb = new QuestBoard();
@@ -1089,11 +1089,11 @@ public class QuestBoard {
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 15Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 15ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===Æ÷º¸¸£ÀÇ ¹«±â1===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===í¬ë³´ë¥´ì˜ ë¬´ê¸°1===");
 		score.setScore(2);
-		Score score2 = obj.getScore("ÀÌ°èÀÇ ¿î¼®¿¡¼­ Æ¯ÀÌÇÑ ±¤¹°À» ¾ò±â");
+		Score score2 = obj.getScore("ì´ê³„ì˜ ìš´ì„ì—ì„œ íŠ¹ì´í•œ ê´‘ë¬¼ì„ ì–»ê¸°");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -1107,7 +1107,7 @@ public class QuestBoard {
 				for (ItemStack is : player.getInventory().getContents()) {
 					if(is == null) continue;
 				    if (is.getType() == Material.PLAYER_HEAD) {			
-				        if (is.getItemMeta().getDisplayName().equals(ChatColor.WHITE + "¾Ë ¼ö ¾ø´Â ±¤¼®")) {
+				        if (is.getItemMeta().getDisplayName().equals(ChatColor.WHITE + "ì•Œ ìˆ˜ ì—†ëŠ” ê´‘ì„")) {
 				        	 is.setAmount(0);
 				        }
 				    }
@@ -1115,16 +1115,16 @@ public class QuestBoard {
 			}
 			es.giveExp(player, 800000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "±¤ºÎ: °í¸¿³×.%±¤ºÎ: ±×·±µ¥ È¤½Ã ±×°É ¾Æ´Â°¡?%±¤ºÎ: ¸ó½ºÅÍµéÀ» »ç³ÉÇÏ´Ùº¸¸é ±×µéÀÇ ÇÇ³ª ½ÉÀåÀ» ¾ò°Å³ª ÇÏ¿´À»°É¼¼.%±¤ºÎ: ³ªÁß¿¡ Àåºñ¸¦ Á¦ÀÛÇÒ ¶§ ±×°ÍµéÀ» Àç·á·Î »ïÀ¸¸é%±¤ºÎ: ´õ¿í Áú ÁÁÀº Àåºñ°¡ ¸¸µé¾îÁú²¬¼¼.");
+			msg.msg(player, "ê´‘ë¶€: ê³ ë§™ë„¤.%ê´‘ë¶€: ê·¸ëŸ°ë° í˜¹ì‹œ ê·¸ê±¸ ì•„ëŠ”ê°€?%ê´‘ë¶€: ëª¬ìŠ¤í„°ë“¤ì„ ì‚¬ëƒ¥í•˜ë‹¤ë³´ë©´ ê·¸ë“¤ì˜ í”¼ë‚˜ ì‹¬ì¥ì„ ì–»ê±°ë‚˜ í•˜ì˜€ì„ê±¸ì„¸.%ê´‘ë¶€: ë‚˜ì¤‘ì— ì¥ë¹„ë¥¼ ì œì‘í•  ë•Œ ê·¸ê²ƒë“¤ì„ ì¬ë£Œë¡œ ì‚¼ìœ¼ë©´%ê´‘ë¶€: ë”ìš± ì§ˆ ì¢‹ì€ ì¥ë¹„ê°€ ë§Œë“¤ì–´ì§ˆê»„ì„¸.");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 15Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 15ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===Æ÷º¸¸£ÀÇ ¹«±â2===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===í¬ë³´ë¥´ì˜ ë¬´ê¸°2===");
 		score.setScore(2);
-		Score score2 = obj.getScore("±¤ºÎ¿¡°Ô ±¤¹°À» °¡Á®´ÙÁÖ±â");
+		Score score2 = obj.getScore("ê´‘ë¶€ì—ê²Œ ê´‘ë¬¼ì„ ê°€ì ¸ë‹¤ì£¼ê¸°");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -1136,18 +1136,18 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 1000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "ºÒ¾ÈÇÑ ÁÖ¹Î: À¸¾Æ¾Ç ³¯ ³»º¸³» ÁÖ°Å¶ó.");
+			msg.msg(player, "ë¶ˆì•ˆí•œ ì£¼ë¯¼: ìœ¼ì•„ì•… ë‚  ë‚´ë³´ë‚´ ì£¼ê±°ë¼.");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 16Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 16ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===¹ÌÇ£¸£À¯ ¼º===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ë¯¸í‘€ë¥´ìœ  ì„±===");
 		score.setScore(3);
-		Score score2 = obj.getScore("¹ÌÇ£¸£À¯ ¼º µ¿¹® ¹Û¿¡ ÀÖ´Â");
+		Score score2 = obj.getScore("ë¯¸í‘€ë¥´ìœ  ì„± ë™ë¬¸ ë°–ì— ìˆëŠ”");
 		score2.setScore(2);
-		Score score3 = obj.getScore("½Ä·®Ã¢°í¿¡ °¡º¸±â");
+		Score score3 = obj.getScore("ì‹ëŸ‰ì°½ê³ ì— ê°€ë³´ê¸°");
 		score3.setScore(1);
 		Score score4 = obj.getScore("(" + num + "/1)");
 		score4.setScore(0);
@@ -1159,17 +1159,17 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 1000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "ºÒ¾ÈÇÑ ÁÖ¹Î: ¡×e¼º ¾ÈÂÊ¡×f¿¡´Â ¾ÆÁ÷ »ç¶÷µéÀÌ ÀÖ¾î.%ºÒ¾ÈÇÑ ÁÖ¹Î: ±×¸®°í ¸î ´Ş Àü¿¡..%ºÒ¾ÈÇÑ ÁÖ¹Î: ¾î´À ¸ğÇè°¡°¡ ¿Ô¾î..%ºÒ¾ÈÇÑ ÁÖ¹Î: ±×´Â ÀÌ ¿¡ÀÏ¶¥ÀÇ ¿ª»ç¸¦ ÆÄÇØÄ¡´Â ÀÌ»óÇÑ ³ğÀÌ¿´¾î..%ºÒ¾ÈÇÑ ÁÖ¹Î: °í¼­ÀûÀ» ¿¬±¸ÇÏ´ø »ç¶÷À» Ã£¾Æ ¿©±â±îÁö ¿Ô´Ù´Âµ¥..%"
-					+ "ºÒ¾ÈÇÑ ÁÖ¹Î: °á±¹ ¡×eÁø½Ç¡×fÀ» ±ú´İ°í´Â ¹ÌÃÄ ³¯¶Ù°Ô µÇ¾úÁö..%ºÒ¾ÈÇÑ ÁÖ¹Î: ÄÉÄÉÄÉÄÉÄÉ±Q..");
+			msg.msg(player, "ë¶ˆì•ˆí•œ ì£¼ë¯¼: Â§eì„± ì•ˆìª½Â§fì—ëŠ” ì•„ì§ ì‚¬ëŒë“¤ì´ ìˆì–´.%ë¶ˆì•ˆí•œ ì£¼ë¯¼: ê·¸ë¦¬ê³  ëª‡ ë‹¬ ì „ì—..%ë¶ˆì•ˆí•œ ì£¼ë¯¼: ì–´ëŠ ëª¨í—˜ê°€ê°€ ì™”ì–´..%ë¶ˆì•ˆí•œ ì£¼ë¯¼: ê·¸ëŠ” ì´ ì—ì¼ë•…ì˜ ì—­ì‚¬ë¥¼ íŒŒí•´ì¹˜ëŠ” ì´ìƒí•œ ë†ˆì´ì˜€ì–´..%ë¶ˆì•ˆí•œ ì£¼ë¯¼: ê³ ì„œì ì„ ì—°êµ¬í•˜ë˜ ì‚¬ëŒì„ ì°¾ì•„ ì—¬ê¸°ê¹Œì§€ ì™”ë‹¤ëŠ”ë°..%"
+					+ "ë¶ˆì•ˆí•œ ì£¼ë¯¼: ê²°êµ­ Â§eì§„ì‹¤Â§fì„ ê¹¨ë‹«ê³ ëŠ” ë¯¸ì³ ë‚ ë›°ê²Œ ë˜ì—ˆì§€..%ë¶ˆì•ˆí•œ ì£¼ë¯¼: ì¼€ì¼€ì¼€ì¼€ì¼€ì¼˜..");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 17Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 17ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ÀººûÀÇ ¿µ¿ª===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ì€ë¹›ì˜ ì˜ì—­===");
 		score.setScore(2);
-		Score score2 = obj.getScore("¼º ¾ÈÀÇ ¸ó½ºÅÍ 30¸¶¸® »ç³É");
+		Score score2 = obj.getScore("ì„± ì•ˆì˜ ëª¬ìŠ¤í„° 30ë§ˆë¦¬ ì‚¬ëƒ¥");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/30)");
 		score3.setScore(0);
@@ -1182,33 +1182,33 @@ public class QuestBoard {
 			
 			ItemStack book = new ItemStack(Material.WRITTEN_BOOK);
 			BookMeta bm = (BookMeta)book.getItemMeta();
-			bm.setAuthor("È÷Æ÷³Ù½Ã½º");
-			bm.setTitle(ChatColor.DARK_RED + "½ÅÀÌ µÇ´Â Æ÷¼Ç");
+			bm.setAuthor("íˆí¬ë„¨ì‹œìŠ¤");
+			bm.setTitle(ChatColor.DARK_RED + "ì‹ ì´ ë˜ëŠ” í¬ì…˜");
 			ArrayList<String> pages = new ArrayList<String>();
-			pages.add("½ÅÀÌ µÇ´Â ¹æ¹ıÀº °£´ÜÇÏ´Ù.\n±×°ÍÀº ¸ğµç ÀÎ°£µéÀÌ ³ª¸¦ ¹Ï°ÔÇÏ¸é µÇ´Â ÀÏÀÌ´Ù.\nµû¶ó¼­ ³ª´Â ÀÎ°£ÀÇ °¨Á¤À» Á¶Á¾ÇÏ´Â ¾àÀ» ¸¸µé°í ÀÖ´Ù.");
-			pages.add("·¹½ÃÇÇ(1ÀÎºĞ ±âÁØ)\n\n¿ëÀÇ ´«¹° 50ml\n°ËÀº Àå¹Ì 2ÀÙ\nÁ¤·ÉÀÇ ½ÉÀå 1°³\nºÒ²É ¹Îµé·¹ ¾¾¾Ñ 2°³\nÅ°¾îÄÃÀÇ ¹ß°ÉÀ½ 1°³");
-			pages.add("±â·Ï1\n\n»ó±Ş Æ÷¼ÇÀ» ¸¸µé ¶§ »ç¿ëµÇ´Â ¿ëÀÇ ´«¹°Àº ÇÊ¼öÀÌ´Ù.");
-			pages.add("±â·Ï2\n\nÀÏÁ¾ÀÇ ÃÖ¸éÁ¦ÀÌ±â ¶§¹®¿¡ °ËÀº Àå¹Ì¸¦ ³Ö¾ú´õ´Ï È¿°úÀûÀÌ¿´´Ù.");
-			pages.add("±â·Ï3\n\n¿¹·ÎºÎÅÍ ÀÎ°£µéÀ» È¦¸®´Â Á¾Á·¿¡´Â ¸ù¸¶¿Í Á¤·ÉÀÌ ÀÖ¾ú´Ù.\n¿ì¼± Á¤·ÉÀÇ ½ÉÀåÀ» »ç¿ëÇØº¸¾Ò´Ù.");
-			pages.add("±â·Ï4\n\nÀÎ°£µéÀ» ¹«¾ğ°¡¿¡ ºüÁ³À» ¶§ ºÒÅº´Ù´Â Ç¥ÇöÀ» ¾´´Ù.\n³ª´Â ¾È´Ù. ±×°ÍÀº ½ÇÁ¦·Î ºÒÅ¸´Â °ÍÀÌ´Ù.\n±×·¡¼­ ºÒ²É ¹Îµé·¹ ¾¾¾Ñµµ ³Ö¾îº¸¾Ò´Ù.");
-			pages.add("±â·Ï5\n\nÅ°¾îÄÃÀÇ ¹ß°ÉÀ½ÀÌ ÀÌ Æ÷¼ÇÀÇ ÇÙ½ÉÀÌ´Ù.\nÅ°¾îÄÃÀº Æ÷º¸¸£ÀÇ ¼öÀåÀÌ¾ú´Ù.\n±×ÀÇ Æ¯±â´Â ÀÎ°£µéÀÇ Á¤±â¸¦ »¡¾Æ¸Ô´Â °ÍÀÌ¸ç, ±×ÀÇ Èûµµ °Å±â¿¡¼­ ºñ·ÔµÈ °ÍÀÌ´Ù.");
-			pages.add(ChatColor.DARK_RED + "" + ChatColor.MAGIC + "ÀÌ ºÎºĞÀº ÀĞÀ» ¼ö°¡ ¾ø¾î.. ÀÌ ºÎºĞÀº ÀĞÀ» ¼ö°¡ ¾ø¾î.. ÀÌ ºÎºĞÀº ÀĞÀ» ¼ö°¡ ¾ø¾î.. ÀÌ ºÎºĞÀº ÀĞÀ» ¼ö°¡ ¾ø¾î.. ÀÌ ºÎºĞÀº ÀĞÀ» ¼ö°¡ ¾ø¾î..");
+			pages.add("ì‹ ì´ ë˜ëŠ” ë°©ë²•ì€ ê°„ë‹¨í•˜ë‹¤.\nê·¸ê²ƒì€ ëª¨ë“  ì¸ê°„ë“¤ì´ ë‚˜ë¥¼ ë¯¿ê²Œí•˜ë©´ ë˜ëŠ” ì¼ì´ë‹¤.\në”°ë¼ì„œ ë‚˜ëŠ” ì¸ê°„ì˜ ê°ì •ì„ ì¡°ì¢…í•˜ëŠ” ì•½ì„ ë§Œë“¤ê³  ìˆë‹¤.");
+			pages.add("ë ˆì‹œí”¼(1ì¸ë¶„ ê¸°ì¤€)\n\nìš©ì˜ ëˆˆë¬¼ 50ml\nê²€ì€ ì¥ë¯¸ 2ì\nì •ë ¹ì˜ ì‹¬ì¥ 1ê°œ\në¶ˆê½ƒ ë¯¼ë“¤ë ˆ ì”¨ì•— 2ê°œ\ní‚¤ì–´ì»¬ì˜ ë°œê±¸ìŒ 1ê°œ");
+			pages.add("ê¸°ë¡1\n\nìƒê¸‰ í¬ì…˜ì„ ë§Œë“¤ ë•Œ ì‚¬ìš©ë˜ëŠ” ìš©ì˜ ëˆˆë¬¼ì€ í•„ìˆ˜ì´ë‹¤.");
+			pages.add("ê¸°ë¡2\n\nì¼ì¢…ì˜ ìµœë©´ì œì´ê¸° ë•Œë¬¸ì— ê²€ì€ ì¥ë¯¸ë¥¼ ë„£ì—ˆë”ë‹ˆ íš¨ê³¼ì ì´ì˜€ë‹¤.");
+			pages.add("ê¸°ë¡3\n\nì˜ˆë¡œë¶€í„° ì¸ê°„ë“¤ì„ í™€ë¦¬ëŠ” ì¢…ì¡±ì—ëŠ” ëª½ë§ˆì™€ ì •ë ¹ì´ ìˆì—ˆë‹¤.\nìš°ì„  ì •ë ¹ì˜ ì‹¬ì¥ì„ ì‚¬ìš©í•´ë³´ì•˜ë‹¤.");
+			pages.add("ê¸°ë¡4\n\nì¸ê°„ë“¤ì„ ë¬´ì–¸ê°€ì— ë¹ ì¡Œì„ ë•Œ ë¶ˆíƒ„ë‹¤ëŠ” í‘œí˜„ì„ ì“´ë‹¤.\në‚˜ëŠ” ì•ˆë‹¤. ê·¸ê²ƒì€ ì‹¤ì œë¡œ ë¶ˆíƒ€ëŠ” ê²ƒì´ë‹¤.\nê·¸ë˜ì„œ ë¶ˆê½ƒ ë¯¼ë“¤ë ˆ ì”¨ì•—ë„ ë„£ì–´ë³´ì•˜ë‹¤.");
+			pages.add("ê¸°ë¡5\n\ní‚¤ì–´ì»¬ì˜ ë°œê±¸ìŒì´ ì´ í¬ì…˜ì˜ í•µì‹¬ì´ë‹¤.\ní‚¤ì–´ì»¬ì€ í¬ë³´ë¥´ì˜ ìˆ˜ì¥ì´ì—ˆë‹¤.\nê·¸ì˜ íŠ¹ê¸°ëŠ” ì¸ê°„ë“¤ì˜ ì •ê¸°ë¥¼ ë¹¨ì•„ë¨¹ëŠ” ê²ƒì´ë©°, ê·¸ì˜ í˜ë„ ê±°ê¸°ì—ì„œ ë¹„ë¡¯ëœ ê²ƒì´ë‹¤.");
+			pages.add(ChatColor.DARK_RED + "" + ChatColor.MAGIC + "ì´ ë¶€ë¶„ì€ ì½ì„ ìˆ˜ê°€ ì—†ì–´.. ì´ ë¶€ë¶„ì€ ì½ì„ ìˆ˜ê°€ ì—†ì–´.. ì´ ë¶€ë¶„ì€ ì½ì„ ìˆ˜ê°€ ì—†ì–´.. ì´ ë¶€ë¶„ì€ ì½ì„ ìˆ˜ê°€ ì—†ì–´.. ì´ ë¶€ë¶„ì€ ì½ì„ ìˆ˜ê°€ ì—†ì–´..");
 			bm.setPages(pages);			
 			book.setItemMeta(bm);
 			player.getInventory().addItem(book);
 			
 			es.giveExp(player, 1100000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "¡×7ÀÌ¹Ì »ç¸ÁÇÑ µíÇÏ´Ù.%¡×7¼ÒÁöÇ°À» ¼ö»öÇØº¸´Ï ¡×eÃ¥¡×7ÀÌ ÇÑ±ÇÀÖ´Ù.%¡×7°¡Á®°¡¾ß ÇÒ °Í °°´Ù.");
+			msg.msg(player, "Â§7ì´ë¯¸ ì‚¬ë§í•œ ë“¯í•˜ë‹¤.%Â§7ì†Œì§€í’ˆì„ ìˆ˜ìƒ‰í•´ë³´ë‹ˆ Â§eì±…Â§7ì´ í•œê¶Œìˆë‹¤.%Â§7ê°€ì ¸ê°€ì•¼ í•  ê²ƒ ê°™ë‹¤.");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 18Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 18ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===Áø½ÇÀ» ¾Æ´Â ÀÚ1===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ì§„ì‹¤ì„ ì•„ëŠ” ì1===");
 		score.setScore(2);
-		Score score2 = obj.getScore("¹ÌÇ£¸£À¯ ¼º¿¡¼­ ¿ª»ç°¡ Ã£±â");
+		Score score2 = obj.getScore("ë¯¸í‘€ë¥´ìœ  ì„±ì—ì„œ ì—­ì‚¬ê°€ ì°¾ê¸°");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -1220,25 +1220,25 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
 			ItemMeta rewardKeyIm = rewardKey.getItemMeta();
-			rewardKeyIm.setDisplayName(ChatColor.YELLOW + "¿ëµµ¸¦ ¸ğ¸£´Â ¿­¼è");
+			rewardKeyIm.setDisplayName(ChatColor.YELLOW + "ìš©ë„ë¥¼ ëª¨ë¥´ëŠ” ì—´ì‡ ");
 			ArrayList<String> rewardLore = new ArrayList();
-			rewardLore.add(ChatColor.GRAY + "¸ğÇè°¡°¡ Èê¸®°í °£ °ÍÀ¸·Î ÃßÁ¤µÇ´Â ¿­¼è");
-			rewardLore.add(ChatColor.GRAY + "¸ğÇè°¡´Â ½Ãµå ±¤»êÀ» ÇâÇÑ °ÍÀ¸·Î ÃßÃøµÈ´Ù.");
+			rewardLore.add(ChatColor.GRAY + "ëª¨í—˜ê°€ê°€ í˜ë¦¬ê³  ê°„ ê²ƒìœ¼ë¡œ ì¶”ì •ë˜ëŠ” ì—´ì‡ ");
+			rewardLore.add(ChatColor.GRAY + "ëª¨í—˜ê°€ëŠ” ì‹œë“œ ê´‘ì‚°ì„ í–¥í•œ ê²ƒìœ¼ë¡œ ì¶”ì¸¡ëœë‹¤.");
 			rewardKeyIm.setLore(rewardLore);
 			rewardKey.setItemMeta(rewardKeyIm);
 			player.getInventory().addItem(rewardKey);
 			es.giveExp(player, 1200000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "¡×7¸ğÇè°¡´Â ¡×e½Ãµå ±¤»ê¡×7À¸·Î °£ °Í °°´Ù.%¡×7¡×e¿ëµµ¸¦ ¸ğ¸£´Â ¿­¼è¡×7¸¦ Ã£¾Ò´Ù.");
+			msg.msg(player, "Â§7ëª¨í—˜ê°€ëŠ” Â§eì‹œë“œ ê´‘ì‚°Â§7ìœ¼ë¡œ ê°„ ê²ƒ ê°™ë‹¤.%Â§7Â§eìš©ë„ë¥¼ ëª¨ë¥´ëŠ” ì—´ì‡ Â§7ë¥¼ ì°¾ì•˜ë‹¤.");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 19Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 19ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===Áø½ÇÀ» ¾Æ´Â ÀÚ2===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ì§„ì‹¤ì„ ì•„ëŠ” ì2===");
 		score.setScore(2);
-		Score score2 = obj.getScore("¿ª»ç°¡¸¦ »ìÇØÇÑ ¸ğÇè°¡ÀÇ ÈçÀû Ã£±â");
+		Score score2 = obj.getScore("ì—­ì‚¬ê°€ë¥¼ ì‚´í•´í•œ ëª¨í—˜ê°€ì˜ í”ì  ì°¾ê¸°");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -1250,19 +1250,19 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 1300000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "±¤ºÎ: ¹¹?%±¤ºÎ: ´©°¡ ¿Ô´Ù°£ Àû ¾ø³Ä°í?%±¤ºÎ: ³Ê °°Àº ¸ğÇè°¡´Â ¸¹ÀÌ ¿Ô´Ù°¬Áö.%±¤ºÎ: °è¼Ó ¿©±â¼­ Ã¤±¤ÇÏ´Â ³ğµéµµ ÀÖ¾ú´Ù°í.%±¤ºÎ: ...%±¤ºÎ: »ç½Ç ¾î¶² ³ğÀÌ ¡×eºÀÀÎµÈ ¹®¡×fÀ» ¿­¾î¹ö·ÈÁö ¹º°¡.%±¤ºÎ: À§ÇèÇÒ °Í °°¾Æ¼­ ¸»ÇÏÁö ¾ÊÀ¸·Á Çß´Âµ¥ ¸»ÀÌÁö.%"
-					+ "±¤ºÎ: °Å±â¿¡ ¡×e½ÅÀÇ º¸¹°¡×fÀÌ ¼û°ÜÁ®ÀÖ´Ù´Â ¼Ò¹®ÀÌ ÀÖ¾î.%±¤ºÎ: ¾Æ¸¶ ³Ê°¡ Ã£´Â »ç¶÷Àº ±×°É °¡Áö·¯ °£°Å°ÚÁö.");
+			msg.msg(player, "ê´‘ë¶€: ë­?%ê´‘ë¶€: ëˆ„ê°€ ì™”ë‹¤ê°„ ì  ì—†ëƒê³ ?%ê´‘ë¶€: ë„ˆ ê°™ì€ ëª¨í—˜ê°€ëŠ” ë§ì´ ì™”ë‹¤ê°”ì§€.%ê´‘ë¶€: ê³„ì† ì—¬ê¸°ì„œ ì±„ê´‘í•˜ëŠ” ë†ˆë“¤ë„ ìˆì—ˆë‹¤ê³ .%ê´‘ë¶€: ...%ê´‘ë¶€: ì‚¬ì‹¤ ì–´ë–¤ ë†ˆì´ Â§eë´‰ì¸ëœ ë¬¸Â§fì„ ì—´ì–´ë²„ë ¸ì§€ ë­”ê°€.%ê´‘ë¶€: ìœ„í—˜í•  ê²ƒ ê°™ì•„ì„œ ë§í•˜ì§€ ì•Šìœ¼ë ¤ í–ˆëŠ”ë° ë§ì´ì§€.%"
+					+ "ê´‘ë¶€: ê±°ê¸°ì— Â§eì‹ ì˜ ë³´ë¬¼Â§fì´ ìˆ¨ê²¨ì ¸ìˆë‹¤ëŠ” ì†Œë¬¸ì´ ìˆì–´.%ê´‘ë¶€: ì•„ë§ˆ ë„ˆê°€ ì°¾ëŠ” ì‚¬ëŒì€ ê·¸ê±¸ ê°€ì§€ëŸ¬ ê°„ê±°ê² ì§€.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq20_1(player, 0);
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 20Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 20ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===Áø½ÇÀ» ¾Æ´Â ÀÚ3===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ì§„ì‹¤ì„ ì•„ëŠ” ì3===");
 		score.setScore(2);
-		Score score2 = obj.getScore("½Ãµå ±¤»êÀÇ ±¤ºÎ¿Í ´ëÈ­");
+		Score score2 = obj.getScore("ì‹œë“œ ê´‘ì‚°ì˜ ê´‘ë¶€ì™€ ëŒ€í™”");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -1274,18 +1274,18 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 1400000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "¡×7¸ğÇè°¡´Â ¿©·¯ ´øÀüµéÀ» µ¹¾Æ´Ù´Ï¸ç%¡×7½ÅÀÇ º¸¹°À» Ã£À¸·ÁÇÏ´Â °Í °°´Ù.%¡×7½ÅÀÇ º¸¹°¿¡ ´ëÇØ ¾Ë¾Æº¸·¯ °¡¾ßÇÒ °Í °°´Ù.");
+			msg.msg(player, "Â§7ëª¨í—˜ê°€ëŠ” ì—¬ëŸ¬ ë˜ì „ë“¤ì„ ëŒì•„ë‹¤ë‹ˆë©°%Â§7ì‹ ì˜ ë³´ë¬¼ì„ ì°¾ìœ¼ë ¤í•˜ëŠ” ê²ƒ ê°™ë‹¤.%Â§7ì‹ ì˜ ë³´ë¬¼ì— ëŒ€í•´ ì•Œì•„ë³´ëŸ¬ ê°€ì•¼í•  ê²ƒ ê°™ë‹¤.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq20_2(player, 0);
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 20Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 20ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===Áø½ÇÀ» ¾Æ´Â ÀÚ4===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ì§„ì‹¤ì„ ì•„ëŠ” ì4===");
 		score.setScore(2);
-		Score score2 = obj.getScore("Å¸¶ôÇÑ ¿äÁ¤ ¿Õ±¹ Å¬¸®¾î");
+		Score score2 = obj.getScore("íƒ€ë½í•œ ìš”ì • ì™•êµ­ í´ë¦¬ì–´");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -1297,18 +1297,18 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 1500000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "±¤ºÎ: ½ÅÀÇ º¸¹°?%±¤ºÎ: ÀÌ ¶¥¿¡ ¸î°³³ª Á¸ÀçÇÏ´ÂÁö´Â ¸ğ¸£°Ú±º.%±¤ºÎ: ³»°¡ ¾Æ´Â Á¤º¸µµ °ÅÀÇ ¾ø°í ¸»ÀÌ¾ß.%±¤ºÎ: ÇÏ³ª È®½ÇÈ÷ ¾Æ´Â °Ç ¡×e¼­ÂÊ ¼¶ÀÎ ¾Æ¶õ¸ğ¾î¡×f¿¡%±¤ºÎ: ½ÅÀÇ º¸¹°ÀÌ ÀÖ´Ù´Â°ÅÁö.%±¤ºÎ: °Å±â´Â ³» °íÇâÀÌ¶ó Àß ¾Ë°í ÀÖÁö.%±¤ºÎ: ¸¶À»ÀÇ Àü¼³ÀÌ±ä Çß´Ù¸¸..%"
-					+ "±¤ºÎ: ¸¶À» »ç¶÷Áß¿¡ ÇÑ »ç¶÷ÀÌ ¿ì¿¬È÷ Åä³¢¸¦ µû¶ó°¡´Ù ´øÀüÀ» ¹ß°ßÇß°í%±¤ºÎ: °Å±â¿¡ Àü¼³ ¼ÓÀÇ ½ÅÀÇ ¹°°ÇÀÎ °Í °°Àº ¹°°ÇÀ» ¹ß°ßÇß´ÙÁö.%±¤ºÎ: ¾îÂîµÇ¾ú°Ç °Å±ä À§ÇèÇÑ Áö¿ªÀÌ¾ß.%±¤ºÎ: ³» Å©°í ¾Æ¸§´Ù¿î ±ÙÀ°À» º¸¸é ¾Ë°ÚÁö¸¸%±¤ºÎ: ÀÌ°Ô ¾î¸± Àû ±× ¼³¿ø¿¡ »ì¸é¼­ Ä¿Áø ±ÙÀ°ÀÌ°Åµç.%"
-					+ "±¤ºÎ: ¿©±â ÁÖº¯°ú´Â ºñ±³°¡ ¾ÈµÉ¸¸Å­ °­ÇÑ ¸ó½ºÅÍ°¡ Ãâ¸ôÇÑ´Ù.%±¤ºÎ: Á¶½ÉÇØ¶ó.");
+			msg.msg(player, "ê´‘ë¶€: ì‹ ì˜ ë³´ë¬¼?%ê´‘ë¶€: ì´ ë•…ì— ëª‡ê°œë‚˜ ì¡´ì¬í•˜ëŠ”ì§€ëŠ” ëª¨ë¥´ê² êµ°.%ê´‘ë¶€: ë‚´ê°€ ì•„ëŠ” ì •ë³´ë„ ê±°ì˜ ì—†ê³  ë§ì´ì•¼.%ê´‘ë¶€: í•˜ë‚˜ í™•ì‹¤íˆ ì•„ëŠ” ê±´ Â§eì„œìª½ ì„¬ì¸ ì•„ë€ëª¨ì–´Â§fì—%ê´‘ë¶€: ì‹ ì˜ ë³´ë¬¼ì´ ìˆë‹¤ëŠ”ê±°ì§€.%ê´‘ë¶€: ê±°ê¸°ëŠ” ë‚´ ê³ í–¥ì´ë¼ ì˜ ì•Œê³  ìˆì§€.%ê´‘ë¶€: ë§ˆì„ì˜ ì „ì„¤ì´ê¸´ í–ˆë‹¤ë§Œ..%"
+					+ "ê´‘ë¶€: ë§ˆì„ ì‚¬ëŒì¤‘ì— í•œ ì‚¬ëŒì´ ìš°ì—°íˆ í† ë¼ë¥¼ ë”°ë¼ê°€ë‹¤ ë˜ì „ì„ ë°œê²¬í–ˆê³ %ê´‘ë¶€: ê±°ê¸°ì— ì „ì„¤ ì†ì˜ ì‹ ì˜ ë¬¼ê±´ì¸ ê²ƒ ê°™ì€ ë¬¼ê±´ì„ ë°œê²¬í–ˆë‹¤ì§€.%ê´‘ë¶€: ì–´ì°Œë˜ì—ˆê±´ ê±°ê¸´ ìœ„í—˜í•œ ì§€ì—­ì´ì•¼.%ê´‘ë¶€: ë‚´ í¬ê³  ì•„ë¦„ë‹¤ìš´ ê·¼ìœ¡ì„ ë³´ë©´ ì•Œê² ì§€ë§Œ%ê´‘ë¶€: ì´ê²Œ ì–´ë¦´ ì  ê·¸ ì„¤ì›ì— ì‚´ë©´ì„œ ì»¤ì§„ ê·¼ìœ¡ì´ê±°ë“ .%"
+					+ "ê´‘ë¶€: ì—¬ê¸° ì£¼ë³€ê³¼ëŠ” ë¹„êµê°€ ì•ˆë ë§Œí¼ ê°•í•œ ëª¬ìŠ¤í„°ê°€ ì¶œëª°í•œë‹¤.%ê´‘ë¶€: ì¡°ì‹¬í•´ë¼.");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 20Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 20ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===Áø½ÇÀ» ¾Æ´Â ÀÚ5===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ì§„ì‹¤ì„ ì•„ëŠ” ì5===");
 		score.setScore(2);
-		Score score2 = obj.getScore("½Ãµå ±¤»êÀÇ ±¤ºÎ¿Í ´ëÈ­");
+		Score score2 = obj.getScore("ì‹œë“œ ê´‘ì‚°ì˜ ê´‘ë¶€ì™€ ëŒ€í™”");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -1320,17 +1320,17 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 1600000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "¸ğÇè°¡: ³Í ´©±¸³Ä?%¸ğÇè°¡: ´©±ºµ¥ ³¯ °è¼Ó ÂÑ¾Æ´Ù´Ï´Â°ÅÁö?%¸ğÇè°¡: ³»°¡ ¸ğ¸¥´Ù°í »ı°¢Çß´Ù¸é ¿À»êÀÌ´Ù.%¸ğÇè°¡: Èì..%¸ğÇè°¡: ³Ê¿¡°Ô¼± ³ª¿Í ºñ½ÁÇÑ Çâ±â°¡ ³ª´Â±º.%¸ğÇè°¡: ±×·¡. ³× ³à¼®µµ ´Ù¸¥ Â÷¿ø¿¡¼­ ¿Â ¡×eÇÃ·¹ÀÌ¾î¡×f±¸³ª.%"
-					+ "¸ğÇè°¡: ³Í ¹» À§ÇØ ½Î¿ìÁö?%¸ğÇè°¡: ¿ª½Ã.. ¾Ë¸®°¡ ¾øÁö.%¸ğÇè°¡: ½Î¿òÀÇ ÀÌÀ¯µµ ¸ğ¸£´Â ÀÜÃ¬ÀÌ´Â °ü½É¾ø´Ù.%¸ğÇè°¡: ³ª´Â ÀÌÁ¦ºÎÅÍ ¼³¿ø Áö´ë¿¡ °¥²¨´Ù.%¸ğÇè°¡: ³¯ ¸¸³ª°í ½Í´Ù¸é%´õ °­ÇØÁ®¼­ µ¹¾Æ¿Í¶ó.%tp-1143 181 1461");
+			msg.msg(player, "ëª¨í—˜ê°€: ë„Œ ëˆ„êµ¬ëƒ?%ëª¨í—˜ê°€: ëˆ„êµ°ë° ë‚  ê³„ì† ì«“ì•„ë‹¤ë‹ˆëŠ”ê±°ì§€?%ëª¨í—˜ê°€: ë‚´ê°€ ëª¨ë¥¸ë‹¤ê³  ìƒê°í–ˆë‹¤ë©´ ì˜¤ì‚°ì´ë‹¤.%ëª¨í—˜ê°€: í ..%ëª¨í—˜ê°€: ë„ˆì—ê²Œì„  ë‚˜ì™€ ë¹„ìŠ·í•œ í–¥ê¸°ê°€ ë‚˜ëŠ”êµ°.%ëª¨í—˜ê°€: ê·¸ë˜. ë„¤ ë…€ì„ë„ ë‹¤ë¥¸ ì°¨ì›ì—ì„œ ì˜¨ Â§eí”Œë ˆì´ì–´Â§fêµ¬ë‚˜.%"
+					+ "ëª¨í—˜ê°€: ë„Œ ë­˜ ìœ„í•´ ì‹¸ìš°ì§€?%ëª¨í—˜ê°€: ì—­ì‹œ.. ì•Œë¦¬ê°€ ì—†ì§€.%ëª¨í—˜ê°€: ì‹¸ì›€ì˜ ì´ìœ ë„ ëª¨ë¥´ëŠ” ì”ì±™ì´ëŠ” ê´€ì‹¬ì—†ë‹¤.%ëª¨í—˜ê°€: ë‚˜ëŠ” ì´ì œë¶€í„° ì„¤ì› ì§€ëŒ€ì— ê°ˆêº¼ë‹¤.%ëª¨í—˜ê°€: ë‚  ë§Œë‚˜ê³  ì‹¶ë‹¤ë©´%ë” ê°•í•´ì ¸ì„œ ëŒì•„ì™€ë¼.%tp-1143 181 1461");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 21Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 21ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===Áø½ÇÀ» ¾Æ´Â ÀÚ6===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ì§„ì‹¤ì„ ì•„ëŠ” ì6===");
 		score.setScore(2);
-		Score score2 = obj.getScore("Æ¼¸£ µî´ëÀÇ ¼û°ÜÁø Àå¼Ò·Î °¡±â");
+		Score score2 = obj.getScore("í‹°ë¥´ ë“±ëŒ€ì˜ ìˆ¨ê²¨ì§„ ì¥ì†Œë¡œ ê°€ê¸°");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -1342,16 +1342,16 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 1700000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "¡×7³¯¾¾°¡ ³Ê¹« Ãß¿î °Í °°´Ù.%¡×7¸¶À»¿¡ °¡¼­ µû¶æÇÏ°Ô ÇÒ ¼ö ÀÖ´Â ¹«¾ğ°¡¸¦ Ã£¾Æº¸ÀÚ.");
+			msg.msg(player, "Â§7ë‚ ì”¨ê°€ ë„ˆë¬´ ì¶”ìš´ ê²ƒ ê°™ë‹¤.%Â§7ë§ˆì„ì— ê°€ì„œ ë”°ëœ»í•˜ê²Œ í•  ìˆ˜ ìˆëŠ” ë¬´ì–¸ê°€ë¥¼ ì°¾ì•„ë³´ì.");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 22Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 22ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===¾Æ¶õ¸ğ¾î===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ì•„ë€ëª¨ì–´===");
 		score.setScore(2);
-		Score score2 = obj.getScore("¾Æ¶õ¸ğ¾î Áö¿ª¿¡ µµÂøÇØ ÄÜ³ë ¸¶À»·Î °¡´Â ½ä¸ÅÅ¸±â");
+		Score score2 = obj.getScore("ì•„ë€ëª¨ì–´ ì§€ì—­ì— ë„ì°©í•´ ì½˜ë…¸ ë§ˆì„ë¡œ ê°€ëŠ” ì°ë§¤íƒ€ê¸°");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -1363,9 +1363,9 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			ItemStack reward = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 			ItemMeta rewardIm = reward.getItemMeta();
-			rewardIm.setDisplayName(ChatColor.GOLD + "¿¢½ºÆ®¶ó Äù½ºÆ®: ¼³¿øÀÇ °¡Èñ");
+			rewardIm.setDisplayName(ChatColor.GOLD + "ì—‘ìŠ¤íŠ¸ë¼ í€˜ìŠ¤íŠ¸: ì„¤ì›ì˜ ê°€í¬");
 			ArrayList<String> rewardLore = new ArrayList();
-			rewardLore.add(ChatColor.GRAY + "'¼³¿øÀÇ °¡Èñ' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+			rewardLore.add(ChatColor.GRAY + "'ì„¤ì›ì˜ ê°€í¬' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 			rewardIm.setLore(rewardLore);
 			rewardIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			rewardIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -1374,19 +1374,19 @@ public class QuestBoard {
 			rewardIm.setUnbreakable(true);
 			reward.setItemMeta(rewardIm);
 			player.getInventory().addItem(reward);	
-			player.sendMessage(ChatColor.GOLD + "¿¢½ºÆ®¶ó Äù½ºÆ®: ¼³¿øÀÇ °¡Èñ" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GOLD + "ì—‘ìŠ¤íŠ¸ë¼ í€˜ìŠ¤íŠ¸: ì„¤ì›ì˜ ê°€í¬" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 			es.giveExp(player, 1800000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "¡×7Á¤ÂûÀÚµé¿¡°Ô ¡×eÄ«·ç ´øÀü¡×7¿¡ ´ëÇÑ Á¤º¸¸¦ µè°Ô µÇ¾ú´Ù.%¡×7¸ğÇè°¡¸¦ Ã£¾Æ ¶°³ªµµ·Ï ÇÏÀÚ.");
+			msg.msg(player, "Â§7ì •ì°°ìë“¤ì—ê²Œ Â§eì¹´ë£¨ ë˜ì „Â§7ì— ëŒ€í•œ ì •ë³´ë¥¼ ë“£ê²Œ ë˜ì—ˆë‹¤.%Â§7ëª¨í—˜ê°€ë¥¼ ì°¾ì•„ ë– ë‚˜ë„ë¡ í•˜ì.");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 23Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 23ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===´øÀü Å½»ö===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ë˜ì „ íƒìƒ‰===");
 		score.setScore(2);
-		Score score2 = obj.getScore("¼³¿ø Á¤ÂûÀÚ 30¸¶¸® »ç³É");
+		Score score2 = obj.getScore("ì„¤ì› ì •ì°°ì 30ë§ˆë¦¬ ì‚¬ëƒ¥");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/30)");
 		score3.setScore(0);
@@ -1398,18 +1398,18 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 1900000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "¸ğÇè°¡: ¿©±â±îÁö ¿À´À¶ó ¼ö°íÇß´Ù.%¸ğÇè°¡: ÀÌ°÷À» ÁöÅ°´Â º¸½º´Â ¡×e¹ß·Î¸£¡×f´õ±º.%¸ğÇè°¡: ¹°·Ğ ÁøÂ¥ ¹ß·Î¸£ÀÏ¸®°¡ ¾øÁö.%¸ğÇè°¡: ±×Àú Æ÷º¸¸£µéÀÌ ¿¬¼ºÇØ³½ ºÒ¾ÈÁ¤ÇÑ °¡Â¥ ÀÏ »Ó.%¸ğÇè°¡: ¾Æ.. ³× ³à¼®ÀÌ ¹» »ı°¢ÇÏ´ÂÁø ¸ğ¸£°ÚÁö¸¸%¸ğÇè°¡: ³ª´Â ¸ó½ºÅÍµé°ú ½Î¿ì´Â ¡×eÇÃ·¹ÀÌ¾î¡×f¶ó°í?%"
-					+ "¸ğÇè°¡: ±×·¸°Ô ÀÌ»óÇÏ°Ô ÃÄ´Ùº¸Áö¸¶.%¸ğÇè°¡: ³ª ¶ÇÇÑ ³Ê¿Í°°Àº ÇÃ·¹ÀÌ¾î. ÀÌ¸§Àº ¡×eµ¥È÷Æ®¶ó¡×f´Ù.%µ¥È÷Æ®¶ó: ¸ó½ºÅÍ¸¦ Á×ÀÌ¸ç °­ÇØÁö´Â°Ç ´ç¿¬ÇÑ ÀÏ ¾Æ´Ñ°¡?%µ¥È÷Æ®¶ó: ¿ì¸° ¾ÕÀ¸·Îµµ ¸¹ÀÌ ¸¸³ª°Ô µÉ ¿î¸íÀÌ¾ß.%µ¥È÷Æ®¶ó: ±×·¯´Ï Ä£ÇÏ°Ô Áö³»´Â°Ô ÁÁÁö.%µ¥È÷Æ®¶ó: ³ª´Â ÀÌ¸¸ Äù½ºÆ®¸¦ ´Ş¼ºÇß±â ¶§¹®¿¡ °¡º¸°Ú¾î.%"
-					+ "µ¥È÷Æ®¶ó: ±×·³...%µ¥È÷Æ®¶ó: ¾¾ À¯ ³Ø½ºÆ® Å¸ÀÓ ¹Ù~ÀÌ!%tp-2465 52 543");
+			msg.msg(player, "ëª¨í—˜ê°€: ì—¬ê¸°ê¹Œì§€ ì˜¤ëŠë¼ ìˆ˜ê³ í–ˆë‹¤.%ëª¨í—˜ê°€: ì´ê³³ì„ ì§€í‚¤ëŠ” ë³´ìŠ¤ëŠ” Â§eë°œë¡œë¥´Â§fë”êµ°.%ëª¨í—˜ê°€: ë¬¼ë¡  ì§„ì§œ ë°œë¡œë¥´ì¼ë¦¬ê°€ ì—†ì§€.%ëª¨í—˜ê°€: ê·¸ì € í¬ë³´ë¥´ë“¤ì´ ì—°ì„±í•´ë‚¸ ë¶ˆì•ˆì •í•œ ê°€ì§œ ì¼ ë¿.%ëª¨í—˜ê°€: ì•„.. ë„¤ ë…€ì„ì´ ë­˜ ìƒê°í•˜ëŠ”ì§„ ëª¨ë¥´ê² ì§€ë§Œ%ëª¨í—˜ê°€: ë‚˜ëŠ” ëª¬ìŠ¤í„°ë“¤ê³¼ ì‹¸ìš°ëŠ” Â§eí”Œë ˆì´ì–´Â§fë¼ê³ ?%"
+					+ "ëª¨í—˜ê°€: ê·¸ë ‡ê²Œ ì´ìƒí•˜ê²Œ ì³ë‹¤ë³´ì§€ë§ˆ.%ëª¨í—˜ê°€: ë‚˜ ë˜í•œ ë„ˆì™€ê°™ì€ í”Œë ˆì´ì–´. ì´ë¦„ì€ Â§eë°íˆíŠ¸ë¼Â§fë‹¤.%ë°íˆíŠ¸ë¼: ëª¬ìŠ¤í„°ë¥¼ ì£½ì´ë©° ê°•í•´ì§€ëŠ”ê±´ ë‹¹ì—°í•œ ì¼ ì•„ë‹Œê°€?%ë°íˆíŠ¸ë¼: ìš°ë¦° ì•ìœ¼ë¡œë„ ë§ì´ ë§Œë‚˜ê²Œ ë  ìš´ëª…ì´ì•¼.%ë°íˆíŠ¸ë¼: ê·¸ëŸ¬ë‹ˆ ì¹œí•˜ê²Œ ì§€ë‚´ëŠ”ê²Œ ì¢‹ì§€.%ë°íˆíŠ¸ë¼: ë‚˜ëŠ” ì´ë§Œ í€˜ìŠ¤íŠ¸ë¥¼ ë‹¬ì„±í–ˆê¸° ë•Œë¬¸ì— ê°€ë³´ê² ì–´.%"
+					+ "ë°íˆíŠ¸ë¼: ê·¸ëŸ¼...%ë°íˆíŠ¸ë¼: ì”¨ ìœ  ë„¥ìŠ¤íŠ¸ íƒ€ì„ ë°”~ì´!%tp-2465 52 543");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 24Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 24ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===Ä«·ç ´øÀü===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ì¹´ë£¨ ë˜ì „===");
 		score.setScore(2);
-		Score score2 = obj.getScore("Ä«·ç ´øÀü Å¬¸®¾î");
+		Score score2 = obj.getScore("ì¹´ë£¨ ë˜ì „ í´ë¦¬ì–´");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -1422,18 +1422,18 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 2000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "¾óÀ½ ÀåÀÎ: ±â´Ù·È´Ù³×.%¾óÀ½ ÀåÀÎ: »ç½Ç ³ªÀÇ ¾ÆµéÀÌ ´ç½ÅÀÌ ±¤»ê¿¡¼­ ¸¸³­ ±¤ºÎ¶ó³×.%¾óÀ½ ÀåÀÎ: ¿ì¸® ¾Æµé¿¡°Ô ´ç½Å¿¡ ´ëÇÑ ¸¹Àº ÀÌ¾ß±â¸¦ µé¾ú´Ù³×.%¾óÀ½ ÀåÀÎ: ¡×e½ÅÀÇ º¸¹°¡×fÀ» Ã£°í ÀÖ´ÙÁö?%¾óÀ½ ÀåÀÎ: ¾Æ¶õ¸ğ¾î¿¡ ÀÖ´Â ½ÅÀÇ º¸¹°Àº Ä«·ç ´øÀü¿¡ ÀÖ´Â °ÍÀÌ ÀüºÎ³×.%"
-					+ "¾óÀ½ ÀåÀÎ: ÇÏÁö¸¸ ½Ç¸ÁÇÏÁö ¸»°Ô³ª.%¾óÀ½ ÀåÀÎ: ½Å±Ş ¾ÆÀÌÅÛÀº ¾Æ´ÏÁö¸¸..%¾óÀ½ ÀåÀÎ: ¡×e°ú°Å ¿µ¿õÀÌ ¾²´ø ¹«±¸¡×f°¡ ÀÖ´Â Àå¼Ò°¡ ÀÖ´Ù³×.%¾óÀ½ ÀåÀÎ: Áö±İ ±×°÷À¸·Î °¡±â À§ÇÑ ÅëÇàÁõÀ» ¸¸µé°í ÀÖÀ¸´Ï%¾óÀ½ ÀåÀÎ: Á¶±İ¸¸ ³ªÁß¿¡ ¿ÍÁÖ½Ã°Ô³ª.%¾óÀ½ ÀåÀÎ: ÀÌ°÷ ¼­Á¡¿¡ ¡×eÈï¹Ì·Î¿î ³»¿ëÀÇ Ã¥¡×fÀ» ÆÇ¸ÅÇÏ´Ï%"
-					+ "¾óÀ½ ÀåÀÎ: °ü½ÉÀÌ ÀÖ´Ù¸é ÇÑ¹ø °¡º¸½Ã°Ô.");
+			msg.msg(player, "ì–¼ìŒ ì¥ì¸: ê¸°ë‹¤ë ¸ë‹¤ë„¤.%ì–¼ìŒ ì¥ì¸: ì‚¬ì‹¤ ë‚˜ì˜ ì•„ë“¤ì´ ë‹¹ì‹ ì´ ê´‘ì‚°ì—ì„œ ë§Œë‚œ ê´‘ë¶€ë¼ë„¤.%ì–¼ìŒ ì¥ì¸: ìš°ë¦¬ ì•„ë“¤ì—ê²Œ ë‹¹ì‹ ì— ëŒ€í•œ ë§ì€ ì´ì•¼ê¸°ë¥¼ ë“¤ì—ˆë‹¤ë„¤.%ì–¼ìŒ ì¥ì¸: Â§eì‹ ì˜ ë³´ë¬¼Â§fì„ ì°¾ê³  ìˆë‹¤ì§€?%ì–¼ìŒ ì¥ì¸: ì•„ë€ëª¨ì–´ì— ìˆëŠ” ì‹ ì˜ ë³´ë¬¼ì€ ì¹´ë£¨ ë˜ì „ì— ìˆëŠ” ê²ƒì´ ì „ë¶€ë„¤.%"
+					+ "ì–¼ìŒ ì¥ì¸: í•˜ì§€ë§Œ ì‹¤ë§í•˜ì§€ ë§ê²Œë‚˜.%ì–¼ìŒ ì¥ì¸: ì‹ ê¸‰ ì•„ì´í…œì€ ì•„ë‹ˆì§€ë§Œ..%ì–¼ìŒ ì¥ì¸: Â§eê³¼ê±° ì˜ì›…ì´ ì“°ë˜ ë¬´êµ¬Â§fê°€ ìˆëŠ” ì¥ì†Œê°€ ìˆë‹¤ë„¤.%ì–¼ìŒ ì¥ì¸: ì§€ê¸ˆ ê·¸ê³³ìœ¼ë¡œ ê°€ê¸° ìœ„í•œ í†µí–‰ì¦ì„ ë§Œë“¤ê³  ìˆìœ¼ë‹ˆ%ì–¼ìŒ ì¥ì¸: ì¡°ê¸ˆë§Œ ë‚˜ì¤‘ì— ì™€ì£¼ì‹œê²Œë‚˜.%ì–¼ìŒ ì¥ì¸: ì´ê³³ ì„œì ì— Â§eí¥ë¯¸ë¡œìš´ ë‚´ìš©ì˜ ì±…Â§fì„ íŒë§¤í•˜ë‹ˆ%"
+					+ "ì–¼ìŒ ì¥ì¸: ê´€ì‹¬ì´ ìˆë‹¤ë©´ í•œë²ˆ ê°€ë³´ì‹œê²Œ.");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 25Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 25ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===¼³¿øÀÇ º¸¹°1===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ì„¤ì›ì˜ ë³´ë¬¼1===");
 		score.setScore(2);
-		Score score2 = obj.getScore("ÄÜ³ë ¸¶À»ÀÇ ¾óÀ½ ÀåÀÎ°ú ´ëÈ­");
+		Score score2 = obj.getScore("ì½˜ë…¸ ë§ˆì„ì˜ ì–¼ìŒ ì¥ì¸ê³¼ ëŒ€í™”");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -1445,19 +1445,19 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 1500000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "³ëÀÎ: ÇãÇã.. ¶Ç´Ù¸¥ ¸ğÇè°¡°¡ ¿À¼Ì±¸¸¸..%³ëÀÎ: ³ª´Â ÀÌ°÷ÀÇ °ü¸®ÀÚ¶ó¿ì.%³ëÀÎ: ¾ÈÅ¸±õÁö¸¸ ÀÌ°÷¿¡¼­ °ü¸®ÇÏ´ø ¹«±¸µéÀº ÀüºÎ µµµÏ¸Â¾Ò´Ù³×. ÇãÇãÇãÇã.%³ëÀÎ: °ËÀº ¿ÊÀ» ÀÔÀº »ç³»°¡ ¾ÆÁÖ ½Ç·ÂÀÌ ¶Ù¾î³µÁö. ÇãÇãÇãÇã.%"
-					+ "³ëÀÎ: ¾ÆÁÖ ½Ï ¾µ¾î°¡¹ö·È´Ù³×. ÇãÇãÇãÇã.%³ëÀÎ: ±×·¡µµ ±× ³à¼®ÀÌ º¸´Â ´«Àº ¾ø´Â °Í °°¼Ò. ÇãÇãÇãÇã.%³ëÀÎ: ¸·´ë±â ÇÏ³ª´Â ³õ°í °¬Áö ¹º°¡. ÇãÇãÇãÇã.%³ëÀÎ: Àú ¾Æ·¡¿¡ »óÀÚ°¡ ÀÖÀ»°É¼¼. ÇãÇãÇãÇã.");
+			msg.msg(player, "ë…¸ì¸: í—ˆí—ˆ.. ë˜ë‹¤ë¥¸ ëª¨í—˜ê°€ê°€ ì˜¤ì…¨êµ¬ë§Œ..%ë…¸ì¸: ë‚˜ëŠ” ì´ê³³ì˜ ê´€ë¦¬ìë¼ìš°.%ë…¸ì¸: ì•ˆíƒ€ê¹ì§€ë§Œ ì´ê³³ì—ì„œ ê´€ë¦¬í•˜ë˜ ë¬´êµ¬ë“¤ì€ ì „ë¶€ ë„ë‘‘ë§ì•˜ë‹¤ë„¤. í—ˆí—ˆí—ˆí—ˆ.%ë…¸ì¸: ê²€ì€ ì˜·ì„ ì…ì€ ì‚¬ë‚´ê°€ ì•„ì£¼ ì‹¤ë ¥ì´ ë›°ì–´ë‚¬ì§€. í—ˆí—ˆí—ˆí—ˆ.%"
+					+ "ë…¸ì¸: ì•„ì£¼ ì‹¹ ì“¸ì–´ê°€ë²„ë ¸ë‹¤ë„¤. í—ˆí—ˆí—ˆí—ˆ.%ë…¸ì¸: ê·¸ë˜ë„ ê·¸ ë…€ì„ì´ ë³´ëŠ” ëˆˆì€ ì—†ëŠ” ê²ƒ ê°™ì†Œ. í—ˆí—ˆí—ˆí—ˆ.%ë…¸ì¸: ë§‰ëŒ€ê¸° í•˜ë‚˜ëŠ” ë†“ê³  ê°”ì§€ ë­”ê°€. í—ˆí—ˆí—ˆí—ˆ.%ë…¸ì¸: ì € ì•„ë˜ì— ìƒìê°€ ìˆì„ê±¸ì„¸. í—ˆí—ˆí—ˆí—ˆ.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq26_1(player, 0);
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 26Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 26ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===¼³¿øÀÇ º¸¹°2===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ì„¤ì›ì˜ ë³´ë¬¼2===");
 		score.setScore(2);
-		Score score2 = obj.getScore("¸¶¹ı ¼öÁ¤ ¾Õ¿¡¼­ ¼º½º·¯¿î ÅëÇàÁõÀ» »ç¿ë");
+		Score score2 = obj.getScore("ë§ˆë²• ìˆ˜ì • ì•ì—ì„œ ì„±ìŠ¤ëŸ¬ìš´ í†µí–‰ì¦ì„ ì‚¬ìš©");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -1469,27 +1469,27 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			ItemStack rewardKey = new ItemStack(Material.STICK);
 			ItemMeta rewardKeyIm = rewardKey.getItemMeta();
-			rewardKeyIm.setDisplayName(ChatColor.LIGHT_PURPLE + "°ËÀÇ ¼ÕÀâÀÌ");
+			rewardKeyIm.setDisplayName(ChatColor.LIGHT_PURPLE + "ê²€ì˜ ì†ì¡ì´");
 			ArrayList<String> rewardLore = new ArrayList();
-			rewardLore.add(ChatColor.GRAY + "¿µ¿õ ·ç ¶ó¹Ù´Ù°¡ »ç¿ëÇß´Ù´Â °ËÀÇ ¼ÕÀâÀÌ");
-			rewardLore.add(ChatColor.GRAY + "ÀÌ°ÍÀ¸·Î ¿ë»çÀÇ °ËÀ» °­È­ÇÒ ¼ö ÀÖ´Ù°í ÇÑ´Ù.");
+			rewardLore.add(ChatColor.GRAY + "ì˜ì›… ë£¨ ë¼ë°”ë‹¤ê°€ ì‚¬ìš©í–ˆë‹¤ëŠ” ê²€ì˜ ì†ì¡ì´");
+			rewardLore.add(ChatColor.GRAY + "ì´ê²ƒìœ¼ë¡œ ìš©ì‚¬ì˜ ê²€ì„ ê°•í™”í•  ìˆ˜ ìˆë‹¤ê³  í•œë‹¤.");
 			rewardKeyIm.setLore(rewardLore);
 			rewardKey.setItemMeta(rewardKeyIm);
 			player.getInventory().addItem(rewardKey);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "°ËÀÇ ¼ÕÀâÀÌ" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "ê²€ì˜ ì†ì¡ì´" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 			es.giveExp(player, 1500000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "³ëÀÎ: ÇãÇãÇãÇã.%³ëÀÎ: ±× ¸·´ë±â´Â ±×³É ¸·´ë±â°¡ ¾Æ´Ï¶ó¿ì.%³ëÀÎ: ¹«·Á °í´ëÀÇ ¿µ¿õ ¡×e·ç ¶ó¹Ù´Ù¡×f´ÔÀÌ »ç¿ëÇÏ½Ã´ø °ËÀÇ ¼ÕÀâÀÌÁö.%³ëÀÎ: ÀÚ³×°¡ °¡Áö°í ÀÖ´Â ¿ë»çÀÇ °ËÀÇ ÈûÀ» ´õ¿í °­ÇÏ°Ô ÇØÁÙ°É¼¼. ÇãÇãÇãÇã.%"
-					+ "³ëÀÎ: ±×·³ ÀÌ¸¸ ¶°³ª°Ô³ª.%³ëÀÎ: ³ª´Â ´õ ÀÌ»ó Á¸ÀçÀÇ ÀÌÀ¯°¡ ¾ø±¸¸Õ. ÇãÇãÇãÇã.%tp-2465 52 543");
+			msg.msg(player, "ë…¸ì¸: í—ˆí—ˆí—ˆí—ˆ.%ë…¸ì¸: ê·¸ ë§‰ëŒ€ê¸°ëŠ” ê·¸ëƒ¥ ë§‰ëŒ€ê¸°ê°€ ì•„ë‹ˆë¼ìš°.%ë…¸ì¸: ë¬´ë ¤ ê³ ëŒ€ì˜ ì˜ì›… Â§eë£¨ ë¼ë°”ë‹¤Â§fë‹˜ì´ ì‚¬ìš©í•˜ì‹œë˜ ê²€ì˜ ì†ì¡ì´ì§€.%ë…¸ì¸: ìë„¤ê°€ ê°€ì§€ê³  ìˆëŠ” ìš©ì‚¬ì˜ ê²€ì˜ í˜ì„ ë”ìš± ê°•í•˜ê²Œ í•´ì¤„ê±¸ì„¸. í—ˆí—ˆí—ˆí—ˆ.%"
+					+ "ë…¸ì¸: ê·¸ëŸ¼ ì´ë§Œ ë– ë‚˜ê²Œë‚˜.%ë…¸ì¸: ë‚˜ëŠ” ë” ì´ìƒ ì¡´ì¬ì˜ ì´ìœ ê°€ ì—†êµ¬ë¨¼. í—ˆí—ˆí—ˆí—ˆ.%tp-2465 52 543");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 26Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 26ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===¼³¿øÀÇ º¸¹°3===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ì„¤ì›ì˜ ë³´ë¬¼3===");
 		score.setScore(2);
-		Score score2 = obj.getScore("»óÀÚ¸¦ ¿­±â");
+		Score score2 = obj.getScore("ìƒìë¥¼ ì—´ê¸°");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -1501,16 +1501,16 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 3000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "³×ºñ: ¾Æ±î´Â Àú ¶§¹®¿¡ ±ôÂ¦ ³î¶ó¼Ì³ª¿ä?%³×ºñ: ¾ÕÀ¸·Î´Â ¿ì¸®ÀÇ ¸ñÇ¥¸¦ À§ÇØ " + player.getDisplayName() + "´ÔÀÌ ´õ¿í °­ÇØÁö½Ç ¼ö ÀÖµµ·Ï Á¦°¡ ¿·¿¡¼­ µµ¿Íµå¸±²¨¿¡¿ä!");
+			msg.msg(player, "ë„¤ë¹„: ì•„ê¹ŒëŠ” ì € ë•Œë¬¸ì— ê¹œì§ ë†€ë¼ì…¨ë‚˜ìš”?%ë„¤ë¹„: ì•ìœ¼ë¡œëŠ” ìš°ë¦¬ì˜ ëª©í‘œë¥¼ ìœ„í•´ " + player.getDisplayName() + "ë‹˜ì´ ë”ìš± ê°•í•´ì§€ì‹¤ ìˆ˜ ìˆë„ë¡ ì œê°€ ì˜†ì—ì„œ ë„ì™€ë“œë¦´êº¼ì—ìš”!");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 27Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 27ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===»õ·Î¿î ¸¸³²===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ìƒˆë¡œìš´ ë§Œë‚¨===");
 		score.setScore(2);
-		Score score2 = obj.getScore("´Ë¿¡¼­ °Å¹Ì 30¸¶¸® »ç³É");
+		Score score2 = obj.getScore("ëŠªì—ì„œ ê±°ë¯¸ 30ë§ˆë¦¬ ì‚¬ëƒ¥");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/30)");
 		score3.setScore(0);
@@ -1526,11 +1526,11 @@ public class QuestBoard {
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 28Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 28ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===´ËÁöÀÇ ¸¶½Å¿Õ===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ëŠªì§€ì˜ ë§ˆì‹ ì™•===");
 		score.setScore(2);
-		Score score2 = obj.getScore("´ËÁöÀÇ ¸¶½Å¿Õ »ç³É");
+		Score score2 = obj.getScore("ëŠªì§€ì˜ ë§ˆì‹ ì™• ì‚¬ëƒ¥");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -1542,18 +1542,18 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 3500000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "¸¶¹ı»ç: ³×¸Şµå ¿Õ±¹ÀÇ º¸¹°ÀÎ ¡×eÈ­¿°ÀÇ µ¹¡×fÀÌ ¾îµğ¿¡ ÀÖ´ÂÁö ¾Ë·ÁÁÖÁö.%¸¶¹ı»ç: ¡×eÁ×À½ÀÇ Å¾¡×fÀ¸·Î °¡º¸½Ã°Ô.");
+			msg.msg(player, "ë§ˆë²•ì‚¬: ë„¤ë©”ë“œ ì™•êµ­ì˜ ë³´ë¬¼ì¸ Â§eí™”ì—¼ì˜ ëŒÂ§fì´ ì–´ë””ì— ìˆëŠ”ì§€ ì•Œë ¤ì£¼ì§€.%ë§ˆë²•ì‚¬: Â§eì£½ìŒì˜ íƒ‘Â§fìœ¼ë¡œ ê°€ë³´ì‹œê²Œ.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq29_1(player, 0);
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 29Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 29ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===Á×À½ÀÇ Å¾1===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ì£½ìŒì˜ íƒ‘1===");
 		score.setScore(3);
-		Score score2 = obj.getScore("À¯Àû¿¡¼­ ¸¶¹ı»ç¿Í ´ëÈ­");
+		Score score2 = obj.getScore("ìœ ì ì—ì„œ ë§ˆë²•ì‚¬ì™€ ëŒ€í™”");
 		score2.setScore(2);
 		Score score3 = obj.getScore("(-926,51,858)");
 		score3.setScore(1);
@@ -1567,17 +1567,17 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 3500000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "Å¾ÀÇ °ü¸®ÀÎ: ÀÌ Å¾Àº ¡×e³×¸ŞµåÀÇ ¹«´ı¡×fÀÌ¶ó´Â ÀÌ¸§À» °¡Áö°í ÀÖ¾ú´Ù³×.%Å¾ÀÇ °ü¸®ÀÎ: ÀÌ Å¾¿¡ È­¿°ÀÇ µ¹ÀÌ ÀÖ´Ù´Â »ç½ÇÀÌ ¾Ë·ÁÁöÀÚ%Å¾ÀÇ °ü¸®ÀÎ: ¸¹Àº ¸ğÇè°¡µéÀÌ Ã£¾Æ¿ÔÁö.%"
-					+ "Å¾ÀÇ °ü¸®ÀÎ: ±×·± ÀÚµéÀÌ °è¼Ó Á×¾î³ª°¬±â ¶§¹®¿¡%Å¾ÀÇ °ü¸®ÀÎ: Á×À½ÀÇ Å¾ÀÌ¶ó´Â º°¸íÀ» ¾ò°Ô µÇ¾úÁö.%Å¾ÀÇ °ü¸®ÀÎ: ÀÚ³×°¡ ÀÌ Å¾À» ¿À¸¦ ÀÚ°İÀÌ ÀÖ´ÂÁö´Â Â÷ÈÄ¿¡ º¸µµ·Ï ÇÏÁö.");
+			msg.msg(player, "íƒ‘ì˜ ê´€ë¦¬ì¸: ì´ íƒ‘ì€ Â§eë„¤ë©”ë“œì˜ ë¬´ë¤Â§fì´ë¼ëŠ” ì´ë¦„ì„ ê°€ì§€ê³  ìˆì—ˆë‹¤ë„¤.%íƒ‘ì˜ ê´€ë¦¬ì¸: ì´ íƒ‘ì— í™”ì—¼ì˜ ëŒì´ ìˆë‹¤ëŠ” ì‚¬ì‹¤ì´ ì•Œë ¤ì§€ì%íƒ‘ì˜ ê´€ë¦¬ì¸: ë§ì€ ëª¨í—˜ê°€ë“¤ì´ ì°¾ì•„ì™”ì§€.%"
+					+ "íƒ‘ì˜ ê´€ë¦¬ì¸: ê·¸ëŸ° ìë“¤ì´ ê³„ì† ì£½ì–´ë‚˜ê°”ê¸° ë•Œë¬¸ì—%íƒ‘ì˜ ê´€ë¦¬ì¸: ì£½ìŒì˜ íƒ‘ì´ë¼ëŠ” ë³„ëª…ì„ ì–»ê²Œ ë˜ì—ˆì§€.%íƒ‘ì˜ ê´€ë¦¬ì¸: ìë„¤ê°€ ì´ íƒ‘ì„ ì˜¤ë¥¼ ìê²©ì´ ìˆëŠ”ì§€ëŠ” ì°¨í›„ì— ë³´ë„ë¡ í•˜ì§€.");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 29Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 29ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===Á×À½ÀÇ Å¾2===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ì£½ìŒì˜ íƒ‘2===");
 		score.setScore(3);
-		Score score2 = obj.getScore("Á×À½ÀÇ Å¾¿¡¼­ °ü¸®ÀÎ°ú ´ëÈ­");
+		Score score2 = obj.getScore("ì£½ìŒì˜ íƒ‘ì—ì„œ ê´€ë¦¬ì¸ê³¼ ëŒ€í™”");
 		score2.setScore(2);
 		Score score3 = obj.getScore("(76,63,-22)");
 		score3.setScore(1);
@@ -1591,16 +1591,16 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 4500000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "Å¾ÀÇ °ü¸®ÀÎ: ±×·¡.%Å¾ÀÇ °ü¸®ÀÎ: ±× Á¤µµÀÇ ÈûÀÌ¶ó¸é ÀÌ Å¾¿¡ µµÀüÇØº¼¸¸Àº ÇÏ±º.");
+			msg.msg(player, "íƒ‘ì˜ ê´€ë¦¬ì¸: ê·¸ë˜.%íƒ‘ì˜ ê´€ë¦¬ì¸: ê·¸ ì •ë„ì˜ í˜ì´ë¼ë©´ ì´ íƒ‘ì— ë„ì „í•´ë³¼ë§Œì€ í•˜êµ°.");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 30Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 30ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===µÇ»ì¾Æ³­ ÇØ°ñ===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ë˜ì‚´ì•„ë‚œ í•´ê³¨===");
 		score.setScore(2);
-		Score score2 = obj.getScore("µÇ»ì¾Æ³­ ÇØ°ñ 20¸¶¸® »ç³É");
+		Score score2 = obj.getScore("ë˜ì‚´ì•„ë‚œ í•´ê³¨ 20ë§ˆë¦¬ ì‚¬ëƒ¥");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/20)");
 		score3.setScore(0);
@@ -1612,16 +1612,16 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 5000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "Å¾ÀÇ °ü¸®ÀÎ: °í¸¿³×.%Å¾ÀÇ °ü¸®ÀÎ: ÀÌ°÷¿¡¼­ ¡×eºÏÂÊ¡×fÀ¸·Î Âß °¡¸é ¾ğ´ö¿¡ ¸¶À»ÀÌ ÇÏ³ª ÀÖÀ»²¨´Ù.%Å¾ÀÇ °ü¸®ÀÎ: Âü°íÇÏ°Ô.");
+			msg.msg(player, "íƒ‘ì˜ ê´€ë¦¬ì¸: ê³ ë§™ë„¤.%íƒ‘ì˜ ê´€ë¦¬ì¸: ì´ê³³ì—ì„œ Â§eë¶ìª½Â§fìœ¼ë¡œ ì­‰ ê°€ë©´ ì–¸ë•ì— ë§ˆì„ì´ í•˜ë‚˜ ìˆì„êº¼ë‹¤.%íƒ‘ì˜ ê´€ë¦¬ì¸: ì°¸ê³ í•˜ê²Œ.");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 31Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 31ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===¿µÈ¥ ¿äÁ¤ °¡·ç===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ì˜í˜¼ ìš”ì • ê°€ë£¨===");
 		score.setScore(2);
-		Score score2 = obj.getScore("¿µÈ¥ ¿äÁ¤ °¡·ç ¼öÁı");
+		Score score2 = obj.getScore("ì˜í˜¼ ìš”ì • ê°€ë£¨ ìˆ˜ì§‘");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/10)");
 		score3.setScore(0);
@@ -1633,16 +1633,16 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 5500000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "°üÀå: ÇêÇê.%°üÀå: ³Êµµ ³ÊÀÇ ÈûÀ» ¾Ë°í ½ÍÀº°Å³Ä?%°üÀå: ÀÌ°÷¿¡ µé¾î°¡¸é ³ÊÀÇ ÈûÀ» ¾Ë°Ô µÉ°Å´Ù.");
+			msg.msg(player, "ê´€ì¥: í—›í—›.%ê´€ì¥: ë„ˆë„ ë„ˆì˜ í˜ì„ ì•Œê³  ì‹¶ì€ê±°ëƒ?%ê´€ì¥: ì´ê³³ì— ë“¤ì–´ê°€ë©´ ë„ˆì˜ í˜ì„ ì•Œê²Œ ë ê±°ë‹¤.");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 32Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 32ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===³ÊÀÇ ±ÙÀ°À» ¸Ô°í ½Í¾î===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ë„ˆì˜ ê·¼ìœ¡ì„ ë¨¹ê³  ì‹¶ì–´===");
 		score.setScore(2);
-		Score score2 = obj.getScore("º£¾Æ±× ¸¶À»ÀÇ °üÀå°ú ´ëÈ­");
+		Score score2 = obj.getScore("ë² ì•„ê·¸ ë§ˆì„ì˜ ê´€ì¥ê³¼ ëŒ€í™”");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -1654,19 +1654,19 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 5000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "»¡°£¸ğÀÚ: ¾È³çÇÏ¼¼¾ß. Àú´Â »¡°£¸ğÀÚ ¼Ò³à¿¡¿©.%»¡°£¸ğÀÚ: Áö±İºÎÅÍ Á¦ ¾ê±â¸¦ µè´Â °Å½Ã¿¡¿©.%»¡°£¸ğÀÚ: ¡×e¹Ğ °¡µğ¾ğ¡×fÀÌ ÀÖ¾ú´ø °Å½Ã¿¡¿©.%»¡°£¸ğÀÚ: ±×°Å½¼ ³Ê¹« ¹«¼­¿î °Å½Ã¿¡¿©..%"
-					+ "»¡°£¸ğÀÚ: ¹Ğ °¡µğ¾ğÀ» ºÎ½¤¹ö¸®´Ù º¸¸é ¡×e´Á´ë¡×f°¡ ³ªÅ¸³¯ °Å½Ã¿¡¿©.%»¡°£¸ğÀÚ: ±× ´Á´ëÀÇ ¸ñÀ» °¡Á®¿ÍÁÖ´Â °Å½Ã¾ß¿ä.");
+			msg.msg(player, "ë¹¨ê°„ëª¨ì: ì•ˆë…•í•˜ì„¸ì•¼. ì €ëŠ” ë¹¨ê°„ëª¨ì ì†Œë…€ì—ì—¬.%ë¹¨ê°„ëª¨ì: ì§€ê¸ˆë¶€í„° ì œ ì–˜ê¸°ë¥¼ ë“£ëŠ” ê±°ì‹œì—ì—¬.%ë¹¨ê°„ëª¨ì: Â§eë°€ ê°€ë””ì–¸Â§fì´ ìˆì—ˆë˜ ê±°ì‹œì—ì—¬.%ë¹¨ê°„ëª¨ì: ê·¸ê±°ìŠ¨ ë„ˆë¬´ ë¬´ì„œìš´ ê±°ì‹œì—ì—¬..%"
+					+ "ë¹¨ê°„ëª¨ì: ë°€ ê°€ë””ì–¸ì„ ë¶€ìˆ´ë²„ë¦¬ë‹¤ ë³´ë©´ Â§eëŠ‘ëŒ€Â§fê°€ ë‚˜íƒ€ë‚  ê±°ì‹œì—ì—¬.%ë¹¨ê°„ëª¨ì: ê·¸ ëŠ‘ëŒ€ì˜ ëª©ì„ ê°€ì ¸ì™€ì£¼ëŠ” ê±°ì‹œì•¼ìš”.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq33_1(player, 0);
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 33Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 33ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===±×´ë´Â »¡°£¸ğÀÚ===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ê·¸ëŒ€ëŠ” ë¹¨ê°„ëª¨ì===");
 		score.setScore(2);
-		Score score2 = obj.getScore("¹Ğ¹ç Ç³Â÷¿¡¼­ »¡°£¸ğÀÚ¿Í ´ëÈ­");
+		Score score2 = obj.getScore("ë°€ë°­ í’ì°¨ì—ì„œ ë¹¨ê°„ëª¨ìì™€ ëŒ€í™”");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -1679,16 +1679,16 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 5000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "»¡°£¸ğÀÚ: ±× ´Á´ë´Â ÀúÈñ ÇÒ¸Ó´Ï¿´´ä´Ï´Ù.%»¡°£¸ğÀÚ: ÈÄÈÊ..");
+			msg.msg(player, "ë¹¨ê°„ëª¨ì: ê·¸ ëŠ‘ëŒ€ëŠ” ì €í¬ í• ë¨¸ë‹ˆì˜€ë‹µë‹ˆë‹¤.%ë¹¨ê°„ëª¨ì: í›„í›—..");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 33Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 33ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===»¡°£¸ğÀÚ ÀÌ¾ß±â1===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ë¹¨ê°„ëª¨ì ì´ì•¼ê¸°1===");
 		score.setScore(2);
-		Score score2 = obj.getScore("º¯ÀåÇÑ ´Á´ë »ç³É");
+		Score score2 = obj.getScore("ë³€ì¥í•œ ëŠ‘ëŒ€ ì‚¬ëƒ¥");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -1701,19 +1701,19 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 5000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "»¡°£¸ğÀÚ: ¾È³çÇÏ¼¼¾ç. Àú´Â »¡°£¸ğÀÚ ¼Ò³à¿¡¿©.%»¡°£¸ğÀÚ: Áö±İºÎÅÍ Á¦ ¾ê±â¸¦ µè´Â °Å½Ã¿¡¿©.%»¡°£¸ğÀÚ: ¿À·¡ÀüºÎÅÍ ±âºĞÀÌ ÁÁ¾ÆÁö°í ¸öÀÌ ¶ß°Å¿öÁö´Â ¾àÀÌ ÀÖ¾ú´ø °Å±â¿¡¿©.%"
-					+ "¡×7»¡°£¸ğÀÚ: ±× ¾àÀÌ Á¤¸» ÃÖ°í¿´´Âµ¥..%»¡°£¸ğÀÚ: ..!%»¡°£¸ğÀÚ: ¡×e¾àÀïÀÌ¡×f³ğµéÀ» ÇĞ»ìÇÏ´Ùº¸¸é ±× ¾àÀ» ¸¸µç ¡×e¸¶³à¡×f°¡ ³ªÅ¸³¯ °Í¸¸ °¡Å¸¿©.%»¡°£¸ğÀÚ: ºÎµğ ¸¶³à¸¦ ¾ø¾ÖÁÖ½Ã´Â °Å½Ã¾ß¿ä.");
+			msg.msg(player, "ë¹¨ê°„ëª¨ì: ì•ˆë…•í•˜ì„¸ì–‘. ì €ëŠ” ë¹¨ê°„ëª¨ì ì†Œë…€ì—ì—¬.%ë¹¨ê°„ëª¨ì: ì§€ê¸ˆë¶€í„° ì œ ì–˜ê¸°ë¥¼ ë“£ëŠ” ê±°ì‹œì—ì—¬.%ë¹¨ê°„ëª¨ì: ì˜¤ë˜ì „ë¶€í„° ê¸°ë¶„ì´ ì¢‹ì•„ì§€ê³  ëª¸ì´ ëœ¨ê±°ì›Œì§€ëŠ” ì•½ì´ ìˆì—ˆë˜ ê±°ê¸°ì—ì—¬.%"
+					+ "Â§7ë¹¨ê°„ëª¨ì: ê·¸ ì•½ì´ ì •ë§ ìµœê³ ì˜€ëŠ”ë°..%ë¹¨ê°„ëª¨ì: ..!%ë¹¨ê°„ëª¨ì: Â§eì•½ìŸì´Â§fë†ˆë“¤ì„ í•™ì‚´í•˜ë‹¤ë³´ë©´ ê·¸ ì•½ì„ ë§Œë“  Â§eë§ˆë…€Â§fê°€ ë‚˜íƒ€ë‚  ê²ƒë§Œ ê°€íƒ€ì—¬.%ë¹¨ê°„ëª¨ì: ë¶€ë”” ë§ˆë…€ë¥¼ ì—†ì• ì£¼ì‹œëŠ” ê±°ì‹œì•¼ìš”.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq34_1(player, 0);
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 34Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 34ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===¶Ç´Ù½Ã »¡°£¸ğÀÚ===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ë˜ë‹¤ì‹œ ë¹¨ê°„ëª¨ì===");
 		score.setScore(2);
-		Score score2 = obj.getScore("¹Ğ¹ç Ç³Â÷¿¡¼­ »¡°£¸ğÀÚ¿Í ´ëÈ­");
+		Score score2 = obj.getScore("ë°€ë°­ í’ì°¨ì—ì„œ ë¹¨ê°„ëª¨ìì™€ ëŒ€í™”");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -1726,16 +1726,16 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 5000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "»¡°£¸ğÀÚ: °í¸¶¿ö¿©.%»¡°£¸ğÀÚ: ÀÌÁ¦ Àúµµ ±× ¾àÀ» ¸¸µé ¼ö ÀÖÀ»°Í °°¾Æ¾ç!");
+			msg.msg(player, "ë¹¨ê°„ëª¨ì: ê³ ë§ˆì›Œì—¬.%ë¹¨ê°„ëª¨ì: ì´ì œ ì €ë„ ê·¸ ì•½ì„ ë§Œë“¤ ìˆ˜ ìˆì„ê²ƒ ê°™ì•„ì–‘!");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 34Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 34ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===»¡°£¸ğÀÚ ÀÌ¾ß±â2===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ë¹¨ê°„ëª¨ì ì´ì•¼ê¸°2===");
 		score.setScore(2);
-		Score score2 = obj.getScore("°úÀÚ ¸¶³à »ç³É");
+		Score score2 = obj.getScore("ê³¼ì ë§ˆë…€ ì‚¬ëƒ¥");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -1748,21 +1748,21 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 6000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "Ä«Å¸¸®³ª: Á×À½ÀÇ Å¾ À§¿¡´Â ¡×eºûÀÇ ¼º¹°¡×fÀÌ¶ó´Â °ÍÀÌ ÀÖ´Ù°í ÇÕ´Ï´Ù.%Ä«Å¸¸®³ª: ±× ¼º¹°À» ¾ò°Ô µÈ´Ù¸é Æ÷º¸¸£µéÀ» ¸êÇÏ°í °³º®ÀÌ µµ·¡ÇÑ´Ù°í ÇÕ´Ï´Ù.%Ä«Å¸¸®³ª: ´ç½ÅÀÌ¶ó¸é ºĞ¸íÈ÷ °¡´ÉÇÒ °Ì´Ï´Ù.%"
-					+ "Ä«Å¸¸®³ª: ÀÌÁ¦ º»·ĞÀ¸·Î ³Ñ¾î°¡ÁÒ.%Ä«Å¸¸®³ª: ¸¶¹ıÅ¾ÀÇ ¿¬±¸·Î °ú°ÅÀÇ Æ÷º¸¸£ ¿ÕÀ» Àç¸²½ÃÅ³ ¼ö ÀÖ´Â ¹æ¹ıÀ» ¾Ë¾Æ³Â½À´Ï´Ù.%Ä«Å¸¸®³ª: ´Ù¸¸ ÀúÈñ´Â Æ÷º¸¸£ÀÇ ¸¶³ª¸¦ »ç¿ëÇÒ ¼ö ¾ø¾ú±â ¶§¹®¿¡%Ä«Å¸¸®³ª: ¿¬¼º °úÁ¤¿¡¼­ ºÒ¿ÏÀüÇÑ ¸¶³ª¸¦ »ç¿ëÇØ¾ßÇß°í%"
-					+ "Ä«Å¸¸®³ª: ±× °á°ú·Î Æ÷º¸¸£ ¿ÕÀÌ ¿ÏÀüÇÑ ÈûÀ» ¾òÁö´Â ¸øÇß½À´Ï´Ù.%Ä«Å¸¸®³ª: ±×·¡µµ Æ÷º¸¸£ ¿ÕÀÇ µ¥ÀÌÅÍ¸¦ ÃæºĞÈ÷ ÃàÀûÇÒ ¼ö´Â ÀÖÀ» °Ì´Ï´Ù.%Ä«Å¸¸®³ª: ±×ÀÇ ÆĞÅÏÀÌ¶ó´øÁö, ½À¼ºÀÌ¶ó´øÁö, ºÎÇÏµéÀÌ¶ó´øÁö..%Ä«Å¸¸®³ª: ÀÌ¹ø Äù½ºÆ®´Â ±×¸¦ Àç¸²½ÃÅ°±â À§ÇÑ Àç·á´Â ¸ğÀ¸´Â °Í.%"
-					+ "Ä«Å¸¸®³ª: °Å±â±îÁö¸¸ ÇÏÁÒ.%Ä«Å¸¸®³ª: ¡×e¸¶¹ı¿¡ Å¸¶ôÇÑ ÀÚ¡×f¸¦ »ç³ÉÇÏ½Ê½Ã¿À.%Ä«¶ó¸®³ª: ±×µéÀ» »ç³ÉÇÏ´Ùº¸¸é ¡×eÆ÷º¸¸£ÀÇ ¸¶³ª¡×f¸¦ ¾òÀ» ¼ö ÀÖÀ» °Ì´Ï´Ù.%Ä«Å¸¸®³ª: Àç·á·Î´Â µü 1°³ÀÇ ¸¶³ª¸¸ ÇÊ¿äÇÏ´Ï, ¿ì¼± 1°³¸¸ ¾ò¾îÁÖ½Ê¼î.");
+			msg.msg(player, "ì¹´íƒ€ë¦¬ë‚˜: ì£½ìŒì˜ íƒ‘ ìœ„ì—ëŠ” Â§eë¹›ì˜ ì„±ë¬¼Â§fì´ë¼ëŠ” ê²ƒì´ ìˆë‹¤ê³  í•©ë‹ˆë‹¤.%ì¹´íƒ€ë¦¬ë‚˜: ê·¸ ì„±ë¬¼ì„ ì–»ê²Œ ëœë‹¤ë©´ í¬ë³´ë¥´ë“¤ì„ ë©¸í•˜ê³  ê°œë²½ì´ ë„ë˜í•œë‹¤ê³  í•©ë‹ˆë‹¤.%ì¹´íƒ€ë¦¬ë‚˜: ë‹¹ì‹ ì´ë¼ë©´ ë¶„ëª…íˆ ê°€ëŠ¥í•  ê²ë‹ˆë‹¤.%"
+					+ "ì¹´íƒ€ë¦¬ë‚˜: ì´ì œ ë³¸ë¡ ìœ¼ë¡œ ë„˜ì–´ê°€ì£ .%ì¹´íƒ€ë¦¬ë‚˜: ë§ˆë²•íƒ‘ì˜ ì—°êµ¬ë¡œ ê³¼ê±°ì˜ í¬ë³´ë¥´ ì™•ì„ ì¬ë¦¼ì‹œí‚¬ ìˆ˜ ìˆëŠ” ë°©ë²•ì„ ì•Œì•„ëƒˆìŠµë‹ˆë‹¤.%ì¹´íƒ€ë¦¬ë‚˜: ë‹¤ë§Œ ì €í¬ëŠ” í¬ë³´ë¥´ì˜ ë§ˆë‚˜ë¥¼ ì‚¬ìš©í•  ìˆ˜ ì—†ì—ˆê¸° ë•Œë¬¸ì—%ì¹´íƒ€ë¦¬ë‚˜: ì—°ì„± ê³¼ì •ì—ì„œ ë¶ˆì™„ì „í•œ ë§ˆë‚˜ë¥¼ ì‚¬ìš©í•´ì•¼í–ˆê³ %"
+					+ "ì¹´íƒ€ë¦¬ë‚˜: ê·¸ ê²°ê³¼ë¡œ í¬ë³´ë¥´ ì™•ì´ ì™„ì „í•œ í˜ì„ ì–»ì§€ëŠ” ëª»í–ˆìŠµë‹ˆë‹¤.%ì¹´íƒ€ë¦¬ë‚˜: ê·¸ë˜ë„ í¬ë³´ë¥´ ì™•ì˜ ë°ì´í„°ë¥¼ ì¶©ë¶„íˆ ì¶•ì í•  ìˆ˜ëŠ” ìˆì„ ê²ë‹ˆë‹¤.%ì¹´íƒ€ë¦¬ë‚˜: ê·¸ì˜ íŒ¨í„´ì´ë¼ë˜ì§€, ìŠµì„±ì´ë¼ë˜ì§€, ë¶€í•˜ë“¤ì´ë¼ë˜ì§€..%ì¹´íƒ€ë¦¬ë‚˜: ì´ë²ˆ í€˜ìŠ¤íŠ¸ëŠ” ê·¸ë¥¼ ì¬ë¦¼ì‹œí‚¤ê¸° ìœ„í•œ ì¬ë£ŒëŠ” ëª¨ìœ¼ëŠ” ê²ƒ.%"
+					+ "ì¹´íƒ€ë¦¬ë‚˜: ê±°ê¸°ê¹Œì§€ë§Œ í•˜ì£ .%ì¹´íƒ€ë¦¬ë‚˜: Â§eë§ˆë²•ì— íƒ€ë½í•œ ìÂ§fë¥¼ ì‚¬ëƒ¥í•˜ì‹­ì‹œì˜¤.%ì¹´ë¼ë¦¬ë‚˜: ê·¸ë“¤ì„ ì‚¬ëƒ¥í•˜ë‹¤ë³´ë©´ Â§eí¬ë³´ë¥´ì˜ ë§ˆë‚˜Â§fë¥¼ ì–»ì„ ìˆ˜ ìˆì„ ê²ë‹ˆë‹¤.%ì¹´íƒ€ë¦¬ë‚˜: ì¬ë£Œë¡œëŠ” ë”± 1ê°œì˜ ë§ˆë‚˜ë§Œ í•„ìš”í•˜ë‹ˆ, ìš°ì„  1ê°œë§Œ ì–»ì–´ì£¼ì‹­ì‡¼.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq35_1(player, 0);
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 35Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 35ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===¸¶¹ıÅ¾À» ÇâÇØ===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ë§ˆë²•íƒ‘ì„ í–¥í•´===");
 		score.setScore(3);
-		Score score2 = obj.getScore("¸¶¹ıÅ¾¿¡¼­ Ä«Å¸¸®³ª¿Í ´ëÈ­");
+		Score score2 = obj.getScore("ë§ˆë²•íƒ‘ì—ì„œ ì¹´íƒ€ë¦¬ë‚˜ì™€ ëŒ€í™”");
 		score2.setScore(2);
 		Score score3 = obj.getScore("(221,80,725)");
 		score3.setScore(1);
@@ -1776,16 +1776,16 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 6000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "Ä«Å¸¸®³ª: ¾òÀ¸¼Ì±º¿ä.%Ä«Å¸¸®³ª: Àß º¸°üÇØµÎ½Ã¸é Á¦°¡ ¿¬¶ôÀ» µå¸®°Ú½À´Ï´Ù.");
+			msg.msg(player, "ì¹´íƒ€ë¦¬ë‚˜: ì–»ìœ¼ì…¨êµ°ìš”.%ì¹´íƒ€ë¦¬ë‚˜: ì˜ ë³´ê´€í•´ë‘ì‹œë©´ ì œê°€ ì—°ë½ì„ ë“œë¦¬ê² ìŠµë‹ˆë‹¤.");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 35Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 35ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===Æ÷º¸¸£ÀÇ ¸¶³ª===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===í¬ë³´ë¥´ì˜ ë§ˆë‚˜===");
 		score.setScore(2);
-		Score score2 = obj.getScore("Æ÷º¸¸£ÀÇ ¸¶³ª È¹µæ");
+		Score score2 = obj.getScore("í¬ë³´ë¥´ì˜ ë§ˆë‚˜ íšë“");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -1797,16 +1797,16 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 7000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "Ä«Å¸¸®³ª: ±¦ÂúÀ¸¼¼¿ä?%Ä«Å¸¸®³ª: ¾Æ¹«¸® ºÒ¿ÏÀüÇÑ ÈûÀ» °¡Áö°í ÀÖ¾îµµ ¿ÕÀº ¿ÕÀÌ±º¿ä..%Ä«Å¸¸®³ª: ±×·¡µµ ÁÁÀº ÀüÅõ µ¥ÀÌÅÍ¸¦ ¾ò¾ú¾î¿ä.%Ä«Å¸¸®³ª: °¨»çÇÕ´Ï´Ù.%Ä«¶óÆ¼³ª: ¾Æ! Âü°í·Î ¹Ì±Ã ³¡¿¡´Â ÀúÈñ°¡ ÁØºñÇÑ ¡×e¼±¹°¡×fÀÌ ÀÖ¾î¿ä.%Ä«Å¸¸®³ª: ±âÈ¸°¡ µÈ´Ù¸é ³¡±îÁö °¡º¾½Ã´Ù!");
+			msg.msg(player, "ì¹´íƒ€ë¦¬ë‚˜: ê´œì°®ìœ¼ì„¸ìš”?%ì¹´íƒ€ë¦¬ë‚˜: ì•„ë¬´ë¦¬ ë¶ˆì™„ì „í•œ í˜ì„ ê°€ì§€ê³  ìˆì–´ë„ ì™•ì€ ì™•ì´êµ°ìš”..%ì¹´íƒ€ë¦¬ë‚˜: ê·¸ë˜ë„ ì¢‹ì€ ì „íˆ¬ ë°ì´í„°ë¥¼ ì–»ì—ˆì–´ìš”.%ì¹´íƒ€ë¦¬ë‚˜: ê°ì‚¬í•©ë‹ˆë‹¤.%ì¹´ë¼í‹°ë‚˜: ì•„! ì°¸ê³ ë¡œ ë¯¸ê¶ ëì—ëŠ” ì €í¬ê°€ ì¤€ë¹„í•œ Â§eì„ ë¬¼Â§fì´ ìˆì–´ìš”.%ì¹´íƒ€ë¦¬ë‚˜: ê¸°íšŒê°€ ëœë‹¤ë©´ ëê¹Œì§€ ê°€ë´…ì‹œë‹¤!");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 36Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 36ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ÀÌ°ÍÀÌ Æ÷º¸¸£ ¿Õ?===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ì´ê²ƒì´ í¬ë³´ë¥´ ì™•?===");
 		score.setScore(2);
-		Score score2 = obj.getScore("Æ÷º¸¸£ ¿Õ¿¡°Ô ½Â¸®");
+		Score score2 = obj.getScore("í¬ë³´ë¥´ ì™•ì—ê²Œ ìŠ¹ë¦¬");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -1818,18 +1818,18 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 5000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "²¿¸¶: ´Ù¸§ÀÌ ¾Æ´Ï¶ó..%²¿¸¶: Á¦ Àå³­°¨À» ¡×e¶°µµ´Â ¸Á·Éµé¡×fÀÌ ºÎ½¥¾î¿ä.%²¿¸¶: ±×µéÀº Àı °ø°İÇÏÁø ¾ÊÁö¸¸ Á¦°¡ º¹¼öÇÏ±â¿£ ÈûÀÌ ºÎÁ·ÇÑ°É¿ä.%²¿¸¶: Á¦ º¹¼ö¸¦ µµ¿ÍÁÖ¼¼¿ä. ¸ğÇè°¡´Ô.");
+			msg.msg(player, "ê¼¬ë§ˆ: ë‹¤ë¦„ì´ ì•„ë‹ˆë¼..%ê¼¬ë§ˆ: ì œ ì¥ë‚œê°ì„ Â§eë– ë„ëŠ” ë§ë ¹ë“¤Â§fì´ ë¶€ì‰ˆì–´ìš”.%ê¼¬ë§ˆ: ê·¸ë“¤ì€ ì ˆ ê³µê²©í•˜ì§„ ì•Šì§€ë§Œ ì œê°€ ë³µìˆ˜í•˜ê¸°ì—” í˜ì´ ë¶€ì¡±í•œê±¸ìš”.%ê¼¬ë§ˆ: ì œ ë³µìˆ˜ë¥¼ ë„ì™€ì£¼ì„¸ìš”. ëª¨í—˜ê°€ë‹˜.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq37_1(player, 0);
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 37Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 37ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===´©°¡ ¿ì´Â ¼Ò¸®¸¦ ³»¾ú´Â°¡===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ëˆ„ê°€ ìš°ëŠ” ì†Œë¦¬ë¥¼ ë‚´ì—ˆëŠ”ê°€===");
 		score.setScore(2);
-		Score score2 = obj.getScore("·Õ°Ô ¸¶À» ¼÷¼ÒÀÇ ²¿¸¶¿Í ´ëÈ­");
+		Score score2 = obj.getScore("ë¡±ê²Œ ë§ˆì„ ìˆ™ì†Œì˜ ê¼¬ë§ˆì™€ ëŒ€í™”");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -1847,11 +1847,11 @@ public class QuestBoard {
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 37Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 37ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===¶°µµ´Â ¸Á·É===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ë– ë„ëŠ” ë§ë ¹===");
 		score.setScore(2);
-		Score score2 = obj.getScore("¶°µµ´Â ¸Á·É ¸ó½ºÅÍ 30¸¶¸® »ç³É");
+		Score score2 = obj.getScore("ë– ë„ëŠ” ë§ë ¹ ëª¬ìŠ¤í„° 30ë§ˆë¦¬ ì‚¬ëƒ¥");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/30)");
 		score3.setScore(0);
@@ -1863,16 +1863,16 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 5000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "²¿¸¶: °¨»çÇÕ´Ï´Ù. ¸ğÇè°¡´Ô.%²¿¸¶: ´öºĞ¿¡ º¹¼ö¸¦ Çß³×¿ä.");
+			msg.msg(player, "ê¼¬ë§ˆ: ê°ì‚¬í•©ë‹ˆë‹¤. ëª¨í—˜ê°€ë‹˜.%ê¼¬ë§ˆ: ë•ë¶„ì— ë³µìˆ˜ë¥¼ í–ˆë„¤ìš”.");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 37Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 37ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===¾ÆÀÌ ´Ş·¡±â===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ì•„ì´ ë‹¬ë˜ê¸°===");
 		score.setScore(2);
-		Score score2 = obj.getScore("²¿¸¶¿¡°Ô µ¹¾Æ°¡ º¸°íÇÏ±â");
+		Score score2 = obj.getScore("ê¼¬ë§ˆì—ê²Œ ëŒì•„ê°€ ë³´ê³ í•˜ê¸°");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -1884,18 +1884,18 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 5000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "²¿¸¶: ¹ã¸¶´Ù ¡×e³²ÂÊ ºÎ¶ô¡×f¿¡¼­ ÀÌ»óÇÑ ¼Ò¸®°¡ ³ª¿ä.%²¿¸¶: Àß ÀÚ¾ß Å°°¡ Å¬ÅÙµ¥..%²¿¸¶: ¸ğÇè°¡´ÔÀÌ ÇØ°áÇÒ ¼ö ÀÖ´Â ÀÏÀÌ¶ó¸é ºÎÅ¹µå·Á¿ä!");
+			msg.msg(player, "ê¼¬ë§ˆ: ë°¤ë§ˆë‹¤ Â§eë‚¨ìª½ ë¶€ë½Â§fì—ì„œ ì´ìƒí•œ ì†Œë¦¬ê°€ ë‚˜ìš”.%ê¼¬ë§ˆ: ì˜ ìì•¼ í‚¤ê°€ í´í…ë°..%ê¼¬ë§ˆ: ëª¨í—˜ê°€ë‹˜ì´ í•´ê²°í•  ìˆ˜ ìˆëŠ” ì¼ì´ë¼ë©´ ë¶€íƒë“œë ¤ìš”!");
 			QuestBoard qb = new QuestBoard();
 			qb.mq38_1(player, 0);
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 38Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 38ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===´©°¡ ¶Ç ¿ì´Â ¼Ò¸®¸¦ ³»¾ú´Â°¡===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ëˆ„ê°€ ë˜ ìš°ëŠ” ì†Œë¦¬ë¥¼ ë‚´ì—ˆëŠ”ê°€===");
 		score.setScore(2);
-		Score score2 = obj.getScore("·Õ°Ô ¸¶À» ¼÷¼ÒÀÇ ²¿¸¶¿Í ´ëÈ­");
+		Score score2 = obj.getScore("ë¡±ê²Œ ë§ˆì„ ìˆ™ì†Œì˜ ê¼¬ë§ˆì™€ ëŒ€í™”");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -1913,11 +1913,11 @@ public class QuestBoard {
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 38Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 38ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===¼ö»óÇÑ ¸ó½ºÅÍ===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ìˆ˜ìƒí•œ ëª¬ìŠ¤í„°===");
 		score.setScore(2);
-		Score score2 = obj.getScore("¿¡¹Ğ 5¸¶¸® »ç³É");
+		Score score2 = obj.getScore("ì—ë°€ 5ë§ˆë¦¬ ì‚¬ëƒ¥");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/5)");
 		score3.setScore(0);
@@ -1934,16 +1934,16 @@ public class QuestBoard {
 			player.getInventory().addItem(weapon1);
 			es.giveExp(player, 5000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "²¿¸¶: °í¸¶¿ö¿ä.%²¿¸¶: ÀÌ°Å ±æ¿¡¼­ ÁÖ¿î°Çµ¥ °¡Áö½Ç·¡¿ä?%¡×b¿¡¹ĞÀÇ Çìµå¡×f¸¦ È¹µæÇß´Ù.");
+			msg.msg(player, "ê¼¬ë§ˆ: ê³ ë§ˆì›Œìš”.%ê¼¬ë§ˆ: ì´ê±° ê¸¸ì—ì„œ ì£¼ìš´ê±´ë° ê°€ì§€ì‹¤ë˜ìš”?%Â§bì—ë°€ì˜ í—¤ë“œÂ§fë¥¼ íšë“í–ˆë‹¤.");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 38Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 38ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===¾ÆÀÌ¿¡°Ô º¸´äÀ»===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ì•„ì´ì—ê²Œ ë³´ë‹µì„===");
 		score.setScore(2);
-		Score score2 = obj.getScore("²¿¸¶¿¡°Ô µ¹¾Æ°¡ º¸°íÇÏ±â");
+		Score score2 = obj.getScore("ê¼¬ë§ˆì—ê²Œ ëŒì•„ê°€ ë³´ê³ í•˜ê¸°");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -1955,18 +1955,18 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 6500000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "³×ºñ: ¿©±â¼­ ´õ ¿Ã¶ó°¡ º¼ ¼ö ÀÖÀ» °Í °°Àºµ¥?%³×ºñ: ÇÑ¹ø °¡º¸ÀÚ.");
+			msg.msg(player, "ë„¤ë¹„: ì—¬ê¸°ì„œ ë” ì˜¬ë¼ê°€ ë³¼ ìˆ˜ ìˆì„ ê²ƒ ê°™ì€ë°?%ë„¤ë¹„: í•œë²ˆ ê°€ë³´ì.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq39_1(player, 0);
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 39Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 39ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===³×ºñÀÇ Èû1===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ë„¤ë¹„ì˜ í˜1===");
 		score.setScore(2);
-		Score score2 = obj.getScore("°í¼º¿¡¼­ ¹æÈ²ÇÏ´Â ¸ó½ºÅÍ 50¸¶¸® »ç³É");
+		Score score2 = obj.getScore("ê³ ì„±ì—ì„œ ë°©í™©í•˜ëŠ” ëª¬ìŠ¤í„° 50ë§ˆë¦¬ ì‚¬ëƒ¥");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/50)");
 		score3.setScore(0);
@@ -1978,18 +1978,18 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 6500000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "³×ºñ: ÀÌ¹ø¿¡µµ ´õ ¿Ã¶ó°¥ ¼ö ÀÖÀ» °Í °°¾Æ.");
+			msg.msg(player, "ë„¤ë¹„: ì´ë²ˆì—ë„ ë” ì˜¬ë¼ê°ˆ ìˆ˜ ìˆì„ ê²ƒ ê°™ì•„.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq39_2(player, 0);
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 39Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 39ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===³×ºñÀÇ Èû2===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ë„¤ë¹„ì˜ í˜2===");
 		score.setScore(2);
-		Score score2 = obj.getScore("°í¼º¿¡¼­ ºĞ³ëÇÏ´Â ¸ó½ºÅÍ 50¸¶¸® »ç³É");
+		Score score2 = obj.getScore("ê³ ì„±ì—ì„œ ë¶„ë…¸í•˜ëŠ” ëª¬ìŠ¤í„° 50ë§ˆë¦¬ ì‚¬ëƒ¥");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/50)");
 		score3.setScore(0);
@@ -2001,16 +2001,16 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 6500000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "³×ºñ: ¾Æ¹«·¡µµ ¸ğ¸£°Ú´Ü ¸»ÀÌÁö.%³×ºñ: ³ª´Â Àá±ñ ¿©±â¼­ Á¶»çÇØº¼Å×´Ï±î%³×ºñ: ³Ê´Â ´Ù¸¥ °÷ °¡¼­ ³î°í ÀÖ¾îºÁ.");
+			msg.msg(player, "ë„¤ë¹„: ì•„ë¬´ë˜ë„ ëª¨ë¥´ê² ë‹¨ ë§ì´ì§€.%ë„¤ë¹„: ë‚˜ëŠ” ì ê¹ ì—¬ê¸°ì„œ ì¡°ì‚¬í•´ë³¼í…Œë‹ˆê¹Œ%ë„¤ë¹„: ë„ˆëŠ” ë‹¤ë¥¸ ê³³ ê°€ì„œ ë†€ê³  ìˆì–´ë´.");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 39Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 39ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===³×ºñÀÇ Èû3===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ë„¤ë¹„ì˜ í˜3===");
 		score.setScore(2);
-		Score score2 = obj.getScore("°í¼º¿¡¼­ µÚÆ²¸° ¸ó½ºÅÍ 50¸¶¸® »ç³É");
+		Score score2 = obj.getScore("ê³ ì„±ì—ì„œ ë’¤í‹€ë¦° ëª¬ìŠ¤í„° 50ë§ˆë¦¬ ì‚¬ëƒ¥");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/50)");
 		score3.setScore(0);
@@ -2022,16 +2022,16 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 8000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "³×ºñ: ¿ÀÈ«!?%³×ºñ: ÀÌ°Í Á» ºÁºÁ ¡×e°ËÀº Èå¸§¡×fÀÌ¾ß.%³×ºñ: ½±°Ô ±¸ÇÒ ¼ö ÀÖ´Â ¹°°ÇÀÌ ¾Æ´Ï´Ï±î ÀÏ´Ü °¡Á®°¡ÀÚ.");
+			msg.msg(player, "ë„¤ë¹„: ì˜¤í™!?%ë„¤ë¹„: ì´ê²ƒ ì¢€ ë´ë´ Â§eê²€ì€ íë¦„Â§fì´ì•¼.%ë„¤ë¹„: ì‰½ê²Œ êµ¬í•  ìˆ˜ ìˆëŠ” ë¬¼ê±´ì´ ì•„ë‹ˆë‹ˆê¹Œ ì¼ë‹¨ ê°€ì ¸ê°€ì.");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 40Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 40ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===¾Æ¶óÅ©³×ÀÇ ÀúÁÖ===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ì•„ë¼í¬ë„¤ì˜ ì €ì£¼===");
 		score.setScore(2);
-		Score score2 = obj.getScore("¾Æ¶óÅ©³×ÀÇ ÀúÁÖ ´øÀü Å¬¸®¾î");
+		Score score2 = obj.getScore("ì•„ë¼í¬ë„¤ì˜ ì €ì£¼ ë˜ì „ í´ë¦¬ì–´");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -2043,7 +2043,7 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 10000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "¡×7°ËÀº Èå¸§À» Á¦¾îÇÏ±â·Î ¸¶À½¸Ô¾ú´Ù.%¡×7Ä«Å¸¸®³ª¿¡°Ô °¡¼­ ÀÇ°ßÀ» ±¸ÇÏÀÚ.%tp822 71 511");
+			msg.msg(player, "Â§7ê²€ì€ íë¦„ì„ ì œì–´í•˜ê¸°ë¡œ ë§ˆìŒë¨¹ì—ˆë‹¤.%Â§7ì¹´íƒ€ë¦¬ë‚˜ì—ê²Œ ê°€ì„œ ì˜ê²¬ì„ êµ¬í•˜ì.%tp822 71 511");
 			QuestBoard qb = new QuestBoard();
 			qb.mq41_1(player, 0);
 			return;
@@ -2051,12 +2051,12 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 10000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "¡×7°ËÀº Èå¸§¿¡ ¸öÀ» ¸Ã±ä´Ù.%¡×7Á¤½ÅÀÌ ¾ÆµæÇØÁø´Ù.%¡×4???: ±×·¡. ³»°¡ ³Ê¿¡°Ô ÈûÀ» ºô·ÁÁÖÁö.%¡×7!!!%tp822 71 511%¡×bµ¥ºôÀÇ º°¡×fÀ» È¹µæÇß´Ù.");
+			msg.msg(player, "Â§7ê²€ì€ íë¦„ì— ëª¸ì„ ë§¡ê¸´ë‹¤.%Â§7ì •ì‹ ì´ ì•„ë“í•´ì§„ë‹¤.%Â§4???: ê·¸ë˜. ë‚´ê°€ ë„ˆì—ê²Œ í˜ì„ ë¹Œë ¤ì£¼ì§€.%Â§7!!!%tp822 71 511%Â§bë°ë¹Œì˜ ë³„Â§fì„ íšë“í–ˆë‹¤.");
 			ItemStack star6 = new ItemStack(Material.NETHER_STAR);
 			ItemMeta star6Im = star6.getItemMeta();
-			star6Im.setDisplayName(ChatColor.AQUA + "µ¥ºôÀÇ º°");
+			star6Im.setDisplayName(ChatColor.AQUA + "ë°ë¹Œì˜ ë³„");
 			ArrayList<String> star6Lore = new ArrayList();
-			star6Lore.add(ChatColor.WHITE + "µ¥ºôÀÇ ÈûÀ» ¾òÀ» ¼ö ÀÖ´Ù.");
+			star6Lore.add(ChatColor.WHITE + "ë°ë¹Œì˜ í˜ì„ ì–»ì„ ìˆ˜ ìˆë‹¤.");
 			star6Im.setLore(star6Lore);
 			star6.setItemMeta(star6Im);
 			player.getInventory().addItem(star6);
@@ -2065,12 +2065,12 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 10000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "¡×7¾îÂ¼´Ùº¸´Ï °ËÀº Èå¸§¿¡¼­ »õ·Î¿î ÈûÀ» Ã£Àº °Í °°´Ù.%¡×7³ª´Â Âü ¿îÀÌ ÁÁÀº °Í °°´Ù.%tp822 71 511%¡×b´ëÇàÀÚÀÇ º°¡×fÀ» È¹µæÇß´Ù.");
+			msg.msg(player, "Â§7ì–´ì©Œë‹¤ë³´ë‹ˆ ê²€ì€ íë¦„ì—ì„œ ìƒˆë¡œìš´ í˜ì„ ì°¾ì€ ê²ƒ ê°™ë‹¤.%Â§7ë‚˜ëŠ” ì°¸ ìš´ì´ ì¢‹ì€ ê²ƒ ê°™ë‹¤.%tp822 71 511%Â§bëŒ€í–‰ìì˜ ë³„Â§fì„ íšë“í–ˆë‹¤.");
 			ItemStack star6 = new ItemStack(Material.NETHER_STAR);
 			ItemMeta star6Im = star6.getItemMeta();
-			star6Im.setDisplayName(ChatColor.AQUA + "´ëÇàÀÚÀÇ º°");
+			star6Im.setDisplayName(ChatColor.AQUA + "ëŒ€í–‰ìì˜ ë³„");
 			ArrayList<String> star6Lore = new ArrayList();
-			star6Lore.add(ChatColor.WHITE + "½ÅÀÇ ÈûÀ» ºô·Á ½Î¿ï ¼ö ÀÖ´Ù.");
+			star6Lore.add(ChatColor.WHITE + "ì‹ ì˜ í˜ì„ ë¹Œë ¤ ì‹¸ìš¸ ìˆ˜ ìˆë‹¤.");
 			star6Im.setLore(star6Lore);
 			star6.setItemMeta(star6Im);
 			player.getInventory().addItem(star6);
@@ -2078,11 +2078,11 @@ public class QuestBoard {
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 41Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 41ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===°ËÀº Èå¸§ÀÇ Èû===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===ê²€ì€ íë¦„ì˜ í˜===");
 		score.setScore(2);
-		Score score2 = obj.getScore("¿î¸íÀ» Á¤ÇÏ±â");
+		Score score2 = obj.getScore("ìš´ëª…ì„ ì •í•˜ê¸°");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -2094,14 +2094,14 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 8000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "Ä«Å¸¸®³ª: ¾î¸Ó³ª ±× ÈûÀº..?%Ä«Å¸¸®³ª: ¸Å¿ì À§ÇèÇÑ ³¿»õ°¡ ³ª´Â±º¿ä.%Ä«Å¸¸®³ª: ÀúÈñ Ãø¿¡¼­ ÀÌ°É ºÀÀÎ½ÃÄÑ µå¸®°Ú½À´Ï´Ù.%Ä«Å¸¸®³ª: ÈåÀ¸À½.%Ä«Å¸¸®³ª: ÈÄ¿ì¿ì.%"
-					+ "Ä«Å¸¸®³ª: ºÀÀÎÇÏ´Â °úÁ¤¿¡¼­ Èå¸§¿¡¼­ ¼ø¼öÇÑ ÈûÀÌ Á¤Á¦µÇ¾ú¾î¿ä.%Ä«Å¸¸®³ª: " + player.getDisplayName() + "´ÔÀÌ °¡Á®¿À½Å°Å´Ï °¡Á®°¡¼Åµµ ±¦Âú¾Æ¿ä.%"
-							+ "¡×b¿£Á©ÀÇ º°¡×fÀ» È¹µæÇß´Ù.");
+			msg.msg(player, "ì¹´íƒ€ë¦¬ë‚˜: ì–´ë¨¸ë‚˜ ê·¸ í˜ì€..?%ì¹´íƒ€ë¦¬ë‚˜: ë§¤ìš° ìœ„í—˜í•œ ëƒ„ìƒˆê°€ ë‚˜ëŠ”êµ°ìš”.%ì¹´íƒ€ë¦¬ë‚˜: ì €í¬ ì¸¡ì—ì„œ ì´ê±¸ ë´‰ì¸ì‹œì¼œ ë“œë¦¬ê² ìŠµë‹ˆë‹¤.%ì¹´íƒ€ë¦¬ë‚˜: íìœ¼ìŒ.%ì¹´íƒ€ë¦¬ë‚˜: í›„ìš°ìš°.%"
+					+ "ì¹´íƒ€ë¦¬ë‚˜: ë´‰ì¸í•˜ëŠ” ê³¼ì •ì—ì„œ íë¦„ì—ì„œ ìˆœìˆ˜í•œ í˜ì´ ì •ì œë˜ì—ˆì–´ìš”.%ì¹´íƒ€ë¦¬ë‚˜: " + player.getDisplayName() + "ë‹˜ì´ ê°€ì ¸ì˜¤ì‹ ê±°ë‹ˆ ê°€ì ¸ê°€ì…”ë„ ê´œì°®ì•„ìš”.%"
+							+ "Â§bì—”ì ¤ì˜ ë³„Â§fì„ íšë“í–ˆë‹¤.");
 			ItemStack star6 = new ItemStack(Material.NETHER_STAR);
 			ItemMeta star6Im = star6.getItemMeta();
-			star6Im.setDisplayName(ChatColor.AQUA + "¿£Á©ÀÇ º°");
+			star6Im.setDisplayName(ChatColor.AQUA + "ì—”ì ¤ì˜ ë³„");
 			ArrayList<String> star6Lore = new ArrayList();
-			star6Lore.add(ChatColor.WHITE + "¿£Á©ÀÇ ÈûÀ» ¾òÀ» ¼ö ÀÖ´Ù.");
+			star6Lore.add(ChatColor.WHITE + "ì—”ì ¤ì˜ í˜ì„ ì–»ì„ ìˆ˜ ìˆë‹¤.");
 			star6Im.setLore(star6Lore);
 			star6.setItemMeta(star6Im);
 			player.getInventory().addItem(star6);
@@ -2109,11 +2109,11 @@ public class QuestBoard {
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
-		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 41Àå");
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 41ì¥");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===Èå¸§ÀÇ ºÀÀÎÀ» À§ÇØ===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===íë¦„ì˜ ë´‰ì¸ì„ ìœ„í•´===");
 		score.setScore(2);
-		Score score2 = obj.getScore("¸¶¹ıÅ¾ÀÇ Ä«Å¸¸®³ª¿Í ´ëÈ­");
+		Score score2 = obj.getScore("ë§ˆë²•íƒ‘ì˜ ì¹´íƒ€ë¦¬ë‚˜ì™€ ëŒ€í™”");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);

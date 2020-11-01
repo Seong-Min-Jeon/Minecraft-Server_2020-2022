@@ -40,21 +40,21 @@ public class Cmd10VilTp implements CommandExecutor {
 			Location kaiman = new Location(world,-478,55,1302);
 			Location hiosu = new Location(world,-1370,51,976);
 			Location konno = new Location(world,-2465,52,543);
-			Location fuhidmeh = new Location(world,-429,98,721); //ÇÁ¶û½º¾î ÇØ»ê¹°
-			Location sitasaidi = new Location(world,-1132,55,656); //¿µ¾î ¾Ş¹«°ú
-			Location karce = new Location(world,-199,67,541); //µ¶ÀÏ¾î circle
-			Location kuredratt = new Location(world,-61,56,80); //µ¶ÀÏ¾î ³×¸ğ
-			Location beiag = new Location(world,141,87,-329); //µ¶ÀÏ¾î »ê
+			Location fuhidmeh = new Location(world,-429,98,721); //í”„ë‘ìŠ¤ì–´ í•´ì‚°ë¬¼
+			Location sitasaidi = new Location(world,-1132,55,656); //ì˜ì–´ ì•µë¬´ê³¼
+			Location karce = new Location(world,-199,67,541); //ë…ì¼ì–´ circle
+			Location kuredratt = new Location(world,-61,56,80); //ë…ì¼ì–´ ë„¤ëª¨
+			Location beiag = new Location(world,141,87,-329); //ë…ì¼ì–´ ì‚°
 			Location magicTower = new Location(world,221,81,725,90,0); 
-			Location longue = new Location(world,822,71,511,270,0); //ÇÁ¶û½º¾î long
+			Location longue = new Location(world,822,71,511,270,0); //í”„ë‘ìŠ¤ì–´ long
 			
 			if(player.isOp() == false) {
 				return false;
 			}
 			if(cmd.getName().equalsIgnoreCase("VilTp")) {
 				if(args.length == 0) {
-					player.sendMessage(ChatColor.WHITE + "1: ¿ö±×´Ò/2: Æ÷¸£°£/3: Æ¼¸£/4: ½Ãµå±¤»ê/5: ¹ÌÇ£¸£À¯/6: Ä«ÀÌ¸¸/7: ¿À½º/"
-							+ "8: ÄÜ³ë/9: ÇÁÈÖ µå ¸ŞÈå/10: ½ÃÅ¸»çÀÌµğ/11: Ä®½º/12: Å©·¹µå¶óÆ®/13: º£¾Æ±×/14: ¸¶¹ıÅ¾/15: ·Õ°Ô");
+					player.sendMessage(ChatColor.WHITE + "1: ì›Œê·¸ë‹/2: í¬ë¥´ê°„/3: í‹°ë¥´/4: ì‹œë“œê´‘ì‚°/5: ë¯¸í‘€ë¥´ìœ /6: ì¹´ì´ë§Œ/7: ì˜¤ìŠ¤/"
+							+ "8: ì½˜ë…¸/9: í”„íœ˜ ë“œ ë©”í/10: ì‹œíƒ€ì‚¬ì´ë””/11: ì¹¼ìŠ¤/12: í¬ë ˆë“œë¼íŠ¸/13: ë² ì•„ê·¸/14: ë§ˆë²•íƒ‘/15: ë¡±ê²Œ");
 					return true;
 				}
 				try { 
@@ -107,7 +107,7 @@ public class Cmd10VilTp implements CommandExecutor {
 						player.teleport(longue);
 					}
 				} catch(Exception e) {
-					player.sendMessage(ChatColor.RED + "Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù¸¸?");
+					player.sendMessage(ChatColor.RED + "ì˜ëª»ëœ ì…ë ¥ì…ë‹ˆë‹¤ë§Œ?");
 					return true;
 				}
 			}

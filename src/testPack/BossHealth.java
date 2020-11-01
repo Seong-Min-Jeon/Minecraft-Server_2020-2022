@@ -9,17 +9,17 @@ import org.bukkit.entity.Player;
 
 public class BossHealth {
 
-	private static BossBar bar1 = Bukkit.createBossBar(ChatColor.DARK_RED + "ÄÚ³¶±×", BarColor.RED, BarStyle.SOLID);
-	private static BossBar bar2 = Bukkit.createBossBar(ChatColor.DARK_RED + "1ÃşÀÇ Áö¹èÀÚ", BarColor.RED, BarStyle.SOLID);
-	private static BossBar bar3 = Bukkit.createBossBar(ChatColor.DARK_RED + "2ÃşÀÇ Áö¹èÀÚ", BarColor.RED, BarStyle.SOLID);
-	private static BossBar bar4 = Bukkit.createBossBar(ChatColor.DARK_RED + "3ÃşÀÇ Áö¹èÀÚ", BarColor.RED, BarStyle.SOLID);
-	private static BossBar bar5 = Bukkit.createBossBar(ChatColor.DARK_RED + "¾Æµ§", BarColor.RED, BarStyle.SOLID);
-	private static BossBar bar6 = Bukkit.createBossBar(ChatColor.DARK_RED + "Æ¯±Ş ¿ä¸®»ç", BarColor.RED, BarStyle.SOLID);
-	private static BossBar bar7 = Bukkit.createBossBar(ChatColor.DARK_RED + "ÄÉÈê·»", BarColor.RED, BarStyle.SOLID);
-	private static BossBar bar8 = Bukkit.createBossBar(ChatColor.DARK_RED + "¹ß·Î¸£", BarColor.RED, BarStyle.SOLID);
-	private static BossBar bar9 = Bukkit.createBossBar(ChatColor.DARK_RED + "¿äÁ¤¿©¿Õ Æ¼Å¸´Ï¾Æ", BarColor.RED, BarStyle.SOLID);
-	private static BossBar bar10 = Bukkit.createBossBar(ChatColor.DARK_RED + "¿äÁ¤¿Õ ¿Àº£·Ğ", BarColor.RED, BarStyle.SOLID);
-	private static BossBar bar11 = Bukkit.createBossBar(ChatColor.DARK_RED + "¾Æ¶óÅ©³×", BarColor.RED, BarStyle.SOLID);
+	private static BossBar bar1 = Bukkit.createBossBar(ChatColor.DARK_RED + "ì½”ë‚­ê·¸", BarColor.RED, BarStyle.SOLID);
+	private static BossBar bar2 = Bukkit.createBossBar(ChatColor.DARK_RED + "1ì¸µì˜ ì§€ë°°ì", BarColor.RED, BarStyle.SOLID);
+	private static BossBar bar3 = Bukkit.createBossBar(ChatColor.DARK_RED + "2ì¸µì˜ ì§€ë°°ì", BarColor.RED, BarStyle.SOLID);
+	private static BossBar bar4 = Bukkit.createBossBar(ChatColor.DARK_RED + "3ì¸µì˜ ì§€ë°°ì", BarColor.RED, BarStyle.SOLID);
+	private static BossBar bar5 = Bukkit.createBossBar(ChatColor.DARK_RED + "ì•„ë´", BarColor.RED, BarStyle.SOLID);
+	private static BossBar bar6 = Bukkit.createBossBar(ChatColor.DARK_RED + "íŠ¹ê¸‰ ìš”ë¦¬ì‚¬", BarColor.RED, BarStyle.SOLID);
+	private static BossBar bar7 = Bukkit.createBossBar(ChatColor.DARK_RED + "ì¼€í˜ë Œ", BarColor.RED, BarStyle.SOLID);
+	private static BossBar bar8 = Bukkit.createBossBar(ChatColor.DARK_RED + "ë°œë¡œë¥´", BarColor.RED, BarStyle.SOLID);
+	private static BossBar bar9 = Bukkit.createBossBar(ChatColor.DARK_RED + "ìš”ì •ì—¬ì™• í‹°íƒ€ë‹ˆì•„", BarColor.RED, BarStyle.SOLID);
+	private static BossBar bar10 = Bukkit.createBossBar(ChatColor.DARK_RED + "ìš”ì •ì™• ì˜¤ë² ë¡ ", BarColor.RED, BarStyle.SOLID);
+	private static BossBar bar11 = Bukkit.createBossBar(ChatColor.DARK_RED + "ì•„ë¼í¬ë„¤", BarColor.RED, BarStyle.SOLID);
 	
 	public BossBar getBar1() {
 		return bar1;

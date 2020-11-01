@@ -264,10 +264,10 @@ public class Main extends JavaPlugin implements Listener{
 	public void onPlayerJoin(PlayerJoinEvent event) {
 		Player player = event.getPlayer(); 
 		
-		// Á¢¼Ó°¡´ÉÇÑ ÇÃ·¹ÀÌ¾î
+		// ì ‘ì†ê°€ëŠ¥í•œ í”Œë ˆì´ì–´
 		try {
 //			if (!(player.getDisplayName().equalsIgnoreCase("yumehama"))) {
-//				player.kickPlayer("¼­¹ö Á¡°Ë Áß ÀÔ´Ï´Ù.");
+//				player.kickPlayer("ì„œë²„ ì ê²€ ì¤‘ ì…ë‹ˆë‹¤.");
 //				return;
 //			}
 			if ((player.getUniqueId().toString().equalsIgnoreCase("5d5f3cf5-bbec-4dba-b97c-fe2ddf900191"))) {
@@ -275,31 +275,31 @@ public class Main extends JavaPlugin implements Listener{
 				return;
 			}
 		} catch (Exception e) {
-			System.err.println(player.getDisplayName() + "ÀÌ Á¢¼ÓÀ» ½ÃµµÇÏ¿´½À´Ï´Ù.");
+			System.err.println(player.getDisplayName() + "ì´ ì ‘ì†ì„ ì‹œë„í•˜ì˜€ìŠµë‹ˆë‹¤.");
 		}
 		
-		//¸®¼Ò½ºÆÑ Àû¿ë
+		//ë¦¬ì†ŒìŠ¤íŒ© ì ìš©
 		if(player.getDisplayName().equalsIgnoreCase("woolring")) { 
 			
 		} else {
-			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/769112921950781450/SPOILER_tutorial_resource_pack_46.zip");
+			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/771989438770708500/aile_texture_pack.zip");
 		}
 		
 		//Message
 		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {
-			event.setJoinMessage("±×°¡ µ¹¾Æ¿Ô´Ù. " + ChatColor.DARK_RED + "'´õ °ÔÀÓ Á¾°áÀÚ' À¯¸ŞÇÏ¸¶.");
+			event.setJoinMessage("ê·¸ê°€ ëŒì•„ì™”ë‹¤. " + ChatColor.DARK_RED + "'ë” ê²Œì„ ì¢…ê²°ì' ìœ ë©”í•˜ë§ˆ.");
 		} else if(player.getDisplayName().equalsIgnoreCase("WoolRing")) {
-			event.setJoinMessage("±×°¡ µ¹¾Æ¿Ô´Ù. " + ChatColor.GREEN + "'µµÆ®¶û µµÆ®°¡ Á¦ÀÏ ÁÁ¾Æ' ¿ï¸µ.");
+			event.setJoinMessage("ê·¸ê°€ ëŒì•„ì™”ë‹¤. " + ChatColor.GREEN + "'ë„íŠ¸ë‘ ë„íŠ¸ê°€ ì œì¼ ì¢‹ì•„' ìš¸ë§.");
 		} else if(player.getDisplayName().equalsIgnoreCase("_nanoboost_")) {
-			event.setJoinMessage("±×°¡ µ¹¾Æ¿Ô´Ù. " + ChatColor.RED + "'0·¾ºÎÅÍ °íÀÎ¹°' ³ª³ëºÎ½ºÆ®.");
+			event.setJoinMessage("ê·¸ê°€ ëŒì•„ì™”ë‹¤. " + ChatColor.RED + "'0ë ™ë¶€í„° ê³ ì¸ë¬¼' ë‚˜ë…¸ë¶€ìŠ¤íŠ¸.");
 		} else if(player.getDisplayName().equalsIgnoreCase("why9196")) {
-			event.setJoinMessage("±×°¡ µ¹¾Æ¿Ô´Ù. " + ChatColor.BLACK + "'±æ ¸¸µé±â ÀåÀÎ' ¿ÍÀÌ.");
+			event.setJoinMessage("ê·¸ê°€ ëŒì•„ì™”ë‹¤. " + ChatColor.BLACK + "'ê¸¸ ë§Œë“¤ê¸° ì¥ì¸' ì™€ì´.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Akilae3102")) {
-			event.setJoinMessage("±×°¡ µ¹¾Æ¿Ô´Ù. " + ChatColor.AQUA + "'È­¶û¾²´Â ´õ·¯¿î ³ğ' ¾ÆÅ³·¹.");
+			event.setJoinMessage("ê·¸ê°€ ëŒì•„ì™”ë‹¤. " + ChatColor.AQUA + "'í™”ë‘ì“°ëŠ” ë”ëŸ¬ìš´ ë†ˆ' ì•„í‚¬ë ˆ.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Espina_ID")) {
-			event.setJoinMessage("±×°¡ µ¹¾Æ¿Ô´Ù. " + ChatColor.BOLD + "'ÀÌµå¸¦ »ç¶ûÇÏ´Â' ¿¡½ºÇÇ³ª.");
+			event.setJoinMessage("ê·¸ê°€ ëŒì•„ì™”ë‹¤. " + ChatColor.BOLD + "'ì´ë“œë¥¼ ì‚¬ë‘í•˜ëŠ”' ì—ìŠ¤í”¼ë‚˜.");
 		} else {
-			event.setJoinMessage("¾ß»ıÀÇ ´©±º°¡°¡ µîÀåÇß´Ù.");
+			event.setJoinMessage("ì•¼ìƒì˜ ëˆ„êµ°ê°€ê°€ ë“±ì¥í–ˆë‹¤.");
 		}
 		
 		//set 
@@ -309,12 +309,12 @@ public class Main extends JavaPlugin implements Listener{
 			player.setOp(true);
 		}		
 		
-		//ÁõÇ¥ ¿À·ù ¼öÁ¤
+		//ì¦í‘œ ì˜¤ë¥˜ ìˆ˜ì •
 		for (ItemStack is : player.getInventory().getContents()) {
 			if(is == null) continue;
 			try {
 				int len = is.getItemMeta().getDisplayName().length();
-				if (is.getItemMeta().getDisplayName().substring(len-2,len).equals("ÁõÇ¥")) {
+				if (is.getItemMeta().getDisplayName().substring(len-2,len).equals("ì¦í‘œ")) {
 					player.getInventory().remove(is);
 					player.getInventory().setItem(7,is);
 			    }
@@ -324,16 +324,16 @@ public class Main extends JavaPlugin implements Listener{
 		}
 		
 		//bar
-		BossBar bar = Bukkit.createBossBar(ChatColor.BOLD + "" + ChatColor.AQUA + "ÀüÅõ °æÇèÄ¡ 2¹è", BarColor.BLUE, BarStyle.SOLID);
+		BossBar bar = Bukkit.createBossBar(ChatColor.BOLD + "" + ChatColor.AQUA + "ì „íˆ¬ ê²½í—˜ì¹˜ 2ë°°", BarColor.BLUE, BarStyle.SOLID);
 		bar.setVisible(false);
 		bar.addPlayer(player);
-		BossBar bar2 = Bukkit.createBossBar(ChatColor.BOLD + "" + ChatColor.DARK_PURPLE + "°­È­È®·ü Áõ°¡", BarColor.PURPLE, BarStyle.SOLID);
+		BossBar bar2 = Bukkit.createBossBar(ChatColor.BOLD + "" + ChatColor.DARK_PURPLE + "ê°•í™”í™•ë¥  ì¦ê°€", BarColor.PURPLE, BarStyle.SOLID);
 		bar2.setVisible(false);
 		bar2.addPlayer(player);
-		BossBar bar3 = Bukkit.createBossBar(ChatColor.BOLD + "" + ChatColor.DARK_GREEN + "¿¡¸Ş¶öµå È¹µæ·® Áõ°¡ 2¹è(ÀüÅõ)", BarColor.GREEN, BarStyle.SOLID);
+		BossBar bar3 = Bukkit.createBossBar(ChatColor.BOLD + "" + ChatColor.DARK_GREEN + "ì—ë©”ë„ë“œ íšë“ëŸ‰ ì¦ê°€ 2ë°°(ì „íˆ¬)", BarColor.GREEN, BarStyle.SOLID);
 		bar3.setVisible(false);
 		bar3.addPlayer(player);
-		BossBar bar4 = Bukkit.createBossBar(ChatColor.BOLD + "" + ChatColor.DARK_RED + "·¹ÀÌµå", BarColor.RED, BarStyle.SOLID);
+		BossBar bar4 = Bukkit.createBossBar(ChatColor.BOLD + "" + ChatColor.DARK_RED + "ë ˆì´ë“œ", BarColor.RED, BarStyle.SOLID);
 		bar4.setVisible(false);
 		bar4.addPlayer(player);
 		try {
@@ -731,7 +731,7 @@ public class Main extends JavaPlugin implements Listener{
 		ItemMeta masterIm = master.getItemMeta();
 		masterIm.setLocalizedName("100000,100000,100000,100000,0,100000,100000,100000,100000,100000,0");
 		masterIm.addEnchant(Enchantment.DAMAGE_ALL, 0, true);
-		masterIm.setDisplayName(ChatColor.DARK_RED + "" + ChatColor.MAGIC + "½ÅÀÇ °Ë[¹üÀ§ Ãà¼ÒÇü]");
+		masterIm.setDisplayName(ChatColor.DARK_RED + "" + ChatColor.MAGIC + "ì‹ ì˜ ê²€[ë²”ìœ„ ì¶•ì†Œí˜•]");
 		ArrayList<String> masterLore = new ArrayList();
 		masterIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		masterIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -745,13 +745,13 @@ public class Main extends JavaPlugin implements Listener{
 //		ItemStack var1 = new ItemStack(Material.OAK_PLANKS);
 //		ItemMeta var1Im = var1.getItemMeta();
 //		var1Im.setLocalizedName("866,24,47,346,429,500,100,100,100,547,250");
-//		var1Im.setDisplayName(ChatColor.DARK_RED + "ÀÏ·ç½Ãµ¥ÀÌÅÍ");
+//		var1Im.setDisplayName(ChatColor.DARK_RED + "ì¼ë£¨ì‹œë°ì´í„°");
 //		ArrayList<String> var1Lore = new ArrayList();
-//		var1Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 250");
+//		var1Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 250");
 //		var1Lore.add(ChatColor.GRAY + " ");
-//		var1Lore.add(ChatColor.GRAY + "ºÎÀ¯¼º 50Ãş º¸½º¿¡°Ô µå¶øµÈ ¸¶°Ë");
-//		var1Lore.add(ChatColor.GRAY + "Æò¹üÇÑ ¸¶½ºÅÍ Å¬·¡½ºÀÇ °Ëº¸´Ùµµ ¼º´ÉÀÌ ÁÁ´Ù.");
-//		var1Lore.add(ChatColor.GRAY + "½ÅÀÇ ÈûÀ¸·Î ¼Ò¸ê´çÇÑ ÈÄ º¹±¸µÇ¾ú´Ù.");
+//		var1Lore.add(ChatColor.GRAY + "ë¶€ìœ ì„± 50ì¸µ ë³´ìŠ¤ì—ê²Œ ë“œëëœ ë§ˆê²€");
+//		var1Lore.add(ChatColor.GRAY + "í‰ë²”í•œ ë§ˆìŠ¤í„° í´ë˜ìŠ¤ì˜ ê²€ë³´ë‹¤ë„ ì„±ëŠ¥ì´ ì¢‹ë‹¤.");
+//		var1Lore.add(ChatColor.GRAY + "ì‹ ì˜ í˜ìœ¼ë¡œ ì†Œë©¸ë‹¹í•œ í›„ ë³µêµ¬ë˜ì—ˆë‹¤.");
 //		var1Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 //		var1Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 //		var1Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -763,13 +763,13 @@ public class Main extends JavaPlugin implements Listener{
 //		ItemStack var2 = new ItemStack(Material.SPRUCE_PLANKS);
 //		ItemMeta var2Im = var2.getItemMeta();
 //		var2Im.setLocalizedName("300,0,0,100,300,200,100,0,0,0,250");
-//		var2Im.setDisplayName(ChatColor.DARK_RED + "´ÙÅ© ¸®ÆŞ¼­");
+//		var2Im.setDisplayName(ChatColor.DARK_RED + "ë‹¤í¬ ë¦¬í„ì„œ");
 //		ArrayList<String> var2Lore = new ArrayList();
-//		var2Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 250");
+//		var2Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 250");
 //		var2Lore.add(ChatColor.GRAY + " ");
-//		var2Lore.add(ChatColor.GRAY + "Å©¸®½ºÅ»¶óÀÌÁî ÁÖ±«·Î ¸¸µé¾îÁø Á÷°Ë");
-//		var2Lore.add(ChatColor.GRAY + "ÀÌ¸§ÀÇ ¶æÀº '¾îµÒÀ» ¹°¸®Ä¡´Â ÀÚ'ÀÌ´Ù.");	
-//		var2Lore.add(ChatColor.GRAY + "½ÅÀÇ ÈûÀ¸·Î ¼Ò¸ê´çÇÑ ÈÄ º¹±¸µÇ¾ú´Ù.");
+//		var2Lore.add(ChatColor.GRAY + "í¬ë¦¬ìŠ¤íƒˆë¼ì´ì¦ˆ ì£¼ê´´ë¡œ ë§Œë“¤ì–´ì§„ ì§ê²€");
+//		var2Lore.add(ChatColor.GRAY + "ì´ë¦„ì˜ ëœ»ì€ 'ì–´ë‘ ì„ ë¬¼ë¦¬ì¹˜ëŠ” ì'ì´ë‹¤.");	
+//		var2Lore.add(ChatColor.GRAY + "ì‹ ì˜ í˜ìœ¼ë¡œ ì†Œë©¸ë‹¹í•œ í›„ ë³µêµ¬ë˜ì—ˆë‹¤.");
 //		var2Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 //		var2Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 //		var2Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -781,12 +781,12 @@ public class Main extends JavaPlugin implements Listener{
 //		ItemStack var3 = new ItemStack(Material.COBBLESTONE_WALL);
 //		ItemMeta var3Im = var3.getItemMeta();
 //		var3Im.setLocalizedName("0,0,0,0,0,699,3,0,1,0,276");
-//		var3Im.setDisplayName(ChatColor.DARK_BLUE + "ÀÎ·ùº¸È£ÀÚ");
+//		var3Im.setDisplayName(ChatColor.DARK_BLUE + "ì¸ë¥˜ë³´í˜¸ì");
 //		ArrayList<String> var3Lore = new ArrayList();
-//		var3Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 276");
+//		var3Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 276");
 //		var3Lore.add(ChatColor.GRAY + " ");
-//		var3Lore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: _nanoboost_");
-//		var3Lore.add(ChatColor.GRAY + "½ÅÀÇ ÈûÀ¸·Î ¼Ò¸ê´çÇÑ ÈÄ º¹±¸µÇ¾ú´Ù.");
+//		var3Lore.add(ChatColor.GRAY + "ì œì‘ì: _nanoboost_");
+//		var3Lore.add(ChatColor.GRAY + "ì‹ ì˜ í˜ìœ¼ë¡œ ì†Œë©¸ë‹¹í•œ í›„ ë³µêµ¬ë˜ì—ˆë‹¤.");
 //		var3Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 //		var3Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 //		var3Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -798,12 +798,12 @@ public class Main extends JavaPlugin implements Listener{
 //		ItemStack var4 = new ItemStack(Material.JUNGLE_PLANKS);
 //		ItemMeta var4Im = var4.getItemMeta();
 //		var4Im.setLocalizedName("1021,544,609,184,215,0,7,0,0,1124,95");
-//		var4Im.setDisplayName(ChatColor.DARK_BLUE + "ÀÎ·ùÇĞ»ìÀÚ");
+//		var4Im.setDisplayName(ChatColor.DARK_BLUE + "ì¸ë¥˜í•™ì‚´ì");
 //		ArrayList<String> var4Lore = new ArrayList();
-//		var4Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 95");
+//		var4Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 95");
 //		var4Lore.add(ChatColor.GRAY + " ");
-//		var4Lore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: _nanoboost_");
-//		var4Lore.add(ChatColor.GRAY + "½ÅÀÇ ÈûÀ¸·Î ¼Ò¸ê´çÇÑ ÈÄ º¹±¸µÇ¾ú´Ù.");
+//		var4Lore.add(ChatColor.GRAY + "ì œì‘ì: _nanoboost_");
+//		var4Lore.add(ChatColor.GRAY + "ì‹ ì˜ í˜ìœ¼ë¡œ ì†Œë©¸ë‹¹í•œ í›„ ë³µêµ¬ë˜ì—ˆë‹¤.");
 //		var4Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 //		var4Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 //		var4Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -815,12 +815,12 @@ public class Main extends JavaPlugin implements Listener{
 //		ItemStack var5 = new ItemStack(Material.CYAN_WOOL);
 //		ItemMeta var5Im = var5.getItemMeta();
 //		var5Im.setLocalizedName("859,100,0,100,10,200,100,100,100,858,200");
-//		var5Im.setDisplayName(ChatColor.AQUA + "¿äÁ¤¿©¿ÕÀÇ °Ë");
+//		var5Im.setDisplayName(ChatColor.AQUA + "ìš”ì •ì—¬ì™•ì˜ ê²€");
 //		ArrayList<String> var5Lore = new ArrayList();
-//		var5Lore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 200");
+//		var5Lore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 200");
 //		var5Lore.add(ChatColor.GRAY + " ");
-//		var5Lore.add(ChatColor.GRAY + "¿äÁ¤¿©¿ÕÀÌ »ç¿ëÇÏ´Â °ËÀÌ´Ù.");
-//		var5Lore.add(ChatColor.GRAY + "½ÅÀÇ ÈûÀ¸·Î ¼Ò¸ê´çÇÑ ÈÄ º¹±¸µÇ¾ú´Ù.");
+//		var5Lore.add(ChatColor.GRAY + "ìš”ì •ì—¬ì™•ì´ ì‚¬ìš©í•˜ëŠ” ê²€ì´ë‹¤.");
+//		var5Lore.add(ChatColor.GRAY + "ì‹ ì˜ í˜ìœ¼ë¡œ ì†Œë©¸ë‹¹í•œ í›„ ë³µêµ¬ë˜ì—ˆë‹¤.");
 //		var5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 //		var5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 //		var5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -832,14 +832,14 @@ public class Main extends JavaPlugin implements Listener{
 //		ItemStack helmet = new ItemStack(Material.IRON_HELMET);
 //		ItemMeta helmetIm = helmet.getItemMeta();
 //		helmetIm.setLocalizedName("0,30,30,30,0,400,30,30,30,50,330");
-//		helmetIm.setDisplayName(ChatColor.GREEN + "¿¡º¸´Ï Çï¸ä");
+//		helmetIm.setDisplayName(ChatColor.GREEN + "ì—ë³´ë‹ˆ í—¬ë©§");
 //		ArrayList<String> helmetLore = new ArrayList();
-//		helmetLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 330");
+//		helmetLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 330");
 //		helmetLore.add(ChatColor.GRAY + " ");
-//		helmetLore.add(ChatColor.GRAY + "¿¡º¸´Ï ÁÖ±«·Î ¸¸µé¾îÁø Çï¸ä");
-//		helmetLore.add(ChatColor.GRAY + "´ëÀåÀåÀÌÀÇ ¼Ø¾¾·Î ÁÁÀº Ç°ÁúÀ»");
-//		helmetLore.add(ChatColor.GRAY + "°¡Áö°Ô µÇ¾ú´Ù.");
-//		helmetLore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+//		helmetLore.add(ChatColor.GRAY + "ì—ë³´ë‹ˆ ì£¼ê´´ë¡œ ë§Œë“¤ì–´ì§„ í—¬ë©§");
+//		helmetLore.add(ChatColor.GRAY + "ëŒ€ì¥ì¥ì´ì˜ ì†œì”¨ë¡œ ì¢‹ì€ í’ˆì§ˆì„");
+//		helmetLore.add(ChatColor.GRAY + "ê°€ì§€ê²Œ ë˜ì—ˆë‹¤.");
+//		helmetLore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 //		helmetIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 //		helmetIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 //		helmetIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -851,14 +851,14 @@ public class Main extends JavaPlugin implements Listener{
 //		ItemStack chestplate = new ItemStack(Material.IRON_CHESTPLATE);
 //		ItemMeta chestplateIm = chestplate.getItemMeta();
 //		chestplateIm.setLocalizedName("0,30,30,30,0,400,30,30,30,50,330");
-//		chestplateIm.setDisplayName(ChatColor.GREEN + "¿¡º¸´Ï °©¿Ê");
+//		chestplateIm.setDisplayName(ChatColor.GREEN + "ì—ë³´ë‹ˆ ê°‘ì˜·");
 //		ArrayList<String> chestplateLore = new ArrayList();
-//		chestplateLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 330");
+//		chestplateLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 330");
 //		chestplateLore.add(ChatColor.GRAY + " ");
-//		chestplateLore.add(ChatColor.GRAY + "¿¡º¸´Ï ÁÖ±«·Î ¸¸µé¾îÁø °©¿Ê");
-//		chestplateLore.add(ChatColor.GRAY + "´ëÀåÀåÀÌÀÇ ¼Ø¾¾·Î ÁÁÀº Ç°ÁúÀ»");
-//		chestplateLore.add(ChatColor.GRAY + "°¡Áö°Ô µÇ¾ú´Ù.");
-//		chestplateLore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+//		chestplateLore.add(ChatColor.GRAY + "ì—ë³´ë‹ˆ ì£¼ê´´ë¡œ ë§Œë“¤ì–´ì§„ ê°‘ì˜·");
+//		chestplateLore.add(ChatColor.GRAY + "ëŒ€ì¥ì¥ì´ì˜ ì†œì”¨ë¡œ ì¢‹ì€ í’ˆì§ˆì„");
+//		chestplateLore.add(ChatColor.GRAY + "ê°€ì§€ê²Œ ë˜ì—ˆë‹¤.");
+//		chestplateLore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 //		chestplateIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 //		chestplateIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 //		chestplateIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -870,14 +870,14 @@ public class Main extends JavaPlugin implements Listener{
 //		ItemStack leggings = new ItemStack(Material.IRON_LEGGINGS);
 //		ItemMeta leggingsIm = leggings.getItemMeta();
 //		leggingsIm.setLocalizedName("0,30,30,30,0,400,30,30,30,50,330");
-//		leggingsIm.setDisplayName(ChatColor.GREEN + "¿¡º¸´Ï °¢¹İ");
+//		leggingsIm.setDisplayName(ChatColor.GREEN + "ì—ë³´ë‹ˆ ê°ë°˜");
 //		ArrayList<String> leggingsLore = new ArrayList();
-//		leggingsLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 330");
+//		leggingsLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 330");
 //		leggingsLore.add(ChatColor.GRAY + " ");
-//		leggingsLore.add(ChatColor.GRAY + "¿¡º¸´Ï ÁÖ±«·Î ¸¸µé¾îÁø °¢¹İ");
-//		leggingsLore.add(ChatColor.GRAY + "´ëÀåÀåÀÌÀÇ ¼Ø¾¾·Î ÁÁÀº Ç°ÁúÀ»");
-//		leggingsLore.add(ChatColor.GRAY + "°¡Áö°Ô µÇ¾ú´Ù.");
-//		leggingsLore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+//		leggingsLore.add(ChatColor.GRAY + "ì—ë³´ë‹ˆ ì£¼ê´´ë¡œ ë§Œë“¤ì–´ì§„ ê°ë°˜");
+//		leggingsLore.add(ChatColor.GRAY + "ëŒ€ì¥ì¥ì´ì˜ ì†œì”¨ë¡œ ì¢‹ì€ í’ˆì§ˆì„");
+//		leggingsLore.add(ChatColor.GRAY + "ê°€ì§€ê²Œ ë˜ì—ˆë‹¤.");
+//		leggingsLore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 //		leggingsIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 //		leggingsIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 //		leggingsIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -889,14 +889,14 @@ public class Main extends JavaPlugin implements Listener{
 //		ItemStack boots = new ItemStack(Material.IRON_BOOTS);
 //		ItemMeta bootsIm = boots.getItemMeta();
 //		bootsIm.setLocalizedName("0,30,30,30,0,400,30,30,30,50,330");
-//		bootsIm.setDisplayName(ChatColor.GREEN + "¿¡º¸´Ï ½Å¹ß");
+//		bootsIm.setDisplayName(ChatColor.GREEN + "ì—ë³´ë‹ˆ ì‹ ë°œ");
 //		ArrayList<String> bootsLore = new ArrayList();
-//		bootsLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 330");
+//		bootsLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 330");
 //		bootsLore.add(ChatColor.GRAY + " ");
-//		bootsLore.add(ChatColor.GRAY + "¿¡º¸´Ï ÁÖ±«·Î ¸¸µé¾îÁø ½Å¹ß");
-//		bootsLore.add(ChatColor.GRAY + "´ëÀåÀåÀÌÀÇ ¼Ø¾¾·Î ÁÁÀº Ç°ÁúÀ»");
-//		bootsLore.add(ChatColor.GRAY + "°¡Áö°Ô µÇ¾ú´Ù.");
-//		bootsLore.add(ChatColor.GRAY + "(¼¼Æ® ¾ÆÀÌÅÛ)");
+//		bootsLore.add(ChatColor.GRAY + "ì—ë³´ë‹ˆ ì£¼ê´´ë¡œ ë§Œë“¤ì–´ì§„ ì‹ ë°œ");
+//		bootsLore.add(ChatColor.GRAY + "ëŒ€ì¥ì¥ì´ì˜ ì†œì”¨ë¡œ ì¢‹ì€ í’ˆì§ˆì„");
+//		bootsLore.add(ChatColor.GRAY + "ê°€ì§€ê²Œ ë˜ì—ˆë‹¤.");
+//		bootsLore.add(ChatColor.GRAY + "(ì„¸íŠ¸ ì•„ì´í…œ)");
 //		bootsIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 //		bootsIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 //		bootsIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -909,11 +909,11 @@ public class Main extends JavaPlugin implements Listener{
 //		ItemStack weapon = new ItemStack(Material.BIRCH_PLANKS);
 //		ItemMeta weaponIm = weapon.getItemMeta();
 //		weaponIm.setLocalizedName("0,800,800,800,300,100,200,200,200,300,330");
-//		weaponIm.setDisplayName(ChatColor.LIGHT_PURPLE + "Âü¼öµµ");
+//		weaponIm.setDisplayName(ChatColor.LIGHT_PURPLE + "ì°¸ìˆ˜ë„");
 //		ArrayList<String> weaponLore = new ArrayList();
-//		weaponLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 330");
+//		weaponLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 330");
 //		weaponLore.add(ChatColor.GRAY + " ");
-//		weaponLore.add(ChatColor.GRAY + "¼º½º·¯¿î ÈûÀ» ´ã¾Æ »ó´ë¸¦ º£¾î¹ö¸®´Â °Ë");
+//		weaponLore.add(ChatColor.GRAY + "ì„±ìŠ¤ëŸ¬ìš´ í˜ì„ ë‹´ì•„ ìƒëŒ€ë¥¼ ë² ì–´ë²„ë¦¬ëŠ” ê²€");
 //		weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 //		weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 //		weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -925,11 +925,11 @@ public class Main extends JavaPlugin implements Listener{
 //		ItemStack helmet = new ItemStack(Material.IRON_HELMET);
 //		ItemMeta helmetIm = helmet.getItemMeta();
 //		helmetIm.setLocalizedName("0,0,0,0,0,1200,0,0,0,0,330");
-//		helmetIm.setDisplayName(ChatColor.YELLOW + "ÇìºìÁîµµ¾î");
+//		helmetIm.setDisplayName(ChatColor.YELLOW + "í—¤ë¸ì¦ˆë„ì–´");
 //		ArrayList<String> helmetLore = new ArrayList();
-//		helmetLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 330");
+//		helmetLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 330");
 //		helmetLore.add(ChatColor.GRAY + " ");
-//		helmetLore.add(ChatColor.GRAY + "½ÂÃµÇÏ´Â Ãµ»ç°¡ ³²±â°í °£ Çï¸ä");
+//		helmetLore.add(ChatColor.GRAY + "ìŠ¹ì²œí•˜ëŠ” ì²œì‚¬ê°€ ë‚¨ê¸°ê³  ê°„ í—¬ë©§");
 //		helmetIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 //		helmetIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 //		helmetIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -941,11 +941,11 @@ public class Main extends JavaPlugin implements Listener{
 //		ItemStack chestplate = new ItemStack(Material.IRON_CHESTPLATE);
 //		ItemMeta chestplateIm = chestplate.getItemMeta();
 //		chestplateIm.setLocalizedName("300,0,0,0,100,1000,0,0,0,1000,330");
-//		chestplateIm.setDisplayName(ChatColor.YELLOW + "³ª»ì¹®");
+//		chestplateIm.setDisplayName(ChatColor.YELLOW + "ë‚˜ì‚´ë¬¸");
 //		ArrayList<String> chestplateLore = new ArrayList();
-//		chestplateLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 330");
+//		chestplateLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 330");
 //		chestplateLore.add(ChatColor.GRAY + " ");
-//		chestplateLore.add(ChatColor.GRAY + "»ì¿¡µµ ²ô¶±¾ø´Â °©¿Ê");
+//		chestplateLore.add(ChatColor.GRAY + "ì‚´ì—ë„ ë„ë–¡ì—†ëŠ” ê°‘ì˜·");
 //		chestplateIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 //		chestplateIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 //		chestplateIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -957,11 +957,11 @@ public class Main extends JavaPlugin implements Listener{
 //		ItemStack leggings = new ItemStack(Material.IRON_LEGGINGS);
 //		ItemMeta leggingsIm = leggings.getItemMeta();
 //		leggingsIm.setLocalizedName("300,0,0,0,0,500,0,0,0,0,330");
-//		leggingsIm.setDisplayName(ChatColor.YELLOW + "¹«È¯Ã¢");
+//		leggingsIm.setDisplayName(ChatColor.YELLOW + "ë¬´í™˜ì°½");
 //		ArrayList<String> leggingsLore = new ArrayList();
-//		leggingsLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 330");
+//		leggingsLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 330");
 //		leggingsLore.add(ChatColor.GRAY + " ");
-//		leggingsLore.add(ChatColor.GRAY + "½ÅÀº µí ¾È½ÅÀº µí °¡º­¿î ½Å¹ß");
+//		leggingsLore.add(ChatColor.GRAY + "ì‹ ì€ ë“¯ ì•ˆì‹ ì€ ë“¯ ê°€ë²¼ìš´ ì‹ ë°œ");
 //		leggingsIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 //		leggingsIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 //		leggingsIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -973,11 +973,11 @@ public class Main extends JavaPlugin implements Listener{
 //		ItemStack boots = new ItemStack(Material.IRON_BOOTS);
 //		ItemMeta bootsIm = boots.getItemMeta();
 //		bootsIm.setLocalizedName("500,0,0,0,0,0,0,0,0,0,330");
-//		bootsIm.setDisplayName(ChatColor.YELLOW + "°øÂü°¢");
+//		bootsIm.setDisplayName(ChatColor.YELLOW + "ê³µì°¸ê°");
 //		ArrayList<String> bootsLore = new ArrayList();
-//		bootsLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: 330");
+//		bootsLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: 330");
 //		bootsLore.add(ChatColor.GRAY + " ");
-//		bootsLore.add(ChatColor.GRAY + "»ó´ë¿ÍÀÇ °Å¸®¸¦ Á¼È÷±â À§ÇÑ ½Å¹ß");
+//		bootsLore.add(ChatColor.GRAY + "ìƒëŒ€ì™€ì˜ ê±°ë¦¬ë¥¼ ì¢íˆê¸° ìœ„í•œ ì‹ ë°œ");
 //		bootsIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 //		bootsIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 //		bootsIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -997,365 +997,365 @@ public class Main extends JavaPlugin implements Listener{
 			ItemStack bonus = new ItemStack(Material.NETHER_STAR);
 			ItemMeta bonusIm = bonus.getItemMeta();
 			bonusIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			bonusIm.setDisplayName(ChatColor.DARK_RED + "¿µ¿õÀÇ ÀÎÀå");
+			bonusIm.setDisplayName(ChatColor.DARK_RED + "ì˜ì›…ì˜ ì¸ì¥");
 			ArrayList<String> bonusLore = new ArrayList();
-			bonusLore.add(ChatColor.GRAY + "¿µ¿õÀ¸·Î¼­ ÀÌÁ¦ ÇÒ ¸¸Å­ Çß´Ù´Â ÁõÇ¥");
-			bonusLore.add(ChatColor.GRAY + "¿©·¯°³¸¦ ¸ğ¾Æ ¾îµò°¡¿¡¼­ ¾ÆÀÌÅÛÀ» »ì ¼ö ÀÖÀ» °Í °°´Ù.");
+			bonusLore.add(ChatColor.GRAY + "ì˜ì›…ìœ¼ë¡œì„œ ì´ì œ í•  ë§Œí¼ í–ˆë‹¤ëŠ” ì¦í‘œ");
+			bonusLore.add(ChatColor.GRAY + "ì—¬ëŸ¬ê°œë¥¼ ëª¨ì•„ ì–´ë”˜ê°€ì—ì„œ ì•„ì´í…œì„ ì‚´ ìˆ˜ ìˆì„ ê²ƒ ê°™ë‹¤.");
 			bonusIm.setLore(bonusLore);
 			bonusIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			bonusIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			bonus.setItemMeta(bonusIm);
 			player.getInventory().addItem(bonus);
 			player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
-			player.sendMessage(ChatColor.GREEN + "ÃÖ´ë ·¹º§ÀÎ 1000À» µ¹ÆÄÇÏ¿´½À´Ï´Ù.");
-			player.sendMessage(ChatColor.GREEN + "°æÇèÄ¡°¡ ÃÊ±âÈ­µÇ´Â ´ë½Å " + ChatColor.DARK_RED + "¿µ¿õÀÇ ÀÎÀå" + ChatColor.GREEN + "ÀÌ ÁÖ¾îÁı´Ï´Ù.");
+			player.sendMessage(ChatColor.GREEN + "ìµœëŒ€ ë ˆë²¨ì¸ 1000ì„ ëŒíŒŒí•˜ì˜€ìŠµë‹ˆë‹¤.");
+			player.sendMessage(ChatColor.GREEN + "ê²½í—˜ì¹˜ê°€ ì´ˆê¸°í™”ë˜ëŠ” ëŒ€ì‹  " + ChatColor.DARK_RED + "ì˜ì›…ì˜ ì¸ì¥" + ChatColor.GREEN + "ì´ ì£¼ì–´ì§‘ë‹ˆë‹¤.");
 			player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
 			return;
 		}
 		player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 0.5f);
 		
-		//¸ŞÀÎÄù½ºÆ®
+		//ë©”ì¸í€˜ìŠ¤íŠ¸
 		new MainQuest(player);
 		
 		if(player.getLevel() >= 1) {
-			//º» ÆÄÀÌÅÍ
+			//ë³¸ íŒŒì´í„°
 			if(player.getInventory().contains(Material.RED_DYE)) {
 				int lvl = player.getLevel();
 				player.setHealth(20);
-				player.sendMessage(ChatColor.GREEN + "·¹º§ ¾÷ (º» ÆÄÀÌÅÍ Lv" + player.getLevel() + ")");
+				player.sendMessage(ChatColor.GREEN + "ë ˆë²¨ ì—… (ë³¸ íŒŒì´í„° Lv" + player.getLevel() + ")");
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
-				player.sendMessage(ChatColor.WHITE + "ÃÖ´ëÃ¼·Â +8");
-				player.sendMessage(ChatColor.WHITE + "ÃÑ Ã¼·Â: " + (20 + lvl*8));
+				player.sendMessage(ChatColor.WHITE + "ìµœëŒ€ì²´ë ¥ +8");
+				player.sendMessage(ChatColor.WHITE + "ì´ ì²´ë ¥: " + (20 + lvl*8));
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
 				if(player.getLevel()==100) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ º» ÆÄÀÌÅÍ 100·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ë³¸ íŒŒì´í„° 100ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==200) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ º» ÆÄÀÌÅÍ 200·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ë³¸ íŒŒì´í„° 200ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==300) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ º» ÆÄÀÌÅÍ 300·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ë³¸ íŒŒì´í„° 300ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==400) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ º» ÆÄÀÌÅÍ 400·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ë³¸ íŒŒì´í„° 400ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==500) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ º» ÆÄÀÌÅÍ 500·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ë³¸ íŒŒì´í„° 500ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				}			
 			}
-			//±â»ç
+			//ê¸°ì‚¬
 			if(player.getInventory().contains(Material.GREEN_DYE)) {
 				int lvl = player.getLevel();
 				player.setHealth(20);
-				player.sendMessage(ChatColor.GREEN + "·¹º§ ¾÷ (±â»ç Lv" + player.getLevel() + ")");
+				player.sendMessage(ChatColor.GREEN + "ë ˆë²¨ ì—… (ê¸°ì‚¬ Lv" + player.getLevel() + ")");
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
-				player.sendMessage(ChatColor.WHITE + "ÃÖ´ëÃ¼·Â +5");
-				player.sendMessage(ChatColor.WHITE + "ÃÑ Ã¼·Â: " + (20 + lvl*5));
+				player.sendMessage(ChatColor.WHITE + "ìµœëŒ€ì²´ë ¥ +5");
+				player.sendMessage(ChatColor.WHITE + "ì´ ì²´ë ¥: " + (20 + lvl*5));
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
 				if(player.getLevel()==100) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ±â»ç 100·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ê¸°ì‚¬ 100ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==200) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ±â»ç 200·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ê¸°ì‚¬ 200ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==300) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ±â»ç 300·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ê¸°ì‚¬ 300ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==400) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ±â»ç 400·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ê¸°ì‚¬ 400ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==500) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ±â»ç 500·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ê¸°ì‚¬ 500ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				}
 			}
-			//ÇÁ¸®½ºÆ®
+			//í”„ë¦¬ìŠ¤íŠ¸
 			if(player.getInventory().contains(Material.LAPIS_LAZULI)) {
 				int lvl = player.getLevel();
 				player.setHealth(20);
-				player.sendMessage(ChatColor.GREEN + "·¹º§ ¾÷ (ÇÁ¸®½ºÆ® Lv" + player.getLevel() + ")");
+				player.sendMessage(ChatColor.GREEN + "ë ˆë²¨ ì—… (í”„ë¦¬ìŠ¤íŠ¸ Lv" + player.getLevel() + ")");
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
-				player.sendMessage(ChatColor.WHITE + "ÃÖ´ëÃ¼·Â +8");
-				player.sendMessage(ChatColor.WHITE + "ÃÑ Ã¼·Â: " + (20 + lvl*8));
+				player.sendMessage(ChatColor.WHITE + "ìµœëŒ€ì²´ë ¥ +8");
+				player.sendMessage(ChatColor.WHITE + "ì´ ì²´ë ¥: " + (20 + lvl*8));
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
 				if(player.getLevel()==100) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ÇÁ¸®½ºÆ® 100·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ í”„ë¦¬ìŠ¤íŠ¸ 100ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==200) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ÇÁ¸®½ºÆ® 200·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ í”„ë¦¬ìŠ¤íŠ¸ 200ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==300) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ÇÁ¸®½ºÆ® 300·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ í”„ë¦¬ìŠ¤íŠ¸ 300ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==400) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ÇÁ¸®½ºÆ® 400·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ í”„ë¦¬ìŠ¤íŠ¸ 400ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==500) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ÇÁ¸®½ºÆ® 500·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ í”„ë¦¬ìŠ¤íŠ¸ 500ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				}
 			}
-			//±¤Àü»ç
+			//ê´‘ì „ì‚¬
 			if(player.getInventory().contains(Material.CYAN_DYE)) {
 				int lvl = player.getLevel();
 				player.setHealth(20);
-				player.sendMessage(ChatColor.GREEN + "·¹º§ ¾÷ (±¤Àü»ç Lv" + player.getLevel() + ")");
+				player.sendMessage(ChatColor.GREEN + "ë ˆë²¨ ì—… (ê´‘ì „ì‚¬ Lv" + player.getLevel() + ")");
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
-				player.sendMessage(ChatColor.WHITE + "ÃÖ´ëÃ¼·Â +2");
-				player.sendMessage(ChatColor.WHITE + "ÃÑ Ã¼·Â: " + (20 + lvl*2));
+				player.sendMessage(ChatColor.WHITE + "ìµœëŒ€ì²´ë ¥ +2");
+				player.sendMessage(ChatColor.WHITE + "ì´ ì²´ë ¥: " + (20 + lvl*2));
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
 				if(player.getLevel()==100) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ±¤Àü»ç 100·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ê´‘ì „ì‚¬ 100ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==200) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ±¤Àü»ç 200·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ê´‘ì „ì‚¬ 200ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==300) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ±¤Àü»ç 300·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ê´‘ì „ì‚¬ 300ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==400) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ±¤Àü»ç 400·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ê´‘ì „ì‚¬ 400ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==500) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ±¤Àü»ç 500·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ê´‘ì „ì‚¬ 500ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				}
 			}
-			//µµ¹Ú»ç
+			//ë„ë°•ì‚¬
 			if(player.getInventory().contains(Material.LIGHT_GRAY_DYE)) {
 				int lvl = player.getLevel();
 				player.setHealth(20);
-				player.sendMessage(ChatColor.GREEN + "·¹º§ ¾÷ (µµ¹Ú»ç Lv" + player.getLevel() + ")");
+				player.sendMessage(ChatColor.GREEN + "ë ˆë²¨ ì—… (ë„ë°•ì‚¬ Lv" + player.getLevel() + ")");
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
-				player.sendMessage(ChatColor.WHITE + "ÃÖ´ëÃ¼·Â +10");
-				player.sendMessage(ChatColor.WHITE + "ÃÑ Ã¼·Â: " + (20 + lvl*10));
+				player.sendMessage(ChatColor.WHITE + "ìµœëŒ€ì²´ë ¥ +10");
+				player.sendMessage(ChatColor.WHITE + "ì´ ì²´ë ¥: " + (20 + lvl*10));
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
 				if(player.getLevel()==100) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ µµ¹Ú»ç 100·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ë„ë°•ì‚¬ 100ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==200) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ µµ¹Ú»ç 200·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ë„ë°•ì‚¬ 200ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==300) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ µµ¹Ú»ç 300·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ë„ë°•ì‚¬ 300ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==400) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ µµ¹Ú»ç 400·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ë„ë°•ì‚¬ 400ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==500) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ µµ¹Ú»ç 500·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ë„ë°•ì‚¬ 500ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				}
 			}
-			//µ¥ºô
+			//ë°ë¹Œ
 			if(player.getInventory().contains(Material.GRAY_DYE)) {
 				int lvl = player.getLevel();
 				player.setHealth(20);
-				player.sendMessage(ChatColor.GREEN + "·¹º§ ¾÷ (µ¥ºô Lv" + player.getLevel() + ")");
+				player.sendMessage(ChatColor.GREEN + "ë ˆë²¨ ì—… (ë°ë¹Œ Lv" + player.getLevel() + ")");
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
-				player.sendMessage(ChatColor.WHITE + "ÃÖ´ëÃ¼·Â +20");
-				player.sendMessage(ChatColor.WHITE + "ÃÑ Ã¼·Â: " + (20 + lvl*20));
+				player.sendMessage(ChatColor.WHITE + "ìµœëŒ€ì²´ë ¥ +20");
+				player.sendMessage(ChatColor.WHITE + "ì´ ì²´ë ¥: " + (20 + lvl*20));
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
 				if(player.getLevel()==100) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ µ¥ºô Æ¯¼ºÀ¸·Î 100·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ë°ë¹Œ íŠ¹ì„±ìœ¼ë¡œ 100ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==200) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ µ¥ºô Æ¯¼ºÀ¸·Î 200·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ë°ë¹Œ íŠ¹ì„±ìœ¼ë¡œ 200ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==300) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ µ¥ºô Æ¯¼ºÀ¸·Î 300·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ë°ë¹Œ íŠ¹ì„±ìœ¼ë¡œ 300ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==400) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ µ¥ºô Æ¯¼ºÀ¸·Î 400·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ë°ë¹Œ íŠ¹ì„±ìœ¼ë¡œ 400ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==500) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ µ¥ºô Æ¯¼ºÀ¸·Î 500·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ë°ë¹Œ íŠ¹ì„±ìœ¼ë¡œ 500ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				}
 			}
-			//¿£Á©
+			//ì—”ì ¤
 			if(player.getInventory().contains(Material.PINK_DYE)) {
 				int lvl = player.getLevel();
 				player.setHealth(20);
-				player.sendMessage(ChatColor.GREEN + "·¹º§ ¾÷ (¿£Á© Lv" + player.getLevel() + ")");
+				player.sendMessage(ChatColor.GREEN + "ë ˆë²¨ ì—… (ì—”ì ¤ Lv" + player.getLevel() + ")");
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
-				player.sendMessage(ChatColor.WHITE + "ÃÖ´ëÃ¼·Â +30");
-				player.sendMessage(ChatColor.WHITE + "ÃÑ Ã¼·Â: " + (20 + lvl*30));
+				player.sendMessage(ChatColor.WHITE + "ìµœëŒ€ì²´ë ¥ +30");
+				player.sendMessage(ChatColor.WHITE + "ì´ ì²´ë ¥: " + (20 + lvl*30));
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
 				if(player.getLevel()==100) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ¿£Á© Æ¯¼ºÀ¸·Î 100·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ì—”ì ¤ íŠ¹ì„±ìœ¼ë¡œ 100ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==200) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ¿£Á© Æ¯¼ºÀ¸·Î 200·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ì—”ì ¤ íŠ¹ì„±ìœ¼ë¡œ 200ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==300) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ¿£Á© Æ¯¼ºÀ¸·Î 300·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ì—”ì ¤ íŠ¹ì„±ìœ¼ë¡œ 300ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==400) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ¿£Á© Æ¯¼ºÀ¸·Î 400·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ì—”ì ¤ íŠ¹ì„±ìœ¼ë¡œ 400ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==500) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ¿£Á© Æ¯¼ºÀ¸·Î 500·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ì—”ì ¤ íŠ¹ì„±ìœ¼ë¡œ 500ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				}
 			}
-			//´ëÇàÀÚ
+			//ëŒ€í–‰ì
 			if(player.getInventory().contains(Material.LIME_DYE)) {
 				int lvl = player.getLevel();
 				player.setHealth(20);
-				player.sendMessage(ChatColor.GREEN + "·¹º§ ¾÷ (´ëÇàÀÚ Lv" + player.getLevel() + ")");
+				player.sendMessage(ChatColor.GREEN + "ë ˆë²¨ ì—… (ëŒ€í–‰ì Lv" + player.getLevel() + ")");
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
-				player.sendMessage(ChatColor.WHITE + "ÃÖ´ëÃ¼·Â +20");
-				player.sendMessage(ChatColor.WHITE + "ÃÑ Ã¼·Â: " + (20 + lvl*20));
+				player.sendMessage(ChatColor.WHITE + "ìµœëŒ€ì²´ë ¥ +20");
+				player.sendMessage(ChatColor.WHITE + "ì´ ì²´ë ¥: " + (20 + lvl*20));
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
 				if(player.getLevel()==100) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ´ëÇàÀÚ 100·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ëŒ€í–‰ì 100ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==200) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ´ëÇàÀÚ 200·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ëŒ€í–‰ì 200ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==300) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ´ëÇàÀÚ 300·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ëŒ€í–‰ì 300ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==400) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ´ëÇàÀÚ 400·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ëŒ€í–‰ì 400ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==500) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ´ëÇàÀÚ 500·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ëŒ€í–‰ì 500ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				}
 			}
-			//±×¸²ÀÚ ¹«»ç
+			//ê·¸ë¦¼ì ë¬´ì‚¬
 			if(player.getInventory().contains(Material.YELLOW_DYE)) {
 				int lvl = player.getLevel();
 				player.setHealth(20);
-				player.sendMessage(ChatColor.GREEN + "·¹º§ ¾÷ (±×¸²ÀÚ ¹«»ç Lv" + player.getLevel() + ")");
+				player.sendMessage(ChatColor.GREEN + "ë ˆë²¨ ì—… (ê·¸ë¦¼ì ë¬´ì‚¬ Lv" + player.getLevel() + ")");
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
-				player.sendMessage(ChatColor.WHITE + "ÃÖ´ëÃ¼·Â +8");
-				player.sendMessage(ChatColor.WHITE + "ÃÑ Ã¼·Â: " + (20 + lvl*8));
+				player.sendMessage(ChatColor.WHITE + "ìµœëŒ€ì²´ë ¥ +8");
+				player.sendMessage(ChatColor.WHITE + "ì´ ì²´ë ¥: " + (20 + lvl*8));
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
 				if(player.getLevel()==100) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ±×¸²ÀÚ ¹«»ç 100·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ê·¸ë¦¼ì ë¬´ì‚¬ 100ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==200) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ±×¸²ÀÚ ¹«»ç 200·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ê·¸ë¦¼ì ë¬´ì‚¬ 200ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==300) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ±×¸²ÀÚ ¹«»ç 300·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ê·¸ë¦¼ì ë¬´ì‚¬ 300ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==400) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ±×¸²ÀÚ ¹«»ç 400·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ê·¸ë¦¼ì ë¬´ì‚¬ 400ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==500) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ±×¸²ÀÚ ¹«»ç 500·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ê·¸ë¦¼ì ë¬´ì‚¬ 500ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				}
 			}
-			//¹ö¼­Ä¿
+			//ë²„ì„œì»¤
 			if(player.getInventory().contains(Material.LIGHT_BLUE_DYE)) {
 				int lvl = player.getLevel();
 				player.setHealth(20);
-				player.sendMessage(ChatColor.GREEN + "·¹º§ ¾÷ (¹ö¼­Ä¿ Lv" + player.getLevel() + ")");
+				player.sendMessage(ChatColor.GREEN + "ë ˆë²¨ ì—… (ë²„ì„œì»¤ Lv" + player.getLevel() + ")");
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
-				player.sendMessage(ChatColor.WHITE + "ÃÖ´ëÃ¼·Â +3");
-				player.sendMessage(ChatColor.WHITE + "ÃÑ Ã¼·Â: " + (20 + lvl*3));
+				player.sendMessage(ChatColor.WHITE + "ìµœëŒ€ì²´ë ¥ +3");
+				player.sendMessage(ChatColor.WHITE + "ì´ ì²´ë ¥: " + (20 + lvl*3));
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
 				if(player.getLevel()==100) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ¹ö¼­Ä¿ 100·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ë²„ì„œì»¤ 100ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==200) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ¹ö¼­Ä¿ 200·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ë²„ì„œì»¤ 200ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==300) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ¹ö¼­Ä¿ 300·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ë²„ì„œì»¤ 300ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==400) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ¹ö¼­Ä¿ 400·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ë²„ì„œì»¤ 400ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==500) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ¹ö¼­Ä¿ 500·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ë²„ì„œì»¤ 500ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				}
 			}
-			//±ºÀÎ
+			//êµ°ì¸
 			if(player.getInventory().contains(Material.MAGENTA_DYE)) {
 				int lvl = player.getLevel();
 				player.setHealth(20);
-				player.sendMessage(ChatColor.GREEN + "·¹º§ ¾÷ (±ºÀÎ Lv" + player.getLevel() + ")");
+				player.sendMessage(ChatColor.GREEN + "ë ˆë²¨ ì—… (êµ°ì¸ Lv" + player.getLevel() + ")");
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
-				player.sendMessage(ChatColor.WHITE + "ÃÖ´ëÃ¼·Â +15");
-				player.sendMessage(ChatColor.WHITE + "ÃÑ Ã¼·Â: " + (20 + lvl*15));
+				player.sendMessage(ChatColor.WHITE + "ìµœëŒ€ì²´ë ¥ +15");
+				player.sendMessage(ChatColor.WHITE + "ì´ ì²´ë ¥: " + (20 + lvl*15));
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
 				if(player.getLevel()==100) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ±ºÀÎ 100·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ êµ°ì¸ 100ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==200) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ±ºÀÎ 200·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ êµ°ì¸ 200ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==300) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ±ºÀÎ 300·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ êµ°ì¸ 300ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==400) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ±ºÀÎ 400·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ êµ°ì¸ 400ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==500) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ±ºÀÎ 500·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ êµ°ì¸ 500ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				}
 				if(player.getLevel()>=900) {
@@ -1364,198 +1364,198 @@ public class Main extends JavaPlugin implements Listener{
 						ItemStack job = new ItemStack(Material.INK_SAC);
 						ItemMeta jobIm = job.getItemMeta();
 						jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-						jobIm.setDisplayName(ChatColor.GOLD + "´ë´ëÀåÀÇ ÁõÇ¥");
+						jobIm.setDisplayName(ChatColor.GOLD + "ëŒ€ëŒ€ì¥ì˜ ì¦í‘œ");
 						jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 						jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 						job.setItemMeta(jobIm);
 						player.getInventory().setItem(7, job);
-						player.sendMessage(ChatColor.GREEN + "È÷µç Á¶°Ç ´Ş¼ºÀ¸·Î ´ë´ëÀå Á÷Ã¥ÀÌ µÇ¾ú½À´Ï´Ù.");
+						player.sendMessage(ChatColor.GREEN + "íˆë“  ì¡°ê±´ ë‹¬ì„±ìœ¼ë¡œ ëŒ€ëŒ€ì¥ ì§ì±…ì´ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 					}
 				}
 			}
-			//±×¸² ¸®ÆÛ
+			//ê·¸ë¦¼ ë¦¬í¼
 			if(player.getInventory().contains(Material.ORANGE_DYE)) {
 				int lvl = player.getLevel();
 				player.setHealth(20);
-				player.sendMessage(ChatColor.GREEN + "·¹º§ ¾÷ (±×¸² ¸®ÆÛ Lv" + player.getLevel() + ")");
+				player.sendMessage(ChatColor.GREEN + "ë ˆë²¨ ì—… (ê·¸ë¦¼ ë¦¬í¼ Lv" + player.getLevel() + ")");
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
-				player.sendMessage(ChatColor.WHITE + "ÃÖ´ëÃ¼·Â +10");
-				player.sendMessage(ChatColor.WHITE + "ÃÑ Ã¼·Â: " + (20 + lvl*10));
+				player.sendMessage(ChatColor.WHITE + "ìµœëŒ€ì²´ë ¥ +10");
+				player.sendMessage(ChatColor.WHITE + "ì´ ì²´ë ¥: " + (20 + lvl*10));
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
 				if(player.getLevel()==100) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ±×¸² ¸®ÆÛ Æ¯¼ºÀ¸·Î 100·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ê·¸ë¦¼ ë¦¬í¼ íŠ¹ì„±ìœ¼ë¡œ 100ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==200) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ±×¸² ¸®ÆÛ Æ¯¼ºÀ¸·Î 200·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ê·¸ë¦¼ ë¦¬í¼ íŠ¹ì„±ìœ¼ë¡œ 200ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==300) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ±×¸² ¸®ÆÛ Æ¯¼ºÀ¸·Î 300·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ê·¸ë¦¼ ë¦¬í¼ íŠ¹ì„±ìœ¼ë¡œ 300ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==400) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ±×¸² ¸®ÆÛ Æ¯¼ºÀ¸·Î 400·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ê·¸ë¦¼ ë¦¬í¼ íŠ¹ì„±ìœ¼ë¡œ 400ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==500) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ±×¸² ¸®ÆÛ Æ¯¼ºÀ¸·Î 500·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ê·¸ë¦¼ ë¦¬í¼ íŠ¹ì„±ìœ¼ë¡œ 500ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				}
 			}
-			//¸¶ÀÎ
+			//ë§ˆì¸
 			if(player.getInventory().contains(Material.BLUE_DYE)) {
 				int lvl = player.getLevel();
 				player.setHealth(20);
-				player.sendMessage(ChatColor.GREEN + "·¹º§ ¾÷ (¸¶ÀÎ Lv" + player.getLevel() + ")");
+				player.sendMessage(ChatColor.GREEN + "ë ˆë²¨ ì—… (ë§ˆì¸ Lv" + player.getLevel() + ")");
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
-				player.sendMessage(ChatColor.WHITE + "ÃÖ´ëÃ¼·Â +50");
-				player.sendMessage(ChatColor.WHITE + "ÃÑ Ã¼·Â: " + (20 + lvl*50));
+				player.sendMessage(ChatColor.WHITE + "ìµœëŒ€ì²´ë ¥ +50");
+				player.sendMessage(ChatColor.WHITE + "ì´ ì²´ë ¥: " + (20 + lvl*50));
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
 				if(player.getLevel()==100) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ¸¶ÀÎ Æ¯¼ºÀ¸·Î 100·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ë§ˆì¸ íŠ¹ì„±ìœ¼ë¡œ 100ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==200) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ¸¶ÀÎ Æ¯¼ºÀ¸·Î 200·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ë§ˆì¸ íŠ¹ì„±ìœ¼ë¡œ 200ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==300) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ¸¶ÀÎ Æ¯¼ºÀ¸·Î 300·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ë§ˆì¸ íŠ¹ì„±ìœ¼ë¡œ 300ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==400) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ¸¶ÀÎ Æ¯¼ºÀ¸·Î 400·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ë§ˆì¸ íŠ¹ì„±ìœ¼ë¡œ 400ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==500) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ¸¶ÀÎ Æ¯¼ºÀ¸·Î 500·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ë§ˆì¸ íŠ¹ì„±ìœ¼ë¡œ 500ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				}
 			}
-			//ÅÂÃÊÀÇ ÀÎ°£
+			//íƒœì´ˆì˜ ì¸ê°„
 			if(player.getInventory().contains(Material.BROWN_DYE)) {
 				int lvl = player.getLevel();
 				player.setHealth(20);
-				player.sendMessage(ChatColor.GREEN + "·¹º§ ¾÷ (ÆÈ¶óµò Lv" + player.getLevel() + ")");
+				player.sendMessage(ChatColor.GREEN + "ë ˆë²¨ ì—… (íŒ”ë¼ë”˜ Lv" + player.getLevel() + ")");
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
-				player.sendMessage(ChatColor.WHITE + "ÃÖ´ëÃ¼·Â +99");
-				player.sendMessage(ChatColor.WHITE + "ÃÑ Ã¼·Â: " + (20 + lvl*99));
+				player.sendMessage(ChatColor.WHITE + "ìµœëŒ€ì²´ë ¥ +99");
+				player.sendMessage(ChatColor.WHITE + "ì´ ì²´ë ¥: " + (20 + lvl*99));
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
 				if(player.getLevel()==100) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ÆÈ¶óµò Æ¯¼ºÀ¸·Î 100·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ íŒ”ë¼ë”˜ íŠ¹ì„±ìœ¼ë¡œ 100ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==200) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ÆÈ¶óµò Æ¯¼ºÀ¸·Î 200·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ íŒ”ë¼ë”˜ íŠ¹ì„±ìœ¼ë¡œ 200ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==300) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ÆÈ¶óµò Æ¯¼ºÀ¸·Î 300·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ íŒ”ë¼ë”˜ íŠ¹ì„±ìœ¼ë¡œ 300ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==400) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ÆÈ¶óµò Æ¯¼ºÀ¸·Î 400·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ íŒ”ë¼ë”˜ íŠ¹ì„±ìœ¼ë¡œ 400ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==500) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ÆÈ¶óµò Æ¯¼ºÀ¸·Î 500·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ íŒ”ë¼ë”˜ íŠ¹ì„±ìœ¼ë¡œ 500ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				}
 			}
-			//¿ë±â»ç
+			//ìš©ê¸°ì‚¬
 			if(player.getInventory().contains(Material.BLACK_DYE)) {
 				int lvl = player.getLevel();
 				player.setHealth(20);
-				player.sendMessage(ChatColor.GREEN + "·¹º§ ¾÷ (¿ë±â»ç Lv" + player.getLevel() + ")");
+				player.sendMessage(ChatColor.GREEN + "ë ˆë²¨ ì—… (ìš©ê¸°ì‚¬ Lv" + player.getLevel() + ")");
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
-				player.sendMessage(ChatColor.WHITE + "ÃÖ´ëÃ¼·Â +80");
-				player.sendMessage(ChatColor.WHITE + "ÃÑ Ã¼·Â: " + (20 + lvl*80));
+				player.sendMessage(ChatColor.WHITE + "ìµœëŒ€ì²´ë ¥ +80");
+				player.sendMessage(ChatColor.WHITE + "ì´ ì²´ë ¥: " + (20 + lvl*80));
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
 				if(player.getLevel()==100) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ¿ë±â»ç 100·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ìš©ê¸°ì‚¬ 100ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==200) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ¿ë±â»ç 200·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ìš©ê¸°ì‚¬ 200ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==300) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ¿ë±â»ç 300·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ìš©ê¸°ì‚¬ 300ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==400) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ¿ë±â»ç 400·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ìš©ê¸°ì‚¬ 400ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==500) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ¿ë±â»ç 500·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ìš©ê¸°ì‚¬ 500ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				}
 			}
-			//´ë´ëÀå
+			//ëŒ€ëŒ€ì¥
 			if(player.getInventory().contains(Material.INK_SAC)) {
 				int lvl = player.getLevel();
 				player.setHealth(20);
-				player.sendMessage(ChatColor.GREEN + "·¹º§ ¾÷ (´ë´ëÀå Lv" + player.getLevel() + ")");
+				player.sendMessage(ChatColor.GREEN + "ë ˆë²¨ ì—… (ëŒ€ëŒ€ì¥ Lv" + player.getLevel() + ")");
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
-				player.sendMessage(ChatColor.WHITE + "ÃÖ´ëÃ¼·Â +40");
-				player.sendMessage(ChatColor.WHITE + "ÃÑ Ã¼·Â: " + (20 + lvl*40));
+				player.sendMessage(ChatColor.WHITE + "ìµœëŒ€ì²´ë ¥ +40");
+				player.sendMessage(ChatColor.WHITE + "ì´ ì²´ë ¥: " + (20 + lvl*40));
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
 				if(player.getLevel()==100) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ´ë´ëÀå Á÷Ã¥À¸·Î 100·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ëŒ€ëŒ€ì¥ ì§ì±…ìœ¼ë¡œ 100ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==200) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ´ë´ëÀå Á÷Ã¥À¸·Î 200·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ëŒ€ëŒ€ì¥ ì§ì±…ìœ¼ë¡œ 200ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==300) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ´ë´ëÀå Á÷Ã¥À¸·Î 300·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ëŒ€ëŒ€ì¥ ì§ì±…ìœ¼ë¡œ 300ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==400) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ´ë´ëÀå Á÷Ã¥À¸·Î 400·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ëŒ€ëŒ€ì¥ ì§ì±…ìœ¼ë¡œ 400ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==500) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ´ë´ëÀå Á÷Ã¥À¸·Î 500·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ëŒ€ëŒ€ì¥ ì§ì±…ìœ¼ë¡œ 500ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				}
 			}
-			//¾ÆÃÄ
+			//ì•„ì³
 			if(player.getInventory().contains(Material.CLAY_BALL)) {
 				int lvl = player.getLevel();
 				player.setHealth(20);
-				player.sendMessage(ChatColor.GREEN + "·¹º§ ¾÷ (¾ÆÃ³ Lv" + player.getLevel() + ")");
+				player.sendMessage(ChatColor.GREEN + "ë ˆë²¨ ì—… (ì•„ì²˜ Lv" + player.getLevel() + ")");
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
-				player.sendMessage(ChatColor.WHITE + "ÃÖ´ëÃ¼·Â +10");
-				player.sendMessage(ChatColor.WHITE + "ÃÑ Ã¼·Â: " + (20 + lvl*10));
+				player.sendMessage(ChatColor.WHITE + "ìµœëŒ€ì²´ë ¥ +10");
+				player.sendMessage(ChatColor.WHITE + "ì´ ì²´ë ¥: " + (20 + lvl*10));
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
 				if(player.getLevel()==100) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ¾ÆÃ³ 100·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ì•„ì²˜ 100ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==200) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ¾ÆÃ³ 200·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ì•„ì²˜ 200ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==300) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ¾ÆÃ³ 300·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ì•„ì²˜ 300ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==400) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ¾ÆÃ³ 400·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ì•„ì²˜ 400ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==500) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ¾ÆÃ³ 500·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ì•„ì²˜ 500ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				}
 				if(player.getLevel()>=900) {
@@ -1564,48 +1564,48 @@ public class Main extends JavaPlugin implements Listener{
 						ItemStack job = new ItemStack(Material.GLOWSTONE_DUST);
 						ItemMeta jobIm = job.getItemMeta();
 						jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-						jobIm.setDisplayName(ChatColor.GOLD + "ÆÄ¿ö·¹ÀÎÀúÀÇ ÁõÇ¥");
+						jobIm.setDisplayName(ChatColor.GOLD + "íŒŒì›Œë ˆì¸ì €ì˜ ì¦í‘œ");
 						jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 						jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 						job.setItemMeta(jobIm);
 						player.getInventory().setItem(7, job);
-						player.sendMessage(ChatColor.GREEN + "È÷µç Á¶°Ç ´Ş¼ºÀ¸·Î ÆÄ¿ö·¹ÀÌÀú°¡ µÇ¾ú½À´Ï´Ù.");
+						player.sendMessage(ChatColor.GREEN + "íˆë“  ì¡°ê±´ ë‹¬ì„±ìœ¼ë¡œ íŒŒì›Œë ˆì´ì €ê°€ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 					}
 				}
 			}
-			//ÆÄ¿ö·¹ÀÎÀú
+			//íŒŒì›Œë ˆì¸ì €
 			if(player.getInventory().contains(Material.GLOWSTONE_DUST)) {
 				int lvl = player.getLevel();
 				player.setHealth(20);
-				player.sendMessage(ChatColor.GREEN + "·¹º§ ¾÷ (ÆÄ¿ö·¹ÀÎÀú Lv" + player.getLevel() + ")");
+				player.sendMessage(ChatColor.GREEN + "ë ˆë²¨ ì—… (íŒŒì›Œë ˆì¸ì € Lv" + player.getLevel() + ")");
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
-				player.sendMessage(ChatColor.WHITE + "ÃÖ´ëÃ¼·Â +60");
-				player.sendMessage(ChatColor.WHITE + "ÃÑ Ã¼·Â: " + (20 + lvl*60));
+				player.sendMessage(ChatColor.WHITE + "ìµœëŒ€ì²´ë ¥ +60");
+				player.sendMessage(ChatColor.WHITE + "ì´ ì²´ë ¥: " + (20 + lvl*60));
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
 				if(player.getLevel()==100) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ " + ChatColor.RED + "ÆÄ" + ChatColor.BLUE + "¿ö" + 
-					    		ChatColor.BLACK + "·¹" + ChatColor.YELLOW + "ÀÎ" + ChatColor.GREEN +"Àú " + ChatColor.WHITE + "100·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ " + ChatColor.RED + "íŒŒ" + ChatColor.BLUE + "ì›Œ" + 
+					    		ChatColor.BLACK + "ë ˆ" + ChatColor.YELLOW + "ì¸" + ChatColor.GREEN +"ì € " + ChatColor.WHITE + "100ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==200) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ " + ChatColor.RED + "ÆÄ" + ChatColor.BLUE + "¿ö" + 
-					    		ChatColor.BLACK + "·¹" + ChatColor.YELLOW + "ÀÎ" + ChatColor.GREEN +"Àú " + ChatColor.WHITE + "200·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ " + ChatColor.RED + "íŒŒ" + ChatColor.BLUE + "ì›Œ" + 
+					    		ChatColor.BLACK + "ë ˆ" + ChatColor.YELLOW + "ì¸" + ChatColor.GREEN +"ì € " + ChatColor.WHITE + "200ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==300) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ " + ChatColor.RED + "ÆÄ" + ChatColor.BLUE + "¿ö" + 
-					    		ChatColor.BLACK + "·¹" + ChatColor.YELLOW + "ÀÎ" + ChatColor.GREEN +"Àú " + ChatColor.WHITE + "300·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ " + ChatColor.RED + "íŒŒ" + ChatColor.BLUE + "ì›Œ" + 
+					    		ChatColor.BLACK + "ë ˆ" + ChatColor.YELLOW + "ì¸" + ChatColor.GREEN +"ì € " + ChatColor.WHITE + "300ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==400) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ " + ChatColor.RED + "ÆÄ" + ChatColor.BLUE + "¿ö" + 
-					    		ChatColor.BLACK + "·¹" + ChatColor.YELLOW + "ÀÎ" + ChatColor.GREEN +"Àú " + ChatColor.WHITE + "400·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ " + ChatColor.RED + "íŒŒ" + ChatColor.BLUE + "ì›Œ" + 
+					    		ChatColor.BLACK + "ë ˆ" + ChatColor.YELLOW + "ì¸" + ChatColor.GREEN +"ì € " + ChatColor.WHITE + "400ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				} else if(player.getLevel()==500) {
 					for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-					    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ " + ChatColor.RED + "ÆÄ" + ChatColor.BLUE + "¿ö" + 
-					    		ChatColor.BLACK + "·¹" + ChatColor.YELLOW + "ÀÎ" + ChatColor.GREEN +"Àú " + ChatColor.WHITE + "500·¹º§À» ´Ş¼ºÇß½À´Ï´Ù!");
+					    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ " + ChatColor.RED + "íŒŒ" + ChatColor.BLUE + "ì›Œ" + 
+					    		ChatColor.BLACK + "ë ˆ" + ChatColor.YELLOW + "ì¸" + ChatColor.GREEN +"ì € " + ChatColor.WHITE + "500ë ˆë²¨ì„ ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤!");
 					}	
 				}
 			}
@@ -1642,43 +1642,43 @@ public class Main extends JavaPlugin implements Listener{
 			Location magicTower = new Location(world,221,81,725,90,0);
 			Location longue = new Location(world,822,71,511,270,0);
 			
-			//Æ÷¸£°£ Ç×±¸ ÁÖº¯ -2000 101 2856  -1817 93 2546
+			//í¬ë¥´ê°„ í•­êµ¬ ì£¼ë³€ -2000 101 2856  -1817 93 2546
 			if(loc.getX() <= -1817 && loc.getZ() <= 2856 &&
 					loc.getX() >= -2000 && loc.getZ() >= 2546) {
 				event.setRespawnLocation(forgan);
 				return;
 			}
-			//ÀØÇôÁø ¹Ù´Ù ½ÅÀü 3815 62 3747  3599 0 3812
+			//ìŠí˜€ì§„ ë°”ë‹¤ ì‹ ì „ 3815 62 3747  3599 0 3812
 			if(loc.getX() <= 3815 && loc.getY() <= 62 && loc.getZ() <= 3812 &&
 					loc.getX() >= 3599 && loc.getY() >= 0 && loc.getZ() >= 3747) {
 				event.setRespawnLocation(wargunil);
 				return;
 			}
-			//½£ÀÇ À¯Àû 3563 69 3787  3439 8 3681
+			//ìˆ²ì˜ ìœ ì  3563 69 3787  3439 8 3681
 			if(loc.getX() <= 3563 && loc.getY() <= 69 && loc.getZ() <= 3787 &&
 					loc.getX() >= 3439 && loc.getY() >= 8 && loc.getZ() >= 3681) {
 				event.setRespawnLocation(forgan);
 				return;
 			}
-			//±¤»ê 3481 31 3837 3603 5 3976
+			//ê´‘ì‚° 3481 31 3837 3603 5 3976
 			if(loc.getX() <= 3603 && loc.getY() <= 31 && loc.getZ() <= 3976 
 					&& loc.getX() >= 3481 && loc.getY() >= 5 && loc.getZ() >= 3837) {
 				event.setRespawnLocation(seedMine);
 				return;
 			}
-			//Å¸¶ôÇÑ ¿äÁ¤ ¿Õ±¹ 3706 115 3591  3823 32 3287
+			//íƒ€ë½í•œ ìš”ì • ì™•êµ­ 3706 115 3591  3823 32 3287
 			if(loc.getX() <= 3823 && loc.getY() <= 115 && loc.getZ() <= 3591 
 					&& loc.getX() >= 3706 && loc.getY() >= 10 && loc.getZ() >= 3287) {
 				event.setRespawnLocation(seedMine);
 				return;
 			}
-			//Ä«·ç ´øÀü 3844 223 3276  3628 2 3105
+			//ì¹´ë£¨ ë˜ì „ 3844 223 3276  3628 2 3105
 			if(loc.getX() <= 3844 && loc.getY() <= 223 && loc.getZ() <= 3276 
 					&& loc.getX() >= 3628 && loc.getY() >= 2 && loc.getZ() >= 3105) {
 				event.setRespawnLocation(konno);
 				return;
 			}
-			//¾Æµ§ÀÇ ÀúÅÃ 3300 65 3706  3431 2 3835
+			//ì•„ë´ì˜ ì €íƒ 3300 65 3706  3431 2 3835
 			if(loc.getX() <= 3431 && loc.getY() <= 65 && loc.getZ() <= 3835 
 					&& loc.getX() >= 3300 && loc.getY() >= 2 && loc.getZ() >= 3706) {
 				event.setRespawnLocation(tiru);
@@ -1761,14 +1761,14 @@ public class Main extends JavaPlugin implements Listener{
 	@EventHandler
 	public void die(PlayerDeathEvent event) {
 		event.setDeathMessage(null);
-		// Äù½ºÆ® °ü·Ã
+		// í€˜ìŠ¤íŠ¸ ê´€ë ¨
 		try {
 			Player player = (Player) event.getEntity();
 			QuestBoard cb = new QuestBoard();
-			if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¸¶½Å¿ÕÀÇ °è¾à3===")) {
+			if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë§ˆì‹ ì™•ì˜ ê³„ì•½3===")) {
 				int qNum = cb.getNum(player);
 				cb.eq2_2(player, qNum + 1);
-			} else if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ÀÌ°ÍÀÌ Æ÷º¸¸£ ¿Õ?===")) {
+			} else if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì´ê²ƒì´ í¬ë³´ë¥´ ì™•?===")) {
 				Location loc = player.getLocation();
 				if (loc.getX() <= 49 && loc.getY() <= 61 && loc.getZ() <= 696 
 						&& loc.getX() >= 16 && loc.getY() >= 51 && loc.getZ() >= 654) {
@@ -1779,14 +1779,14 @@ public class Main extends JavaPlugin implements Listener{
 		} catch(Exception e) {
 			
 		}
-		// º¸½º¹Ù °ü·Ã
+		// ë³´ìŠ¤ë°” ê´€ë ¨
 		try {
 			Player player = (Player) event.getEntity();
 			new BossHealth().removePlayer(player);
 		} catch(Exception e) {
 			
 		}
-		// ¾È°Çµå·Áµµ µÊ
+		// ì•ˆê±´ë“œë ¤ë„ ë¨
 		try {
 			Player player = (Player) event.getEntity();
 			Cmd8Party cp = new Cmd8Party();
@@ -1804,7 +1804,7 @@ public class Main extends JavaPlugin implements Listener{
 		try {
 			Player player = (Player)event.getEntity();
 			PacketPlayOutTitle title = new PacketPlayOutTitle(EnumTitleAction.TITLE, 
-					ChatSerializer.a("{\"text\":\"¡×CYOU DIED\"}"));
+					ChatSerializer.a("{\"text\":\"Â§CYOU DIED\"}"));
 			Object handle = player.getClass().getMethod("getHandle").invoke(player);
 	        Object playerConnection = handle.getClass().getField("playerConnection").get(handle);
 	        playerConnection.getClass().getMethod("sendPacket", getNMSClass("Packet")).invoke(playerConnection, title);
@@ -1895,114 +1895,114 @@ public class Main extends JavaPlugin implements Listener{
 	@EventHandler
 	public void consumeItem(PlayerItemConsumeEvent event) {
 		Player player = (Player)event.getPlayer();
-		//HPÆ÷¼Ç
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "Èú¸µ Æ÷¼Ç I")) {
+		//HPí¬ì…˜
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "íë§ í¬ì…˜ I")) {
 			PotionRatio pr = new PotionRatio();
 			pr.calculation(player, 10.0);
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "Èú¸µ Æ÷¼Ç II")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "íë§ í¬ì…˜ II")) {
 			PotionRatio pr = new PotionRatio();
 			pr.calculation(player, 30.0);
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "Èú¸µ Æ÷¼Ç III")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "íë§ í¬ì…˜ III")) {
 			PotionRatio pr = new PotionRatio();
 			pr.calculation(player, 100.0);
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "Èú¸µ Æ÷¼Ç IV")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "íë§ í¬ì…˜ IV")) {
 			PotionRatio pr = new PotionRatio();
 			pr.calculation(player, 200.0);
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "Èú¸µ Æ÷¼Ç V")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "íë§ í¬ì…˜ V")) {
 			PotionRatio pr = new PotionRatio();
 			pr.calculation(player, 300.0);
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "Èú¸µ Æ÷¼Ç VI")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "íë§ í¬ì…˜ VI")) {
 			PotionRatio pr = new PotionRatio();
 			pr.calculation(player, 500.0);
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "Èú¸µ Æ÷¼Ç VII")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "íë§ í¬ì…˜ VII")) {
 			PotionRatio pr = new PotionRatio();
 			pr.calculation(player, 800.0);
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "Èú¸µ Æ÷¼Ç VIII")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "íë§ í¬ì…˜ VIII")) {
 			PotionRatio pr = new PotionRatio();
 			pr.calculation(player, 1100.0);
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "Èú¸µ Æ÷¼Ç IX")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "íë§ í¬ì…˜ IX")) {
 			PotionRatio pr = new PotionRatio();
 			pr.calculation(player, 1300.0);
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "Èú¸µ Æ÷¼Ç X")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "íë§ í¬ì…˜ X")) {
 			PotionRatio pr = new PotionRatio();
 			pr.calculation(player, 1600.0);
 		}
-		//Æ¯ÀÌ Æ÷¼Ç
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "¿¤¸¯¼­")) {
+		//íŠ¹ì´ í¬ì…˜
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "ì—˜ë¦­ì„œ")) {
 			for(PotionEffect effect : player.getActivePotionEffects ()){
 		        player.removePotionEffect(effect.getType());
 		    }
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "³Ã±âÀÇ Æ÷¼Ç")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "ëƒ‰ê¸°ì˜ í¬ì…˜")) {
 			player.setFireTicks(0);
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "¹Ù¶÷ÀÇ Æ÷¼Ç I")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "ë°”ëŒì˜ í¬ì…˜ I")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED,2400,0,true,false,false));
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "¹Ù¶÷ÀÇ Æ÷¼Ç II")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "ë°”ëŒì˜ í¬ì…˜ II")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED,2400,1,true,false,false));
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "°­È­µÈ ¹Ù¶÷ÀÇ Æ÷¼Ç II")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "ê°•í™”ëœ ë°”ëŒì˜ í¬ì…˜ II")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED,6000,1,true,false,false));
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "¹ÙÀ§ÀÇ Æ÷¼Ç I")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "ë°”ìœ„ì˜ í¬ì…˜ I")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,1800,0,true,false,false));
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "¹ÙÀ§ÀÇ Æ÷¼Ç II")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "ë°”ìœ„ì˜ í¬ì…˜ II")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,1800,1,true,false,false));
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,1800,0,true,false,false));
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "°­È­µÈ ¹ÙÀ§ÀÇ Æ÷¼Ç I")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "ê°•í™”ëœ ë°”ìœ„ì˜ í¬ì…˜ I")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,3600,0,true,false,false));
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "°­È­µÈ ¹ÙÀ§ÀÇ Æ÷¼Ç II")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "ê°•í™”ëœ ë°”ìœ„ì˜ í¬ì…˜ II")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,3000,1,true,false,false));
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,3000,0,true,false,false));
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "±ÙÀ°ÀÇ Æ÷¼Ç I")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "ê·¼ìœ¡ì˜ í¬ì…˜ I")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,1800,0,true,false,false));
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "°­È­µÈ ±ÙÀ°ÀÇ Æ÷¼Ç I")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "ê°•í™”ëœ ê·¼ìœ¡ì˜ í¬ì…˜ I")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,1800,30,true,false,false));
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "µµ¾àÀÇ Æ÷¼Ç I")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "ë„ì•½ì˜ í¬ì…˜ I")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,1200,0,true,false,false));
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "ÄÚÄÚ³Ó À½·á")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "ì½”ì½”ë„› ìŒë£Œ")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 6, 0,true,false,false));
 			player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 0,true,false,false));
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "¿ö±×´Ò Æ¯Á¦ ¿ÍÀÎ")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "ì›Œê·¸ë‹ íŠ¹ì œ ì™€ì¸")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION,1800,0,true,false,false));
 			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,1800,2,true,false,false));
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "ÇØ°ñ¹°")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "í•´ê³¨ë¬¼")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED,1200,2,true,false,false));
 			player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,1200,0,true,false,false));
 			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON,1200,0,true,false,false));
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "°ËÀº ÀÎ°£ÀÇ ÇÇ")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "ê²€ì€ ì¸ê°„ì˜ í”¼")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER,600,0,true,false,false));
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "¾àÀç ¿ì¸° ¹°")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "ì•½ì¬ ìš°ë¦° ë¬¼")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 600, 4,true,false,false));
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "°ÅºÏÀÌ ¿ì¸° ¹°")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "ê±°ë¶ì´ ìš°ë¦° ë¬¼")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 1,true,false,false));
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "´«¿¡ ÁÁÀº Æ÷¼Ç")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "ëˆˆì— ì¢‹ì€ í¬ì…˜")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, 1200, 0,true,false,false));
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "»ç¶ûÀÇ ¹¦¾à")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "ì‚¬ë‘ì˜ ë¬˜ì•½")) {
 			try {
 				Cmd8Party cp = new Cmd8Party();
 				ArrayList<Player> party = cp.getPlayerParty(player);
@@ -2013,73 +2013,73 @@ public class Main extends JavaPlugin implements Listener{
 				
 			}
 		}
-		//À½½Ä
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "´ë±¸±¸ÀÌ")) {
+		//ìŒì‹
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "ëŒ€êµ¬êµ¬ì´")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 2, 0,true,false,false));
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "¸ÀÀÖ´Â Ä¡Å²")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "ë§›ìˆëŠ” ì¹˜í‚¨")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 50, 0,true,false,false));
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "±¸¿î Ä¡Å²")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "êµ¬ìš´ ì¹˜í‚¨")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 80, 0,true,false,false));
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "ÆÄÆ¼¿ë Ä¥¸éÁ¶")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "íŒŒí‹°ìš© ì¹ ë©´ì¡°")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 80, 1,true,false,false));
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GRAY + "Æ÷¸£°£½Ä µÅÁö±¸ÀÌ")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GRAY + "í¬ë¥´ê°„ì‹ ë¼ì§€êµ¬ì´")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 140, 1,true,false,false));
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GRAY + "ÁÁÀº Àåºñ·Î ±¸¿î ´ß°í±â")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GRAY + "ì¢‹ì€ ì¥ë¹„ë¡œ êµ¬ìš´ ë‹­ê³ ê¸°")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 2400, 1,true,false,false));
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "¹ÌÇ£¸£À¯½Ä ´ß¿ä¸®")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "ë¯¸í‘€ë¥´ìœ ì‹ ë‹­ìš”ë¦¬")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 100, 2,true,false,false));
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GRAY + "Á¶¸®ÇÑ µÅÁö°í±â")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GRAY + "ì¡°ë¦¬í•œ ë¼ì§€ê³ ê¸°")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 2400, 0,true,false,false));
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "Æ¯Á¦¾ç³ä µÅÁö±¸ÀÌ")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "íŠ¹ì œì–‘ë… ë¼ì§€êµ¬ì´")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 100, 0,true,false,false));
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "Ä«ÀÌ¸¸½Ä ¾ç¿ä¸®")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "ì¹´ì´ë§Œì‹ ì–‘ìš”ë¦¬")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 20, 10,true,false,false));
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "°í±ŞÁø Ä«ÀÌ¸¸½Ä ¾ç¿ä¸®")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "ê³ ê¸‰ì§„ ì¹´ì´ë§Œì‹ ì–‘ìš”ë¦¬")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 1,true,false,false));
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "ÈÆÁ¦ ¿¬¾î")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "í›ˆì œ ì—°ì–´")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 30, 1,true,false,false));
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "ÄÚ¸®¾Æ ±è")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "ì½”ë¦¬ì•„ ê¹€")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, 100, 5,true,false,false));
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 200, 2,true,false,false));
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "°«ÀâÀº »ı¼±")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "ê°“ì¡ì€ ìƒì„ ")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 200, 0,true,false,false));
-			player.sendMessage(ChatColor.RED + "¹°°í±â¿¡ ±â»ıÃæÀÌ ÀÖ¾ú´ø °Í °°´Ù.");
+			player.sendMessage(ChatColor.RED + "ë¬¼ê³ ê¸°ì— ê¸°ìƒì¶©ì´ ìˆì—ˆë˜ ê²ƒ ê°™ë‹¤.");
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "¹Ù´Ù À§¿¡¼­ ±¸¿î »ı¼±±¸ÀÌ")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "ë°”ë‹¤ ìœ„ì—ì„œ êµ¬ìš´ ìƒì„ êµ¬ì´")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 200, 0,true,false,false));
 			player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 1,true,false,false));
 			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 2,true,false,false));
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "°­ÇÑ ºÒ¿¡ ÀÍÈù ½ºÅ×ÀÌÅ©")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "ê°•í•œ ë¶ˆì— ìµíŒ ìŠ¤í…Œì´í¬")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 100, 0,true,false,false));
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "¼öºñµå ½ºÅ×ÀÌÅ©")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "ìˆ˜ë¹„ë“œ ìŠ¤í…Œì´í¬")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 600, 0,true,false,false));
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "º£¾Æ±× µÅÁö ¿ä¸®")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "ë² ì•„ê·¸ ë¼ì§€ ìš”ë¦¬")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 150, 1,true,false,false));
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "º£¾Æ±×½Ä Æ¯Á¦ µÅÁö ±¸ÀÌ")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "ë² ì•„ê·¸ì‹ íŠ¹ì œ ë¼ì§€ êµ¬ì´")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 300, 1,true,false,false));
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "ÀÌ°ÍÀÌ ½ºÅ×ÀÌÅ©")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "ì´ê²ƒì´ ìŠ¤í…Œì´í¬")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 600, 1,true,false,false));
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 1,true,false,false));
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "Æ¼º» ½ºÅ×ÀÌÅ©")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "í‹°ë³¸ ìŠ¤í…Œì´í¬")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 300, 2,true,false,false));
 		}
 		
@@ -2154,174 +2154,174 @@ public class Main extends JavaPlugin implements Listener{
 		CraftingScroll cs = new CraftingScroll();
 		
 		try {
-			//¸¶À» ½ºÅ©·Ñ
+			//ë§ˆì„ ìŠ¤í¬ë¡¤
 			vilTP.vilTP(player, itemArg);
-			//¼÷¹ÚÆ¼ÄÏ
+			//ìˆ™ë°•í‹°ì¼“
 			ticket.sleep(player, itemArg);		
-			//ÀÌµ¿
+			//ì´ë™
 			tp.teleport(player, itemArg);
-			//º¸½º¼ÒÈ¯
+			//ë³´ìŠ¤ì†Œí™˜
 			boss.summon(player, itemArg);
-			//°­È­
+			//ê°•í™”
 			reinScroll.openInv(player, itemArg);
-			//°¨Á¤
+			//ê°ì •
 			define.effect(player, itemArg);
-			//Äù½ºÆ® ½ºÅ©·Ñ
+			//í€˜ìŠ¤íŠ¸ ìŠ¤í¬ë¡¤
 			qs.quest(player, itemArg);
-			//±âÅ¸ ½ºÅ©·Ñ
+			//ê¸°íƒ€ ìŠ¤í¬ë¡¤
 			as.effect(player, itemArg);
-			//¾ÆÀÌÅÛ ÆÄ±â ½ºÅ©·Ñ
+			//ì•„ì´í…œ íŒŒê¸° ìŠ¤í¬ë¡¤
 			ids.openInv(player, itemArg);
-			//Á¦ÀÛ ½ºÅ©·Ñ
+			//ì œì‘ ìŠ¤í¬ë¡¤
 			cs.openInv(player, itemArg);
 		} catch(Exception e) {
 			
 		}
 		
-		//Á÷¾÷
+		//ì§ì—…
 		if (event.getItemDrop().getItemStack().getType() == Material.NETHER_STAR) {
 			job.chooseJob(player, itemArg);
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard ());
 		}
 
-		//³íµå¶ø ¾ÆÀÌÅÛ
-		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "º» ÆÄÀÌÅÍÀÇ ÁõÇ¥")) {
+		//ë…¼ë“œë ì•„ì´í…œ
+		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "ë³¸ íŒŒì´í„°ì˜ ì¦í‘œ")) {
 			event.setCancelled(true);
 		}
-		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "±â»çÀÇ ÁõÇ¥")) {
+		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "ê¸°ì‚¬ì˜ ì¦í‘œ")) {
 			event.setCancelled(true);
 		}
-		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "ÇÁ¸®½ºÆ®ÀÇ ÁõÇ¥")) {
+		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "í”„ë¦¬ìŠ¤íŠ¸ì˜ ì¦í‘œ")) {
 			event.setCancelled(true);
 		}
-		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "±¤Àü»çÀÇ ÁõÇ¥")) {
+		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "ê´‘ì „ì‚¬ì˜ ì¦í‘œ")) {
 			event.setCancelled(true);
 		}
-		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "µµ¹Ú»çÀÇ ÁõÇ¥")) {
+		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "ë„ë°•ì‚¬ì˜ ì¦í‘œ")) {
 			event.setCancelled(true);
 		}
-		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "µ¥ºôÀÇ ÁõÇ¥")) {
+		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "ë°ë¹Œì˜ ì¦í‘œ")) {
 			event.setCancelled(true);
 		}
-		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "¿£Á©ÀÇ ÁõÇ¥")) {
+		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "ì—”ì ¤ì˜ ì¦í‘œ")) {
 			event.setCancelled(true);
 		}
-		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "´ëÇàÀÚÀÇ ÁõÇ¥")) {
+		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "ëŒ€í–‰ìì˜ ì¦í‘œ")) {
 			event.setCancelled(true);
 		}
-		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "±×¸²ÀÚ ¹«»çÀÇ ÁõÇ¥")) {
+		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "ê·¸ë¦¼ì ë¬´ì‚¬ì˜ ì¦í‘œ")) {
 			event.setCancelled(true);
 		}
-		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "¹ö¼­Ä¿ÀÇ ÁõÇ¥")) {
+		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "ë²„ì„œì»¤ì˜ ì¦í‘œ")) {
 			event.setCancelled(true);
 		}
-		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "±ºÀÎÀÇ ÁõÇ¥")) {
+		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "êµ°ì¸ì˜ ì¦í‘œ")) {
 			event.setCancelled(true);
 		}
-		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "±×¸² ¸®ÆÛÀÇ ÁõÇ¥")) {
+		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "ê·¸ë¦¼ ë¦¬í¼ì˜ ì¦í‘œ")) {
 			event.setCancelled(true);
 		}
-		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "¸¶ÀÎÀÇ ÁõÇ¥")) {
+		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "ë§ˆì¸ì˜ ì¦í‘œ")) {
 			event.setCancelled(true);
 		}
-		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "ÅÂÃÊÀÇ ÀÎ°£ÀÇ ÁõÇ¥")) {
+		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "íƒœì´ˆì˜ ì¸ê°„ì˜ ì¦í‘œ")) {
 			event.setCancelled(true);
 		}
-		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "¿ë±â»çÀÇ ÁõÇ¥")) {
+		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "ìš©ê¸°ì‚¬ì˜ ì¦í‘œ")) {
 			event.setCancelled(true);
 		}
-		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "´ë´ëÀåÀÇ ÁõÇ¥")) {
+		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "ëŒ€ëŒ€ì¥ì˜ ì¦í‘œ")) {
 			event.setCancelled(true);
 		}
-		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "ÆÄ¿ö·¹ÀÎÀúÀÇ ÁõÇ¥")) {
+		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "íŒŒì›Œë ˆì¸ì €ì˜ ì¦í‘œ")) {
 			event.setCancelled(true);
 		}
-		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "¾ÆÃ³ÀÇ ÁõÇ¥")) {
+		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "ì•„ì²˜ì˜ ì¦í‘œ")) {
 			event.setCancelled(true);
 		}
-		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.BLUE + "¸¶³ª")) {
+		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.BLUE + "ë§ˆë‚˜")) {
 			event.setCancelled(true);
 		}
-		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.RED + "¸¶³ª¾øÀ½")) {
+		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.RED + "ë§ˆë‚˜ì—†ìŒ")) {
 			event.setCancelled(true);
 		}
-		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "°í´ë µå·¡°ïÀÇ »À")) {
+		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "ê³ ëŒ€ ë“œë˜ê³¤ì˜ ë¼ˆ")) {
 			event.setCancelled(true);
 		}
 		if(event.getItemDrop().getItemStack().getType() == Material.WOODEN_HOE) {
-			player.sendMessage(ChatColor.RED + "µå¶ø ºÒ°¡ ¾ÆÀÌÅÛÀÔ´Ï´Ù.");
+			player.sendMessage(ChatColor.RED + "ë“œë ë¶ˆê°€ ì•„ì´í…œì…ë‹ˆë‹¤.");
 			event.setCancelled(true);
 		}
 		if(event.getItemDrop().getItemStack().getType() == Material.STONE_HOE) {
-			player.sendMessage(ChatColor.RED + "µå¶ø ºÒ°¡ ¾ÆÀÌÅÛÀÔ´Ï´Ù.");
+			player.sendMessage(ChatColor.RED + "ë“œë ë¶ˆê°€ ì•„ì´í…œì…ë‹ˆë‹¤.");
 			event.setCancelled(true);
 		}
 		if(event.getItemDrop().getItemStack().getType() == Material.IRON_HOE) {
-			player.sendMessage(ChatColor.RED + "µå¶ø ºÒ°¡ ¾ÆÀÌÅÛÀÔ´Ï´Ù.");
+			player.sendMessage(ChatColor.RED + "ë“œë ë¶ˆê°€ ì•„ì´í…œì…ë‹ˆë‹¤.");
 			event.setCancelled(true);
 		}
 		if(event.getItemDrop().getItemStack().getType() == Material.GOLDEN_HOE) {
-			player.sendMessage(ChatColor.RED + "µå¶ø ºÒ°¡ ¾ÆÀÌÅÛÀÔ´Ï´Ù.");
+			player.sendMessage(ChatColor.RED + "ë“œë ë¶ˆê°€ ì•„ì´í…œì…ë‹ˆë‹¤.");
 			event.setCancelled(true);
 		}
 		if(event.getItemDrop().getItemStack().getType() == Material.DIAMOND_HOE) {
-			player.sendMessage(ChatColor.RED + "µå¶ø ºÒ°¡ ¾ÆÀÌÅÛÀÔ´Ï´Ù.");
+			player.sendMessage(ChatColor.RED + "ë“œë ë¶ˆê°€ ì•„ì´í…œì…ë‹ˆë‹¤.");
 			event.setCancelled(true);
 		}
 		if(event.getItemDrop().getItemStack().getType() == Material.NETHERITE_HOE) {
-			player.sendMessage(ChatColor.RED + "µå¶ø ºÒ°¡ ¾ÆÀÌÅÛÀÔ´Ï´Ù.");
+			player.sendMessage(ChatColor.RED + "ë“œë ë¶ˆê°€ ì•„ì´í…œì…ë‹ˆë‹¤.");
 			event.setCancelled(true);
 		}
 		if(event.getItemDrop().getItemStack().getType() == Material.WOODEN_PICKAXE) {
-			player.sendMessage(ChatColor.RED + "µå¶ø ºÒ°¡ ¾ÆÀÌÅÛÀÔ´Ï´Ù.");
+			player.sendMessage(ChatColor.RED + "ë“œë ë¶ˆê°€ ì•„ì´í…œì…ë‹ˆë‹¤.");
 			event.setCancelled(true);
 		}
 		if(event.getItemDrop().getItemStack().getType() == Material.STONE_PICKAXE) {
-			player.sendMessage(ChatColor.RED + "µå¶ø ºÒ°¡ ¾ÆÀÌÅÛÀÔ´Ï´Ù.");
+			player.sendMessage(ChatColor.RED + "ë“œë ë¶ˆê°€ ì•„ì´í…œì…ë‹ˆë‹¤.");
 			event.setCancelled(true);
 		}
 		if(event.getItemDrop().getItemStack().getType() == Material.IRON_PICKAXE) {
-			player.sendMessage(ChatColor.RED + "µå¶ø ºÒ°¡ ¾ÆÀÌÅÛÀÔ´Ï´Ù.");
+			player.sendMessage(ChatColor.RED + "ë“œë ë¶ˆê°€ ì•„ì´í…œì…ë‹ˆë‹¤.");
 			event.setCancelled(true);
 		}
 		if(event.getItemDrop().getItemStack().getType() == Material.GOLDEN_PICKAXE) {
-			player.sendMessage(ChatColor.RED + "µå¶ø ºÒ°¡ ¾ÆÀÌÅÛÀÔ´Ï´Ù.");
+			player.sendMessage(ChatColor.RED + "ë“œë ë¶ˆê°€ ì•„ì´í…œì…ë‹ˆë‹¤.");
 			event.setCancelled(true);
 		}
 		if(event.getItemDrop().getItemStack().getType() == Material.DIAMOND_PICKAXE) {
-			player.sendMessage(ChatColor.RED + "µå¶ø ºÒ°¡ ¾ÆÀÌÅÛÀÔ´Ï´Ù.");
+			player.sendMessage(ChatColor.RED + "ë“œë ë¶ˆê°€ ì•„ì´í…œì…ë‹ˆë‹¤.");
 			event.setCancelled(true);
 		}
 		if(event.getItemDrop().getItemStack().getType() == Material.NETHERITE_PICKAXE) {
-			player.sendMessage(ChatColor.RED + "µå¶ø ºÒ°¡ ¾ÆÀÌÅÛÀÔ´Ï´Ù.");
+			player.sendMessage(ChatColor.RED + "ë“œë ë¶ˆê°€ ì•„ì´í…œì…ë‹ˆë‹¤.");
 			event.setCancelled(true);
 		}
 		if(event.getItemDrop().getItemStack().getType() == Material.WOODEN_SHOVEL) {
-			player.sendMessage(ChatColor.RED + "µå¶ø ºÒ°¡ ¾ÆÀÌÅÛÀÔ´Ï´Ù.");
+			player.sendMessage(ChatColor.RED + "ë“œë ë¶ˆê°€ ì•„ì´í…œì…ë‹ˆë‹¤.");
 			event.setCancelled(true);
 		}
 		if(event.getItemDrop().getItemStack().getType() == Material.STONE_SHOVEL) {
-			player.sendMessage(ChatColor.RED + "µå¶ø ºÒ°¡ ¾ÆÀÌÅÛÀÔ´Ï´Ù.");
+			player.sendMessage(ChatColor.RED + "ë“œë ë¶ˆê°€ ì•„ì´í…œì…ë‹ˆë‹¤.");
 			event.setCancelled(true);
 		}
 		if(event.getItemDrop().getItemStack().getType() == Material.IRON_SHOVEL) {
-			player.sendMessage(ChatColor.RED + "µå¶ø ºÒ°¡ ¾ÆÀÌÅÛÀÔ´Ï´Ù.");
+			player.sendMessage(ChatColor.RED + "ë“œë ë¶ˆê°€ ì•„ì´í…œì…ë‹ˆë‹¤.");
 			event.setCancelled(true);
 		}
 		if(event.getItemDrop().getItemStack().getType() == Material.GOLDEN_SHOVEL) {
-			player.sendMessage(ChatColor.RED + "µå¶ø ºÒ°¡ ¾ÆÀÌÅÛÀÔ´Ï´Ù.");
+			player.sendMessage(ChatColor.RED + "ë“œë ë¶ˆê°€ ì•„ì´í…œì…ë‹ˆë‹¤.");
 			event.setCancelled(true);
 		}
 		if(event.getItemDrop().getItemStack().getType() == Material.DIAMOND_SHOVEL) {
-			player.sendMessage(ChatColor.RED + "µå¶ø ºÒ°¡ ¾ÆÀÌÅÛÀÔ´Ï´Ù.");
+			player.sendMessage(ChatColor.RED + "ë“œë ë¶ˆê°€ ì•„ì´í…œì…ë‹ˆë‹¤.");
 			event.setCancelled(true);
 		}
 		if(event.getItemDrop().getItemStack().getType() == Material.NETHERITE_SHOVEL) {
-			player.sendMessage(ChatColor.RED + "µå¶ø ºÒ°¡ ¾ÆÀÌÅÛÀÔ´Ï´Ù.");
+			player.sendMessage(ChatColor.RED + "ë“œë ë¶ˆê°€ ì•„ì´í…œì…ë‹ˆë‹¤.");
 			event.setCancelled(true);
 		}
 		if(event.getItemDrop().getItemStack().getType() == Material.PLAYER_HEAD) {
-			player.sendMessage(ChatColor.RED + "µå¶ø ºÒ°¡ ¾ÆÀÌÅÛÀÔ´Ï´Ù.");
+			player.sendMessage(ChatColor.RED + "ë“œë ë¶ˆê°€ ì•„ì´í…œì…ë‹ˆë‹¤.");
 			event.setCancelled(true);
 		}
 	}
@@ -2332,10 +2332,10 @@ public class Main extends JavaPlugin implements Listener{
 			if(event.getDamager() instanceof Player) {
 				Player player = (Player) event.getDamager();
 				if(!(event.getEntity() instanceof Player)) {
-					if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "" + ChatColor.MAGIC + "½ÅÀÇ °Ë")) {
+					if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "" + ChatColor.MAGIC + "ì‹ ì˜ ê²€")) {
 						event.getEntity().remove();				
 					}
-					if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "" + ChatColor.MAGIC + "½ÅÀÇ °Ë[¹üÀ§ Ãà¼ÒÇü]")) {
+					if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "" + ChatColor.MAGIC + "ì‹ ì˜ ê²€[ë²”ìœ„ ì¶•ì†Œí˜•]")) {
 						event.getEntity().remove();				
 					}
 				}
@@ -3004,7 +3004,7 @@ public class Main extends JavaPlugin implements Listener{
 					}
 					double damage = (lvl * jobMul * skillMul * weaponMul) + enchMul;
 					try {
-						if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "Á×À½ÀÇ ¼­¾à")) {
+						if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "ì£½ìŒì˜ ì„œì•½")) {
 							damage = player.getLevel() * 50;
 						}
 					} catch(Exception e) {
@@ -3184,6 +3184,17 @@ public class Main extends JavaPlugin implements Listener{
 		} catch(Exception e) {
 			
 		}
+		// DisableAttack
+		try {
+			DisableAttack da = new DisableAttack();
+			Player player = (Player) event.getDamager();
+			if (!da.disable(player)) {
+				event.setCancelled(true);
+				return;
+			}
+		} catch (Exception e) {
+
+		}
 		//Damage Calc
 		try {
 			if(event.getDamager() instanceof Player) {
@@ -3229,7 +3240,7 @@ public class Main extends JavaPlugin implements Listener{
 					|| item.getType() == Material.NETHERITE_CHESTPLATE || item.getType() == Material.NETHERITE_LEGGINGS || item.getType() == Material.NETHERITE_BOOTS)) {
 				LimitLevel la = new LimitLevel();
 				if(la.limit(player, item) == false) {
-					player.sendMessage(ChatColor.RED + "¾ÆÁ÷ ÀÌ ¹«±â¸¦ ´Ù·ç±â¿¡´Â ³» ÈûÀÌ ºÎÁ·ÇÏ´Ù.");
+					player.sendMessage(ChatColor.RED + "ì•„ì§ ì´ ë¬´ê¸°ë¥¼ ë‹¤ë£¨ê¸°ì—ëŠ” ë‚´ í˜ì´ ë¶€ì¡±í•˜ë‹¤.");
 					event.setCancelled(true);
 					return;
 				}
@@ -3263,17 +3274,6 @@ public class Main extends JavaPlugin implements Listener{
 		} catch (Exception e) {
 
 		}
-		//DisableAttack
-		try {
-			DisableAttack da = new DisableAttack();
-			Player player = (Player) event.getDamager();
-			if(!da.disable(player)) {
-				event.setCancelled(true);
-				return;
-			}
-		} catch(Exception e) {
-			
-		}
 		//Sweeping Damage
 		try {
 			if (event.getDamager() instanceof Player) {
@@ -3301,55 +3301,55 @@ public class Main extends JavaPlugin implements Listener{
 			if(event.getDamager() instanceof Player) {
 				Player player = (Player) event.getDamager();
 				int num = player.getLevel();
-				// º» ÆÄÀÌÅÍ
+				// ë³¸ íŒŒì´í„°
 				if (player.getInventory().contains(Material.RED_DYE)) {
 					event.setDamage(event.getDamage() + num * 0.75);
 				}
-				// ±¤Àü»ç
+				// ê´‘ì „ì‚¬
 				if (player.getInventory().contains(Material.CYAN_DYE)) {
 					event.setDamage(event.getDamage() + num * 0.6);
 				}
-				// µ¥ºô
+				// ë°ë¹Œ
 				if (player.getInventory().contains(Material.GRAY_DYE)) {
 					event.setDamage(event.getDamage() + num * 5);
 				}
-				// ¿£Á©
+				// ì—”ì ¤
 				if (player.getInventory().contains(Material.PINK_DYE)) {
 					event.setDamage(event.getDamage() + num * 4);
 				}
-				// ´ëÇàÀÚ
+				// ëŒ€í–‰ì
 				if (player.getInventory().contains(Material.LIME_DYE)) {
 					event.setDamage(event.getDamage() + num * 4.5);
 				}
-				// ±×¸²ÀÚ ¹«»ç
+				// ê·¸ë¦¼ì ë¬´ì‚¬
 				if (player.getInventory().contains(Material.YELLOW_DYE)) {
 					event.setDamage(event.getDamage() + num * 0.5);
 				}
-				// ¹ö¼­Ä¿
+				// ë²„ì„œì»¤
 				if (player.getInventory().contains(Material.LIGHT_BLUE_DYE)) {
 					event.setDamage(event.getDamage() + num * 2);
 				}
-				// ±×¸² ¸®ÆÛ		
+				// ê·¸ë¦¼ ë¦¬í¼		
 				if (player.getInventory().contains(Material.ORANGE_DYE)) {
 					event.setDamage(event.getDamage() + num * 3);
 				}
-				// ±ºÀÎ	
+				// êµ°ì¸	
 				if (player.getInventory().contains(Material.MAGENTA_DYE)) {
 					event.setDamage(event.getDamage() + num * 2);
 				}
-				// ¸¶ÀÎ
+				// ë§ˆì¸
 				if (player.getInventory().contains(Material.BLUE_DYE)) {
 					event.setDamage(event.getDamage() + num * 30);
 				}
-				// ÆÈ¶óµò		
+				// íŒ”ë¼ë”˜		
 				if (player.getInventory().contains(Material.BROWN_DYE)) {
 					event.setDamage(event.getDamage() + num * 25);
 				}
-				// ¿ë±â»ç
+				// ìš©ê¸°ì‚¬
 				if (player.getInventory().contains(Material.BLACK_DYE)) {
 					event.setDamage(event.getDamage() + num * 28);
 				}
-				// ´ë´ëÀå
+				// ëŒ€ëŒ€ì¥
 				if (player.getInventory().contains(Material.INK_SAC)) {
 					event.setDamage(event.getDamage() + num * 15);
 				}
@@ -3526,7 +3526,7 @@ public class Main extends JavaPlugin implements Listener{
 			event.setCancelled(true);
 			return;
 		}
-		//Æ¯¼öµ©
+		//íŠ¹ìˆ˜ë€
 		try {
 			DamageRatio dr = new DamageRatio();
 			if (event.getCause() == DamageCause.FIRE_TICK || event.getCause() == DamageCause.FIRE || event.getCause() == DamageCause.HOT_FLOOR) {
@@ -3892,7 +3892,7 @@ public class Main extends JavaPlugin implements Listener{
 					MobDeath md = new MobDeath(mob, damage);
 				}
 			}
-			//¸÷ Á¤¸®
+			//ëª¹ ì •ë¦¬
 			if (event.getCause() == DamageCause.DROWNING) {
 				if (event.getEntity() instanceof Mob) {
 					Mob mob = (Mob) event.getEntity();
@@ -3933,18 +3933,18 @@ public class Main extends JavaPlugin implements Listener{
 
 		}
 		
-		// ¿¬½À »ó´ë
+		// ì—°ìŠµ ìƒëŒ€
 		if(event.getEntity().getType() == EntityType.MUSHROOM_COW) {
 			event.getEntity().setCustomName(Integer.toString((int) event.getFinalDamage()));
 			event.getEntity().setCustomNameVisible(true);
 		}
 		
-		// º¸½º¹Ù
+		// ë³´ìŠ¤ë°”
 		try {
 			if(!(event.getEntity() instanceof Player)) {
 				Entity mob = event.getEntity();
-				// ÄÚ³¶±×
-				if (mob.getCustomName().substring(2).equalsIgnoreCase("ÄÚ³¶±×" + ChatColor.YELLOW + " [Lv.??]")) {
+				// ì½”ë‚­ê·¸
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("ì½”ë‚­ê·¸" + ChatColor.YELLOW + " [Lv.??]")) {
 
 					LivingEntity boss = (LivingEntity) mob;
 					
@@ -3956,8 +3956,8 @@ public class Main extends JavaPlugin implements Listener{
 						new BossHealth().getBar1().setProgress(boss.getHealth() / 700000.0);
 					}
 				}
-				// Å¾ 1Ãş
-				if (mob.getCustomName().substring(2).equalsIgnoreCase("1ÃşÀÇ Áö¹èÀÚ" + ChatColor.YELLOW + " [Lv.??]")) {
+				// íƒ‘ 1ì¸µ
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("1ì¸µì˜ ì§€ë°°ì" + ChatColor.YELLOW + " [Lv.??]")) {
 
 					LivingEntity boss = (LivingEntity) mob;
 					
@@ -3969,8 +3969,8 @@ public class Main extends JavaPlugin implements Listener{
 						new BossHealth().getBar2().setProgress(boss.getHealth() / 250000.0);
 					}
 				}
-				// Å¾ 2Ãş
-				if (mob.getCustomName().substring(2).equalsIgnoreCase("2ÃşÀÇ Áö¹èÀÚ" + ChatColor.YELLOW + " [Lv.??]")) {
+				// íƒ‘ 2ì¸µ
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("2ì¸µì˜ ì§€ë°°ì" + ChatColor.YELLOW + " [Lv.??]")) {
 
 					LivingEntity boss = (LivingEntity) mob;
 					
@@ -3982,8 +3982,8 @@ public class Main extends JavaPlugin implements Listener{
 						new BossHealth().getBar3().setProgress(boss.getHealth() / 550000.0);
 					}
 				}
-				// Å¾ 3Ãş
-				if (mob.getCustomName().substring(2).equalsIgnoreCase("3ÃşÀÇ Áö¹èÀÚ" + ChatColor.YELLOW + " [Lv.??]")) {
+				// íƒ‘ 3ì¸µ
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("3ì¸µì˜ ì§€ë°°ì" + ChatColor.YELLOW + " [Lv.??]")) {
 
 					LivingEntity boss = (LivingEntity) mob;
 					
@@ -3995,8 +3995,8 @@ public class Main extends JavaPlugin implements Listener{
 						new BossHealth().getBar4().setProgress(boss.getHealth() / 1000000.0);
 					}
 				}
-				// ¾Æµ§
-				if (mob.getCustomName().substring(2).equalsIgnoreCase("¾Æµ§" + ChatColor.YELLOW + " [Lv.??]")) {
+				// ì•„ë´
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("ì•„ë´" + ChatColor.YELLOW + " [Lv.??]")) {
 
 					LivingEntity boss = (LivingEntity) mob;
 					
@@ -4008,8 +4008,8 @@ public class Main extends JavaPlugin implements Listener{
 						new BossHealth().getBar5().setProgress(boss.getHealth() / 20000.0);
 					}
 				}
-				// Æ¯±Ş ¿ä¸®»ç
-				if (mob.getCustomName().substring(2).equalsIgnoreCase("Æ¯±Ş ¿ä¸®»ç" + ChatColor.YELLOW + " [Lv.??]")) {
+				// íŠ¹ê¸‰ ìš”ë¦¬ì‚¬
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("íŠ¹ê¸‰ ìš”ë¦¬ì‚¬" + ChatColor.YELLOW + " [Lv.??]")) {
 
 					LivingEntity boss = (LivingEntity) mob;
 					
@@ -4021,8 +4021,8 @@ public class Main extends JavaPlugin implements Listener{
 						new BossHealth().getBar6().setProgress(boss.getHealth() / 60000.0);
 					}
 				}
-				// ÄÉÈê·»
-				if (mob.getCustomName().substring(2).equalsIgnoreCase("ÄÉÈê·»" + ChatColor.YELLOW + " [Lv.??]")) {
+				// ì¼€í˜ë Œ
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("ì¼€í˜ë Œ" + ChatColor.YELLOW + " [Lv.??]")) {
 
 					LivingEntity boss = (LivingEntity) mob;
 					
@@ -4034,8 +4034,8 @@ public class Main extends JavaPlugin implements Listener{
 						new BossHealth().getBar7().setProgress(boss.getHealth() / 70000.0);
 					}
 				}
-				// ¹ß·Î¸£
-				if (mob.getCustomName().substring(2).equalsIgnoreCase("¹ß·Î¸£" + ChatColor.YELLOW + " [Lv.??]")) {
+				// ë°œë¡œë¥´
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("ë°œë¡œë¥´" + ChatColor.YELLOW + " [Lv.??]")) {
 
 					LivingEntity boss = (LivingEntity) mob;
 					
@@ -4047,8 +4047,8 @@ public class Main extends JavaPlugin implements Listener{
 						new BossHealth().getBar8().setProgress(boss.getHealth() / 150000.0);
 					}
 				}
-				// Æ¼Å¸´Ï¾Æ
-				if (mob.getCustomName().substring(2).equalsIgnoreCase("¿äÁ¤¿©¿Õ Æ¼Å¸´Ï¾Æ" + ChatColor.YELLOW + " [Lv.??]")) {
+				// í‹°íƒ€ë‹ˆì•„
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("ìš”ì •ì—¬ì™• í‹°íƒ€ë‹ˆì•„" + ChatColor.YELLOW + " [Lv.??]")) {
 
 					LivingEntity boss = (LivingEntity) mob;
 					
@@ -4060,8 +4060,8 @@ public class Main extends JavaPlugin implements Listener{
 						new BossHealth().getBar9().setProgress(boss.getHealth() / 30000.0);
 					}
 				}
-				// ¿Àº£·Ğ
-				if (mob.getCustomName().substring(2).equalsIgnoreCase("¿äÁ¤¿Õ ¿Àº£·Ğ" + ChatColor.YELLOW + " [Lv.??]")) {
+				// ì˜¤ë² ë¡ 
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("ìš”ì •ì™• ì˜¤ë² ë¡ " + ChatColor.YELLOW + " [Lv.??]")) {
 
 					LivingEntity boss = (LivingEntity) mob;
 					
@@ -4073,8 +4073,8 @@ public class Main extends JavaPlugin implements Listener{
 						new BossHealth().getBar10().setProgress(boss.getHealth() / 30000.0);
 					}
 				}
-				// ¾Æ¶óÅ©³×
-				if (mob.getCustomName().substring(2).equalsIgnoreCase("¾Æ¶óÅ©³×" + ChatColor.YELLOW + " [Lv.??]")) {
+				// ì•„ë¼í¬ë„¤
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("ì•„ë¼í¬ë„¤" + ChatColor.YELLOW + " [Lv.??]")) {
 
 					LivingEntity boss = (LivingEntity) mob;
 					
@@ -4095,7 +4095,7 @@ public class Main extends JavaPlugin implements Listener{
 	
 	@EventHandler
 	public void mouseEvent(PlayerInteractEvent event) {
-		// Å×½ºÆ®¿ë
+		// í…ŒìŠ¤íŠ¸ìš©
 		try {
 			EquipmentSlot e = event.getHand();
 			if (e.equals(EquipmentSlot.HAND)) {
@@ -4149,7 +4149,7 @@ public class Main extends JavaPlugin implements Listener{
 		} catch (Exception e) {
 
 		}
-		// Àåºñ Âø¿ë
+		// ì¥ë¹„ ì°©ìš©
 		try {
 			EquipmentSlot e = event.getHand();
 			if (e.equals(EquipmentSlot.HAND)) {
@@ -4173,7 +4173,7 @@ public class Main extends JavaPlugin implements Listener{
 		} catch (Exception e) {
 
 		}
-		//´Ù¶ô¹® µî ¸·±â
+		//ë‹¤ë½ë¬¸ ë“± ë§‰ê¸°
 		try {
 			EquipmentSlot e = event.getHand (); 
 	        if (e.equals (EquipmentSlot.HAND)) {
@@ -4195,12 +4195,12 @@ public class Main extends JavaPlugin implements Listener{
 		} catch(Exception e) {
 			
 		}
-		//Äù½ºÆ®
+		//í€˜ìŠ¤íŠ¸
 		try {			
 			QuestBoard qb = new QuestBoard();
 			EquipmentSlot e = event.getHand (); 
 	        if (e.equals (EquipmentSlot.HAND)) {
-	        	//Äù½ºÆ® Å¬¸®¾î ÀÌº¥Æ®
+	        	//í€˜ìŠ¤íŠ¸ í´ë¦¬ì–´ ì´ë²¤íŠ¸
 	    		Player player = event.getPlayer();
 	    		if(event.getAction() == Action.RIGHT_CLICK_BLOCK) {
 	    			Block block = event.getClickedBlock();
@@ -4212,40 +4212,40 @@ public class Main extends JavaPlugin implements Listener{
 						}
 					}
 	    			if(block.getType()==Material.CHEST && block.getX()==-1977 && block.getY()==83 && block.getZ()==2950) {
-	    				if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ÇØÀû¼±ÀÇ º¸¹°===")) {
+	    				if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===í•´ì ì„ ì˜ ë³´ë¬¼===")) {
 	    					if (i != 0) {
 	    						int qNum = qb.getNum(player);
 		    					qb.q2(player, qNum+1);	
 							} else {
-								player.sendMessage(ChatColor.RED + "ÀÎº¥Åä¸®¿¡ ºóÄ­ÀÌ ¾ø½À´Ï´Ù.");
+								player.sendMessage(ChatColor.RED + "ì¸ë²¤í† ë¦¬ì— ë¹ˆì¹¸ì´ ì—†ìŠµë‹ˆë‹¤.");
 							}
 	    				}	    		
 	    				event.setCancelled(true);
 	    			}
 	    			if(block.getType()==Material.ENDER_CHEST && block.getX()==-699 && block.getY()==92 && block.getZ()==2143) {
-	    				if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===µî´ë¸¦ ¹àÈ÷´Â Èû===")) {
+	    				if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë“±ëŒ€ë¥¼ ë°íˆëŠ” í˜===")) {
 	    					if (i != 0) {
 	    						int qNum = qb.getNum(player);
 		    					qb.mq12(player, qNum+1);	
 							} else {
-								player.sendMessage(ChatColor.RED + "ÀÎº¥Åä¸®¿¡ ºóÄ­ÀÌ ¾ø½À´Ï´Ù.");
+								player.sendMessage(ChatColor.RED + "ì¸ë²¤í† ë¦¬ì— ë¹ˆì¹¸ì´ ì—†ìŠµë‹ˆë‹¤.");
 							}
 	    				}	    		
 	    				event.setCancelled(true);
 	    			}
 	    			if(block.getType()==Material.LECTERN && block.getX()==-1174 && block.getZ()==1983) {
-	    				if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ÆÄ¸£È¦·ĞÀÇ ¿ª»ç===")) {
+	    				if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===íŒŒë¥´í™€ë¡ ì˜ ì—­ì‚¬===")) {
 	    					if (i != 0) {
 	    						int qNum = qb.getNum(player);
 		    					qb.mq8(player, qNum+1);	
 							} else {
-								player.sendMessage(ChatColor.RED + "ÀÎº¥Åä¸®¿¡ ºóÄ­ÀÌ ¾ø½À´Ï´Ù.");
+								player.sendMessage(ChatColor.RED + "ì¸ë²¤í† ë¦¬ì— ë¹ˆì¹¸ì´ ì—†ìŠµë‹ˆë‹¤.");
 							}
 	    				}	
 	    				event.setCancelled(true);
 	    			}
 	    			if(block.getType()==Material.STONE_BUTTON && block.getX()==-699 && block.getZ()==2133) {
-	    				if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===µî´ë¿¡ ¼û°ÜÁø ºñ¹Ğ===")) {
+	    				if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë“±ëŒ€ì— ìˆ¨ê²¨ì§„ ë¹„ë°€===")) {
 	    					if (i != 0) {
 	    						int qNum = qb.getNum(player);
 		    					qb.mq11(player, qNum+1);
@@ -4253,10 +4253,10 @@ public class Main extends JavaPlugin implements Listener{
 		    					ChangeJob cj = new ChangeJob();
 		    					cj.changeJob1(player);
 							} else {
-								player.sendMessage(ChatColor.RED + "ÀÎº¥Åä¸®¿¡ ºóÄ­ÀÌ ¾ø½À´Ï´Ù.");
+								player.sendMessage(ChatColor.RED + "ì¸ë²¤í† ë¦¬ì— ë¹ˆì¹¸ì´ ì—†ìŠµë‹ˆë‹¤.");
 							}
 	    				}
-	    				if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Áø½ÇÀ» ¾Æ´Â ÀÚ6===")) {
+	    				if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì§„ì‹¤ì„ ì•„ëŠ” ì6===")) {
 	    					int qNum = qb.getNum(player);
 	    					qb.mq21(player, qNum+1);
 	    					player.teleport(new Location(world, 3796, 19, 3799.5));
@@ -4268,56 +4268,56 @@ public class Main extends JavaPlugin implements Listener{
     					cj.changeJob1(player);
 	    			}
 	    			if(block.getType()==Material.PLAYER_HEAD && block.getX()==-648 && block.getY()==42 && block.getZ()==1332) {
-	    				if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Áø½ÇÀ» ¾Æ´Â ÀÚ2===")) {
+	    				if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì§„ì‹¤ì„ ì•„ëŠ” ì2===")) {
 	    					if (i != 0) {
 	    						int qNum = qb.getNum(player);
 		    					qb.mq19(player, qNum+1);
 							} else {
-								player.sendMessage(ChatColor.RED + "ÀÎº¥Åä¸®¿¡ ºóÄ­ÀÌ ¾ø½À´Ï´Ù.");
+								player.sendMessage(ChatColor.RED + "ì¸ë²¤í† ë¦¬ì— ë¹ˆì¹¸ì´ ì—†ìŠµë‹ˆë‹¤.");
 							}
 	    				}	    		
 	    				event.setCancelled(true);
 	    			}
 	    			if(block.getType()==Material.CHEST && block.getX()==-1994 && block.getY()==32 && block.getZ()==81) {
-	    				if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¼³¿øÀÇ º¸¹°3===")) {
+	    				if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì„¤ì›ì˜ ë³´ë¬¼3===")) {
 	    					if (i != 0) {
 	    						int qNum = qb.getNum(player);
 		    					qb.mq26_1(player, qNum+1);
 							} else {
-								player.sendMessage(ChatColor.RED + "ÀÎº¥Åä¸®¿¡ ºóÄ­ÀÌ ¾ø½À´Ï´Ù.");
+								player.sendMessage(ChatColor.RED + "ì¸ë²¤í† ë¦¬ì— ë¹ˆì¹¸ì´ ì—†ìŠµë‹ˆë‹¤.");
 							}
 	    				}	    		
 	    				event.setCancelled(true);
 	    			}
 	    			if(block.getType()==Material.STONE_BUTTON && block.getX()==3812 && block.getZ()==3800) {
-	    				if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===°ËÀº Èå¸§ÀÇ Èû===")) {
+	    				if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ê²€ì€ íë¦„ì˜ í˜===")) {
 	    					if (i != 0) {
 	    						int qNum = qb.getNum(player);
 		    					qb.mq41(player, qNum+1);
 							} else {
-								player.sendMessage(ChatColor.RED + "ÀÎº¥Åä¸®¿¡ ºóÄ­ÀÌ ¾ø½À´Ï´Ù.");
+								player.sendMessage(ChatColor.RED + "ì¸ë²¤í† ë¦¬ì— ë¹ˆì¹¸ì´ ì—†ìŠµë‹ˆë‹¤.");
 							}
 	    				}	    		
 	    				event.setCancelled(true);
 	    			}
 	    			if(block.getType()==Material.STONE_BUTTON && block.getX()==3810 && block.getZ()==3800) {
-	    				if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===°ËÀº Èå¸§ÀÇ Èû===")) {
+	    				if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ê²€ì€ íë¦„ì˜ í˜===")) {
 	    					if (i != 0) {
 	    						int qNum = qb.getNum(player);
 		    					qb.mq41(player, qNum+2);
 							} else {
-								player.sendMessage(ChatColor.RED + "ÀÎº¥Åä¸®¿¡ ºóÄ­ÀÌ ¾ø½À´Ï´Ù.");
+								player.sendMessage(ChatColor.RED + "ì¸ë²¤í† ë¦¬ì— ë¹ˆì¹¸ì´ ì—†ìŠµë‹ˆë‹¤.");
 							}
 	    				}	    		
 	    				event.setCancelled(true);
 	    			}
 	    			if(block.getType()==Material.STONE_BUTTON && block.getX()==3808 && block.getZ()==3800) {
-	    				if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===°ËÀº Èå¸§ÀÇ Èû===")) {
+	    				if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ê²€ì€ íë¦„ì˜ í˜===")) {
 	    					if (i != 0) {
 	    						int qNum = qb.getNum(player);
 		    					qb.mq41(player, qNum+3);
 							} else {
-								player.sendMessage(ChatColor.RED + "ÀÎº¥Åä¸®¿¡ ºóÄ­ÀÌ ¾ø½À´Ï´Ù.");
+								player.sendMessage(ChatColor.RED + "ì¸ë²¤í† ë¦¬ì— ë¹ˆì¹¸ì´ ì—†ìŠµë‹ˆë‹¤.");
 							}
 	    				}	    		
 	    				event.setCancelled(true);
@@ -4333,7 +4333,7 @@ public class Main extends JavaPlugin implements Listener{
 	    					}
 	    				}
 	    				if(bool == false) {
-	    					player.sendMessage("´©±º°¡ ¾È¿¡ ÀÖ½À´Ï´Ù.");
+	    					player.sendMessage("ëˆ„êµ°ê°€ ì•ˆì— ìˆìŠµë‹ˆë‹¤.");
 	    				} else {
 	    					player.teleport(new Location(world, -1096, 186, 1453.5, -90.0f, 0.0f));
 	    					ItemStack skull = new ItemStack(Material.PLAYER_HEAD);
@@ -4365,7 +4365,7 @@ public class Main extends JavaPlugin implements Listener{
 		} catch(Exception e) {
 			
 		}
-		//´ÙÁßÃ¢°í ½Ã½ºÅÛ
+		//ë‹¤ì¤‘ì°½ê³  ì‹œìŠ¤í…œ
 		try {
 			EquipmentSlot e = event.getHand(); 
 	        if (e.equals (EquipmentSlot.HAND)) {	
@@ -4388,16 +4388,16 @@ public class Main extends JavaPlugin implements Listener{
 		} catch(Exception e) {
 			
 		}
-		//±âÅ¸
+		//ê¸°íƒ€
 		try {
 			EquipmentSlot e = event.getHand(); 
 	        if (e.equals (EquipmentSlot.HAND)) {	 
-	        	//³¯±â
+	        	//ë‚ ê¸°
 	        	try {
 	        		Player player = event.getPlayer();
 		        	if(player.getInventory().getItemInMainHand().getType() == Material.ELYTRA) {
 		        		if (player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) {												
-							player.sendMessage(ChatColor.GREEN + "[½ºÅ³]ºí¸µÅ©°¡ ¹ßµ¿µË´Ï´Ù.");
+							player.sendMessage(ChatColor.GREEN + "[ìŠ¤í‚¬]ë¸”ë§í¬ê°€ ë°œë™ë©ë‹ˆë‹¤.");
 
 							Vector vec = player.getEyeLocation().getDirection().multiply(3.0f);
 							player.setVelocity(vec);
@@ -4407,7 +4407,7 @@ public class Main extends JavaPlugin implements Listener{
 	        	} catch(Exception e1) {
 	        		
 	        	}
-	        	//¹ß»çÃ¼
+	        	//ë°œì‚¬ì²´
 	    		try {
 	    			if(event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
 	    				Player player = event.getPlayer();
@@ -4419,7 +4419,7 @@ public class Main extends JavaPlugin implements Listener{
 	    		} catch(Exception e1) {
 	    			
 	    		}	    		
-	        	//»óÀÚ ÀÌº¥Æ®&·çÆ® Ã¼½ºÆ®
+	        	//ìƒì ì´ë²¤íŠ¸&ë£¨íŠ¸ ì²´ìŠ¤íŠ¸
 	    		Player player = event.getPlayer();
 	    		if(event.getAction() == Action.RIGHT_CLICK_BLOCK) {
 	    			Block block = event.getClickedBlock();
@@ -4609,7 +4609,7 @@ public class Main extends JavaPlugin implements Listener{
 		    			event.setCancelled(true);
 	    			}
 	    		}
-	    		//Ãë¼Ò ÀÌº¥µå
+	    		//ì·¨ì†Œ ì´ë²¤ë“œ
 	    		try {
 	    			if(event.getAction() == Action.RIGHT_CLICK_BLOCK) {
 	        			if(player.getInventory().getItemInMainHand().getType()==Material.BAMBOO) {
@@ -4619,7 +4619,7 @@ public class Main extends JavaPlugin implements Listener{
 	    		} catch(Exception e1) {
 	    			
 	    		}
-	    		//Á×Ã¢ Æ¯¼ö ÀÌº¥Æ®
+	    		//ì£½ì°½ íŠ¹ìˆ˜ ì´ë²¤íŠ¸
 	    		try {
 	    			if(event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
 	        			if(player.getInventory().getItemInMainHand().getType()==Material.BAMBOO) {
@@ -4628,7 +4628,7 @@ public class Main extends JavaPlugin implements Listener{
 	        				    if (nearEntity.getType() == EntityType.PLAYER) { 
 	        				    	Player nearPlayer = (Player) nearEntity;
 	        				    	nearPlayer.setHealth(0);
-	        				    	nearPlayer.sendMessage(ChatColor.RED + player.getDisplayName() + "´ÔÀÌ Á×Ã¢À¸·Î ´ç½ÅÀ» ¼Ò¸ê½ÃÄ×½À´Ï´Ù.");
+	        				    	nearPlayer.sendMessage(ChatColor.RED + player.getDisplayName() + "ë‹˜ì´ ì£½ì°½ìœ¼ë¡œ ë‹¹ì‹ ì„ ì†Œë©¸ì‹œì¼°ìŠµë‹ˆë‹¤.");
 	        				    }        
 	        				}   	
 	        			}
@@ -4636,7 +4636,7 @@ public class Main extends JavaPlugin implements Listener{
 	    		} catch(Exception e1) {
 	    			
 	    		}  		
-	    		//ÁõÇ¥
+	    		//ì¦í‘œ
 	    		try {
 	    			if(event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
 	        			PlayerStat ps = new PlayerStat();
@@ -4645,7 +4645,7 @@ public class Main extends JavaPlugin implements Listener{
 	    		} catch(Exception e1) {
 	    			
 	    		}
-	    		//½ºÅ³
+	    		//ìŠ¤í‚¬
 	    		try {
 	    			if(event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
 	    				if(event.getClickedBlock() == null) {
@@ -4660,7 +4660,7 @@ public class Main extends JavaPlugin implements Listener{
 	    		} catch(Exception e1) {
 	    			
 	    		}   
-	    		//Ä¿¸ÇµåÇü ½ºÅ³
+	    		//ì»¤ë§¨ë“œí˜• ìŠ¤í‚¬
 	    		try {	    			
 	    			if(event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
 	    				Inventory inv = player.getInventory();
@@ -4755,7 +4755,7 @@ public class Main extends JavaPlugin implements Listener{
 		} catch(Exception e) {
 			
 		}
-		//¹ç º¸È£ ÀÌº¥Æ®
+		//ë°­ ë³´í˜¸ ì´ë²¤íŠ¸
 		try { 
 			if(event.getAction()==Action.PHYSICAL && event.getClickedBlock().getType() == Material.FARMLAND) {
 				event.setCancelled(true);
@@ -4767,7 +4767,7 @@ public class Main extends JavaPlugin implements Listener{
 	
 	@EventHandler
 	public void leftMouseEvent(PlayerAnimationEvent event) {
-		//Äù
+		//í€˜
 		try {					        
 			Player player = event.getPlayer();
 			Block block = player.getTargetBlockExact(5);
@@ -4782,35 +4782,35 @@ public class Main extends JavaPlugin implements Listener{
 				}
 				if (loc.getX() == -1492 && loc.getY() == 65 && loc.getZ() == 2035) {
 					QuestBoard qb = new QuestBoard();
-					if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Àü¼³ÀÇ ½ÃÀÛ===")) {
+					if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì „ì„¤ì˜ ì‹œì‘===")) {
 						if (i != 0) {
 							int qNum = qb.getNum(player);
 							qb.mq7(player, qNum + 1);
 						} else {
-							player.sendMessage(ChatColor.RED + "ÀÎº¥Åä¸®¿¡ ºóÄ­ÀÌ ¾ø½À´Ï´Ù.");
+							player.sendMessage(ChatColor.RED + "ì¸ë²¤í† ë¦¬ì— ë¹ˆì¹¸ì´ ì—†ìŠµë‹ˆë‹¤.");
 						}
 
 					}
 				}
 				if (loc.getX() == -1992 && loc.getY() == 58 && loc.getZ() == 2241) {
 					QuestBoard qb = new QuestBoard();
-					if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Æ÷º¸¸£ÀÇ ¹«±â1===")) {
+					if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===í¬ë³´ë¥´ì˜ ë¬´ê¸°1===")) {
 						if (i != 0) {
 							int qNum = qb.getNum(player);
 							qb.mq15(player, qNum + 1);
 						} else {
-							player.sendMessage(ChatColor.RED + "ÀÎº¥Åä¸®¿¡ ºóÄ­ÀÌ ¾ø½À´Ï´Ù.");
+							player.sendMessage(ChatColor.RED + "ì¸ë²¤í† ë¦¬ì— ë¹ˆì¹¸ì´ ì—†ìŠµë‹ˆë‹¤.");
 						}
 					}
 				}
 				if (loc.getX() == -1105 && loc.getY() == 82 && loc.getZ() == 1235) {
 					QuestBoard qb = new QuestBoard();
-					if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Áø½ÇÀ» ¾Æ´Â ÀÚ1===")) {
+					if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì§„ì‹¤ì„ ì•„ëŠ” ì1===")) {
 						if (i != 0) {
 							int qNum = qb.getNum(player);
 							qb.mq18(player, qNum + 1);
 						} else {
-							player.sendMessage(ChatColor.RED + "ÀÎº¥Åä¸®¿¡ ºóÄ­ÀÌ ¾ø½À´Ï´Ù.");
+							player.sendMessage(ChatColor.RED + "ì¸ë²¤í† ë¦¬ì— ë¹ˆì¹¸ì´ ì—†ìŠµë‹ˆë‹¤.");
 						}
 					}
 				}
@@ -4818,7 +4818,7 @@ public class Main extends JavaPlugin implements Listener{
 		} catch(Exception e) {
 			
 		}	
-		//»ıÈ°
+		//ìƒí™œ
 		try {					        
 			Player player = event.getPlayer();
 			Location loc = player.getLocation();
@@ -4838,7 +4838,7 @@ public class Main extends JavaPlugin implements Listener{
 		} catch(Exception e) {
 			
 		}		
-		//½ºÅ³
+		//ìŠ¤í‚¬
 		try {
 			Player player = event.getPlayer();
 			if(event.getAnimationType() == PlayerAnimationType.ARM_SWING) {
@@ -4850,7 +4850,7 @@ public class Main extends JavaPlugin implements Listener{
 		} catch(Exception e1) {
 			
 		}
-		//Ä¿¸ÇµåÇü ½ºÅ³
+		//ì»¤ë§¨ë“œí˜• ìŠ¤í‚¬
 		try {
 			Player player = event.getPlayer();
 			Inventory inv = player.getInventory();
@@ -4970,7 +4970,7 @@ public class Main extends JavaPlugin implements Listener{
 	public void summonMobDeathEvent(EntityDeathEvent event) {
 		//bomb
 		try {
-			if(event.getEntity().getCustomName().substring(2).split("¡×")[0].equalsIgnoreCase("¿¬¾î ÀÎÇü")) {
+			if(event.getEntity().getCustomName().substring(2).split("Â§")[0].equalsIgnoreCase("ì—°ì–´ ì¸í˜•")) {
 				String name = event.getEntity().getCustomName().substring(14);
 				String numStr = name.split("]")[0];
 				int num = Integer.parseInt(numStr);
@@ -4984,7 +4984,7 @@ public class Main extends JavaPlugin implements Listener{
 				    }        
 				}   
 			}
-			if(event.getEntity().getCustomName().substring(2).split("¡×")[0].equalsIgnoreCase("µ¥ºôÀÇ Èû")) {
+			if(event.getEntity().getCustomName().substring(2).split("Â§")[0].equalsIgnoreCase("ë°ë¹Œì˜ í˜")) {
 				List <Entity> entitylist = event.getEntity().getNearbyEntities (10, 20, 10); 
 				for (Entity nearEntity : entitylist) { 
 				    if(nearEntity instanceof LivingEntity) {
@@ -4994,11 +4994,11 @@ public class Main extends JavaPlugin implements Listener{
 				    }        
 				}
 			}
-			if(event.getEntity().getCustomName().substring(2).split("¡×")[0].equalsIgnoreCase("À¯ÀûÀÇ ÁÖÀÎ")) {
+			if(event.getEntity().getCustomName().substring(2).split("Â§")[0].equalsIgnoreCase("ìœ ì ì˜ ì£¼ì¸")) {
 				
 				ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
 				ItemMeta rewardKeyIm = rewardKey.getItemMeta();
-				rewardKeyIm.setDisplayName(ChatColor.YELLOW + "½£ÀÇ À¯Àû º¸»ó ¿­¼è");
+				rewardKeyIm.setDisplayName(ChatColor.YELLOW + "ìˆ²ì˜ ìœ ì  ë³´ìƒ ì—´ì‡ ");
 				rewardKey.setItemMeta(rewardKeyIm);
 				
 				List<Entity> entitylist = event.getEntity().getNearbyEntities(40, 20, 40);
@@ -5010,7 +5010,7 @@ public class Main extends JavaPlugin implements Listener{
 								&& nearplayer.getLocation().getY() >= 15 && nearplayer.getLocation().getZ() >= 3691) {
 							nearplayer.getInventory().addItem(rewardKey);
 							nearplayer.teleport(new Location(world, 3465, 37, 3749.5, -90f, 1.4f));
-							nearplayer.sendMessage("À¯Àû ¾îµò°¡·Î ÀÌµ¿Çß´Ù.");
+							nearplayer.sendMessage("ìœ ì  ì–´ë”˜ê°€ë¡œ ì´ë™í–ˆë‹¤.");
 						}
 					}
 				}
@@ -5048,7 +5048,7 @@ public class Main extends JavaPlugin implements Listener{
 		        	if(cnt/64 != 0) {
 		        		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, cnt/64);
 		        		ItemMeta im = item.getItemMeta();
-		        		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		        		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		        		item.setItemMeta(im);
 		        		player.getInventory().addItem(item);
 		        	}
@@ -5066,13 +5066,13 @@ public class Main extends JavaPlugin implements Listener{
 		        	if(cnt2/64 != 0) {
 		        		ItemStack item = new ItemStack(Material.SCUTE, cnt2/64);
 		        		ItemMeta im = item.getItemMeta();
-		        		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		        		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		        		item.setItemMeta(im);
 		        		player.getInventory().addItem(item);
 		        	}
 		        	ItemStack eme2 = new ItemStack(Material.EMERALD_BLOCK, cnt2%64);
 	        		ItemMeta emeIm2 = eme2.getItemMeta();
-	        		emeIm2.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+	        		emeIm2.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 	        		eme2.setItemMeta(emeIm2);
 		        	player.getInventory().addItem(eme2);
 		        	
@@ -5088,13 +5088,13 @@ public class Main extends JavaPlugin implements Listener{
 		        	if(cnt3/64 != 0) {
 		        		ItemStack item = new ItemStack(Material.RABBIT_HIDE, cnt3/64);
 		        		ItemMeta im = item.getItemMeta();
-		        		im.setDisplayName(ChatColor.AQUA + "¿¡¸Ş¶öµå °áÁ¤");
+		        		im.setDisplayName(ChatColor.AQUA + "ì—ë©”ë„ë“œ ê²°ì •");
 		        		item.setItemMeta(im);
 		        		player.getInventory().addItem(item);
 		        	}
 		        	ItemStack eme3 = new ItemStack(Material.SCUTE, cnt3%64);
 	        		ItemMeta emeIm3 = eme3.getItemMeta();
-	        		emeIm3.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+	        		emeIm3.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 	        		eme3.setItemMeta(emeIm3);
 		        	player.getInventory().addItem(eme3);
 		        	
@@ -5109,13 +5109,13 @@ public class Main extends JavaPlugin implements Listener{
 		        	if(cnt4/64 != 0) {
 		        		ItemStack item = new ItemStack(Material.RABBIT_FOOT, cnt4/64);
 		        		ItemMeta im = item.getItemMeta();
-		        		im.setDisplayName(ChatColor.DARK_RED + "¿¡¸Ş¶öµå °áÁ¤+");
+		        		im.setDisplayName(ChatColor.DARK_RED + "ì—ë©”ë„ë“œ ê²°ì •+");
 		        		item.setItemMeta(im);
 		        		player.getInventory().addItem(item);
 		        	}
 		        	ItemStack eme4 = new ItemStack(Material.RABBIT_HIDE, cnt4%64);
 	        		ItemMeta emeIm4 = eme4.getItemMeta();
-	        		emeIm4.setDisplayName(ChatColor.AQUA + "¿¡¸Ş¶öµå °áÁ¤");
+	        		emeIm4.setDisplayName(ChatColor.AQUA + "ì—ë©”ë„ë“œ ê²°ì •");
 	        		eme4.setItemMeta(emeIm4);
 		        	player.getInventory().addItem(eme4);
 	        	}
@@ -5135,14 +5135,18 @@ public class Main extends JavaPlugin implements Listener{
 				event.setCancelled(true);
 				return;
 			}
-			// ºô¸®Àú ´ëÈ­
+			if(event.getRightClicked().getType() == EntityType.ARMOR_STAND && player.getGameMode() == GameMode.ADVENTURE) {
+				event.setCancelled(true);
+				return;
+			}
+			// ë¹Œë¦¬ì € ëŒ€í™”
 			if(event.getRightClicked().getType() == EntityType.VILLAGER || event.getRightClicked().getType() == EntityType.ARMOR_STAND) {
 				InteractVillager iv = new InteractVillager();
 				if(iv.interactVillager(player, event.getRightClicked()) == true) {
 					event.setCancelled(true);
 				}
 			}
-			// npc ´ëÈ­
+			// npc ëŒ€í™”
 			if (event.getRightClicked().getType() == EntityType.SKELETON_HORSE) {
 				InteractNPC iv = new InteractNPC();
 				if (iv.interactNPC(player, event.getRightClicked()) == true) {
@@ -5390,14 +5394,14 @@ public class Main extends JavaPlugin implements Listener{
 		            return;
 		        }
 		        if(clicked != null && clicked.getType() == Material.MAGMA_CREAM) {
-		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.RED + "³ª°¡±â")) {
+		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.RED + "ë‚˜ê°€ê¸°")) {
 		            	player.closeInventory();
 		        	}
 		            event.setCancelled(true);
 		            return;
 		        }  
 		        if(clicked != null && clicked.getType() == Material.SHULKER_SHELL) {
-		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.RED + "³ª°¡±â")) {
+		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.RED + "ë‚˜ê°€ê¸°")) {
 		            	player.closeInventory();
 		        	}
 		            event.setCancelled(true);
@@ -5430,7 +5434,7 @@ public class Main extends JavaPlugin implements Listener{
 		            return;
 		        }
 		        if(clicked != null && clicked.getType() == Material.SLIME_BALL) {
-		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "°­È­ÇÏ±â")) {
+		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ê°•í™”í•˜ê¸°")) {
 		        		Inventory inv = event.getInventory();
 		        		ReinforcementMakeEvent rm = new ReinforcementMakeEvent();
 		        		if(rm.rein(player, inv) == false) {
@@ -5438,7 +5442,7 @@ public class Main extends JavaPlugin implements Listener{
 		        			return;
 		        		}
 		        	}
-		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "Á¦ÀÛÇÏ±â")) {
+		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ì œì‘í•˜ê¸°")) {
 		        		Inventory inv = event.getInventory();
 		        		CraftingItem ci = new CraftingItem();
 		        		ci.make(player, inv);
@@ -5474,19 +5478,19 @@ public class Main extends JavaPlugin implements Listener{
 		
 		// Message
 		if (player.getDisplayName().equalsIgnoreCase("yumehama")) {
-			event.setQuitMessage(ChatColor.DARK_RED + "'´õ °ÔÀÓ Á¾°áÀÚ' À¯¸ŞÇÏ¸¶" + ChatColor.WHITE + "´ÔÀÌ ·Î±×¾Æ¿ô ÇÏ¿´½À´Ï´Ù.");
+			event.setQuitMessage(ChatColor.DARK_RED + "'ë” ê²Œì„ ì¢…ê²°ì' ìœ ë©”í•˜ë§ˆ" + ChatColor.WHITE + "ë‹˜ì´ ë¡œê·¸ì•„ì›ƒ í•˜ì˜€ìŠµë‹ˆë‹¤.");
 		} else if (player.getDisplayName().equalsIgnoreCase("WoolRing")) {
-			event.setQuitMessage(ChatColor.GREEN + "'±×¸° ÀÏ·ºÆ®·Î´Ğ Àü»ç' ¿ï¸µ" + ChatColor.WHITE + "´ÔÀÌ ¸»µµ ¾øÀÌ Å»ÁÖÇÕ´Ï´Ù.");
+			event.setQuitMessage(ChatColor.GREEN + "'ê·¸ë¦° ì¼ë ‰íŠ¸ë¡œë‹‰ ì „ì‚¬' ìš¸ë§" + ChatColor.WHITE + "ë‹˜ì´ ë§ë„ ì—†ì´ íƒˆì£¼í•©ë‹ˆë‹¤.");
 		} else if (player.getDisplayName().equalsIgnoreCase("_nanoboost_")) {
-			event.setQuitMessage(ChatColor.RED + "·ùÅ©°¡ ÁöÃÄ Àá¿¡ µé¾ú½À´Ï´Ù.");
+			event.setQuitMessage(ChatColor.RED + "ë¥˜í¬ê°€ ì§€ì³ ì ì— ë“¤ì—ˆìŠµë‹ˆë‹¤.");
 		} else if(player.getDisplayName().equalsIgnoreCase("why9196")) {
 			event.setQuitMessage(ChatColor.BLACK + "????????????????");
 		} else if(player.getDisplayName().equalsIgnoreCase("Akilae3102")) {
-			event.setQuitMessage("ÃµÀú ÁØÁ¦°¡ ½½ÇÂ " + ChatColor.AQUA + "'ÃÖ°­ÀÇ µà¾ó¸®½ºÆ®' ¾ÆÅ³·¹°¡ ¼¼»óÀ» ¶°³µ½À´Ï´Ù.");
+			event.setQuitMessage("ì²œì € ì¤€ì œê°€ ìŠ¬í”ˆ " + ChatColor.AQUA + "'ìµœê°•ì˜ ë“€ì–¼ë¦¬ìŠ¤íŠ¸' ì•„í‚¬ë ˆê°€ ì„¸ìƒì„ ë– ë‚¬ìŠµë‹ˆë‹¤.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Espina_ID")) {
-			event.setQuitMessage(ChatColor.BOLD + "'¸ğÅäÄ«»óÀÇ ¿¬ÀÎÀÌ¾úÁö¸¸ Ä«ÁîÇÏ»óÀ» °ø·«ÇÏ°íÀÚ ÇÏÁö¸¸ ÀÌµå¸¦ »ç¶ûÇÏ´Â' ¿¡½ºÇÇ³ª°¡ µ¥ÀÌÆ®¸¦ ÇÏ·¯ 2D¼¼Ä«ÀÌ·Î ¶°³µ½À´Ï´Ù.");
+			event.setQuitMessage(ChatColor.BOLD + "'ëª¨í† ì¹´ìƒì˜ ì—°ì¸ì´ì—ˆì§€ë§Œ ì¹´ì¦ˆí•˜ìƒì„ ê³µëµí•˜ê³ ì í•˜ì§€ë§Œ ì´ë“œë¥¼ ì‚¬ë‘í•˜ëŠ”' ì—ìŠ¤í”¼ë‚˜ê°€ ë°ì´íŠ¸ë¥¼ í•˜ëŸ¬ 2Dì„¸ì¹´ì´ë¡œ ë– ë‚¬ìŠµë‹ˆë‹¤.");
 		} else {
-			event.setQuitMessage("¾ß»ıÀÇ ´©±º°¡°¡ µµ¸ÁÃÄ¹ö·È´Ù.");
+			event.setQuitMessage("ì•¼ìƒì˜ ëˆ„êµ°ê°€ê°€ ë„ë§ì³ë²„ë ¸ë‹¤.");
 		}
 		
 		// Off in Dungeon
@@ -5621,8 +5625,8 @@ public class Main extends JavaPlugin implements Listener{
                     fw.write("\n" + str);
                     fw.write("\n" + "player name: " + player.getDisplayName());
                     fw.write("\n" + "player location: " + (int)(player.getLocation().getX()) + " " + (int)(player.getLocation().getY()) + " " + (int)(player.getLocation().getZ()));
-                    fw.write("\n" + "·¹º§: " + player.getLevel() + " °æÇèÄ¡: " + "(" + (int)(player.getExp()*player.getExpToLevel()) + "/" + player.getExpToLevel() + ")"
-                    		+ " ÃÖ´ëÃ¼·Â: " + player.getMaxHealth());
+                    fw.write("\n" + "ë ˆë²¨: " + player.getLevel() + " ê²½í—˜ì¹˜: " + "(" + (int)(player.getExp()*player.getExpToLevel()) + "/" + player.getExpToLevel() + ")"
+                    		+ " ìµœëŒ€ì²´ë ¥: " + player.getMaxHealth());
                     fw.write("\n");
                     for(int i = 0 ; i<41 ; i++){                    
                     	 try {
@@ -5659,339 +5663,339 @@ public class Main extends JavaPlugin implements Listener{
                     BufferedReader bufReader = new BufferedReader(filereader);
                     FileWriter fw = new FileWriter(file, false);              
                     QuestBoard qb = new QuestBoard();
-            		if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ÇØ¾ÈÀÇ À§Çù===")) {
+            		if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===í•´ì•ˆì˜ ìœ„í˜‘===")) {
             				int number =  qb.getNum(player);
             				fw.write("q1\n");
             				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ÇØÀû¼±ÀÇ º¸¹°===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===í•´ì ì„ ì˜ ë³´ë¬¼===")) {
         				int number =  qb.getNum(player);
         				fw.write("q2\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Æ÷º¸¸£ÀÇ ¸»´Ü===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===í¬ë³´ë¥´ì˜ ë§ë‹¨===")) {
         				int number =  qb.getNum(player);
         				fw.write("q3\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¹Ğ »ç³É²Û===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë°€ ì‚¬ëƒ¥ê¾¼===")) {
         				int number =  qb.getNum(player);
         				fw.write("q4\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Ä§·«ÀÚ===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì¹¨ëµì===")) {
         				int number =  qb.getNum(player);
         				fw.write("q5\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===½£ ±íÀº °÷===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ìˆ² ê¹Šì€ ê³³===")) {
         				int number =  qb.getNum(player);
         				fw.write("q6\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===À¯ÀûÀ» Á¤È­ÇÏ´Â ÀÚ===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ìœ ì ì„ ì •í™”í•˜ëŠ” ì===")) {
         				int number =  qb.getNum(player);
         				fw.write("q7\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===°°¾Æº¸ÀÌÁö¸¸ ´Ù¸¥===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ê°™ì•„ë³´ì´ì§€ë§Œ ë‹¤ë¥¸===")) {
         				int number =  qb.getNum(player);
         				fw.write("q8\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Æ÷º¸¸£ÀÇ À§Çù===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===í¬ë³´ë¥´ì˜ ìœ„í˜‘===")) {
         				int number =  qb.getNum(player);
         				fw.write("q9\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Å»È¯===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===íƒˆí™˜===")) {
         				int number =  qb.getNum(player);
         				fw.write("q10\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===³×Å©·Îº§¸®===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë„¤í¬ë¡œë²¨ë¦¬===")) {
         				int number =  qb.getNum(player);
         				fw.write("q11\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===µ¥ºô ÀÎÀÚ===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë°ë¹Œ ì¸ì===")) {
         				int number =  qb.getNum(player);
         				fw.write("q12\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===»õ·Î¿î °íºí¸°===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ìƒˆë¡œìš´ ê³ ë¸”ë¦°===")) {
         				int number =  qb.getNum(player);
         				fw.write("q13\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ºÒÀÇ ¾Ç¸¶===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë¶ˆì˜ ì•…ë§ˆ===")) {
         				int number =  qb.getNum(player);
         				fw.write("q14\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¹æÇØ¹ŞÀº ÆÄ±«¼öÀÇ ÀáI===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë°©í•´ë°›ì€ íŒŒê´´ìˆ˜ì˜ ì I===")) {
         				int number =  qb.getNum(player);
         				fw.write("q15\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¹¦Áö¸¦ ÁöÅ°´Â ÀÚ===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë¬˜ì§€ë¥¼ ì§€í‚¤ëŠ” ì===")) {
         				int number =  qb.getNum(player);
         				fw.write("q16\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ÆøÅºº´===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===í­íƒ„ë³‘===")) {
         				int number =  qb.getNum(player);
         				fw.write("q17\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¿¡¹ĞÀÇ °áÀÇ===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì—ë°€ì˜ ê²°ì˜===")) {
         				int number =  qb.getNum(player);
         				fw.write("q18\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¼³¿øÀÇ °¡Èñ1===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì„¤ì›ì˜ ê°€í¬1===")) {
         				int number =  qb.getNum(player);
         				fw.write("eq1\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¼³¿øÀÇ °¡Èñ2===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì„¤ì›ì˜ ê°€í¬2===")) {
         				int number =  qb.getNum(player);
         				fw.write("eq1_1\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¼³¿øÀÇ °¡Èñ3===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì„¤ì›ì˜ ê°€í¬3===")) {
         				int number =  qb.getNum(player);
         				fw.write("eq1_2\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¼³¿øÀÇ °¡Èñ4===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì„¤ì›ì˜ ê°€í¬4===")) {
         				int number =  qb.getNum(player);
         				fw.write("eq1_3\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¼³¿øÀÇ °¡Èñ5===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì„¤ì›ì˜ ê°€í¬5===")) {
         				int number =  qb.getNum(player);
         				fw.write("eq1_4\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¼³¿øÀÇ °¡Èñ6===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì„¤ì›ì˜ ê°€í¬6===")) {
         				int number =  qb.getNum(player);
         				fw.write("eq1_5\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¼³¿øÀÇ °¡Èñ7===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì„¤ì›ì˜ ê°€í¬7===")) {
         				int number =  qb.getNum(player);
         				fw.write("eq1_6\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¸¶½Å¿ÕÀÇ °è¾à1===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë§ˆì‹ ì™•ì˜ ê³„ì•½1===")) {
         				int number =  qb.getNum(player);
         				fw.write("eq2\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¸¶½Å¿ÕÀÇ °è¾à2===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë§ˆì‹ ì™•ì˜ ê³„ì•½2===")) {
         				int number =  qb.getNum(player);
         				fw.write("eq2_1\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¸¶½Å¿ÕÀÇ °è¾à3===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë§ˆì‹ ì™•ì˜ ê³„ì•½3===")) {
         				int number =  qb.getNum(player);
         				fw.write("eq2_2\n");
         				fw.write(Integer.toString(number));
-            		}  else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¿ö±×´Ò ¼¶ÀÇ ºñ¹Ğ===")) {
+            		}  else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì›Œê·¸ë‹ ì„¬ì˜ ë¹„ë°€===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq1\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¼ö·ÃÀÇ ½ÃÀÛ===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ìˆ˜ë ¨ì˜ ì‹œì‘===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq2\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¿¡ÀÏ ¶¥À¸·Î===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì—ì¼ ë•…ìœ¼ë¡œ===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq3\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ÃÌÀåÀÇ ºÎÅ¹1===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì´Œì¥ì˜ ë¶€íƒ1===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq4\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ÃÌÀåÀÇ ºÎÅ¹2===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì´Œì¥ì˜ ë¶€íƒ2===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq5\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ÃÌÀåÀÇ ºÎÅ¹3===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì´Œì¥ì˜ ë¶€íƒ3===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq6\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Àü¼³ÀÇ ½ÃÀÛ===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì „ì„¤ì˜ ì‹œì‘===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq7\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ÆÄ¸£È¦·ĞÀÇ ¿ª»ç===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===íŒŒë¥´í™€ë¡ ì˜ ì—­ì‚¬===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq8\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¾ÕÀ¸·Î ³ª¾Æ°¡±â À§ÇÑ ¿©Á¤===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì•ìœ¼ë¡œ ë‚˜ì•„ê°€ê¸° ìœ„í•œ ì—¬ì •===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq9\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===µî´ëÁö±â ½ÃÇè===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë“±ëŒ€ì§€ê¸° ì‹œí—˜===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq10\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===µî´ë¿¡ ¼û°ÜÁø ºñ¹Ğ===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë“±ëŒ€ì— ìˆ¨ê²¨ì§„ ë¹„ë°€===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq11\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===µî´ë¸¦ ¹àÈ÷´Â Èû===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë“±ëŒ€ë¥¼ ë°íˆëŠ” í˜===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq12\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===½Ãµå ±¤»êÀ¸·Î °¡´Â ±æ===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì‹œë“œ ê´‘ì‚°ìœ¼ë¡œ ê°€ëŠ” ê¸¸===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq13\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===½Ãµå ±¤»ê===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì‹œë“œ ê´‘ì‚°===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq14\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Æ÷º¸¸£ÀÇ ¹«±â1===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===í¬ë³´ë¥´ì˜ ë¬´ê¸°1===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq15\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Æ÷º¸¸£ÀÇ ¹«±â2===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===í¬ë³´ë¥´ì˜ ë¬´ê¸°2===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq15_1\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¹ÌÇ£¸£À¯ ¼º===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë¯¸í‘€ë¥´ìœ  ì„±===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq16\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ÀººûÀÇ ¿µ¿ª===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì€ë¹›ì˜ ì˜ì—­===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq17\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Áø½ÇÀ» ¾Æ´Â ÀÚ1===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì§„ì‹¤ì„ ì•„ëŠ” ì1===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq18\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Áø½ÇÀ» ¾Æ´Â ÀÚ2===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì§„ì‹¤ì„ ì•„ëŠ” ì2===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq19\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Áø½ÇÀ» ¾Æ´Â ÀÚ3===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì§„ì‹¤ì„ ì•„ëŠ” ì3===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq20\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Áø½ÇÀ» ¾Æ´Â ÀÚ4===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì§„ì‹¤ì„ ì•„ëŠ” ì4===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq20_1\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Áø½ÇÀ» ¾Æ´Â ÀÚ5===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì§„ì‹¤ì„ ì•„ëŠ” ì5===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq20_2\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Áø½ÇÀ» ¾Æ´Â ÀÚ6===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì§„ì‹¤ì„ ì•„ëŠ” ì6===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq21\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¾Æ¶õ¸ğ¾î===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì•„ë€ëª¨ì–´===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq22\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===´øÀü Å½»ö===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë˜ì „ íƒìƒ‰===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq23\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Ä«·ç ´øÀü===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì¹´ë£¨ ë˜ì „===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq24\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¼³¿øÀÇ º¸¹°1===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì„¤ì›ì˜ ë³´ë¬¼1===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq25\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¼³¿øÀÇ º¸¹°2===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì„¤ì›ì˜ ë³´ë¬¼2===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq26\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¼³¿øÀÇ º¸¹°3===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì„¤ì›ì˜ ë³´ë¬¼3===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq26_1\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===»õ·Î¿î ¸¸³²===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ìƒˆë¡œìš´ ë§Œë‚¨===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq27\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===´ËÁöÀÇ ¸¶½Å¿Õ===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ëŠªì§€ì˜ ë§ˆì‹ ì™•===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq28\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Á×À½ÀÇ Å¾1===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì£½ìŒì˜ íƒ‘1===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq29\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Á×À½ÀÇ Å¾2===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì£½ìŒì˜ íƒ‘2===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq29_1\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===µÇ»ì¾Æ³­ ÇØ°ñ===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë˜ì‚´ì•„ë‚œ í•´ê³¨===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq30\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¿µÈ¥ ¿äÁ¤ °¡·ç===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì˜í˜¼ ìš”ì • ê°€ë£¨===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq31\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===³ÊÀÇ ±ÙÀ°À» ¸Ô°í ½Í¾î===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë„ˆì˜ ê·¼ìœ¡ì„ ë¨¹ê³  ì‹¶ì–´===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq32\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===±×´ë´Â »¡°£¸ğÀÚ===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ê·¸ëŒ€ëŠ” ë¹¨ê°„ëª¨ì===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq33\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===»¡°£¸ğÀÚ ÀÌ¾ß±â1===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë¹¨ê°„ëª¨ì ì´ì•¼ê¸°1===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq33_1\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¶Ç´Ù½Ã »¡°£¸ğÀÚ===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë˜ë‹¤ì‹œ ë¹¨ê°„ëª¨ì===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq34\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===»¡°£¸ğÀÚ ÀÌ¾ß±â2===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë¹¨ê°„ëª¨ì ì´ì•¼ê¸°2===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq34_1\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¸¶¹ıÅ¾À» ÇâÇØ===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë§ˆë²•íƒ‘ì„ í–¥í•´===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq35\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Æ÷º¸¸£ÀÇ ¸¶³ª===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===í¬ë³´ë¥´ì˜ ë§ˆë‚˜===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq35_1\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ÀÌ°ÍÀÌ Æ÷º¸¸£ ¿Õ?===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì´ê²ƒì´ í¬ë³´ë¥´ ì™•?===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq36\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===´©°¡ ¿ì´Â ¼Ò¸®¸¦ ³»¾ú´Â°¡===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ëˆ„ê°€ ìš°ëŠ” ì†Œë¦¬ë¥¼ ë‚´ì—ˆëŠ”ê°€===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq37\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¶°µµ´Â ¸Á·É===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë– ë„ëŠ” ë§ë ¹===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq37_1\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¾ÆÀÌ ´Ş·¡±â===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì•„ì´ ë‹¬ë˜ê¸°===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq37_2\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===´©°¡ ¶Ç ¿ì´Â ¼Ò¸®¸¦ ³»¾ú´Â°¡===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ëˆ„ê°€ ë˜ ìš°ëŠ” ì†Œë¦¬ë¥¼ ë‚´ì—ˆëŠ”ê°€===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq38\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¼ö»óÇÑ ¸ó½ºÅÍ===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ìˆ˜ìƒí•œ ëª¬ìŠ¤í„°===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq38_1\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¾ÆÀÌ¿¡°Ô º¸´äÀ»===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì•„ì´ì—ê²Œ ë³´ë‹µì„===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq38_2\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===³×ºñÀÇ Èû1===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë„¤ë¹„ì˜ í˜1===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq39\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===³×ºñÀÇ Èû2===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë„¤ë¹„ì˜ í˜2===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq39_1\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===³×ºñÀÇ Èû3===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë„¤ë¹„ì˜ í˜3===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq39_2\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¾Æ¶óÅ©³×ÀÇ ÀúÁÖ===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì•„ë¼í¬ë„¤ì˜ ì €ì£¼===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq40\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===°ËÀº Èå¸§ÀÇ Èû===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ê²€ì€ íë¦„ì˜ í˜===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq41\n");
         				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Èå¸§ÀÇ ºÀÀÎÀ» À§ÇØ===")) {
+            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===íë¦„ì˜ ë´‰ì¸ì„ ìœ„í•´===")) {
         				int number =  qb.getNum(player);
         				fw.write("mq41_1\n");
         				fw.write(Integer.toString(number));
@@ -6162,7 +6166,7 @@ public class Main extends JavaPlugin implements Listener{
 						|| item1.getType() == Material.NETHERITE_CHESTPLATE || item1.getType() == Material.NETHERITE_LEGGINGS || item1.getType() == Material.NETHERITE_BOOTS)) {
 					LimitLevel la = new LimitLevel();
 					if(la.limit(player, item1) == false) {
-						player.sendMessage(ChatColor.RED + "¾ÆÁ÷ ÀÌ ¹«±â¸¦ ´Ù·ç±â¿¡´Â ³» ÈûÀÌ ºÎÁ·ÇÏ´Ù.");
+						player.sendMessage(ChatColor.RED + "ì•„ì§ ì´ ë¬´ê¸°ë¥¼ ë‹¤ë£¨ê¸°ì—ëŠ” ë‚´ í˜ì´ ë¶€ì¡±í•˜ë‹¤.");
 						return;
 					}
 				}
@@ -6173,7 +6177,7 @@ public class Main extends JavaPlugin implements Listener{
 			if(!(player.getInventory().contains(Material.HEART_OF_THE_SEA))) {
 				ItemStack item = new ItemStack(Material.MAGMA_CREAM);
 				ItemMeta itemIm = item.getItemMeta();
-				itemIm.setDisplayName(ChatColor.RED + "¸¶³ª¾øÀ½");
+				itemIm.setDisplayName(ChatColor.RED + "ë§ˆë‚˜ì—†ìŒ");
 				item.setItemMeta(itemIm);
 				player.getInventory().setItem(8, item);
 			}
@@ -6348,21 +6352,21 @@ public class Main extends JavaPlugin implements Listener{
 //		if(num == 0) {
 //			ItemStack item = new ItemStack(Material.COOKIE);
 //			ItemMeta im = item.getItemMeta();
-//			im.setDisplayName(ChatColor.AQUA + "¸®·ÎÀÌ");
+//			im.setDisplayName(ChatColor.AQUA + "ë¦¬ë¡œì´");
 //			item.setItemMeta(im);
 //			player.getInventory().addItem(item);
-//			player.sendMessage("±× ³à¼®. ¸®·ÎÀÌ¸¦ È¹µæÇÏ¿´´Ù.");
+//			player.sendMessage("ê·¸ ë…€ì„. ë¦¬ë¡œì´ë¥¼ íšë“í•˜ì˜€ë‹¤.");
 //			for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-//			    allPlayer.sendMessage(player.getDisplayName() + "´ÔÀÌ ¸®·ÎÀÌ¸¦ ³¬¾Æ¹ö·È½À´Ï´Ù.");
-//			    allPlayer.sendMessage("==ÀÌº¥Æ® Á¾·á==");
+//			    allPlayer.sendMessage(player.getDisplayName() + "ë‹˜ì´ ë¦¬ë¡œì´ë¥¼ ë‚šì•„ë²„ë ¸ìŠµë‹ˆë‹¤.");
+//			    allPlayer.sendMessage("==ì´ë²¤íŠ¸ ì¢…ë£Œ==");
 //			}
 //		} else {
 //			ItemStack item = new ItemStack(Material.COD);
 //			ItemMeta im = item.getItemMeta();
-//			im.setDisplayName(ChatColor.GRAY + "²Î");
+//			im.setDisplayName(ChatColor.GRAY + "ê½");
 //			item.setItemMeta(im);
 //			player.getInventory().addItem(item);
-//			player.sendMessage("²ÎÀ» ³¬¾Ò´Ù.");
+//			player.sendMessage("ê½ì„ ë‚šì•˜ë‹¤.");
 //		}
 	}
 	

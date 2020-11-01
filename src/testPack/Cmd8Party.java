@@ -80,7 +80,7 @@ public class Cmd8Party implements CommandExecutor {
 						player.sendMessage(ChatColor.GREEN + "Send party to " + player2.getDisplayName() + ".");
 						party(player, player2);
 					} else {
-						player.sendMessage(ChatColor.RED + "¹» ±â´ëÇÏ½Å°Ì´Ï±î ÈŞ¸Õ.");
+						player.sendMessage(ChatColor.RED + "ë­˜ ê¸°ëŒ€í•˜ì‹ ê²ë‹ˆê¹Œ íœ´ë¨¼.");
 						return true;
 					}
 				} catch(Exception e) {

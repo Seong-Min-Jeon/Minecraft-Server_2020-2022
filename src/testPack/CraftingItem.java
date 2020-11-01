@@ -45,25 +45,25 @@ public class CraftingItem {
 				try {name[idx] = item.getItemMeta().getDisplayName();} catch(Exception e) {}
 				try { 
 					String tmp = item.getItemMeta().getDisplayName().substring(0, 2);
-					if(tmp.equals("¡×7")) {
+					if(tmp.equals("Â§7")) {
 						rank[idx] = 0;
-					} else if(tmp.equals("¡×f")) {
+					} else if(tmp.equals("Â§f")) {
 						rank[idx] = 3;
-					} else if(tmp.equals("¡×e")) {
+					} else if(tmp.equals("Â§e")) {
 						rank[idx] = 9;
-					} else if(tmp.equals("¡×d")) {
+					} else if(tmp.equals("Â§d")) {
 						rank[idx] = 27;
-					} else if(tmp.equals("¡×b")) {
+					} else if(tmp.equals("Â§b")) {
 						rank[idx] = 81;
-					} else if(tmp.equals("¡×4")) {
+					} else if(tmp.equals("Â§4")) {
 						rank[idx] = 243;
-					} else if(tmp.equals("¡×5")) {
+					} else if(tmp.equals("Â§5")) {
 						rank[idx] = 729;
-					} else if(tmp.equals("¡×a")) {
+					} else if(tmp.equals("Â§a")) {
 						rank[idx] = 15;
-					} else if(tmp.equals("¡×3")) {
+					} else if(tmp.equals("Â§3")) {
 						rank[idx] = 51;
-					} else if(tmp.equals("¡×6")) {
+					} else if(tmp.equals("Â§6")) {
 						rank[idx] = 3;
 					} else {
 						rank[idx] = 1;
@@ -143,194 +143,194 @@ public class CraftingItem {
 					continue;
 				}
 				
-				//·ù
-				if(name[i].equalsIgnoreCase(ChatColor.GRAY + "ÈìÁıÀÌ »ı±ä ¼®Åº ")) {
+				//ë¥˜
+				if(name[i].equalsIgnoreCase(ChatColor.GRAY + "í ì§‘ì´ ìƒê¸´ ì„íƒ„ ")) {
 					totalStat += amount[i]; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "¼®Åº ")) {
+				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "ì„íƒ„ ")) {
 					totalStat += amount[i] * 2; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "±ú²ıÇÑ ¼®Åº ")) {
+				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "ê¹¨ë—í•œ ì„íƒ„ ")) {
 					totalStat += amount[i] * 3; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "¼ø¼öµµ°¡ ³ôÀº ¼®Åº ")) {
+				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "ìˆœìˆ˜ë„ê°€ ë†’ì€ ì„íƒ„ ")) {
 					totalStat += amount[i] * 4; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "Àı´ëÀûÀÎ ¼®Åº ")) {
+				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "ì ˆëŒ€ì ì¸ ì„íƒ„ ")) {
 					totalStat += amount[i] * 5; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "½ÅÀÇ ÈûÀÌ ´ã±ä ¼®Åº ")) {
+				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "ì‹ ì˜ í˜ì´ ë‹´ê¸´ ì„íƒ„ ")) {
 					totalStat += amount[i] * 7; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "»óÅÂ°¡ ÁÁÁö ¾ÊÀº Ã¶")) {
+				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "ìƒíƒœê°€ ì¢‹ì§€ ì•Šì€ ì² ")) {
 					totalStat += amount[i] * 4; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "Ã¶")) {
+				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "ì² ")) {
 					totalStat += amount[i] * 5; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "ºûÀÌ³ª´Â Ã¶")) {
+				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "ë¹›ì´ë‚˜ëŠ” ì² ")) {
 					totalStat += amount[i] * 6; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "¼ø¹éÀÇ Ã¶")) {
+				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "ìˆœë°±ì˜ ì² ")) {
 					totalStat += amount[i] * 7; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "½ÅÀÇ ÈûÀÌ ´ã±ä Ã¶")) {
+				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "ì‹ ì˜ í˜ì´ ë‹´ê¸´ ì² ")) {
 					totalStat += amount[i] * 9; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "°¡Ä¡°¡ ¶³¾îÁø ±İ")) {
+				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "ê°€ì¹˜ê°€ ë–¨ì–´ì§„ ê¸ˆ")) {
 					totalStat += amount[i] * 7; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "±İ")) {
+				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "ê¸ˆ")) {
 					totalStat += amount[i] * 8; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "½±°Ô ³ìÁö ¾Ê´Â ±İ")) {
+				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "ì‰½ê²Œ ë…¹ì§€ ì•ŠëŠ” ê¸ˆ")) {
 					totalStat += amount[i] * 9; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "½ÅÀÇ ÈûÀÌ ´ã±ä ±İ")) {
+				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "ì‹ ì˜ í˜ì´ ë‹´ê¸´ ê¸ˆ")) {
 					totalStat += amount[i] * 11; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "ÈìÁıÀÌ ³­ ´ÙÀÌ¾Æ¸óµå")) {
+				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "í ì§‘ì´ ë‚œ ë‹¤ì´ì•„ëª¬ë“œ")) {
 					totalStat += amount[i] * 10; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "´ÙÀÌ¾Æ¸óµå")) {
+				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "ë‹¤ì´ì•„ëª¬ë“œ")) {
 					totalStat += amount[i] * 11; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "ºû³ª´Â ´ÙÀÌ¾Æ¸óµå")) {
+				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "ë¹›ë‚˜ëŠ” ë‹¤ì´ì•„ëª¬ë“œ")) {
 					totalStat += amount[i] * 12; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "½ÅÀÇ ÈûÀÌ ´ã±ä ´ÙÀÌ¾Æ¸óµå")) {
+				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "ì‹ ì˜ í˜ì´ ë‹´ê¸´ ë‹¤ì´ì•„ëª¬ë“œ")) {
 					totalStat += amount[i] * 15; 
 				}
 				
-				//±¤¹°·ù
-				if(name[i].equalsIgnoreCase(ChatColor.GRAY + "ÈìÁıÀÌ »ı±ä ¼®Åº")) {
+				//ê´‘ë¬¼ë¥˜
+				if(name[i].equalsIgnoreCase(ChatColor.GRAY + "í ì§‘ì´ ìƒê¸´ ì„íƒ„")) {
 					totalStat += amount[i] * 2; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "¼®Åº")) {
+				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "ì„íƒ„")) {
 					totalStat += amount[i] * 3; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "±ú²ıÇÑ ¼®Åº")) {
+				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "ê¹¨ë—í•œ ì„íƒ„")) {
 					totalStat += amount[i] * 4; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "¼ø¼öµµ°¡ ³ôÀº ¼®Åº")) {
+				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "ìˆœìˆ˜ë„ê°€ ë†’ì€ ì„íƒ„")) {
 					totalStat += amount[i] * 6; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "Àı´ëÀûÀÎ ¼®Åº")) {
+				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "ì ˆëŒ€ì ì¸ ì„íƒ„")) {
 					totalStat += amount[i] * 7; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "½ÅÀÇ ÈûÀÌ ´ã±ä ¼®Åº")) {
+				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "ì‹ ì˜ í˜ì´ ë‹´ê¸´ ì„íƒ„")) {
 					totalStat += amount[i] * 9; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "»óÅÂ°¡ ÁÁÁö ¾ÊÀº Ã¶")) {
+				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "ìƒíƒœê°€ ì¢‹ì§€ ì•Šì€ ì² ")) {
 					totalStat += amount[i] * 5; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "Ã¶")) {
+				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "ì² ")) {
 					totalStat += amount[i] * 6; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "ºûÀÌ³ª´Â Ã¶")) {
+				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "ë¹›ì´ë‚˜ëŠ” ì² ")) {
 					totalStat += amount[i] * 8; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "¼ø¹éÀÇ Ã¶")) {
+				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "ìˆœë°±ì˜ ì² ")) {
 					totalStat += amount[i] * 9; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "½ÅÀÇ ÈûÀÌ ´ã±ä Ã¶")) {
+				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "ì‹ ì˜ í˜ì´ ë‹´ê¸´ ì² ")) {
 					totalStat += amount[i] * 11; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "°¡Ä¡°¡ ¶³¾îÁø ±İ")) {
+				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "ê°€ì¹˜ê°€ ë–¨ì–´ì§„ ê¸ˆ")) {
 					totalStat += amount[i] * 9; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "±İ")) {
+				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "ê¸ˆ")) {
 					totalStat += amount[i] * 10; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "½±°Ô ³ìÁö ¾Ê´Â ±İ")) {
+				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "ì‰½ê²Œ ë…¹ì§€ ì•ŠëŠ” ê¸ˆ")) {
 					totalStat += amount[i] * 11; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "½ÅÀÇ ÈûÀÌ ´ã±ä ±İ")) {
+				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "ì‹ ì˜ í˜ì´ ë‹´ê¸´ ê¸ˆ")) {
 					totalStat += amount[i] * 13; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "ÈìÁıÀÌ ³­ ´ÙÀÌ¾Æ¸óµå")) {
+				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "í ì§‘ì´ ë‚œ ë‹¤ì´ì•„ëª¬ë“œ")) {
 					totalStat += amount[i] * 12; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "´ÙÀÌ¾Æ¸óµå")) {
+				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "ë‹¤ì´ì•„ëª¬ë“œ")) {
 					totalStat += amount[i] * 13; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "ºû³ª´Â ´ÙÀÌ¾Æ¸óµå")) {
+				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "ë¹›ë‚˜ëŠ” ë‹¤ì´ì•„ëª¬ë“œ")) {
 					totalStat += amount[i] * 14; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "½ÅÀÇ ÈûÀÌ ´ã±ä ´ÙÀÌ¾Æ¸óµå")) {
+				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "ì‹ ì˜ í˜ì´ ë‹´ê¸´ ë‹¤ì´ì•„ëª¬ë“œ")) {
 					totalStat += amount[i] * 18; 
 				}
 				
-				//¹Ğ·ù
-				if(name[i].equalsIgnoreCase(ChatColor.GRAY + "»óÃ³°¡ ¸¹Àº ¹Ğ")) {
+				//ë°€ë¥˜
+				if(name[i].equalsIgnoreCase(ChatColor.GRAY + "ìƒì²˜ê°€ ë§ì€ ë°€")) {
 					totalStat += amount[i]; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "¹Ğ")) {
+				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "ë°€")) {
 					totalStat += amount[i] * 2; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "ÁÁÀº ½ÄÀç·á°¡ µÉ ¹Ğ")) {
+				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "ì¢‹ì€ ì‹ì¬ë£Œê°€ ë  ë°€")) {
 					totalStat += amount[i] * 3; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "Á¤±³ÇÑ ÈûÀ¸·Î Àß¸° ¹Ğ")) {
+				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "ì •êµí•œ í˜ìœ¼ë¡œ ì˜ë¦° ë°€")) {
 					totalStat += amount[i] * 4; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "À±±â°¡ ³ª´Â ¹Ğ")) {
+				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "ìœ¤ê¸°ê°€ ë‚˜ëŠ” ë°€")) {
 					totalStat += amount[i] * 5; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "½ÅÀÌ ¸Ô´Â´Ù°í ¾Ë·ÁÁø ¹Ğ")) {
+				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "ì‹ ì´ ë¨¹ëŠ”ë‹¤ê³  ì•Œë ¤ì§„ ë°€")) {
 					totalStat += amount[i] * 7; 
 				}
 				
-				//Á¦ÀÛ Àü¿ë ¾ÆÀÌÅÛ
-				if(name[i].equalsIgnoreCase(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ÇÇ")) {
+				//ì œì‘ ì „ìš© ì•„ì´í…œ
+				if(name[i].equalsIgnoreCase(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ í”¼")) {
 					totalStat += amount[i] * 3; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ¾µ°³")) {
+				if(name[i].equalsIgnoreCase(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ")) {
 					totalStat += amount[i] * 4; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ »ìÁ¡")) {
+				if(name[i].equalsIgnoreCase(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì ")) {
 					totalStat += amount[i] * 5; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ °£")) {
+				if(name[i].equalsIgnoreCase(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ê°„")) {
 					totalStat += amount[i] * 6; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ½ÉÀå")) {
+				if(name[i].equalsIgnoreCase(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì‹¬ì¥")) {
 					totalStat += amount[i] * 8;
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ÇÇ")) {
+				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ í”¼")) {
 					totalStat += amount[i] * 7; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ¾µ°³")) {
+				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ")) {
 					totalStat += amount[i] * 8; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ »ìÁ¡")) {
+				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì ")) {
 					totalStat += amount[i] * 9; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ °£")) {
+				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ê°„")) {
 					totalStat += amount[i] * 10; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ½ÉÀå")) {
+				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ì‹¬ì¥")) {
 					totalStat += amount[i] * 12;
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ »Ô")) {
+				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ë¿”")) {
 					totalStat += amount[i] * 15;
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ÇÇ")) {
+				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ í”¼")) {
 					totalStat += amount[i] * 11; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ¾µ°³")) {
+				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ")) {
 					totalStat += amount[i] * 12; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ »ìÁ¡")) {
+				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì ")) {
 					totalStat += amount[i] * 13; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ °£")) {
+				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ê°„")) {
 					totalStat += amount[i] * 14; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ½ÉÀå")) {
+				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì‹¬ì¥")) {
 					totalStat += amount[i] * 16;
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ »Ô")) {
+				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ë¿”")) {
 					totalStat += amount[i] * 19;
 				}
 			}
@@ -387,17 +387,17 @@ public class CraftingItem {
 			
 			
 			if(resultStat <= 0) {
-				player.sendMessage("Á¦ÀÛ °á°ú ¾Æ¹«°Íµµ ¾òÁö ¸øÇß½À´Ï´Ù.");
+				player.sendMessage("ì œì‘ ê²°ê³¼ ì•„ë¬´ê²ƒë„ ì–»ì§€ ëª»í–ˆìŠµë‹ˆë‹¤.");
 				return;
 			}
 			
 			int doubleUpChance = rnd.nextInt(10);
 			
 			if(doubleUpChance == 0) {
-				player.sendMessage("Á¦ÀÛ ´ë¼º°ø!");
+				player.sendMessage("ì œì‘ ëŒ€ì„±ê³µ!");
 				resultStat *= 2;
 			} else {
-				player.sendMessage("Á¦ÀÛ ¼º°ø!");
+				player.sendMessage("ì œì‘ ì„±ê³µ!");
 			}
 			
 			System.out.println(resultStat);
@@ -521,7 +521,7 @@ public class CraftingItem {
 			inv.setItem(25, makeItem(player, equipType, stat, localName));
 			
 		} catch(Exception e) {
-			player.sendMessage(ChatColor.WHITE + "¾Ë ¼ö ¾ø´Â ¿À·ù. ½º¼¦ Âï¾î¼­ ¿î¿µÀÚÇÑÅ× º¸³»ÁÖ¼¼¿ä.");
+			player.sendMessage(ChatColor.WHITE + "ì•Œ ìˆ˜ ì—†ëŠ” ì˜¤ë¥˜. ìŠ¤ìƒ· ì°ì–´ì„œ ìš´ì˜ìí•œí…Œ ë³´ë‚´ì£¼ì„¸ìš”.");
 		}
 	}
 	
@@ -558,11 +558,11 @@ public class CraftingItem {
 			ItemStack equip = new ItemStack(Material.LEATHER_HELMET);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
-			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ Çï¸ä");
+			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ í—¬ë©§");
 			ArrayList<String> equipLore = new ArrayList();
-			equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+			equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -574,11 +574,11 @@ public class CraftingItem {
 			ItemStack equip = new ItemStack(Material.CHAINMAIL_HELMET);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
-			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ Çï¸ä");
+			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ í—¬ë©§");
 			ArrayList<String> equipLore = new ArrayList();
-			equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+			equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -590,11 +590,11 @@ public class CraftingItem {
 			ItemStack equip = new ItemStack(Material.IRON_HELMET);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
-			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ Çï¸ä");
+			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ í—¬ë©§");
 			ArrayList<String> equipLore = new ArrayList();
-			equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+			equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -606,11 +606,11 @@ public class CraftingItem {
 			ItemStack equip = new ItemStack(Material.GOLDEN_HELMET);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
-			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ Çï¸ä");
+			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ í—¬ë©§");
 			ArrayList<String> equipLore = new ArrayList();
-			equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+			equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -622,11 +622,11 @@ public class CraftingItem {
 			ItemStack equip = new ItemStack(Material.DIAMOND_HELMET);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
-			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ Çï¸ä");
+			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ í—¬ë©§");
 			ArrayList<String> equipLore = new ArrayList();
-			equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+			equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -638,11 +638,11 @@ public class CraftingItem {
 			ItemStack equip = new ItemStack(Material.NETHERITE_HELMET);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
-			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ Çï¸ä");
+			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ í—¬ë©§");
 			ArrayList<String> equipLore = new ArrayList();
-			equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+			equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -654,11 +654,11 @@ public class CraftingItem {
 			ItemStack equip = new ItemStack(Material.LEATHER_CHESTPLATE);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
-			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ °©¿Ê");
+			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ê°‘ì˜·");
 			ArrayList<String> equipLore = new ArrayList();
-			equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+			equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -670,11 +670,11 @@ public class CraftingItem {
 			ItemStack equip = new ItemStack(Material.CHAINMAIL_CHESTPLATE);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
-			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ °©¿Ê");
+			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ê°‘ì˜·");
 			ArrayList<String> equipLore = new ArrayList();
-			equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+			equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -686,11 +686,11 @@ public class CraftingItem {
 			ItemStack equip = new ItemStack(Material.IRON_CHESTPLATE);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
-			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ °©¿Ê");
+			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ê°‘ì˜·");
 			ArrayList<String> equipLore = new ArrayList();
-			equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+			equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -702,11 +702,11 @@ public class CraftingItem {
 			ItemStack equip = new ItemStack(Material.GOLDEN_CHESTPLATE);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
-			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ °©¿Ê");
+			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ê°‘ì˜·");
 			ArrayList<String> equipLore = new ArrayList();
-			equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+			equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -718,11 +718,11 @@ public class CraftingItem {
 			ItemStack equip = new ItemStack(Material.DIAMOND_CHESTPLATE);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
-			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ °©¿Ê");
+			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ê°‘ì˜·");
 			ArrayList<String> equipLore = new ArrayList();
-			equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+			equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -734,11 +734,11 @@ public class CraftingItem {
 			ItemStack equip = new ItemStack(Material.NETHERITE_CHESTPLATE);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
-			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ °©¿Ê");
+			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ê°‘ì˜·");
 			ArrayList<String> equipLore = new ArrayList();
-			equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+			equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -750,11 +750,11 @@ public class CraftingItem {
 			ItemStack equip = new ItemStack(Material.LEATHER_LEGGINGS);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
-			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ °¢¹İ");
+			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ê°ë°˜");
 			ArrayList<String> equipLore = new ArrayList();
-			equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+			equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -766,11 +766,11 @@ public class CraftingItem {
 			ItemStack equip = new ItemStack(Material.CHAINMAIL_LEGGINGS);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
-			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ °¢¹İ");
+			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ê°ë°˜");
 			ArrayList<String> equipLore = new ArrayList();
-			equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+			equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -782,11 +782,11 @@ public class CraftingItem {
 			ItemStack equip = new ItemStack(Material.IRON_LEGGINGS);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
-			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ °¢¹İ");
+			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ê°ë°˜");
 			ArrayList<String> equipLore = new ArrayList();
-			equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+			equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -798,11 +798,11 @@ public class CraftingItem {
 			ItemStack equip = new ItemStack(Material.GOLDEN_LEGGINGS);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
-			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ °¢¹İ");
+			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ê°ë°˜");
 			ArrayList<String> equipLore = new ArrayList();
-			equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+			equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -814,11 +814,11 @@ public class CraftingItem {
 			ItemStack equip = new ItemStack(Material.DIAMOND_LEGGINGS);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
-			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ °¢¹İ");
+			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ê°ë°˜");
 			ArrayList<String> equipLore = new ArrayList();
-			equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+			equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -830,11 +830,11 @@ public class CraftingItem {
 			ItemStack equip = new ItemStack(Material.NETHERITE_LEGGINGS);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
-			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ °¢¹İ");
+			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ê°ë°˜");
 			ArrayList<String> equipLore = new ArrayList();
-			equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+			equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -846,11 +846,11 @@ public class CraftingItem {
 			ItemStack equip = new ItemStack(Material.LEATHER_BOOTS);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
-			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ½Å¹ß");
+			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ì‹ ë°œ");
 			ArrayList<String> equipLore = new ArrayList();
-			equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+			equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -862,11 +862,11 @@ public class CraftingItem {
 			ItemStack equip = new ItemStack(Material.CHAINMAIL_BOOTS);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
-			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ½Å¹ß");
+			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ì‹ ë°œ");
 			ArrayList<String> equipLore = new ArrayList();
-			equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+			equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -878,11 +878,11 @@ public class CraftingItem {
 			ItemStack equip = new ItemStack(Material.IRON_BOOTS);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
-			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ½Å¹ß");
+			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ì‹ ë°œ");
 			ArrayList<String> equipLore = new ArrayList();
-			equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+			equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -894,11 +894,11 @@ public class CraftingItem {
 			ItemStack equip = new ItemStack(Material.GOLDEN_BOOTS);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
-			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ½Å¹ß");
+			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ì‹ ë°œ");
 			ArrayList<String> equipLore = new ArrayList();
-			equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+			equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -910,11 +910,11 @@ public class CraftingItem {
 			ItemStack equip = new ItemStack(Material.DIAMOND_BOOTS);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
-			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ½Å¹ß");
+			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ì‹ ë°œ");
 			ArrayList<String> equipLore = new ArrayList();
-			equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+			equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -926,11 +926,11 @@ public class CraftingItem {
 			ItemStack equip = new ItemStack(Material.NETHERITE_BOOTS);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
-			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ½Å¹ß");
+			equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ì‹ ë°œ");
 			ArrayList<String> equipLore = new ArrayList();
-			equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+			equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -946,11 +946,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.OAK_LEAVES);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -962,11 +962,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.SPRUCE_LEAVES);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -978,11 +978,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.BIRCH_LEAVES);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -994,11 +994,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.JUNGLE_LEAVES);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1010,11 +1010,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.ACACIA_LEAVES);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1026,11 +1026,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.DARK_OAK_LEAVES);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1042,11 +1042,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.STONE_STAIRS);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1058,11 +1058,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.COBBLESTONE_WALL);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1074,11 +1074,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.BROWN_CARPET);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1090,11 +1090,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.GREEN_CARPET);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1106,11 +1106,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.BLACK_CARPET);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1122,11 +1122,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.STONE);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1138,11 +1138,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.BIRCH_PLANKS);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1154,11 +1154,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.JUNGLE_PLANKS);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1170,11 +1170,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.ACACIA_PLANKS);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1186,11 +1186,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.DARK_OAK_PLANKS);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1202,11 +1202,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.BEDROCK);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1218,11 +1218,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.SPRUCE_LOG);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1234,11 +1234,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.BIRCH_LOG);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1250,11 +1250,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.JUNGLE_LOG);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1266,11 +1266,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.ACACIA_LOG);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1282,11 +1282,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.DARK_OAK_LOG);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1298,11 +1298,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.SANDSTONE);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1314,11 +1314,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.CHISELED_SANDSTONE);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1330,11 +1330,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.CUT_SANDSTONE);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1346,11 +1346,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.LAPIS_BLOCK);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1362,11 +1362,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.MAGENTA_WOOL);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1378,11 +1378,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.LIME_WOOL);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1394,11 +1394,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.GRAY_WOOL);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1410,11 +1410,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.LIGHT_GRAY_WOOL);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1426,11 +1426,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.CYAN_WOOL);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1442,11 +1442,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.PURPLE_WOOL);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1458,11 +1458,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.OAK_SLAB);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1474,11 +1474,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.SPRUCE_SLAB);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1490,11 +1490,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.BIRCH_SLAB);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1506,11 +1506,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.JUNGLE_SLAB);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1522,11 +1522,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.ACACIA_SLAB);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1538,11 +1538,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.DARK_OAK_SLAB);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1554,11 +1554,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.STONE_SLAB);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1570,11 +1570,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.COBBLESTONE_SLAB);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1586,11 +1586,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.STONE_BRICK_SLAB);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1602,11 +1602,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.NETHER_BRICK_SLAB);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1618,11 +1618,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.QUARTZ_SLAB);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1634,11 +1634,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.RED_SANDSTONE);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1650,11 +1650,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.RED_SANDSTONE_SLAB);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1666,11 +1666,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.SMOOTH_RED_SANDSTONE);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1682,11 +1682,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.OBSIDIAN);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1698,11 +1698,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.SMOOTH_SANDSTONE);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1714,11 +1714,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.CHISELED_RED_SANDSTONE);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1730,11 +1730,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.CUT_RED_SANDSTONE);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1746,11 +1746,11 @@ public class CraftingItem {
 				ItemStack equip = new ItemStack(Material.RED_SANDSTONE_STAIRS);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "´ÔÀÌ Á¦ÀÛÇÑ ¹«±â");
+				equipIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "ë‹˜ì´ ì œì‘í•œ ë¬´ê¸°");
 				ArrayList<String> equipLore = new ArrayList();
-				equipLore.add(ChatColor.GRAY + "·¹º§ Á¦ÇÑ: " + stat[10]);
+				equipLore.add(ChatColor.GRAY + "ë ˆë²¨ ì œí•œ: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "Á¦ÀÛÀÚ: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "ì œì‘ì: " + player.getDisplayName());
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);

@@ -23,11 +23,11 @@ public class JobScroll {
 
 	public void chooseJob(Player player, Item itemArg) {
 		World world = player.getWorld();
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "º» ÆÄÀÌÅÍÀÇ º°")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "ë³¸ íŒŒì´í„°ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.RED_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "º» ÆÄÀÌÅÍÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "ë³¸ íŒŒì´í„°ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -43,16 +43,16 @@ public class JobScroll {
 			for(PotionEffect effect : player.getActivePotionEffects ()){
 		        player.removePotionEffect(effect.getType());
 		    }
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);	
-			//³ÊÅ¬
+			//ë„ˆí´
 			ItemStack knuckle = new ItemStack(Material.BONE);
 			ItemMeta knuckleIm = knuckle.getItemMeta();
-			knuckleIm.setDisplayName(ChatColor.GOLD + "°í´ë µå·¡°ïÀÇ »À");
+			knuckleIm.setDisplayName(ChatColor.GOLD + "ê³ ëŒ€ ë“œë˜ê³¤ì˜ ë¼ˆ");
 			knuckle.setItemMeta(knuckleIm);	
 			player.getInventory().setItem(0, knuckle);
 			//tp
@@ -67,11 +67,11 @@ public class JobScroll {
 			ItemStack headItem = new ItemStack(Material.SKELETON_SKULL);
 			head.setHelmet(headItem);
 		}
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "±â»çÀÇ º°")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "ê¸°ì‚¬ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.GREEN_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "±â»çÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "ê¸°ì‚¬ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -87,19 +87,19 @@ public class JobScroll {
 			for(PotionEffect effect : player.getActivePotionEffects ()){
 		        player.removePotionEffect(effect.getType());
 		    }
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);	
-			//¹«±â
+			//ë¬´ê¸°
 			ItemStack item5 = new ItemStack(Material.BIRCH_LEAVES);
 			ItemMeta item5Im = item5.getItemMeta();
 			item5Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0");
-			item5Im.setDisplayName(ChatColor.GRAY + "³ª¹µ°¡Áö");
+			item5Im.setDisplayName(ChatColor.GRAY + "ë‚˜ë­‡ê°€ì§€");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "±×Àú ÇÏÂúÀº ³ª¹µ°¡Áö");
+			item5Lore.add(ChatColor.GRAY + "ê·¸ì € í•˜ì°®ì€ ë‚˜ë­‡ê°€ì§€");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -119,11 +119,11 @@ public class JobScroll {
 			ItemStack headItem = new ItemStack(Material.SKELETON_SKULL);
 			head.setHelmet(headItem);
 		}
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "ÇÁ¸®½ºÆ®ÀÇ º°")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "í”„ë¦¬ìŠ¤íŠ¸ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.LAPIS_LAZULI);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "ÇÁ¸®½ºÆ®ÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "í”„ë¦¬ìŠ¤íŠ¸ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -139,19 +139,19 @@ public class JobScroll {
 			for(PotionEffect effect : player.getActivePotionEffects ()){
 		        player.removePotionEffect(effect.getType());
 		    }
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);	
-			//¹«±â
+			//ë¬´ê¸°
 			ItemStack item5 = new ItemStack(Material.BIRCH_LEAVES);
 			ItemMeta item5Im = item5.getItemMeta();
 			item5Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0");
-			item5Im.setDisplayName(ChatColor.GRAY + "³ª¹µ°¡Áö");
+			item5Im.setDisplayName(ChatColor.GRAY + "ë‚˜ë­‡ê°€ì§€");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "±×Àú ÇÏÂúÀº ³ª¹µ°¡Áö");
+			item5Lore.add(ChatColor.GRAY + "ê·¸ì € í•˜ì°®ì€ ë‚˜ë­‡ê°€ì§€");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -171,11 +171,11 @@ public class JobScroll {
 			ItemStack headItem = new ItemStack(Material.SKELETON_SKULL);
 			head.setHelmet(headItem);
 		}
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "±¤Àü»çÀÇ º°")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "ê´‘ì „ì‚¬ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.CYAN_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "±¤Àü»çÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "ê´‘ì „ì‚¬ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -191,19 +191,19 @@ public class JobScroll {
 			for(PotionEffect effect : player.getActivePotionEffects ()){
 		        player.removePotionEffect(effect.getType());
 		    }
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);	
-			//¹«±â
+			//ë¬´ê¸°
 			ItemStack item5 = new ItemStack(Material.BIRCH_LEAVES);
 			ItemMeta item5Im = item5.getItemMeta();
 			item5Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0");
-			item5Im.setDisplayName(ChatColor.GRAY + "³ª¹µ°¡Áö");
+			item5Im.setDisplayName(ChatColor.GRAY + "ë‚˜ë­‡ê°€ì§€");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "±×Àú ÇÏÂúÀº ³ª¹µ°¡Áö");
+			item5Lore.add(ChatColor.GRAY + "ê·¸ì € í•˜ì°®ì€ ë‚˜ë­‡ê°€ì§€");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -223,11 +223,11 @@ public class JobScroll {
 			ItemStack headItem = new ItemStack(Material.SKELETON_SKULL);
 			head.setHelmet(headItem);
 		}
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "µµ¹Ú»çÀÇ º°")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "ë„ë°•ì‚¬ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.LIGHT_GRAY_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "µµ¹Ú»çÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "ë„ë°•ì‚¬ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -243,19 +243,19 @@ public class JobScroll {
 			for(PotionEffect effect : player.getActivePotionEffects ()){
 		        player.removePotionEffect(effect.getType());
 		    }
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);	
-			//¹«±â
+			//ë¬´ê¸°
 			ItemStack item5 = new ItemStack(Material.BIRCH_LEAVES);
 			ItemMeta item5Im = item5.getItemMeta();
 			item5Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0");
-			item5Im.setDisplayName(ChatColor.GRAY + "³ª¹µ°¡Áö");
+			item5Im.setDisplayName(ChatColor.GRAY + "ë‚˜ë­‡ê°€ì§€");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "±×Àú ÇÏÂúÀº ³ª¹µ°¡Áö");
+			item5Lore.add(ChatColor.GRAY + "ê·¸ì € í•˜ì°®ì€ ë‚˜ë­‡ê°€ì§€");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -275,11 +275,11 @@ public class JobScroll {
 			ItemStack headItem = new ItemStack(Material.SKELETON_SKULL);
 			head.setHelmet(headItem);
 		}
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "µ¥ºôÀÇ º°")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "ë°ë¹Œì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.GRAY_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "µ¥ºôÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "ë°ë¹Œì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -295,19 +295,19 @@ public class JobScroll {
 			for(PotionEffect effect : player.getActivePotionEffects ()){
 		        player.removePotionEffect(effect.getType());
 		    }
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);	
-			//¹«±â
+			//ë¬´ê¸°
 			ItemStack item5 = new ItemStack(Material.JUNGLE_PLANKS);
 			ItemMeta item5Im = item5.getItemMeta();
 			item5Im.setLocalizedName("666,300,0,0,100,666,0,0,0,666,0");
-			item5Im.setDisplayName(ChatColor.DARK_RED + "µ¥ºô ½º¿öµå");
+			item5Im.setDisplayName(ChatColor.DARK_RED + "ë°ë¹Œ ìŠ¤ì›Œë“œ");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "»óÀ§ ¾Ç¸¶¿¡°Ô ÇÏ»ç ¹ŞÀº °Ë");
+			item5Lore.add(ChatColor.GRAY + "ìƒìœ„ ì•…ë§ˆì—ê²Œ í•˜ì‚¬ ë°›ì€ ê²€");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -322,13 +322,13 @@ public class JobScroll {
 			itemArg.remove();
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 			//player.kickPlayer(ChatColor.RED + "Error Code:" + ChatColor.MAGIC + " Hi My Name Is Yumehama(The God)"
-			//		+ "\n" + ChatColor.GRAY + "´ç½ÅÀÇ ¼±ÅÃ¿¡ ÀÇÇØ °èÁ¤ÀÌ Å¸¶ôÇÏ°í ÀÖ½À´Ï´Ù.");
+			//		+ "\n" + ChatColor.GRAY + "ë‹¹ì‹ ì˜ ì„ íƒì— ì˜í•´ ê³„ì •ì´ íƒ€ë½í•˜ê³  ìˆìŠµë‹ˆë‹¤.");
 		}
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "¿£Á©ÀÇ º°")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "ì—”ì ¤ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.PINK_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "¿£Á©ÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "ì—”ì ¤ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -344,19 +344,19 @@ public class JobScroll {
 			for(PotionEffect effect : player.getActivePotionEffects ()){
 		        player.removePotionEffect(effect.getType());
 		    }
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);	
-			//¹«±â
+			//ë¬´ê¸°
 			ItemStack item5 = new ItemStack(Material.BIRCH_PLANKS);
 			ItemMeta item5Im = item5.getItemMeta();
 			item5Im.setLocalizedName("500,0,0,0,0,1000,200,200,200,500,0");
-			item5Im.setDisplayName(ChatColor.DARK_RED + "¿£Á© ½º¿öµå");
+			item5Im.setDisplayName(ChatColor.DARK_RED + "ì—”ì ¤ ìŠ¤ì›Œë“œ");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "´ëÃµ»ç¿¡°Ô ÇÏ»ç ¹ŞÀº ¼º°Ë");
+			item5Lore.add(ChatColor.GRAY + "ëŒ€ì²œì‚¬ì—ê²Œ í•˜ì‚¬ ë°›ì€ ì„±ê²€");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -371,11 +371,11 @@ public class JobScroll {
 			itemArg.remove();
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "´ëÇàÀÚÀÇ º°")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "ëŒ€í–‰ìì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.LIME_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "´ëÇàÀÚÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "ëŒ€í–‰ìì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -391,19 +391,19 @@ public class JobScroll {
 			for(PotionEffect effect : player.getActivePotionEffects ()){
 		        player.removePotionEffect(effect.getType());
 		    }
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);	
-			//¹«±â
+			//ë¬´ê¸°
 			ItemStack item5 = new ItemStack(Material.BIRCH_LOG);
 			ItemMeta item5Im = item5.getItemMeta();
 			item5Im.setLocalizedName("777,77,77,77,77,777,777,777,777,777,0");
-			item5Im.setDisplayName(ChatColor.DARK_RED + "½ÅÀÇ ÈûÀ» ´ãÀº °Ë");
+			item5Im.setDisplayName(ChatColor.DARK_RED + "ì‹ ì˜ í˜ì„ ë‹´ì€ ê²€");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "¾È¹Ù¸£ÀÇ ºñ´Ã·Î ¸¸µé¾îÁø ¼º°Ë");
+			item5Lore.add(ChatColor.GRAY + "ì•ˆë°”ë¥´ì˜ ë¹„ëŠ˜ë¡œ ë§Œë“¤ì–´ì§„ ì„±ê²€");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -418,11 +418,11 @@ public class JobScroll {
 			itemArg.remove();
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "±×¸²ÀÚ ¹«»çÀÇ º°")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "ê·¸ë¦¼ì ë¬´ì‚¬ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.YELLOW_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "±×¸²ÀÚ ¹«»çÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "ê·¸ë¦¼ì ë¬´ì‚¬ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -438,19 +438,19 @@ public class JobScroll {
 			for(PotionEffect effect : player.getActivePotionEffects ()){
 		        player.removePotionEffect(effect.getType());
 		    }
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);	
-			//¹«±â
+			//ë¬´ê¸°
 			ItemStack item5 = new ItemStack(Material.SPRUCE_LOG);
 			ItemMeta item5Im = item5.getItemMeta();
 			item5Im.setLocalizedName("30,5,5,5,0,0,0,0,0,0");
-			item5Im.setDisplayName(ChatColor.AQUA + "Á×À½ÀÇ ¹«µµ");
+			item5Im.setDisplayName(ChatColor.AQUA + "ì£½ìŒì˜ ë¬´ë„");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "¾Ç¸¶¿ÍÀÇ °è¾àÀÌ µÇ¾îÀÖ´Â °Ë");
+			item5Lore.add(ChatColor.GRAY + "ì•…ë§ˆì™€ì˜ ê³„ì•½ì´ ë˜ì–´ìˆëŠ” ê²€");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -465,11 +465,11 @@ public class JobScroll {
 			itemArg.remove();
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "¹ö¼­Ä¿ÀÇ º°")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "ë²„ì„œì»¤ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.LIGHT_BLUE_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "¹ö¼­Ä¿ÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "ë²„ì„œì»¤ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -485,19 +485,19 @@ public class JobScroll {
 			for(PotionEffect effect : player.getActivePotionEffects ()){
 		        player.removePotionEffect(effect.getType());
 		    }
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);	
-			//¹«±â
+			//ë¬´ê¸°
 			ItemStack item5 = new ItemStack(Material.SPRUCE_LEAVES);
 			ItemMeta item5Im = item5.getItemMeta();
 			item5Im.setLocalizedName("50,0,0,0,5,0,0,0,0,0");
-			item5Im.setDisplayName(ChatColor.AQUA + "¹İ¶õ±ºÀÇ ´ë°Ë");
+			item5Im.setDisplayName(ChatColor.AQUA + "ë°˜ë€êµ°ì˜ ëŒ€ê²€");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "ÈÖµÎ¸£´Â °ÍÀ¸·Î º¸ÀÌ´Â ÀûÀ» ¼¶¸êÇÒ ¼ö ÀÖ´Â °Ë");
+			item5Lore.add(ChatColor.GRAY + "íœ˜ë‘ë¥´ëŠ” ê²ƒìœ¼ë¡œ ë³´ì´ëŠ” ì ì„ ì„¬ë©¸í•  ìˆ˜ ìˆëŠ” ê²€");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -512,11 +512,11 @@ public class JobScroll {
 			itemArg.remove();
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "±ºÀÎÀÇ º°")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "êµ°ì¸ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.MAGENTA_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "±ºÀÎÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "êµ°ì¸ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -532,10 +532,10 @@ public class JobScroll {
 			for(PotionEffect effect : player.getActivePotionEffects ()){
 		        player.removePotionEffect(effect.getType());
 		    }
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);	
 			//tp
@@ -545,11 +545,11 @@ public class JobScroll {
 			itemArg.remove();
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "±×¸² ¸®ÆÛÀÇ º°")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "ê·¸ë¦¼ ë¦¬í¼ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.ORANGE_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "±×¸² ¸®ÆÛÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "ê·¸ë¦¼ ë¦¬í¼ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -565,10 +565,10 @@ public class JobScroll {
 			for(PotionEffect effect : player.getActivePotionEffects ()){
 		        player.removePotionEffect(effect.getType());
 		    }
-			//¸Ó¸®
+			//ë¨¸ë¦¬
 			ItemStack item5 = new ItemStack(Material.SKELETON_SKULL);
 			ItemMeta item5Im = item5.getItemMeta();
-			item5Im.setDisplayName(ChatColor.GOLD + "" + player.getDisplayName() + "ÀÇ ¸Ó¸®");
+			item5Im.setDisplayName(ChatColor.GOLD + "" + player.getDisplayName() + "ì˜ ë¨¸ë¦¬");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -576,10 +576,10 @@ public class JobScroll {
 			item5.setItemMeta(item5Im);
 			player.getInventory().setItem(39, item5);	
 			player.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY,Integer.MAX_VALUE,0));
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);		
 			//tp
@@ -589,11 +589,11 @@ public class JobScroll {
 			itemArg.remove();
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "¸¶ÀÎÀÇ º°")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "ë§ˆì¸ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.BLUE_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "¸¶ÀÎÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "ë§ˆì¸ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -609,13 +609,13 @@ public class JobScroll {
 			for(PotionEffect effect : player.getActivePotionEffects ()){
 		        player.removePotionEffect(effect.getType());
 		    }
-			//¹«±â
+			//ë¬´ê¸°
 			ItemStack item5 = new ItemStack(Material.DIAMOND_SWORD);
 			ItemMeta item5Im = item5.getItemMeta();
 			item5Im.setLocalizedName("500,0,0,0,10,300,0,0,0,100");
-			item5Im.setDisplayName(ChatColor.DARK_RED + "¹ß¸®»ç¸£µµ");
+			item5Im.setDisplayName(ChatColor.DARK_RED + "ë°œë¦¬ì‚¬ë¥´ë„");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "Á×Àº ÀÚµéÀÇ ¸¶³ª¸¦ ÀÀÃà½ÃÄÑ ¸¸µé¾îÁø °Ë");
+			item5Lore.add(ChatColor.GRAY + "ì£½ì€ ìë“¤ì˜ ë§ˆë‚˜ë¥¼ ì‘ì¶•ì‹œì¼œ ë§Œë“¤ì–´ì§„ ê²€");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -623,10 +623,10 @@ public class JobScroll {
 			item5Im.setLore(item5Lore);
 			item5.setItemMeta(item5Im);
 			player.getInventory().addItem(item5);
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);		
 			//tp
@@ -636,13 +636,13 @@ public class JobScroll {
 			itemArg.remove();
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 			//player.kickPlayer(ChatColor.RED + "Error Code:" + ChatColor.MAGIC + " Hi My Name Is Yumehama(The God)"
-			//		+ "\n" + ChatColor.GRAY + "´ç½ÅÀÇ ¼±ÅÃ¿¡ ÀÇÇØ °èÁ¤ÀÌ Å¸¶ôÇÏ°í ÀÖ½À´Ï´Ù.");
+			//		+ "\n" + ChatColor.GRAY + "ë‹¹ì‹ ì˜ ì„ íƒì— ì˜í•´ ê³„ì •ì´ íƒ€ë½í•˜ê³  ìˆìŠµë‹ˆë‹¤.");
 		}
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "ÆÈ¶óµòÀÇ º°")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "íŒ”ë¼ë”˜ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.BROWN_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "ÆÈ¶óµòÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "íŒ”ë¼ë”˜ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -658,13 +658,13 @@ public class JobScroll {
 			for(PotionEffect effect : player.getActivePotionEffects ()){
 		        player.removePotionEffect(effect.getType());
 		    }
-			//¹«±â
+			//ë¬´ê¸°
 			ItemStack item5 = new ItemStack(Material.DIAMOND_SWORD);
 			ItemMeta item5Im = item5.getItemMeta();
 			item5Im.setLocalizedName("100,0,0,0,0,1000,0,0,0,1000");
-			item5Im.setDisplayName(ChatColor.DARK_RED + "ÁöÅ°´Â ÀÚÀÇ °Ë");
+			item5Im.setDisplayName(ChatColor.DARK_RED + "ì§€í‚¤ëŠ” ìì˜ ê²€");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "ÀüÅõÀÇ ½Å¿¡°Ô ÇÏ»ç ¹ŞÀº °Ë");
+			item5Lore.add(ChatColor.GRAY + "ì „íˆ¬ì˜ ì‹ ì—ê²Œ í•˜ì‚¬ ë°›ì€ ê²€");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -672,10 +672,10 @@ public class JobScroll {
 			item5Im.setLore(item5Lore);
 			item5.setItemMeta(item5Im);
 			player.getInventory().addItem(item5);
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);		
 			//tp
@@ -685,11 +685,11 @@ public class JobScroll {
 			itemArg.remove();
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "¿ë±â»çÀÇ º°")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "ìš©ê¸°ì‚¬ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.BLACK_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "¿ë±â»çÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "ìš©ê¸°ì‚¬ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -705,13 +705,13 @@ public class JobScroll {
 			for(PotionEffect effect : player.getActivePotionEffects ()){
 		        player.removePotionEffect(effect.getType());
 		    }
-			//¹«±â
+			//ë¬´ê¸°
 			ItemStack item5 = new ItemStack(Material.DIAMOND_SWORD);
 			ItemMeta item5Im = item5.getItemMeta();
 			item5Im.setLocalizedName("200,0,0,0,0,500,0,0,0,1500");
-			item5Im.setDisplayName(ChatColor.DARK_RED + "»ê±Í½º");
+			item5Im.setDisplayName(ChatColor.DARK_RED + "ì‚°ê·€ìŠ¤");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "¿ëÀÇ ¿ª¸°ÀÌ µé¾î°£ ºÀÀÎµÈ °Ë");
+			item5Lore.add(ChatColor.GRAY + "ìš©ì˜ ì—­ë¦°ì´ ë“¤ì–´ê°„ ë´‰ì¸ëœ ê²€");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -719,10 +719,10 @@ public class JobScroll {
 			item5Im.setLore(item5Lore);
 			item5.setItemMeta(item5Im);
 			player.getInventory().addItem(item5);
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);		
 			//tp
@@ -732,11 +732,11 @@ public class JobScroll {
 			itemArg.remove();
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "¾ÆÃ³ÀÇ º°")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "ì•„ì²˜ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.CLAY_BALL);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "¾ÆÃ³ÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "ì•„ì²˜ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -752,13 +752,13 @@ public class JobScroll {
 			for(PotionEffect effect : player.getActivePotionEffects()){
 		        player.removePotionEffect(effect.getType());
 		    }
-			//¹«±â
+			//ë¬´ê¸°
 			ItemStack item5 = new ItemStack(Material.DEAD_TUBE_CORAL_BLOCK);
 			ItemMeta item5Im = item5.getItemMeta();
 			item5Im.setLocalizedName("0");
-			item5Im.setDisplayName(ChatColor.GOLD + "±×¶õ¸¶±×");
+			item5Im.setDisplayName(ChatColor.GOLD + "ê·¸ë€ë§ˆê·¸");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "¶¥ ¼Ó¼ºÀÌ ±êµé¾î ÀÖ´Â È°");
+			item5Lore.add(ChatColor.GRAY + "ë•… ì†ì„±ì´ ê¹ƒë“¤ì–´ ìˆëŠ” í™œ");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -766,10 +766,10 @@ public class JobScroll {
 			item5Im.setLore(item5Lore);
 			item5.setItemMeta(item5Im);
 			player.getInventory().addItem(item5);
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);		
 			//tp
@@ -779,12 +779,12 @@ public class JobScroll {
 			itemArg.remove();
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
-		//º¸Á¸ÀÇ º° ==================================================================================================================================================
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "º¸Á¸ÀÇ º» ÆÄÀÌÅÍÀÇ º°")) {
+		//ë³´ì¡´ì˜ ë³„ ==================================================================================================================================================
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "ë³´ì¡´ì˜ ë³¸ íŒŒì´í„°ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.RED_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "º» ÆÄÀÌÅÍÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "ë³¸ íŒŒì´í„°ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -801,16 +801,16 @@ public class JobScroll {
 			for(PotionEffect effect : player.getActivePotionEffects ()){
 		        player.removePotionEffect(effect.getType());
 		    }
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);	
-			//³ÊÅ¬
+			//ë„ˆí´
 			ItemStack knuckle = new ItemStack(Material.BONE);
 			ItemMeta knuckleIm = knuckle.getItemMeta();
-			knuckleIm.setDisplayName(ChatColor.GOLD + "°í´ë µå·¡°ïÀÇ »À");
+			knuckleIm.setDisplayName(ChatColor.GOLD + "ê³ ëŒ€ ë“œë˜ê³¤ì˜ ë¼ˆ");
 			knuckle.setItemMeta(knuckleIm);	
 			player.getInventory().setItem(0, knuckle);
 			//tp
@@ -820,11 +820,11 @@ public class JobScroll {
 			itemArg.remove();
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "º¸Á¸ÀÇ ±â»çÀÇ º°")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "ë³´ì¡´ì˜ ê¸°ì‚¬ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.GREEN_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "±â»çÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "ê¸°ì‚¬ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -841,18 +841,18 @@ public class JobScroll {
 			for(PotionEffect effect : player.getActivePotionEffects ()){
 		        player.removePotionEffect(effect.getType());
 		    }
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);	
-			//¹«±â
+			//ë¬´ê¸°
 			ItemStack item5 = new ItemStack(Material.BIRCH_LEAVES);
 			ItemMeta item5Im = item5.getItemMeta();
-			item5Im.setDisplayName(ChatColor.GRAY + "³ª¹µ°¡Áö");
+			item5Im.setDisplayName(ChatColor.GRAY + "ë‚˜ë­‡ê°€ì§€");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "´©±º°¡ ¿À·¡ »ç¿ëÇÑ °Í °°Àº ¸ñ°Ë");
+			item5Lore.add(ChatColor.GRAY + "ëˆ„êµ°ê°€ ì˜¤ë˜ ì‚¬ìš©í•œ ê²ƒ ê°™ì€ ëª©ê²€");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -867,11 +867,11 @@ public class JobScroll {
 			itemArg.remove();
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "º¸Á¸ÀÇ ÇÁ¸®½ºÆ®ÀÇ º°")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "ë³´ì¡´ì˜ í”„ë¦¬ìŠ¤íŠ¸ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.LAPIS_LAZULI);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "ÇÁ¸®½ºÆ®ÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "í”„ë¦¬ìŠ¤íŠ¸ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -888,18 +888,18 @@ public class JobScroll {
 			for(PotionEffect effect : player.getActivePotionEffects ()){
 		        player.removePotionEffect(effect.getType());
 		    }
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);	
-			//¹«±â
+			//ë¬´ê¸°
 			ItemStack item5 = new ItemStack(Material.BIRCH_LEAVES);
 			ItemMeta item5Im = item5.getItemMeta();
-			item5Im.setDisplayName(ChatColor.GRAY + "³ª¹µ°¡Áö");
+			item5Im.setDisplayName(ChatColor.GRAY + "ë‚˜ë­‡ê°€ì§€");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "´©±º°¡ ¿À·¡ »ç¿ëÇÑ °Í °°Àº ¸ñ°Ë");
+			item5Lore.add(ChatColor.GRAY + "ëˆ„êµ°ê°€ ì˜¤ë˜ ì‚¬ìš©í•œ ê²ƒ ê°™ì€ ëª©ê²€");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -907,10 +907,10 @@ public class JobScroll {
 			item5Im.setLore(item5Lore);
 			item5.setItemMeta(item5Im);
 			player.getInventory().addItem(item5);	
-			//¹æÆĞ
+			//ë°©íŒ¨
 			ItemStack knuckle = new ItemStack(Material.SHIELD);
 			ItemMeta knuckleIm = knuckle.getItemMeta();
-			knuckleIm.setDisplayName(ChatColor.GOLD + "ÇÁ¸®½ºÆ®ÀÇ ¹æÆĞ");
+			knuckleIm.setDisplayName(ChatColor.GOLD + "í”„ë¦¬ìŠ¤íŠ¸ì˜ ë°©íŒ¨");
 			knuckleIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			knuckleIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			knuckleIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -924,11 +924,11 @@ public class JobScroll {
 			itemArg.remove();
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "º¸Á¸ÀÇ ±¤Àü»çÀÇ º°")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "ë³´ì¡´ì˜ ê´‘ì „ì‚¬ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.CYAN_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "±¤Àü»çÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "ê´‘ì „ì‚¬ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -945,18 +945,18 @@ public class JobScroll {
 			for(PotionEffect effect : player.getActivePotionEffects ()){
 		        player.removePotionEffect(effect.getType());
 		    }
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);	
-			//¹«±â
+			//ë¬´ê¸°
 			ItemStack item5 = new ItemStack(Material.BIRCH_LEAVES);
 			ItemMeta item5Im = item5.getItemMeta();
-			item5Im.setDisplayName(ChatColor.GRAY + "³ª¹µ°¡Áö");
+			item5Im.setDisplayName(ChatColor.GRAY + "ë‚˜ë­‡ê°€ì§€");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "´©±º°¡ ¿À·¡ »ç¿ëÇÑ °Í °°Àº ¸ñ°Ë");
+			item5Lore.add(ChatColor.GRAY + "ëˆ„êµ°ê°€ ì˜¤ë˜ ì‚¬ìš©í•œ ê²ƒ ê°™ì€ ëª©ê²€");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -971,11 +971,11 @@ public class JobScroll {
 			itemArg.remove();
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "º¸Á¸ÀÇ µµ¹Ú»çÀÇ º°")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "ë³´ì¡´ì˜ ë„ë°•ì‚¬ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.LIGHT_GRAY_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "µµ¹Ú»çÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "ë„ë°•ì‚¬ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -992,18 +992,18 @@ public class JobScroll {
 			for(PotionEffect effect : player.getActivePotionEffects ()){
 		        player.removePotionEffect(effect.getType());
 		    }
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);	
-			//¹«±â
+			//ë¬´ê¸°
 			ItemStack item5 = new ItemStack(Material.BIRCH_LEAVES);
 			ItemMeta item5Im = item5.getItemMeta();
-			item5Im.setDisplayName(ChatColor.GRAY + "³ª¹µ°¡Áö");
+			item5Im.setDisplayName(ChatColor.GRAY + "ë‚˜ë­‡ê°€ì§€");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "´©±º°¡ ¿À·¡ »ç¿ëÇÑ °Í °°Àº ¸ñ°Ë");
+			item5Lore.add(ChatColor.GRAY + "ëˆ„êµ°ê°€ ì˜¤ë˜ ì‚¬ìš©í•œ ê²ƒ ê°™ì€ ëª©ê²€");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1018,11 +1018,11 @@ public class JobScroll {
 			itemArg.remove();
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "º¸Á¸ÀÇ µ¥ºôÀÇ º°")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "ë³´ì¡´ì˜ ë°ë¹Œì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.GRAY_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "µ¥ºôÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "ë°ë¹Œì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -1039,20 +1039,20 @@ public class JobScroll {
 			for(PotionEffect effect : player.getActivePotionEffects ()){
 		        player.removePotionEffect(effect.getType());
 		    }
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);	
-			//¹«±â
+			//ë¬´ê¸°
 			ItemStack item5 = new ItemStack(Material.DIAMOND_SWORD);
 			ItemMeta item5Im = item5.getItemMeta();
 			item5Im.addEnchant(Enchantment.DAMAGE_ALL, 99, true);
 			item5Im.addEnchant(Enchantment.SWEEPING_EDGE, 3, true);
-			item5Im.setDisplayName(ChatColor.DARK_RED + "µ¥ºô ½º¿öµå");
+			item5Im.setDisplayName(ChatColor.DARK_RED + "ë°ë¹Œ ìŠ¤ì›Œë“œ");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "°è½ÃÀÚ Ä«»ç¸£°¡ °¡Áö°í ÀÖ´ø °Ë");
+			item5Lore.add(ChatColor.GRAY + "ê³„ì‹œì ì¹´ì‚¬ë¥´ê°€ ê°€ì§€ê³  ìˆë˜ ê²€");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1067,11 +1067,11 @@ public class JobScroll {
 			itemArg.remove();
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "º¸Á¸ÀÇ ¿£Á©ÀÇ º°")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "ë³´ì¡´ì˜ ì—”ì ¤ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.PINK_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "¿£Á©ÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "ì—”ì ¤ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -1088,20 +1088,20 @@ public class JobScroll {
 			for(PotionEffect effect : player.getActivePotionEffects ()){
 		        player.removePotionEffect(effect.getType());
 		    }
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);	
-			//¹«±â
+			//ë¬´ê¸°
 			ItemStack item5 = new ItemStack(Material.DIAMOND_SWORD);
 			ItemMeta item5Im = item5.getItemMeta();
 			item5Im.addEnchant(Enchantment.DAMAGE_ALL, 99, true);
 			item5Im.addEnchant(Enchantment.THORNS, 99, true);
-			item5Im.setDisplayName(ChatColor.DARK_RED + "¿£Á© ½º¿öµå");
+			item5Im.setDisplayName(ChatColor.DARK_RED + "ì—”ì ¤ ìŠ¤ì›Œë“œ");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "¸¶³ª³­ ¸Æ ¸®¸£¿¡°Ô ¹ŞÀº ¼º°Ë");
+			item5Lore.add(ChatColor.GRAY + "ë§ˆë‚˜ë‚œ ë§¥ ë¦¬ë¥´ì—ê²Œ ë°›ì€ ì„±ê²€");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1116,11 +1116,11 @@ public class JobScroll {
 			itemArg.remove();
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "º¸Á¸ÀÇ ´ëÇàÀÚÀÇ º°")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "ë³´ì¡´ì˜ ëŒ€í–‰ìì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.LIME_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "´ëÇàÀÚÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "ëŒ€í–‰ìì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -1137,21 +1137,21 @@ public class JobScroll {
 			for(PotionEffect effect : player.getActivePotionEffects ()){
 		        player.removePotionEffect(effect.getType());
 		    }
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);	
-			//¹«±â
+			//ë¬´ê¸°
 			ItemStack item5 = new ItemStack(Material.DIAMOND_SWORD);
 			ItemMeta item5Im = item5.getItemMeta();
 			item5Im.addEnchant(Enchantment.DAMAGE_ALL, 99, true);
 			item5Im.addEnchant(Enchantment.FIRE_ASPECT, 99, true);
 			item5Im.addEnchant(Enchantment.SWEEPING_EDGE, 1, true);
-			item5Im.setDisplayName(ChatColor.DARK_RED + "½ÅÀÇ ÈûÀ» ´ãÀº °Ë");
+			item5Im.setDisplayName(ChatColor.DARK_RED + "ì‹ ì˜ í˜ì„ ë‹´ì€ ê²€");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "¾È¹Ù¸£ÀÇ ºñ´Ã·Î ¸¸µé¾îÁø ¼º°Ë");
+			item5Lore.add(ChatColor.GRAY + "ì•ˆë°”ë¥´ì˜ ë¹„ëŠ˜ë¡œ ë§Œë“¤ì–´ì§„ ì„±ê²€");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1166,11 +1166,11 @@ public class JobScroll {
 			itemArg.remove();
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "º¸Á¸ÀÇ ±×¸²ÀÚ ¹«»çÀÇ º°")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "ë³´ì¡´ì˜ ê·¸ë¦¼ì ë¬´ì‚¬ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.YELLOW_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "±×¸²ÀÚ ¹«»çÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "ê·¸ë¦¼ì ë¬´ì‚¬ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -1187,20 +1187,20 @@ public class JobScroll {
 			for(PotionEffect effect : player.getActivePotionEffects ()){
 		        player.removePotionEffect(effect.getType());
 		    }
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);	
-			//¹«±â
+			//ë¬´ê¸°
 			ItemStack item5 = new ItemStack(Material.GOLDEN_SWORD);
 			ItemMeta item5Im = item5.getItemMeta();
 			item5Im.addEnchant(Enchantment.DAMAGE_ALL, 30, true);
 			item5Im.addEnchant(Enchantment.SWEEPING_EDGE, 1, true);
-			item5Im.setDisplayName(ChatColor.AQUA + "Á×À½ÀÇ ¹«µµ");
+			item5Im.setDisplayName(ChatColor.AQUA + "ì£½ìŒì˜ ë¬´ë„");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "¾Ç¸¶¿ÍÀÇ °è¾àÀÌ µÇ¾îÀÖ´Â °Ë");
+			item5Lore.add(ChatColor.GRAY + "ì•…ë§ˆì™€ì˜ ê³„ì•½ì´ ë˜ì–´ìˆëŠ” ê²€");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1215,11 +1215,11 @@ public class JobScroll {
 			itemArg.remove();
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "º¸Á¸ÀÇ ¹ö¼­Ä¿ÀÇ º°")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "ë³´ì¡´ì˜ ë²„ì„œì»¤ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.LIGHT_BLUE_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "¹ö¼­Ä¿ÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "ë²„ì„œì»¤ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -1236,21 +1236,21 @@ public class JobScroll {
 			for(PotionEffect effect : player.getActivePotionEffects ()){
 		        player.removePotionEffect(effect.getType());
 		    }
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);	
-			//¹«±â
+			//ë¬´ê¸°
 			ItemStack item5 = new ItemStack(Material.GOLDEN_SWORD);
 			ItemMeta item5Im = item5.getItemMeta();
 			item5Im.addEnchant(Enchantment.DAMAGE_ALL, 25, true);
 			item5Im.addEnchant(Enchantment.KNOCKBACK, 3, true);
 			item5Im.addEnchant(Enchantment.SWEEPING_EDGE, 6, true);
-			item5Im.setDisplayName(ChatColor.AQUA + "¹İ¶õ±ºÀÇ ´ë°Ë");
+			item5Im.setDisplayName(ChatColor.AQUA + "ë°˜ë€êµ°ì˜ ëŒ€ê²€");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "ÈÖµÎ¸£´Â °ÍÀ¸·Î º¸ÀÌ´Â ÀûÀ» ¼¶¸êÇÒ ¼ö ÀÖ´Â °Ë");
+			item5Lore.add(ChatColor.GRAY + "íœ˜ë‘ë¥´ëŠ” ê²ƒìœ¼ë¡œ ë³´ì´ëŠ” ì ì„ ì„¬ë©¸í•  ìˆ˜ ìˆëŠ” ê²€");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1265,11 +1265,11 @@ public class JobScroll {
 			itemArg.remove();
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "º¸Á¸ÀÇ ±ºÀÎÀÇ º°")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "ë³´ì¡´ì˜ êµ°ì¸ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.MAGENTA_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "±ºÀÎÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "êµ°ì¸ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -1286,10 +1286,10 @@ public class JobScroll {
 			for(PotionEffect effect : player.getActivePotionEffects ()){
 		        player.removePotionEffect(effect.getType());
 		    }
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);	
 			//tp
@@ -1299,11 +1299,11 @@ public class JobScroll {
 			itemArg.remove();
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "º¸Á¸ÀÇ ±×¸² ¸®ÆÛÀÇ º°")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "ë³´ì¡´ì˜ ê·¸ë¦¼ ë¦¬í¼ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.ORANGE_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "±×¸² ¸®ÆÛÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "ê·¸ë¦¼ ë¦¬í¼ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -1320,10 +1320,10 @@ public class JobScroll {
 			for(PotionEffect effect : player.getActivePotionEffects ()){
 		        player.removePotionEffect(effect.getType());
 		    }
-			//¸Ó¸®
+			//ë¨¸ë¦¬
 			ItemStack item5 = new ItemStack(Material.SKELETON_SKULL);
 			ItemMeta item5Im = item5.getItemMeta();
-			item5Im.setDisplayName(ChatColor.GOLD + "" + player.getDisplayName() + "ÀÇ ¸Ó¸®");
+			item5Im.setDisplayName(ChatColor.GOLD + "" + player.getDisplayName() + "ì˜ ë¨¸ë¦¬");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1331,10 +1331,10 @@ public class JobScroll {
 			item5.setItemMeta(item5Im);
 			player.getInventory().setItem(39, item5);	
 			player.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY,Integer.MAX_VALUE,0));
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);		
 			//tp
@@ -1344,11 +1344,11 @@ public class JobScroll {
 			itemArg.remove();
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "º¸Á¸ÀÇ ¸¶ÀÎÀÇ º°")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "ë³´ì¡´ì˜ ë§ˆì¸ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.BLUE_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "¸¶ÀÎÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "ë§ˆì¸ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -1365,16 +1365,16 @@ public class JobScroll {
 			for(PotionEffect effect : player.getActivePotionEffects ()){
 		        player.removePotionEffect(effect.getType());
 		    }
-			//¹«±â
+			//ë¬´ê¸°
 			ItemStack item5 = new ItemStack(Material.DIAMOND_SWORD);
 			ItemMeta item5Im = item5.getItemMeta();
 			item5Im.addEnchant(Enchantment.DAMAGE_ALL, 200, true);
 			item5Im.addEnchant(Enchantment.SWEEPING_EDGE, 5, true);
 			item5Im.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 9, true);
 			item5Im.addEnchant(Enchantment.KNOCKBACK, 4, true);
-			item5Im.setDisplayName(ChatColor.DARK_RED + "¹ß¸®»ç¸£µµ");
+			item5Im.setDisplayName(ChatColor.DARK_RED + "ë°œë¦¬ì‚¬ë¥´ë„");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "Á×Àº ÀÚµéÀÇ ¸¶³ª¸¦ ÀÀÃà½ÃÄÑ ¸¸µé¾îÁø °Ë");
+			item5Lore.add(ChatColor.GRAY + "ì£½ì€ ìë“¤ì˜ ë§ˆë‚˜ë¥¼ ì‘ì¶•ì‹œì¼œ ë§Œë“¤ì–´ì§„ ê²€");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1382,10 +1382,10 @@ public class JobScroll {
 			item5Im.setLore(item5Lore);
 			item5.setItemMeta(item5Im);
 			player.getInventory().addItem(item5);
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);		
 			//tp
@@ -1395,11 +1395,11 @@ public class JobScroll {
 			itemArg.remove();
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "º¸Á¸ÀÇ ÆÈ¶óµòÀÇ º°")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "ë³´ì¡´ì˜ íŒ”ë¼ë”˜ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.BROWN_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "ÆÈ¶óµòÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "íŒ”ë¼ë”˜ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -1416,10 +1416,10 @@ public class JobScroll {
 			for(PotionEffect effect : player.getActivePotionEffects ()){
 		        player.removePotionEffect(effect.getType());
 		    }
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);		
 			//tp
@@ -1429,11 +1429,11 @@ public class JobScroll {
 			itemArg.remove();
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "º¸Á¸ÀÇ ¿ë±â»çÀÇ º°")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "ë³´ì¡´ì˜ ìš©ê¸°ì‚¬ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.BLACK_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "¿ë±â»çÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "ìš©ê¸°ì‚¬ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -1450,13 +1450,13 @@ public class JobScroll {
 			for(PotionEffect effect : player.getActivePotionEffects ()){
 		        player.removePotionEffect(effect.getType());
 		    }
-			//¹«±â
+			//ë¬´ê¸°
 			ItemStack item5 = new ItemStack(Material.DIAMOND_SWORD);
 			ItemMeta item5Im = item5.getItemMeta();
 			item5Im.addEnchant(Enchantment.THORNS, 500, true);
-			item5Im.setDisplayName(ChatColor.DARK_RED + "»ê±Í½º");
+			item5Im.setDisplayName(ChatColor.DARK_RED + "ì‚°ê·€ìŠ¤");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "ÇÇ¸¦ Å½ÇÏ´ø ¾Ç¸¶°¡ ºÀÀÎµÈ °Ë");
+			item5Lore.add(ChatColor.GRAY + "í”¼ë¥¼ íƒí•˜ë˜ ì•…ë§ˆê°€ ë´‰ì¸ëœ ê²€");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1464,10 +1464,10 @@ public class JobScroll {
 			item5Im.setLore(item5Lore);
 			item5.setItemMeta(item5Im);
 			player.getInventory().addItem(item5);
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);		
 			//tp
@@ -1477,11 +1477,11 @@ public class JobScroll {
 			itemArg.remove();
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "º¸Á¸ÀÇ ¾ÆÃ³ÀÇ º°")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "ë³´ì¡´ì˜ ì•„ì²˜ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.CLAY_BALL);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "¾ÆÃ³ÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "ì•„ì²˜ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -1498,12 +1498,12 @@ public class JobScroll {
 			for(PotionEffect effect : player.getActivePotionEffects ()){
 		        player.removePotionEffect(effect.getType());
 		    }
-			//¹«±â
+			//ë¬´ê¸°
 			ItemStack item5 = new ItemStack(Material.DEAD_TUBE_CORAL_BLOCK);
 			ItemMeta item5Im = item5.getItemMeta();
-			item5Im.setDisplayName(ChatColor.WHITE + "ÃÊº¸ÀÚ¿ë È°");
+			item5Im.setDisplayName(ChatColor.WHITE + "ì´ˆë³´ììš© í™œ");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "´©±¸³ª »ç¿ëÇÒ ¼ö ÀÖÀ» °Í °°´Ù.");
+			item5Lore.add(ChatColor.GRAY + "ëˆ„êµ¬ë‚˜ ì‚¬ìš©í•  ìˆ˜ ìˆì„ ê²ƒ ê°™ë‹¤.");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1511,10 +1511,10 @@ public class JobScroll {
 			item5Im.setLore(item5Lore);
 			item5.setItemMeta(item5Im);
 			player.getInventory().addItem(item5);
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);		
 			//tp
@@ -1524,13 +1524,13 @@ public class JobScroll {
 			itemArg.remove();
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
-		//¿ÏÀü º¸Á¸ÀÇ º° ==================================================================================================================================================
+		//ì™„ì „ ë³´ì¡´ì˜ ë³„ ==================================================================================================================================================
 		if (itemArg.getItemStack().getItemMeta().getDisplayName()
-				.equalsIgnoreCase(ChatColor.AQUA + "¿ÏÀü º¸Á¸ÀÇ º» ÆÄÀÌÅÍÀÇ º°")) {
+				.equalsIgnoreCase(ChatColor.AQUA + "ì™„ì „ ë³´ì¡´ì˜ ë³¸ íŒŒì´í„°ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.RED_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "º» ÆÄÀÌÅÍÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "ë³¸ íŒŒì´í„°ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -1546,16 +1546,16 @@ public class JobScroll {
 			for (PotionEffect effect : player.getActivePotionEffects()) {
 				player.removePotionEffect(effect.getType());
 			}
-			// ¸¶³ª
+			// ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);
 			player.getInventory().setItem(8, item);
-			// ³ÊÅ¬
+			// ë„ˆí´
 			ItemStack knuckle = new ItemStack(Material.BONE);
 			ItemMeta knuckleIm = knuckle.getItemMeta();
-			knuckleIm.setDisplayName(ChatColor.GOLD + "°í´ë µå·¡°ïÀÇ »À");
+			knuckleIm.setDisplayName(ChatColor.GOLD + "ê³ ëŒ€ ë“œë˜ê³¤ì˜ ë¼ˆ");
 			knuckle.setItemMeta(knuckleIm);
 			player.getInventory().setItem(0, knuckle);
 			// tp
@@ -1566,11 +1566,11 @@ public class JobScroll {
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
 		if (itemArg.getItemStack().getItemMeta().getDisplayName()
-				.equalsIgnoreCase(ChatColor.AQUA + "¿ÏÀü º¸Á¸ÀÇ ±â»çÀÇ º°")) {
+				.equalsIgnoreCase(ChatColor.AQUA + "ì™„ì „ ë³´ì¡´ì˜ ê¸°ì‚¬ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.GREEN_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "±â»çÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "ê¸°ì‚¬ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -1586,18 +1586,18 @@ public class JobScroll {
 			for (PotionEffect effect : player.getActivePotionEffects()) {
 				player.removePotionEffect(effect.getType());
 			}
-			// ¸¶³ª
+			// ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);
 			player.getInventory().setItem(8, item);
-			// ¹«±â
+			// ë¬´ê¸°
 			ItemStack item5 = new ItemStack(Material.BIRCH_LEAVES);
 			ItemMeta item5Im = item5.getItemMeta();
-			item5Im.setDisplayName(ChatColor.GRAY + "³ª¹µ°¡Áö");
+			item5Im.setDisplayName(ChatColor.GRAY + "ë‚˜ë­‡ê°€ì§€");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "´©±º°¡ ¿À·¡ »ç¿ëÇÑ °Í °°Àº ¸ñ°Ë");
+			item5Lore.add(ChatColor.GRAY + "ëˆ„êµ°ê°€ ì˜¤ë˜ ì‚¬ìš©í•œ ê²ƒ ê°™ì€ ëª©ê²€");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1613,11 +1613,11 @@ public class JobScroll {
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
 		if (itemArg.getItemStack().getItemMeta().getDisplayName()
-				.equalsIgnoreCase(ChatColor.AQUA + "¿ÏÀü º¸Á¸ÀÇ ÇÁ¸®½ºÆ®ÀÇ º°")) {
+				.equalsIgnoreCase(ChatColor.AQUA + "ì™„ì „ ë³´ì¡´ì˜ í”„ë¦¬ìŠ¤íŠ¸ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.LAPIS_LAZULI);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "ÇÁ¸®½ºÆ®ÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "í”„ë¦¬ìŠ¤íŠ¸ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -1633,18 +1633,18 @@ public class JobScroll {
 			for (PotionEffect effect : player.getActivePotionEffects()) {
 				player.removePotionEffect(effect.getType());
 			}
-			// ¸¶³ª
+			// ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);
 			player.getInventory().setItem(8, item);
-			// ¹«±â
+			// ë¬´ê¸°
 			ItemStack item5 = new ItemStack(Material.BIRCH_LEAVES);
 			ItemMeta item5Im = item5.getItemMeta();
-			item5Im.setDisplayName(ChatColor.GRAY + "³ª¹µ°¡Áö");
+			item5Im.setDisplayName(ChatColor.GRAY + "ë‚˜ë­‡ê°€ì§€");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "´©±º°¡ ¿À·¡ »ç¿ëÇÑ °Í °°Àº ¸ñ°Ë");
+			item5Lore.add(ChatColor.GRAY + "ëˆ„êµ°ê°€ ì˜¤ë˜ ì‚¬ìš©í•œ ê²ƒ ê°™ì€ ëª©ê²€");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1652,10 +1652,10 @@ public class JobScroll {
 			item5Im.setLore(item5Lore);
 			item5.setItemMeta(item5Im);
 			player.getInventory().addItem(item5);
-			// ¹æÆĞ
+			// ë°©íŒ¨
 			ItemStack knuckle = new ItemStack(Material.SHIELD);
 			ItemMeta knuckleIm = knuckle.getItemMeta();
-			knuckleIm.setDisplayName(ChatColor.GOLD + "ÇÁ¸®½ºÆ®ÀÇ ¹æÆĞ");
+			knuckleIm.setDisplayName(ChatColor.GOLD + "í”„ë¦¬ìŠ¤íŠ¸ì˜ ë°©íŒ¨");
 			knuckleIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			knuckleIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			knuckleIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1670,11 +1670,11 @@ public class JobScroll {
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
 		if (itemArg.getItemStack().getItemMeta().getDisplayName()
-				.equalsIgnoreCase(ChatColor.AQUA + "¿ÏÀü º¸Á¸ÀÇ ±¤Àü»çÀÇ º°")) {
+				.equalsIgnoreCase(ChatColor.AQUA + "ì™„ì „ ë³´ì¡´ì˜ ê´‘ì „ì‚¬ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.CYAN_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "±¤Àü»çÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "ê´‘ì „ì‚¬ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -1690,18 +1690,18 @@ public class JobScroll {
 			for (PotionEffect effect : player.getActivePotionEffects()) {
 				player.removePotionEffect(effect.getType());
 			}
-			// ¸¶³ª
+			// ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);
 			player.getInventory().setItem(8, item);
-			// ¹«±â
+			// ë¬´ê¸°
 			ItemStack item5 = new ItemStack(Material.BIRCH_LEAVES);
 			ItemMeta item5Im = item5.getItemMeta();
-			item5Im.setDisplayName(ChatColor.GRAY + "³ª¹µ°¡Áö");
+			item5Im.setDisplayName(ChatColor.GRAY + "ë‚˜ë­‡ê°€ì§€");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "´©±º°¡ ¿À·¡ »ç¿ëÇÑ °Í °°Àº ¸ñ°Ë");
+			item5Lore.add(ChatColor.GRAY + "ëˆ„êµ°ê°€ ì˜¤ë˜ ì‚¬ìš©í•œ ê²ƒ ê°™ì€ ëª©ê²€");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1717,11 +1717,11 @@ public class JobScroll {
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
 		if (itemArg.getItemStack().getItemMeta().getDisplayName()
-				.equalsIgnoreCase(ChatColor.AQUA + "¿ÏÀü º¸Á¸ÀÇ µµ¹Ú»çÀÇ º°")) {
+				.equalsIgnoreCase(ChatColor.AQUA + "ì™„ì „ ë³´ì¡´ì˜ ë„ë°•ì‚¬ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.LIGHT_GRAY_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "µµ¹Ú»çÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "ë„ë°•ì‚¬ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -1737,18 +1737,18 @@ public class JobScroll {
 			for (PotionEffect effect : player.getActivePotionEffects()) {
 				player.removePotionEffect(effect.getType());
 			}
-			// ¸¶³ª
+			// ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);
 			player.getInventory().setItem(8, item);
-			// ¹«±â
+			// ë¬´ê¸°
 			ItemStack item5 = new ItemStack(Material.BIRCH_LEAVES);
 			ItemMeta item5Im = item5.getItemMeta();
-			item5Im.setDisplayName(ChatColor.GRAY + "³ª¹µ°¡Áö");
+			item5Im.setDisplayName(ChatColor.GRAY + "ë‚˜ë­‡ê°€ì§€");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "´©±º°¡ ¿À·¡ »ç¿ëÇÑ °Í °°Àº ¸ñ°Ë");
+			item5Lore.add(ChatColor.GRAY + "ëˆ„êµ°ê°€ ì˜¤ë˜ ì‚¬ìš©í•œ ê²ƒ ê°™ì€ ëª©ê²€");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1764,11 +1764,11 @@ public class JobScroll {
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
 		if (itemArg.getItemStack().getItemMeta().getDisplayName()
-				.equalsIgnoreCase(ChatColor.DARK_RED + "¿ÏÀü º¸Á¸ÀÇ µ¥ºôÀÇ º°")) {
+				.equalsIgnoreCase(ChatColor.DARK_RED + "ì™„ì „ ë³´ì¡´ì˜ ë°ë¹Œì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.GRAY_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "µ¥ºôÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "ë°ë¹Œì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -1784,20 +1784,20 @@ public class JobScroll {
 			for (PotionEffect effect : player.getActivePotionEffects()) {
 				player.removePotionEffect(effect.getType());
 			}
-			// ¸¶³ª
+			// ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);
 			player.getInventory().setItem(8, item);
-			// ¹«±â
+			// ë¬´ê¸°
 			ItemStack item5 = new ItemStack(Material.DIAMOND_SWORD);
 			ItemMeta item5Im = item5.getItemMeta();
 			item5Im.addEnchant(Enchantment.DAMAGE_ALL, 99, true);
 			item5Im.addEnchant(Enchantment.SWEEPING_EDGE, 3, true);
-			item5Im.setDisplayName(ChatColor.DARK_RED + "µ¥ºô ½º¿öµå");
+			item5Im.setDisplayName(ChatColor.DARK_RED + "ë°ë¹Œ ìŠ¤ì›Œë“œ");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "°è½ÃÀÚ Ä«»ç¸£°¡ °¡Áö°í ÀÖ´ø °Ë");
+			item5Lore.add(ChatColor.GRAY + "ê³„ì‹œì ì¹´ì‚¬ë¥´ê°€ ê°€ì§€ê³  ìˆë˜ ê²€");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1813,11 +1813,11 @@ public class JobScroll {
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
 		if (itemArg.getItemStack().getItemMeta().getDisplayName()
-				.equalsIgnoreCase(ChatColor.DARK_RED + "¿ÏÀü º¸Á¸ÀÇ ¿£Á©ÀÇ º°")) {
+				.equalsIgnoreCase(ChatColor.DARK_RED + "ì™„ì „ ë³´ì¡´ì˜ ì—”ì ¤ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.PINK_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "¿£Á©ÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "ì—”ì ¤ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -1833,20 +1833,20 @@ public class JobScroll {
 			for (PotionEffect effect : player.getActivePotionEffects()) {
 				player.removePotionEffect(effect.getType());
 			}
-			// ¸¶³ª
+			// ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);
 			player.getInventory().setItem(8, item);
-			// ¹«±â
+			// ë¬´ê¸°
 			ItemStack item5 = new ItemStack(Material.DIAMOND_SWORD);
 			ItemMeta item5Im = item5.getItemMeta();
 			item5Im.addEnchant(Enchantment.DAMAGE_ALL, 99, true);
 			item5Im.addEnchant(Enchantment.THORNS, 99, true);
-			item5Im.setDisplayName(ChatColor.DARK_RED + "¿£Á© ½º¿öµå");
+			item5Im.setDisplayName(ChatColor.DARK_RED + "ì—”ì ¤ ìŠ¤ì›Œë“œ");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "¸¶³ª³­ ¸Æ ¸®¸£¿¡°Ô ¹ŞÀº ¼º°Ë");
+			item5Lore.add(ChatColor.GRAY + "ë§ˆë‚˜ë‚œ ë§¥ ë¦¬ë¥´ì—ê²Œ ë°›ì€ ì„±ê²€");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1862,11 +1862,11 @@ public class JobScroll {
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
 		if (itemArg.getItemStack().getItemMeta().getDisplayName()
-				.equalsIgnoreCase(ChatColor.DARK_RED + "¿ÏÀü º¸Á¸ÀÇ ´ëÇàÀÚÀÇ º°")) {
+				.equalsIgnoreCase(ChatColor.DARK_RED + "ì™„ì „ ë³´ì¡´ì˜ ëŒ€í–‰ìì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.LIME_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "´ëÇàÀÚÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "ëŒ€í–‰ìì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -1882,21 +1882,21 @@ public class JobScroll {
 			for (PotionEffect effect : player.getActivePotionEffects()) {
 				player.removePotionEffect(effect.getType());
 			}
-			// ¸¶³ª
+			// ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);
 			player.getInventory().setItem(8, item);
-			// ¹«±â
+			// ë¬´ê¸°
 			ItemStack item5 = new ItemStack(Material.DIAMOND_SWORD);
 			ItemMeta item5Im = item5.getItemMeta();
 			item5Im.addEnchant(Enchantment.DAMAGE_ALL, 99, true);
 			item5Im.addEnchant(Enchantment.FIRE_ASPECT, 99, true);
 			item5Im.addEnchant(Enchantment.SWEEPING_EDGE, 1, true);
-			item5Im.setDisplayName(ChatColor.DARK_RED + "½ÅÀÇ ÈûÀ» ´ãÀº °Ë");
+			item5Im.setDisplayName(ChatColor.DARK_RED + "ì‹ ì˜ í˜ì„ ë‹´ì€ ê²€");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "¾È¹Ù¸£ÀÇ ºñ´Ã·Î ¸¸µé¾îÁø ¼º°Ë");
+			item5Lore.add(ChatColor.GRAY + "ì•ˆë°”ë¥´ì˜ ë¹„ëŠ˜ë¡œ ë§Œë“¤ì–´ì§„ ì„±ê²€");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1911,11 +1911,11 @@ public class JobScroll {
 			itemArg.remove();
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "¿ÏÀü º¸Á¸ÀÇ ±×¸²ÀÚ ¹«»çÀÇ º°")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "ì™„ì „ ë³´ì¡´ì˜ ê·¸ë¦¼ì ë¬´ì‚¬ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.YELLOW_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "±×¸²ÀÚ ¹«»çÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "ê·¸ë¦¼ì ë¬´ì‚¬ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -1931,20 +1931,20 @@ public class JobScroll {
 			for (PotionEffect effect : player.getActivePotionEffects()) {
 				player.removePotionEffect(effect.getType());
 			}
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);	
-			//¹«±â
+			//ë¬´ê¸°
 			ItemStack item5 = new ItemStack(Material.GOLDEN_SWORD);
 			ItemMeta item5Im = item5.getItemMeta();
 			item5Im.addEnchant(Enchantment.DAMAGE_ALL, 30, true);
 			item5Im.addEnchant(Enchantment.SWEEPING_EDGE, 1, true);
-			item5Im.setDisplayName(ChatColor.AQUA + "Á×À½ÀÇ ¹«µµ");
+			item5Im.setDisplayName(ChatColor.AQUA + "ì£½ìŒì˜ ë¬´ë„");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "¾Ç¸¶¿ÍÀÇ °è¾àÀÌ µÇ¾îÀÖ´Â °Ë");
+			item5Lore.add(ChatColor.GRAY + "ì•…ë§ˆì™€ì˜ ê³„ì•½ì´ ë˜ì–´ìˆëŠ” ê²€");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1959,11 +1959,11 @@ public class JobScroll {
 			itemArg.remove();
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "¿ÏÀü º¸Á¸ÀÇ ¹ö¼­Ä¿ÀÇ º°")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "ì™„ì „ ë³´ì¡´ì˜ ë²„ì„œì»¤ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.LIGHT_BLUE_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "¹ö¼­Ä¿ÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "ë²„ì„œì»¤ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -1979,21 +1979,21 @@ public class JobScroll {
 			for (PotionEffect effect : player.getActivePotionEffects()) {
 				player.removePotionEffect(effect.getType());
 			}
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);	
-			//¹«±â
+			//ë¬´ê¸°
 			ItemStack item5 = new ItemStack(Material.GOLDEN_SWORD);
 			ItemMeta item5Im = item5.getItemMeta();
 			item5Im.addEnchant(Enchantment.DAMAGE_ALL, 25, true);
 			item5Im.addEnchant(Enchantment.KNOCKBACK, 3, true);
 			item5Im.addEnchant(Enchantment.SWEEPING_EDGE, 6, true);
-			item5Im.setDisplayName(ChatColor.AQUA + "¹İ¶õ±ºÀÇ ´ë°Ë");
+			item5Im.setDisplayName(ChatColor.AQUA + "ë°˜ë€êµ°ì˜ ëŒ€ê²€");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "ÈÖµÎ¸£´Â °ÍÀ¸·Î º¸ÀÌ´Â ÀûÀ» ¼¶¸êÇÒ ¼ö ÀÖ´Â °Ë");
+			item5Lore.add(ChatColor.GRAY + "íœ˜ë‘ë¥´ëŠ” ê²ƒìœ¼ë¡œ ë³´ì´ëŠ” ì ì„ ì„¬ë©¸í•  ìˆ˜ ìˆëŠ” ê²€");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -2008,11 +2008,11 @@ public class JobScroll {
 			itemArg.remove();
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "¿ÏÀü º¸Á¸ÀÇ ±ºÀÎÀÇ º°")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "ì™„ì „ ë³´ì¡´ì˜ êµ°ì¸ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.MAGENTA_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "±ºÀÎÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "êµ°ì¸ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -2028,10 +2028,10 @@ public class JobScroll {
 			for (PotionEffect effect : player.getActivePotionEffects()) {
 				player.removePotionEffect(effect.getType());
 			}
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);	
 			//tp
@@ -2041,11 +2041,11 @@ public class JobScroll {
 			itemArg.remove();
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "¿ÏÀü º¸Á¸ÀÇ ±×¸² ¸®ÆÛÀÇ º°")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "ì™„ì „ ë³´ì¡´ì˜ ê·¸ë¦¼ ë¦¬í¼ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.ORANGE_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "±×¸² ¸®ÆÛÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "ê·¸ë¦¼ ë¦¬í¼ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -2061,10 +2061,10 @@ public class JobScroll {
 			for (PotionEffect effect : player.getActivePotionEffects()) {
 				player.removePotionEffect(effect.getType());
 			}
-			//¸Ó¸®
+			//ë¨¸ë¦¬
 			ItemStack item5 = new ItemStack(Material.SKELETON_SKULL);
 			ItemMeta item5Im = item5.getItemMeta();
-			item5Im.setDisplayName(ChatColor.GOLD + "" + player.getDisplayName() + "ÀÇ ¸Ó¸®");
+			item5Im.setDisplayName(ChatColor.GOLD + "" + player.getDisplayName() + "ì˜ ë¨¸ë¦¬");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -2072,10 +2072,10 @@ public class JobScroll {
 			item5.setItemMeta(item5Im);
 			player.getInventory().setItem(39, item5);	
 			player.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY,Integer.MAX_VALUE,0));
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);		
 			//tp
@@ -2085,11 +2085,11 @@ public class JobScroll {
 			itemArg.remove();
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "¿ÏÀü º¸Á¸ÀÇ ¸¶ÀÎÀÇ º°")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "ì™„ì „ ë³´ì¡´ì˜ ë§ˆì¸ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.BLUE_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "¸¶ÀÎÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "ë§ˆì¸ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -2105,16 +2105,16 @@ public class JobScroll {
 			for (PotionEffect effect : player.getActivePotionEffects()) {
 				player.removePotionEffect(effect.getType());
 			}
-			//¹«±â
+			//ë¬´ê¸°
 			ItemStack item5 = new ItemStack(Material.DIAMOND_SWORD);
 			ItemMeta item5Im = item5.getItemMeta();
 			item5Im.addEnchant(Enchantment.DAMAGE_ALL, 200, true);
 			item5Im.addEnchant(Enchantment.SWEEPING_EDGE, 5, true);
 			item5Im.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 9, true);
 			item5Im.addEnchant(Enchantment.KNOCKBACK, 4, true);
-			item5Im.setDisplayName(ChatColor.DARK_RED + "¹ß¸®»ç¸£µµ");
+			item5Im.setDisplayName(ChatColor.DARK_RED + "ë°œë¦¬ì‚¬ë¥´ë„");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "Á×Àº ÀÚµéÀÇ ¸¶³ª¸¦ ÀÀÃà½ÃÄÑ ¸¸µé¾îÁø °Ë");
+			item5Lore.add(ChatColor.GRAY + "ì£½ì€ ìë“¤ì˜ ë§ˆë‚˜ë¥¼ ì‘ì¶•ì‹œì¼œ ë§Œë“¤ì–´ì§„ ê²€");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -2122,10 +2122,10 @@ public class JobScroll {
 			item5Im.setLore(item5Lore);
 			item5.setItemMeta(item5Im);
 			player.getInventory().addItem(item5);
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);		
 			//tp
@@ -2135,11 +2135,11 @@ public class JobScroll {
 			itemArg.remove();
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "¿ÏÀü º¸Á¸ÀÇ ÆÈ¶óµòÀÇ º°")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "ì™„ì „ ë³´ì¡´ì˜ íŒ”ë¼ë”˜ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.BROWN_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "ÆÈ¶óµòÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "íŒ”ë¼ë”˜ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -2155,10 +2155,10 @@ public class JobScroll {
 			for (PotionEffect effect : player.getActivePotionEffects()) {
 				player.removePotionEffect(effect.getType());
 			}
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);		
 			//tp
@@ -2168,11 +2168,11 @@ public class JobScroll {
 			itemArg.remove();
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "¿ÏÀü º¸Á¸ÀÇ ¿ë±â»çÀÇ º°")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "ì™„ì „ ë³´ì¡´ì˜ ìš©ê¸°ì‚¬ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.BLACK_DYE);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "¿ë±â»çÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "ìš©ê¸°ì‚¬ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -2188,13 +2188,13 @@ public class JobScroll {
 			for (PotionEffect effect : player.getActivePotionEffects()) {
 				player.removePotionEffect(effect.getType());
 			}
-			//¹«±â
+			//ë¬´ê¸°
 			ItemStack item5 = new ItemStack(Material.DIAMOND_SWORD);
 			ItemMeta item5Im = item5.getItemMeta();
 			item5Im.addEnchant(Enchantment.THORNS, 500, true);
-			item5Im.setDisplayName(ChatColor.DARK_RED + "»ê±Í½º");
+			item5Im.setDisplayName(ChatColor.DARK_RED + "ì‚°ê·€ìŠ¤");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "ÇÇ¸¦ Å½ÇÏ´ø ¾Ç¸¶°¡ ºÀÀÎµÈ °Ë");
+			item5Lore.add(ChatColor.GRAY + "í”¼ë¥¼ íƒí•˜ë˜ ì•…ë§ˆê°€ ë´‰ì¸ëœ ê²€");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -2202,10 +2202,10 @@ public class JobScroll {
 			item5Im.setLore(item5Lore);
 			item5.setItemMeta(item5Im);
 			player.getInventory().addItem(item5);
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);		
 			//tp
@@ -2215,11 +2215,11 @@ public class JobScroll {
 			itemArg.remove();
 			itemArg.getLocation().getWorld().playSound(loc, Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
 		}
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "¿ÏÀü º¸Á¸ÀÇ ¾ÆÃ³ÀÇ º°")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "ì™„ì „ ë³´ì¡´ì˜ ì•„ì²˜ì˜ ë³„")) {
 			ItemStack job = new ItemStack(Material.CLAY_BALL);
 			ItemMeta jobIm = job.getItemMeta();
 			jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			jobIm.setDisplayName(ChatColor.GOLD + "¾ÆÃ³ÀÇ ÁõÇ¥");
+			jobIm.setDisplayName(ChatColor.GOLD + "ì•„ì²˜ì˜ ì¦í‘œ");
 			jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			job.setItemMeta(jobIm);
@@ -2235,12 +2235,12 @@ public class JobScroll {
 			for (PotionEffect effect : player.getActivePotionEffects()) {
 				player.removePotionEffect(effect.getType());
 			}
-			//¹«±â
+			//ë¬´ê¸°
 			ItemStack item5 = new ItemStack(Material.DEAD_TUBE_CORAL_BLOCK);
 			ItemMeta item5Im = item5.getItemMeta();
-			item5Im.setDisplayName(ChatColor.WHITE + "ÃÊº¸ÀÚ¿ë È°");
+			item5Im.setDisplayName(ChatColor.WHITE + "ì´ˆë³´ììš© í™œ");
 			ArrayList<String> item5Lore = new ArrayList();
-			item5Lore.add(ChatColor.GRAY + "´©±¸³ª »ç¿ëÇÒ ¼ö ÀÖÀ» °Í °°´Ù.");
+			item5Lore.add(ChatColor.GRAY + "ëˆ„êµ¬ë‚˜ ì‚¬ìš©í•  ìˆ˜ ìˆì„ ê²ƒ ê°™ë‹¤.");
 			item5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			item5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			item5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -2248,10 +2248,10 @@ public class JobScroll {
 			item5Im.setLore(item5Lore);
 			item5.setItemMeta(item5Im);
 			player.getInventory().addItem(item5);
-			//¸¶³ª
+			//ë§ˆë‚˜
 			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			itemIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			item.setItemMeta(itemIm);	
 			player.getInventory().setItem(8, item);		
 			//tp

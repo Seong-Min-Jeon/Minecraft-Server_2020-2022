@@ -20,7 +20,9 @@ import org.bukkit.entity.Piglin;
 import org.bukkit.entity.PolarBear;
 import org.bukkit.entity.Skeleton;
 import org.bukkit.entity.Slime;
+import org.bukkit.entity.Snowman;
 import org.bukkit.entity.Spider;
+import org.bukkit.entity.Wolf;
 import org.bukkit.entity.Zombie;
 import org.bukkit.inventory.EntityEquipment;
 import org.bukkit.inventory.ItemStack;
@@ -64,7 +66,7 @@ public class SpawnMob {
 	}
 
 	public boolean antimob1(LivingEntity entity, Location loc) {
-		// ½£ÀÇ À¯Àû ±ÙÃ³ -2094 80 2471 -2033 30 2436
+		// ìˆ²ì˜ ìœ ì  ê·¼ì²˜ -2094 80 2471 -2033 30 2436
 		if (loc.getX() <= -2033 && loc.getY() <= 180
 				&& loc.getZ() <= 2471 && loc.getX() >= -2094
 				&& loc.getY() >= 30 && loc.getZ() >= 2436) {
@@ -84,7 +86,7 @@ public class SpawnMob {
 	}
 
 	public boolean antimob2(LivingEntity entity, Location loc) {
-		// ÄÜ³ë ±ÙÃ³ -2428 95 584 -2515 45 494
+		// ì½˜ë…¸ ê·¼ì²˜ -2428 95 584 -2515 45 494
 		if (loc.getX() <= -2428 && loc.getY() <= 95
 				&& loc.getZ() <= 584 && loc.getX() >= -2515
 				&& loc.getY() >= 45 && loc.getZ() >= 494) {
@@ -112,7 +114,7 @@ public class SpawnMob {
 	}
 
 	public boolean antimob3(LivingEntity entity, Location loc) {
-		// ¾Æ¶õ¸ğ¾î Á¤ÂûÄ·ÇÁ -2414 70 718 -2477 118 777
+		// ì•„ë€ëª¨ì–´ ì •ì°°ìº í”„ -2414 70 718 -2477 118 777
 		if (loc.getX() <= -2414 && loc.getY() <= 118
 				&& loc.getZ() <= 777 && loc.getX() >= -2477
 				&& loc.getY() >= 70 && loc.getZ() >= 718) {
@@ -140,7 +142,7 @@ public class SpawnMob {
 	}
 	
 	public boolean antimob4(LivingEntity entity, Location loc) {
-		// Å©·¹µå¶óÆ® -113 200 136  2 46 35
+		// í¬ë ˆë“œë¼íŠ¸ -113 200 136  2 46 35
 		if (loc.getX() <= 2 && loc.getY() <= 200
 				&& loc.getZ() <= 136 && loc.getX() >= -113
 				&& loc.getY() >= 46 && loc.getZ() >= 35) {
@@ -164,7 +166,7 @@ public class SpawnMob {
 	}
 	
 	public boolean antimob5(LivingEntity entity, Location loc) {
-		// º£¾Æ±× 18 153 -253  155 86 -349
+		// ë² ì•„ê·¸ 18 153 -253  155 86 -349
 		if (loc.getX() <= 155 && loc.getY() <= 153
 				&& loc.getZ() <= -253 && loc.getX() >= 18
 				&& loc.getY() >= 86 && loc.getZ() >= -349) {
@@ -190,7 +192,7 @@ public class SpawnMob {
 	}
 	
 	public boolean antimob6(LivingEntity entity, Location loc) {
-		// ¸¶¹ıÅ¾  230 105 698  192 78 756    
+		// ë§ˆë²•íƒ‘  230 105 698  192 78 756    
 		if (loc.getX() <= 230 && loc.getY() <= 105 && loc.getZ() <= 756 
 				&& loc.getX() >= 192 && loc.getY() >= 78 && loc.getZ() >= 698) {
 			if (entity.getType() == (EntityType) EntityType.SLIME) {
@@ -215,7 +217,7 @@ public class SpawnMob {
 	}
 	
 	public boolean antimob7(LivingEntity entity, Location loc) {
-		// ¸¶¹ıÅ¾ ±ÙÃ³ È÷µç 285 70 750  345 47 782
+		// ë§ˆë²•íƒ‘ ê·¼ì²˜ íˆë“  285 70 750  345 47 782
 		if (loc.getX() <= 345 && loc.getY() <= 70 && loc.getZ() <= 782 
 				&& loc.getX() >= 285 && loc.getY() >= 47 && loc.getZ() >= 750) {
 			if (entity.getType() == (EntityType) EntityType.SLIME) {
@@ -240,12 +242,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob1(LivingEntity entity, Location loc) {
-		// °ø°İÀ» ¸ğ¸£´Â ½ºÄÌÀÌ 3686 39 3708 3712 47 3672
+		// ê³µê²©ì„ ëª¨ë¥´ëŠ” ìŠ¤ì¼ˆì´ 3686 39 3708 3712 47 3672
 		if (loc.getX() <= 3712 && loc.getY() <= 47
 				&& loc.getZ() <= 3708 && loc.getX() >= 3686
 				&& loc.getY() >= 39 && loc.getZ() >= 3672) {
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "°ø°İÀ» ¸ğ¸£´Â ½ºÄÌÀÌ" + ChatColor.YELLOW + " [Lv.0]");
+				entity.setCustomName(ChatColor.GRAY + "ê³µê²©ì„ ëª¨ë¥´ëŠ” ìŠ¤ì¼ˆì´" + ChatColor.YELLOW + " [Lv.0]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(1);
 				entity.setHealth(1);
@@ -278,12 +280,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob2(LivingEntity entity, Location loc) {
-		// ÃÊ·Ï ½½¶óÀÓ -1881 54 3069 -1834 53 3106
+		// ì´ˆë¡ ìŠ¬ë¼ì„ -1881 54 3069 -1834 53 3106
 		if (loc.getX() <= -1833 && loc.getY() <= 60
 				&& loc.getZ() <= 3107 && loc.getX() >= -1882
 				&& loc.getY() >= 50 && loc.getZ() >= 3068) {
 			if (entity.getType() == (EntityType) EntityType.SLIME) {
-				entity.setCustomName(ChatColor.GRAY + "ÃÊ·Ï ½½¶óÀÓ" + ChatColor.YELLOW + " [Lv.1]");
+				entity.setCustomName(ChatColor.GRAY + "ì´ˆë¡ ìŠ¬ë¼ì„" + ChatColor.YELLOW + " [Lv.1]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(8);
 				entity.setHealth(8);
@@ -299,12 +301,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob3(LivingEntity entity, Location loc) {
-		// ÇØ¾È°¡ Á»ºñ1 -1887 56 2986 -1946 45 3068
+		// í•´ì•ˆê°€ ì¢€ë¹„1 -1887 56 2986 -1946 45 3068
 		if (loc.getX() <= -1887 && loc.getY() <= 56
 				&& loc.getZ() <= 3068 && loc.getX() >= -1946
 				&& loc.getY() >= 45 && loc.getZ() >= 2986) {
 			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "ÇØ¾È°¡ Á»ºñ" + ChatColor.YELLOW + " [Lv.6]");
+				entity.setCustomName(ChatColor.GRAY + "í•´ì•ˆê°€ ì¢€ë¹„" + ChatColor.YELLOW + " [Lv.6]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(18);
 				entity.setHealth(18);
@@ -334,13 +336,13 @@ public class SpawnMob {
 	}
 
 	public boolean mob4(LivingEntity entity, Location loc) {
-		// ÀÏ´Ü ¾È¾¸
-		// ÇØ¾È°¡ Á»ºñ2 -1929 55 3016 -1966 45 3060
+		// ì¼ë‹¨ ì•ˆì”€
+		// í•´ì•ˆê°€ ì¢€ë¹„2 -1929 55 3016 -1966 45 3060
 		if (loc.getX() <= -1929 && loc.getY() <= 55
 				&& loc.getZ() <= 3060 && loc.getX() >= -1966
 				&& loc.getY() >= 45 && loc.getZ() >= 3016) {
 			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "ÇØ¾È°¡ Á»ºñ" + ChatColor.YELLOW + " [Lv.6]");
+				entity.setCustomName(ChatColor.GRAY + "í•´ì•ˆê°€ ì¢€ë¹„" + ChatColor.YELLOW + " [Lv.6]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(18);
 				entity.setHealth(18);
@@ -370,12 +372,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob5(LivingEntity entity, Location loc) {
-		// ¿ö±×´Ò¿¡ ¹è½Å´çÇÑ ÀÚ -1820 50 3061 -1786 57 3094
+		// ì›Œê·¸ë‹ì— ë°°ì‹ ë‹¹í•œ ì -1820 50 3061 -1786 57 3094
 		if (loc.getX() <= -1786 && loc.getY() <= 57
 				&& loc.getZ() <= 3094 && loc.getX() >= -1820
 				&& loc.getY() >= 50 && loc.getZ() >= 3061) {
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¿ö±×´Ò¿¡ ¹è½Å´çÇÑ ÀÚ" + ChatColor.YELLOW + " [Lv.13]");
+				entity.setCustomName(ChatColor.GRAY + "ì›Œê·¸ë‹ì— ë°°ì‹ ë‹¹í•œ ì" + ChatColor.YELLOW + " [Lv.13]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(30);
 				entity.setHealth(30);
@@ -404,12 +406,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob6(LivingEntity entity, Location loc) {
-		// °ËÀº ¼ö¿° ÇÏ¼öÀÎ & °ËÀº ¼ö¿° °£ºÎ -1960 60 2954 -1980 52 2947
+		// ê²€ì€ ìˆ˜ì—¼ í•˜ìˆ˜ì¸ & ê²€ì€ ìˆ˜ì—¼ ê°„ë¶€ -1960 60 2954 -1980 52 2947
 		if (loc.getX() <= -1960 && loc.getY() <= 60
 				&& loc.getZ() <= 2954 && loc.getX() >= -1980
 				&& loc.getY() >= 52 && loc.getZ() >= 2947) {
 			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "°ËÀº ¼ö¿° ÇÏ¼öÀÎ" + ChatColor.YELLOW + " [Lv.32]");
+				entity.setCustomName(ChatColor.GRAY + "ê²€ì€ ìˆ˜ì—¼ í•˜ìˆ˜ì¸" + ChatColor.YELLOW + " [Lv.32]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(150);
 				entity.setHealth(150);
@@ -430,7 +432,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 8));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "°ËÀº ¼ö¿° °£ºÎ" + ChatColor.YELLOW + " [Lv.40]");
+				entity.setCustomName(ChatColor.GRAY + "ê²€ì€ ìˆ˜ì—¼ ê°„ë¶€" + ChatColor.YELLOW + " [Lv.40]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(230);
 				entity.setHealth(230);
@@ -468,12 +470,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob7(LivingEntity entity, Location loc) {
-		// Æ÷·¹½ºÆ® °í½ºÆ® -1870 45 2694 -1925 80 2635
+		// í¬ë ˆìŠ¤íŠ¸ ê³ ìŠ¤íŠ¸ -1870 45 2694 -1925 80 2635
 		if (loc.getX() <= -1870 && loc.getY() <= 80
 				&& loc.getZ() <= 2694 && loc.getX() >= -1925
 				&& loc.getY() >= 45 && loc.getZ() >= 2635) {
 			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "Æ÷·¹½ºÆ® °í½ºÆ®" + ChatColor.YELLOW + " [Lv.15]");
+				entity.setCustomName(ChatColor.GRAY + "í¬ë ˆìŠ¤íŠ¸ ê³ ìŠ¤íŠ¸" + ChatColor.YELLOW + " [Lv.15]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(35);
 				entity.setHealth(35);
@@ -508,12 +510,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob8(LivingEntity entity, Location loc) {
-		// Å©¸®½ºÅ» ¿ö¸®¾î -1938 77 2617 -1882 56 2596
+		// í¬ë¦¬ìŠ¤íƒˆ ì›Œë¦¬ì–´ -1938 77 2617 -1882 56 2596
 		if (loc.getX() <= -1882 && loc.getY() <= 77
 				&& loc.getZ() <= 2617 && loc.getX() >= -1938
 				&& loc.getY() >= 45 && loc.getZ() >= 2596) {
 			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "Å©¸®½ºÅ» ¿ö¸®¾î" + ChatColor.YELLOW + " [Lv.18]");
+				entity.setCustomName(ChatColor.GRAY + "í¬ë¦¬ìŠ¤íƒˆ ì›Œë¦¬ì–´" + ChatColor.YELLOW + " [Lv.18]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(50);
 				entity.setHealth(50);
@@ -545,12 +547,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob9(LivingEntity entity, Location loc) {
-		// ÀúÁÖ¹ŞÀº ³ª¹« ¿äÁ¤ -1822 58 2570 -1788 62 2535
+		// ì €ì£¼ë°›ì€ ë‚˜ë¬´ ìš”ì • -1822 58 2570 -1788 62 2535
 		if (loc.getX() <= -1788 && loc.getY() <= 65
 				&& loc.getZ() <= 2570 && loc.getX() >= -1822
 				&& loc.getY() >= 50 && loc.getZ() >= 2535) {
 			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "ÀúÁÖ¹ŞÀº ³ª¹« ¿äÁ¤" + ChatColor.YELLOW + " [Lv.20]");
+				entity.setCustomName(ChatColor.GRAY + "ì €ì£¼ë°›ì€ ë‚˜ë¬´ ìš”ì •" + ChatColor.YELLOW + " [Lv.20]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(60);
 				entity.setHealth(60);
@@ -590,12 +592,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob10(LivingEntity entity, Location loc) {
-		// »êÈ£ Á¤·É && »êÈ£ ½ºÆ®·¹ÀÌ 3768 19 3789 3737 9 3760
+		// ì‚°í˜¸ ì •ë ¹ && ì‚°í˜¸ ìŠ¤íŠ¸ë ˆì´ 3768 19 3789 3737 9 3760
 		if (loc.getX() <= 3768 && loc.getY() <= 19
 				&& loc.getZ() <= 3789 && loc.getX() >= 3737
 				&& loc.getY() >= 9 && loc.getZ() >= 3760) {
 			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "»êÈ£ Á¤·É" + ChatColor.YELLOW + " [Lv.12]");
+				entity.setCustomName(ChatColor.GRAY + "ì‚°í˜¸ ì •ë ¹" + ChatColor.YELLOW + " [Lv.12]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(20);
 				entity.setHealth(20);
@@ -607,7 +609,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 1));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.STRAY) {
-				entity.setCustomName(ChatColor.GRAY + "»êÈ£ ½ºÆ®·¹ÀÌ" + ChatColor.YELLOW + " [Lv.16]");
+				entity.setCustomName(ChatColor.GRAY + "ì‚°í˜¸ ìŠ¤íŠ¸ë ˆì´" + ChatColor.YELLOW + " [Lv.16]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(30);
 				entity.setHealth(30);
@@ -632,12 +634,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob11(LivingEntity entity, Location loc) {
-		// °ÅºÏ º´»ç 3703 20 3765 3713 15 3756
+		// ê±°ë¶ ë³‘ì‚¬ 3703 20 3765 3713 15 3756
 		if (loc.getX() <= 3713 && loc.getY() <= 23
 				&& loc.getZ() <= 3765 && loc.getX() >= 3703
 				&& loc.getY() >= 15 && loc.getZ() >= 3756) {
 			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "°ÅºÏ º´»ç" + ChatColor.YELLOW + " [Lv.15]");
+				entity.setCustomName(ChatColor.GRAY + "ê±°ë¶ ë³‘ì‚¬" + ChatColor.YELLOW + " [Lv.15]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(20);
 				entity.setHealth(20);
@@ -677,18 +679,18 @@ public class SpawnMob {
 	}
 
 	public boolean mob12(LivingEntity entity, Location loc) {
-		// ¿¤´õ °¡µğ¾ğ, °¡µğ¾ğ 3646 16 3793 3618 6 3765
+		// ì—˜ë” ê°€ë””ì–¸, ê°€ë””ì–¸ 3646 16 3793 3618 6 3765
 		if (loc.getX() <= 3646 && loc.getY() <= 16
 				&& loc.getZ() <= 3793 && loc.getX() >= 3618
 				&& loc.getY() >= 6 && loc.getZ() >= 3765) {
 			if (entity.getType() == (EntityType) EntityType.GUARDIAN) {
-				entity.setCustomName(ChatColor.GRAY + "°¡µğ¾ğ" + ChatColor.YELLOW + " [Lv.12]");
+				entity.setCustomName(ChatColor.GRAY + "ê°€ë””ì–¸" + ChatColor.YELLOW + " [Lv.12]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(30);
 				entity.setHealth(30);
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.ELDER_GUARDIAN) {
-				entity.setCustomName(ChatColor.GRAY + "¿¤´õ °¡µğ¾ğ" + ChatColor.YELLOW + " [Lv.19]");
+				entity.setCustomName(ChatColor.GRAY + "ì—˜ë” ê°€ë””ì–¸" + ChatColor.YELLOW + " [Lv.19]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(50);
 				entity.setHealth(50);
@@ -704,12 +706,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob13(LivingEntity entity, Location loc) {
-		// Ä§·«ÀÚ -1830 63 2472 -1964 54 2324
+		// ì¹¨ëµì -1830 63 2472 -1964 54 2324
 		if (loc.getX() <= -1830 && loc.getY() <= 100
 				&& loc.getZ() <= 2472 && loc.getX() >= -1964
 				&& loc.getY() >= 40 && loc.getZ() >= 2324) {
 			if (entity.getType() == (EntityType) EntityType.VINDICATOR) {
-				entity.setCustomName(ChatColor.GRAY + "Ä§·«ÀÚ" + ChatColor.YELLOW + " [Lv.24]");
+				entity.setCustomName(ChatColor.GRAY + "ì¹¨ëµì" + ChatColor.YELLOW + " [Lv.24]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(80);
 				entity.setHealth(80);
@@ -722,7 +724,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 8));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.EVOKER) {
-				entity.setCustomName(ChatColor.GRAY + "Ä§·«ÀÚ" + ChatColor.YELLOW + " [Lv.24]");
+				entity.setCustomName(ChatColor.GRAY + "ì¹¨ëµì" + ChatColor.YELLOW + " [Lv.24]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(110);
 				entity.setHealth(110);
@@ -741,12 +743,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob14(LivingEntity entity, Location loc) {
-		// ¼¾ ¸¶±× Æò¿ø -1753 83 2410 -1436 117 1983
+		// ì„¼ ë§ˆê·¸ í‰ì› -1753 83 2410 -1436 117 1983
 		if (loc.getX() <= -1436 && loc.getY() <= 200
 				&& loc.getZ() <= 2410 && loc.getX() >= -1753
 				&& loc.getY() >= 40 && loc.getZ() >= 1983) {
 			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "°íºí¸°" + ChatColor.YELLOW + " [Lv.47]");
+				entity.setCustomName(ChatColor.GRAY + "ê³ ë¸”ë¦°" + ChatColor.YELLOW + " [Lv.47]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(280);
 				entity.setHealth(280);
@@ -767,7 +769,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 8));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "ÆÄ¸£È¦·ĞÀÇ ¸ÁÀÚ" + ChatColor.YELLOW + " [Lv.50]");
+				entity.setCustomName(ChatColor.GRAY + "íŒŒë¥´í™€ë¡ ì˜ ë§ì" + ChatColor.YELLOW + " [Lv.50]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(350);
 				entity.setHealth(350);
@@ -786,7 +788,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 10));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.STRAY) {
-				entity.setCustomName(ChatColor.GRAY + "ÆÄ¸£È¦·ĞÀÇ À¯·É" + ChatColor.YELLOW + " [Lv.58]");
+				entity.setCustomName(ChatColor.GRAY + "íŒŒë¥´í™€ë¡ ì˜ ìœ ë ¹" + ChatColor.YELLOW + " [Lv.58]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(370);
 				entity.setHealth(370);
@@ -813,7 +815,7 @@ public class SpawnMob {
 				boots.setBoots(bootsItem);
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.RAVAGER) {
-				entity.setCustomName(ChatColor.GRAY + "º¯ÀÌµÈ °õ" + ChatColor.YELLOW + " [Lv.62]");
+				entity.setCustomName(ChatColor.GRAY + "ë³€ì´ëœ ê³°" + ChatColor.YELLOW + " [Lv.62]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(380);
 				entity.setHealth(380);
@@ -831,12 +833,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob15(LivingEntity entity, Location loc) {
-		// Æ÷¸£°£ ¼­ÂÊ ½£ -1936 85 2686 -2143 82 2444
+		// í¬ë¥´ê°„ ì„œìª½ ìˆ² -1936 85 2686 -2143 82 2444
 		if (loc.getX() <= -1936 && loc.getY() <= 100
 				&& loc.getZ() <= 2686 && loc.getX() >= -2143
 				&& loc.getY() >= 30 && loc.getZ() >= 2444) {
 			if (entity.getType() == (EntityType) EntityType.RAVAGER) {
-				entity.setCustomName(ChatColor.GRAY + "½£ÀÇ È²¼Ò" + ChatColor.YELLOW + " [Lv.34]");
+				entity.setCustomName(ChatColor.GRAY + "ìˆ²ì˜ í™©ì†Œ" + ChatColor.YELLOW + " [Lv.34]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(150);
 				entity.setHealth(150);
@@ -844,7 +846,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, Integer.MAX_VALUE, 0));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.WITCH) {
-				entity.setCustomName(ChatColor.GRAY + "½£ÀÇ ¸¶³à" + ChatColor.YELLOW + " [Lv.31]");
+				entity.setCustomName(ChatColor.GRAY + "ìˆ²ì˜ ë§ˆë…€" + ChatColor.YELLOW + " [Lv.31]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(130);
 				entity.setHealth(130);
@@ -861,12 +863,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob16(LivingEntity entity, Location loc) {
-		// »êÀû -1913 58 2354 -2121 53 2271
+		// ì‚°ì  -1913 58 2354 -2121 53 2271
 		if (loc.getX() <= -1913 && loc.getY() <= 100
 				&& loc.getZ() <= 2354 && loc.getX() >= -2121
 				&& loc.getY() >= 30 && loc.getZ() >= 2271) {
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "»êÀû" + ChatColor.YELLOW + " [Lv.27]");
+				entity.setCustomName(ChatColor.GRAY + "ì‚°ì " + ChatColor.YELLOW + " [Lv.27]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(100);
 				entity.setHealth(100);
@@ -905,12 +907,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob17(LivingEntity entity, Location loc) {
-		// ½£ÀÇ À¯Àû ´øÀü 3532 29 3773 3447 10 3690
+		// ìˆ²ì˜ ìœ ì  ë˜ì „ 3532 29 3773 3447 10 3690
 		if (loc.getX() <= 3532 && loc.getY() <= 30
 				&& loc.getZ() <= 3773 && loc.getX() >= 3447
 				&& loc.getY() >= 10 && loc.getZ() >= 3690) {
 			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "º¯ÀÌµÈ ³ª¹µÀÙ" + ChatColor.YELLOW + " [Lv.35]");
+				entity.setCustomName(ChatColor.GRAY + "ë³€ì´ëœ ë‚˜ë­‡ì" + ChatColor.YELLOW + " [Lv.35]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(100);
 				entity.setHealth(100);
@@ -940,7 +942,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 10));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "µÇ»ì¾Æ³­ ¸ğÇè°¡" + ChatColor.YELLOW + " [Lv.38]");
+				entity.setCustomName(ChatColor.GRAY + "ë˜ì‚´ì•„ë‚œ ëª¨í—˜ê°€" + ChatColor.YELLOW + " [Lv.38]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(120);
 				entity.setHealth(120);
@@ -971,12 +973,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob18(LivingEntity entity, Location loc) {
-		// À¯ÀûÀÇ ÁÖÀÎ 3522 15 3726 3556 35 3691
+		// ìœ ì ì˜ ì£¼ì¸ 3522 15 3726 3556 35 3691
 		if (loc.getX() <= 3556 && loc.getY() <= 35
 				&& loc.getZ() <= 3726 && loc.getX() >= 3522
 				&& loc.getY() >= 15 && loc.getZ() >= 3691) {
 			if (entity.getType() == (EntityType) EntityType.GHAST) {
-				entity.setCustomName(ChatColor.GRAY + "À¯ÀûÀÇ ÁÖÀÎ" + ChatColor.YELLOW + " [Lv.43]");
+				entity.setCustomName(ChatColor.GRAY + "ìœ ì ì˜ ì£¼ì¸" + ChatColor.YELLOW + " [Lv.43]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(600);
 				entity.setHealth(600);
@@ -992,12 +994,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob19(LivingEntity entity, Location loc) {
-		// Æò¿ø2 -1436 50 1812 -804 90 2464
+		// í‰ì›2 -1436 50 1812 -804 90 2464
 		if (loc.getX() <= -804 && loc.getY() <= 90
 				&& loc.getZ() <= 2464 && loc.getX() >= -1436
 				&& loc.getY() >= 50 && loc.getZ() >= 1812) {
 			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "¿ÀÅ©" + ChatColor.YELLOW + " [Lv.60]");
+				entity.setCustomName(ChatColor.GRAY + "ì˜¤í¬" + ChatColor.YELLOW + " [Lv.60]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(420);
 				entity.setHealth(420);
@@ -1027,7 +1029,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 17));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¹Ì·¡¸¦ ¿¹ÁöÇÏ´Â ´«" + ChatColor.YELLOW + " [Lv.66]");
+				entity.setCustomName(ChatColor.GRAY + "ë¯¸ë˜ë¥¼ ì˜ˆì§€í•˜ëŠ” ëˆˆ" + ChatColor.YELLOW + " [Lv.66]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(500);
 				entity.setHealth(500);
@@ -1051,14 +1053,14 @@ public class SpawnMob {
 				boots.setBoots(bootsItem);
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.ENDERMAN) {
-				entity.setCustomName(ChatColor.GRAY + "°ËÀº ÀÎ°£" + ChatColor.YELLOW + " [Lv.72]");
+				entity.setCustomName(ChatColor.GRAY + "ê²€ì€ ì¸ê°„" + ChatColor.YELLOW + " [Lv.72]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(800);
 				entity.setHealth(800);
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 21));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "Æ÷º¸¸£ Á¤Âûº´" + ChatColor.YELLOW + " [Lv.80]");
+				entity.setCustomName(ChatColor.GRAY + "í¬ë³´ë¥´ ì •ì°°ë³‘" + ChatColor.YELLOW + " [Lv.80]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(1000);
 				entity.setHealth(1000);
@@ -1101,19 +1103,19 @@ public class SpawnMob {
 	}
 
 	public boolean mob20(LivingEntity entity, Location loc) {
-		// ÆÄ¸£È¦·ĞÀÇ À¯Àû -1096 52 2365 -1027 3 2246
+		// íŒŒë¥´í™€ë¡ ì˜ ìœ ì  -1096 52 2365 -1027 3 2246
 		if (loc.getX() <= -1027 && loc.getY() <= 52
 				&& loc.getZ() <= 2365 && loc.getX() >= -1096
 				&& loc.getY() >= 3 && loc.getZ() >= 2246) {
 			if (entity.getType() == (EntityType) EntityType.SPIDER) {
-				entity.setCustomName(ChatColor.GRAY + "À¯ÀûÀ» ÁöÅ°´Â °Å¹Ì" + ChatColor.YELLOW + " [Lv.100]");
+				entity.setCustomName(ChatColor.GRAY + "ìœ ì ì„ ì§€í‚¤ëŠ” ê±°ë¯¸" + ChatColor.YELLOW + " [Lv.100]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(2800);
 				entity.setHealth(2800);
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 32));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "ÆÄ¸£È¦·ĞÀÇ ¼öÈ£ÀÚ" + ChatColor.YELLOW + " [Lv.113]");
+				entity.setCustomName(ChatColor.GRAY + "íŒŒë¥´í™€ë¡ ì˜ ìˆ˜í˜¸ì" + ChatColor.YELLOW + " [Lv.113]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(4000);
 				entity.setHealth(4000);
@@ -1145,12 +1147,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob21(LivingEntity entity, Location loc) {
-		// Æ¼¸£ ÇØ¾È°¡ -642 52 1993 -568 52 1881
+		// í‹°ë¥´ í•´ì•ˆê°€ -642 52 1993 -568 52 1881
 		if (loc.getX() <= -568 && loc.getY() <= 60
 				&& loc.getZ() <= 1993 && loc.getX() >= -642
 				&& loc.getY() >= 40 && loc.getZ() >= 1881) {
 			if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¿Ü´«ÀÇ Æ÷º¸¸£" + ChatColor.YELLOW + " [Lv.83]");
+				entity.setCustomName(ChatColor.GRAY + "ì™¸ëˆˆì˜ í¬ë³´ë¥´" + ChatColor.YELLOW + " [Lv.83]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(1300);
 				entity.setHealth(1300);
@@ -1188,12 +1190,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob22(LivingEntity entity, Location loc) {
-		// ±¤»ê´øÀü 3481 31 3837 3603 5 3976
+		// ê´‘ì‚°ë˜ì „ 3481 31 3837 3603 5 3976
 		if (loc.getX() <= 3603 && loc.getY() <= 31
 				&& loc.getZ() <= 3976 && loc.getX() >= 3481
 				&& loc.getY() >= 5 && loc.getZ() >= 3837) {
 			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "Á»ºñ" + ChatColor.YELLOW + " [Lv.120]");
+				entity.setCustomName(ChatColor.GRAY + "ì¢€ë¹„" + ChatColor.YELLOW + " [Lv.120]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(3100);
 				entity.setHealth(3100);
@@ -1215,7 +1217,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 38));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "½ºÄÌ·¹Åæ" + ChatColor.YELLOW + " [Lv.124]");
+				entity.setCustomName(ChatColor.GRAY + "ìŠ¤ì¼ˆë ˆí†¤" + ChatColor.YELLOW + " [Lv.124]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(3300);
 				entity.setHealth(3300);
@@ -1242,7 +1244,7 @@ public class SpawnMob {
 				boots.setBoots(bootsItem);
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SPIDER) {
-				entity.setCustomName(ChatColor.GRAY + "°Å¹Ì" + ChatColor.YELLOW + " [Lv.115]");
+				entity.setCustomName(ChatColor.GRAY + "ê±°ë¯¸" + ChatColor.YELLOW + " [Lv.115]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(2600);
 				entity.setHealth(2600);
@@ -1259,12 +1261,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob23(LivingEntity entity, Location loc) {
-		// Æ¼¸£ ºÏÂÊ Æò¿ø -712 88 1562 -1051 40 1800
+		// í‹°ë¥´ ë¶ìª½ í‰ì› -712 88 1562 -1051 40 1800
 		if (loc.getX() <= -712 && loc.getY() <= 88
 				&& loc.getZ() <= 1800 && loc.getX() >= -1051
 				&& loc.getY() >= 40 && loc.getZ() >= 1562) {
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "Æ÷º¸¸£ ¼¼·Â ÇÃ·¹ÀÌ¾î" + ChatColor.YELLOW + " [Lv.96]");
+				entity.setCustomName(ChatColor.GRAY + "í¬ë³´ë¥´ ì„¸ë ¥ í”Œë ˆì´ì–´" + ChatColor.YELLOW + " [Lv.96]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(2000);
 				entity.setHealth(2000);
@@ -1306,19 +1308,19 @@ public class SpawnMob {
 	}
 
 	public boolean mob24(LivingEntity entity, Location loc) {
-		// ½Ãµå ±¤»ê Àü¿¡ µ¿±¼ -1049 39 1804 -930 3 1966
+		// ì‹œë“œ ê´‘ì‚° ì „ì— ë™êµ´ -1049 39 1804 -930 3 1966
 		if (loc.getX() <= -930 && loc.getY() <= 39
 				&& loc.getZ() <= 1966 && loc.getX() >= -1049
 				&& loc.getY() >= 3 && loc.getZ() >= 1804) {
 			if (entity.getType() == (EntityType) EntityType.CAVE_SPIDER) {
-				entity.setCustomName(ChatColor.GRAY + "µ¿±¼ °Å¹Ì" + ChatColor.YELLOW + " [Lv.134]");
+				entity.setCustomName(ChatColor.GRAY + "ë™êµ´ ê±°ë¯¸" + ChatColor.YELLOW + " [Lv.134]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(2000);
 				entity.setHealth(2000);
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 10));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SILVERFISH) {
-				entity.setCustomName(ChatColor.GRAY + "µ¿±¼ ¹ú·¹" + ChatColor.YELLOW + " [Lv.140]");
+				entity.setCustomName(ChatColor.GRAY + "ë™êµ´ ë²Œë ˆ" + ChatColor.YELLOW + " [Lv.140]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(2400);
 				entity.setHealth(2400);
@@ -1335,12 +1337,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob25(LivingEntity entity, Location loc) {
-		// ¹ÌÇ£¸£À¯ °¡´Â ±æ -499 86 1542 -719 35 1387
+		// ë¯¸í‘€ë¥´ìœ  ê°€ëŠ” ê¸¸ -499 86 1542 -719 35 1387
 		if (loc.getX() <= -499 && loc.getY() <= 89
 				&& loc.getZ() <= 1542 && loc.getX() >= -719
 				&& loc.getY() >= 35 && loc.getZ() >= 1387) {
 			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "¾Æ¶û" + ChatColor.YELLOW + " [Lv.127]");
+				entity.setCustomName(ChatColor.GRAY + "ì•„ë‘" + ChatColor.YELLOW + " [Lv.127]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(2800);
 				entity.setHealth(2800);
@@ -1361,7 +1363,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 39));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¸Ó¶ó¿ì´õ" + ChatColor.YELLOW + " [Lv.135]");
+				entity.setCustomName(ChatColor.GRAY + "ë¨¸ë¼ìš°ë”" + ChatColor.YELLOW + " [Lv.135]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(3000);
 				entity.setHealth(3000);
@@ -1390,12 +1392,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob26(LivingEntity entity, Location loc) {
-		// ¹ÌÇ£¸£À¯ °¡´Â ±æ ÇØ¾È µ¿±¼ -538 34 1487 -610 10 1541
+		// ë¯¸í‘€ë¥´ìœ  ê°€ëŠ” ê¸¸ í•´ì•ˆ ë™êµ´ -538 34 1487 -610 10 1541
 		if (loc.getX() <= -538 && loc.getY() <= 34
 				&& loc.getZ() <= 1541 && loc.getX() >= -610
 				&& loc.getY() >= 10 && loc.getZ() >= 1487) {
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "ÆÄ¸£È¦·ĞÀÇ ÀüÅõº´" + ChatColor.YELLOW + " [Lv.253]");
+				entity.setCustomName(ChatColor.GRAY + "íŒŒë¥´í™€ë¡ ì˜ ì „íˆ¬ë³‘" + ChatColor.YELLOW + " [Lv.253]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(10000);
 				entity.setHealth(10000);
@@ -1424,12 +1426,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob27(LivingEntity entity, Location loc) {
-		// ¹ÌÇ£¸£À¯ °¡´Â ±æ µ¿±¼ -970 55 1575 -1020 32 1653
+		// ë¯¸í‘€ë¥´ìœ  ê°€ëŠ” ê¸¸ ë™êµ´ -970 55 1575 -1020 32 1653
 		if (loc.getX() <= -970 && loc.getY() <= 55
 				&& loc.getZ() <= 1653 && loc.getX() >= -1020
 				&& loc.getY() >= 32 && loc.getZ() >= 1575) {
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "Æ÷º¸¸£ ¼¼·Â ÇÃ·¹ÀÌ¾î" + ChatColor.YELLOW + " [Lv.150]");
+				entity.setCustomName(ChatColor.GRAY + "í¬ë³´ë¥´ ì„¸ë ¥ í”Œë ˆì´ì–´" + ChatColor.YELLOW + " [Lv.150]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(3300);
 				entity.setHealth(3300);
@@ -1458,12 +1460,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob28(LivingEntity entity, Location loc) {
-		// ¹ÌÇ£¸£À¯1 -919 59 1291 -997 109 1465
+		// ë¯¸í‘€ë¥´ìœ 1 -919 59 1291 -997 109 1465
 		if (loc.getX() <= -919 && loc.getY() <= 109
 				&& loc.getZ() <= 1465 && loc.getX() >= -997
 				&& loc.getY() >= 59 && loc.getZ() >= 1291) {
 			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "ºĞ³ëÀÇ Çü»ó" + ChatColor.YELLOW + " [Lv.158]");
+				entity.setCustomName(ChatColor.GRAY + "ë¶„ë…¸ì˜ í˜•ìƒ" + ChatColor.YELLOW + " [Lv.158]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(3500);
 				entity.setHealth(3500);
@@ -1484,7 +1486,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 46));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "°øÇãÀÇ Çü»ó" + ChatColor.YELLOW + " [Lv.160]");
+				entity.setCustomName(ChatColor.GRAY + "ê³µí—ˆì˜ í˜•ìƒ" + ChatColor.YELLOW + " [Lv.160]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(3700);
 				entity.setHealth(3700);
@@ -1503,7 +1505,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 47));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "°íÅëÀÇ Çü»ó" + ChatColor.YELLOW + " [Lv.163]");
+				entity.setCustomName(ChatColor.GRAY + "ê³ í†µì˜ í˜•ìƒ" + ChatColor.YELLOW + " [Lv.163]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(3800);
 				entity.setHealth(3800);
@@ -1532,12 +1534,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob29(LivingEntity entity, Location loc) {
-		// ¹ÌÇ£¸£À¯2 -962 59 1289 -1030 109 1203
+		// ë¯¸í‘€ë¥´ìœ 2 -962 59 1289 -1030 109 1203
 		if (loc.getX() <= -962 && loc.getY() <= 109
 				&& loc.getZ() <= 1289 && loc.getX() >= -1030
 				&& loc.getY() >= 59 && loc.getZ() >= 1203) {
 			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "Ä§¹¬ÀÇ Çü»ó" + ChatColor.YELLOW + " [Lv.165]");
+				entity.setCustomName(ChatColor.GRAY + "ì¹¨ë¬µì˜ í˜•ìƒ" + ChatColor.YELLOW + " [Lv.165]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(3850);
 				entity.setHealth(3850);
@@ -1558,7 +1560,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 48));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¿ì¿ïÀÇ Çü»ó" + ChatColor.YELLOW + " [Lv.168]");
+				entity.setCustomName(ChatColor.GRAY + "ìš°ìš¸ì˜ í˜•ìƒ" + ChatColor.YELLOW + " [Lv.168]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(3900);
 				entity.setHealth(3900);
@@ -1577,7 +1579,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 49));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "Çã¸ùÀÇ Çü»ó" + ChatColor.YELLOW + " [Lv.171]");
+				entity.setCustomName(ChatColor.GRAY + "í—ˆëª½ì˜ í˜•ìƒ" + ChatColor.YELLOW + " [Lv.171]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(4000);
 				entity.setHealth(4000);
@@ -1606,12 +1608,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob30(LivingEntity entity, Location loc) {
-		// ¹ÌÇ£¸£À¯3 -1005 58 1204 -1116 105 1095
+		// ë¯¸í‘€ë¥´ìœ 3 -1005 58 1204 -1116 105 1095
 		if (loc.getX() <= -1005 && loc.getY() <= 109
 				&& loc.getZ() <= 1204 && loc.getX() >= -1116
 				&& loc.getY() >= 59 && loc.getZ() >= 1095) {
 			if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¿À¸¸ÀÇ Çü»ó" + ChatColor.YELLOW + " [Lv.178]");
+				entity.setCustomName(ChatColor.GRAY + "ì˜¤ë§Œì˜ í˜•ìƒ" + ChatColor.YELLOW + " [Lv.178]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(4100);
 				entity.setHealth(4100);
@@ -1630,7 +1632,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 10));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¹è½ÅÀÇ Çü»ó" + ChatColor.YELLOW + " [Lv.174]");
+				entity.setCustomName(ChatColor.GRAY + "ë°°ì‹ ì˜ í˜•ìƒ" + ChatColor.YELLOW + " [Lv.174]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(4200);
 				entity.setHealth(4200);
@@ -1659,12 +1661,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob31(LivingEntity entity, Location loc) {
-		// ¹ÌÇ£¸£À¯4 -1118 58 1140 -1182 105 1312
+		// ë¯¸í‘€ë¥´ìœ 4 -1118 58 1140 -1182 105 1312
 		if (loc.getX() <= -1118 && loc.getY() <= 109
 				&& loc.getZ() <= 1312 && loc.getX() >= -1182
 				&& loc.getY() >= 59 && loc.getZ() >= 1140) {
 			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "ºĞ³ëÀÇ Çü»ó" + ChatColor.YELLOW + " [Lv.158]");
+				entity.setCustomName(ChatColor.GRAY + "ë¶„ë…¸ì˜ í˜•ìƒ" + ChatColor.YELLOW + " [Lv.158]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(3500);
 				entity.setHealth(3500);
@@ -1685,7 +1687,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 46));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "°øÇãÀÇ Çü»ó" + ChatColor.YELLOW + " [Lv.160]");
+				entity.setCustomName(ChatColor.GRAY + "ê³µí—ˆì˜ í˜•ìƒ" + ChatColor.YELLOW + " [Lv.160]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(3700);
 				entity.setHealth(3700);
@@ -1704,7 +1706,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 47));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "°íÅëÀÇ Çü»ó" + ChatColor.YELLOW + " [Lv.163]");
+				entity.setCustomName(ChatColor.GRAY + "ê³ í†µì˜ í˜•ìƒ" + ChatColor.YELLOW + " [Lv.163]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(3800);
 				entity.setHealth(3800);
@@ -1733,12 +1735,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob32(LivingEntity entity, Location loc) {
-		// ¹ÌÇ£¸£À¯5 -1187 58 1273 -1233 105 1460
+		// ë¯¸í‘€ë¥´ìœ 5 -1187 58 1273 -1233 105 1460
 		if (loc.getX() <= -1187 && loc.getY() <= 109
 				&& loc.getZ() <= 1460 && loc.getX() >= -1233
 				&& loc.getY() >= 59 && loc.getZ() >= 1273) {
 			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "Ä§¹¬ÀÇ Çü»ó" + ChatColor.YELLOW + " [Lv.165]");
+				entity.setCustomName(ChatColor.GRAY + "ì¹¨ë¬µì˜ í˜•ìƒ" + ChatColor.YELLOW + " [Lv.165]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(3850);
 				entity.setHealth(3850);
@@ -1759,7 +1761,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 48));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¿ì¿ïÀÇ Çü»ó" + ChatColor.YELLOW + " [Lv.168]");
+				entity.setCustomName(ChatColor.GRAY + "ìš°ìš¸ì˜ í˜•ìƒ" + ChatColor.YELLOW + " [Lv.168]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(3900);
 				entity.setHealth(3900);
@@ -1778,7 +1780,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 49));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "Çã¸ùÀÇ Çü»ó" + ChatColor.YELLOW + " [Lv.171]");
+				entity.setCustomName(ChatColor.GRAY + "í—ˆëª½ì˜ í˜•ìƒ" + ChatColor.YELLOW + " [Lv.171]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(4000);
 				entity.setHealth(4000);
@@ -1807,12 +1809,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob33(LivingEntity entity, Location loc) {
-		// ¹ÌÇ£¸£À¯6 -1234 58 1460 -1290 102 1311
+		// ë¯¸í‘€ë¥´ìœ 6 -1234 58 1460 -1290 102 1311
 		if (loc.getX() <= -1234 && loc.getY() <= 109
 				&& loc.getZ() <= 1460 && loc.getX() >= -1290
 				&& loc.getY() >= 59 && loc.getZ() >= 1311) {
 			if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¿À¸¸ÀÇ Çü»ó" + ChatColor.YELLOW + " [Lv.178]");
+				entity.setCustomName(ChatColor.GRAY + "ì˜¤ë§Œì˜ í˜•ìƒ" + ChatColor.YELLOW + " [Lv.178]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(4100);
 				entity.setHealth(4100);
@@ -1831,7 +1833,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 10));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¹è½ÅÀÇ Çü»ó" + ChatColor.YELLOW + " [Lv.174]");
+				entity.setCustomName(ChatColor.GRAY + "ë°°ì‹ ì˜ í˜•ìƒ" + ChatColor.YELLOW + " [Lv.174]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(4200);
 				entity.setHealth(4200);
@@ -1860,12 +1862,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob34(LivingEntity entity, Location loc) {
-		// ¹ÌÇ£¸£À¯ ½Ã·Ã -1079 196 1439 -1099 183 1468
+		// ë¯¸í‘€ë¥´ìœ  ì‹œë ¨ -1079 196 1439 -1099 183 1468
 		if (loc.getX() <= -1079 && loc.getY() <= 196
 				&& loc.getZ() <= 1468 && loc.getX() >= -1099
 				&& loc.getY() >= 180 && loc.getZ() >= 1439) {
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "½Ã·ÃÀÇ Çü»ó" + ChatColor.YELLOW + " [Lv.??]");
+				entity.setCustomName(ChatColor.GRAY + "ì‹œë ¨ì˜ í˜•ìƒ" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
 				EntityEquipment weapon = entity.getEquipment();
 				ItemStack weaponItem = new ItemStack(Material.DARK_OAK_LEAVES);
@@ -1891,12 +1893,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob35(LivingEntity entity, Location loc) {
-		// ¹ÌÇ£¸£À¯ ¹¦Áö -750 95 1380 -646 55 1277
+		// ë¯¸í‘€ë¥´ìœ  ë¬˜ì§€ -750 95 1380 -646 55 1277
 		if (loc.getX() <= -646 && loc.getY() <= 95
 				&& loc.getZ() <= 1380 && loc.getX() >= -750
 				&& loc.getY() >= 55 && loc.getZ() >= 1277) {
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "±Í¿õ" + ChatColor.YELLOW + " [Lv.148]");
+				entity.setCustomName(ChatColor.GRAY + "ê·€ì›…" + ChatColor.YELLOW + " [Lv.148]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(3400);
 				entity.setHealth(3400);
@@ -1918,7 +1920,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 44));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.RAVAGER) {
-				entity.setCustomName(ChatColor.GRAY + "´ë»ç" + ChatColor.YELLOW + " [Lv.157]");
+				entity.setCustomName(ChatColor.GRAY + "ëŒ€ì‚¬" + ChatColor.YELLOW + " [Lv.157]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(3800);
 				entity.setHealth(3800);
@@ -1935,19 +1937,19 @@ public class SpawnMob {
 	}
 
 	public boolean mob36(LivingEntity entity, Location loc) {
-		// °è°î -1314 48 2082 -1579 0 1745
+		// ê³„ê³¡ -1314 48 2082 -1579 0 1745
 		if (loc.getX() <= -1314 && loc.getY() <= 48
 				&& loc.getZ() <= 2082 && loc.getX() >= -1579
 				&& loc.getY() >= 0 && loc.getZ() >= 1745) {
 			if (entity.getType() == (EntityType) EntityType.VEX) {
-				entity.setCustomName(ChatColor.GRAY + "¿µÈ¥À» Å½ÇÏ´Â ¿äÁ¤" + ChatColor.YELLOW + " [Lv.200]");
+				entity.setCustomName(ChatColor.GRAY + "ì˜í˜¼ì„ íƒí•˜ëŠ” ìš”ì •" + ChatColor.YELLOW + " [Lv.200]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(5000);
 				entity.setHealth(5000);
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 60));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SLIME) {
-				entity.setCustomName(ChatColor.GRAY + "µö½½¶óÀÓ" + ChatColor.YELLOW + " [Lv.194]");
+				entity.setCustomName(ChatColor.GRAY + "ë”¥ìŠ¬ë¼ì„" + ChatColor.YELLOW + " [Lv.194]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(5000);
 				entity.setHealth(5000);
@@ -1964,12 +1966,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob37(LivingEntity entity, Location loc) {
-		// ¹ÌÇ£¸£À¯ µ¿ÂÊ ºÎ±Ù -685 56 1274 -946 160 924
+		// ë¯¸í‘€ë¥´ìœ  ë™ìª½ ë¶€ê·¼ -685 56 1274 -946 160 924
 		if (loc.getX() <= -685 && loc.getY() <= 160
 				&& loc.getZ() <= 1274 && loc.getX() >= -946
 				&& loc.getY() >= 56 && loc.getZ() >= 924) {
 			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "¿ö¸®¾î" + ChatColor.YELLOW + " [Lv.184]");
+				entity.setCustomName(ChatColor.GRAY + "ì›Œë¦¬ì–´" + ChatColor.YELLOW + " [Lv.184]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(4500);
 				entity.setHealth(4500);
@@ -1990,7 +1992,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 54));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "ºóµğÄÉÀÌÅÍ" + ChatColor.YELLOW + " [Lv.190]");
+				entity.setCustomName(ChatColor.GRAY + "ë¹ˆë””ì¼€ì´í„°" + ChatColor.YELLOW + " [Lv.190]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(4700);
 				entity.setHealth(4700);
@@ -2009,14 +2011,14 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 55));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.BLAZE) {
-				entity.setCustomName(ChatColor.GRAY + "Àú°Å³ÊÆ®" + ChatColor.YELLOW + " [Lv.198]");
+				entity.setCustomName(ChatColor.GRAY + "ì €ê±°ë„ˆíŠ¸" + ChatColor.YELLOW + " [Lv.198]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(4900);
 				entity.setHealth(4900);
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 56));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "À¯¼­ÆÛ" + ChatColor.YELLOW + " [Lv.203]");
+				entity.setCustomName(ChatColor.GRAY + "ìœ ì„œí¼" + ChatColor.YELLOW + " [Lv.203]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(5200);
 				entity.setHealth(5200);
@@ -2045,12 +2047,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob38(LivingEntity entity, Location loc) {
-		// ¹ÌÇ£¸£À¯ ºÏÂÊ -960 75 990 -1277 45 871
+		// ë¯¸í‘€ë¥´ìœ  ë¶ìª½ -960 75 990 -1277 45 871
 		if (loc.getX() <= -960 && loc.getY() <= 75
 				&& loc.getZ() <= 990 && loc.getX() >= -1277
 				&& loc.getY() >= 45 && loc.getZ() >= 871) {
 			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "µÚÆ²¸° ¿ª»çÀÇ ÈçÀû" + ChatColor.YELLOW + " [Lv.211]");
+				entity.setCustomName(ChatColor.GRAY + "ë’¤í‹€ë¦° ì—­ì‚¬ì˜ í”ì " + ChatColor.YELLOW + " [Lv.211]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(5700);
 				entity.setHealth(5700);
@@ -2081,7 +2083,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.ENDERMAN) {
-				entity.setCustomName(ChatColor.GRAY + "¾Æ°ø°£ ÆÄ¼ö²Û" + ChatColor.YELLOW + " [Lv.218]");
+				entity.setCustomName(ChatColor.GRAY + "ì•„ê³µê°„ íŒŒìˆ˜ê¾¼" + ChatColor.YELLOW + " [Lv.218]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(6000);
 				entity.setHealth(6000);
@@ -2098,12 +2100,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob39(LivingEntity entity, Location loc) {
-		// ¹ÌÇ£¸£À¯ ¼­ÂÊ1 -1323 83 1105 -1639 114 1513
+		// ë¯¸í‘€ë¥´ìœ  ì„œìª½1 -1323 83 1105 -1639 114 1513
 		if (loc.getX() <= -1323 && loc.getY() <= 100
 				&& loc.getZ() <= 1513 && loc.getX() >= -1639
 				&& loc.getY() >= 35 && loc.getZ() >= 1105) {
 			if (entity.getType() == (EntityType) EntityType.STRAY) {
-				entity.setCustomName(ChatColor.GRAY + "Á¶³­´çÇÑ ¿µÈ¥" + ChatColor.YELLOW + " [Lv.201]");
+				entity.setCustomName(ChatColor.GRAY + "ì¡°ë‚œë‹¹í•œ ì˜í˜¼" + ChatColor.YELLOW + " [Lv.201]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(5300);
 				entity.setHealth(5300);
@@ -2131,7 +2133,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.DOLPHINS_GRACE, Integer.MAX_VALUE, 1));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "ÀÍ»ç´çÇÑ ¼±¿ø" + ChatColor.YELLOW + " [Lv.205]");
+				entity.setCustomName(ChatColor.GRAY + "ìµì‚¬ë‹¹í•œ ì„ ì›" + ChatColor.YELLOW + " [Lv.205]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(5500);
 				entity.setHealth(5500);
@@ -2172,12 +2174,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob40(LivingEntity entity, Location loc) {
-		// ¹ÌÇ£¸£À¯ ¼­ÂÊ2 -1200 100 1142 -1420 40 1235
+		// ë¯¸í‘€ë¥´ìœ  ì„œìª½2 -1200 100 1142 -1420 40 1235
 		if (loc.getX() <= -1200 && loc.getY() <= 100
 				&& loc.getZ() <= 1235 && loc.getX() >= -1420
 				&& loc.getY() >= 40 && loc.getZ() >= 1142) {
 			if (entity.getType() == (EntityType) EntityType.STRAY) {
-				entity.setCustomName(ChatColor.GRAY + "Á¶³­´çÇÑ ¿µÈ¥" + ChatColor.YELLOW + " [Lv.201]");
+				entity.setCustomName(ChatColor.GRAY + "ì¡°ë‚œë‹¹í•œ ì˜í˜¼" + ChatColor.YELLOW + " [Lv.201]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(5300);
 				entity.setHealth(5300);
@@ -2202,7 +2204,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.DOLPHINS_GRACE, Integer.MAX_VALUE, 1));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "ÀÍ»ç´çÇÑ ¼±¿ø" + ChatColor.YELLOW + " [Lv.205]");
+				entity.setCustomName(ChatColor.GRAY + "ìµì‚¬ë‹¹í•œ ì„ ì›" + ChatColor.YELLOW + " [Lv.205]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(5500);
 				entity.setHealth(5500);
@@ -2243,12 +2245,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob41(LivingEntity entity, Location loc) {
-		// Ä«ÀÌ¸¸ ºÏÂÊ1 -684 99 1007 -360 45 1225
+		// ì¹´ì´ë§Œ ë¶ìª½1 -684 99 1007 -360 45 1225
 		if (loc.getX() <= -360 && loc.getY() <= 100
 				&& loc.getZ() <= 1225 && loc.getX() >= -684
 				&& loc.getY() >= 45 && loc.getZ() >= 1007) {
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¼ö¶ó" + ChatColor.YELLOW + " [Lv.212]");
+				entity.setCustomName(ChatColor.GRAY + "ìˆ˜ë¼" + ChatColor.YELLOW + " [Lv.212]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(5800);
 				entity.setHealth(5800);
@@ -2268,7 +2270,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.DOLPHINS_GRACE, Integer.MAX_VALUE, 1));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "³ªÂû" + ChatColor.YELLOW + " [Lv.216]");
+				entity.setCustomName(ChatColor.GRAY + "ë‚˜ì°°" + ChatColor.YELLOW + " [Lv.216]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(6000);
 				entity.setHealth(6000);
@@ -2290,7 +2292,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.DOLPHINS_GRACE, Integer.MAX_VALUE, 1));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.HUSK) {
-				entity.setCustomName(ChatColor.GRAY + "³ªÈ£" + ChatColor.YELLOW + " [Lv.222]");
+				entity.setCustomName(ChatColor.GRAY + "ë‚˜í˜¸" + ChatColor.YELLOW + " [Lv.222]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(6300);
 				entity.setHealth(6300);
@@ -2312,7 +2314,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.DOLPHINS_GRACE, Integer.MAX_VALUE, 1));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "³ª¼¶" + ChatColor.YELLOW + " [Lv.230]");
+				entity.setCustomName(ChatColor.GRAY + "ë‚˜ì„¬" + ChatColor.YELLOW + " [Lv.230]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(6600);
 				entity.setHealth(6600);
@@ -2342,12 +2344,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob42(LivingEntity entity, Location loc) {
-		// Æ¼¸£ ºÏÂÊ -726 79 1819 -539 79 1612
+		// í‹°ë¥´ ë¶ìª½ -726 79 1819 -539 79 1612
 		if (loc.getX() <= -539 && loc.getY() <= 88
 				&& loc.getZ() <= 1819 && loc.getX() >= -726
 				&& loc.getY() >= 40 && loc.getZ() >= 1612) {
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "Æ÷º¸¸£ ¼¼·Â ÇÃ·¹ÀÌ¾î" + ChatColor.YELLOW + " [Lv.96]");
+				entity.setCustomName(ChatColor.GRAY + "í¬ë³´ë¥´ ì„¸ë ¥ í”Œë ˆì´ì–´" + ChatColor.YELLOW + " [Lv.96]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(2500);
 				entity.setHealth(2500);
@@ -2389,12 +2391,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob43(LivingEntity entity, Location loc) {
-		// Ä«ÀÌ¸¸ °¡´Â ±æ -560 63 1376 -429 76 1571
+		// ì¹´ì´ë§Œ ê°€ëŠ” ê¸¸ -560 63 1376 -429 76 1571
 		if (loc.getX() <= -429 && loc.getY() <= 80
 				&& loc.getZ() <= 1571 && loc.getX() >= -560
 				&& loc.getY() >= 40 && loc.getZ() >= 1376) {
 			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "¾Æ¶û" + ChatColor.YELLOW + " [Lv.127]");
+				entity.setCustomName(ChatColor.GRAY + "ì•„ë‘" + ChatColor.YELLOW + " [Lv.127]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(2800);
 				entity.setHealth(2800);
@@ -2415,7 +2417,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 39));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¸Ó¶ó¿ì´õ" + ChatColor.YELLOW + " [Lv.135]");
+				entity.setCustomName(ChatColor.GRAY + "ë¨¸ë¼ìš°ë”" + ChatColor.YELLOW + " [Lv.135]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(3000);
 				entity.setHealth(3000);
@@ -2444,12 +2446,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob44(LivingEntity entity, Location loc) {
-		// Ä«ÀÌ¸¸ ºÏÂÊ2 -356 40 1238 48 98 1136
+		// ì¹´ì´ë§Œ ë¶ìª½2 -356 40 1238 48 98 1136
 		if (loc.getX() <= 48 && loc.getY() <= 98
 				&& loc.getZ() <= 1238 && loc.getX() >= -356
 				&& loc.getY() >= 40 && loc.getZ() >= 1136) {
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¼ö¶ó" + ChatColor.YELLOW + " [Lv.212]");
+				entity.setCustomName(ChatColor.GRAY + "ìˆ˜ë¼" + ChatColor.YELLOW + " [Lv.212]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(5800);
 				entity.setHealth(5800);
@@ -2469,7 +2471,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.DOLPHINS_GRACE, Integer.MAX_VALUE, 1));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "³ªÂû" + ChatColor.YELLOW + " [Lv.216]");
+				entity.setCustomName(ChatColor.GRAY + "ë‚˜ì°°" + ChatColor.YELLOW + " [Lv.216]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(6000);
 				entity.setHealth(6000);
@@ -2491,7 +2493,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.DOLPHINS_GRACE, Integer.MAX_VALUE, 1));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.HUSK) {
-				entity.setCustomName(ChatColor.GRAY + "³ªÈ£" + ChatColor.YELLOW + " [Lv.222]");
+				entity.setCustomName(ChatColor.GRAY + "ë‚˜í˜¸" + ChatColor.YELLOW + " [Lv.222]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(6300);
 				entity.setHealth(6300);
@@ -2513,7 +2515,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.DOLPHINS_GRACE, Integer.MAX_VALUE, 1));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "³ª¼¶" + ChatColor.YELLOW + " [Lv.230]");
+				entity.setCustomName(ChatColor.GRAY + "ë‚˜ì„¬" + ChatColor.YELLOW + " [Lv.230]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(6600);
 				entity.setHealth(6600);
@@ -2543,12 +2545,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob45(LivingEntity entity, Location loc) {
-		// Ä«ÀÌ¸¸ ºÏÂÊ3 67 98 1132 -72 40 1010
+		// ì¹´ì´ë§Œ ë¶ìª½3 67 98 1132 -72 40 1010
 		if (loc.getX() <= 67 && loc.getY() <= 98
 				&& loc.getZ() <= 1132 && loc.getX() >= -72
 				&& loc.getY() >= 40 && loc.getZ() >= 1010) {
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¼ö¶ó" + ChatColor.YELLOW + " [Lv.212]");
+				entity.setCustomName(ChatColor.GRAY + "ìˆ˜ë¼" + ChatColor.YELLOW + " [Lv.212]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(5800);
 				entity.setHealth(5800);
@@ -2568,7 +2570,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.DOLPHINS_GRACE, Integer.MAX_VALUE, 1));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "³ªÂû" + ChatColor.YELLOW + " [Lv.216]");
+				entity.setCustomName(ChatColor.GRAY + "ë‚˜ì°°" + ChatColor.YELLOW + " [Lv.216]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(6000);
 				entity.setHealth(6000);
@@ -2590,7 +2592,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.DOLPHINS_GRACE, Integer.MAX_VALUE, 1));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.HUSK) {
-				entity.setCustomName(ChatColor.GRAY + "³ªÈ£" + ChatColor.YELLOW + " [Lv.222]");
+				entity.setCustomName(ChatColor.GRAY + "ë‚˜í˜¸" + ChatColor.YELLOW + " [Lv.222]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(6300);
 				entity.setHealth(6300);
@@ -2612,7 +2614,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.DOLPHINS_GRACE, Integer.MAX_VALUE, 1));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "³ª¼¶" + ChatColor.YELLOW + " [Lv.230]");
+				entity.setCustomName(ChatColor.GRAY + "ë‚˜ì„¬" + ChatColor.YELLOW + " [Lv.230]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(6600);
 				entity.setHealth(6600);
@@ -2642,12 +2644,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob46(LivingEntity entity, Location loc) {
-		// Ä«ÀÌ¸¸ ºÏÂÊ4 -382 69 1001 -497 106 888
+		// ì¹´ì´ë§Œ ë¶ìª½4 -382 69 1001 -497 106 888
 		if (loc.getX() <= -382 && loc.getY() <= 106
 				&& loc.getZ() <= 1001 && loc.getX() >= -497
 				&& loc.getY() >= 40 && loc.getZ() >= 888) {
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¼ö¶ó" + ChatColor.YELLOW + " [Lv.212]");
+				entity.setCustomName(ChatColor.GRAY + "ìˆ˜ë¼" + ChatColor.YELLOW + " [Lv.212]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(5800);
 				entity.setHealth(5800);
@@ -2667,7 +2669,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.DOLPHINS_GRACE, Integer.MAX_VALUE, 1));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "³ªÂû" + ChatColor.YELLOW + " [Lv.216]");
+				entity.setCustomName(ChatColor.GRAY + "ë‚˜ì°°" + ChatColor.YELLOW + " [Lv.216]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(6000);
 				entity.setHealth(6000);
@@ -2689,7 +2691,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.DOLPHINS_GRACE, Integer.MAX_VALUE, 1));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.HUSK) {
-				entity.setCustomName(ChatColor.GRAY + "³ªÈ£" + ChatColor.YELLOW + " [Lv.222]");
+				entity.setCustomName(ChatColor.GRAY + "ë‚˜í˜¸" + ChatColor.YELLOW + " [Lv.222]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(6300);
 				entity.setHealth(6300);
@@ -2711,7 +2713,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.DOLPHINS_GRACE, Integer.MAX_VALUE, 1));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "³ª¼¶" + ChatColor.YELLOW + " [Lv.230]");
+				entity.setCustomName(ChatColor.GRAY + "ë‚˜ì„¬" + ChatColor.YELLOW + " [Lv.230]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(6600);
 				entity.setHealth(6600);
@@ -2741,12 +2743,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob47(LivingEntity entity, Location loc) {
-		// µ¥ºô Æ÷Å» -532 60 990 -658 90 852
+		// ë°ë¹Œ í¬íƒˆ -532 60 990 -658 90 852
 		if (loc.getX() <= -532 && loc.getY() <= 90
 				&& loc.getZ() <= 990 && loc.getX() >= -658
 				&& loc.getY() >= 60 && loc.getZ() >= 852) {
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "µ¥ºô º¸ÃÊº´" + ChatColor.YELLOW + " [Lv.243]");
+				entity.setCustomName(ChatColor.GRAY + "ë°ë¹Œ ë³´ì´ˆë³‘" + ChatColor.YELLOW + " [Lv.243]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(8000);
 				entity.setHealth(8000);
@@ -2774,7 +2776,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 69));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "µ¥ºô º´»ç" + ChatColor.YELLOW + " [Lv.250]");
+				entity.setCustomName(ChatColor.GRAY + "ë°ë¹Œ ë³‘ì‚¬" + ChatColor.YELLOW + " [Lv.250]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(10000);
 				entity.setHealth(10000);
@@ -2805,7 +2807,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "µ¥ºô ºĞ´ëÀå" + ChatColor.YELLOW + " [Lv.260]");
+				entity.setCustomName(ChatColor.GRAY + "ë°ë¹Œ ë¶„ëŒ€ì¥" + ChatColor.YELLOW + " [Lv.260]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(12000);
 				entity.setHealth(12000);
@@ -2844,12 +2846,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob48(LivingEntity entity, Location loc) {
-		// Áß¹İ °è°î -49 104 791 -336 10 1130
+		// ì¤‘ë°˜ ê³„ê³¡ -49 104 791 -336 10 1130
 		if (loc.getX() <= -49 && loc.getY() <= 150
 				&& loc.getZ() <= 1130 && loc.getX() >= -336
 				&& loc.getY() >= 10 && loc.getZ() >= 791) {
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¹¦Áö±âÀÇ ½ÅÁ÷" + ChatColor.YELLOW + " [Lv.226]");
+				entity.setCustomName(ChatColor.GRAY + "ë¬˜ì§€ê¸°ì˜ ì‹ ì§" + ChatColor.YELLOW + " [Lv.226]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(6300);
 				entity.setHealth(6300);
@@ -2877,7 +2879,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 63));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "¹¦Áö±âÀÇ »ç·É°ü" + ChatColor.YELLOW + " [Lv.231]");
+				entity.setCustomName(ChatColor.GRAY + "ë¬˜ì§€ê¸°ì˜ ì‚¬ë ¹ê´€" + ChatColor.YELLOW + " [Lv.231]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(6700);
 				entity.setHealth(6700);
@@ -2908,7 +2910,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.HUSK) {
-				entity.setCustomName(ChatColor.GRAY + "¹¦Áö±âÀÇ ¿µ¼ú»ç" + ChatColor.YELLOW + " [Lv.236]");
+				entity.setCustomName(ChatColor.GRAY + "ë¬˜ì§€ê¸°ì˜ ì˜ìˆ ì‚¬" + ChatColor.YELLOW + " [Lv.236]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(7000);
 				entity.setHealth(7000);
@@ -2939,7 +2941,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.ENDERMAN) {
-				entity.setCustomName(ChatColor.GRAY + "¹¦Áö±âÀÇ ÀÌ´ÉÀÚ" + ChatColor.YELLOW + " [Lv.245]");
+				entity.setCustomName(ChatColor.GRAY + "ë¬˜ì§€ê¸°ì˜ ì´ëŠ¥ì" + ChatColor.YELLOW + " [Lv.245]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(8000);
 				entity.setHealth(8000);
@@ -2957,12 +2959,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob49(LivingEntity entity, Location loc) {
-		// Å¸¶ôÇÑ ¿äÁ¤ ¿Õ±¹ ÀÔ±¸ 3707 60 3482 3788 30 3296
+		// íƒ€ë½í•œ ìš”ì • ì™•êµ­ ì…êµ¬ 3707 60 3482 3788 30 3296
 		if (loc.getX() <= 3788 && loc.getY() <= 60
 				&& loc.getZ() <= 3482 && loc.getX() >= 3707
 				&& loc.getY() >= 30 && loc.getZ() >= 3296) {
 			if (entity.getType() == (EntityType) EntityType.VEX) {
-				entity.setCustomName(ChatColor.GRAY + "º¸ÃÊ¸¦ ¼­´Â ¿äÁ¤" + ChatColor.YELLOW + " [Lv.183]");
+				entity.setCustomName(ChatColor.GRAY + "ë³´ì´ˆë¥¼ ì„œëŠ” ìš”ì •" + ChatColor.YELLOW + " [Lv.183]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(4000);
 				entity.setHealth(4000);
@@ -2972,7 +2974,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 55));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "°ø°İ´ë ¿äÁ¤" + ChatColor.YELLOW + " [Lv.187]");
+				entity.setCustomName(ChatColor.GRAY + "ê³µê²©ëŒ€ ìš”ì •" + ChatColor.YELLOW + " [Lv.187]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(5000);
 				entity.setHealth(5000);
@@ -3011,19 +3013,19 @@ public class SpawnMob {
 	}
 
 	public boolean mob50(LivingEntity entity, Location loc) {
-		// Å¸¶ôÇÑ ¿äÁ¤ ¿Õ±¹ 3755 84 3430 3736 74 3461
+		// íƒ€ë½í•œ ìš”ì • ì™•êµ­ 3755 84 3430 3736 74 3461
 		if (loc.getX() <= 3755 && loc.getY() <= 84
 				&& loc.getZ() <= 3461 && loc.getX() >= 3736
 				&& loc.getY() >= 74 && loc.getZ() >= 3430) {
 			if (entity.getType() == (EntityType) EntityType.BLAZE) {
-				entity.setCustomName(ChatColor.GRAY + "ºÒÀÇ ¿äÁ¤" + ChatColor.YELLOW + " [Lv.192]");
+				entity.setCustomName(ChatColor.GRAY + "ë¶ˆì˜ ìš”ì •" + ChatColor.YELLOW + " [Lv.192]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(5200);
 				entity.setHealth(5200);
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 57));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.PHANTOM) {
-				entity.setCustomName(ChatColor.GRAY + "¿äÁ¤ÀÇ ¼ÒÈ¯¼ö" + ChatColor.YELLOW + " [Lv.194]");
+				entity.setCustomName(ChatColor.GRAY + "ìš”ì •ì˜ ì†Œí™˜ìˆ˜" + ChatColor.YELLOW + " [Lv.194]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(5500);
 				entity.setHealth(5500);
@@ -3032,7 +3034,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 58));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.WITHER) {
-				entity.setCustomName(ChatColor.GRAY + "°Å´ë ¿äÁ¤" + ChatColor.YELLOW + " [Lv.200]");
+				entity.setCustomName(ChatColor.GRAY + "ê±°ëŒ€ ìš”ì •" + ChatColor.YELLOW + " [Lv.200]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(30000);
 				entity.setHealth(30000);
@@ -3049,12 +3051,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob51(LivingEntity entity, Location loc) {
-		// Å¸¶ôÇÑ ¿äÁ¤ ¿Õ±¹ º¸½º¹æ1 3770 76 3471 3775 78 3482
+		// íƒ€ë½í•œ ìš”ì • ì™•êµ­ ë³´ìŠ¤ë°©1 3770 76 3471 3775 78 3482
 		if (loc.getX() <= 3775 && loc.getY() <= 78
 				&& loc.getZ() <= 3482 && loc.getX() >= 3770
 				&& loc.getY() >= 76 && loc.getZ() >= 3471) {
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¿äÁ¤¿Õ ¿Àº£·Ğ" + ChatColor.YELLOW + " [Lv.??]");
+				entity.setCustomName(ChatColor.GRAY + "ìš”ì •ì™• ì˜¤ë² ë¡ " + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(30000);
 				entity.setHealth(30000);
@@ -3085,12 +3087,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob52(LivingEntity entity, Location loc) {
-		// Å¸¶ôÇÑ ¿äÁ¤ ¿Õ±¹ º¸½º¹æ2 3775 76 3471 3780 78 3482
+		// íƒ€ë½í•œ ìš”ì • ì™•êµ­ ë³´ìŠ¤ë°©2 3775 76 3471 3780 78 3482
 		if (loc.getX() <= 3780 && loc.getY() <= 78
 				&& loc.getZ() <= 3482 && loc.getX() >= 3775
 				&& loc.getY() >= 76 && loc.getZ() >= 3471) {
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¿äÁ¤¿©¿Õ Æ¼Å¸´Ï¾Æ" + ChatColor.YELLOW + " [Lv.??]");
+				entity.setCustomName(ChatColor.GRAY + "ìš”ì •ì—¬ì™• í‹°íƒ€ë‹ˆì•„" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(30000);
 				entity.setHealth(30000);
@@ -3130,12 +3132,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob53(LivingEntity entity, Location loc) {
-		// Å¸¶ôÇÑ ¿äÁ¤ ¿Õ±¹ º¸½º¹æ 3754 90 3497 3797 75 3456
+		// íƒ€ë½í•œ ìš”ì • ì™•êµ­ ë³´ìŠ¤ë°© 3754 90 3497 3797 75 3456
 		if (loc.getX() <= 3797 && loc.getY() <= 90
 				&& loc.getZ() <= 3497 && loc.getX() >= 3754
 				&& loc.getY() >= 75 && loc.getZ() >= 3456) {
 			if (entity.getType() == (EntityType) EntityType.WITHER) {
-				entity.setCustomName(ChatColor.GRAY + "°Å´ë ¿äÁ¤" + ChatColor.YELLOW + " [Lv.200]");
+				entity.setCustomName(ChatColor.GRAY + "ê±°ëŒ€ ìš”ì •" + ChatColor.YELLOW + " [Lv.200]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(20000);
 				entity.setHealth(20000);
@@ -3153,12 +3155,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob54(LivingEntity entity, Location loc) {
-		// ¾Æ¶õ¸ğ¾î -1789 200 931 -2964 30 443
+		// ì•„ë€ëª¨ì–´ -1789 200 931 -2964 30 443
 		if (loc.getX() <= -1789 && loc.getY() <= 200
 				&& loc.getZ() <= 931 && loc.getX() >= -2964
 				&& loc.getY() >= 30 && loc.getZ() >= 443) {
 			if (entity.getType() == (EntityType) EntityType.POLAR_BEAR) {
-				entity.setCustomName(ChatColor.GRAY + "³ªºñ" + ChatColor.YELLOW + " [Lv.254]");
+				entity.setCustomName(ChatColor.GRAY + "ë‚˜ë¹„" + ChatColor.YELLOW + " [Lv.254]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(15000);
 				entity.setHealth(15000);
@@ -3173,7 +3175,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 75));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "¼³¿ø Á¤ÂûÀÚ" + ChatColor.YELLOW + " [Lv.217]");
+				entity.setCustomName(ChatColor.GRAY + "ì„¤ì› ì •ì°°ì" + ChatColor.YELLOW + " [Lv.217]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(10000);
 				entity.setHealth(10000);
@@ -3194,7 +3196,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 68));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¼³¿ø Á¤ÂûÀÚ" + ChatColor.YELLOW + " [Lv.224]");
+				entity.setCustomName(ChatColor.GRAY + "ì„¤ì› ì •ì°°ì" + ChatColor.YELLOW + " [Lv.224]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(10000);
 				entity.setHealth(10000);
@@ -3218,7 +3220,7 @@ public class SpawnMob {
 				boots.setBoots(bootsItem);
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¼³¿ø Á¤ÂûÀÚ" + ChatColor.YELLOW + " [Lv.230]");
+				entity.setCustomName(ChatColor.GRAY + "ì„¤ì› ì •ì°°ì" + ChatColor.YELLOW + " [Lv.230]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(12000);
 				entity.setHealth(12000);
@@ -3252,7 +3254,7 @@ public class SpawnMob {
 	}
 
 	public boolean mob55(LivingEntity entity, Location loc) {
-		// ¼³¿ø µ¿±¼ ÀÔ±¸
+		// ì„¤ì› ë™êµ´ ì…êµ¬
 		if (loc.getX() <= 3832 && loc.getY() <= 42
 				&& loc.getZ() <= 3242 && loc.getX() >= 3769
 				&& loc.getY() >= 8 && loc.getZ() >= 3179) {
@@ -3260,7 +3262,7 @@ public class SpawnMob {
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¹ß·Î¸£ÀÇ º¸º´" + ChatColor.YELLOW + " [Lv.230]");
+				entity.setCustomName(ChatColor.GRAY + "ë°œë¡œë¥´ì˜ ë³´ë³‘" + ChatColor.YELLOW + " [Lv.230]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(12000);
 				entity.setHealth(12000);
@@ -3292,7 +3294,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¹ß·Î¸£ÀÇ ±Ãº´" + ChatColor.YELLOW + " [Lv.230]");
+				entity.setCustomName(ChatColor.GRAY + "ë°œë¡œë¥´ì˜ ê¶ë³‘" + ChatColor.YELLOW + " [Lv.230]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(13000);
 				entity.setHealth(13000);
@@ -3344,7 +3346,7 @@ public class SpawnMob {
 	}
 
 	public boolean mob56(LivingEntity entity, Location loc) {
-		// ¼³¿ø µ¿±¼ ¾Æ·¡ 3753 62 3182  3639 12 3232
+		// ì„¤ì› ë™êµ´ ì•„ë˜ 3753 62 3182  3639 12 3232
 		if (loc.getX() <= 3753 && loc.getY() <= 62
 				&& loc.getZ() <= 3232 && loc.getX() >= 3639
 				&& loc.getY() >= 12 && loc.getZ() >= 3182) {
@@ -3352,7 +3354,7 @@ public class SpawnMob {
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¹ß·Î¸£ÀÇ º¸º´" + ChatColor.YELLOW + " [Lv.232]");
+				entity.setCustomName(ChatColor.GRAY + "ë°œë¡œë¥´ì˜ ë³´ë³‘" + ChatColor.YELLOW + " [Lv.232]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(13000);
 				entity.setHealth(13000);
@@ -3384,7 +3386,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¹ß·Î¸£ÀÇ ±Ãº´" + ChatColor.YELLOW + " [Lv.232]");
+				entity.setCustomName(ChatColor.GRAY + "ë°œë¡œë¥´ì˜ ê¶ë³‘" + ChatColor.YELLOW + " [Lv.232]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(14000);
 				entity.setHealth(14000);
@@ -3436,7 +3438,7 @@ public class SpawnMob {
 	}
 
 	public boolean mob57(LivingEntity entity, Location loc) {
-		// ¼³¿ø µ¿±¼ À§ 3749 91 3225  3644 70 3184
+		// ì„¤ì› ë™êµ´ ìœ„ 3749 91 3225  3644 70 3184
 		if (loc.getX() <= 3749 && loc.getY() <= 91
 				&& loc.getZ() <= 3225 && loc.getX() >= 3644
 				&& loc.getY() >= 70 && loc.getZ() >= 3184) {
@@ -3444,7 +3446,7 @@ public class SpawnMob {
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¹ß·Î¸£ÀÇ º¸º´" + ChatColor.YELLOW + " [Lv.238]");
+				entity.setCustomName(ChatColor.GRAY + "ë°œë¡œë¥´ì˜ ë³´ë³‘" + ChatColor.YELLOW + " [Lv.238]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(14000);
 				entity.setHealth(14000);
@@ -3476,7 +3478,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¹ß·Î¸£ÀÇ ±Ãº´" + ChatColor.YELLOW + " [Lv.238]");
+				entity.setCustomName(ChatColor.GRAY + "ë°œë¡œë¥´ì˜ ê¶ë³‘" + ChatColor.YELLOW + " [Lv.238]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(15000);
 				entity.setHealth(15000);
@@ -3528,7 +3530,7 @@ public class SpawnMob {
 	}
 
 	public boolean mob58(LivingEntity entity, Location loc) {
-		// ¼³¿ø µ¿±¼ Áß°£ º¸½º
+		// ì„¤ì› ë™êµ´ ì¤‘ê°„ ë³´ìŠ¤
 		if (loc.getX() <= 3792 && loc.getY() <= 70
 				&& loc.getZ() <= 3216 && loc.getX() >= 3790
 				&& loc.getY() >= 68 && loc.getZ() >= 3214) {
@@ -3536,7 +3538,7 @@ public class SpawnMob {
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "ÄÉÈê·»" + ChatColor.YELLOW + " [Lv.??]");
+				entity.setCustomName(ChatColor.GRAY + "ì¼€í˜ë Œ" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(70000);
 				entity.setHealth(70000);
@@ -3574,7 +3576,7 @@ public class SpawnMob {
 	}
 
 	public boolean mob59(LivingEntity entity, Location loc) {
-		// ¼³¿ø µ¿±¼ º¸½º
+		// ì„¤ì› ë™êµ´ ë³´ìŠ¤
 		if (loc.getX() <= 3741 && loc.getY() <= 141
 				&& loc.getZ() <= 3237 && loc.getX() >= 3739
 				&& loc.getY() >= 139 && loc.getZ() >= 3235) {
@@ -3582,7 +3584,7 @@ public class SpawnMob {
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "¹ß·Î¸£" + ChatColor.YELLOW + " [Lv.??]");
+				entity.setCustomName(ChatColor.GRAY + "ë°œë¡œë¥´" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(150000);
 				entity.setHealth(150000);
@@ -3621,12 +3623,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob60(LivingEntity entity, Location loc) {
-		// ´ËÁö ½½¶óÀÓ -616 94 699  -897 43 871
+		// ëŠªì§€ ìŠ¬ë¼ì„ -616 94 699  -897 43 871
 		if (loc.getX() <= -616 && loc.getY() <= 94
 				&& loc.getZ() <= 871 && loc.getX() >= -897
 				&& loc.getY() >= 43 && loc.getZ() >= 699) {
 			if (entity.getType() == (EntityType) EntityType.SLIME) {
-				entity.setCustomName(ChatColor.GRAY + "°Å´ë ½½¶óÀÓ" + ChatColor.YELLOW + " [Lv.253]");
+				entity.setCustomName(ChatColor.GRAY + "ê±°ëŒ€ ìŠ¬ë¼ì„" + ChatColor.YELLOW + " [Lv.253]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(12000);
 				entity.setHealth(12000);
@@ -3653,7 +3655,7 @@ public class SpawnMob {
 	}
 
 	public boolean mob61(LivingEntity entity, Location loc) {
-		// ´Ë °Å¹ÌÁö´ë -795 103 311  -313 45 691
+		// ëŠª ê±°ë¯¸ì§€ëŒ€ -795 103 311  -313 45 691
 		if (loc.getX() <= -313 && loc.getY() <= 103
 				&& loc.getZ() <= 691 && loc.getX() >= -795
 				&& loc.getY() >= 45 && loc.getZ() >= 311) {
@@ -3661,7 +3663,7 @@ public class SpawnMob {
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.SPIDER) {
-				entity.setCustomName(ChatColor.GRAY + "´Á´ë °Å¹Ì" + ChatColor.YELLOW + " [Lv.258]");
+				entity.setCustomName(ChatColor.GRAY + "ëŠ‘ëŒ€ ê±°ë¯¸" + ChatColor.YELLOW + " [Lv.258]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(15000);
 				entity.setHealth(15000);
@@ -3669,7 +3671,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.CAVE_SPIDER) {
-				entity.setCustomName(ChatColor.GRAY + "µ¶°Å¹Ì" + ChatColor.YELLOW + " [Lv.264]");
+				entity.setCustomName(ChatColor.GRAY + "ë…ê±°ë¯¸" + ChatColor.YELLOW + " [Lv.264]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(15000);
 				entity.setHealth(15000);
@@ -3692,12 +3694,12 @@ public class SpawnMob {
 	}
 
 	public boolean mob62(LivingEntity entity, Location loc) {
-		// ´ËÁö ½½¶óÀÓ -810 94 693  -970 43 602
+		// ëŠªì§€ ìŠ¬ë¼ì„ -810 94 693  -970 43 602
 		if (loc.getX() <= -810 && loc.getY() <= 94
 				&& loc.getZ() <= 693 && loc.getX() >= -970
 				&& loc.getY() >= 43 && loc.getZ() >= 602) {
 			if (entity.getType() == (EntityType) EntityType.SLIME) {
-				entity.setCustomName(ChatColor.GRAY + "°Å´ë ½½¶óÀÓ" + ChatColor.YELLOW + " [Lv.253]");
+				entity.setCustomName(ChatColor.GRAY + "ê±°ëŒ€ ìŠ¬ë¼ì„" + ChatColor.YELLOW + " [Lv.253]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(12000);
 				entity.setHealth(12000);
@@ -3724,7 +3726,7 @@ public class SpawnMob {
 	}
 
 	public boolean mob63(LivingEntity entity, Location loc) {
-		// ´ËÁö ¹°¿õµ¢ÀÌ -888 109 572 -1238 43 167
+		// ëŠªì§€ ë¬¼ì›…ë©ì´ -888 109 572 -1238 43 167
 		if (loc.getX() <= -888 && loc.getY() <= 109
 				&& loc.getZ() <= 572 && loc.getX() >= -1238
 				&& loc.getY() >= 43 && loc.getZ() >= 167) {
@@ -3732,7 +3734,7 @@ public class SpawnMob {
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "´ËÁöÀÇ ¸¶¼ö" + ChatColor.YELLOW + " [Lv.265]");
+				entity.setCustomName(ChatColor.GRAY + "ëŠªì§€ì˜ ë§ˆìˆ˜" + ChatColor.YELLOW + " [Lv.265]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(16500);
 				entity.setHealth(16500);
@@ -3765,7 +3767,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 75));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "´ËÁöÀÇ ¸¶½Å¿Õ" + ChatColor.YELLOW + " [Lv.270]");
+				entity.setCustomName(ChatColor.GRAY + "ëŠªì§€ì˜ ë§ˆì‹ ì™•" + ChatColor.YELLOW + " [Lv.270]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(40000);
 				entity.setHealth(40000);
@@ -3802,7 +3804,7 @@ public class SpawnMob {
 	}
 
 	public boolean mob64(LivingEntity entity, Location loc) {
-		// ´ËÁö ºÏµ¿ÂÊ1 -868 115 166  -1156 47 27  
+		// ëŠªì§€ ë¶ë™ìª½1 -868 115 166  -1156 47 27  
 		if (loc.getX() <= -868 && loc.getY() <= 115
 				&& loc.getZ() <= 166 && loc.getX() >= -1156
 				&& loc.getY() >= 47 && loc.getZ() >= 27) {
@@ -3810,7 +3812,7 @@ public class SpawnMob {
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "»êÀû" + ChatColor.YELLOW + " [Lv.268]");
+				entity.setCustomName(ChatColor.GRAY + "ì‚°ì " + ChatColor.YELLOW + " [Lv.268]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(16000);
 				entity.setHealth(16000);
@@ -3857,7 +3859,7 @@ public class SpawnMob {
 	}
 
 	public boolean mob65(LivingEntity entity, Location loc) {
-		// ´ËÁö ºÏµ¿ÂÊ2 -974 109 -41  -869 47 -222
+		// ëŠªì§€ ë¶ë™ìª½2 -974 109 -41  -869 47 -222
 		if (loc.getX() <= -869 && loc.getY() <= 109
 				&& loc.getZ() <= -41 && loc.getX() >= -974
 				&& loc.getY() >= 47 && loc.getZ() >= -222) {
@@ -3865,7 +3867,7 @@ public class SpawnMob {
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "»êÀû" + ChatColor.YELLOW + " [Lv.268]");
+				entity.setCustomName(ChatColor.GRAY + "ì‚°ì " + ChatColor.YELLOW + " [Lv.268]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(16000);
 				entity.setHealth(16000);
@@ -3912,14 +3914,14 @@ public class SpawnMob {
 	}
 
 	public boolean mob66(LivingEntity entity, Location loc) {
-		// Çª¸£ Æò¿ø1 -311 113 498  -125 41 150
+		// í‘¸ë¥´ í‰ì›1 -311 113 498  -125 41 150
 		if (loc.getX() <= -125 && loc.getY() <= 113 && loc.getZ() <= 498 
 				&& loc.getX() >= -311 && loc.getY() >= 41 && loc.getZ() >= 150) {
 			Location chestLoc = new Location(entity.getWorld(), -1830, 92, 3043);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "Çª¸£ °íºí¸°" + ChatColor.YELLOW + " [Lv.271]");
+				entity.setCustomName(ChatColor.GRAY + "í‘¸ë¥´ ê³ ë¸”ë¦°" + ChatColor.YELLOW + " [Lv.271]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(18000);
 				entity.setHealth(18000);
@@ -3944,7 +3946,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "µÇ»ì¾Æ³­ Àü»ç" + ChatColor.YELLOW + " [Lv.274]");
+				entity.setCustomName(ChatColor.GRAY + "ë˜ì‚´ì•„ë‚œ ì „ì‚¬" + ChatColor.YELLOW + " [Lv.274]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(19000);
 				entity.setHealth(19000);
@@ -3982,7 +3984,7 @@ public class SpawnMob {
 	}
 
 	public boolean mob67(LivingEntity entity, Location loc) {
-		// Çª¸£ Æò¿ø2 -124 115 149  -408 41 -263
+		// í‘¸ë¥´ í‰ì›2 -124 115 149  -408 41 -263
 		if (loc.getX() <= -124 && loc.getY() <= 115
 				&& loc.getZ() <= 149 && loc.getX() >= -408
 				&& loc.getY() >= 41 && loc.getZ() >= -263) {
@@ -3990,7 +3992,7 @@ public class SpawnMob {
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.RAVAGER) {
-				entity.setCustomName(ChatColor.GRAY + "ÇÏ±Ş ÆÄ±«¼ö" + ChatColor.YELLOW + " [Lv.290]");
+				entity.setCustomName(ChatColor.GRAY + "í•˜ê¸‰ íŒŒê´´ìˆ˜" + ChatColor.YELLOW + " [Lv.290]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(24000);
 				entity.setHealth(24000);
@@ -3998,7 +4000,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "µÇ»ì¾Æ³­ ÇØ°ñ" + ChatColor.YELLOW + " [Lv.286]");
+				entity.setCustomName(ChatColor.GRAY + "ë˜ì‚´ì•„ë‚œ í•´ê³¨" + ChatColor.YELLOW + " [Lv.286]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(22500);
 				entity.setHealth(22500);
@@ -4041,14 +4043,14 @@ public class SpawnMob {
 	}
 
 	public boolean mob68(LivingEntity entity, Location loc) {
-		// Çª¸£ Æò¿ø3 -123 115 367  62 41 37
+		// í‘¸ë¥´ í‰ì›3 -123 115 367  62 41 37
 		if (loc.getX() <= 62 && loc.getY() <= 115 && loc.getZ() <= 367 
 				&& loc.getX() >= -123 && loc.getY() >= 41 && loc.getZ() >= 37) {
 			Location chestLoc = new Location(entity.getWorld(), -1830, 92, 3043);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "Æ÷º¸¸£ ¼¼·Â ÇÃ·¹ÀÌ¾î" + ChatColor.YELLOW + " [Lv.279]");
+				entity.setCustomName(ChatColor.GRAY + "í¬ë³´ë¥´ ì„¸ë ¥ í”Œë ˆì´ì–´" + ChatColor.YELLOW + " [Lv.279]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(20000);
 				entity.setHealth(20000);
@@ -4071,7 +4073,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.BLAZE) {
-				entity.setCustomName(ChatColor.GRAY + "Ä¶½ÃÆÛ" + ChatColor.YELLOW + " [Lv.283]");
+				entity.setCustomName(ChatColor.GRAY + "ìº˜ì‹œí¼" + ChatColor.YELLOW + " [Lv.283]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(21000);
 				entity.setHealth(21000);
@@ -4094,7 +4096,7 @@ public class SpawnMob {
 	}
 
 	public boolean mob69(LivingEntity entity, Location loc) {
-		// Çª¸£ Æò¿ø4 29 115 27  -123 41 -208
+		// í‘¸ë¥´ í‰ì›4 29 115 27  -123 41 -208
 		if (loc.getX() <= 29 && loc.getY() <= 115
 				&& loc.getZ() <= 27 && loc.getX() >= -123
 				&& loc.getY() >= 41 && loc.getZ() >= -208) {
@@ -4102,7 +4104,7 @@ public class SpawnMob {
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.RAVAGER) {
-				entity.setCustomName(ChatColor.GRAY + "ÇÏ±Ş ÆÄ±«¼ö" + ChatColor.YELLOW + " [Lv.290]");
+				entity.setCustomName(ChatColor.GRAY + "í•˜ê¸‰ íŒŒê´´ìˆ˜" + ChatColor.YELLOW + " [Lv.290]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(24000);
 				entity.setHealth(24000);
@@ -4110,7 +4112,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "µÇ»ì¾Æ³­ ÇØ°ñ" + ChatColor.YELLOW + " [Lv.286]");
+				entity.setCustomName(ChatColor.GRAY + "ë˜ì‚´ì•„ë‚œ í•´ê³¨" + ChatColor.YELLOW + " [Lv.286]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(22500);
 				entity.setHealth(22500);
@@ -4153,14 +4155,14 @@ public class SpawnMob {
 	}
 
 	public boolean mob70(LivingEntity entity, Location loc) {
-		// Çª¸£ Æò¿ø5 61 115 366  211 41 461
+		// í‘¸ë¥´ í‰ì›5 61 115 366  211 41 461
 		if (loc.getX() <= 211 && loc.getY() <= 115 && loc.getZ() <= 461
 				&& loc.getX() >= 61 && loc.getY() >= 41 && loc.getZ() >= 366) {
 			Location chestLoc = new Location(entity.getWorld(), -1830, 92, 3043);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "Çª¸£ °íºí¸°" + ChatColor.YELLOW + " [Lv.271]");
+				entity.setCustomName(ChatColor.GRAY + "í‘¸ë¥´ ê³ ë¸”ë¦°" + ChatColor.YELLOW + " [Lv.271]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(18000);
 				entity.setHealth(18000);
@@ -4185,7 +4187,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "µÇ»ì¾Æ³­ Àü»ç" + ChatColor.YELLOW + " [Lv.274]");
+				entity.setCustomName(ChatColor.GRAY + "ë˜ì‚´ì•„ë‚œ ì „ì‚¬" + ChatColor.YELLOW + " [Lv.274]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(19000);
 				entity.setHealth(19000);
@@ -4223,14 +4225,14 @@ public class SpawnMob {
 	}
 	
 	public boolean mob71(LivingEntity entity, Location loc) {
-		// Çª¸£ Æò¿ø6 65 115 364  693 41 19
+		// í‘¸ë¥´ í‰ì›6 65 115 364  693 41 19
 		if (loc.getX() <= 693 && loc.getY() <= 115 && loc.getZ() <= 364 
 				&& loc.getX() >= 65 && loc.getY() >= 41 && loc.getZ() >= 19) {
 			Location chestLoc = new Location(entity.getWorld(), -1830, 92, 3043);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¹Ğ °¡µğ¾ğ" + ChatColor.YELLOW + " [Lv.294]");
+				entity.setCustomName(ChatColor.GRAY + "ë°€ ê°€ë””ì–¸" + ChatColor.YELLOW + " [Lv.294]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(26000);
 				entity.setHealth(26000);
@@ -4253,7 +4255,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "º¯ÀåÇÑ ´Á´ë" + ChatColor.YELLOW + " [Lv.300]");
+				entity.setCustomName(ChatColor.GRAY + "ë³€ì¥í•œ ëŠ‘ëŒ€" + ChatColor.YELLOW + " [Lv.300]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(70000);
 				entity.setHealth(70000);
@@ -4294,14 +4296,14 @@ public class SpawnMob {
 	}
 	
 	public boolean mob72(LivingEntity entity, Location loc) {
-		// Çª¸£ Æò¿ø7 40 115 -51  319 41 -421
+		// í‘¸ë¥´ í‰ì›7 40 115 -51  319 41 -421
 		if (loc.getX() <= 319 && loc.getY() <= 115 && loc.getZ() <= -51 
 				&& loc.getX() >= 40 && loc.getY() >= 41 && loc.getZ() >= -421) {
 			Location chestLoc = new Location(entity.getWorld(), -1830, 92, 3043);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "¾àÀïÀÌ" + ChatColor.YELLOW + " [Lv.299]");
+				entity.setCustomName(ChatColor.GRAY + "ì•½ìŸì´" + ChatColor.YELLOW + " [Lv.299]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(28000);
 				entity.setHealth(28000);
@@ -4338,7 +4340,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.WITCH) {
-				entity.setCustomName(ChatColor.GRAY + "°úÀÚ ¸¶³à" + ChatColor.YELLOW + " [Lv.306]");
+				entity.setCustomName(ChatColor.GRAY + "ê³¼ì ë§ˆë…€" + ChatColor.YELLOW + " [Lv.306]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(80000);
 				entity.setHealth(80000);
@@ -4362,7 +4364,7 @@ public class SpawnMob {
 	}
 	
 	public boolean mob73(LivingEntity entity, Location loc) {
-		// ¼¾ ¸¶±× ´øÀü1 3390 40 3826  3424 11 3783
+		// ì„¼ ë§ˆê·¸ ë˜ì „1 3390 40 3826  3424 11 3783
 		if (loc.getX() <= 3424 && loc.getY() <= 40
 				&& loc.getZ() <= 3826 && loc.getX() >= 3390
 				&& loc.getY() >= 11 && loc.getZ() >= 3783) {
@@ -4370,7 +4372,7 @@ public class SpawnMob {
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "ÀüÅõÇü Áı»ç" + ChatColor.YELLOW + " [Lv.100]");
+				entity.setCustomName(ChatColor.GRAY + "ì „íˆ¬í˜• ì§‘ì‚¬" + ChatColor.YELLOW + " [Lv.100]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(2300);
 				entity.setHealth(2300);
@@ -4403,7 +4405,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 37));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "ÀüÅõÇü ¸ŞÀÌµå" + ChatColor.YELLOW + " [Lv.105]");
+				entity.setCustomName(ChatColor.GRAY + "ì „íˆ¬í˜• ë©”ì´ë“œ" + ChatColor.YELLOW + " [Lv.105]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(2400);
 				entity.setHealth(2400);
@@ -4454,7 +4456,7 @@ public class SpawnMob {
 	}
 
 	public boolean mob74(LivingEntity entity, Location loc) {
-		// ¼¾ ¸¶±× ´øÀü2 3415 25 3769  3395 9 3712
+		// ì„¼ ë§ˆê·¸ ë˜ì „2 3415 25 3769  3395 9 3712
 		if (loc.getX() <= 3415 && loc.getY() <= 25
 				&& loc.getZ() <= 3769 && loc.getX() >= 3395
 				&& loc.getY() >= 9 && loc.getZ() >= 3712) {
@@ -4462,7 +4464,7 @@ public class SpawnMob {
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "±â»çÃâ½Å Áı»ç" + ChatColor.YELLOW + " [Lv.110]");
+				entity.setCustomName(ChatColor.GRAY + "ê¸°ì‚¬ì¶œì‹  ì§‘ì‚¬" + ChatColor.YELLOW + " [Lv.110]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(8000);
 				entity.setHealth(8000);
@@ -4496,7 +4498,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "Àå±³Ãâ½Å ¸ŞÀÌµå" + ChatColor.YELLOW + " [Lv.110]");
+				entity.setCustomName(ChatColor.GRAY + "ì¥êµì¶œì‹  ë©”ì´ë“œ" + ChatColor.YELLOW + " [Lv.110]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(8000);
 				entity.setHealth(8000);
@@ -4534,7 +4536,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "º¸¾ÈÆÀÀå" + ChatColor.YELLOW + " [Lv.115]");
+				entity.setCustomName(ChatColor.GRAY + "ë³´ì•ˆíŒ€ì¥" + ChatColor.YELLOW + " [Lv.115]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(8000);
 				entity.setHealth(8000);
@@ -4572,7 +4574,7 @@ public class SpawnMob {
 	}
 
 	public boolean mob75(LivingEntity entity, Location loc) {
-		// ¼¾ ¸¶±× ´øÀü3 3348 11 3759  3386 16 3721
+		// ì„¼ ë§ˆê·¸ ë˜ì „3 3348 11 3759  3386 16 3721
 		if (loc.getX() <= 3386 && loc.getY() <= 16
 				&& loc.getZ() <= 3759 && loc.getX() >= 3348
 				&& loc.getY() >= 11 && loc.getZ() >= 3721) {
@@ -4580,7 +4582,7 @@ public class SpawnMob {
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "ÀüÅõÇü Áı»ç" + ChatColor.YELLOW + " [Lv.105]");
+				entity.setCustomName(ChatColor.GRAY + "ì „íˆ¬í˜• ì§‘ì‚¬" + ChatColor.YELLOW + " [Lv.105]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(2500);
 				entity.setHealth(2500);
@@ -4613,7 +4615,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 38));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "ÀüÅõÇü ¸ŞÀÌµå" + ChatColor.YELLOW + " [Lv.108]");
+				entity.setCustomName(ChatColor.GRAY + "ì „íˆ¬í˜• ë©”ì´ë“œ" + ChatColor.YELLOW + " [Lv.108]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(2700);
 				entity.setHealth(2700);
@@ -4664,7 +4666,7 @@ public class SpawnMob {
 	}
 
 	public boolean mob76(LivingEntity entity, Location loc) {
-		// ¼¾ ¸¶±× ´øÀü4 3336 10 3725  3299 45 3762
+		// ì„¼ ë§ˆê·¸ ë˜ì „4 3336 10 3725  3299 45 3762
 		if (loc.getX() <= 3336 && loc.getY() <= 45
 				&& loc.getZ() <= 3762 && loc.getX() >= 3299
 				&& loc.getY() >= 10 && loc.getZ() >= 3725) {
@@ -4672,7 +4674,7 @@ public class SpawnMob {
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¾Æµ§" + ChatColor.YELLOW + " [Lv.??]");
+				entity.setCustomName(ChatColor.GRAY + "ì•„ë´" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(20000);
 				entity.setHealth(20000);
@@ -4695,7 +4697,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "¸ŞÀÌµå º´»ç" + ChatColor.YELLOW + " [Lv.??]");
+				entity.setCustomName(ChatColor.GRAY + "ë©”ì´ë“œ ë³‘ì‚¬" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(3000);
 				entity.setHealth(3000);
@@ -4741,7 +4743,7 @@ public class SpawnMob {
 	}
 
 	public boolean mob77(LivingEntity entity, Location loc) {
-		// ¼¾ ¸¶±× ´øÀü5 3354 37 3827  3388 13 3803
+		// ì„¼ ë§ˆê·¸ ë˜ì „5 3354 37 3827  3388 13 3803
 		if (loc.getX() <= 3388 && loc.getY() <= 37
 				&& loc.getZ() <= 3827 && loc.getX() >= 3354
 				&& loc.getY() >= 13 && loc.getZ() >= 3803) {
@@ -4749,7 +4751,7 @@ public class SpawnMob {
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "ÀüÅõÇü Áı»ç" + ChatColor.YELLOW + " [Lv.105]");
+				entity.setCustomName(ChatColor.GRAY + "ì „íˆ¬í˜• ì§‘ì‚¬" + ChatColor.YELLOW + " [Lv.105]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(2500);
 				entity.setHealth(2500);
@@ -4782,7 +4784,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 38));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "ÀüÅõÇü ¸ŞÀÌµå" + ChatColor.YELLOW + " [Lv.108]");
+				entity.setCustomName(ChatColor.GRAY + "ì „íˆ¬í˜• ë©”ì´ë“œ" + ChatColor.YELLOW + " [Lv.108]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(2700);
 				entity.setHealth(2700);
@@ -4833,7 +4835,7 @@ public class SpawnMob {
 	}
 
 	public boolean mob78(LivingEntity entity, Location loc) {
-		// ¼¾ ¸¶±× ´øÀü6 3355 32 3803  3383 11 3766
+		// ì„¼ ë§ˆê·¸ ë˜ì „6 3355 32 3803  3383 11 3766
 		if (loc.getX() <= 3383 && loc.getY() <= 32
 				&& loc.getZ() <= 3803 && loc.getX() >= 3355
 				&& loc.getY() >= 11 && loc.getZ() >= 3766) {
@@ -4841,7 +4843,7 @@ public class SpawnMob {
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "Æ¯±Ş ¿ä¸®»ç" + ChatColor.YELLOW + " [Lv.??]");
+				entity.setCustomName(ChatColor.GRAY + "íŠ¹ê¸‰ ìš”ë¦¬ì‚¬" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(60000);
 				entity.setHealth(60000);
@@ -4875,7 +4877,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 2));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SILVERFISH) {
-				entity.setCustomName(ChatColor.GRAY + "¹Ù¼±»ı" + ChatColor.YELLOW + " [Lv.180]");
+				entity.setCustomName(ChatColor.GRAY + "ë°”ì„ ìƒ" + ChatColor.YELLOW + " [Lv.180]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(5000);
 				entity.setHealth(5000);
@@ -4898,14 +4900,14 @@ public class SpawnMob {
 	}
 
 	public boolean mob79(LivingEntity entity, Location loc) {
-		// Å¾ 1Ãş
+		// íƒ‘ 1ì¸µ
 		if (loc.getX() <= 90 && loc.getY() <= 87 && loc.getZ() <= -5 && 
 				loc.getX() >= 54 && loc.getY() >= 75 && loc.getZ() >= -41) {
 			Location chestLoc = new Location(entity.getWorld(), -1844, 92, 3044);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "1ÃşÀÇ Áö¹èÀÚ" + ChatColor.YELLOW + " [Lv.??]");
+				entity.setCustomName(ChatColor.GRAY + "1ì¸µì˜ ì§€ë°°ì" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(250000);
 				entity.setHealth(250000);
@@ -4952,14 +4954,14 @@ public class SpawnMob {
 	}
 
 	public boolean mob80(LivingEntity entity, Location loc) {
-		// Å¾ 2Ãş
+		// íƒ‘ 2ì¸µ
 		if (loc.getX() <= 90 && loc.getY() <= 100 && loc.getZ() <= -5 && 
 				loc.getX() >= 54 && loc.getY() >= 88 && loc.getZ() >= -41) {
 			Location chestLoc = new Location(entity.getWorld(), -1844, 92, 3044);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "2ÃşÀÇ Áö¹èÀÚ" + ChatColor.YELLOW + " [Lv.??]");
+				entity.setCustomName(ChatColor.GRAY + "2ì¸µì˜ ì§€ë°°ì" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(550000);
 				entity.setHealth(550000);
@@ -4997,7 +4999,7 @@ public class SpawnMob {
 	}
 
 	public boolean mob81(LivingEntity entity, Location loc) {
-		// Å¾ 3Ãş
+		// íƒ‘ 3ì¸µ
 		if (loc.getX() <= 90 && loc.getY() <= 115 && loc.getZ() <= -5 && 
 				loc.getX() >= 54 && loc.getY() >= 101 && loc.getZ() >= -41) {
 			Location chestLoc = new Location(entity.getWorld(), -1844, 92, 3044);
@@ -5005,7 +5007,7 @@ public class SpawnMob {
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
 				if(loc.getX() == 72 && loc.getY() == 101 && loc.getZ() == -22 ) {
-					entity.setCustomName(ChatColor.GRAY + "3ÃşÀÇ Áö¹èÀÚ" + ChatColor.YELLOW + " [Lv.??]");
+					entity.setCustomName(ChatColor.GRAY + "3ì¸µì˜ ì§€ë°°ì" + ChatColor.YELLOW + " [Lv.??]");
 					entity.setCustomNameVisible(true);
 					entity.setMaxHealth(1000000);
 					entity.setHealth(1000000);
@@ -5028,7 +5030,7 @@ public class SpawnMob {
 					entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
 					return true;
 				} else {
-					entity.setCustomName(ChatColor.GRAY + "3ÃşÀÇ Áö¹èÀÚ?" + ChatColor.YELLOW + " [Lv.??]");
+					entity.setCustomName(ChatColor.GRAY + "3ì¸µì˜ ì§€ë°°ì?" + ChatColor.YELLOW + " [Lv.??]");
 					entity.setCustomNameVisible(true);
 					entity.setMaxHealth(300000);
 					entity.setHealth(300000);
@@ -5067,14 +5069,14 @@ public class SpawnMob {
 	}
 	
 	public boolean mob82(LivingEntity entity, Location loc) {
-		// Å¾ 4Ãş
+		// íƒ‘ 4ì¸µ
 		if (loc.getX() <= 90 && loc.getY() <= 128 && loc.getZ() <= -5 && 
 				loc.getX() >= 54 && loc.getY() >= 116 && loc.getZ() >= -41) {
 			Location chestLoc = new Location(entity.getWorld(), -1844, 92, 3044);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "2ÃşÀÇ Áö¹èÀÚ" + ChatColor.YELLOW + " [Lv.??]");
+				entity.setCustomName(ChatColor.GRAY + "2ì¸µì˜ ì§€ë°°ì" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(600000);
 				entity.setHealth(600000);
@@ -5112,14 +5114,14 @@ public class SpawnMob {
 	}
 	
 	public boolean mob83(LivingEntity entity, Location loc) {
-		// Å¾ 5Ãş
+		// íƒ‘ 5ì¸µ
 		if (loc.getX() <= 90 && loc.getY() <= 141 && loc.getZ() <= -5 && 
 				loc.getX() >= 54 && loc.getY() >= 129 && loc.getZ() >= -41) {
 			Location chestLoc = new Location(entity.getWorld(), -1844, 92, 3044);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "2ÃşÀÇ Áö¹èÀÚ" + ChatColor.YELLOW + " [Lv.??]");
+				entity.setCustomName(ChatColor.GRAY + "2ì¸µì˜ ì§€ë°°ì" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(600000);
 				entity.setHealth(600000);
@@ -5157,14 +5159,14 @@ public class SpawnMob {
 	}
 	
 	public boolean mob84(LivingEntity entity, Location loc) {
-		// Å¾ 6Ãş
+		// íƒ‘ 6ì¸µ
 		if (loc.getX() <= 90 && loc.getY() <= 156 && loc.getZ() <= -5 && 
 				loc.getX() >= 54 && loc.getY() >= 142 && loc.getZ() >= -41) {
 			Location chestLoc = new Location(entity.getWorld(), -1844, 92, 3044);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "2ÃşÀÇ Áö¹èÀÚ" + ChatColor.YELLOW + " [Lv.??]");
+				entity.setCustomName(ChatColor.GRAY + "2ì¸µì˜ ì§€ë°°ì" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(600000);
 				entity.setHealth(600000);
@@ -5202,14 +5204,14 @@ public class SpawnMob {
 	}
 	
 	public boolean mob85(LivingEntity entity, Location loc) {
-		// Å¾ 7Ãş
+		// íƒ‘ 7ì¸µ
 		if (loc.getX() <= 90 && loc.getY() <= 169 && loc.getZ() <= -5 && 
 				loc.getX() >= 54 && loc.getY() >= 157 && loc.getZ() >= -41) {
 			Location chestLoc = new Location(entity.getWorld(), -1844, 92, 3044);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "2ÃşÀÇ Áö¹èÀÚ" + ChatColor.YELLOW + " [Lv.??]");
+				entity.setCustomName(ChatColor.GRAY + "2ì¸µì˜ ì§€ë°°ì" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(600000);
 				entity.setHealth(600000);
@@ -5247,14 +5249,14 @@ public class SpawnMob {
 	}
 	
 	public boolean mob86(LivingEntity entity, Location loc) {
-		// Å¾ 8Ãş
+		// íƒ‘ 8ì¸µ
 		if (loc.getX() <= 90 && loc.getY() <= 182 && loc.getZ() <= -5 && 
 				loc.getX() >= 54 && loc.getY() >= 170 && loc.getZ() >= -41) {
 			Location chestLoc = new Location(entity.getWorld(), -1844, 92, 3044);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "2ÃşÀÇ Áö¹èÀÚ" + ChatColor.YELLOW + " [Lv.??]");
+				entity.setCustomName(ChatColor.GRAY + "2ì¸µì˜ ì§€ë°°ì" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(600000);
 				entity.setHealth(600000);
@@ -5292,14 +5294,14 @@ public class SpawnMob {
 	}
 	
 	public boolean mob87(LivingEntity entity, Location loc) {
-		// Å¾ 9Ãş
+		// íƒ‘ 9ì¸µ
 		if (loc.getX() <= 90 && loc.getY() <= 197 && loc.getZ() <= -5 && 
 				loc.getX() >= 54 && loc.getY() >= 183 && loc.getZ() >= -41) {
 			Location chestLoc = new Location(entity.getWorld(), -1844, 92, 3044);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "2ÃşÀÇ Áö¹èÀÚ" + ChatColor.YELLOW + " [Lv.??]");
+				entity.setCustomName(ChatColor.GRAY + "2ì¸µì˜ ì§€ë°°ì" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(600000);
 				entity.setHealth(600000);
@@ -5337,14 +5339,14 @@ public class SpawnMob {
 	}
 	
 	public boolean mob88(LivingEntity entity, Location loc) {
-		// Å¾ 10Ãş
+		// íƒ‘ 10ì¸µ
 		if (loc.getX() <= 90 && loc.getY() <= 210 && loc.getZ() <= -5 && 
 				loc.getX() >= 54 && loc.getY() >= 198 && loc.getZ() >= -41) {
 			Location chestLoc = new Location(entity.getWorld(), -1844, 92, 3044);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "2ÃşÀÇ Áö¹èÀÚ" + ChatColor.YELLOW + " [Lv.??]");
+				entity.setCustomName(ChatColor.GRAY + "2ì¸µì˜ ì§€ë°°ì" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(600000);
 				entity.setHealth(600000);
@@ -5382,14 +5384,14 @@ public class SpawnMob {
 	}
 	
 	public boolean mob89(LivingEntity entity, Location loc) {
-		// Å¾ 11Ãş
+		// íƒ‘ 11ì¸µ
 		if (loc.getX() <= 90 && loc.getY() <= 223 && loc.getZ() <= -5 && 
 				loc.getX() >= 54 && loc.getY() >= 211 && loc.getZ() >= -41) {
 			Location chestLoc = new Location(entity.getWorld(), -1844, 92, 3044);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "2ÃşÀÇ Áö¹èÀÚ" + ChatColor.YELLOW + " [Lv.??]");
+				entity.setCustomName(ChatColor.GRAY + "2ì¸µì˜ ì§€ë°°ì" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(600000);
 				entity.setHealth(600000);
@@ -5427,14 +5429,14 @@ public class SpawnMob {
 	}
 	
 	public boolean mob90(LivingEntity entity, Location loc) {
-		// Å¾ 12Ãş
+		// íƒ‘ 12ì¸µ
 		if (loc.getX() <= 90 && loc.getY() <= 238 && loc.getZ() <= -5 && 
 				loc.getX() >= 54 && loc.getY() >= 224 && loc.getZ() >= -41) {
 			Location chestLoc = new Location(entity.getWorld(), -1844, 92, 3044);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "2ÃşÀÇ Áö¹èÀÚ" + ChatColor.YELLOW + " [Lv.??]");
+				entity.setCustomName(ChatColor.GRAY + "2ì¸µì˜ ì§€ë°°ì" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(600000);
 				entity.setHealth(600000);
@@ -5472,14 +5474,14 @@ public class SpawnMob {
 	}
 	
 	public boolean mob91(LivingEntity entity, Location loc) {
-		// º£¾Æ±× ±ÙÃ³ ÇØÀúµ¿±¼ 33 41 -487  -40 4 -568
+		// ë² ì•„ê·¸ ê·¼ì²˜ í•´ì €ë™êµ´ 33 41 -487  -40 4 -568
 		if (loc.getX() <= 33 && loc.getY() <= 41 && loc.getZ() <= -487 && 
 				loc.getX() >= -40 && loc.getY() >= 4 && loc.getZ() >= -568) {
 			Location chestLoc = new Location(entity.getWorld(), -1830, 92, 3043);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "ÁöÇÏÀÇ ÆÄ¼ö²Û" + ChatColor.YELLOW + " [Lv.320]");
+				entity.setCustomName(ChatColor.GRAY + "ì§€í•˜ì˜ íŒŒìˆ˜ê¾¼" + ChatColor.YELLOW + " [Lv.320]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(31000);
 				entity.setHealth(31000);
@@ -5513,7 +5515,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "ÁöÇÏÀÇ ÆÄ¼ö²Û" + ChatColor.YELLOW + " [Lv.324]");
+				entity.setCustomName(ChatColor.GRAY + "ì§€í•˜ì˜ íŒŒìˆ˜ê¾¼" + ChatColor.YELLOW + " [Lv.324]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(31000);
 				entity.setHealth(31000);
@@ -5565,11 +5567,11 @@ public class SpawnMob {
 	}
 	
 	public boolean mob92(LivingEntity entity, Location loc) {
-		// ´ËÀÇ ½½¶óÀÓ Áö´ë -1020 42 526  -931 1 401
+		// ëŠªì˜ ìŠ¬ë¼ì„ ì§€ëŒ€ -1020 42 526  -931 1 401
 		if (loc.getX() <= -931 && loc.getY() <= 42 && loc.getZ() <= 526 && 
 				loc.getX() >= -1020 && loc.getY() >= 1 && loc.getZ() >= 401) {
 			if (entity.getType() == (EntityType) EntityType.SLIME) {
-				entity.setCustomName(ChatColor.GRAY + "°« ½½¶óÀÓ" + ChatColor.YELLOW + " [Lv.310]");
+				entity.setCustomName(ChatColor.GRAY + "ê°“ ìŠ¬ë¼ì„" + ChatColor.YELLOW + " [Lv.310]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(29000);
 				entity.setHealth(29000);
@@ -5596,14 +5598,14 @@ public class SpawnMob {
 	}
 	
 	public boolean mob93(LivingEntity entity, Location loc) {
-		// º£¾Æ±× ÁÖº¯ ¸¶À» -36 65 -227  -175 49 -323
+		// ë² ì•„ê·¸ ì£¼ë³€ ë§ˆì„ -36 65 -227  -175 49 -323
 		if (loc.getX() <= -36 && loc.getY() <= 65 && loc.getZ() <= -227 && 
 				loc.getX() >= -175 && loc.getY() >= 49 && loc.getZ() >= -323) {
 			Location chestLoc = new Location(entity.getWorld(), -1830, 92, 3043);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "»ç¶óÁø ºÎ¶ôÀÇ Àü»ç" + ChatColor.YELLOW + " [Lv.306]");
+				entity.setCustomName(ChatColor.GRAY + "ì‚¬ë¼ì§„ ë¶€ë½ì˜ ì „ì‚¬" + ChatColor.YELLOW + " [Lv.306]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(29000);
 				entity.setHealth(29000);
@@ -5641,14 +5643,14 @@ public class SpawnMob {
 	}
 	
 	public boolean mob94(LivingEntity entity, Location loc) {
-		// ³×Å©·Îº§¸® -179 62 776  -78 4 580
+		// ë„¤í¬ë¡œë²¨ë¦¬ -179 62 776  -78 4 580
 		if (loc.getX() <= -78 && loc.getY() <= 62 && loc.getZ() <= 776 
 				&& loc.getX() >= -179 && loc.getY() >= 4 && loc.getZ() >= 580) {
 			Location chestLoc = new Location(entity.getWorld(), -1830, 92, 3043);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "³×Å©·Îº§¸®ÀÇ ¾Ï»ìÀÚ" + ChatColor.YELLOW + " [Lv.308]");
+				entity.setCustomName(ChatColor.GRAY + "ë„¤í¬ë¡œë²¨ë¦¬ì˜ ì•”ì‚´ì" + ChatColor.YELLOW + " [Lv.308]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(28000);
 				entity.setHealth(28000);
@@ -5671,7 +5673,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "³×Å©·Îº§¸®ÀÇ °¨½ÃÀÚ" + ChatColor.YELLOW + " [Lv.314]");
+				entity.setCustomName(ChatColor.GRAY + "ë„¤í¬ë¡œë²¨ë¦¬ì˜ ê°ì‹œì" + ChatColor.YELLOW + " [Lv.314]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(30000);
 				entity.setHealth(30000);
@@ -5708,7 +5710,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.ENDERMAN) {
-				entity.setCustomName(ChatColor.GRAY + "³×Å©·Îº§¸®ÀÇ º¹º´" + ChatColor.YELLOW + " [Lv.318]");
+				entity.setCustomName(ChatColor.GRAY + "ë„¤í¬ë¡œë²¨ë¦¬ì˜ ë³µë³‘" + ChatColor.YELLOW + " [Lv.318]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(32000);
 				entity.setHealth(32000);
@@ -5731,11 +5733,11 @@ public class SpawnMob {
 	}
 	
 	public boolean mob95(LivingEntity entity, Location loc) {
-		// Çª¸£Æò¿ø µ¿±¼ -59 77 555  146 58 466 
+		// í‘¸ë¥´í‰ì› ë™êµ´ -59 77 555  146 58 466 
 		if (loc.getX() <= 146 && loc.getY() <= 77 && loc.getZ() <= 555 
 				&& loc.getX() >= -59 && loc.getY() >= 58 && loc.getZ() >= 466) {
 			if (entity.getType() == (EntityType) EntityType.SILVERFISH) {
-				entity.setCustomName(ChatColor.GRAY + "Çª¸£ ³¯¹ú·¹" + ChatColor.YELLOW + " [Lv.312]");
+				entity.setCustomName(ChatColor.GRAY + "í‘¸ë¥´ ë‚ ë²Œë ˆ" + ChatColor.YELLOW + " [Lv.312]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(31000);
 				entity.setHealth(31000);
@@ -5743,7 +5745,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.ENDERMITE) {
-				entity.setCustomName(ChatColor.GRAY + "Çª¸£ ³¯¹ú·¹" + ChatColor.YELLOW + " [Lv.317]");
+				entity.setCustomName(ChatColor.GRAY + "í‘¸ë¥´ ë‚ ë²Œë ˆ" + ChatColor.YELLOW + " [Lv.317]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(32000);
 				entity.setHealth(32000);
@@ -5766,14 +5768,14 @@ public class SpawnMob {
 	}
 	
 	public boolean mob96(LivingEntity entity, Location loc) {
-		// ÁöÇÏ°¨¿Á 313 41 -184  250 25 -154
+		// ì§€í•˜ê°ì˜¥ 313 41 -184  250 25 -154
 		if (loc.getX() <= 313 && loc.getY() <= 41 && loc.getZ() <= -154 
 				&& loc.getX() >= 250 && loc.getY() >= 25 && loc.getZ() >= -184) {
 			Location chestLoc = new Location(entity.getWorld(), -1830, 92, 3043);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "ÁöÇÏ°¨¿ÁÀÇ °£ºÎ" + ChatColor.YELLOW + " [Lv.329]");
+				entity.setCustomName(ChatColor.GRAY + "ì§€í•˜ê°ì˜¥ì˜ ê°„ë¶€" + ChatColor.YELLOW + " [Lv.329]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(33500);
 				entity.setHealth(33500);
@@ -5796,7 +5798,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "ÁöÇÏ°¨¿ÁÀÇ ÁË¼ö" + ChatColor.YELLOW + " [Lv.325]");
+				entity.setCustomName(ChatColor.GRAY + "ì§€í•˜ê°ì˜¥ì˜ ì£„ìˆ˜" + ChatColor.YELLOW + " [Lv.325]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(33000);
 				entity.setHealth(33000);
@@ -5834,14 +5836,14 @@ public class SpawnMob {
 	}
 	
 	public boolean mob97(LivingEntity entity, Location loc) {
-		// ¸¶¹ıÅ¾ 1  147 3 489  429 172 697
+		// ë§ˆë²•íƒ‘ 1  147 3 489  429 172 697
 		if (loc.getX() <= 429 && loc.getY() <= 172 && loc.getZ() <= 697 
 				&& loc.getX() >= 147 && loc.getY() >= 3 && loc.getZ() >= 489) {
 			Location chestLoc = new Location(entity.getWorld(), -1830, 92, 3043);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.BLAZE) {
-				entity.setCustomName(ChatColor.GRAY + "¸¶·ÂÀÇ ºÎ»ê¹°" + ChatColor.YELLOW + " [Lv.325]");
+				entity.setCustomName(ChatColor.GRAY + "ë§ˆë ¥ì˜ ë¶€ì‚°ë¬¼" + ChatColor.YELLOW + " [Lv.325]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(32000);
 				entity.setHealth(32000);
@@ -5849,7 +5851,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.HUSK) {
-				entity.setCustomName(ChatColor.GRAY + "°­È­ °³Á¶ ÀÎ°£" + ChatColor.YELLOW + " [Lv.330]");
+				entity.setCustomName(ChatColor.GRAY + "ê°•í™” ê°œì¡° ì¸ê°„" + ChatColor.YELLOW + " [Lv.330]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(34000);
 				entity.setHealth(34000);
@@ -5889,14 +5891,14 @@ public class SpawnMob {
 	}
 	
 	public boolean mob98(LivingEntity entity, Location loc) {
-		// ¸¶¹ıÅ¾ 2 429 172 700  47 3 935
+		// ë§ˆë²•íƒ‘ 2 429 172 700  47 3 935
 		if (loc.getX() <= 429 && loc.getY() <= 172 && loc.getZ() <= 935 
 				&& loc.getX() >= 47 && loc.getY() >= 3 && loc.getZ() >= 700) {
 			Location chestLoc = new Location(entity.getWorld(), -1830, 92, 3043);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.ENDERMAN) {
-				entity.setCustomName(ChatColor.GRAY + "¸¶¹ı¿¡ Å¸¶ôÇÑ ÀÚ" + ChatColor.YELLOW + " [Lv.332]");
+				entity.setCustomName(ChatColor.GRAY + "ë§ˆë²•ì— íƒ€ë½í•œ ì" + ChatColor.YELLOW + " [Lv.332]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(35000);
 				entity.setHealth(35000);
@@ -5904,7 +5906,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SLIME) {
-				entity.setCustomName(ChatColor.GRAY + "Àü»ıÇÑ ½½¶óÀÓ" + ChatColor.YELLOW + " [Lv.336]");
+				entity.setCustomName(ChatColor.GRAY + "ì „ìƒí•œ ìŠ¬ë¼ì„" + ChatColor.YELLOW + " [Lv.336]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(36000);
 				entity.setHealth(36000);
@@ -5931,14 +5933,14 @@ public class SpawnMob {
 	}
 	
 	public boolean mob99(LivingEntity entity, Location loc) {
-		// ¸¶¹ıÅ¾ 3  146 78 502  8 164 697
+		// ë§ˆë²•íƒ‘ 3  146 78 502  8 164 697
 		if (loc.getX() <= 146 && loc.getY() <= 164 && loc.getZ() <= 697 
 				&& loc.getX() >= 8 && loc.getY() >= 78 && loc.getZ() >= 502) {
 			Location chestLoc = new Location(entity.getWorld(), -1830, 92, 3043);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.BLAZE) {
-				entity.setCustomName(ChatColor.GRAY + "¸¶·ÂÀÇ ºÎ»ê¹°" + ChatColor.YELLOW + " [Lv.325]");
+				entity.setCustomName(ChatColor.GRAY + "ë§ˆë ¥ì˜ ë¶€ì‚°ë¬¼" + ChatColor.YELLOW + " [Lv.325]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(32000);
 				entity.setHealth(32000);
@@ -5946,7 +5948,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.HUSK) {
-				entity.setCustomName(ChatColor.GRAY + "°­È­ °³Á¶ ÀÎ°£" + ChatColor.YELLOW + " [Lv.330]");
+				entity.setCustomName(ChatColor.GRAY + "ê°•í™” ê°œì¡° ì¸ê°„" + ChatColor.YELLOW + " [Lv.330]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(34000);
 				entity.setHealth(34000);
@@ -5986,14 +5988,14 @@ public class SpawnMob {
 	}
 	
 	public boolean mob100(LivingEntity entity, Location loc) {
-		// ¹Ì±Ã 50 62 615  96 53 695  
+		// ë¯¸ê¶ 50 62 615  96 53 695  
 		if (loc.getX() <= 96 && loc.getY() <= 62 && loc.getZ() <= 695 
 				&& loc.getX() >= 50 && loc.getY() >= 53 && loc.getZ() >= 615) {
 			Location chestLoc = new Location(entity.getWorld(), -1830, 92, 3043);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.ENDERMITE) {
-				entity.setCustomName(ChatColor.GRAY + "Àç¾Ó" + ChatColor.YELLOW + " [Lv.343]");
+				entity.setCustomName(ChatColor.GRAY + "ì¬ì•™" + ChatColor.YELLOW + " [Lv.343]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(37000);
 				entity.setHealth(37000);
@@ -6001,7 +6003,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.HUSK) {
-				entity.setCustomName(ChatColor.GRAY + "Å¸¶ôÇÑ ¸ğÇè°¡" + ChatColor.YELLOW + " [Lv.347]");
+				entity.setCustomName(ChatColor.GRAY + "íƒ€ë½í•œ ëª¨í—˜ê°€" + ChatColor.YELLOW + " [Lv.347]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(38500);
 				entity.setHealth(38500);
@@ -6041,14 +6043,14 @@ public class SpawnMob {
 	}
 	
 	public boolean mob101(LivingEntity entity, Location loc) {
-		// ¹Ì±Ãº¸½º¹æ 48 61 654  16 51 696
+		// ë¯¸ê¶ë³´ìŠ¤ë°© 48 61 654  16 51 696
 		if (loc.getX() <= 48 && loc.getY() <= 61 && loc.getZ() <= 696 
 				&& loc.getX() >= 16 && loc.getY() >= 51 && loc.getZ() >= 654) {
 			Location chestLoc = new Location(entity.getWorld(), -1830, 92, 3043);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.ENDERMITE) {
-				entity.setCustomName(ChatColor.GRAY + "Àç¾Ó" + ChatColor.YELLOW + " [Lv.343]");
+				entity.setCustomName(ChatColor.GRAY + "ì¬ì•™" + ChatColor.YELLOW + " [Lv.343]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(37000);
 				entity.setHealth(37000);
@@ -6056,7 +6058,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "ÄÚ³¶±×" + ChatColor.YELLOW + " [Lv.??]");
+				entity.setCustomName(ChatColor.GRAY + "ì½”ë‚­ê·¸" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(700000);
 				entity.setHealth(700000);
@@ -6100,11 +6102,11 @@ public class SpawnMob {
 	}
 	
 	public boolean mob102(LivingEntity entity, Location loc) {
-		// °í¼º ¼­ÂÊ  625 200 887  493 40 389
+		// ê³ ì„± ì„œìª½  625 200 887  493 40 389
 		if (loc.getX() <= 625 && loc.getY() <= 200 && loc.getZ() <= 887 && 
 				loc.getX() >= 493 && loc.getY() >= 40 && loc.getZ() >= 389) {
 			if (entity.getType() == (EntityType) EntityType.SILVERFISH) {
-				entity.setCustomName(ChatColor.GRAY + "¿äÁ¤ÀÇ ÆÄÆí" + ChatColor.YELLOW + " [Lv.338]");
+				entity.setCustomName(ChatColor.GRAY + "ìš”ì •ì˜ íŒŒí¸" + ChatColor.YELLOW + " [Lv.338]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(36500);
 				entity.setHealth(36500);
@@ -6112,7 +6114,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "ÃÊ¸¶µµ¿ë±â»ç" + ChatColor.YELLOW + " [Lv.342]");
+				entity.setCustomName(ChatColor.GRAY + "ì´ˆë§ˆë„ìš©ê¸°ì‚¬" + ChatColor.YELLOW + " [Lv.342]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(37000);
 				entity.setHealth(37000);
@@ -6164,14 +6166,14 @@ public class SpawnMob {
 	}
 	
 	public boolean mob103(LivingEntity entity, Location loc) {
-		// °í¼º ³²ÂÊ 627 150 661  810 45 891
+		// ê³ ì„± ë‚¨ìª½ 627 150 661  810 45 891
 		if (loc.getX() <= 810 && loc.getY() <= 150 && loc.getZ() <= 891 && 
 				loc.getX() >= 627 && loc.getY() >= 45 && loc.getZ() >= 661) {
 			Location chestLoc = new Location(entity.getWorld(), -1830, 92, 3045);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¶°µµ´Â ¸Á·É Àü»ç" + ChatColor.YELLOW + " [Lv.344]");
+				entity.setCustomName(ChatColor.GRAY + "ë– ë„ëŠ” ë§ë ¹ ì „ì‚¬" + ChatColor.YELLOW + " [Lv.344]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(38000);
 				entity.setHealth(38000);
@@ -6194,7 +6196,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¶°µµ´Â ¸Á·É ¸¶¹ı»ç" + ChatColor.YELLOW + " [Lv.349]");
+				entity.setCustomName(ChatColor.GRAY + "ë– ë„ëŠ” ë§ë ¹ ë§ˆë²•ì‚¬" + ChatColor.YELLOW + " [Lv.349]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(39000);
 				entity.setHealth(39000);
@@ -6237,11 +6239,11 @@ public class SpawnMob {
 	}
 	
 	public boolean mob104(LivingEntity entity, Location loc) {
-		// °í¼º µ¿³²ÂÊ 758 150 656  967 45 620
+		// ê³ ì„± ë™ë‚¨ìª½ 758 150 656  967 45 620
 		if (loc.getX() <= 967 && loc.getY() <= 150 && loc.getZ() <= 656 && 
 				loc.getX() >= 758 && loc.getY() >= 55 && loc.getZ() >= 620) {
 			if (entity.getType() == (EntityType) EntityType.RAVAGER) {
-				entity.setCustomName(ChatColor.GRAY + "±×¸®Áñ¸® º£¾î" + ChatColor.YELLOW + " [Lv.347]");
+				entity.setCustomName(ChatColor.GRAY + "ê·¸ë¦¬ì¦ë¦¬ ë² ì–´" + ChatColor.YELLOW + " [Lv.347]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(39000);
 				entity.setHealth(39000);
@@ -6298,14 +6300,14 @@ public class SpawnMob {
 	}
 	
 	public boolean mob105(LivingEntity entity, Location loc) {
-		// °í¼º ±ÙÃ³ ºÎ¶ô 908 104 747  1105 40 895
+		// ê³ ì„± ê·¼ì²˜ ë¶€ë½ 908 104 747  1105 40 895
 		if (loc.getX() <= 1105 && loc.getY() <= 104 && loc.getZ() <= 895 && 
 				loc.getX() >= 908 && loc.getY() >= 40 && loc.getZ() >= 747) {
 			Location chestLoc = new Location(entity.getWorld(), -1830, 92, 3045);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "ÆÄ½ºÄ®" + ChatColor.YELLOW + " [Lv.359]");
+				entity.setCustomName(ChatColor.GRAY + "íŒŒìŠ¤ì¹¼" + ChatColor.YELLOW + " [Lv.359]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(42500);
 				entity.setHealth(42500);
@@ -6337,7 +6339,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.CREEPER) {
-				entity.setCustomName(ChatColor.GRAY + "¿¡¹Ğ" + ChatColor.YELLOW + " [Lv.363]");
+				entity.setCustomName(ChatColor.GRAY + "ì—ë°€" + ChatColor.YELLOW + " [Lv.363]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(43000);
 				entity.setHealth(43000);
@@ -6359,14 +6361,14 @@ public class SpawnMob {
 	}
 	
 	public boolean mob106(LivingEntity entity, Location loc) {
-		// ºÎ¶ô ¾Õ ÆòÁö 819 80 774  901 50 911
+		// ë¶€ë½ ì• í‰ì§€ 819 80 774  901 50 911
 		if (loc.getX() <= 901 && loc.getY() <= 80 && loc.getZ() <= 911 && 
 				loc.getX() >= 819 && loc.getY() >= 50 && loc.getZ() >= 774) {
 			Location chestLoc = new Location(entity.getWorld(), -1830, 92, 3045);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "Æ÷º¸¸£ ¼¼·Â ÇÃ·¹ÀÌ¾î" + ChatColor.YELLOW + " [Lv.354]");
+				entity.setCustomName(ChatColor.GRAY + "í¬ë³´ë¥´ ì„¸ë ¥ í”Œë ˆì´ì–´" + ChatColor.YELLOW + " [Lv.354]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(41000);
 				entity.setHealth(41000);
@@ -6389,7 +6391,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.WITCH) {
-				entity.setCustomName(ChatColor.GRAY + "¸¶¹ı¼Ò³à" + ChatColor.YELLOW + " [Lv.357]");
+				entity.setCustomName(ChatColor.GRAY + "ë§ˆë²•ì†Œë…€" + ChatColor.YELLOW + " [Lv.357]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(42000);
 				entity.setHealth(42000);
@@ -6411,11 +6413,11 @@ public class SpawnMob {
 	}
 	
 	public boolean mob107(LivingEntity entity, Location loc) {
-		// ºÎ¶ô ±ÙÃ³ µ¿±¼ 847 57 739  777 29 683
+		// ë¶€ë½ ê·¼ì²˜ ë™êµ´ 847 57 739  777 29 683
 		if (loc.getX() <= 847 && loc.getY() <= 57 && loc.getZ() <= 739 && 
 				loc.getX() >= 777 && loc.getY() >= 29 && loc.getZ() >= 683) {
 			if (entity.getType() == (EntityType) EntityType.MAGMA_CUBE) {
-				entity.setCustomName(ChatColor.GRAY + "ÁøÈë ¿äÁ¤" + ChatColor.YELLOW + " [Lv.366]");
+				entity.setCustomName(ChatColor.GRAY + "ì§„í™ ìš”ì •" + ChatColor.YELLOW + " [Lv.366]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(44000);
 				entity.setHealth(44000);
@@ -6442,11 +6444,11 @@ public class SpawnMob {
 	}
 	
 	public boolean mob108(LivingEntity entity, Location loc) {
-		// ¾Æ¶óÅ©³×ÀÇ ÀúÁÖ1 699 56 551  782 34 633
+		// ì•„ë¼í¬ë„¤ì˜ ì €ì£¼1 699 56 551  782 34 633
 		if (loc.getX() <= 782 && loc.getY() <= 56 && loc.getZ() <= 633 
 				&& loc.getX() >= 699 && loc.getY() >= 34 && loc.getZ() >= 551) {
 			if (entity.getType() == (EntityType) EntityType.PHANTOM) {
-				entity.setCustomName(ChatColor.GRAY + "Çª¸¥ °¡¿À¸®" + ChatColor.YELLOW + " [Lv.380]");
+				entity.setCustomName(ChatColor.GRAY + "í‘¸ë¥¸ ê°€ì˜¤ë¦¬" + ChatColor.YELLOW + " [Lv.380]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(15000);
 				entity.setHealth(15000);
@@ -6470,18 +6472,18 @@ public class SpawnMob {
 	}
 	
 	public boolean mob109(LivingEntity entity, Location loc) {
-		// ¾Æ¶óÅ©³×ÀÇ ÀúÁÖ º¸½º¹æ 727 31 555  776 0 605
+		// ì•„ë¼í¬ë„¤ì˜ ì €ì£¼ ë³´ìŠ¤ë°© 727 31 555  776 0 605
 		if (loc.getX() <= 776 && loc.getY() <= 31 && loc.getZ() <= 605 
 				&& loc.getX() >= 727 && loc.getY() >= 0 && loc.getZ() >= 555) {
 			if (entity.getType() == (EntityType) EntityType.CAVE_SPIDER) {
-				entity.setCustomName(ChatColor.GRAY + "¾Æ¶óÅ©³×" + ChatColor.YELLOW + " [Lv.??]");
+				entity.setCustomName(ChatColor.GRAY + "ì•„ë¼í¬ë„¤" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(800000);
 				entity.setHealth(800000);
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 150));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SPIDER) {
-				entity.setCustomName(ChatColor.GRAY + "¾Æ¶óÅ©³×ÀÇ ÇÏ¼öÀÎ" + ChatColor.YELLOW + " [Lv.383]");
+				entity.setCustomName(ChatColor.GRAY + "ì•„ë¼í¬ë„¤ì˜ í•˜ìˆ˜ì¸" + ChatColor.YELLOW + " [Lv.383]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(48000);
 				entity.setHealth(48000);
@@ -6503,14 +6505,14 @@ public class SpawnMob {
 	}
 
 	public boolean mob110(LivingEntity entity, Location loc) {
-		// ¼ö¸ñ¿ø 744 120 659  710 60 617
+		// ìˆ˜ëª©ì› 744 120 659  710 60 617
 		if (loc.getX() <= 744 && loc.getY() <= 120 && loc.getZ() <= 659 && 
 				loc.getX() >= 710 && loc.getY() >= 60 && loc.getZ() >= 617) {
 			Location chestLoc = new Location(entity.getWorld(), -1830, 92, 3045);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "³×¿À¾ÆÄí¾Æ ¸¶µ¹" + ChatColor.YELLOW + " [Lv.365]");
+				entity.setCustomName(ChatColor.GRAY + "ë„¤ì˜¤ì•„ì¿ ì•„ ë§ˆëŒ" + ChatColor.YELLOW + " [Lv.365]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(43700);
 				entity.setHealth(43700);
@@ -6547,7 +6549,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "¶óÀÌÆ®·¹ÀÌ ¸¶µ¹" + ChatColor.YELLOW + " [Lv.369]");
+				entity.setCustomName(ChatColor.GRAY + "ë¼ì´íŠ¸ë ˆì´ ë§ˆëŒ" + ChatColor.YELLOW + " [Lv.369]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(44600);
 				entity.setHealth(44600);
@@ -6596,14 +6598,14 @@ public class SpawnMob {
 	}
 	
 	public boolean mob111(LivingEntity entity, Location loc) {
-		// 3Ãş 672 116 572  713 100 605   
+		// 3ì¸µ 672 116 572  713 100 605   
 		if (loc.getX() <= 713 && loc.getY() <= 116 && loc.getZ() <= 605 && 
 				loc.getX() >= 672 && loc.getY() >= 100 && loc.getZ() >= 572) {
 			Location chestLoc = new Location(entity.getWorld(), -1830, 92, 3045);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "µÚÆ²¸° ¿äÁ¤" + ChatColor.YELLOW + " [Lv.384]");
+				entity.setCustomName(ChatColor.GRAY + "ë’¤í‹€ë¦° ìš”ì •" + ChatColor.YELLOW + " [Lv.384]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(49000);
 				entity.setHealth(49000);
@@ -6635,7 +6637,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "µÚÆ²¸° ¿äÁ¤" + ChatColor.YELLOW + " [Lv.386]");
+				entity.setCustomName(ChatColor.GRAY + "ë’¤í‹€ë¦° ìš”ì •" + ChatColor.YELLOW + " [Lv.386]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(50000);
 				entity.setHealth(50000);
@@ -6682,14 +6684,14 @@ public class SpawnMob {
 	}
 	
 	public boolean mob112(LivingEntity entity, Location loc) {
-		// 2Ãş 712 91 566  668 82 609
+		// 2ì¸µ 712 91 566  668 82 609
 		if (loc.getX() <= 712 && loc.getY() <= 91 && loc.getZ() <= 609 && 
 				loc.getX() >= 668 && loc.getY() >= 82 && loc.getZ() >= 566) {
 			Location chestLoc = new Location(entity.getWorld(), -1830, 92, 3045);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "ºĞ³ëÇÏ´Â ¿äÁ¤" + ChatColor.YELLOW + " [Lv.379]");
+				entity.setCustomName(ChatColor.GRAY + "ë¶„ë…¸í•˜ëŠ” ìš”ì •" + ChatColor.YELLOW + " [Lv.379]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(47500);
 				entity.setHealth(47500);
@@ -6726,7 +6728,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "ºĞ³ëÇÏ´Â ¿äÁ¤" + ChatColor.YELLOW + " [Lv.383]");
+				entity.setCustomName(ChatColor.GRAY + "ë¶„ë…¸í•˜ëŠ” ìš”ì •" + ChatColor.YELLOW + " [Lv.383]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(48000);
 				entity.setHealth(48000);
@@ -6778,14 +6780,14 @@ public class SpawnMob {
 	}
 	
 	public boolean mob113(LivingEntity entity, Location loc) {
-		// 1Ãş 675 75 617  718 65 566
+		// 1ì¸µ 675 75 617  718 65 566
 		if (loc.getX() <= 718 && loc.getY() <= 75 && loc.getZ() <= 617 && 
 				loc.getX() >= 675 && loc.getY() >= 65 && loc.getZ() >= 566) {
 			Location chestLoc = new Location(entity.getWorld(), -1830, 92, 3045);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¹æÈ²ÇÏ´Â ¿äÁ¤" + ChatColor.YELLOW + " [Lv.372]");
+				entity.setCustomName(ChatColor.GRAY + "ë°©í™©í•˜ëŠ” ìš”ì •" + ChatColor.YELLOW + " [Lv.372]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(45200);
 				entity.setHealth(45200);
@@ -6822,7 +6824,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¹æÈ²ÇÏ´Â ¿äÁ¤" + ChatColor.YELLOW + " [Lv.376]");
+				entity.setCustomName(ChatColor.GRAY + "ë°©í™©í•˜ëŠ” ìš”ì •" + ChatColor.YELLOW + " [Lv.376]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(46500);
 				entity.setHealth(46500);
@@ -6869,80 +6871,113 @@ public class SpawnMob {
 	}
 	
 	public boolean mob114(LivingEntity entity, Location loc) {
-		// ¹Ğ¹ç µ¿ÂÊ 695 40 6  860 100 165
-		if (loc.getX() <= 718 && loc.getY() <= 75 && loc.getZ() <= 617 && 
-				loc.getX() >= 675 && loc.getY() >= 65 && loc.getZ() >= 566) {
+		// ë°€ë°­ ë™ìª½ 695 40 6  860 100 165
+		if (loc.getX() <= 860 && loc.getY() <= 100 && loc.getZ() <= 165 && 
+				loc.getX() >= 695 && loc.getY() >= 40 && loc.getZ() >= 6) {
 			Location chestLoc = new Location(entity.getWorld(), -1830, 92, 3045);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¹æÈ²ÇÏ´Â ¿äÁ¤" + ChatColor.YELLOW + " [Lv.372]");
+				entity.setCustomName(ChatColor.GRAY + "ì¼„" + ChatColor.YELLOW + " [Lv.390]");
 				entity.setCustomNameVisible(true);
-				entity.setMaxHealth(45200);
-				entity.setHealth(45200);
+				entity.setMaxHealth(51000);
+				entity.setHealth(51000);
 				EntityEquipment weapon = entity.getEquipment();
 				ItemStack weaponItem = new ItemStack(Material.BOW);
 				ItemMeta im = weaponItem.getItemMeta();
-				im.setLocalizedName("120");
+				im.setLocalizedName("133");
 				weaponItem.setItemMeta(im);
 				weapon.setItemInMainHand(weaponItem);
-				EntityEquipment mobBow = entity.getEquipment();
-				ItemStack mobBowItem = new ItemStack(Material.MUSIC_DISC_13);
-				mobBow.setItemInOffHand(mobBowItem);
 				EntityEquipment head = entity.getEquipment();
-				ItemStack headItem = chest.getInventory().getItem(6);
+				ItemStack headItem = chest.getInventory().getItem(12);
 				head.setHelmet(headItem);
 				EntityEquipment chestplate = entity.getEquipment();
 				ItemStack chestplateItem = new ItemStack(Material.LEATHER_CHESTPLATE);
 				LeatherArmorMeta chestmeta = (LeatherArmorMeta) chestplateItem.getItemMeta();
-				chestmeta.setColor(Color.fromRGB(20, 33, 155));
+				chestmeta.setColor(Color.fromRGB(200, 10, 10));
 				chestplateItem.setItemMeta(chestmeta);
 				chestplate.setChestplate(chestplateItem);
 				EntityEquipment leggings = entity.getEquipment();
 				ItemStack leggingsItem = new ItemStack(Material.LEATHER_LEGGINGS);
 				LeatherArmorMeta leggingsmeta = (LeatherArmorMeta) leggingsItem.getItemMeta();
-				leggingsmeta.setColor(Color.fromRGB(20, 33, 155));
+				leggingsmeta.setColor(Color.fromRGB(200, 10, 10));
 				leggingsItem.setItemMeta(leggingsmeta);
 				leggings.setLeggings(leggingsItem);
 				EntityEquipment boots = entity.getEquipment();
 				ItemStack bootsItem = new ItemStack(Material.LEATHER_BOOTS);
 				LeatherArmorMeta bootsmeta = (LeatherArmorMeta) bootsItem.getItemMeta();
-				bootsmeta.setColor(Color.fromRGB(20, 33, 155));
+				bootsmeta.setColor(Color.fromRGB(170, 120, 10));
 				bootsItem.setItemMeta(bootsmeta);
 				boots.setBoots(bootsItem);
-				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¹æÈ²ÇÏ´Â ¿äÁ¤" + ChatColor.YELLOW + " [Lv.376]");
+				entity.setCustomName(ChatColor.GRAY + "ë¥˜" + ChatColor.YELLOW + " [Lv.394]");
 				entity.setCustomNameVisible(true);
-				entity.setMaxHealth(46500);
-				entity.setHealth(46500);
+				entity.setMaxHealth(52000);
+				entity.setHealth(52000);
 				EntityEquipment weapon = entity.getEquipment();
-				ItemStack weaponItem = new ItemStack(Material.GREEN_CARPET);
+				ItemStack weaponItem = new ItemStack(Material.BOW);
+				ItemMeta im = weaponItem.getItemMeta();
+				im.setLocalizedName("135");
+				weaponItem.setItemMeta(im);
 				weapon.setItemInMainHand(weaponItem);
 				EntityEquipment head = entity.getEquipment();
-				ItemStack headItem = chest.getInventory().getItem(7);
+				ItemStack headItem = chest.getInventory().getItem(13);
 				head.setHelmet(headItem);
 				EntityEquipment chestplate = entity.getEquipment();
 				ItemStack chestplateItem = new ItemStack(Material.LEATHER_CHESTPLATE);
 				LeatherArmorMeta chestmeta = (LeatherArmorMeta) chestplateItem.getItemMeta();
-				chestmeta.setColor(Color.fromRGB(155, 20, 155));
+				chestmeta.setColor(Color.fromRGB(255, 255, 255));
 				chestplateItem.setItemMeta(chestmeta);
 				chestplate.setChestplate(chestplateItem);
 				EntityEquipment leggings = entity.getEquipment();
 				ItemStack leggingsItem = new ItemStack(Material.LEATHER_LEGGINGS);
 				LeatherArmorMeta leggingsmeta = (LeatherArmorMeta) leggingsItem.getItemMeta();
-				leggingsmeta.setColor(Color.fromRGB(155, 20, 155));
+				leggingsmeta.setColor(Color.fromRGB(255, 255, 255));
 				leggingsItem.setItemMeta(leggingsmeta);
 				leggings.setLeggings(leggingsItem);
 				EntityEquipment boots = entity.getEquipment();
 				ItemStack bootsItem = new ItemStack(Material.LEATHER_BOOTS);
 				LeatherArmorMeta bootsmeta = (LeatherArmorMeta) bootsItem.getItemMeta();
-				bootsmeta.setColor(Color.fromRGB(155, 20, 155));
+				bootsmeta.setColor(Color.fromRGB(170, 120, 10));
 				bootsItem.setItemMeta(bootsmeta);
 				boots.setBoots(bootsItem);
-				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 122));
-				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
+				return true;
+			} else if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
+				entity.setCustomName(ChatColor.GRAY + "ê³ ìš°í‚¤" + ChatColor.YELLOW + " [Lv.397]");
+				entity.setCustomNameVisible(true);
+				entity.setMaxHealth(53000);
+				entity.setHealth(53000);
+				Zombie zom = (Zombie) entity;
+				zom.setBaby(false);
+				EntityEquipment weapon = entity.getEquipment();
+				ItemStack weaponItem = new ItemStack(Material.AIR);
+				weapon.setItemInMainHand(weaponItem);
+				EntityEquipment head = entity.getEquipment();
+				ItemStack headItem = chest.getInventory().getItem(14);
+				head.setHelmet(headItem);
+				EntityEquipment chestplate = entity.getEquipment();
+				ItemStack chestplateItem = new ItemStack(Material.LEATHER_CHESTPLATE);
+				LeatherArmorMeta chestmeta = (LeatherArmorMeta) chestplateItem.getItemMeta();
+				chestmeta.setColor(Color.fromRGB(140, 70, 140));
+				chestplateItem.setItemMeta(chestmeta);
+				chestplate.setChestplate(chestplateItem);
+				EntityEquipment leggings = entity.getEquipment();
+				ItemStack leggingsItem = new ItemStack(Material.LEATHER_LEGGINGS);
+				LeatherArmorMeta leggingsmeta = (LeatherArmorMeta) leggingsItem.getItemMeta();
+				leggingsmeta.setColor(Color.fromRGB(140, 70, 140));
+				leggingsItem.setItemMeta(leggingsmeta);
+				leggings.setLeggings(leggingsItem);
+				EntityEquipment boots = entity.getEquipment();
+				ItemStack bootsItem = new ItemStack(Material.LEATHER_BOOTS);
+				LeatherArmorMeta bootsmeta = (LeatherArmorMeta) bootsItem.getItemMeta();
+				bootsmeta.setColor(Color.fromRGB(140, 60, 10));
+				bootsItem.setItemMeta(bootsmeta);
+				boots.setBoots(bootsItem);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 137));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM
 					|| entity.getType() == (EntityType) EntityType.SALMON
@@ -6960,79 +6995,28 @@ public class SpawnMob {
 	}
 	
 	public boolean mob115(LivingEntity entity, Location loc) {
-		// Å¬·¹¾îÈå ¼­¹® 860 50 167  695 100 415
-		if (loc.getX() <= 718 && loc.getY() <= 75 && loc.getZ() <= 617 && 
-				loc.getX() >= 675 && loc.getY() >= 65 && loc.getZ() >= 566) {
+		// í´ë ˆì–´í ì„œë¬¸ 860 50 167  695 100 415
+		if (loc.getX() <= 860 && loc.getY() <= 100 && loc.getZ() <= 415 && 
+				loc.getX() >= 695 && loc.getY() >= 50 && loc.getZ() >= 167) {
 			Location chestLoc = new Location(entity.getWorld(), -1830, 92, 3045);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
-			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¹æÈ²ÇÏ´Â ¿äÁ¤" + ChatColor.YELLOW + " [Lv.372]");
+			if (entity.getType() == (EntityType) EntityType.ENDERMAN) {
+				entity.setCustomName(ChatColor.GRAY + "ë²”ì¸" + ChatColor.YELLOW + " [Lv.395]");
 				entity.setCustomNameVisible(true);
-				entity.setMaxHealth(45200);
-				entity.setHealth(45200);
-				EntityEquipment weapon = entity.getEquipment();
-				ItemStack weaponItem = new ItemStack(Material.BOW);
-				ItemMeta im = weaponItem.getItemMeta();
-				im.setLocalizedName("120");
-				weaponItem.setItemMeta(im);
-				weapon.setItemInMainHand(weaponItem);
-				EntityEquipment mobBow = entity.getEquipment();
-				ItemStack mobBowItem = new ItemStack(Material.MUSIC_DISC_13);
-				mobBow.setItemInOffHand(mobBowItem);
-				EntityEquipment head = entity.getEquipment();
-				ItemStack headItem = chest.getInventory().getItem(6);
-				head.setHelmet(headItem);
-				EntityEquipment chestplate = entity.getEquipment();
-				ItemStack chestplateItem = new ItemStack(Material.LEATHER_CHESTPLATE);
-				LeatherArmorMeta chestmeta = (LeatherArmorMeta) chestplateItem.getItemMeta();
-				chestmeta.setColor(Color.fromRGB(20, 33, 155));
-				chestplateItem.setItemMeta(chestmeta);
-				chestplate.setChestplate(chestplateItem);
-				EntityEquipment leggings = entity.getEquipment();
-				ItemStack leggingsItem = new ItemStack(Material.LEATHER_LEGGINGS);
-				LeatherArmorMeta leggingsmeta = (LeatherArmorMeta) leggingsItem.getItemMeta();
-				leggingsmeta.setColor(Color.fromRGB(20, 33, 155));
-				leggingsItem.setItemMeta(leggingsmeta);
-				leggings.setLeggings(leggingsItem);
-				EntityEquipment boots = entity.getEquipment();
-				ItemStack bootsItem = new ItemStack(Material.LEATHER_BOOTS);
-				LeatherArmorMeta bootsmeta = (LeatherArmorMeta) bootsItem.getItemMeta();
-				bootsmeta.setColor(Color.fromRGB(20, 33, 155));
-				bootsItem.setItemMeta(bootsmeta);
-				boots.setBoots(bootsItem);
+				entity.setMaxHealth(53000);
+				entity.setHealth(53000);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 136));
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;
-			} else if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¹æÈ²ÇÏ´Â ¿äÁ¤" + ChatColor.YELLOW + " [Lv.376]");
+			} else if (entity.getType() == (EntityType) EntityType.ENDERMITE) {
+				entity.setCustomName(ChatColor.GRAY + "í¬ë„" + ChatColor.YELLOW + " [Lv.399]");
 				entity.setCustomNameVisible(true);
-				entity.setMaxHealth(46500);
-				entity.setHealth(46500);
-				EntityEquipment weapon = entity.getEquipment();
-				ItemStack weaponItem = new ItemStack(Material.GREEN_CARPET);
-				weapon.setItemInMainHand(weaponItem);
-				EntityEquipment head = entity.getEquipment();
-				ItemStack headItem = chest.getInventory().getItem(7);
-				head.setHelmet(headItem);
-				EntityEquipment chestplate = entity.getEquipment();
-				ItemStack chestplateItem = new ItemStack(Material.LEATHER_CHESTPLATE);
-				LeatherArmorMeta chestmeta = (LeatherArmorMeta) chestplateItem.getItemMeta();
-				chestmeta.setColor(Color.fromRGB(155, 20, 155));
-				chestplateItem.setItemMeta(chestmeta);
-				chestplate.setChestplate(chestplateItem);
-				EntityEquipment leggings = entity.getEquipment();
-				ItemStack leggingsItem = new ItemStack(Material.LEATHER_LEGGINGS);
-				LeatherArmorMeta leggingsmeta = (LeatherArmorMeta) leggingsItem.getItemMeta();
-				leggingsmeta.setColor(Color.fromRGB(155, 20, 155));
-				leggingsItem.setItemMeta(leggingsmeta);
-				leggings.setLeggings(leggingsItem);
-				EntityEquipment boots = entity.getEquipment();
-				ItemStack bootsItem = new ItemStack(Material.LEATHER_BOOTS);
-				LeatherArmorMeta bootsmeta = (LeatherArmorMeta) bootsItem.getItemMeta();
-				bootsmeta.setColor(Color.fromRGB(155, 20, 155));
-				bootsItem.setItemMeta(bootsmeta);
-				boots.setBoots(bootsItem);
-				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 122));
+				entity.setMaxHealth(54000);
+				entity.setHealth(54000);
+				Wolf w = (Wolf) entity;
+				w.setAngry(true);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 138));
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM
@@ -7051,14 +7035,14 @@ public class SpawnMob {
 	}
 	
 	public boolean mob116(LivingEntity entity, Location loc) {
-		// Å¬·¹¾îÈå ³²¹® 860 50 419  1068 100 504 
+		// í´ë ˆì–´í ë‚¨ë¬¸ 860 50 419  1068 100 504 
 		if (loc.getX() <= 718 && loc.getY() <= 75 && loc.getZ() <= 617 && 
 				loc.getX() >= 675 && loc.getY() >= 65 && loc.getZ() >= 566) {
 			Location chestLoc = new Location(entity.getWorld(), -1830, 92, 3045);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¹æÈ²ÇÏ´Â ¿äÁ¤" + ChatColor.YELLOW + " [Lv.372]");
+				entity.setCustomName(ChatColor.GRAY + "ë°©í™©í•˜ëŠ” ìš”ì •" + ChatColor.YELLOW + " [Lv.372]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(45200);
 				entity.setHealth(45200);
@@ -7095,7 +7079,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¹æÈ²ÇÏ´Â ¿äÁ¤" + ChatColor.YELLOW + " [Lv.376]");
+				entity.setCustomName(ChatColor.GRAY + "ë°©í™©í•˜ëŠ” ìš”ì •" + ChatColor.YELLOW + " [Lv.376]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(46500);
 				entity.setHealth(46500);
@@ -7142,14 +7126,14 @@ public class SpawnMob {
 	}
 	
 	public boolean mob117(LivingEntity entity, Location loc) {
-		// Å¬·¹¾îÈå µ¿³²ÂÊ 1076 40 348  1164 100 679
+		// í´ë ˆì–´í ë™ë‚¨ìª½ 1076 40 348  1164 100 679
 		if (loc.getX() <= 718 && loc.getY() <= 75 && loc.getZ() <= 617 && 
 				loc.getX() >= 675 && loc.getY() >= 65 && loc.getZ() >= 566) {
 			Location chestLoc = new Location(entity.getWorld(), -1830, 92, 3045);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¹æÈ²ÇÏ´Â ¿äÁ¤" + ChatColor.YELLOW + " [Lv.372]");
+				entity.setCustomName(ChatColor.GRAY + "ë°©í™©í•˜ëŠ” ìš”ì •" + ChatColor.YELLOW + " [Lv.372]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(45200);
 				entity.setHealth(45200);
@@ -7186,7 +7170,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "¹æÈ²ÇÏ´Â ¿äÁ¤" + ChatColor.YELLOW + " [Lv.376]");
+				entity.setCustomName(ChatColor.GRAY + "ë°©í™©í•˜ëŠ” ìš”ì •" + ChatColor.YELLOW + " [Lv.376]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(46500);
 				entity.setHealth(46500);
@@ -7233,10 +7217,124 @@ public class SpawnMob {
 	}
 	
 	public boolean mob118(LivingEntity entity, Location loc) {
+		// í´ë ˆì–´í1 901 165 248  1082 60 312
+		if (loc.getX() <= 1082 && loc.getY() <= 165 && loc.getZ() <= 312 && 
+				loc.getX() >= 901 && loc.getY() >= 60 && loc.getZ() >= 248) {
+			Location chestLoc = new Location(entity.getWorld(), -1830, 92, 3045);
+			Block block = chestLoc.getBlock();
+			Chest chest = (Chest) block.getState();
+			if (entity.getType() == (EntityType) EntityType.SKELETON) {
+				entity.setCustomName(ChatColor.GRAY + "í´ë ˆì–´íì˜ ë§ë ¹" + ChatColor.YELLOW + " [Lv.400]");
+				entity.setCustomNameVisible(true);
+				entity.setMaxHealth(60000);
+				entity.setHealth(60000);
+				EntityEquipment weapon = entity.getEquipment();
+				ItemStack weaponItem = new ItemStack(Material.BIRCH_SLAB);
+				weapon.setItemInMainHand(weaponItem);
+				EntityEquipment head = entity.getEquipment();
+				ItemStack headItem = chest.getInventory().getItem(15);
+				head.setHelmet(headItem);
+				EntityEquipment chestplate = entity.getEquipment();
+				ItemStack chestplateItem = new ItemStack(Material.GOLDEN_CHESTPLATE);
+				chestplate.setChestplate(chestplateItem);
+				EntityEquipment leggings = entity.getEquipment();
+				ItemStack leggingsItem = new ItemStack(Material.IRON_LEGGINGS);
+				leggings.setLeggings(leggingsItem);
+				EntityEquipment boots = entity.getEquipment();
+				ItemStack bootsItem = new ItemStack(Material.GOLDEN_BOOTS);
+				boots.setBoots(bootsItem);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 160));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
+				return true;
+			} else if (entity.getType() == (EntityType) EntityType.PHANTOM) {
+				entity.setCustomName(ChatColor.GRAY + "404 Not Found" + ChatColor.YELLOW + " [Lv.404]");
+				entity.setCustomNameVisible(true);
+				entity.setMaxHealth(62000);
+				entity.setHealth(62000);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 163));
+				return true;
+			} else if (entity.getType() == (EntityType) EntityType.SILVERFISH) {
+				entity.setCustomName(ChatColor.GRAY + "404 Not Found" + ChatColor.YELLOW + " [Lv.404]");
+				entity.setCustomNameVisible(true);
+				entity.setMaxHealth(62000);
+				entity.setHealth(62000);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 163));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 2));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, Integer.MAX_VALUE, 0));
+				return true;
+			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM
+					|| entity.getType() == (EntityType) EntityType.SALMON
+					|| entity.getType() == (EntityType) EntityType.ITEM_FRAME
+					|| entity.getType() == (EntityType) EntityType.DROPPED_ITEM
+					|| entity.getType() == (EntityType) EntityType.ARMOR_STAND
+					|| entity.getType() == (EntityType) EntityType.VILLAGER
+					|| entity.getType() == (EntityType) EntityType.SKELETON_HORSE) {
+				return true;
+			} else {
+				return false;
+			}
+		}
 		return true;
 	}
 	
 	public boolean mob119(LivingEntity entity, Location loc) {
+		// í´ë ˆì–´í2 904 165 247  1072 60 110 
+		if (loc.getX() <= 1072 && loc.getY() <= 165 && loc.getZ() <= 247 && 
+				loc.getX() >= 904 && loc.getY() >= 60 && loc.getZ() >= 110) {
+			Location chestLoc = new Location(entity.getWorld(), -1830, 92, 3045);
+			Block block = chestLoc.getBlock();
+			Chest chest = (Chest) block.getState();
+			if (entity.getType() == (EntityType) EntityType.HUSK) {
+				entity.setCustomName(ChatColor.GRAY + "íƒ€ë½í•œ ì£¼ë¯¼" + ChatColor.YELLOW + " [Lv.406]");
+				entity.setCustomNameVisible(true);
+				entity.setMaxHealth(64000);
+				entity.setHealth(64000);
+				Husk h = (Husk) entity;
+				h.setBaby(false);
+				EntityEquipment weapon = entity.getEquipment();
+				ItemStack weaponItem = new ItemStack(Material.ACACIA_LEAVES);
+				weapon.setItemInMainHand(weaponItem);
+				EntityEquipment head = entity.getEquipment();
+				ItemStack headItem = new ItemStack(Material.AIR);
+				head.setHelmet(headItem);
+				EntityEquipment chestplate = entity.getEquipment();
+				ItemStack chestplateItem = new ItemStack(Material.DIAMOND_CHESTPLATE);
+				chestplate.setChestplate(chestplateItem);
+				EntityEquipment leggings = entity.getEquipment();
+				ItemStack leggingsItem = new ItemStack(Material.GOLDEN_LEGGINGS);
+				leggings.setLeggings(leggingsItem);
+				EntityEquipment boots = entity.getEquipment();
+				ItemStack bootsItem = new ItemStack(Material.IRON_BOOTS);
+				boots.setBoots(bootsItem);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 166));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
+				return true;
+			} else if (entity.getType() == (EntityType) EntityType.VINDICATOR) {
+				entity.setCustomName(ChatColor.GRAY + "ì ì‹ëœ ì£¼ë¯¼" + ChatColor.YELLOW + " [Lv.409]");
+				entity.setCustomNameVisible(true);
+				entity.setMaxHealth(66000);
+				entity.setHealth(66000);
+				EntityEquipment weapon = entity.getEquipment();
+				ItemStack weaponItem = new ItemStack(Material.GOLDEN_AXE);
+				weapon.setItemInMainHand(weaponItem);
+				EntityEquipment helmet = entity.getEquipment();
+				ItemStack helmetItem = new ItemStack(Material.AIR);
+				helmet.setHelmet(helmetItem);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 168));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
+				return true;
+			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM
+					|| entity.getType() == (EntityType) EntityType.SALMON
+					|| entity.getType() == (EntityType) EntityType.ITEM_FRAME
+					|| entity.getType() == (EntityType) EntityType.DROPPED_ITEM
+					|| entity.getType() == (EntityType) EntityType.ARMOR_STAND
+					|| entity.getType() == (EntityType) EntityType.VILLAGER
+					|| entity.getType() == (EntityType) EntityType.SKELETON_HORSE) {
+				return true;
+			} else {
+				return false;
+			}
+		}
 		return true;
 	}
 	

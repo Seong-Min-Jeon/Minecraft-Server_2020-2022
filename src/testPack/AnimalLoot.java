@@ -18,582 +18,582 @@ public class AnimalLoot {
 	
 	public boolean Loot(Player player, Entity animal, Location loc) {
 		if(!(animal.getCustomName()==null)) {
-			if(animal.getCustomName().equals(ChatColor.GREEN + "µÅÁö")) {
-				if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GRAY + "³°Àº Ã¤Áıµµ±¸")) {
+			if(animal.getCustomName().equals(ChatColor.GREEN + "ë¼ì§€")) {
+				if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GRAY + "ë‚¡ì€ ì±„ì§‘ë„êµ¬")) {
 					int num1 = rnd.nextInt(10);
 					if(num1==0) { 
 						ItemStack var1 = new ItemStack(Material.PORKCHOP);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.GRAY + "¹Ì¼÷ÇÏ°Ô Ã¤ÁıµÈ µÅÁö°í±â");
+						var1Im.setDisplayName(ChatColor.GRAY + "ë¯¸ìˆ™í•˜ê²Œ ì±„ì§‘ëœ ë¼ì§€ê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 10);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.GRAY + "¹Ì¼÷ÇÏ°Ô Ã¤ÁıµÈ µÅÁö°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.GRAY + "ë¯¸ìˆ™í•˜ê²Œ ì±„ì§‘ëœ ë¼ì§€ê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					}
-				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "Æò¹üÇÑ Ã¤Áıµµ±¸")) {
+				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "í‰ë²”í•œ ì±„ì§‘ë„êµ¬")) {
 					int num1 = rnd.nextInt(10);
 					if(num1<=2) { 
 						ItemStack var1 = new ItemStack(Material.PORKCHOP);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.GRAY + "¹Ì¼÷ÇÏ°Ô Ã¤ÁıµÈ µÅÁö°í±â");
+						var1Im.setDisplayName(ChatColor.GRAY + "ë¯¸ìˆ™í•˜ê²Œ ì±„ì§‘ëœ ë¼ì§€ê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 10);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.GRAY + "¹Ì¼÷ÇÏ°Ô Ã¤ÁıµÈ µÅÁö°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.GRAY + "ë¯¸ìˆ™í•˜ê²Œ ì±„ì§‘ëœ ë¼ì§€ê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					} else if(num1==3) { 
 						ItemStack var1 = new ItemStack(Material.PORKCHOP);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.WHITE + "Àû´çÇÑ Å©±âÀÇ µÅÁö°í±â");
+						var1Im.setDisplayName(ChatColor.WHITE + "ì ë‹¹í•œ í¬ê¸°ì˜ ë¼ì§€ê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 50000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.WHITE + "Àû´çÇÑ Å©±âÀÇ µÅÁö°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.WHITE + "ì ë‹¹í•œ í¬ê¸°ì˜ ë¼ì§€ê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					}
-				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "Àººû Ã¤Áıµµ±¸")) {
+				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "ì€ë¹› ì±„ì§‘ë„êµ¬")) {
 					int num1 = rnd.nextInt(10);
 					if(num1<=2) { 
 						ItemStack var1 = new ItemStack(Material.PORKCHOP);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.WHITE + "Àû´çÇÑ Å©±âÀÇ µÅÁö°í±â");
+						var1Im.setDisplayName(ChatColor.WHITE + "ì ë‹¹í•œ í¬ê¸°ì˜ ë¼ì§€ê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 50000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.WHITE + "Àû´çÇÑ Å©±âÀÇ µÅÁö°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.WHITE + "ì ë‹¹í•œ í¬ê¸°ì˜ ë¼ì§€ê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					} else if(num1==3) { 
 						ItemStack var1 = new ItemStack(Material.PORKCHOP);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.YELLOW + "¸ÀÀÖ¾î º¸ÀÌ´Â µÅÁö°í±â");
+						var1Im.setDisplayName(ChatColor.YELLOW + "ë§›ìˆì–´ ë³´ì´ëŠ” ë¼ì§€ê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 600000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.YELLOW + "¸ÀÀÖ¾î º¸ÀÌ´Â µÅÁö°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.YELLOW + "ë§›ìˆì–´ ë³´ì´ëŠ” ë¼ì§€ê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					}
-				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "±İºû Ã¤Áıµµ±¸")) {
+				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "ê¸ˆë¹› ì±„ì§‘ë„êµ¬")) {
 					int num1 = rnd.nextInt(10);
 					if(num1<=2) { 
 						ItemStack var1 = new ItemStack(Material.PORKCHOP);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.YELLOW + "¸ÀÀÖ¾î º¸ÀÌ´Â µÅÁö°í±â");
+						var1Im.setDisplayName(ChatColor.YELLOW + "ë§›ìˆì–´ ë³´ì´ëŠ” ë¼ì§€ê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 600000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.YELLOW + "¸ÀÀÖ¾î º¸ÀÌ´Â µÅÁö°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.YELLOW + "ë§›ìˆì–´ ë³´ì´ëŠ” ë¼ì§€ê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					} else if(num1==3) { 
 						ItemStack var1 = new ItemStack(Material.PORKCHOP);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "ÁÁÀº À°ÁúÀÇ µÅÁö°í±â");
+						var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì¢‹ì€ ìœ¡ì§ˆì˜ ë¼ì§€ê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 7000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.LIGHT_PURPLE + "ÁÁÀº À°ÁúÀÇ µÅÁö°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.LIGHT_PURPLE + "ì¢‹ì€ ìœ¡ì§ˆì˜ ë¼ì§€ê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					}
-				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "ÀåÀÎÀÌ ¸¸µç Ã¤Áıµµ±¸")) {
+				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "ì¥ì¸ì´ ë§Œë“  ì±„ì§‘ë„êµ¬")) {
 					int num1 = rnd.nextInt(10);
 					if(num1<=2) { 
 						ItemStack var1 = new ItemStack(Material.PORKCHOP);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "ÁÁÀº À°ÁúÀÇ µÅÁö°í±â");
+						var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì¢‹ì€ ìœ¡ì§ˆì˜ ë¼ì§€ê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 7000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.LIGHT_PURPLE + "ÁÁÀº À°ÁúÀÇ µÅÁö°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.LIGHT_PURPLE + "ì¢‹ì€ ìœ¡ì§ˆì˜ ë¼ì§€ê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					} else if(num1==3) { 
 						ItemStack var1 = new ItemStack(Material.PORKCHOP);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.AQUA + "½Å¼±µµ°¡ ¶Ù¾î³­ µÅÁö°í±â");
+						var1Im.setDisplayName(ChatColor.AQUA + "ì‹ ì„ ë„ê°€ ë›°ì–´ë‚œ ë¼ì§€ê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 10000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.AQUA + "½Å¼±µµ°¡ ¶Ù¾î³­ µÅÁö°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.AQUA + "ì‹ ì„ ë„ê°€ ë›°ì–´ë‚œ ë¼ì§€ê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					}
-				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "½ÅÀÇ Ã¤Áıµµ±¸")) {
+				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "ì‹ ì˜ ì±„ì§‘ë„êµ¬")) {
 					int num1 = rnd.nextInt(100);
 					if(num1<=20) { 
 						ItemStack var1 = new ItemStack(Material.PORKCHOP);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.AQUA + "½Å¼±µµ°¡ ¶Ù¾î³­ µÅÁö°í±â");
+						var1Im.setDisplayName(ChatColor.AQUA + "ì‹ ì„ ë„ê°€ ë›°ì–´ë‚œ ë¼ì§€ê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 10000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.AQUA + "½Å¼±µµ°¡ ¶Ù¾î³­ µÅÁö°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.AQUA + "ì‹ ì„ ë„ê°€ ë›°ì–´ë‚œ ë¼ì§€ê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					} else if(num1==21) { 
 						ItemStack var1 = new ItemStack(Material.PORKCHOP);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.DARK_RED + "½ÅÀÌ Å½ÇÏ´Â µÅÁö°í±â");
+						var1Im.setDisplayName(ChatColor.DARK_RED + "ì‹ ì´ íƒí•˜ëŠ” ë¼ì§€ê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 20000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.DARK_RED + "½ÅÀÌ Å½ÇÏ´Â µÅÁö°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.DARK_RED + "ì‹ ì´ íƒí•˜ëŠ” ë¼ì§€ê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					}
-				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_PURPLE + "Å©·ç¾ÆÈåÀÇ Ã¤Áıµµ±¸")) {
+				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_PURPLE + "í¬ë£¨ì•„íì˜ ì±„ì§‘ë„êµ¬")) {
 					int num1 = rnd.nextInt(70);
 					if(num1<=20) { 
 						ItemStack var1 = new ItemStack(Material.PORKCHOP);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.AQUA + "½Å¼±µµ°¡ ¶Ù¾î³­ µÅÁö°í±â");
+						var1Im.setDisplayName(ChatColor.AQUA + "ì‹ ì„ ë„ê°€ ë›°ì–´ë‚œ ë¼ì§€ê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 10000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.AQUA + "½Å¼±µµ°¡ ¶Ù¾î³­ µÅÁö°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.AQUA + "ì‹ ì„ ë„ê°€ ë›°ì–´ë‚œ ë¼ì§€ê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					} else if(num1==21) { 
 						ItemStack var1 = new ItemStack(Material.PORKCHOP);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.DARK_RED + "½ÅÀÌ Å½ÇÏ´Â µÅÁö°í±â");
+						var1Im.setDisplayName(ChatColor.DARK_RED + "ì‹ ì´ íƒí•˜ëŠ” ë¼ì§€ê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 20000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.DARK_RED + "½ÅÀÌ Å½ÇÏ´Â µÅÁö°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.DARK_RED + "ì‹ ì´ íƒí•˜ëŠ” ë¼ì§€ê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					}
 				} else {
-					player.sendMessage("Ã¤Áıµµ±¸¸¦ ÀÌ¿ëÇØ °í±â¸¦ ¾òÀ» ¼ö ÀÖÀ» µí ÇÏ´Ù.");
+					player.sendMessage("ì±„ì§‘ë„êµ¬ë¥¼ ì´ìš©í•´ ê³ ê¸°ë¥¼ ì–»ì„ ìˆ˜ ìˆì„ ë“¯ í•˜ë‹¤.");
 				}
 				player.getWorld().playSound(loc, Sound.ENTITY_PIG_HURT, 1.0f, 1.0f);
 				return true;
 			}
-			if(animal.getCustomName().equals(ChatColor.GREEN + "¼Ò")) {
-				if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GRAY + "³°Àº Ã¤Áıµµ±¸")) {
+			if(animal.getCustomName().equals(ChatColor.GREEN + "ì†Œ")) {
+				if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GRAY + "ë‚¡ì€ ì±„ì§‘ë„êµ¬")) {
 					int num1 = rnd.nextInt(10);
 					if(num1==0) { 
 						ItemStack var1 = new ItemStack(Material.BEEF);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.GRAY + "Ä³³Í µî±ŞÀÇ ¼Ò°í±â");
+						var1Im.setDisplayName(ChatColor.GRAY + "ìºë„Œ ë“±ê¸‰ì˜ ì†Œê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 10);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.GRAY + "Ä³³Í µî±ŞÀÇ ¼Ò°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.GRAY + "ìºë„Œ ë“±ê¸‰ì˜ ì†Œê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					}
-				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "Æò¹üÇÑ Ã¤Áıµµ±¸")) {
+				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "í‰ë²”í•œ ì±„ì§‘ë„êµ¬")) {
 					int num1 = rnd.nextInt(10);
 					if(num1<=2) { 
 						ItemStack var1 = new ItemStack(Material.BEEF);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.GRAY + "Ä³³Í µî±ŞÀÇ ¼Ò°í±â");
+						var1Im.setDisplayName(ChatColor.GRAY + "ìºë„Œ ë“±ê¸‰ì˜ ì†Œê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 10);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.GRAY + "Ä³³Í µî±ŞÀÇ ¼Ò°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.GRAY + "ìºë„Œ ë“±ê¸‰ì˜ ì†Œê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					} else if(num1==3) { 
 						ItemStack var1 = new ItemStack(Material.BEEF);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.WHITE + "À¯Æ¿¸®Æ¼ µî±ŞÀÇ ¼Ò°í±â");
+						var1Im.setDisplayName(ChatColor.WHITE + "ìœ í‹¸ë¦¬í‹° ë“±ê¸‰ì˜ ì†Œê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 50000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.WHITE + "À¯Æ¿¸®Æ¼ µî±ŞÀÇ ¼Ò°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.WHITE + "ìœ í‹¸ë¦¬í‹° ë“±ê¸‰ì˜ ì†Œê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					}
-				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "Àººû Ã¤Áıµµ±¸")) {
+				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "ì€ë¹› ì±„ì§‘ë„êµ¬")) {
 					int num1 = rnd.nextInt(10);
 					if(num1<=2) { 
 						ItemStack var1 = new ItemStack(Material.BEEF);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.WHITE + "À¯Æ¿¸®Æ¼ µî±ŞÀÇ ¼Ò°í±â");
+						var1Im.setDisplayName(ChatColor.WHITE + "ìœ í‹¸ë¦¬í‹° ë“±ê¸‰ì˜ ì†Œê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 50000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.WHITE + "À¯Æ¿¸®Æ¼ µî±ŞÀÇ ¼Ò°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.WHITE + "ìœ í‹¸ë¦¬í‹° ë“±ê¸‰ì˜ ì†Œê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					} else if(num1==3) { 
 						ItemStack var1 = new ItemStack(Material.BEEF);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.YELLOW + "½ºÅÙ´Ùµå µî±ŞÀÇ ¼Ò°í±â");
+						var1Im.setDisplayName(ChatColor.YELLOW + "ìŠ¤í…ë‹¤ë“œ ë“±ê¸‰ì˜ ì†Œê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 600000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.YELLOW + "½ºÅÙ´Ùµå µî±ŞÀÇ ¼Ò°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.YELLOW + "ìŠ¤í…ë‹¤ë“œ ë“±ê¸‰ì˜ ì†Œê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					}
-				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "±İºû Ã¤Áıµµ±¸")) {
+				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "ê¸ˆë¹› ì±„ì§‘ë„êµ¬")) {
 					int num1 = rnd.nextInt(10);
 					if(num1<=2) { 
 						ItemStack var1 = new ItemStack(Material.BEEF);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.YELLOW + "½ºÅÙ´Ùµå µî±ŞÀÇ ¼Ò°í±â");
+						var1Im.setDisplayName(ChatColor.YELLOW + "ìŠ¤í…ë‹¤ë“œ ë“±ê¸‰ì˜ ì†Œê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 600000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.YELLOW + "½ºÅÙ´Ùµå µî±ŞÀÇ ¼Ò°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.YELLOW + "ìŠ¤í…ë‹¤ë“œ ë“±ê¸‰ì˜ ì†Œê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					} else if(num1==3) { 
 						ItemStack var1 = new ItemStack(Material.BEEF);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "¼¿·ºÆ® µî±ŞÀÇ ¼Ò°í±â");
+						var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì…€ë ‰íŠ¸ ë“±ê¸‰ì˜ ì†Œê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 7000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.LIGHT_PURPLE + "¼¿·ºÆ® µî±ŞÀÇ ¼Ò°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.LIGHT_PURPLE + "ì…€ë ‰íŠ¸ ë“±ê¸‰ì˜ ì†Œê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					}
-				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "ÀåÀÎÀÌ ¸¸µç Ã¤Áıµµ±¸")) {
+				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "ì¥ì¸ì´ ë§Œë“  ì±„ì§‘ë„êµ¬")) {
 					int num1 = rnd.nextInt(10);
 					if(num1<=2) { 
 						ItemStack var1 = new ItemStack(Material.BEEF);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "¼¿·ºÆ® µî±ŞÀÇ ¼Ò°í±â");
+						var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì…€ë ‰íŠ¸ ë“±ê¸‰ì˜ ì†Œê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 7000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.LIGHT_PURPLE + "¼¿·ºÆ® µî±ŞÀÇ ¼Ò°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.LIGHT_PURPLE + "ì…€ë ‰íŠ¸ ë“±ê¸‰ì˜ ì†Œê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					} else if(num1==3) { 
 						ItemStack var1 = new ItemStack(Material.BEEF);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.AQUA + "ÇÁ¶óÀÓ µî±ŞÀÇ ¼Ò°í±â");
+						var1Im.setDisplayName(ChatColor.AQUA + "í”„ë¼ì„ ë“±ê¸‰ì˜ ì†Œê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 10000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.AQUA + "ÇÁ¶óÀÓ µî±ŞÀÇ ¼Ò°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.AQUA + "í”„ë¼ì„ ë“±ê¸‰ì˜ ì†Œê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					}
-				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "½ÅÀÇ Ã¤Áıµµ±¸")) {
+				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "ì‹ ì˜ ì±„ì§‘ë„êµ¬")) {
 					int num1 = rnd.nextInt(100);
 					if(num1<=20) { 
 						ItemStack var1 = new ItemStack(Material.BEEF);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.AQUA + "ÇÁ¶óÀÓ µî±ŞÀÇ ¼Ò°í±â");
+						var1Im.setDisplayName(ChatColor.AQUA + "í”„ë¼ì„ ë“±ê¸‰ì˜ ì†Œê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 10000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.AQUA + "ÇÁ¶óÀÓ µî±ŞÀÇ ¼Ò°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.AQUA + "í”„ë¼ì„ ë“±ê¸‰ì˜ ì†Œê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					} else if(num1==21) { 
 						ItemStack var1 = new ItemStack(Material.BEEF);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.DARK_RED + "½ÅÀÌ Áñ°Ü¸Ô´Â ¼Ò°í±â");
+						var1Im.setDisplayName(ChatColor.DARK_RED + "ì‹ ì´ ì¦ê²¨ë¨¹ëŠ” ì†Œê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 20000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.DARK_RED + "½ÅÀÌ Áñ°Ü¸Ô´Â ¼Ò°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.DARK_RED + "ì‹ ì´ ì¦ê²¨ë¨¹ëŠ” ì†Œê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					}
-				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_PURPLE + "Å©·ç¾ÆÈåÀÇ Ã¤Áıµµ±¸")) {
+				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_PURPLE + "í¬ë£¨ì•„íì˜ ì±„ì§‘ë„êµ¬")) {
 					int num1 = rnd.nextInt(70);
 					if(num1<=20) { 
 						ItemStack var1 = new ItemStack(Material.BEEF);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.AQUA + "ÇÁ¶óÀÓ µî±ŞÀÇ ¼Ò°í±â");
+						var1Im.setDisplayName(ChatColor.AQUA + "í”„ë¼ì„ ë“±ê¸‰ì˜ ì†Œê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 10000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.AQUA + "ÇÁ¶óÀÓ µî±ŞÀÇ ¼Ò°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.AQUA + "í”„ë¼ì„ ë“±ê¸‰ì˜ ì†Œê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					} else if(num1==21) { 
 						ItemStack var1 = new ItemStack(Material.BEEF);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.DARK_RED + "½ÅÀÌ Áñ°Ü¸Ô´Â ¼Ò°í±â");
+						var1Im.setDisplayName(ChatColor.DARK_RED + "ì‹ ì´ ì¦ê²¨ë¨¹ëŠ” ì†Œê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 20000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.DARK_RED + "½ÅÀÌ Áñ°Ü¸Ô´Â ¼Ò°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.DARK_RED + "ì‹ ì´ ì¦ê²¨ë¨¹ëŠ” ì†Œê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					}
 				} else {
-					player.sendMessage("Ã¤Áıµµ±¸¸¦ ÀÌ¿ëÇØ °í±â¸¦ ¾òÀ» ¼ö ÀÖÀ» µí ÇÏ´Ù.");
+					player.sendMessage("ì±„ì§‘ë„êµ¬ë¥¼ ì´ìš©í•´ ê³ ê¸°ë¥¼ ì–»ì„ ìˆ˜ ìˆì„ ë“¯ í•˜ë‹¤.");
 				}
 				player.getWorld().playSound(loc, Sound.ENTITY_COW_HURT, 1.0f, 1.0f);
 				return true;
 			}
-			if(animal.getCustomName().equals(ChatColor.GREEN + "´ß")) {				
-				if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GRAY + "³°Àº Ã¤Áıµµ±¸")) {
+			if(animal.getCustomName().equals(ChatColor.GREEN + "ë‹­")) {				
+				if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GRAY + "ë‚¡ì€ ì±„ì§‘ë„êµ¬")) {
 					int num1 = rnd.nextInt(10);
 					if(num1==0) { 
 						ItemStack var1 = new ItemStack(Material.CHICKEN);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.GRAY + "2µî±Ş ´ß°í±â");
+						var1Im.setDisplayName(ChatColor.GRAY + "2ë“±ê¸‰ ë‹­ê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 10);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.GRAY + "2µî±Ş ´ß°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.GRAY + "2ë“±ê¸‰ ë‹­ê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					}
-				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "Æò¹üÇÑ Ã¤Áıµµ±¸")) {
+				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "í‰ë²”í•œ ì±„ì§‘ë„êµ¬")) {
 					int num1 = rnd.nextInt(10);
 					if(num1<=2) { 
 						ItemStack var1 = new ItemStack(Material.CHICKEN);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.GRAY + "2µî±Ş ´ß°í±â");
+						var1Im.setDisplayName(ChatColor.GRAY + "2ë“±ê¸‰ ë‹­ê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 10);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.GRAY + "2µî±Ş ´ß°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.GRAY + "2ë“±ê¸‰ ë‹­ê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					} else if(num1==3) { 
 						ItemStack var1 = new ItemStack(Material.CHICKEN);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.WHITE + "1µî±Ş ´ß°í±â");
+						var1Im.setDisplayName(ChatColor.WHITE + "1ë“±ê¸‰ ë‹­ê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 50000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.WHITE + "1µî±Ş ´ß°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.WHITE + "1ë“±ê¸‰ ë‹­ê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					}
-				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "Àººû Ã¤Áıµµ±¸")) {
+				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "ì€ë¹› ì±„ì§‘ë„êµ¬")) {
 					int num1 = rnd.nextInt(10);
 					if(num1<=2) { 
 						ItemStack var1 = new ItemStack(Material.CHICKEN);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.WHITE + "1µî±Ş ´ß°í±â");
+						var1Im.setDisplayName(ChatColor.WHITE + "1ë“±ê¸‰ ë‹­ê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 50000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.WHITE + "1µî±Ş ´ß°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.WHITE + "1ë“±ê¸‰ ë‹­ê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					} else if(num1==3) { 
 						ItemStack var1 = new ItemStack(Material.CHICKEN);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.YELLOW + "1+µî±Ş ´ß°í±â");
+						var1Im.setDisplayName(ChatColor.YELLOW + "1+ë“±ê¸‰ ë‹­ê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 600000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.YELLOW + "1+µî±Ş ´ß°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.YELLOW + "1+ë“±ê¸‰ ë‹­ê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					}
-				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "±İºû Ã¤Áıµµ±¸")) {
+				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "ê¸ˆë¹› ì±„ì§‘ë„êµ¬")) {
 					int num1 = rnd.nextInt(10);
 					if(num1<=2) { 
 						ItemStack var1 = new ItemStack(Material.CHICKEN);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.YELLOW + "1+µî±Ş ´ß°í±â");
+						var1Im.setDisplayName(ChatColor.YELLOW + "1+ë“±ê¸‰ ë‹­ê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 600000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.YELLOW + "1+µî±Ş ´ß°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.YELLOW + "1+ë“±ê¸‰ ë‹­ê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					} else if(num1==3) { 
 						ItemStack var1 = new ItemStack(Material.CHICKEN);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "´ßÀÇ Ç°ÁúÀ» ³Ñ¾î¼± ´ß°í±â");
+						var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "ë‹­ì˜ í’ˆì§ˆì„ ë„˜ì–´ì„  ë‹­ê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 7000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.LIGHT_PURPLE + "´ßÀÇ Ç°ÁúÀ» ³Ñ¾î¼± ´ß°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.LIGHT_PURPLE + "ë‹­ì˜ í’ˆì§ˆì„ ë„˜ì–´ì„  ë‹­ê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					}
-				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "ÀåÀÎÀÌ ¸¸µç Ã¤Áıµµ±¸")) {
+				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "ì¥ì¸ì´ ë§Œë“  ì±„ì§‘ë„êµ¬")) {
 					int num1 = rnd.nextInt(10);
 					if(num1<=2) { 
 						ItemStack var1 = new ItemStack(Material.CHICKEN);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "´ßÀÇ Ç°ÁúÀ» ³Ñ¾î¼± ´ß°í±â");
+						var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "ë‹­ì˜ í’ˆì§ˆì„ ë„˜ì–´ì„  ë‹­ê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 7000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.LIGHT_PURPLE + "´ßÀÇ Ç°ÁúÀ» ³Ñ¾î¼± ´ß°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.LIGHT_PURPLE + "ë‹­ì˜ í’ˆì§ˆì„ ë„˜ì–´ì„  ë‹­ê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					} else if(num1==3) { 
 						ItemStack var1 = new ItemStack(Material.CHICKEN);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.AQUA + "´ßÀÇ Ç°ÁúÀ» ÃÊ¿ùÇÑ ´ß°í±â");
+						var1Im.setDisplayName(ChatColor.AQUA + "ë‹­ì˜ í’ˆì§ˆì„ ì´ˆì›”í•œ ë‹­ê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 10000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.AQUA + "´ßÀÇ Ç°ÁúÀ» ÃÊ¿ùÇÑ ´ß°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.AQUA + "ë‹­ì˜ í’ˆì§ˆì„ ì´ˆì›”í•œ ë‹­ê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					}
-				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "½ÅÀÇ Ã¤Áıµµ±¸")) {
+				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "ì‹ ì˜ ì±„ì§‘ë„êµ¬")) {
 					int num1 = rnd.nextInt(100);
 					if(num1<=20) { 
 						ItemStack var1 = new ItemStack(Material.CHICKEN);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.AQUA + "´ßÀÇ Ç°ÁúÀ» ÃÊ¿ùÇÑ ´ß°í±â");
+						var1Im.setDisplayName(ChatColor.AQUA + "ë‹­ì˜ í’ˆì§ˆì„ ì´ˆì›”í•œ ë‹­ê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 10000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.AQUA + "´ßÀÇ Ç°ÁúÀ» ÃÊ¿ùÇÑ ´ß°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.AQUA + "ë‹­ì˜ í’ˆì§ˆì„ ì´ˆì›”í•œ ë‹­ê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					} else if(num1==21) { 
 						ItemStack var1 = new ItemStack(Material.CHICKEN);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.DARK_RED + "½ÅÀÌ Æ¢°Ü¸Ô´Â ´ß°í±â");
+						var1Im.setDisplayName(ChatColor.DARK_RED + "ì‹ ì´ íŠ€ê²¨ë¨¹ëŠ” ë‹­ê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 20000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.DARK_RED + "½ÅÀÌ Æ¢°Ü¸Ô´Â ´ß°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.DARK_RED + "ì‹ ì´ íŠ€ê²¨ë¨¹ëŠ” ë‹­ê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					}
-				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_PURPLE + "Å©·ç¾ÆÈåÀÇ Ã¤Áıµµ±¸")) {
+				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_PURPLE + "í¬ë£¨ì•„íì˜ ì±„ì§‘ë„êµ¬")) {
 					int num1 = rnd.nextInt(70);
 					if(num1<=20) { 
 						ItemStack var1 = new ItemStack(Material.CHICKEN);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.AQUA + "´ßÀÇ Ç°ÁúÀ» ÃÊ¿ùÇÑ ´ß°í±â");
+						var1Im.setDisplayName(ChatColor.AQUA + "ë‹­ì˜ í’ˆì§ˆì„ ì´ˆì›”í•œ ë‹­ê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 10000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.AQUA + "´ßÀÇ Ç°ÁúÀ» ÃÊ¿ùÇÑ ´ß°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.AQUA + "ë‹­ì˜ í’ˆì§ˆì„ ì´ˆì›”í•œ ë‹­ê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					} else if(num1==21) { 
 						ItemStack var1 = new ItemStack(Material.CHICKEN);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.DARK_RED + "½ÅÀÌ Æ¢°Ü¸Ô´Â ´ß°í±â");
+						var1Im.setDisplayName(ChatColor.DARK_RED + "ì‹ ì´ íŠ€ê²¨ë¨¹ëŠ” ë‹­ê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 20000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.DARK_RED + "½ÅÀÌ Æ¢°Ü¸Ô´Â ´ß°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.DARK_RED + "ì‹ ì´ íŠ€ê²¨ë¨¹ëŠ” ë‹­ê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					}
 				} else {
-					player.sendMessage("Ã¤Áıµµ±¸¸¦ ÀÌ¿ëÇØ °í±â¸¦ ¾òÀ» ¼ö ÀÖÀ» µí ÇÏ´Ù.");
+					player.sendMessage("ì±„ì§‘ë„êµ¬ë¥¼ ì´ìš©í•´ ê³ ê¸°ë¥¼ ì–»ì„ ìˆ˜ ìˆì„ ë“¯ í•˜ë‹¤.");
 				}
 				player.getWorld().playSound(loc, Sound.ENTITY_CHICKEN_HURT, 1.0f, 1.0f);
 				return true;
 			}
-			if(animal.getCustomName().equals(ChatColor.GREEN + "¾ç")) {					
-				if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GRAY + "³°Àº Ã¤Áıµµ±¸")) {
+			if(animal.getCustomName().equals(ChatColor.GREEN + "ì–‘")) {					
+				if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GRAY + "ë‚¡ì€ ì±„ì§‘ë„êµ¬")) {
 					int num1 = rnd.nextInt(10);
 					if(num1==0) { 
 						ItemStack var1 = new ItemStack(Material.MUTTON);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.GRAY + "º£Å¸·¥ µî±ŞÀÇ ¾ç°í±â");
+						var1Im.setDisplayName(ChatColor.GRAY + "ë² íƒ€ë¨ ë“±ê¸‰ì˜ ì–‘ê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 10);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.GRAY + "º£Å¸·¥ µî±ŞÀÇ ¾ç°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.GRAY + "ë² íƒ€ë¨ ë“±ê¸‰ì˜ ì–‘ê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					}
-				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "Æò¹üÇÑ Ã¤Áıµµ±¸")) {
+				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "í‰ë²”í•œ ì±„ì§‘ë„êµ¬")) {
 					int num1 = rnd.nextInt(10);
 					if(num1<=2) { 
 						ItemStack var1 = new ItemStack(Material.MUTTON);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.GRAY + "º£Å¸·¥ µî±ŞÀÇ ¾ç°í±â");
+						var1Im.setDisplayName(ChatColor.GRAY + "ë² íƒ€ë¨ ë“±ê¸‰ì˜ ì–‘ê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 10);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.GRAY + "º£Å¸·¥ µî±ŞÀÇ ¾ç°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.GRAY + "ë² íƒ€ë¨ ë“±ê¸‰ì˜ ì–‘ê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					} else if(num1==3) { 
 						ItemStack var1 = new ItemStack(Material.MUTTON);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.WHITE + "·¥(Lamb) µî±ŞÀÇ ¾ç°í±â");
+						var1Im.setDisplayName(ChatColor.WHITE + "ë¨(Lamb) ë“±ê¸‰ì˜ ì–‘ê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 50000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.WHITE + "·¥(Lamb) µî±ŞÀÇ ¾ç°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.WHITE + "ë¨(Lamb) ë“±ê¸‰ì˜ ì–‘ê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					}
-				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "Àººû Ã¤Áıµµ±¸")) {
+				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "ì€ë¹› ì±„ì§‘ë„êµ¬")) {
 					int num1 = rnd.nextInt(10);
 					if(num1<=2) { 
 						ItemStack var1 = new ItemStack(Material.MUTTON);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.WHITE + "·¥(Lamb) µî±ŞÀÇ ¾ç°í±â");
+						var1Im.setDisplayName(ChatColor.WHITE + "ë¨(Lamb) ë“±ê¸‰ì˜ ì–‘ê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 50000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.WHITE + "·¥(Lamb) µî±ŞÀÇ ¾ç°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.WHITE + "ë¨(Lamb) ë“±ê¸‰ì˜ ì–‘ê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					} else if(num1==3) { 
 						ItemStack var1 = new ItemStack(Material.MUTTON);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.YELLOW + "È£°Ù µî±ŞÀÇ ¾ç°í±â");
+						var1Im.setDisplayName(ChatColor.YELLOW + "í˜¸ê²Ÿ ë“±ê¸‰ì˜ ì–‘ê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 600000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.YELLOW + "È£°Ù µî±ŞÀÇ ¾ç°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.YELLOW + "í˜¸ê²Ÿ ë“±ê¸‰ì˜ ì–‘ê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					}
-				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "±İºû Ã¤Áıµµ±¸")) {
+				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "ê¸ˆë¹› ì±„ì§‘ë„êµ¬")) {
 					int num1 = rnd.nextInt(10);
 					if(num1<=2) { 
 						ItemStack var1 = new ItemStack(Material.MUTTON);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.YELLOW + "È£°Ù µî±ŞÀÇ ¾ç°í±â");
+						var1Im.setDisplayName(ChatColor.YELLOW + "í˜¸ê²Ÿ ë“±ê¸‰ì˜ ì–‘ê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 600000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.YELLOW + "È£°Ù µî±ŞÀÇ ¾ç°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.YELLOW + "í˜¸ê²Ÿ ë“±ê¸‰ì˜ ì–‘ê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					} else if(num1==3) { 
 						ItemStack var1 = new ItemStack(Material.MUTTON);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "¸ÓÆ° µî±ŞÀÇ ¾ç°í±â");
+						var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "ë¨¸íŠ¼ ë“±ê¸‰ì˜ ì–‘ê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 7000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.LIGHT_PURPLE + "¸ÓÆ° µî±ŞÀÇ ¾ç°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.LIGHT_PURPLE + "ë¨¸íŠ¼ ë“±ê¸‰ì˜ ì–‘ê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					}
-				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "ÀåÀÎÀÌ ¸¸µç Ã¤Áıµµ±¸")) {
+				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "ì¥ì¸ì´ ë§Œë“  ì±„ì§‘ë„êµ¬")) {
 					int num1 = rnd.nextInt(10);
 					if(num1<=2) { 
 						ItemStack var1 = new ItemStack(Material.MUTTON);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "¸ÓÆ° µî±ŞÀÇ ¾ç°í±â");
+						var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "ë¨¸íŠ¼ ë“±ê¸‰ì˜ ì–‘ê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 7000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.LIGHT_PURPLE + "¸ÓÆ° µî±ŞÀÇ ¾ç°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.LIGHT_PURPLE + "ë¨¸íŠ¼ ë“±ê¸‰ì˜ ì–‘ê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					} else if(num1==3) { 
 						ItemStack var1 = new ItemStack(Material.MUTTON);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.AQUA + "·¥(Ram) µî±ŞÀÇ ¾ç°í±â");
+						var1Im.setDisplayName(ChatColor.AQUA + "ë¨(Ram) ë“±ê¸‰ì˜ ì–‘ê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 10000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.AQUA + "·¥(Ram) µî±ŞÀÇ ¾ç°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.AQUA + "ë¨(Ram) ë“±ê¸‰ì˜ ì–‘ê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					}
-				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "½ÅÀÇ Ã¤Áıµµ±¸")) {
+				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "ì‹ ì˜ ì±„ì§‘ë„êµ¬")) {
 					int num1 = rnd.nextInt(100);
 					if(num1<=20) { 
 						ItemStack var1 = new ItemStack(Material.MUTTON);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.AQUA + "·¥(Ram) µî±ŞÀÇ ¾ç°í±â");
+						var1Im.setDisplayName(ChatColor.AQUA + "ë¨(Ram) ë“±ê¸‰ì˜ ì–‘ê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 10000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.AQUA + "·¥(Ram) µî±ŞÀÇ ¾ç°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.AQUA + "ë¨(Ram) ë“±ê¸‰ì˜ ì–‘ê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					} else if(num1==21) { 
 						ItemStack var1 = new ItemStack(Material.MUTTON);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.DARK_RED + "½ÅÀÌ ÀÎÁ¤ÇÑ ¾ç°í±â");
+						var1Im.setDisplayName(ChatColor.DARK_RED + "ì‹ ì´ ì¸ì •í•œ ì–‘ê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 20000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.DARK_RED + "½ÅÀÌ ÀÎÁ¤ÇÑ ¾ç°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.DARK_RED + "ì‹ ì´ ì¸ì •í•œ ì–‘ê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					}
-				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_PURPLE + "Å©·ç¾ÆÈåÀÇ Ã¤Áıµµ±¸")) {
+				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_PURPLE + "í¬ë£¨ì•„íì˜ ì±„ì§‘ë„êµ¬")) {
 					int num1 = rnd.nextInt(70);
 					if(num1<=20) { 
 						ItemStack var1 = new ItemStack(Material.MUTTON);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.AQUA + "·¥(Ram) µî±ŞÀÇ ¾ç°í±â");
+						var1Im.setDisplayName(ChatColor.AQUA + "ë¨(Ram) ë“±ê¸‰ì˜ ì–‘ê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 10000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.AQUA + "·¥(Ram) µî±ŞÀÇ ¾ç°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.AQUA + "ë¨(Ram) ë“±ê¸‰ì˜ ì–‘ê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					} else if(num1==21) { 
 						ItemStack var1 = new ItemStack(Material.MUTTON);
 						ItemMeta var1Im = var1.getItemMeta();
-						var1Im.setDisplayName(ChatColor.DARK_RED + "½ÅÀÌ ÀÎÁ¤ÇÑ ¾ç°í±â");
+						var1Im.setDisplayName(ChatColor.DARK_RED + "ì‹ ì´ ì¸ì •í•œ ì–‘ê³ ê¸°");
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 20000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.DARK_RED + "½ÅÀÌ ÀÎÁ¤ÇÑ ¾ç°í±â" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+						player.sendMessage(ChatColor.DARK_RED + "ì‹ ì´ ì¸ì •í•œ ì–‘ê³ ê¸°" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 					}
 				} else {
-					player.sendMessage("Ã¤Áıµµ±¸¸¦ ÀÌ¿ëÇØ °í±â¸¦ ¾òÀ» ¼ö ÀÖÀ» µí ÇÏ´Ù.");
+					player.sendMessage("ì±„ì§‘ë„êµ¬ë¥¼ ì´ìš©í•´ ê³ ê¸°ë¥¼ ì–»ì„ ìˆ˜ ìˆì„ ë“¯ í•˜ë‹¤.");
 				}
 				player.getWorld().playSound(loc, Sound.ENTITY_SHEEP_HURT, 1.0f, 1.0f);
 				return true;

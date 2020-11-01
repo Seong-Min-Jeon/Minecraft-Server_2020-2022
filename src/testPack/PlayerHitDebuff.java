@@ -64,9 +64,9 @@ public class PlayerHitDebuff {
 		mob22(player, mob);
 	}
 
-	// ½Ã·ÃÀÇ Çü»ó
+	// ì‹œë ¨ì˜ í˜•ìƒ
 	public void mob1(Player player, Entity mob) {
-		if(mob.getCustomName().substring(2).equalsIgnoreCase("½Ã·ÃÀÇ Çü»ó" + ChatColor.YELLOW + " [Lv.??]")) {
+		if(mob.getCustomName().substring(2).equalsIgnoreCase("ì‹œë ¨ì˜ í˜•ìƒ" + ChatColor.YELLOW + " [Lv.??]")) {
 			if(((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
 				int num = rnd.nextInt(5);
 				if(num == 0) {
@@ -82,15 +82,15 @@ public class PlayerHitDebuff {
 					player.damage(player.getHealth()/2);
 					player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,100,1,true,false,false));
 					player.getWorld().playSound(mob.getLocation(), Sound.BLOCK_PORTAL_TRIGGER, 1.0f, 1.0f);
-					player.sendMessage(ChatColor.RED + "½Ã·ÃÀÇ ÀúÁÖ°¡ °É¸³´Ï´Ù.");
+					player.sendMessage(ChatColor.RED + "ì‹œë ¨ì˜ ì €ì£¼ê°€ ê±¸ë¦½ë‹ˆë‹¤.");
 				}
 			}
 		}
 	}
 
-	// ¿äÁ¤¿Õ
+	// ìš”ì •ì™•
 	public void mob2(Player player, Entity mob) {
-		if(mob.getCustomName().substring(2).equalsIgnoreCase("¿äÁ¤¿Õ ¿Àº£·Ğ" + ChatColor.YELLOW + " [Lv.??]")) {
+		if(mob.getCustomName().substring(2).equalsIgnoreCase("ìš”ì •ì™• ì˜¤ë² ë¡ " + ChatColor.YELLOW + " [Lv.??]")) {
 			int num = rnd.nextInt(20);
 			if(num <= 3) {
 				// ===============================================================
@@ -104,7 +104,7 @@ public class PlayerHitDebuff {
 				// ================================================================
 				player.damage(200);
 				player.getWorld().playSound(mob.getLocation(), Sound.BLOCK_PORTAL_TRIGGER, 1.0f, 1.0f);
-				player.sendMessage(ChatColor.RED + "¿äÁ¤¿ÕÀÇ ¸¶¹ıÀÌ ¹ßµ¿µË´Ï´Ù.");
+				player.sendMessage(ChatColor.RED + "ìš”ì •ì™•ì˜ ë§ˆë²•ì´ ë°œë™ë©ë‹ˆë‹¤.");
 			}
 			if(num == 4) {
 				LivingEntity ent = (LivingEntity) mob;
@@ -114,15 +114,15 @@ public class PlayerHitDebuff {
 				WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
 				world.addEntity(cw);
 				player.getWorld().playEffect(mob.getLocation(), Effect.END_GATEWAY_SPAWN, 0);
-				player.sendMessage(ChatColor.RED + "¿äÁ¤¿ÕÀÌ ¼ÒÈ¯ ¸¶¹ıÀ» »ç¿ëÇß½À´Ï´Ù.");
-				sendMessage(player, ChatColor.RED + "¿äÁ¤¿ÕÀÌ ¼ÒÈ¯ ¸¶¹ıÀ» »ç¿ëÇß½À´Ï´Ù.");
+				player.sendMessage(ChatColor.RED + "ìš”ì •ì™•ì´ ì†Œí™˜ ë§ˆë²•ì„ ì‚¬ìš©í–ˆìŠµë‹ˆë‹¤.");
+				sendMessage(player, ChatColor.RED + "ìš”ì •ì™•ì´ ì†Œí™˜ ë§ˆë²•ì„ ì‚¬ìš©í–ˆìŠµë‹ˆë‹¤.");
 			}
 		}
 	}
 
-	// ¿äÁ¤¿©¿Õ
+	// ìš”ì •ì—¬ì™•
 	public void mob3(Player player, Entity mob) {
-		if(mob.getCustomName().substring(2).equalsIgnoreCase("¿äÁ¤¿©¿Õ Æ¼Å¸´Ï¾Æ" + ChatColor.YELLOW + " [Lv.??]")) {
+		if(mob.getCustomName().substring(2).equalsIgnoreCase("ìš”ì •ì—¬ì™• í‹°íƒ€ë‹ˆì•„" + ChatColor.YELLOW + " [Lv.??]")) {
 			int num = rnd.nextInt(10);
 			if(num == 0) {
 				for(int i = 0 ; i < 10 ; i++) {
@@ -138,15 +138,15 @@ public class PlayerHitDebuff {
 					}
 				}
 				player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ENDER_DRAGON_FLAP, 1.0f, 1.0f);
-				player.sendMessage(ChatColor.RED + "¿äÁ¤¿©¿ÕÀÇ ½ºÅ³·Î ÁÖº¯ ¸ó½ºÅÍ°¡ È¸º¹µË´Ï´Ù.");
-				sendMessage(player, ChatColor.RED + "¿äÁ¤¿©¿ÕÀÇ ½ºÅ³·Î ÁÖº¯ ¸ó½ºÅÍ°¡ È¸º¹µË´Ï´Ù.");
+				player.sendMessage(ChatColor.RED + "ìš”ì •ì—¬ì™•ì˜ ìŠ¤í‚¬ë¡œ ì£¼ë³€ ëª¬ìŠ¤í„°ê°€ íšŒë³µë©ë‹ˆë‹¤.");
+				sendMessage(player, ChatColor.RED + "ìš”ì •ì—¬ì™•ì˜ ìŠ¤í‚¬ë¡œ ì£¼ë³€ ëª¬ìŠ¤í„°ê°€ íšŒë³µë©ë‹ˆë‹¤.");
 			}
 		}
 	}
 
-	// ÄÉÈê·»
+	// ì¼€í˜ë Œ
 	public void mob4(Player player, Entity mob) {
-		if(mob.getCustomName().substring(2).equalsIgnoreCase("ÄÉÈê·»" + ChatColor.YELLOW + " [Lv.??]")) {
+		if(mob.getCustomName().substring(2).equalsIgnoreCase("ì¼€í˜ë Œ" + ChatColor.YELLOW + " [Lv.??]")) {
 			int num = rnd.nextInt(8);
 			if(num < 1) {
 				for(int i = 0 ; i < 10 ; i++) {
@@ -155,7 +155,7 @@ public class PlayerHitDebuff {
 				player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,200,1,true,false,false));
 				player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS,40,50,true,false,false));
 				player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ENDER_DRAGON_FLAP, 1.0f, 1.0f);
-				player.sendMessage(ChatColor.RED + "ÄÉÈê·»ÀÇ ÀúÁÖ·Î ¸öÀÌ ¾ó¾îºÙ½À´Ï´Ù.");
+				player.sendMessage(ChatColor.RED + "ì¼€í˜ë Œì˜ ì €ì£¼ë¡œ ëª¸ì´ ì–¼ì–´ë¶™ìŠµë‹ˆë‹¤.");
 				((WitherSkeleton) mob).setTarget(player);
 			} 
 			if(num == 2) {
@@ -184,15 +184,15 @@ public class PlayerHitDebuff {
 					mob.teleport(new Location(player.getWorld(), 3787, 82, 3217));
 				}
 				player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
-				player.sendMessage(ChatColor.RED + "ÄÉÈê·»ÀÌ ¾îµò°¡·Î ÀÌµ¿ÇÏ¿´½À´Ï´Ù.");
-				sendMessage(player, ChatColor.RED + "ÄÉÈê·»ÀÌ ¾îµò°¡·Î ÀÌµ¿ÇÏ¿´½À´Ï´Ù.");
+				player.sendMessage(ChatColor.RED + "ì¼€í˜ë Œì´ ì–´ë”˜ê°€ë¡œ ì´ë™í•˜ì˜€ìŠµë‹ˆë‹¤.");
+				sendMessage(player, ChatColor.RED + "ì¼€í˜ë Œì´ ì–´ë”˜ê°€ë¡œ ì´ë™í•˜ì˜€ìŠµë‹ˆë‹¤.");
 			}
 		}
 	}
 
-	// ¹ß·Î¸£
+	// ë°œë¡œë¥´
 	public void mob5(Player player, Entity mob) {
-		if(mob.getCustomName().substring(2).equalsIgnoreCase("¹ß·Î¸£" + ChatColor.YELLOW + " [Lv.??]")) {
+		if(mob.getCustomName().substring(2).equalsIgnoreCase("ë°œë¡œë¥´" + ChatColor.YELLOW + " [Lv.??]")) {
 			if(((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
 				int num = rnd.nextInt(10);
 				if(num == 0) {
@@ -201,15 +201,15 @@ public class PlayerHitDebuff {
 					player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,100,200,true,false,false));
 					player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION,100,200,true,false,false));
 					player.getWorld().playSound(mob.getLocation(), Sound.BLOCK_CHAIN_HIT, 1.0f, 1.0f);
-					player.sendMessage(ChatColor.RED + "¹ß·Î¸£°¡ ´ç½ÅÀ» ²ø¾î´ç°å½À´Ï´Ù.");
+					player.sendMessage(ChatColor.RED + "ë°œë¡œë¥´ê°€ ë‹¹ì‹ ì„ ëŒì–´ë‹¹ê²¼ìŠµë‹ˆë‹¤.");
 					((Zombie) mob).setTarget(player);
 				} 
 				if(num == 1) {
 					
 					mob.teleport(player);
 					
-					player.sendMessage(ChatColor.RED + "¹ß·Î¸£°¡ ÇïÆÄÀÌ¾î¸¦ ½ÃÀüÇÕ´Ï´Ù.");
-					sendMessage(player, ChatColor.RED + "¹ß·Î¸£°¡ ÇïÆÄÀÌ¾î¸¦ ½ÃÀüÇÕ´Ï´Ù.");
+					player.sendMessage(ChatColor.RED + "ë°œë¡œë¥´ê°€ í—¬íŒŒì´ì–´ë¥¼ ì‹œì „í•©ë‹ˆë‹¤.");
+					sendMessage(player, ChatColor.RED + "ë°œë¡œë¥´ê°€ í—¬íŒŒì´ì–´ë¥¼ ì‹œì „í•©ë‹ˆë‹¤.");
 					
 					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true, false, false));
 					
@@ -239,8 +239,8 @@ public class PlayerHitDebuff {
 							}
 							
 							if (time >= 40) {
-								player.sendMessage(ChatColor.RED + "¹ß·Î¸£°¡ ÇïÆÄÀÌ¾î¸¦ »ç¿ëÇÏ¿´½À´Ï´Ù.");
-								sendMessage(player, ChatColor.RED + "¹ß·Î¸£°¡ ÇïÆÄÀÌ¾î¸¦ »ç¿ëÇÏ¿´½À´Ï´Ù.");
+								player.sendMessage(ChatColor.RED + "ë°œë¡œë¥´ê°€ í—¬íŒŒì´ì–´ë¥¼ ì‚¬ìš©í•˜ì˜€ìŠµë‹ˆë‹¤.");
+								sendMessage(player, ChatColor.RED + "ë°œë¡œë¥´ê°€ í—¬íŒŒì´ì–´ë¥¼ ì‚¬ìš©í•˜ì˜€ìŠµë‹ˆë‹¤.");
 								// ===============================================================
 								ParticleData pd = new ParticleData(player.getUniqueId());
 								if (pd.hasID()) {
@@ -275,16 +275,16 @@ public class PlayerHitDebuff {
 					player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,100,100,true,false,false));
 					player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,100,200,true,false,false));
 					player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS,50,200,true,false,false));
-					player.sendMessage(ChatColor.RED + "¹ß·Î¸£ÀÇ ÈûÀ¸·Î ¼®È­µÇ¾ú½À´Ï´Ù.");
+					player.sendMessage(ChatColor.RED + "ë°œë¡œë¥´ì˜ í˜ìœ¼ë¡œ ì„í™”ë˜ì—ˆìŠµë‹ˆë‹¤.");
 					((Zombie) mob).setTarget(player);
 				}
 			}
 		}
 	}
 
-	// ¾Æµ§
+	// ì•„ë´
 	public void mob6(Player player, Entity mob) {
-		if (mob.getCustomName().substring(2).equalsIgnoreCase("¾Æµ§" + ChatColor.YELLOW + " [Lv.??]")) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("ì•„ë´" + ChatColor.YELLOW + " [Lv.??]")) {
 			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
 				int num = rnd.nextInt(10);
 				if (num == 0) {
@@ -292,8 +292,8 @@ public class PlayerHitDebuff {
 					player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 100, 0, true, false, false));
 					((LivingEntity) mob).setHealth(((LivingEntity) mob).getHealth() + 3000);
 					player.getWorld().playSound(mob.getLocation(), Sound.AMBIENT_CAVE, 1.0f, 1.0f);
-					player.sendMessage(ChatColor.RED + "¾Æµ§ÀÌ È¸º¹À» ÇÏ±â À§ÇØ µµ¸Á°©´Ï´Ù.");
-					sendMessage(player, ChatColor.RED + "¾Æµ§ÀÌ È¸º¹À» ÇÏ±â À§ÇØ µµ¸Á°©´Ï´Ù.");
+					player.sendMessage(ChatColor.RED + "ì•„ë´ì´ íšŒë³µì„ í•˜ê¸° ìœ„í•´ ë„ë§ê°‘ë‹ˆë‹¤.");
+					sendMessage(player, ChatColor.RED + "ì•„ë´ì´ íšŒë³µì„ í•˜ê¸° ìœ„í•´ ë„ë§ê°‘ë‹ˆë‹¤.");
 					((WitherSkeleton) mob).setTarget(player);
 				}
 				if (num == 1) {
@@ -318,8 +318,8 @@ public class PlayerHitDebuff {
 					ItemStack head2Item = chest.getInventory().getItem(10);
 					head2.setHelmet(head2Item);
 					player.getWorld().playSound(mob.getLocation(), Sound.BLOCK_BASALT_BREAK, 1.0f, 1.0f);
-					player.sendMessage(ChatColor.RED + "¾Æµ§ÀÌ ¸ŞÀÌµåµéÀ» È£ÃâÇÏ¿´½À´Ï´Ù.");
-					sendMessage(player, ChatColor.RED + "¾Æµ§ÀÌ ¸ŞÀÌµåµéÀ» È£ÃâÇÏ¿´½À´Ï´Ù.");
+					player.sendMessage(ChatColor.RED + "ì•„ë´ì´ ë©”ì´ë“œë“¤ì„ í˜¸ì¶œí•˜ì˜€ìŠµë‹ˆë‹¤.");
+					sendMessage(player, ChatColor.RED + "ì•„ë´ì´ ë©”ì´ë“œë“¤ì„ í˜¸ì¶œí•˜ì˜€ìŠµë‹ˆë‹¤.");
 				}
 			} else {
 				int num = rnd.nextInt(32);
@@ -327,61 +327,61 @@ public class PlayerHitDebuff {
 					player.teleport(new Location(player.getWorld(), 3325, 13, 3736));
 					mob.teleport(new Location(player.getWorld(), 3327, 13, 3734));
 					player.getWorld().playSound(mob.getLocation(), Sound.BLOCK_ANVIL_DESTROY, 1.0f, 1.0f);
-					player.sendMessage(ChatColor.RED + "¾Æµ§ÀÇ ¸¶¹ıÀ¸·Î ÀÌµ¿µË´Ï´Ù.");
+					player.sendMessage(ChatColor.RED + "ì•„ë´ì˜ ë§ˆë²•ìœ¼ë¡œ ì´ë™ë©ë‹ˆë‹¤.");
 					((WitherSkeleton) mob).setTarget(player);
 				} else if (num == 1) {
 					player.teleport(new Location(player.getWorld(), 3325, 13, 3752));
 					mob.teleport(new Location(player.getWorld(), 3327, 13, 3754));
 					player.getWorld().playSound(mob.getLocation(), Sound.BLOCK_ANVIL_DESTROY, 1.0f, 1.0f);
-					player.sendMessage(ChatColor.RED + "¾Æµ§ÀÇ ¸¶¹ıÀ¸·Î ÀÌµ¿µË´Ï´Ù.");
+					player.sendMessage(ChatColor.RED + "ì•„ë´ì˜ ë§ˆë²•ìœ¼ë¡œ ì´ë™ë©ë‹ˆë‹¤.");
 					((WitherSkeleton) mob).setTarget(player);
 				} else if (num == 2) {
 					player.teleport(new Location(player.getWorld(), 3309, 13, 3752));
 					mob.teleport(new Location(player.getWorld(), 3307, 13, 3754));
 					player.getWorld().playSound(mob.getLocation(), Sound.BLOCK_ANVIL_DESTROY, 1.0f, 1.0f);
-					player.sendMessage(ChatColor.RED + "¾Æµ§ÀÇ ¸¶¹ıÀ¸·Î ÀÌµ¿µË´Ï´Ù.");
+					player.sendMessage(ChatColor.RED + "ì•„ë´ì˜ ë§ˆë²•ìœ¼ë¡œ ì´ë™ë©ë‹ˆë‹¤.");
 					((WitherSkeleton) mob).setTarget(player);
 				} else if (num == 3) {
 					player.teleport(new Location(player.getWorld(), 3309, 13, 3736));
 					mob.teleport(new Location(player.getWorld(), 3307, 13, 3734));
 					player.getWorld().playSound(mob.getLocation(), Sound.BLOCK_ANVIL_DESTROY, 1.0f, 1.0f);
-					player.sendMessage(ChatColor.RED + "¾Æµ§ÀÇ ¸¶¹ıÀ¸·Î ÀÌµ¿µË´Ï´Ù.");
+					player.sendMessage(ChatColor.RED + "ì•„ë´ì˜ ë§ˆë²•ìœ¼ë¡œ ì´ë™ë©ë‹ˆë‹¤.");
 					((WitherSkeleton) mob).setTarget(player);
 				}
 			}
 		}
 	}
 
-	// Æ¯±Ş ¿ä¸®»ç
+	// íŠ¹ê¸‰ ìš”ë¦¬ì‚¬
 	public void mob7(Player player, Entity mob) {
-		if (mob.getCustomName().substring(2).equalsIgnoreCase("Æ¯±Ş ¿ä¸®»ç" + ChatColor.YELLOW + " [Lv.??]")) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("íŠ¹ê¸‰ ìš”ë¦¬ì‚¬" + ChatColor.YELLOW + " [Lv.??]")) {
 			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
 				int num = rnd.nextInt(10);
 				if (num == 0) {
 					((LivingEntity) mob).setHealth(((LivingEntity) mob).getHealth() + 8000);
 					player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_GENERIC_EAT, 1.0f, 1.0f);
-					player.sendMessage(ChatColor.RED + "Æ¯±Ş ¿ä¸®»ç°¡ À½½ÄÀ» ¸Ô°í È¸º¹ÇÕ´Ï´Ù.");
-					sendMessage(player, ChatColor.RED + "Æ¯±Ş ¿ä¸®»ç°¡ À½½ÄÀ» ¸Ô°í È¸º¹ÇÕ´Ï´Ù.");
+					player.sendMessage(ChatColor.RED + "íŠ¹ê¸‰ ìš”ë¦¬ì‚¬ê°€ ìŒì‹ì„ ë¨¹ê³  íšŒë³µí•©ë‹ˆë‹¤.");
+					sendMessage(player, ChatColor.RED + "íŠ¹ê¸‰ ìš”ë¦¬ì‚¬ê°€ ìŒì‹ì„ ë¨¹ê³  íšŒë³µí•©ë‹ˆë‹¤.");
 					((Zombie) mob).setTarget(player);
 				} else if (num == 1) {
 					player.setFireTicks(200);
-					player.sendMessage(ChatColor.RED + "Æ¯±Ş ¿ä¸®»ç: ¸ÀÀÖ°Ô ±¸¿öÁö°Å¶ó.");
+					player.sendMessage(ChatColor.RED + "íŠ¹ê¸‰ ìš”ë¦¬ì‚¬: ë§›ìˆê²Œ êµ¬ì›Œì§€ê±°ë¼.");
 					((Zombie) mob).setTarget(player);
 				}
 			} else {
 				int num = rnd.nextInt(8);
 				if (num == 0) {
 					player.setFireTicks(200);
-					player.sendMessage(ChatColor.RED + "Æ¯±Ş ¿ä¸®»ç: ¸ÀÀÖ°Ô ±¸¿öÁö°Å¶ó.");
+					player.sendMessage(ChatColor.RED + "íŠ¹ê¸‰ ìš”ë¦¬ì‚¬: ë§›ìˆê²Œ êµ¬ì›Œì§€ê±°ë¼.");
 					((Zombie) mob).setTarget(player);
 				}
 			}
 		}
 	}
 
-	// 1ÃşÀÇ Áö¹èÀÚ
+	// 1ì¸µì˜ ì§€ë°°ì
 	public void mob8(Player player, Entity mob) {
-		if (mob.getCustomName().substring(2).equalsIgnoreCase("1ÃşÀÇ Áö¹èÀÚ" + ChatColor.YELLOW + " [Lv.??]")) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("1ì¸µì˜ ì§€ë°°ì" + ChatColor.YELLOW + " [Lv.??]")) {
 
 			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
 				int num = rnd.nextInt(12);
@@ -392,7 +392,7 @@ public class PlayerHitDebuff {
 					player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 100, 200, true, false, false));
 					player.setVelocity(player.getEyeLocation().getDirection().multiply(-10.0f));
 					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_NETHERRACK_STEP, 3.0f, 1.0f);
-					player.sendMessage(ChatColor.RED + "Áö¹èÀÚ°¡ ´ç½ÅÀ» ¹Ğ¾î³À´Ï´Ù.");
+					player.sendMessage(ChatColor.RED + "ì§€ë°°ìê°€ ë‹¹ì‹ ì„ ë°€ì–´ëƒ…ë‹ˆë‹¤.");
 					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
 						int time = 0;
@@ -419,8 +419,8 @@ public class PlayerHitDebuff {
 				}
 				if (num == 1) {
 					
-					player.sendMessage(ChatColor.RED + "Áö¹èÀÚ°¡ ÁÖ¹®À» ¿Ü¿ì±â ½ÃÀÛÇß½À´Ï´Ù.");
-					sendMessage(player, ChatColor.RED + "Áö¹èÀÚ°¡ ÁÖ¹®À» ¿Ü¿ì±â ½ÃÀÛÇß½À´Ï´Ù.");
+					player.sendMessage(ChatColor.RED + "ì§€ë°°ìê°€ ì£¼ë¬¸ì„ ì™¸ìš°ê¸° ì‹œì‘í–ˆìŠµë‹ˆë‹¤.");
+					sendMessage(player, ChatColor.RED + "ì§€ë°°ìê°€ ì£¼ë¬¸ì„ ì™¸ìš°ê¸° ì‹œì‘í–ˆìŠµë‹ˆë‹¤.");
 					
 					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true, false, false));
 					
@@ -450,8 +450,8 @@ public class PlayerHitDebuff {
 							}
 							
 							if (time >= 40) {
-								player.sendMessage(ChatColor.RED + "Áö¹èÀÚ°¡ ½ÉÆÇIÀ» »ç¿ëÇÏ¿´½À´Ï´Ù.");
-								sendMessage(player, ChatColor.RED + "Áö¹èÀÚ°¡ ½ÉÆÇIÀ» »ç¿ëÇÏ¿´½À´Ï´Ù.");
+								player.sendMessage(ChatColor.RED + "ì§€ë°°ìê°€ ì‹¬íŒIì„ ì‚¬ìš©í•˜ì˜€ìŠµë‹ˆë‹¤.");
+								sendMessage(player, ChatColor.RED + "ì§€ë°°ìê°€ ì‹¬íŒIì„ ì‚¬ìš©í•˜ì˜€ìŠµë‹ˆë‹¤.");
 								// ===============================================================
 								ParticleData pd = new ParticleData(player.getUniqueId());
 								if (pd.hasID()) {
@@ -493,30 +493,30 @@ public class PlayerHitDebuff {
 					// ================================================================
 					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 2000, true, false, false));
 					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, 100, 0, true, false, false));
-					player.sendMessage(ChatColor.RED + "Å¾ÀÇ ÀúÁÖ·Î Áö¹èÀÚ°¡ °­È­µË´Ï´Ù.");
-					sendMessage(player, ChatColor.RED + "Å¾ÀÇ ÀúÁÖ·Î Áö¹èÀÚ°¡ °­È­µË´Ï´Ù.");
+					player.sendMessage(ChatColor.RED + "íƒ‘ì˜ ì €ì£¼ë¡œ ì§€ë°°ìê°€ ê°•í™”ë©ë‹ˆë‹¤.");
+					sendMessage(player, ChatColor.RED + "íƒ‘ì˜ ì €ì£¼ë¡œ ì§€ë°°ìê°€ ê°•í™”ë©ë‹ˆë‹¤.");
 					((Skeleton) mob).setTarget(player);
 				}
 			}
 		}
 	}
 
-	// 2ÃşÀÇ Áö¹èÀÚ
+	// 2ì¸µì˜ ì§€ë°°ì
 	public void mob9(Player player, Entity mob) {
-		if (mob.getCustomName().substring(2).equalsIgnoreCase("2ÃşÀÇ Áö¹èÀÚ" + ChatColor.YELLOW + " [Lv.??]")) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("2ì¸µì˜ ì§€ë°°ì" + ChatColor.YELLOW + " [Lv.??]")) {
 			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
 				int num = rnd.nextInt(12);
 				if (num == 0) {
 					player.teleport(mob.getLocation());
 					player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 100, 200, true, false, false));
 					player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 100, 200, true, false, false));
-					player.sendMessage(ChatColor.RED + "È¯°¢¿¡ °É·È½À´Ï´Ù.");
+					player.sendMessage(ChatColor.RED + "í™˜ê°ì— ê±¸ë ¸ìŠµë‹ˆë‹¤.");
 					((Skeleton) mob).setTarget(player);
 				}
 				if (num == 1) {
 					
-					player.sendMessage(ChatColor.RED + "Áö¹èÀÚ°¡ ÁÖ¹®À» ¿Ü¿ì±â ½ÃÀÛÇß½À´Ï´Ù.");
-					sendMessage(player, ChatColor.RED + "Áö¹èÀÚ°¡ ÁÖ¹®À» ¿Ü¿ì±â ½ÃÀÛÇß½À´Ï´Ù.");
+					player.sendMessage(ChatColor.RED + "ì§€ë°°ìê°€ ì£¼ë¬¸ì„ ì™¸ìš°ê¸° ì‹œì‘í–ˆìŠµë‹ˆë‹¤.");
+					sendMessage(player, ChatColor.RED + "ì§€ë°°ìê°€ ì£¼ë¬¸ì„ ì™¸ìš°ê¸° ì‹œì‘í–ˆìŠµë‹ˆë‹¤.");
 					
 					Location loc = mob.getLocation();
 					
@@ -544,8 +544,8 @@ public class PlayerHitDebuff {
 							}
 							
 							if (time >= 40) {
-								player.sendMessage(ChatColor.RED + "Áö¹èÀÚ°¡ ½ÉÆÇIIÀ» »ç¿ëÇÏ¿´½À´Ï´Ù.");
-								sendMessage(player, ChatColor.RED + "Áö¹èÀÚ°¡ ½ÉÆÇIIÀ» »ç¿ëÇÏ¿´½À´Ï´Ù.");
+								player.sendMessage(ChatColor.RED + "ì§€ë°°ìê°€ ì‹¬íŒIIì„ ì‚¬ìš©í•˜ì˜€ìŠµë‹ˆë‹¤.");
+								sendMessage(player, ChatColor.RED + "ì§€ë°°ìê°€ ì‹¬íŒIIì„ ì‚¬ìš©í•˜ì˜€ìŠµë‹ˆë‹¤.");
 								// ===============================================================
 								ParticleData pd = new ParticleData(player.getUniqueId());
 								if (pd.hasID()) {
@@ -587,22 +587,22 @@ public class PlayerHitDebuff {
 					// ================================================================
 					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 2000, true, false, false));
 					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, 100, 0, true, false, false));
-					player.sendMessage(ChatColor.RED + "Å¾ÀÇ ÀúÁÖ·Î Áö¹èÀÚ°¡ °­È­µË´Ï´Ù.");
-					sendMessage(player, ChatColor.RED + "Å¾ÀÇ ÀúÁÖ·Î Áö¹èÀÚ°¡ °­È­µË´Ï´Ù.");
+					player.sendMessage(ChatColor.RED + "íƒ‘ì˜ ì €ì£¼ë¡œ ì§€ë°°ìê°€ ê°•í™”ë©ë‹ˆë‹¤.");
+					sendMessage(player, ChatColor.RED + "íƒ‘ì˜ ì €ì£¼ë¡œ ì§€ë°°ìê°€ ê°•í™”ë©ë‹ˆë‹¤.");
 					((Skeleton) mob).setTarget(player);
 				}
 			}
 		}
 	}
 
-	// 3ÃşÀÇ Áö¹èÀÚ
+	// 3ì¸µì˜ ì§€ë°°ì
 	public void mob10(Player player, Entity mob) {
-		if (mob.getCustomName().substring(2).equalsIgnoreCase("3ÃşÀÇ Áö¹èÀÚ" + ChatColor.YELLOW + " [Lv.??]")) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("3ì¸µì˜ ì§€ë°°ì" + ChatColor.YELLOW + " [Lv.??]")) {
 			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
 				int num = rnd.nextInt(12);
 				if (num == 0) {
-					player.sendMessage(ChatColor.RED + "Áö¹èÀÚ°¡ ºĞ½ÅÀ» ¼ÒÈ¯ÇÕ´Ï´Ù.");
-					sendMessage(player, ChatColor.RED + "Áö¹èÀÚ°¡ ºĞ½ÅÀ» ¼ÒÈ¯ÇÕ´Ï´Ù.");
+					player.sendMessage(ChatColor.RED + "ì§€ë°°ìê°€ ë¶„ì‹ ì„ ì†Œí™˜í•©ë‹ˆë‹¤.");
+					sendMessage(player, ChatColor.RED + "ì§€ë°°ìê°€ ë¶„ì‹ ì„ ì†Œí™˜í•©ë‹ˆë‹¤.");
 					player.getWorld().spawnEntity(mob.getLocation(), EntityType.SKELETON);
 					player.getWorld().spawnEntity(mob.getLocation(), EntityType.SKELETON);
 					player.getWorld().spawnEntity(mob.getLocation(), EntityType.SKELETON);
@@ -612,8 +612,8 @@ public class PlayerHitDebuff {
 				}
 				if (num == 1) {
 					
-					player.sendMessage(ChatColor.RED + "Áö¹èÀÚ°¡ ÁÖ¹®À» ¿Ü¿ì±â ½ÃÀÛÇß½À´Ï´Ù.");
-					sendMessage(player, ChatColor.RED + "Áö¹èÀÚ°¡ ÁÖ¹®À» ¿Ü¿ì±â ½ÃÀÛÇß½À´Ï´Ù.");
+					player.sendMessage(ChatColor.RED + "ì§€ë°°ìê°€ ì£¼ë¬¸ì„ ì™¸ìš°ê¸° ì‹œì‘í–ˆìŠµë‹ˆë‹¤.");
+					sendMessage(player, ChatColor.RED + "ì§€ë°°ìê°€ ì£¼ë¬¸ì„ ì™¸ìš°ê¸° ì‹œì‘í–ˆìŠµë‹ˆë‹¤.");
 					
 					Location loc = mob.getLocation();
 					
@@ -641,8 +641,8 @@ public class PlayerHitDebuff {
 							}
 							
 							if (time >= 40) {
-								player.sendMessage(ChatColor.RED + "Áö¹èÀÚ°¡ ½ÉÆÇIIIÀ» »ç¿ëÇÏ¿´½À´Ï´Ù.");
-								sendMessage(player, ChatColor.RED + "Áö¹èÀÚ°¡ ½ÉÆÇIIIÀ» »ç¿ëÇÏ¿´½À´Ï´Ù.");
+								player.sendMessage(ChatColor.RED + "ì§€ë°°ìê°€ ì‹¬íŒIIIì„ ì‚¬ìš©í•˜ì˜€ìŠµë‹ˆë‹¤.");
+								sendMessage(player, ChatColor.RED + "ì§€ë°°ìê°€ ì‹¬íŒIIIì„ ì‚¬ìš©í•˜ì˜€ìŠµë‹ˆë‹¤.");
 								// ===============================================================
 								ParticleData pd = new ParticleData(player.getUniqueId());
 								if (pd.hasID()) {
@@ -685,78 +685,78 @@ public class PlayerHitDebuff {
 					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 2000, true, false, false));
 					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, 100, 0, true, false, false));
 					mob.teleport(player.getLocation().add(0,1,0));
-					player.sendMessage(ChatColor.RED + "Å¾ÀÇ ÀúÁÖ·Î Áö¹èÀÚ°¡ °­È­µË´Ï´Ù.");
-					sendMessage(player, ChatColor.RED + "Å¾ÀÇ ÀúÁÖ·Î Áö¹èÀÚ°¡ °­È­µË´Ï´Ù.");
+					player.sendMessage(ChatColor.RED + "íƒ‘ì˜ ì €ì£¼ë¡œ ì§€ë°°ìê°€ ê°•í™”ë©ë‹ˆë‹¤.");
+					sendMessage(player, ChatColor.RED + "íƒ‘ì˜ ì €ì£¼ë¡œ ì§€ë°°ìê°€ ê°•í™”ë©ë‹ˆë‹¤.");
 					((Skeleton) mob).setTarget(player);
 				}
 			}
 		}
 	}
 
-	// 4ÃşÀÇ Áö¹èÀÚ
+	// 4ì¸µì˜ ì§€ë°°ì
 	public void mob11(Player player, Entity mob) {
 
 	}
 
-	// 5ÃşÀÇ Áö¹èÀÚ
+	// 5ì¸µì˜ ì§€ë°°ì
 	public void mob12(Player player, Entity mob) {
 
 	}
 
-	// 6ÃşÀÇ Áö¹èÀÚ
+	// 6ì¸µì˜ ì§€ë°°ì
 	public void mob13(Player player, Entity mob) {
 
 	}
 
-	// 7ÃşÀÇ Áö¹èÀÚ
+	// 7ì¸µì˜ ì§€ë°°ì
 	public void mob14(Player player, Entity mob) {
 
 	}
 
-	// 8ÃşÀÇ Áö¹èÀÚ
+	// 8ì¸µì˜ ì§€ë°°ì
 	public void mob15(Player player, Entity mob) {
 
 	}
 
-	// 9ÃşÀÇ Áö¹èÀÚ
+	// 9ì¸µì˜ ì§€ë°°ì
 	public void mob16(Player player, Entity mob) {
 
 	}
 
-	// 10ÃşÀÇ Áö¹èÀÚ
+	// 10ì¸µì˜ ì§€ë°°ì
 	public void mob17(Player player, Entity mob) {
 
 	}
 
-	// 11ÃşÀÇ Áö¹èÀÚ
+	// 11ì¸µì˜ ì§€ë°°ì
 	public void mob18(Player player, Entity mob) {
 
 	}
 
-	// 12ÃşÀÇ Áö¹èÀÚ
+	// 12ì¸µì˜ ì§€ë°°ì
 	public void mob19(Player player, Entity mob) {
 
 	}
 
-	// ¾àÀïÀÌ
+	// ì•½ìŸì´
 	public void mob20(Player player, Entity mob) {
-		if (mob.getCustomName().substring(2).equalsIgnoreCase("¾àÀïÀÌ" + ChatColor.YELLOW + " [Lv.299]")) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("ì•½ìŸì´" + ChatColor.YELLOW + " [Lv.299]")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 0, true, false, false));
 		}
 	}
 
-	// ÄÚ³¶±×
+	// ì½”ë‚­ê·¸
 	public void mob21(Player player, Entity mob) {
 		
-		if (mob.getCustomName().substring(2).equalsIgnoreCase("ÄÚ³¶±×" + ChatColor.YELLOW + " [Lv.??]")) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("ì½”ë‚­ê·¸" + ChatColor.YELLOW + " [Lv.??]")) {
 			
 			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
 				int num = rnd.nextInt(12);
 				if (num == 0) {
 					player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 100, 200, true, false, false));
 					player.getWorld().playSound(player.getLocation(), Sound.AMBIENT_CAVE, 3.0f, 1.0f);
-					player.sendMessage(ChatColor.RED + "¾îµÒÀÇ ±â¿îÀÌ µ¤Ä¨´Ï´Ù.");
-					sendMessage(player, ChatColor.RED + "¾îµÒÀÇ ±â¿îÀÌ µ¤Ä¨´Ï´Ù.");
+					player.sendMessage(ChatColor.RED + "ì–´ë‘ ì˜ ê¸°ìš´ì´ ë®ì¹©ë‹ˆë‹¤.");
+					sendMessage(player, ChatColor.RED + "ì–´ë‘ ì˜ ê¸°ìš´ì´ ë®ì¹©ë‹ˆë‹¤.");
 					((Skeleton) mob).setTarget(player);
 					player.getWorld().spawnEntity(mob.getLocation(), EntityType.ENDERMITE);
 					player.getWorld().spawnEntity(mob.getLocation(), EntityType.ENDERMITE);
@@ -766,8 +766,8 @@ public class PlayerHitDebuff {
 				}
 				if (num == 1) {
 					
-					player.sendMessage(ChatColor.RED + "¸ê¸ÁÀÇ ÁÖ¹®ÀÌ µé·Á¿É´Ï´Ù.");
-					sendMessage(player, ChatColor.RED + "¸ê¸ÁÀÇ ÁÖ¹®ÀÌ µé·Á¿É´Ï´Ù.");
+					player.sendMessage(ChatColor.RED + "ë©¸ë§ì˜ ì£¼ë¬¸ì´ ë“¤ë ¤ì˜µë‹ˆë‹¤.");
+					sendMessage(player, ChatColor.RED + "ë©¸ë§ì˜ ì£¼ë¬¸ì´ ë“¤ë ¤ì˜µë‹ˆë‹¤.");
 					
 					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 210, 200, true, false, false));
 					
@@ -797,8 +797,8 @@ public class PlayerHitDebuff {
 							}
 							
 							if (time >= 80) {
-								player.sendMessage(ChatColor.RED + "¸ê¸ÁÀÇ ÁÖ¹®ÀÌ ¹ßµ¿µÇ¾ú½À´Ï´Ù.");
-								sendMessage(player, ChatColor.RED + "¸ê¸ÁÀÇ ÁÖ¹®ÀÌ ¹ßµ¿µÇ¾ú½À´Ï´Ù.");
+								player.sendMessage(ChatColor.RED + "ë©¸ë§ì˜ ì£¼ë¬¸ì´ ë°œë™ë˜ì—ˆìŠµë‹ˆë‹¤.");
+								sendMessage(player, ChatColor.RED + "ë©¸ë§ì˜ ì£¼ë¬¸ì´ ë°œë™ë˜ì—ˆìŠµë‹ˆë‹¤.");
 								// ===============================================================
 								ParticleData pd = new ParticleData(player.getUniqueId());
 								if (pd.hasID()) {
@@ -814,7 +814,7 @@ public class PlayerHitDebuff {
 										p.getWorld().playEffect(p.getLocation(), Effect.END_GATEWAY_SPAWN, 2);
 										try {
 											QuestBoard cb = new QuestBoard();
-											if (cb.getQuestName((Player) p).equals(ChatColor.LIGHT_PURPLE + "===ÀÌ°ÍÀÌ Æ÷º¸¸£ ¿Õ?===")) {
+											if (cb.getQuestName((Player) p).equals(ChatColor.LIGHT_PURPLE + "===ì´ê²ƒì´ í¬ë³´ë¥´ ì™•?===")) {
 												((Player) p).damage(999999);
 											}
 											((Player) p).damage(5000);
@@ -849,17 +849,17 @@ public class PlayerHitDebuff {
 
 	}
 
-	// ¾Æ¶óÅ©³×
+	// ì•„ë¼í¬ë„¤
 	public void mob22(Player player, Entity mob) {
 		
-		if (mob.getCustomName().substring(2).equalsIgnoreCase("¾Æ¶óÅ©³×" + ChatColor.YELLOW + " [Lv.??]")) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("ì•„ë¼í¬ë„¤" + ChatColor.YELLOW + " [Lv.??]")) {
 			
 			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
 				int num = rnd.nextInt(12);
 				if (num == 0) {
 					player.getWorld().playSound(player.getLocation(), Sound.AMBIENT_CAVE, 2.0f, 3.0f);
-					player.sendMessage(ChatColor.RED + "¾Æ¶óÅ©³×°¡ ¾Ë±î±â¸¦ ½ÃÀüÇß½À´Ï´Ù.");
-					sendMessage(player, ChatColor.RED + "¾Æ¶óÅ©³×°¡ ¾Ë±î±â¸¦ ½ÃÀüÇß½À´Ï´Ù.");
+					player.sendMessage(ChatColor.RED + "ì•„ë¼í¬ë„¤ê°€ ì•Œê¹Œê¸°ë¥¼ ì‹œì „í–ˆìŠµë‹ˆë‹¤.");
+					sendMessage(player, ChatColor.RED + "ì•„ë¼í¬ë„¤ê°€ ì•Œê¹Œê¸°ë¥¼ ì‹œì „í–ˆìŠµë‹ˆë‹¤.");
 					((CaveSpider) mob).setTarget(player);
 					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -874,8 +874,8 @@ public class PlayerHitDebuff {
 							}
 							
 							if (time >= 80) {
-								player.sendMessage(ChatColor.RED + "¾Æ¶óÅ©³×°¡ ¾ËÀ» ±õ´Ï´Ù.");
-								sendMessage(player, ChatColor.RED + "¾Æ¶óÅ©³×°¡ ¾ËÀ» ±õ´Ï´Ù.");
+								player.sendMessage(ChatColor.RED + "ì•„ë¼í¬ë„¤ê°€ ì•Œì„ ê¹ë‹ˆë‹¤.");
+								sendMessage(player, ChatColor.RED + "ì•„ë¼í¬ë„¤ê°€ ì•Œì„ ê¹ë‹ˆë‹¤.");
 								player.getWorld().spawnEntity(mob.getLocation(), EntityType.SPIDER);
 								player.getWorld().spawnEntity(mob.getLocation(), EntityType.SPIDER);
 								player.getWorld().spawnEntity(mob.getLocation(), EntityType.SPIDER);
@@ -908,8 +908,8 @@ public class PlayerHitDebuff {
 							}
 						}
 					}
-					player.sendMessage(ChatColor.RED + "¾Æ¶óÅ©³×°¡ ÇÔÁ¤À» ÆÄ³õ½À´Ï´Ù.");
-					sendMessage(player, ChatColor.RED + "¾Æ¶óÅ©³×°¡ ÇÔÁ¤À» ÆÄ³õ½À´Ï´Ù.");
+					player.sendMessage(ChatColor.RED + "ì•„ë¼í¬ë„¤ê°€ í•¨ì •ì„ íŒŒë†“ìŠµë‹ˆë‹¤.");
+					sendMessage(player, ChatColor.RED + "ì•„ë¼í¬ë„¤ê°€ í•¨ì •ì„ íŒŒë†“ìŠµë‹ˆë‹¤.");
 					((CaveSpider) mob).setTarget(player);
 					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -965,8 +965,8 @@ public class PlayerHitDebuff {
 							}
 						}
 					}
-					player.sendMessage(ChatColor.RED + "¾Æ¶óÅ©³×°¡ ÇÔÁ¤À» ÆÄ³õ½À´Ï´Ù.");
-					sendMessage(player, ChatColor.RED + "¾Æ¶óÅ©³×°¡ ÇÔÁ¤À» ÆÄ³õ½À´Ï´Ù.");
+					player.sendMessage(ChatColor.RED + "ì•„ë¼í¬ë„¤ê°€ í•¨ì •ì„ íŒŒë†“ìŠµë‹ˆë‹¤.");
+					sendMessage(player, ChatColor.RED + "ì•„ë¼í¬ë„¤ê°€ í•¨ì •ì„ íŒŒë†“ìŠµë‹ˆë‹¤.");
 					((CaveSpider) mob).setTarget(player);
 					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -1004,7 +1004,7 @@ public class PlayerHitDebuff {
 					}, 0, 1);
 				} else if (num == 1) {
 					player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 200, 200, true, false, false));
-					player.sendMessage(ChatColor.RED + "¾Æ¶óÅ©³×°¡ ´ç½ÅÀ» ¼Ó¹ÚÇÕ´Ï´Ù.");
+					player.sendMessage(ChatColor.RED + "ì•„ë¼í¬ë„¤ê°€ ë‹¹ì‹ ì„ ì†ë°•í•©ë‹ˆë‹¤.");
 					((CaveSpider) mob).setTarget(player);
 				}
 			}

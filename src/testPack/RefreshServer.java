@@ -191,7 +191,7 @@ public class RefreshServer {
 						}
 					}
 					
-					// ¼³¿ø Áö¿ª Ãß¿ò
+					// ì„¤ì› ì§€ì—­ ì¶”ì›€
 					for(Player allPlayer : Bukkit.getOnlinePlayers()) {
 						Location loc = allPlayer.getLocation();
 						if(loc.getBlock().getBiome() == Biome.BASALT_DELTAS || loc.getBlock().getBiome() == Biome.SNOWY_TUNDRA) {
@@ -211,28 +211,28 @@ public class RefreshServer {
 									if (allPlayer.getInventory().getLeggings() != null) {
 										if (allPlayer.getInventory().getBoots() != null) {
 											
-											if (allPlayer.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "¹æÇÑ Çï¸ä")) {
-												if (allPlayer.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "¹æÇÑ °©¿Ê")) {
-													if (allPlayer.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "¹æÇÑ °¢¹İ")) {
-														if (allPlayer.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "¹æÇÑ ½Å¹ß")) {
+											if (allPlayer.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ë°©í•œ í—¬ë©§")) {
+												if (allPlayer.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ë°©í•œ ê°‘ì˜·")) {
+													if (allPlayer.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ë°©í•œ ê°ë°˜")) {
+														if (allPlayer.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ë°©í•œ ì‹ ë°œ")) {
 															wear = true;
 														}
 													}
 												}
 											}
-											if (allPlayer.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "´©±º°¡ÀÇ ¹æÇÑ Çï¸ä")) {
-												if (allPlayer.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "´©±º°¡ÀÇ ¹æÇÑ °©¿Ê")) {
-													if (allPlayer.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "´©±º°¡ÀÇ ¹æÇÑ °¢¹İ")) {
-														if (allPlayer.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "´©±º°¡ÀÇ ¹æÇÑ ½Å¹ß")) {
+											if (allPlayer.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ëˆ„êµ°ê°€ì˜ ë°©í•œ í—¬ë©§")) {
+												if (allPlayer.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ëˆ„êµ°ê°€ì˜ ë°©í•œ ê°‘ì˜·")) {
+													if (allPlayer.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ëˆ„êµ°ê°€ì˜ ë°©í•œ ê°ë°˜")) {
+														if (allPlayer.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ëˆ„êµ°ê°€ì˜ ë°©í•œ ì‹ ë°œ")) {
 															wear = true;
 														}
 													}
 												}
 											}
-											if (allPlayer.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "³ÃÈ¤ÇÑ ¹Ì¸íÀÇ Çï¸ä")) {
-												if (allPlayer.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "³ÃÈ¤ÇÑ ¹Ì¸íÀÇ °©¿Ê")) {
-													if (allPlayer.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "³ÃÈ¤ÇÑ ¹Ì¸íÀÇ °¢¹İ")) {
-														if (allPlayer.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "³ÃÈ¤ÇÑ ¹Ì¸íÀÇ ½Å¹ß")) {
+											if (allPlayer.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ëƒ‰í˜¹í•œ ë¯¸ëª…ì˜ í—¬ë©§")) {
+												if (allPlayer.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ëƒ‰í˜¹í•œ ë¯¸ëª…ì˜ ê°‘ì˜·")) {
+													if (allPlayer.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ëƒ‰í˜¹í•œ ë¯¸ëª…ì˜ ê°ë°˜")) {
+														if (allPlayer.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "ëƒ‰í˜¹í•œ ë¯¸ëª…ì˜ ì‹ ë°œ")) {
 															wear = true;
 														}
 													}
@@ -247,7 +247,7 @@ public class RefreshServer {
 							if(wear == false) {
 								allPlayer.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 600, 2,true,false,false));
 								allPlayer.addPotionEffect(new PotionEffect(PotionEffectType.HARM, 600, 2,true,false,false));
-								allPlayer.sendMessage(ChatColor.RED + "Ãß¿ö¼­ ¸öÀÌ ¾ó¾îºÙ´Â °Í °°´Ù.");
+								allPlayer.sendMessage(ChatColor.RED + "ì¶”ì›Œì„œ ëª¸ì´ ì–¼ì–´ë¶™ëŠ” ê²ƒ ê°™ë‹¤.");
 							}
 							
 						}
@@ -259,7 +259,7 @@ public class RefreshServer {
 					if(change == 0) {
 						for(Player player : Bukkit.getOnlinePlayers()) {
 							player.sendMessage(ChatColor.BLUE + "=============================");
-							player.sendMessage(ChatColor.GOLD + "¾Æ·¡ °ø½Ä È¨ÆäÀÌÁö¿¡¼­ ¸¹Àº Á¤º¸¸¦ ¾òÀ» ¼ö ÀÖ½À´Ï´Ù!");
+							player.sendMessage(ChatColor.GOLD + "ì•„ë˜ ê³µì‹ í™ˆí˜ì´ì§€ì—ì„œ ë§ì€ ì •ë³´ë¥¼ ì–»ì„ ìˆ˜ ìˆìŠµë‹ˆë‹¤!");
 							try {
 								IChatBaseComponent comp = ChatSerializer.a("{\"text\":\"" + "\",\"extra\":[{\"text\":\"" + ChatColor.LIGHT_PURPLE + "" + ChatColor.UNDERLINE + "https://aile-server.netlify.app/"
 					                    + "\",\"clickEvent\": {\"action\":\"open_url\",\"value\":\"" + "https://aile-server.netlify.app/"
@@ -273,14 +273,14 @@ public class RefreshServer {
 								
 							}
 							player.sendMessage("");
-							player.sendMessage(ChatColor.GOLD + "¸µÅ©¸¦ Å¬¸¯ÇØ ¹Ù·Î ÀÌµ¿!");
+							player.sendMessage(ChatColor.GOLD + "ë§í¬ë¥¼ í´ë¦­í•´ ë°”ë¡œ ì´ë™!");
 							player.sendMessage(ChatColor.BLUE + "=============================");
 						}
 						change = 1;
 					} else if(change == 1) {
 						for(Player player : Bukkit.getOnlinePlayers()) {
 							player.sendMessage(ChatColor.BLUE + "=============================");
-							player.sendMessage(ChatColor.GOLD + "¾Æ·¡ °ø½Ä Ä«Æä¿¡¼­ ¸¹Àº Á¤º¸¸¦ ¾òÀ» ¼ö ÀÖ½À´Ï´Ù!");
+							player.sendMessage(ChatColor.GOLD + "ì•„ë˜ ê³µì‹ ì¹´í˜ì—ì„œ ë§ì€ ì •ë³´ë¥¼ ì–»ì„ ìˆ˜ ìˆìŠµë‹ˆë‹¤!");
 							try {
 								IChatBaseComponent comp = ChatSerializer.a("{\"text\":\"" + "\",\"extra\":[{\"text\":\"" + ChatColor.LIGHT_PURPLE + "" + ChatColor.UNDERLINE + "https://cafe.naver.com/yumehamaserver"
 					                    + "\",\"clickEvent\": {\"action\":\"open_url\",\"value\":\"" + "https://cafe.naver.com/yumehamaserver"
@@ -294,7 +294,7 @@ public class RefreshServer {
 								
 							}
 							player.sendMessage("");
-							player.sendMessage(ChatColor.GOLD + "¸µÅ©¸¦ Å¬¸¯ÇØ ¹Ù·Î ÀÌµ¿!");
+							player.sendMessage(ChatColor.GOLD + "ë§í¬ë¥¼ í´ë¦­í•´ ë°”ë¡œ ì´ë™!");
 							player.sendMessage(ChatColor.BLUE + "=============================");
 						}
 						change = 0;
@@ -312,7 +312,7 @@ public class RefreshServer {
 //								if(map.containsKey(allPlayer.getDisplayName())) {
 //									int num = map.get(allPlayer.getDisplayName());
 //									if(num == (int)(allPlayer.getLocation().getX()*2 + allPlayer.getLocation().getY()*3 + allPlayer.getLocation().getZ()*5)) {
-//										allPlayer.kickPlayer("Àá¼ö ÇÃ·¹ÀÌ¾î·Î ÃßÁ¤µÇ¾î ¼­¹ö¿¡¼­ ³ª°¡Á³½À´Ï´Ù.");
+//										allPlayer.kickPlayer("ì ìˆ˜ í”Œë ˆì´ì–´ë¡œ ì¶”ì •ë˜ì–´ ì„œë²„ì—ì„œ ë‚˜ê°€ì¡ŒìŠµë‹ˆë‹¤.");
 //									}
 //								}
 //							}

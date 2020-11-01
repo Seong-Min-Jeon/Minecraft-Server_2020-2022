@@ -8,73 +8,73 @@ import org.bukkit.potion.PotionEffectType;
 public class PlayerJobBuff {
 
 	public void playerBuff(Player player) {
-		// ∫ª ∆ƒ¿Ã≈Õ
+		// Î≥∏ ÌååÏù¥ÌÑ∞
 		if (player.getInventory().contains(Material.RED_DYE)) {
 			
 		}
-		// ±‚ªÁ
+		// Í∏∞ÏÇ¨
 		if (player.getInventory().contains(Material.GREEN_DYE)) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 100, 0,true,false,false));
 		}
-		// «¡∏ÆΩ∫∆Æ
+		// ÌîÑÎ¶¨Ïä§Ìä∏
 		if (player.getInventory().contains(Material.LAPIS_LAZULI)) {
 			
 		}
-		// ±§¿¸ªÁ
+		// Í¥ëÏ†ÑÏÇ¨
 		if (player.getInventory().contains(Material.CYAN_DYE)) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 60, 0,true,false,false));
 		}
-		// µ•∫Ù
+		// Îç∞Îπå
 		if (player.getInventory().contains(Material.GRAY_DYE)) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1,true,false,false));
 			player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, Integer.MAX_VALUE, 0,true,false,false));
 		}
-		// ø£¡©
+		// ÏóîÏ†§
 		if (player.getInventory().contains(Material.PINK_DYE)) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0,true,false,false));
 			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, Integer.MAX_VALUE, 2,true,false,false));
 		}
-		// ¥Î«‡¿⁄
+		// ÎåÄÌñâÏûê
 		if (player.getInventory().contains(Material.LIME_DYE)) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0,true,false,false));
 		}
-		// ±◊∏≤¿⁄ π´ªÁ
+		// Í∑∏Î¶ºÏûê Î¨¥ÏÇ¨
 		if (player.getInventory().contains(Material.YELLOW_DYE)) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1,true,false,false));
 		}
-		// πˆº≠ƒø
+		// Î≤ÑÏÑúÏª§
 		if (player.getInventory().contains(Material.LIGHT_BLUE_DYE)) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0,true,false,false));
 		}
-		// ±∫¿Œ
+		// Íµ∞Ïù∏
 		if (player.getInventory().contains(Material.MAGENTA_DYE)) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, Integer.MAX_VALUE, 1,true,false,false));
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0,true,false,false));
 			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 80, 3,true,false,false));
 		}
-		// ±◊∏≤ ∏Æ∆€		
+		// Í∑∏Î¶º Î¶¨Ìçº		
 		if (player.getInventory().contains(Material.ORANGE_DYE)) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 60, 1,true,false,false));
 		}
-		// ∏∂¿Œ
+		// ÎßàÏù∏
 		if (player.getInventory().contains(Material.BLUE_DYE)) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 2,true,false,false));
 			player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, Integer.MAX_VALUE, 1,true,false,false));
 			player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, Integer.MAX_VALUE, 0,true,false,false));
 			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, Integer.MAX_VALUE, 1,true,false,false));
 		}
-		// ∆»∂ÛµÚ		
+		// ÌåîÎùºÎîò		
 		if (player.getInventory().contains(Material.BROWN_DYE)) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0,true,false,false));
 			player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, Integer.MAX_VALUE, 2,true,false,false));
 			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, Integer.MAX_VALUE, 3,true,false,false));
 		}
-		// øÎ±‚ªÁ
+		// Ïö©Í∏∞ÏÇ¨
 		if (player.getInventory().contains(Material.BLACK_DYE)) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1,true,false,false));
 			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, Integer.MAX_VALUE, 2,true,false,false));
 		}
-		// ¥Î¥Î¿Â
+		// ÎåÄÎåÄÏû•
 		if (player.getInventory().contains(Material.INK_SAC)) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, Integer.MAX_VALUE, 2,true,false,false));
 			player.addPotionEffect(new PotionEffect(PotionEffectType.WATER_BREATHING, Integer.MAX_VALUE, 1,true,false,false));

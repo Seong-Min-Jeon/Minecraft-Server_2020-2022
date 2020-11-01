@@ -167,9 +167,9 @@ public class MainQuest {
 	public void main1(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 1Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 1ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'¿ö±×´Ò ¼¶ÀÇ ºñ¹Ğ' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ì›Œê·¸ë‹ ì„¬ì˜ ë¹„ë°€' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -183,9 +183,9 @@ public class MainQuest {
 	public void main2(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 2Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 2ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'¼ö·ÃÀÇ ½ÃÀÛ' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ìˆ˜ë ¨ì˜ ì‹œì‘' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -199,9 +199,9 @@ public class MainQuest {
 	public void main3(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 3Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 3ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'¿¡ÀÏ ¶¥À¸·Î' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ì—ì¼ ë•…ìœ¼ë¡œ' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -215,9 +215,9 @@ public class MainQuest {
 	public void main4(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 4Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 4ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'ÃÌÀåÀÇ ºÎÅ¹1' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ì´Œì¥ì˜ ë¶€íƒ1' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -231,9 +231,9 @@ public class MainQuest {
 	public void main5(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 5Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 5ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'ÃÌÀåÀÇ ºÎÅ¹2' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ì´Œì¥ì˜ ë¶€íƒ2' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -247,9 +247,9 @@ public class MainQuest {
 	public void main6(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 6Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 6ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'ÃÌÀåÀÇ ºÎÅ¹3' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ì´Œì¥ì˜ ë¶€íƒ3' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -263,9 +263,9 @@ public class MainQuest {
 	public void main7(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 7Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 7ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'Àü¼³ÀÇ ½ÃÀÛ' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ì „ì„¤ì˜ ì‹œì‘' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -279,9 +279,9 @@ public class MainQuest {
 	public void main8(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 8Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 8ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'ÆÄ¸£È¦·ĞÀÇ ¿ª»ç' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'íŒŒë¥´í™€ë¡ ì˜ ì—­ì‚¬' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -295,9 +295,9 @@ public class MainQuest {
 	public void main9(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 9Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 9ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'¾ÕÀ¸·Î ³ª¾Æ°¡±â À§ÇÑ ¿©Á¤' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ì•ìœ¼ë¡œ ë‚˜ì•„ê°€ê¸° ìœ„í•œ ì—¬ì •' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -311,9 +311,9 @@ public class MainQuest {
 	public void main10(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 10Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 10ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'µî´ëÁö±â ½ÃÇè' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ë“±ëŒ€ì§€ê¸° ì‹œí—˜' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -327,9 +327,9 @@ public class MainQuest {
 	public void main11(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 11Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 11ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'µî´ë¿¡ ¼û°ÜÁø ºñ¹Ğ' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ë“±ëŒ€ì— ìˆ¨ê²¨ì§„ ë¹„ë°€' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -343,9 +343,9 @@ public class MainQuest {
 	public void main12(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 12Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 12ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'µî´ë¸¦ ¹àÈ÷´Â Èû' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ë“±ëŒ€ë¥¼ ë°íˆëŠ” í˜' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -359,9 +359,9 @@ public class MainQuest {
 	public void main13(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 13Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 13ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'½Ãµå ±¤»êÀ¸·Î °¡´Â ±æ' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ì‹œë“œ ê´‘ì‚°ìœ¼ë¡œ ê°€ëŠ” ê¸¸' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -375,9 +375,9 @@ public class MainQuest {
 	public void main14(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 14Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 14ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'½Ãµå ±¤»ê' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ì‹œë“œ ê´‘ì‚°' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -391,9 +391,9 @@ public class MainQuest {
 	public void main15(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 15Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 15ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'Æ÷º¸¸£ÀÇ ¹«±â' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'í¬ë³´ë¥´ì˜ ë¬´ê¸°' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -407,9 +407,9 @@ public class MainQuest {
 	public void main16(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 16Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 16ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'¹ÌÇ£¸£À¯ ¼º' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ë¯¸í‘€ë¥´ìœ  ì„±' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -423,9 +423,9 @@ public class MainQuest {
 	public void main17(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 17Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 17ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'ÀººûÀÇ ¿µ¿ª' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ì€ë¹›ì˜ ì˜ì—­' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -439,9 +439,9 @@ public class MainQuest {
 	public void main18(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 18Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 18ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'Áø½ÇÀ» ¾Æ´Â ÀÚ1' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ì§„ì‹¤ì„ ì•„ëŠ” ì1' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -455,9 +455,9 @@ public class MainQuest {
 	public void main19(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 19Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 19ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'Áø½ÇÀ» ¾Æ´Â ÀÚ2' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ì§„ì‹¤ì„ ì•„ëŠ” ì2' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -471,9 +471,9 @@ public class MainQuest {
 	public void main20(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 20Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 20ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'Áø½ÇÀ» ¾Æ´Â ÀÚ3' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ì§„ì‹¤ì„ ì•„ëŠ” ì3' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -487,9 +487,9 @@ public class MainQuest {
 	public void main21(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 21Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 21ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'Áø½ÇÀ» ¾Æ´Â ÀÚ6' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ì§„ì‹¤ì„ ì•„ëŠ” ì6' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -503,9 +503,9 @@ public class MainQuest {
 	public void main22(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 22Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 22ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'¾Æ¶õ¸ğ¾î' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ì•„ë€ëª¨ì–´' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -519,9 +519,9 @@ public class MainQuest {
 	public void main23(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 23Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 23ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'´øÀü Å½»ö' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ë˜ì „ íƒìƒ‰' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -535,9 +535,9 @@ public class MainQuest {
 	public void main24(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 24Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 24ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'Ä«·ç ´øÀü' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ì¹´ë£¨ ë˜ì „' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -551,9 +551,9 @@ public class MainQuest {
 	public void main25(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 25Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 25ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'¼³¿øÀÇ º¸¹°1' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ì„¤ì›ì˜ ë³´ë¬¼1' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -567,9 +567,9 @@ public class MainQuest {
 	public void main26(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 26Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 26ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'¼³¿øÀÇ º¸¹°2' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ì„¤ì›ì˜ ë³´ë¬¼2' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -583,9 +583,9 @@ public class MainQuest {
 	public void main27(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 27Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 27ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'»õ·Î¿î ¸¸³²' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ìƒˆë¡œìš´ ë§Œë‚¨' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -599,9 +599,9 @@ public class MainQuest {
 	public void main28(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 28Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 28ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'´ËÁöÀÇ ¸¶½Å¿Õ' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ëŠªì§€ì˜ ë§ˆì‹ ì™•' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -615,9 +615,9 @@ public class MainQuest {
 	public void main29(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 29Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 29ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'Á×À½ÀÇ Å¾' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ì£½ìŒì˜ íƒ‘' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -631,9 +631,9 @@ public class MainQuest {
 	public void main30(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 30Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 30ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'µÇ»ì¾Æ³­ ÇØ°ñ' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ë˜ì‚´ì•„ë‚œ í•´ê³¨' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -647,9 +647,9 @@ public class MainQuest {
 	public void main31(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 31Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 31ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'¿µÈ¥ ¿äÁ¤ °¡·ç' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ì˜í˜¼ ìš”ì • ê°€ë£¨' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -663,9 +663,9 @@ public class MainQuest {
 	public void main32(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 32Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 32ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'³ÊÀÇ ±ÙÀ°À» ¸Ô°í ½Í¾î' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ë„ˆì˜ ê·¼ìœ¡ì„ ë¨¹ê³  ì‹¶ì–´' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -679,9 +679,9 @@ public class MainQuest {
 	public void main33(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 33Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 33ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'±×´ë´Â »¡°£¸ğÀÚ' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ê·¸ëŒ€ëŠ” ë¹¨ê°„ëª¨ì' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -695,9 +695,9 @@ public class MainQuest {
 	public void main34(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 34Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 34ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'¶Ç´Ù½Ã »¡°£¸ğÀÚ' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ë˜ë‹¤ì‹œ ë¹¨ê°„ëª¨ì' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -711,9 +711,9 @@ public class MainQuest {
 	public void main35(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 35Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 35ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'¸¶¹ıÅ¾À» ÇâÇØ' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ë§ˆë²•íƒ‘ì„ í–¥í•´' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -727,9 +727,9 @@ public class MainQuest {
 	public void main36(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 36Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 36ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'ÀÌ°ÍÀÌ Æ÷º¸¸£ ¿Õ?' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ì´ê²ƒì´ í¬ë³´ë¥´ ì™•?' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -743,9 +743,9 @@ public class MainQuest {
 	public void main37(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 37Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 37ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'´©°¡ ¿ì´Â ¼Ò¸®¸¦ ³»¾ú´Â°¡' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ëˆ„ê°€ ìš°ëŠ” ì†Œë¦¬ë¥¼ ë‚´ì—ˆëŠ”ê°€' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -759,9 +759,9 @@ public class MainQuest {
 	public void main38(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 38Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 38ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'´©°¡ ¶Ç ¿ì´Â ¼Ò¸®¸¦ ³»¾ú´Â°¡' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ëˆ„ê°€ ë˜ ìš°ëŠ” ì†Œë¦¬ë¥¼ ë‚´ì—ˆëŠ”ê°€' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -775,9 +775,9 @@ public class MainQuest {
 	public void main39(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 39Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 39ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'³×ºñÀÇ Èû' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ë„¤ë¹„ì˜ í˜' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -791,9 +791,9 @@ public class MainQuest {
 	public void main40(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 40Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 40ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'¾Æ¶óÅ©³×ÀÇ ÀúÁÖ' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ì•„ë¼í¬ë„¤ì˜ ì €ì£¼' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -807,9 +807,9 @@ public class MainQuest {
 	public void main41(Player player) {
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¸ŞÀÎÄù½ºÆ® 41Àå");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ë©”ì¸í€˜ìŠ¤íŠ¸ 41ì¥");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'°ËÀº Èå¸§ÀÇ Èû' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ê²€ì€ íë¦„ì˜ í˜' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);

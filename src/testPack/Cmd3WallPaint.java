@@ -36,55 +36,55 @@ public class Cmd3WallPaint implements CommandExecutor {
 			}
 			if(cmd.getName().equalsIgnoreCase("WallPaint")) {
 				if(args.length == 0) {
-					player.sendMessage(ChatColor.RED + "¹üÀ§ /¹Ğµµ/fromºí·°¸í/toºí·°¸í À» ÀÔ·ÂÇØ¾ßÁÒ;; »ç¿ë¹ıµµ ¸ğ¸£½Ê´Ï±î??");
+					player.sendMessage(ChatColor.RED + "ë²”ìœ„ /ë°€ë„/fromë¸”ëŸ­ëª…/toë¸”ëŸ­ëª… ì„ ì…ë ¥í•´ì•¼ì£ ;; ì‚¬ìš©ë²•ë„ ëª¨ë¥´ì‹­ë‹ˆê¹Œ??");
 					return true;
 				}
 				try { 
 					if(args[0].equalsIgnoreCase("help")) {
-						player.sendMessage(ChatColor.GREEN + "¹üÀ§ /¹Ğµµ/fromºí·°¸í/toºí·°¸íÀ» ÀÔ·ÂÇÏ¼¼¿ä(¹Ğµµ 100À» ¼±ÅÃÇÏ½Ã¸é ¹üÀ§¿¡ ÇØ´çÇÏ´Â Àü¿ª¿¡ È¿°ú°¡ Àû¿ëµË´Ï´Ù.)");
+						player.sendMessage(ChatColor.GREEN + "ë²”ìœ„ /ë°€ë„/fromë¸”ëŸ­ëª…/toë¸”ëŸ­ëª…ì„ ì…ë ¥í•˜ì„¸ìš”(ë°€ë„ 100ì„ ì„ íƒí•˜ì‹œë©´ ë²”ìœ„ì— í•´ë‹¹í•˜ëŠ” ì „ì—­ì— íš¨ê³¼ê°€ ì ìš©ë©ë‹ˆë‹¤.)");
 						return true;
 					}
 					r = Integer.parseInt(args[0]);
 				} catch(Exception e) {
-					player.sendMessage(ChatColor.RED + "¾Æ´µ µÎ¹øÂ°´Â Á¤¼ö¸¦ ³Ö¾î¾ßÁö ÀÌ »ç¶÷¾Æ");
+					player.sendMessage(ChatColor.RED + "ì•„ë‰˜ ë‘ë²ˆì§¸ëŠ” ì •ìˆ˜ë¥¼ ë„£ì–´ì•¼ì§€ ì´ ì‚¬ëŒì•„");
 					return true;
 				}
 				try { 				
 					num = Integer.parseInt(args[1]);
 					if(num>100) {
-						player.sendMessage(ChatColor.RED + "100ÀÌ»óÀº ¿å½ÉÀÌ Å®´Ï´Ù");
+						player.sendMessage(ChatColor.RED + "100ì´ìƒì€ ìš•ì‹¬ì´ í½ë‹ˆë‹¤");
 						return true;
 					}
 				} catch(Exception e) {
-					player.sendMessage(ChatColor.RED + "¹Ğµµ°¡ Á¤¼ö¿©¾ßÁÒ ¾ÆÁÒ¾¾;;");
+					player.sendMessage(ChatColor.RED + "ë°€ë„ê°€ ì •ìˆ˜ì—¬ì•¼ì£  ì•„ì£ ì”¨;;");
 					return true;
 				}
 				try { 
 					String name = args[2].toUpperCase();
 					if(name.equalsIgnoreCase("yumehama")) {
-						player.sendMessage(ChatColor.AQUA + "¾È³ç ³ª¸¦ ¼ÒÈ¯ÇÏ·Á´Â °Å´Ï?");
-						player.sendMessage(ChatColor.AQUA + "³»°¡ ¼±¹°À» ÇÏ³ª ÁÙ²²");
-						player.sendMessage(ChatColor.AQUA + "»ç½Ç °ÅÁş¸»ÀÌ¾ß");
+						player.sendMessage(ChatColor.AQUA + "ì•ˆë…• ë‚˜ë¥¼ ì†Œí™˜í•˜ë ¤ëŠ” ê±°ë‹ˆ?");
+						player.sendMessage(ChatColor.AQUA + "ë‚´ê°€ ì„ ë¬¼ì„ í•˜ë‚˜ ì¤„ê»˜");
+						player.sendMessage(ChatColor.AQUA + "ì‚¬ì‹¤ ê±°ì§“ë§ì´ì•¼");
 						return true;
 					} else {						
 						mat = Material.valueOf(name);
 					}					
 				} catch(Exception e) {
-					player.sendMessage(ChatColor.RED + "fromºí·°¸í ¿À·ù: °ÔÀÓ¿¡ ÀÖ´Â ÀÌ¸§À» ½áÁÖ½ÃÁÒ(¿¹: orange_stained_glass_pane)");
+					player.sendMessage(ChatColor.RED + "fromë¸”ëŸ­ëª… ì˜¤ë¥˜: ê²Œì„ì— ìˆëŠ” ì´ë¦„ì„ ì¨ì£¼ì‹œì£ (ì˜ˆ: orange_stained_glass_pane)");
 					return true;
 				}
 				try { 
 					String name = args[3].toUpperCase();
 					if(name.equalsIgnoreCase("YUMEHAMA")) {
-						player.sendMessage(ChatColor.AQUA + "¾È³ç ³ª¸¦ ¼ÒÈ¯ÇÏ·Á´Â °Å´Ï?");
-						player.sendMessage(ChatColor.AQUA + "³»°¡ ¼±¹°À» ÇÏ³ª ÁÙ²²");
-						player.sendMessage(ChatColor.AQUA + "»ç½Ç °ÅÁş¸»ÀÌ¾ß");
+						player.sendMessage(ChatColor.AQUA + "ì•ˆë…• ë‚˜ë¥¼ ì†Œí™˜í•˜ë ¤ëŠ” ê±°ë‹ˆ?");
+						player.sendMessage(ChatColor.AQUA + "ë‚´ê°€ ì„ ë¬¼ì„ í•˜ë‚˜ ì¤„ê»˜");
+						player.sendMessage(ChatColor.AQUA + "ì‚¬ì‹¤ ê±°ì§“ë§ì´ì•¼");
 						return true;
 					} else {						
 						mat2 = Material.valueOf(name);
 					}					
 				} catch(Exception e) {
-					player.sendMessage(ChatColor.RED + "toºí·°¸í ¿À·ù: °ÔÀÓ¿¡ ÀÖ´Â ÀÌ¸§À» ½áÁÖ½ÃÁÒ(¿¹: orange_stained_glass_pane)");
+					player.sendMessage(ChatColor.RED + "toë¸”ëŸ­ëª… ì˜¤ë¥˜: ê²Œì„ì— ìˆëŠ” ì´ë¦„ì„ ì¨ì£¼ì‹œì£ (ì˜ˆ: orange_stained_glass_pane)");
 					return true;
 				}
 				try {
@@ -102,7 +102,7 @@ public class Cmd3WallPaint implements CommandExecutor {
 				        }
 				    }
 				} catch(Exception e) {
-					player.sendMessage(ChatColor.RED + "¾Ë ¼ö ¾ø´Â ¿À·ù");
+					player.sendMessage(ChatColor.RED + "ì•Œ ìˆ˜ ì—†ëŠ” ì˜¤ë¥˜");
 					return true;
 				}
 			}

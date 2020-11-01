@@ -52,112 +52,112 @@ public class ShopperManager {
 		addNPCPacket(player, npc11_2());
 	}
 	
-	// ÀºÇà
+	// ì€í–‰
 	public EntityPlayer npc1_1() {
 		Location loc = new Location(Bukkit.getWorld("world"), -1822, 70, 3019, 90, 0);
 		
-		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "ÀºÇà¿ø");
+		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "ì€í–‰ì›");
 		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
 		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
 		String[] name = getSkin("0r4c1e");
 		if(name == null) {
-			System.out.println("ÀºÇà¿ø È®ÀÎ ºÒ°¡");
+			System.out.println("ì€í–‰ì› í™•ì¸ ë¶ˆê°€");
 		} else {
 			gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
 		}
 		return npc;
 	}
 	
-	// ³óºÎ
+	// ë†ë¶€
 	public EntityPlayer npc2_1() {
 		Location loc = new Location(Bukkit.getWorld("world"), -1856, 70, 3027, 0, 0);
 		
-		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "³óºÎ");
+		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "ë†ë¶€");
 		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
 		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
 		String[] name = getSkin("00T_");
 		if(name == null) {
-			System.out.println("³óºÎ È®ÀÎ ºÒ°¡");
+			System.out.println("ë†ë¶€ í™•ì¸ ë¶ˆê°€");
 		} else {
 			gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
 		}
 		return npc;
 	}
 	
-	// »ç¼­
+	// ì‚¬ì„œ
 	public EntityPlayer npc3_1() {
 		Location loc = new Location(Bukkit.getWorld("world"), -1827, 70, 3007, 0, 0);
 		
-		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "»ç¼­");
+		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "ì‚¬ì„œ");
 		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
 		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
 		String[] name = getSkin("Gretukas");
 		if(name == null) {
-			System.out.println("»ç¼­ È®ÀÎ ºÒ°¡");
+			System.out.println("ì‚¬ì„œ í™•ì¸ ë¶ˆê°€");
 		} else {
 			gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
 		}
 		return npc;
 	}
 	
-	// ¼÷¹Ú¾÷ÀÚ
+	// ìˆ™ë°•ì—…ì
 	public EntityPlayer npc4_1() {
 		Location loc = new Location(Bukkit.getWorld("world"), -1839, 76, 3053, 0, 0);
 		
-		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "¼÷¹Ú¾÷ÀÚ");
+		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "ìˆ™ë°•ì—…ì");
 		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
 		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
 		String[] name = getSkin("0j7");
 		if(name == null) {
-			System.out.println("¼÷¹Ú¾÷ÀÚ È®ÀÎ ºÒ°¡");
+			System.out.println("ìˆ™ë°•ì—…ì í™•ì¸ ë¶ˆê°€");
 		} else {
 			gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
 		}
 		return npc;
 	}
 	
-	// ½ºÅ©·Ñ »óÀÎ
+	// ìŠ¤í¬ë¡¤ ìƒì¸
 	public EntityPlayer npc5_1() {
 		Location loc = new Location(Bukkit.getWorld("world"), -1836, 70, 3002, 0, 0);
 		
-		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "½ºÅ©·Ñ »óÀÎ");
+		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "ìŠ¤í¬ë¡¤ ìƒì¸");
 		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
 		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
 		String[] name = getSkin("_Image");
 		if(name == null) {
-			System.out.println("½ºÅ©·Ñ »óÀÎ È®ÀÎ ºÒ°¡");
+			System.out.println("ìŠ¤í¬ë¡¤ ìƒì¸ í™•ì¸ ë¶ˆê°€");
 		} else {
 			gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
 		}
 		return npc;
 	}
 	
-	// Æ¯¼ö »óÀÎ 1
+	// íŠ¹ìˆ˜ ìƒì¸ 1
 	public EntityPlayer npc6_1() {
 		Location loc = new Location(Bukkit.getWorld("world"), 3693, 44, 3713, 0, 0);
 		
-		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "»óÀÎ");
+		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "ìƒì¸");
 		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
 		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
 		String[] name = getSkin("ButtonPlayZ");
 		if(name == null) {
-			System.out.println("Æ¯¼ö »óÀÎ1 È®ÀÎ ºÒ°¡");
+			System.out.println("íŠ¹ìˆ˜ ìƒì¸1 í™•ì¸ ë¶ˆê°€");
 		} else {
 			gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
 		}
 		return npc;
 	}
 
-	// Æ¯¼ö »óÀÎ 2
+	// íŠ¹ìˆ˜ ìƒì¸ 2
 	public EntityPlayer npc7_1() {
 		Location loc = new Location(Bukkit.getWorld("world"), 3742, 41, 3702, 0, 0);
 
-		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "»óÀÎ");
+		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "ìƒì¸");
 		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
 		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
 		String[] name = getSkin("__ZFox__");
 		if (name == null) {
-			System.out.println("Æ¯¼ö »óÀÎ2 È®ÀÎ ºÒ°¡");
+			System.out.println("íŠ¹ìˆ˜ ìƒì¸2 í™•ì¸ ë¶ˆê°€");
 		} else {
 			gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
 		}
@@ -167,28 +167,28 @@ public class ShopperManager {
 	public EntityPlayer npc7_2() {
 		Location loc = new Location(Bukkit.getWorld("world"), 3750, 41, 3684, 0, 0);
 
-		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "»óÀÎ");
+		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "ìƒì¸");
 		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
 		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
 		String[] name = getSkin("__ZFox__");
 		if (name == null) {
-			System.out.println("Æ¯¼ö »óÀÎ2 È®ÀÎ ºÒ°¡");
+			System.out.println("íŠ¹ìˆ˜ ìƒì¸2 í™•ì¸ ë¶ˆê°€");
 		} else {
 			gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
 		}
 		return npc;
 	}
 
-	// ´ëÀåÀåÀÌ
+	// ëŒ€ì¥ì¥ì´
 	public EntityPlayer npc8_1() {
 		Location loc = new Location(Bukkit.getWorld("world"), -1844, 70, 3007, 0, 0);
 
-		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "´ëÀåÀåÀÌ");
+		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "ëŒ€ì¥ì¥ì´");
 		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
 		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
 		String[] name = getSkin("_Frenk");
 		if (name == null) {
-			System.out.println("´ëÀåÀåÀÌ È®ÀÎ ºÒ°¡");
+			System.out.println("ëŒ€ì¥ì¥ì´ í™•ì¸ ë¶ˆê°€");
 		} else {
 			gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
 		}
@@ -198,60 +198,60 @@ public class ShopperManager {
 	public EntityPlayer npc8_2() {
 		Location loc = new Location(Bukkit.getWorld("world"), -1847, 70, 3006, 0, 0);
 
-		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "´ëÀåÀåÀÌ");
+		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "ëŒ€ì¥ì¥ì´");
 		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
 		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
 		String[] name = getSkin("_Frenk");
 		if (name == null) {
-			System.out.println("´ëÀåÀåÀÌ È®ÀÎ ºÒ°¡");
+			System.out.println("ëŒ€ì¥ì¥ì´ í™•ì¸ ë¶ˆê°€");
 		} else {
 			gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
 		}
 		return npc;
 	}
 
-	// À½½Ä »óÀÎ
+	// ìŒì‹ ìƒì¸
 	public EntityPlayer npc9_1() {
 		Location loc = new Location(Bukkit.getWorld("world"), -1856, 70, 3021, 0, 0);
 
-		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "À½½Ä »óÀÎ");
+		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "ìŒì‹ ìƒì¸");
 		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
 		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
 		String[] name = getSkin("Xemna");
 		if (name == null) {
-			System.out.println("À½½Ä »óÀÎ È®ÀÎ ºÒ°¡");
+			System.out.println("ìŒì‹ ìƒì¸ í™•ì¸ ë¶ˆê°€");
 		} else {
 			gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
 		}
 		return npc;
 	}
 	
-	// Á»ºñ
+	// ì¢€ë¹„
 	public EntityPlayer npc10_1() {
 		Location loc = new Location(Bukkit.getWorld("world"), -1897, 53, 3075, 0, 0);
 
-		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "»óÀÎ");
+		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "ìƒì¸");
 		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
 		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
 		String[] name = getSkin("iPadZombie1");
 		if (name == null) {
-			System.out.println("»óÀÎ È®ÀÎ ºÒ°¡");
+			System.out.println("ìƒì¸ í™•ì¸ ë¶ˆê°€");
 		} else {
 			gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
 		}
 		return npc;
 	}
 	
-	// Æ¯¼ö »óÀÎ 3
+	// íŠ¹ìˆ˜ ìƒì¸ 3
 	public EntityPlayer npc11_1() {
 		Location loc = new Location(Bukkit.getWorld("world"), -1935, 52, 3010, 0, 0);
 
-		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "»óÀÎ");
+		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "ìƒì¸");
 		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
 		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
 		String[] name = getSkin("TrashPc");
 		if (name == null) {
-			System.out.println("Æ¯¼ö »óÀÎ3 È®ÀÎ ºÒ°¡");
+			System.out.println("íŠ¹ìˆ˜ ìƒì¸3 í™•ì¸ ë¶ˆê°€");
 		} else {
 			gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
 		}
@@ -261,12 +261,12 @@ public class ShopperManager {
 	public EntityPlayer npc11_2() {
 		Location loc = new Location(Bukkit.getWorld("world"), -1884, 51, 2712, 0, 0);
 
-		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "»óÀÎ");
+		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "ìƒì¸");
 		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
 		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
 		String[] name = getSkin("TrashPc");
 		if (name == null) {
-			System.out.println("Æ¯¼ö »óÀÎ3 È®ÀÎ ºÒ°¡");
+			System.out.println("íŠ¹ìˆ˜ ìƒì¸3 í™•ì¸ ë¶ˆê°€");
 		} else {
 			gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
 		}
@@ -274,7 +274,7 @@ public class ShopperManager {
 	}
 	
 	
-	// ¸Ş¼Òµå
+	// ë©”ì†Œë“œ
 	private String[] getSkin(String name) {
 		try {
 			URL url = new URL("https://api.mojang.com/users/profiles/minecraft/" + name);

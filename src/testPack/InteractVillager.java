@@ -37,7 +37,7 @@ public class InteractVillager {
 			if(((Villager)ent).getCanPickupItems() == false) {
 				return false;
 			} 
-			player.sendMessage(ChatColor.RED + "ÀÎº¥Åä¸®¿¡ ºóÄ­ÀÌ ¾ø½À´Ï´Ù.");
+			player.sendMessage(ChatColor.RED + "ì¸ë²¤í† ë¦¬ì— ë¹ˆì¹¸ì´ ì—†ìŠµë‹ˆë‹¤.");
 			return true;
 		}
 		
@@ -45,19 +45,19 @@ public class InteractVillager {
 	}
 	
 	public boolean vil0() {
-		//Àü¼³ÀÇ ½ÃÀÛ -1494 2037  -1491 2033
+		//ì „ì„¤ì˜ ì‹œì‘ -1494 2037  -1491 2033
 		if(loc.getX() <= -1489 && loc.getZ() <= 2037 
 				&& loc.getX() >= -1495 && loc.getZ() >= 2032) {
 			QuestBoard cb = new QuestBoard();
 			try {
-				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Àü¼³ÀÇ ½ÃÀÛ===")) {
+				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì „ì„¤ì˜ ì‹œì‘===")) {
 					int qNum = cb.getNum(player);
 					cb.mq7(player, qNum+1);		
 				} else {
-					player.sendMessage(ChatColor.GRAY + "ºû³ª´Â °ËÀÌ ÀÖ´Ù.");
+					player.sendMessage(ChatColor.GRAY + "ë¹›ë‚˜ëŠ” ê²€ì´ ìˆë‹¤.");
 				}
 			} catch(Exception e) {
-				player.sendMessage(ChatColor.GRAY + "ºû³ª´Â °ËÀÌ ÀÖ´Ù.");
+				player.sendMessage(ChatColor.GRAY + "ë¹›ë‚˜ëŠ” ê²€ì´ ìˆë‹¤.");
 			}
 			return true;
 		}
@@ -65,29 +65,29 @@ public class InteractVillager {
 	}
 	
 	public boolean vil1() {
-		//Æ¼¸£ °æºñº´ -680 51 1956  -672 46 1943
+		//í‹°ë¥´ ê²½ë¹„ë³‘ -680 51 1956  -672 46 1943
 		if(loc.getX() <= -672 && loc.getZ() <= 1956 
 				&& loc.getX() >= -680 && loc.getZ() >= 1943) {
-			player.sendMessage("Æ¼¸£ °æºñº´: ÀÌ°÷Àº Æ¼¸£¿ä. ³»°¡ ÁöÄÑ¾ßÇÒ °÷ÀÌÁö.");
+			player.sendMessage("í‹°ë¥´ ê²½ë¹„ë³‘: ì´ê³³ì€ í‹°ë¥´ìš”. ë‚´ê°€ ì§€ì¼œì•¼í•  ê³³ì´ì§€.");
 			return true;
 		}
 		return false;
 	}
 
 	public boolean vil2() {
-		//¿¡ÀÏ¶¥À¸·Î Äù½ºÆ® -1875 2690 -1863 2702
+		//ì—ì¼ë•…ìœ¼ë¡œ í€˜ìŠ¤íŠ¸ -1875 2690 -1863 2702
 		if(loc.getX() <= -1863 && loc.getZ() <= 2702 
 				&& loc.getX() >= -1875 && loc.getZ() >= 2690) {
 			QuestBoard cb = new QuestBoard();
 			try {
-				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¿¡ÀÏ ¶¥À¸·Î===")) {
+				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì—ì¼ ë•…ìœ¼ë¡œ===")) {
 					int qNum = cb.getNum(player);
 					cb.mq3(player, qNum+1);		
 				} else {
-					player.sendMessage("Æ÷¸£°£ ÃÌÀå: ÇãÇã.. ¾î¼­¿À½Ã°Ô.");
+					player.sendMessage("í¬ë¥´ê°„ ì´Œì¥: í—ˆí—ˆ.. ì–´ì„œì˜¤ì‹œê²Œ.");
 				}
 			} catch(Exception e) {
-				player.sendMessage("Æ÷¸£°£ ÃÌÀå: ÇãÇã.. ¾î¼­¿À½Ã°Ô.");
+				player.sendMessage("í¬ë¥´ê°„ ì´Œì¥: í—ˆí—ˆ.. ì–´ì„œì˜¤ì‹œê²Œ.");
 			}
 			return true;
 		}
@@ -95,15 +95,15 @@ public class InteractVillager {
 	}
 	
 	public boolean vil3() {
-		//½Ãµå ±¤»ê ±¤ºÎ -1152 43 1727  -1169 44 1742
+		//ì‹œë“œ ê´‘ì‚° ê´‘ë¶€ -1152 43 1727  -1169 44 1742
 		if(loc.getX() <= -1152 && loc.getZ() <= 1742 
 				&& loc.getX() >= -1169 && loc.getZ() >= 1727) {
 			QuestBoard cb = new QuestBoard();
 			try {
-				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===½Ãµå ±¤»ê===")) {
+				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì‹œë“œ ê´‘ì‚°===")) {
     				int qNum = cb.getNum(player);
     				cb.mq14(player, qNum + 1);
-    			} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Æ÷º¸¸£ÀÇ ¹«±â2===")) {
+    			} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===í¬ë³´ë¥´ì˜ ë¬´ê¸°2===")) {
 					Location chestLoc = new Location(player.getWorld(), -1833, 92, 3036);
 					Block block = chestLoc.getBlock();
 					Chest chest = (Chest) block.getState();
@@ -112,19 +112,19 @@ public class InteractVillager {
 						int qNum = cb.getNum(player);
         				cb.mq15_1(player, qNum + 1);
 					} else {
-						player.sendMessage("±¤ºÎ: ¹°°ÇÀº ¾îµğ¿¡ ÀÖ´Â°¡?");
+						player.sendMessage("ê´‘ë¶€: ë¬¼ê±´ì€ ì–´ë””ì— ìˆëŠ”ê°€?");
 					}
-    			} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Áø½ÇÀ» ¾Æ´Â ÀÚ3===")) {
+    			} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì§„ì‹¤ì„ ì•„ëŠ” ì3===")) {
     				int qNum = cb.getNum(player);
     				cb.mq20(player, qNum + 1);
-    			} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Áø½ÇÀ» ¾Æ´Â ÀÚ5===")) {
+    			} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì§„ì‹¤ì„ ì•„ëŠ” ì5===")) {
     				int qNum = cb.getNum(player);
     				cb.mq20_2(player, qNum + 1);
     			} else {
-    				player.sendMessage("±¤ºÎ: ÀÌ°÷¿¡´Â ÀÌÁ¦ ³²Àº°Ô ¾ø´Ù¸¸ ÇÊ¿äÇÏ´Ù¸é µÑ·¯º¸½Ã°Ô.");
+    				player.sendMessage("ê´‘ë¶€: ì´ê³³ì—ëŠ” ì´ì œ ë‚¨ì€ê²Œ ì—†ë‹¤ë§Œ í•„ìš”í•˜ë‹¤ë©´ ë‘˜ëŸ¬ë³´ì‹œê²Œ.");
     			}
 			} catch(Exception e) {
-				player.sendMessage("±¤ºÎ: ÀÌ°÷¿¡´Â ÀÌÁ¦ ³²Àº°Ô ¾ø´Ù¸¸ ÇÊ¿äÇÏ´Ù¸é µÑ·¯º¸½Ã°Ô.");
+				player.sendMessage("ê´‘ë¶€: ì´ê³³ì—ëŠ” ì´ì œ ë‚¨ì€ê²Œ ì—†ë‹¤ë§Œ í•„ìš”í•˜ë‹¤ë©´ ë‘˜ëŸ¬ë³´ì‹œê²Œ.");
 			}
 			return true;
 		}
@@ -132,19 +132,19 @@ public class InteractVillager {
 	}
 	
 	public boolean vil4() {
-		//¹ÌÇ£¸£À¯ ½Ä·®Ã¢°í -862 58 1370  -879 69 1389
+		//ë¯¸í‘€ë¥´ìœ  ì‹ëŸ‰ì°½ê³  -862 58 1370  -879 69 1389
 		if(loc.getX() <= -862 && loc.getZ() <= 1389 
 				&& loc.getX() >= -879 && loc.getZ() >= 1370) {
 			QuestBoard cb = new QuestBoard();
 			try {
-				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¹ÌÇ£¸£À¯ ¼º===")) {
+				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë¯¸í‘€ë¥´ìœ  ì„±===")) {
 					int qNum = cb.getNum(player);
 					cb.mq16(player, qNum+1);		
 				} else {
-					player.sendMessage("ºÒ¾ÈÇÑ ÁÖ¹Î: ³¯ Á» »ì·ÁÁà");
+					player.sendMessage("ë¶ˆì•ˆí•œ ì£¼ë¯¼: ë‚  ì¢€ ì‚´ë ¤ì¤˜");
 				}
 			} catch(Exception e) {
-				player.sendMessage("ºÒ¾ÈÇÑ ÁÖ¹Î: ³¯ Á» »ì·ÁÁà");
+				player.sendMessage("ë¶ˆì•ˆí•œ ì£¼ë¯¼: ë‚  ì¢€ ì‚´ë ¤ì¤˜");
 			}
 			return true;
 		}
@@ -152,12 +152,12 @@ public class InteractVillager {
 	}
 	
 	public boolean vil5() {
-		//ÄÜ³ë·Î °¡´Â ½ä¸Å -1963 50 463  -1978 57 452
+		//ì½˜ë…¸ë¡œ ê°€ëŠ” ì°ë§¤ -1963 50 463  -1978 57 452
 		if(loc.getX() <= -1963 && loc.getZ() <= 463  
 				&& loc.getX() >= -1978 && loc.getZ() >= 452) {
 			QuestBoard cb = new QuestBoard();
 			try {
-				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¾Æ¶õ¸ğ¾î===")) {
+				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì•„ë€ëª¨ì–´===")) {
 					int qNum = cb.getNum(player);
 					cb.mq22(player, qNum+1);		
 				} else {
@@ -166,11 +166,11 @@ public class InteractVillager {
 			} catch(Exception e) {
 				
 			}
-			player.sendMessage("½ä¸Å ¾ÆÀú¾¾: ÈåÀ¿.. °£´Ù¾Ñ!");
+			player.sendMessage("ì°ë§¤ ì•„ì €ì”¨: íì.. ê°„ë‹¤ì•—!");
 			player.teleport(new Location(player.getWorld(),-2417,52,489));
 			ItemStack item = new ItemStack(Material.MAGMA_CREAM);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.RED + "¸¶³ª¾øÀ½");
+			itemIm.setDisplayName(ChatColor.RED + "ë§ˆë‚˜ì—†ìŒ");
 			item.setItemMeta(itemIm);
 			player.getInventory().setItem(8, item);
 			return true;
@@ -179,14 +179,14 @@ public class InteractVillager {
 	}
 	
 	public boolean vil6() {
-		//ÄÜ³ë¿¡¼­ °¡´Â ½ä¸Å -2410 52 488  -2426 56 496
+		//ì½˜ë…¸ì—ì„œ ê°€ëŠ” ì°ë§¤ -2410 52 488  -2426 56 496
 		if(loc.getX() <= -2410 && loc.getZ() <= 496  
 				&& loc.getX() >= -2426 && loc.getZ() >= 488) {
-			player.sendMessage("½ä¸Å ¾ÆÀú¾¾: ÈåÀ¿.. °£´Ù¾Ñ!");
+			player.sendMessage("ì°ë§¤ ì•„ì €ì”¨: íì.. ê°„ë‹¤ì•—!");
 			player.teleport(new Location(player.getWorld(),-1970,52,455));
 			ItemStack item = new ItemStack(Material.MAGMA_CREAM);
 			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.RED + "¸¶³ª¾øÀ½");
+			itemIm.setDisplayName(ChatColor.RED + "ë§ˆë‚˜ì—†ìŒ");
 			item.setItemMeta(itemIm);
 			player.getInventory().setItem(8, item);
 			return true;
@@ -195,25 +195,25 @@ public class InteractVillager {
 	}
 	
 	public boolean vil7() {
-		//ÄÜ³ë ¾óÀ½ ÀåÀÎ -2481 74 524  -2470 66 536
+		//ì½˜ë…¸ ì–¼ìŒ ì¥ì¸ -2481 74 524  -2470 66 536
 		if(loc.getX() <= -2470 && loc.getY() <= 74 && loc.getZ() <= 536 
 				&& loc.getX() >= -2481 && loc.getY() >= 66 && loc.getZ() >= 524) {
 			QuestBoard cb = new QuestBoard();
 			try {
-				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¼³¿øÀÇ °¡Èñ1===")) {
+				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì„¤ì›ì˜ ê°€í¬1===")) {
 					int qNum = cb.getNum(player);
 					cb.eq1(player, qNum+1);		
-				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¼³¿øÀÇ °¡Èñ3===") && (player.getWorld().getTime() <= 13000 || player.getWorld().getTime() >= 23000)) {
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì„¤ì›ì˜ ê°€í¬3===") && (player.getWorld().getTime() <= 13000 || player.getWorld().getTime() >= 23000)) {
 					int qNum = cb.getNum(player);
 					cb.eq1_2(player, qNum+1);		
-				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¼³¿øÀÇ º¸¹°1===")) {
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì„¤ì›ì˜ ë³´ë¬¼1===")) {
 					int qNum = cb.getNum(player);
 					cb.mq25(player, qNum+1);		
 				} else {
-					player.sendMessage("¾óÀ½ ÀåÀÎ: ÈÄ¿ì.. ÀÏÀÌ ³Ê¹« Èûµé±¸¸¸.");
+					player.sendMessage("ì–¼ìŒ ì¥ì¸: í›„ìš°.. ì¼ì´ ë„ˆë¬´ í˜ë“¤êµ¬ë§Œ.");
 				}
 			} catch(Exception e) {
-				player.sendMessage("¾óÀ½ ÀåÀÎ: ÈÄ¿ì.. ÀÏÀÌ ³Ê¹« Èûµé±¸¸¸.");
+				player.sendMessage("ì–¼ìŒ ì¥ì¸: í›„ìš°.. ì¼ì´ ë„ˆë¬´ í˜ë“¤êµ¬ë§Œ.");
 			}
 			return true;
 		}
@@ -221,20 +221,20 @@ public class InteractVillager {
 	}
 	
 	public boolean vil8() {
-		//´Ë ºÏµ¿ÂÊ »êÀå ÁÖÀÎ 994 -8
+		//ëŠª ë¶ë™ìª½ ì‚°ì¥ ì£¼ì¸ 994 -8
 		if(loc.getX() <= -993 && loc.getZ() <= -7 
 				&& loc.getX() >= -995 && loc.getZ() >= -9) {
 			QuestBoard cb = new QuestBoard();
 			try {
-				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¸¶½Å¿ÕÀÇ °è¾à2===")) {
+				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë§ˆì‹ ì™•ì˜ ê³„ì•½2===")) {
 					int qNum = cb.getNum(player);
 					cb.eq2_1(player, qNum+1);	
 					((LivingEntity) ent).addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, 1200, 0,true,false,false));
 				} else {
-					player.sendMessage("»êÀå ÁÖÀÎ: ³ª´Â °ú°Å¿¡ ¿ëº´ÀÌ¾ú¼Ò.");
+					player.sendMessage("ì‚°ì¥ ì£¼ì¸: ë‚˜ëŠ” ê³¼ê±°ì— ìš©ë³‘ì´ì—ˆì†Œ.");
 				}
 			} catch(Exception e) {
-				player.sendMessage("»êÀå ÁÖÀÎ: ³ª´Â °ú°Å¿¡ ¿ëº´ÀÌ¾ú¼Ò.");
+				player.sendMessage("ì‚°ì¥ ì£¼ì¸: ë‚˜ëŠ” ê³¼ê±°ì— ìš©ë³‘ì´ì—ˆì†Œ.");
 			}
 			return true;
 		}
@@ -242,20 +242,20 @@ public class InteractVillager {
 	}
 	
 	public boolean vil9() {
-		//¿øÇüÀ¯Àû ¸¶¹ı»ç -927 857  -924 860
+		//ì›í˜•ìœ ì  ë§ˆë²•ì‚¬ -927 857  -924 860
 		if(loc.getX() <= -924 && loc.getZ() <= 860
 				&& loc.getX() >= -927 && loc.getZ() >= 857) {
 			QuestBoard cb = new QuestBoard();
 			try {
-				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Á×À½ÀÇ Å¾1===")) {
+				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì£½ìŒì˜ íƒ‘1===")) {
 					int qNum = cb.getNum(player);
 					cb.mq29(player, qNum+1);	
 					((LivingEntity) ent).addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, 1200, 0,true,false,false));
 				} else {
-					player.sendMessage("¸¶¹ı»ç: ³ª´Â ¸ğµç°É ¾Ë°í ÀÖÁö.");
+					player.sendMessage("ë§ˆë²•ì‚¬: ë‚˜ëŠ” ëª¨ë“ ê±¸ ì•Œê³  ìˆì§€.");
 				}
 			} catch(Exception e) {
-				player.sendMessage("¸¶¹ı»ç: ³ª´Â ¸ğµç°É ¾Ë°í ÀÖÁö.");
+				player.sendMessage("ë§ˆë²•ì‚¬: ë‚˜ëŠ” ëª¨ë“ ê±¸ ì•Œê³  ìˆì§€.");
 			}
 			return true;
 		}
@@ -263,19 +263,19 @@ public class InteractVillager {
 	}
 	
 	public boolean vil10() {
-		//´Ë ºÏµ¿ÂÊ »êÀå ÁÖÀÎ 77 -23  74 -21
+		//ëŠª ë¶ë™ìª½ ì‚°ì¥ ì£¼ì¸ 77 -23  74 -21
 		if(loc.getX() <= 77 && loc.getZ() <= -21
 				&& loc.getX() >= 74 && loc.getZ() >= -23) {
 			QuestBoard cb = new QuestBoard();
 			try {
-				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Á×À½ÀÇ Å¾2===")) {
+				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì£½ìŒì˜ íƒ‘2===")) {
 					int qNum = cb.getNum(player);
 					cb.mq29_1(player, qNum+1);	
 				} else {
-					player.sendMessage("Å¾ÀÇ °ü¸®ÀÎ: ÀÌ°÷Àº Á×À½ÀÇ Å¾ÀÌ¿À.");
+					player.sendMessage("íƒ‘ì˜ ê´€ë¦¬ì¸: ì´ê³³ì€ ì£½ìŒì˜ íƒ‘ì´ì˜¤.");
 				}
 			} catch(Exception e) {
-				player.sendMessage("Å¾ÀÇ °ü¸®ÀÎ: ÀÌ°÷Àº Á×À½ÀÇ Å¾ÀÌ¿À.");
+				player.sendMessage("íƒ‘ì˜ ê´€ë¦¬ì¸: ì´ê³³ì€ ì£½ìŒì˜ íƒ‘ì´ì˜¤.");
 			}
 			return true;
 		}
@@ -283,19 +283,19 @@ public class InteractVillager {
 	}
 	
 	public boolean vil11() {
-		//°üÀå 56 -292  58 -290
+		//ê´€ì¥ 56 -292  58 -290
 		if(loc.getX() <= 58 && loc.getZ() <= -290
 				&& loc.getX() >= 56 && loc.getZ() >= -292) {
 			QuestBoard cb = new QuestBoard();
 			try {
-				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===³ÊÀÇ ±ÙÀ°À» ¸Ô°í ½Í¾î===")) {
+				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë„ˆì˜ ê·¼ìœ¡ì„ ë¨¹ê³  ì‹¶ì–´===")) {
 					int qNum = cb.getNum(player);
 					cb.mq32(player, qNum+1);	
 				} else {
-					player.sendMessage("°üÀå: ÇêÇê. ÇÏ¾Ñ.");
+					player.sendMessage("ê´€ì¥: í—›í—›. í•˜ì•—.");
 				}
 			} catch(Exception e) {
-				player.sendMessage("°üÀå: ÇêÇê. ÇÏ¾Ñ.");
+				player.sendMessage("ê´€ì¥: í—›í—›. í•˜ì•—.");
 			}
 			return true;
 		}
@@ -303,22 +303,22 @@ public class InteractVillager {
 	}
 	
 	public boolean vil12() {
-		//¸¶¹ıÅ¾ 225 724  226 726
+		//ë§ˆë²•íƒ‘ 225 724  226 726
 		if(loc.getX() <= 226 && loc.getZ() <= 726
 				&& loc.getX() >= 224 && loc.getZ() >= 724) {
 			QuestBoard cb = new QuestBoard();
 			try {
-				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¸¶¹ıÅ¾À» ÇâÇØ===")) {
+				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë§ˆë²•íƒ‘ì„ í–¥í•´===")) {
 					int qNum = cb.getNum(player);
 					cb.mq35(player, qNum+1);	
-				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Èå¸§ÀÇ ºÀÀÎÀ» À§ÇØ===")) {
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===íë¦„ì˜ ë´‰ì¸ì„ ìœ„í•´===")) {
 					int qNum = cb.getNum(player);
 					cb.mq41_1(player, qNum+1);	
 				} else {
-					player.sendMessage("Ä«Å¸¸®³ª: ¿©±â´Â ¸¶¹ıÅ¾ÀÔ´Ï´Ù. ¸¶³ªÀÇ °¡È£°¡ ÀÖ±â¸¦.");
+					player.sendMessage("ì¹´íƒ€ë¦¬ë‚˜: ì—¬ê¸°ëŠ” ë§ˆë²•íƒ‘ì…ë‹ˆë‹¤. ë§ˆë‚˜ì˜ ê°€í˜¸ê°€ ìˆê¸°ë¥¼.");
 				}
 			} catch(Exception e) {
-				player.sendMessage("Ä«Å¸¸®³ª: ¿©±â´Â ¸¶¹ıÅ¾ÀÔ´Ï´Ù. ¸¶³ªÀÇ °¡È£°¡ ÀÖ±â¸¦.");
+				player.sendMessage("ì¹´íƒ€ë¦¬ë‚˜: ì—¬ê¸°ëŠ” ë§ˆë²•íƒ‘ì…ë‹ˆë‹¤. ë§ˆë‚˜ì˜ ê°€í˜¸ê°€ ìˆê¸°ë¥¼.");
 			}
 			return true;
 		}
@@ -326,38 +326,38 @@ public class InteractVillager {
 	}
 	
 	public boolean vil13() {
-		//·Õ°Ô 929 528  932 530
+		//ë¡±ê²Œ 929 528  932 530
 		if(loc.getX() <= 932 && loc.getZ() <= 530
 				&& loc.getX() >= 929 && loc.getZ() >= 528) {
-			player.sendMessage("ÁÖ¹Î: ÀÌ°÷Àº ÀÚÀ¯·Î¿î Ã¤±¼ÀåÀÌ¿À.");
+			player.sendMessage("ì£¼ë¯¼: ì´ê³³ì€ ììœ ë¡œìš´ ì±„êµ´ì¥ì´ì˜¤.");
 			return true;
 		}
 		return false;
 	}
 	
 	public boolean vil14() {
-		//·Õ°Ô ²¿¸¶ 836 523  837 525
+		//ë¡±ê²Œ ê¼¬ë§ˆ 836 523  837 525
 		if(loc.getX() <= 838 && loc.getZ() <= 525 
 				&& loc.getX() >= 836 && loc.getZ() >= 523) {
 			QuestBoard cb = new QuestBoard();
 			try {
-				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===´©°¡ ¿ì´Â ¼Ò¸®¸¦ ³»¾ú´Â°¡===")) {
+				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ëˆ„ê°€ ìš°ëŠ” ì†Œë¦¬ë¥¼ ë‚´ì—ˆëŠ”ê°€===")) {
 					int qNum = cb.getNum(player);
 					cb.mq37(player, qNum+1);		
-				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¾ÆÀÌ ´Ş·¡±â===")) {
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì•„ì´ ë‹¬ë˜ê¸°===")) {
 					int qNum = cb.getNum(player);
 					cb.mq37_2(player, qNum+1);		
-				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===´©°¡ ¶Ç ¿ì´Â ¼Ò¸®¸¦ ³»¾ú´Â°¡===")) {
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ëˆ„ê°€ ë˜ ìš°ëŠ” ì†Œë¦¬ë¥¼ ë‚´ì—ˆëŠ”ê°€===")) {
 					int qNum = cb.getNum(player);
 					cb.mq38(player, qNum+1);		
-				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¾ÆÀÌ¿¡°Ô º¸´äÀ»===")) {
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì•„ì´ì—ê²Œ ë³´ë‹µì„===")) {
 					int qNum = cb.getNum(player);
 					cb.mq38_2(player, qNum+1);		
 				} else {
-					player.sendMessage("²¿¸¶: ÈÄ¿¡¿¨.");
+					player.sendMessage("ê¼¬ë§ˆ: í›„ì—ì—¥.");
 				}
 			} catch(Exception e) {
-				player.sendMessage("²¿¸¶: ÈÄ¿¡¿¨.");
+				player.sendMessage("ê¼¬ë§ˆ: í›„ì—ì—¥.");
 			}
 			return true;
 		}

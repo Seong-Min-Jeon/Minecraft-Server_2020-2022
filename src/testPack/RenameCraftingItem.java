@@ -19,13 +19,13 @@ public class RenameCraftingItem {
 			if(msg.substring(0,1).equals("&") && msg.substring(msg.length() - 1).equals("&")) {
 				ItemStack item = player.getInventory().getItemInMainHand();
 				ItemMeta im = item.getItemMeta();
-				if(im.getDisplayName().substring(0, 2).equals("¡×3")) {
-					im.setDisplayName("¡×3" + msg.substring(1, msg.length()-1));
+				if(im.getDisplayName().substring(0, 2).equals("Â§3")) {
+					im.setDisplayName("Â§3" + msg.substring(1, msg.length()-1));
 					item.setItemMeta(im);
-					player.sendMessage(ChatColor.GREEN + "¾ÆÀÌÅÛÀÇ ÀÌ¸§ÀÌ º¯°æµÇ¾ú½À´Ï´Ù.");
+					player.sendMessage(ChatColor.GREEN + "ì•„ì´í…œì˜ ì´ë¦„ì´ ë³€ê²½ë˜ì—ˆìŠµë‹ˆë‹¤.");
 					return false;
 				}
-				player.sendMessage(ChatColor.RED + "ÀÌ¸§ º¯°æÀÌ ºÒ°¡´ÉÇÑ ¾ÆÀÌÅÛÀÔ´Ï´Ù.");
+				player.sendMessage(ChatColor.RED + "ì´ë¦„ ë³€ê²½ì´ ë¶ˆê°€ëŠ¥í•œ ì•„ì´í…œì…ë‹ˆë‹¤.");
 				return false;
 			}
 		}

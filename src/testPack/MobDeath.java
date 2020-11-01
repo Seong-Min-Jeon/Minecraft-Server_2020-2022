@@ -48,10 +48,10 @@ public class MobDeath {
 			lootPlayer = this.player;
 		}
 		if (((LivingEntity) mob).getHealth() - damage <= 0) {
-			// ¸¶³ªÁö±Þ
+			// ë§ˆë‚˜ì§€ê¸‰
 			ItemStack mana = new ItemStack(Material.HEART_OF_THE_SEA);
 			ItemMeta manaIm = mana.getItemMeta();
-			manaIm.setDisplayName(ChatColor.BLUE + "¸¶³ª");
+			manaIm.setDisplayName(ChatColor.BLUE + "ë§ˆë‚˜");
 			mana.setItemMeta(manaIm);
 			if (lootPlayer.getInventory().contains(Material.HEART_OF_THE_SEA)) {
 				int i = 0;
@@ -67,14 +67,14 @@ public class MobDeath {
 			} else {
 				lootPlayer.getInventory().setItem(8, mana);
 			}
-			// ·¹º§ ¾È¸ÂÀ¸¸é Äµ½½
+			// ë ˆë²¨ ì•ˆë§žìœ¼ë©´ ìº”ìŠ¬
 			String str = mob.getCustomName().split("\\.")[1];
 			String num = str.split("]")[0];
 			try {
 				int mobLvl = Integer.parseInt(num);
 				int dist = lootPlayer.getLevel() - mobLvl;
 				if (dist < -20) {
-					lootPlayer.sendMessage(ChatColor.RED + "¸ó½ºÅÍ¿ÍÀÇ ¼öÁØ Â÷ÀÌ·Î ¾Æ¹«°Íµµ ¾òÀ» ¼ö ¾ø½À´Ï´Ù.");
+					lootPlayer.sendMessage(ChatColor.RED + "ëª¬ìŠ¤í„°ì™€ì˜ ìˆ˜ì¤€ ì°¨ì´ë¡œ ì•„ë¬´ê²ƒë„ ì–»ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 					return;
 				}
 			} catch (Exception e) {
@@ -84,610 +84,610 @@ public class MobDeath {
 			try {
 				String name = mob.getCustomName().substring(2);
 
-				// °ø°ÝÀ» ¸ð¸£´Â ½ºÄÌÀÌ
-				if (name.equalsIgnoreCase("°ø°ÝÀ» ¸ð¸£´Â ½ºÄÌÀÌ" + ChatColor.YELLOW + " [Lv.0]")) {
+				// ê³µê²©ì„ ëª¨ë¥´ëŠ” ìŠ¤ì¼ˆì´
+				if (name.equalsIgnoreCase("ê³µê²©ì„ ëª¨ë¥´ëŠ” ìŠ¤ì¼ˆì´" + ChatColor.YELLOW + " [Lv.0]")) {
 					mobloot.mob1(lootPlayer);
 				}
-				// º¸½º ½ºÄÌÀÌ
-				if (name.equalsIgnoreCase("º¸½º ½ºÄÌÀÌ" + ChatColor.YELLOW + " [Lv.0]")) {
+				// ë³´ìŠ¤ ìŠ¤ì¼ˆì´
+				if (name.equalsIgnoreCase("ë³´ìŠ¤ ìŠ¤ì¼ˆì´" + ChatColor.YELLOW + " [Lv.0]")) {
 					mobloot.mob2(lootPlayer);
 				}
-				// ÃÊ·Ï ½½¶óÀÓ
-				if (name.equalsIgnoreCase("ÃÊ·Ï ½½¶óÀÓ" + ChatColor.YELLOW + " [Lv.1]")) {
+				// ì´ˆë¡ ìŠ¬ë¼ìž„
+				if (name.equalsIgnoreCase("ì´ˆë¡ ìŠ¬ë¼ìž„" + ChatColor.YELLOW + " [Lv.1]")) {
 					mobloot.mob3(lootPlayer);
 				}
-				// ÇØ¾È°¡ Á»ºñ
-				if (name.equalsIgnoreCase("ÇØ¾È°¡ Á»ºñ" + ChatColor.YELLOW + " [Lv.6]")) {
+				// í•´ì•ˆê°€ ì¢€ë¹„
+				if (name.equalsIgnoreCase("í•´ì•ˆê°€ ì¢€ë¹„" + ChatColor.YELLOW + " [Lv.6]")) {
 					mobloot.mob4(lootPlayer);
 				}
-				// ¿ö±×´Ò¿¡ ¹è½Å´çÇÑ ÀÚ
-				if (name.equalsIgnoreCase("¿ö±×´Ò¿¡ ¹è½Å´çÇÑ ÀÚ" + ChatColor.YELLOW + " [Lv.13]")) {
+				// ì›Œê·¸ë‹ì— ë°°ì‹ ë‹¹í•œ ìž
+				if (name.equalsIgnoreCase("ì›Œê·¸ë‹ì— ë°°ì‹ ë‹¹í•œ ìž" + ChatColor.YELLOW + " [Lv.13]")) {
 					mobloot.mob5(lootPlayer);
 				}
-				// °ËÀº ¼ö¿° ÇÏ¼öÀÎ
-				if (name.equalsIgnoreCase("°ËÀº ¼ö¿° ÇÏ¼öÀÎ" + ChatColor.YELLOW + " [Lv.32]")) {
+				// ê²€ì€ ìˆ˜ì—¼ í•˜ìˆ˜ì¸
+				if (name.equalsIgnoreCase("ê²€ì€ ìˆ˜ì—¼ í•˜ìˆ˜ì¸" + ChatColor.YELLOW + " [Lv.32]")) {
 					mobloot.mob6(lootPlayer);
 				}
-				// °ËÀº ¼ö¿° °£ºÎ
-				if (name.equalsIgnoreCase("°ËÀº ¼ö¿° °£ºÎ" + ChatColor.YELLOW + " [Lv.40]")) {
+				// ê²€ì€ ìˆ˜ì—¼ ê°„ë¶€
+				if (name.equalsIgnoreCase("ê²€ì€ ìˆ˜ì—¼ ê°„ë¶€" + ChatColor.YELLOW + " [Lv.40]")) {
 					mobloot.mob7(lootPlayer);
 				}
-				// Æ÷·¹½ºÆ® °í½ºÆ®
-				if (name.equalsIgnoreCase("Æ÷·¹½ºÆ® °í½ºÆ®" + ChatColor.YELLOW + " [Lv.15]")) {
+				// í¬ë ˆìŠ¤íŠ¸ ê³ ìŠ¤íŠ¸
+				if (name.equalsIgnoreCase("í¬ë ˆìŠ¤íŠ¸ ê³ ìŠ¤íŠ¸" + ChatColor.YELLOW + " [Lv.15]")) {
 					mobloot.mob8(lootPlayer);
 				}
-				// Å©¸®½ºÅ» ¿ö¸®¾î
-				if (name.equalsIgnoreCase("Å©¸®½ºÅ» ¿ö¸®¾î" + ChatColor.YELLOW + " [Lv.18]")) {
+				// í¬ë¦¬ìŠ¤íƒˆ ì›Œë¦¬ì–´
+				if (name.equalsIgnoreCase("í¬ë¦¬ìŠ¤íƒˆ ì›Œë¦¬ì–´" + ChatColor.YELLOW + " [Lv.18]")) {
 					mobloot.mob9(lootPlayer);
 				}
-				// ÀúÁÖ¹ÞÀº ³ª¹« ¿äÁ¤
-				if (name.equalsIgnoreCase("ÀúÁÖ¹ÞÀº ³ª¹« ¿äÁ¤" + ChatColor.YELLOW + " [Lv.20]")) {
+				// ì €ì£¼ë°›ì€ ë‚˜ë¬´ ìš”ì •
+				if (name.equalsIgnoreCase("ì €ì£¼ë°›ì€ ë‚˜ë¬´ ìš”ì •" + ChatColor.YELLOW + " [Lv.20]")) {
 					mobloot.mob10(lootPlayer);
 				}
-				// »êÈ£ Á»ºñ
-				if (name.equalsIgnoreCase("»êÈ£ Á¤·É" + ChatColor.YELLOW + " [Lv.12]")) {
+				// ì‚°í˜¸ ì¢€ë¹„
+				if (name.equalsIgnoreCase("ì‚°í˜¸ ì •ë ¹" + ChatColor.YELLOW + " [Lv.12]")) {
 					mobloot.mob11(lootPlayer);
 				}
-				// »êÈ£ ½ºÆ®·¹ÀÌ
-				if (name.equalsIgnoreCase("»êÈ£ ½ºÆ®·¹ÀÌ" + ChatColor.YELLOW + " [Lv.16]")) {
+				// ì‚°í˜¸ ìŠ¤íŠ¸ë ˆì´
+				if (name.equalsIgnoreCase("ì‚°í˜¸ ìŠ¤íŠ¸ë ˆì´" + ChatColor.YELLOW + " [Lv.16]")) {
 					mobloot.mob12(lootPlayer);
 				}
-				// °ÅºÏ º´»ç
-				if (name.equalsIgnoreCase("°ÅºÏ º´»ç" + ChatColor.YELLOW + " [Lv.15]")) {
+				// ê±°ë¶ ë³‘ì‚¬
+				if (name.equalsIgnoreCase("ê±°ë¶ ë³‘ì‚¬" + ChatColor.YELLOW + " [Lv.15]")) {
 					mobloot.mob13(lootPlayer);
 				}
-				// ¿¤´õ °¡µð¾ð
-				if (name.equalsIgnoreCase("¿¤´õ °¡µð¾ð" + ChatColor.YELLOW + " [Lv.19]")) {
+				// ì—˜ë” ê°€ë””ì–¸
+				if (name.equalsIgnoreCase("ì—˜ë” ê°€ë””ì–¸" + ChatColor.YELLOW + " [Lv.19]")) {
 					mobloot.mob14(lootPlayer);
 				}
-				// °íºí¸°
-				if (name.equalsIgnoreCase("°íºí¸°" + ChatColor.YELLOW + " [Lv.47]")) {
+				// ê³ ë¸”ë¦°
+				if (name.equalsIgnoreCase("ê³ ë¸”ë¦°" + ChatColor.YELLOW + " [Lv.47]")) {
 					mobloot.mob15(lootPlayer);
 				}
-				// ÆÄ¸£È¦·ÐÀÇ ¸ÁÀÚ
-				if (name.equalsIgnoreCase("ÆÄ¸£È¦·ÐÀÇ ¸ÁÀÚ" + ChatColor.YELLOW + " [Lv.50]")) {
+				// íŒŒë¥´í™€ë¡ ì˜ ë§ìž
+				if (name.equalsIgnoreCase("íŒŒë¥´í™€ë¡ ì˜ ë§ìž" + ChatColor.YELLOW + " [Lv.50]")) {
 					mobloot.mob16(lootPlayer);
 				}
-				// ÆÄ¸£È¦·ÐÀÇ À¯·É
-				if (name.equalsIgnoreCase("ÆÄ¸£È¦·ÐÀÇ À¯·É" + ChatColor.YELLOW + " [Lv.58]")) {
+				// íŒŒë¥´í™€ë¡ ì˜ ìœ ë ¹
+				if (name.equalsIgnoreCase("íŒŒë¥´í™€ë¡ ì˜ ìœ ë ¹" + ChatColor.YELLOW + " [Lv.58]")) {
 					mobloot.mob17(lootPlayer);
 				}
-				// º¯ÀÌµÈ °õ
-				if (name.equalsIgnoreCase("º¯ÀÌµÈ °õ" + ChatColor.YELLOW + " [Lv.62]")) {
+				// ë³€ì´ëœ ê³°
+				if (name.equalsIgnoreCase("ë³€ì´ëœ ê³°" + ChatColor.YELLOW + " [Lv.62]")) {
 					mobloot.mob18(lootPlayer);
 				}
-				// Ä§·«ÀÚ
-				if (name.equalsIgnoreCase("Ä§·«ÀÚ" + ChatColor.YELLOW + " [Lv.24]")) {
+				// ì¹¨ëžµìž
+				if (name.equalsIgnoreCase("ì¹¨ëžµìž" + ChatColor.YELLOW + " [Lv.24]")) {
 					mobloot.mob19(lootPlayer);
 				}
-				// ½£ÀÇ È²¼Ò
-				if (name.equalsIgnoreCase("½£ÀÇ È²¼Ò" + ChatColor.YELLOW + " [Lv.34]")) {
+				// ìˆ²ì˜ í™©ì†Œ
+				if (name.equalsIgnoreCase("ìˆ²ì˜ í™©ì†Œ" + ChatColor.YELLOW + " [Lv.34]")) {
 					mobloot.mob20(lootPlayer);
 				}
-				// ½£ÀÇ ¸¶³à
-				if (name.equalsIgnoreCase("½£ÀÇ ¸¶³à" + ChatColor.YELLOW + " [Lv.31]")) {
+				// ìˆ²ì˜ ë§ˆë…€
+				if (name.equalsIgnoreCase("ìˆ²ì˜ ë§ˆë…€" + ChatColor.YELLOW + " [Lv.31]")) {
 					mobloot.mob21(lootPlayer);
 				}
-				// »êÀû
-				if (name.equalsIgnoreCase("»êÀû" + ChatColor.YELLOW + " [Lv.27]")) {
+				// ì‚°ì 
+				if (name.equalsIgnoreCase("ì‚°ì " + ChatColor.YELLOW + " [Lv.27]")) {
 					mobloot.mob22(lootPlayer);
 				}
-				// º¯ÀÌµÈ ³ª¹µÀÙ
-				if (name.equalsIgnoreCase("º¯ÀÌµÈ ³ª¹µÀÙ" + ChatColor.YELLOW + " [Lv.35]")) {
+				// ë³€ì´ëœ ë‚˜ë­‡ìžŽ
+				if (name.equalsIgnoreCase("ë³€ì´ëœ ë‚˜ë­‡ìžŽ" + ChatColor.YELLOW + " [Lv.35]")) {
 					mobloot.mob23(lootPlayer);
 				}
-				// µÇ»ì¾Æ³­ ¸ðÇè°¡
-				if (name.equalsIgnoreCase("µÇ»ì¾Æ³­ ¸ðÇè°¡" + ChatColor.YELLOW + " [Lv.38]")) {
+				// ë˜ì‚´ì•„ë‚œ ëª¨í—˜ê°€
+				if (name.equalsIgnoreCase("ë˜ì‚´ì•„ë‚œ ëª¨í—˜ê°€" + ChatColor.YELLOW + " [Lv.38]")) {
 					mobloot.mob24(lootPlayer);
 				}
-				// À¯ÀûÀÇ ÁÖÀÎ
-				if (name.equalsIgnoreCase("À¯ÀûÀÇ ÁÖÀÎ" + ChatColor.YELLOW + " [Lv.43]")) {
+				// ìœ ì ì˜ ì£¼ì¸
+				if (name.equalsIgnoreCase("ìœ ì ì˜ ì£¼ì¸" + ChatColor.YELLOW + " [Lv.43]")) {
 					mobloot.mob25(lootPlayer);
 				}
-				// ¿ÀÅ©
-				if (name.equalsIgnoreCase("¿ÀÅ©" + ChatColor.YELLOW + " [Lv.60]")) {
+				// ì˜¤í¬
+				if (name.equalsIgnoreCase("ì˜¤í¬" + ChatColor.YELLOW + " [Lv.60]")) {
 					mobloot.mob26(lootPlayer);
 				}
-				// ¹Ì·¡¸¦ ¿¹ÁöÇÏ´Â ´«
-				if (name.equalsIgnoreCase("¹Ì·¡¸¦ ¿¹ÁöÇÏ´Â ´«" + ChatColor.YELLOW + " [Lv.66]")) {
+				// ë¯¸ëž˜ë¥¼ ì˜ˆì§€í•˜ëŠ” ëˆˆ
+				if (name.equalsIgnoreCase("ë¯¸ëž˜ë¥¼ ì˜ˆì§€í•˜ëŠ” ëˆˆ" + ChatColor.YELLOW + " [Lv.66]")) {
 					mobloot.mob27(lootPlayer);
 				}
-				// °ËÀº ÀÎ°£
-				if (name.equalsIgnoreCase("°ËÀº ÀÎ°£" + ChatColor.YELLOW + " [Lv.72]")) {
+				// ê²€ì€ ì¸ê°„
+				if (name.equalsIgnoreCase("ê²€ì€ ì¸ê°„" + ChatColor.YELLOW + " [Lv.72]")) {
 					mobloot.mob28(lootPlayer);
 				}
-				// Æ÷º¸¸£ Á¤Âûº´
-				if (name.equalsIgnoreCase("Æ÷º¸¸£ Á¤Âûº´" + ChatColor.YELLOW + " [Lv.80]")) {
+				// í¬ë³´ë¥´ ì •ì°°ë³‘
+				if (name.equalsIgnoreCase("í¬ë³´ë¥´ ì •ì°°ë³‘" + ChatColor.YELLOW + " [Lv.80]")) {
 					mobloot.mob29(lootPlayer);
 				}
-				// À¯ÀûÀ» ÁöÅ°´Â °Å¹Ì
-				if (name.equalsIgnoreCase("À¯ÀûÀ» ÁöÅ°´Â °Å¹Ì" + ChatColor.YELLOW + " [Lv.100]")) {
+				// ìœ ì ì„ ì§€í‚¤ëŠ” ê±°ë¯¸
+				if (name.equalsIgnoreCase("ìœ ì ì„ ì§€í‚¤ëŠ” ê±°ë¯¸" + ChatColor.YELLOW + " [Lv.100]")) {
 					mobloot.mob30(lootPlayer);
 				}
-				// ÆÄ¸£È¦·ÐÀÇ ¼öÈ£ÀÚ
-				if (name.equalsIgnoreCase("ÆÄ¸£È¦·ÐÀÇ ¼öÈ£ÀÚ" + ChatColor.YELLOW + " [Lv.113]")) {
+				// íŒŒë¥´í™€ë¡ ì˜ ìˆ˜í˜¸ìž
+				if (name.equalsIgnoreCase("íŒŒë¥´í™€ë¡ ì˜ ìˆ˜í˜¸ìž" + ChatColor.YELLOW + " [Lv.113]")) {
 					mobloot.mob31(lootPlayer);
 				}
-				// ¿Ü´«ÀÇ Æ÷º¸¸£
-				if (name.equalsIgnoreCase("¿Ü´«ÀÇ Æ÷º¸¸£" + ChatColor.YELLOW + " [Lv.83]")) {
+				// ì™¸ëˆˆì˜ í¬ë³´ë¥´
+				if (name.equalsIgnoreCase("ì™¸ëˆˆì˜ í¬ë³´ë¥´" + ChatColor.YELLOW + " [Lv.83]")) {
 					mobloot.mob32(lootPlayer);
 				}
-				// Æ÷º¸¸£ ¼¼·Â ÇÃ·¹ÀÌ¾î
-				if (name.equalsIgnoreCase("Æ÷º¸¸£ ¼¼·Â ÇÃ·¹ÀÌ¾î" + ChatColor.YELLOW + " [Lv.96]")) {
+				// í¬ë³´ë¥´ ì„¸ë ¥ í”Œë ˆì´ì–´
+				if (name.equalsIgnoreCase("í¬ë³´ë¥´ ì„¸ë ¥ í”Œë ˆì´ì–´" + ChatColor.YELLOW + " [Lv.96]")) {
 					mobloot.mob33(lootPlayer);
 				}
-				// µ¿±¼ °Å¹Ì
-				if (name.equalsIgnoreCase("µ¿±¼ °Å¹Ì" + ChatColor.YELLOW + " [Lv.134]")) {
+				// ë™êµ´ ê±°ë¯¸
+				if (name.equalsIgnoreCase("ë™êµ´ ê±°ë¯¸" + ChatColor.YELLOW + " [Lv.134]")) {
 					mobloot.mob34(lootPlayer);
 				}
-				// µ¿±¼ ¹ú·¹
-				if (name.equalsIgnoreCase("µ¿±¼ ¹ú·¹" + ChatColor.YELLOW + " [Lv.140]")) {
+				// ë™êµ´ ë²Œë ˆ
+				if (name.equalsIgnoreCase("ë™êµ´ ë²Œë ˆ" + ChatColor.YELLOW + " [Lv.140]")) {
 					mobloot.mob35(lootPlayer);
 				}
-				// ¾Æ¶û
-				if (name.equalsIgnoreCase("¾Æ¶û" + ChatColor.YELLOW + " [Lv.127]")) {
+				// ì•„ëž‘
+				if (name.equalsIgnoreCase("ì•„ëž‘" + ChatColor.YELLOW + " [Lv.127]")) {
 					mobloot.mob36(lootPlayer);
 				}
-				// ¸Ó¶ó¿ì´õ
-				if (name.equalsIgnoreCase("¸Ó¶ó¿ì´õ" + ChatColor.YELLOW + " [Lv.135]")) {
+				// ë¨¸ë¼ìš°ë”
+				if (name.equalsIgnoreCase("ë¨¸ë¼ìš°ë”" + ChatColor.YELLOW + " [Lv.135]")) {
 					mobloot.mob37(lootPlayer);
 				}
-				// ÆÄ¸£È¦·ÐÀÇ ÀüÅõº´
-				if (name.equalsIgnoreCase("ÆÄ¸£È¦·ÐÀÇ ÀüÅõº´" + ChatColor.YELLOW + " [Lv.253]")) {
+				// íŒŒë¥´í™€ë¡ ì˜ ì „íˆ¬ë³‘
+				if (name.equalsIgnoreCase("íŒŒë¥´í™€ë¡ ì˜ ì „íˆ¬ë³‘" + ChatColor.YELLOW + " [Lv.253]")) {
 					mobloot.mob38(lootPlayer);
 				}
-				// Æ÷º¸¸£ ¼¼·Â ÇÃ·¹ÀÌ¾î
-				if (name.equalsIgnoreCase("Æ÷º¸¸£ ¼¼·Â ÇÃ·¹ÀÌ¾î" + ChatColor.YELLOW + " [Lv.150]")) {
+				// í¬ë³´ë¥´ ì„¸ë ¥ í”Œë ˆì´ì–´
+				if (name.equalsIgnoreCase("í¬ë³´ë¥´ ì„¸ë ¥ í”Œë ˆì´ì–´" + ChatColor.YELLOW + " [Lv.150]")) {
 					mobloot.mob39(lootPlayer);
 				}
-				// ºÐ³ëÀÇ Çü»ó
-				if (name.equalsIgnoreCase("ºÐ³ëÀÇ Çü»ó" + ChatColor.YELLOW + " [Lv.158]")) {
+				// ë¶„ë…¸ì˜ í˜•ìƒ
+				if (name.equalsIgnoreCase("ë¶„ë…¸ì˜ í˜•ìƒ" + ChatColor.YELLOW + " [Lv.158]")) {
 					mobloot.mob40(lootPlayer);
 				}
-				// °øÇãÀÇ Çü»ó
-				if (name.equalsIgnoreCase("°øÇãÀÇ Çü»ó" + ChatColor.YELLOW + " [Lv.160]")) {
+				// ê³µí—ˆì˜ í˜•ìƒ
+				if (name.equalsIgnoreCase("ê³µí—ˆì˜ í˜•ìƒ" + ChatColor.YELLOW + " [Lv.160]")) {
 					mobloot.mob41(lootPlayer);
 				}
-				// °íÅëÀÇ Çü»ó
-				if (name.equalsIgnoreCase("°íÅëÀÇ Çü»ó" + ChatColor.YELLOW + " [Lv.163]")) {
+				// ê³ í†µì˜ í˜•ìƒ
+				if (name.equalsIgnoreCase("ê³ í†µì˜ í˜•ìƒ" + ChatColor.YELLOW + " [Lv.163]")) {
 					mobloot.mob42(lootPlayer);
 				}
-				// Ä§¹¬ÀÇ Çü»ó
-				if (name.equalsIgnoreCase("Ä§¹¬ÀÇ Çü»ó" + ChatColor.YELLOW + " [Lv.165]")) {
+				// ì¹¨ë¬µì˜ í˜•ìƒ
+				if (name.equalsIgnoreCase("ì¹¨ë¬µì˜ í˜•ìƒ" + ChatColor.YELLOW + " [Lv.165]")) {
 					mobloot.mob43(lootPlayer);
 				}
-				// ¿ì¿ïÀÇ Çü»ó
-				if (name.equalsIgnoreCase("¿ì¿ïÀÇ Çü»ó" + ChatColor.YELLOW + " [Lv.168]")) {
+				// ìš°ìš¸ì˜ í˜•ìƒ
+				if (name.equalsIgnoreCase("ìš°ìš¸ì˜ í˜•ìƒ" + ChatColor.YELLOW + " [Lv.168]")) {
 					mobloot.mob44(lootPlayer);
 				}
-				// Çã¸ùÀÇ Çü»ó
-				if (name.equalsIgnoreCase("Çã¸ùÀÇ Çü»ó" + ChatColor.YELLOW + " [Lv.171]")) {
+				// í—ˆëª½ì˜ í˜•ìƒ
+				if (name.equalsIgnoreCase("í—ˆëª½ì˜ í˜•ìƒ" + ChatColor.YELLOW + " [Lv.171]")) {
 					mobloot.mob45(lootPlayer);
 				}
-				// ¿À¸¸ÀÇ Çü»ó
-				if (name.equalsIgnoreCase("¿À¸¸ÀÇ Çü»ó" + ChatColor.YELLOW + " [Lv.178]")) {
+				// ì˜¤ë§Œì˜ í˜•ìƒ
+				if (name.equalsIgnoreCase("ì˜¤ë§Œì˜ í˜•ìƒ" + ChatColor.YELLOW + " [Lv.178]")) {
 					mobloot.mob46(lootPlayer);
 				}
-				// ¹è½ÅÀÇ Çü»ó
-				if (name.equalsIgnoreCase("¹è½ÅÀÇ Çü»ó" + ChatColor.YELLOW + " [Lv.174]")) {
+				// ë°°ì‹ ì˜ í˜•ìƒ
+				if (name.equalsIgnoreCase("ë°°ì‹ ì˜ í˜•ìƒ" + ChatColor.YELLOW + " [Lv.174]")) {
 					mobloot.mob47(lootPlayer);
 				}
-				// ½Ã·ÃÀÇ Çü»ó
-				if (name.equalsIgnoreCase("½Ã·ÃÀÇ Çü»ó" + ChatColor.YELLOW + " [Lv.??]")) {
+				// ì‹œë ¨ì˜ í˜•ìƒ
+				if (name.equalsIgnoreCase("ì‹œë ¨ì˜ í˜•ìƒ" + ChatColor.YELLOW + " [Lv.??]")) {
 					mobloot.mob48(lootPlayer);
 				}
-				// ±Í¿õ
-				if (name.equalsIgnoreCase("±Í¿õ" + ChatColor.YELLOW + " [Lv.148]")) {
+				// ê·€ì›…
+				if (name.equalsIgnoreCase("ê·€ì›…" + ChatColor.YELLOW + " [Lv.148]")) {
 					mobloot.mob49(lootPlayer);
 				}
-				// ´ë»ç
-				if (name.equalsIgnoreCase("´ë»ç" + ChatColor.YELLOW + " [Lv.157]")) {
+				// ëŒ€ì‚¬
+				if (name.equalsIgnoreCase("ëŒ€ì‚¬" + ChatColor.YELLOW + " [Lv.157]")) {
 					mobloot.mob50(lootPlayer);
 				}
-				// ¿µÈ¥À» Å½ÇÏ´Â ¿äÁ¤
-				if (name.equalsIgnoreCase("¿µÈ¥À» Å½ÇÏ´Â ¿äÁ¤" + ChatColor.YELLOW + " [Lv.200]")) {
+				// ì˜í˜¼ì„ íƒí•˜ëŠ” ìš”ì •
+				if (name.equalsIgnoreCase("ì˜í˜¼ì„ íƒí•˜ëŠ” ìš”ì •" + ChatColor.YELLOW + " [Lv.200]")) {
 					mobloot.mob51(lootPlayer);
 				}
-				// µö½½¶óÀÓ
-				if (name.equalsIgnoreCase("µö½½¶óÀÓ" + ChatColor.YELLOW + " [Lv.194]")) {
+				// ë”¥ìŠ¬ë¼ìž„
+				if (name.equalsIgnoreCase("ë”¥ìŠ¬ë¼ìž„" + ChatColor.YELLOW + " [Lv.194]")) {
 					mobloot.mob52(lootPlayer);
 				}
-				// ¿ö¸®¾î
-				if (name.equalsIgnoreCase("¿ö¸®¾î" + ChatColor.YELLOW + " [Lv.184]")) {
+				// ì›Œë¦¬ì–´
+				if (name.equalsIgnoreCase("ì›Œë¦¬ì–´" + ChatColor.YELLOW + " [Lv.184]")) {
 					mobloot.mob53(lootPlayer);
 				}
-				// ºóµðÄÉÀÌÅÍ
-				if (name.equalsIgnoreCase("ºóµðÄÉÀÌÅÍ" + ChatColor.YELLOW + " [Lv.190]")) {
+				// ë¹ˆë””ì¼€ì´í„°
+				if (name.equalsIgnoreCase("ë¹ˆë””ì¼€ì´í„°" + ChatColor.YELLOW + " [Lv.190]")) {
 					mobloot.mob54(lootPlayer);
 				}
-				// Àú°Å³ÊÆ®
-				if (name.equalsIgnoreCase("Àú°Å³ÊÆ®" + ChatColor.YELLOW + " [Lv.198]")) {
+				// ì €ê±°ë„ˆíŠ¸
+				if (name.equalsIgnoreCase("ì €ê±°ë„ˆíŠ¸" + ChatColor.YELLOW + " [Lv.198]")) {
 					mobloot.mob55(lootPlayer);
 				}
-				// À¯¼­ÆÛ
-				if (name.equalsIgnoreCase("À¯¼­ÆÛ" + ChatColor.YELLOW + " [Lv.203]")) {
+				// ìœ ì„œí¼
+				if (name.equalsIgnoreCase("ìœ ì„œí¼" + ChatColor.YELLOW + " [Lv.203]")) {
 					mobloot.mob56(lootPlayer);
 				}
-				// µÚÆ²¸° ¿ª»çÀÇ ÈçÀû
-				if (name.equalsIgnoreCase("µÚÆ²¸° ¿ª»çÀÇ ÈçÀû" + ChatColor.YELLOW + " [Lv.211]")) {
+				// ë’¤í‹€ë¦° ì—­ì‚¬ì˜ í”ì 
+				if (name.equalsIgnoreCase("ë’¤í‹€ë¦° ì—­ì‚¬ì˜ í”ì " + ChatColor.YELLOW + " [Lv.211]")) {
 					mobloot.mob57(lootPlayer);
 				}
-				// ¾Æ°ø°£ ÆÄ¼ö²Û
-				if (name.equalsIgnoreCase("¾Æ°ø°£ ÆÄ¼ö²Û" + ChatColor.YELLOW + " [Lv.218]")) {
+				// ì•„ê³µê°„ íŒŒìˆ˜ê¾¼
+				if (name.equalsIgnoreCase("ì•„ê³µê°„ íŒŒìˆ˜ê¾¼" + ChatColor.YELLOW + " [Lv.218]")) {
 					mobloot.mob58(lootPlayer);
 				}
-				// Á¶³­´çÇÑ ¿µÈ¥
-				if (name.equalsIgnoreCase("Á¶³­´çÇÑ ¿µÈ¥" + ChatColor.YELLOW + " [Lv.201]")) {
+				// ì¡°ë‚œë‹¹í•œ ì˜í˜¼
+				if (name.equalsIgnoreCase("ì¡°ë‚œë‹¹í•œ ì˜í˜¼" + ChatColor.YELLOW + " [Lv.201]")) {
 					mobloot.mob59(lootPlayer);
 				}
-				// ÀÍ»ç´çÇÑ ¼±¿ø
-				if (name.equalsIgnoreCase("ÀÍ»ç´çÇÑ ¼±¿ø" + ChatColor.YELLOW + " [Lv.205]")) {
+				// ìµì‚¬ë‹¹í•œ ì„ ì›
+				if (name.equalsIgnoreCase("ìµì‚¬ë‹¹í•œ ì„ ì›" + ChatColor.YELLOW + " [Lv.205]")) {
 					mobloot.mob60(lootPlayer);
 				}
-				// ¼ö¶ó
-				if (name.equalsIgnoreCase("¼ö¶ó" + ChatColor.YELLOW + " [Lv.212]")) {
+				// ìˆ˜ë¼
+				if (name.equalsIgnoreCase("ìˆ˜ë¼" + ChatColor.YELLOW + " [Lv.212]")) {
 					mobloot.mob61(lootPlayer);
 				}
-				// ³ªÂû
-				if (name.equalsIgnoreCase("³ªÂû" + ChatColor.YELLOW + " [Lv.216]")) {
+				// ë‚˜ì°°
+				if (name.equalsIgnoreCase("ë‚˜ì°°" + ChatColor.YELLOW + " [Lv.216]")) {
 					mobloot.mob62(lootPlayer);
 				}
-				// ³ªÈ£
-				if (name.equalsIgnoreCase("³ªÈ£" + ChatColor.YELLOW + " [Lv.222]")) {
+				// ë‚˜í˜¸
+				if (name.equalsIgnoreCase("ë‚˜í˜¸" + ChatColor.YELLOW + " [Lv.222]")) {
 					mobloot.mob63(lootPlayer);
 				}
-				// ³ª¼¶
-				if (name.equalsIgnoreCase("³ª¼¶" + ChatColor.YELLOW + " [Lv.230]")) {
+				// ë‚˜ì„¬
+				if (name.equalsIgnoreCase("ë‚˜ì„¬" + ChatColor.YELLOW + " [Lv.230]")) {
 					mobloot.mob64(lootPlayer);
 				}
-				// µ¥ºô º¸ÃÊº´
-				if (name.equalsIgnoreCase("µ¥ºô º¸ÃÊº´" + ChatColor.YELLOW + " [Lv.243]")) {
+				// ë°ë¹Œ ë³´ì´ˆë³‘
+				if (name.equalsIgnoreCase("ë°ë¹Œ ë³´ì´ˆë³‘" + ChatColor.YELLOW + " [Lv.243]")) {
 					mobloot.mob65(lootPlayer);
 				}
-				// µ¥ºô º´»ç
-				if (name.equalsIgnoreCase("µ¥ºô º´»ç" + ChatColor.YELLOW + " [Lv.250]")) {
+				// ë°ë¹Œ ë³‘ì‚¬
+				if (name.equalsIgnoreCase("ë°ë¹Œ ë³‘ì‚¬" + ChatColor.YELLOW + " [Lv.250]")) {
 					mobloot.mob66(lootPlayer);
 				}
-				// µ¥ºô ºÐ´ëÀå
-				if (name.equalsIgnoreCase("µ¥ºô ºÐ´ëÀå" + ChatColor.YELLOW + " [Lv.260]")) {
+				// ë°ë¹Œ ë¶„ëŒ€ìž¥
+				if (name.equalsIgnoreCase("ë°ë¹Œ ë¶„ëŒ€ìž¥" + ChatColor.YELLOW + " [Lv.260]")) {
 					mobloot.mob67(lootPlayer);
 				}
-				// ¹¦Áö±âÀÇ ½ÅÁ÷
-				if (name.equalsIgnoreCase("¹¦Áö±âÀÇ ½ÅÁ÷" + ChatColor.YELLOW + " [Lv.226]")) {
+				// ë¬˜ì§€ê¸°ì˜ ì‹ ì§
+				if (name.equalsIgnoreCase("ë¬˜ì§€ê¸°ì˜ ì‹ ì§" + ChatColor.YELLOW + " [Lv.226]")) {
 					mobloot.mob68(lootPlayer);
 				}
-				// ¹¦Áö±âÀÇ »ç·É°ü
-				if (name.equalsIgnoreCase("¹¦Áö±âÀÇ »ç·É°ü" + ChatColor.YELLOW + " [Lv.231]")) {
+				// ë¬˜ì§€ê¸°ì˜ ì‚¬ë ¹ê´€
+				if (name.equalsIgnoreCase("ë¬˜ì§€ê¸°ì˜ ì‚¬ë ¹ê´€" + ChatColor.YELLOW + " [Lv.231]")) {
 					mobloot.mob69(lootPlayer);
 				}
-				// ¹¦Áö±âÀÇ ¿µ¼ú»ç
-				if (name.equalsIgnoreCase("¹¦Áö±âÀÇ ¿µ¼ú»ç" + ChatColor.YELLOW + " [Lv.236]")) {
+				// ë¬˜ì§€ê¸°ì˜ ì˜ìˆ ì‚¬
+				if (name.equalsIgnoreCase("ë¬˜ì§€ê¸°ì˜ ì˜ìˆ ì‚¬" + ChatColor.YELLOW + " [Lv.236]")) {
 					mobloot.mob70(lootPlayer);
 				}
-				// ¹¦Áö±âÀÇ ÀÌ´ÉÀÚ
-				if (name.equalsIgnoreCase("¹¦Áö±âÀÇ ÀÌ´ÉÀÚ" + ChatColor.YELLOW + " [Lv.245]")) {
+				// ë¬˜ì§€ê¸°ì˜ ì´ëŠ¥ìž
+				if (name.equalsIgnoreCase("ë¬˜ì§€ê¸°ì˜ ì´ëŠ¥ìž" + ChatColor.YELLOW + " [Lv.245]")) {
 					mobloot.mob71(lootPlayer);
 				}
-				// º¸ÃÊ¸¦ ¼­´Â ¿äÁ¤
-				if (name.equalsIgnoreCase("º¸ÃÊ¸¦ ¼­´Â ¿äÁ¤" + ChatColor.YELLOW + " [Lv.183]")) {
+				// ë³´ì´ˆë¥¼ ì„œëŠ” ìš”ì •
+				if (name.equalsIgnoreCase("ë³´ì´ˆë¥¼ ì„œëŠ” ìš”ì •" + ChatColor.YELLOW + " [Lv.183]")) {
 					mobloot.mob72(lootPlayer);
 				}
-				// °ø°Ý´ë ¿äÁ¤
-				if (name.equalsIgnoreCase("°ø°Ý´ë ¿äÁ¤" + ChatColor.YELLOW + " [Lv.187]")) {
+				// ê³µê²©ëŒ€ ìš”ì •
+				if (name.equalsIgnoreCase("ê³µê²©ëŒ€ ìš”ì •" + ChatColor.YELLOW + " [Lv.187]")) {
 					mobloot.mob73(lootPlayer);
 				}
-				// ºÒÀÇ ¿äÁ¤
-				if (name.equalsIgnoreCase("ºÒÀÇ ¿äÁ¤" + ChatColor.YELLOW + " [Lv.192]")) {
+				// ë¶ˆì˜ ìš”ì •
+				if (name.equalsIgnoreCase("ë¶ˆì˜ ìš”ì •" + ChatColor.YELLOW + " [Lv.192]")) {
 					mobloot.mob74(lootPlayer);
 				}
-				// ¿äÁ¤ÀÇ ¼ÒÈ¯¼ö
-				if (name.equalsIgnoreCase("¿äÁ¤ÀÇ ¼ÒÈ¯¼ö" + ChatColor.YELLOW + " [Lv.194]")) {
+				// ìš”ì •ì˜ ì†Œí™˜ìˆ˜
+				if (name.equalsIgnoreCase("ìš”ì •ì˜ ì†Œí™˜ìˆ˜" + ChatColor.YELLOW + " [Lv.194]")) {
 					mobloot.mob75(lootPlayer);
 				}
-				// °Å´ë ¿äÁ¤
-				if (name.equalsIgnoreCase("°Å´ë ¿äÁ¤" + ChatColor.YELLOW + " [Lv.200]")) {
+				// ê±°ëŒ€ ìš”ì •
+				if (name.equalsIgnoreCase("ê±°ëŒ€ ìš”ì •" + ChatColor.YELLOW + " [Lv.200]")) {
 					mobloot.mob76(lootPlayer);
 				}
-				// ¿äÁ¤¿Õ ¿Àº£·Ð
-				if (name.equalsIgnoreCase("¿äÁ¤¿Õ ¿Àº£·Ð" + ChatColor.YELLOW + " [Lv.??]")) {
+				// ìš”ì •ì™• ì˜¤ë² ë¡ 
+				if (name.equalsIgnoreCase("ìš”ì •ì™• ì˜¤ë² ë¡ " + ChatColor.YELLOW + " [Lv.??]")) {
 					mobloot.mob77(lootPlayer);
 					mob.remove();
 				}
-				// ¿äÁ¤¿©¿Õ Æ¼Å¸´Ï¾Æ
-				if (name.equalsIgnoreCase("¿äÁ¤¿©¿Õ Æ¼Å¸´Ï¾Æ" + ChatColor.YELLOW + " [Lv.??]")) {
+				// ìš”ì •ì—¬ì™• í‹°íƒ€ë‹ˆì•„
+				if (name.equalsIgnoreCase("ìš”ì •ì—¬ì™• í‹°íƒ€ë‹ˆì•„" + ChatColor.YELLOW + " [Lv.??]")) {
 					mobloot.mob78(lootPlayer);
 					mob.remove();
 				}
-				// ³ªºñ
-				if (name.equalsIgnoreCase("³ªºñ" + ChatColor.YELLOW + " [Lv.254]")) {
+				// ë‚˜ë¹„
+				if (name.equalsIgnoreCase("ë‚˜ë¹„" + ChatColor.YELLOW + " [Lv.254]")) {
 					mobloot.mob79(lootPlayer);
 				}
-				// ¼³¿ø Á¤ÂûÀÚ
-				if (name.equalsIgnoreCase("¼³¿ø Á¤ÂûÀÚ" + ChatColor.YELLOW + " [Lv.217]")) {
+				// ì„¤ì› ì •ì°°ìž
+				if (name.equalsIgnoreCase("ì„¤ì› ì •ì°°ìž" + ChatColor.YELLOW + " [Lv.217]")) {
 					mobloot.mob80(lootPlayer);
 				}
-				// ¼³¿ø Á¤ÂûÀÚ
-				if (name.equalsIgnoreCase("¼³¿ø Á¤ÂûÀÚ" + ChatColor.YELLOW + " [Lv.224]")) {
+				// ì„¤ì› ì •ì°°ìž
+				if (name.equalsIgnoreCase("ì„¤ì› ì •ì°°ìž" + ChatColor.YELLOW + " [Lv.224]")) {
 					mobloot.mob81(lootPlayer);
 				}
-				// ¼³¿ø Á¤ÂûÀÚ
-				if (name.equalsIgnoreCase("¼³¿ø Á¤ÂûÀÚ" + ChatColor.YELLOW + " [Lv.230]")) {
+				// ì„¤ì› ì •ì°°ìž
+				if (name.equalsIgnoreCase("ì„¤ì› ì •ì°°ìž" + ChatColor.YELLOW + " [Lv.230]")) {
 					mobloot.mob82(lootPlayer);
 				}
-				// ¹ß·Î¸£ÀÇ º¸º´
-				if (name.equalsIgnoreCase("¹ß·Î¸£ÀÇ º¸º´" + ChatColor.YELLOW + " [Lv.230]")) {
+				// ë°œë¡œë¥´ì˜ ë³´ë³‘
+				if (name.equalsIgnoreCase("ë°œë¡œë¥´ì˜ ë³´ë³‘" + ChatColor.YELLOW + " [Lv.230]")) {
 					mobloot.mob83(lootPlayer);
 				}
-				// ¹ß·Î¸£ÀÇ ±Ãº´
-				if (name.equalsIgnoreCase("¹ß·Î¸£ÀÇ ±Ãº´" + ChatColor.YELLOW + " [Lv.230]")) {
+				// ë°œë¡œë¥´ì˜ ê¶ë³‘
+				if (name.equalsIgnoreCase("ë°œë¡œë¥´ì˜ ê¶ë³‘" + ChatColor.YELLOW + " [Lv.230]")) {
 					mobloot.mob83(lootPlayer);
 				}
-				// ¹ß·Î¸£ÀÇ º¸º´
-				if (name.equalsIgnoreCase("¹ß·Î¸£ÀÇ º¸º´" + ChatColor.YELLOW + " [Lv.232]")) {
+				// ë°œë¡œë¥´ì˜ ë³´ë³‘
+				if (name.equalsIgnoreCase("ë°œë¡œë¥´ì˜ ë³´ë³‘" + ChatColor.YELLOW + " [Lv.232]")) {
 					mobloot.mob84(lootPlayer);
 				}
-				// ¹ß·Î¸£ÀÇ ±Ãº´
-				if (name.equalsIgnoreCase("¹ß·Î¸£ÀÇ ±Ãº´" + ChatColor.YELLOW + " [Lv.232]")) {
+				// ë°œë¡œë¥´ì˜ ê¶ë³‘
+				if (name.equalsIgnoreCase("ë°œë¡œë¥´ì˜ ê¶ë³‘" + ChatColor.YELLOW + " [Lv.232]")) {
 					mobloot.mob84(lootPlayer);
 				}
-				// ¹ß·Î¸£ÀÇ º¸º´
-				if (name.equalsIgnoreCase("¹ß·Î¸£ÀÇ º¸º´" + ChatColor.YELLOW + " [Lv.238]")) {
+				// ë°œë¡œë¥´ì˜ ë³´ë³‘
+				if (name.equalsIgnoreCase("ë°œë¡œë¥´ì˜ ë³´ë³‘" + ChatColor.YELLOW + " [Lv.238]")) {
 					mobloot.mob85(lootPlayer);
 				}
-				// ¹ß·Î¸£ÀÇ ±Ãº´
-				if (name.equalsIgnoreCase("¹ß·Î¸£ÀÇ ±Ãº´" + ChatColor.YELLOW + " [Lv.238]")) {
+				// ë°œë¡œë¥´ì˜ ê¶ë³‘
+				if (name.equalsIgnoreCase("ë°œë¡œë¥´ì˜ ê¶ë³‘" + ChatColor.YELLOW + " [Lv.238]")) {
 					mobloot.mob85(lootPlayer);
 				}
-				// ÄÉÈê·»
-				if (name.equalsIgnoreCase("ÄÉÈê·»" + ChatColor.YELLOW + " [Lv.??]")) {
+				// ì¼€í˜ë Œ
+				if (name.equalsIgnoreCase("ì¼€í˜ë Œ" + ChatColor.YELLOW + " [Lv.??]")) {
 					mobloot.mob86(lootPlayer);
 				}
-				// ¹ß·Î¸£
-				if (name.equalsIgnoreCase("¹ß·Î¸£" + ChatColor.YELLOW + " [Lv.??]")) {
+				// ë°œë¡œë¥´
+				if (name.equalsIgnoreCase("ë°œë¡œë¥´" + ChatColor.YELLOW + " [Lv.??]")) {
 					mobloot.mob87(lootPlayer);
 				}
-				// °Å´ë ½½¶óÀÓ
-				if (name.equalsIgnoreCase("°Å´ë ½½¶óÀÓ" + ChatColor.YELLOW + " [Lv.253]")) {
+				// ê±°ëŒ€ ìŠ¬ë¼ìž„
+				if (name.equalsIgnoreCase("ê±°ëŒ€ ìŠ¬ë¼ìž„" + ChatColor.YELLOW + " [Lv.253]")) {
 					mobloot.mob88(lootPlayer);
 				}
-				// ´Á´ë °Å¹Ì
-				if (name.equalsIgnoreCase("´Á´ë °Å¹Ì" + ChatColor.YELLOW + " [Lv.258]")) {
+				// ëŠ‘ëŒ€ ê±°ë¯¸
+				if (name.equalsIgnoreCase("ëŠ‘ëŒ€ ê±°ë¯¸" + ChatColor.YELLOW + " [Lv.258]")) {
 					mobloot.mob89(lootPlayer);
 				}
-				// µ¶°Å¹Ì
-				if (name.equalsIgnoreCase("µ¶°Å¹Ì" + ChatColor.YELLOW + " [Lv.264]")) {
+				// ë…ê±°ë¯¸
+				if (name.equalsIgnoreCase("ë…ê±°ë¯¸" + ChatColor.YELLOW + " [Lv.264]")) {
 					mobloot.mob90(lootPlayer);
 				}
-				// ´ËÁöÀÇ ¸¶¼ö
-				if (name.equalsIgnoreCase("´ËÁöÀÇ ¸¶¼ö" + ChatColor.YELLOW + " [Lv.265]")) {
+				// ëŠªì§€ì˜ ë§ˆìˆ˜
+				if (name.equalsIgnoreCase("ëŠªì§€ì˜ ë§ˆìˆ˜" + ChatColor.YELLOW + " [Lv.265]")) {
 					mobloot.mob91(lootPlayer);
 				}
-				// ´ËÁöÀÇ ¸¶½Å¿Õ
-				if (name.equalsIgnoreCase("´ËÁöÀÇ ¸¶½Å¿Õ" + ChatColor.YELLOW + " [Lv.270]")) {
+				// ëŠªì§€ì˜ ë§ˆì‹ ì™•
+				if (name.equalsIgnoreCase("ëŠªì§€ì˜ ë§ˆì‹ ì™•" + ChatColor.YELLOW + " [Lv.270]")) {
 					mobloot.mob92(lootPlayer);
 				}
-				// »êÀû
-				if (name.equalsIgnoreCase("»êÀû" + ChatColor.YELLOW + " [Lv.268]")) {
+				// ì‚°ì 
+				if (name.equalsIgnoreCase("ì‚°ì " + ChatColor.YELLOW + " [Lv.268]")) {
 					mobloot.mob93(lootPlayer);
 				}
-				// ÀüÅõÇü Áý»ç
-				if (name.equalsIgnoreCase("ÀüÅõÇü Áý»ç" + ChatColor.YELLOW + " [Lv.100]")) {
+				// ì „íˆ¬í˜• ì§‘ì‚¬
+				if (name.equalsIgnoreCase("ì „íˆ¬í˜• ì§‘ì‚¬" + ChatColor.YELLOW + " [Lv.100]")) {
 					mobloot.mob94(lootPlayer);
 				}
-				// ÀüÅõÇü ¸ÞÀÌµå
-				if (name.equalsIgnoreCase("ÀüÅõÇü ¸ÞÀÌµå" + ChatColor.YELLOW + " [Lv.105]")) {
+				// ì „íˆ¬í˜• ë©”ì´ë“œ
+				if (name.equalsIgnoreCase("ì „íˆ¬í˜• ë©”ì´ë“œ" + ChatColor.YELLOW + " [Lv.105]")) {
 					mobloot.mob95(lootPlayer);
 				}
-				// ±â»çÃâ½Å Áý»ç
-				if (name.equalsIgnoreCase("±â»çÃâ½Å Áý»ç" + ChatColor.YELLOW + " [Lv.110]")) {
+				// ê¸°ì‚¬ì¶œì‹  ì§‘ì‚¬
+				if (name.equalsIgnoreCase("ê¸°ì‚¬ì¶œì‹  ì§‘ì‚¬" + ChatColor.YELLOW + " [Lv.110]")) {
 					mobloot.mob96(lootPlayer);
 				}
-				// Àå±³Ãâ½Å ¸ÞÀÌµå
-				if (name.equalsIgnoreCase("Àå±³Ãâ½Å ¸ÞÀÌµå" + ChatColor.YELLOW + " [Lv.110]")) {
+				// ìž¥êµì¶œì‹  ë©”ì´ë“œ
+				if (name.equalsIgnoreCase("ìž¥êµì¶œì‹  ë©”ì´ë“œ" + ChatColor.YELLOW + " [Lv.110]")) {
 					mobloot.mob96(lootPlayer);
 				}
-				// º¸¾ÈÆÀÀå
-				if (name.equalsIgnoreCase("º¸¾ÈÆÀÀå" + ChatColor.YELLOW + " [Lv.115]")) {
+				// ë³´ì•ˆíŒ€ìž¥
+				if (name.equalsIgnoreCase("ë³´ì•ˆíŒ€ìž¥" + ChatColor.YELLOW + " [Lv.115]")) {
 					mobloot.mob96(lootPlayer);
 				}
-				// ÀüÅõÇü Áý»ç
-				if (name.equalsIgnoreCase("ÀüÅõÇü Áý»ç" + ChatColor.YELLOW + " [Lv.105]")) {
+				// ì „íˆ¬í˜• ì§‘ì‚¬
+				if (name.equalsIgnoreCase("ì „íˆ¬í˜• ì§‘ì‚¬" + ChatColor.YELLOW + " [Lv.105]")) {
 					mobloot.mob97(lootPlayer);
 				}
-				// ÀüÅõÇü ¸ÞÀÌµå
-				if (name.equalsIgnoreCase("ÀüÅõÇü ¸ÞÀÌµå" + ChatColor.YELLOW + " [Lv.108]")) {
+				// ì „íˆ¬í˜• ë©”ì´ë“œ
+				if (name.equalsIgnoreCase("ì „íˆ¬í˜• ë©”ì´ë“œ" + ChatColor.YELLOW + " [Lv.108]")) {
 					mobloot.mob98(lootPlayer);
 				}
-				// ¾Æµ§
-				if (name.equalsIgnoreCase("¾Æµ§" + ChatColor.YELLOW + " [Lv.??]")) {
+				// ì•„ë´
+				if (name.equalsIgnoreCase("ì•„ë´" + ChatColor.YELLOW + " [Lv.??]")) {
 					mobloot.mob99(lootPlayer);
 				}
-				// Æ¯±Þ ¿ä¸®»ç
-				if (name.equalsIgnoreCase("Æ¯±Þ ¿ä¸®»ç" + ChatColor.YELLOW + " [Lv.??]")) {
+				// íŠ¹ê¸‰ ìš”ë¦¬ì‚¬
+				if (name.equalsIgnoreCase("íŠ¹ê¸‰ ìš”ë¦¬ì‚¬" + ChatColor.YELLOW + " [Lv.??]")) {
 					mobloot.mob100(lootPlayer);
 				}
-				// ¹Ù¼±»ý
-				if (name.equalsIgnoreCase("¹Ù¼±»ý" + ChatColor.YELLOW + " [Lv.180]")) {
+				// ë°”ì„ ìƒ
+				if (name.equalsIgnoreCase("ë°”ì„ ìƒ" + ChatColor.YELLOW + " [Lv.180]")) {
 					mobloot.mob101(lootPlayer);
 				}
-				// Çª¸£ °íºí¸°
-				if (name.equalsIgnoreCase("Çª¸£ °íºí¸°" + ChatColor.YELLOW + " [Lv.271]")) {
+				// í‘¸ë¥´ ê³ ë¸”ë¦°
+				if (name.equalsIgnoreCase("í‘¸ë¥´ ê³ ë¸”ë¦°" + ChatColor.YELLOW + " [Lv.271]")) {
 					mobloot.mob102(lootPlayer);
 				}
-				// µÇ»ì¾Æ³­ Àü»ç
-				if (name.equalsIgnoreCase("µÇ»ì¾Æ³­ Àü»ç" + ChatColor.YELLOW + " [Lv.274]")) {
+				// ë˜ì‚´ì•„ë‚œ ì „ì‚¬
+				if (name.equalsIgnoreCase("ë˜ì‚´ì•„ë‚œ ì „ì‚¬" + ChatColor.YELLOW + " [Lv.274]")) {
 					mobloot.mob103(lootPlayer);
 				}
-				// Æ÷º¸¸£ ¼¼·Â ÇÃ·¹ÀÌ¾î
-				if (name.equalsIgnoreCase("Æ÷º¸¸£ ¼¼·Â ÇÃ·¹ÀÌ¾î" + ChatColor.YELLOW + " [Lv.279]")) {
+				// í¬ë³´ë¥´ ì„¸ë ¥ í”Œë ˆì´ì–´
+				if (name.equalsIgnoreCase("í¬ë³´ë¥´ ì„¸ë ¥ í”Œë ˆì´ì–´" + ChatColor.YELLOW + " [Lv.279]")) {
 					mobloot.mob104(lootPlayer);
 				}
-				// Ä¶½ÃÆÛ
-				if (name.equalsIgnoreCase("Ä¶½ÃÆÛ" + ChatColor.YELLOW + " [Lv.283]")) {
+				// ìº˜ì‹œí¼
+				if (name.equalsIgnoreCase("ìº˜ì‹œí¼" + ChatColor.YELLOW + " [Lv.283]")) {
 					mobloot.mob105(lootPlayer);
 				}
-				// ÇÏ±Þ ÆÄ±«¼ö
-				if (name.equalsIgnoreCase("ÇÏ±Þ ÆÄ±«¼ö" + ChatColor.YELLOW + " [Lv.290]")) {
+				// í•˜ê¸‰ íŒŒê´´ìˆ˜
+				if (name.equalsIgnoreCase("í•˜ê¸‰ íŒŒê´´ìˆ˜" + ChatColor.YELLOW + " [Lv.290]")) {
 					mobloot.mob106(lootPlayer);
 				}
-				// µÇ»ì¾Æ³­ ÇØ°ñ
-				if (name.equalsIgnoreCase("µÇ»ì¾Æ³­ ÇØ°ñ" + ChatColor.YELLOW + " [Lv.286]")) {
+				// ë˜ì‚´ì•„ë‚œ í•´ê³¨
+				if (name.equalsIgnoreCase("ë˜ì‚´ì•„ë‚œ í•´ê³¨" + ChatColor.YELLOW + " [Lv.286]")) {
 					mobloot.mob107(lootPlayer);
 				}
-				// ¹Ð °¡µð¾ð
-				if (name.equalsIgnoreCase("¹Ð °¡µð¾ð" + ChatColor.YELLOW + " [Lv.294]")) {
+				// ë°€ ê°€ë””ì–¸
+				if (name.equalsIgnoreCase("ë°€ ê°€ë””ì–¸" + ChatColor.YELLOW + " [Lv.294]")) {
 					mobloot.mob108(lootPlayer);
 				}
-				// º¯ÀåÇÑ ´Á´ë
-				if (name.equalsIgnoreCase("º¯ÀåÇÑ ´Á´ë" + ChatColor.YELLOW + " [Lv.300]")) {
+				// ë³€ìž¥í•œ ëŠ‘ëŒ€
+				if (name.equalsIgnoreCase("ë³€ìž¥í•œ ëŠ‘ëŒ€" + ChatColor.YELLOW + " [Lv.300]")) {
 					mobloot.mob109(lootPlayer);
 				}
-				// ¾àÀïÀÌ
-				if (name.equalsIgnoreCase("¾àÀïÀÌ" + ChatColor.YELLOW + " [Lv.299]")) {
+				// ì•½ìŸì´
+				if (name.equalsIgnoreCase("ì•½ìŸì´" + ChatColor.YELLOW + " [Lv.299]")) {
 					mobloot.mob110(lootPlayer);
 				}
-				// °úÀÚ ¸¶³à
-				if (name.equalsIgnoreCase("°úÀÚ ¸¶³à" + ChatColor.YELLOW + " [Lv.306]")) {
+				// ê³¼ìž ë§ˆë…€
+				if (name.equalsIgnoreCase("ê³¼ìž ë§ˆë…€" + ChatColor.YELLOW + " [Lv.306]")) {
 					mobloot.mob111(lootPlayer);
 				}
-				// 1ÃþÀÇ Áö¹èÀÚ
-				if (name.equalsIgnoreCase("1ÃþÀÇ Áö¹èÀÚ" + ChatColor.YELLOW + " [Lv.??]")) {
+				// 1ì¸µì˜ ì§€ë°°ìž
+				if (name.equalsIgnoreCase("1ì¸µì˜ ì§€ë°°ìž" + ChatColor.YELLOW + " [Lv.??]")) {
 					mobloot.mob112(lootPlayer);
 				}
-				// 2ÃþÀÇ Áö¹èÀÚ
-				if (name.equalsIgnoreCase("2ÃþÀÇ Áö¹èÀÚ" + ChatColor.YELLOW + " [Lv.??]")) {
+				// 2ì¸µì˜ ì§€ë°°ìž
+				if (name.equalsIgnoreCase("2ì¸µì˜ ì§€ë°°ìž" + ChatColor.YELLOW + " [Lv.??]")) {
 					mobloot.mob113(lootPlayer);
 				}
-				// 3ÃþÀÇ Áö¹èÀÚ
-				if (name.equalsIgnoreCase("3ÃþÀÇ Áö¹èÀÚ" + ChatColor.YELLOW + " [Lv.??]")) {
+				// 3ì¸µì˜ ì§€ë°°ìž
+				if (name.equalsIgnoreCase("3ì¸µì˜ ì§€ë°°ìž" + ChatColor.YELLOW + " [Lv.??]")) {
 					mobloot.mob114(lootPlayer);
 				}
-				// 4ÃþÀÇ Áö¹èÀÚ
-				if (name.equalsIgnoreCase("4ÃþÀÇ Áö¹èÀÚ" + ChatColor.YELLOW + " [Lv.??]")) {
+				// 4ì¸µì˜ ì§€ë°°ìž
+				if (name.equalsIgnoreCase("4ì¸µì˜ ì§€ë°°ìž" + ChatColor.YELLOW + " [Lv.??]")) {
 					mobloot.mob115(lootPlayer);
 				}
-				// 5ÃþÀÇ Áö¹èÀÚ
-				if (name.equalsIgnoreCase("5ÃþÀÇ Áö¹èÀÚ" + ChatColor.YELLOW + " [Lv.??]")) {
+				// 5ì¸µì˜ ì§€ë°°ìž
+				if (name.equalsIgnoreCase("5ì¸µì˜ ì§€ë°°ìž" + ChatColor.YELLOW + " [Lv.??]")) {
 					mobloot.mob116(lootPlayer);
 				}
-				// 6ÃþÀÇ Áö¹èÀÚ
-				if (name.equalsIgnoreCase("6ÃþÀÇ Áö¹èÀÚ" + ChatColor.YELLOW + " [Lv.??]")) {
+				// 6ì¸µì˜ ì§€ë°°ìž
+				if (name.equalsIgnoreCase("6ì¸µì˜ ì§€ë°°ìž" + ChatColor.YELLOW + " [Lv.??]")) {
 					mobloot.mob117(lootPlayer);
 				}
-				// 7ÃþÀÇ Áö¹èÀÚ
-				if (name.equalsIgnoreCase("7ÃþÀÇ Áö¹èÀÚ" + ChatColor.YELLOW + " [Lv.??]")) {
+				// 7ì¸µì˜ ì§€ë°°ìž
+				if (name.equalsIgnoreCase("7ì¸µì˜ ì§€ë°°ìž" + ChatColor.YELLOW + " [Lv.??]")) {
 					mobloot.mob118(lootPlayer);
 				}
-				// 8ÃþÀÇ Áö¹èÀÚ
-				if (name.equalsIgnoreCase("8ÃþÀÇ Áö¹èÀÚ" + ChatColor.YELLOW + " [Lv.??]")) {
+				// 8ì¸µì˜ ì§€ë°°ìž
+				if (name.equalsIgnoreCase("8ì¸µì˜ ì§€ë°°ìž" + ChatColor.YELLOW + " [Lv.??]")) {
 					mobloot.mob119(lootPlayer);
 				}
-				// 9ÃþÀÇ Áö¹èÀÚ
-				if (name.equalsIgnoreCase("9ÃþÀÇ Áö¹èÀÚ" + ChatColor.YELLOW + " [Lv.??]")) {
+				// 9ì¸µì˜ ì§€ë°°ìž
+				if (name.equalsIgnoreCase("9ì¸µì˜ ì§€ë°°ìž" + ChatColor.YELLOW + " [Lv.??]")) {
 					mobloot.mob120(lootPlayer);
 				}
-				// 10ÃþÀÇ Áö¹èÀÚ
-				if (name.equalsIgnoreCase("10ÃþÀÇ Áö¹èÀÚ" + ChatColor.YELLOW + " [Lv.??]")) {
+				// 10ì¸µì˜ ì§€ë°°ìž
+				if (name.equalsIgnoreCase("10ì¸µì˜ ì§€ë°°ìž" + ChatColor.YELLOW + " [Lv.??]")) {
 					mobloot.mob121(lootPlayer);
 				}
-				// 11ÃþÀÇ Áö¹èÀÚ
-				if (name.equalsIgnoreCase("11ÃþÀÇ Áö¹èÀÚ" + ChatColor.YELLOW + " [Lv.??]")) {
+				// 11ì¸µì˜ ì§€ë°°ìž
+				if (name.equalsIgnoreCase("11ì¸µì˜ ì§€ë°°ìž" + ChatColor.YELLOW + " [Lv.??]")) {
 					mobloot.mob122(lootPlayer);
 				}
-				// Å¾ÀÇ ÁÖÀÎ
-				if (name.equalsIgnoreCase("Å¾ÀÇ ÁÖÀÎ" + ChatColor.YELLOW + " [Lv.??]")) {
+				// íƒ‘ì˜ ì£¼ì¸
+				if (name.equalsIgnoreCase("íƒ‘ì˜ ì£¼ì¸" + ChatColor.YELLOW + " [Lv.??]")) {
 					mobloot.mob123(lootPlayer);
 				}
-				// ÁöÇÏÀÇ ÆÄ¼ö²Û
-				if (name.equalsIgnoreCase("ÁöÇÏÀÇ ÆÄ¼ö²Û" + ChatColor.YELLOW + " [Lv.320]")) {
+				// ì§€í•˜ì˜ íŒŒìˆ˜ê¾¼
+				if (name.equalsIgnoreCase("ì§€í•˜ì˜ íŒŒìˆ˜ê¾¼" + ChatColor.YELLOW + " [Lv.320]")) {
 					mobloot.mob124(lootPlayer);
 				}
-				// ÁöÇÏÀÇ ÆÄ¼ö²Û
-				if (name.equalsIgnoreCase("ÁöÇÏÀÇ ÆÄ¼ö²Û" + ChatColor.YELLOW + " [Lv.324]")) {
+				// ì§€í•˜ì˜ íŒŒìˆ˜ê¾¼
+				if (name.equalsIgnoreCase("ì§€í•˜ì˜ íŒŒìˆ˜ê¾¼" + ChatColor.YELLOW + " [Lv.324]")) {
 					mobloot.mob125(lootPlayer);
 				}
-				// °« ½½¶óÀÓ
-				if (name.equalsIgnoreCase("°« ½½¶óÀÓ" + ChatColor.YELLOW + " [Lv.310]")) {
+				// ê°“ ìŠ¬ë¼ìž„
+				if (name.equalsIgnoreCase("ê°“ ìŠ¬ë¼ìž„" + ChatColor.YELLOW + " [Lv.310]")) {
 					mobloot.mob126(lootPlayer);
 				}
-				// »ç¶óÁø ºÎ¶ôÀÇ Àü»ç
-				if (name.equalsIgnoreCase("»ç¶óÁø ºÎ¶ôÀÇ Àü»ç" + ChatColor.YELLOW + " [Lv.306]")) {
+				// ì‚¬ë¼ì§„ ë¶€ë½ì˜ ì „ì‚¬
+				if (name.equalsIgnoreCase("ì‚¬ë¼ì§„ ë¶€ë½ì˜ ì „ì‚¬" + ChatColor.YELLOW + " [Lv.306]")) {
 					mobloot.mob127(lootPlayer);
 				}
-				// ³×Å©·Îº§¸®ÀÇ ¾Ï»ìÀÚ
-				if (name.equalsIgnoreCase("³×Å©·Îº§¸®ÀÇ ¾Ï»ìÀÚ" + ChatColor.YELLOW + " [Lv.308]")) {
+				// ë„¤í¬ë¡œë²¨ë¦¬ì˜ ì•”ì‚´ìž
+				if (name.equalsIgnoreCase("ë„¤í¬ë¡œë²¨ë¦¬ì˜ ì•”ì‚´ìž" + ChatColor.YELLOW + " [Lv.308]")) {
 					mobloot.mob128(lootPlayer);
 				}
-				// ³×Å©·Îº§¸®ÀÇ °¨½ÃÀÚ
-				if (name.equalsIgnoreCase("³×Å©·Îº§¸®ÀÇ °¨½ÃÀÚ" + ChatColor.YELLOW + " [Lv.314]")) {
+				// ë„¤í¬ë¡œë²¨ë¦¬ì˜ ê°ì‹œìž
+				if (name.equalsIgnoreCase("ë„¤í¬ë¡œë²¨ë¦¬ì˜ ê°ì‹œìž" + ChatColor.YELLOW + " [Lv.314]")) {
 					mobloot.mob129(lootPlayer);
 				}
-				// ³×Å©·Îº§¸®ÀÇ º¹º´
-				if (name.equalsIgnoreCase("³×Å©·Îº§¸®ÀÇ º¹º´" + ChatColor.YELLOW + " [Lv.318]")) {
+				// ë„¤í¬ë¡œë²¨ë¦¬ì˜ ë³µë³‘
+				if (name.equalsIgnoreCase("ë„¤í¬ë¡œë²¨ë¦¬ì˜ ë³µë³‘" + ChatColor.YELLOW + " [Lv.318]")) {
 					mobloot.mob130(lootPlayer);
 				}
-				// Çª¸£ ³¯¹ú·¹
-				if (name.equalsIgnoreCase("Çª¸£ ³¯¹ú·¹" + ChatColor.YELLOW + " [Lv.312]")) {
+				// í‘¸ë¥´ ë‚ ë²Œë ˆ
+				if (name.equalsIgnoreCase("í‘¸ë¥´ ë‚ ë²Œë ˆ" + ChatColor.YELLOW + " [Lv.312]")) {
 					mobloot.mob131(lootPlayer);
 				}
-				// Çª¸£ ³¯¹ú·¹
-				if (name.equalsIgnoreCase("Çª¸£ ³¯¹ú·¹" + ChatColor.YELLOW + " [Lv.317]")) {
+				// í‘¸ë¥´ ë‚ ë²Œë ˆ
+				if (name.equalsIgnoreCase("í‘¸ë¥´ ë‚ ë²Œë ˆ" + ChatColor.YELLOW + " [Lv.317]")) {
 					mobloot.mob132(lootPlayer);
 				}
-				// ÁöÇÏ°¨¿ÁÀÇ °£ºÎ
-				if (name.equalsIgnoreCase("ÁöÇÏ°¨¿ÁÀÇ °£ºÎ" + ChatColor.YELLOW + " [Lv.329]")) {
+				// ì§€í•˜ê°ì˜¥ì˜ ê°„ë¶€
+				if (name.equalsIgnoreCase("ì§€í•˜ê°ì˜¥ì˜ ê°„ë¶€" + ChatColor.YELLOW + " [Lv.329]")) {
 					mobloot.mob133(lootPlayer);
 				}
-				// ÁöÇÏ°¨¿ÁÀÇ ÁË¼ö
-				if (name.equalsIgnoreCase("ÁöÇÏ°¨¿ÁÀÇ ÁË¼ö" + ChatColor.YELLOW + " [Lv.325]")) {
+				// ì§€í•˜ê°ì˜¥ì˜ ì£„ìˆ˜
+				if (name.equalsIgnoreCase("ì§€í•˜ê°ì˜¥ì˜ ì£„ìˆ˜" + ChatColor.YELLOW + " [Lv.325]")) {
 					mobloot.mob134(lootPlayer);
 				}
-				// ¸¶·ÂÀÇ ºÎ»ê¹°
-				if (name.equalsIgnoreCase("¸¶·ÂÀÇ ºÎ»ê¹°" + ChatColor.YELLOW + " [Lv.325]")) {
+				// ë§ˆë ¥ì˜ ë¶€ì‚°ë¬¼
+				if (name.equalsIgnoreCase("ë§ˆë ¥ì˜ ë¶€ì‚°ë¬¼" + ChatColor.YELLOW + " [Lv.325]")) {
 					mobloot.mob135(lootPlayer);
 				}
-				// °­È­ °³Á¶ ÀÎ°£
-				if (name.equalsIgnoreCase("°­È­ °³Á¶ ÀÎ°£" + ChatColor.YELLOW + " [Lv.330]")) {
+				// ê°•í™” ê°œì¡° ì¸ê°„
+				if (name.equalsIgnoreCase("ê°•í™” ê°œì¡° ì¸ê°„" + ChatColor.YELLOW + " [Lv.330]")) {
 					mobloot.mob136(lootPlayer);
 				}
-				// ¸¶¹ý¿¡ Å¸¶ôÇÑ ÀÚ
-				if (name.equalsIgnoreCase("¸¶¹ý¿¡ Å¸¶ôÇÑ ÀÚ" + ChatColor.YELLOW + " [Lv.332]")) {
+				// ë§ˆë²•ì— íƒ€ë½í•œ ìž
+				if (name.equalsIgnoreCase("ë§ˆë²•ì— íƒ€ë½í•œ ìž" + ChatColor.YELLOW + " [Lv.332]")) {
 					mobloot.mob137(lootPlayer);
 				}
-				// Àü»ýÇÑ ½½¶óÀÓ
-				if (name.equalsIgnoreCase("Àü»ýÇÑ ½½¶óÀÓ" + ChatColor.YELLOW + " [Lv.336]")) {
+				// ì „ìƒí•œ ìŠ¬ë¼ìž„
+				if (name.equalsIgnoreCase("ì „ìƒí•œ ìŠ¬ë¼ìž„" + ChatColor.YELLOW + " [Lv.336]")) {
 					mobloot.mob138(lootPlayer);
 				}
-				// Àç¾Ó
-				if (name.equalsIgnoreCase("Àç¾Ó" + ChatColor.YELLOW + " [Lv.343]")) {
+				// ìž¬ì•™
+				if (name.equalsIgnoreCase("ìž¬ì•™" + ChatColor.YELLOW + " [Lv.343]")) {
 					mobloot.mob139(lootPlayer);
 				}
-				// Å¸¶ôÇÑ ¸ðÇè°¡
-				if (name.equalsIgnoreCase("Å¸¶ôÇÑ ¸ðÇè°¡" + ChatColor.YELLOW + " [Lv.347]")) {
+				// íƒ€ë½í•œ ëª¨í—˜ê°€
+				if (name.equalsIgnoreCase("íƒ€ë½í•œ ëª¨í—˜ê°€" + ChatColor.YELLOW + " [Lv.347]")) {
 					mobloot.mob140(lootPlayer);
 				}
-				// ÄÚ³¶±×
-				if (name.equalsIgnoreCase("ÄÚ³¶±×" + ChatColor.YELLOW + " [Lv.??]")) {
+				// ì½”ë‚­ê·¸
+				if (name.equalsIgnoreCase("ì½”ë‚­ê·¸" + ChatColor.YELLOW + " [Lv.??]")) {
 					mobloot.mob141(lootPlayer);
 				}
-				// ¿äÁ¤ÀÇ ÆÄÆí
-				if (name.equalsIgnoreCase("¿äÁ¤ÀÇ ÆÄÆí" + ChatColor.YELLOW + " [Lv.338]")) {
+				// ìš”ì •ì˜ íŒŒíŽ¸
+				if (name.equalsIgnoreCase("ìš”ì •ì˜ íŒŒíŽ¸" + ChatColor.YELLOW + " [Lv.338]")) {
 					mobloot.mob142(lootPlayer);
 				}
-				// ÃÊ¸¶µµ¿ë±â»ç
-				if (name.equalsIgnoreCase("ÃÊ¸¶µµ¿ë±â»ç" + ChatColor.YELLOW + " [Lv.342]")) {
+				// ì´ˆë§ˆë„ìš©ê¸°ì‚¬
+				if (name.equalsIgnoreCase("ì´ˆë§ˆë„ìš©ê¸°ì‚¬" + ChatColor.YELLOW + " [Lv.342]")) {
 					mobloot.mob143(lootPlayer);
 				}
-				// ¶°µµ´Â ¸Á·É Àü»ç
-				if (name.equalsIgnoreCase("¶°µµ´Â ¸Á·É Àü»ç" + ChatColor.YELLOW + " [Lv.344]")) {
+				// ë– ë„ëŠ” ë§ë ¹ ì „ì‚¬
+				if (name.equalsIgnoreCase("ë– ë„ëŠ” ë§ë ¹ ì „ì‚¬" + ChatColor.YELLOW + " [Lv.344]")) {
 					mobloot.mob144(lootPlayer);
 				}
-				// ¶°µµ´Â ¸Á·É ¸¶¹ý»ç
-				if (name.equalsIgnoreCase("¶°µµ´Â ¸Á·É ¸¶¹ý»ç" + ChatColor.YELLOW + " [Lv.349]")) {
+				// ë– ë„ëŠ” ë§ë ¹ ë§ˆë²•ì‚¬
+				if (name.equalsIgnoreCase("ë– ë„ëŠ” ë§ë ¹ ë§ˆë²•ì‚¬" + ChatColor.YELLOW + " [Lv.349]")) {
 					mobloot.mob145(lootPlayer);
 				}
-				// ±×¸®Áñ¸® º£¾î
-				if (name.equalsIgnoreCase("±×¸®Áñ¸® º£¾î" + ChatColor.YELLOW + " [Lv.347]")) {
+				// ê·¸ë¦¬ì¦ë¦¬ ë² ì–´
+				if (name.equalsIgnoreCase("ê·¸ë¦¬ì¦ë¦¬ ë² ì–´" + ChatColor.YELLOW + " [Lv.347]")) {
 					mobloot.mob146(lootPlayer);
 				}
 				// TNTZ
@@ -695,72 +695,123 @@ public class MobDeath {
 					mob.getWorld().createExplosion(mob.getLocation(), 5, false, false);
 					mobloot.mob147(lootPlayer);
 				}
-				// Æ÷º¸¸£ ¼¼·Â ÇÃ·¹ÀÌ¾î
-				if (name.equalsIgnoreCase("Æ÷º¸¸£ ¼¼·Â ÇÃ·¹ÀÌ¾î" + ChatColor.YELLOW + " [Lv.354]")) {
+				// í¬ë³´ë¥´ ì„¸ë ¥ í”Œë ˆì´ì–´
+				if (name.equalsIgnoreCase("í¬ë³´ë¥´ ì„¸ë ¥ í”Œë ˆì´ì–´" + ChatColor.YELLOW + " [Lv.354]")) {
 					mobloot.mob150(lootPlayer);
 				}
-				// ¸¶¹ý¼Ò³à
-				if (name.equalsIgnoreCase("¸¶¹ý¼Ò³à" + ChatColor.YELLOW + " [Lv.357]")) {
+				// ë§ˆë²•ì†Œë…€
+				if (name.equalsIgnoreCase("ë§ˆë²•ì†Œë…€" + ChatColor.YELLOW + " [Lv.357]")) {
 					mobloot.mob151(lootPlayer);
 				}
-				// ÆÄ½ºÄ®
-				if (name.equalsIgnoreCase("ÆÄ½ºÄ®" + ChatColor.YELLOW + " [Lv.359]")) {
+				// íŒŒìŠ¤ì¹¼
+				if (name.equalsIgnoreCase("íŒŒìŠ¤ì¹¼" + ChatColor.YELLOW + " [Lv.359]")) {
 					mobloot.mob148(lootPlayer);
 				}
-				// ¿¡¹Ð
-				if (name.equalsIgnoreCase("¿¡¹Ð" + ChatColor.YELLOW + " [Lv.363]")) {
+				// ì—ë°€
+				if (name.equalsIgnoreCase("ì—ë°€" + ChatColor.YELLOW + " [Lv.363]")) {
 					mobloot.mob149(lootPlayer);
 				}
-				// ÁøÈë ¿äÁ¤
-				if (name.equalsIgnoreCase("ÁøÈë ¿äÁ¤" + ChatColor.YELLOW + " [Lv.366]")) {
+				// ì§„í™ ìš”ì •
+				if (name.equalsIgnoreCase("ì§„í™ ìš”ì •" + ChatColor.YELLOW + " [Lv.366]")) {
 					mobloot.mob152(lootPlayer);
 				}
-				// Çª¸¥ °¡¿À¸®
-				if (name.equalsIgnoreCase("Çª¸¥ °¡¿À¸®" + ChatColor.YELLOW + " [Lv.380]")) {
+				// í‘¸ë¥¸ ê°€ì˜¤ë¦¬
+				if (name.equalsIgnoreCase("í‘¸ë¥¸ ê°€ì˜¤ë¦¬" + ChatColor.YELLOW + " [Lv.380]")) {
 					mobloot.mob153(lootPlayer);
 				}
-				// ¾Æ¶óÅ©³×ÀÇ ÇÏ¼öÀÎ
-				if (name.equalsIgnoreCase("¾Æ¶óÅ©³×ÀÇ ÇÏ¼öÀÎ" + ChatColor.YELLOW + " [Lv.383]")) {
+				// ì•„ë¼í¬ë„¤ì˜ í•˜ìˆ˜ì¸
+				if (name.equalsIgnoreCase("ì•„ë¼í¬ë„¤ì˜ í•˜ìˆ˜ì¸" + ChatColor.YELLOW + " [Lv.383]")) {
 					mobloot.mob154(lootPlayer);
 				}
-				// ¾Æ¶óÅ©³×
-				if (name.equalsIgnoreCase("¾Æ¶óÅ©³×" + ChatColor.YELLOW + " [Lv.??]")) {
+				// ì•„ë¼í¬ë„¤
+				if (name.equalsIgnoreCase("ì•„ë¼í¬ë„¤" + ChatColor.YELLOW + " [Lv.??]")) {
 					mobloot.mob155(lootPlayer);
 				}
-				// ³×¿À¾ÆÄí¾Æ ¸¶µ¹
-				if (name.equalsIgnoreCase("³×¿À¾ÆÄí¾Æ ¸¶µ¹" + ChatColor.YELLOW + " [Lv.365]")) {
+				// ë„¤ì˜¤ì•„ì¿ ì•„ ë§ˆëŒ
+				if (name.equalsIgnoreCase("ë„¤ì˜¤ì•„ì¿ ì•„ ë§ˆëŒ" + ChatColor.YELLOW + " [Lv.365]")) {
 					mobloot.mob156(lootPlayer);
 				}
-				// ¶óÀÌÆ®·¹ÀÌ ¸¶µ¹
-				if (name.equalsIgnoreCase("¶óÀÌÆ®·¹ÀÌ ¸¶µ¹" + ChatColor.YELLOW + " [Lv.369]")) {
+				// ë¼ì´íŠ¸ë ˆì´ ë§ˆëŒ
+				if (name.equalsIgnoreCase("ë¼ì´íŠ¸ë ˆì´ ë§ˆëŒ" + ChatColor.YELLOW + " [Lv.369]")) {
 					mobloot.mob157(lootPlayer);
 				}
-				// ¹æÈ²ÇÏ´Â ¿äÁ¤
-				if (name.equalsIgnoreCase("¹æÈ²ÇÏ´Â ¿äÁ¤" + ChatColor.YELLOW + " [Lv.372]")) {
+				// ë°©í™©í•˜ëŠ” ìš”ì •
+				if (name.equalsIgnoreCase("ë°©í™©í•˜ëŠ” ìš”ì •" + ChatColor.YELLOW + " [Lv.372]")) {
 					mobloot.mob158(lootPlayer);
 				}
-				// ¹æÈ²ÇÏ´Â ¿äÁ¤
-				if (name.equalsIgnoreCase("¹æÈ²ÇÏ´Â ¿äÁ¤" + ChatColor.YELLOW + " [Lv.376]")) {
+				// ë°©í™©í•˜ëŠ” ìš”ì •
+				if (name.equalsIgnoreCase("ë°©í™©í•˜ëŠ” ìš”ì •" + ChatColor.YELLOW + " [Lv.376]")) {
 					mobloot.mob159(lootPlayer);
 				}
-				// ºÐ³ëÇÏ´Â ¿äÁ¤
-				if (name.equalsIgnoreCase("ºÐ³ëÇÏ´Â ¿äÁ¤" + ChatColor.YELLOW + " [Lv.379]")) {
+				// ë¶„ë…¸í•˜ëŠ” ìš”ì •
+				if (name.equalsIgnoreCase("ë¶„ë…¸í•˜ëŠ” ìš”ì •" + ChatColor.YELLOW + " [Lv.379]")) {
 					mobloot.mob160(lootPlayer);
 				}
-				// ºÐ³ëÇÏ´Â ¿äÁ¤
-				if (name.equalsIgnoreCase("ºÐ³ëÇÏ´Â ¿äÁ¤" + ChatColor.YELLOW + " [Lv.383]")) {
+				// ë¶„ë…¸í•˜ëŠ” ìš”ì •
+				if (name.equalsIgnoreCase("ë¶„ë…¸í•˜ëŠ” ìš”ì •" + ChatColor.YELLOW + " [Lv.383]")) {
 					mobloot.mob161(lootPlayer);
 				}
-				// µÚÆ²¸° ¿äÁ¤
-				if (name.equalsIgnoreCase("µÚÆ²¸° ¿äÁ¤" + ChatColor.YELLOW + " [Lv.384]")) {
+				// ë’¤í‹€ë¦° ìš”ì •
+				if (name.equalsIgnoreCase("ë’¤í‹€ë¦° ìš”ì •" + ChatColor.YELLOW + " [Lv.384]")) {
 					mobloot.mob162(lootPlayer);
 				}
-				// µÚÆ²¸° ¿äÁ¤
-				if (name.equalsIgnoreCase("µÚÆ²¸° ¿äÁ¤" + ChatColor.YELLOW + " [Lv.386]")) {
+				// ë’¤í‹€ë¦° ìš”ì •
+				if (name.equalsIgnoreCase("ë’¤í‹€ë¦° ìš”ì •" + ChatColor.YELLOW + " [Lv.386]")) {
 					mobloot.mob163(lootPlayer);
+				}
+				// ì¼„
+				if (name.equalsIgnoreCase("ì¼„" + ChatColor.YELLOW + " [Lv.390]")) {
+					mobloot.mob164(lootPlayer);
+				}
+				// ë¥˜
+				if (name.equalsIgnoreCase("ë¥˜" + ChatColor.YELLOW + " [Lv.394]")) {
+					mobloot.mob165(lootPlayer);
+				}
+				// ê³ ìš°í‚¤
+				if (name.equalsIgnoreCase("ê³ ìš°í‚¤" + ChatColor.YELLOW + " [Lv.397]")) {
+					mobloot.mob166(lootPlayer);
+				}
+				// ë²”ì¸
+				if (name.equalsIgnoreCase("ë²”ì¸" + ChatColor.YELLOW + " [Lv.395]")) {
+					mobloot.mob167(lootPlayer);
+				}
+				// í¬ë„
+				if (name.equalsIgnoreCase("í¬ë„" + ChatColor.YELLOW + " [Lv.399]")) {
+					mobloot.mob168(lootPlayer);
+				}
+				// í´ë ˆì–´íì˜ ë§ë ¹
+				if (name.equalsIgnoreCase("í´ë ˆì–´íì˜ ë§ë ¹" + ChatColor.YELLOW + " [Lv.400]")) {
+					mobloot.mob169(lootPlayer);
+				}
+				// 404 Not Found
+				if (name.equalsIgnoreCase("404 Not Found" + ChatColor.YELLOW + " [Lv.404]")) {
+					mobloot.mob170(lootPlayer);
+				}
+				// íƒ€ë½í•œ ì£¼ë¯¼
+				if (name.equalsIgnoreCase("íƒ€ë½í•œ ì£¼ë¯¼" + ChatColor.YELLOW + " [Lv.406]")) {
+					mobloot.mob171(lootPlayer);
+				}
+				// ìž ì‹ëœ ì£¼ë¯¼
+				if (name.equalsIgnoreCase("ìž ì‹ëœ ì£¼ë¯¼" + ChatColor.YELLOW + " [Lv.409]")) {
+					mobloot.mob172(lootPlayer);
 				}
 			} catch (Exception e) {
 
+			}
+			
+//================================================================================================================================
+
+			try {
+				mob.getVehicle().remove();
+			} catch(Exception e) {
+				
+			}
+			try {
+				for(Entity ent : mob.getPassengers()) {
+					ent.remove();
+				}
+			} catch(Exception e) {
+				
 			}
 			
 //================================================================================================================================
@@ -775,7 +826,7 @@ public class MobDeath {
         	if(cnt/64 != 0) {
         		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, cnt/64);
         		ItemMeta im = item.getItemMeta();
-        		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Þ¶öµå ÁÖ¸Ó´Ï");
+        		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ëž„ë“œ ì£¼ë¨¸ë‹ˆ");
         		item.setItemMeta(im);
         		lootPlayer.getInventory().addItem(item);
         	}
@@ -793,13 +844,13 @@ public class MobDeath {
         	if(cnt2/64 != 0) {
         		ItemStack item = new ItemStack(Material.SCUTE, cnt2/64);
         		ItemMeta im = item.getItemMeta();
-        		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Þ¶öµå ÁÖ¸Ó´Ï+");
+        		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ëž„ë“œ ì£¼ë¨¸ë‹ˆ+");
         		item.setItemMeta(im);
         		lootPlayer.getInventory().addItem(item);
         	}
         	ItemStack eme2 = new ItemStack(Material.EMERALD_BLOCK, cnt2%64);
     		ItemMeta emeIm2 = eme2.getItemMeta();
-    		emeIm2.setDisplayName(ChatColor.YELLOW + "¿¡¸Þ¶öµå ÁÖ¸Ó´Ï");
+    		emeIm2.setDisplayName(ChatColor.YELLOW + "ì—ë©”ëž„ë“œ ì£¼ë¨¸ë‹ˆ");
     		eme2.setItemMeta(emeIm2);
         	lootPlayer.getInventory().addItem(eme2);
         	
@@ -815,13 +866,13 @@ public class MobDeath {
         	if(cnt3/64 != 0) {
         		ItemStack item = new ItemStack(Material.RABBIT_HIDE, cnt3/64);
         		ItemMeta im = item.getItemMeta();
-        		im.setDisplayName(ChatColor.AQUA + "¿¡¸Þ¶öµå °áÁ¤");
+        		im.setDisplayName(ChatColor.AQUA + "ì—ë©”ëž„ë“œ ê²°ì •");
         		item.setItemMeta(im);
         		lootPlayer.getInventory().addItem(item);
         	}
         	ItemStack eme3 = new ItemStack(Material.SCUTE, cnt3%64);
     		ItemMeta emeIm3 = eme3.getItemMeta();
-    		emeIm3.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Þ¶öµå ÁÖ¸Ó´Ï+");
+    		emeIm3.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ëž„ë“œ ì£¼ë¨¸ë‹ˆ+");
     		eme3.setItemMeta(emeIm3);
         	lootPlayer.getInventory().addItem(eme3);
         	
@@ -837,13 +888,13 @@ public class MobDeath {
         	if(cnt4/64 != 0) {
         		ItemStack item = new ItemStack(Material.RABBIT_FOOT, cnt4/64);
         		ItemMeta im = item.getItemMeta();
-        		im.setDisplayName(ChatColor.DARK_RED + "¿¡¸Þ¶öµå °áÁ¤+");
+        		im.setDisplayName(ChatColor.DARK_RED + "ì—ë©”ëž„ë“œ ê²°ì •+");
         		item.setItemMeta(im);
         		lootPlayer.getInventory().addItem(item);
         	}
         	ItemStack eme4 = new ItemStack(Material.RABBIT_HIDE, cnt4%64);
     		ItemMeta emeIm4 = eme4.getItemMeta();
-    		emeIm4.setDisplayName(ChatColor.AQUA + "¿¡¸Þ¶öµå °áÁ¤");
+    		emeIm4.setDisplayName(ChatColor.AQUA + "ì—ë©”ëž„ë“œ ê²°ì •");
     		eme4.setItemMeta(emeIm4);
         	lootPlayer.getInventory().addItem(eme4);
 			

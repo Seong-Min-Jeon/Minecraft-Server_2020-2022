@@ -31,37 +31,37 @@ public class MobLoot {
 	// 1:10 10:100 20:1000 30:4000 40:10000 50:21000 100:200000 200:1840000
 	// 400:16660000 700:97600000 1000:300000000
 
-	// °ø°İÀ» ¸ğ¸£´Â ½ºÄÌÀÌ
+	// ê³µê²©ì„ ëª¨ë¥´ëŠ” ìŠ¤ì¼ˆì´
 	public void mob1(Player player) {
 		ItemStack ticket = new ItemStack(Material.ACACIA_DOOR);
 		ItemMeta ticketIm = ticket.getItemMeta();
-		ticketIm.setDisplayName(ChatColor.YELLOW + "º¸½º ½ºÄÌÀÌ ¼ÒÈ¯ Æ¼ÄÏ");
+		ticketIm.setDisplayName(ChatColor.YELLOW + "ë³´ìŠ¤ ìŠ¤ì¼ˆì´ ì†Œí™˜ í‹°ì¼“");
 		ArrayList<String> ticketLore = new ArrayList();
-		ticketLore.add(ChatColor.GRAY + "º¸½º ½ºÄÌÀÌ¸¦ ¼ÒÈ¯ÇÒ ¼ö ÀÖ´Â Æ¼ÄÏ");
-		ticketLore.add(ChatColor.GRAY + "Q¸¦ ÀÌ¿ëÇØ »ç¿ëÇØº¸ÀÚ");
+		ticketLore.add(ChatColor.GRAY + "ë³´ìŠ¤ ìŠ¤ì¼ˆì´ë¥¼ ì†Œí™˜í•  ìˆ˜ ìˆëŠ” í‹°ì¼“");
+		ticketLore.add(ChatColor.GRAY + "Që¥¼ ì´ìš©í•´ ì‚¬ìš©í•´ë³´ì");
 		ticketIm.setLore(ticketLore);
 		ticket.setItemMeta(ticketIm);
 		player.getInventory().addItem(ticket);
-		player.sendMessage(ChatColor.YELLOW + "º¸½º ½ºÄÌÀÌ ¼ÒÈ¯ Æ¼ÄÏ" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+		player.sendMessage(ChatColor.YELLOW + "ë³´ìŠ¤ ìŠ¤ì¼ˆì´ ì†Œí™˜ í‹°ì¼“" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		es.giveExp(player, 1);
 	}
 
-	// º¸½º ½ºÄÌÀÌ
+	// ë³´ìŠ¤ ìŠ¤ì¼ˆì´
 	public void mob2(Player player) {
 		ItemStack ticket = new ItemStack(Material.PAPER);
 		ItemMeta ticketIm = ticket.getItemMeta();
-		ticketIm.setDisplayName(ChatColor.YELLOW + "³´ ±³È¯±Ç");
+		ticketIm.setDisplayName(ChatColor.YELLOW + "ë‚« êµí™˜ê¶Œ");
 		ArrayList<String> ticketLore = new ArrayList();
-		ticketLore.add(ChatColor.GRAY + "³´°ú ±³È¯ÇÒ ¼ö ÀÖÀ» °Í °°´Ù.");
-		ticketLore.add(ChatColor.GRAY + "ÁÖ¹Î°ú ´ëÈ­ÇØ »ç¿ëÇØº¸ÀÚ");
+		ticketLore.add(ChatColor.GRAY + "ë‚«ê³¼ êµí™˜í•  ìˆ˜ ìˆì„ ê²ƒ ê°™ë‹¤.");
+		ticketLore.add(ChatColor.GRAY + "ì£¼ë¯¼ê³¼ ëŒ€í™”í•´ ì‚¬ìš©í•´ë³´ì");
 		ticketIm.setLore(ticketLore);
 		ticket.setItemMeta(ticketIm);
 		player.getInventory().addItem(ticket);
-		player.sendMessage(ChatColor.YELLOW + "³´ ±³È¯±Ç" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+		player.sendMessage(ChatColor.YELLOW + "ë‚« êµí™˜ê¶Œ" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		es.giveExp(player, 1);
 	}
 
-	// ÃÊ·Ï ½½¶óÀÓ
+	// ì´ˆë¡ ìŠ¬ë¼ì„
 	public void mob3(Player player) {
 		int num = rnd.nextInt(2);
 		ItemStack item = new ItemStack(Material.EMERALD, num * multyEme);
@@ -69,7 +69,7 @@ public class MobLoot {
 		es.giveExp(player, 10);
 	}
 
-	// ÇØ¾È°¡ Á»ºñ
+	// í•´ì•ˆê°€ ì¢€ë¹„
 	public void mob4(Player player) {
 		int num = rnd.nextInt(4);
 		ItemStack item = new ItemStack(Material.EMERALD, num * multyEme);
@@ -77,13 +77,13 @@ public class MobLoot {
 		es.giveExp(player, 80);
 
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ÇØ¾ÈÀÇ À§Çù===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===í•´ì•ˆì˜ ìœ„í˜‘===")) {
 			int qNum = cb.getNum(player);
 			cb.q1(player, qNum + 1);
 		}
 	}
 
-	// ¿ö±×´Ò¿¡ ¹è½Å´çÇÑ ÀÚ
+	// ì›Œê·¸ë‹ì— ë°°ì‹ ë‹¹í•œ ì
 	public void mob5(Player player) {
 		int num = rnd.nextInt(5) + 2;
 		ItemStack item = new ItemStack(Material.EMERALD, num * multyEme);
@@ -91,13 +91,13 @@ public class MobLoot {
 		es.giveExp(player, 260);
 
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¿ö±×´Ò ¼¶ÀÇ ºñ¹Ğ===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì›Œê·¸ë‹ ì„¬ì˜ ë¹„ë°€===")) {
 			int qNum = cb.getNum(player);
 			cb.mq1(player, qNum + 1);
 		}
 	}
 
-	// °ËÀº ¼ö¿° ÇÏ¼öÀÎ
+	// ê²€ì€ ìˆ˜ì—¼ í•˜ìˆ˜ì¸
 	public void mob6(Player player) {
 		int num = rnd.nextInt(10) + 5;
 		ItemStack item = new ItemStack(Material.EMERALD, num * multyEme);
@@ -105,7 +105,7 @@ public class MobLoot {
 		es.giveExp(player, 3334);
 	}
 
-	// °ËÀº ¼ö¿° °£ºÎ
+	// ê²€ì€ ìˆ˜ì—¼ ê°„ë¶€
 	public void mob7(Player player) {
 		int num = rnd.nextInt(15) + 10;
 		ItemStack item = new ItemStack(Material.EMERALD, num * multyEme);
@@ -114,18 +114,18 @@ public class MobLoot {
 		if (num2 <= 0) {
 			ItemStack rein = new ItemStack(Material.CHARCOAL);
 			ItemMeta reinIm = rein.getItemMeta();
-			reinIm.setDisplayName(ChatColor.AQUA + "°ËÀº ¼ö¿°ÀÇ ÁõÇ¥");
+			reinIm.setDisplayName(ChatColor.AQUA + "ê²€ì€ ìˆ˜ì—¼ì˜ ì¦í‘œ");
 			ArrayList<String> reinLore = new ArrayList();
-			reinLore.add(ChatColor.GRAY + "°ËÀº ¼ö¿°´ÜÀÇ °ËÀÇ ÃÊ¿ù ¼ÒÀç");
+			reinLore.add(ChatColor.GRAY + "ê²€ì€ ìˆ˜ì—¼ë‹¨ì˜ ê²€ì˜ ì´ˆì›” ì†Œì¬");
 			reinIm.setLore(reinLore);
 			rein.setItemMeta(reinIm);
 			player.getInventory().addItem(rein);
-			player.sendMessage(ChatColor.AQUA + "°ËÀº ¼ö¿°ÀÇ ÁõÇ¥" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.AQUA + "ê²€ì€ ìˆ˜ì—¼ì˜ ì¦í‘œ" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		}
 		es.giveExp(player, 3768);
 	}
 
-	// Æ÷·¹½ºÆ® °í½ºÆ®
+	// í¬ë ˆìŠ¤íŠ¸ ê³ ìŠ¤íŠ¸
 	public void mob8(Player player) {
 		int num = rnd.nextInt(10) + 3;
 		ItemStack item = new ItemStack(Material.EMERALD, num * multyEme);
@@ -134,9 +134,9 @@ public class MobLoot {
 		if (num2 <= 0) {
 			ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 			ItemMeta scrollIm = scroll.getItemMeta();
-			scrollIm.setDisplayName(ChatColor.WHITE + "Äù½ºÆ®: ¹Ğ »ç³É²Û");
+			scrollIm.setDisplayName(ChatColor.WHITE + "í€˜ìŠ¤íŠ¸: ë°€ ì‚¬ëƒ¥ê¾¼");
 			ArrayList<String> scrollLore = new ArrayList();
-			scrollLore.add(ChatColor.GRAY + "'¹Ğ »ç³É²Û' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+			scrollLore.add(ChatColor.GRAY + "'ë°€ ì‚¬ëƒ¥ê¾¼' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 			scrollIm.setLore(scrollLore);
 			scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -145,18 +145,18 @@ public class MobLoot {
 			scrollIm.setUnbreakable(true);
 			scroll.setItemMeta(scrollIm);
 			player.getInventory().addItem(scroll);
-			player.sendMessage(ChatColor.WHITE + "Äù½ºÆ®: ¹Ğ »ç³É²Û" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.WHITE + "í€˜ìŠ¤íŠ¸: ë°€ ì‚¬ëƒ¥ê¾¼" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		}
 		es.giveExp(player, 524);
 
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¹Ğ »ç³É²Û===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë°€ ì‚¬ëƒ¥ê¾¼===")) {
 			int qNum = cb.getNum(player);
 			cb.q4(player, qNum + 1);
 		}
 	}
 
-	// Å©¸®½ºÅ» ¿ö¸®¾î
+	// í¬ë¦¬ìŠ¤íƒˆ ì›Œë¦¬ì–´
 	public void mob9(Player player) {
 		int num = rnd.nextInt(2) + 5;
 		ItemStack item = new ItemStack(Material.EMERALD, num * multyEme);
@@ -165,31 +165,31 @@ public class MobLoot {
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ÇÇ");
+		var1im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ í”¼");
 		var1.setItemMeta(var1im);
 		
 		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
 		ItemMeta var2im = var2.getItemMeta();
-		var2im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ¾µ°³");
+		var2im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
 		var2.setItemMeta(var2im);
 		
 		int tmp = rnd.nextInt(10);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ÇÇ" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ¾µ°³" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		}
 
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Æ÷º¸¸£ÀÇ ¸»´Ü===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===í¬ë³´ë¥´ì˜ ë§ë‹¨===")) {
 			int qNum = cb.getNum(player);
 			cb.q3(player, qNum + 1);
 		}
 	}
 
-	// ÀúÁÖ¹ŞÀº ³ª¹« ¿äÁ¤
+	// ì €ì£¼ë°›ì€ ë‚˜ë¬´ ìš”ì •
 	public void mob10(Player player) {
 		int num = rnd.nextInt(6) + 4;
 		ItemStack item = new ItemStack(Material.EMERALD, num * multyEme);
@@ -197,7 +197,7 @@ public class MobLoot {
 		es.giveExp(player, 652);
 	}
 
-	// »êÈ£ Á¤·É
+	// ì‚°í˜¸ ì •ë ¹
 	public void mob11(Player player) {
 		int num = rnd.nextInt(4);
 		ItemStack item = new ItemStack(Material.EMERALD, num * multyEme);
@@ -205,7 +205,7 @@ public class MobLoot {
 		es.giveExp(player, 233);
 	}
 
-	// »êÈ£ ½ºÆ®·¹ÀÌ
+	// ì‚°í˜¸ ìŠ¤íŠ¸ë ˆì´
 	public void mob12(Player player) {
 		int num = rnd.nextInt(8);
 		ItemStack item = new ItemStack(Material.EMERALD, num * multyEme);
@@ -213,7 +213,7 @@ public class MobLoot {
 		es.giveExp(player, 355);
 	}
 
-	// °ÅºÏ º´»ç
+	// ê±°ë¶ ë³‘ì‚¬
 	public void mob13(Player player) {
 		int num = rnd.nextInt(6);
 		ItemStack item = new ItemStack(Material.EMERALD, num * multyEme);
@@ -221,7 +221,7 @@ public class MobLoot {
 		es.giveExp(player, 202);
 	}
 
-	// ¿¤´õ °¡µğ¾ğ
+	// ì—˜ë” ê°€ë””ì–¸
 	public void mob14(Player player) {
 		int num = rnd.nextInt(20) + 10;
 		ItemStack item = new ItemStack(Material.EMERALD, num * multyEme);
@@ -230,22 +230,22 @@ public class MobLoot {
 
 		ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
 		ItemMeta rewardKeyIm = rewardKey.getItemMeta();
-		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "ÀØÇôÁø ¹Ù´Ù ½ÅÀü º¸»ó ¿­¼è");
+		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "ìŠí˜€ì§„ ë°”ë‹¤ ì‹ ì „ ë³´ìƒ ì—´ì‡ ");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "ÀØÇôÁø ¹Ù´Ù ½ÅÀü º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+		player.sendMessage(ChatColor.YELLOW + "ìŠí˜€ì§„ ë°”ë‹¤ ì‹ ì „ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 
 		List<Entity> entitylist = player.getNearbyEntities(10, 3, 10);
 		for (Entity nearEntity : entitylist) {
 			if (nearEntity.getType() == EntityType.PLAYER) {
 				Player nearplayer = (Player) nearEntity;
 				nearplayer.getInventory().addItem(rewardKey);
-				nearplayer.sendMessage(ChatColor.YELLOW + "ÀØÇôÁø ¹Ù´Ù ½ÅÀü º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+				nearplayer.sendMessage(ChatColor.YELLOW + "ìŠí˜€ì§„ ë°”ë‹¤ ì‹ ì „ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 			}
 		}
 	}
 
-	// °íºí¸°
+	// ê³ ë¸”ë¦°
 	public void mob15(Player player) {
 		int num = rnd.nextInt(10) + 16;
 		ItemStack item = new ItemStack(Material.EMERALD, num * multyEme);
@@ -256,9 +256,9 @@ public class MobLoot {
 		if (num2 == 0) {
 			ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 			ItemMeta scrollIm = scroll.getItemMeta();
-			scrollIm.setDisplayName(ChatColor.WHITE + "Äù½ºÆ®: °°¾Æº¸ÀÌÁö¸¸ ´Ù¸¥");
+			scrollIm.setDisplayName(ChatColor.WHITE + "í€˜ìŠ¤íŠ¸: ê°™ì•„ë³´ì´ì§€ë§Œ ë‹¤ë¥¸");
 			ArrayList<String> scrollLore = new ArrayList();
-			scrollLore.add(ChatColor.GRAY + "'°°¾Æº¸ÀÌÁö¸¸ ´Ù¸¥' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+			scrollLore.add(ChatColor.GRAY + "'ê°™ì•„ë³´ì´ì§€ë§Œ ë‹¤ë¥¸' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 			scrollIm.setLore(scrollLore);
 			scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -267,17 +267,17 @@ public class MobLoot {
 			scrollIm.setUnbreakable(true);
 			scroll.setItemMeta(scrollIm);
 			player.getInventory().addItem(scroll);
-			player.sendMessage(ChatColor.WHITE + "Äù½ºÆ®: °°¾Æº¸ÀÌÁö¸¸ ´Ù¸¥" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.WHITE + "í€˜ìŠ¤íŠ¸: ê°™ì•„ë³´ì´ì§€ë§Œ ë‹¤ë¥¸" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		}
 
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ÃÌÀåÀÇ ºÎÅ¹3===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì´Œì¥ì˜ ë¶€íƒ3===")) {
 			int qNum = cb.getNum(player);
 			cb.mq6(player, qNum + 1);
 		}
 	}
 
-	// ÆÄ¸£È¦·ĞÀÇ ¸ÁÀÚ
+	// íŒŒë¥´í™€ë¡ ì˜ ë§ì
 	public void mob16(Player player) {
 		int num = rnd.nextInt(10) + 18;
 		ItemStack item = new ItemStack(Material.EMERALD, num * multyEme);
@@ -285,7 +285,7 @@ public class MobLoot {
 		es.giveExp(player, 9527);
 	}
 
-	// ÆÄ¸£È¦·ĞÀÇ À¯·É
+	// íŒŒë¥´í™€ë¡ ì˜ ìœ ë ¹
 	public void mob17(Player player) {
 		int num = rnd.nextInt(4) + 20;
 		ItemStack item = new ItemStack(Material.EMERALD, num * multyEme);
@@ -294,9 +294,9 @@ public class MobLoot {
 		if (num2 == 0) {
 			ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 			ItemMeta scrollIm = scroll.getItemMeta();
-			scrollIm.setDisplayName(ChatColor.LIGHT_PURPLE + "Äù½ºÆ®: À¯ÀûÀ» Á¤È­ÇÏ´Â ÀÚ");
+			scrollIm.setDisplayName(ChatColor.LIGHT_PURPLE + "í€˜ìŠ¤íŠ¸: ìœ ì ì„ ì •í™”í•˜ëŠ” ì");
 			ArrayList<String> scrollLore = new ArrayList();
-			scrollLore.add(ChatColor.GRAY + "'À¯ÀûÀ» Á¤È­ÇÏ´Â ÀÚ' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+			scrollLore.add(ChatColor.GRAY + "'ìœ ì ì„ ì •í™”í•˜ëŠ” ì' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 			scrollIm.setLore(scrollLore);
 			scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -305,12 +305,12 @@ public class MobLoot {
 			scrollIm.setUnbreakable(true);
 			scroll.setItemMeta(scrollIm);
 			player.getInventory().addItem(scroll);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "Äù½ºÆ®: À¯ÀûÀ» Á¤È­ÇÏ´Â ÀÚ" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "í€˜ìŠ¤íŠ¸: ìœ ì ì„ ì •í™”í•˜ëŠ” ì" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		}
 		es.giveExp(player, 10374);
 	}
 
-	// º¯ÀÌµÈ °õ
+	// ë³€ì´ëœ ê³°
 	public void mob18(Player player) {
 		int num = rnd.nextInt(10) + 30;
 		ItemStack item = new ItemStack(Material.EMERALD, num * multyEme);
@@ -322,12 +322,12 @@ public class MobLoot {
 			Chest chest = (Chest) block.getState();
 			ItemStack weapon = chest.getInventory().getItem(0);
 			player.getInventory().addItem(weapon);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "º¯ÀÌÀÇ ÈûÀÌ ´ã±ä ¹°Ã¼" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "ë³€ì´ì˜ í˜ì´ ë‹´ê¸´ ë¬¼ì²´" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		}
 		es.giveExp(player, 15554);
 	}
 
-	// Ä§·«ÀÚ
+	// ì¹¨ëµì
 	public void mob19(Player player) {
 		int num = rnd.nextInt(15);
 		ItemStack item = new ItemStack(Material.EMERALD, num * multyEme);
@@ -335,13 +335,13 @@ public class MobLoot {
 		es.giveExp(player, 2217);
 
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Ä§·«ÀÚ===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì¹¨ëµì===")) {
 			int qNum = cb.getNum(player);
 			cb.q5(player, qNum + 1);
 		}
 	}
 
-	// ½£ÀÇ È²¼Ò
+	// ìˆ²ì˜ í™©ì†Œ
 	public void mob20(Player player) {
 		int num = rnd.nextInt(30);
 		ItemStack item = new ItemStack(Material.EMERALD, num * multyEme);
@@ -350,9 +350,9 @@ public class MobLoot {
 		if (num2 <= 0) {
 			ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 			ItemMeta scrollIm = scroll.getItemMeta();
-			scrollIm.setDisplayName(ChatColor.YELLOW + "Äù½ºÆ®: ½£ ±íÀº °÷");
+			scrollIm.setDisplayName(ChatColor.YELLOW + "í€˜ìŠ¤íŠ¸: ìˆ² ê¹Šì€ ê³³");
 			ArrayList<String> scrollLore = new ArrayList();
-			scrollLore.add(ChatColor.GRAY + "'½£ ±íÀº °÷' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+			scrollLore.add(ChatColor.GRAY + "'ìˆ² ê¹Šì€ ê³³' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 			scrollIm.setLore(scrollLore);
 			scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -361,12 +361,12 @@ public class MobLoot {
 			scrollIm.setUnbreakable(true);
 			scroll.setItemMeta(scrollIm);
 			player.getInventory().addItem(scroll);
-			player.sendMessage(ChatColor.YELLOW + "Äù½ºÆ®: ½£ ±íÀº °÷" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.YELLOW + "í€˜ìŠ¤íŠ¸: ìˆ² ê¹Šì€ ê³³" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		}
 		es.giveExp(player, 3572);
 	}
 
-	// ½£ÀÇ ¸¶³à
+	// ìˆ²ì˜ ë§ˆë…€
 	public void mob21(Player player) {
 		int num = rnd.nextInt(18);
 		ItemStack item = new ItemStack(Material.EMERALD, num * multyEme);
@@ -374,13 +374,13 @@ public class MobLoot {
 		es.giveExp(player, 3152);
 
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ÃÌÀåÀÇ ºÎÅ¹1===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì´Œì¥ì˜ ë¶€íƒ1===")) {
 			int qNum = cb.getNum(player);
 			cb.mq4(player, qNum + 1);
 		}
 	}
 
-	// »êÀû
+	// ì‚°ì 
 	public void mob22(Player player) {
 		int num = rnd.nextInt(10) + 6;
 		ItemStack item = new ItemStack(Material.EMERALD, num * multyEme);
@@ -388,7 +388,7 @@ public class MobLoot {
 		es.giveExp(player, 2811);
 	}
 
-	// º¯ÀÌµÈ ³ª¹µÀÙ
+	// ë³€ì´ëœ ë‚˜ë­‡ì
 	public void mob23(Player player) {
 		int num = rnd.nextInt(10);
 		ItemStack item = new ItemStack(Material.EMERALD, num * multyEme);
@@ -398,19 +398,19 @@ public class MobLoot {
 		int num2 = rnd.nextInt(15);
 		if (num2 == 0) {
 			player.teleport(new Location(world, 3464.5, 18, 3740));
-			player.sendMessage("À¯Àû ¾îµò°¡·Î ÀÌµ¿Çß´Ù.");
+			player.sendMessage("ìœ ì  ì–´ë”˜ê°€ë¡œ ì´ë™í–ˆë‹¤.");
 		} else if (num2 == 1) {
 			player.teleport(new Location(world, 3464.5, 18, 3697));
-			player.sendMessage("À¯Àû ¾îµò°¡·Î ÀÌµ¿Çß´Ù.");
+			player.sendMessage("ìœ ì  ì–´ë”˜ê°€ë¡œ ì´ë™í–ˆë‹¤.");
 		} else if (num2 == 2) {
 			player.teleport(new Location(world, 3503.5, 18, 3698));
-			player.sendMessage("À¯Àû ¾îµò°¡·Î ÀÌµ¿Çß´Ù.");
+			player.sendMessage("ìœ ì  ì–´ë”˜ê°€ë¡œ ì´ë™í–ˆë‹¤.");
 		} else if (num2 == 3) {
 			player.teleport(new Location(world, 3514.5, 18, 3745));
-			player.sendMessage("À¯Àû ¾îµò°¡·Î ÀÌµ¿Çß´Ù.");
+			player.sendMessage("ìœ ì  ì–´ë”˜ê°€ë¡œ ì´ë™í–ˆë‹¤.");
 		} else if (num2 == 4) {
 			player.teleport(new Location(world, 3539.5, 18, 3698));
-			player.sendMessage("À¯Àû ¾îµò°¡·Î ÀÌµ¿Çß´Ù.");
+			player.sendMessage("ìœ ì  ì–´ë”˜ê°€ë¡œ ì´ë™í–ˆë‹¤.");
 			int cnt = 0;
 			List<Entity> list = player.getNearbyEntities(30, 10, 30);
 			for (Entity ent : list) {
@@ -424,7 +424,7 @@ public class MobLoot {
 		}
 	}
 
-	// µÇ»ì¾Æ³­ ¸ğÇè°¡
+	// ë˜ì‚´ì•„ë‚œ ëª¨í—˜ê°€
 	public void mob24(Player player) {
 		int num = rnd.nextInt(10);
 		ItemStack item = new ItemStack(Material.EMERALD, num * multyEme);
@@ -434,19 +434,19 @@ public class MobLoot {
 		int num2 = rnd.nextInt(10);
 		if (num2 == 0) {
 			player.teleport(new Location(world, 3464.5, 18, 3740));
-			player.sendMessage("À¯Àû ¾îµò°¡·Î ÀÌµ¿Çß´Ù.");
+			player.sendMessage("ìœ ì  ì–´ë”˜ê°€ë¡œ ì´ë™í–ˆë‹¤.");
 		} else if (num2 == 1) {
 			player.teleport(new Location(world, 3464.5, 18, 3697));
-			player.sendMessage("À¯Àû ¾îµò°¡·Î ÀÌµ¿Çß´Ù.");
+			player.sendMessage("ìœ ì  ì–´ë”˜ê°€ë¡œ ì´ë™í–ˆë‹¤.");
 		} else if (num2 == 2) {
 			player.teleport(new Location(world, 3503.5, 18, 3698));
-			player.sendMessage("À¯Àû ¾îµò°¡·Î ÀÌµ¿Çß´Ù.");
+			player.sendMessage("ìœ ì  ì–´ë”˜ê°€ë¡œ ì´ë™í–ˆë‹¤.");
 		} else if (num2 == 3) {
 			player.teleport(new Location(world, 3514.5, 18, 3745));
-			player.sendMessage("À¯Àû ¾îµò°¡·Î ÀÌµ¿Çß´Ù.");
+			player.sendMessage("ìœ ì  ì–´ë”˜ê°€ë¡œ ì´ë™í–ˆë‹¤.");
 		} else if (num2 == 4) {
 			player.teleport(new Location(world, 3539.5, 18, 3698));
-			player.sendMessage("À¯Àû ¾îµò°¡·Î ÀÌµ¿Çß´Ù.");
+			player.sendMessage("ìœ ì  ì–´ë”˜ê°€ë¡œ ì´ë™í–ˆë‹¤.");
 			int cnt = 0;
 			List<Entity> list = player.getNearbyEntities(30, 10, 30);
 			for (Entity ent : list) {
@@ -460,7 +460,7 @@ public class MobLoot {
 		}
 	}
 
-	// À¯ÀûÀÇ ÁÖÀÎ
+	// ìœ ì ì˜ ì£¼ì¸
 	public void mob25(Player player) {
 		int num = rnd.nextInt(20);
 		ItemStack item = new ItemStack(Material.EMERALD, num * multyEme);
@@ -469,10 +469,10 @@ public class MobLoot {
 
 		ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
 		ItemMeta rewardKeyIm = rewardKey.getItemMeta();
-		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "½£ÀÇ À¯Àû º¸»ó ¿­¼è");
+		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "ìˆ²ì˜ ìœ ì  ë³´ìƒ ì—´ì‡ ");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "½£ÀÇ À¯Àû º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+		player.sendMessage(ChatColor.YELLOW + "ìˆ²ì˜ ìœ ì  ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 
 		World world = player.getWorld();
 
@@ -484,41 +484,41 @@ public class MobLoot {
 						&& nearplayer.getLocation().getZ() <= 3726 && nearplayer.getLocation().getX() >= 3522
 						&& nearplayer.getLocation().getY() >= 15 && nearplayer.getLocation().getZ() >= 3691) {
 					nearplayer.getInventory().addItem(rewardKey);
-					nearplayer.sendMessage(ChatColor.YELLOW + "½£ÀÇ À¯Àû º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+					nearplayer.sendMessage(ChatColor.YELLOW + "ìˆ²ì˜ ìœ ì  ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 					nearplayer.teleport(new Location(world, 3465, 37, 3749.5, -90f, 1.4f));
-					nearplayer.sendMessage("À¯Àû ¾îµò°¡·Î ÀÌµ¿Çß´Ù.");
+					nearplayer.sendMessage("ìœ ì  ì–´ë”˜ê°€ë¡œ ì´ë™í–ˆë‹¤.");
 				}
 			}
 		}
 
 		player.teleport(new Location(world, 3465, 37, 3749.5, -90f, -1.4f));
-		player.sendMessage("À¯Àû ¾îµò°¡·Î ÀÌµ¿Çß´Ù.");
+		player.sendMessage("ìœ ì  ì–´ë”˜ê°€ë¡œ ì´ë™í–ˆë‹¤.");
 
 	}
 
-	// ¿ÀÅ©
+	// ì˜¤í¬
 	public void mob26(Player player) {
 		int num = rnd.nextInt(2);
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 17312);
 
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===°°¾Æº¸ÀÌÁö¸¸ ´Ù¸¥===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ê°™ì•„ë³´ì´ì§€ë§Œ ë‹¤ë¥¸===")) {
 			int qNum = cb.getNum(player);
 			cb.q8(player, qNum + 1);
 		}
 	}
 
-	// ¹Ì·¡¸¦ ¿¹ÁöÇÏ´Â ´«
+	// ë¯¸ë˜ë¥¼ ì˜ˆì§€í•˜ëŠ” ëˆˆ
 	public void mob27(Player player) {
 		int num = rnd.nextInt(2);
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 19843);
@@ -530,417 +530,417 @@ public class MobLoot {
 			Chest chest = (Chest) block.getState();
 			ItemStack weapon1 = chest.getInventory().getItem(10);
 			player.getInventory().addItem(weapon1);
-			player.sendMessage(ChatColor.YELLOW + "¹Ì·¡¸¦ ¿¹ÁöÇÏ´Â ´«" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.YELLOW + "ë¯¸ë˜ë¥¼ ì˜ˆì§€í•˜ëŠ” ëˆˆ" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		}
 		
 	}
 
-	// °ËÀº ÀÎ°£
+	// ê²€ì€ ì¸ê°„
 	public void mob28(Player player) {
 		int num = rnd.nextInt(2);
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 22532);
 	}
 
-	// Æ÷º¸¸£ Á¤Âûº´
+	// í¬ë³´ë¥´ ì •ì°°ë³‘
 	public void mob29(Player player) {
 		int num = rnd.nextInt(4);
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 28653);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ÇÇ");
+		var1im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ í”¼");
 		var1.setItemMeta(var1im);
 		
 		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
 		ItemMeta var2im = var2.getItemMeta();
-		var2im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ¾µ°³");
+		var2im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
 		var2.setItemMeta(var2im);
 		
 		int tmp = rnd.nextInt(10);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ÇÇ" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ¾µ°³" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		}
 
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Æ÷º¸¸£ÀÇ À§Çù===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===í¬ë³´ë¥´ì˜ ìœ„í˜‘===")) {
 			int qNum = cb.getNum(player);
 			cb.q9(player, qNum + 1);
 		}
 
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¾ÕÀ¸·Î ³ª¾Æ°¡±â À§ÇÑ ¿©Á¤===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì•ìœ¼ë¡œ ë‚˜ì•„ê°€ê¸° ìœ„í•œ ì—¬ì •===")) {
 			int qNum = cb.getNum(player);
 			cb.mq9(player, qNum + 1);
 		}
 	}
 
-	// À¯ÀûÀ» ÁöÅ°´Â °Å¹Ì
+	// ìœ ì ì„ ì§€í‚¤ëŠ” ê±°ë¯¸
 	public void mob30(Player player) {
 		es.giveExp(player, 50000);
 	}
 
-	// ÆÄ¸£È¦·ĞÀÇ ¼öÈ£ÀÚ
+	// íŒŒë¥´í™€ë¡ ì˜ ìˆ˜í˜¸ì
 	public void mob31(Player player) {
 		es.giveExp(player, 60000);
 	}
 
-	// ¿Ü´«ÀÇ Æ÷º¸¸£
+	// ì™¸ëˆˆì˜ í¬ë³´ë¥´
 	public void mob32(Player player) {
 		int num = rnd.nextInt(3);
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 30800);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ÇÇ");
+		var1im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ í”¼");
 		var1.setItemMeta(var1im);
 		
 		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
 		ItemMeta var2im = var2.getItemMeta();
-		var2im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ¾µ°³");
+		var2im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
 		var2.setItemMeta(var2im);
 		
 		int tmp = rnd.nextInt(10);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ÇÇ" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ¾µ°³" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		}
 
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===µî´ëÁö±â ½ÃÇè===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë“±ëŒ€ì§€ê¸° ì‹œí—˜===")) {
 			int qNum = cb.getNum(player);
 			cb.mq10(player, qNum + 1);
 		}
 	}
 
-	// Æ÷º¸¸£ ¼¼·Â ÇÃ·¹ÀÌ¾î
+	// í¬ë³´ë¥´ ì„¸ë ¥ í”Œë ˆì´ì–´
 	public void mob33(Player player) {
 		int num = rnd.nextInt(5);
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 45412);
 
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===½Ãµå ±¤»êÀ¸·Î °¡´Â ±æ===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì‹œë“œ ê´‘ì‚°ìœ¼ë¡œ ê°€ëŠ” ê¸¸===")) {
 			int qNum = cb.getNum(player);
 			cb.mq13(player, qNum + 1);
 		}
 	}
 
-	// µ¿±¼ °Å¹Ì
+	// ë™êµ´ ê±°ë¯¸
 	public void mob34(Player player) {
 		int num = rnd.nextInt(4);
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 90621);
 	}
 
-	// µ¿±¼ ¹ú·¹
+	// ë™êµ´ ë²Œë ˆ
 	public void mob35(Player player) {
 		int num = rnd.nextInt(4);
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 95134);
 	}
 
-	// ¾Æ¶û
+	// ì•„ë‘
 	public void mob36(Player player) {
 		int num = rnd.nextInt(7);
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 84134);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ÇÇ");
+		var1im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ í”¼");
 		var1.setItemMeta(var1im);
 		
 		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
 		ItemMeta var2im = var2.getItemMeta();
-		var2im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ¾µ°³");
+		var2im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
 		var2.setItemMeta(var2im);
 		
 		ItemStack var3 = new ItemStack(Material.CRACKED_POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var3im = var3.getItemMeta();
-		var3im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ »ìÁ¡");
+		var3im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì ");
 		var3.setItemMeta(var3im);
 		
 		int tmp = rnd.nextInt(10);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ÇÇ" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ¾µ°³" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ »ìÁ¡" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		}
 	}
 
-	// ¸Ó¶ó¿ì´õ
+	// ë¨¸ë¼ìš°ë”
 	public void mob37(Player player) {
 		int num = rnd.nextInt(7);
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 90134);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ÇÇ");
+		var1im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ í”¼");
 		var1.setItemMeta(var1im);
 		
 		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
 		ItemMeta var2im = var2.getItemMeta();
-		var2im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ¾µ°³");
+		var2im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
 		var2.setItemMeta(var2im);
 		
 		ItemStack var3 = new ItemStack(Material.CRACKED_POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var3im = var3.getItemMeta();
-		var3im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ »ìÁ¡");
+		var3im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì ");
 		var3.setItemMeta(var3im);
 		
 		int tmp = rnd.nextInt(10);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ÇÇ" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ¾µ°³" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ »ìÁ¡" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		}
 	}
 
-	// ÆÄ¸£È¦·ĞÀÇ ÀüÅõº´
+	// íŒŒë¥´í™€ë¡ ì˜ ì „íˆ¬ë³‘
 	public void mob38(Player player) {
 		int num = rnd.nextInt(10) + 10;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 399999);
 	}
 
-	// Æ÷º¸¸£ ¼¼·Â ÇÃ·¹ÀÌ¾î
+	// í¬ë³´ë¥´ ì„¸ë ¥ í”Œë ˆì´ì–´
 	public void mob39(Player player) {
 		int num = rnd.nextInt(10);
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 108134);
 	}
 
-	// ºĞ³ëÀÇ Çü»ó
+	// ë¶„ë…¸ì˜ í˜•ìƒ
 	public void mob40(Player player) {
 		int num = rnd.nextInt(7);
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 130134);
 		
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ÀººûÀÇ ¿µ¿ª===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì€ë¹›ì˜ ì˜ì—­===")) {
 			int qNum = cb.getNum(player);
 			cb.mq17(player, qNum + 1);
 		}
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Å»È¯===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===íƒˆí™˜===")) {
 			int qNum = cb.getNum(player);
 			cb.q10(player, qNum + 1);
 		}	
 	}
 
-	// °øÇãÀÇ Çü»ó
+	// ê³µí—ˆì˜ í˜•ìƒ
 	public void mob41(Player player) {
 		int num = rnd.nextInt(7);
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 144160);
 		
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ÀººûÀÇ ¿µ¿ª===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì€ë¹›ì˜ ì˜ì—­===")) {
 			int qNum = cb.getNum(player);
 			cb.mq17(player, qNum + 1);
 		}
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Å»È¯===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===íƒˆí™˜===")) {
 			int qNum = cb.getNum(player);
 			cb.q10(player, qNum + 1);
 		}
 	}
 
-	// °íÅëÀÇ Çü»ó
+	// ê³ í†µì˜ í˜•ìƒ
 	public void mob42(Player player) {
 		int num = rnd.nextInt(7);
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 151532);
 		
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ÀººûÀÇ ¿µ¿ª===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì€ë¹›ì˜ ì˜ì—­===")) {
 			int qNum = cb.getNum(player);
 			cb.mq17(player, qNum + 1);
 		}
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Å»È¯===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===íƒˆí™˜===")) {
 			int qNum = cb.getNum(player);
 			cb.q10(player, qNum + 1);
 		}
 	}
 
-	// Ä§¹¬ÀÇ Çü»ó
+	// ì¹¨ë¬µì˜ í˜•ìƒ
 	public void mob43(Player player) {
 		int num = rnd.nextInt(8);
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 166256);
 		
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ÀººûÀÇ ¿µ¿ª===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì€ë¹›ì˜ ì˜ì—­===")) {
 			int qNum = cb.getNum(player);
 			cb.mq17(player, qNum + 1);
 		}
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Å»È¯===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===íƒˆí™˜===")) {
 			int qNum = cb.getNum(player);
 			cb.q10(player, qNum + 1);
 		}
 	}
 
-	// ¿ì¿ïÀÇ Çü»ó
+	// ìš°ìš¸ì˜ í˜•ìƒ
 	public void mob44(Player player) {
 		int num = rnd.nextInt(8);
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 178490);
 		
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ÀººûÀÇ ¿µ¿ª===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì€ë¹›ì˜ ì˜ì—­===")) {
 			int qNum = cb.getNum(player);
 			cb.mq17(player, qNum + 1);
 		}
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Å»È¯===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===íƒˆí™˜===")) {
 			int qNum = cb.getNum(player);
 			cb.q10(player, qNum + 1);
 		}
 	}
 
-	// Çã¸ùÀÇ Çü»ó
+	// í—ˆëª½ì˜ í˜•ìƒ
 	public void mob45(Player player) {
 		int num = rnd.nextInt(8);
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 183613);
 		
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ÀººûÀÇ ¿µ¿ª===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì€ë¹›ì˜ ì˜ì—­===")) {
 			int qNum = cb.getNum(player);
 			cb.mq17(player, qNum + 1);
 		}
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Å»È¯===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===íƒˆí™˜===")) {
 			int qNum = cb.getNum(player);
 			cb.q10(player, qNum + 1);
 		}
 	}
 
-	// ¿À¸¸ÀÇ Çü»ó
+	// ì˜¤ë§Œì˜ í˜•ìƒ
 	public void mob46(Player player) {
 		int num = rnd.nextInt(8) + 2;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 198236);
 		
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ÀººûÀÇ ¿µ¿ª===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì€ë¹›ì˜ ì˜ì—­===")) {
 			int qNum = cb.getNum(player);
 			cb.mq17(player, qNum + 1);
 		}
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Å»È¯===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===íƒˆí™˜===")) {
 			int qNum = cb.getNum(player);
 			cb.q10(player, qNum + 1);
 		}
 	}
 
-	// ¹è½ÅÀÇ Çü»ó
+	// ë°°ì‹ ì˜ í˜•ìƒ
 	public void mob47(Player player) {
 		int num = rnd.nextInt(8) + 2;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 193572);
 		
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ÀººûÀÇ ¿µ¿ª===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì€ë¹›ì˜ ì˜ì—­===")) {
 			int qNum = cb.getNum(player);
 			cb.mq17(player, qNum + 1);
 		}
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Å»È¯===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===íƒˆí™˜===")) {
 			int qNum = cb.getNum(player);
 			cb.q10(player, qNum + 1);
 		}
 	}
 
-	// ½Ã·ÃÀÇ Çü»ó
+	// ì‹œë ¨ì˜ í˜•ìƒ
 	public void mob48(Player player) {
-		player.sendMessage("Å¬¸®¾î!");
+		player.sendMessage("í´ë¦¬ì–´!");
 		player.teleport(new Location(player.getWorld(), -1106, 186, 1453.5, -90.0f, 0.0f));
 		
 		Location chestLoc = new Location(player.getWorld(), -1833, 92, 3036);
@@ -948,624 +948,624 @@ public class MobLoot {
 		Chest chest = (Chest) block.getState();
 		ItemStack item = chest.getInventory().getItem(7);
 		player.getInventory().addItem(item);
-		player.sendMessage(ChatColor.DARK_RED + "¼û°ÜÁø ´Ş°¿ 1" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+		player.sendMessage(ChatColor.DARK_RED + "ìˆ¨ê²¨ì§„ ë‹¬ê±€ 1" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 	}
 
-	// ±Í¿õ
+	// ê·€ì›…
 	public void mob49(Player player) {
 		int num = rnd.nextInt(8) + 3;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 121257);
 	}
 
-	// ´ë»ç
+	// ëŒ€ì‚¬
 	public void mob50(Player player) {
 		int num = rnd.nextInt(8) + 3;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 131257);
 	}
 
-	// ¿µÈ¥À» Å½ÇÏ´Â ¿äÁ¤
+	// ì˜í˜¼ì„ íƒí•˜ëŠ” ìš”ì •
 	public void mob51(Player player) {
 		es.giveExp(player, 251256);
 	}
 
-	// µö½½¶óÀÓ
+	// ë”¥ìŠ¬ë¼ì„
 	public void mob52(Player player) {
 		es.giveExp(player, 258193);
 	}
 
-	// ¿ö¸®¾î
+	// ì›Œë¦¬ì–´
 	public void mob53(Player player) {
 		int num = rnd.nextInt(12);
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 220000);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ÇÇ");
+		var1im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ í”¼");
 		var1.setItemMeta(var1im);
 		
 		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
 		ItemMeta var2im = var2.getItemMeta();
-		var2im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ¾µ°³");
+		var2im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
 		var2.setItemMeta(var2im);
 		
 		ItemStack var3 = new ItemStack(Material.CRACKED_POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var3im = var3.getItemMeta();
-		var3im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ »ìÁ¡");
+		var3im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì ");
 		var3.setItemMeta(var3im);
 		
 		int tmp = rnd.nextInt(10);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ÇÇ" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ¾µ°³" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ »ìÁ¡" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		}
 	}
 
-	// ºóµğÄÉÀÌÅÍ
+	// ë¹ˆë””ì¼€ì´í„°
 	public void mob54(Player player) {
 		int num = rnd.nextInt(12);
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 232516);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ÇÇ");
+		var1im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ í”¼");
 		var1.setItemMeta(var1im);
 		
 		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
 		ItemMeta var2im = var2.getItemMeta();
-		var2im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ¾µ°³");
+		var2im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
 		var2.setItemMeta(var2im);
 		
 		ItemStack var3 = new ItemStack(Material.CRACKED_POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var3im = var3.getItemMeta();
-		var3im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ »ìÁ¡");
+		var3im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì ");
 		var3.setItemMeta(var3im);
 		
 		int tmp = rnd.nextInt(10);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ÇÇ" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ¾µ°³" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ »ìÁ¡" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		}
 	}
 
-	// Àú°Å³ÊÆ®
+	// ì €ê±°ë„ˆíŠ¸
 	public void mob55(Player player) {
 		int num = rnd.nextInt(12);
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 247236);
 	}
 
-	// À¯¼­ÆÛ
+	// ìœ ì„œí¼
 	public void mob56(Player player) {
 		int num = rnd.nextInt(12);
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 261684);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ÇÇ");
+		var1im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ í”¼");
 		var1.setItemMeta(var1im);
 		
 		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
 		ItemMeta var2im = var2.getItemMeta();
-		var2im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ¾µ°³");
+		var2im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
 		var2.setItemMeta(var2im);
 		
 		ItemStack var3 = new ItemStack(Material.CRACKED_POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var3im = var3.getItemMeta();
-		var3im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ »ìÁ¡");
+		var3im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì ");
 		var3.setItemMeta(var3im);
 		
 		ItemStack var4 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_SLAB);
 		ItemMeta var4im = var4.getItemMeta();
-		var4im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ °£");
+		var4im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ê°„");
 		var4.setItemMeta(var4im);
 		
 		int tmp = rnd.nextInt(12);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ÇÇ" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ¾µ°³" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ »ìÁ¡" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ °£" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ê°„" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		}
 	}
 
-	// µÚÆ²¸° ¿ª»çÀÇ ÈçÀû
+	// ë’¤í‹€ë¦° ì—­ì‚¬ì˜ í”ì 
 	public void mob57(Player player) {
 		int num = rnd.nextInt(10);
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 271134);
 	}
 	
-	// ¾Æ°ø°£ ÆÄ¼ö²Û
+	// ì•„ê³µê°„ íŒŒìˆ˜ê¾¼
 	public void mob58(Player player) {
 		int num = rnd.nextInt(10);
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 294284);
 	}
 
-	// Á¶³­´çÇÑ ¿µÈ¥
+	// ì¡°ë‚œë‹¹í•œ ì˜í˜¼
 	public void mob59(Player player) {
 		int num = rnd.nextInt(10);
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 251652);
 	}
 
-	// ÀÍ»ç´çÇÑ ¼±¿ø
+	// ìµì‚¬ë‹¹í•œ ì„ ì›
 	public void mob60(Player player) {
 		int num = rnd.nextInt(10);
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 261684);
 	}
 	
-	// ¼ö¶ó
+	// ìˆ˜ë¼
 	public void mob61(Player player) {
 		int num = rnd.nextInt(15);
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 281256);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ÇÇ");
+		var1im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ í”¼");
 		var1.setItemMeta(var1im);
 		
 		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
 		ItemMeta var2im = var2.getItemMeta();
-		var2im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ¾µ°³");
+		var2im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
 		var2.setItemMeta(var2im);
 		
 		ItemStack var3 = new ItemStack(Material.CRACKED_POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var3im = var3.getItemMeta();
-		var3im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ »ìÁ¡");
+		var3im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì ");
 		var3.setItemMeta(var3im);
 		
 		ItemStack var4 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_SLAB);
 		ItemMeta var4im = var4.getItemMeta();
-		var4im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ °£");
+		var4im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ê°„");
 		var4.setItemMeta(var4im);
 		
 		ItemStack var5 = new ItemStack(Material.CHISELED_POLISHED_BLACKSTONE);
 		ItemMeta var5im = var5.getItemMeta();
-		var5im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ½ÉÀå");
+		var5im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì‹¬ì¥");
 		var5.setItemMeta(var5im);
 		
 		int tmp = rnd.nextInt(20);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ÇÇ" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ¾µ°³" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ »ìÁ¡" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ °£" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ê°„" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ½ÉÀå" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì‹¬ì¥" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		}
 	}
 
-	// ³ªÂû
+	// ë‚˜ì°°
 	public void mob62(Player player) {
 		int num = rnd.nextInt(15);
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 303261);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ÇÇ");
+		var1im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ í”¼");
 		var1.setItemMeta(var1im);
 		
 		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
 		ItemMeta var2im = var2.getItemMeta();
-		var2im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ¾µ°³");
+		var2im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
 		var2.setItemMeta(var2im);
 		
 		ItemStack var3 = new ItemStack(Material.CRACKED_POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var3im = var3.getItemMeta();
-		var3im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ »ìÁ¡");
+		var3im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì ");
 		var3.setItemMeta(var3im);
 		
 		ItemStack var4 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_SLAB);
 		ItemMeta var4im = var4.getItemMeta();
-		var4im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ °£");
+		var4im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ê°„");
 		var4.setItemMeta(var4im);
 		
 		ItemStack var5 = new ItemStack(Material.CHISELED_POLISHED_BLACKSTONE);
 		ItemMeta var5im = var5.getItemMeta();
-		var5im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ½ÉÀå");
+		var5im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì‹¬ì¥");
 		var5.setItemMeta(var5im);
 		
 		int tmp = rnd.nextInt(20);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ÇÇ" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ¾µ°³" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ »ìÁ¡" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ °£" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ê°„" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ½ÉÀå" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì‹¬ì¥" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		}
 	}
 
-	// ³ªÈ£
+	// ë‚˜í˜¸
 	public void mob63(Player player) {
 		int num = rnd.nextInt(15);
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 331534);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ÇÇ");
+		var1im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ í”¼");
 		var1.setItemMeta(var1im);
 		
 		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
 		ItemMeta var2im = var2.getItemMeta();
-		var2im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ¾µ°³");
+		var2im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
 		var2.setItemMeta(var2im);
 		
 		ItemStack var3 = new ItemStack(Material.CRACKED_POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var3im = var3.getItemMeta();
-		var3im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ »ìÁ¡");
+		var3im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì ");
 		var3.setItemMeta(var3im);
 		
 		ItemStack var4 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_SLAB);
 		ItemMeta var4im = var4.getItemMeta();
-		var4im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ °£");
+		var4im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ê°„");
 		var4.setItemMeta(var4im);
 		
 		ItemStack var5 = new ItemStack(Material.CHISELED_POLISHED_BLACKSTONE);
 		ItemMeta var5im = var5.getItemMeta();
-		var5im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ½ÉÀå");
+		var5im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì‹¬ì¥");
 		var5.setItemMeta(var5im);
 		
 		int tmp = rnd.nextInt(20);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ÇÇ" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ¾µ°³" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ »ìÁ¡" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ °£" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ê°„" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ½ÉÀå" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì‹¬ì¥" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		}
 	}
 
-	// ³ª¼¶
+	// ë‚˜ì„¬
 	public void mob64(Player player) {
 		int num = rnd.nextInt(15);
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 361654);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ÇÇ");
+		var1im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ í”¼");
 		var1.setItemMeta(var1im);
 		
 		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
 		ItemMeta var2im = var2.getItemMeta();
-		var2im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ¾µ°³");
+		var2im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
 		var2.setItemMeta(var2im);
 		
 		ItemStack var3 = new ItemStack(Material.CRACKED_POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var3im = var3.getItemMeta();
-		var3im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ »ìÁ¡");
+		var3im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì ");
 		var3.setItemMeta(var3im);
 		
 		ItemStack var4 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_SLAB);
 		ItemMeta var4im = var4.getItemMeta();
-		var4im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ °£");
+		var4im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ê°„");
 		var4.setItemMeta(var4im);
 		
 		ItemStack var5 = new ItemStack(Material.CHISELED_POLISHED_BLACKSTONE);
 		ItemMeta var5im = var5.getItemMeta();
-		var5im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ½ÉÀå");
+		var5im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì‹¬ì¥");
 		var5.setItemMeta(var5im);
 		
 		int tmp = rnd.nextInt(20);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ÇÇ" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ¾µ°³" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ »ìÁ¡" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ °£" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ê°„" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ½ÉÀå" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì‹¬ì¥" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		}
 	}
 
-	// µ¥ºô º¸ÃÊº´
+	// ë°ë¹Œ ë³´ì´ˆë³‘
 	public void mob65(Player player) {
 		int num = rnd.nextInt(10) + 10;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 405631);
 		
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===µ¥ºô ÀÎÀÚ===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë°ë¹Œ ì¸ì===")) {
 			int qNum = cb.getNum(player);
 			cb.q12(player, qNum + 1);
 		}
 	}
 
-	// µ¥ºô º´»ç
+	// ë°ë¹Œ ë³‘ì‚¬
 	public void mob66(Player player) {
 		int num = rnd.nextInt(10) + 10;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 427134);
 		
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===µ¥ºô ÀÎÀÚ===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë°ë¹Œ ì¸ì===")) {
 			int qNum = cb.getNum(player);
 			cb.q12(player, qNum + 1);
 		}
 	}
 
-	// µ¥ºô ºĞ´ëÀå
+	// ë°ë¹Œ ë¶„ëŒ€ì¥
 	public void mob67(Player player) {
 		int num = rnd.nextInt(15) + 10;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 461124);
 		
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===µ¥ºô ÀÎÀÚ===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë°ë¹Œ ì¸ì===")) {
 			int qNum = cb.getNum(player);
 			cb.q12(player, qNum + 1);
 		}
 	}
 	
-	// ¹¦Áö±âÀÇ ½ÅÁ÷
+	// ë¬˜ì§€ê¸°ì˜ ì‹ ì§
 	public void mob68(Player player) {
 		int num = rnd.nextInt(10) + 5;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 331134);
 		
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===³×Å©·Îº§¸®===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë„¤í¬ë¡œë²¨ë¦¬===")) {
 			int qNum = cb.getNum(player);
 			cb.q11(player, qNum + 1);
 		}
 	}
 	
-	// ¹¦Áö±âÀÇ »ç·É°ü
+	// ë¬˜ì§€ê¸°ì˜ ì‚¬ë ¹ê´€
 	public void mob69(Player player) {
 		int num = rnd.nextInt(10) + 5;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 358417);
 		
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===³×Å©·Îº§¸®===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë„¤í¬ë¡œë²¨ë¦¬===")) {
 			int qNum = cb.getNum(player);
 			cb.q11(player, qNum + 1);
 		}
 	}
 	
-	// ¹¦Áö±âÀÇ ¿µ¼ú»ç
+	// ë¬˜ì§€ê¸°ì˜ ì˜ìˆ ì‚¬
 	public void mob70(Player player) {
 		int num = rnd.nextInt(10) + 5;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 378571);
 		
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===³×Å©·Îº§¸®===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë„¤í¬ë¡œë²¨ë¦¬===")) {
 			int qNum = cb.getNum(player);
 			cb.q11(player, qNum + 1);
 		}
 	}
 	
-	// ¹¦Áö±âÀÇ ÀÌ´ÉÀÚ
+	// ë¬˜ì§€ê¸°ì˜ ì´ëŠ¥ì
 	public void mob71(Player player) {
 		int num = rnd.nextInt(10) + 5;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 418760);
 		
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===³×Å©·Îº§¸®===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë„¤í¬ë¡œë²¨ë¦¬===")) {
 			int qNum = cb.getNum(player);
 			cb.q11(player, qNum + 1);
 		}
 	}
 	
-	// º¸ÃÊ¸¦ ¼­´Â ¿äÁ¤
+	// ë³´ì´ˆë¥¼ ì„œëŠ” ìš”ì •
 	public void mob72(Player player) {
 		int num = rnd.nextInt(10);
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 204251);
 	}
 	
-	// °ø°İ´ë ¿äÁ¤
+	// ê³µê²©ëŒ€ ìš”ì •
 	public void mob73(Player player) {
 		int num = rnd.nextInt(10);
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 222167);
 	}
 	
-	// ºÒÀÇ ¿äÁ¤
+	// ë¶ˆì˜ ìš”ì •
 	public void mob74(Player player) {
 		int num = rnd.nextInt(10);
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 273712);
 	}
 
-	// ¿äÁ¤ÀÇ ¼ÒÈ¯¼ö
+	// ìš”ì •ì˜ ì†Œí™˜ìˆ˜
 	public void mob75(Player player) {
 		int num = rnd.nextInt(10);
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 283712);
 	}
 	
-	// °Å´ë ¿äÁ¤
+	// ê±°ëŒ€ ìš”ì •
 	public void mob76(Player player) {
 		int num = rnd.nextInt(20) + 10;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 450000);
 	}
 	
-	// ¿äÁ¤¿Õ ¿Àº£·Ğ
+	// ìš”ì •ì™• ì˜¤ë² ë¡ 
 	public void mob77(Player player) {
 		int num = rnd.nextInt(30) + 5;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 777777);
 
 		ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
 		ItemMeta rewardKeyIm = rewardKey.getItemMeta();
-		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "Å¸¶ôÇÑ ¿äÁ¤ ¿Õ±¹ º¸»ó ¿­¼è");
+		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "íƒ€ë½í•œ ìš”ì • ì™•êµ­ ë³´ìƒ ì—´ì‡ ");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "Å¸¶ôÇÑ ¿äÁ¤ ¿Õ±¹ º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+		player.sendMessage(ChatColor.YELLOW + "íƒ€ë½í•œ ìš”ì • ì™•êµ­ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -1576,28 +1576,28 @@ public class MobLoot {
 				if (loc.getX() <= 3797 && loc.getY() <= 90 && loc.getZ() <= 3497 
 						&& loc.getX() >= 3754 && loc.getY() >= 75 && loc.getZ() >= 3456) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "Å¸¶ôÇÑ ¿äÁ¤ ¿Õ±¹ º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+					nearPlayer.sendMessage(ChatColor.YELLOW + "íƒ€ë½í•œ ìš”ì • ì™•êµ­ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 				}
 			}
 		}
 	}
 	
-	// ¿äÁ¤¿©¿Õ Æ¼Å¸´Ï¾Æ
+	// ìš”ì •ì—¬ì™• í‹°íƒ€ë‹ˆì•„
 	public void mob78(Player player) {
 		int num = rnd.nextInt(30) + 5;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 777777);
 
 		ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
 		ItemMeta rewardKeyIm = rewardKey.getItemMeta();
-		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "Å¸¶ôÇÑ ¿äÁ¤ ¿Õ±¹ º¸»ó ¿­¼è");
+		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "íƒ€ë½í•œ ìš”ì • ì™•êµ­ ë³´ìƒ ì—´ì‡ ");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "Å¸¶ôÇÑ ¿äÁ¤ ¿Õ±¹ º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+		player.sendMessage(ChatColor.YELLOW + "íƒ€ë½í•œ ìš”ì • ì™•êµ­ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -1608,228 +1608,228 @@ public class MobLoot {
 				if (loc.getX() <= 3797 && loc.getY() <= 90 && loc.getZ() <= 3497 
 						&& loc.getX() >= 3754 && loc.getY() >= 75 && loc.getZ() >= 3456) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "Å¸¶ôÇÑ ¿äÁ¤ ¿Õ±¹ º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+					nearPlayer.sendMessage(ChatColor.YELLOW + "íƒ€ë½í•œ ìš”ì • ì™•êµ­ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 				}
 			}
 		}
 	}
 	
-	// ³ªºñ
+	// ë‚˜ë¹„
 	public void mob79(Player player) {
 		int num = rnd.nextInt(20) + 5;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 465760);
 	}
 
-	// ¼³¿ø Á¤ÂûÀÚ
+	// ì„¤ì› ì •ì°°ì
 	public void mob80(Player player) {
 		int num = rnd.nextInt(20) + 5;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 315156);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ÇÇ");
+		var1im.setDisplayName(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ í”¼");
 		var1.setItemMeta(var1im);
 		
 		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
 		ItemMeta var2im = var2.getItemMeta();
-		var2im.setDisplayName(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ¾µ°³");
+		var2im.setDisplayName(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
 		var2.setItemMeta(var2im);
 		
 		int tmp = rnd.nextInt(15);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ÇÇ" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ¾µ°³" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		}
 		
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===´øÀü Å½»ö===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë˜ì „ íƒìƒ‰===")) {
 			int qNum = cb.getNum(player);
 			cb.mq23(player, qNum + 1);
 		}
 	}
 	
-	// ¼³¿ø Á¤ÂûÀÚ
+	// ì„¤ì› ì •ì°°ì
 	public void mob81(Player player) {
 		int num = rnd.nextInt(20) + 5;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 338573);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ÇÇ");
+		var1im.setDisplayName(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ í”¼");
 		var1.setItemMeta(var1im);
 		
 		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
 		ItemMeta var2im = var2.getItemMeta();
-		var2im.setDisplayName(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ¾µ°³");
+		var2im.setDisplayName(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
 		var2.setItemMeta(var2im);
 		
 		int tmp = rnd.nextInt(15);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ÇÇ" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ¾µ°³" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		}
 		
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===´øÀü Å½»ö===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë˜ì „ íƒìƒ‰===")) {
 			int qNum = cb.getNum(player);
 			cb.mq23(player, qNum + 1);
 		}
 	}
 	
-	// ¼³¿ø Á¤ÂûÀÚ
+	// ì„¤ì› ì •ì°°ì
 	public void mob82(Player player) {
 		int num = rnd.nextInt(20) + 5;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 380265);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ÇÇ");
+		var1im.setDisplayName(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ í”¼");
 		var1.setItemMeta(var1im);
 		
 		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
 		ItemMeta var2im = var2.getItemMeta();
-		var2im.setDisplayName(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ¾µ°³");
+		var2im.setDisplayName(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
 		var2.setItemMeta(var2im);
 		
 		int tmp = rnd.nextInt(15);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ÇÇ" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ¾µ°³" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		}
 		
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===´øÀü Å½»ö===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë˜ì „ íƒìƒ‰===")) {
 			int qNum = cb.getNum(player);
 			cb.mq23(player, qNum + 1);
 		}
 	}
 	
-	// ¹ß·Î¸£ÀÇ º¸º´, ¹ß·Î¸£ÀÇ ±Ãº´
+	// ë°œë¡œë¥´ì˜ ë³´ë³‘, ë°œë¡œë¥´ì˜ ê¶ë³‘
 	public void mob83(Player player) {
 		int num = rnd.nextInt(20);
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 401245);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ÇÇ");
+		var1im.setDisplayName(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ í”¼");
 		var1.setItemMeta(var1im);
 		
 		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
 		ItemMeta var2im = var2.getItemMeta();
-		var2im.setDisplayName(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ¾µ°³");
+		var2im.setDisplayName(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
 		var2.setItemMeta(var2im);
 		
 		ItemStack var3 = new ItemStack(Material.CRACKED_POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var3im = var3.getItemMeta();
-		var3im.setDisplayName(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ »ìÁ¡");
+		var3im.setDisplayName(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì ");
 		var3.setItemMeta(var3im);
 		
 		int tmp = rnd.nextInt(18);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ÇÇ" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ¾µ°³" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ »ìÁ¡" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		}
 	}
 	
-	// ¹ß·Î¸£ÀÇ º¸º´, ¹ß·Î¸£ÀÇ ±Ãº´
+	// ë°œë¡œë¥´ì˜ ë³´ë³‘, ë°œë¡œë¥´ì˜ ê¶ë³‘
 	public void mob84(Player player) {
 		int num = rnd.nextInt(20);
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 413415);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ÇÇ");
+		var1im.setDisplayName(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ í”¼");
 		var1.setItemMeta(var1im);
 		
 		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
 		ItemMeta var2im = var2.getItemMeta();
-		var2im.setDisplayName(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ¾µ°³");
+		var2im.setDisplayName(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
 		var2.setItemMeta(var2im);
 		
 		ItemStack var3 = new ItemStack(Material.CRACKED_POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var3im = var3.getItemMeta();
-		var3im.setDisplayName(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ »ìÁ¡");
+		var3im.setDisplayName(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì ");
 		var3.setItemMeta(var3im);
 		
 		int tmp = rnd.nextInt(18);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ÇÇ" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ¾µ°³" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ »ìÁ¡" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		}
 	}
 	
-	// ¹ß·Î¸£ÀÇ º¸º´, ¹ß·Î¸£ÀÇ ±Ãº´
+	// ë°œë¡œë¥´ì˜ ë³´ë³‘, ë°œë¡œë¥´ì˜ ê¶ë³‘
 	public void mob85(Player player) {
 		es.giveExp(player, 444623);
 	}
 	
-	// ÄÉÈê·»
+	// ì¼€í˜ë Œ
 	public void mob86(Player player) {
 		int num = rnd.nextInt(10)+40;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 1100000);
 		
 		ItemStack var1 = new ItemStack(Material.CHISELED_POLISHED_BLACKSTONE);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ½ÉÀå");
+		var1im.setDisplayName(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ì‹¬ì¥");
 		var1.setItemMeta(var1im);
 		player.getInventory().addItem(var1);
-		player.sendMessage(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ½ÉÀå" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+		player.sendMessage(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ì‹¬ì¥" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -1842,11 +1842,11 @@ public class MobLoot {
 					
 					try {
 						QuestBoard cb = new QuestBoard();
-						if (cb.getQuestName(nearPlayer).equals(ChatColor.LIGHT_PURPLE + "===¼³¿øÀÇ °¡Èñ7===")) {
+						if (cb.getQuestName(nearPlayer).equals(ChatColor.LIGHT_PURPLE + "===ì„¤ì›ì˜ ê°€í¬7===")) {
 							int qNum = cb.getNum(nearPlayer);
 							cb.eq1_6(nearPlayer, qNum + 1);
 							nearPlayer.teleport(new Location(nearPlayer.getWorld(), 3734, 140, 3146, 90, 0));
-						} else if (cb.getQuestName(nearPlayer).equals(ChatColor.LIGHT_PURPLE + "===Ä«·ç ´øÀü===")) {
+						} else if (cb.getQuestName(nearPlayer).equals(ChatColor.LIGHT_PURPLE + "===ì¹´ë£¨ ë˜ì „===")) {
 							int qNum = cb.getNum(nearPlayer);
 							cb.mq24(nearPlayer, qNum + 1);
 							nearPlayer.teleport(new Location(nearPlayer.getWorld(), 3734, 140, 3146, 90, 0));
@@ -1863,11 +1863,11 @@ public class MobLoot {
 		
 		try {
 			QuestBoard cb = new QuestBoard();
-			if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¼³¿øÀÇ °¡Èñ7===")) {
+			if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì„¤ì›ì˜ ê°€í¬7===")) {
 				int qNum = cb.getNum(player);
 				cb.eq1_6(player, qNum + 1);
 				player.teleport(new Location(player.getWorld(), 3734, 140, 3146, 90, 0));
-			} else if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Ä«·ç ´øÀü===")) {
+			} else if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì¹´ë£¨ ë˜ì „===")) {
 				int qNum = cb.getNum(player);
 				cb.mq24(player, qNum + 1);
 				player.teleport(new Location(player.getWorld(), 3734, 140, 3146, 90, 0));
@@ -1880,29 +1880,29 @@ public class MobLoot {
 
 	}
 	
-	// ¹ß·Î¸£
+	// ë°œë¡œë¥´
 	public void mob87(Player player) {
 		int num = rnd.nextInt(4) + 44;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 1300000);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_STAIRS);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ »Ô");
+		var1im.setDisplayName(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ë¿”");
 		var1.setItemMeta(var1im);
 		player.getInventory().addItem(var1);
-		player.sendMessage(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ »Ô" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+		player.sendMessage(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ë¿”" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 
 		ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
 		ItemMeta rewardKeyIm = rewardKey.getItemMeta();
-		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "Ä«·ç ´øÀü º¸»ó ¿­¼è");
+		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "ì¹´ë£¨ ë˜ì „ ë³´ìƒ ì—´ì‡ ");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "Ä«·ç ´øÀü º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+		player.sendMessage(ChatColor.YELLOW + "ì¹´ë£¨ ë˜ì „ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -1913,69 +1913,69 @@ public class MobLoot {
 				if (loc.getX() <= 3769 && loc.getY() <= 163 && loc.getZ() <= 3254 && loc.getX() >= 3711
 						&& loc.getY() >= 133 && loc.getZ() >= 3217) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "Ä«·ç ´øÀü º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+					nearPlayer.sendMessage(ChatColor.YELLOW + "ì¹´ë£¨ ë˜ì „ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 				}
 			}
 		}
 	}
 	
-	// °Å´ë ½½¶óÀÓ
+	// ê±°ëŒ€ ìŠ¬ë¼ì„
 	public void mob88(Player player) {
 		int num = rnd.nextInt(10) + 10;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 471760);
 	}
 	
-	// ´Á´ë °Å¹Ì
+	// ëŠ‘ëŒ€ ê±°ë¯¸
 	public void mob89(Player player) {
 		int num = rnd.nextInt(20) + 5;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 486124);
 		
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===»õ·Î¿î ¸¸³²===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ìƒˆë¡œìš´ ë§Œë‚¨===")) {
 			int qNum = cb.getNum(player);
 			cb.mq27(player, qNum + 1);
-		} else if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¸¶½Å¿ÕÀÇ °è¾à1===")) {
+		} else if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë§ˆì‹ ì™•ì˜ ê³„ì•½1===")) {
 			int qNum = cb.getNum(player);
 			cb.eq2(player, qNum + 1);
 		}
 	}
 	
-	// µ¶°Å¹Ì
+	// ë…ê±°ë¯¸
 	public void mob90(Player player) {
 		int num = rnd.nextInt(20) + 5;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 494250);
 		
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===»õ·Î¿î ¸¸³²===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ìƒˆë¡œìš´ ë§Œë‚¨===")) {
 			int qNum = cb.getNum(player);
 			cb.mq27(player, qNum + 1);
-		} else if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¸¶½Å¿ÕÀÇ °è¾à1===")) {
+		} else if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë§ˆì‹ ì™•ì˜ ê³„ì•½1===")) {
 			int qNum = cb.getNum(player);
 			cb.eq2(player, qNum + 1);
 		}
 	}
 	
-	// ´ËÁöÀÇ ¸¶¼ö
+	// ëŠªì§€ì˜ ë§ˆìˆ˜
 	public void mob91(Player player) {
 		int num = rnd.nextInt(20) + 10;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 498760);
@@ -1987,21 +1987,21 @@ public class MobLoot {
 		}
 	}
 	
-	// ´ËÁöÀÇ ¸¶½Å¿Õ
+	// ëŠªì§€ì˜ ë§ˆì‹ ì™•
 	public void mob92(Player player) {
 		int num = 64;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 555555);
 		
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.GOLD + "¿¢½ºÆ®¶ó Äù½ºÆ®: ¸¶½Å¿ÕÀÇ °è¾à");
+		scrollIm.setDisplayName(ChatColor.GOLD + "ì—‘ìŠ¤íŠ¸ë¼ í€˜ìŠ¤íŠ¸: ë§ˆì‹ ì™•ì˜ ê³„ì•½");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "'¸¶½Å¿ÕÀÇ °è¾à' Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ÀÖ´Ù.");
+		scrollLore.add(ChatColor.GRAY + "'ë§ˆì‹ ì™•ì˜ ê³„ì•½' í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆë‹¤.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -2012,198 +2012,198 @@ public class MobLoot {
 		player.getInventory().addItem(scroll);
 		
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===´ËÁöÀÇ ¸¶½Å¿Õ===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ëŠªì§€ì˜ ë§ˆì‹ ì™•===")) {
 			int qNum = cb.getNum(player);
 			cb.mq28(player, qNum + 1);
 		}
 	}
 
-	// »êÀû
+	// ì‚°ì 
 	public void mob93(Player player) {
 		int num = rnd.nextInt(10) + 10;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 512523);
 	}
 	
-	// ÀüÅõÇü Áı»ç
+	// ì „íˆ¬í˜• ì§‘ì‚¬
 	public void mob94(Player player) {
 		int num = rnd.nextInt(5);
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 44742);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ÇÇ");
+		var1im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ í”¼");
 		var1.setItemMeta(var1im);
 		
 		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
 		ItemMeta var2im = var2.getItemMeta();
-		var2im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ¾µ°³");
+		var2im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
 		var2.setItemMeta(var2im);
 		
 		int tmp = rnd.nextInt(10);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ÇÇ" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ¾µ°³" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		}
 		
 	}
 	
-	// ÀüÅõÇü ¸ŞÀÌµå
+	// ì „íˆ¬í˜• ë©”ì´ë“œ
 	public void mob95(Player player) {
 		int num = rnd.nextInt(5);
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 49825);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ÇÇ");
+		var1im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ í”¼");
 		var1.setItemMeta(var1im);
 		
 		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
 		ItemMeta var2im = var2.getItemMeta();
-		var2im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ¾µ°³");
+		var2im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
 		var2.setItemMeta(var2im);
 		
 		int tmp = rnd.nextInt(10);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ÇÇ" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ¾µ°³" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		}
 		
 	}
 	
-	// ±â»çÃâ½Å Áı»ç, Àå±³Ãâ½Å ¸ŞÀÌµå, º¸¾ÈÆÀÀå
+	// ê¸°ì‚¬ì¶œì‹  ì§‘ì‚¬, ì¥êµì¶œì‹  ë©”ì´ë“œ, ë³´ì•ˆíŒ€ì¥
 	public void mob96(Player player) {
 		int num = rnd.nextInt(5) + 5;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 64235);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ÇÇ");
+		var1im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ í”¼");
 		var1.setItemMeta(var1im);
 		
 		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
 		ItemMeta var2im = var2.getItemMeta();
-		var2im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ¾µ°³");
+		var2im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
 		var2.setItemMeta(var2im);
 		
 		int tmp = rnd.nextInt(10);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ÇÇ" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ¾µ°³" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		}
 	}
 	
-	// ÀüÅõÇü Áı»ç
+	// ì „íˆ¬í˜• ì§‘ì‚¬
 	public void mob97(Player player) {
 		int num = rnd.nextInt(5);
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 49125);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ÇÇ");
+		var1im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ í”¼");
 		var1.setItemMeta(var1im);
 		
 		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
 		ItemMeta var2im = var2.getItemMeta();
-		var2im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ¾µ°³");
+		var2im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
 		var2.setItemMeta(var2im);
 		
 		int tmp = rnd.nextInt(10);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ÇÇ" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ¾µ°³" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		}
 	}
 	
-	// ÀüÅõÇü ¸ŞÀÌµå
+	// ì „íˆ¬í˜• ë©”ì´ë“œ
 	public void mob98(Player player) {
 		int num = rnd.nextInt(5);
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 52763);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ÇÇ");
+		var1im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ í”¼");
 		var1.setItemMeta(var1im);
 		
 		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
 		ItemMeta var2im = var2.getItemMeta();
-		var2im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ¾µ°³");
+		var2im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
 		var2.setItemMeta(var2im);
 		
 		int tmp = rnd.nextInt(10);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ÇÇ" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ¾µ°³" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		}
 	}
 	
-	// ¾Æµ§
+	// ì•„ë´
 	public void mob99(Player player) {
 		int num = rnd.nextInt(10) + 10;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 160000);
 		
 		ItemStack var1 = new ItemStack(Material.CHISELED_POLISHED_BLACKSTONE);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.GRAY + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ½ÉÀå");
+		var1im.setDisplayName(ChatColor.GRAY + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì‹¬ì¥");
 		var1.setItemMeta(var1im);
 		player.getInventory().addItem(var1);
-		player.sendMessage(ChatColor.WHITE + "ÇÏ±Ş Æ÷º¸¸£ÀÇ ½ÉÀå" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+		player.sendMessage(ChatColor.WHITE + "í•˜ê¸‰ í¬ë³´ë¥´ì˜ ì‹¬ì¥" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 
 		ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
 		ItemMeta rewardKeyIm = rewardKey.getItemMeta();
-		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "¾Æµ§ÀÇ ÀúÅÃ º¸»ó ¿­¼è");
+		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "ì•„ë´ì˜ ì €íƒ ë³´ìƒ ì—´ì‡ ");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "¾Æµ§ÀÇ ÀúÅÃ º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+		player.sendMessage(ChatColor.YELLOW + "ì•„ë´ì˜ ì €íƒ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2214,28 +2214,28 @@ public class MobLoot {
 				if (loc.getX() <= 3336 && loc.getY() <= 45 && loc.getZ() <= 3762 && loc.getX() >= 3299
 						&& loc.getY() >= 10 && loc.getZ() >= 3725) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "¾Æµ§ÀÇ ÀúÅÃ º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+					nearPlayer.sendMessage(ChatColor.YELLOW + "ì•„ë´ì˜ ì €íƒ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 				}
 			}
 		}
 	}
 
-	// Æ¯±Ş ¿ä¸®»ç
+	// íŠ¹ê¸‰ ìš”ë¦¬ì‚¬
 	public void mob100(Player player) {
 		int num = rnd.nextInt(10) + 10;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 900000);
 
 		ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
 		ItemMeta rewardKeyIm = rewardKey.getItemMeta();
-		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "¼û°ÜÁø ¾Æµ§ÀÇ ÀúÅÃ º¸»ó ¿­¼è");
+		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "ìˆ¨ê²¨ì§„ ì•„ë´ì˜ ì €íƒ ë³´ìƒ ì—´ì‡ ");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "¼û°ÜÁø ¾Æµ§ÀÇ ÀúÅÃ º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+		player.sendMessage(ChatColor.YELLOW + "ìˆ¨ê²¨ì§„ ì•„ë´ì˜ ì €íƒ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2246,248 +2246,248 @@ public class MobLoot {
 				if (loc.getX() <= 3383 && loc.getY() <= 32 && loc.getZ() <= 3803 && loc.getX() >= 3355
 						&& loc.getY() >= 11 && loc.getZ() >= 3766) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "¼û°ÜÁø ¾Æµ§ÀÇ ÀúÅÃ º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+					nearPlayer.sendMessage(ChatColor.YELLOW + "ìˆ¨ê²¨ì§„ ì•„ë´ì˜ ì €íƒ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 				}
 			}
 		}
 	}
 	
-	// ¹Ù¼±»ı
+	// ë°”ì„ ìƒ
 	public void mob101(Player player) {
 		es.giveExp(player, 180000);
 	}
 	
-	// Çª¸£ °íºí¸°
+	// í‘¸ë¥´ ê³ ë¸”ë¦°
 	public void mob102(Player player) {
 		int num = rnd.nextInt(8) + 15;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 521250);
 		
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===»õ·Î¿î °íºí¸°===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ìƒˆë¡œìš´ ê³ ë¸”ë¦°===")) {
 			int qNum = cb.getNum(player);
 			cb.q13(player, qNum + 1);
 		}
 	}
 
-	// µÇ»ì¾Æ³­ Àü»ç
+	// ë˜ì‚´ì•„ë‚œ ì „ì‚¬
 	public void mob103(Player player) {
 		int num = rnd.nextInt(10) + 20;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 539125);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ÇÇ");
+		var1im.setDisplayName(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ í”¼");
 		var1.setItemMeta(var1im);
 		
 		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
 		ItemMeta var2im = var2.getItemMeta();
-		var2im.setDisplayName(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ¾µ°³");
+		var2im.setDisplayName(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
 		var2.setItemMeta(var2im);
 		
 		ItemStack var3 = new ItemStack(Material.CRACKED_POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var3im = var3.getItemMeta();
-		var3im.setDisplayName(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ »ìÁ¡");
+		var3im.setDisplayName(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì ");
 		var3.setItemMeta(var3im);
 		
 		ItemStack var4 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_SLAB);
 		ItemMeta var4im = var4.getItemMeta();
-		var4im.setDisplayName(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ °£");
+		var4im.setDisplayName(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ê°„");
 		var4.setItemMeta(var4im);
 		
 		ItemStack var5 = new ItemStack(Material.CHISELED_POLISHED_BLACKSTONE);
 		ItemMeta var5im = var5.getItemMeta();
-		var5im.setDisplayName(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ½ÉÀå");
+		var5im.setDisplayName(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ì‹¬ì¥");
 		var5.setItemMeta(var5im);
 		
 		int tmp = rnd.nextInt(20);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ÇÇ" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ¾µ°³" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ »ìÁ¡" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ °£" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ê°„" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ½ÉÀå" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ì‹¬ì¥" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		}
 	}
 	
-	// Æ÷º¸¸£ ¼¼·Â ÇÃ·¹ÀÌ¾î
+	// í¬ë³´ë¥´ ì„¸ë ¥ í”Œë ˆì´ì–´
 	public void mob104(Player player) {
 		int num = rnd.nextInt(10) + 20;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 553419);
 	}
 	
-	// Ä¶½ÃÆÛ
+	// ìº˜ì‹œí¼
 	public void mob105(Player player) {
 		int num = rnd.nextInt(15) + 20;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 570012);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ÇÇ");
+		var1im.setDisplayName(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ í”¼");
 		var1.setItemMeta(var1im);
 		
 		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
 		ItemMeta var2im = var2.getItemMeta();
-		var2im.setDisplayName(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ¾µ°³");
+		var2im.setDisplayName(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
 		var2.setItemMeta(var2im);
 		
 		ItemStack var3 = new ItemStack(Material.CRACKED_POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var3im = var3.getItemMeta();
-		var3im.setDisplayName(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ »ìÁ¡");
+		var3im.setDisplayName(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì ");
 		var3.setItemMeta(var3im);
 		
 		ItemStack var4 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_SLAB);
 		ItemMeta var4im = var4.getItemMeta();
-		var4im.setDisplayName(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ °£");
+		var4im.setDisplayName(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ê°„");
 		var4.setItemMeta(var4im);
 		
 		ItemStack var5 = new ItemStack(Material.CHISELED_POLISHED_BLACKSTONE);
 		ItemMeta var5im = var5.getItemMeta();
-		var5im.setDisplayName(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ½ÉÀå");
+		var5im.setDisplayName(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ì‹¬ì¥");
 		var5.setItemMeta(var5im);
 		
 		int tmp = rnd.nextInt(20);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ÇÇ" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ¾µ°³" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ »ìÁ¡" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ °£" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ê°„" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ½ÉÀå" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ì‹¬ì¥" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		}
 		
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ºÒÀÇ ¾Ç¸¶===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë¶ˆì˜ ì•…ë§ˆ===")) {
 			int qNum = cb.getNum(player);
 			cb.q14(player, qNum + 1);
 		}
 	}
 	
-	// ÇÏ±Ş ÆÄ±«¼ö
+	// í•˜ê¸‰ íŒŒê´´ìˆ˜
 	public void mob106(Player player) {
 		int num = rnd.nextInt(10) + 30;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 612405);
 		
 		QuestBoard cb = new QuestBoard();
 		if(num > 34) {
-			if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¿µÈ¥ ¿äÁ¤ °¡·ç===")) {
+			if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì˜í˜¼ ìš”ì • ê°€ë£¨===")) {
 				int qNum = cb.getNum(player);
 				cb.mq31(player, qNum + 1);
 			}
 		}
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¹æÇØ¹ŞÀº ÆÄ±«¼öÀÇ ÀáI===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë°©í•´ë°›ì€ íŒŒê´´ìˆ˜ì˜ ì I===")) {
 			int qNum = cb.getNum(player);
 			cb.q15(player, qNum + 1);
 		}
 	}
 	
-	// µÇ»ì¾Æ³­ ÇØ°ñ
+	// ë˜ì‚´ì•„ë‚œ í•´ê³¨
 	public void mob107(Player player) {
 		int num = rnd.nextInt(10) + 20;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 587125);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ÇÇ");
+		var1im.setDisplayName(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ í”¼");
 		var1.setItemMeta(var1im);
 		
 		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
 		ItemMeta var2im = var2.getItemMeta();
-		var2im.setDisplayName(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ¾µ°³");
+		var2im.setDisplayName(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
 		var2.setItemMeta(var2im);
 		
 		ItemStack var3 = new ItemStack(Material.CRACKED_POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var3im = var3.getItemMeta();
-		var3im.setDisplayName(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ »ìÁ¡");
+		var3im.setDisplayName(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì ");
 		var3.setItemMeta(var3im);
 		
 		ItemStack var4 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_SLAB);
 		ItemMeta var4im = var4.getItemMeta();
-		var4im.setDisplayName(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ °£");
+		var4im.setDisplayName(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ê°„");
 		var4.setItemMeta(var4im);
 		
 		ItemStack var5 = new ItemStack(Material.CHISELED_POLISHED_BLACKSTONE);
 		ItemMeta var5im = var5.getItemMeta();
-		var5im.setDisplayName(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ½ÉÀå");
+		var5im.setDisplayName(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ì‹¬ì¥");
 		var5.setItemMeta(var5im);
 		
 		int tmp = rnd.nextInt(20);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ÇÇ" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ¾µ°³" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ »ìÁ¡" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ °£" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ê°„" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.WHITE + "Áß±Ş Æ÷º¸¸£ÀÇ ½ÉÀå" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.WHITE + "ì¤‘ê¸‰ í¬ë³´ë¥´ì˜ ì‹¬ì¥" + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		}
 		
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===µÇ»ì¾Æ³­ ÇØ°ñ===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë˜ì‚´ì•„ë‚œ í•´ê³¨===")) {
 			int qNum = cb.getNum(player);
 			cb.mq30(player, qNum + 1);
 		}
 	}
 	
-	// ¹Ğ °¡µğ¾ğ
+	// ë°€ ê°€ë””ì–¸
 	public void mob108(Player player) {
 		int num = rnd.nextInt(20) + 25;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 635241);
@@ -2499,50 +2499,50 @@ public class MobLoot {
 		}
 	}
 	
-	// º¯ÀåÇÑ ´Á´ë
+	// ë³€ì¥í•œ ëŠ‘ëŒ€
 	public void mob109(Player player) {
 		int num = rnd.nextInt(40) + 24;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 752156);
 
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===»¡°£¸ğÀÚ ÀÌ¾ß±â1===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë¹¨ê°„ëª¨ì ì´ì•¼ê¸°1===")) {
 			int qNum = cb.getNum(player);
 			cb.mq33_1(player, qNum + 1);
 		}
 	}
 	
-	// ¾àÀïÀÌ
+	// ì•½ìŸì´
 	public void mob110(Player player) {
 		int num = rnd.nextInt(20) + 25;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 671552);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ÇÇ");
+		var1im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ í”¼");
 		var1.setItemMeta(var1im);
 		
 		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
 		ItemMeta var2im = var2.getItemMeta();
-		var2im.setDisplayName(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ¾µ°³");
+		var2im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
 		var2.setItemMeta(var2im);
 		
 		int tmp = rnd.nextInt(10);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ÇÇ" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ¾µ°³" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		}
 		
 		int tmp2 = rnd.nextInt(20);
@@ -2552,50 +2552,50 @@ public class MobLoot {
 		}
 	}
 	
-	// °úÀÚ ¸¶³à
+	// ê³¼ì ë§ˆë…€
 	public void mob111(Player player) {
 		int num = rnd.nextInt(40) + 24;
 		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.YELLOW + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï");
+		im.setDisplayName(ChatColor.YELLOW + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 811249);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ÇÇ");
+		var1im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ í”¼");
 		var1.setItemMeta(var1im);
 		
 		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
 		ItemMeta var2im = var2.getItemMeta();
-		var2im.setDisplayName(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ¾µ°³");
+		var2im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
 		var2.setItemMeta(var2im);
 		
 		int tmp = rnd.nextInt(5);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ÇÇ" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ¾µ°³" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		}
 
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===»¡°£¸ğÀÚ ÀÌ¾ß±â2===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë¹¨ê°„ëª¨ì ì´ì•¼ê¸°2===")) {
 			int qNum = cb.getNum(player);
 			cb.mq34_1(player, qNum + 1);
 		}
 	}
 	
-	// 1ÃşÀÇ Áö¹èÀÚ
+	// 1ì¸µì˜ ì§€ë°°ì
 	public void mob112(Player player) {
 		ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
 		ItemMeta rewardKeyIm = rewardKey.getItemMeta();
-		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "Á×À½ÀÇ Å¾ 1Ãş º¸»ó ¿­¼è");
+		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "ì£½ìŒì˜ íƒ‘ 1ì¸µ ë³´ìƒ ì—´ì‡ ");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "Á×À½ÀÇ Å¾ 1Ãş º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+		player.sendMessage(ChatColor.YELLOW + "ì£½ìŒì˜ íƒ‘ 1ì¸µ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2605,20 +2605,20 @@ public class MobLoot {
 				if (loc.getX() <= 90 && loc.getY() <= 87 && loc.getZ() <= -5 && 
 						loc.getX() >= 54 && loc.getY() >= 75 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "Á×À½ÀÇ Å¾ 1Ãş º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+					nearPlayer.sendMessage(ChatColor.YELLOW + "ì£½ìŒì˜ íƒ‘ 1ì¸µ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 				}
 			}
 		}
 	}
 	
-	// 2ÃşÀÇ Áö¹èÀÚ
+	// 2ì¸µì˜ ì§€ë°°ì
 	public void mob113(Player player) {
 		ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
 		ItemMeta rewardKeyIm = rewardKey.getItemMeta();
-		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "Á×À½ÀÇ Å¾ 2Ãş º¸»ó ¿­¼è");
+		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "ì£½ìŒì˜ íƒ‘ 2ì¸µ ë³´ìƒ ì—´ì‡ ");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "Á×À½ÀÇ Å¾ 2Ãş º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+		player.sendMessage(ChatColor.YELLOW + "ì£½ìŒì˜ íƒ‘ 2ì¸µ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2628,20 +2628,20 @@ public class MobLoot {
 				if (loc.getX() <= 90 && loc.getY() <= 87 && loc.getZ() <= -5 && 
 						loc.getX() >= 54 && loc.getY() >= 75 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "Á×À½ÀÇ Å¾ 2Ãş º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+					nearPlayer.sendMessage(ChatColor.YELLOW + "ì£½ìŒì˜ íƒ‘ 2ì¸µ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 				}
 			}
 		}
 	}
 	
-	// 3ÃşÀÇ Áö¹èÀÚ
+	// 3ì¸µì˜ ì§€ë°°ì
 	public void mob114(Player player) {
 		ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
 		ItemMeta rewardKeyIm = rewardKey.getItemMeta();
-		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "Á×À½ÀÇ Å¾ 3Ãş º¸»ó ¿­¼è");
+		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "ì£½ìŒì˜ íƒ‘ 3ì¸µ ë³´ìƒ ì—´ì‡ ");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "Á×À½ÀÇ Å¾ 3Ãş º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+		player.sendMessage(ChatColor.YELLOW + "ì£½ìŒì˜ íƒ‘ 3ì¸µ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2651,20 +2651,20 @@ public class MobLoot {
 				if (loc.getX() <= 90 && loc.getY() <= 87 && loc.getZ() <= -5 && 
 						loc.getX() >= 54 && loc.getY() >= 75 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "Á×À½ÀÇ Å¾ 3Ãş º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+					nearPlayer.sendMessage(ChatColor.YELLOW + "ì£½ìŒì˜ íƒ‘ 3ì¸µ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 				}
 			}
 		}
 	}
 	
-	// 4ÃşÀÇ Áö¹èÀÚ
+	// 4ì¸µì˜ ì§€ë°°ì
 	public void mob115(Player player) {
 		ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
 		ItemMeta rewardKeyIm = rewardKey.getItemMeta();
-		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "Á×À½ÀÇ Å¾ 4Ãş º¸»ó ¿­¼è");
+		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "ì£½ìŒì˜ íƒ‘ 4ì¸µ ë³´ìƒ ì—´ì‡ ");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "Á×À½ÀÇ Å¾ 4Ãş º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+		player.sendMessage(ChatColor.YELLOW + "ì£½ìŒì˜ íƒ‘ 4ì¸µ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2674,20 +2674,20 @@ public class MobLoot {
 				if (loc.getX() <= 90 && loc.getY() <= 87 && loc.getZ() <= -5 && 
 						loc.getX() >= 54 && loc.getY() >= 75 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "Á×À½ÀÇ Å¾ 4Ãş º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+					nearPlayer.sendMessage(ChatColor.YELLOW + "ì£½ìŒì˜ íƒ‘ 4ì¸µ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 				}
 			}
 		}
 	}
 	
-	// 5ÃşÀÇ Áö¹èÀÚ
+	// 5ì¸µì˜ ì§€ë°°ì
 	public void mob116(Player player) {
 		ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
 		ItemMeta rewardKeyIm = rewardKey.getItemMeta();
-		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "Á×À½ÀÇ Å¾ 5Ãş º¸»ó ¿­¼è");
+		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "ì£½ìŒì˜ íƒ‘ 5ì¸µ ë³´ìƒ ì—´ì‡ ");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "Á×À½ÀÇ Å¾ 5Ãş º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+		player.sendMessage(ChatColor.YELLOW + "ì£½ìŒì˜ íƒ‘ 5ì¸µ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2697,20 +2697,20 @@ public class MobLoot {
 				if (loc.getX() <= 90 && loc.getY() <= 87 && loc.getZ() <= -5 && 
 						loc.getX() >= 54 && loc.getY() >= 75 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "Á×À½ÀÇ Å¾ 5Ãş º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+					nearPlayer.sendMessage(ChatColor.YELLOW + "ì£½ìŒì˜ íƒ‘ 5ì¸µ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 				}
 			}
 		}
 	}
 	
-	// 6ÃşÀÇ Áö¹èÀÚ
+	// 6ì¸µì˜ ì§€ë°°ì
 	public void mob117(Player player) {
 		ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
 		ItemMeta rewardKeyIm = rewardKey.getItemMeta();
-		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "Á×À½ÀÇ Å¾ 6Ãş º¸»ó ¿­¼è");
+		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "ì£½ìŒì˜ íƒ‘ 6ì¸µ ë³´ìƒ ì—´ì‡ ");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "Á×À½ÀÇ Å¾ 6Ãş º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+		player.sendMessage(ChatColor.YELLOW + "ì£½ìŒì˜ íƒ‘ 6ì¸µ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2720,20 +2720,20 @@ public class MobLoot {
 				if (loc.getX() <= 90 && loc.getY() <= 87 && loc.getZ() <= -5 && 
 						loc.getX() >= 54 && loc.getY() >= 75 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "Á×À½ÀÇ Å¾ 6Ãş º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+					nearPlayer.sendMessage(ChatColor.YELLOW + "ì£½ìŒì˜ íƒ‘ 6ì¸µ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 				}
 			}
 		}
 	}
 	
-	// 7ÃşÀÇ Áö¹èÀÚ
+	// 7ì¸µì˜ ì§€ë°°ì
 	public void mob118(Player player) {
 		ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
 		ItemMeta rewardKeyIm = rewardKey.getItemMeta();
-		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "Á×À½ÀÇ Å¾ 7Ãş º¸»ó ¿­¼è");
+		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "ì£½ìŒì˜ íƒ‘ 7ì¸µ ë³´ìƒ ì—´ì‡ ");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "Á×À½ÀÇ Å¾ 7Ãş º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+		player.sendMessage(ChatColor.YELLOW + "ì£½ìŒì˜ íƒ‘ 7ì¸µ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2743,20 +2743,20 @@ public class MobLoot {
 				if (loc.getX() <= 90 && loc.getY() <= 87 && loc.getZ() <= -5 && 
 						loc.getX() >= 54 && loc.getY() >= 75 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "Á×À½ÀÇ Å¾ 7Ãş º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+					nearPlayer.sendMessage(ChatColor.YELLOW + "ì£½ìŒì˜ íƒ‘ 7ì¸µ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 				}
 			}
 		}
 	}
 	
-	// 8ÃşÀÇ Áö¹èÀÚ
+	// 8ì¸µì˜ ì§€ë°°ì
 	public void mob119(Player player) {
 		ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
 		ItemMeta rewardKeyIm = rewardKey.getItemMeta();
-		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "Á×À½ÀÇ Å¾ 8Ãş º¸»ó ¿­¼è");
+		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "ì£½ìŒì˜ íƒ‘ 8ì¸µ ë³´ìƒ ì—´ì‡ ");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "Á×À½ÀÇ Å¾ 8Ãş º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+		player.sendMessage(ChatColor.YELLOW + "ì£½ìŒì˜ íƒ‘ 8ì¸µ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2766,20 +2766,20 @@ public class MobLoot {
 				if (loc.getX() <= 90 && loc.getY() <= 87 && loc.getZ() <= -5 && 
 						loc.getX() >= 54 && loc.getY() >= 75 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "Á×À½ÀÇ Å¾ 8Ãş º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+					nearPlayer.sendMessage(ChatColor.YELLOW + "ì£½ìŒì˜ íƒ‘ 8ì¸µ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 				}
 			}
 		}
 	}
 	
-	// 9ÃşÀÇ Áö¹èÀÚ
+	// 9ì¸µì˜ ì§€ë°°ì
 	public void mob120(Player player) {
 		ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
 		ItemMeta rewardKeyIm = rewardKey.getItemMeta();
-		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "Á×À½ÀÇ Å¾ 9Ãş º¸»ó ¿­¼è");
+		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "ì£½ìŒì˜ íƒ‘ 9ì¸µ ë³´ìƒ ì—´ì‡ ");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "Á×À½ÀÇ Å¾ 9Ãş º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+		player.sendMessage(ChatColor.YELLOW + "ì£½ìŒì˜ íƒ‘ 9ì¸µ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2789,20 +2789,20 @@ public class MobLoot {
 				if (loc.getX() <= 90 && loc.getY() <= 87 && loc.getZ() <= -5 && 
 						loc.getX() >= 54 && loc.getY() >= 75 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "Á×À½ÀÇ Å¾ 9Ãş º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+					nearPlayer.sendMessage(ChatColor.YELLOW + "ì£½ìŒì˜ íƒ‘ 9ì¸µ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 				}
 			}
 		}
 	}
 	
-	// 10ÃşÀÇ Áö¹èÀÚ
+	// 10ì¸µì˜ ì§€ë°°ì
 	public void mob121(Player player) {
 		ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
 		ItemMeta rewardKeyIm = rewardKey.getItemMeta();
-		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "Á×À½ÀÇ Å¾ 10Ãş º¸»ó ¿­¼è");
+		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "ì£½ìŒì˜ íƒ‘ 10ì¸µ ë³´ìƒ ì—´ì‡ ");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "Á×À½ÀÇ Å¾ 10Ãş º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+		player.sendMessage(ChatColor.YELLOW + "ì£½ìŒì˜ íƒ‘ 10ì¸µ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2812,20 +2812,20 @@ public class MobLoot {
 				if (loc.getX() <= 90 && loc.getY() <= 87 && loc.getZ() <= -5 && 
 						loc.getX() >= 54 && loc.getY() >= 75 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "Á×À½ÀÇ Å¾ 10Ãş º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+					nearPlayer.sendMessage(ChatColor.YELLOW + "ì£½ìŒì˜ íƒ‘ 10ì¸µ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 				}
 			}
 		}
 	}
 	
-	// 11ÃşÀÇ Áö¹èÀÚ
+	// 11ì¸µì˜ ì§€ë°°ì
 	public void mob122(Player player) {
 		ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
 		ItemMeta rewardKeyIm = rewardKey.getItemMeta();
-		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "Á×À½ÀÇ Å¾ 11Ãş º¸»ó ¿­¼è");
+		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "ì£½ìŒì˜ íƒ‘ 11ì¸µ ë³´ìƒ ì—´ì‡ ");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "Á×À½ÀÇ Å¾ 11Ãş º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+		player.sendMessage(ChatColor.YELLOW + "ì£½ìŒì˜ íƒ‘ 11ì¸µ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2835,20 +2835,20 @@ public class MobLoot {
 				if (loc.getX() <= 90 && loc.getY() <= 87 && loc.getZ() <= -5 && 
 						loc.getX() >= 54 && loc.getY() >= 75 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "Á×À½ÀÇ Å¾ 11Ãş º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+					nearPlayer.sendMessage(ChatColor.YELLOW + "ì£½ìŒì˜ íƒ‘ 11ì¸µ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 				}
 			}
 		}
 	}
 	
-	// Å¾ÀÇ ÁÖÀÎ
+	// íƒ‘ì˜ ì£¼ì¸
 	public void mob123(Player player) {
 		ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
 		ItemMeta rewardKeyIm = rewardKey.getItemMeta();
-		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "Á×À½ÀÇ Å¾ 12Ãş º¸»ó ¿­¼è");
+		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "ì£½ìŒì˜ íƒ‘ 12ì¸µ ë³´ìƒ ì—´ì‡ ");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "Á×À½ÀÇ Å¾ 12Ãş º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+		player.sendMessage(ChatColor.YELLOW + "ì£½ìŒì˜ íƒ‘ 12ì¸µ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 		
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2858,276 +2858,276 @@ public class MobLoot {
 				if (loc.getX() <= 90 && loc.getY() <= 87 && loc.getZ() <= -5 && 
 						loc.getX() >= 54 && loc.getY() >= 75 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "Á×À½ÀÇ Å¾ 12Ãş º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+					nearPlayer.sendMessage(ChatColor.YELLOW + "ì£½ìŒì˜ íƒ‘ 12ì¸µ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 				}
 			}
 		}
 	}
 	
-	// ÁöÇÏÀÇ ÆÄ¼ö²Û
+	// ì§€í•˜ì˜ íŒŒìˆ˜ê¾¼
 	public void mob124(Player player) {
 		int num = rnd.nextInt(2);
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 783712);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ÇÇ");
+		var1im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ í”¼");
 		var1.setItemMeta(var1im);
 		
 		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
 		ItemMeta var2im = var2.getItemMeta();
-		var2im.setDisplayName(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ¾µ°³");
+		var2im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
 		var2.setItemMeta(var2im);
 		
 		int tmp = rnd.nextInt(5);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ÇÇ" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ¾µ°³" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		}
 	}
 	
-	// ÁöÇÏÀÇ ÆÄ¼ö²Û
+	// ì§€í•˜ì˜ íŒŒìˆ˜ê¾¼
 	public void mob125(Player player) {
 		int num = rnd.nextInt(2);
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 802712);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ÇÇ");
+		var1im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ í”¼");
 		var1.setItemMeta(var1im);
 		
 		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
 		ItemMeta var2im = var2.getItemMeta();
-		var2im.setDisplayName(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ¾µ°³");
+		var2im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
 		var2.setItemMeta(var2im);
 		
 		int tmp = rnd.nextInt(5);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ÇÇ" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ¾µ°³" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		}
 	}
 	
-	// °« ½½¶óÀÓ
+	// ê°“ ìŠ¬ë¼ì„
 	public void mob126(Player player) {
 		int num = rnd.nextInt(1);
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 731012);
 	}
 	
-	// »ç¶óÁø ºÎ¶ôÀÇ Àü»ç
+	// ì‚¬ë¼ì§„ ë¶€ë½ì˜ ì „ì‚¬
 	public void mob127(Player player) {
 		int num = rnd.nextInt(2);
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 710412);
 	}
 	
-	// ³×Å©·Îº§¸® ¾Ï»ìÀÚ
+	// ë„¤í¬ë¡œë²¨ë¦¬ ì•”ì‚´ì
 	public void mob128(Player player) {
 		int num = rnd.nextInt(2);
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 690412);
 		
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¹¦Áö¸¦ ÁöÅ°´Â ÀÚ===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë¬˜ì§€ë¥¼ ì§€í‚¤ëŠ” ì===")) {
 			int qNum = cb.getNum(player);
 			cb.q16(player, qNum + 1);
 		}
 	}
 	
-	// ³×Å©·Îº§¸® °¨½ÃÀÚ
+	// ë„¤í¬ë¡œë²¨ë¦¬ ê°ì‹œì
 	public void mob129(Player player) {
 		int num = rnd.nextInt(2);
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 723432);
 		
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¹¦Áö¸¦ ÁöÅ°´Â ÀÚ===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë¬˜ì§€ë¥¼ ì§€í‚¤ëŠ” ì===")) {
 			int qNum = cb.getNum(player);
 			cb.q16(player, qNum + 1);
 		}
 	}
 	
-	// ³×Å©·Îº§¸® º¹º´
+	// ë„¤í¬ë¡œë²¨ë¦¬ ë³µë³‘
 	public void mob130(Player player) {
 		int num = rnd.nextInt(2);
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 752145);
 		
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¹¦Áö¸¦ ÁöÅ°´Â ÀÚ===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë¬˜ì§€ë¥¼ ì§€í‚¤ëŠ” ì===")) {
 			int qNum = cb.getNum(player);
 			cb.q16(player, qNum + 1);
 		}
 	}
 	
-	// Çª¸£ ³¯¹ú·¹
+	// í‘¸ë¥´ ë‚ ë²Œë ˆ
 	public void mob131(Player player) {
 		int num = rnd.nextInt(2);
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 736213);
 	}
 	
-	// Çª¸£ ³¯¹ú·¹
+	// í‘¸ë¥´ ë‚ ë²Œë ˆ
 	public void mob132(Player player) {
 		int num = rnd.nextInt(2);
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 760145);
 	}
 
-	// ÁöÇÏ°¨¿ÁÀÇ °£ºÎ
+	// ì§€í•˜ê°ì˜¥ì˜ ê°„ë¶€
 	public void mob133(Player player) {
 		int num = rnd.nextInt(3) + 1;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 812512);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ÇÇ");
+		var1im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ í”¼");
 		var1.setItemMeta(var1im);
 		
 		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
 		ItemMeta var2im = var2.getItemMeta();
-		var2im.setDisplayName(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ¾µ°³");
+		var2im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
 		var2.setItemMeta(var2im);
 		
 		int tmp = rnd.nextInt(5);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ÇÇ" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ¾µ°³" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		}
 	}
 	
-	// ÁöÇÏ°¨¿ÁÀÇ ÁË¼ö
+	// ì§€í•˜ê°ì˜¥ì˜ ì£„ìˆ˜
 	public void mob134(Player player) {
 		int num = rnd.nextInt(3) + 1;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 797012);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ÇÇ");
+		var1im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ í”¼");
 		var1.setItemMeta(var1im);
 		
 		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
 		ItemMeta var2im = var2.getItemMeta();
-		var2im.setDisplayName(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ¾µ°³");
+		var2im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
 		var2.setItemMeta(var2im);
 		
 		int tmp = rnd.nextInt(5);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ÇÇ" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ¾µ°³" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		}
 	}
 	
-	// ¸¶·ÂÀÇ ºÎ»ê¹°
+	// ë§ˆë ¥ì˜ ë¶€ì‚°ë¬¼
 	public void mob135(Player player) {
 		int num = rnd.nextInt(2) + 2;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 799151);
 	}
 	
-	// °­È­ °³Á¶ ÀÎ°£
+	// ê°•í™” ê°œì¡° ì¸ê°„
 	public void mob136(Player player) {
 		int num = rnd.nextInt(2) + 2;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 828282);
 	}
 
-	// ¸¶¹ı¿¡ Å¸¶ôÇÑ ÀÚ
+	// ë§ˆë²•ì— íƒ€ë½í•œ ì
 	public void mob137(Player player) {
 		int num = rnd.nextInt(3) + 2;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 832501);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ÇÇ");
+		var1im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ í”¼");
 		var1.setItemMeta(var1im);
 		
 		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
 		ItemMeta var2im = var2.getItemMeta();
-		var2im.setDisplayName(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ¾µ°³");
+		var2im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
 		var2.setItemMeta(var2im);
 		
 		int tmp = rnd.nextInt(5);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ÇÇ" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ¾µ°³" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 		}
 		
 		int num2 = rnd.nextInt(30);
@@ -3137,92 +3137,92 @@ public class MobLoot {
 			Chest chest = (Chest) block.getState();
 			ItemStack weapon = chest.getInventory().getItem(12);
 			player.getInventory().addItem(weapon);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "Æ÷º¸¸£ÀÇ ¸¶³ª" + ChatColor.WHITE + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "í¬ë³´ë¥´ì˜ ë§ˆë‚˜" + ChatColor.WHITE + "ë¥¼ íšë“í–ˆë‹¤.");
 			
 			QuestBoard cb = new QuestBoard();
-			if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Æ÷º¸¸£ÀÇ ¸¶³ª===")) {
+			if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===í¬ë³´ë¥´ì˜ ë§ˆë‚˜===")) {
 				int qNum = cb.getNum(player);
 				cb.mq35_1(player, qNum + 1);
 			}
 		}
 	}
 	
-	// Àü»ıÇÑ ½½¶óÀÓ
+	// ì „ìƒí•œ ìŠ¬ë¼ì„
 	public void mob138(Player player) {
 		int num = rnd.nextInt(3) + 2;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 849012);
 	}
 	
-	// Àç¾Ó
+	// ì¬ì•™
 	public void mob139(Player player) {
 		int num = rnd.nextInt(3) + 3;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 900000);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ÇÇ");
+		var1im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ í”¼");
 		var1.setItemMeta(var1im);
 		
 		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
 		ItemMeta var2im = var2.getItemMeta();
-		var2im.setDisplayName(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ¾µ°³");
+		var2im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
 		var2.setItemMeta(var2im);
 		
 		ItemStack var3 = new ItemStack(Material.CRACKED_POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var3im = var3.getItemMeta();
-		var3im.setDisplayName(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ »ìÁ¡");
+		var3im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì ");
 		var3.setItemMeta(var3im);
 		
 		int tmp = rnd.nextInt(10);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ÇÇ" + ChatColor.YELLOW + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.YELLOW + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ¾µ°³" + ChatColor.YELLOW + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.YELLOW + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ »ìÁ¡" + ChatColor.YELLOW + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì " + ChatColor.YELLOW + "ì„ íšë“í–ˆë‹¤.");
 		}
 	}
 	
-	// Å¸¶ôÇÑ ¸ğÇè°¡
+	// íƒ€ë½í•œ ëª¨í—˜ê°€
 	public void mob140(Player player) {
 		int num = rnd.nextInt(4) + 3;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 950000);
 	}
 	
-	// ÄÚ³¶±×
+	// ì½”ë‚­ê·¸
 	public void mob141(Player player) {
 		int num = 10;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 3000000);
 		
 		ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
 		ItemMeta rewardKeyIm = rewardKey.getItemMeta();
-		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "¹Ì±Ã º¸»ó ¿­¼è");
+		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "ë¯¸ê¶ ë³´ìƒ ì—´ì‡ ");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "¹Ì±Ã º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+		player.sendMessage(ChatColor.YELLOW + "ë¯¸ê¶ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -3233,7 +3233,7 @@ public class MobLoot {
 				if (loc.getX() <= 49 && loc.getY() <= 61 && loc.getZ() <= 696 
 						&& loc.getX() >= 16 && loc.getY() >= 51 && loc.getZ() >= 654) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "¹Ì±Ã º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+					nearPlayer.sendMessage(ChatColor.YELLOW + "ë¯¸ê¶ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 					nearPlayer.teleport(new Location(nearPlayer.getWorld(), 28.5, 63, 681));
 				}
 			}
@@ -3242,122 +3242,122 @@ public class MobLoot {
 		
 	}
 	
-	// ¿äÁ¤ÀÇ ÆÄÆí
+	// ìš”ì •ì˜ íŒŒí¸
 	public void mob142(Player player) {
 		int num = rnd.nextInt(4) + 2;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 861234);
 	}
 	
-	// ÃÊ¸¶µµ¿ë±â»ç
+	// ì´ˆë§ˆë„ìš©ê¸°ì‚¬
 	public void mob143(Player player) {
 		int num = rnd.nextInt(4) + 2;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 888888);
 	}
 	
-	// ¶°µµ´Â ¸Á·É Àü»ç
+	// ë– ë„ëŠ” ë§ë ¹ ì „ì‚¬
 	public void mob144(Player player) {
 		int num = rnd.nextInt(3) + 3;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 895000);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ÇÇ");
+		var1im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ í”¼");
 		var1.setItemMeta(var1im);
 		
 		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
 		ItemMeta var2im = var2.getItemMeta();
-		var2im.setDisplayName(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ¾µ°³");
+		var2im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
 		var2.setItemMeta(var2im);
 		
 		ItemStack var3 = new ItemStack(Material.CRACKED_POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var3im = var3.getItemMeta();
-		var3im.setDisplayName(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ »ìÁ¡");
+		var3im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì ");
 		var3.setItemMeta(var3im);
 		
 		int tmp = rnd.nextInt(10);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ÇÇ" + ChatColor.YELLOW + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.YELLOW + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ¾µ°³" + ChatColor.YELLOW + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.YELLOW + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ »ìÁ¡" + ChatColor.YELLOW + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì " + ChatColor.YELLOW + "ì„ íšë“í–ˆë‹¤.");
 		}
 		
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¶°µµ´Â ¸Á·É===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë– ë„ëŠ” ë§ë ¹===")) {
 			int qNum = cb.getNum(player);
 			cb.mq37_1(player, qNum + 1);
 		}
 	}
 	
-	// ¶°µµ´Â ¸Á·É ¸¶¹ı»ç
+	// ë– ë„ëŠ” ë§ë ¹ ë§ˆë²•ì‚¬
 	public void mob145(Player player) {
 		int num = rnd.nextInt(3) + 3;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 916000);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ÇÇ");
+		var1im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ í”¼");
 		var1.setItemMeta(var1im);
 		
 		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
 		ItemMeta var2im = var2.getItemMeta();
-		var2im.setDisplayName(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ¾µ°³");
+		var2im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
 		var2.setItemMeta(var2im);
 		
 		ItemStack var3 = new ItemStack(Material.CRACKED_POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var3im = var3.getItemMeta();
-		var3im.setDisplayName(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ »ìÁ¡");
+		var3im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì ");
 		var3.setItemMeta(var3im);
 		
 		int tmp = rnd.nextInt(10);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ÇÇ" + ChatColor.YELLOW + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.YELLOW + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ¾µ°³" + ChatColor.YELLOW + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.YELLOW + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ »ìÁ¡" + ChatColor.YELLOW + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì " + ChatColor.YELLOW + "ì„ íšë“í–ˆë‹¤.");
 		}
 		
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¶°µµ´Â ¸Á·É===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë– ë„ëŠ” ë§ë ¹===")) {
 			int qNum = cb.getNum(player);
 			cb.mq37_1(player, qNum + 1);
 		}
 	}
 	
-	// ±×¸®Áñ¸® º£¾î
+	// ê·¸ë¦¬ì¦ë¦¬ ë² ì–´
 	public void mob146(Player player) {
 		int num = rnd.nextInt(3) + 4;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 925200);
@@ -3368,141 +3368,141 @@ public class MobLoot {
 		int num = rnd.nextInt(3) + 4;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 935500);
 		
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ÆøÅºº´===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===í­íƒ„ë³‘===")) {
 			int qNum = cb.getNum(player);
 			cb.q17(player, qNum + 1);
 		}
 	}
 	
-	// ÆÄ½ºÄ®
+	// íŒŒìŠ¤ì¹¼
 	public void mob148(Player player) {
 		int num = rnd.nextInt(3) + 4;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 980000);
 	}
 	
-	// ¿¡¹Ğ
+	// ì—ë°€
 	public void mob149(Player player) {
 		int num = rnd.nextInt(3) + 4;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 1444444);
 		
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¿¡¹ĞÀÇ °áÀÇ===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì—ë°€ì˜ ê²°ì˜===")) {
 			int qNum = cb.getNum(player);
 			cb.q18(player, qNum + 1);
-		} else if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¼ö»óÇÑ ¸ó½ºÅÍ===")) {
+		} else if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ìˆ˜ìƒí•œ ëª¬ìŠ¤í„°===")) {
 			int qNum = cb.getNum(player);
 			cb.mq38_1(player, qNum + 1);
 		}
 	}
 	
-	// Æ÷º¸¸£ ¼¼·Â ÇÃ·¹ÀÌ¾î
+	// í¬ë³´ë¥´ ì„¸ë ¥ í”Œë ˆì´ì–´
 	public void mob150(Player player) {
 		int num = rnd.nextInt(3) + 4;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 950000);
 	}
 	
-	// ¸¶¹ı¼Ò³à
+	// ë§ˆë²•ì†Œë…€
 	public void mob151(Player player) {
 		int num = rnd.nextInt(3) + 4;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 965000);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ÇÇ");
+		var1im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ í”¼");
 		var1.setItemMeta(var1im);
 		
 		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
 		ItemMeta var2im = var2.getItemMeta();
-		var2im.setDisplayName(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ¾µ°³");
+		var2im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
 		var2.setItemMeta(var2im);
 		
 		ItemStack var3 = new ItemStack(Material.CRACKED_POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var3im = var3.getItemMeta();
-		var3im.setDisplayName(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ »ìÁ¡");
+		var3im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì ");
 		var3.setItemMeta(var3im);
 		
 		int tmp = rnd.nextInt(7);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ÇÇ" + ChatColor.YELLOW + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.YELLOW + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ¾µ°³" + ChatColor.YELLOW + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.YELLOW + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ »ìÁ¡" + ChatColor.YELLOW + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì " + ChatColor.YELLOW + "ì„ íšë“í–ˆë‹¤.");
 		}
 	}
 	
-	// ÁøÈë ¿äÁ¤
+	// ì§„í™ ìš”ì •
 	public void mob152(Player player) {
 		es.giveExp(player, 1100000);
 	}
 	
-	// Çª¸¥ °¡¿À¸®
+	// í‘¸ë¥¸ ê°€ì˜¤ë¦¬
 	public void mob153(Player player) {
 //		int num = rnd.nextInt(3) + 4;
 //		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 //		ItemMeta im = item.getItemMeta();
-//		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+//		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 //		item.setItemMeta(im);
 //		player.getInventory().addItem(item);
 //		es.giveExp(player, 1100000);
 	}
 	
-	// ¾Æ¶óÅ©³×ÀÇ ÇÏ¼öÀÎ
+	// ì•„ë¼í¬ë„¤ì˜ í•˜ìˆ˜ì¸
 	public void mob154(Player player) {
 		int num = rnd.nextInt(3) + 2;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 1160000);
 	}
 	
-	// ¾Æ¶óÅ©³×
+	// ì•„ë¼í¬ë„¤
 	public void mob155(Player player) {
 		int num = 10;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 7000000);
 		
 		ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
 		ItemMeta rewardKeyIm = rewardKey.getItemMeta();
-		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "¾Æ¶óÅ©³×ÀÇ ÀúÁÖ º¸»ó ¿­¼è");
+		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "ì•„ë¼í¬ë„¤ì˜ ì €ì£¼ ë³´ìƒ ì—´ì‡ ");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "¾Æ¶óÅ©³×ÀÇ ÀúÁÖ º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+		player.sendMessage(ChatColor.YELLOW + "ì•„ë¼í¬ë„¤ì˜ ì €ì£¼ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -3512,215 +3512,447 @@ public class MobLoot {
 				if (loc.getX() <= 776 && loc.getY() <= 31 && loc.getZ() <= 605 
 						&& loc.getX() >= 727 && loc.getY() >= 0 && loc.getZ() >= 555) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "¾Æ¶óÅ©³×ÀÇ ÀúÁÖ º¸»ó ¿­¼è" + ChatColor.WHITE + "À» È¹µæÇß´Ù.");
+					nearPlayer.sendMessage(ChatColor.YELLOW + "ì•„ë¼í¬ë„¤ì˜ ì €ì£¼ ë³´ìƒ ì—´ì‡ " + ChatColor.WHITE + "ì„ íšë“í–ˆë‹¤.");
 				}
 			}
 		}
 	}
 	
-	// ³×¿À¾ÆÄí¾Æ ¸¶µ¹
+	// ë„¤ì˜¤ì•„ì¿ ì•„ ë§ˆëŒ
 	public void mob156(Player player) {
 		int num = rnd.nextInt(3) + 4;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 1000000);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ÇÇ");
+		var1im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ í”¼");
 		var1.setItemMeta(var1im);
 		
 		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
 		ItemMeta var2im = var2.getItemMeta();
-		var2im.setDisplayName(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ¾µ°³");
+		var2im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
 		var2.setItemMeta(var2im);
 		
 		ItemStack var3 = new ItemStack(Material.CRACKED_POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var3im = var3.getItemMeta();
-		var3im.setDisplayName(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ »ìÁ¡");
+		var3im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì ");
 		var3.setItemMeta(var3im);
 		
 		int tmp = rnd.nextInt(7);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ÇÇ" + ChatColor.YELLOW + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.YELLOW + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ¾µ°³" + ChatColor.YELLOW + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.YELLOW + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ »ìÁ¡" + ChatColor.YELLOW + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì " + ChatColor.YELLOW + "ì„ íšë“í–ˆë‹¤.");
 		}
 	}
 	
-	// ¶óÀÌÆ®·¹ÀÌ ¸¶µ¹
+	// ë¼ì´íŠ¸ë ˆì´ ë§ˆëŒ
 	public void mob157(Player player) {
 		int num = rnd.nextInt(3) + 4;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 1030000);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var1im = var1.getItemMeta();
-		var1im.setDisplayName(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ÇÇ");
+		var1im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ í”¼");
 		var1.setItemMeta(var1im);
 		
 		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
 		ItemMeta var2im = var2.getItemMeta();
-		var2im.setDisplayName(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ¾µ°³");
+		var2im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
 		var2.setItemMeta(var2im);
 		
 		ItemStack var3 = new ItemStack(Material.CRACKED_POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var3im = var3.getItemMeta();
-		var3im.setDisplayName(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ »ìÁ¡");
+		var3im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì ");
 		var3.setItemMeta(var3im);
 		
 		int tmp = rnd.nextInt(7);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ÇÇ" + ChatColor.YELLOW + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.YELLOW + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ ¾µ°³" + ChatColor.YELLOW + "¸¦ È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.YELLOW + "ë¥¼ íšë“í–ˆë‹¤.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.YELLOW + "»ó±Ş Æ÷º¸¸£ÀÇ »ìÁ¡" + ChatColor.YELLOW + "À» È¹µæÇß´Ù.");
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì " + ChatColor.YELLOW + "ì„ íšë“í–ˆë‹¤.");
 		}
 	}
 	
-	// ¹æÈ²ÇÏ´Â ¿äÁ¤
+	// ë°©í™©í•˜ëŠ” ìš”ì •
 	public void mob158(Player player) {
 		int num = rnd.nextInt(3) + 5;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 1060000);
 		
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===³×ºñÀÇ Èû1===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë„¤ë¹„ì˜ í˜1===")) {
 			int qNum = cb.getNum(player);
 			cb.mq39(player, qNum + 1);
 		}
 	}
 	
-	// ¹æÈ²ÇÏ´Â ¿äÁ¤
+	// ë°©í™©í•˜ëŠ” ìš”ì •
 	public void mob159(Player player) {
 		int num = rnd.nextInt(3) + 5;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 1100000);
 		
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===³×ºñÀÇ Èû1===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë„¤ë¹„ì˜ í˜1===")) {
 			int qNum = cb.getNum(player);
 			cb.mq39(player, qNum + 1);
 		}
 	}
 	
-	// ºĞ³ëÇÏ´Â ¿äÁ¤
+	// ë¶„ë…¸í•˜ëŠ” ìš”ì •
 	public void mob160(Player player) {
 		int num = rnd.nextInt(3) + 5;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 1120000);
 		
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===³×ºñÀÇ Èû2===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë„¤ë¹„ì˜ í˜2===")) {
 			int qNum = cb.getNum(player);
 			cb.mq39_1(player, qNum + 1);
 		}
 	}
 	
-	// ºĞ³ëÇÏ´Â ¿äÁ¤
+	// ë¶„ë…¸í•˜ëŠ” ìš”ì •
 	public void mob161(Player player) {
 		int num = rnd.nextInt(3) + 5;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 1150000);
 		
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===³×ºñÀÇ Èû2===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë„¤ë¹„ì˜ í˜2===")) {
 			int qNum = cb.getNum(player);
 			cb.mq39_1(player, qNum + 1);
 		}
 	}
 	
-	// µÚÆ²¸° ¿äÁ¤
+	// ë’¤í‹€ë¦° ìš”ì •
 	public void mob162(Player player) {
 		int num = rnd.nextInt(3) + 5;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 1160000);
 		
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===³×ºñÀÇ Èû3===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë„¤ë¹„ì˜ í˜3===")) {
 			int qNum = cb.getNum(player);
 			cb.mq39_2(player, qNum + 1);
 		}
 	}
 	
-	// µÚÆ²¸° ¿äÁ¤
+	// ë’¤í‹€ë¦° ìš”ì •
 	public void mob163(Player player) {
 		int num = rnd.nextInt(3) + 5;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "¿¡¸Ş¶öµå ÁÖ¸Ó´Ï+");
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 1172000);
 		
 		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===³×ºñÀÇ Èû3===")) {
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ë„¤ë¹„ì˜ í˜3===")) {
 			int qNum = cb.getNum(player);
 			cb.mq39_2(player, qNum + 1);
 		}
 	}
 	
+	// ì¼„
 	public void mob164(Player player) {
-
+		int num = rnd.nextInt(4) + 5;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1170000);
+		
+		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
+		ItemMeta var1im = var1.getItemMeta();
+		var1im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ í”¼");
+		var1.setItemMeta(var1im);
+		
+		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
+		ItemMeta var2im = var2.getItemMeta();
+		var2im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
+		var2.setItemMeta(var2im);
+		
+		ItemStack var3 = new ItemStack(Material.CRACKED_POLISHED_BLACKSTONE_BRICKS);
+		ItemMeta var3im = var3.getItemMeta();
+		var3im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì ");
+		var3.setItemMeta(var3im);
+		
+		ItemStack var4 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_SLAB);
+		ItemMeta var4im = var4.getItemMeta();
+		var4im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ê°„");
+		var4.setItemMeta(var4im);
+		
+		ItemStack var5 = new ItemStack(Material.CHISELED_POLISHED_BLACKSTONE);
+		ItemMeta var5im = var5.getItemMeta();
+		var5im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì‹¬ì¥");
+		var5.setItemMeta(var5im);
+		
+		int tmp = rnd.nextInt(20);
+		if(tmp == 0) {
+			player.getInventory().addItem(var1);
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.YELLOW + "ë¥¼ íšë“í–ˆë‹¤.");
+		} else if(tmp == 1) {
+			player.getInventory().addItem(var2);
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.YELLOW + "ë¥¼ íšë“í–ˆë‹¤.");
+		} else if(tmp == 2) {
+			player.getInventory().addItem(var3);
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì " + ChatColor.YELLOW + "ì„ íšë“í–ˆë‹¤.");
+		} else if(tmp == 3) {
+			player.getInventory().addItem(var4);
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ê°„" + ChatColor.YELLOW + "ì„ íšë“í–ˆë‹¤.");
+		} else if(tmp == 4) {
+			player.getInventory().addItem(var5);
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì‹¬ì¥" + ChatColor.YELLOW + "ì„ íšë“í–ˆë‹¤.");
+		}
 	}
 	
+	// ë¥˜
 	public void mob165(Player player) {
-
+		int num = rnd.nextInt(4) + 5;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1180000);
+		
+		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
+		ItemMeta var1im = var1.getItemMeta();
+		var1im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ í”¼");
+		var1.setItemMeta(var1im);
+		
+		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
+		ItemMeta var2im = var2.getItemMeta();
+		var2im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
+		var2.setItemMeta(var2im);
+		
+		ItemStack var3 = new ItemStack(Material.CRACKED_POLISHED_BLACKSTONE_BRICKS);
+		ItemMeta var3im = var3.getItemMeta();
+		var3im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì ");
+		var3.setItemMeta(var3im);
+		
+		ItemStack var4 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_SLAB);
+		ItemMeta var4im = var4.getItemMeta();
+		var4im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ê°„");
+		var4.setItemMeta(var4im);
+		
+		ItemStack var5 = new ItemStack(Material.CHISELED_POLISHED_BLACKSTONE);
+		ItemMeta var5im = var5.getItemMeta();
+		var5im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì‹¬ì¥");
+		var5.setItemMeta(var5im);
+		
+		int tmp = rnd.nextInt(20);
+		if(tmp == 0) {
+			player.getInventory().addItem(var1);
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.YELLOW + "ë¥¼ íšë“í–ˆë‹¤.");
+		} else if(tmp == 1) {
+			player.getInventory().addItem(var2);
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.YELLOW + "ë¥¼ íšë“í–ˆë‹¤.");
+		} else if(tmp == 2) {
+			player.getInventory().addItem(var3);
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì " + ChatColor.YELLOW + "ì„ íšë“í–ˆë‹¤.");
+		} else if(tmp == 3) {
+			player.getInventory().addItem(var4);
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ê°„" + ChatColor.YELLOW + "ì„ íšë“í–ˆë‹¤.");
+		} else if(tmp == 4) {
+			player.getInventory().addItem(var5);
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì‹¬ì¥" + ChatColor.YELLOW + "ì„ íšë“í–ˆë‹¤.");
+		}
 	}
 	
+	// ê³ ìš°í‚¤
 	public void mob166(Player player) {
-
+		int num = rnd.nextInt(4) + 5;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1190000);
+		
+		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
+		ItemMeta var1im = var1.getItemMeta();
+		var1im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ í”¼");
+		var1.setItemMeta(var1im);
+		
+		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
+		ItemMeta var2im = var2.getItemMeta();
+		var2im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ");
+		var2.setItemMeta(var2im);
+		
+		ItemStack var3 = new ItemStack(Material.CRACKED_POLISHED_BLACKSTONE_BRICKS);
+		ItemMeta var3im = var3.getItemMeta();
+		var3im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì ");
+		var3.setItemMeta(var3im);
+		
+		ItemStack var4 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_SLAB);
+		ItemMeta var4im = var4.getItemMeta();
+		var4im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ê°„");
+		var4.setItemMeta(var4im);
+		
+		ItemStack var5 = new ItemStack(Material.CHISELED_POLISHED_BLACKSTONE);
+		ItemMeta var5im = var5.getItemMeta();
+		var5im.setDisplayName(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì‹¬ì¥");
+		var5.setItemMeta(var5im);
+		
+		int tmp = rnd.nextInt(20);
+		if(tmp == 0) {
+			player.getInventory().addItem(var1);
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ í”¼" + ChatColor.YELLOW + "ë¥¼ íšë“í–ˆë‹¤.");
+		} else if(tmp == 1) {
+			player.getInventory().addItem(var2);
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì“¸ê°œ" + ChatColor.YELLOW + "ë¥¼ íšë“í–ˆë‹¤.");
+		} else if(tmp == 2) {
+			player.getInventory().addItem(var3);
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì‚´ì " + ChatColor.YELLOW + "ì„ íšë“í–ˆë‹¤.");
+		} else if(tmp == 3) {
+			player.getInventory().addItem(var4);
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ê°„" + ChatColor.YELLOW + "ì„ íšë“í–ˆë‹¤.");
+		} else if(tmp == 4) {
+			player.getInventory().addItem(var5);
+			player.sendMessage(ChatColor.YELLOW + "ìƒê¸‰ í¬ë³´ë¥´ì˜ ì‹¬ì¥" + ChatColor.YELLOW + "ì„ íšë“í–ˆë‹¤.");
+		}
 	}
 	
+	// ë²”ì¸
 	public void mob167(Player player) {
-
+		int num = rnd.nextInt(4) + 5;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1187000);
 	}
 	
+	// í¬ë„
 	public void mob168(Player player) {
-
+		int num = rnd.nextInt(4) + 5;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1200000);
 	}
 	
+	// í´ë ˆì–´íì˜ ë§ë ¹
 	public void mob169(Player player) {
+		int num = rnd.nextInt(6) + 5;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1220000);
+	}
+	
+	// 404 Not Found
+	public void mob170(Player player) {
+		int num = rnd.nextInt(6) + 5;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1250000);
+	}
+	
+	// íƒ€ë½í•œ ì£¼ë¯¼
+	public void mob171(Player player) {
+		int num = rnd.nextInt(6) + 5;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1270000);
+	}
+	
+	// ì ì‹ëœ ì£¼ë¯¼
+	public void mob172(Player player) {
+		int num = rnd.nextInt(6) + 5;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "ì—ë©”ë„ë“œ ì£¼ë¨¸ë‹ˆ+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1290000);
+	}
+	
+	public void mob173(Player player) {
 
 	}
 	
-	public void mob170(Player player) {
+	public void mob174(Player player) {
+
+	}
+
+	public void mob175(Player player) {
+
+	}
+	
+	public void mob176(Player player) {
+
+	}
+	
+	public void mob177(Player player) {
+
+	}
+	
+	public void mob178(Player player) {
+
+	}
+	
+	public void mob179(Player player) {
+
+	}
+	
+	public void mob180(Player player) {
 
 	}
 }

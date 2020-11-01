@@ -35,41 +35,41 @@ public class Cmd2ChangeAir implements CommandExecutor {
 			}
 			if(cmd.getName().equalsIgnoreCase("ChangeAir")) {
 				if(args.length == 0) {
-					player.sendMessage(ChatColor.RED + "¹üÀ§ /¹Ğµµ/ºí·°¸í À» ÀÔ·ÂÇØ¾ßÁÒ;; »ç¿ë¹ıµµ ¸ğ¸£½Ê´Ï±î??");
+					player.sendMessage(ChatColor.RED + "ë²”ìœ„ /ë°€ë„/ë¸”ëŸ­ëª… ì„ ì…ë ¥í•´ì•¼ì£ ;; ì‚¬ìš©ë²•ë„ ëª¨ë¥´ì‹­ë‹ˆê¹Œ??");
 					return true;
 				}
 				try { 
 					if(args[0].equalsIgnoreCase("help")) {
-						player.sendMessage(ChatColor.GREEN + "¹üÀ§ /¹Ğµµ/ºí·°¸íÀ» ÀÔ·ÂÇÏ¼¼¿ä(¹Ğµµ´Â 5°¡ ÃÖ´ëÀÔ´Ï´Ù.)");
+						player.sendMessage(ChatColor.GREEN + "ë²”ìœ„ /ë°€ë„/ë¸”ëŸ­ëª…ì„ ì…ë ¥í•˜ì„¸ìš”(ë°€ë„ëŠ” 5ê°€ ìµœëŒ€ì…ë‹ˆë‹¤.)");
 						return true;
 					}
 					r = Integer.parseInt(args[0]);
 				} catch(Exception e) {
-					player.sendMessage(ChatColor.RED + "¾Æ´µ µÎ¹øÂ°´Â Á¤¼ö¸¦ ³Ö¾î¾ßÁö ÀÌ »ç¶÷¾Æ");
+					player.sendMessage(ChatColor.RED + "ì•„ë‰˜ ë‘ë²ˆì§¸ëŠ” ì •ìˆ˜ë¥¼ ë„£ì–´ì•¼ì§€ ì´ ì‚¬ëŒì•„");
 					return true;
 				}
 				try { 				
 					num = Integer.parseInt(args[1]);
 					if(num>5) {
-						player.sendMessage(ChatColor.RED + "5ÀÌ»óÀº ¿å½ÉÀÌ Å®´Ï´Ù");
+						player.sendMessage(ChatColor.RED + "5ì´ìƒì€ ìš•ì‹¬ì´ í½ë‹ˆë‹¤");
 						return true;
 					}
 				} catch(Exception e) {
-					player.sendMessage(ChatColor.RED + "¹Ğµµ°¡ Á¤¼ö¿©¾ßÁÒ ¾ÆÁÒ¾¾;;");
+					player.sendMessage(ChatColor.RED + "ë°€ë„ê°€ ì •ìˆ˜ì—¬ì•¼ì£  ì•„ì£ ì”¨;;");
 					return true;
 				}
 				try { 
 					String name = args[2].toUpperCase();
 					if(name.equalsIgnoreCase("yumehama")) {
-						player.sendMessage(ChatColor.DARK_BLUE + "¾È³ç ³ª¸¦ ¼ÒÈ¯ÇÏ·Á´Â °Å´Ï?");
-						player.sendMessage(ChatColor.DARK_BLUE + "³»°¡ ¼±¹°À» ÇÏ³ª ÁÙ²²");
-						player.sendMessage(ChatColor.DARK_BLUE + "»ç½Ç °ÅÁş¸»ÀÌ¾ß");
+						player.sendMessage(ChatColor.DARK_BLUE + "ì•ˆë…• ë‚˜ë¥¼ ì†Œí™˜í•˜ë ¤ëŠ” ê±°ë‹ˆ?");
+						player.sendMessage(ChatColor.DARK_BLUE + "ë‚´ê°€ ì„ ë¬¼ì„ í•˜ë‚˜ ì¤„ê»˜");
+						player.sendMessage(ChatColor.DARK_BLUE + "ì‚¬ì‹¤ ê±°ì§“ë§ì´ì•¼");
 						return true;
 					} else {						
 						mat = Material.valueOf(name);
 					}					
 				} catch(Exception e) {
-					player.sendMessage(ChatColor.RED + "°ÔÀÓ¿¡ ÀÖ´Â ÀÌ¸§À» ½áÁÖ½ÃÁÒ(¿¹: orange_stained_glass_pane)");
+					player.sendMessage(ChatColor.RED + "ê²Œì„ì— ìˆëŠ” ì´ë¦„ì„ ì¨ì£¼ì‹œì£ (ì˜ˆ: orange_stained_glass_pane)");
 					return true;
 				}
 				try {
@@ -87,7 +87,7 @@ public class Cmd2ChangeAir implements CommandExecutor {
 				        }
 				    }
 				} catch(Exception e) {
-					player.sendMessage(ChatColor.RED + "¾Ë ¼ö ¾ø´Â ¿À·ù");
+					player.sendMessage(ChatColor.RED + "ì•Œ ìˆ˜ ì—†ëŠ” ì˜¤ë¥˜");
 					return true;
 				}
 			}

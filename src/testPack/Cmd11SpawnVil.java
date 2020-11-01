@@ -83,7 +83,7 @@ public class Cmd11SpawnVil implements CommandExecutor {
 						villager.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, Integer.MAX_VALUE, 255));
 						villager.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, Integer.MAX_VALUE, Integer.MAX_VALUE));
 					} catch(Exception e) {
-						player.sendMessage(ChatColor.RED + "Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù¸¸?");
+						player.sendMessage(ChatColor.RED + "ì˜ëª»ëœ ì…ë ¥ì…ë‹ˆë‹¤ë§Œ?");
 						return true;
 					}
 				} else if(args[0].equalsIgnoreCase("Player")) {
@@ -95,7 +95,7 @@ public class Cmd11SpawnVil implements CommandExecutor {
 						npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
 						addNPCPacket(npc);
 					} catch(Exception e) {
-						player.sendMessage(ChatColor.RED + "Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù¸¸?");
+						player.sendMessage(ChatColor.RED + "ì˜ëª»ëœ ì…ë ¥ì…ë‹ˆë‹¤ë§Œ?");
 						return true;
 					}
 				} else if(args[0].equalsIgnoreCase("Wolf")) {
@@ -109,7 +109,7 @@ public class Cmd11SpawnVil implements CommandExecutor {
 						villager.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, Integer.MAX_VALUE, 255));
 						villager.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, Integer.MAX_VALUE, Integer.MAX_VALUE));
 					} catch(Exception e) {
-						player.sendMessage(ChatColor.RED + "Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù¸¸?");
+						player.sendMessage(ChatColor.RED + "ì˜ëª»ëœ ì…ë ¥ì…ë‹ˆë‹¤ë§Œ?");
 						return true;
 					}
 				} else if(args[0].equalsIgnoreCase("pig")) {
@@ -123,7 +123,7 @@ public class Cmd11SpawnVil implements CommandExecutor {
 						villager.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, Integer.MAX_VALUE, 255));
 						villager.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, Integer.MAX_VALUE, Integer.MAX_VALUE));
 					} catch(Exception e) {
-						player.sendMessage(ChatColor.RED + "Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù¸¸?");
+						player.sendMessage(ChatColor.RED + "ì˜ëª»ëœ ì…ë ¥ì…ë‹ˆë‹¤ë§Œ?");
 						return true;
 					}
 				} else if(args[0].equalsIgnoreCase("chicken")) {
@@ -139,7 +139,7 @@ public class Cmd11SpawnVil implements CommandExecutor {
 						villager.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, Integer.MAX_VALUE, 255));
 						villager.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, Integer.MAX_VALUE, Integer.MAX_VALUE));
 					} catch(Exception e) {
-						player.sendMessage(ChatColor.RED + "Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù¸¸?");
+						player.sendMessage(ChatColor.RED + "ì˜ëª»ëœ ì…ë ¥ì…ë‹ˆë‹¤ë§Œ?");
 						return true;
 					}
 				} else if(args[0].equalsIgnoreCase("cow")) {
@@ -153,7 +153,7 @@ public class Cmd11SpawnVil implements CommandExecutor {
 						villager.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, Integer.MAX_VALUE, 255));
 						villager.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, Integer.MAX_VALUE, Integer.MAX_VALUE));
 					} catch(Exception e) {
-						player.sendMessage(ChatColor.RED + "Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù¸¸?");
+						player.sendMessage(ChatColor.RED + "ì˜ëª»ëœ ì…ë ¥ì…ë‹ˆë‹¤ë§Œ?");
 						return true;
 					}
 				} else if(args[0].equalsIgnoreCase("sheep")) {
@@ -167,7 +167,7 @@ public class Cmd11SpawnVil implements CommandExecutor {
 						villager.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, Integer.MAX_VALUE, 255));
 						villager.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, Integer.MAX_VALUE, Integer.MAX_VALUE));
 					} catch(Exception e) {
-						player.sendMessage(ChatColor.RED + "Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù¸¸?");
+						player.sendMessage(ChatColor.RED + "ì˜ëª»ëœ ì…ë ¥ì…ë‹ˆë‹¤ë§Œ?");
 						return true;
 					}
 				} else if(args[0].equalsIgnoreCase("mush")) {
@@ -179,11 +179,11 @@ public class Cmd11SpawnVil implements CommandExecutor {
 						villager.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, Integer.MAX_VALUE, 255));
 						villager.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, Integer.MAX_VALUE, Integer.MAX_VALUE));
 					} catch(Exception e) {
-						player.sendMessage(ChatColor.RED + "Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù¸¸?");
+						player.sendMessage(ChatColor.RED + "ì˜ëª»ëœ ì…ë ¥ì…ë‹ˆë‹¤ë§Œ?");
 						return true;
 					}
 				} else {
-					player.sendMessage(ChatColor.RED + "Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù¸¸?");
+					player.sendMessage(ChatColor.RED + "ì˜ëª»ëœ ì…ë ¥ì…ë‹ˆë‹¤ë§Œ?");
 				}
 				
 				

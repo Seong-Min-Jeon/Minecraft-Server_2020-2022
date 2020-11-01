@@ -16,7 +16,7 @@ public class DefineScroll {
 
 	public void effect(Player player, Item itemArg) {
 		
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "¿Â∫Ò ∞®¡§º≠")) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "Ïû•ÎπÑ Í∞êÏ†ïÏÑú")) {
 			itemArg.remove();
 			ItemStack item = player.getInventory().getItemInMainHand();
 			if(item.getType()!=Material.AIR) {
@@ -55,7 +55,7 @@ public class DefineScroll {
 						preList = im.getLore();
 						int cnt = 0;
 						for(int i = 0 ; i < preList.size() ; i++) {			
-							if(preList.get(i).equals("=====¿Œ√¶∆Æ=====")) {
+							if(preList.get(i).equals("=====Ïù∏Ï±àÌä∏=====")) {
 								break;
 							}
 //							if(i==preList.size()-1) {
@@ -70,46 +70,46 @@ public class DefineScroll {
 						if(!(list.get(list.size()-1).equals(" "))) {
 							list.add(" ");
 						}
-						list.add("=====¿Œ√¶∆Æ=====");
+						list.add("=====Ïù∏Ï±àÌä∏=====");
 						if(Integer.parseInt(ench[0]) != 0) {
 							int lvl = Integer.parseInt(ench[0]);
-							list.add(ChatColor.BLUE + "√ﬂ∞° µ•πÃ¡ˆ(∏µÁ ∞¥√º): " + lvl);
+							list.add(ChatColor.BLUE + "Ï∂îÍ∞Ä Îç∞ÎØ∏ÏßÄ(Î™®Îì† Í∞ùÏ≤¥): " + lvl);
 						}
 						if(Integer.parseInt(ench[1]) != 0) {
 							int lvl = Integer.parseInt(ench[1]);
-							list.add(ChatColor.BLUE + "√ﬂ∞° µ•πÃ¡ˆ(¿Œ∞£«¸): " + lvl);
+							list.add(ChatColor.BLUE + "Ï∂îÍ∞Ä Îç∞ÎØ∏ÏßÄ(Ïù∏Í∞ÑÌòï): " + lvl);
 						}
 						if(Integer.parseInt(ench[2]) != 0) {
 							int lvl = Integer.parseInt(ench[2]);
-							list.add(ChatColor.BLUE + "√ﬂ∞° µ•πÃ¡ˆ(π˙∑π): " + lvl);
+							list.add(ChatColor.BLUE + "Ï∂îÍ∞Ä Îç∞ÎØ∏ÏßÄ(Î≤åÎ†à): " + lvl);
 						}
 						if(Integer.parseInt(ench[3]) != 0) {
 							int lvl = Integer.parseInt(ench[3]);
-							list.add(ChatColor.BLUE + "√ﬂ∞° µ•πÃ¡ˆ(∞≈¥Î ∞¥√º): " + lvl);
+							list.add(ChatColor.BLUE + "Ï∂îÍ∞Ä Îç∞ÎØ∏ÏßÄ(Í±∞ÎåÄ Í∞ùÏ≤¥): " + lvl);
 						}					
 						if(Integer.parseInt(ench[4]) != 0) {
 							int lvl = Integer.parseInt(ench[4]);
-							list.add(ChatColor.BLUE + "Ω∫«√∑πΩ√: " + lvl);
+							list.add(ChatColor.BLUE + "Ïä§ÌîåÎ†àÏãú: " + lvl);
 						}
 						if(Integer.parseInt(ench[5]) != 0) {
 							int lvl = Integer.parseInt(ench[5]);
-							list.add(ChatColor.BLUE + "∫∏»£(¿œπ›): " + lvl);
+							list.add(ChatColor.BLUE + "Î≥¥Ìò∏(ÏùºÎ∞ò): " + lvl);
 						}
 						if(Integer.parseInt(ench[6]) != 0) {
 							int lvl = Integer.parseInt(ench[6]);
-							list.add(ChatColor.BLUE + "∫∏»£(»≠ø∞): " + lvl);
+							list.add(ChatColor.BLUE + "Î≥¥Ìò∏(ÌôîÏóº): " + lvl);
 						}
 						if(Integer.parseInt(ench[7]) != 0) {
 							int lvl = Integer.parseInt(ench[7]);
-							list.add(ChatColor.BLUE + "∫∏»£(∆¯πﬂ): " + lvl);
+							list.add(ChatColor.BLUE + "Î≥¥Ìò∏(Ìè≠Î∞ú): " + lvl);
 						}
 						if(Integer.parseInt(ench[8]) != 0) {
 							int lvl = Integer.parseInt(ench[8]);
-							list.add(ChatColor.BLUE + "∫∏»£(πﬂªÁ√º): " + lvl);
+							list.add(ChatColor.BLUE + "Î≥¥Ìò∏(Î∞úÏÇ¨Ï≤¥): " + lvl);
 						}
 						if(Integer.parseInt(ench[9]) != 0) {
 							int lvl = Integer.parseInt(ench[9]);
-							list.add(ChatColor.BLUE + "π›∞›: " + lvl);
+							list.add(ChatColor.BLUE + "Î∞òÍ≤©: " + lvl);
 						}
 						im.setLore(list);
 						item.setItemMeta(im);					
@@ -125,7 +125,7 @@ public class DefineScroll {
 						preList = im.getLore();
 						int cnt = 0;
 						for(int i = 0 ; i < preList.size() ; i++) {			
-							if(preList.contains("=====¿Œ√¶∆Æ=====")) {
+							if(preList.contains("=====Ïù∏Ï±àÌä∏=====")) {
 								break;
 							}
 //							if(i==preList.size()-1) {
@@ -140,17 +140,17 @@ public class DefineScroll {
 						if(!(list.get(list.size()-1).equals(" "))) {
 							list.add(" ");
 						}
-						list.add("=====¿Œ√¶∆Æ=====");
+						list.add("=====Ïù∏Ï±àÌä∏=====");
 						if(Integer.parseInt(ench) != 0) {
 							int lvl = Integer.parseInt(ench);
-							list.add(ChatColor.BLUE + "√ﬂ∞° µ•πÃ¡ˆ: " + lvl);
+							list.add(ChatColor.BLUE + "Ï∂îÍ∞Ä Îç∞ÎØ∏ÏßÄ: " + lvl);
 						}						
 						im.setLore(list);
 						item.setItemMeta(im);					
 					}
 				}
 			} else {
-				player.sendMessage(ChatColor.RED + "ø¿∏•º’ø° ¿Â∫Ò∏¶ µÈ∞Ì ªÁøÎ«ÿ¡÷ººø‰.");
+				player.sendMessage(ChatColor.RED + "Ïò§Î•∏ÏÜêÏóê Ïû•ÎπÑÎ•º Îì§Í≥† ÏÇ¨Ïö©Ìï¥Ï£ºÏÑ∏Ïöî.");
 				player.getInventory().addItem(itemArg.getItemStack());
 			}
 		}

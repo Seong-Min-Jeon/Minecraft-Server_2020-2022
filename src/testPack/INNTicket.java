@@ -26,8 +26,8 @@ public class INNTicket {
 	}
 
 	public void wargunil(Player player, Item itemArg, World world) {	
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "¿ö±×´Ò ¼÷¹Ú Æ¼ÄÏ")) {
-			//¿ö±×´Ò -1850 74 3048 -1829 80 3056 
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "ì›Œê·¸ë‹ ìˆ™ë°• í‹°ì¼“")) {
+			//ì›Œê·¸ë‹ -1850 74 3048 -1829 80 3056 
 			if (player.getLocation().getX() <= -1829 && player.getLocation().getY() <= 80 && player.getLocation().getZ() <= 3056 && 
 					player.getLocation().getX() >= -1850 && player.getLocation().getY() >= 74 && player.getLocation().getZ() >= 3048) {
 				Location loc = new Location(world, -1834, 76, 3051);
@@ -40,8 +40,8 @@ public class INNTicket {
 	}
 	
 	public void forgan(Player player, Item itemArg, World world) {	
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "Æ÷¸£°£ ¼÷¹Ú Æ¼ÄÏ")) {
-			//Æ÷¸£°£ -1556 50 2437  -1586 104 2423
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "í¬ë¥´ê°„ ìˆ™ë°• í‹°ì¼“")) {
+			//í¬ë¥´ê°„ -1556 50 2437  -1586 104 2423
 			if (player.getLocation().getX() <= -1556 && player.getLocation().getY() <= 100 && player.getLocation().getZ() <= 2437 && 
 					player.getLocation().getX() >= -1586 && player.getLocation().getY() >= 50 && player.getLocation().getZ() >= 2423) {
 				Location loc = new Location(world, -1566, 61, 2441);
@@ -54,8 +54,8 @@ public class INNTicket {
 	}
 	
 	public void tiru(Player player, Item itemArg, World world) {	
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "Æ¼¸£ ¼÷¹Ú Æ¼ÄÏ")) {
-			//Æ¼¸£ -657 42 1937  -663 42 1949
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "í‹°ë¥´ ìˆ™ë°• í‹°ì¼“")) {
+			//í‹°ë¥´ -657 42 1937  -663 42 1949
 			if (player.getLocation().getX() <= -657 && player.getLocation().getY() <= 45 && player.getLocation().getZ() <= 1949 && 
 					player.getLocation().getX() >= -663 && player.getLocation().getY() >= 28 && player.getLocation().getZ() >= 1937) {
 				Location loc = new Location(world, -660, 43, 1945);
@@ -68,8 +68,8 @@ public class INNTicket {
 	}
 	
 	public void kaiman(Player player, Item itemArg, World world) {	
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "Ä«ÀÌ¸¸ ¼÷¹Ú Æ¼ÄÏ")) {
-			//Ä«ÀÌ¸¸ -483 53 1295  -465 59 1312
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "ì¹´ì´ë§Œ ìˆ™ë°• í‹°ì¼“")) {
+			//ì¹´ì´ë§Œ -483 53 1295  -465 59 1312
 			if (player.getLocation().getX() <= -465 && player.getLocation().getY() <= 59 && player.getLocation().getZ() <= 1312 && 
 					player.getLocation().getX() >= -483 && player.getLocation().getY() >= 53 && player.getLocation().getZ() >= 1295) {
 				Location loc = new Location(world,-478,55,1302);
@@ -82,8 +82,8 @@ public class INNTicket {
 	}
 	
 	public void osu(Player player, Item itemArg, World world) {	
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "¿À½º ¼÷¹Ú Æ¼ÄÏ")) {
-			//¿À½º -1382 53 997  -1374 59 1002
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "ì˜¤ìŠ¤ ìˆ™ë°• í‹°ì¼“")) {
+			//ì˜¤ìŠ¤ -1382 53 997  -1374 59 1002
 			if (player.getLocation().getX() <= -1374 && player.getLocation().getY() <= 59 && player.getLocation().getZ() <= 1002 && 
 					player.getLocation().getX() >= -1382 && player.getLocation().getY() >= 53 && player.getLocation().getZ() >= 997) {
 				Location loc = new Location(world,-1377.5,55,999);
@@ -96,8 +96,8 @@ public class INNTicket {
 	}
 	
 	public void konno(Player player, Item itemArg, World world) {	
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "ÄÜ³ë ¼÷¹Ú Æ¼ÄÏ")) {
-			//ÄÜ³ë -2471 79 517  -2453 50 503
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "ì½˜ë…¸ ìˆ™ë°• í‹°ì¼“")) {
+			//ì½˜ë…¸ -2471 79 517  -2453 50 503
 			if (player.getLocation().getX() <= -2453 && player.getLocation().getY() <= 79 && player.getLocation().getZ() <= 517 && 
 					player.getLocation().getX() >= -2471 && player.getLocation().getY() >= 50 && player.getLocation().getZ() >= 503) {
 				Location loc = new Location(world,-2462,55,509);
@@ -110,8 +110,8 @@ public class INNTicket {
 	}
 	
 	public void fuhidmeh(Player player, Item itemArg, World world) {	
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "ÇÁÈÖ µå ¸ŞÈå ¼÷¹Ú Æ¼ÄÏ")) {
-			//ÇÁÈÖ µå ¸Şµå -431 107 754  -423 95 733
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "í”„íœ˜ ë“œ ë©”í ìˆ™ë°• í‹°ì¼“")) {
+			//í”„íœ˜ ë“œ ë©”ë“œ -431 107 754  -423 95 733
 			if (player.getLocation().getX() <= -423 && player.getLocation().getY() <= 107 && player.getLocation().getZ() <= 754 && 
 					player.getLocation().getX() >= -431 && player.getLocation().getY() >= 95 && player.getLocation().getZ() >= 733) {
 				Location loc = new Location(world,-430,101,753);
@@ -124,8 +124,8 @@ public class INNTicket {
 	}
 	
 	public void sitasaidi(Player player, Item itemArg, World world) {	
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "½ÃÅ¸»çÀÌµğ ¼÷¹Ú Æ¼ÄÏ")) {
-			//½ÃÅ¸»çÀÌµğ -1151 63 651  -1111 47 662
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "ì‹œíƒ€ì‚¬ì´ë”” ìˆ™ë°• í‹°ì¼“")) {
+			//ì‹œíƒ€ì‚¬ì´ë”” -1151 63 651  -1111 47 662
 			if (player.getLocation().getX() <= -1111 && player.getLocation().getY() <= 63 && player.getLocation().getZ() <= 662 && 
 					player.getLocation().getX() >= -1151 && player.getLocation().getY() >= 47 && player.getLocation().getZ() >= 651) {
 				Location loc = new Location(world,-1148,55,657);
@@ -138,8 +138,8 @@ public class INNTicket {
 	}
 	
 	public void karce(Player player, Item itemArg, World world) {	
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "Ä®½º ¼÷¹Ú Æ¼ÄÏ")) {
-			//Ä®½º -181 64 565  -193 81 552
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "ì¹¼ìŠ¤ ìˆ™ë°• í‹°ì¼“")) {
+			//ì¹¼ìŠ¤ -181 64 565  -193 81 552
 			if (player.getLocation().getX() <= -181 && player.getLocation().getY() <= 81 && player.getLocation().getZ() <= 565 && 
 					player.getLocation().getX() >= -193 && player.getLocation().getY() >= 64 && player.getLocation().getZ() >= 552) {
 				Location loc = new Location(world,-182,68,562);
@@ -152,8 +152,8 @@ public class INNTicket {
 	}
 	
 	public void kuredrat(Player player, Item itemArg, World world) {	
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "Å©·¹µå¶óÆ® ¼÷¹Ú Æ¼ÄÏ")) {
-			//Å©·¹µå¶óÆ® -72 56 106  -55 74 97
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "í¬ë ˆë“œë¼íŠ¸ ìˆ™ë°• í‹°ì¼“")) {
+			//í¬ë ˆë“œë¼íŠ¸ -72 56 106  -55 74 97
 			if (player.getLocation().getX() <= -55 && player.getLocation().getY() <= 74 && player.getLocation().getZ() <= 106 && 
 					player.getLocation().getX() >= -72 && player.getLocation().getY() >= 55 && player.getLocation().getZ() >= 97) {
 				Location loc = new Location(world,-65,61,101);
@@ -166,8 +166,8 @@ public class INNTicket {
 	}
 	
 	public void beiag(Player player, Item itemArg, World world) {	
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "º£¾Æ±× ¼÷¹Ú Æ¼ÄÏ")) {
-			//º£¾Æ±× 131 85 -334  109 113 -316
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "ë² ì•„ê·¸ ìˆ™ë°• í‹°ì¼“")) {
+			//ë² ì•„ê·¸ 131 85 -334  109 113 -316
 			if (player.getLocation().getX() <= 131 && player.getLocation().getY() <= 113 && player.getLocation().getZ() <= -316 && 
 					player.getLocation().getX() >= 109 && player.getLocation().getY() >= 85 && player.getLocation().getZ() >= -334) {
 				Location loc = new Location(world,114,97,-331);
@@ -180,8 +180,8 @@ public class INNTicket {
 	}
 	
 	public void longue(Player player, Item itemArg, World world) {	
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "·Õ°Ô ¼÷¹Ú Æ¼ÄÏ")) {
-			//·Õ°Ô 852 63 511  823 96 548
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "ë¡±ê²Œ ìˆ™ë°• í‹°ì¼“")) {
+			//ë¡±ê²Œ 852 63 511  823 96 548
 			if (player.getLocation().getX() <= 852 && player.getLocation().getY() <= 96 && player.getLocation().getZ() <= 548 && 
 					player.getLocation().getX() >= 823 && player.getLocation().getY() >= 63 && player.getLocation().getZ() >= 511) {
 				Location loc = new Location(world,829,74,525);

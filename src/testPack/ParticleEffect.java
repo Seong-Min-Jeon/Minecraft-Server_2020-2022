@@ -28,7 +28,7 @@ public class ParticleEffect {
 		this.ent = ent;
 	}
 	
-	// º» Ã¼½ºÆ®
+	// ë³¸ ì²´ìŠ¤íŠ¸
 	public void startE1() {
 		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -60,7 +60,7 @@ public class ParticleEffect {
 		}, 0, 1);
 	}
 
-	// »À°¨¿Á
+	// ë¼ˆê°ì˜¥
 	public void startE2() {
 		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -94,7 +94,7 @@ public class ParticleEffect {
 		}, 0, 1);
 	}
 
-	// µğ¹ÙÀÎ ¸µÅ©
+	// ë””ë°”ì¸ ë§í¬
 	public void startE3() {
 		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -128,7 +128,7 @@ public class ParticleEffect {
 		}, 0, 1);
 	}
 
-	// Áõ¿ø
+	// ì¦ì›
 	public void startE4() {
 		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -162,7 +162,7 @@ public class ParticleEffect {
 		}, 0, 1);
 	}
 
-	// ¼º½º·¯¿î Èû
+	// ì„±ìŠ¤ëŸ¬ìš´ í˜
 	public void startE5() {
 		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -201,7 +201,7 @@ public class ParticleEffect {
 		}, 0, 1);
 	}
 
-	// ¹öÆ¼±â
+	// ë²„í‹°ê¸°
 	public void startE6() {
 		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -239,7 +239,7 @@ public class ParticleEffect {
 		}, 0, 1);
 	}
 
-	// µµ¹Ú»çÀÇ ÆÇ
+	// ë„ë°•ì‚¬ì˜ íŒ
 	public void startE7() {
 		ArrayList<Particle> list = new ArrayList<>();
 
@@ -280,7 +280,7 @@ public class ParticleEffect {
 		}, 0, 1);
 	}
 
-	// ¹«Á¶°Ç ÀÌ±â´Â ÆÇ
+	// ë¬´ì¡°ê±´ ì´ê¸°ëŠ” íŒ
 	public void startE8() {
 		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -318,7 +318,7 @@ public class ParticleEffect {
 		}, 0, 1);
 	}
 
-	// Ä«»ç¸£ÀÇ º¹¼ö
+	// ì¹´ì‚¬ë¥´ì˜ ë³µìˆ˜
 	public void startE9() {
 		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -356,7 +356,7 @@ public class ParticleEffect {
 		}, 0, 1);
 	}
 
-	// ½ÅÀÇ ±Ç´É
+	// ì‹ ì˜ ê¶ŒëŠ¥
 	public void startE10() {
 		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -415,7 +415,7 @@ public class ParticleEffect {
 		}, 0, 1);
 	}
 
-	// ±â»ç´Ü Ã¢¸³
+	// ê¸°ì‚¬ë‹¨ ì°½ë¦½
 	public void startE11() {
 		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -452,7 +452,7 @@ public class ParticleEffect {
 		}, 0, 1);
 	}
 
-	// »ç±â ÁøÀÛ
+	// ì‚¬ê¸° ì§„ì‘
 	public void startE12() {
 		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -490,7 +490,7 @@ public class ParticleEffect {
 		}, 0, 1);
 	}
 
-	// ½ÅÀÇ ÁÖ»çÀ§
+	// ì‹ ì˜ ì£¼ì‚¬ìœ„
 	public void startE13() {
 		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -527,7 +527,7 @@ public class ParticleEffect {
 		}, 0, 1);
 	}
 
-	// ¹ßµµ
+	// ë°œë„
 	public void startE14() {
 		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -568,7 +568,7 @@ public class ParticleEffect {
 		}, 0, 1);
 	}
 
-	// ³ªÀÌÆ®¸Ş¾î
+	// ë‚˜ì´íŠ¸ë©”ì–´
 	public void startE15() {
 		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -607,7 +607,7 @@ public class ParticleEffect {
 		}, 0, 1);
 	}
 
-	// Æ÷¼ÇÀÇ ºÎÀÛ¿ë
+	// í¬ì…˜ì˜ ë¶€ì‘ìš©
 	public void startE16() {
 		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -642,7 +642,7 @@ public class ParticleEffect {
 		}, 0, 1);
 	}
 
-	// Æ÷¼Ç Áßµ¶
+	// í¬ì…˜ ì¤‘ë…
 	public void startE17() {
 		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -677,7 +677,7 @@ public class ParticleEffect {
 		}, 0, 1);
 	}
 
-	// ¸¶Æí
+	// ë§ˆí¸
 	public void startE18() {
 		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -714,7 +714,7 @@ public class ParticleEffect {
 		}, 0, 1);
 	}
 
-	// ¼±ÀÓÀÇ ¸í·É
+	// ì„ ì„ì˜ ëª…ë ¹
 	public void startE19() {
 		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -749,7 +749,7 @@ public class ParticleEffect {
 		}, 0, 1);
 	}
 
-	// Á×À½ÀÇ ¼ıÀÚ
+	// ì£½ìŒì˜ ìˆ«ì
 	public void startE20() {
 		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -786,7 +786,7 @@ public class ParticleEffect {
 		}, 0, 1);
 	}
 
-	// Áö¿ÁºÒ
+	// ì§€ì˜¥ë¶ˆ
 	public void startE21() {
 		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -827,7 +827,7 @@ public class ParticleEffect {
 		}, 0, 1);
 	}
 
-	// ¿¡·Î¿ì ½Çµå
+	// ì—ë¡œìš° ì‹¤ë“œ
 	public void startE22() {
 		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -860,7 +860,7 @@ public class ParticleEffect {
 		}, 0, 1);
 	}
 
-	// ·çÀÎ ¿Àºê ³ë¹Ù
+	// ë£¨ì¸ ì˜¤ë¸Œ ë…¸ë°”
 	public void startE23() {
 		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -909,7 +909,7 @@ public class ParticleEffect {
 		}, 0, 1);
 	}
 
-	// ´Ï À§·Î ³» ¹ØÀ¸·Î
+	// ë‹ˆ ìœ„ë¡œ ë‚´ ë°‘ìœ¼ë¡œ
 	public void startE24() {
 		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -951,7 +951,7 @@ public class ParticleEffect {
 		}, 0, 1);
 	}
 
-	// ¶ó¶¼´Â ¸»ÀÌ¾ß
+	// ë¼ë–¼ëŠ” ë§ì´ì•¼
 	public void startE25() {
 		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -986,7 +986,7 @@ public class ParticleEffect {
 		}, 0, 1);
 	}
 
-	// ÇïÆÄÀÌ¾î
+	// í—¬íŒŒì´ì–´
 	public void startE26() {
 		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -1027,7 +1027,7 @@ public class ParticleEffect {
 		}, 0, 1);
 	}
 
-	// º» Ã¼½ºÆ®
+	// ë³¸ ì²´ìŠ¤íŠ¸
 	public void startE27() {
 		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -1060,10 +1060,10 @@ public class ParticleEffect {
 	}
 
 
-////¸ó½ºÅÍ ±â¼ú////	
+////ëª¬ìŠ¤í„° ê¸°ìˆ ////	
 	
 	
-	// ½Ã·ÃÀÇ Çü»ó
+	// ì‹œë ¨ì˜ í˜•ìƒ
 	public void startE28() {
 		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -1100,7 +1100,7 @@ public class ParticleEffect {
 		}, 0, 1);
 	}
 
-	// ¿äÁ¤¿Õ
+	// ìš”ì •ì™•
 	public void startE29() {
 		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -1134,7 +1134,7 @@ public class ParticleEffect {
 		}, 0, 1);
 	}
 
-	// ¹ß·Î¸£
+	// ë°œë¡œë¥´
 	public void startE30() {
 		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -1173,7 +1173,7 @@ public class ParticleEffect {
 		}, 0, 1);
 	}
 	
-	// ¾Æµ§
+	// ì•„ë´
 	public void startE31() {
 		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -1208,7 +1208,7 @@ public class ParticleEffect {
 		}, 0, 1);
 	}
 	
-	// Á×À½ÀÇ Å¾ °øÅë
+	// ì£½ìŒì˜ íƒ‘ ê³µí†µ
 	public void startE32() {
 		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -1244,7 +1244,7 @@ public class ParticleEffect {
 		}, 0, 1);
 	}
 	
-	// Á×À½ÀÇ Å¾ ½ÉÆÇ
+	// ì£½ìŒì˜ íƒ‘ ì‹¬íŒ
 	public void startE33() {
 		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -1284,7 +1284,7 @@ public class ParticleEffect {
 		}, 0, 1);
 	}
 
-	// ÄÚ³¶±×
+	// ì½”ë‚­ê·¸
 	public void startE34() {
 		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 

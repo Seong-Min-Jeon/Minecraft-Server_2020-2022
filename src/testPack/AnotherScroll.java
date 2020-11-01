@@ -25,26 +25,26 @@ public class AnotherScroll {
 	}
 	
 	public void jobRemoveScroll(Player player, Item itemArg, World world) {	
-		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "Á÷¾÷ ÃÊ±âÈ­ ½ºÅ©·Ñ")) {
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "ì§ì—… ì´ˆê¸°í™” ìŠ¤í¬ë¡¤")) {
 			player.getInventory().clear();
 			player.kickPlayer(ChatColor.RED + "Error Code:" + ChatColor.MAGIC + " Hi My Name Is Yumehama(The God)"
-					+ "\n" + ChatColor.GRAY + "±â·ÏÀÇ ½ÅÀÌ ´ç½ÅÀÇ Á¤º¸¸¦ Á¦°ÅÇÏ±â À§ÇØ Àá½Ã Áß°£¼¼°è·Î ´ç½ÅÀ» ÀÌ¼ÛÇÏ¿´½À´Ï´Ù.");
+					+ "\n" + ChatColor.GRAY + "ê¸°ë¡ì˜ ì‹ ì´ ë‹¹ì‹ ì˜ ì •ë³´ë¥¼ ì œê±°í•˜ê¸° ìœ„í•´ ìž ì‹œ ì¤‘ê°„ì„¸ê³„ë¡œ ë‹¹ì‹ ì„ ì´ì†¡í•˜ì˜€ìŠµë‹ˆë‹¤.");
 			itemArg.remove();
 		}	
 	}
 	
 	public void questRemoveScroll(Player player, Item itemArg, World world) {	
-		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "Äù½ºÆ® Á¦°Å ½ºÅ©·Ñ")) {
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "í€˜ìŠ¤íŠ¸ ì œê±° ìŠ¤í¬ë¡¤")) {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard ());
 			itemArg.remove();
 		}	
 	}
 	
 	public void mapPaper(Player player, Item itemArg, World world) {	
-		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "Áöµµ¿ë Á¾ÀÌ")) {
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "ì§€ë„ìš© ì¢…ì´")) {
 			Location loc = player.getLocation();
 			if(loc.getX() > 3500 || loc.getZ() > 3500 || loc.getX() < -3500 || loc.getZ() < -3500) {
-				player.sendMessage(ChatColor.RED + "»ç¿ëºÒ°¡ Áö¿ªÀÔ´Ï´Ù.");
+				player.sendMessage(ChatColor.RED + "ì‚¬ìš©ë¶ˆê°€ ì§€ì—­ìž…ë‹ˆë‹¤.");
 				return;
 			}
 			

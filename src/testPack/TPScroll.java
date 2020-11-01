@@ -23,11 +23,11 @@ public class TPScroll {
 	}
 	
 	public void ticket1(Player player, Item itemArg, World world) {
-		// ¿ö±×´Ò->´ë·ú  -1936 51 3013  -1941 57 3002
+		// ì›Œê·¸ë‹->ëŒ€ë¥™  -1936 51 3013  -1941 57 3002
 		Location loc = player.getLocation();
 		if (loc.getX() <= -1936 && loc.getY() <= 57 && loc.getZ() <= 3013 && 
 				loc.getX() >= -1941 && loc.getY() >= 51 && loc.getZ() >= 3002) {
-			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "´ë·úÇà Æ¼ÄÏ")) {
+			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "ëŒ€ë¥™í–‰ í‹°ì¼“")) {
 				itemArg.remove();				
 				Location loc3 = new Location(world, -1880, 52, 2714);
 				List<Entity> list = player.getNearbyEntities(10, 10, 10);
@@ -48,11 +48,11 @@ public class TPScroll {
 	}
 	
 	public void ticket2(Player player, Item itemArg, World world) {
-		// ´ë·ú->¿ö±×´Ò  -1882 49 2707  -1879 57 2719
+		// ëŒ€ë¥™->ì›Œê·¸ë‹  -1882 49 2707  -1879 57 2719
 		Location loc = player.getLocation();
 		if (loc.getX() <= -1879 && loc.getY() <= 57 && loc.getZ() <= 2719 && 
 				loc.getX() >= -1882 && loc.getY() >= 49 && loc.getZ() >= 2707) {
-			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "¿ö±×´ÒÇà Æ¼ÄÏ")) {
+			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "ì›Œê·¸ë‹í–‰ í‹°ì¼“")) {
 				itemArg.remove();				
 				Location loc3 = new Location(world, -1938, 53, 3007);
 				List<Entity> list = player.getNearbyEntities(10, 10, 10);
@@ -72,11 +72,11 @@ public class TPScroll {
 	}
 	
 	public void ticket3(Player player, Item itemArg, World world) {
-		// ¿À½º->¾Æ¶õ¸ğ¾î -1379 91 903  -1388 48 871
+		// ì˜¤ìŠ¤->ì•„ë€ëª¨ì–´ -1379 91 903  -1388 48 871
 		Location loc = player.getLocation();
 		if (loc.getX() <= -1379 && loc.getY() <= 91 && loc.getZ() <= 903 && 
 				loc.getX() >= -1388 && loc.getY() >= 48 && loc.getZ() >= 871) {
-			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "¾Æ¶õ¸ğ¾îÇà Æ¼ÄÏ")) {
+			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "ì•„ë€ëª¨ì–´í–‰ í‹°ì¼“")) {
 				itemArg.remove();				
 				Location loc3 = new Location(world, -1927, 53, 451);
 				List<Entity> list = player.getNearbyEntities(10, 10, 10);
@@ -97,11 +97,11 @@ public class TPScroll {
 	}
 	
 	public void ticket4(Player player, Item itemArg, World world) {
-		// ¾Æ¶õ¸ğ¾î->¿À½º  -1939 91 449  -1908 48 438
+		// ì•„ë€ëª¨ì–´->ì˜¤ìŠ¤  -1939 91 449  -1908 48 438
 		Location loc = player.getLocation();
 		if (loc.getX() <= -1908 && loc.getY() <= 91 && loc.getZ() <= 449 && 
 				loc.getX() >= -1939 && loc.getY() >= 48 && loc.getZ() >= 438) {
-			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "¿À½ºÇà Æ¼ÄÏ")) {
+			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "ì˜¤ìŠ¤í–‰ í‹°ì¼“")) {
 				itemArg.remove();				
 				Location loc3 = new Location(world, -1377, 53, 889);
 				List<Entity> list = player.getNearbyEntities(10, 10, 10);
@@ -121,13 +121,13 @@ public class TPScroll {
 	}
 	
 	public void ticket5(Player player, Item itemArg, World world) {
-		// ¾Æ¶õ¸ğ¾î ¼û°ÜÁø Àå¼Ò -2318 203 630  -2345 255 664
+		// ì•„ë€ëª¨ì–´ ìˆ¨ê²¨ì§„ ì¥ì†Œ -2318 203 630  -2345 255 664
 		Location loc = player.getLocation();
 		if (loc.getX() <= -2318 && loc.getY() <= 255 && loc.getZ() <= 664 && 
 				loc.getX() >= -2345 && loc.getY() >= 203 && loc.getZ() >= 630) {
-			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "¼º½º·¯¿î ÅëÇàÁõ")) {
+			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "ì„±ìŠ¤ëŸ¬ìš´ í†µí–‰ì¦")) {
 				QuestBoard cb = new QuestBoard();
-				if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===¼³¿øÀÇ º¸¹°2===")) {
+				if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===ì„¤ì›ì˜ ë³´ë¬¼2===")) {
 					itemArg.remove();				
 					Location loc3 = new Location(world, -1994, 88, 139);
 					player.teleport(loc3);
@@ -140,21 +140,21 @@ public class TPScroll {
 	}
 	
 	public void ticket6(Player player, Item itemArg, World world) {
-		// ¹Ì±Ã
-		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "¹Ì±Ã ¿öÇÁ ½ºÅ©·Ñ")) {
+		// ë¯¸ê¶
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "ë¯¸ê¶ ì›Œí”„ ìŠ¤í¬ë¡¤")) {
 			if(player.getLevel() >= 340) {
 				itemArg.remove();	
 				Location loc = new Location(world, 96.5, 54, 695.5, 180, 0);
 				player.teleport(loc);
 				player.getWorld().playSound(loc, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
-				// º¸½º¹Ù °ü·Ã
+				// ë³´ìŠ¤ë°” ê´€ë ¨
 				try {
 					new BossHealth().removePlayer(player);
 				} catch (Exception e) {
 
 				}
 			} else {
-				player.sendMessage(ChatColor.RED + "ÀÌ ¾ÆÀÌÅÛÀ» »ç¿ëÇÏ±â¿¡´Â ·¹º§ÀÌ ³·´Ù.");
+				player.sendMessage(ChatColor.RED + "ì´ ì•„ì´í…œì„ ì‚¬ìš©í•˜ê¸°ì—ëŠ” ë ˆë²¨ì´ ë‚®ë‹¤.");
 			}
 			
 		}

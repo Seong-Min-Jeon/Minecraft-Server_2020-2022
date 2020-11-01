@@ -94,21 +94,21 @@ public class MouseClickForSkill {
 			Object playerConnection = handle.getClass().getField("playerConnection").get(handle);
 			playerConnection.getClass().getMethod("sendPacket", getNMSClass("Packet")).invoke(playerConnection, title);
 			if(key.length() == 1) {
-				String st = key + "¡×7 - _ - _";
-				PacketPlayOutTitle subtitle = new PacketPlayOutTitle(EnumTitleAction.SUBTITLE, ChatSerializer.a("{\"text\":\"¡×2" + st + "\"}"));
+				String st = key + "Â§7 - _ - _";
+				PacketPlayOutTitle subtitle = new PacketPlayOutTitle(EnumTitleAction.SUBTITLE, ChatSerializer.a("{\"text\":\"Â§2" + st + "\"}"));
 				playerConnection.getClass().getMethod("sendPacket", getNMSClass("Packet")).invoke(playerConnection, subtitle);
 			} else if(key.length() == 2) {
 				char key1 = key.charAt(0);
 				char key2 = key.charAt(1);
-				String st = key1 + "¡×7 - " + "¡×2" + key2 + "¡×7 - _";
-				PacketPlayOutTitle subtitle = new PacketPlayOutTitle(EnumTitleAction.SUBTITLE, ChatSerializer.a("{\"text\":\"¡×2" + st + "\"}"));
+				String st = key1 + "Â§7 - " + "Â§2" + key2 + "Â§7 - _";
+				PacketPlayOutTitle subtitle = new PacketPlayOutTitle(EnumTitleAction.SUBTITLE, ChatSerializer.a("{\"text\":\"Â§2" + st + "\"}"));
 				playerConnection.getClass().getMethod("sendPacket", getNMSClass("Packet")).invoke(playerConnection, subtitle);
 			} else if(key.length() == 3) {
 				char key1 = key.charAt(0);
 				char key2 = key.charAt(1);
 				char key3 = key.charAt(2);
-				String st = key1 + "¡×7 - " + "¡×2" + key2 + "¡×7 - " + "¡×2" + key3;
-				PacketPlayOutTitle subtitle = new PacketPlayOutTitle(EnumTitleAction.SUBTITLE, ChatSerializer.a("{\"text\":\"¡×2" + st + "\"}"));
+				String st = key1 + "Â§7 - " + "Â§2" + key2 + "Â§7 - " + "Â§2" + key3;
+				PacketPlayOutTitle subtitle = new PacketPlayOutTitle(EnumTitleAction.SUBTITLE, ChatSerializer.a("{\"text\":\"Â§2" + st + "\"}"));
 				playerConnection.getClass().getMethod("sendPacket", getNMSClass("Packet")).invoke(playerConnection, subtitle);
 			}
 			
