@@ -257,14 +257,14 @@ public class RefreshServer {
 				if(time % 6000 == 0) {
 					
 					if(change == 0) {
+						IChatBaseComponent comp = ChatSerializer.a("{\"text\":\"" + "\",\"extra\":[{\"text\":\"" + ChatColor.LIGHT_PURPLE + "" + ChatColor.UNDERLINE + "https://aile-server.netlify.app/"
+			                    + "\",\"clickEvent\": {\"action\":\"open_url\",\"value\":\"" + "https://aile-server.netlify.app/"
+			                    +  "\",\"hoverEvent\": {\"action\":\"show_text\",\"value\":\"" + ""
+			                    + "\"}}}]}"); 
 						for(Player player : Bukkit.getOnlinePlayers()) {
 							player.sendMessage(ChatColor.BLUE + "=============================");
 							player.sendMessage(ChatColor.GOLD + "아래 공식 홈페이지에서 많은 정보를 얻을 수 있습니다!");
 							try {
-								IChatBaseComponent comp = ChatSerializer.a("{\"text\":\"" + "\",\"extra\":[{\"text\":\"" + ChatColor.LIGHT_PURPLE + "" + ChatColor.UNDERLINE + "https://aile-server.netlify.app/"
-					                    + "\",\"clickEvent\": {\"action\":\"open_url\",\"value\":\"" + "https://aile-server.netlify.app/"
-					                    +  "\",\"hoverEvent\": {\"action\":\"show_text\",\"value\":\"" + ""
-					                    + "\"}}}]}"); 
 								PacketPlayOutChat chat = new PacketPlayOutChat(comp, ChatMessageType.CHAT, player.getUniqueId());
 								Object handle = player.getClass().getMethod("getHandle").invoke(player);
 						        Object playerConnection = handle.getClass().getField("playerConnection").get(handle);
@@ -278,14 +278,14 @@ public class RefreshServer {
 						}
 						change = 1;
 					} else if(change == 1) {
+						IChatBaseComponent comp = ChatSerializer.a("{\"text\":\"" + "\",\"extra\":[{\"text\":\"" + ChatColor.LIGHT_PURPLE + "" + ChatColor.UNDERLINE + "https://cafe.naver.com/yumehamaserver"
+			                    + "\",\"clickEvent\": {\"action\":\"open_url\",\"value\":\"" + "https://cafe.naver.com/yumehamaserver"
+			                    +  "\",\"hoverEvent\": {\"action\":\"show_text\",\"value\":\"" + ""
+			                    + "\"}}}]}"); 
 						for(Player player : Bukkit.getOnlinePlayers()) {
 							player.sendMessage(ChatColor.BLUE + "=============================");
 							player.sendMessage(ChatColor.GOLD + "아래 공식 카페에서 많은 정보를 얻을 수 있습니다!");
 							try {
-								IChatBaseComponent comp = ChatSerializer.a("{\"text\":\"" + "\",\"extra\":[{\"text\":\"" + ChatColor.LIGHT_PURPLE + "" + ChatColor.UNDERLINE + "https://cafe.naver.com/yumehamaserver"
-					                    + "\",\"clickEvent\": {\"action\":\"open_url\",\"value\":\"" + "https://cafe.naver.com/yumehamaserver"
-					                    +  "\",\"hoverEvent\": {\"action\":\"show_text\",\"value\":\"" + ""
-					                    + "\"}}}]}"); 
 								PacketPlayOutChat chat = new PacketPlayOutChat(comp, ChatMessageType.CHAT, player.getUniqueId());
 								Object handle = player.getClass().getMethod("getHandle").invoke(player);
 						        Object playerConnection = handle.getClass().getField("playerConnection").get(handle);

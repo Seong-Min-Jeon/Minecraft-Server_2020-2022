@@ -1,17 +1,21 @@
 package testPack;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 
 public class ExpSystemByMob {
 	
 	Cmd8Party cp = new Cmd8Party();
 	private final int multyExp = 1;
+	Random rnd = new Random();
 	
 	public void giveExp(Player player, int exp) {
 		int currentLevel = player.getLevel();
@@ -69,7 +73,7 @@ public class ExpSystemByMob {
 				for(Player partyPlayer : party) {
 					if(partyPlayer != player) {
 						boolean isOk = false;
-						for(Entity ent : partyPlayer.getNearbyEntities(20, 10, 20)) {
+						for(Entity ent : partyPlayer.getNearbyEntities(15, 6, 15)) {
 							if(ent instanceof Player) {
 								Player p = (Player) ent;
 								if(p.equals(player)) {
@@ -92,6 +96,30 @@ public class ExpSystemByMob {
 	}
 	
 	public void partyGiveExp(Player player, int exp) {
+		
+		// 마나지급
+		int num = rnd.nextInt(5);
+		if(num == 0) {
+			ItemStack mana = new ItemStack(Material.HEART_OF_THE_SEA);
+			ItemMeta manaIm = mana.getItemMeta();
+			manaIm.setDisplayName(ChatColor.BLUE + "마나");
+			mana.setItemMeta(manaIm);
+			if (player.getInventory().contains(Material.HEART_OF_THE_SEA)) {
+				int i = 0;
+				for (ItemStack is : player.getInventory().getContents()) {
+					if (is == null)
+						continue;
+					if (is.getType() == Material.HEART_OF_THE_SEA) {
+						i = i + is.getAmount();
+					}
+				}
+				if (i < 20)
+					player.getInventory().addItem(mana);
+			} else {
+				player.getInventory().setItem(8, mana);
+			}
+		}
+		
 		int currentLevel = player.getLevel();
 		if(currentLevel != 0) {
 			exp -= Math.log10(currentLevel) * Math.log10(currentLevel) * currentLevel * currentLevel;

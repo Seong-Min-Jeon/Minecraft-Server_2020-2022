@@ -328,6 +328,12 @@ public class MobThread {
 						} else if(loc.getX() <= 1072 && loc.getY() <= 165 && loc.getZ() <= 247 && 
 								loc.getX() >= 904 && loc.getY() >= 60 && loc.getZ() >= 110) {
 							kleah2(player, loc);
+						} else if(loc.getX() <= 1068 && loc.getY() <= 100 && loc.getZ() <= 504 && 
+								loc.getX() >= 860 && loc.getY() >= 50 && loc.getZ() >= 419) {
+							kleahSouth(player, loc);
+						} else if(loc.getX() <= 1164 && loc.getY() <= 100 && loc.getZ() <= 679 && 
+								loc.getX() >= 1076 && loc.getY() >= 40 && loc.getZ() >= 348) {
+							kleahSouthEast(player, loc);
 						}
 					} 
 					
@@ -1937,9 +1943,13 @@ public class MobThread {
 		}
 		
 		if (num == 0) {
-			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+			CustomSkeleton2 cs = new CustomSkeleton2(loc);
+			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
+			world.addEntity(cs);
 		} else if (num == 1) {
-			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
+			CustomWitherSkeleton2 cs = new CustomWitherSkeleton2(loc);
+			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
+			world.addEntity(cs);
 		} else if (num == 2) {
 			loc.getWorld().spawnEntity(loc, EntityType.ZOMBIE);
 		}
@@ -1990,6 +2000,36 @@ public class MobThread {
 			loc.getWorld().spawnEntity(loc, EntityType.HUSK);
 		} else if (num == 1) {
 			loc.getWorld().spawnEntity(loc, EntityType.VINDICATOR);
+		}
+	}
+	
+	public void kleahSouth(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 1068 && loc.getY() <= 100 && loc.getZ() <= 504 && 
+				loc.getX() >= 860 && loc.getY() >= 50 && loc.getZ() >= 419)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.ZOMBIE);
+		}
+	}
+	
+	public void kleahSouthEast(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 1164 && loc.getY() <= 100 && loc.getZ() <= 679 && 
+				loc.getX() >= 1076 && loc.getY() >= 40 && loc.getZ() >= 348)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.SILVERFISH);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
 		}
 	}
 	

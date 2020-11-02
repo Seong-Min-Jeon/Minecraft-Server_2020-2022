@@ -487,9 +487,7 @@ public class TPMobSpawn {
 					}
 				}
 			}
-			CustomSkeleton cs = new CustomSkeleton(new Location(player.getWorld(), 72, 75, -22));
-			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
-			world.addEntity(cs);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 72, 75, -22), EntityType.SKELETON);
 			
 			new BossHealth().getBar2().setProgress(1.0);
 			new BossHealth().getBar2().addPlayer(player);
@@ -524,9 +522,7 @@ public class TPMobSpawn {
 					}
 				}
 			}
-			CustomSkeleton cs = new CustomSkeleton(new Location(player.getWorld(), 72, 88, -22));
-			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
-			world.addEntity(cs);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 72, 88, -22), EntityType.SKELETON);
 			
 			new BossHealth().getBar3().setProgress(1.0);
 			new BossHealth().getBar3().addPlayer(player);
@@ -561,9 +557,7 @@ public class TPMobSpawn {
 					}
 				}
 			}
-			CustomSkeleton cs = new CustomSkeleton(new Location(player.getWorld(), 72, 101, -22));
-			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
-			world.addEntity(cs);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 72, 101, -22), EntityType.SKELETON);
 			
 			new BossHealth().getBar4().setProgress(1.0);
 			new BossHealth().getBar4().addPlayer(player);
@@ -597,9 +591,7 @@ public class TPMobSpawn {
 					}
 				}
 			}
-			CustomSkeleton cs = new CustomSkeleton(new Location(player.getWorld(), 72, 116, -22));
-			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
-			world.addEntity(cs);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 72, 116, -22), EntityType.SKELETON);
 			return;
 		}
 		
@@ -630,9 +622,7 @@ public class TPMobSpawn {
 					}
 				}
 			}
-			CustomSkeleton cs = new CustomSkeleton(new Location(player.getWorld(), 72, 129, -22));
-			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
-			world.addEntity(cs);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 72, 129, -22), EntityType.SKELETON);
 			return;
 		}
 		
@@ -663,9 +653,7 @@ public class TPMobSpawn {
 					}
 				}
 			}
-			CustomSkeleton cs = new CustomSkeleton(new Location(player.getWorld(), 72, 142, -22));
-			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
-			world.addEntity(cs);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 72, 142, -22), EntityType.SKELETON);
 			return;
 		}
 		
@@ -696,9 +684,7 @@ public class TPMobSpawn {
 					}
 				}
 			}
-			CustomSkeleton cs = new CustomSkeleton(new Location(player.getWorld(), 72, 157, -22));
-			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
-			world.addEntity(cs);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 72, 157, -22), EntityType.SKELETON);
 			return;
 		}
 		
@@ -729,9 +715,7 @@ public class TPMobSpawn {
 					}
 				}
 			}
-			CustomSkeleton cs = new CustomSkeleton(new Location(player.getWorld(), 72, 170, -22));
-			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
-			world.addEntity(cs);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 72, 170, -22), EntityType.SKELETON);
 			return;
 		}
 		
@@ -762,9 +746,7 @@ public class TPMobSpawn {
 					}
 				}
 			}
-			CustomSkeleton cs = new CustomSkeleton(new Location(player.getWorld(), 72, 183, -22));
-			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
-			world.addEntity(cs);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 72, 183, -22), EntityType.SKELETON);
 			return;
 		}
 		
@@ -795,9 +777,7 @@ public class TPMobSpawn {
 					}
 				}
 			}
-			CustomSkeleton cs = new CustomSkeleton(new Location(player.getWorld(), 72, 198, -22));
-			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
-			world.addEntity(cs);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 72, 198, -22), EntityType.SKELETON);
 			return;
 		}
 		
@@ -828,9 +808,7 @@ public class TPMobSpawn {
 					}
 				}
 			}
-			CustomSkeleton cs = new CustomSkeleton(new Location(player.getWorld(), 72, 211, -22));
-			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
-			world.addEntity(cs);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 72, 211, -22), EntityType.SKELETON);
 			return;
 		}
 		
@@ -861,9 +839,7 @@ public class TPMobSpawn {
 					}
 				}
 			}
-			CustomSkeleton cs = new CustomSkeleton(new Location(player.getWorld(), 72, 224, -22));
-			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
-			world.addEntity(cs);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 72, 224, -22), EntityType.SKELETON);
 			return;
 		}
 		

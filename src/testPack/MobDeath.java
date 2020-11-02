@@ -795,6 +795,26 @@ public class MobDeath {
 				if (name.equalsIgnoreCase("잠식된 주민" + ChatColor.YELLOW + " [Lv.409]")) {
 					mobloot.mob172(lootPlayer);
 				}
+				// 카스파르
+				if (name.equalsIgnoreCase("카스파르" + ChatColor.YELLOW + " [Lv.407]")) {
+					mobloot.mob173(lootPlayer);
+				}
+				// 와일드
+				if (name.equalsIgnoreCase("와일드" + ChatColor.YELLOW + " [Lv.413]")) {
+					mobloot.mob174(lootPlayer);
+				}
+				// 자미엘
+				if (name.equalsIgnoreCase("자미엘" + ChatColor.YELLOW + " [Lv.420]")) {
+					mobloot.mob175(lootPlayer);
+				}
+				// 나무 벌레
+				if (name.equalsIgnoreCase("나무 벌레" + ChatColor.YELLOW + " [Lv.410]")) {
+					mobloot.mob176(lootPlayer);
+				}
+				// 산적
+				if (name.equalsIgnoreCase("산적" + ChatColor.YELLOW + " [Lv.415]")) {
+					mobloot.mob177(lootPlayer);
+				}
 			} catch (Exception e) {
 
 			}

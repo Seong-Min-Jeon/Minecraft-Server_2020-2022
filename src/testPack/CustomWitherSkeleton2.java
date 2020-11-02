@@ -2,10 +2,12 @@ package testPack;
 
 import org.bukkit.Location;
 import org.bukkit.craftbukkit.v1_16_R1.CraftWorld;
+import org.bukkit.craftbukkit.v1_16_R1.entity.CraftWitherSkeleton;
 
 import net.minecraft.server.v1_16_R1.EntityBlaze;
 import net.minecraft.server.v1_16_R1.EntityHuman;
 import net.minecraft.server.v1_16_R1.EntitySkeleton;
+import net.minecraft.server.v1_16_R1.EntitySkeletonWither;
 import net.minecraft.server.v1_16_R1.EntityTypes;
 import net.minecraft.server.v1_16_R1.EntityWither;
 import net.minecraft.server.v1_16_R1.PathfinderGoalArrowAttack;
@@ -21,10 +23,10 @@ import net.minecraft.server.v1_16_R1.PathfinderGoalRandomLookaround;
 import net.minecraft.server.v1_16_R1.PathfinderGoalRandomStroll;
 import net.minecraft.server.v1_16_R1.PathfinderGoalRandomStrollLand;
 
-public class CustomSkeleton2 extends EntitySkeleton{
+public class CustomWitherSkeleton2 extends EntitySkeletonWither{
 
-	public CustomSkeleton2(Location loc) {
-		super(EntityTypes.SKELETON, ((CraftWorld) loc.getWorld()).getHandle());
+	public CustomWitherSkeleton2(Location loc) {
+		super(EntityTypes.WITHER_SKELETON, ((CraftWorld) loc.getWorld()).getHandle());
 		this.setPosition(loc.getX(), loc.getY(), loc.getZ());
 	}
 	

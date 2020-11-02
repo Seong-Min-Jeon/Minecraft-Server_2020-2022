@@ -292,13 +292,15 @@ public class Main extends JavaPlugin implements Listener{
 		} else if(player.getDisplayName().equalsIgnoreCase("WoolRing")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.GREEN + "'도트랑 도트가 제일 좋아' 울링.");
 		} else if(player.getDisplayName().equalsIgnoreCase("_nanoboost_")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.RED + "'0렙부터 고인물' 나노부스트.");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.RED + "'백수의 왕' 나노부스트.");
 		} else if(player.getDisplayName().equalsIgnoreCase("why9196")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.BLACK + "'길 만들기 장인' 와이.");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.BLUE + "'프리스트로 300레벨을 달성한' 와이.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Akilae3102")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.AQUA + "'화랑쓰는 더러운 놈' 아킬레.");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.AQUA + "'시공의 힘을 얻은' 아킬레.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Espina_ID")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.BOLD + "'이드를 사랑하는' 에스피나.");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.BOLD + "'솔로의 검을 가진' 에스피나.");
+		} else if(player.getDisplayName().equalsIgnoreCase("KangOSung")) {
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.YELLOW + "'울링의 조수' 캉!");
 		} else {
 			event.setJoinMessage("야생의 누군가가 등장했다.");
 		}
@@ -5479,13 +5481,15 @@ public class Main extends JavaPlugin implements Listener{
 		} else if (player.getDisplayName().equalsIgnoreCase("WoolRing")) {
 			event.setQuitMessage(ChatColor.GREEN + "'그린 일렉트로닉 전사' 울링" + ChatColor.WHITE + "님이 말도 없이 탈주합니다.");
 		} else if (player.getDisplayName().equalsIgnoreCase("_nanoboost_")) {
-			event.setQuitMessage(ChatColor.RED + "류크가 지쳐 잠에 들었습니다.");
+			event.setQuitMessage(ChatColor.RED + "나노부스트는 잠이 들었습니다.");
 		} else if(player.getDisplayName().equalsIgnoreCase("why9196")) {
-			event.setQuitMessage(ChatColor.BLACK + "????????????????");
+			event.setQuitMessage(ChatColor.BLUE + "????????????????");
 		} else if(player.getDisplayName().equalsIgnoreCase("Akilae3102")) {
 			event.setQuitMessage("천저 준제가 슬픈 " + ChatColor.AQUA + "'최강의 듀얼리스트' 아킬레가 세상을 떠났습니다.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Espina_ID")) {
-			event.setQuitMessage(ChatColor.BOLD + "'모토카상의 연인이었지만 카즈하상을 공략하고자 하지만 이드를 사랑하는' 에스피나가 데이트를 하러 2D세카이로 떠났습니다.");
+			event.setQuitMessage(ChatColor.BOLD + "'그림쟁이' 에스피나가 그림을 그리러 떠났습니다.");
+		} else if(player.getDisplayName().equalsIgnoreCase("KangOSung")) {
+			event.setQuitMessage(ChatColor.BOLD + "'일이 생긴' 캉님이 급히 떠났습니다.");
 		} else {
 			event.setQuitMessage("야생의 누군가가 도망쳐버렸다.");
 		}

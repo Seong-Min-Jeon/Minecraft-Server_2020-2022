@@ -3924,24 +3924,164 @@ public class MobLoot {
 		es.giveExp(player, 1290000);
 	}
 	
+	// 카스파르
 	public void mob173(Player player) {
-
+		int num = rnd.nextInt(6) + 5;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1280000);
+		
+		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
+		ItemMeta var1im = var1.getItemMeta();
+		var1im.setDisplayName(ChatColor.YELLOW + "상급 포보르의 피");
+		var1.setItemMeta(var1im);
+		
+		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
+		ItemMeta var2im = var2.getItemMeta();
+		var2im.setDisplayName(ChatColor.YELLOW + "상급 포보르의 쓸개");
+		var2.setItemMeta(var2im);
+		
+		ItemStack var3 = new ItemStack(Material.CRACKED_POLISHED_BLACKSTONE_BRICKS);
+		ItemMeta var3im = var3.getItemMeta();
+		var3im.setDisplayName(ChatColor.YELLOW + "상급 포보르의 살점");
+		var3.setItemMeta(var3im);
+		
+		ItemStack var4 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_SLAB);
+		ItemMeta var4im = var4.getItemMeta();
+		var4im.setDisplayName(ChatColor.YELLOW + "상급 포보르의 간");
+		var4.setItemMeta(var4im);
+		
+		ItemStack var5 = new ItemStack(Material.CHISELED_POLISHED_BLACKSTONE);
+		ItemMeta var5im = var5.getItemMeta();
+		var5im.setDisplayName(ChatColor.YELLOW + "상급 포보르의 심장");
+		var5.setItemMeta(var5im);
+		
+		int tmp = rnd.nextInt(20);
+		if(tmp == 0) {
+			player.getInventory().addItem(var1);
+			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.YELLOW + "를 획득했다.");
+		} else if(tmp == 1) {
+			player.getInventory().addItem(var2);
+			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.YELLOW + "를 획득했다.");
+		} else if(tmp == 2) {
+			player.getInventory().addItem(var3);
+			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 살점" + ChatColor.YELLOW + "을 획득했다.");
+		} else if(tmp == 3) {
+			player.getInventory().addItem(var4);
+			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 간" + ChatColor.YELLOW + "을 획득했다.");
+		} else if(tmp == 4) {
+			player.getInventory().addItem(var5);
+			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 심장" + ChatColor.YELLOW + "을 획득했다.");
+		}
+		
+		int tmp2 = rnd.nextInt(40);
+		if(tmp2 == 0) {
+			Location loc = player.getLocation().add(0, 3, 0);
+			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
+		}
 	}
 	
+	// 와일드
 	public void mob174(Player player) {
-
+		int num = rnd.nextInt(6) + 5;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1320000);
+		
+		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
+		ItemMeta var1im = var1.getItemMeta();
+		var1im.setDisplayName(ChatColor.YELLOW + "상급 포보르의 피");
+		var1.setItemMeta(var1im);
+		
+		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
+		ItemMeta var2im = var2.getItemMeta();
+		var2im.setDisplayName(ChatColor.YELLOW + "상급 포보르의 쓸개");
+		var2.setItemMeta(var2im);
+		
+		ItemStack var3 = new ItemStack(Material.CRACKED_POLISHED_BLACKSTONE_BRICKS);
+		ItemMeta var3im = var3.getItemMeta();
+		var3im.setDisplayName(ChatColor.YELLOW + "상급 포보르의 살점");
+		var3.setItemMeta(var3im);
+		
+		ItemStack var4 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_SLAB);
+		ItemMeta var4im = var4.getItemMeta();
+		var4im.setDisplayName(ChatColor.YELLOW + "상급 포보르의 간");
+		var4.setItemMeta(var4im);
+		
+		ItemStack var5 = new ItemStack(Material.CHISELED_POLISHED_BLACKSTONE);
+		ItemMeta var5im = var5.getItemMeta();
+		var5im.setDisplayName(ChatColor.YELLOW + "상급 포보르의 심장");
+		var5.setItemMeta(var5im);
+		
+		int tmp = rnd.nextInt(20);
+		if(tmp == 0) {
+			player.getInventory().addItem(var1);
+			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.YELLOW + "를 획득했다.");
+		} else if(tmp == 1) {
+			player.getInventory().addItem(var2);
+			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.YELLOW + "를 획득했다.");
+		} else if(tmp == 2) {
+			player.getInventory().addItem(var3);
+			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 살점" + ChatColor.YELLOW + "을 획득했다.");
+		} else if(tmp == 3) {
+			player.getInventory().addItem(var4);
+			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 간" + ChatColor.YELLOW + "을 획득했다.");
+		} else if(tmp == 4) {
+			player.getInventory().addItem(var5);
+			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 심장" + ChatColor.YELLOW + "을 획득했다.");
+		}
+		
+		int tmp2 = rnd.nextInt(40);
+		if(tmp2 == 0) {
+			Location loc = player.getLocation().add(0, 3, 0);
+			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
+		}
 	}
 
+	// 자미엘
 	public void mob175(Player player) {
-
+		int num = rnd.nextInt(6) + 5;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 2000000);
+		
+		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_STAIRS);
+		ItemMeta var1im = var1.getItemMeta();
+		var1im.setDisplayName(ChatColor.YELLOW + "상급 포보르의 뿔");
+		var1.setItemMeta(var1im);
+		player.getInventory().addItem(var1);
+		player.sendMessage(ChatColor.YELLOW + "상급 포보르의 뿔" + ChatColor.WHITE + "을 획득했다.");
 	}
 	
+	// 나무 벌레
 	public void mob176(Player player) {
-
+		int num = rnd.nextInt(6) + 5;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1300000);
 	}
 	
+	// 산적
 	public void mob177(Player player) {
-
+		int num = rnd.nextInt(6) + 5;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1340000);
 	}
 	
 	public void mob178(Player player) {
@@ -3953,6 +4093,46 @@ public class MobLoot {
 	}
 	
 	public void mob180(Player player) {
+
+	}
+	
+	public void mob181(Player player) {
+
+	}
+	
+	public void mob182(Player player) {
+
+	}
+	
+	public void mob183(Player player) {
+
+	}
+	
+	public void mob184(Player player) {
+
+	}
+	
+	public void mob185(Player player) {
+
+	}
+	
+	public void mob186(Player player) {
+
+	}
+	
+	public void mob187(Player player) {
+
+	}
+	
+	public void mob188(Player player) {
+
+	}
+	
+	public void mob189(Player player) {
+
+	}
+	
+	public void mob190(Player player) {
 
 	}
 }
