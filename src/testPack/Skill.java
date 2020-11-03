@@ -2678,8 +2678,12 @@ public class Skill {
 				if (player.getHealth() < player.getMaxHealth() / 5) {
 					player.getInventory().remove(Material.HEART_OF_THE_SEA);
 					Location loc = player.getLocation();
-					player.setHealth(player.getMaxHealth());
-					player.setNoDamageTicks(200);
+					if(player.getHealth() >= 10) {
+						player.setHealth(20);
+					} else {
+						player.setHealth(player.getHealth() + 10);
+					}
+					player.setNoDamageTicks(100);
 					player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 200, 20));
 					// ===============================================================
 					ParticleData pd = new ParticleData(player.getUniqueId());
@@ -2696,7 +2700,11 @@ public class Skill {
 				} else {
 					player.getInventory().remove(Material.HEART_OF_THE_SEA);
 					Location loc = player.getLocation();
-					player.setHealth(player.getMaxHealth());
+					if(player.getHealth() >= 10) {
+						player.setHealth(20);
+					} else {
+						player.setHealth(player.getHealth() + 10);
+					}
 					player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 2));
 					player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_FALLING, 200, 0));
 					// ===============================================================
@@ -2710,7 +2718,7 @@ public class Skill {
 					// ================================================================
 					world.playSound(loc, Sound.ENTITY_WANDERING_TRADER_DRINK_POTION, 1.0f, 1.0f);
 					player.sendMessage(ChatColor.GREEN + "[스킬]포션의 부작용이 발동됩니다.");
-					player.sendMessage(ChatColor.GREEN + "체력이 모두 회복되지만, 디버프가 걸립니다.");
+					player.sendMessage(ChatColor.GREEN + "체력이 회복되지만, 디버프가 걸립니다.");
 				}
 			} else if (i > 2) {
 				player.getInventory().remove(Material.HEART_OF_THE_SEA);
@@ -2720,7 +2728,11 @@ public class Skill {
 				item.setItemMeta(itemIm);
 				player.getInventory().setItem(8, item);
 				Location loc = player.getLocation();
-				player.setHealth(player.getMaxHealth());
+				if(player.getHealth() >= 10) {
+					player.setHealth(20);
+				} else {
+					player.setHealth(player.getHealth() + 10);
+				}
 				player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 2));
 				player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_FALLING, 200, 0));
 				world.playSound(loc, Sound.ENTITY_WANDERING_TRADER_DRINK_POTION, 1.0f, 1.0f);
@@ -2734,7 +2746,7 @@ public class Skill {
 				pe.startE16();
 				// ================================================================
 				player.sendMessage(ChatColor.GREEN + "[스킬]포션의 부작용이 발동됩니다.");
-				player.sendMessage(ChatColor.GREEN + "체력이 모두 회복되지만, 디버프가 걸립니다.");
+				player.sendMessage(ChatColor.GREEN + "체력이 회복되지만, 디버프가 걸립니다.");
 			} else {
 				player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
 				world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);

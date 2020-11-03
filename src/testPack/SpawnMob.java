@@ -13,6 +13,7 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Husk;
 import org.bukkit.entity.LivingEntity;
+import org.bukkit.entity.LlamaSpit;
 import org.bukkit.entity.MagmaCube;
 import org.bukkit.entity.Phantom;
 import org.bukkit.entity.PigZombie;
@@ -7153,7 +7154,7 @@ public class SpawnMob {
 				entity.setMaxHealth(71500);
 				entity.setHealth(71500);
 				EntityEquipment weapon = entity.getEquipment();
-				ItemStack weaponItem = new ItemStack(Material.GREEN_CARPET);
+				ItemStack weaponItem = new ItemStack(Material.IRON_SWORD);
 				weapon.setItemInMainHand(weaponItem);
 				EntityEquipment head = entity.getEquipment();
 				ItemStack headItem = chest.getInventory().getItem(2);
@@ -7317,6 +7318,39 @@ public class SpawnMob {
 	}
 	
 	public boolean mob120(LivingEntity entity, Location loc) {
+		// 부락 동쪽 1106 96 675  1299 37 1035 
+		if (loc.getX() <= 1299 && loc.getY() <= 96 && loc.getZ() <= 1035 && 
+				loc.getX() >= 1106 && loc.getY() >= 37 && loc.getZ() >= 675) {
+			Location chestLoc = new Location(entity.getWorld(), -1830, 92, 3045);
+			Block block = chestLoc.getBlock();
+			Chest chest = (Chest) block.getState();
+			if (entity.getType() == (EntityType) EntityType.RAVAGER) {
+				entity.setCustomName(ChatColor.GRAY + "흑아" + ChatColor.YELLOW + " [Lv.417]");
+				entity.setCustomNameVisible(true);
+				entity.setMaxHealth(74000);
+				entity.setHealth(74000);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 176));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
+				return true;
+			} else if (entity.getType() == (EntityType) EntityType.LLAMA) {
+				entity.setCustomName(ChatColor.GRAY + "자독" + ChatColor.YELLOW + " [Lv.420]");
+				entity.setCustomNameVisible(true);
+				entity.setMaxHealth(77777);
+				entity.setHealth(77777);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
+				return true;
+			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM
+					|| entity.getType() == (EntityType) EntityType.SALMON
+					|| entity.getType() == (EntityType) EntityType.ITEM_FRAME
+					|| entity.getType() == (EntityType) EntityType.DROPPED_ITEM
+					|| entity.getType() == (EntityType) EntityType.ARMOR_STAND
+					|| entity.getType() == (EntityType) EntityType.VILLAGER
+					|| entity.getType() == (EntityType) EntityType.SKELETON_HORSE) {
+				return true;
+			} else {
+				return false;
+			}
+		}
 		return true;
 	}
 	

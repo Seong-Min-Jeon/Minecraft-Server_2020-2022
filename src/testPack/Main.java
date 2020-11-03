@@ -48,6 +48,8 @@ import org.bukkit.entity.IronGolem;
 import org.bukkit.entity.Item;
 import org.bukkit.entity.ItemFrame;
 import org.bukkit.entity.LivingEntity;
+import org.bukkit.entity.Llama;
+import org.bukkit.entity.LlamaSpit;
 import org.bukkit.entity.Mob;
 import org.bukkit.entity.Phantom;
 import org.bukkit.entity.Pig;
@@ -75,6 +77,7 @@ import org.bukkit.event.block.BlockPhysicsEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.entity.CreatureSpawnEvent;
 import org.bukkit.event.entity.CreeperPowerEvent;
+import org.bukkit.event.entity.EntityBreedEvent;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.EntityDamageEvent.DamageCause;
@@ -2109,6 +2112,16 @@ public class Main extends JavaPlugin implements Listener{
 			if(!sa.spawn(entity)) {			
 				event.setCancelled(true);
 			}			
+			try {
+				if(entity.getType() == EntityType.ZOMBIE || entity.getType() == EntityType.SKELETON || entity.getType() == EntityType.WITHER_SKELETON
+						|| entity.getType() == EntityType.WITCH) {
+					if(entity.getCustomName() == null) {
+						entity.remove();
+					}
+				}
+			} catch(Exception e) {
+				
+			}
 		} catch(Exception e3) {
 			
 		}
@@ -2467,6 +2480,59 @@ public class Main extends JavaPlugin implements Listener{
 						for (Entity nearEntity : entitylist) {
 							if (nearEntity instanceof PolarBear) {
 								((PolarBear) nearEntity).setTarget(player);
+							}
+						}
+					}
+				}
+			}
+		} catch (Exception e) {
+
+		}
+		// Llama target
+		try {
+			if (event.getEntity() instanceof Llama) {
+				if (event.getDamager() instanceof Player) {
+					Player player = (Player) event.getDamager();
+					((Llama) event.getEntity()).setTarget(player);
+					List<Entity> entitylist = event.getEntity().getNearbyEntities(30, 5, 30);
+					for (Entity nearEntity : entitylist) {
+						if (nearEntity instanceof Llama) {
+							((Llama) nearEntity).setTarget(player);
+						}
+					}
+				} else if (event.getDamager() instanceof Arrow) {
+					Arrow proj = (Arrow) event.getDamager();
+					if (proj.getShooter() instanceof Player) {
+						Player player = (Player) proj.getShooter();
+						((Llama) event.getEntity()).setTarget(player);
+						List<Entity> entitylist = event.getEntity().getNearbyEntities(30, 5, 30);
+						for (Entity nearEntity : entitylist) {
+							if (nearEntity instanceof Llama) {
+								((Llama) nearEntity).setTarget(player);
+							}
+						}
+					}
+				} else if (event.getDamager() instanceof SmallFireball) {
+					SmallFireball proj = (SmallFireball) event.getDamager();
+					if (proj.getShooter() instanceof Player) {
+						Player player = (Player) proj.getShooter();
+						((Llama) event.getEntity()).setTarget(player);
+						List<Entity> entitylist = event.getEntity().getNearbyEntities(30, 5, 30);
+						for (Entity nearEntity : entitylist) {
+							if (nearEntity instanceof Llama) {
+								((Llama) nearEntity).setTarget(player);
+							}
+						}
+					}
+				} else if (event.getDamager() instanceof Snowball) {
+					Snowball proj = (Snowball) event.getDamager();
+					if (proj.getShooter() instanceof Player) {
+						Player player = (Player) proj.getShooter();
+						((Llama) event.getEntity()).setTarget(player);
+						List<Entity> entitylist = event.getEntity().getNearbyEntities(30, 5, 30);
+						for (Entity nearEntity : entitylist) {
+							if (nearEntity instanceof Llama) {
+								((Llama) nearEntity).setTarget(player);
 							}
 						}
 					}
@@ -3152,6 +3218,21 @@ public class Main extends JavaPlugin implements Listener{
 		} catch (Exception e) {
 
 		}
+		//Llama spit
+		try {
+			if (event.getDamager() instanceof LlamaSpit) {
+				if (event.getEntity() instanceof Player) {
+					Player player = (Player) event.getEntity();
+					player.setHealth(player.getHealth()*4 / 5);
+				} else {
+					event.setCancelled(true);
+					return;
+				}
+
+			}
+		} catch (Exception e) {
+
+		}
 		//Mob is Damager
 		try {
 			if(!(event.getDamager() instanceof Player)) {
@@ -3444,7 +3525,7 @@ public class Main extends JavaPlugin implements Listener{
 					|| event.getEntity().getType() == EntityType.CHICKEN || event.getEntity().getType() == EntityType.COW
 					|| event.getEntity().getType() == EntityType.SHEEP || event.getEntity().getType() == EntityType.WOLF
 					|| event.getEntity().getType() == EntityType.HORSE || event.getEntity().getType() == EntityType.SKELETON_HORSE
-					|| event.getEntity().getType() == EntityType.DONKEY || event.getEntity().getType() == EntityType.LLAMA
+					|| event.getEntity().getType() == EntityType.DONKEY
 					|| event.getEntity().getType() == EntityType.CAT || event.getEntity().getType() == EntityType.ARMOR_STAND) {
 				event.setCancelled(true);
 				return;
@@ -5594,6 +5675,9 @@ public class Main extends JavaPlugin implements Listener{
 					if(ent.getType() == EntityType.ZOMBIFIED_PIGLIN) {
 						ent.remove();
 					}
+					if(ent.getType() == EntityType.LLAMA) {
+						ent.remove();
+					}
 					if(ent.getType() == EntityType.DROPPED_ITEM) {
 						ent.remove();
 					}
@@ -6130,6 +6214,12 @@ public class Main extends JavaPlugin implements Listener{
 			event.setCancelled(true);
 			return;
 		}
+	}
+	
+	@EventHandler
+	public void breedEvent(EntityBreedEvent event) {
+		event.setCancelled(true);
+		return;
 	}
 	
 	@EventHandler

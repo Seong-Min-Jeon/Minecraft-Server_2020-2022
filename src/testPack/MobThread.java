@@ -334,7 +334,11 @@ public class MobThread {
 						} else if(loc.getX() <= 1164 && loc.getY() <= 100 && loc.getZ() <= 679 && 
 								loc.getX() >= 1076 && loc.getY() >= 40 && loc.getZ() >= 348) {
 							kleahSouthEast(player, loc);
+						} else if(loc.getX() <= 1299 && loc.getY() <= 96 && loc.getZ() <= 1035 && 
+								loc.getX() >= 1106 && loc.getY() >= 37 && loc.getZ() >= 675) {
+							castleNearVilEast(player, loc);
 						}
+						
 					} 
 					
 					if(time >= 360) {
@@ -2033,6 +2037,20 @@ public class MobThread {
 		}
 	}
 	
+	public void castleNearVilEast(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 1299 && loc.getY() <= 96 && loc.getZ() <= 1035 && 
+				loc.getX() >= 1106 && loc.getY() >= 37 && loc.getZ() >= 675)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.RAVAGER);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.LLAMA);
+		}
+	}
 	
 	public Location location(Location loc) {
 		int x = rnd.nextInt(10) - 5;

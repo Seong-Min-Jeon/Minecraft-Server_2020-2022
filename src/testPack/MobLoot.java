@@ -4084,12 +4084,26 @@ public class MobLoot {
 		es.giveExp(player, 1340000);
 	}
 	
+	// 흑아
 	public void mob178(Player player) {
-
+		int num = rnd.nextInt(6) + 5;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1355000);
 	}
 	
+	// 자독
 	public void mob179(Player player) {
-
+		int num = rnd.nextInt(6) + 5;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1370000);
 	}
 	
 	public void mob180(Player player) {

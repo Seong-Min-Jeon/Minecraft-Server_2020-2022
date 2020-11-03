@@ -815,6 +815,14 @@ public class MobDeath {
 				if (name.equalsIgnoreCase("산적" + ChatColor.YELLOW + " [Lv.415]")) {
 					mobloot.mob177(lootPlayer);
 				}
+				// 흑아
+				if (name.equalsIgnoreCase("흑아" + ChatColor.YELLOW + " [Lv.417]")) {
+					mobloot.mob178(lootPlayer);
+				}
+				// 자독
+				if (name.equalsIgnoreCase("자독" + ChatColor.YELLOW + " [Lv.420]")) {
+					mobloot.mob179(lootPlayer);
+				}
 			} catch (Exception e) {
 
 			}

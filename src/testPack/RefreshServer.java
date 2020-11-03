@@ -182,6 +182,9 @@ public class RefreshServer {
 								if(ent.getType() == EntityType.ZOMBIFIED_PIGLIN) {
 									ent.remove();
 								}
+								if(ent.getType() == EntityType.LLAMA) {
+									ent.remove();
+								}
 								if(ent.getType() == EntityType.DROPPED_ITEM) {
 									ent.remove();
 								}
