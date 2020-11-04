@@ -7,6 +7,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Color;
 import org.bukkit.Material;
+import org.bukkit.Sound;
 import org.bukkit.block.Block;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
@@ -181,6 +182,7 @@ public class LootChest {
 		int num5 = rnd.nextInt(30);	
 		int num6 = rnd.nextInt(20);	
 		int num7 = rnd.nextInt(30) + 10;
+		int tokenPercent = rnd.nextInt(10);	
 		
 		ItemStack var1 = new ItemStack(Material.OAK_LEAVES);
 		ItemMeta var1Im = var1.getItemMeta();
@@ -272,8 +274,12 @@ public class LootChest {
 		scrollIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
 		scrollIm.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
 		scrollIm.setUnbreakable(true);
-		scroll.setItemMeta(scrollIm);		
+		scroll.setItemMeta(scrollIm);	
 		
+		ItemStack token = new ItemStack(Material.PRISMARINE_SHARD);
+		ItemMeta tokenIm = token.getItemMeta();
+		tokenIm.setDisplayName(ChatColor.YELLOW + "바다의 파편");
+		token.setItemMeta(tokenIm);
 		
 		ItemStack emerald = new ItemStack(Material.EMERALD, num7);
 		inv.setItem(0, emerald);
@@ -302,6 +308,10 @@ public class LootChest {
 			idx = rnd.nextInt(9);
 			inv.setItem(idx, scroll);
 		}
+		if(tokenPercent==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, token);
+		}
 		
 		player.openInventory(inv);		
 	}
@@ -316,6 +326,7 @@ public class LootChest {
 		int num5 = rnd.nextInt(30);	
 		int num6 = rnd.nextInt(15);	
 		int num7 = rnd.nextInt(30) + 34;
+		int tokenPercent = rnd.nextInt(10);
 		
 		ItemStack var1 = new ItemStack(Material.GREEN_CARPET);
 		ItemMeta var1Im = var1.getItemMeta();
@@ -421,6 +432,10 @@ public class LootChest {
 		scrollIm.setUnbreakable(true);
 		scroll.setItemMeta(scrollIm);		
 		
+		ItemStack token = new ItemStack(Material.KELP);
+		ItemMeta tokenIm = token.getItemMeta();
+		tokenIm.setDisplayName(ChatColor.YELLOW + "숲의 바람");
+		token.setItemMeta(tokenIm);
 		
 		ItemStack emerald = new ItemStack(Material.EMERALD, num7);
 		inv.setItem(0, emerald);
@@ -449,6 +464,10 @@ public class LootChest {
 			idx = rnd.nextInt(9);
 			inv.setItem(idx, scroll);
 		}
+		if(tokenPercent==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, token);
+		}
 		
 		player.openInventory(inv);		
 	}
@@ -467,6 +486,7 @@ public class LootChest {
 		int num9 = rnd.nextInt(20);	
 		int num10 = rnd.nextInt(100);	
 		int num11 = rnd.nextInt(30) + 20;
+		int tokenPercent = rnd.nextInt(20);
 		
 		ItemStack var1 = new ItemStack(Material.STONE);
 		ItemMeta var1Im = var1.getItemMeta();
@@ -626,6 +646,11 @@ public class LootChest {
 		var10Im.setLore(var10Lore);
 		var10.setItemMeta(var10Im);
 		
+		ItemStack token = new ItemStack(Material.PRISMARINE_CRYSTALS);
+		ItemMeta tokenIm = token.getItemMeta();
+		tokenIm.setDisplayName(ChatColor.YELLOW + "요정의 날개 조각");
+		token.setItemMeta(tokenIm);
+		
 		ItemStack emerald = new ItemStack(Material.EMERALD_BLOCK, num11);
 		ItemMeta im = emerald.getItemMeta();
 		im.setDisplayName(ChatColor.YELLOW + "에메랄드 주머니");
@@ -672,6 +697,10 @@ public class LootChest {
 			idx = rnd.nextInt(9);
 			inv.setItem(idx, var10);
 		}
+		if(tokenPercent==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, token);
+		}
 		player.openInventory(inv);	
 	}
 	
@@ -688,6 +717,7 @@ public class LootChest {
 		int num8 = rnd.nextInt(50);	// 부조화의 검
 		int num9 = rnd.nextInt(40);	// 얼음 활
 		int num10 = rnd.nextInt(2) + 1;
+		int tokenPercent = rnd.nextInt(14);
 		
 		ItemStack var1 = new ItemStack(Material.CYAN_WOOL);
 		ItemMeta var1Im = var1.getItemMeta();
@@ -825,6 +855,11 @@ public class LootChest {
 		var9Im.setLore(var9Lore);
 		var9.setItemMeta(var9Im);
 		
+		ItemStack token = new ItemStack(Material.BLUE_ICE);
+		ItemMeta tokenIm = token.getItemMeta();
+		tokenIm.setDisplayName(ChatColor.YELLOW + "한기의 정수");
+		token.setItemMeta(tokenIm);
+		
 		ItemStack emerald = new ItemStack(Material.SCUTE, num10);
 		ItemMeta im = emerald.getItemMeta();
 		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
@@ -867,6 +902,10 @@ public class LootChest {
 			idx = rnd.nextInt(9);
 			inv.setItem(idx, var9);
 		}
+		if(tokenPercent==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, token);
+		}
 		player.openInventory(inv);	
 	}
 	
@@ -883,6 +922,7 @@ public class LootChest {
 		int num8 = rnd.nextInt(20);	// 윤회
 		int num9 = rnd.nextInt(10);	// 회향
 		int num10 = rnd.nextInt(20) + 10;
+		int tokenPercent = rnd.nextInt(10);
 		
 		ItemStack var1 = new ItemStack(Material.SPRUCE_LOG);
 		ItemMeta var1Im = var1.getItemMeta();
@@ -1023,6 +1063,11 @@ public class LootChest {
 		var9Im.setLore(var9Lore);
 		var9.setItemMeta(var9Im);
 		
+		ItemStack token = new ItemStack(Material.POPPED_CHORUS_FRUIT);
+		ItemMeta tokenIm = token.getItemMeta();
+		tokenIm.setDisplayName(ChatColor.YELLOW + "악의 덩어리");
+		token.setItemMeta(tokenIm);
+		
 		ItemStack emerald = new ItemStack(Material.EMERALD_BLOCK, num10);
 		ItemMeta im = emerald.getItemMeta();
 		im.setDisplayName(ChatColor.YELLOW + "에메랄드 주머니");
@@ -1065,6 +1110,10 @@ public class LootChest {
 			idx = rnd.nextInt(9);
 			inv.setItem(idx, var9);
 		}
+		if(tokenPercent==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, token);
+		}
 		player.openInventory(inv);	
 	}
 	
@@ -1081,6 +1130,7 @@ public class LootChest {
 		int num8 = rnd.nextInt(20);	// 타락한 윤회
 		int num9 = rnd.nextInt(20);	// 타락한 회향
 		int num10 = rnd.nextInt(2) + 3;
+		int tokenPercent = rnd.nextInt(16);
 		
 		ItemStack var1 = new ItemStack(Material.SPRUCE_LOG);
 		ItemMeta var1Im = var1.getItemMeta();
@@ -1221,6 +1271,11 @@ public class LootChest {
 		var9Im.setLore(var9Lore);
 		var9.setItemMeta(var9Im);
 		
+		ItemStack token = new ItemStack(Material.NAUTILUS_SHELL);
+		ItemMeta tokenIm = token.getItemMeta();
+		tokenIm.setDisplayName(ChatColor.YELLOW + "요리사의 식재료");
+		token.setItemMeta(tokenIm);
+		
 		ItemStack emerald = new ItemStack(Material.SCUTE, num10);
 		ItemMeta im = emerald.getItemMeta();
 		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
@@ -1262,6 +1317,10 @@ public class LootChest {
 		if(num9==0) {
 			idx = rnd.nextInt(9);
 			inv.setItem(idx, var9);
+		}
+		if(tokenPercent==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, token);
 		}
 		player.openInventory(inv);	
 	}
@@ -1548,6 +1607,7 @@ public class LootChest {
 		int num8 = rnd.nextInt(10);	// 광석3
 		int num9 = rnd.nextInt(10);	// 광석4
 		int num10 = rnd.nextInt(20) + 30;
+		int tokenPercent = rnd.nextInt(20);
 		
 		ItemStack var1 = new ItemStack(Material.MUSIC_DISC_CAT);
 		ItemMeta var1Im = var1.getItemMeta();
@@ -1649,6 +1709,11 @@ public class LootChest {
 		var9Im.setDisplayName(ChatColor.YELLOW + "가치가 떨어진 금광석");
 		var9.setItemMeta(var9Im);
 		
+		ItemStack token = new ItemStack(Material.BOOK);
+		ItemMeta tokenIm = token.getItemMeta();
+		tokenIm.setDisplayName(ChatColor.YELLOW + "지식의 창고");
+		token.setItemMeta(tokenIm);
+		
 		ItemStack emerald = new ItemStack(Material.SCUTE, num10);
 		ItemMeta im = emerald.getItemMeta();
 		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
@@ -1691,6 +1756,10 @@ public class LootChest {
 			idx = rnd.nextInt(9);
 			inv.setItem(idx, var9);
 		}
+		if(tokenPercent==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, token);
+		}
 		player.openInventory(inv);	
 	}
 	
@@ -1707,6 +1776,7 @@ public class LootChest {
 		int num8 = rnd.nextInt(20);	// 오드아이즈
 		int num9 = rnd.nextInt(10);	// 클리어윙
 		int num10 = rnd.nextInt(14) + 50;
+		int tokenPercent = rnd.nextInt(21);
 		
 		ItemStack var1 = new ItemStack(Material.JUNGLE_PLANKS);
 		ItemMeta var1Im = var1.getItemMeta();
@@ -1848,6 +1918,11 @@ public class LootChest {
 		var9Im.setLore(var9Lore);
 		var9.setItemMeta(var9Im);
 		
+		ItemStack token = new ItemStack(Material.STRING);
+		ItemMeta tokenIm = token.getItemMeta();
+		tokenIm.setDisplayName(ChatColor.YELLOW + "아라크네의 거미줄");
+		token.setItemMeta(tokenIm);
+		
 		ItemStack emerald = new ItemStack(Material.SCUTE, num10);
 		ItemMeta im = emerald.getItemMeta();
 		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
@@ -1890,6 +1965,10 @@ public class LootChest {
 			idx = rnd.nextInt(9);
 			inv.setItem(idx, var9);
 		}
+		if(tokenPercent==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, token);
+		}
 		player.openInventory(inv);	
 	}
 	
@@ -1900,6 +1979,7 @@ public class LootChest {
 					continue;
 				if (is.getItemMeta().getDisplayName().equals(ChatColor.YELLOW + str)) {
 					is.setAmount(is.getAmount()-1);
+					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_CHEST_OPEN, 1.0f, 1.0f);
 					return true;
 				}
 			}

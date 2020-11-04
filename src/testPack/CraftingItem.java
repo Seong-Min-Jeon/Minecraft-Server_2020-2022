@@ -143,62 +143,62 @@ public class CraftingItem {
 					continue;
 				}
 				
-				//류
-				if(name[i].equalsIgnoreCase(ChatColor.GRAY + "흠집이 생긴 석탄 ")) {
+				//광석류
+				if(name[i].equalsIgnoreCase(ChatColor.GRAY + "흠집이 생긴 석탄 광석")) {
 					totalStat += amount[i]; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "석탄 ")) {
+				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "석탄 광석")) {
 					totalStat += amount[i] * 2; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "깨끗한 석탄 ")) {
+				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "깨끗한 석탄 광석")) {
 					totalStat += amount[i] * 3; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "순수도가 높은 석탄 ")) {
+				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "순수도가 높은 석탄 광석")) {
 					totalStat += amount[i] * 4; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "절대적인 석탄 ")) {
+				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "절대적인 석탄 광석")) {
 					totalStat += amount[i] * 5; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "신의 힘이 담긴 석탄 ")) {
+				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "신의 힘이 담긴 석탄 광석")) {
 					totalStat += amount[i] * 7; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "상태가 좋지 않은 철")) {
+				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "상태가 좋지 않은 철 광석")) {
 					totalStat += amount[i] * 4; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "철")) {
+				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "철 광석")) {
 					totalStat += amount[i] * 5; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "빛이나는 철")) {
+				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "빛이나는 철 광석")) {
 					totalStat += amount[i] * 6; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "순백의 철")) {
+				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "순백의 철 광석")) {
 					totalStat += amount[i] * 7; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "신의 힘이 담긴 철")) {
+				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "신의 힘이 담긴 철 광석")) {
 					totalStat += amount[i] * 9; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "가치가 떨어진 금")) {
+				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "가치가 떨어진 금 광석")) {
 					totalStat += amount[i] * 7; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "금")) {
+				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "금 광석")) {
 					totalStat += amount[i] * 8; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "쉽게 녹지 않는 금")) {
+				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "쉽게 녹지 않는 금 광석")) {
 					totalStat += amount[i] * 9; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "신의 힘이 담긴 금")) {
+				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "신의 힘이 담긴 금 광석")) {
 					totalStat += amount[i] * 11; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드")) {
+				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석")) {
 					totalStat += amount[i] * 10; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "다이아몬드")) {
+				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "다이아몬드 원석")) {
 					totalStat += amount[i] * 11; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "빛나는 다이아몬드")) {
+				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "빛나는 다이아몬드 원석")) {
 					totalStat += amount[i] * 12; 
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "신의 힘이 담긴 다이아몬드")) {
+				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "신의 힘이 담긴 다이아몬드 원석")) {
 					totalStat += amount[i] * 15; 
 				}
 				

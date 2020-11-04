@@ -748,6 +748,45 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("yumehama") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
 //		if(player.getDisplayName().equalsIgnoreCase("WoolRing") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
 		
+		ItemStack var2 = new ItemStack(Material.DIAMOND_BOOTS);
+		ItemMeta var2Im = var2.getItemMeta();
+		var2Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,777");
+		var2Im.setDisplayName(ChatColor.DARK_RED + "잭팟");
+		ArrayList<String> var2Lore = new ArrayList();
+		var2Lore.add(ChatColor.GRAY + "레벨 제한: 777");
+		var2Lore.add(ChatColor.GRAY + " ");
+		var2Lore.add(ChatColor.GRAY + "당신이 룰렛을 돌려 777이 나왔다면");
+		var2Lore.add(ChatColor.GRAY + "분명 행운이 있을 것입니다.");
+		var2Lore.add(ChatColor.GRAY + " ");
+		var2Lore.add(ChatColor.BLUE + "-근접 공격 시 7.7% 확률로 체력 10% 회복");
+		var2Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		var2Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		var2Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var2Im.setUnbreakable(true);
+		var2Im.setLore(var2Lore);
+		var2.setItemMeta(var2Im);
+		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var2);}
+		
+		
+//		ItemStack var2 = new ItemStack(Material.POLISHED_DIORITE_STAIRS);
+//		ItemMeta var2Im = var2.getItemMeta();
+//		var2Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,40");
+//		var2Im.setDisplayName(ChatColor.AQUA + "무지개 반사");
+//		ArrayList<String> var2Lore = new ArrayList();
+//		var2Lore.add(ChatColor.GRAY + "레벨 제한: 40");
+//		var2Lore.add(ChatColor.GRAY + " ");
+//		var2Lore.add(ChatColor.GRAY + "무지개 빛으로 빛나는 반지");
+//		var2Lore.add(ChatColor.GRAY + " ");
+//		var2Lore.add(ChatColor.BLUE + "-반격 데미지 2배");
+//		var2Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var2Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var2Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var2Im.setUnbreakable(true);
+//		var2Im.setLore(var2Lore);
+//		var2.setItemMeta(var2Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var2);}
+		
+		
 //		ItemStack var1 = new ItemStack(Material.OAK_PLANKS);
 //		ItemMeta var1Im = var1.getItemMeta();
 //		var1Im.setLocalizedName("866,24,47,346,429,500,100,100,100,547,250");
@@ -3457,6 +3496,9 @@ public class Main extends JavaPlugin implements Listener{
 			if (event.getDamager() instanceof Player) {
 				Entity entity = (Entity) event.getEntity();
 				Player player = (Player) event.getDamager();
+				
+				new AccessoryEffect().a1(player);
+				
 				PlayerHitDebuff debuff = new PlayerHitDebuff();
 				debuff.playerHitDebuff(player, entity);
 			}
@@ -5292,6 +5334,17 @@ public class Main extends JavaPlugin implements Listener{
 				}
 				try {
 					item = player.getInventory().getHelmet();
+					im = item.getItemMeta();
+					ary = im.getLocalizedName().split(",");
+					if(Integer.parseInt(ary[10]) > lvl) {
+						player.getInventory().addItem(item);
+						player.getInventory().setHelmet(null);
+					}
+				} catch(Exception e) {
+					
+				}
+				try {
+					item = player.getInventory().getItemInOffHand();
 					im = item.getItemMeta();
 					ary = im.getLocalizedName().split(",");
 					if(Integer.parseInt(ary[10]) > lvl) {

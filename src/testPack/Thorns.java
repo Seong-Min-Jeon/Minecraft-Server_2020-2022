@@ -51,6 +51,9 @@ public class Thorns {
 		} catch(Exception e) {
 			
 		}
+		
+		thorns = new AccessoryEffect().a2(player, thorns);
+		
 		return thorns;
 	}
 	

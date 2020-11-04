@@ -78,7 +78,15 @@ public class ChestOwner {
 				return;
 			}
 			closeInv(chestLoc.getBlock(), inv);
+		} else if(num == 4) {
+			Location chestLoc = new Location(player.getWorld(), 3774, 3, 3745);
+			if(inv == null) {
+				openInv(player, chestLoc.getBlock());
+				return;
+			}
+			closeInv(chestLoc.getBlock(), inv);
 		}
+		
 	}
 	
 	public void openInv(Player player, Block block) {

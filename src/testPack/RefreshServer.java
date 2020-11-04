@@ -257,7 +257,7 @@ public class RefreshServer {
 					}
 				}
 				
-				if(time % 6000 == 0) {
+				if(time % 12000 == 0) {
 					
 					if(change == 0) {
 						IChatBaseComponent comp = ChatSerializer.a("{\"text\":\"" + "\",\"extra\":[{\"text\":\"" + ChatColor.LIGHT_PURPLE + "" + ChatColor.UNDERLINE + "https://aile-server.netlify.app/"

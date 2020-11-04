@@ -2333,6 +2333,11 @@ public class Skill {
 			}
 			if (i >= 20) {
 				player.getInventory().remove(Material.HEART_OF_THE_SEA);
+				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 20);
+				ItemMeta itemIm = item.getItemMeta();
+				itemIm.setDisplayName(ChatColor.BLUE + "마나");
+				item.setItemMeta(itemIm);
+				player.getInventory().setItem(8, item);
 				Location loc = player.getLocation();
 				int num = rnd.nextInt(6);
 				player.sendMessage(ChatColor.GREEN + "[스킬]신의 주사위가 발동됩니다.");
@@ -2459,47 +2464,14 @@ public class Skill {
 									int num2 = rnd.nextInt(216);
 									if (num2 < 215) {
 										try {
-											int num3 = rnd.nextInt(40);
-											ItemStack item = player.getInventory().getItem(num3);
-											if (item.getType() == Material.HEART_OF_THE_SEA
-													|| item.getType() == Material.DIAMOND
-													|| item.getType() == Material.LIME_DYE
-													|| item.getType() == Material.MAGMA_CREAM
-													|| item.getType() == Material.AIR
-													|| item.getType() == Material.PLAYER_HEAD
-													|| item.getType() == Material.OAK_LEAVES || item.getType() == Material.SPRUCE_LEAVES || item.getType() == Material.BIRCH_LEAVES
-													|| item.getType() == Material.JUNGLE_LEAVES || item.getType() == Material.ACACIA_LEAVES || item.getType() == Material.DARK_OAK_LEAVES
-													|| item.getType() == Material.COBBLESTONE_WALL || item.getType() == Material.MOSSY_COBBLESTONE_WALL || item.getType() == Material.BROWN_CARPET
-													|| item.getType() == Material.GREEN_CARPET || item.getType() == Material.BLACK_CARPET || item.getType() == Material.STONE
-													|| item.getType() == Material.OAK_PLANKS || item.getType() == Material.SPRUCE_PLANKS || item.getType() == Material.BIRCH_PLANKS
-													|| item.getType() == Material.JUNGLE_PLANKS || item.getType() == Material.ACACIA_PLANKS || item.getType() == Material.DARK_OAK_PLANKS
-													|| item.getType() == Material.BEDROCK || item.getType() == Material.SPRUCE_LOG || item.getType() == Material.BIRCH_LOG
-													|| item.getType() == Material.JUNGLE_LOG || item.getType() == Material.ACACIA_LOG || item.getType() == Material.DARK_OAK_LOG
-													|| item.getType() == Material.SANDSTONE || item.getType() == Material.CHISELED_SANDSTONE || item.getType() == Material.CUT_SANDSTONE
-													|| item.getType() == Material.LAPIS_BLOCK || item.getType() == Material.MAGENTA_WOOL || item.getType() == Material.LIME_WOOL
-													|| item.getType() == Material.GRAY_WOOL || item.getType() == Material.LIGHT_GRAY_WOOL || item.getType() == Material.CYAN_WOOL
-													|| item.getType() == Material.PURPLE_WOOL || item.getType() == Material.OAK_SLAB || item.getType() == Material.SPRUCE_SLAB
-													|| item.getType() == Material.BIRCH_SLAB || item.getType() == Material.JUNGLE_SLAB || item.getType() == Material.ACACIA_SLAB
-													|| item.getType() == Material.DARK_OAK_SLAB || item.getType() == Material.STONE_SLAB || item.getType() == Material.COBBLESTONE_SLAB
-													|| item.getType() == Material.STONE_BRICK_SLAB || item.getType() == Material.NETHER_BRICK_SLAB || item.getType() == Material.QUARTZ_SLAB
-													|| item.getType() == Material.RED_SANDSTONE || item.getType() == Material.RED_SANDSTONE_SLAB || item.getType() == Material.SMOOTH_RED_SANDSTONE
-													|| item.getType() == Material.OBSIDIAN || item.getType() == Material.SMOOTH_SANDSTONE || item.getType() == Material.CHISELED_RED_SANDSTONE
-													|| item.getType() == Material.CUT_RED_SANDSTONE || item.getType() == Material.RED_SANDSTONE_STAIRS || item.getType() == Material.STONE_STAIRS
-													|| item.getType() == Material.DEAD_BRAIN_CORAL_BLOCK || item.getType() == Material.DEAD_BUBBLE_CORAL_BLOCK || item.getType() == Material.DEAD_FIRE_CORAL_BLOCK
-													|| item.getType() == Material.DEAD_HORN_CORAL_BLOCK || item.getType() == Material.DEAD_TUBE_CORAL_BLOCK || item.getType() == Material.BRAIN_CORAL_BLOCK
-													|| item.getType() == Material.HORN_CORAL_BLOCK || item.getType() == Material.TUBE_CORAL_BLOCK || item.getType() == Material.BUBBLE_CORAL_BLOCK
-													|| item.getType() == Material.FIRE_CORAL_BLOCK || item.getType() == Material.POLISHED_GRANITE_STAIRS || item.getType() == Material.SMOOTH_RED_SANDSTONE_STAIRS 
-													|| item.getType() == Material.MOSSY_COBBLESTONE_STAIRS || item.getType() == Material.MOSSY_STONE_BRICK_STAIRS || item.getType() == Material.POLISHED_DIORITE_STAIRS
-													|| item.getType() == Material.END_STONE_BRICK_STAIRS || item.getType() == Material.STONE_STAIRS || item.getType() == Material.SMOOTH_SANDSTONE_STAIRS
-													|| item.getType() == Material.SMOOTH_QUARTZ_STAIRS || item.getType() == Material.GRANITE_STAIRS) {
-												player.sendMessage(ChatColor.RED + "스킬 발동에 실패하였습니다.");
-												world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
-											} else {
-												player.getInventory().addItem(item);
-												player.sendMessage(ChatColor.GREEN + "신의 장난으로 아이템이 복제되었습니다.");
-												world.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f,
-														1.0f);
-											}
+											player.getInventory().remove(Material.HEART_OF_THE_SEA);
+											ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 40);
+											ItemMeta itemIm = item.getItemMeta();
+											itemIm.setDisplayName(ChatColor.BLUE + "마나");
+											item.setItemMeta(itemIm);
+											player.getInventory().setItem(8, item);
+											player.sendMessage(ChatColor.GREEN + "신의 탐욕이 발동됩니다.");
+											player.sendMessage(ChatColor.GREEN + "마나의 수가 40이 됩니다.");
 										} catch (Exception e20) {
 											player.sendMessage(ChatColor.RED + "스킬 발동에 실패하였습니다.");
 											world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
@@ -2523,9 +2495,6 @@ public class Skill {
 											weapon1.setItemMeta(weapon1Im);
 											player.getInventory().addItem(weapon1);
 											player.sendMessage(ChatColor.GREEN + "신에게 아이템을 받았습니다.");
-											for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-												allPlayer.sendMessage(player.getDisplayName() + "님께서 신에게 아이템을 받았습니다.");
-											}
 											world.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 1.0f);
 										}
 									}									
