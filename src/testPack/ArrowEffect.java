@@ -49,6 +49,7 @@ public class ArrowEffect {
 				if(im.getDisplayName().equals(ChatColor.YELLOW + "질풍의 지팡이")) {
 					if(player.getLevel() >= 300) {
 						if(removeMana(player, 1)) {
+							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BEACON_ACTIVATE, 6.0f, 8.0f);
 							player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 1, true, false, false));
 							player.sendMessage(ChatColor.GREEN + "신속이 부여됩니다.");
 						}
@@ -57,7 +58,12 @@ public class ArrowEffect {
 				if(im.getDisplayName().equals(ChatColor.LIGHT_PURPLE + "고목나무 지팡이")) {
 					if(player.getLevel() >= 300) {
 						if(removeMana(player, 2)) {
-							player.setHealth(player.getHealth()+2);
+							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BEACON_ACTIVATE, 6.0f, 8.0f);
+							if(player.getHealth() >= 18) {
+								player.setHealth(20);
+							} else {
+								player.setHealth(player.getHealth() + 2);
+							}
 							player.sendMessage(ChatColor.GREEN + "체력이 회복되었습니다.");
 						}
 					} 

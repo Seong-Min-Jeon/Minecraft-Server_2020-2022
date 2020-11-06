@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.NumberFormat.Style;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -23,6 +24,7 @@ import org.bukkit.NamespacedKey;
 import org.bukkit.Particle;
 import org.bukkit.Sound;
 import org.bukkit.World;
+import org.bukkit.attribute.Attribute;
 import org.bukkit.block.Block;
 import org.bukkit.block.Chest;
 import org.bukkit.boss.BarColor;
@@ -724,6 +726,7 @@ public class Main extends JavaPlugin implements Listener{
 //		if(player.getDisplayName().equals("yumehama") || player.getDisplayName().equalsIgnoreCase("WoolRing")) {
 //			player.addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, Integer.MAX_VALUE, 0));
 //		}
+		
 		world = player.getWorld();
 		JoinJob jj = new JoinJob();
 		if(!(player.getDisplayName().equalsIgnoreCase("WoolRing1"))) {
@@ -748,36 +751,33 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("yumehama") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
 //		if(player.getDisplayName().equalsIgnoreCase("WoolRing") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
 		
-		ItemStack var2 = new ItemStack(Material.DIAMOND_BOOTS);
-		ItemMeta var2Im = var2.getItemMeta();
-		var2Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,777");
-		var2Im.setDisplayName(ChatColor.DARK_RED + "잭팟");
-		ArrayList<String> var2Lore = new ArrayList();
-		var2Lore.add(ChatColor.GRAY + "레벨 제한: 777");
-		var2Lore.add(ChatColor.GRAY + " ");
-		var2Lore.add(ChatColor.GRAY + "당신이 룰렛을 돌려 777이 나왔다면");
-		var2Lore.add(ChatColor.GRAY + "분명 행운이 있을 것입니다.");
-		var2Lore.add(ChatColor.GRAY + " ");
-		var2Lore.add(ChatColor.BLUE + "-근접 공격 시 7.7% 확률로 체력 10% 회복");
-		var2Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-		var2Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-		var2Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
-		var2Im.setUnbreakable(true);
-		var2Im.setLore(var2Lore);
-		var2.setItemMeta(var2Im);
-		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var2);}
-		
-		
-//		ItemStack var2 = new ItemStack(Material.POLISHED_DIORITE_STAIRS);
+//		ItemStack var1 = new ItemStack(Material.SPRUCE_SLAB);
+//		ItemMeta var1Im = var1.getItemMeta();
+//		var1Im.setLocalizedName("200,200,10,100,50,200,50,50,50,100,200");
+//		var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "요정 대장장이의 창");
+//		ArrayList<String> var1Lore = new ArrayList();
+//		var1Lore.add(ChatColor.GRAY + "레벨 제한: 200");
+//		var1Lore.add(ChatColor.GRAY + " ");
+//		var1Lore.add(ChatColor.GRAY + "요정 왕국이 타락하기 이전 요정 대장장이가");
+//		var1Lore.add(ChatColor.GRAY + "빛의 힘을 연구하며 만들어낸 창");
+//		var1Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var1Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var1Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var1Im.setUnbreakable(true);
+//		var1Im.setLore(var1Lore);
+//		var1.setItemMeta(var1Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var1);}
+//		
+//		ItemStack var2 = new ItemStack(Material.MOSSY_STONE_BRICK_STAIRS);
 //		ItemMeta var2Im = var2.getItemMeta();
-//		var2Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,40");
-//		var2Im.setDisplayName(ChatColor.AQUA + "무지개 반사");
+//		var2Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,210");
+//		var2Im.setDisplayName(ChatColor.AQUA + "타락한 반지");
 //		ArrayList<String> var2Lore = new ArrayList();
-//		var2Lore.add(ChatColor.GRAY + "레벨 제한: 40");
+//		var2Lore.add(ChatColor.GRAY + "레벨 제한: 210");
 //		var2Lore.add(ChatColor.GRAY + " ");
-//		var2Lore.add(ChatColor.GRAY + "무지개 빛으로 빛나는 반지");
+//		var2Lore.add(ChatColor.GRAY + "에일의 요정들과 함께 타락해버린 반지");
 //		var2Lore.add(ChatColor.GRAY + " ");
-//		var2Lore.add(ChatColor.BLUE + "-반격 데미지 2배");
+//		var2Lore.add(ChatColor.BLUE + "-전투 경험치 10% 증가");
 //		var2Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 //		var2Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 //		var2Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -2379,6 +2379,42 @@ public class Main extends JavaPlugin implements Listener{
 			player.sendMessage(ChatColor.RED + "드랍 불가 아이템입니다.");
 			event.setCancelled(true);
 		}
+		if(event.getItemDrop().getItemStack().getType() == Material.POLISHED_GRANITE_STAIRS) {
+			player.sendMessage(ChatColor.RED + "드랍 불가 아이템입니다.");
+			event.setCancelled(true);
+		}
+		if(event.getItemDrop().getItemStack().getType() == Material.SMOOTH_RED_SANDSTONE_STAIRS) {
+			player.sendMessage(ChatColor.RED + "드랍 불가 아이템입니다.");
+			event.setCancelled(true);
+		}
+		if(event.getItemDrop().getItemStack().getType() == Material.MOSSY_STONE_BRICK_STAIRS) {
+			player.sendMessage(ChatColor.RED + "드랍 불가 아이템입니다.");
+			event.setCancelled(true);
+		}
+		if(event.getItemDrop().getItemStack().getType() == Material.POLISHED_DIORITE_STAIRS) {
+			player.sendMessage(ChatColor.RED + "드랍 불가 아이템입니다.");
+			event.setCancelled(true);
+		}
+		if(event.getItemDrop().getItemStack().getType() == Material.MOSSY_COBBLESTONE_STAIRS) {
+			player.sendMessage(ChatColor.RED + "드랍 불가 아이템입니다.");
+			event.setCancelled(true);
+		}
+		if(event.getItemDrop().getItemStack().getType() == Material.END_STONE_BRICK_STAIRS) {
+			player.sendMessage(ChatColor.RED + "드랍 불가 아이템입니다.");
+			event.setCancelled(true);
+		}
+		if(event.getItemDrop().getItemStack().getType() == Material.SMOOTH_SANDSTONE_STAIRS) {
+			player.sendMessage(ChatColor.RED + "드랍 불가 아이템입니다.");
+			event.setCancelled(true);
+		}
+		if(event.getItemDrop().getItemStack().getType() == Material.SMOOTH_QUARTZ_STAIRS) {
+			player.sendMessage(ChatColor.RED + "드랍 불가 아이템입니다.");
+			event.setCancelled(true);
+		}
+		if(event.getItemDrop().getItemStack().getType() == Material.GRANITE_STAIRS) {
+			player.sendMessage(ChatColor.RED + "드랍 불가 아이템입니다.");
+			event.setCancelled(true);
+		}
 	}
 	
 	@EventHandler
@@ -3307,10 +3343,21 @@ public class Main extends JavaPlugin implements Listener{
 		} catch(Exception e) {
 			
 		}
-		// DisableAttack
+		// DisableAttack1
 		try {
 			DisableAttack da = new DisableAttack();
 			Player player = (Player) event.getDamager();
+			if (!da.disable(player)) {
+				event.setCancelled(true);
+				return;
+			}
+		} catch (Exception e) {
+
+		}
+		// DisableAttack2
+		try {
+			DisableAttack da = new DisableAttack();
+			Player player = (Player) event.getEntity();
 			if (!da.disable(player)) {
 				event.setCancelled(true);
 				return;
@@ -3496,9 +3543,32 @@ public class Main extends JavaPlugin implements Listener{
 			if (event.getDamager() instanceof Player) {
 				Entity entity = (Entity) event.getEntity();
 				Player player = (Player) event.getDamager();
+				//===========================================================================
+				// 타격 시 확률적 마나 증가
+				int num = 0;
+				num += new SpecialEffect().a1(player);
 				
-				new AccessoryEffect().a1(player);
-				
+				if(rnd.nextInt(100) < num) {
+					ItemStack mana = new ItemStack(Material.HEART_OF_THE_SEA);
+					ItemMeta manaIm = mana.getItemMeta();
+					manaIm.setDisplayName(ChatColor.BLUE + "마나");
+					mana.setItemMeta(manaIm);
+					if (player.getInventory().contains(Material.HEART_OF_THE_SEA)) {
+						int i = 0;
+						for (ItemStack is : player.getInventory().getContents()) {
+							if (is == null)
+								continue;
+							if (is.getType() == Material.HEART_OF_THE_SEA) {
+								i = i + is.getAmount();
+							}
+						}
+						if (i < 20)
+							player.getInventory().addItem(mana);
+					} else {
+						player.getInventory().setItem(8, mana);
+					}
+				}
+				//===========================================================================
 				PlayerHitDebuff debuff = new PlayerHitDebuff();
 				debuff.playerHitDebuff(player, entity);
 			}
@@ -3651,6 +3721,21 @@ public class Main extends JavaPlugin implements Listener{
 				|| event.getEntity().getType() == EntityType.WOLF || event.getEntity().getType() == EntityType.CAT || event.getEntity().getType() == EntityType.DONKEY) {
 			event.setCancelled(true);
 			return;
+		}
+		//회피
+		try {
+			if (event.getEntity() instanceof Player) {
+				Player player = (Player) event.getEntity();
+				int num = 0;
+				num += new SpecialEffect().a7(player);
+				
+				if(rnd.nextInt(100) < num) {
+					event.setCancelled(true);
+					return;
+				}
+			}
+		} catch(Exception e) {
+			
 		}
 		//특수뎀
 		try {
@@ -4017,6 +4102,11 @@ public class Main extends JavaPlugin implements Listener{
 					double damage = event.getFinalDamage();
 					MobDeath md = new MobDeath(mob, damage);
 				}
+			} else if (event.getCause() == DamageCause.FALL) {
+				if (event.getEntity() instanceof Mob) {				
+					event.setCancelled(true);
+					return;
+				}
 			}
 			//몹 정리
 			if (event.getCause() == DamageCause.DROWNING) {
@@ -4266,6 +4356,35 @@ public class Main extends JavaPlugin implements Listener{
 							}
 
 						}, 0, 1);
+						
+						event.setCancelled(true);
+						return;
+					}
+				}
+			}
+		} catch (Exception e) {
+
+		}
+		// 말 테스트용
+		try {
+			EquipmentSlot e = event.getHand();
+			if (e.equals(EquipmentSlot.HAND)) {
+				Player player = event.getPlayer();
+				if (event.getAction() == Action.RIGHT_CLICK_AIR && event.getAction() == Action.RIGHT_CLICK_BLOCK && player.getDisplayName().equalsIgnoreCase("yumehama")) {
+					ItemMeta im = player.getInventory().getItemInMainHand().getItemMeta();
+					Material type = player.getInventory().getItemInMainHand().getType();
+					if (type == Material.SADDLE) {
+						
+						if(im.getDisplayName().equals(ChatColor.WHITE + "테스트용 안장")) {
+							Horse horse = (Horse) world.spawnEntity(player.getLocation(), EntityType.HORSE);
+							horse.setBreed(false);
+							horse.setNoDamageTicks(Integer.MAX_VALUE);
+							horse.setAdult();
+							horse.setTamed(true);
+							horse.setStyle(Horse.Style.NONE);
+							horse.setColor(Horse.Color.WHITE);
+							horse.getAttribute(Attribute.GENERIC_MOVEMENT_SPEED).setBaseValue(1);
+						}
 						
 						event.setCancelled(true);
 						return;
@@ -4721,6 +4840,12 @@ public class Main extends JavaPlugin implements Listener{
 	    				event.setCancelled(true);
 	    			}
 	    			if(block.getType() == Material.DISPENSER && event.getPlayer().isOp() == false) {
+	    				event.setCancelled(true);
+	    			}
+	    			if(block.getType() == Material.JUKEBOX && event.getPlayer().isOp() == false) {
+	    				event.setCancelled(true);
+	    			}
+	    			if(block.getType() == Material.FLOWER_POT && event.getPlayer().isOp() == false) {
 	    				event.setCancelled(true);
 	    			}
 	    			if(block.getType() == Material.ARMOR_STAND && event.getPlayer().isOp() == false) {

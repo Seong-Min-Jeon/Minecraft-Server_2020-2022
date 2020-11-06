@@ -55,6 +55,12 @@ public class ExpSystemByMob {
 				exp = 0;
 			}
 		}
+		
+		int percent = 0;
+		percent += new SpecialEffect().b1(player);
+		percent += new SpecialEffect().a8(player);
+		exp += exp * percent / 100;
+		
 		float customExpToLevel = (float)((int)((Math.pow(currentLevel, 3)/10) * Math.log10(currentLevel+1) + 10));
 		float customRatio = (float)(exp/customExpToLevel);
 		float currentRatio = player.getExp();
@@ -156,6 +162,12 @@ public class ExpSystemByMob {
 				exp = 0;
 			}
 		}
+		
+		int percent = 0;
+		percent += new SpecialEffect().b1(player);
+		percent += new SpecialEffect().a8(player);
+		exp += exp * percent / 100;
+		
 		float customExpToLevel = (float)((int)((Math.pow(currentLevel, 3)/10) * Math.log10(currentLevel+1) + 10));
 		float customRatio = (float)(exp/customExpToLevel);
 		float currentRatio = player.getExp();

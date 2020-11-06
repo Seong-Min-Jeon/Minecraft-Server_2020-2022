@@ -52,7 +52,11 @@ public class Thorns {
 			
 		}
 		
-		thorns = new AccessoryEffect().a2(player, thorns);
+		thorns += new SpecialEffect().a2(player, thorns);
+		thorns += new SpecialEffect().a3(player, thorns);
+		thorns += new SpecialEffect().a4(player, thorns);
+		thorns += new SpecialEffect().a5(player, thorns);
+		thorns += new SpecialEffect().a6(player, thorns);
 		
 		return thorns;
 	}

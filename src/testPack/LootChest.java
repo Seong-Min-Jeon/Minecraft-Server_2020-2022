@@ -486,7 +486,7 @@ public class LootChest {
 		int num9 = rnd.nextInt(20);	
 		int num10 = rnd.nextInt(100);	
 		int num11 = rnd.nextInt(30) + 20;
-		int tokenPercent = rnd.nextInt(20);
+		int tokenPercent = rnd.nextInt(10);
 		
 		ItemStack var1 = new ItemStack(Material.STONE);
 		ItemMeta var1Im = var1.getItemMeta();
@@ -717,7 +717,7 @@ public class LootChest {
 		int num8 = rnd.nextInt(50);	// 부조화의 검
 		int num9 = rnd.nextInt(40);	// 얼음 활
 		int num10 = rnd.nextInt(2) + 1;
-		int tokenPercent = rnd.nextInt(14);
+		int tokenPercent = rnd.nextInt(10);
 		
 		ItemStack var1 = new ItemStack(Material.CYAN_WOOL);
 		ItemMeta var1Im = var1.getItemMeta();
@@ -1130,7 +1130,7 @@ public class LootChest {
 		int num8 = rnd.nextInt(20);	// 타락한 윤회
 		int num9 = rnd.nextInt(20);	// 타락한 회향
 		int num10 = rnd.nextInt(2) + 3;
-		int tokenPercent = rnd.nextInt(16);
+		int tokenPercent = rnd.nextInt(10);
 		
 		ItemStack var1 = new ItemStack(Material.SPRUCE_LOG);
 		ItemMeta var1Im = var1.getItemMeta();
@@ -1607,7 +1607,7 @@ public class LootChest {
 		int num8 = rnd.nextInt(10);	// 광석3
 		int num9 = rnd.nextInt(10);	// 광석4
 		int num10 = rnd.nextInt(20) + 30;
-		int tokenPercent = rnd.nextInt(20);
+		int tokenPercent = rnd.nextInt(10);
 		
 		ItemStack var1 = new ItemStack(Material.MUSIC_DISC_CAT);
 		ItemMeta var1Im = var1.getItemMeta();
@@ -1776,7 +1776,7 @@ public class LootChest {
 		int num8 = rnd.nextInt(20);	// 오드아이즈
 		int num9 = rnd.nextInt(10);	// 클리어윙
 		int num10 = rnd.nextInt(14) + 50;
-		int tokenPercent = rnd.nextInt(21);
+		int tokenPercent = rnd.nextInt(10);
 		
 		ItemStack var1 = new ItemStack(Material.JUNGLE_PLANKS);
 		ItemMeta var1Im = var1.getItemMeta();
