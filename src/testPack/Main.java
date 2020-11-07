@@ -2142,7 +2142,10 @@ public class Main extends JavaPlugin implements Listener{
 			if(entity instanceof Drowned) {
 				entity.remove();
 			}
-			((LivingEntity)entity).addPotionEffect(new PotionEffect(PotionEffectType.DOLPHINS_GRACE, Integer.MAX_VALUE, 2));
+			if(!(entity.getType() == EntityType.HORSE || entity.getType() == EntityType.PIG || entity.getType() == EntityType.SHEEP
+					|| entity.getType() == EntityType.COW || entity.getType() == EntityType.CHICKEN)) {
+				((LivingEntity)entity).addPotionEffect(new PotionEffect(PotionEffectType.DOLPHINS_GRACE, Integer.MAX_VALUE, 2, true, false, false));
+			}
 			SpawnMob sm = new SpawnMob();
 			SpawnAnimal sa = new SpawnAnimal();
 			if(!sm.spawn(entity)) {			
@@ -2468,6 +2471,20 @@ public class Main extends JavaPlugin implements Listener{
 				}
 			}
 			
+		} catch(Exception e) {
+			
+		}
+		// riding horse
+		try {
+			if(event.getDamager() instanceof Player) {
+				Player player = (Player) event.getDamager();
+				if(!(event.getEntity() instanceof Player)) {
+					if(player.getVehicle() != null) {
+						event.setCancelled(true);
+						return;
+					}
+				}
+			}
 		} catch(Exception e) {
 			
 		}
@@ -3354,17 +3371,6 @@ public class Main extends JavaPlugin implements Listener{
 		} catch (Exception e) {
 
 		}
-		// DisableAttack2
-		try {
-			DisableAttack da = new DisableAttack();
-			Player player = (Player) event.getEntity();
-			if (!da.disable(player)) {
-				event.setCancelled(true);
-				return;
-			}
-		} catch (Exception e) {
-
-		}
 		//Damage Calc
 		try {
 			if(event.getDamager() instanceof Player) {
@@ -3612,10 +3618,19 @@ public class Main extends JavaPlugin implements Listener{
 		try {
 			if (event.getDamager() instanceof LivingEntity && !(event.getDamager() instanceof Player)) {
 				if (event.getEntity() instanceof Player) {
-					LivingEntity entity = (LivingEntity) event.getDamager();
-					Player player = (Player) event.getEntity();
-					Thorns t = new Thorns();
-					entity.damage(t.thorns(player, entity));
+					try {
+						DisableAttack da = new DisableAttack();
+						Player player = (Player) event.getEntity();
+						if (da.disable(player)) {
+							if(player.getVehicle() == null) {
+								LivingEntity entity = (LivingEntity) event.getDamager();
+								Thorns t = new Thorns();
+								entity.damage(t.thorns(player, entity));
+							}
+						}
+					} catch (Exception e) {
+
+					}
 				}
 			}
 		} catch (Exception e) {
@@ -4311,52 +4326,13 @@ public class Main extends JavaPlugin implements Listener{
 	
 	@EventHandler
 	public void mouseEvent(PlayerInteractEvent event) {
-		// 테스트용
+		// riding horse
 		try {
 			EquipmentSlot e = event.getHand();
 			if (e.equals(EquipmentSlot.HAND)) {
 				Player player = event.getPlayer();
-				if (event.getAction() == Action.RIGHT_CLICK_BLOCK && player.getDisplayName().equalsIgnoreCase("yumehama")) {
-					Material type = player.getInventory().getItemInMainHand().getType();
-					if((type == Material.DRAGON_HEAD)) {
-						
-						ArrayList<FallingBlock> ary = new ArrayList<>();
-						Location loc = player.getLocation();
-						for(int x = -2 ; x < 3 ; x++) {
-							for(int y = -1 ; y < 1 ; y++) {
-								for(int z = -2 ; z < 3 ; z++) {
-									Location loc2 = loc.clone().add(new Vector(x,y+0.01,z));
-									if(loc2.getBlock().getType() != Material.AIR) {
-										FallingBlock fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, Material.RED_WOOL, (byte)0);
-										fb.setVelocity(new Vector(0,0,0));
-										fb.setDropItem(false);
-										fb.setGravity(false);
-										ary.add(fb);
-									}
-								}
-							}
-						}
-						
-						Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
-
-							int time = 0;
-							ArrayList<FallingBlock> ary2 = ary;
-
-							@Override
-							public void run() {
-								
-								if (time >= 40) {
-									for(FallingBlock fb : ary2) {
-										fb.remove();
-									}
-								}
-								
-								time++;
-
-							}
-
-						}, 0, 1);
-						
+				if (event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
+					if(player.getVehicle() != null) {
 						event.setCancelled(true);
 						return;
 					}
@@ -4365,25 +4341,219 @@ public class Main extends JavaPlugin implements Listener{
 		} catch (Exception e) {
 
 		}
-		// 말 테스트용
+		// horse
 		try {
 			EquipmentSlot e = event.getHand();
 			if (e.equals(EquipmentSlot.HAND)) {
 				Player player = event.getPlayer();
-				if (event.getAction() == Action.RIGHT_CLICK_AIR && event.getAction() == Action.RIGHT_CLICK_BLOCK && player.getDisplayName().equalsIgnoreCase("yumehama")) {
+				if (event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
 					ItemMeta im = player.getInventory().getItemInMainHand().getItemMeta();
 					Material type = player.getInventory().getItemInMainHand().getType();
 					if (type == Material.SADDLE) {
-						
-						if(im.getDisplayName().equals(ChatColor.WHITE + "테스트용 안장")) {
-							Horse horse = (Horse) world.spawnEntity(player.getLocation(), EntityType.HORSE);
+						HorseOwner ho = new HorseOwner();
+						if(ho.already(player)) {
+							try {
+								ho.returnHorse(player).remove();
+							} catch(Exception e2) {
+								
+							}
+							ho.remove(player);
+						}
+						if(im.getDisplayName().equals(ChatColor.GRAY + "갈색마")) {
+							player.getWorld().playSound(player.getLocation(), Sound.ENTITY_HORSE_GALLOP, 0.5f, 1.0f);
+							player.getWorld().playSound(player.getLocation(), Sound.ENTITY_HORSE_AMBIENT, 8.0f, 1.0f);
+							Horse horse = (Horse) player.getWorld().spawnEntity(player.getLocation(), EntityType.HORSE);
+							horse.setCustomName(ChatColor.GRAY + "" + player.getDisplayName() + "'s horse");
+							horse.setCustomNameVisible(true);
 							horse.setBreed(false);
 							horse.setNoDamageTicks(Integer.MAX_VALUE);
 							horse.setAdult();
 							horse.setTamed(true);
-							horse.setStyle(Horse.Style.NONE);
+							horse.setOwner(player);
+							horse.getInventory().setSaddle(new ItemStack(Material.SADDLE));
+							int num = rnd.nextInt(100);
+							if(num < 60) {
+								horse.setStyle(Horse.Style.NONE);
+							} else if(num < 80) {
+								horse.setStyle(Horse.Style.WHITE);
+							} else if(num < 90) {
+								horse.setStyle(Horse.Style.WHITEFIELD);
+							} else if(num < 99) {
+								horse.setStyle(Horse.Style.WHITE_DOTS);
+							} else if(num < 100) {
+								horse.setStyle(Horse.Style.BLACK_DOTS);
+							}
+							horse.setColor(Horse.Color.BROWN);
+							horse.getAttribute(Attribute.GENERIC_MOVEMENT_SPEED).setBaseValue(0.2);
+							ho.put(player, horse);
+						}
+						if(im.getDisplayName().equals(ChatColor.WHITE + "검갈마")) {
+							player.getWorld().playSound(player.getLocation(), Sound.ENTITY_HORSE_GALLOP, 0.5f, 1.0f);
+							player.getWorld().playSound(player.getLocation(), Sound.ENTITY_HORSE_AMBIENT, 8.0f, 1.0f);
+							Horse horse = (Horse) player.getWorld().spawnEntity(player.getLocation(), EntityType.HORSE);
+							horse.setCustomName(ChatColor.GRAY + "" + player.getDisplayName() + "'s horse");
+							horse.setCustomNameVisible(true);
+							horse.setBreed(false);
+							horse.setNoDamageTicks(Integer.MAX_VALUE);
+							horse.setAdult();
+							horse.setTamed(true);
+							horse.setOwner(player);
+							horse.getInventory().setSaddle(new ItemStack(Material.SADDLE));
+							int num = rnd.nextInt(100);
+							if(num < 60) {
+								horse.setStyle(Horse.Style.NONE);
+							} else if(num < 80) {
+								horse.setStyle(Horse.Style.WHITE);
+							} else if(num < 90) {
+								horse.setStyle(Horse.Style.WHITEFIELD);
+							} else if(num < 99) {
+								horse.setStyle(Horse.Style.WHITE_DOTS);
+							} else if(num < 100) {
+								horse.setStyle(Horse.Style.BLACK_DOTS);
+							}
+							horse.setColor(Horse.Color.DARK_BROWN);
+							horse.getAttribute(Attribute.GENERIC_MOVEMENT_SPEED).setBaseValue(0.25);
+							ho.put(player, horse);
+						}
+						if(im.getDisplayName().equals(ChatColor.YELLOW + "황갈마")) {
+							player.getWorld().playSound(player.getLocation(), Sound.ENTITY_HORSE_GALLOP, 0.5f, 1.0f);
+							player.getWorld().playSound(player.getLocation(), Sound.ENTITY_HORSE_AMBIENT, 8.0f, 1.0f);
+							Horse horse = (Horse) player.getWorld().spawnEntity(player.getLocation(), EntityType.HORSE);
+							horse.setCustomName(ChatColor.GRAY + "" + player.getDisplayName() + "'s horse");
+							horse.setCustomNameVisible(true);
+							horse.setBreed(false);
+							horse.setNoDamageTicks(Integer.MAX_VALUE);
+							horse.setAdult();
+							horse.setTamed(true);
+							horse.setOwner(player);
+							horse.getInventory().setSaddle(new ItemStack(Material.SADDLE));
+							int num = rnd.nextInt(100);
+							if(num < 60) {
+								horse.setStyle(Horse.Style.NONE);
+							} else if(num < 80) {
+								horse.setStyle(Horse.Style.WHITE);
+							} else if(num < 90) {
+								horse.setStyle(Horse.Style.WHITEFIELD);
+							} else if(num < 99) {
+								horse.setStyle(Horse.Style.WHITE_DOTS);
+							} else if(num < 100) {
+								horse.setStyle(Horse.Style.BLACK_DOTS);
+							}
+							horse.setColor(Horse.Color.CREAMY);
+							horse.getAttribute(Attribute.GENERIC_MOVEMENT_SPEED).setBaseValue(0.3);
+							ho.put(player, horse);
+						}
+						if(im.getDisplayName().equals(ChatColor.LIGHT_PURPLE + "회색마")) {
+							player.getWorld().playSound(player.getLocation(), Sound.ENTITY_HORSE_GALLOP, 0.5f, 1.0f);
+							player.getWorld().playSound(player.getLocation(), Sound.ENTITY_HORSE_AMBIENT, 8.0f, 1.0f);
+							Horse horse = (Horse) player.getWorld().spawnEntity(player.getLocation(), EntityType.HORSE);
+							horse.setCustomName(ChatColor.GRAY + "" + player.getDisplayName() + "'s horse");
+							horse.setCustomNameVisible(true);
+							horse.setBreed(false);
+							horse.setNoDamageTicks(Integer.MAX_VALUE);
+							horse.setAdult();
+							horse.setTamed(true);
+							horse.setOwner(player);
+							horse.getInventory().setSaddle(new ItemStack(Material.SADDLE));
+							int num = rnd.nextInt(100);
+							if(num < 60) {
+								horse.setStyle(Horse.Style.NONE);
+							} else if(num < 80) {
+								horse.setStyle(Horse.Style.WHITE);
+							} else if(num < 90) {
+								horse.setStyle(Horse.Style.WHITEFIELD);
+							} else if(num < 99) {
+								horse.setStyle(Horse.Style.WHITE_DOTS);
+							} else if(num < 100) {
+								horse.setStyle(Horse.Style.BLACK_DOTS);
+							}
+							horse.setColor(Horse.Color.GRAY);
+							horse.getAttribute(Attribute.GENERIC_MOVEMENT_SPEED).setBaseValue(0.35);
+							ho.put(player, horse);
+						}
+						if(im.getDisplayName().equals(ChatColor.AQUA + "황금갈기마")) {
+							player.getWorld().playSound(player.getLocation(), Sound.ENTITY_HORSE_GALLOP, 0.5f, 1.0f);
+							player.getWorld().playSound(player.getLocation(), Sound.ENTITY_HORSE_AMBIENT, 8.0f, 1.0f);
+							Horse horse = (Horse) player.getWorld().spawnEntity(player.getLocation(), EntityType.HORSE);
+							horse.setCustomName(ChatColor.GRAY + "" + player.getDisplayName() + "'s horse");
+							horse.setCustomNameVisible(true);
+							horse.setBreed(false);
+							horse.setNoDamageTicks(Integer.MAX_VALUE);
+							horse.setAdult();
+							horse.setTamed(true);
+							horse.setOwner(player);
+							horse.getInventory().setSaddle(new ItemStack(Material.SADDLE));
+							int num = rnd.nextInt(100);
+							if(num < 60) {
+								horse.setStyle(Horse.Style.NONE);
+							} else if(num < 80) {
+								horse.setStyle(Horse.Style.WHITE);
+							} else if(num < 90) {
+								horse.setStyle(Horse.Style.WHITEFIELD);
+							} else if(num < 99) {
+								horse.setStyle(Horse.Style.WHITE_DOTS);
+							} else if(num < 100) {
+								horse.setStyle(Horse.Style.BLACK_DOTS);
+							}
+							horse.setColor(Horse.Color.CHESTNUT);
+							horse.getAttribute(Attribute.GENERIC_MOVEMENT_SPEED).setBaseValue(0.4);
+							ho.put(player, horse);
+						}
+						if(im.getDisplayName().equals(ChatColor.DARK_RED + "흑마")) {
+							player.getWorld().playSound(player.getLocation(), Sound.ENTITY_HORSE_GALLOP, 0.5f, 1.0f);
+							player.getWorld().playSound(player.getLocation(), Sound.ENTITY_HORSE_AMBIENT, 8.0f, 1.0f);
+							Horse horse = (Horse) player.getWorld().spawnEntity(player.getLocation(), EntityType.HORSE);
+							horse.setCustomName(ChatColor.GRAY + "" + player.getDisplayName() + "'s horse");
+							horse.setCustomNameVisible(true);
+							horse.setBreed(false);
+							horse.setNoDamageTicks(Integer.MAX_VALUE);
+							horse.setAdult();
+							horse.setTamed(true);
+							horse.setOwner(player);
+							horse.getInventory().setSaddle(new ItemStack(Material.SADDLE));
+							int num = rnd.nextInt(100);
+							if(num < 60) {
+								horse.setStyle(Horse.Style.NONE);
+							} else if(num < 80) {
+								horse.setStyle(Horse.Style.WHITE);
+							} else if(num < 90) {
+								horse.setStyle(Horse.Style.WHITEFIELD);
+							} else if(num < 99) {
+								horse.setStyle(Horse.Style.WHITE_DOTS);
+							} else if(num < 100) {
+								horse.setStyle(Horse.Style.BLACK_DOTS);
+							}
+							horse.setColor(Horse.Color.BLACK);
+							horse.getAttribute(Attribute.GENERIC_MOVEMENT_SPEED).setBaseValue(0.5);
+							ho.put(player, horse);
+						}
+						if(im.getDisplayName().equals(ChatColor.DARK_PURPLE + "백마")) {
+							player.getWorld().playSound(player.getLocation(), Sound.ENTITY_HORSE_GALLOP, 0.5f, 1.0f);
+							player.getWorld().playSound(player.getLocation(), Sound.ENTITY_HORSE_AMBIENT, 8.0f, 1.0f);
+							Horse horse = (Horse) player.getWorld().spawnEntity(player.getLocation(), EntityType.HORSE);
+							horse.setCustomName(ChatColor.GRAY + "" + player.getDisplayName() + "'s horse");
+							horse.setCustomNameVisible(true);
+							horse.setBreed(false);
+							horse.setNoDamageTicks(Integer.MAX_VALUE);
+							horse.setAdult();
+							horse.setTamed(true);
+							horse.setOwner(player);
+							horse.getInventory().setSaddle(new ItemStack(Material.SADDLE));
+							int num = rnd.nextInt(100);
+							if(num < 60) {
+								horse.setStyle(Horse.Style.NONE);
+							} else if(num < 80) {
+								horse.setStyle(Horse.Style.WHITE);
+							} else if(num < 90) {
+								horse.setStyle(Horse.Style.WHITEFIELD);
+							} else if(num < 99) {
+								horse.setStyle(Horse.Style.WHITE_DOTS);
+							} else if(num < 100) {
+								horse.setStyle(Horse.Style.BLACK_DOTS);
+							}
 							horse.setColor(Horse.Color.WHITE);
-							horse.getAttribute(Attribute.GENERIC_MOVEMENT_SPEED).setBaseValue(1);
+							horse.getAttribute(Attribute.GENERIC_MOVEMENT_SPEED).setBaseValue(0.6);
+							ho.put(player, horse);
 						}
 						
 						event.setCancelled(true);
@@ -4399,7 +4569,7 @@ public class Main extends JavaPlugin implements Listener{
 			EquipmentSlot e = event.getHand();
 			if (e.equals(EquipmentSlot.HAND)) {
 				Player player = event.getPlayer();
-				if (event.getAction() == Action.RIGHT_CLICK_BLOCK && player.isOp() == false) {
+				if ((event.getAction() == Action.RIGHT_CLICK_BLOCK || event.getAction() == Action.RIGHT_CLICK_AIR) && player.isOp() == false) {
 					Material type = player.getInventory().getItemInMainHand().getType();
 					if((type == Material.LEATHER_HELMET) || (type == Material.LEATHER_CHESTPLATE) || (type == Material.LEATHER_LEGGINGS) || (type == Material.LEATHER_BOOTS) 
 							|| (type == Material.CHAINMAIL_HELMET) || (type == Material.CHAINMAIL_CHESTPLATE) || (type == Material.CHAINMAIL_LEGGINGS) || (type == Material.CHAINMAIL_BOOTS)
@@ -5855,6 +6025,11 @@ public class Main extends JavaPlugin implements Listener{
 					}
 					if(ent.getType() == EntityType.LLAMA) {
 						ent.remove();
+					}
+					if(ent.getType() == EntityType.HORSE) {
+						if(((Horse) ent).isCustomNameVisible()) {
+							ent.remove();
+						}
 					}
 					if(ent.getType() == EntityType.DROPPED_ITEM) {
 						ent.remove();

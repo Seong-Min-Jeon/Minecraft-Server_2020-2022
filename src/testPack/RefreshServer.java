@@ -12,6 +12,7 @@ import org.bukkit.World;
 import org.bukkit.block.Biome;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
+import org.bukkit.entity.Horse;
 import org.bukkit.entity.Item;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
@@ -185,6 +186,11 @@ public class RefreshServer {
 								if(ent.getType() == EntityType.LLAMA) {
 									ent.remove();
 								}
+								if(ent.getType() == EntityType.HORSE) {
+									if(((Horse) ent).isCustomNameVisible()) {
+										ent.remove();
+									}
+								}
 								if(ent.getType() == EntityType.DROPPED_ITEM) {
 									ent.remove();
 								}
@@ -257,7 +263,7 @@ public class RefreshServer {
 					}
 				}
 				
-				if(time % 12000 == 0) {
+				if(time % 6000 == 0) {
 					
 					if(change == 0) {
 						IChatBaseComponent comp = ChatSerializer.a("{\"text\":\"" + "\",\"extra\":[{\"text\":\"" + ChatColor.LIGHT_PURPLE + "" + ChatColor.UNDERLINE + "https://aile-server.netlify.app/"
