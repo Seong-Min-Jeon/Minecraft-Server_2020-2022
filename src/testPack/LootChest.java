@@ -1796,7 +1796,7 @@ public class LootChest {
 		
 		ItemStack var2 = new ItemStack(Material.IRON_HELMET);
 		ItemMeta var2Im = var2.getItemMeta();
-		var2Im.setLocalizedName("300,0,0,0,0,300,0,0,0,3000,390");
+		var2Im.setLocalizedName("600,0,0,0,0,300,0,0,0,1000,390");
 		var2Im.setDisplayName(ChatColor.GREEN + "거미 여왕의 헬멧");
 		ArrayList<String> var2Lore = new ArrayList();
 		var2Lore.add(ChatColor.GRAY + "레벨 제한: 390");
@@ -1812,7 +1812,7 @@ public class LootChest {
 		
 		ItemStack var3 = new ItemStack(Material.IRON_CHESTPLATE);
 		ItemMeta var3Im = var3.getItemMeta();
-		var3Im.setLocalizedName("300,0,0,0,0,300,0,0,0,3000,390");
+		var3Im.setLocalizedName("600,0,0,0,0,300,0,0,0,1000,390");
 		var3Im.setDisplayName(ChatColor.GREEN + "거미 여왕의 갑옷");
 		ArrayList<String> var3Lore = new ArrayList();
 		var3Lore.add(ChatColor.GRAY + "레벨 제한: 390");
@@ -1828,7 +1828,7 @@ public class LootChest {
 		
 		ItemStack var4 = new ItemStack(Material.IRON_LEGGINGS);
 		ItemMeta var4Im = var4.getItemMeta();
-		var4Im.setLocalizedName("300,0,0,0,0,300,0,0,0,3000,390");
+		var4Im.setLocalizedName("600,0,0,0,0,300,0,0,0,1000,390");
 		var4Im.setDisplayName(ChatColor.GREEN + "거미 여왕의 각반");
 		ArrayList<String> var4Lore = new ArrayList();
 		var4Lore.add(ChatColor.GRAY + "레벨 제한: 390");
@@ -1844,7 +1844,7 @@ public class LootChest {
 		
 		ItemStack var5 = new ItemStack(Material.IRON_BOOTS);
 		ItemMeta var5Im = var5.getItemMeta();
-		var5Im.setLocalizedName("300,0,0,0,0,300,0,0,0,3000,390");
+		var5Im.setLocalizedName("600,0,0,0,0,300,0,0,0,1000,390");
 		var5Im.setDisplayName(ChatColor.GREEN + "거미 여왕의 신발");
 		ArrayList<String> var5Lore = new ArrayList();
 		var5Lore.add(ChatColor.GRAY + "레벨 제한: 390");

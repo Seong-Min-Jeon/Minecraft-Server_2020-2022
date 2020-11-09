@@ -47,6 +47,7 @@ public class MobDeath {
 		} else {
 			lootPlayer = this.player;
 		}
+		
 		if (((LivingEntity) mob).getHealth() - damage <= 0) {
 			// 마나지급
 			ItemStack mana = new ItemStack(Material.HEART_OF_THE_SEA);

@@ -100,9 +100,61 @@ public class SpecialEffect {
 		return 0;
 	}
 	
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	public int h1(Player player) {
+		try {
+			if(player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "삼보룡")) {
+				return 5;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	public int c1(Player player) {
+		try {
+			if(player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "진월")) {
+				return 1;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	public int l1(Player player) {
+		try {
+			if(player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "엑스에어리얼")) {
+				return 5;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
 	public int b1(Player player) {
 		try {
 			if(player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "질주하는 자극")) {
+				return 5;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+	public int b2(Player player) {
+		try {
+			if(player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "스쿠트")) {
 				return 5;
 			}
 		} catch(Exception e) {

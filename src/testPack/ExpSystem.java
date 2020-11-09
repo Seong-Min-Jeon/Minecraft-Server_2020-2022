@@ -17,16 +17,25 @@ public class ExpSystem {
 				exp = 0;
 			}
 		}
-		float customExpToLevel = (float)((int)((Math.pow(currentLevel, 3)/10) * Math.log10(currentLevel+1) + 10));
-		float customRatio = (float)(exp/customExpToLevel);
-		float currentRatio = player.getExp();
-		float totalRatio = customRatio + currentRatio;
+		double customExpToLevel = (double)((int)((Math.pow(currentLevel, 3)/10) * Math.log10(currentLevel+1) + 10));
+		if(currentLevel >= 1000) {
+			customExpToLevel = 2100000000; //21억
+		} else if(currentLevel >= 900) {
+			customExpToLevel = 1500000000; //15억
+		} else if(currentLevel >= 800) {
+			customExpToLevel = 1000000000; //10억
+		} else if(currentLevel >= 700) {
+			customExpToLevel = 500000000; //5억
+		}
+		double customRatio = (double)(exp/customExpToLevel);
+		double currentRatio = player.getExp();
+		double totalRatio = customRatio + currentRatio;
 		player.sendMessage(ChatColor.GRAY + "[Exp] " + exchange(exp));
 		if(totalRatio>=1) {
 			player.setLevel(player.getLevel()+1);
 			player.setExp(0);
 		} else { 
-			player.setExp(totalRatio);
+			player.setExp((float) totalRatio);
 		}
 	}
 	
