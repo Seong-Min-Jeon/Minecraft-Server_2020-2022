@@ -23,6 +23,7 @@ public class INNTicket {
 		kuredrat(player, itemArg, world);
 		beiag(player, itemArg, world);
 		longue(player, itemArg, world);
+		hamabe(player, itemArg, world);
 	}
 
 	public void wargunil(Player player, Item itemArg, World world) {	
@@ -185,6 +186,20 @@ public class INNTicket {
 			if (player.getLocation().getX() <= 852 && player.getLocation().getY() <= 96 && player.getLocation().getZ() <= 548 && 
 					player.getLocation().getX() >= 823 && player.getLocation().getY() >= 63 && player.getLocation().getZ() >= 511) {
 				Location loc = new Location(world,829,74,525);
+				player.teleport(loc);
+				itemArg.remove();
+				player.getWorld().playSound(loc, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);
+				player.setHealth(player.getMaxHealth());
+			}
+		}	
+	}
+	
+	public void hamabe(Player player, Item itemArg, World world) {	
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "하마베 숙박 티켓")) {
+			//하마베 980 62 -4  967 85 6
+			if (player.getLocation().getX() <= 980 && player.getLocation().getY() <= 85 && player.getLocation().getZ() <= 6 && 
+					player.getLocation().getX() >= 967 && player.getLocation().getY() >= 62 && player.getLocation().getZ() >= -4) {
+				Location loc = new Location(world,972,66,1);
 				player.teleport(loc);
 				itemArg.remove();
 				player.getWorld().playSound(loc, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);
