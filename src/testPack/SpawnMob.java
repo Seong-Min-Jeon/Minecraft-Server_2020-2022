@@ -7355,6 +7355,43 @@ public class SpawnMob {
 	}
 	
 	public boolean mob121(LivingEntity entity, Location loc) {
+		// 보스 스켈이 3707 44 3712
+		if (loc.getX() <= 3708 && loc.getY() <= 45 && loc.getZ() <= 3713 && 
+				loc.getX() >= 3706 && loc.getY() >= 43 && loc.getZ() >= 3711) {
+			if (entity.getType() == (EntityType) EntityType.SKELETON) {
+				entity.setCustomName(ChatColor.GRAY + "보스 스켈이" + ChatColor.YELLOW + " [Lv.0]");
+				entity.setCustomNameVisible(true);
+				entity.setMaxHealth(3);
+				entity.setHealth(3);
+				EntityEquipment weapon = entity.getEquipment();
+				ItemStack weaponItem = new ItemStack(Material.PAPER);
+				weapon.setItemInMainHand(weaponItem);
+				EntityEquipment head = entity.getEquipment();
+				ItemStack headItem = new ItemStack(Material.SKELETON_SKULL);
+				head.setHelmet(headItem);
+				EntityEquipment chestplate = entity.getEquipment();
+				ItemStack chestplateItem = new ItemStack(Material.LEATHER_CHESTPLATE);
+				chestplate.setChestplate(chestplateItem);
+				EntityEquipment leggings = entity.getEquipment();
+				ItemStack leggingsItem = new ItemStack(Material.LEATHER_LEGGINGS);
+				leggings.setLeggings(leggingsItem);
+				EntityEquipment boots = entity.getEquipment();
+				ItemStack bootsItem = new ItemStack(Material.LEATHER_BOOTS);
+				boots.setBoots(bootsItem);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, Integer.MAX_VALUE, 3000));
+				return true;
+			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM
+					|| entity.getType() == (EntityType) EntityType.SALMON
+					|| entity.getType() == (EntityType) EntityType.ITEM_FRAME
+					|| entity.getType() == (EntityType) EntityType.DROPPED_ITEM
+					|| entity.getType() == (EntityType) EntityType.ARMOR_STAND
+					|| entity.getType() == (EntityType) EntityType.VILLAGER
+					|| entity.getType() == (EntityType) EntityType.SKELETON_HORSE) {
+				return true;
+			} else {
+				return false;
+			}
+		}
 		return true;
 	}
 	
@@ -7391,6 +7428,46 @@ public class SpawnMob {
 	}
 	
 	public boolean mob130(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob131(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob132(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob133(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob134(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob135(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob136(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob137(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob138(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob139(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob140(LivingEntity entity, Location loc) {
 		return true;
 	}
 

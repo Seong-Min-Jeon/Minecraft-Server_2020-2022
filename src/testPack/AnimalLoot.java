@@ -52,7 +52,7 @@ public class AnimalLoot {
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
 						player.sendMessage(ChatColor.WHITE + "적당한 크기의 돼지고기" + ChatColor.WHITE + "를 획득했다.");
 					}
-				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "은빛 채집도구")) {
+				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "금빛 채집도구")) {
 					int num1 = rnd.nextInt(10);
 					if(num1<=2) { 
 						ItemStack var1 = new ItemStack(Material.PORKCHOP);
@@ -73,7 +73,7 @@ public class AnimalLoot {
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
 						player.sendMessage(ChatColor.YELLOW + "맛있어 보이는 돼지고기" + ChatColor.WHITE + "를 획득했다.");
 					}
-				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "금빛 채집도구")) {
+				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "푸른빛 채집도구")) {
 					int num1 = rnd.nextInt(10);
 					if(num1<=2) { 
 						ItemStack var1 = new ItemStack(Material.PORKCHOP);
@@ -197,7 +197,7 @@ public class AnimalLoot {
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
 						player.sendMessage(ChatColor.WHITE + "유틸리티 등급의 소고기" + ChatColor.WHITE + "를 획득했다.");
 					}
-				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "은빛 채집도구")) {
+				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "금빛 채집도구")) {
 					int num1 = rnd.nextInt(10);
 					if(num1<=2) { 
 						ItemStack var1 = new ItemStack(Material.BEEF);
@@ -218,7 +218,7 @@ public class AnimalLoot {
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
 						player.sendMessage(ChatColor.YELLOW + "스텐다드 등급의 소고기" + ChatColor.WHITE + "를 획득했다.");
 					}
-				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "금빛 채집도구")) {
+				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "푸른빛 채집도구")) {
 					int num1 = rnd.nextInt(10);
 					if(num1<=2) { 
 						ItemStack var1 = new ItemStack(Material.BEEF);
@@ -342,7 +342,7 @@ public class AnimalLoot {
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
 						player.sendMessage(ChatColor.WHITE + "1등급 닭고기" + ChatColor.WHITE + "를 획득했다.");
 					}
-				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "은빛 채집도구")) {
+				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "금빛 채집도구")) {
 					int num1 = rnd.nextInt(10);
 					if(num1<=2) { 
 						ItemStack var1 = new ItemStack(Material.CHICKEN);
@@ -363,7 +363,7 @@ public class AnimalLoot {
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
 						player.sendMessage(ChatColor.YELLOW + "1+등급 닭고기" + ChatColor.WHITE + "를 획득했다.");
 					}
-				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "금빛 채집도구")) {
+				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "푸른빛 채집도구")) {
 					int num1 = rnd.nextInt(10);
 					if(num1<=2) { 
 						ItemStack var1 = new ItemStack(Material.CHICKEN);
@@ -487,7 +487,7 @@ public class AnimalLoot {
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
 						player.sendMessage(ChatColor.WHITE + "램(Lamb) 등급의 양고기" + ChatColor.WHITE + "를 획득했다.");
 					}
-				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "은빛 채집도구")) {
+				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "금빛 채집도구")) {
 					int num1 = rnd.nextInt(10);
 					if(num1<=2) { 
 						ItemStack var1 = new ItemStack(Material.MUTTON);
@@ -508,7 +508,7 @@ public class AnimalLoot {
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
 						player.sendMessage(ChatColor.YELLOW + "호겟 등급의 양고기" + ChatColor.WHITE + "를 획득했다.");
 					}
-				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "금빛 채집도구")) {
+				} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "푸른빛 채집도구")) {
 					int num1 = rnd.nextInt(10);
 					if(num1<=2) { 
 						ItemStack var1 = new ItemStack(Material.MUTTON);

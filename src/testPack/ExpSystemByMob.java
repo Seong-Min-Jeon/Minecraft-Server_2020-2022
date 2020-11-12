@@ -62,7 +62,7 @@ public class ExpSystemByMob {
 		percent += new SpecialEffect().h1(player);
 		exp += exp * percent / 100;
 		
-		double customExpToLevel = (double)((int)((Math.pow(currentLevel, 3)/10) * Math.log10(currentLevel+1) + 10)); // 700, 800, 900렙에 이것만 바꾸면 됨 / 파티원 이벤트랑 퀘스트에도 적용바람
+		double customExpToLevel = (double)((int)((Math.pow(currentLevel, 3)/10) * Math.log10(currentLevel+1) + 10));
 		if(currentLevel >= 1000) {
 			customExpToLevel = 2100000000; //21억
 		} else if(currentLevel >= 900) {
@@ -100,7 +100,7 @@ public class ExpSystemByMob {
 						if(isOk == true) {
 							int partyPlayerLvl = partyPlayer.getLevel();
 							int differ = Math.abs(currentLevel - partyPlayerLvl);
-							partyGiveExp(partyPlayer, (int)(natExp*((100-3*differ)*0.01)));
+							partyGiveExp(partyPlayer, (int)(natExp*((100-2*differ)*0.01)));
 						}
 					}
 				}

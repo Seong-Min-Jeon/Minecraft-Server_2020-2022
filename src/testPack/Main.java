@@ -2172,7 +2172,7 @@ public class Main extends JavaPlugin implements Listener{
 			player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 1,true,false,false));
 		}
 		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "훈제 연어")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 30, 1,true,false,false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 30, 10,true,false,false));
 		}
 		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "코리아 김")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, 100, 5,true,false,false));
@@ -2205,6 +2205,24 @@ public class Main extends JavaPlugin implements Listener{
 		}
 		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "티본 스테이크")) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 300, 2,true,false,false));
+		}
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "하마베산 생선구이")) {
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 1200, 1,true,false,false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 600, 1,true,false,false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 20, 10,true,false,false));
+		}
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "하마베산 생선찜")) {
+			player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 1200, 0,true,false,false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 600, 1,true,false,false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 20, 10,true,false,false));
+		}
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "허니 콤보")) {
+			player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 1200, 2,true,false,false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 20, 10,true,false,false));
+		}
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "레드 콤보")) {
+			player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 1200, 2,true,false,false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 20, 10,true,false,false));
 		}
 		
 		if(player.getInventory().getItemInMainHand().getType() == Material.POTION) {
@@ -3277,7 +3295,7 @@ public class Main extends JavaPlugin implements Listener{
 					if(arrow.getShooter() instanceof Player) {
 						event.setCancelled(true);
 					}
-					event.getEntity().setFireTicks(200);
+					event.getEntity().setFireTicks(120);
 				}
 				if(event.getEntity() instanceof Mob) {
 					SmallFireball arrow = (SmallFireball) event.getDamager();
@@ -3842,7 +3860,7 @@ public class Main extends JavaPlugin implements Listener{
 		}
 		if(event.getEntity().getType() == EntityType.PIG || event.getEntity().getType() == EntityType.COW 
 				|| event.getEntity().getType() == EntityType.CHICKEN || event.getEntity().getType() == EntityType.SHEEP || event.getEntity().getType() == EntityType.VILLAGER
-				|| event.getEntity().getType() == EntityType.HORSE || event.getEntity().getType() == EntityType.SKELETON_HORSE || event.getEntity().getType() == EntityType.DONKEY
+				|| event.getEntity().getType() == EntityType.HORSE || event.getEntity().getType() == EntityType.SKELETON_HORSE || event.getEntity().getType() == EntityType.ZOMBIE_HORSE
 				|| event.getEntity().getType() == EntityType.WOLF || event.getEntity().getType() == EntityType.CAT || event.getEntity().getType() == EntityType.DONKEY) {
 			event.setCancelled(true);
 			return;
@@ -4058,7 +4076,7 @@ public class Main extends JavaPlugin implements Listener{
 						damage = 0.001;
 					}
 					event.setDamage(damage);
-					player.setFireTicks(200);
+					player.setFireTicks(120);
 				}
 			}
 			if (event.getCause() == DamageCause.ENTITY_EXPLOSION) {
@@ -4129,7 +4147,7 @@ public class Main extends JavaPlugin implements Listener{
 						damage = 0.001;
 					}
 					event.setDamage(damage);
-					player.setFireTicks(200);
+					player.setFireTicks(120);
 				}
 			}
 			if(event.getCause() == DamageCause.MAGIC) {
@@ -4943,7 +4961,11 @@ public class Main extends JavaPlugin implements Listener{
 	    		Player player = event.getPlayer();
 	    		if(event.getAction() == Action.RIGHT_CLICK_BLOCK) {
 	    			Block block = event.getClickedBlock();
+	    			
 	    			if(block.getType() == Material.CHEST && event.getPlayer().isOp() == false) {
+	    				event.setCancelled(true);
+	    			}
+	    			if(block.getType() == Material.TRAPPED_CHEST && event.getPlayer().isOp() == false) {
 	    				event.setCancelled(true);
 	    			}
 	    			if(block.getType() == Material.CRAFTING_TABLE && event.getPlayer().isOp() == false) {
@@ -5219,6 +5241,7 @@ public class Main extends JavaPlugin implements Listener{
 		    			lc.open(player, block);
 		    			event.setCancelled(true);
 	    			}
+	    			
 	    		}
 	    		//취소 이벤드
 	    		try {
@@ -5855,7 +5878,7 @@ public class Main extends JavaPlugin implements Listener{
 					ary = im.getLocalizedName().split(",");
 					if(Integer.parseInt(ary[10]) > lvl) {
 						player.getInventory().addItem(item);
-						player.getInventory().setHelmet(null);
+						player.getInventory().setItemInOffHand(null);
 					}
 				} catch(Exception e) {
 					

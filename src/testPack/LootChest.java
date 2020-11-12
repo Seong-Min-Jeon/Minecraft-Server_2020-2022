@@ -83,11 +83,13 @@ public class LootChest {
 					|| block.getX()==3339 && block.getY()==16 && block.getZ()==3792 || block.getX()==3325 && block.getY()==13 && block.getZ()==3788
 					|| block.getX()==3324 && block.getY()==14 && block.getZ()==3784 || block.getX()==3318 && block.getY()==16 && block.getZ()==3791
 					|| block.getX()==3316 && block.getY()==14 && block.getZ()==3799 || block.getX()==3315 && block.getY()==16 && block.getZ()==3809) {
-				int num = rnd.nextInt(10);
+				int num = rnd.nextInt(5);
 				if(num == 0) {
 					if(removeKey(player, "아덴의 저택 보상 열쇠")) {
 						dungeon5(player);
-					} else if(removeKey(player, "숨겨진 아덴의 저택 보상 열쇠")) {
+					}
+				} else if(num == 1) {
+					if(removeKey(player, "숨겨진 아덴의 저택 보상 열쇠")) {
 						dungeon6(player);
 					}
 				}

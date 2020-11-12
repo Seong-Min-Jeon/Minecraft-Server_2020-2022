@@ -34,18 +34,7 @@ public class BossTicket {
 					&& player.getLocation().getZ() <= 3730 && player.getLocation().getX() >= 3686
 					&& player.getLocation().getY() >= 39 && player.getLocation().getZ() >= 3672) {
 				Location loc = new Location(world, 3707, 44, 3712);
-				Skeleton Boss = (Skeleton) world.spawnEntity(loc, EntityType.SKELETON);
-				Boss.setCustomName(ChatColor.GRAY + "보스 스켈이" + ChatColor.YELLOW + " [Lv.0]");
-				Boss.setCustomNameVisible(true);
-				((LivingEntity) Boss).setMaxHealth(3);
-				((LivingEntity) Boss).setHealth(3);
-				EntityEquipment helmet = Boss.getEquipment();
-				ItemStack helmetItem = new ItemStack(Material.SKELETON_SKULL);
-				helmet.setHelmet(helmetItem);
-				EntityEquipment weapon = Boss.getEquipment();
-				ItemStack weaponItem = new ItemStack(Material.PAPER);
-				weapon.setItemInMainHand(weaponItem);
-				Boss.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, Integer.MAX_VALUE, 32700));
+				world.spawnEntity(loc, EntityType.SKELETON);
 				itemArg.remove();
 				itemArg.getLocation().getWorld().playEffect(loc, Effect.SMOKE, 5);
 				itemArg.getLocation().getWorld().playEffect(loc, Effect.SMOKE, 100);

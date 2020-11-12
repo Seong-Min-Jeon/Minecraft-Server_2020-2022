@@ -2650,7 +2650,7 @@ public class Skill {
 					if(player.getHealth() >= 10) {
 						player.setHealth(20);
 					} else {
-						player.setHealth(player.getHealth() + 10);
+						player.setHealth(player.getHealth() + 20);
 					}
 					player.setNoDamageTicks(100);
 					player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 200, 20));
@@ -2672,7 +2672,7 @@ public class Skill {
 					if(player.getHealth() >= 10) {
 						player.setHealth(20);
 					} else {
-						player.setHealth(player.getHealth() + 10);
+						player.setHealth(player.getHealth() + 15);
 					}
 					player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 2));
 					player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_FALLING, 200, 0));
@@ -2700,7 +2700,7 @@ public class Skill {
 				if(player.getHealth() >= 10) {
 					player.setHealth(20);
 				} else {
-					player.setHealth(player.getHealth() + 10);
+					player.setHealth(player.getHealth() + 15);
 				}
 				player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 2));
 				player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_FALLING, 200, 0));
@@ -2857,7 +2857,10 @@ public class Skill {
 					int num = 0;					
 					List<Entity> entitylist = player.getNearbyEntities(5, 5, 5);
 					for (Entity nearEntity : entitylist) {
-						if (nearEntity.getType() != EntityType.PLAYER) {
+						if ((nearEntity.getType() != EntityType.PLAYER) || (nearEntity.getType() != EntityType.PIG) || (nearEntity.getType() != EntityType.COW)
+								|| (nearEntity.getType() != EntityType.CHICKEN) || (nearEntity.getType() != EntityType.SHEEP) || (nearEntity.getType() != EntityType.VILLAGER)
+								|| (nearEntity.getType() != EntityType.HORSE) || (nearEntity.getType() != EntityType.SKELETON_HORSE) || (nearEntity.getType() != EntityType.ZOMBIE_HORSE)
+								|| (nearEntity.getType() != EntityType.WOLF) || (nearEntity.getType() != EntityType.CAT) || (nearEntity.getType() != EntityType.DONKEY)) {
 							if (nearEntity instanceof LivingEntity) {
 								LivingEntity nearMob = (LivingEntity) nearEntity;
 								nearMob.setFireTicks(200);
