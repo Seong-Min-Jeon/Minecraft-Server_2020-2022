@@ -23,7 +23,7 @@ public class LootChest {
 	Random rnd = new Random();
 
 	public void open(Player player, Block block) {
-		if(block.getType() == Material.CHEST) {
+		if(block.getType() == Material.WHITE_GLAZED_TERRACOTTA) {
 			if(block.getX()==3619 && block.getY()==44 && block.getZ()==3792) {
 				if(removeKey(player, "잊혀진 바다 신전 보상 열쇠")) {
 					dungeon1(player);
@@ -75,14 +75,7 @@ public class LootChest {
 					dungeon4(player);
 				}				
 			}
-			if(block.getX()==3334 && block.getY()==13 && block.getZ()==3805 || block.getX()==3336 && block.getY()==14 && block.getZ()==3805 
-					|| block.getX()==3341 && block.getY()==15 && block.getZ()==3807 || block.getX()==3341 && block.getY()==15 && block.getZ()==3810
-					|| block.getX()==3338 && block.getY()==14 && block.getZ()==3802 || block.getX()==3341 && block.getY()==15 && block.getZ()==3800
-					|| block.getX()==3339 && block.getY()==16 && block.getZ()==3797 || block.getX()==3337 && block.getY()==14 && block.getZ()==3796
-					|| block.getX()==3343 && block.getY()==16 && block.getZ()==3795 || block.getX()==3334 && block.getY()==13 && block.getZ()==3792
-					|| block.getX()==3339 && block.getY()==16 && block.getZ()==3792 || block.getX()==3325 && block.getY()==13 && block.getZ()==3788
-					|| block.getX()==3324 && block.getY()==14 && block.getZ()==3784 || block.getX()==3318 && block.getY()==16 && block.getZ()==3791
-					|| block.getX()==3316 && block.getY()==14 && block.getZ()==3799 || block.getX()==3315 && block.getY()==16 && block.getZ()==3809) {
+			if(block.getX()==3329 && block.getY()==14 && block.getZ()==3782) {
 				int num = rnd.nextInt(5);
 				if(num == 0) {
 					if(removeKey(player, "아덴의 저택 보상 열쇠")) {
@@ -1618,7 +1611,7 @@ public class LootChest {
 		ArrayList<String> var1Lore = new ArrayList();
 		var1Lore.add(ChatColor.GRAY + "레벨 제한: 350");
 		var1Lore.add(ChatColor.GRAY + " ");
-		var1Lore.add(ChatColor.GRAY + "기분나쁜 마나가 느껴지는 스태프");
+		var1Lore.add(ChatColor.GRAY + "기분 나쁜 마나가 느껴지는 스태프");
 		var1Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var1Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var1Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);

@@ -291,7 +291,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("woolring")) { 
 			
 		} else {
-			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/774553061200363530/aile_texture_pack_2.zip");
+			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/777088401862033408/aile_texture_pack_3.zip");
 		}
 		
 		//Message
@@ -754,18 +754,20 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("yumehama") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
 //		if(player.getDisplayName().equalsIgnoreCase("WoolRing") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
 		
-//		ItemStack var1 = new ItemStack(Material.SPRUCE_SLAB);
+//		ItemStack var1 = new ItemStack(Material.IRON_HELMET);
 //		ItemMeta var1Im = var1.getItemMeta();
-//		var1Im.setLocalizedName("200,200,10,100,50,200,50,50,50,100,200");
-//		var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "요정 대장장이의 창");
+//		var1Im.setLocalizedName("300,200,200,300,100,500,800,800,800,500,400");
+//		var1Im.setDisplayName(ChatColor.AQUA + "호크아이");
 //		ArrayList<String> var1Lore = new ArrayList();
-//		var1Lore.add(ChatColor.GRAY + "레벨 제한: 200");
+//		var1Lore.add(ChatColor.GRAY + "레벨 제한: 400");
 //		var1Lore.add(ChatColor.GRAY + " ");
-//		var1Lore.add(ChatColor.GRAY + "요정 왕국이 타락하기 이전 요정 대장장이가");
-//		var1Lore.add(ChatColor.GRAY + "빛의 힘을 연구하며 만들어낸 창");
+//		var1Lore.add(ChatColor.GRAY + "과거 활에 특화된 전사가 사용하던 헬멧");
+//		var1Lore.add(ChatColor.GRAY + " ");
+//		var1Lore.add(ChatColor.BLUE + "-원거리 공격 시 독 데미지 192");
 //		var1Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 //		var1Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 //		var1Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var1Im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
 //		var1Im.setUnbreakable(true);
 //		var1Im.setLore(var1Lore);
 //		var1.setItemMeta(var1Im);
@@ -773,14 +775,14 @@ public class Main extends JavaPlugin implements Listener{
 //		
 //		ItemStack var2 = new ItemStack(Material.MOSSY_STONE_BRICK_STAIRS);
 //		ItemMeta var2Im = var2.getItemMeta();
-//		var2Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,210");
-//		var2Im.setDisplayName(ChatColor.AQUA + "타락한 반지");
+//		var2Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,400");
+//		var2Im.setDisplayName(ChatColor.AQUA + "녹슨 반지");
 //		ArrayList<String> var2Lore = new ArrayList();
-//		var2Lore.add(ChatColor.GRAY + "레벨 제한: 210");
+//		var2Lore.add(ChatColor.GRAY + "레벨 제한: 400");
 //		var2Lore.add(ChatColor.GRAY + " ");
-//		var2Lore.add(ChatColor.GRAY + "에일의 요정들과 함께 타락해버린 반지");
+//		var2Lore.add(ChatColor.GRAY + "아라크네의 독에 잠식되어 녹슬게 된 반지");
 //		var2Lore.add(ChatColor.GRAY + " ");
-//		var2Lore.add(ChatColor.BLUE + "-전투 경험치 10% 증가");
+//		var2Lore.add(ChatColor.BLUE + "-근접 공격 시 독 데미지 192");
 //		var2Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 //		var2Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 //		var2Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -879,14 +881,12 @@ public class Main extends JavaPlugin implements Listener{
 		
 //		ItemStack helmet = new ItemStack(Material.IRON_HELMET);
 //		ItemMeta helmetIm = helmet.getItemMeta();
-//		helmetIm.setLocalizedName("0,30,30,30,0,400,30,30,30,50,330");
-//		helmetIm.setDisplayName(ChatColor.GREEN + "에보니 헬멧");
+//		helmetIm.setLocalizedName("0,0,1000,0,200,500,0,0,0,150,380");
+//		helmetIm.setDisplayName(ChatColor.GREEN + "F-Killer 헬멧");
 //		ArrayList<String> helmetLore = new ArrayList();
-//		helmetLore.add(ChatColor.GRAY + "레벨 제한: 330");
+//		helmetLore.add(ChatColor.GRAY + "레벨 제한: 380");
 //		helmetLore.add(ChatColor.GRAY + " ");
-//		helmetLore.add(ChatColor.GRAY + "에보니 주괴로 만들어진 헬멧");
-//		helmetLore.add(ChatColor.GRAY + "대장장이의 솜씨로 좋은 품질을");
-//		helmetLore.add(ChatColor.GRAY + "가지게 되었다.");
+//		helmetLore.add(ChatColor.GRAY + "벌레를 학살하기 위해 만들어진 헬멧");
 //		helmetLore.add(ChatColor.GRAY + "(세트 아이템)");
 //		helmetIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 //		helmetIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -898,14 +898,12 @@ public class Main extends JavaPlugin implements Listener{
 //
 //		ItemStack chestplate = new ItemStack(Material.IRON_CHESTPLATE);
 //		ItemMeta chestplateIm = chestplate.getItemMeta();
-//		chestplateIm.setLocalizedName("0,30,30,30,0,400,30,30,30,50,330");
-//		chestplateIm.setDisplayName(ChatColor.GREEN + "에보니 갑옷");
+//		chestplateIm.setLocalizedName("0,0,1000,0,200,500,0,0,0,150,380");
+//		chestplateIm.setDisplayName(ChatColor.GREEN + "F-Killer 갑옷");
 //		ArrayList<String> chestplateLore = new ArrayList();
-//		chestplateLore.add(ChatColor.GRAY + "레벨 제한: 330");
+//		chestplateLore.add(ChatColor.GRAY + "레벨 제한: 380");
 //		chestplateLore.add(ChatColor.GRAY + " ");
-//		chestplateLore.add(ChatColor.GRAY + "에보니 주괴로 만들어진 갑옷");
-//		chestplateLore.add(ChatColor.GRAY + "대장장이의 솜씨로 좋은 품질을");
-//		chestplateLore.add(ChatColor.GRAY + "가지게 되었다.");
+//		chestplateLore.add(ChatColor.GRAY + "벌레를 학살하기 위해 만들어진 갑옷");
 //		chestplateLore.add(ChatColor.GRAY + "(세트 아이템)");
 //		chestplateIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 //		chestplateIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -917,14 +915,12 @@ public class Main extends JavaPlugin implements Listener{
 //
 //		ItemStack leggings = new ItemStack(Material.IRON_LEGGINGS);
 //		ItemMeta leggingsIm = leggings.getItemMeta();
-//		leggingsIm.setLocalizedName("0,30,30,30,0,400,30,30,30,50,330");
-//		leggingsIm.setDisplayName(ChatColor.GREEN + "에보니 각반");
+//		leggingsIm.setLocalizedName("0,0,1000,0,200,500,0,0,0,150,380");
+//		leggingsIm.setDisplayName(ChatColor.GREEN + "F-Killer 각반");
 //		ArrayList<String> leggingsLore = new ArrayList();
-//		leggingsLore.add(ChatColor.GRAY + "레벨 제한: 330");
+//		leggingsLore.add(ChatColor.GRAY + "레벨 제한: 380");
 //		leggingsLore.add(ChatColor.GRAY + " ");
-//		leggingsLore.add(ChatColor.GRAY + "에보니 주괴로 만들어진 각반");
-//		leggingsLore.add(ChatColor.GRAY + "대장장이의 솜씨로 좋은 품질을");
-//		leggingsLore.add(ChatColor.GRAY + "가지게 되었다.");
+//		leggingsLore.add(ChatColor.GRAY + "벌레를 학살하기 위해 만들어진 각반");
 //		leggingsLore.add(ChatColor.GRAY + "(세트 아이템)");
 //		leggingsIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 //		leggingsIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -936,14 +932,12 @@ public class Main extends JavaPlugin implements Listener{
 //
 //		ItemStack boots = new ItemStack(Material.IRON_BOOTS);
 //		ItemMeta bootsIm = boots.getItemMeta();
-//		bootsIm.setLocalizedName("0,30,30,30,0,400,30,30,30,50,330");
-//		bootsIm.setDisplayName(ChatColor.GREEN + "에보니 신발");
+//		bootsIm.setLocalizedName("0,0,1000,0,200,500,0,0,0,150,380");
+//		bootsIm.setDisplayName(ChatColor.GREEN + "F-Killer 신발");
 //		ArrayList<String> bootsLore = new ArrayList();
-//		bootsLore.add(ChatColor.GRAY + "레벨 제한: 330");
+//		bootsLore.add(ChatColor.GRAY + "레벨 제한: 380");
 //		bootsLore.add(ChatColor.GRAY + " ");
-//		bootsLore.add(ChatColor.GRAY + "에보니 주괴로 만들어진 신발");
-//		bootsLore.add(ChatColor.GRAY + "대장장이의 솜씨로 좋은 품질을");
-//		bootsLore.add(ChatColor.GRAY + "가지게 되었다.");
+//		bootsLore.add(ChatColor.GRAY + "벌레를 학살하기 위해 만들어진 신발");
 //		bootsLore.add(ChatColor.GRAY + "(세트 아이템)");
 //		bootsIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 //		bootsIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -2517,6 +2511,10 @@ public class Main extends JavaPlugin implements Listener{
 			player.sendMessage(ChatColor.RED + "드랍 불가 아이템입니다.");
 			event.setCancelled(true);
 		}
+		if(event.getItemDrop().getItemStack().getType() == Material.SADDLE) {
+			player.sendMessage(ChatColor.RED + "드랍 불가 아이템입니다.");
+			event.setCancelled(true);
+		}
 	}
 	
 	@EventHandler
@@ -2573,6 +2571,32 @@ public class Main extends JavaPlugin implements Listener{
 		} catch(Exception e) {
 			
 		}
+		// animal Loot
+		try {
+			if (event.getDamager() instanceof Player) {
+				Player player = (Player) event.getDamager();
+				Location loc = player.getLocation();
+				Entity animal = event.getEntity();
+				AnimalLoot animalLoot = new AnimalLoot();
+				boolean isOk = animalLoot.Loot(player, animal, loc);
+				if (isOk == true) {
+					event.setCancelled(true);
+					return;
+				}
+			}
+		} catch (Exception e) {
+
+		}
+		// non attackable entity
+		if(event.getEntity().getType() == EntityType.VILLAGER || event.getEntity().getType() == EntityType.PIG 
+				|| event.getEntity().getType() == EntityType.CHICKEN || event.getEntity().getType() == EntityType.COW
+				|| event.getEntity().getType() == EntityType.SHEEP || event.getEntity().getType() == EntityType.WOLF
+				|| event.getEntity().getType() == EntityType.HORSE || event.getEntity().getType() == EntityType.SKELETON_HORSE
+				|| event.getEntity().getType() == EntityType.DONKEY
+				|| event.getEntity().getType() == EntityType.CAT || event.getEntity().getType() == EntityType.ARMOR_STAND) {
+			event.setCancelled(true);
+			return;
+		}
 		// riding horse
 		try {
 			if(event.getDamager() instanceof Player) {
@@ -2595,19 +2619,6 @@ public class Main extends JavaPlugin implements Listener{
 			}
 		} catch (Exception e) {
 
-		}
-		//villager hit
-		try {
-			if (event.getDamager() instanceof Player) {
-				if(event.getEntity() instanceof Villager) {
-					if(!event.getDamager().isOp()) {
-						event.setCancelled(true);
-						return;
-					}
-				}
-			}
-		} catch(Exception e) {
-			
 		}
 		//enderman target
 		try {
@@ -3030,22 +3041,6 @@ public class Main extends JavaPlugin implements Listener{
 							}
 						}
 					}
-				}
-			}
-		} catch (Exception e) {
-
-		}
-		//animal Loot
-		try {
-			if (event.getDamager() instanceof Player) {
-				Player player = (Player) event.getDamager();
-				Location loc = player.getLocation();
-				Entity animal = event.getEntity();
-				AnimalLoot animalLoot = new AnimalLoot();
-				boolean isOk = animalLoot.Loot(player, animal, loc);
-				if (isOk == true) {
-					event.setCancelled(true);
-					return;
 				}
 			}
 		} catch (Exception e) {
@@ -3652,6 +3647,7 @@ public class Main extends JavaPlugin implements Listener{
 				// 타격 시 확률적 마나 증가
 				int num = 0;
 				num += new SpecialEffect().a1(player);
+				num += new SpecialEffect().a9(player);
 				
 				if(rnd.nextInt(100) < num) {
 					ItemStack mana = new ItemStack(Material.HEART_OF_THE_SEA);
@@ -3683,6 +3679,20 @@ public class Main extends JavaPlugin implements Listener{
 				PotionRatio pr = new PotionRatio();
 				pr.calculation(player, addHealth);
 				//===========================================================================
+				// 독뎀
+				int poison = 0;
+				poison += new SpecialEffect().a10(player);
+				
+				if(poison != 0) {
+					if(entity.getType() == EntityType.ZOMBIE || entity.getType() == EntityType.ZOMBIE_VILLAGER || entity.getType() == EntityType.HUSK
+							|| entity.getType() == EntityType.DROWNED || entity.getType() == EntityType.SKELETON || entity.getType() == EntityType.WITHER_SKELETON
+							|| entity.getType() == EntityType.WITHER) {
+						((LivingEntity) entity).addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, poison));
+					} else {
+						((LivingEntity) entity).addPotionEffect(new PotionEffect(PotionEffectType.HARM, 200, poison));
+					}
+				}
+				//===========================================================================
 				PlayerHitDebuff debuff = new PlayerHitDebuff();
 				debuff.playerHitDebuff(player, entity);
 			}
@@ -3703,6 +3713,20 @@ public class Main extends JavaPlugin implements Listener{
 				
 				PotionRatio pr = new PotionRatio();
 				pr.calculation(player, addHealth);
+				//===========================================================================
+				// 독뎀
+				int poison = 0;
+				poison += new SpecialEffect().h2(player);
+				
+				if(poison != 0) {
+					if(entity.getType() == EntityType.ZOMBIE || entity.getType() == EntityType.ZOMBIE_VILLAGER || entity.getType() == EntityType.HUSK
+							|| entity.getType() == EntityType.DROWNED || entity.getType() == EntityType.SKELETON || entity.getType() == EntityType.WITHER_SKELETON
+							|| entity.getType() == EntityType.WITHER) {
+						((LivingEntity) entity).addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, poison));
+					} else {
+						((LivingEntity) entity).addPotionEffect(new PotionEffect(PotionEffectType.HARM, 200, poison));
+					}
+				}
 				//===========================================================================
 				PlayerHitDebuff debuff = new PlayerHitDebuff();
 				debuff.playerHitDebuff(player, entity);
@@ -5236,7 +5260,7 @@ public class Main extends JavaPlugin implements Listener{
 	    				event.setCancelled(true);
 	    			}
 	    			
-	    			if(block.getType() == Material.CHEST && event.getPlayer().isOp() == false) {
+	    			if(block.getType() == Material.WHITE_GLAZED_TERRACOTTA) {
 	    				LootChest lc = new LootChest();
 		    			lc.open(player, block);
 		    			event.setCancelled(true);

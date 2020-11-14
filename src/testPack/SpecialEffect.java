@@ -100,11 +100,44 @@ public class SpecialEffect {
 		return 0;
 	}
 	
+	public int a9(Player player) {
+		try {
+			if(player.getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "푸른 기운의 반지")) {
+				return 3;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+	public int a10(Player player) {
+		try {
+			if(player.getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "녹슨 반지")) {
+				return 5;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
 	public int h1(Player player) {
 		try {
 			if(player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "삼보룡")) {
+				return 5;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+	public int h2(Player player) {
+		try {
+			if(player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "호크아이")) {
 				return 5;
 			}
 		} catch(Exception e) {
