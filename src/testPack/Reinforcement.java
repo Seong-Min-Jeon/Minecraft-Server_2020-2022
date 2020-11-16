@@ -1,5 +1,6 @@
 package testPack;
 
+import java.util.ArrayList;
 import java.util.Map;
 import java.util.Random;
 
@@ -21,6 +22,11 @@ public class Reinforcement {
 	private final int percentArrowKami = 100; //100  70
 
 	public ItemMeta coalReinWeapon(Player player, ItemMeta item, ItemMeta itemResource) {
+		
+		if(!durability(item)) {
+			player.sendMessage("내구도가 0인 장비에는 강화의 효력이 나타나지 않습니다.");
+			return item;
+		} 
 		
 		String[] ary = item.getLocalizedName().split(",");
 		
@@ -623,6 +629,11 @@ public class Reinforcement {
 	
 	public ItemMeta ironReinWeapon(Player player, ItemMeta item, ItemMeta itemResource) {
 		
+		if(!durability(item)) {
+			player.sendMessage("내구도가 0인 장비에는 강화의 효력이 나타나지 않습니다.");
+			return item;
+		} 
+		
 		String[] ary = item.getLocalizedName().split(",");
 		
 		//철 1
@@ -984,6 +995,11 @@ public class Reinforcement {
 	}
 	
 	public ItemMeta goldReinWeapon(Player player, ItemMeta item, ItemMeta itemResource) {
+		
+		if(!durability(item)) {
+			player.sendMessage("내구도가 0인 장비에는 강화의 효력이 나타나지 않습니다.");
+			return item;
+		} 
 		
 		String[] ary = item.getLocalizedName().split(",");
 		
@@ -1407,6 +1423,11 @@ public class Reinforcement {
 	}
 	
 	public ItemMeta diaReinWeapon(Player player, ItemMeta item, ItemMeta itemResource) {
+		
+		if(!durability(item)) {
+			player.sendMessage("내구도가 0인 장비에는 강화의 효력이 나타나지 않습니다.");
+			return item;
+		} 
 		
 		String[] ary = item.getLocalizedName().split(",");
 		
@@ -2398,6 +2419,11 @@ public class Reinforcement {
 	}
 
 	public ItemMeta coalReinArmor(Player player, ItemMeta item, ItemMeta itemResource) {
+		
+		if(!durability(item)) {
+			player.sendMessage("내구도가 0인 장비에는 강화의 효력이 나타나지 않습니다.");
+			return item;
+		} 
 		
 		String[] ary = item.getLocalizedName().split(",");
 		
@@ -3402,6 +3428,11 @@ public class Reinforcement {
 	
 	public ItemMeta ironReinArmor(Player player, ItemMeta item, ItemMeta itemResource) {
 		
+		if(!durability(item)) {
+			player.sendMessage("내구도가 0인 장비에는 강화의 효력이 나타나지 않습니다.");
+			return item;
+		} 
+		
 		String[] ary = item.getLocalizedName().split(",");
 		
 		//철 1
@@ -4239,6 +4270,11 @@ public class Reinforcement {
 	
 	public ItemMeta goldReinArmor(Player player, ItemMeta item, ItemMeta itemResource) {
 		
+		if(!durability(item)) {
+			player.sendMessage("내구도가 0인 장비에는 강화의 효력이 나타나지 않습니다.");
+			return item;
+		} 
+		
 		String[] ary = item.getLocalizedName().split(",");
 		
 		//금 1
@@ -4909,6 +4945,11 @@ public class Reinforcement {
 	}
 	
 	public ItemMeta diaReinArmor(Player player, ItemMeta item, ItemMeta itemResource) {
+		
+		if(!durability(item)) {
+			player.sendMessage("내구도가 0인 장비에는 강화의 효력이 나타나지 않습니다.");
+			return item;
+		} 
 		
 		String[] ary = item.getLocalizedName().split(",");
 		
@@ -5761,6 +5802,51 @@ public class Reinforcement {
 			
 		}
 		return data;
+	}
+	
+	public boolean durability(ItemMeta item) {
+		try {
+			ArrayList<String> lores = (ArrayList<String>) item.getLore();
+			int lineNum = -1;
+			for(int i = 0 ; i < lores.size() ; i++) {
+				if(lores.get(i).split(": ")[0].equals(ChatColor.DARK_GRAY + "내구도")) {
+					lineNum = i;
+					break;
+				}
+			}
+			if(lineNum != -1) {
+				int dura = Integer.parseInt(lores.get(lineNum).split(": ")[1].split("/")[0]);
+				if(dura == 0) {
+					return false;
+				} else {
+					dura--;
+				}
+				lores.set(lineNum, ChatColor.DARK_GRAY + "내구도: " + Integer.toString(dura) + "/1000");
+				item.setLore(lores);
+				return true;
+			} else {
+				for(int i = 0 ; i < lores.size() ; i++) {
+					if(lores.get(i).equals("=====인챈트=====")) {
+						lineNum = i;
+						break;
+					}
+				}
+				if(lineNum != -1) {
+					lores.add(lineNum, " ");
+					lores.add(lineNum, ChatColor.DARK_GRAY + "내구도: 999/1000");
+					item.setLore(lores);
+					return true;
+				} else {
+					lores.add(" ");
+					lores.add(ChatColor.DARK_GRAY + "내구도: 999/1000");
+					item.setLore(lores);
+					return true;
+				}
+			}
+		} catch(Exception e) {
+			
+		}
+		return true;
 	}
 	
 	public ItemMeta bowRein1(Player player, ItemMeta item, ItemMeta itemResource) {

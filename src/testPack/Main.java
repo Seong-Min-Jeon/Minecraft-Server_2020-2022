@@ -200,6 +200,7 @@ public class Main extends JavaPlugin implements Listener{
 		getCommand("EmeraldToggle").setExecutor(new Cmd12EmeraldToggle());
 		getCommand("chest").setExecutor(new Cmd13Chest());
 		getCommand("ItemLock").setExecutor(new Cmd14ItemLock());
+		getCommand("skiptutorial").setExecutor(new Cmd15skiptutorial());
 		
 		new RefreshServer();
 //		new NPCHitBox();
@@ -291,7 +292,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("woolring")) { 
 			
 		} else {
-			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/777088401862033408/aile_texture_pack_3.zip");
+			player.setResourcePack("https://cdn.discordapp.com/attachments/698152850349490176/777410216048197632/aile_texture_pack_4.zip");
 		}
 		
 		//Message
@@ -347,394 +348,164 @@ public class Main extends JavaPlugin implements Listener{
 		BossBar bar4 = Bukkit.createBossBar(ChatColor.BOLD + "" + ChatColor.DARK_RED + "레이드", BarColor.RED, BarStyle.SOLID);
 		bar4.setVisible(false);
 		bar4.addPlayer(player);
+		
+		//처음 온 플레이어 상자 배정
 		try {
 			File dataFolder = getDataFolder();
-            if(!dataFolder.exists()) {
-                dataFolder.mkdir();
-            } else {
-            	File file = new File(getDataFolder(), player.getDisplayName() + "_data.dat");
-                if(!file.exists()) {
-                    try {
-                    	file.createNewFile();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                } 
-            }
-		} catch(Exception e) {
-			
-		}
-		try {
-			File dataFolder = getDataFolder();
-            if(!dataFolder.exists()) {
-                dataFolder.mkdir();
-            } else {
-            	File file = new File(getDataFolder(), player.getDisplayName() + "_Qdata.dat");
-                if(!file.exists()) {
-                    try {
-                    	file.createNewFile();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                } else {
-                	FileReader filereader = new FileReader(file);
+	        if(!dataFolder.exists()) {
+	            dataFolder.mkdir();
+	        } else {
+	        	File file = new File(getDataFolder(), "playerInv.dat");
+	            if(!file.exists()) {
+	                try {
+	                	file.createNewFile();
+	                } catch (IOException e) {
+	                    e.printStackTrace();
+	                }
+	            } else {
+	            	FileReader filereader = new FileReader(file);
                     BufferedReader bufReader = new BufferedReader(filereader);
-                    String quest = "";
-                    String num = "";
-                    quest = bufReader.readLine();
-                    num = bufReader.readLine();
-                    if(quest.equals("q1")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.q1(event.getPlayer(), Integer.parseInt(num));
-                    }    
-                    if(quest.equals("q2")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.q2(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("q3")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.q3(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("q4")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.q4(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("q5")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.q5(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("q6")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.q6(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("q7")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.q7(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("q8")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.q8(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("q9")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.q9(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("q10")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.q10(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("q11")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.q11(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("q12")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.q12(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("q13")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.q13(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("q14")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.q14(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("q15")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.q15(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("q16")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.q16(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("q17")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.q17(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("q18")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.q18(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("eq1")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.eq1(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("eq1_1")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.eq1_1(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("eq1_2")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.eq1_2(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("eq1_3")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.eq1_3(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("eq1_4")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.eq1_4(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("eq1_5")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.eq1_5(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("eq1_6")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.eq1_6(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("eq2")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.eq2(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("eq2_1")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.eq2_1(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("eq2_2")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.eq2_2(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq1")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq1(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq2")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq2(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq3")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq3(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq4")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq4(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq5")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq5(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq6")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq6(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq7")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq7(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq8")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq8(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq9")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq9(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq10")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq10(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq11")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq11(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq12")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq12(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq13")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq13(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq14")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq14(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq15")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq15(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq15_1")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq15_1(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq16")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq16(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq17")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq17(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq18")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq18(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq19")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq19(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq20")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq20(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq20_1")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq20_1(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq20_2")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq20_2(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq21")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq21(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq22")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq22(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq23")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq23(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq24")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq24(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq25")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq25(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq26")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq26(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq26_1")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq26_1(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq27")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq27(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq28")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq28(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq29")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq29(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq29_1")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq29_1(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq30")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq30(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq31")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq31(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq32")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq32(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq33")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq33(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq33_1")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq33_1(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq34")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq34(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq34_1")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq34_1(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq35")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq35(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq35_1")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq35_1(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq36")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq36(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq37")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq37(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq37_1")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq37_1(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq37_2")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq37_2(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq38")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq38(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq38_1")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq38_1(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq38_2")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq38_2(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq39")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq39(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq39_1")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq39_1(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq39_2")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq39_2(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq40")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq40(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq41")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq41(event.getPlayer(), Integer.parseInt(num));
-                    }
-                    if(quest.equals("mq41_1")) {
-                    	QuestBoard qb = new QuestBoard();
-                		qb.mq41_1(event.getPlayer(), Integer.parseInt(num));
+                    int x = 0;
+                    String line = bufReader.readLine();
+                    while(line != null) {
+                    	x++;
+                    	if(line.equals(player.getUniqueId().toString())) {
+                    		break;
+                    	}
+                    	line = bufReader.readLine();
+                    }
+                    if(line == null) {
+                        BufferedWriter fw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file,true), "UTF-8"));
+                        fw.write(player.getUniqueId().toString());
+                        fw.write("\n");
+                        fw.write(Integer.toString(10000+x) + "/1/0");
+                        fw.write("\n");
+                        fw.close();
+                        
+                        world = Bukkit.getWorld("world");
+                        Location loc;
+                        loc = new Location(world, 10000+x, 1, 0);
+                        loc.getBlock().setType(Material.CHEST);
+                        loc = new Location(world, 10000+x, 1, 1);
+                        loc.getBlock().setType(Material.CHEST);
+                        loc = new Location(world, 10000+x, 1, 2);
+                        loc.getBlock().setType(Material.CHEST);
+                        loc = new Location(world, 10000+x, 1, 3);
+                        loc.getBlock().setType(Material.CHEST);
+                        loc = new Location(world, 10000+x, 1, 4);
+                        loc.getBlock().setType(Material.CHEST);
+                        loc = new Location(world, 10000+x, 1, 5);
+                        loc.getBlock().setType(Material.CHEST);
+                        loc = new Location(world, 10000+x, 1, 6);
+                        loc.getBlock().setType(Material.CHEST);
+                        loc = new Location(world, 10000+x, 1, 7);
+                        loc.getBlock().setType(Material.CHEST);
+                        loc = new Location(world, 10000+x, 1, 8);
+                        loc.getBlock().setType(Material.CHEST);
+                        loc = new Location(world, 10000+x, 1, 9);
+                        loc.getBlock().setType(Material.CHEST);
+                        loc = new Location(world, 10000+x, 1, 10);
+                        loc.getBlock().setType(Material.CHEST);
+                        loc = new Location(world, 10000+x, 1, 11);
+                        loc.getBlock().setType(Material.CHEST);
+                        loc = new Location(world, 10000+x, 1, 12);
+                        loc.getBlock().setType(Material.CHEST);
+                        loc = new Location(world, 10000+x, 1, 13);
+                        loc.getBlock().setType(Material.CHEST);
+                        loc = new Location(world, 10000+x, 1, 14);
+                        loc.getBlock().setType(Material.CHEST);
+                        loc = new Location(world, 10000+x, 1, 15);
+                        loc.getBlock().setType(Material.CHEST);
+                        loc = new Location(world, 10000+x, 1, 16);
+                        loc.getBlock().setType(Material.CHEST);
+                        loc = new Location(world, 10000+x, 1, 17);
+                        loc.getBlock().setType(Material.CHEST);
+                        loc = new Location(world, 10000+x, 2, 0);
+                        loc.getBlock().setType(Material.CHEST);
+                        loc = new Location(world, 10000+x, 2, 1);
+                        loc.getBlock().setType(Material.CHEST);
+                        loc = new Location(world, 10000+x, 2, 2);
+                        loc.getBlock().setType(Material.CHEST);
+                        loc = new Location(world, 10000+x, 2, 3);
+                        loc.getBlock().setType(Material.CHEST);
+                        loc = new Location(world, 10000+x, 2, 4);
+                        loc.getBlock().setType(Material.CHEST);
+                        loc = new Location(world, 10000+x, 2, 5);
+                        loc.getBlock().setType(Material.CHEST);
+                        loc = new Location(world, 10000+x, 2, 6);
+                        loc.getBlock().setType(Material.CHEST);
+                        loc = new Location(world, 10000+x, 2, 7);
+                        loc.getBlock().setType(Material.CHEST);
+                        loc = new Location(world, 10000+x, 2, 8);
+                        loc.getBlock().setType(Material.CHEST);
+                        loc = new Location(world, 10000+x, 2, 9);
+                        loc.getBlock().setType(Material.CHEST);
+                        loc = new Location(world, 10000+x, 2, 10);
+                        loc.getBlock().setType(Material.CHEST);
+                        loc = new Location(world, 10000+x, 2, 11);
+                        loc.getBlock().setType(Material.CHEST);
+                        loc = new Location(world, 10000+x, 2, 12);
+                        loc.getBlock().setType(Material.CHEST);
+                        loc = new Location(world, 10000+x, 2, 13);
+                        loc.getBlock().setType(Material.CHEST);
+                        loc = new Location(world, 10000+x, 2, 14);
+                        loc.getBlock().setType(Material.CHEST);
+                        loc = new Location(world, 10000+x, 2, 15);
+                        loc.getBlock().setType(Material.CHEST);
+                        loc = new Location(world, 10000+x, 2, 16);
+                        loc.getBlock().setType(Material.CHEST);
+                        loc = new Location(world, 10000+x, 2, 17);
+                        loc.getBlock().setType(Material.CHEST);
                     }
                     bufReader.close();
-                }
-            }
+	            }
+	        }
 		} catch(Exception e) {
 			
 		}
 		
-//		if(player.getDisplayName().equals("yumehama") || player.getDisplayName().equalsIgnoreCase("WoolRing")) {
-//			player.addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, Integer.MAX_VALUE, 0));
-//		}
-		
-		world = player.getWorld();
-		JoinJob jj = new JoinJob();
-		if(!(player.getDisplayName().equalsIgnoreCase("WoolRing1"))) {
-			jj.chooseJob(player);
+		// 생성 가능 캐릭터 파일
+		try {
+			File dataFolder = getDataFolder();
+            if(!dataFolder.exists()) {
+                dataFolder.mkdir();
+            } else {
+            	File dir = new File(getDataFolder() + "/" + player.getUniqueId().toString());
+            	if(!dir.exists()) {
+            		try{
+            		    dir.mkdir(); 
+            		} catch(Exception e) {
+            		    e.getStackTrace();
+            		}
+				}
+				File file = new File(dir, "available_character.dat");
+				if (!file.exists()) {
+					try {
+						file.createNewFile();
+						BufferedWriter fw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), "UTF-8"));
+		                fw.write("1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0");
+		                fw.close();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
+			}
+		} catch (Exception e) {
+			
 		}
+		
+		//플레이어 접속 시 로비로 이동 & 캐릭터 선택창 활성화
+		world = player.getWorld();
+		player.teleport(new Location(world,3665,41,3675.5,180,0));
+		for(PotionEffect effect : player.getActivePotionEffects()){
+	        player.removePotionEffect(effect.getType());
+	    }
+		player.setFireTicks(0);
+		player.getInventory().clear();
+		player.setLevel(0);
+		player.setExp(0);
+		player.setHealth(20);
+		player.setFoodLevel(20);
 		
 		//Mob Spawning Field	
 		new MobThread(player);	
@@ -751,7 +522,7 @@ public class Main extends JavaPlugin implements Listener{
 		masterIm.setUnbreakable(true);
 		masterIm.setLore(masterLore);
 		master.setItemMeta(masterIm);
-		if(player.getDisplayName().equalsIgnoreCase("yumehama") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
 //		if(player.getDisplayName().equalsIgnoreCase("WoolRing") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
 		
 //		ItemStack var1 = new ItemStack(Material.IRON_HELMET);
@@ -1121,7 +892,9 @@ public class Main extends JavaPlugin implements Listener{
 		player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 0.5f);
 		
 		//메인퀘스트
-		new MainQuest(player);
+		if(event.getOldLevel() != 0) {
+			new MainQuest(player);
+		}
 		
 		if(player.getLevel() >= 1) {
 			//본 파이터
@@ -2295,7 +2068,6 @@ public class Main extends JavaPlugin implements Listener{
 		TPScroll tp = new TPScroll();
 		VilTPScroll vilTP = new VilTPScroll();
 		INNTicket ticket = new INNTicket();
-		JobScroll job = new JobScroll();
 		BossTicket boss = new BossTicket();
 		ReinforcementScroll reinScroll = new ReinforcementScroll();
 		DefineScroll define = new DefineScroll();
@@ -2325,14 +2097,16 @@ public class Main extends JavaPlugin implements Listener{
 			ids.openInv(player, itemArg);
 			//제작 스크롤
 			cs.openInv(player, itemArg);
+			//캐릭터 삭제 스크롤
+			new RemoveCharacter(player, itemArg, getDataFolder());
 		} catch(Exception e) {
 			
 		}
 		
 		//직업
 		if (event.getItemDrop().getItemStack().getType() == Material.NETHER_STAR) {
-			job.chooseJob(player, itemArg);
-			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard ());
+			event.setCancelled(true);
+			return;
 		}
 
 		//논드랍 아이템
@@ -4805,8 +4579,48 @@ public class Main extends JavaPlugin implements Listener{
 	    						int qNum = qb.getNum(player);
 		    					qb.mq11(player, qNum+1);
 		    					player.teleport(new Location(world, 3796, 26, 3798));
-		    					ChangeJob cj = new ChangeJob();
-		    					cj.changeJob1(player);
+		    					
+		    					// 생성 가능 캐릭터 파일
+		    					try {
+		    						File dataFolder = getDataFolder();
+		    			            if(!dataFolder.exists()) {
+		    			                dataFolder.mkdir();
+		    			            } else {
+		    			            	File dir = new File(getDataFolder() + "/" + player.getUniqueId().toString());
+		    			            	if(!dir.exists()) {
+		    			            		try{
+		    			            		    dir.mkdir(); 
+		    			            		} catch(Exception e2) {
+		    			            		    e2.getStackTrace();
+		    			            		}
+		    							}
+		    							File file = new File(dir, "available_character.dat");
+		    							try {
+		    								FileReader filereader = new FileReader(file);
+		    			    				BufferedReader bufReader = new BufferedReader(filereader);
+		    			    				String[] num = bufReader.readLine().split(" ");
+		    			    				num[5] = "1";
+		    			    				num[6] = "1";
+		    			    				num[7] = "1";
+		    			    				num[8] = "1";
+		    			    				num[9] = "1";
+		    			    				String str = "";
+		    			    				for(int j = 0 ; j < 17 ; j++) {
+		    			    					str += num[j] + " ";
+		    			    				}
+		    			    				str += num[17];
+	    									BufferedWriter fw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), "UTF-8"));
+	    					                fw.write(str);
+	    					                fw.close();
+	    					                bufReader.close();
+	    								} catch (IOException e2) {
+	    									e2.printStackTrace();
+	    								}
+		    						}
+		    					} catch (Exception e2) {
+		    						
+		    					}
+		    					
 							} else {
 								player.sendMessage(ChatColor.RED + "인벤토리에 빈칸이 없습니다.");
 							}
@@ -4817,10 +4631,6 @@ public class Main extends JavaPlugin implements Listener{
 	    					player.teleport(new Location(world, 3796, 19, 3799.5));
 	    				}
 	    				event.setCancelled(true);
-	    			}
-	    			if(block.getType()==Material.STONE_BUTTON && block.getX()==3796 && block.getZ()==3797) {
-	    				ChangeJob cj = new ChangeJob();
-    					cj.changeJob1(player);
 	    			}
 	    			if(block.getType()==Material.PLAYER_HEAD && block.getX()==-648 && block.getY()==42 && block.getZ()==1332) {
 	    				if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===진실을 아는 자2===")) {
@@ -4915,6 +4725,9 @@ public class Main extends JavaPlugin implements Listener{
 	    				}
 	    				event.setCancelled(true);
 	    			}
+	    			if(block.getType()==Material.STONE_BUTTON && block.getX()==3664 && block.getZ()==3674) {
+	    				new CharacterSelectButton(player, getDataFolder());
+	    			}
 	    		}
 	        }
 		} catch(Exception e) {
@@ -4928,6 +4741,10 @@ public class Main extends JavaPlugin implements Listener{
 	    		if(event.getAction() == Action.RIGHT_CLICK_BLOCK) {
 	    			Block block = event.getClickedBlock();
 	    			if(block.getType() == Material.ENDER_CHEST) {
+	    				
+	    				//저장
+	    				new SaveAll(player, getDataFolder());
+	    				
 	    				Cmd13Chest cc = new Cmd13Chest();
 	    		    	if(cc.isPlayerInSelectAL(player.getUniqueId().toString())) {
 	    		    		int num = cc.getChestNum(player.getUniqueId().toString());
@@ -5832,19 +5649,6 @@ public class Main extends JavaPlugin implements Listener{
 	@EventHandler
 	public void clickInv(InventoryClickEvent event) {
 		if(event.getClick() != ClickType.MIDDLE) {
-			// 2차 전직
-			try {
-				if(event.getInventory().getType() == InventoryType.CHEST) {
-					if(event.getInventory().getSize() == 9) {
-						ItemStack clicked = event.getCurrentItem();
-				        Player player = (Player) event.getWhoClicked();
-				        ChangeJobClick cjc = new ChangeJobClick();
-				        cjc.click(player, clicked);
-					}
-				}
-			} catch(Exception e) {
-				
-			}
 			// 제한레벨
 			try {
 				Player player = (Player) event.getWhoClicked();
@@ -5970,110 +5774,147 @@ public class Main extends JavaPlugin implements Listener{
 			try {
 				ItemStack clicked = event.getCurrentItem();
 		        Player player = (Player) event.getWhoClicked();
-//		        ItemStack item1 = event.getCursor();
-//		        try {
-//		        	 ItemStack item2 = event.getInventory().getItem(event.getSlot());
-//				        if(item1 == item2) {
-//				        	if(item1.getType() == Material.OAK_LEAVES || item1.getType() == Material.SPRUCE_LEAVES || item1.getType() == Material.BIRCH_LEAVES
-//										|| item1.getType() == Material.JUNGLE_LEAVES || item1.getType() == Material.ACACIA_LEAVES || item1.getType() == Material.DARK_OAK_LEAVES
-//										|| item1.getType() == Material.COBBLESTONE_WALL || item1.getType() == Material.MOSSY_COBBLESTONE_WALL || item1.getType() == Material.BROWN_CARPET
-//										|| item1.getType() == Material.GREEN_CARPET || item1.getType() == Material.BLACK_CARPET || item1.getType() == Material.STONE
-//										|| item1.getType() == Material.OAK_PLANKS || item1.getType() == Material.SPRUCE_PLANKS || item1.getType() == Material.BIRCH_PLANKS
-//										|| item1.getType() == Material.JUNGLE_PLANKS || item1.getType() == Material.ACACIA_PLANKS || item1.getType() == Material.DARK_OAK_PLANKS
-//										|| item1.getType() == Material.BEDROCK || item1.getType() == Material.SPRUCE_LOG || item1.getType() == Material.BIRCH_LOG
-//										|| item1.getType() == Material.JUNGLE_LOG || item1.getType() == Material.ACACIA_LOG || item1.getType() == Material.DARK_OAK_LOG
-//										|| item1.getType() == Material.SANDSTONE || item1.getType() == Material.CHISELED_SANDSTONE || item1.getType() == Material.CUT_SANDSTONE
-//										|| item1.getType() == Material.LAPIS_BLOCK || item1.getType() == Material.MAGENTA_WOOL || item1.getType() == Material.LIME_WOOL
-//										|| item1.getType() == Material.GRAY_WOOL || item1.getType() == Material.LIGHT_GRAY_WOOL || item1.getType() == Material.CYAN_WOOL
-//										|| item1.getType() == Material.PURPLE_WOOL || item1.getType() == Material.OAK_SLAB || item1.getType() == Material.SPRUCE_SLAB
-//										|| item1.getType() == Material.BIRCH_SLAB || item1.getType() == Material.JUNGLE_SLAB || item1.getType() == Material.ACACIA_SLAB
-//										|| item1.getType() == Material.DARK_OAK_SLAB || item1.getType() == Material.STONE_SLAB || item1.getType() == Material.COBBLESTONE_SLAB
-//										|| item1.getType() == Material.STONE_BRICK_SLAB || item1.getType() == Material.NETHER_BRICK_SLAB || item1.getType() == Material.QUARTZ_SLAB
-//										|| item1.getType() == Material.RED_SANDSTONE || item1.getType() == Material.RED_SANDSTONE_SLAB || item1.getType() == Material.SMOOTH_RED_SANDSTONE
-//										|| item1.getType() == Material.OBSIDIAN || item1.getType() == Material.SMOOTH_SANDSTONE || item1.getType() == Material.CHISELED_RED_SANDSTONE
-//										|| item1.getType() == Material.CUT_RED_SANDSTONE || item1.getType() == Material.RED_SANDSTONE_STAIRS || item1.getType() == Material.STONE_STAIRS
-//										|| item1.getType() == Material.DEAD_BRAIN_CORAL_BLOCK || item1.getType() == Material.DEAD_BUBBLE_CORAL_BLOCK || item1.getType() == Material.DEAD_FIRE_CORAL_BLOCK
-//										|| item1.getType() == Material.DEAD_HORN_CORAL_BLOCK || item1.getType() == Material.DEAD_TUBE_CORAL_BLOCK || item1.getType() == Material.BRAIN_CORAL_BLOCK
-//										|| item1.getType() == Material.HORN_CORAL_BLOCK || item1.getType() == Material.TUBE_CORAL_BLOCK || item1.getType() == Material.BUBBLE_CORAL_BLOCK
-//										|| item1.getType() == Material.FIRE_CORAL_BLOCK || item1.getType() == Material.POLISHED_GRANITE_STAIRS || item1.getType() == Material.SMOOTH_RED_SANDSTONE_STAIRS 
-//										|| item1.getType() == Material.MOSSY_COBBLESTONE_STAIRS || item1.getType() == Material.MOSSY_STONE_BRICK_STAIRS || item1.getType() == Material.POLISHED_DIORITE_STAIRS
-//										|| item1.getType() == Material.END_STONE_BRICK_STAIRS || item1.getType() == Material.STONE_STAIRS || item1.getType() == Material.SMOOTH_SANDSTONE_STAIRS
-//										|| item1.getType() == Material.SMOOTH_QUARTZ_STAIRS || item1.getType() == Material.GRANITE_STAIRS) {
-//				        		event.setCancelled(true);
-//				        	}        	
-//				        }
-//		        } catch(Exception e) {
-//		        	
-//		        }
 		        if(clicked != null && clicked.getType() == Material.RED_DYE) {
+		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "본 파이터")) {
+		            	player.closeInventory();
+		            	new ReloadPlayerData(player, "boneFighter", getDataFolder());
+		        	}
 		            event.setCancelled(true);
 		            return;
 		        }
 		        if(clicked != null && clicked.getType() == Material.GREEN_DYE) {
+		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "기사")) {
+		            	player.closeInventory();
+		            	new ReloadPlayerData(player, "knight", getDataFolder());
+		        	}
 		            event.setCancelled(true);
 		            return;
 		        }
 		        if(clicked != null && clicked.getType() == Material.LAPIS_LAZULI) {
+		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "프리스트")) {
+		            	player.closeInventory();
+		            	new ReloadPlayerData(player, "priest", getDataFolder());
+		        	}
 		            event.setCancelled(true);
 		            return;
 		        }
 		        if(clicked != null && clicked.getType() == Material.CYAN_DYE) {
+		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "광전사")) {
+		            	player.closeInventory();
+		            	new ReloadPlayerData(player, "berserker1", getDataFolder());
+		        	}
 		            event.setCancelled(true);
 		            return;
 		        }
 		        if(clicked != null && clicked.getType() == Material.LIGHT_GRAY_DYE) {
+		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "도박사")) {
+		            	player.closeInventory();
+		            	new ReloadPlayerData(player, "gambler", getDataFolder());
+		        	}
 		            event.setCancelled(true);
 		            return;
 		        }
 		        if(clicked != null && clicked.getType() == Material.GRAY_DYE) {
+		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "데빌")) {
+		            	player.closeInventory();
+		            	new ReloadPlayerData(player, "devil", getDataFolder());
+		        	}
 		            event.setCancelled(true);
 		            return;
 		        }
 		        if(clicked != null && clicked.getType() == Material.PINK_DYE) {
+		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "엔젤")) {
+		            	player.closeInventory();
+		            	new ReloadPlayerData(player, "angel", getDataFolder());
+		        	}
 		            event.setCancelled(true);
 		            return;
 		        }
 		        if(clicked != null && clicked.getType() == Material.LIME_DYE) {
+		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "대행자")) {
+		            	player.closeInventory();
+		            	new ReloadPlayerData(player, "agent", getDataFolder());
+		        	}
 		            event.setCancelled(true);
 		            return;
 		        }
 		        if(clicked != null && clicked.getType() == Material.YELLOW_DYE) {
+		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "그림자 무사")) {
+		            	player.closeInventory();
+		            	new ReloadPlayerData(player, "shadowKnight", getDataFolder());
+		        	}
 		            event.setCancelled(true);
 		            return;
 		        }
 		        if(clicked != null && clicked.getType() == Material.LIGHT_BLUE_DYE) {
+		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "버서커")) {
+		            	player.closeInventory();
+		            	new ReloadPlayerData(player, "berserker2", getDataFolder());
+		        	}
 		            event.setCancelled(true);
 		            return;
 		        }
 		        if(clicked != null && clicked.getType() == Material.MAGENTA_DYE) {
+		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "군인")) {
+		            	player.closeInventory();
+		            	new ReloadPlayerData(player, "soldier", getDataFolder());
+		        	}
 		            event.setCancelled(true);
 		            return;
 		        }
 		        if(clicked != null && clicked.getType() == Material.ORANGE_DYE) {
+		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "그림 리퍼")) {
+		            	player.closeInventory();
+		            	new ReloadPlayerData(player, "grimReaper", getDataFolder());
+		        	}
 		            event.setCancelled(true);
 		            return;
 		        }
 		        if(clicked != null && clicked.getType() == Material.BLUE_DYE) {
+		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "마인")) {
+		            	player.closeInventory();
+		            	new ReloadPlayerData(player, "akuma", getDataFolder());
+		        	}
 		            event.setCancelled(true);
 		            return;
 		        }
 		        if(clicked != null && clicked.getType() == Material.BROWN_DYE) {
+		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "팔라딘")) {
+		            	player.closeInventory();
+		            	new ReloadPlayerData(player, "paladin", getDataFolder());
+		        	}
 		            event.setCancelled(true);
 		            return;
 		        }
 		        if(clicked != null && clicked.getType() == Material.BLACK_DYE) {
+		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "용기사")) {
+		            	player.closeInventory();
+		            	new ReloadPlayerData(player, "dragonKnight", getDataFolder());
+		        	}
 		            event.setCancelled(true);
 		            return;
 		        }
 		        if(clicked != null && clicked.getType() == Material.INK_SAC) {
-		            event.setCancelled(true);
-		            return;
-		        }
-		        if(clicked != null && clicked.getType() == Material.GLOWSTONE_DUST) {
+		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "대대장")) {
+		            	player.closeInventory();
+		            	new ReloadPlayerData(player, "commander", getDataFolder());
+		        	}
 		            event.setCancelled(true);
 		            return;
 		        }
 		        if(clicked != null && clicked.getType() == Material.CLAY_BALL) {
+		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "아처")) {
+		            	player.closeInventory();
+		            	new ReloadPlayerData(player, "archer", getDataFolder());
+		        	}
+		            event.setCancelled(true);
+		            return;
+		        }
+		        if(clicked != null && clicked.getType() == Material.GLOWSTONE_DUST) {
+		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "파워레인저")) {
+		            	player.closeInventory();
+		            	new ReloadPlayerData(player, "powerRanger", getDataFolder());
+		        	}
 		            event.setCancelled(true);
 		            return;
 		        }
@@ -6137,6 +5978,59 @@ public class Main extends JavaPlugin implements Listener{
 		        		event.setCancelled(true);
 		        		return;
 		        	}
+		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "캐릭터 생성")) {
+		        		player.closeInventory();
+		        		Inventory inv = event.getInventory();
+		        		if((inv.getItem(0) != null) && (inv.getItem(1) != null) && (inv.getItem(2) != null)
+		        				&& (inv.getItem(3) != null) && (inv.getItem(4) != null)) {
+		        			player.sendMessage(ChatColor.BOLD + "캐릭터는 5명까지만 생성할 수 있습니다.");
+		        		} else {
+		        			new NewCharacter(player, getDataFolder());
+		        		}
+		        		event.setCancelled(true);
+		        		return;
+		        	}
+		            event.setCancelled(true);
+		            return;
+		        }
+		        if(clicked != null && clicked.getType() == Material.NETHER_STAR) {
+		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "본 파이터의 별")) {
+		        		new AddCharacter(player, "boneFighter", getDataFolder());
+		        	} else if(clicked.getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "기사의 별")) {
+		        		new AddCharacter(player, "knight", getDataFolder());
+		        	} else if(clicked.getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "프리스트의 별")) {
+		        		new AddCharacter(player, "priest", getDataFolder());
+		        	} else if(clicked.getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "광전사의 별")) {
+		        		new AddCharacter(player, "berserker1", getDataFolder());
+		        	} else if(clicked.getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "도박사의 별")) {
+		        		new AddCharacter(player, "gambler", getDataFolder());
+		        	} else if(clicked.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "그림자 무사의 별")) {
+		        		new AddCharacter(player, "shadowKnight", getDataFolder());
+		        	} else if(clicked.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "버서커의 별")) {
+		        		new AddCharacter(player, "berserker2", getDataFolder());
+		        	} else if(clicked.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "군인의 별")) {
+		        		new AddCharacter(player, "soldier", getDataFolder());
+		        	} else if(clicked.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "그림 리퍼의 별")) {
+		        		new AddCharacter(player, "grimReaper", getDataFolder());
+		        	} else if(clicked.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "아처의 별")) {
+		        		new AddCharacter(player, "archer", getDataFolder());
+		        	} else if(clicked.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "데빌의 별")) {
+		        		new AddCharacter(player, "devil", getDataFolder());
+		        	} else if(clicked.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "엔젤의 별")) {
+		        		new AddCharacter(player, "angel", getDataFolder());
+		        	} else if(clicked.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "대행자의 별")) {
+		        		new AddCharacter(player, "agent", getDataFolder());
+		        	} else if(clicked.getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "마인의 별")) {
+		        		new AddCharacter(player, "akuma", getDataFolder());
+		        	} else if(clicked.getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "팔라딘의 별")) {
+		        		new AddCharacter(player, "paladin", getDataFolder());
+		        	} else if(clicked.getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "용기사의 별")) {
+		        		new AddCharacter(player, "dragonKnight", getDataFolder());
+		        	} else if(clicked.getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "대대장의 별")) {
+		        		new AddCharacter(player, "commander", getDataFolder());
+		        	} else if(clicked.getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "파워레인저의 별")) {
+		        		new AddCharacter(player, "powerRanger", getDataFolder());
+		        	}
 		            event.setCancelled(true);
 		            return;
 		        }
@@ -6164,6 +6058,9 @@ public class Main extends JavaPlugin implements Listener{
 	public void offPlayer(PlayerQuitEvent event) {
 		Player player = event.getPlayer();		
 		
+		//adventure
+		player.setGameMode(GameMode.ADVENTURE);
+		
 		// Ban
 		if ((player.getUniqueId().toString().equalsIgnoreCase("5d5f3cf5-bbec-4dba-b97c-fe2ddf900191"))) {
 			event.setQuitMessage(null);
@@ -6182,7 +6079,7 @@ public class Main extends JavaPlugin implements Listener{
 		} else if(player.getDisplayName().equalsIgnoreCase("Akilae3102")) {
 			event.setQuitMessage("천저 준제가 슬픈 " + ChatColor.AQUA + "'최강의 듀얼리스트' 아킬레가 세상을 떠났습니다.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Espina_ID")) {
-			event.setQuitMessage(ChatColor.BOLD + "'그림쟁이' 에스피나가 그림을 그리러 떠났습니다.");
+			event.setQuitMessage(ChatColor.BOLD + "'훈련병' 에스피나의 시간이 얼마 남지 않았습니다.");
 		} else if(player.getDisplayName().equalsIgnoreCase("KangOSung")) {
 			event.setQuitMessage(ChatColor.BOLD + "'일이 생긴' 캉님이 급히 떠났습니다.");
 		} else {
@@ -6304,413 +6201,12 @@ public class Main extends JavaPlugin implements Listener{
 					
 				}
 			}
-		}		
-		try {
-			File dataFolder = getDataFolder();
-            if(!dataFolder.exists()) {
-                dataFolder.mkdir();
-            } else {
-            	File file = new File(getDataFolder(), player.getDisplayName() + "_data.dat");
-                if(!file.exists()) {
-                    try {
-                    	file.createNewFile();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                } else {
-                	long time = System.currentTimeMillis(); 
-            		SimpleDateFormat dayTime = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-            		String str = dayTime.format(new Date(time));
-            		
-                	FileReader filereader = new FileReader(file);
-                    BufferedReader bufReader = new BufferedReader(filereader);
-                    String line = "";
-                    BufferedWriter fw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file, true), "UTF-8"));
-                    fw.write("\n" + str);
-                    fw.write("\n" + "player name: " + player.getDisplayName());
-                    fw.write("\n" + "player location: " + (int)(player.getLocation().getX()) + " " + (int)(player.getLocation().getY()) + " " + (int)(player.getLocation().getZ()));
-                    fw.write("\n" + "레벨: " + player.getLevel() + " 경험치: " + "(" + (int)(player.getExp()*player.getExpToLevel()) + "/" + player.getExpToLevel() + ")"
-                    		+ " 최대체력: " + player.getMaxHealth());
-                    fw.write("\n");
-                    for(int i = 0 ; i<41 ; i++){                    
-                    	 try {
-                    		 fw.write(player.getInventory().getItem(i).getItemMeta().getDisplayName());        
-                    		 fw.write("(" + player.getInventory().getItem(i).getType() + ")"); 
-                    		 fw.write(String.valueOf(player.getInventory().getItem(i).getAmount()));
-                    		 fw.write(" / ");
-                    	 } catch(Exception e) {
-                    		
-                    	 }                   
-                    }
-                    fw.write("\n");
-                    fw.close();
-                    bufReader.close();
-                }
-            }
-		} catch(Exception e) {
-			
-		}
-		try {
-			File dataFolder = getDataFolder();
-            if(!dataFolder.exists()) {
-                dataFolder.mkdir();
-            } else {
-            	File file = new File(getDataFolder(), player.getDisplayName() + "_Qdata.dat");
-                if(!file.exists()) {
-                    try {
-                    	file.createNewFile();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                } else {                	
-                	FileReader filereader = new FileReader(file);
-                    BufferedReader bufReader = new BufferedReader(filereader);
-                    FileWriter fw = new FileWriter(file, false);              
-                    QuestBoard qb = new QuestBoard();
-            		if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===해안의 위협===")) {
-            				int number =  qb.getNum(player);
-            				fw.write("q1\n");
-            				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===해적선의 보물===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("q2\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===포보르의 말단===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("q3\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===밀 사냥꾼===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("q4\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===침략자===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("q5\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===숲 깊은 곳===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("q6\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===유적을 정화하는 자===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("q7\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===같아보이지만 다른===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("q8\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===포보르의 위협===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("q9\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===탈환===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("q10\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===네크로벨리===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("q11\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===데빌 인자===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("q12\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===새로운 고블린===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("q13\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===불의 악마===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("q14\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===방해받은 파괴수의 잠I===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("q15\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===묘지를 지키는 자===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("q16\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===폭탄병===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("q17\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===에밀의 결의===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("q18\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===설원의 가희1===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("eq1\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===설원의 가희2===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("eq1_1\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===설원의 가희3===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("eq1_2\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===설원의 가희4===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("eq1_3\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===설원의 가희5===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("eq1_4\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===설원의 가희6===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("eq1_5\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===설원의 가희7===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("eq1_6\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===마신왕의 계약1===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("eq2\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===마신왕의 계약2===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("eq2_1\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===마신왕의 계약3===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("eq2_2\n");
-        				fw.write(Integer.toString(number));
-            		}  else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===워그닐 섬의 비밀===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq1\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===수련의 시작===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq2\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===에일 땅으로===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq3\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===촌장의 부탁1===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq4\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===촌장의 부탁2===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq5\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===촌장의 부탁3===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq6\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===전설의 시작===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq7\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===파르홀론의 역사===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq8\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===앞으로 나아가기 위한 여정===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq9\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===등대지기 시험===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq10\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===등대에 숨겨진 비밀===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq11\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===등대를 밝히는 힘===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq12\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===시드 광산으로 가는 길===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq13\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===시드 광산===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq14\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===포보르의 무기1===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq15\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===포보르의 무기2===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq15_1\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===미푀르유 성===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq16\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===은빛의 영역===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq17\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===진실을 아는 자1===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq18\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===진실을 아는 자2===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq19\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===진실을 아는 자3===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq20\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===진실을 아는 자4===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq20_1\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===진실을 아는 자5===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq20_2\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===진실을 아는 자6===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq21\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===아란모어===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq22\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===던전 탐색===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq23\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===카루 던전===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq24\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===설원의 보물1===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq25\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===설원의 보물2===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq26\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===설원의 보물3===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq26_1\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===새로운 만남===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq27\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===늪지의 마신왕===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq28\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===죽음의 탑1===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq29\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===죽음의 탑2===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq29_1\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===되살아난 해골===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq30\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===영혼 요정 가루===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq31\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===너의 근육을 먹고 싶어===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq32\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===그대는 빨간모자===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq33\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===빨간모자 이야기1===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq33_1\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===또다시 빨간모자===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq34\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===빨간모자 이야기2===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq34_1\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===마법탑을 향해===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq35\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===포보르의 마나===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq35_1\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===이것이 포보르 왕?===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq36\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===누가 우는 소리를 내었는가===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq37\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===떠도는 망령===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq37_1\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===아이 달래기===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq37_2\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===누가 또 우는 소리를 내었는가===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq38\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===수상한 몬스터===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq38_1\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===아이에게 보답을===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq38_2\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===네비의 힘1===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq39\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===네비의 힘2===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq39_1\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===네비의 힘3===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq39_2\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===아라크네의 저주===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq40\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===검은 흐름의 힘===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq41\n");
-        				fw.write(Integer.toString(number));
-            		} else if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===흐름의 봉인을 위해===")) {
-        				int number =  qb.getNum(player);
-        				fw.write("mq41_1\n");
-        				fw.write(Integer.toString(number));
-            		}            		
-                    fw.close();
-                    bufReader.close();
-                }
-            }
-		} catch(Exception e) {
-			
-		}
+		}	
+		
+		//저장
+		new SaveAll(player, getDataFolder());
+		
+		//파티클 제거
 		try {
 			ParticleData pd = new ParticleData(player.getUniqueId());
 			if(pd.hasID()) {
@@ -6720,6 +6216,8 @@ public class Main extends JavaPlugin implements Listener{
 		} catch(Exception e) {
 			
 		}
+		
+		//파티 제거
 		try {
 			Cmd8Party cp = new Cmd8Party();
 			ArrayList<Player> party = cp.getPlayerParty(player);

@@ -3130,7 +3130,7 @@ public class MobLoot {
 			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		}
 		
-		int num2 = rnd.nextInt(30);
+		int num2 = rnd.nextInt(20);
 		if (num2 <= 0) {
 			Location chestLoc = new Location(player.getWorld(), -1833, 92, 3036);
 			Block block = chestLoc.getBlock();

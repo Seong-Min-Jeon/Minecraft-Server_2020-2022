@@ -44,4 +44,7 @@ commands:
   ItemLock:
    description: ItemLock
    usage: /ItemLock
+  skiptutorial:
+   description: skiptutorial
+   usage: /skiptutorial
 api-version: 1.16

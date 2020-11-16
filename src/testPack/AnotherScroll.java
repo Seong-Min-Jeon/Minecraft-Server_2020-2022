@@ -19,18 +19,8 @@ public class AnotherScroll {
 
 	public void effect(Player player, Item itemArg) {
 		World world = player.getWorld();
-		jobRemoveScroll(player, itemArg, world);
 		questRemoveScroll(player, itemArg, world);
 		mapPaper(player, itemArg, world);
-	}
-	
-	public void jobRemoveScroll(Player player, Item itemArg, World world) {	
-		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "직업 초기화 스크롤")) {
-			player.getInventory().clear();
-			player.kickPlayer(ChatColor.RED + "Error Code:" + ChatColor.MAGIC + " Hi My Name Is Yumehama(The God)"
-					+ "\n" + ChatColor.GRAY + "기록의 신이 당신의 정보를 제거하기 위해 잠시 중간세계로 당신을 이송하였습니다.");
-			itemArg.remove();
-		}	
 	}
 	
 	public void questRemoveScroll(Player player, Item itemArg, World world) {	
