@@ -286,6 +286,7 @@ public class NewCharacter {
                 if(!ary[17].equals("0")) {
                 	inv.setItem(17, star18);
                 }
+                bufReader.close();
 			}
 		} catch (Exception e) {
 

@@ -21,6 +21,7 @@ public class AnotherScroll {
 		World world = player.getWorld();
 		questRemoveScroll(player, itemArg, world);
 		mapPaper(player, itemArg, world);
+		levelUpScroll(player, itemArg, world);
 	}
 	
 	public void questRemoveScroll(Player player, Item itemArg, World world) {	
@@ -54,6 +55,19 @@ public class AnotherScroll {
 			item.setItemMeta(mm);
 			player.getInventory().addItem(item);
 			itemArg.remove();
+		}	
+	}
+	
+	public void levelUpScroll(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().substring(0,9).equalsIgnoreCase(ChatColor.DARK_RED + "레벨업 스크롤")) {
+			itemArg.remove();
+			try {
+				String str = itemArg.getItemStack().getItemMeta().getDisplayName();
+				int lvl = Integer.parseInt(str.split("\\.")[1].split("\\]")[0]);
+				player.setLevel(lvl);
+			} catch(Exception e) {
+				
+			}
 		}	
 	}
 	

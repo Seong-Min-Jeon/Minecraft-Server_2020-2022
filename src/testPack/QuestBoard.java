@@ -2068,29 +2068,15 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 10000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "§7검은 흐름에 몸을 맡긴다.%§7정신이 아득해진다.%§4???: 그래. 내가 너에게 힘을 빌려주지.%§7!!!%tp822 71 511%§b데빌의 별§f을 획득했다.");
-			ItemStack star6 = new ItemStack(Material.NETHER_STAR);
-			ItemMeta star6Im = star6.getItemMeta();
-			star6Im.setDisplayName(ChatColor.AQUA + "데빌의 별");
-			ArrayList<String> star6Lore = new ArrayList();
-			star6Lore.add(ChatColor.WHITE + "데빌의 힘을 얻을 수 있다.");
-			star6Im.setLore(star6Lore);
-			star6.setItemMeta(star6Im);
-			player.getInventory().addItem(star6);
+			msg.msg(player, "§7검은 흐름에 몸을 맡긴다.%tp3796 26 3798%§7정신이 아득해진다.%§7난 무엇을 위해 이 여행을 떠나온 것인가.%§7주마등이 스쳐간다.%§7이 힘에 이대로 잠식된다면 나도 포보르가 되는 것일까.%"
+					+ "§7나는 무엇인가.%§7강해지고 싶다.%§7포보르가 되면 어떠리 강해지면 아무것도 두렵지 않을텐데.%§7여러 망상을 하던 중 검은 흐름의 끝에 도달했다.%§7그 끝에는 분명 악이었지만 순수한, 타락하지 않은 힘이 존재했다.%"
+					+ "tp822 71 511%[System] 데빌 캐릭터를 생성할 수 있게 되었습니다.");
 			return;
 		} else if(num==3) {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 10000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "§7어쩌다보니 검은 흐름에서 새로운 힘을 찾은 것 같다.%§7나는 참 운이 좋은 것 같다.%tp822 71 511%§b대행자의 별§f을 획득했다.");
-			ItemStack star6 = new ItemStack(Material.NETHER_STAR);
-			ItemMeta star6Im = star6.getItemMeta();
-			star6Im.setDisplayName(ChatColor.AQUA + "대행자의 별");
-			ArrayList<String> star6Lore = new ArrayList();
-			star6Lore.add(ChatColor.WHITE + "신의 힘을 빌려 싸울 수 있다.");
-			star6Im.setLore(star6Lore);
-			star6.setItemMeta(star6Im);
-			player.getInventory().addItem(star6);
+			msg.msg(player, "§7어쩌다보니 검은 흐름에서 새로운 힘을 찾은 것 같다.%§7나는 참 운이 좋은 것 같다.%tp822 71 511%[System] 대행자 캐릭터를 생성할 수 있게 되었습니다.");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
@@ -2113,15 +2099,7 @@ public class QuestBoard {
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			msg.msg(player, "카타리나: 어머나 그 힘은..?%카타리나: 매우 위험한 냄새가 나는군요.%카타리나: 저희 측에서 이걸 봉인시켜 드리겠습니다.%카타리나: 흐으음.%카타리나: 후우우.%"
 					+ "카타리나: 봉인하는 과정에서 흐름에서 순수한 힘이 정제되었어요.%카타리나: " + player.getDisplayName() + "님이 가져오신거니 가져가셔도 괜찮아요.%"
-							+ "§b엔젤의 별§f을 획득했다.");
-			ItemStack star6 = new ItemStack(Material.NETHER_STAR);
-			ItemMeta star6Im = star6.getItemMeta();
-			star6Im.setDisplayName(ChatColor.AQUA + "엔젤의 별");
-			ArrayList<String> star6Lore = new ArrayList();
-			star6Lore.add(ChatColor.WHITE + "엔젤의 힘을 얻을 수 있다.");
-			star6Im.setLore(star6Lore);
-			star6.setItemMeta(star6Im);
-			player.getInventory().addItem(star6);
+					+ "%§7따듯한 힘이 몸을 감싸온다.%[System] 엔젤 캐릭터를 생성할 수 있게 되었습니다.");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
