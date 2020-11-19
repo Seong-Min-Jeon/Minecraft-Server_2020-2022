@@ -2099,7 +2099,7 @@ public class QuestBoard {
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			msg.msg(player, "카타리나: 어머나 그 힘은..?%카타리나: 매우 위험한 냄새가 나는군요.%카타리나: 저희 측에서 이걸 봉인시켜 드리겠습니다.%카타리나: 흐으음.%카타리나: 후우우.%"
 					+ "카타리나: 봉인하는 과정에서 흐름에서 순수한 힘이 정제되었어요.%카타리나: " + player.getDisplayName() + "님이 가져오신거니 가져가셔도 괜찮아요.%"
-					+ "%§7따듯한 힘이 몸을 감싸온다.%[System] 엔젤 캐릭터를 생성할 수 있게 되었습니다.");
+					+ "§7따듯한 힘이 몸을 감싸온다.%[System] 엔젤 캐릭터를 생성할 수 있게 되었습니다.");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
@@ -2112,6 +2112,107 @@ public class QuestBoard {
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq42(Player player, int num) {
+		if(num>=1) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 5000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "주민: 이곳은 §e하마베 마을§f이에요.%주민: 아.. 혹시 모험가님이신가요?%주민: 모험가님 부디 §e클레어흐§f를 탈환해주세요.%주민: 제 앞에 보이는 대도시 보이시죠?%"
+					+ "주민: 저곳은 지금 전쟁터에요.%주민: 과거에는 평화로운 마을이었는데..%주민: 어떤 광신도 집단이 나타나 자기들이 포보르를 낳았다느니%주민: 포보르를 따르지 않으면 지옥에서마저 포보르들에게 영원히 고통받게 된다느니.%"
+					+ "주민: 처음에는 모두가 미친 사람들 취급했지요.%주민: 그런데 그들이 포보르를 마을에 대리고 온거 아니겠어요?%주민: 포보르가 도시를 점령하게 되고 생존자들은 대부분 하마베 마을로 피신하게 되었어요.%"
+					+ "주민: 시간이 지나고 식량이 부족해지자 사람들은 불안에 떨었어요.%주민: 몇몇 용기있는 사람들은 배를 타고 식량을 구하러 나갔지만.. 아무도 돌아오지 못했어요.%주민: 그렇게 사람들은 미쳐갔고 많은 사람들이 광신도 집단에 무릎을 꿇었어요.%"
+					+ "주민: 그 사람들이 떠나서 지금은 식량 문제가 덜하긴 하지만 이건 큰 문제에요.%주민: 부디 광신도 녀석들을 혼내주세요.");
+			QuestBoard qb = new QuestBoard();
+			qb.mq42_1(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 42장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===항구 마을, 하마베 마을===");
+		score.setScore(3);
+		Score score2 = obj.getScore("하마베 마을에서 주민과 대화");
+		score2.setScore(2);
+		Score score3 = obj.getScore("(978,62,92)");
+		score3.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/1)");
+		score4.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq42_1(Player player, int num) {
+		if(num>=100) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 8000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "주민: 으으음?%주민: 모험가님 그 사람들은 광신도 녀석들이 아니라 도망친 마을 사람들이에요.%주민: 물론 포보르들에게 개조되어 비정상적인 힘을 얻고 타락하게 되었지만요.%"
+					+ "주민: ...%주민: 사실 저도 광신도 집단의 위치를 잘 아는게 아니라서요.%주민: 알아보고 다시 연락드릴게요.");
+			QuestBoard qb = new QuestBoard();
+			qb.mq42_1(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 42장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===광신도 집단1===");
+		score.setScore(2);
+		Score score2 = obj.getScore("클레어흐의 주민 몬스터 100마리 사냥");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/100)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq43(Player player, int num) {
+		if(num>=100) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 5000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "주민: 맞아요. 그 녀석들이 포보르들을 대려오는걸 제 눈으로 똑똑히 봤다고요.%주민: 그런데 저 녀석들은 간부급이 아닌 것 같아요.%"
+					+ "주민: 광신도 간부들은 강한 포보르들과 함께 다닌다고 들었어요.%주민: 이것도 다시 알아보고 연락드릴게요.");
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 43장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===광신도 집단2===");
+		score.setScore(3);
+		Score score2 = obj.getScore("클레어흐의 광신도 100마리 사냥");
+		score2.setScore(2);
+		Score score3 = obj.getScore("(978,62,92)");
+		score3.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/100)");
+		score4.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq44(Player player, int num) {
+		if(num>=100) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 5000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "주민: 맞아요. 그 녀석들이 포보르들을 대려오는걸 제 눈으로 똑똑히 봤다고요.%주민: 그런데 저 녀석들은 간부급이 아닌 것 같아요.%"
+					+ "주민: 광신도 간부들은 강한 포보르들과 함께 다닌다고 들었어요.%주민: 이것도 다시 알아보고 연락드릴게요.");
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 44장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===광신도 집단3===");
+		score.setScore(3);
+		Score score2 = obj.getScore("클레어흐의 광신도 100마리 사냥");
+		score2.setScore(2);
+		Score score3 = obj.getScore("(978,62,92)");
+		score3.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/100)");
+		score4.setScore(0);
 		player.setScoreboard(board);
 	}
 	

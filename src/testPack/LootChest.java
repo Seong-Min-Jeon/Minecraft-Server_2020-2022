@@ -76,12 +76,14 @@ public class LootChest {
 				}				
 			}
 			if(block.getX()==3329 && block.getY()==14 && block.getZ()==3782) {
-				int num = rnd.nextInt(5);
+				int num = 0;
 				if(num == 0) {
 					if(removeKey(player, "아덴의 저택 보상 열쇠")) {
 						dungeon5(player);
+						num++;
 					}
-				} else if(num == 1) {
+				}
+				if(num == 0) {
 					if(removeKey(player, "숨겨진 아덴의 저택 보상 열쇠")) {
 						dungeon6(player);
 					}

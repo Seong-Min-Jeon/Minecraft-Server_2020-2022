@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
+import org.bukkit.Sound;
 import org.bukkit.block.Block;
 import org.bukkit.block.Chest;
 import org.bukkit.craftbukkit.v1_16_R1.CraftWorld;
@@ -19,6 +20,8 @@ import org.bukkit.entity.WitherSkeleton;
 import org.bukkit.entity.Zombie;
 import org.bukkit.inventory.EntityEquipment;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 
 import net.minecraft.server.v1_16_R1.WorldServer;
 
@@ -32,6 +35,7 @@ public class TPMobSpawn {
 		snow(player, loc);
 		senmag(player, loc);
 		tower(player, loc);
+		maze(player, loc);
 		aracune(player, loc);
 	}
 
@@ -844,6 +848,52 @@ public class TPMobSpawn {
 		}
 		
 		
+	}
+	
+	public void maze(Player player, Location loc) {
+		// 코낭그
+		if (loc.getX() == 48.5 && loc.getY() == 53 && loc.getZ() == 676.5) {
+			player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "먹잇감이 제발로 왔군.");
+
+			player.teleport(new Location(player.getWorld(), 48.13, 53.14, 676.13));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS,40,1,true,false,false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION,40,1,true,false,false));
+			player.getWorld().playSound(player.getLocation(), Sound.AMBIENT_CAVE, 3.0f, 1.0f);
+			int num = 0;
+			List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
+			for (Entity nearEntity : entitylist) {
+				if (nearEntity.getType() == EntityType.PLAYER) {
+					Player nearPlayer = (Player) nearEntity;
+					Location loc2 = nearPlayer.getLocation();
+					if (loc2.getX() <= 49 && loc2.getY() <= 61 && loc2.getZ() <= 696 && 
+							loc2.getX() >= 16 && loc2.getY() >= 51 && loc2.getZ() >= 654) {
+						num++;
+						new BossHealth().getBar1().addPlayer(player);
+						return;
+					}
+				}
+			}
+
+			if (num == 0) {
+				for (Entity nearEntity : entitylist) {
+					if (nearEntity instanceof Mob) {
+						Location loc2 = nearEntity.getLocation();
+						if (loc2.getX() <= 49 && loc2.getY() <= 61 && loc2.getZ() <= 696 && 
+								loc2.getX() >= 16 && loc2.getY() >= 51 && loc2.getZ() >= 654) {
+							nearEntity.remove();
+						}
+					}
+				}
+			}
+			
+			CustomSkeleton2 cs = new CustomSkeleton2(new Location(player.getWorld(), 25, 54, 675));
+			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
+			world.addEntity(cs);
+
+			new BossHealth().getBar1().setProgress(1.0);
+			new BossHealth().getBar1().addPlayer(player);
+			return;
+		}
 	}
 	
 	public void aracune(Player player, Location loc) {

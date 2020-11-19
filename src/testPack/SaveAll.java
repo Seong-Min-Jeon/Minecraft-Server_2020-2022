@@ -131,6 +131,7 @@ public class SaveAll {
 						Chest chest1 = (Chest) block1.getState();
 						Inventory c1Inv = chest1.getInventory();
 						Inventory pInv = player.getInventory();
+						c1Inv.clear();
 						for (int i = 0; i < 27; i++) {
 							if (pInv.getItem(i) == null) {
 								continue;
@@ -140,11 +141,12 @@ public class SaveAll {
 						Block block2 = new Location(world, x, y + 1, z).getBlock();
 						Chest chest2 = (Chest) block2.getState();
 						Inventory c2Inv = chest2.getInventory();
+						c2Inv.clear();
 						for (int i = 0; i < 14; i++) {
-							if (pInv.getItem(i) == null) {
+							if (pInv.getItem(i+27) == null) {
 								continue;
 							}
-							c2Inv.setItem(i, pInv.getItem(i + 27));
+							c2Inv.setItem(i, pInv.getItem(i+27));
 						}
 						bufReader.close();
 					}

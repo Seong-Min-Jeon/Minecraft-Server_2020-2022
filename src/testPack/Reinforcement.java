@@ -5821,7 +5821,7 @@ public class Reinforcement {
 				} else {
 					dura--;
 				}
-				lores.set(lineNum, ChatColor.DARK_GRAY + "내구도: " + Integer.toString(dura) + "/1000");
+				lores.set(lineNum, ChatColor.DARK_GRAY + "내구도: " + Integer.toString(dura) + "/3000");
 				item.setLore(lores);
 				return true;
 			} else {
@@ -5833,12 +5833,12 @@ public class Reinforcement {
 				}
 				if(lineNum != -1) {
 					lores.add(lineNum, " ");
-					lores.add(lineNum, ChatColor.DARK_GRAY + "내구도: 999/1000");
+					lores.add(lineNum, ChatColor.DARK_GRAY + "내구도: 2999/3000");
 					item.setLore(lores);
 					return true;
 				} else {
 					lores.add(" ");
-					lores.add(ChatColor.DARK_GRAY + "내구도: 999/1000");
+					lores.add(ChatColor.DARK_GRAY + "내구도: 2999/3000");
 					item.setLore(lores);
 					return true;
 				}

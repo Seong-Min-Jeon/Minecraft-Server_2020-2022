@@ -41,7 +41,8 @@ public class InteractVillager {
 			return true;
 		}
 		
-		return vil0() || vil1() || vil2() || vil3() || vil4() || vil5() || vil6() || vil7() || vil8() || vil9() || vil10() || vil11() || vil12() || vil13() || vil14();
+		return vil0() || vil1() || vil2() || vil3() || vil4() || vil5() || vil6() || vil7() || vil8() || vil9() || vil10() || vil11() || vil12() || vil13() || vil14()
+				|| vil15();
 	}
 	
 	public boolean vil0() {
@@ -358,6 +359,26 @@ public class InteractVillager {
 				}
 			} catch(Exception e) {
 				player.sendMessage("꼬마: 후에엥.");
+			}
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean vil15() {
+		//하마베 주민 976 91  979 94
+		if(loc.getX() <= 979 && loc.getZ() <= 94
+				&& loc.getX() >= 976 && loc.getZ() >= 91) {
+			QuestBoard cb = new QuestBoard();
+			try {
+				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===항구 마을, 하마베 마을===")) {
+					int qNum = cb.getNum(player);
+					cb.mq42(player, qNum+1);	
+				} else {
+					player.sendMessage("주민: 이곳은 하마베 마을이에요.");
+				}
+			} catch(Exception e) {
+				player.sendMessage("주민: 이곳은 하마베 마을이에요.");
 			}
 			return true;
 		}

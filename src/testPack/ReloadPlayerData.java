@@ -52,12 +52,12 @@ public class ReloadPlayerData {
     				String level = bufReader.readLine();
     				String[] ary1 = loc.split("/");
     				player.teleport(new Location(player.getWorld(), Integer.parseInt(ary1[0]), Integer.parseInt(ary1[1]), Integer.parseInt(ary1[2])));
-    				String[] ary2 = health.split("/");
-    				player.setHealth(Double.parseDouble(ary2[0]));
-    				player.setFoodLevel(Integer.parseInt(ary2[1]));
     				String[] ary3 = level.split("/");
     				player.setLevel(Integer.parseInt(ary3[0]));
     				player.setExp(Float.parseFloat(ary3[1]));
+    				String[] ary2 = health.split("/");
+    				player.setHealth(Double.parseDouble(ary2[0]));
+    				player.setFoodLevel(Integer.parseInt(ary2[1]));
     				bufReader.close();
             	} catch(Exception e) {
             		

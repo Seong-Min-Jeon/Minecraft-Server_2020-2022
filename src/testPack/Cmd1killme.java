@@ -15,18 +15,18 @@ public class Cmd1killme implements CommandExecutor {
 		if(sender instanceof Player) {
 			Player player = (Player) sender;
 			try {
-				if(player.getDisplayName().equals("yumehama")) {
-					for(Entity ent : player.getWorld().getEntities()){
-						try {
-							if(ent.getType() == EntityType.SKELETON_HORSE) {
-								ent.remove();
-							}
-						} catch(Exception e) {
-							
-						}
-					}
-					return true;
-				}
+//				if(player.getDisplayName().equals("yumehama")) {
+//					for(Entity ent : player.getWorld().getEntities()){
+//						try {
+//							if(ent.getType() == EntityType.SKELETON_HORSE) {
+//								ent.remove();
+//							}
+//						} catch(Exception e) {
+//							
+//						}
+//					}
+//					return true;
+//				}
 			} catch(Exception e) {
 				
 			}

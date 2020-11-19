@@ -2860,7 +2860,8 @@ public class Skill {
 						if ((nearEntity.getType() != EntityType.PLAYER) || (nearEntity.getType() != EntityType.PIG) || (nearEntity.getType() != EntityType.COW)
 								|| (nearEntity.getType() != EntityType.CHICKEN) || (nearEntity.getType() != EntityType.SHEEP) || (nearEntity.getType() != EntityType.VILLAGER)
 								|| (nearEntity.getType() != EntityType.HORSE) || (nearEntity.getType() != EntityType.SKELETON_HORSE) || (nearEntity.getType() != EntityType.ZOMBIE_HORSE)
-								|| (nearEntity.getType() != EntityType.WOLF) || (nearEntity.getType() != EntityType.CAT) || (nearEntity.getType() != EntityType.DONKEY)) {
+								|| (nearEntity.getType() != EntityType.WOLF) || (nearEntity.getType() != EntityType.CAT) || (nearEntity.getType() != EntityType.DONKEY)
+								|| (nearEntity.getType() != EntityType.ARMOR_STAND)) {
 							if (nearEntity instanceof LivingEntity) {
 								LivingEntity nearMob = (LivingEntity) nearEntity;
 								nearMob.setFireTicks(200);
@@ -2915,7 +2916,11 @@ public class Skill {
 					int num = 0;
 					List<Entity> entitylist = player.getNearbyEntities(5, 5, 5);
 					for (Entity nearEntity : entitylist) {
-						if (nearEntity.getType() != EntityType.PLAYER) {
+						if (nearEntity.getType() != EntityType.PLAYER || (nearEntity.getType() != EntityType.PIG) || (nearEntity.getType() != EntityType.COW)
+								|| (nearEntity.getType() != EntityType.CHICKEN) || (nearEntity.getType() != EntityType.SHEEP) || (nearEntity.getType() != EntityType.VILLAGER)
+								|| (nearEntity.getType() != EntityType.HORSE) || (nearEntity.getType() != EntityType.SKELETON_HORSE) || (nearEntity.getType() != EntityType.ZOMBIE_HORSE)
+								|| (nearEntity.getType() != EntityType.WOLF) || (nearEntity.getType() != EntityType.CAT) || (nearEntity.getType() != EntityType.DONKEY)
+								|| (nearEntity.getType() != EntityType.ARMOR_STAND)) {
 							if (nearEntity instanceof LivingEntity) {
 								LivingEntity nearMob = (LivingEntity) nearEntity;
 								nearMob.damage(player.getLevel());

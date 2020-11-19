@@ -47,4 +47,7 @@ commands:
   skiptutorial:
    description: skiptutorial
    usage: /skiptutorial
+  class:
+   description: class
+   usage: /class
 api-version: 1.16
