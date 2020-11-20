@@ -814,7 +814,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getLevel() > 700 && player.getLevel() < 800) {
 			player.setLevel(700);
 			player.setExp(0);
-			ItemStack bonus = new ItemStack(Material.NETHER_STAR);
+			ItemStack bonus = new ItemStack(Material.ENDER_EYE);
 			ItemMeta bonusIm = bonus.getItemMeta();
 			bonusIm.addEnchant(Enchantment.LUCK, 32700, true);
 			bonusIm.setDisplayName(ChatColor.DARK_RED + "에일의 인장");
@@ -834,7 +834,7 @@ public class Main extends JavaPlugin implements Listener{
 		} else if(player.getLevel() > 800 && player.getLevel() < 900) {
 			player.setLevel(800);
 			player.setExp(0);
-			ItemStack bonus = new ItemStack(Material.NETHER_STAR);
+			ItemStack bonus = new ItemStack(Material.ENDER_EYE);
 			ItemMeta bonusIm = bonus.getItemMeta();
 			bonusIm.addEnchant(Enchantment.LUCK, 32700, true);
 			bonusIm.setDisplayName(ChatColor.DARK_RED + "영웅의 인장");
@@ -854,7 +854,7 @@ public class Main extends JavaPlugin implements Listener{
 		} else if(player.getLevel() > 900 && player.getLevel() < 1000) {
 			player.setLevel(900);
 			player.setExp(0);
-			ItemStack bonus = new ItemStack(Material.NETHER_STAR);
+			ItemStack bonus = new ItemStack(Material.ENDER_EYE);
 			ItemMeta bonusIm = bonus.getItemMeta();
 			bonusIm.addEnchant(Enchantment.LUCK, 32700, true);
 			bonusIm.setDisplayName(ChatColor.DARK_RED + "전설의 인장");
@@ -871,26 +871,26 @@ public class Main extends JavaPlugin implements Listener{
 			player.sendMessage(ChatColor.GREEN + "경험치가 초기화되는 대신 " + ChatColor.DARK_RED + "전설의 인장" + ChatColor.GREEN + "이 주어집니다.");
 			player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
 			return;
-		} else if(player.getLevel() > 1000) {
-				player.setLevel(1000);
-				player.setExp(0);
-				ItemStack bonus = new ItemStack(Material.NETHER_STAR);
-				ItemMeta bonusIm = bonus.getItemMeta();
-				bonusIm.addEnchant(Enchantment.LUCK, 32700, true);
-				bonusIm.setDisplayName(ChatColor.DARK_PURPLE + "투신의 인장");
-				ArrayList<String> bonusLore = new ArrayList();
-				bonusLore.add(ChatColor.GRAY + "전투의 신이 수여한 증표");
-				bonusLore.add(ChatColor.GRAY + "여러개를 모아 어딘가에서 아이템을 살 수 있을 것 같다.");
-				bonusIm.setLore(bonusLore);
-				bonusIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-				bonusIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-				bonus.setItemMeta(bonusIm);
-				player.getInventory().addItem(bonus);
-				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
-				player.sendMessage(ChatColor.GREEN + "[한계 레벨] 1000을 돌파하였습니다.");
-				player.sendMessage(ChatColor.GREEN + "경험치가 초기화되는 대신 " + ChatColor.DARK_PURPLE + "투신의 인장" + ChatColor.GREEN + "이 주어집니다.");
-				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
-				return;
+		} else if (player.getLevel() > 1000) {
+			player.setLevel(1000);
+			player.setExp(0);
+			ItemStack bonus = new ItemStack(Material.ENDER_EYE);
+			ItemMeta bonusIm = bonus.getItemMeta();
+			bonusIm.addEnchant(Enchantment.LUCK, 32700, true);
+			bonusIm.setDisplayName(ChatColor.DARK_PURPLE + "투신의 인장");
+			ArrayList<String> bonusLore = new ArrayList();
+			bonusLore.add(ChatColor.GRAY + "전투의 신이 수여한 증표");
+			bonusLore.add(ChatColor.GRAY + "여러개를 모아 어딘가에서 아이템을 살 수 있을 것 같다.");
+			bonusIm.setLore(bonusLore);
+			bonusIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+			bonusIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+			bonus.setItemMeta(bonusIm);
+			player.getInventory().addItem(bonus);
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
+			player.sendMessage(ChatColor.GREEN + "[한계 레벨] 1000을 돌파하였습니다.");
+			player.sendMessage(ChatColor.GREEN + "경험치가 초기화되는 대신 " + ChatColor.DARK_PURPLE + "투신의 인장" + ChatColor.GREEN + "이 주어집니다.");
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
+			return;
 		}
 		player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 0.5f);
 		

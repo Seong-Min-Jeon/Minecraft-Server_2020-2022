@@ -3911,6 +3911,12 @@ public class MobLoot {
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 1270000);
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===광신도 집단1===")) {
+			int qNum = cb.getNum(player);
+			cb.mq42_1(player, qNum + 1);
+		}
 	}
 	
 	// 잠식된 주민
@@ -3922,6 +3928,12 @@ public class MobLoot {
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 1290000);
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===광신도 집단1===")) {
+			int qNum = cb.getNum(player);
+			cb.mq42_1(player, qNum + 1);
+		}
 	}
 	
 	// 카스파르
@@ -4106,20 +4118,60 @@ public class MobLoot {
 		es.giveExp(player, 1370000);
 	}
 	
+	// 클레어흐의 광신도
 	public void mob180(Player player) {
-
+		int num = rnd.nextInt(7) + 5;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1340000);
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===광신도 집단2===")) {
+			int qNum = cb.getNum(player);
+			cb.mq43(player, qNum + 1);
+		}
 	}
 	
+	// 클레어흐의 광신도
 	public void mob181(Player player) {
-
+		int num = rnd.nextInt(7) + 5;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1360000);
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===광신도 집단2===")) {
+			int qNum = cb.getNum(player);
+			cb.mq43(player, qNum + 1);
+		}
 	}
 	
+	// 클레어흐의 광신도 간부
 	public void mob182(Player player) {
-
+		int num = rnd.nextInt(7) + 6;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1400000);
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===광신도 집단3===")) {
+			int qNum = cb.getNum(player);
+			cb.mq44(player, qNum + 1);
+		}
 	}
 	
+	// 클레어흐의 포보르
 	public void mob183(Player player) {
-
+		es.giveExp(player, 1480000);
 	}
 	
 	public void mob184(Player player) {

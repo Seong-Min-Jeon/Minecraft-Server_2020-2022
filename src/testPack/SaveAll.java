@@ -633,6 +633,22 @@ public class SaveAll {
 						int number = qb.getNum(player);
 						fw.write("mq41_1\n");
 						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===항구 마을, 하마베 마을===")) {
+						int number = qb.getNum(player);
+						fw.write("mq42\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===광신도 집단1===")) {
+						int number = qb.getNum(player);
+						fw.write("mq42_1\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===광신도 집단2===")) {
+						int number = qb.getNum(player);
+						fw.write("mq43\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===광신도 집단3===")) {
+						int number = qb.getNum(player);
+						fw.write("mq44\n");
+						fw.write(Integer.toString(number));
 					}
 					fw.close();
 					bufReader.close();

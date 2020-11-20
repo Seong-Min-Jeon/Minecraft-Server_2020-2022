@@ -613,5 +613,30 @@ public class QuestScroll {
 		}	
 	}
 	
+	public void mq42(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "메인퀘스트 42장")) {
+			msg.msg(player, "네비: 으으음...%네비: 오랜만이랄까.%네비: 뭔가 되게 오래있다가 만난 것 같아.%네비: 약간 모습이 달라진 것도 같구.%네비: 오늘도 힘차게 가보자구!%"
+					+ "네비: §e하마베 마을§f에서 누가 도움을 요청했나봐.%네비: 좌표는 내가 찍어줄테니까 너는 이동만 하라구~");
+			QuestBoard qb = new QuestBoard();
+			qb.mq42(player, 0);
+		}	
+	}
+	
+	public void mq43(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "메인퀘스트 43장")) {
+			msg.msg(player, "주민: 제가 왜 그 생각을 못했을까요.%주민: 광신도 녀석들은 성당 지하에 있다는 소문이 있어요.");
+			QuestBoard qb = new QuestBoard();
+			qb.mq43(player, 0);
+		}	
+	}
+	
+	public void mq44(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "메인퀘스트 44장")) {
+			msg.msg(player, "주민: 이 녀석들 따로 본거지가 있던게 확실합니다.%주민: 제 친구랑 밤중에 포보르를 미행한 결과 그 위치를 알아냈죠.");
+			QuestBoard qb = new QuestBoard();
+			qb.mq44(player, 0);
+		}	
+	}
+	
 	
 }

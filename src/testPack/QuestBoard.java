@@ -2171,7 +2171,7 @@ public class QuestBoard {
 	public void mq43(Player player, int num) {
 		if(num>=100) {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
-			es.giveExp(player, 5000000);
+			es.giveExp(player, 9000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			msg.msg(player, "주민: 맞아요. 그 녀석들이 포보르들을 대려오는걸 제 눈으로 똑똑히 봤다고요.%주민: 그런데 저 녀석들은 간부급이 아닌 것 같아요.%"
 					+ "주민: 광신도 간부들은 강한 포보르들과 함께 다닌다고 들었어요.%주민: 이것도 다시 알아보고 연락드릴게요.");
@@ -2193,12 +2193,12 @@ public class QuestBoard {
 	}
 	
 	public void mq44(Player player, int num) {
-		if(num>=100) {
+		if(num>=50) {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
-			es.giveExp(player, 5000000);
+			es.giveExp(player, 9500000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "주민: 맞아요. 그 녀석들이 포보르들을 대려오는걸 제 눈으로 똑똑히 봤다고요.%주민: 그런데 저 녀석들은 간부급이 아닌 것 같아요.%"
-					+ "주민: 광신도 간부들은 강한 포보르들과 함께 다닌다고 들었어요.%주민: 이것도 다시 알아보고 연락드릴게요.");
+			msg.msg(player, "주민: 이걸로 평화가 돌아올까요?%주민: 광신도 녀석들 포보르의 힘을 받아서 끝도 없이 재생되나봐요.%주민: 아무래도 포보르의 근원을 없애는게 답인 것 같아요.%주민: §e사막§f에 포보르의 근원이 있다는 소문이 있어요.%"
+					+ "주민: 나중에 기회가 되면 한번 가보세요.");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
@@ -2207,11 +2207,11 @@ public class QuestBoard {
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
 		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===광신도 집단3===");
 		score.setScore(3);
-		Score score2 = obj.getScore("클레어흐의 광신도 100마리 사냥");
+		Score score2 = obj.getScore("클레어흐의 광신도 간부 50마리 사냥");
 		score2.setScore(2);
-		Score score3 = obj.getScore("(978,62,92)");
+		Score score3 = obj.getScore("(914,68,173)");
 		score3.setScore(1);
-		Score score4 = obj.getScore("(" + num + "/100)");
+		Score score4 = obj.getScore("(" + num + "/50)");
 		score4.setScore(0);
 		player.setScoreboard(board);
 	}

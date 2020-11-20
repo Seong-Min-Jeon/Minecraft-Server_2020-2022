@@ -337,6 +337,12 @@ public class MobThread {
 						} else if(loc.getX() <= 1299 && loc.getY() <= 96 && loc.getZ() <= 1035 && 
 								loc.getX() >= 1106 && loc.getY() >= 37 && loc.getZ() >= 675) {
 							castleNearVilEast(player, loc);
+						} else if(loc.getX() <= 1060 && loc.getY() <= 54 && loc.getZ() <= 298 && 
+								loc.getX() >= 1009 && loc.getY() >= 36 && loc.getZ() >= 254) {
+							kleahBase1(player, loc);
+						} else if(loc.getX() <= 1030 && loc.getY() <= 55 && loc.getZ() <= 214 
+								&& loc.getX() >= 912 && loc.getY() >= 18 && loc.getZ() >= 142) {
+							kleahBase2(player, loc);
 						}
 						
 					} 
@@ -1986,8 +1992,7 @@ public class MobThread {
 			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
 		} else if (num == 1) {
 			if (player.getWorld().getTime() >= 13000 && player.getWorld().getTime() <= 23000) {
-				Silverfish s = (Silverfish) loc.getWorld().spawnEntity(loc, EntityType.SILVERFISH);
-				s.setPassenger(loc.getWorld().spawnEntity(loc, EntityType.PHANTOM));
+				loc.getWorld().spawnEntity(loc, EntityType.SILVERFISH);
 			}
 		}
 	}
@@ -2049,6 +2054,38 @@ public class MobThread {
 			loc.getWorld().spawnEntity(loc, EntityType.RAVAGER);
 		} else if (num == 1) {
 			loc.getWorld().spawnEntity(loc, EntityType.LLAMA);
+		}
+	}
+	
+	public void kleahBase1(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 1060 && loc.getY() <= 54 && loc.getZ() <= 298 && 
+				loc.getX() >= 1009 && loc.getY() >= 36 && loc.getZ() >= 254)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.ZOMBIE);
+		} else if (num == 1) {
+			CustomSkeleton2 cs = new CustomSkeleton2(loc);
+			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
+			world.addEntity(cs);
+		}
+	}
+	
+	public void kleahBase2(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 1030 && loc.getY() <= 55 && loc.getZ() <= 214 
+				&& loc.getX() >= 912 && loc.getY() >= 18 && loc.getZ() >= 142)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.ZOMBIE);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.CAVE_SPIDER);
 		}
 	}
 	

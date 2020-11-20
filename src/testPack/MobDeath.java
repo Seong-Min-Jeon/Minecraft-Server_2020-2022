@@ -824,6 +824,22 @@ public class MobDeath {
 				if (name.equalsIgnoreCase("자독" + ChatColor.YELLOW + " [Lv.420]")) {
 					mobloot.mob179(lootPlayer);
 				}
+				// 클레어흐의 광신도
+				if (name.equalsIgnoreCase("클레어흐의 광신도" + ChatColor.YELLOW + " [Lv.414]")) {
+					mobloot.mob180(lootPlayer);
+				}
+				// 클레어흐의 광신도
+				if (name.equalsIgnoreCase("클레어흐의 광신도" + ChatColor.YELLOW + " [Lv.419]")) {
+					mobloot.mob181(lootPlayer);
+				}
+				// 클레어흐의 광신도 간부
+				if (name.equalsIgnoreCase("클레어흐의 광신도 간부" + ChatColor.YELLOW + " [Lv.423]")) {
+					mobloot.mob182(lootPlayer); 
+				}
+				// 클레어흐의 포보르
+				if (name.equalsIgnoreCase("클레어흐의 포보르" + ChatColor.YELLOW + " [Lv.427]")) {
+					mobloot.mob183(lootPlayer);
+				}
 			} catch (Exception e) {
 
 			}
