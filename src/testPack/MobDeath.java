@@ -840,6 +840,14 @@ public class MobDeath {
 				if (name.equalsIgnoreCase("클레어흐의 포보르" + ChatColor.YELLOW + " [Lv.427]")) {
 					mobloot.mob183(lootPlayer);
 				}
+				// 파르홀론의 묘를 지키는 자
+				if (name.equalsIgnoreCase("파르홀론의 묘를 지키는 자" + ChatColor.YELLOW + " [Lv.142]")) {
+					mobloot.mob184(lootPlayer); 
+				}
+				// 약화된 아라크네
+				if (name.equalsIgnoreCase("약화된 아라크네" + ChatColor.YELLOW + " [Lv.146]")) {
+					mobloot.mob185(lootPlayer);
+				}
 			} catch (Exception e) {
 
 			}

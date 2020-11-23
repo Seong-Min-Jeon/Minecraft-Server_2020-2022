@@ -333,6 +333,24 @@ public class CraftingItem {
 				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "상급 포보르의 뿔")) {
 					totalStat += amount[i] * 19;
 				}
+				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "최상급 포보르의 피")) {
+					totalStat += amount[i] * 15; 
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개")) {
+					totalStat += amount[i] * 16; 
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점")) {
+					totalStat += amount[i] * 17; 
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "최상급 포보르의 간")) {
+					totalStat += amount[i] * 18; 
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장")) {
+					totalStat += amount[i] * 20;
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "최상급 포보르의 뿔")) {
+					totalStat += amount[i] * 23;
+				}
 			}
 			
 			for(int i : rank) {

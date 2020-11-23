@@ -1106,8 +1106,8 @@ public class SpawnMob {
 	}
 
 	public boolean mob20(LivingEntity entity, Location loc) {
-		// 파르홀론의 유적 -1096 52 2365 -1027 3 2246
-		if (loc.getX() <= -1027 && loc.getY() <= 52
+		// 파르홀론의 유적 -1096 42 2365 -1027 3 2246
+		if (loc.getX() <= -1027 && loc.getY() <= 42
 				&& loc.getZ() <= 2365 && loc.getX() >= -1096
 				&& loc.getY() >= 3 && loc.getZ() >= 2246) {
 			if (entity.getType() == (EntityType) EntityType.SPIDER) {
@@ -7553,6 +7553,69 @@ public class SpawnMob {
 	}
 
 	public boolean mob124(LivingEntity entity, Location loc) {
+		// 파르홀론 유적 지하 -1090 5 2302  -1112 0 2281 
+		if (loc.getX() <= -1090 && loc.getY() <= 5 && loc.getZ() <= 2302 
+				&& loc.getX() >= -1112 && loc.getY() >= 0 && loc.getZ() >= 2281) {
+			Location chestLoc = new Location(entity.getWorld(), -1830, 92, 3045);
+			Block block = chestLoc.getBlock();
+			Chest chest = (Chest) block.getState();
+			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
+				entity.setCustomName(ChatColor.GRAY + "파르홀론의 묘를 지키는 자" + ChatColor.YELLOW + " [Lv.142]");
+				entity.setCustomNameVisible(true);
+				entity.setMaxHealth(4000);
+				entity.setHealth(4000);
+				Zombie z = (Zombie) entity;
+				z.setBaby(false);
+				EntityEquipment weapon = entity.getEquipment();
+				ItemStack weaponItem = new ItemStack(Material.JUNGLE_PLANKS);
+				weapon.setItemInMainHand(weaponItem);
+				EntityEquipment mobBow = entity.getEquipment();
+				ItemStack mobBowItem = new ItemStack(Material.JUNGLE_PLANKS);
+				mobBow.setItemInOffHand(mobBowItem);
+				EntityEquipment head = entity.getEquipment();
+				ItemStack headItem = chest.getInventory().getItem(22);
+				head.setHelmet(headItem);
+				EntityEquipment chestplate = entity.getEquipment();
+				ItemStack chestplateItem = new ItemStack(Material.LEATHER_CHESTPLATE);
+				LeatherArmorMeta chestmeta = (LeatherArmorMeta) chestplateItem.getItemMeta();
+				chestmeta.setColor(Color.fromRGB(255, 255, 255));
+				chestplateItem.setItemMeta(chestmeta);
+				chestplate.setChestplate(chestplateItem);
+				EntityEquipment leggings = entity.getEquipment();
+				ItemStack leggingsItem = new ItemStack(Material.LEATHER_LEGGINGS);
+				LeatherArmorMeta leggingsmeta = (LeatherArmorMeta) leggingsItem.getItemMeta();
+				leggingsmeta.setColor(Color.fromRGB(255, 255, 255));
+				leggingsItem.setItemMeta(leggingsmeta);
+				leggings.setLeggings(leggingsItem);
+				EntityEquipment boots = entity.getEquipment();
+				ItemStack bootsItem = new ItemStack(Material.LEATHER_BOOTS);
+				LeatherArmorMeta bootsmeta = (LeatherArmorMeta) bootsItem.getItemMeta();
+				bootsmeta.setColor(Color.fromRGB(255, 255, 255));
+				bootsItem.setItemMeta(bootsmeta);
+				boots.setBoots(bootsItem);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 42));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
+				return true;
+			} else if (entity.getType() == (EntityType) EntityType.CAVE_SPIDER) {
+				entity.setCustomName(ChatColor.GRAY + "약화된 아라크네" + ChatColor.YELLOW + " [Lv.146]");
+				entity.setCustomNameVisible(true);
+				entity.setMaxHealth(4200);
+				entity.setHealth(4200);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 44));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
+				return true;
+			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM
+					|| entity.getType() == (EntityType) EntityType.SALMON
+					|| entity.getType() == (EntityType) EntityType.ITEM_FRAME
+					|| entity.getType() == (EntityType) EntityType.DROPPED_ITEM
+					|| entity.getType() == (EntityType) EntityType.ARMOR_STAND
+					|| entity.getType() == (EntityType) EntityType.VILLAGER
+					|| entity.getType() == (EntityType) EntityType.SKELETON_HORSE) {
+				return true;
+			} else {
+				return false;
+			}
+		}
 		return true;
 	}
 	

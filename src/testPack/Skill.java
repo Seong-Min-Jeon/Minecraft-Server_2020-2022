@@ -2243,7 +2243,7 @@ public class Skill {
 							} else {
 								nearPlayer.setHealth(nearPlayer.getMaxHealth());
 							}
-							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 400, 2));
+							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 400, 1));
 							nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 회복되었습니다.");
 							nearPlayer.sendMessage(
 									ChatColor.GREEN + player.getDisplayName() + "님에 의해 10초 동안 방어력이 상승합니다.");
@@ -2287,7 +2287,7 @@ public class Skill {
 						} else {
 							nearPlayer.setHealth(nearPlayer.getMaxHealth());
 						}
-						nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 400, 2));
+						nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 400, 1));
 						nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 회복되었습니다.");
 						nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 10초 동안 방어력이 상승합니다.");
 					}
@@ -2857,11 +2857,11 @@ public class Skill {
 					int num = 0;					
 					List<Entity> entitylist = player.getNearbyEntities(5, 5, 5);
 					for (Entity nearEntity : entitylist) {
-						if ((nearEntity.getType() != EntityType.PLAYER) || (nearEntity.getType() != EntityType.PIG) || (nearEntity.getType() != EntityType.COW)
-								|| (nearEntity.getType() != EntityType.CHICKEN) || (nearEntity.getType() != EntityType.SHEEP) || (nearEntity.getType() != EntityType.VILLAGER)
-								|| (nearEntity.getType() != EntityType.HORSE) || (nearEntity.getType() != EntityType.SKELETON_HORSE) || (nearEntity.getType() != EntityType.ZOMBIE_HORSE)
-								|| (nearEntity.getType() != EntityType.WOLF) || (nearEntity.getType() != EntityType.CAT) || (nearEntity.getType() != EntityType.DONKEY)
-								|| (nearEntity.getType() != EntityType.ARMOR_STAND)) {
+						if ((nearEntity.getType() != EntityType.PLAYER) && (nearEntity.getType() != EntityType.PIG) && (nearEntity.getType() != EntityType.COW)
+								&& (nearEntity.getType() != EntityType.CHICKEN) && (nearEntity.getType() != EntityType.SHEEP) && (nearEntity.getType() != EntityType.VILLAGER)
+								&& (nearEntity.getType() != EntityType.HORSE) && (nearEntity.getType() != EntityType.SKELETON_HORSE) && (nearEntity.getType() != EntityType.ZOMBIE_HORSE)
+								&& (nearEntity.getType() != EntityType.WOLF) && (nearEntity.getType() != EntityType.CAT) && (nearEntity.getType() != EntityType.DONKEY)
+								&& (nearEntity.getType() != EntityType.ARMOR_STAND)) {
 							if (nearEntity instanceof LivingEntity) {
 								LivingEntity nearMob = (LivingEntity) nearEntity;
 								nearMob.setFireTicks(200);
@@ -2916,11 +2916,11 @@ public class Skill {
 					int num = 0;
 					List<Entity> entitylist = player.getNearbyEntities(5, 5, 5);
 					for (Entity nearEntity : entitylist) {
-						if (nearEntity.getType() != EntityType.PLAYER || (nearEntity.getType() != EntityType.PIG) || (nearEntity.getType() != EntityType.COW)
-								|| (nearEntity.getType() != EntityType.CHICKEN) || (nearEntity.getType() != EntityType.SHEEP) || (nearEntity.getType() != EntityType.VILLAGER)
-								|| (nearEntity.getType() != EntityType.HORSE) || (nearEntity.getType() != EntityType.SKELETON_HORSE) || (nearEntity.getType() != EntityType.ZOMBIE_HORSE)
-								|| (nearEntity.getType() != EntityType.WOLF) || (nearEntity.getType() != EntityType.CAT) || (nearEntity.getType() != EntityType.DONKEY)
-								|| (nearEntity.getType() != EntityType.ARMOR_STAND)) {
+						if (nearEntity.getType() != EntityType.PLAYER && (nearEntity.getType() != EntityType.PIG) && (nearEntity.getType() != EntityType.COW)
+								&& (nearEntity.getType() != EntityType.CHICKEN) && (nearEntity.getType() != EntityType.SHEEP) && (nearEntity.getType() != EntityType.VILLAGER)
+								&& (nearEntity.getType() != EntityType.HORSE) && (nearEntity.getType() != EntityType.SKELETON_HORSE) && (nearEntity.getType() != EntityType.ZOMBIE_HORSE)
+								&& (nearEntity.getType() != EntityType.WOLF) && (nearEntity.getType() != EntityType.CAT) && (nearEntity.getType() != EntityType.DONKEY)
+								&& (nearEntity.getType() != EntityType.ARMOR_STAND)) {
 							if (nearEntity instanceof LivingEntity) {
 								LivingEntity nearMob = (LivingEntity) nearEntity;
 								nearMob.damage(player.getLevel());

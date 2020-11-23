@@ -3983,15 +3983,15 @@ public class Main extends JavaPlugin implements Listener{
 					Inventory inv = player.getInventory();
 					if(inv.contains(Material.RED_DYE) || inv.contains(Material.GREEN_DYE) || inv.contains(Material.LAPIS_LAZULI)
 							|| inv.contains(Material.CYAN_DYE) || inv.contains(Material.LIGHT_GRAY_DYE)) {
-						damage = 1 - (1 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+						damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
 					} else if(inv.contains(Material.YELLOW_DYE) || inv.contains(Material.LIGHT_BLUE_DYE) || inv.contains(Material.MAGENTA_DYE)
 							|| inv.contains(Material.ORANGE_DYE) || inv.contains(Material.CLAY_BALL)) {
 						damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
 					} else if(inv.contains(Material.GRAY_DYE) || inv.contains(Material.PINK_DYE) || inv.contains(Material.LIME_DYE)) {
-						damage = 4 - (4 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+						damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
 					} else if(inv.contains(Material.BLUE_DYE) || inv.contains(Material.BROWN_DYE) || inv.contains(Material.BLACK_DYE)
 							|| inv.contains(Material.INK_SAC) || inv.contains(Material.GLOWSTONE_DUST)) {
-						damage = 6 - (6 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+						damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
 					} else {
 						damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
 					}
@@ -4020,15 +4020,15 @@ public class Main extends JavaPlugin implements Listener{
 					Inventory inv = player.getInventory();
 					if(inv.contains(Material.RED_DYE) || inv.contains(Material.GREEN_DYE) || inv.contains(Material.LAPIS_LAZULI)
 							|| inv.contains(Material.CYAN_DYE) || inv.contains(Material.LIGHT_GRAY_DYE)) {
-						event.setDamage(dr.calculation(player, player.getLevel()/8));
+						event.setDamage(dr.calculation(player, player.getLevel()/6));
 					} else if(inv.contains(Material.YELLOW_DYE) || inv.contains(Material.LIGHT_BLUE_DYE) || inv.contains(Material.MAGENTA_DYE)
 							|| inv.contains(Material.ORANGE_DYE) || inv.contains(Material.CLAY_BALL)) {
 						event.setDamage(dr.calculation(player, player.getLevel()/4));
 					} else if(inv.contains(Material.GRAY_DYE) || inv.contains(Material.PINK_DYE) || inv.contains(Material.LIME_DYE)) {
-						event.setDamage(dr.calculation(player, player.getLevel()));
+						event.setDamage(dr.calculation(player, player.getLevel()/2));
 					} else if(inv.contains(Material.BLUE_DYE) || inv.contains(Material.BROWN_DYE) || inv.contains(Material.BLACK_DYE)
 							|| inv.contains(Material.INK_SAC) || inv.contains(Material.GLOWSTONE_DUST)) {
-						event.setDamage(dr.calculation(player, player.getLevel()*5));
+						event.setDamage(dr.calculation(player, player.getLevel()));
 					} else {
 						event.setDamage(dr.calculation(player, player.getLevel()/4));
 					}
@@ -4040,15 +4040,15 @@ public class Main extends JavaPlugin implements Listener{
 					Inventory inv = player.getInventory();
 					if(inv.contains(Material.RED_DYE) || inv.contains(Material.GREEN_DYE) || inv.contains(Material.LAPIS_LAZULI)
 							|| inv.contains(Material.CYAN_DYE) || inv.contains(Material.LIGHT_GRAY_DYE)) {
-						event.setDamage(dr.calculation(player, player.getLevel()/4));
+						event.setDamage(dr.calculation(player, player.getLevel()/3));
 					} else if(inv.contains(Material.YELLOW_DYE) || inv.contains(Material.LIGHT_BLUE_DYE) || inv.contains(Material.MAGENTA_DYE)
 							|| inv.contains(Material.ORANGE_DYE) || inv.contains(Material.CLAY_BALL)) {
 						event.setDamage(dr.calculation(player, player.getLevel()/2));
 					} else if(inv.contains(Material.GRAY_DYE) || inv.contains(Material.PINK_DYE) || inv.contains(Material.LIME_DYE)) {
-						event.setDamage(dr.calculation(player, player.getLevel()*2));
+						event.setDamage(dr.calculation(player, player.getLevel()));
 					} else if(inv.contains(Material.BLUE_DYE) || inv.contains(Material.BROWN_DYE) || inv.contains(Material.BLACK_DYE)
 							|| inv.contains(Material.INK_SAC) || inv.contains(Material.GLOWSTONE_DUST)) {
-						event.setDamage(dr.calculation(player, player.getLevel()*8));
+						event.setDamage(dr.calculation(player, player.getLevel()*2));
 					} else {
 						event.setDamage(dr.calculation(player, player.getLevel()/2));
 					}
@@ -4106,15 +4106,15 @@ public class Main extends JavaPlugin implements Listener{
 					Inventory inv = player.getInventory();
 					if(inv.contains(Material.RED_DYE) || inv.contains(Material.GREEN_DYE) || inv.contains(Material.LAPIS_LAZULI)
 							|| inv.contains(Material.CYAN_DYE) || inv.contains(Material.LIGHT_GRAY_DYE)) {
-						damage = 1 - (1 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+						damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
 					} else if(inv.contains(Material.YELLOW_DYE) || inv.contains(Material.LIGHT_BLUE_DYE) || inv.contains(Material.MAGENTA_DYE)
 							|| inv.contains(Material.ORANGE_DYE) || inv.contains(Material.CLAY_BALL)) {
 						damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
 					} else if(inv.contains(Material.GRAY_DYE) || inv.contains(Material.PINK_DYE) || inv.contains(Material.LIME_DYE)) {
-						damage = 4 - (4 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+						damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
 					} else if(inv.contains(Material.BLUE_DYE) || inv.contains(Material.BROWN_DYE) || inv.contains(Material.BLACK_DYE)
 							|| inv.contains(Material.INK_SAC) || inv.contains(Material.GLOWSTONE_DUST)) {
-						damage = 6 - (6 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+						damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
 					} else {
 						damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
 					}
@@ -4177,15 +4177,15 @@ public class Main extends JavaPlugin implements Listener{
 					Inventory inv = player.getInventory();
 					if(inv.contains(Material.RED_DYE) || inv.contains(Material.GREEN_DYE) || inv.contains(Material.LAPIS_LAZULI)
 							|| inv.contains(Material.CYAN_DYE) || inv.contains(Material.LIGHT_GRAY_DYE)) {
-						damage = 1 - (1 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+						damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
 					} else if(inv.contains(Material.YELLOW_DYE) || inv.contains(Material.LIGHT_BLUE_DYE) || inv.contains(Material.MAGENTA_DYE)
 							|| inv.contains(Material.ORANGE_DYE) || inv.contains(Material.CLAY_BALL)) {
 						damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
 					} else if(inv.contains(Material.GRAY_DYE) || inv.contains(Material.PINK_DYE) || inv.contains(Material.LIME_DYE)) {
-						damage = 4 - (4 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+						damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
 					} else if(inv.contains(Material.BLUE_DYE) || inv.contains(Material.BROWN_DYE) || inv.contains(Material.BLACK_DYE)
 							|| inv.contains(Material.INK_SAC) || inv.contains(Material.GLOWSTONE_DUST)) {
-						damage = 6 - (6 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+						damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
 					} else {
 						damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
 					}
@@ -6670,6 +6670,9 @@ public class Main extends JavaPlugin implements Listener{
 	@EventHandler
 	public void conversionEvent(EntityTransformEvent event) {
 		if(event.getEntity().getType() == EntityType.ZOMBIE) {
+			event.getEntity().remove();
+		}
+		if(event.getEntity().getType() == EntityType.HUSK) {
 			event.getEntity().remove();
 		}
 		if(event.getEntity().getType() == EntityType.PIGLIN) {

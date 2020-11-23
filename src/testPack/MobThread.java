@@ -103,7 +103,7 @@ public class MobThread {
 						} else if(loc.getX() <= -804 && loc.getY() <= 90 && loc.getZ() <= 2464 && loc.getX() >= -1436
 								&& loc.getY() >= 50 && loc.getZ() >= 1812) {
 							senMag2(player, loc);
-						} else if(loc.getX() <= -1027 && loc.getY() <= 52 && loc.getZ() <= 2365 && loc.getX() >= -1096
+						} else if(loc.getX() <= -1027 && loc.getY() <= 42 && loc.getZ() <= 2365 && loc.getX() >= -1096
 								&& loc.getY() >= 3 && loc.getZ() >= 2246) {
 							partholon(player, loc);
 						} else if(loc.getX() <= -568 && loc.getY() <= 60 && loc.getZ() <= 1993 && loc.getX() >= -642
@@ -343,6 +343,9 @@ public class MobThread {
 						} else if(loc.getX() <= 1030 && loc.getY() <= 55 && loc.getZ() <= 214 
 								&& loc.getX() >= 912 && loc.getY() >= 18 && loc.getZ() >= 142) {
 							kleahBase2(player, loc);
+						} else if(loc.getX() <= -1090 && loc.getY() <= 5 && loc.getZ() <= 2302 
+								&& loc.getX() >= -1112 && loc.getY() >= 0 && loc.getZ() >= 2281) {
+							partholonBase(player, loc);
 						}
 						
 					} 
@@ -633,7 +636,7 @@ public class MobThread {
 	public void partholon(Player player, Location loc) {
 		int num = rnd.nextInt(2);
 		loc = location(loc);
-		if (!(loc.getX() <= -1027 && loc.getY() <= 52 && loc.getZ() <= 2365 && loc.getX() >= -1096 && loc.getY() >= 3
+		if (!(loc.getX() <= -1027 && loc.getY() <= 42 && loc.getZ() <= 2365 && loc.getX() >= -1096 && loc.getY() >= 3
 				&& loc.getZ() >= 2246)) {
 			return;
 		}
@@ -2079,6 +2082,21 @@ public class MobThread {
 		loc = location(loc);
 		if (!(loc.getX() <= 1030 && loc.getY() <= 55 && loc.getZ() <= 214 
 				&& loc.getX() >= 912 && loc.getY() >= 18 && loc.getZ() >= 142)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.ZOMBIE);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.CAVE_SPIDER);
+		}
+	}
+	
+	public void partholonBase(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= -1090 && loc.getY() <= 5 && loc.getZ() <= 2302 
+				&& loc.getX() >= -1112 && loc.getY() >= 0 && loc.getZ() >= 2281)) {
 			return;
 		}
 		
