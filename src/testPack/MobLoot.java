@@ -4227,23 +4227,131 @@ public class MobLoot {
 		es.giveExp(player, 140000);
 	}
 	
+	// 에임
 	public void mob186(Player player) {
-
+		int num = rnd.nextInt(7) + 6;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1400000);
 	}
 	
+	// HeYhO
 	public void mob187(Player player) {
-
+		int num = rnd.nextInt(7) + 6;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1430000);
 	}
 	
+	// 녹지 않는 뼈
 	public void mob188(Player player) {
-
+		int num = rnd.nextInt(7) + 6;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1450000);
 	}
 	
+	// 레드 블럭
 	public void mob189(Player player) {
-
+		int num = rnd.nextInt(7) + 6;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1480000);
 	}
 	
 	public void mob190(Player player) {
+
+	}
+	
+	public void mob191(Player player) {
+
+	}
+	
+	public void mob192(Player player) {
+
+	}
+	
+	public void mob193(Player player) {
+
+	}
+	
+	public void mob194(Player player) {
+
+	}
+	
+	public void mob195(Player player) {
+
+	}
+	
+	public void mob196(Player player) {
+
+	}
+	
+	public void mob197(Player player) {
+
+	}
+	
+	public void mob198(Player player) {
+
+	}
+	
+	public void mob199(Player player) {
+
+	}
+	
+	public void mob200(Player player) {
+
+	}
+	
+	public void mob201(Player player) {
+
+	}
+	
+	public void mob202(Player player) {
+
+	}
+	
+	public void mob203(Player player) {
+
+	}
+	
+	public void mob204(Player player) {
+
+	}
+	
+	public void mob205(Player player) {
+
+	}
+	
+	public void mob206(Player player) {
+
+	}
+	
+	public void mob207(Player player) {
+
+	}
+	
+	public void mob208(Player player) {
+
+	}
+	
+	public void mob209(Player player) {
+
+	}
+	
+	public void mob210(Player player) {
 
 	}
 }

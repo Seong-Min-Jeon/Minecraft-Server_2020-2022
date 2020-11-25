@@ -848,6 +848,22 @@ public class MobDeath {
 				if (name.equalsIgnoreCase("약화된 아라크네" + ChatColor.YELLOW + " [Lv.146]")) {
 					mobloot.mob185(lootPlayer);
 				}
+				// 에임
+				if (name.equalsIgnoreCase("에임" + ChatColor.YELLOW + " [Lv.426]")) {
+					mobloot.mob186(lootPlayer); 
+				}
+				// HeYhO
+				if (name.equalsIgnoreCase("HeYhO" + ChatColor.YELLOW + " [Lv.431]")) {
+					mobloot.mob187(lootPlayer);
+				}
+				// 녹지 않는 뼈
+				if (name.equalsIgnoreCase("녹지 않는 뼈" + ChatColor.YELLOW + " [Lv.434]")) {
+					mobloot.mob188(lootPlayer); 
+				}
+				// 레드 블럭
+				if (name.equalsIgnoreCase("레드 블럭" + ChatColor.YELLOW + " [Lv.438]")) {
+					mobloot.mob189(lootPlayer);
+				}
 			} catch (Exception e) {
 
 			}

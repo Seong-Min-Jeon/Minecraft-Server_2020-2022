@@ -5816,7 +5816,7 @@ public class Main extends JavaPlugin implements Listener{
 				String numStr = name.split("]")[0];
 				int num = Integer.parseInt(numStr);
 				Location loc = event.getEntity().getLocation();
-				event.getEntity().getWorld().createExplosion(loc, 1, false, false);
+				event.getEntity().getWorld().createExplosion(loc, 0, false, false);
 				List <Entity> entitylist = event.getEntity().getNearbyEntities (8, 5, 8); 
 				for (Entity nearEntity : entitylist) { 
 				    if (nearEntity.getType() != EntityType.PLAYER) { 
