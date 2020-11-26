@@ -59,7 +59,7 @@ public class ShootArrow {
 		Entity mob = (Entity) arrow.getShooter();
 		if(arrow1(arrow, mob, loc) && arrow2(arrow, mob, loc) && arrow3(arrow, mob, loc) && arrow4(arrow, mob, loc) 
 				&& arrow5(arrow, mob, loc) && arrow6(arrow, mob, loc) && arrow7(arrow, mob, loc) && arrow8(arrow, mob, loc)
-				&& arrow9(arrow, mob, loc)) {
+				&& arrow9(arrow, mob, loc) && arrow10(arrow, mob, loc)) {
 			SpectralArrow sarrow = (SpectralArrow) arrow.getWorld().spawnEntity(loc, EntityType.SPECTRAL_ARROW);
 			sarrow.setVelocity(arrow.getVelocity());
 		}
@@ -176,6 +176,19 @@ public class ShootArrow {
 				arrow.removePassenger(arrow.getPassenger());
 			}
 			Item item = arrow.getWorld().dropItem(loc, new ItemStack(Material.IRON_SWORD));
+			item.setPickupDelay(10000000);
+			arrow.addPassenger(item);
+			return false;
+		}
+		return true;
+	}
+	
+	public boolean arrow10(Arrow arrow, Entity mob, Location loc) {
+		if(mob.getCustomName().substring(2).equalsIgnoreCase("Death Gun" + ChatColor.YELLOW + " [Lv.444]")) {
+			if (arrow.getPassenger() != null) {
+				arrow.removePassenger(arrow.getPassenger());
+			}
+			Item item = arrow.getWorld().dropItem(loc, new ItemStack(Material.FIRE_CHARGE));
 			item.setPickupDelay(10000000);
 			arrow.addPassenger(item);
 			return false;

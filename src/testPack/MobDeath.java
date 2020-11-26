@@ -864,6 +864,18 @@ public class MobDeath {
 				if (name.equalsIgnoreCase("레드 블럭" + ChatColor.YELLOW + " [Lv.438]")) {
 					mobloot.mob189(lootPlayer);
 				}
+				// 사막 망령 전사
+				if (name.equalsIgnoreCase("사막 망령 전사" + ChatColor.YELLOW + " [Lv.440]")) {
+					mobloot.mob190(lootPlayer);
+				}
+				// Death Gun
+				if (name.equalsIgnoreCase("Death Gun" + ChatColor.YELLOW + " [Lv.444]")) {
+					mobloot.mob191(lootPlayer); 
+				}
+				// 공허
+				if (name.equalsIgnoreCase("공허" + ChatColor.YELLOW + " [Lv.448]")) {
+					mobloot.mob192(lootPlayer);
+				}
 			} catch (Exception e) {
 
 			}

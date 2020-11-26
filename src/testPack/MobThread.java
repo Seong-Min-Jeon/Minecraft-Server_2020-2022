@@ -346,6 +346,15 @@ public class MobThread {
 						} else if(loc.getX() <= -1090 && loc.getY() <= 5 && loc.getZ() <= 2302 
 								&& loc.getX() >= -1112 && loc.getY() >= 0 && loc.getZ() >= 2281) {
 							partholonBase(player, loc);
+						} else if(loc.getX() <= 911 && loc.getY() <= 33 && loc.getZ() <= 36 
+								&& loc.getX() >= 768 && loc.getY() >= 0 && loc.getZ() >= -153) {
+							kleahLavaCave1(player, loc);
+						} else if(loc.getX() <= 811 && loc.getY() <= 90 && loc.getZ() <= -64 
+								&& loc.getX() >= 779 && loc.getY() >= 38 && loc.getZ() >= -96) {
+							kleahLavaCave2(player, loc);
+						} else if(loc.getX() <= 532 && loc.getY() <= 255 && loc.getZ() <= 1267 
+								&& loc.getX() >= 120 && loc.getY() >= 0 && loc.getZ() >= 1029) {
+							desert1(player, loc);
 						}
 						
 					} 
@@ -2104,6 +2113,53 @@ public class MobThread {
 			loc.getWorld().spawnEntity(loc, EntityType.ZOMBIE);
 		} else if (num == 1) {
 			loc.getWorld().spawnEntity(loc, EntityType.CAVE_SPIDER);
+		}
+	}
+	
+	public void kleahLavaCave1(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 911 && loc.getY() <= 33 && loc.getZ() <= 36 
+				&& loc.getX() >= 768 && loc.getY() >= 0 && loc.getZ() >= -153)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.MAGMA_CUBE);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		}
+	}
+	
+	public void kleahLavaCave2(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 811 && loc.getY() <= 90 && loc.getZ() <= -64 
+				&& loc.getX() >= 779 && loc.getY() >= 38 && loc.getZ() >= -96)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.ZOMBIE);
+		}
+	}
+	
+	public void desert1(Player player, Location loc) {
+		int num = rnd.nextInt(3);
+		loc = location(loc);
+		if (!(loc.getX() <= 532 && loc.getY() <= 255 && loc.getZ() <= 1267 
+				&& loc.getX() >= 120 && loc.getY() >= 0 && loc.getZ() >= 1029)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.HUSK);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		} else if (num == 2) {
+			loc.getWorld().spawnEntity(loc, EntityType.ENDERMAN);
 		}
 	}
 	
