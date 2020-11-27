@@ -1103,11 +1103,11 @@ public class Skill {
 							zombie.setTarget(golem);
 						}
 						if (nearEntity instanceof Drowned) {
-							WitherSkeleton zombie = (WitherSkeleton) nearEntity;
+							Drowned zombie = (Drowned) nearEntity;
 							zombie.setTarget(golem);
 						}
 						if (nearEntity instanceof Husk) {
-							WitherSkeleton zombie = (WitherSkeleton) nearEntity;
+							Husk zombie = (Husk) nearEntity;
 							zombie.setTarget(golem);
 						}
 					}
@@ -2181,8 +2181,7 @@ public class Skill {
 						((LivingEntity) golem).setMaxHealth((20 + player.getLevel() * 30) / 2);
 						((LivingEntity) golem).setHealth((20 + player.getLevel() * 30) / 2);
 						int golemLv = (player.getLevel() / 2);
-						golem.addPotionEffect(
-								new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, golemLv));						
+						golem.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, golemLv * 2));						
 						go.put(golem.getUniqueId(), player);
 					}
 					IronGolem golem = (IronGolem) world.spawnEntity(loc, EntityType.IRON_GOLEM);
@@ -2191,8 +2190,7 @@ public class Skill {
 					((LivingEntity) golem).setMaxHealth((20 + player.getLevel() * 30));
 					((LivingEntity) golem).setHealth((20 + player.getLevel() * 30));
 					int golemLv = player.getLevel();
-					golem.addPotionEffect(
-							new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, golemLv));
+					golem.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, golemLv * 2));
 					golem.addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, Integer.MAX_VALUE, 0));
 					go.put(golem.getUniqueId(), player);
 					player.sendMessage(ChatColor.GREEN + "[스킬]천사의 기사단이 발동됩니다.");
@@ -2213,11 +2211,11 @@ public class Skill {
 								zombie.setTarget(golem);
 							}
 							if (nearEntity instanceof Drowned) {
-								WitherSkeleton zombie = (WitherSkeleton) nearEntity;
+								Drowned zombie = (Drowned) nearEntity;
 								zombie.setTarget(golem);
 							}
 							if (nearEntity instanceof Husk) {
-								WitherSkeleton zombie = (WitherSkeleton) nearEntity;
+								Husk zombie = (Husk) nearEntity;
 								zombie.setTarget(golem);
 							}
 						}

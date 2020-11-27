@@ -70,6 +70,9 @@ public class Cmd16class implements CommandExecutor {
 			//저장
 			new SaveAll(player, folder);
 			
+			//퀘 초기화
+			player.setScoreboard(Bukkit.getScoreboardManager().getNewScoreboard());
+			
 			//플레이어 접속 시 로비로 이동 & 캐릭터 선택창 활성화
 			World world = player.getWorld();
 			player.teleport(new Location(world,3665,41,3675.5,180,0));

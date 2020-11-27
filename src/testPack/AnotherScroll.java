@@ -26,7 +26,7 @@ public class AnotherScroll {
 	
 	public void questRemoveScroll(Player player, Item itemArg, World world) {	
 		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "퀘스트 제거 스크롤")) {
-			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard ());
+			player.setScoreboard(Bukkit.getScoreboardManager().getNewScoreboard());
 			itemArg.remove();
 		}	
 	}
