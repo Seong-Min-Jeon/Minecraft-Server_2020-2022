@@ -211,7 +211,7 @@ public class ArrowEffect {
 	 		SimpleDateFormat hms = new SimpleDateFormat("hhmmssSSS");
 	 		String strTime = hms.format(new Date(dayTime));
 	 		Integer time = Integer.parseInt(strTime);
-	 		if(time-lastTime > reload) {
+	 		if(time-lastTime > reload || Math.abs(time-lastTime) > 10000) {
 	 			timer.remove(player);
 		 		timer.put(player, time);
 		 		return true;

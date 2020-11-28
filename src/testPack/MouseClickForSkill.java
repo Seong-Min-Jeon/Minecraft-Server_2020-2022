@@ -8,11 +8,15 @@ import java.util.Map;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.Sound;
+import org.bukkit.craftbukkit.v1_16_R1.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 
 import net.minecraft.server.v1_16_R1.PacketPlayOutTitle;
+import net.minecraft.server.v1_16_R1.ChatMessageType;
+import net.minecraft.server.v1_16_R1.IChatBaseComponent;
 import net.minecraft.server.v1_16_R1.IChatBaseComponent.ChatSerializer;
+import net.minecraft.server.v1_16_R1.PacketPlayOutChat;
 import net.minecraft.server.v1_16_R1.PacketPlayOutTitle.EnumTitleAction;
 
 public class MouseClickForSkill {
@@ -72,13 +76,16 @@ public class MouseClickForSkill {
  			s.effect(player, key);
  		} else {
  			Inventory inv = player.getInventory();
- 			if(inv.contains(Material.CLAY_BALL) || inv.contains(Material.GLOWSTONE_DUST)) {
+ 			if(inv.contains(Material.CLAY_BALL) || inv.contains(Material.GLOWSTONE_DUST) || inv.contains(Material.INK_SAC)) {
  				if(!key.equalsIgnoreCase("R")) {
  					cmd.put(player, key); 		
  					sendPacket(player, key);									
  	 			}
  			}
- 			if(inv.contains(Material.BLUE_DYE) || inv.contains(Material.BLACK_DYE)) {
+ 			if(inv.contains(Material.BLUE_DYE) || inv.contains(Material.BLACK_DYE) || inv.contains(Material.RED_DYE) || inv.contains(Material.GREEN_DYE)
+ 					 || inv.contains(Material.LAPIS_LAZULI) || inv.contains(Material.CYAN_DYE) || inv.contains(Material.LIGHT_GRAY_DYE) || inv.contains(Material.GRAY_DYE)
+ 					 || inv.contains(Material.PINK_DYE) || inv.contains(Material.LIME_DYE) || inv.contains(Material.YELLOW_DYE) || inv.contains(Material.LIGHT_BLUE_DYE)
+ 					 || inv.contains(Material.MAGENTA_DYE) || inv.contains(Material.ORANGE_DYE) || inv.contains(Material.BROWN_DYE)) {
  				if(!key.equalsIgnoreCase("L")) {
  					cmd.put(player, key); 		
  					sendPacket(player, key);									
@@ -89,28 +96,22 @@ public class MouseClickForSkill {
 	
 	public void sendPacket(Player player, String key) {
 		try {
-			PacketPlayOutTitle title = new PacketPlayOutTitle(EnumTitleAction.TITLE, ChatSerializer.a("{\"text\":\" \"}"));
-			Object handle = player.getClass().getMethod("getHandle").invoke(player);
-			Object playerConnection = handle.getClass().getField("playerConnection").get(handle);
-			playerConnection.getClass().getMethod("sendPacket", getNMSClass("Packet")).invoke(playerConnection, title);
-			if(key.length() == 1) {
-				String st = key + "§7 - _ - _";
-				PacketPlayOutTitle subtitle = new PacketPlayOutTitle(EnumTitleAction.SUBTITLE, ChatSerializer.a("{\"text\":\"§2" + st + "\"}"));
-				playerConnection.getClass().getMethod("sendPacket", getNMSClass("Packet")).invoke(playerConnection, subtitle);
-			} else if(key.length() == 2) {
+			String message = null;
+			if (key.length() == 1) {
+				message = "§a" + key + "§7 - _ - _";
+			} else if (key.length() == 2) {
 				char key1 = key.charAt(0);
 				char key2 = key.charAt(1);
-				String st = key1 + "§7 - " + "§2" + key2 + "§7 - _";
-				PacketPlayOutTitle subtitle = new PacketPlayOutTitle(EnumTitleAction.SUBTITLE, ChatSerializer.a("{\"text\":\"§2" + st + "\"}"));
-				playerConnection.getClass().getMethod("sendPacket", getNMSClass("Packet")).invoke(playerConnection, subtitle);
-			} else if(key.length() == 3) {
+				message = "§a" + key1 + "§7 - " + "§a" + key2 + "§7 - _";
+			} else if (key.length() == 3) {
 				char key1 = key.charAt(0);
 				char key2 = key.charAt(1);
 				char key3 = key.charAt(2);
-				String st = key1 + "§7 - " + "§2" + key2 + "§7 - " + "§2" + key3;
-				PacketPlayOutTitle subtitle = new PacketPlayOutTitle(EnumTitleAction.SUBTITLE, ChatSerializer.a("{\"text\":\"§2" + st + "\"}"));
-				playerConnection.getClass().getMethod("sendPacket", getNMSClass("Packet")).invoke(playerConnection, subtitle);
+				message = "§a" + key1 + "§7 - " + "§a" + key2 + "§7 - " + "§a" + key3;
 			}
+			IChatBaseComponent chatComponent = IChatBaseComponent.ChatSerializer.a("{\"text\":\"" + message + "\"}");
+	        PacketPlayOutChat packet = new PacketPlayOutChat(chatComponent, ChatMessageType.GAME_INFO, player.getUniqueId());
+	        ((CraftPlayer) player).getHandle().playerConnection.sendPacket(packet);
 			
 		} catch (Exception e) {
 
@@ -143,7 +144,7 @@ public class MouseClickForSkill {
 	}
 	
 	public void bowPlayerPlaySound(Player player, String key) {
-		if(player.getInventory().contains(Material.CLAY_BALL) || player.getInventory().contains(Material.GLOWSTONE_DUST)) {
+		if(player.getInventory().contains(Material.CLAY_BALL) || player.getInventory().contains(Material.GLOWSTONE_DUST) || player.getInventory().contains(Material.INK_SAC)) {
  			if(key.equals("R")) {
  				if(cmd.get(player) == null) {
  					return;
@@ -154,7 +155,11 @@ public class MouseClickForSkill {
 	}
 	
 	public void swordPlayerPlaySound(Player player, String key) {
-		if(player.getInventory().contains(Material.BLUE_DYE) || player.getInventory().contains(Material.BLACK_DYE)) {
+		if(player.getInventory().contains(Material.BLUE_DYE) || player.getInventory().contains(Material.BLACK_DYE) || player.getInventory().contains(Material.RED_DYE) 
+				 || player.getInventory().contains(Material.GREEN_DYE) || player.getInventory().contains(Material.LAPIS_LAZULI) || player.getInventory().contains(Material.CYAN_DYE) 
+				 || player.getInventory().contains(Material.LIGHT_GRAY_DYE) || player.getInventory().contains(Material.GRAY_DYE) || player.getInventory().contains(Material.PINK_DYE) 
+				 || player.getInventory().contains(Material.LIME_DYE) || player.getInventory().contains(Material.YELLOW_DYE) || player.getInventory().contains(Material.LIGHT_BLUE_DYE)
+				 || player.getInventory().contains(Material.MAGENTA_DYE) || player.getInventory().contains(Material.ORANGE_DYE) || player.getInventory().contains(Material.BROWN_DYE)) {
  			if(key.equals("L")) {
  				if(cmd.get(player) == null) {
  					return;

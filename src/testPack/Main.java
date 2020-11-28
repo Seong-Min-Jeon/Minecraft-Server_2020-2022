@@ -144,6 +144,7 @@ import org.bukkit.inventory.meta.SkullMeta;
 import org.bukkit.map.MapView;
 import org.bukkit.map.MapView.Scale;
 import org.bukkit.material.MaterialData;
+import org.bukkit.permissions.Permission;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.potion.PotionEffect;
@@ -3275,6 +3276,9 @@ public class Main extends JavaPlugin implements Listener{
 					}
 					double damage = (lvl * jobMul * skillMul * weaponMul) + enchMul;
 					try {
+						if (player.getInventory().getItemInMainHand().getType() == Material.BONE) {
+							damage = player.getLevel() * 10;
+						}
 						if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "죽음의 서약")) {
 							damage = player.getLevel() * 50;
 						}
@@ -5476,28 +5480,6 @@ public class Main extends JavaPlugin implements Listener{
 	    		} catch(Exception e1) {
 	    			
 	    		}
-	    		//스킬
-	    		try {
-	    			// riding horse
-	    			try {
-						if (event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
-							if (player.getVehicle() == null) {
-								if(event.getClickedBlock() == null) {
-			    					Skill skill = new Skill();
-				    				skill.effect(player);
-			    				}
-			    				if(event.getClickedBlock().getType() != Material.ENDER_CHEST) {
-			    					Skill skill = new Skill();
-				    				skill.effect(player);
-			    				}
-							}
-						}
-	    			} catch (Exception e1) {
-
-	    			}
-	    		} catch(Exception e1) {
-	    			
-	    		}   
 	    		//커맨드형 스킬
 	    		try {	    
 	    			if(player.getVehicle() == null) {
@@ -5516,7 +5498,22 @@ public class Main extends JavaPlugin implements Listener{
 		    						}
 		    					}
 		    				}
-		    				if(inv.contains(Material.BLUE_DYE) || inv.contains(Material.BLACK_DYE)) {
+		    				if(inv.contains(Material.INK_SAC)) {
+		    					if(item.getType() == Material.BRAIN_CORAL_BLOCK || item.getType() == Material.BUBBLE_CORAL_BLOCK || item.getType() == Material.FIRE_CORAL_BLOCK
+		    							|| item.getType() == Material.HORN_CORAL_BLOCK || item.getType() == Material.TUBE_CORAL_BLOCK) {
+		    						MouseClickForSkill mc = new MouseClickForSkill();
+		    						int time = mc.getTime(player);
+		    						if(time==0) {
+		    							mc.click(player, "R");
+		    						} else {
+		    							mc.click(player, "R", time);
+		    						}
+		    					}
+		    				}
+		    				if(inv.contains(Material.BLUE_DYE) || inv.contains(Material.BLACK_DYE) || inv.contains(Material.GREEN_DYE) 
+		    						|| inv.contains(Material.LAPIS_LAZULI) || inv.contains(Material.CYAN_DYE) || inv.contains(Material.LIGHT_GRAY_DYE) 
+		    						|| inv.contains(Material.GRAY_DYE) || inv.contains(Material.PINK_DYE) || inv.contains(Material.LIME_DYE) 
+		    						|| inv.contains(Material.YELLOW_DYE) || inv.contains(Material.LIGHT_BLUE_DYE) || inv.contains(Material.BROWN_DYE)) {
 		    					if(item.getType() == Material.WOODEN_SWORD
 		    							|| item.getType() == Material.STONE_SWORD
 		    							|| item.getType() == Material.IRON_SWORD
@@ -5577,6 +5574,49 @@ public class Main extends JavaPlugin implements Listener{
 		    							|| item.getType() == Material.CUT_RED_SANDSTONE
 		    							|| item.getType() == Material.RED_SANDSTONE_STAIRS
 		    							|| item.getType() == Material.STONE_STAIRS) {
+		    						MouseClickForSkill mc = new MouseClickForSkill();
+		    						int time = mc.getTime(player);
+		    						if(time==0) {
+		    							mc.click(player, "R");
+		    						} else {
+		    							mc.click(player, "R", time);
+		    						}
+		    					}
+		    				}
+		    				if(inv.contains(Material.RED_DYE)) {
+		    					if(item.getType() == Material.BONE) {
+		    						MouseClickForSkill mc = new MouseClickForSkill();
+		    						int time = mc.getTime(player);
+		    						if(time==0) {
+		    							mc.click(player, "R");
+		    						} else {
+		    							mc.click(player, "R", time);
+		    						}
+		    					}
+		    				}
+		    				if(inv.contains(Material.MAGENTA_DYE)) {
+		    					if(item.getType() == Material.WOODEN_PICKAXE 
+		    							|| item.getType() == Material.STONE_PICKAXE
+		    							|| item.getType() == Material.IRON_PICKAXE
+		    							|| item.getType() == Material.GOLDEN_PICKAXE
+		    							|| item.getType() == Material.DIAMOND_PICKAXE
+		    							|| item.getType() == Material.NETHERITE_PICKAXE) {
+		    						MouseClickForSkill mc = new MouseClickForSkill();
+		    						int time = mc.getTime(player);
+		    						if(time==0) {
+		    							mc.click(player, "R");
+		    						} else {
+		    							mc.click(player, "R", time);
+		    						}
+		    					}
+		    				}
+		    				if(inv.contains(Material.ORANGE_DYE)) {
+		    					if(item.getType() == Material.WOODEN_HOE
+		    							|| item.getType() == Material.STONE_HOE
+		    							|| item.getType() == Material.IRON_HOE
+		    							|| item.getType() == Material.GOLDEN_HOE
+		    							|| item.getType() == Material.DIAMOND_HOE
+		    							|| item.getType() == Material.NETHERITE_HOE) {
 		    						MouseClickForSkill mc = new MouseClickForSkill();
 		    						int time = mc.getTime(player);
 		    						if(time==0) {
@@ -5679,18 +5719,6 @@ public class Main extends JavaPlugin implements Listener{
 		} catch(Exception e) {
 			
 		}		
-		//스킬
-		try {
-			Player player = event.getPlayer();
-			if(event.getAnimationType() == PlayerAnimationType.ARM_SWING && player.getVehicle() == null) {
-				if(player.getTargetBlockExact(5) == null) {
-					Skill skill = new Skill();
-					skill.leftEffect(player);
-				}
-			}			
-		} catch(Exception e1) {
-			
-		}
 		//커맨드형 스킬
 		try {
 			Player player = event.getPlayer();
@@ -5707,9 +5735,24 @@ public class Main extends JavaPlugin implements Listener{
 						} else {
 							mc.click(player, "L", time);
 						}
-					}					
+					}
 				}
-				if(inv.contains(Material.BLUE_DYE) || inv.contains(Material.BLACK_DYE)) {
+				if(inv.contains(Material.INK_SAC)) {
+					if(item.getType() == Material.BRAIN_CORAL_BLOCK || item.getType() == Material.BUBBLE_CORAL_BLOCK || item.getType() == Material.FIRE_CORAL_BLOCK
+							|| item.getType() == Material.HORN_CORAL_BLOCK || item.getType() == Material.TUBE_CORAL_BLOCK) {
+						MouseClickForSkill mc = new MouseClickForSkill();
+						int time = mc.getTime(player);
+						if(time==0) {
+							mc.click(player, "L");
+						} else {
+							mc.click(player, "L", time);
+						}
+					}
+				}
+				if(inv.contains(Material.BLUE_DYE) || inv.contains(Material.BLACK_DYE) || inv.contains(Material.GREEN_DYE) 
+						|| inv.contains(Material.LAPIS_LAZULI) || inv.contains(Material.CYAN_DYE) || inv.contains(Material.LIGHT_GRAY_DYE) 
+						|| inv.contains(Material.GRAY_DYE) || inv.contains(Material.PINK_DYE) || inv.contains(Material.LIME_DYE) 
+						|| inv.contains(Material.YELLOW_DYE) || inv.contains(Material.LIGHT_BLUE_DYE) || inv.contains(Material.BROWN_DYE)) {
 					if(item.getType() == Material.WOODEN_SWORD
 							|| item.getType() == Material.STONE_SWORD
 							|| item.getType() == Material.IRON_SWORD
@@ -5770,6 +5813,49 @@ public class Main extends JavaPlugin implements Listener{
 							|| item.getType() == Material.CUT_RED_SANDSTONE
 							|| item.getType() == Material.RED_SANDSTONE_STAIRS
 							|| item.getType() == Material.STONE_STAIRS) {
+						MouseClickForSkill mc = new MouseClickForSkill();
+						int time = mc.getTime(player);
+						if(time==0) {
+							mc.click(player, "L");
+						} else {
+							mc.click(player, "L", time);
+						}
+					}
+				}
+				if(inv.contains(Material.RED_DYE)) {
+					if(item.getType() == Material.BONE) {
+						MouseClickForSkill mc = new MouseClickForSkill();
+						int time = mc.getTime(player);
+						if(time==0) {
+							mc.click(player, "L");
+						} else {
+							mc.click(player, "L", time);
+						}
+					}
+				}
+				if(inv.contains(Material.MAGENTA_DYE)) {
+					if(item.getType() == Material.WOODEN_PICKAXE 
+							|| item.getType() == Material.STONE_PICKAXE
+							|| item.getType() == Material.IRON_PICKAXE
+							|| item.getType() == Material.GOLDEN_PICKAXE
+							|| item.getType() == Material.DIAMOND_PICKAXE
+							|| item.getType() == Material.NETHERITE_PICKAXE) {
+						MouseClickForSkill mc = new MouseClickForSkill();
+						int time = mc.getTime(player);
+						if(time==0) {
+							mc.click(player, "L");
+						} else {
+							mc.click(player, "L", time);
+						}
+					}
+				}
+				if(inv.contains(Material.ORANGE_DYE)) {
+					if(item.getType() == Material.WOODEN_HOE
+							|| item.getType() == Material.STONE_HOE
+							|| item.getType() == Material.IRON_HOE
+							|| item.getType() == Material.GOLDEN_HOE
+							|| item.getType() == Material.DIAMOND_HOE
+							|| item.getType() == Material.NETHERITE_HOE) {
 						MouseClickForSkill mc = new MouseClickForSkill();
 						int time = mc.getTime(player);
 						if(time==0) {

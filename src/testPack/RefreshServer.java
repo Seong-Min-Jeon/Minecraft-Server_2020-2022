@@ -263,6 +263,29 @@ public class RefreshServer {
 					}
 				}
 				
+				if(time % 60 == 0) {
+					for(Player player : Bukkit.getOnlinePlayers()) {
+						ItemStack mana = new ItemStack(Material.HEART_OF_THE_SEA);
+						ItemMeta manaIm = mana.getItemMeta();
+						manaIm.setDisplayName(ChatColor.BLUE + "마나");
+						mana.setItemMeta(manaIm);
+						if (player.getInventory().contains(Material.HEART_OF_THE_SEA)) {
+							int i = 0;
+							for (ItemStack is : player.getInventory().getContents()) {
+								if (is == null)
+									continue;
+								if (is.getType() == Material.HEART_OF_THE_SEA) {
+									i = i + is.getAmount();
+								}
+							}
+							if (i < 20)
+								player.getInventory().addItem(mana);
+						} else {
+							player.getInventory().setItem(8, mana);
+						}
+					}
+				}
+				
 //				if(time % 6000 == 0) {
 //					
 //					if(change == 0) {

@@ -23,6 +23,7 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Husk;
 import org.bukkit.entity.IronGolem;
+import org.bukkit.entity.Item;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Mob;
 import org.bukkit.entity.Player;
@@ -50,7 +51,7 @@ public class Skill {
 	
 	GolemOwner go = new GolemOwner();
 
-	public void effect(Player player) {
+	public void effect(Player player, String key) {
 		
 		try {
 			ItemStack item = player.getInventory().getItemInMainHand();
@@ -70,12 +71,12 @@ public class Skill {
 			}
 		} catch(Exception e) {
 			
-		}	
+		}
 		
 		ItemStack mainHand = player.getInventory().getItemInMainHand();
 		if (player.getInventory().contains(Material.RED_DYE)
 				&& player.getInventory().getItemInMainHand().getType() == Material.BONE) {
-			skill1(player);
+			skill1(player, key);
 		}
 		if (player.getInventory().contains(Material.GREEN_DYE)
 				&& (mainHand.getType() == Material.WOODEN_SWORD
@@ -138,7 +139,7 @@ public class Skill {
 						|| mainHand.getType() == Material.CUT_RED_SANDSTONE
 						|| mainHand.getType() == Material.RED_SANDSTONE_STAIRS
 						|| mainHand.getType() == Material.STONE_STAIRS)) {
-			skill2(player);
+			skill2(player, key);
 		}
 		if (player.getInventory().contains(Material.LAPIS_LAZULI)
 				&& (mainHand.getType() == Material.WOODEN_SWORD
@@ -201,7 +202,7 @@ public class Skill {
 						|| mainHand.getType() == Material.CUT_RED_SANDSTONE
 						|| mainHand.getType() == Material.RED_SANDSTONE_STAIRS
 						|| mainHand.getType() == Material.STONE_STAIRS)) {
-			skill3(player);
+			skill3(player, key);
 		}
 		if (player.getInventory().contains(Material.CYAN_DYE)
 				&& (mainHand.getType() == Material.WOODEN_SWORD
@@ -264,7 +265,7 @@ public class Skill {
 						|| mainHand.getType() == Material.CUT_RED_SANDSTONE
 						|| mainHand.getType() == Material.RED_SANDSTONE_STAIRS
 						|| mainHand.getType() == Material.STONE_STAIRS)) {
-			skill4(player);
+			skill4(player, key);
 		}
 		if (player.getInventory().contains(Material.LIGHT_GRAY_DYE)
 				&& (mainHand.getType() == Material.WOODEN_SWORD
@@ -327,7 +328,7 @@ public class Skill {
 						|| mainHand.getType() == Material.CUT_RED_SANDSTONE
 						|| mainHand.getType() == Material.RED_SANDSTONE_STAIRS
 						|| mainHand.getType() == Material.STONE_STAIRS)) {
-			skill5(player);
+			skill5(player, key);
 		}
 		if (player.getInventory().contains(Material.GRAY_DYE)
 				&& (mainHand.getType() == Material.WOODEN_SWORD
@@ -390,7 +391,7 @@ public class Skill {
 						|| mainHand.getType() == Material.CUT_RED_SANDSTONE
 						|| mainHand.getType() == Material.RED_SANDSTONE_STAIRS
 						|| mainHand.getType() == Material.STONE_STAIRS)) {
-			skill6(player);
+			skill6(player, key);
 		}
 		if (player.getInventory().contains(Material.PINK_DYE)
 				&& (mainHand.getType() == Material.WOODEN_SWORD
@@ -453,7 +454,7 @@ public class Skill {
 						|| mainHand.getType() == Material.CUT_RED_SANDSTONE
 						|| mainHand.getType() == Material.RED_SANDSTONE_STAIRS
 						|| mainHand.getType() == Material.STONE_STAIRS)) {
-			skill7(player);
+			skill7(player, key);
 		}
 		if (player.getInventory().contains(Material.LIME_DYE)
 				&& (mainHand.getType() == Material.WOODEN_SWORD
@@ -516,7 +517,7 @@ public class Skill {
 						|| mainHand.getType() == Material.CUT_RED_SANDSTONE
 						|| mainHand.getType() == Material.RED_SANDSTONE_STAIRS
 						|| mainHand.getType() == Material.STONE_STAIRS)) {
-			skill8(player);
+			skill8(player, key);
 		}
 		if (player.getInventory().contains(Material.YELLOW_DYE)
 				&& (mainHand.getType() == Material.WOODEN_SWORD
@@ -579,7 +580,7 @@ public class Skill {
 						|| mainHand.getType() == Material.CUT_RED_SANDSTONE
 						|| mainHand.getType() == Material.RED_SANDSTONE_STAIRS
 						|| mainHand.getType() == Material.STONE_STAIRS)) {
-			skill9(player);
+			skill9(player, key);
 		}
 		if (player.getInventory().contains(Material.LIGHT_BLUE_DYE)
 				&& (mainHand.getType() == Material.WOODEN_SWORD
@@ -642,7 +643,7 @@ public class Skill {
 						|| mainHand.getType() == Material.CUT_RED_SANDSTONE
 						|| mainHand.getType() == Material.RED_SANDSTONE_STAIRS
 						|| mainHand.getType() == Material.STONE_STAIRS)) {
-			skill10(player);
+			skill10(player, key);
 		}
 		if (player.getInventory().contains(Material.MAGENTA_DYE)
 				&& (mainHand.getType() == Material.WOODEN_PICKAXE
@@ -651,7 +652,7 @@ public class Skill {
 						|| mainHand.getType() == Material.GOLDEN_PICKAXE
 						|| mainHand.getType() == Material.DIAMOND_PICKAXE
 						|| mainHand.getType() == Material.NETHERITE_PICKAXE)) {
-			skill11(player);
+			skill11(player, key);
 		}
 		if (player.getInventory().contains(Material.ORANGE_DYE)
 				&& (mainHand.getType() == Material.WOODEN_HOE
@@ -660,7 +661,7 @@ public class Skill {
 						|| mainHand.getType() == Material.GOLDEN_HOE
 						|| mainHand.getType() == Material.DIAMOND_HOE
 						|| mainHand.getType() == Material.NETHERITE_HOE)) {
-			skill12(player);
+			skill12(player, key);
 		}		
 		if (player.getInventory().contains(Material.BROWN_DYE)
 				&& (mainHand.getType() == Material.WOODEN_SWORD
@@ -723,41 +724,16 @@ public class Skill {
 						|| mainHand.getType() == Material.CUT_RED_SANDSTONE
 						|| mainHand.getType() == Material.RED_SANDSTONE_STAIRS
 						|| mainHand.getType() == Material.STONE_STAIRS)) {
-			skill14(player);
-		}			
-		
-		if (!player.getInventory().contains(Material.HEART_OF_THE_SEA)) {
-			ItemStack item = new ItemStack(Material.MAGMA_CREAM);
-			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.RED + "마나없음");
-			item.setItemMeta(itemIm);
-			player.getInventory().setItem(8, item);
+			skill14(player, key);
+		}	
+		if (player.getInventory().contains(Material.INK_SAC)
+				&& (mainHand.getType() == Material.BRAIN_CORAL_BLOCK 
+				|| mainHand.getType() == Material.HORN_CORAL_BLOCK 
+				|| mainHand.getType() == Material.TUBE_CORAL_BLOCK 
+				|| mainHand.getType() == Material.BUBBLE_CORAL_BLOCK 
+				|| mainHand.getType() == Material.FIRE_CORAL_BLOCK)) {
+			skill16(player, key);
 		}
-	}
-
-	public void effect(Player player, String key) {
-		
-		try {
-			ItemStack item = player.getInventory().getItemInMainHand();
-			if(!(item.getType() == Material.LEATHER_HELMET || item.getType() == Material.LEATHER_CHESTPLATE || item.getType() == Material.LEATHER_LEGGINGS
-					|| item.getType() == Material.LEATHER_BOOTS || item.getType() == Material.CHAINMAIL_HELMET || item.getType() == Material.CHAINMAIL_CHESTPLATE 
-					|| item.getType() == Material.CHAINMAIL_LEGGINGS || item.getType() == Material.CHAINMAIL_BOOTS || item.getType() == Material.IRON_HELMET 
-					|| item.getType() == Material.IRON_CHESTPLATE || item.getType() == Material.IRON_LEGGINGS || item.getType() == Material.IRON_BOOTS 
-					|| item.getType() == Material.GOLDEN_HELMET || item.getType() == Material.GOLDEN_CHESTPLATE || item.getType() == Material.GOLDEN_LEGGINGS 
-					|| item.getType() == Material.GOLDEN_BOOTS || item.getType() == Material.DIAMOND_HELMET || item.getType() == Material.DIAMOND_CHESTPLATE 
-					|| item.getType() == Material.DIAMOND_LEGGINGS || item.getType() == Material.DIAMOND_BOOTS || item.getType() == Material.NETHERITE_HELMET 
-					|| item.getType() == Material.NETHERITE_CHESTPLATE || item.getType() == Material.NETHERITE_LEGGINGS || item.getType() == Material.NETHERITE_BOOTS)) {
-				LimitLevel la = new LimitLevel();
-				if(la.limit(player, item) == false) {
-					player.sendMessage(ChatColor.RED + "아직 이 무기를 다루기에는 내 힘이 부족하다.");
-					return;
-				}
-			}
-		} catch(Exception e) {
-			
-		}
-		
-		ItemStack mainHand = player.getInventory().getItemInMainHand();
 		if (player.getInventory().contains(Material.CLAY_BALL)) {
 			if (mainHand.getType() == Material.DEAD_BRAIN_CORAL_BLOCK 
 					|| mainHand.getType() == Material.DEAD_BUBBLE_CORAL_BLOCK
@@ -912,50 +888,9 @@ public class Skill {
 		}
 	}
 	
-	public void leftEffect(Player player) {
-		
-		try {
-			ItemStack item = player.getInventory().getItemInMainHand();
-			if(!(item.getType() == Material.LEATHER_HELMET || item.getType() == Material.LEATHER_CHESTPLATE || item.getType() == Material.LEATHER_LEGGINGS
-					|| item.getType() == Material.LEATHER_BOOTS || item.getType() == Material.CHAINMAIL_HELMET || item.getType() == Material.CHAINMAIL_CHESTPLATE 
-					|| item.getType() == Material.CHAINMAIL_LEGGINGS || item.getType() == Material.CHAINMAIL_BOOTS || item.getType() == Material.IRON_HELMET 
-					|| item.getType() == Material.IRON_CHESTPLATE || item.getType() == Material.IRON_LEGGINGS || item.getType() == Material.IRON_BOOTS 
-					|| item.getType() == Material.GOLDEN_HELMET || item.getType() == Material.GOLDEN_CHESTPLATE || item.getType() == Material.GOLDEN_LEGGINGS 
-					|| item.getType() == Material.GOLDEN_BOOTS || item.getType() == Material.DIAMOND_HELMET || item.getType() == Material.DIAMOND_CHESTPLATE 
-					|| item.getType() == Material.DIAMOND_LEGGINGS || item.getType() == Material.DIAMOND_BOOTS || item.getType() == Material.NETHERITE_HELMET 
-					|| item.getType() == Material.NETHERITE_CHESTPLATE || item.getType() == Material.NETHERITE_LEGGINGS || item.getType() == Material.NETHERITE_BOOTS)) {
-				LimitLevel la = new LimitLevel();
-				if(la.limit(player, item) == false) {
-					player.sendMessage(ChatColor.RED + "아직 이 무기를 다루기에는 내 힘이 부족하다.");
-					return;
-				}
-			}
-		} catch(Exception e) {
-			
-		}
-		
-		ItemStack mainHand = player.getInventory().getItemInMainHand();	
-		if (player.getInventory().contains(Material.INK_SAC)
-				&& (mainHand.getType() == Material.BRAIN_CORAL_BLOCK 
-				|| mainHand.getType() == Material.HORN_CORAL_BLOCK 
-				|| mainHand.getType() == Material.TUBE_CORAL_BLOCK 
-				|| mainHand.getType() == Material.BUBBLE_CORAL_BLOCK 
-				|| mainHand.getType() == Material.FIRE_CORAL_BLOCK)) {
-			skill16(player);
-		}
-		if (!player.getInventory().contains(Material.HEART_OF_THE_SEA)) {
-			ItemStack item = new ItemStack(Material.MAGMA_CREAM);
-			ItemMeta itemIm = item.getItemMeta();
-			itemIm.setDisplayName(ChatColor.RED + "마나없음");
-			item.setItemMeta(itemIm);
-			player.getInventory().setItem(8, item);
-		}
-	}
-	
-	public void skill1(Player player) {
+	public void skill1(Player player, String key) {
 		World world = player.getWorld();
-		if (!(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
-				.equals(ChatColor.GOLD + "본 파이터의 증표"))) {
+		if (!(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "본 파이터의 증표"))) {
 			int i = 0;
 			for (ItemStack is : player.getInventory().getContents()) {
 				if (is == null)
@@ -964,85 +899,162 @@ public class Skill {
 					i = i + is.getAmount();
 				}
 			}
-			if (i == 3) {
-				player.getInventory().remove(Material.HEART_OF_THE_SEA);
-				int num = player.getLevel();
-				Location loc = player.getLocation();
-				List<Entity> entitylist = player.getNearbyEntities(5, 5, 5);
-				for (Entity nearEntity : entitylist) {
-					if (nearEntity.getType() != EntityType.PLAYER) {
-						if (nearEntity instanceof LivingEntity) {
-							LivingEntity nearMob = (LivingEntity) nearEntity;
-							nearMob.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 32700));
-							nearMob.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 200, 140));
-							nearMob.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 200, 32700));
+			if(key.equals("RRR")) {
+				if(i>=3) {
+					if ((player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) || (player.getLocation().getBlock().getType() != Material.AIR)
+							|| (player.getLocation().add(0,1,0).getBlock().getType() != Material.AIR)) {						
+						player.getInventory().remove(Material.HEART_OF_THE_SEA);
+						ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 3);
+						ItemMeta itemIm = item.getItemMeta();
+						itemIm.setDisplayName(ChatColor.BLUE + "마나");
+						item.setItemMeta(itemIm);
+						player.getInventory().setItem(8, item);
+						player.sendMessage(ChatColor.GREEN + "[스킬]원시의 질주가 발동됩니다.");
+						Vector vec = player.getEyeLocation().getDirection().multiply(1.4f);
+						player.setVelocity(vec);
+						world.playSound(player.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
+					}
+				} else {
+					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+				}
+			} else if(key.equals("RRL")) {
+				if(i>=4) {
+					player.getInventory().remove(Material.HEART_OF_THE_SEA);
+					ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 4);
+					ItemMeta itemIm = item.getItemMeta();
+					itemIm.setDisplayName(ChatColor.BLUE + "마나");
+					item.setItemMeta(itemIm);
+					player.getInventory().setItem(8, item);
+					int num = player.getLevel();
+					Location loc = player.getLocation();
+					world.playEffect(loc, Effect.MOBSPAWNER_FLAMES, 1);
+					world.playEffect(loc.add(1, 0, 0), Effect.MOBSPAWNER_FLAMES, 1);
+					world.playEffect(loc.add(1, 0, 1), Effect.MOBSPAWNER_FLAMES, 1);
+					world.playEffect(loc.add(-1, 0, 0), Effect.MOBSPAWNER_FLAMES, 1);
+					world.playEffect(loc.add(-1, 0, 1), Effect.MOBSPAWNER_FLAMES, 1);
+					world.playEffect(loc.add(1, 0, -1), Effect.MOBSPAWNER_FLAMES, 1);
+					world.playEffect(loc.add(0, 0, -1), Effect.MOBSPAWNER_FLAMES, 1);
+					world.playEffect(loc.add(0, 0, 1), Effect.MOBSPAWNER_FLAMES, 1);
+					world.playEffect(loc.add(-1, 0, -1), Effect.MOBSPAWNER_FLAMES, 1);
+					player.sendMessage(ChatColor.GREEN + "[스킬]본 체스트을 발동합니다.");
+					if (num < 15) {
+						player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 0,true,false,false));
+					} else if (num < 30) {
+						player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 150, 0,true,false,false));
+					} else if (num < 45) {
+						player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 0,true,false,false));
+					} else if (num < 60) {
+						player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 1,true,false,false));
+					} else if (num < 75) {
+						player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 150, 1,true,false,false));
+					} else if (num < 90) {
+						player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 1,true,false,false));
+					} else {
+						player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 2,true,false,false));
+					}
+					// ===============================================================
+					ParticleData pd = new ParticleData(player.getUniqueId());
+					if (pd.hasID()) {
+						pd.endTask();
+						pd.removeID();
+					}
+					ParticleEffect pe = new ParticleEffect(player);
+					pe.startE1();
+					// ================================================================
+					world.playSound(loc, Sound.ENTITY_BLAZE_DEATH, 1.0f, 1.0f);
+					
+				} else {
+					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+				}
+			} else if(key.equals("RLL")) {
+				if(i>=5) {
+					player.getInventory().remove(Material.HEART_OF_THE_SEA);
+					ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 5);
+					ItemMeta itemIm = item.getItemMeta();
+					itemIm.setDisplayName(ChatColor.BLUE + "마나");
+					item.setItemMeta(itemIm);
+					player.getInventory().setItem(8, item);
+					int num = player.getLevel();
+					Location loc = player.getLocation();
+					List<Entity> entitylist = player.getNearbyEntities(5, 5, 5);
+					for (Entity nearEntity : entitylist) {
+						if (nearEntity.getType() != EntityType.PLAYER) {
+							if (nearEntity instanceof LivingEntity) {
+								LivingEntity nearMob = (LivingEntity) nearEntity;
+								nearMob.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 100, 32700));
+								nearMob.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 100, 140));
+								nearMob.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 100, 32700));
+							}
 						}
 					}
-				}
-				// ===============================================================
-				ParticleData pd = new ParticleData(player.getUniqueId());
-				if (pd.hasID()) {
-					pd.endTask();
-					pd.removeID();
-				}
-				ParticleEffect pe = new ParticleEffect(player);
-				pe.startE2();
-				// ================================================================
-				player.sendMessage(ChatColor.GREEN + "[스킬]뼈감옥을 발동합니다.");
-				player.sendMessage(ChatColor.GREEN + "10초간 적의 움직임을 멈춥니다.");
-				world.playSound(loc, Sound.ENTITY_WOLF_SHAKE, 1.0f, 1.0f);
-			} else if (i > 3) {
-				player.getInventory().remove(Material.HEART_OF_THE_SEA);
-				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 3);
-				ItemMeta itemIm = item.getItemMeta();
-				itemIm.setDisplayName(ChatColor.BLUE + "마나");
-				item.setItemMeta(itemIm);
-				player.getInventory().setItem(8, item);
-				int num = player.getLevel();
-				Location loc = player.getLocation();
-				world.playEffect(loc, Effect.MOBSPAWNER_FLAMES, 1);
-				world.playEffect(loc.add(1, 0, 0), Effect.MOBSPAWNER_FLAMES, 1);
-				world.playEffect(loc.add(1, 0, 1), Effect.MOBSPAWNER_FLAMES, 1);
-				world.playEffect(loc.add(-1, 0, 0), Effect.MOBSPAWNER_FLAMES, 1);
-				world.playEffect(loc.add(-1, 0, 1), Effect.MOBSPAWNER_FLAMES, 1);
-				world.playEffect(loc.add(1, 0, -1), Effect.MOBSPAWNER_FLAMES, 1);
-				world.playEffect(loc.add(0, 0, -1), Effect.MOBSPAWNER_FLAMES, 1);
-				world.playEffect(loc.add(0, 0, 1), Effect.MOBSPAWNER_FLAMES, 1);
-				world.playEffect(loc.add(-1, 0, -1), Effect.MOBSPAWNER_FLAMES, 1);
-				player.sendMessage(ChatColor.GREEN + "[스킬]본 체스트을 발동합니다.");
-				if (num < 15) {
-					player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 0,true,false,false));
-				} else if (num < 30) {
-					player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 150, 0,true,false,false));
-				} else if (num < 45) {
-					player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 0,true,false,false));
-				} else if (num < 60) {
-					player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 1,true,false,false));
-				} else if (num < 75) {
-					player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 150, 1,true,false,false));
-				} else if (num < 90) {
-					player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 1,true,false,false));
+					// ===============================================================
+					ParticleData pd = new ParticleData(player.getUniqueId());
+					if (pd.hasID()) {
+						pd.endTask();
+						pd.removeID();
+					}
+					ParticleEffect pe = new ParticleEffect(player);
+					pe.startE2();
+					// ================================================================
+					player.sendMessage(ChatColor.GREEN + "[스킬]뼈감옥을 발동합니다.");
+					player.sendMessage(ChatColor.GREEN + "5초간 적의 움직임을 멈춥니다.");
+					world.playSound(loc, Sound.ENTITY_WOLF_SHAKE, 1.0f, 1.0f);				
 				} else {
-					player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 2,true,false,false));
+					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
 				}
-				// ===============================================================
-				ParticleData pd = new ParticleData(player.getUniqueId());
-				if (pd.hasID()) {
-					pd.endTask();
-					pd.removeID();
+			} else if(key.equals("RLR")) {
+				if(i>=10) {
+					player.getInventory().remove(Material.HEART_OF_THE_SEA);
+					ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 10);
+					ItemMeta itemIm = item.getItemMeta();
+					itemIm.setDisplayName(ChatColor.BLUE + "마나");
+					item.setItemMeta(itemIm);
+					player.getInventory().setItem(8, item);
+					
+					player.sendMessage(ChatColor.GREEN + "[스킬]뼈 던지기가 발동됩니다.");
+					
+					Thread t = new Thread(player.getUniqueId());
+					sleep = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+						int time = 0;
+						
+						@Override
+						public void run() {
+							if (!t.hasID()) {
+								t.setID(sleep);
+							}
+						
+							if(time>=20) {								
+								t.endTask();
+								t.removeID();
+							} else if(time%5 == 0) {
+								Arrow arrow = player.launchProjectile(Arrow.class);
+								arrow.setShooter(player);
+								arrow.setDamage(1);
+								arrow.setVelocity(player.getLocation().getDirection().multiply(1.8f));		
+								world.playSound(player.getLocation(), Sound.ENTITY_ARROW_SHOOT, 1.0f, 0.2f);
+								
+								Item item = arrow.getWorld().dropItem(arrow.getLocation(), new ItemStack(Material.BONE));
+								item.setPickupDelay(10000000);
+								arrow.addPassenger(item);
+							}
+							
+							time++;
+						}						
+						
+					}, 0, 1);
+				} else {
+					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
 				}
-				ParticleEffect pe = new ParticleEffect(player);
-				pe.startE1();
-				// ================================================================
-				world.playSound(loc, Sound.ENTITY_BLAZE_DEATH, 1.0f, 1.0f);
-			} else {
-				player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-				world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
 			}
 		}
 	}
 
-	public void skill2(Player player) {
+	public void skill2(Player player, String key) {
 		World world = player.getWorld();
 		if (!(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
 				.equals(ChatColor.GOLD + "기사의 증표"))) {
@@ -1187,7 +1199,7 @@ public class Skill {
 		}
 	}
 
-	public void skill3(Player player) {
+	public void skill3(Player player, String key) {
 		World world = player.getWorld();
 		if (!(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
 				.equals(ChatColor.GOLD + "프리스트의 증표"))) {
@@ -1297,7 +1309,7 @@ public class Skill {
 		}
 	}
 
-	public void skill4(Player player) {
+	public void skill4(Player player, String key) {
 		World world = player.getWorld();
 		if (!(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
 				.equals(ChatColor.GOLD + "광전사의 증표"))) {
@@ -1381,7 +1393,7 @@ public class Skill {
 		}
 	}
 
-	public void skill5(Player player) {
+	public void skill5(Player player, String key) {
 		World world = player.getWorld();
 		if (!(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
 				.equals(ChatColor.GOLD + "도박사의 증표"))) {			
@@ -2073,7 +2085,7 @@ public class Skill {
 		}
 	}
 
-	public void skill6(Player player) {
+	public void skill6(Player player, String key) {
 		World world = player.getWorld();
 		if (!(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
 				.equals(ChatColor.GOLD + "데빌의 증표"))) {
@@ -2149,7 +2161,7 @@ public class Skill {
 		}
 	}
 
-	public void skill7(Player player) {
+	public void skill7(Player player, String key) {
 		World world = player.getWorld();
 		if (!(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
 				.equals(ChatColor.GOLD + "엔젤의 증표"))) {
@@ -2317,7 +2329,7 @@ public class Skill {
 		}
 	}
 
-	public void skill8(Player player) {
+	public void skill8(Player player, String key) {
 		World world = player.getWorld();
 		if (!(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
 				.equals(ChatColor.GOLD + "대행자의 증표"))) {
@@ -2513,7 +2525,7 @@ public class Skill {
 		}
 	}
 
-	public void skill9(Player player) {
+	public void skill9(Player player, String key) {
 		World world = player.getWorld();
 		if (!(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
 				.equals(ChatColor.GOLD + "그림자 무사의 증표"))) {
@@ -2629,7 +2641,7 @@ public class Skill {
 		}
 	}
 	
-	public void skill10(Player player) {
+	public void skill10(Player player, String key) {
 		World world = player.getWorld();
 		if (!(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
 				.equals(ChatColor.GOLD + "버서커의 증표"))) {
@@ -2721,7 +2733,7 @@ public class Skill {
 		}
 	}
 	
-	public void skill11(Player player) {
+	public void skill11(Player player, String key) {
 		World world = player.getWorld();
 		if (!(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
 				.equals(ChatColor.GOLD + "군인의 증표"))) {
@@ -2813,7 +2825,7 @@ public class Skill {
 		}
 	}
 
-	public void skill12(Player player) {
+	public void skill12(Player player, String key) {
 		World world = player.getWorld();
 		if (!(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
 				.equals(ChatColor.GOLD + "그림 리퍼의 증표"))) {
@@ -3121,7 +3133,7 @@ public class Skill {
 		}
 	}
 
-	public void skill14(Player player) {
+	public void skill14(Player player, String key) {
 		World world = player.getWorld();
 		if (!(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
 				.equals(ChatColor.GOLD + "팔라딘의 증표"))) {
@@ -3389,7 +3401,7 @@ public class Skill {
 		}
 	}
 	
-	public void skill16(Player player) {
+	public void skill16(Player player, String key) {
 		World world = player.getWorld();
 		if (!(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
 				.equals(ChatColor.GOLD + "대대장의 증표"))) {
