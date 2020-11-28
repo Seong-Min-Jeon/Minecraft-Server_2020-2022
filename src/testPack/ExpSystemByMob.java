@@ -23,37 +23,10 @@ public class ExpSystemByMob {
 		if(currentLevel != 0) {
 			exp -= Math.log10(currentLevel) * Math.log10(currentLevel) * currentLevel * currentLevel;
 			exp *= multyExp;
-//			Inventory inv = player.getInventory();
-//			if(inv.contains(Material.YELLOW_DYE) && currentLevel < 100) {
-//				exp *= 2;
-//			} else if(inv.contains(Material.LIGHT_BLUE_DYE) && currentLevel < 100) {
-//				exp *= 2;
-//			} else if(inv.contains(Material.MAGENTA_DYE) && currentLevel < 100) {
-//				exp *= 2;
-//			} else if(inv.contains(Material.ORANGE_DYE) && currentLevel < 100) {
-//				exp *= 2;
-//			} else if(inv.contains(Material.CLAY_BALL) && currentLevel < 100) {
-//				exp *= 2;
-//			} else if(inv.contains(Material.GRAY_DYE) && currentLevel < 400) {
-//				exp *= 2;
-//			} else if(inv.contains(Material.PINK_DYE) && currentLevel < 400) {
-//				exp *= 2;
-//			} else if(inv.contains(Material.LIME_DYE) && currentLevel < 400) {
-//				exp *= 2;
-//			} else if(inv.contains(Material.BLUE_DYE) && currentLevel < 900) {
-//				exp *= 2;
-//			} else if(inv.contains(Material.BROWN_DYE) && currentLevel < 900) {
-//				exp *= 2;
-//			} else if(inv.contains(Material.BLACK_DYE) && currentLevel < 900) {
-//				exp *= 2;
-//			} else if(inv.contains(Material.INK_SAC) && currentLevel < 900) {
-//				exp *= 2;
-//			} else if(inv.contains(Material.GLOWSTONE_DUST) && currentLevel < 900) {
-//				exp *= 2;
-//			}
-			if(exp < 0) {
-				exp = 0;
-			}
+		}
+		
+		if(exp < 0) {
+			exp = 0;
 		}
 		
 		int percent = 0;
@@ -112,65 +85,14 @@ public class ExpSystemByMob {
 	}
 	
 	public void partyGiveExp(Player player, int exp) {
-		
-		// 마나지급
-		int num = rnd.nextInt(5);
-		if(num == 0) {
-			ItemStack mana = new ItemStack(Material.HEART_OF_THE_SEA);
-			ItemMeta manaIm = mana.getItemMeta();
-			manaIm.setDisplayName(ChatColor.BLUE + "마나");
-			mana.setItemMeta(manaIm);
-			if (player.getInventory().contains(Material.HEART_OF_THE_SEA)) {
-				int i = 0;
-				for (ItemStack is : player.getInventory().getContents()) {
-					if (is == null)
-						continue;
-					if (is.getType() == Material.HEART_OF_THE_SEA) {
-						i = i + is.getAmount();
-					}
-				}
-				if (i < 20)
-					player.getInventory().addItem(mana);
-			} else {
-				player.getInventory().setItem(8, mana);
-			}
-		}
-		
 		int currentLevel = player.getLevel();
 		if(currentLevel != 0) {
 			exp -= Math.log10(currentLevel) * Math.log10(currentLevel) * currentLevel * currentLevel;
 			exp *= multyExp;
-			Inventory inv = player.getInventory();
-			if(inv.contains(Material.YELLOW_DYE) && currentLevel < 100) {
-				exp *= 2;
-			} else if(inv.contains(Material.LIGHT_BLUE_DYE) && currentLevel < 100) {
-				exp *= 2;
-			} else if(inv.contains(Material.MAGENTA_DYE) && currentLevel < 100) {
-				exp *= 2;
-			} else if(inv.contains(Material.ORANGE_DYE) && currentLevel < 100) {
-				exp *= 2;
-			} else if(inv.contains(Material.CLAY_BALL) && currentLevel < 100) {
-				exp *= 2;
-			} else if(inv.contains(Material.GRAY_DYE) && currentLevel < 400) {
-				exp *= 2;
-			} else if(inv.contains(Material.PINK_DYE) && currentLevel < 400) {
-				exp *= 2;
-			} else if(inv.contains(Material.LIME_DYE) && currentLevel < 400) {
-				exp *= 2;
-			} else if(inv.contains(Material.BLUE_DYE) && currentLevel < 900) {
-				exp *= 2;
-			} else if(inv.contains(Material.BROWN_DYE) && currentLevel < 900) {
-				exp *= 2;
-			} else if(inv.contains(Material.BLACK_DYE) && currentLevel < 900) {
-				exp *= 2;
-			} else if(inv.contains(Material.INK_SAC) && currentLevel < 900) {
-				exp *= 2;
-			} else if(inv.contains(Material.GLOWSTONE_DUST) && currentLevel < 900) {
-				exp *= 2;
-			}
-			if(exp < 0) {
-				exp = 0;
-			}
+		}
+		
+		if(exp < 0) {
+			exp = 0;
 		}
 		
 		int percent = 0;

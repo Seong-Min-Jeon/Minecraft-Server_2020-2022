@@ -84,15 +84,15 @@ public class DamageCal {
 				|| entity.getType() == EntityType.DROWNED || entity.getType() == EntityType.VEX || entity.getType() == EntityType.STRAY
 				|| entity.getType() == EntityType.ZOMBIFIED_PIGLIN || entity.getType() == EntityType.HUSK || entity.getType() == EntityType.ZOMBIE_VILLAGER
 				|| entity.getType() == EntityType.ENDERMAN) {
-			return (int)(damAll*5 + damUn*1.5);
+			return (int)(damAll*3 + damUn*3.5);
 		} else if(entity.getType() == EntityType.SPIDER || entity.getType() == EntityType.CAVE_SPIDER || entity.getType() == EntityType.BEE || entity.getType() == EntityType.SILVERFISH 
 				||entity.getType() == EntityType.ENDERMITE) {
-			return (int)(damAll*5 + damAr*1.5);
+			return (int)(damAll*3 + damAr*3.5);
 		} else if(entity.getType() == EntityType.ELDER_GUARDIAN || entity.getType() == EntityType.GUARDIAN || entity.getType() == EntityType.GHAST
 				|| entity.getType() == EntityType.RAVAGER || entity.getType() == EntityType.PHANTOM || entity.getType() == EntityType.HOGLIN
 				|| entity.getType() == EntityType.ZOGLIN || entity.getType() == EntityType.WITHER || entity.getType() == EntityType.POLAR_BEAR
 				|| entity.getType() == EntityType.IRON_GOLEM) {
-			return (int)(damAll*5 + damIm*1.5);
+			return (int)(damAll*3 + damIm*3.5);
 		} else {
 			return damAll*5;
 		}

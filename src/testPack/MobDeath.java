@@ -49,25 +49,6 @@ public class MobDeath {
 		}
 		
 		if (((LivingEntity) mob).getHealth() - damage <= 0) {
-			// 마나지급
-			ItemStack mana = new ItemStack(Material.HEART_OF_THE_SEA);
-			ItemMeta manaIm = mana.getItemMeta();
-			manaIm.setDisplayName(ChatColor.BLUE + "마나");
-			mana.setItemMeta(manaIm);
-			if (lootPlayer.getInventory().contains(Material.HEART_OF_THE_SEA)) {
-				int i = 0;
-				for (ItemStack is : lootPlayer.getInventory().getContents()) {
-					if (is == null)
-						continue;
-					if (is.getType() == Material.HEART_OF_THE_SEA) {
-						i = i + is.getAmount();
-					}
-				}
-				if (i < 20)
-					lootPlayer.getInventory().addItem(mana);
-			} else {
-				lootPlayer.getInventory().setItem(8, mana);
-			}
 			// 레벨 안맞으면 캔슬
 			String str = mob.getCustomName().split("\\.")[1];
 			String num = str.split("]")[0];
