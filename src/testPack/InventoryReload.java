@@ -154,6 +154,8 @@ public class InventoryReload {
 				item5Im.setUnbreakable(true);
 				item5.setItemMeta(item5Im);
 				player.getInventory().setItem(39, item5);	
+				
+				new Skill().getMap(player);
 			} else {
 				if(inv.getItem(0) == null) {
 					ItemStack item5 = new ItemStack(Material.BIRCH_LEAVES);

@@ -1,24 +1,24 @@
 package testPack;
 
 import org.bukkit.Location;
-import org.bukkit.craftbukkit.v1_16_R1.CraftWorld;
+import org.bukkit.craftbukkit.v1_16_R3.CraftWorld;
 
-import net.minecraft.server.v1_16_R1.EntityBlaze;
-import net.minecraft.server.v1_16_R1.EntityHuman;
-import net.minecraft.server.v1_16_R1.EntitySkeleton;
-import net.minecraft.server.v1_16_R1.EntitySkeletonWither;
-import net.minecraft.server.v1_16_R1.EntityTypes;
-import net.minecraft.server.v1_16_R1.EntityWither;
-import net.minecraft.server.v1_16_R1.EntityWitherSkull;
-import net.minecraft.server.v1_16_R1.PathfinderGoalAvoidTarget;
-import net.minecraft.server.v1_16_R1.PathfinderGoalFloat;
-import net.minecraft.server.v1_16_R1.PathfinderGoalHurtByTarget;
-import net.minecraft.server.v1_16_R1.PathfinderGoalLookAtPlayer;
-import net.minecraft.server.v1_16_R1.PathfinderGoalMeleeAttack;
-import net.minecraft.server.v1_16_R1.PathfinderGoalMoveTowardsRestriction;
-import net.minecraft.server.v1_16_R1.PathfinderGoalNearestAttackableTarget;
-import net.minecraft.server.v1_16_R1.PathfinderGoalRandomLookaround;
-import net.minecraft.server.v1_16_R1.PathfinderGoalRandomStroll;
+import net.minecraft.server.v1_16_R3.EntityBlaze;
+import net.minecraft.server.v1_16_R3.EntityHuman;
+import net.minecraft.server.v1_16_R3.EntitySkeleton;
+import net.minecraft.server.v1_16_R3.EntitySkeletonWither;
+import net.minecraft.server.v1_16_R3.EntityTypes;
+import net.minecraft.server.v1_16_R3.EntityWither;
+import net.minecraft.server.v1_16_R3.EntityWitherSkull;
+import net.minecraft.server.v1_16_R3.PathfinderGoalAvoidTarget;
+import net.minecraft.server.v1_16_R3.PathfinderGoalFloat;
+import net.minecraft.server.v1_16_R3.PathfinderGoalHurtByTarget;
+import net.minecraft.server.v1_16_R3.PathfinderGoalLookAtPlayer;
+import net.minecraft.server.v1_16_R3.PathfinderGoalMeleeAttack;
+import net.minecraft.server.v1_16_R3.PathfinderGoalMoveTowardsRestriction;
+import net.minecraft.server.v1_16_R3.PathfinderGoalNearestAttackableTarget;
+import net.minecraft.server.v1_16_R3.PathfinderGoalRandomLookaround;
+import net.minecraft.server.v1_16_R3.PathfinderGoalRandomStroll;
 
 public class CustomWitherSkeleton extends EntitySkeletonWither{
 

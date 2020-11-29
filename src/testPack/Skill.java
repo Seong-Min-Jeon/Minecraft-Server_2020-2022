@@ -1,6 +1,7 @@
 package testPack;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
@@ -16,11 +17,13 @@ import org.bukkit.Sound;
 import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.enchantments.Enchantment;
+import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Arrow;
 import org.bukkit.entity.Drowned;
 import org.bukkit.entity.EnderDragon;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
+import org.bukkit.entity.FallingBlock;
 import org.bukkit.entity.Husk;
 import org.bukkit.entity.IronGolem;
 import org.bukkit.entity.Item;
@@ -36,11 +39,13 @@ import org.bukkit.entity.Zombie;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.potion.Potion;
 import org.bukkit.potion.PotionData;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.potion.PotionType;
+import org.bukkit.util.EulerAngle;
 import org.bukkit.util.Vector;
 
 public class Skill {
@@ -48,6 +53,8 @@ public class Skill {
 	Random rnd = new Random();
 	private int sleep = 0;
 	private int sleep2 = 0;
+	
+	private static HashMap<String, Integer> map = new HashMap<>();
 	
 	GolemOwner go = new GolemOwner();
 
@@ -902,7 +909,7 @@ public class Skill {
 			if(key.equals("RRR")) {
 				if(i>=3) {
 					if ((player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) || (player.getLocation().getBlock().getType() != Material.AIR)
-							|| (player.getLocation().add(0,1,0).getBlock().getType() != Material.AIR)) {						
+							|| (player.getLocation().add(0,-2,0).getBlock().getType() != Material.AIR)) {						
 						player.getInventory().remove(Material.HEART_OF_THE_SEA);
 						ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 3);
 						ItemMeta itemIm = item.getItemMeta();
@@ -937,7 +944,7 @@ public class Skill {
 					world.playEffect(loc.add(0, 0, -1), Effect.MOBSPAWNER_FLAMES, 1);
 					world.playEffect(loc.add(0, 0, 1), Effect.MOBSPAWNER_FLAMES, 1);
 					world.playEffect(loc.add(-1, 0, -1), Effect.MOBSPAWNER_FLAMES, 1);
-					player.sendMessage(ChatColor.GREEN + "[스킬]본 체스트을 발동합니다.");
+					player.sendMessage(ChatColor.GREEN + "[스킬]본 체스트가 발동됩니다.");
 					if (num < 15) {
 						player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 0,true,false,false));
 					} else if (num < 30) {
@@ -997,7 +1004,7 @@ public class Skill {
 					ParticleEffect pe = new ParticleEffect(player);
 					pe.startE2();
 					// ================================================================
-					player.sendMessage(ChatColor.GREEN + "[스킬]뼈감옥을 발동합니다.");
+					player.sendMessage(ChatColor.GREEN + "[스킬]뼈감옥이 발동됩니다.");
 					player.sendMessage(ChatColor.GREEN + "5초간 적의 움직임을 멈춥니다.");
 					world.playSound(loc, Sound.ENTITY_WOLF_SHAKE, 1.0f, 1.0f);				
 				} else {
@@ -1067,7 +1074,7 @@ public class Skill {
 			if(key.equals("RRR")) {
 				if(i>=5) {
 					if ((player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) || (player.getLocation().getBlock().getType() != Material.AIR)
-							|| (player.getLocation().add(0,1,0).getBlock().getType() != Material.AIR)) {						
+							|| (player.getLocation().add(0,-2,0).getBlock().getType() != Material.AIR)) {						
 						player.getInventory().remove(Material.HEART_OF_THE_SEA);
 						ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 5);
 						ItemMeta itemIm = item.getItemMeta();
@@ -1076,7 +1083,7 @@ public class Skill {
 						player.getInventory().setItem(8, item);
 						
 						player.sendMessage(ChatColor.GREEN + "[스킬]차지 어택이 발동됩니다.");
-						world.playSound(player.getLocation(), Sound.BLOCK_CHEST_CLOSE, 1.0f, 0.5f);
+						world.playSound(player.getLocation(), Sound.BLOCK_CHEST_CLOSE, 2.0f, 0.5f);
 						
 						Vector vec = player.getEyeLocation().add(0,2,0).getDirection().multiply(1.5f);
 						player.setVelocity(vec);						
@@ -1175,13 +1182,13 @@ public class Skill {
 						if (nearEntity.getType() == EntityType.PLAYER) {
 							Player nearPlayer = (Player) nearEntity;
 							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0, true, false, false));
-							nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 10초간 방어력이 상승합니다.");
+							nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 10초간 저항이 부여됩니다.");
 						}
 					}
 					player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0, true, false, false));
-					player.sendMessage(ChatColor.GREEN + "[스킬]전투의 의지를 발동합니다.");
-					player.sendMessage(ChatColor.GREEN + "10초간 아군의 방어력이 증가합니다.");
-					world.playSound(loc, Sound.BLOCK_CHAIN_BREAK, 1.0f, 0.5f);				
+					player.sendMessage(ChatColor.GREEN + "[스킬]전투의 의지가 발동됩니다.");
+					player.sendMessage(ChatColor.GREEN + "10초간 아군에게 저항이 부여됩니다.");
+					world.playSound(loc, Sound.BLOCK_CHAIN_BREAK, 2.0f, 0.5f);				
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
 					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
@@ -1201,6 +1208,7 @@ public class Skill {
 						if ((nearEntity.getType() == EntityType.IRON_GOLEM)) {
 							if (nearEntity.isCustomNameVisible()) {								
 								((LivingEntity) nearEntity).setHealth(0);
+								num++;
 							}
 						}
 					}
@@ -1209,6 +1217,14 @@ public class Skill {
 						player.sendMessage(ChatColor.GREEN + "[스킬]자폭이 발동됩니다.");
 						player.sendMessage(ChatColor.RED + "주위에 골렘이 없습니다.");
 					} else {
+						for (Entity nearEntity : entitylist) {
+							if (nearEntity.getType() != EntityType.PLAYER) {
+								if (nearEntity instanceof LivingEntity) {
+									LivingEntity nearMob = (LivingEntity) nearEntity;
+									nearMob.damage(player.getLevel() * num);
+								}
+							}
+						}
 						player.sendMessage(ChatColor.GREEN + "[스킬]자폭이 발동됩니다.");
 						world.playSound(player.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 1.0f, 1.5f);
 						world.spawnParticle(Particle.EXPLOSION_LARGE, player.getLocation(), 0);
@@ -1235,7 +1251,7 @@ public class Skill {
 			if(key.equals("RRR")) {
 				if(i>=10) {
 					if ((player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) || (player.getLocation().getBlock().getType() != Material.AIR)
-							|| (player.getLocation().add(0,1,0).getBlock().getType() != Material.AIR)) {						
+							|| (player.getLocation().add(0,-2,0).getBlock().getType() != Material.AIR)) {						
 						player.getInventory().remove(Material.HEART_OF_THE_SEA);
 						ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 10);
 						ItemMeta itemIm = item.getItemMeta();
@@ -1266,12 +1282,12 @@ public class Skill {
 						if (nearEntity.getType() == EntityType.PLAYER) {
 							Player nearPlayer = (Player) nearEntity;
 							PotionRatio pr = new PotionRatio();
-							pr.calculation(nearPlayer, player.getLevel() * 2);
-							nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 회복되었습니다.");
+							pr.calculation(nearPlayer, player.getLevel() * 3);
+							nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 회복되었습니다." + ChatColor.AQUA + " [+" + ChatColor.RED + player.getLevel() * 3 + ChatColor.AQUA + "]");
 						}
 					}
 					PotionRatio pr = new PotionRatio();
-					pr.calculation(player, player.getLevel() * 2);
+					pr.calculation(player, player.getLevel() * 3);
 					Location loc = player.getLocation();
 					// ===============================================================
 					ParticleData pd = new ParticleData(player.getUniqueId());
@@ -1284,7 +1300,7 @@ public class Skill {
 					// ================================================================
 					world.playSound(loc, Sound.ENTITY_ENDER_DRAGON_FLAP, 1.0f, 1.0f);
 					player.sendMessage(ChatColor.GREEN + "[스킬]넬의 사랑이 발동됩니다.");
-					player.sendMessage(ChatColor.GREEN + "자신과 주변 아군의 체력이 회복됩니다.");
+					player.sendMessage(ChatColor.GREEN + "자신과 주변 아군의 체력이 회복됩니다." + ChatColor.AQUA + " [+" + ChatColor.RED + player.getLevel() * 3 + ChatColor.AQUA + "]");
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
 					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
@@ -1301,12 +1317,12 @@ public class Skill {
 					for (Entity nearEntity : entitylist) {
 						if (nearEntity.getType() == EntityType.PLAYER) {
 							Player nearPlayer = (Player) nearEntity;
-							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 0, true, false, false));
+							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 2, true, false, false));
 							nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 10초간 추가 체력이 부여됩니다.");
 						}
 					}
 					player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 0, true, false, false));
-					player.sendMessage(ChatColor.GREEN + "[스킬]딘의 화염을 발동합니다.");
+					player.sendMessage(ChatColor.GREEN + "[스킬]딘의 화염이 발동됩니다.");
 					player.sendMessage(ChatColor.GREEN + "10초간 추가 체력이 부여됩니다.");												
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
@@ -1315,7 +1331,7 @@ public class Skill {
 			} else if(key.equals("RLR")) {
 				if(i>=2) {
 					if ((player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) || (player.getLocation().getBlock().getType() != Material.AIR)
-							|| (player.getLocation().add(0,1,0).getBlock().getType() != Material.AIR)) {
+							|| (player.getLocation().add(0,-2,0).getBlock().getType() != Material.AIR)) {
 						player.getInventory().remove(Material.HEART_OF_THE_SEA);
 						ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 2);
 						ItemMeta itemIm = item.getItemMeta();
@@ -1339,9 +1355,13 @@ public class Skill {
 		World world = player.getWorld();
 		if (!(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "광전사의 증표"))) {
 			int damNum = 0;
-			if (player.getInventory().getItemInMainHand().getItemMeta() != null) {
-				ItemMeta im = player.getInventory().getItemInMainHand().getItemMeta();
-				damNum = Integer.parseInt(im.getLocalizedName().split(",")[0]);
+			try {
+				if (player.getInventory().getItemInMainHand().getItemMeta() != null) {
+					ItemMeta im = player.getInventory().getItemInMainHand().getItemMeta();
+					damNum = Integer.parseInt(im.getLocalizedName().split(",")[0]);
+				}
+			} catch(Exception e) {
+				
 			}
 			int i = 0;
 			for (ItemStack is : player.getInventory().getContents()) {
@@ -1354,7 +1374,7 @@ public class Skill {
 			if(key.equals("RRR")) {
 				if(i>=3) {
 					if ((player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) || (player.getLocation().getBlock().getType() != Material.AIR)
-							|| (player.getLocation().add(0,1,0).getBlock().getType() != Material.AIR)) {						
+							|| (player.getLocation().add(0,-2,0).getBlock().getType() != Material.AIR)) {						
 						player.getInventory().remove(Material.HEART_OF_THE_SEA);
 						ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 3);
 						ItemMeta itemIm = item.getItemMeta();
@@ -1406,7 +1426,7 @@ public class Skill {
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
 					player.setNoDamageTicks(20);
-					player.sendMessage(ChatColor.GREEN + "[스킬]염옥악을 발동합니다.");
+					player.sendMessage(ChatColor.GREEN + "[스킬]염옥악이 발동됩니다.");
 					player.sendMessage(ChatColor.GREEN + "1초간 무적이 됩니다.");												
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
@@ -1415,7 +1435,7 @@ public class Skill {
 			} else if(key.equals("RLR")) {
 				if(i>=5) {
 					if ((player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) || (player.getLocation().getBlock().getType() != Material.AIR)
-							|| (player.getLocation().add(0,1,0).getBlock().getType() != Material.AIR)) {
+							|| (player.getLocation().add(0,-2,0).getBlock().getType() != Material.AIR)) {
 						player.getInventory().remove(Material.HEART_OF_THE_SEA);
 						ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 5);
 						ItemMeta itemIm = item.getItemMeta();
@@ -1427,7 +1447,7 @@ public class Skill {
 						
 						Vector vec = new Vector(0, 1, 0);
 						player.setVelocity(vec.multiply(1.2f));						
-						List<Entity> entitylist = player.getNearbyEntities(3, 3, 3);				
+						List<Entity> entitylist = player.getNearbyEntities(4, 3, 4);				
 						for (Entity nearEntity : entitylist) {
 							if (nearEntity instanceof Mob) {
 								LivingEntity ent = (LivingEntity) nearEntity;
@@ -1460,7 +1480,7 @@ public class Skill {
 			if(key.equals("RRR")) {
 				if(i>=3) {
 					if ((player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) || (player.getLocation().getBlock().getType() != Material.AIR)
-							|| (player.getLocation().add(0,1,0).getBlock().getType() != Material.AIR)) {						
+							|| (player.getLocation().add(0,-2,0).getBlock().getType() != Material.AIR)) {						
 						player.getInventory().remove(Material.HEART_OF_THE_SEA);
 						ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 3);
 						ItemMeta itemIm = item.getItemMeta();
@@ -1756,7 +1776,7 @@ public class Skill {
 											Player nearPlayer = (Player) nearEntity;
 											PotionRatio pr = new PotionRatio();
 											pr.calculation(nearPlayer, player.getLevel() * 2);
-											nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 회복되었습니다.");
+											nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 회복되었습니다." + ChatColor.AQUA + " [+" + ChatColor.RED + player.getLevel() * 2 + ChatColor.AQUA + "]");
 										}
 									}
 									PotionRatio pr = new PotionRatio();
@@ -1773,7 +1793,7 @@ public class Skill {
 									// ================================================================
 									world.playSound(loc, Sound.ENTITY_ENDER_DRAGON_FLAP, 1.0f, 1.0f);
 									player.sendMessage(ChatColor.GREEN + "[스킬]넬의 사랑이 발동됩니다.");
-									player.sendMessage(ChatColor.GREEN + "자신과 주변 아군의 체력이 회복됩니다.");
+									player.sendMessage(ChatColor.GREEN + "자신과 주변 아군의 체력이 회복됩니다." + ChatColor.AQUA + " [+" + ChatColor.RED + player.getLevel() * 2 + ChatColor.AQUA + "]");
 								} else if (num == 2) {
 									Location loc = player.getLocation();
 									IronGolem golem = (IronGolem) world.spawnEntity(loc, EntityType.IRON_GOLEM);
@@ -1844,7 +1864,7 @@ public class Skill {
 									world.playEffect(loc.add(0, 0, -1), Effect.MOBSPAWNER_FLAMES, 1);
 									world.playEffect(loc.add(0, 0, 1), Effect.MOBSPAWNER_FLAMES, 1);
 									world.playEffect(loc.add(-1, 0, -1), Effect.MOBSPAWNER_FLAMES, 1);
-									player.sendMessage(ChatColor.GREEN + "[스킬]본 체스트을 발동합니다.");
+									player.sendMessage(ChatColor.GREEN + "[스킬]본 체스트가 발동됩니다.");
 									if (num < 15) {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 0,true,false,false));
 									} else if (num < 30) {
@@ -1889,7 +1909,7 @@ public class Skill {
 			} else if(key.equals("RLR")) {
 				if(i>=10) {
 					if ((player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) || (player.getLocation().getBlock().getType() != Material.AIR)
-							|| (player.getLocation().add(0,1,0).getBlock().getType() != Material.AIR)) {
+							|| (player.getLocation().add(0,-2,0).getBlock().getType() != Material.AIR)) {
 						player.getInventory().remove(Material.HEART_OF_THE_SEA);
 						ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 10);
 						ItemMeta itemIm = item.getItemMeta();
@@ -1930,7 +1950,11 @@ public class Skill {
 										player.getInventory().setItem(8, mana);
 									} else if (num == 1) {
 										player.sendMessage(ChatColor.RED + "마나가 모두 사라집니다.");
-										player.getInventory().remove(Material.HEART_OF_THE_SEA);
+										ItemStack item = new ItemStack(Material.MAGMA_CREAM);
+										ItemMeta itemIm = item.getItemMeta();
+										itemIm.setDisplayName(ChatColor.RED + "마나없음");
+										item.setItemMeta(itemIm);
+										player.getInventory().setItem(8, item);
 									} else {
 										player.sendMessage(ChatColor.RED + "스킬 사용에 실패하였습니다.");
 										world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
@@ -1957,12 +1981,15 @@ public class Skill {
 
 	public void skill6(Player player, String key) {
 		World world = player.getWorld();
-		if (!(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
-				.equals(ChatColor.GOLD + "데빌의 증표"))) {
+		if (!(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "데빌의 증표"))) {
 			int damNum = 0;
-			if (player.getInventory().getItemInMainHand().getItemMeta() != null) {
-				ItemMeta im = player.getInventory().getItemInMainHand().getItemMeta();
-				damNum = Integer.parseInt(im.getLocalizedName().split(",")[0]);
+			try {
+				if (player.getInventory().getItemInMainHand().getItemMeta() != null) {
+					ItemMeta im = player.getInventory().getItemInMainHand().getItemMeta();
+					damNum = Integer.parseInt(im.getLocalizedName().split(",")[0]);
+				}
+			} catch(Exception e) {
+				
 			}
 			int i = 0;
 			for (ItemStack is : player.getInventory().getContents()) {
@@ -1972,69 +1999,153 @@ public class Skill {
 					i = i + is.getAmount();
 				}
 			}
-			if (i == 3) {
-				player.getInventory().remove(Material.HEART_OF_THE_SEA);
-				Location loc = player.getLocation();
-				player.teleport(loc.add(0, 1, 0));
-				player.addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, 100, 0));
-				player.setNoDamageTicks(100);				
-				List<Entity> entitylist = player.getNearbyEntities(10, 5, 10);
-				for (Entity nearEntity : entitylist) {
-					if(!(nearEntity instanceof Player)) {
-						if (nearEntity instanceof LivingEntity) {
-							LivingEntity nearMob = (LivingEntity) nearEntity;
-							nearMob.damage(player.getLevel()*10 + damNum*15);
+			if(key.equals("RRR")) {
+				if(i>=3) {
+					if ((player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) || (player.getLocation().getBlock().getType() != Material.AIR)
+							|| (player.getLocation().add(0,-2,0).getBlock().getType() != Material.AIR)) {						
+						player.getInventory().remove(Material.HEART_OF_THE_SEA);
+						ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 3);
+						ItemMeta itemIm = item.getItemMeta();
+						itemIm.setDisplayName(ChatColor.BLUE + "마나");
+						item.setItemMeta(itemIm);
+						player.getInventory().setItem(8, item);
+
+						player.sendMessage(ChatColor.GREEN + "[스킬]비공이 발동됩니다.");	
+						world.playSound(player.getLocation(), Sound.ENTITY_BLAZE_AMBIENT, 1.0f, 1.0f);
+						Vector vec = new Vector(0, 1, 0);
+						player.setVelocity(vec.multiply(2.0f));
+					}
+				} else {
+					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+				}
+			} else if(key.equals("RRL")) {
+				if(i>=3) {
+					player.getInventory().remove(Material.HEART_OF_THE_SEA);
+					ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 3);
+					ItemMeta itemIm = item.getItemMeta();
+					itemIm.setDisplayName(ChatColor.BLUE + "마나");
+					item.setItemMeta(itemIm);
+					player.getInventory().setItem(8, item);
+					Location loc = player.getLocation();
+					Salmon salmon = (Salmon) world.spawnEntity(loc, EntityType.SALMON);
+					salmon.setCustomName(ChatColor.GRAY + "연어 인형" + ChatColor.YELLOW + " [Lv." + player.getLevel() + "]");
+					salmon.setCustomNameVisible(true);
+					((LivingEntity) salmon).setMaxHealth(5);
+					((LivingEntity) salmon).setHealth(5);
+					salmon.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 1));
+					world.playSound(player.getLocation(), Sound.UI_BUTTON_CLICK, 1.0f, 1.0f);
+					player.sendMessage(ChatColor.GREEN + "[스킬]악마의 장난이 발동됩니다.");
+					player.sendMessage(ChatColor.GREEN + "연어 인형이 소환됩니다.");
+					// ===============================================================
+					ParticleData pd = new ParticleData(player.getUniqueId());
+					if (pd.hasID()) {
+						pd.endTask();
+						pd.removeID();
+					}
+					ParticleEffect pe = new ParticleEffect(player);
+					pe.startE9();
+					// ================================================================
+				} else {
+					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+				}
+			} else if(key.equals("RLL")) {
+				if(i>=5) {
+					player.getInventory().remove(Material.HEART_OF_THE_SEA);
+					ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 5);
+					ItemMeta itemIm = item.getItemMeta();
+					itemIm.setDisplayName(ChatColor.BLUE + "마나");
+					item.setItemMeta(itemIm);
+					player.getInventory().setItem(8, item);
+					List<Entity> entitylist = player.getNearbyEntities(10, 5, 10);
+					for (Entity nearEntity : entitylist) {
+						if(!(nearEntity instanceof Player)) {
+							if (nearEntity instanceof LivingEntity) {
+								LivingEntity nearMob = (LivingEntity) nearEntity;
+								nearMob.damage(player.getLevel()*10 + damNum*15);
+							}
 						}
 					}
+					player.sendMessage(ChatColor.GREEN + "[스킬]데빌 블레스터가 발동됩니다.");
+					world.playSound(player.getLocation(), Sound.BLOCK_PORTAL_TRIGGER, 1.0f, 1.0f);
+					// ===============================================================
+					ParticleData pd = new ParticleData(player.getUniqueId());
+					if (pd.hasID()) {
+						pd.endTask();
+						pd.removeID();
+					}
+					ParticleEffect pe = new ParticleEffect(player);
+					pe.startE10();
+					// ================================================================
+				} else {
+					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
 				}
-				player.sendMessage(ChatColor.GREEN + "[스킬]데빌 블레스터가 발동됩니다.");
-				world.playSound(player.getLocation(), Sound.BLOCK_PORTAL_TRIGGER, 1.0f, 1.0f);
-				// ===============================================================
-				ParticleData pd = new ParticleData(player.getUniqueId());
-				if (pd.hasID()) {
-					pd.endTask();
-					pd.removeID();
+			} else if(key.equals("RLR")) {
+				if(i>=8) {
+					player.getInventory().remove(Material.HEART_OF_THE_SEA);
+					ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 8);
+					ItemMeta itemIm = item.getItemMeta();
+					itemIm.setDisplayName(ChatColor.BLUE + "마나");
+					item.setItemMeta(itemIm);
+					player.getInventory().setItem(8, item);
+					// ===============================================================
+					ParticleData pd = new ParticleData(player.getUniqueId());
+					if (pd.hasID()) {
+						pd.endTask();
+						pd.removeID();
+					}
+					ParticleEffect pe = new ParticleEffect(player);
+					pe.startE0_3();
+					// ================================================================
+					Thread t = new Thread(player.getUniqueId());
+					sleep = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+						int time = 0;
+						
+						@Override
+						public void run() {
+							if (!t.hasID()) {
+								t.setID(sleep);
+							}
+						
+							if(time>=40) {								
+								t.endTask();
+								t.removeID();
+							} else if(time%2 == 0) {
+								Arrow arrow = player.launchProjectile(Arrow.class);
+								arrow.setShooter(player);
+								arrow.setDamage(2);
+								arrow.setVelocity(player.getLocation().getDirection().multiply(5.0f));		
+							}
+							
+							time++;
+						}						
+						
+					}, 0, 1);
+					player.sendMessage(ChatColor.GREEN + "[스킬]인페르노가 발동됩니다.");
+					world.playSound(player.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 1.0f, 0.1f);
+				} else {
+					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
 				}
-				ParticleEffect pe = new ParticleEffect(player);
-				pe.startE10();
-				// ================================================================
-			} else if (i > 3) {
-				player.getInventory().remove(Material.HEART_OF_THE_SEA);
-				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 3);
-				ItemMeta itemIm = item.getItemMeta();
-				itemIm.setDisplayName(ChatColor.BLUE + "마나");
-				item.setItemMeta(itemIm);
-				player.getInventory().setItem(8, item);
-				Location loc = player.getLocation();
-				Salmon salmon = (Salmon) world.spawnEntity(loc, EntityType.SALMON);
-				salmon.setCustomName(ChatColor.GRAY + "연어 인형" + ChatColor.YELLOW + " [Lv." + player.getLevel() + "]");
-				salmon.setCustomNameVisible(true);
-				((LivingEntity) salmon).setMaxHealth(5);
-				((LivingEntity) salmon).setHealth(5);
-				salmon.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 1));
-				world.playSound(player.getLocation(), Sound.UI_BUTTON_CLICK, 1.0f, 1.0f);
-				player.sendMessage(ChatColor.GREEN + "[스킬]악마의 장난이 발동됩니다.");
-				player.sendMessage(ChatColor.GREEN + "연어 인형이 소환됩니다.");
-				// ===============================================================
-				ParticleData pd = new ParticleData(player.getUniqueId());
-				if (pd.hasID()) {
-					pd.endTask();
-					pd.removeID();
-				}
-				ParticleEffect pe = new ParticleEffect(player);
-				pe.startE9();
-				// ================================================================
-			} else {
-				player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-				world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
 			}
 		}
 	}
 
 	public void skill7(Player player, String key) {
 		World world = player.getWorld();
-		if (!(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
-				.equals(ChatColor.GOLD + "엔젤의 증표"))) {
+		if (!(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "엔젤의 증표"))) {
+			int damNum = 0;
+			try {
+				if (player.getInventory().getItemInMainHand().getItemMeta() != null) {
+					ItemMeta im = player.getInventory().getItemInMainHand().getItemMeta();
+					damNum = Integer.parseInt(im.getLocalizedName().split(",")[0]);
+				}
+			} catch(Exception e) {
+				
+			}
 			int i = 0;
 			for (ItemStack is : player.getInventory().getContents()) {
 				if (is == null)
@@ -2043,19 +2154,36 @@ public class Skill {
 					i = i + is.getAmount();
 				}
 			}
-			if (i == 5) {
-				player.getInventory().remove(Material.HEART_OF_THE_SEA);
-				List<Entity> entitylist = player.getNearbyEntities(10, 5, 10);
-				int num = 0;
-				for (Entity nearEntity : entitylist) {
-					if (nearEntity.getType() == EntityType.PLAYER) {
-						Player nearPlayer = (Player) nearEntity;
-						num++;
+			if(key.equals("RRR")) {
+				if(i>=2) {
+					if ((player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) || (player.getLocation().getBlock().getType() != Material.AIR)
+							|| (player.getLocation().add(0,-2,0).getBlock().getType() != Material.AIR)) {						
+						player.getInventory().remove(Material.HEART_OF_THE_SEA);
+						ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 2);
+						ItemMeta itemIm = item.getItemMeta();
+						itemIm.setDisplayName(ChatColor.BLUE + "마나");
+						item.setItemMeta(itemIm);
+						player.getInventory().setItem(8, item);
+
+						player.sendMessage(ChatColor.GREEN + "[스킬]천사의 날개가 발동됩니다.");
+						world.playSound(player.getLocation(), Sound.ENTITY_BLAZE_AMBIENT, 1.0f, 2.0f);
+						Vector vec = new Vector(0, 1, 0);
+						player.setVelocity(vec.multiply(2.0f));
 					}
+				} else {
+					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
 				}
-				if (num == 0) {
+			} else if(key.equals("RRL")) {
+				if(i>=7) {
+					player.getInventory().remove(Material.HEART_OF_THE_SEA);
+					ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 7);
+					ItemMeta itemIm = item.getItemMeta();
+					itemIm.setDisplayName(ChatColor.BLUE + "마나");
+					item.setItemMeta(itemIm);
+					player.getInventory().setItem(8, item);
 					Location loc = player.getLocation();					
-					for (int _ = 0; _ < 4; _++) {
+					for (int _ = 0; _ < 2; _++) {
 						IronGolem golem = (IronGolem) world.spawnEntity(loc, EntityType.IRON_GOLEM);
 						golem.setCustomName(
 								ChatColor.GRAY + "기사단원" + ChatColor.YELLOW + " [Lv." + player.getLevel() + "]");
@@ -2114,31 +2242,136 @@ public class Skill {
 					pe.startE11();
 					// ================================================================
 				} else {
+					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+				}
+			} else if(key.equals("RLL")) {
+				if(i>=15) {
+					player.getInventory().remove(Material.HEART_OF_THE_SEA);
+					ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 15);
+					ItemMeta itemIm = item.getItemMeta();
+					itemIm.setDisplayName(ChatColor.BLUE + "마나");
+					item.setItemMeta(itemIm);
+					player.getInventory().setItem(8, item);
+					
+					Arrow arrow = player.launchProjectile(Arrow.class);
+					arrow.setShooter(player);
+					arrow.setVelocity(player.getLocation().getDirection().multiply(0.7f));		
+					world.playSound(player.getLocation(), Sound.ENTITY_PLAYER_ATTACK_SWEEP, 1.5f, 1.0f);
+					
+					FallingBlock fb = (FallingBlock) player.getWorld().spawnFallingBlock(player.getLocation(), Material.RED_WOOL, (byte)0);
+					fb.setVelocity(new Vector(0,0,0));
+					fb.setDropItem(false);
+					fb.setGravity(false);
+					arrow.addPassenger(fb);
+					
+					Thread t = new Thread(player.getUniqueId());
+					sleep = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+						
+						int time = 0;
+						FallingBlock fb;
+						
+						@Override
+						public void run() {
+							if (!t.hasID()) {
+								t.setID(sleep);
+							}
+						
+							if(arrow.isDead() && time == 0) {	
+								arrow.getLocation();
+								fb = (FallingBlock) player.getWorld().spawnFallingBlock(arrow.getLocation().add(0,1,0), Material.BLUE_WOOL, (byte)0);
+								fb.setVelocity(new Vector(0,0,0));
+								fb.setDropItem(false);
+								fb.setGravity(false);
+								time++;
+							}
+							
+							if(time >= 1) {
+								time++;
+							}
+							
+							if(time == 5 || time == 25) {
+								List<Entity> entitylist = fb.getNearbyEntities(8, 3, 8);
+								for(Entity nearEntity : entitylist) {
+									if(nearEntity instanceof LivingEntity) {
+										if((nearEntity.getType() != EntityType.PLAYER) && (nearEntity.getType() != EntityType.PIG) && (nearEntity.getType() != EntityType.COW)
+												&& (nearEntity.getType() != EntityType.CHICKEN) && (nearEntity.getType() != EntityType.SHEEP) && (nearEntity.getType() != EntityType.VILLAGER)
+												&& (nearEntity.getType() != EntityType.HORSE) && (nearEntity.getType() != EntityType.SKELETON_HORSE) && (nearEntity.getType() != EntityType.ZOMBIE_HORSE)
+												&& (nearEntity.getType() != EntityType.WOLF) && (nearEntity.getType() != EntityType.CAT) && (nearEntity.getType() != EntityType.DONKEY)
+												&& (nearEntity.getType() != EntityType.ARMOR_STAND)) {
+											((LivingEntity) nearEntity).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 20, 100, true, false, false));
+											ArmorStand as = (ArmorStand) player.getWorld().spawnEntity(nearEntity.getLocation().add(0,8,0), EntityType.ARMOR_STAND);
+											as.setVisible(false);
+											as.setArms(true);
+											as.setItemInHand(new ItemStack(Material.BIRCH_LOG));
+											as.setRightArmPose(new EulerAngle(Math.toRadians(90), 0, 0));
+										}
+									}
+								}
+							}
+							
+							if(time == 20 || time == 40) {
+								List<Entity> entitylist = fb.getNearbyEntities(8, 3, 8);
+								for(Entity nearEntity : entitylist) {
+									if(nearEntity instanceof ArmorStand) {
+										ArmorStand as = (ArmorStand) nearEntity;
+										if((as.getItemInHand().getType() == Material.BIRCH_LOG) && (as.getRightArmPose().getX() == Math.toRadians(90))) {
+											as.remove();
+											continue;
+										}
+									}
+									if(nearEntity instanceof LivingEntity) {
+										if((nearEntity.getType() != EntityType.PLAYER) && (nearEntity.getType() != EntityType.PIG) && (nearEntity.getType() != EntityType.COW)
+												&& (nearEntity.getType() != EntityType.CHICKEN) && (nearEntity.getType() != EntityType.SHEEP) && (nearEntity.getType() != EntityType.VILLAGER)
+												&& (nearEntity.getType() != EntityType.HORSE) && (nearEntity.getType() != EntityType.SKELETON_HORSE) && (nearEntity.getType() != EntityType.ZOMBIE_HORSE)
+												&& (nearEntity.getType() != EntityType.WOLF) && (nearEntity.getType() != EntityType.CAT) && (nearEntity.getType() != EntityType.DONKEY)
+												&& (nearEntity.getType() != EntityType.ARMOR_STAND)) {
+											((LivingEntity) nearEntity).damage(player.getLevel()*40);
+										}
+									}
+								}
+							}
+							
+							if(time >= 40) {
+								fb.remove();
+								t.endTask();
+								t.removeID();
+							}
+							
+							
+						}						
+						
+					}, 0, 1);
+					
+				} else {
+					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+				}
+			} else if(key.equals("RLR")) {
+				if(i>=4) {
+					player.getInventory().remove(Material.HEART_OF_THE_SEA);
+					ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 4);
+					ItemMeta itemIm = item.getItemMeta();
+					itemIm.setDisplayName(ChatColor.BLUE + "마나");
+					item.setItemMeta(itemIm);
+					player.getInventory().setItem(8, item);
+					List<Entity> entitylist = player.getNearbyEntities(10, 5, 10);
 					for (Entity nearEntity : entitylist) {
 						if (nearEntity.getType() == EntityType.PLAYER) {
 							Player nearPlayer = (Player) nearEntity;
-							int addHealth = (int) (player.getMaxHealth() * 40 / 100);
-							if (nearPlayer.getHealth() + addHealth <= nearPlayer.getMaxHealth()) {
-								nearPlayer.setHealth(nearPlayer.getHealth() + addHealth);
-							} else {
-								nearPlayer.setHealth(nearPlayer.getMaxHealth());
-							}
+							PotionRatio pr = new PotionRatio();
+							pr.calculation(nearPlayer, player.getLevel() * 7);
 							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 400, 1, true, false, false));
-							nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 회복되었습니다.");
-							nearPlayer.sendMessage(
-									ChatColor.GREEN + player.getDisplayName() + "님에 의해 10초 동안 방어력이 상승합니다.");
+							nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 회복되었습니다." + ChatColor.AQUA + " [+" + ChatColor.RED + player.getLevel() * 7 + ChatColor.AQUA + "]");
+							nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 10초 동안 방어력이 상승합니다.");
 						}
 					}
-					int addHealth = (int) (player.getMaxHealth() * 50 / 100);
-					if (player.getHealth() + addHealth <= player.getMaxHealth()) {
-						player.setHealth(player.getHealth() + addHealth);
-					} else {
-						player.setHealth(player.getMaxHealth());
-					}
+					PotionRatio pr = new PotionRatio();
+					pr.calculation(player, player.getLevel() * 7);
 					Location loc = player.getLocation();
 					world.playEffect(loc, Effect.DRAGON_BREATH, 0);
 					player.sendMessage(ChatColor.GREEN + "[스킬]천사의 축복이 발동됩니다.");
-					player.sendMessage(ChatColor.GREEN + "자신과 주변 아군의 체력이 회복됩니다.");
+					player.sendMessage(ChatColor.GREEN + "자신과 주변 아군의 체력이 회복됩니다." + ChatColor.AQUA + " [+" + ChatColor.RED + player.getLevel() * 7 + ChatColor.AQUA + "]");
 					world.playSound(player.getLocation(), Sound.ENTITY_PHANTOM_FLAP, 1.0f, 1.0f);
 					// ===============================================================
 					ParticleData pd = new ParticleData(player.getUniqueId());
@@ -2148,53 +2381,11 @@ public class Skill {
 					}
 					ParticleEffect pe = new ParticleEffect(player);
 					pe.startE12();
-					// ================================================================
-				}
-			} else if (i > 5) {
-				player.getInventory().remove(Material.HEART_OF_THE_SEA);
-				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 5);
-				ItemMeta itemIm = item.getItemMeta();
-				itemIm.setDisplayName(ChatColor.BLUE + "마나");
-				item.setItemMeta(itemIm);
-				player.getInventory().setItem(8, item);
-				List<Entity> entitylist = player.getNearbyEntities(10, 5, 10);
-				for (Entity nearEntity : entitylist) {
-					if (nearEntity.getType() == EntityType.PLAYER) {
-						Player nearPlayer = (Player) nearEntity;
-						int addHealth = (int) (player.getMaxHealth() * 40 / 100);
-						if (nearPlayer.getHealth() + addHealth <= nearPlayer.getMaxHealth()) {
-							nearPlayer.setHealth(nearPlayer.getHealth() + addHealth);
-						} else {
-							nearPlayer.setHealth(nearPlayer.getMaxHealth());
-						}
-						nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 400, 1, true, false, false));
-						nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 회복되었습니다.");
-						nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 10초 동안 방어력이 상승합니다.");
-					}
-				}
-				int addHealth = (int) (player.getMaxHealth() * 50 / 100);
-				if (player.getHealth() + addHealth <= player.getMaxHealth()) {
-					player.setHealth(player.getHealth() + addHealth);
+					// ===============================================================
 				} else {
-					player.setHealth(player.getMaxHealth());
+					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
 				}
-				Location loc = player.getLocation();
-				world.playEffect(loc, Effect.DRAGON_BREATH, 0);
-				player.sendMessage(ChatColor.GREEN + "[스킬]천사의 축복이 발동됩니다.");
-				player.sendMessage(ChatColor.GREEN + "자신과 주변 아군의 체력이 회복됩니다.");
-				world.playSound(player.getLocation(), Sound.ENTITY_PHANTOM_FLAP, 1.0f, 1.0f);
-				// ===============================================================
-				ParticleData pd = new ParticleData(player.getUniqueId());
-				if (pd.hasID()) {
-					pd.endTask();
-					pd.removeID();
-				}
-				ParticleEffect pe = new ParticleEffect(player);
-				pe.startE12();
-				// ===============================================================
-			} else {
-				player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-				world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
 			}
 		}
 	}
@@ -2397,12 +2588,15 @@ public class Skill {
 
 	public void skill9(Player player, String key) {
 		World world = player.getWorld();
-		if (!(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
-				.equals(ChatColor.GOLD + "그림자 무사의 증표"))) {
+		if (!(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "그림자 무사의 증표"))) {
 			int damNum = 0;
-			if (player.getInventory().getItemInMainHand().getItemMeta() != null) {
-				ItemMeta im = player.getInventory().getItemInMainHand().getItemMeta();
-				damNum = Integer.parseInt(im.getLocalizedName().split(",")[0]);
+			try {
+				if (player.getInventory().getItemInMainHand().getItemMeta() != null) {
+					ItemMeta im = player.getInventory().getItemInMainHand().getItemMeta();
+					damNum = Integer.parseInt(im.getLocalizedName().split(",")[0]);
+				}
+			} catch(Exception e) {
+				
 			}
 			int i = 0;
 			for (ItemStack is : player.getInventory().getContents()) {
@@ -2412,34 +2606,52 @@ public class Skill {
 					i = i + is.getAmount();
 				}
 			}
-			if (i == 10) {
-				player.getInventory().remove(Material.HEART_OF_THE_SEA);
-				Location loc = player.getLocation();
-				if (player.getHealth() == player.getMaxHealth()) {
-					player.setHealth((int) (player.getHealth() / 2));
-					int num = (player.getLevel() / 10);
-					player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 400, num * 3));
-					player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 400, 5));
-					// ===============================================================
-					ParticleData pd = new ParticleData(player.getUniqueId());
-					if (pd.hasID()) {
-						pd.endTask();
-						pd.removeID();
+			if(key.equals("RRR")) {
+				if(i>=2) {
+					if ((player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) || (player.getLocation().getBlock().getType() != Material.AIR)
+							|| (player.getLocation().add(0,-2,0).getBlock().getType() != Material.AIR)) {						
+						player.getInventory().remove(Material.HEART_OF_THE_SEA);
+						ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 2);
+						ItemMeta itemIm = item.getItemMeta();
+						itemIm.setDisplayName(ChatColor.BLUE + "마나");
+						item.setItemMeta(itemIm);
+						player.getInventory().setItem(8, item);
+
+						player.sendMessage(ChatColor.GREEN + "[스킬]반역의 날개가 발동됩니다.");
+						player.sendMessage(ChatColor.GREEN + "1분간 아군에게 신속이 부여됩니다.");
+						
+						List<Entity> entitylist = player.getNearbyEntities(10, 10, 10);
+						for (Entity nearEntity : entitylist) {
+							if (nearEntity.getType() == EntityType.PLAYER) {
+								Player nearPlayer = (Player) nearEntity;
+								nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 1200, 1, true, false, false));
+								nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 1분간 신속이 부여됩니다.");
+							}
+						}
+
+						Vector vec = player.getEyeLocation().getDirection().multiply(2.5f);
+						player.setVelocity(vec);
+						world.playSound(player.getLocation(), Sound.ENTITY_BLAZE_AMBIENT, 1.0f, 1.8f);
 					}
-					ParticleEffect pe = new ParticleEffect(player);
-					pe.startE15();
-					// ================================================================
-					world.playSound(loc, Sound.BLOCK_CAMPFIRE_CRACKLE, 1.0f, 1.0f);
-					player.sendMessage(ChatColor.GREEN + "[스킬]나이트메어가 발동됩니다.");
-					player.sendMessage(ChatColor.GREEN + "능력치가 대폭 상승합니다.");
 				} else {
+					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+				}
+			} else if(key.equals("RRL")) {
+				if(i>=8) {
+					player.getInventory().remove(Material.HEART_OF_THE_SEA);
+					ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 8);
+					ItemMeta itemIm = item.getItemMeta();
+					itemIm.setDisplayName(ChatColor.BLUE + "마나");
+					item.setItemMeta(itemIm);
+					player.getInventory().setItem(8, item);
 					player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 40, 100));
 					List<Entity> entitylist = player.getNearbyEntities(5, 5, 5);
 					for (Entity nearEntity : entitylist) {
 						if (nearEntity.getType() != EntityType.PLAYER) {
 							if (nearEntity instanceof LivingEntity) {
 								LivingEntity nearMob = (LivingEntity) nearEntity;
-								nearMob.damage(player.getLevel()*5 + damNum*20);
+								nearMob.damage(player.getLevel()*10 + damNum*10);
 							}
 						}
 					}
@@ -2452,21 +2664,24 @@ public class Skill {
 					ParticleEffect pe = new ParticleEffect(player);
 					pe.startE14();
 					// ================================================================
-					world.playSound(loc, Sound.ENTITY_LIGHTNING_BOLT_THUNDER, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.ENTITY_LIGHTNING_BOLT_THUNDER, 1.0f, 1.0f);
 					player.sendMessage(ChatColor.GREEN + "[스킬]발도가 발동됩니다.");
 					player.sendMessage(ChatColor.GREEN + "눈앞의 적이 사라집니다.");
+				} else {
+					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
 				}
-			} else if (i > 10) {
-				player.getInventory().remove(Material.HEART_OF_THE_SEA);
-				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 10);
-				ItemMeta itemIm = item.getItemMeta();
-				itemIm.setDisplayName(ChatColor.BLUE + "마나");
-				item.setItemMeta(itemIm);
-				player.getInventory().setItem(8, item);
-				Location loc = player.getLocation();
-				if (player.getHealth() == player.getMaxHealth()) {
+			} else if(key.equals("RLL")) {
+				if(i>=5) {
+					player.getInventory().remove(Material.HEART_OF_THE_SEA);
+					ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 5);
+					ItemMeta itemIm = item.getItemMeta();
+					itemIm.setDisplayName(ChatColor.BLUE + "마나");
+					item.setItemMeta(itemIm);
+					player.getInventory().setItem(8, item);
+					Location loc = player.getLocation();
 					player.setHealth((int) (player.getHealth() / 2));
-					int num = (player.getLevel() / 10);
+					int num = player.getLevel();
 					player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, num * 3));
 					// ===============================================================
 					ParticleData pd = new ParticleData(player.getUniqueId());
@@ -2481,40 +2696,80 @@ public class Skill {
 					player.sendMessage(ChatColor.GREEN + "[스킬]나이트메어가 발동됩니다.");
 					player.sendMessage(ChatColor.GREEN + "능력치가 대폭 상승합니다.");
 				} else {
-					player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 40, 100));
-					List<Entity> entitylist = player.getNearbyEntities(5, 5, 5);
-					for (Entity nearEntity : entitylist) {
-						if (nearEntity.getType() != EntityType.PLAYER) {
-							if (nearEntity instanceof LivingEntity) {
-								LivingEntity nearMob = (LivingEntity) nearEntity;
-								nearMob.damage(player.getLevel()*5 + damNum*20);
-							}
-						}
-					}
-					// ===============================================================
-					ParticleData pd = new ParticleData(player.getUniqueId());
-					if (pd.hasID()) {
-						pd.endTask();
-						pd.removeID();
-					}
-					ParticleEffect pe = new ParticleEffect(player);
-					pe.startE14();
-					// ================================================================
-					world.playSound(loc, Sound.ENTITY_LIGHTNING_BOLT_THUNDER, 1.0f, 1.0f);
-					player.sendMessage(ChatColor.GREEN + "[스킬]발도가 발동됩니다.");
-					player.sendMessage(ChatColor.GREEN + "눈앞의 적이 사라집니다.");
+					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
 				}
-			} else {
-				player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-				world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+			} else if(key.equals("RLR")) {
+				if(i>=15) {
+					player.getInventory().remove(Material.HEART_OF_THE_SEA);
+					ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 15);
+					ItemMeta itemIm = item.getItemMeta();
+					itemIm.setDisplayName(ChatColor.BLUE + "마나");
+					item.setItemMeta(itemIm);
+					player.getInventory().setItem(8, item);
+					
+					player.sendMessage(ChatColor.GREEN + "[스킬]화둔이 발동됩니다.");
+					
+					Arrow arrow = player.launchProjectile(Arrow.class);
+					arrow.setShooter(player);
+					arrow.setVelocity(player.getLocation().getDirection().multiply(1.8f));		
+					world.spawnParticle(Particle.FLAME, arrow.getLocation(), 5);
+					world.playSound(player.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 0.8f, 6.0f);
+					
+					Item dItem = arrow.getWorld().dropItem(arrow.getLocation(), new ItemStack(Material.FIREWORK_STAR));
+					dItem.setPickupDelay(10000000);
+					arrow.addPassenger(dItem);
+					
+					Thread t = new Thread(player.getUniqueId());
+					sleep = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+						
+						@Override
+						public void run() {
+							if (!t.hasID()) {
+								t.setID(sleep);
+							}
+						
+							if(!arrow.isDead()) {	
+								world.spawnParticle(Particle.FLAME, arrow.getLocation(), 10);
+							} else {	
+								List<Entity> entitylist = arrow.getNearbyEntities(5, 5, 5);
+								for (Entity nearEntity : entitylist) {
+									if (nearEntity.getType() != EntityType.PLAYER) {
+										if (nearEntity instanceof LivingEntity) {
+											LivingEntity nearMob = (LivingEntity) nearEntity;
+											nearMob.damage(player.getLevel() * 25);
+										}
+									}
+								}
+								world.playSound(arrow.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 1.0f, 1.0f);
+								world.spawnParticle(Particle.EXPLOSION_LARGE, arrow.getLocation(), 0);
+								world.spawnParticle(Particle.FLAME, arrow.getLocation(), 10);
+								t.endTask();
+								t.removeID();
+							}
+						}						
+						
+					}, 0, 1);
+				} else {
+					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+				}
 			}
 		}
 	}
 	
 	public void skill10(Player player, String key) {
 		World world = player.getWorld();
-		if (!(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
-				.equals(ChatColor.GOLD + "버서커의 증표"))) {
+		if (!(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "버서커의 증표"))) {
+			int damNum = 0;
+			try {
+				if (player.getInventory().getItemInMainHand().getItemMeta() != null) {
+					ItemMeta im = player.getInventory().getItemInMainHand().getItemMeta();
+					damNum = Integer.parseInt(im.getLocalizedName().split(",")[0]);
+				}
+			} catch(Exception e) {
+				
+			}
 			int i = 0;
 			for (ItemStack is : player.getInventory().getContents()) {
 				if (is == null)
@@ -2523,17 +2778,41 @@ public class Skill {
 					i = i + is.getAmount();
 				}
 			}
-			if (i == 2) {
-				if (player.getHealth() < player.getMaxHealth() / 5) {
+			if(key.equals("RRR")) {
+				if(i>=2) {
+					if ((player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) || (player.getLocation().getBlock().getType() != Material.AIR)
+							|| (player.getLocation().add(0,-2,0).getBlock().getType() != Material.AIR)) {						
+						player.getInventory().remove(Material.HEART_OF_THE_SEA);
+						ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 2);
+						ItemMeta itemIm = item.getItemMeta();
+						itemIm.setDisplayName(ChatColor.BLUE + "마나");
+						item.setItemMeta(itemIm);
+						player.getInventory().setItem(8, item);
+
+						player.sendMessage(ChatColor.GREEN + "[스킬]엘·카나프가 발동됩니다.");
+
+						Vector vec = player.getEyeLocation().getDirection().multiply(2.0f);
+						player.setVelocity(vec);
+						world.playSound(player.getLocation(), Sound.ENTITY_BLAZE_AMBIENT, 1.0f, 1.8f);
+					}
+				} else {
+					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+				}
+			} else if(key.equals("RRL")) {
+				if(i>=3) {
 					player.getInventory().remove(Material.HEART_OF_THE_SEA);
+					ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 3);
+					ItemMeta itemIm = item.getItemMeta();
+					itemIm.setDisplayName(ChatColor.BLUE + "마나");
+					item.setItemMeta(itemIm);
+					player.getInventory().setItem(8, item);
 					Location loc = player.getLocation();
-					if(player.getHealth() >= 10) {
+					if(player.getHealth() > 10) {
 						player.setHealth(20);
 					} else {
-						player.setHealth(player.getHealth() + 20);
+						player.setHealth(player.getHealth() + 10);
 					}
-					player.setNoDamageTicks(100);
-					player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 200, 20));
 					// ===============================================================
 					ParticleData pd = new ParticleData(player.getUniqueId());
 					if (pd.hasID()) {
@@ -2543,70 +2822,75 @@ public class Skill {
 					ParticleEffect pe = new ParticleEffect(player);
 					pe.startE17();
 					// ================================================================
-					world.playSound(loc, Sound.ENTITY_WANDERING_TRADER_DRINK_POTION, 1.0f, 1.0f);
-					player.sendMessage(ChatColor.GREEN + "[스킬]포션 중독이 발동됩니다.");
-					player.sendMessage(ChatColor.GREEN + "잠시 고통이 모두 사라지지만, 심각한 디버프가 걸립니다.");
+					world.playSound(loc, Sound.ENTITY_BLAZE_BURN, 1.0f, 0.6f); 	
+					player.sendMessage(ChatColor.GREEN + "[스킬]엘·페게츠가 발동됩니다.");
+					player.sendMessage(ChatColor.GREEN + "자신의 체력이 회복됩니다." + ChatColor.AQUA + " [+" + ChatColor.RED + "50%" + ChatColor.AQUA + "]");
 				} else {
+					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+				}
+			} else if(key.equals("RLL")) {
+				if(i>=10) {
 					player.getInventory().remove(Material.HEART_OF_THE_SEA);
-					Location loc = player.getLocation();
-					if(player.getHealth() >= 10) {
-						player.setHealth(20);
-					} else {
-						player.setHealth(player.getHealth() + 15);
-					}
-					player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 2));
-					player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_FALLING, 200, 0));
-					// ===============================================================
-					ParticleData pd = new ParticleData(player.getUniqueId());
-					if (pd.hasID()) {
-						pd.endTask();
-						pd.removeID();
-					}
-					ParticleEffect pe = new ParticleEffect(player);
-					pe.startE16();
-					// ================================================================
-					world.playSound(loc, Sound.ENTITY_WANDERING_TRADER_DRINK_POTION, 1.0f, 1.0f);
-					player.sendMessage(ChatColor.GREEN + "[스킬]포션의 부작용이 발동됩니다.");
-					player.sendMessage(ChatColor.GREEN + "체력이 회복되지만, 디버프가 걸립니다.");
-				}
-			} else if (i > 2) {
-				player.getInventory().remove(Material.HEART_OF_THE_SEA);
-				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 2);
-				ItemMeta itemIm = item.getItemMeta();
-				itemIm.setDisplayName(ChatColor.BLUE + "마나");
-				item.setItemMeta(itemIm);
-				player.getInventory().setItem(8, item);
-				Location loc = player.getLocation();
-				if(player.getHealth() >= 10) {
-					player.setHealth(20);
+					ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 10);
+					ItemMeta itemIm = item.getItemMeta();
+					itemIm.setDisplayName(ChatColor.BLUE + "마나");
+					item.setItemMeta(itemIm);
+					player.getInventory().setItem(8, item);
+					
+					player.sendMessage(ChatColor.GREEN + "[스킬]엘·초펠이 발동됩니다.");
+					world.playSound(player.getLocation(), Sound.ITEM_TRIDENT_THUNDER, 1.0f, 1.5f);
+					
+					Vector vec = player.getEyeLocation().getDirection().multiply(3.0f);
+					vec.add(new Vector(0, vec.getY() * -1, 0));
+					player.setVelocity(vec);						
+					List<Entity> entitylist = player.getNearbyEntities(6, 6, 6);				
+					for (Entity nearEntity : entitylist) {
+						if (nearEntity instanceof Mob) {
+							LivingEntity ent = (LivingEntity) nearEntity;
+							if(ent.getType() != EntityType.MUSHROOM_COW) {
+								ent.setVelocity(vec);
+							}
+							ent.damage(player.getLevel()*5 + damNum * 15);
+						}
+					}	
 				} else {
-					player.setHealth(player.getHealth() + 15);
+					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
 				}
-				player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 2));
-				player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_FALLING, 200, 0));
-				world.playSound(loc, Sound.ENTITY_WANDERING_TRADER_DRINK_POTION, 1.0f, 1.0f);
-				// ===============================================================
-				ParticleData pd = new ParticleData(player.getUniqueId());
-				if (pd.hasID()) {
-					pd.endTask();
-					pd.removeID();
+			} else if(key.equals("RLR")) {
+				if(i>=6) {
+					player.getInventory().remove(Material.HEART_OF_THE_SEA);
+					ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 6);
+					ItemMeta itemIm = item.getItemMeta();
+					itemIm.setDisplayName(ChatColor.BLUE + "마나");
+					item.setItemMeta(itemIm);
+					player.getInventory().setItem(8, item);
+					player.sendMessage(ChatColor.GREEN + "[스킬]엘·예브른이 발동됩니다.");
+					world.playSound(player.getLocation(), Sound.ITEM_TRIDENT_THUNDER, 1.0f, 0.3f);
+					
+					Vector vec = new Vector(0, 1, 0);
+					List<Entity> entitylist = player.getNearbyEntities(5, 5, 5);				
+					for (Entity nearEntity : entitylist) {
+						if (nearEntity instanceof Mob) {
+							LivingEntity ent = (LivingEntity) nearEntity;
+							if(ent.getType() != EntityType.MUSHROOM_COW) {
+								ent.setVelocity(vec.multiply(3.0f));
+							}
+							ent.damage(player.getLevel()*10 + damNum * 10);
+						}
+					}	
+				} else {
+					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
 				}
-				ParticleEffect pe = new ParticleEffect(player);
-				pe.startE16();
-				// ================================================================
-				player.sendMessage(ChatColor.GREEN + "[스킬]포션의 부작용이 발동됩니다.");
-				player.sendMessage(ChatColor.GREEN + "체력이 회복되지만, 디버프가 걸립니다.");
-			} else {
-				player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-				world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
 			}
 		}
 	}
 	
 	public void skill11(Player player, String key) {
 		World world = player.getWorld();
-		if (!(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
-				.equals(ChatColor.GOLD + "군인의 증표"))) {
+		if (!(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "군인의 증표"))) {
 			int i = 0;
 			for (ItemStack is : player.getInventory().getContents()) {
 				if (is == null)
@@ -2615,27 +2899,100 @@ public class Skill {
 					i = i + is.getAmount();
 				}
 			}
-			if (i == 5) {
-				player.getInventory().remove(Material.HEART_OF_THE_SEA);
-				Location loc = player.getLocation();
-				int num = rnd.nextInt(20);
-				if (num == 0) {
-					// ===============================================================
-					ParticleData pd = new ParticleData(player.getUniqueId());
-					if (pd.hasID()) {
-						pd.endTask();
-						pd.removeID();
+			if(key.equals("RRR")) {
+				if(i>=2) {
+					if ((player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) || (player.getLocation().getBlock().getType() != Material.AIR)
+							|| (player.getLocation().add(0,-2,0).getBlock().getType() != Material.AIR)) {						
+						player.getInventory().remove(Material.HEART_OF_THE_SEA);
+						ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 2);
+						ItemMeta itemIm = item.getItemMeta();
+						itemIm.setDisplayName(ChatColor.BLUE + "마나");
+						item.setItemMeta(itemIm);
+						player.getInventory().setItem(8, item);
+
+						player.sendMessage(ChatColor.GREEN + "[스킬]행군이 발동됩니다.");
+
+						player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 2));
+						world.playSound(player.getLocation(), Sound.UI_TOAST_IN, 1.0f, 0.5f);
 					}
-					ParticleEffect pe = new ParticleEffect(player);
-					pe.startE18();
-					// ================================================================
-					world.playSound(loc, Sound.ITEM_BOOK_PAGE_TURN, 1.0f, 1.0f);
-					player.sendMessage(ChatColor.GREEN + "[스킬]마음의 편지가 발동됩니다.");
-					player.sendMessage(ChatColor.RED + "효과가 없었습니다.");
 				} else {
-					player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, 1200, 2));
-					player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 1200, 4));
-					player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 1200, 10));
+					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+				}
+			} else if(key.equals("RRL")) {
+				if(i>=5) {
+					player.getInventory().remove(Material.HEART_OF_THE_SEA);
+					ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 5);
+					ItemMeta itemIm = item.getItemMeta();
+					itemIm.setDisplayName(ChatColor.BLUE + "마나");
+					item.setItemMeta(itemIm);
+					player.getInventory().setItem(8, item);
+					
+					player.sendMessage(ChatColor.GREEN + "[스킬]수류탄 투척이 발동됩니다.");
+					
+					Arrow arrow = player.launchProjectile(Arrow.class);
+					arrow.setShooter(player);
+					arrow.setVelocity(player.getLocation().getDirection().multiply(0.7f));		
+					world.spawnParticle(Particle.FLAME, arrow.getLocation(), 2);
+					world.playSound(player.getLocation(), Sound.ENTITY_PLAYER_ATTACK_SWEEP, 1.5f, 1.0f);
+					
+					Item dItem = arrow.getWorld().dropItem(arrow.getLocation(), new ItemStack(Material.FIRE_CHARGE));
+					dItem.setPickupDelay(10000000);
+					arrow.addPassenger(dItem);
+					
+					Thread t = new Thread(player.getUniqueId());
+					sleep = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+						
+						@Override
+						public void run() {
+							if (!t.hasID()) {
+								t.setID(sleep);
+							}
+						
+							if(arrow.isDead()) {	
+								List<Entity> entitylist = arrow.getNearbyEntities(5, 5, 5);
+								for (Entity nearEntity : entitylist) {
+									if (nearEntity.getType() != EntityType.PLAYER) {
+										if (nearEntity instanceof LivingEntity) {
+											LivingEntity nearMob = (LivingEntity) nearEntity;
+											nearMob.damage(player.getLevel() * 30);
+										}
+									}
+								}
+								world.playSound(arrow.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 0.8f, 2.0f);
+								world.spawnParticle(Particle.EXPLOSION_LARGE, arrow.getLocation(), 0);
+								world.spawnParticle(Particle.FLAME, arrow.getLocation(), 10);
+								t.endTask();
+								t.removeID();
+							}
+						}						
+						
+					}, 0, 1);
+				} else {
+					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+				}
+			} else if(key.equals("RLL")) {
+				if(i>=8) {
+					player.getInventory().remove(Material.HEART_OF_THE_SEA);
+					ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 8);
+					ItemMeta itemIm = item.getItemMeta();
+					itemIm.setDisplayName(ChatColor.BLUE + "마나");
+					item.setItemMeta(itemIm);
+					player.getInventory().setItem(8, item);
+					
+					List<Entity> entitylist = player.getNearbyEntities(10, 5, 10);
+					for (Entity nearEntity : entitylist) {
+						if (nearEntity.getType() == EntityType.PLAYER) {
+							Player nearPlayer = (Player) nearEntity;
+							PotionRatio pr = new PotionRatio();
+							pr.calculation(nearPlayer, player.getLevel() * 4);
+							nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 회복되었습니다." + ChatColor.AQUA + " [+" + ChatColor.RED + player.getLevel() * 4 + ChatColor.AQUA + "]");
+						}
+					}
+					PotionRatio pr = new PotionRatio();
+					pr.calculation(player, player.getLevel() * 4);
+					Location loc = player.getLocation();
 					// ===============================================================
 					ParticleData pd = new ParticleData(player.getUniqueId());
 					if (pd.hasID()) {
@@ -2645,60 +3002,48 @@ public class Skill {
 					ParticleEffect pe = new ParticleEffect(player);
 					pe.startE19();
 					// ================================================================
-					world.playSound(loc, Sound.ITEM_FIRECHARGE_USE, 1.0f, 1.0f);
-					player.sendMessage(ChatColor.GREEN + "[스킬]선임의 명령이 발동됩니다.");
-					player.sendMessage(ChatColor.GREEN + "많이 아프지만 효율적인 노동을 할 수 있습니다.");
-				}
-			} else if (i > 5) {
-				player.getInventory().remove(Material.HEART_OF_THE_SEA);
-				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 5);
-				ItemMeta itemIm = item.getItemMeta();
-				itemIm.setDisplayName(ChatColor.BLUE + "마나");
-				item.setItemMeta(itemIm);
-				player.getInventory().setItem(8, item);
-				Location loc = player.getLocation();
-				int num = rnd.nextInt(20);
-				if (num == 0) {
-					// ===============================================================
-					ParticleData pd = new ParticleData(player.getUniqueId());
-					if (pd.hasID()) {
-						pd.endTask();
-						pd.removeID();
-					}
-					ParticleEffect pe = new ParticleEffect(player);
-					pe.startE18();
-					// ================================================================
-					world.playSound(loc, Sound.ITEM_BOOK_PAGE_TURN, 1.0f, 1.0f);
-					player.sendMessage(ChatColor.GREEN + "[스킬]마음의 편지가 발동됩니다.");
-					player.sendMessage(ChatColor.RED + "효과가 없었습니다.");
+					world.playSound(player.getLocation(), Sound.ENTITY_PLAYER_ATTACK_SWEEP, 1.5f, 0.5f);
+					player.sendMessage(ChatColor.GREEN + "[스킬]구급법이 발동됩니다.");
+					player.sendMessage(ChatColor.GREEN + "자신과 주변 아군의 체력이 회복됩니다." + ChatColor.AQUA + " [+" + ChatColor.RED + player.getLevel() * 4 + ChatColor.AQUA + "]");
 				} else {
-					player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, 1200, 2));
-					player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 1200, 4));
-					player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 1200, 10));
-					// ===============================================================
-					ParticleData pd = new ParticleData(player.getUniqueId());
-					if (pd.hasID()) {
-						pd.endTask();
-						pd.removeID();
-					}
-					ParticleEffect pe = new ParticleEffect(player);
-					pe.startE19();
-					// ================================================================
-					world.playSound(loc, Sound.ITEM_FIRECHARGE_USE, 1.0f, 1.0f);
-					player.sendMessage(ChatColor.GREEN + "[스킬]선임의 명령이 발동됩니다.");
-					player.sendMessage(ChatColor.GREEN + "많이 아프지만 효율적인 노동을 할 수 있습니다.");
+					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
 				}
-			} else {
-				player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-				world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+			} else if(key.equals("RLR")) {
+				if(i>=10) {
+					player.getInventory().remove(Material.HEART_OF_THE_SEA);
+					ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 10);
+					ItemMeta itemIm = item.getItemMeta();
+					itemIm.setDisplayName(ChatColor.BLUE + "마나");
+					item.setItemMeta(itemIm);
+					player.getInventory().setItem(8, item);
+					Location loc = player.getLocation();
+					List<Entity> entitylist = player.getNearbyEntities(10, 10, 10);
+					for (Entity nearEntity : entitylist) {
+						if (nearEntity.getType() == EntityType.PLAYER) {
+							Player nearPlayer = (Player) nearEntity;
+							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0, true, false, false));
+							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 1, true, false, false));
+							nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 10초간 저항이 부여됩니다.");
+							nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 10초간 추가 체력이 부여됩니다.");
+						}
+					}
+					player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0, true, false, false));
+					player.sendMessage(ChatColor.GREEN + "[스킬]각개전투가 발동됩니다.");
+					player.sendMessage(ChatColor.GREEN + "10초간 아군에게 저항이 부여됩니다.");
+					player.sendMessage(ChatColor.GREEN + "10초간 아군에게 추가 체력이 부여됩니다.");
+					world.playSound(loc, Sound.BLOCK_CHAIN_BREAK, 2.0f, 0.5f);		
+				} else {
+					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+				}
 			}
 		}
 	}
 
 	public void skill12(Player player, String key) {
 		World world = player.getWorld();
-		if (!(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
-				.equals(ChatColor.GOLD + "그림 리퍼의 증표"))) {
+		if (!(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "그림 리퍼의 증표"))) {
 			int i = 0;
 			for (ItemStack is : player.getInventory().getContents()) {
 				if (is == null)
@@ -2707,54 +3052,148 @@ public class Skill {
 					i = i + is.getAmount();
 				}
 			}
-			int j = 0;
-			for (ItemStack is : player.getInventory().getContents()) {
-				if (is == null)
-					continue;
-				if (is.getType() == Material.EMERALD_BLOCK) {
-					j = j + is.getAmount();
-				}
-			}
-			if (i == 1) {
-				player.getInventory().remove(Material.HEART_OF_THE_SEA);
-				Location loc = player.getLocation();
-				if (j == 44) {
-					player.getInventory().remove(Material.EMERALD_BLOCK);
-					player.setNoDamageTicks(444);
-					// ===============================================================
-					ParticleData pd = new ParticleData(player.getUniqueId());
-					if (pd.hasID()) {
-						pd.endTask();
-						pd.removeID();
-					}
-					ParticleEffect pe = new ParticleEffect(player);
-					pe.startE20();
-					// ================================================================
-					world.playSound(loc, Sound.ENTITY_BLAZE_DEATH, 1.0f, 1.0f);
-					player.sendMessage(ChatColor.GREEN + "[스킬]죽음의 숫자가 발동됩니다.");
-					player.sendMessage(ChatColor.GREEN + "44개의 에메랄드 블럭을 소진하여 잠시 동안 무적이 됩니다.");
-				} else {
-					int num = 0;					
-					List<Entity> entitylist = player.getNearbyEntities(5, 5, 5);
-					for (Entity nearEntity : entitylist) {
-						if ((nearEntity.getType() != EntityType.PLAYER) && (nearEntity.getType() != EntityType.PIG) && (nearEntity.getType() != EntityType.COW)
-								&& (nearEntity.getType() != EntityType.CHICKEN) && (nearEntity.getType() != EntityType.SHEEP) && (nearEntity.getType() != EntityType.VILLAGER)
-								&& (nearEntity.getType() != EntityType.HORSE) && (nearEntity.getType() != EntityType.SKELETON_HORSE) && (nearEntity.getType() != EntityType.ZOMBIE_HORSE)
-								&& (nearEntity.getType() != EntityType.WOLF) && (nearEntity.getType() != EntityType.CAT) && (nearEntity.getType() != EntityType.DONKEY)
-								&& (nearEntity.getType() != EntityType.ARMOR_STAND)) {
-							if (nearEntity instanceof LivingEntity) {
-								LivingEntity nearMob = (LivingEntity) nearEntity;
-								nearMob.setFireTicks(200);
-								nearMob.damage(player.getLevel());
-								num++;
-							}
+			if(key.equals("RRR")) {
+				if(i>=2) {
+					if ((player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) || (player.getLocation().getBlock().getType() != Material.AIR)
+							|| (player.getLocation().add(0,-2,0).getBlock().getType() != Material.AIR)) {						
+						player.getInventory().remove(Material.HEART_OF_THE_SEA);
+						ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 2);
+						ItemMeta itemIm = item.getItemMeta();
+						itemIm.setDisplayName(ChatColor.BLUE + "마나");
+						item.setItemMeta(itemIm);
+						player.getInventory().setItem(8, item);
+
+						if(map.get(player.getDisplayName()) == 1) {
+							player.sendMessage(ChatColor.GREEN + "[스킬]영혼 걸음이 발동됩니다.");
+							Vector vec = player.getEyeLocation().getDirection().multiply(1.2f);
+							player.setVelocity(vec);
+							world.playSound(player.getLocation(), Sound.ITEM_CHORUS_FRUIT_TELEPORT, 1.0f, 1.0f);
+						} else {
+							player.sendMessage(ChatColor.GREEN + "[스킬]사신의 걸음이 발동됩니다.");
+							Vector vec = player.getEyeLocation().getDirection().multiply(1.7f);
+							player.setVelocity(vec);
+							world.playSound(player.getLocation(), Sound.ENTITY_SHULKER_TELEPORT, 1.0f, 1.8f);
 						}
 					}
-					if (num == 0) {
-						world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.GREEN + "[스킬]지옥불이 발동됩니다.");
-						player.sendMessage(ChatColor.RED + "대상이 없습니다.");
+				} else {
+					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+				}
+			} else if(key.equals("RRL")) {
+				if(i>=1) {
+					player.getInventory().remove(Material.HEART_OF_THE_SEA);
+					ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 1);
+					ItemMeta itemIm = item.getItemMeta();
+					itemIm.setDisplayName(ChatColor.BLUE + "마나");
+					item.setItemMeta(itemIm);
+					player.getInventory().setItem(8, item);
+					
+					if(map.get(player.getDisplayName()) == 1) {
+						List<Entity> entitylist = player.getNearbyEntities(10, 5, 10);
+						for (Entity nearEntity : entitylist) {
+							if (nearEntity.getType() != EntityType.PLAYER) {
+								if (nearEntity instanceof LivingEntity) {
+									LivingEntity nearMob = (LivingEntity) nearEntity;
+									nearMob.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 600, player.getLevel()/10,true,false,false));
+								}
+							}
+						}
+						world.playSound(player.getLocation(), Sound.AMBIENT_CAVE, 3.0f, 1.5f);
+						player.sendMessage(ChatColor.GREEN + "[스킬]영혼 흡착이 발동됩니다.");
+						player.sendMessage(ChatColor.GREEN + "10초간 주변 적들이 약화됩니다.");
 					} else {
+						int num = 0;					
+						List<Entity> entitylist = player.getNearbyEntities(5, 5, 5);
+						for (Entity nearEntity : entitylist) {
+							if ((nearEntity.getType() != EntityType.PLAYER) && (nearEntity.getType() != EntityType.PIG) && (nearEntity.getType() != EntityType.COW)
+									&& (nearEntity.getType() != EntityType.CHICKEN) && (nearEntity.getType() != EntityType.SHEEP) && (nearEntity.getType() != EntityType.VILLAGER)
+									&& (nearEntity.getType() != EntityType.HORSE) && (nearEntity.getType() != EntityType.SKELETON_HORSE) && (nearEntity.getType() != EntityType.ZOMBIE_HORSE)
+									&& (nearEntity.getType() != EntityType.WOLF) && (nearEntity.getType() != EntityType.CAT) && (nearEntity.getType() != EntityType.DONKEY)
+									&& (nearEntity.getType() != EntityType.ARMOR_STAND)) {
+								if (nearEntity instanceof LivingEntity) {
+									LivingEntity nearMob = (LivingEntity) nearEntity;
+									nearMob.setFireTicks(200);
+									nearMob.damage(player.getLevel());
+									num++;
+								}
+							}
+						}
+						if (num == 0) {
+							world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+							player.sendMessage(ChatColor.GREEN + "[스킬]지옥불이 발동됩니다.");
+							player.sendMessage(ChatColor.RED + "대상이 없습니다.");
+						} else {
+							// ===============================================================
+							ParticleData pd = new ParticleData(player.getUniqueId());
+							if (pd.hasID()) {
+								pd.endTask();
+								pd.removeID();
+							}
+							ParticleEffect pe = new ParticleEffect(player);
+							pe.startE21();
+							// ================================================================
+							world.playSound(player.getLocation(), Sound.ENTITY_CAT_HISS, 1.0f, 1.0f);
+							player.sendMessage(ChatColor.GREEN + "[스킬]지옥불이 발동됩니다.");
+							player.sendMessage(ChatColor.GREEN + "주변의 몬스터들이 불타게 됩니다.");
+						}
+					}
+
+				} else {
+					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+				}
+			} else if(key.equals("RLL")) {
+				if(i>=5) {
+					player.getInventory().remove(Material.HEART_OF_THE_SEA);
+					ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 5);
+					ItemMeta itemIm = item.getItemMeta();
+					itemIm.setDisplayName(ChatColor.BLUE + "마나");
+					item.setItemMeta(itemIm);
+					player.getInventory().setItem(8, item);
+					
+					if(map.get(player.getDisplayName()) == 1) {
+						List<Entity> entitylist = player.getNearbyEntities(10, 5, 10);
+						for (Entity nearEntity : entitylist) {
+							if (nearEntity.getType() != EntityType.PLAYER) {
+								if (nearEntity instanceof LivingEntity) {
+									LivingEntity nearMob = (LivingEntity) nearEntity;
+									nearMob.damage(player.getLevel() * 20);
+								}
+							}
+						}
+						world.playSound(player.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 1.0f, 1.5f);
+						world.spawnParticle(Particle.EXPLOSION_LARGE, player.getLocation(), 0);
+						player.sendMessage(ChatColor.GREEN + "[스킬]카르마가 발동됩니다.");
+					} else {
+						player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 400, 3, true, false, false));
+						player.sendMessage(ChatColor.GREEN + "[스킬]칼라수트라가 발동됩니다.");
+						world.playSound(player.getLocation(), Sound.ENTITY_BLAZE_DEATH, 1.0f, 1.0f);
+					}
+				} else {
+					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+				}
+			} else if(key.equals("RLR")) {
+				if(i>=1) {
+					player.getInventory().remove(Material.HEART_OF_THE_SEA);
+					ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 1);
+					ItemMeta itemIm = item.getItemMeta();
+					itemIm.setDisplayName(ChatColor.BLUE + "마나");
+					item.setItemMeta(itemIm);
+					player.getInventory().setItem(8, item);
+					if(map.get(player.getDisplayName()) == 1) {
+						//파티클 제거
+						try {
+							ParticleData pd = new ParticleData(player.getUniqueId());
+							if(pd.hasID()) {
+								pd.endTask();
+								pd.removeID();
+							}
+						} catch(Exception e) {
+							
+						}
+						map.remove(player.getDisplayName());
+						map.put(player.getDisplayName(), 0);
 						// ===============================================================
 						ParticleData pd = new ParticleData(player.getUniqueId());
 						if (pd.hasID()) {
@@ -2762,58 +3201,22 @@ public class Skill {
 							pd.removeID();
 						}
 						ParticleEffect pe = new ParticleEffect(player);
-						pe.startE21();
+						pe.startE0_1();
 						// ================================================================
-						world.playSound(loc, Sound.ENTITY_CAT_HISS, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.GREEN + "[스킬]지옥불이 발동됩니다.");
-						player.sendMessage(ChatColor.GREEN + "주변의 몬스터들이 불타게 됩니다.");
-					}
-				}
-			} else if (i > 1) {
-				player.getInventory().remove(Material.HEART_OF_THE_SEA);
-				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 1);
-				ItemMeta itemIm = item.getItemMeta();
-				itemIm.setDisplayName(ChatColor.BLUE + "마나");
-				item.setItemMeta(itemIm);
-				player.getInventory().setItem(8, item);
-				Location loc = player.getLocation();
-				if (j == 44) {
-					player.getInventory().remove(Material.EMERALD_BLOCK);
-					player.setNoDamageTicks(444);
-					// ===============================================================
-					ParticleData pd = new ParticleData(player.getUniqueId());
-					if (pd.hasID()) {
-						pd.endTask();
-						pd.removeID();
-					}
-					ParticleEffect pe = new ParticleEffect(player);
-					pe.startE20();
-					// ================================================================
-					world.playSound(loc, Sound.ENTITY_BLAZE_DEATH, 1.0f, 1.0f);
-					player.sendMessage(ChatColor.GREEN + "[스킬]죽음의 숫자가 발동됩니다.");
-					player.sendMessage(ChatColor.GREEN + "44개의 에메랄드 블럭을 소진하여 잠시 동안 무적이 됩니다.");
-				} else {
-					int num = 0;
-					List<Entity> entitylist = player.getNearbyEntities(5, 5, 5);
-					for (Entity nearEntity : entitylist) {
-						if (nearEntity.getType() != EntityType.PLAYER && (nearEntity.getType() != EntityType.PIG) && (nearEntity.getType() != EntityType.COW)
-								&& (nearEntity.getType() != EntityType.CHICKEN) && (nearEntity.getType() != EntityType.SHEEP) && (nearEntity.getType() != EntityType.VILLAGER)
-								&& (nearEntity.getType() != EntityType.HORSE) && (nearEntity.getType() != EntityType.SKELETON_HORSE) && (nearEntity.getType() != EntityType.ZOMBIE_HORSE)
-								&& (nearEntity.getType() != EntityType.WOLF) && (nearEntity.getType() != EntityType.CAT) && (nearEntity.getType() != EntityType.DONKEY)
-								&& (nearEntity.getType() != EntityType.ARMOR_STAND)) {
-							if (nearEntity instanceof LivingEntity) {
-								LivingEntity nearMob = (LivingEntity) nearEntity;
-								nearMob.damage(player.getLevel());
-								nearMob.setFireTicks(200);
-								num++;
-							}
-						}
-					}
-					if (num == 0) {
-						world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.GREEN + "[스킬]지옥불이 발동됩니다.");
-						player.sendMessage(ChatColor.RED + "대상이 없습니다.");
+						player.sendMessage(ChatColor.GREEN + "[스킬]폼 체인지가 발동됩니다.");
 					} else {
+						//파티클 제거
+						try {
+							ParticleData pd = new ParticleData(player.getUniqueId());
+							if(pd.hasID()) {
+								pd.endTask();
+								pd.removeID();
+							}
+						} catch(Exception e) {
+							
+						}
+						map.remove(player.getDisplayName());
+						map.put(player.getDisplayName(), 1);
 						// ===============================================================
 						ParticleData pd = new ParticleData(player.getUniqueId());
 						if (pd.hasID()) {
@@ -2821,16 +3224,14 @@ public class Skill {
 							pd.removeID();
 						}
 						ParticleEffect pe = new ParticleEffect(player);
-						pe.startE21();
+						pe.startE0_2();
 						// ================================================================
-						world.playSound(loc, Sound.ENTITY_CAT_HISS, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.GREEN + "[스킬]지옥불이 발동됩니다.");
-						player.sendMessage(ChatColor.GREEN + "주변의 몬스터들이 불타게 됩니다.");
+						player.sendMessage(ChatColor.GREEN + "[스킬]폼 체인지가 발동됩니다.");
 					}
+				} else {
+					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
 				}
-			} else {
-				player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-				world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
 			}
 		}
 	}
@@ -2856,7 +3257,7 @@ public class Skill {
 			if(key.equals("RRR")) {
 				if(i>=1) {
 					if ((player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) || (player.getLocation().getBlock().getType() != Material.AIR)
-							|| (player.getLocation().add(0,1,0).getBlock().getType() != Material.AIR)) {						
+							|| (player.getLocation().add(0,-2,0).getBlock().getType() != Material.AIR)) {						
 						player.getInventory().remove(Material.HEART_OF_THE_SEA);
 						ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 1);
 						ItemMeta itemIm = item.getItemMeta();
@@ -3117,7 +3518,7 @@ public class Skill {
 			if(key.equals("RRR")) {
 				if(i>=2) {
 					if ((player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) || (player.getLocation().getBlock().getType() != Material.AIR)
-							|| (player.getLocation().add(0,1,0).getBlock().getType() != Material.AIR)) {						
+							|| (player.getLocation().add(0,-2,0).getBlock().getType() != Material.AIR)) {						
 						player.getInventory().remove(Material.HEART_OF_THE_SEA);
 						ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 2);
 						ItemMeta itemIm = item.getItemMeta();
@@ -3210,7 +3611,7 @@ public class Skill {
 			} else if(key.equals("RLR")) {
 				if(i>=1) {
 					if ((player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) || (player.getLocation().getBlock().getType() != Material.AIR)
-							|| (player.getLocation().add(0,1,0).getBlock().getType() != Material.AIR)) {
+							|| (player.getLocation().add(0,-2,0).getBlock().getType() != Material.AIR)) {
 						player.getInventory().remove(Material.HEART_OF_THE_SEA);
 						ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 1);
 						ItemMeta itemIm = item.getItemMeta();
@@ -3483,7 +3884,7 @@ public class Skill {
 									if (nearEntity.getType() != EntityType.PLAYER) {
 										if (nearEntity instanceof LivingEntity) {
 											LivingEntity nearMob = (LivingEntity) nearEntity;
-											nearMob.damage(player.getLevel()*11);
+											nearMob.damage(player.getLevel()*20);
 										}
 									}
 								}
@@ -3505,7 +3906,7 @@ public class Skill {
 			} else if(key.equals("LLL")) {
 				if(i>=3) {
 					if ((player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) || (player.getLocation().getBlock().getType() != Material.AIR)
-							|| (player.getLocation().add(0,1,0).getBlock().getType() != Material.AIR)) {
+							|| (player.getLocation().add(0,-2,0).getBlock().getType() != Material.AIR)) {
 						player.getInventory().remove(Material.HEART_OF_THE_SEA);
 						ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 3);
 						ItemMeta itemIm = item.getItemMeta();
@@ -3556,7 +3957,9 @@ public class Skill {
 								if(e instanceof Mob) {
 									LivingEntity mob = (LivingEntity) e; 
 									mob.damage(1);
-									mob.setVelocity(new Vector(0.3,1,0.3));
+									if(mob.getType() != EntityType.MUSHROOM_COW) {
+										mob.setVelocity(new Vector(0.3,1,0.3));
+									}
 									time += 49;
 								}
 							}
@@ -3698,7 +4101,7 @@ public class Skill {
 			} else if(key.equals("LLL")) {
 				if(i>=1) {
 					if ((player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) || (player.getLocation().getBlock().getType() != Material.AIR)
-							|| (player.getLocation().add(0,1,0).getBlock().getType() != Material.AIR)) {
+							|| (player.getLocation().add(0,-2,0).getBlock().getType() != Material.AIR)) {
 						player.getInventory().remove(Material.HEART_OF_THE_SEA);
 						ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 1);
 						ItemMeta itemIm = item.getItemMeta();
@@ -3751,7 +4154,9 @@ public class Skill {
 								if(e instanceof Mob) {
 									LivingEntity mob = (LivingEntity) e; 
 									mob.damage(player.getLevel());
-									mob.setVelocity(new Vector(0.3,1,0.3));
+									if(mob.getType() != EntityType.MUSHROOM_COW) {
+										mob.setVelocity(new Vector(0.3,1,0.3));
+									}
 									time += 29;
 								}
 							}
@@ -3775,6 +4180,37 @@ public class Skill {
 				}
 			}
 		}	
+	}
+	
+	public void getMap(Player player) {
+		try {
+			if(map.containsKey(player.getDisplayName())) {
+				map.remove(player.getDisplayName());
+				map.put(player.getDisplayName(), 0);
+				// ===============================================================
+				ParticleData pd = new ParticleData(player.getUniqueId());
+				if (pd.hasID()) {
+					pd.endTask();
+					pd.removeID();
+				}
+				ParticleEffect pe = new ParticleEffect(player);
+				pe.startE0_1();
+				// ================================================================
+			} else {
+				map.put(player.getDisplayName(), 0);
+				// ===============================================================
+				ParticleData pd = new ParticleData(player.getUniqueId());
+				if (pd.hasID()) {
+					pd.endTask();
+					pd.removeID();
+				}
+				ParticleEffect pe = new ParticleEffect(player);
+				pe.startE0_1();
+				// ================================================================
+			}
+		} catch(Exception e) {
+			
+		}
 	}
 	
 }

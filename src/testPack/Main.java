@@ -155,10 +155,10 @@ import org.bukkit.scoreboard.ScoreboardManager;
 import org.bukkit.scoreboard.Team;
 import org.bukkit.util.Vector;
 
-import net.minecraft.server.v1_16_R1.IChatBaseComponent.ChatSerializer;
-import net.minecraft.server.v1_16_R1.PacketPlayOutTitle;
-import net.minecraft.server.v1_16_R1.WorldGenDecoratorNetherGlowstone;
-import net.minecraft.server.v1_16_R1.PacketPlayOutTitle.EnumTitleAction;
+import net.minecraft.server.v1_16_R3.IChatBaseComponent.ChatSerializer;
+import net.minecraft.server.v1_16_R3.PacketPlayOutTitle;
+import net.minecraft.server.v1_16_R3.WorldGenDecoratorNetherGlowstone;
+import net.minecraft.server.v1_16_R3.PacketPlayOutTitle.EnumTitleAction;
 
 import java.util.Random;
 
@@ -2253,7 +2253,7 @@ public class Main extends JavaPlugin implements Listener{
 					|| entity.getType() == EntityType.COW || entity.getType() == EntityType.CHICKEN)) {
 				((LivingEntity)entity).addPotionEffect(new PotionEffect(PotionEffectType.DOLPHINS_GRACE, Integer.MAX_VALUE, 2, true, false, false));
 			}
-			if(entity.getType() != EntityType.HORSE) {
+			if((entity.getType() != EntityType.HORSE) && (entity.getType() != EntityType.ARMOR_STAND)) {
 				SpawnMob sm = new SpawnMob();
 				SpawnAnimal sa = new SpawnAnimal();
 				if(!sm.spawn(entity)) {			
@@ -3273,6 +3273,9 @@ public class Main extends JavaPlugin implements Listener{
 					}
 					if(arrow.getDamage() == 1) {
 						skillMul = 20;
+					}
+					if(arrow.getDamage() == 2) {
+						skillMul = 100;
 					}
 					double damage = (lvl * jobMul * skillMul * weaponMul) + enchMul;
 					try {

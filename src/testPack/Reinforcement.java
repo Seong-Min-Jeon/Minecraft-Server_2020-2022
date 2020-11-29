@@ -5925,6 +5925,12 @@ public class Reinforcement {
 	}
 	
 	public ItemMeta bowRein6(Player player, ItemMeta item, ItemMeta itemResource) {
+		
+		if(!durability(item)) {
+			player.sendMessage("내구도가 0인 장비에는 강화의 효력이 나타나지 않습니다.");
+			return item;
+		}
+		
 		//석영 6
 		if(itemResource.getDisplayName().equals(ChatColor.DARK_RED + "신의 힘이 담긴 석영")) {
 			int num = rnd.nextInt(percentArrowKami);
