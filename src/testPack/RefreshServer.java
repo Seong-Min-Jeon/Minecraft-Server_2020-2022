@@ -258,7 +258,7 @@ public class RefreshServer {
 					}
 				}
 				
-				if(time % 60 == 0) {
+				if(time % 40 == 0) {
 					for(Player player : Bukkit.getOnlinePlayers()) {
 						ItemStack mana = new ItemStack(Material.HEART_OF_THE_SEA);
 						ItemMeta manaIm = mana.getItemMeta();
