@@ -1180,7 +1180,113 @@ public class ParticleEffect {
 			}
 		}, 0, 1);
 	}
+	
+	// 마인 레이저
+	public void startE0_4() {
+		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
+			int time = 0;
+			Location loc, e1, e2, e3, e4, e5, e6, e7, e8, e9, e10, e11, e12, e13, e14, e15, e16, e17, e18, e19, e20;
+			Vector dir;
+			ParticleData pd = new ParticleData(player.getUniqueId());
+
+			@Override
+			public void run() {
+				if (!pd.hasID()) {
+					pd.setID(taskID);
+				}
+
+				if (time >= 40) {
+					pd.endTask();
+					pd.removeID();
+				}
+
+				loc = player.getEyeLocation();
+				dir = loc.getDirection();
+				e1 = loc.clone().add(dir.getX(), dir.getY(), dir.getZ());
+				e2 = loc.clone().add(dir.getX() * 2, dir.getY() * 2, dir.getZ() * 2);
+				e3 = loc.clone().add(dir.getX() * 3, dir.getY() * 3, dir.getZ() * 3);
+				e4 = loc.clone().add(dir.getX() * 4, dir.getY() * 4, dir.getZ() * 4);
+				e5 = loc.clone().add(dir.getX() * 5, dir.getY() * 5, dir.getZ() * 5);
+				e6 = loc.clone().add(dir.getX() * 6, dir.getY() * 6, dir.getZ() * 6);
+				e7 = loc.clone().add(dir.getX() * 7, dir.getY() * 7, dir.getZ() * 7);
+				e8 = loc.clone().add(dir.getX() * 8, dir.getY() * 8, dir.getZ() * 8);
+				e9 = loc.clone().add(dir.getX() * 9, dir.getY() * 9, dir.getZ() * 9);
+				e10 = loc.clone().add(dir.getX() * 10, dir.getY() * 10, dir.getZ() * 10);
+				e11 = loc.clone().add(dir.getX() * 11, dir.getY() * 11, dir.getZ() * 11);
+				e12 = loc.clone().add(dir.getX() * 12, dir.getY() * 12, dir.getZ() * 12);
+				e13 = loc.clone().add(dir.getX() * 13, dir.getY() * 13, dir.getZ() * 13);
+				e14 = loc.clone().add(dir.getX() * 14, dir.getY() * 14, dir.getZ() * 14);
+				e15 = loc.clone().add(dir.getX() * 15, dir.getY() * 15, dir.getZ() * 15);
+				e16 = loc.clone().add(dir.getX() * 16, dir.getY() * 16, dir.getZ() * 16);
+				e17 = loc.clone().add(dir.getX() * 17, dir.getY() * 17, dir.getZ() * 17);
+				e18 = loc.clone().add(dir.getX() * 18, dir.getY() * 18, dir.getZ() * 18);
+				e19 = loc.clone().add(dir.getX() * 19, dir.getY() * 19, dir.getZ() * 19);
+				e20 = loc.clone().add(dir.getX() * 20, dir.getY() * 20, dir.getZ() * 20);
+
+				player.getWorld().spawnParticle(Particle.CRIT_MAGIC, e1, 0);
+				player.getWorld().spawnParticle(Particle.CRIT_MAGIC, e2, 0);
+				player.getWorld().spawnParticle(Particle.CRIT_MAGIC, e3, 0);
+				player.getWorld().spawnParticle(Particle.CRIT_MAGIC, e4, 0);
+				player.getWorld().spawnParticle(Particle.CRIT_MAGIC, e5, 0);
+				player.getWorld().spawnParticle(Particle.CRIT_MAGIC, e6, 0);
+				player.getWorld().spawnParticle(Particle.CRIT_MAGIC, e7, 0);
+				player.getWorld().spawnParticle(Particle.CRIT_MAGIC, e8, 0);
+				player.getWorld().spawnParticle(Particle.CRIT_MAGIC, e9, 0);
+				player.getWorld().spawnParticle(Particle.CRIT_MAGIC, e10, 0);
+				player.getWorld().spawnParticle(Particle.CRIT_MAGIC, e11, 0);
+				player.getWorld().spawnParticle(Particle.CRIT_MAGIC, e12, 0);
+				player.getWorld().spawnParticle(Particle.CRIT_MAGIC, e13, 0);
+				player.getWorld().spawnParticle(Particle.CRIT_MAGIC, e14, 0);
+				player.getWorld().spawnParticle(Particle.CRIT_MAGIC, e15, 0);
+				player.getWorld().spawnParticle(Particle.CRIT_MAGIC, e16, 0);
+				player.getWorld().spawnParticle(Particle.CRIT_MAGIC, e17, 0);
+				player.getWorld().spawnParticle(Particle.CRIT_MAGIC, e18, 0);
+				player.getWorld().spawnParticle(Particle.CRIT_MAGIC, e19, 0);
+				player.getWorld().spawnParticle(Particle.CRIT_MAGIC, e20, 0);
+
+				time++;
+
+			}
+		}, 0, 1);
+	}
+
+	// 아이 오브 오더
+	public void startE0_5() {
+		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+			int time = 0;
+			double var = 0;
+			Location loc, first, second;
+			ParticleData pd = new ParticleData(player.getUniqueId());
+
+			@Override
+			public void run() {
+				if (!pd.hasID()) {
+					pd.setID(taskID);
+				}
+
+				if (time >= 20) {
+					pd.endTask();
+					pd.removeID();
+				}
+
+				time++;
+				var += Math.PI / 16;
+
+				loc = player.getLocation();
+
+				for (int i = 1; i < 5; i++) {
+					first = loc.clone().add(Math.cos(var) * i, 0, Math.sin(var) * i);
+					second = loc.clone().add(Math.cos(var + Math.PI) * i, 0, Math.sin(var + Math.PI) * i);
+
+					player.getWorld().spawnParticle(Particle.CRIT, first, 10);
+					player.getWorld().spawnParticle(Particle.CRIT, second, 10);
+				}
+			}
+		}, 0, 1);
+	}
+	
 ////몬스터 기술////	
 	
 	

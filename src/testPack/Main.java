@@ -83,6 +83,7 @@ import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.entity.CreatureSpawnEvent;
 import org.bukkit.event.entity.CreeperPowerEvent;
 import org.bukkit.event.entity.EntityBreedEvent;
+import org.bukkit.event.entity.EntityChangeBlockEvent;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.EntityDamageEvent.DamageCause;
@@ -296,7 +297,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("woolring")) { 
 			
 		} else {
-			player.setResourcePack("https://cdn.discordapp.com/attachments/698152850349490176/777410216048197632/aile_texture_pack_4.zip");
+			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/783199240984985601/aile_texture_pack_6.zip");
 		}
 		
 		//Message
@@ -2690,18 +2691,6 @@ public class Main extends JavaPlugin implements Listener{
 							}
 						}
 					}
-				} else if(event.getDamager() instanceof Snowball) {
-					Snowball proj = (Snowball) event.getDamager();
-					if(proj.getShooter() instanceof Player) {
-						Player player = (Player) proj.getShooter();
-						((PolarBear) event.getEntity()).setTarget(player);
-						List<Entity> entitylist = event.getEntity().getNearbyEntities(30, 10, 30);
-						for (Entity nearEntity : entitylist) {
-							if (nearEntity instanceof PolarBear) {
-								((PolarBear) nearEntity).setTarget(player);
-							}
-						}
-					}
 				}
 			}
 		} catch (Exception e) {
@@ -2743,18 +2732,6 @@ public class Main extends JavaPlugin implements Listener{
 							}
 						}
 					}
-				} else if (event.getDamager() instanceof Snowball) {
-					Snowball proj = (Snowball) event.getDamager();
-					if (proj.getShooter() instanceof Player) {
-						Player player = (Player) proj.getShooter();
-						((Llama) event.getEntity()).setTarget(player);
-						List<Entity> entitylist = event.getEntity().getNearbyEntities(30, 5, 30);
-						for (Entity nearEntity : entitylist) {
-							if (nearEntity instanceof Llama) {
-								((Llama) nearEntity).setTarget(player);
-							}
-						}
-					}
 				}
 			}
 		} catch (Exception e) {
@@ -2786,18 +2763,6 @@ public class Main extends JavaPlugin implements Listener{
 					}
 				} else if (event.getDamager() instanceof SmallFireball) {
 					SmallFireball proj = (SmallFireball) event.getDamager();
-					if (proj.getShooter() instanceof Player) {
-						Player player = (Player) proj.getShooter();
-						((Phantom) event.getEntity()).setTarget(player);
-						List<Entity> entitylist = event.getEntity().getNearbyEntities(20, 20, 20);
-						for (Entity nearEntity : entitylist) {
-							if (nearEntity instanceof Phantom) {
-								((Phantom) nearEntity).setTarget(player);
-							}
-						}
-					}
-				} else if (event.getDamager() instanceof Snowball) {
-					Snowball proj = (Snowball) event.getDamager();
 					if (proj.getShooter() instanceof Player) {
 						Player player = (Player) proj.getShooter();
 						((Phantom) event.getEntity()).setTarget(player);
@@ -2858,21 +2823,6 @@ public class Main extends JavaPlugin implements Listener{
 							}
 						}
 					}
-				} else if (event.getDamager() instanceof Snowball) {
-					Snowball proj = (Snowball) event.getDamager();
-					if (proj.getShooter() instanceof Player) {
-						Player player = (Player) proj.getShooter();
-						((Guardian) event.getEntity()).setTarget(player);
-						List<Entity> entitylist = event.getEntity().getNearbyEntities(20, 20, 20);
-						for (Entity nearEntity : entitylist) {
-							if (nearEntity instanceof Guardian) {
-								((Guardian) nearEntity).setTarget(player);
-							}
-							if (nearEntity instanceof ElderGuardian) {
-								((ElderGuardian) nearEntity).setTarget(player);
-							}
-						}
-					}
 				}
 			}
 			if (event.getEntity() instanceof ElderGuardian) {
@@ -2905,21 +2855,6 @@ public class Main extends JavaPlugin implements Listener{
 					}
 				} else if (event.getDamager() instanceof SmallFireball) {
 					SmallFireball proj = (SmallFireball) event.getDamager();
-					if (proj.getShooter() instanceof Player) {
-						Player player = (Player) proj.getShooter();
-						((ElderGuardian) event.getEntity()).setTarget(player);
-						List<Entity> entitylist = event.getEntity().getNearbyEntities(20, 20, 20);
-						for (Entity nearEntity : entitylist) {
-							if (nearEntity instanceof Guardian) {
-								((Guardian) nearEntity).setTarget(player);
-							}
-							if (nearEntity instanceof ElderGuardian) {
-								((ElderGuardian) nearEntity).setTarget(player);
-							}
-						}
-					}
-				} else if (event.getDamager() instanceof Snowball) {
-					Snowball proj = (Snowball) event.getDamager();
 					if (proj.getShooter() instanceof Player) {
 						Player player = (Player) proj.getShooter();
 						((ElderGuardian) event.getEntity()).setTarget(player);
@@ -2983,21 +2918,6 @@ public class Main extends JavaPlugin implements Listener{
 							}
 						}
 					}
-				} else if(event.getDamager() instanceof Snowball) {
-					Snowball proj = (Snowball) event.getDamager();
-					if(proj.getShooter() instanceof Player) {
-						Player player = (Player) proj.getShooter();
-						((Spider) event.getEntity()).setTarget(player);
-						List<Entity> entitylist = event.getEntity().getNearbyEntities(20, 20, 20);
-						for (Entity nearEntity : entitylist) {
-							if (nearEntity instanceof Spider) {
-								((Spider) nearEntity).setTarget(player);
-							}
-							if (nearEntity instanceof CaveSpider) {
-								((CaveSpider) nearEntity).setTarget(player);
-							}
-						}
-					}
 				}
 			}
 			if (event.getEntity() instanceof CaveSpider) {
@@ -3030,21 +2950,6 @@ public class Main extends JavaPlugin implements Listener{
 					}
 				} else if(event.getDamager() instanceof SmallFireball) {
 					SmallFireball proj = (SmallFireball) event.getDamager();
-					if(proj.getShooter() instanceof Player) {
-						Player player = (Player) proj.getShooter();
-						((CaveSpider) event.getEntity()).setTarget(player);
-						List<Entity> entitylist = event.getEntity().getNearbyEntities(20, 20, 20);
-						for (Entity nearEntity : entitylist) {
-							if (nearEntity instanceof Spider) {
-								((Spider) nearEntity).setTarget(player);
-							}
-							if (nearEntity instanceof CaveSpider) {
-								((CaveSpider) nearEntity).setTarget(player);
-							}
-						}
-					}
-				} else if(event.getDamager() instanceof Snowball) {
-					Snowball proj = (Snowball) event.getDamager();
 					if(proj.getShooter() instanceof Player) {
 						Player player = (Player) proj.getShooter();
 						((CaveSpider) event.getEntity()).setTarget(player);
@@ -3277,6 +3182,9 @@ public class Main extends JavaPlugin implements Listener{
 					if(arrow.getDamage() == 2) {
 						skillMul = 100;
 					}
+					if(arrow.getDamage() == 3) {
+						skillMul = 300;
+					}
 					double damage = (lvl * jobMul * skillMul * weaponMul) + enchMul;
 					try {
 						if (player.getInventory().getItemInMainHand().getType() == Material.BONE) {
@@ -3394,35 +3302,6 @@ public class Main extends JavaPlugin implements Listener{
 					double damage = (lvl * jobMul * weaponMul) + enchMul;
 					event.setDamage(damage);
 				}
-			}
-		} catch (Exception e) {
-
-		}
-		//Snow
-		try {
-			if (event.getDamager() instanceof Snowball) {
-				if(event.getEntity() instanceof Mob) {
-					Snowball arrow = (Snowball) event.getDamager();
-					if(!(arrow.getShooter() instanceof Player)) {
-						event.setCancelled(true);
-						return;
-					} else {
-						Player player = (Player) arrow.getShooter();
-						((Mob) event.getEntity()).setTarget(player);
-					}
-				}
-				if(event.getEntity() instanceof Player) {
-					event.setCancelled(true);
-				}
-				Snowball arrow = (Snowball) event.getDamager();
-				Player player = (Player) arrow.getShooter();
-				double lvl = player.getLevel();
-				double Mul = 1;
-				if (player.getInventory().getItemInMainHand() != null) {
-					Mul += Integer.parseInt(player.getInventory().getItemInMainHand().getItemMeta().getLocalizedName().split(",")[0]) / 5.0;
-				}				
-				double damage = lvl * Mul * 2;
-				event.setDamage(damage);
 			}
 		} catch (Exception e) {
 
@@ -3778,17 +3657,6 @@ public class Main extends JavaPlugin implements Listener{
 		} catch (Exception e) {
 
 		}
-		// hit mob4
-		try {
-			if (event.getDamager() instanceof Snowball) {
-				Entity entity = (Entity) event.getEntity();
-				Player player = ((Player) ((Snowball) event.getDamager()).getShooter());
-				PlayerHitDebuff debuff = new PlayerHitDebuff();
-				debuff.playerHitDebuff(player, entity);
-			}
-		} catch (Exception e) {
-
-		}
 		// thorns
 		try {
 			if (event.getDamager() instanceof LivingEntity && !(event.getDamager() instanceof Player)) {
@@ -3848,61 +3716,6 @@ public class Main extends JavaPlugin implements Listener{
 		} catch (Exception e) {
 
 		}
-		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//		//Change Name Color
-//		try {
-//			if (((LivingEntity)event.getEntity()).getHealth() <= ((LivingEntity)event.getEntity()).getMaxHealth() / 2) {
-//				String name = event.getEntity().getCustomName().substring(2);
-//				String[] nameAry = name.split("L");
-//				event.getEntity().setCustomName(ChatColor.YELLOW + nameAry[0] + "L" + nameAry[1]);
-//			}
-//			if (((LivingEntity)event.getEntity()).getHealth() <= ((LivingEntity)event.getEntity()).getMaxHealth() / 5) {
-//				String name = event.getEntity().getCustomName().substring(2);
-//				String[] nameAry = name.split("L");
-//				event.getEntity().setCustomName(ChatColor.RED + nameAry[0] + "L" + nameAry[1]);
-//			}
-//		} catch(Exception e) {
-//			
-//		}
-//		//Mob Loot
-//		try {
-//			if(event.getDamager() instanceof IronGolem) {
-//				IronGolem ir =(IronGolem) event.getDamager();
-//				GolemOwner go = new GolemOwner();
-//				Player player = go.returnPlayer(ir.getUniqueId());
-//				Entity mob = event.getEntity();
-//				double damage = event.getDamage();				
-//				MobDeath md = new MobDeath(player, mob, damage);
-//			}			
-//			if(event.getDamager() instanceof Player) {
-//				Entity mob = event.getEntity();
-//				double damage = event.getFinalDamage();				
-//				MobDeath md = new MobDeath(mob, damage);
-//			}	
-//			if(event.getDamager() instanceof Arrow) {
-//				Entity mob = event.getEntity();
-//				Arrow arrow = (Arrow) event.getDamager();
-//				Player player = (Player)arrow.getShooter();
-//				double damage = event.getFinalDamage();				
-//				MobDeath md = new MobDeath(player, mob, damage);
-//			}	
-//			if(event.getDamager() instanceof SmallFireball) {
-//				Entity mob = event.getEntity();
-//				SmallFireball arrow = (SmallFireball) event.getDamager();
-//				Player player = (Player)arrow.getShooter();
-//				double damage = event.getFinalDamage();				
-//				MobDeath md = new MobDeath(player, mob, damage);
-//			}	
-//			if(event.getDamager() instanceof Snowball) {
-//				Entity mob = event.getEntity();
-//				Snowball arrow = (Snowball) event.getDamager();
-//				Player player = (Player)arrow.getShooter();
-//				double damage = event.getFinalDamage();				
-//				MobDeath md = new MobDeath(player, mob, damage);
-//			}	
-//		} catch(Exception e) {
-//			
-//		}
 	}
 	
 	@EventHandler
@@ -6776,6 +6589,12 @@ public class Main extends JavaPlugin implements Listener{
 	
 	@EventHandler
 	public void craftEvent(CraftItemEvent event) {
+		event.setCancelled(true);
+	}
+	
+	@EventHandler
+	public void onBlockChange(EntityChangeBlockEvent event) {
+		event.getEntity().remove();
 		event.setCancelled(true);
 	}
 	
