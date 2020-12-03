@@ -1287,6 +1287,76 @@ public class ParticleEffect {
 		}, 0, 1);
 	}
 	
+	// 터렛 레이저
+	public void startE0_6() {
+		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+			int time = 0;
+			Location loc, e1, e2, e3, e4, e5, e6, e7, e8, e9, e10, e11, e12, e13, e14, e15, e16, e17, e18, e19, e20;
+			Vector dir;
+			ParticleData pd = new ParticleData(player.getUniqueId());
+
+			@Override
+			public void run() {
+				if (!pd.hasID()) {
+					pd.setID(taskID);
+				}
+
+				if (time >= 200) {
+					pd.endTask();
+					pd.removeID();
+				}
+
+				loc = ent.getLocation().add(new Vector(0, 2, 0));
+				dir = loc.getDirection();
+				e1 = loc.clone().add(dir.getX(), dir.getY(), dir.getZ());
+				e2 = loc.clone().add(dir.getX() * 2, dir.getY(), dir.getZ() * 2);
+				e3 = loc.clone().add(dir.getX() * 3, dir.getY(), dir.getZ() * 3);
+				e4 = loc.clone().add(dir.getX() * 4, dir.getY(), dir.getZ() * 4);
+				e5 = loc.clone().add(dir.getX() * 5, dir.getY(), dir.getZ() * 5);
+				e6 = loc.clone().add(dir.getX() * 6, dir.getY(), dir.getZ() * 6);
+				e7 = loc.clone().add(dir.getX() * 7, dir.getY(), dir.getZ() * 7);
+				e8 = loc.clone().add(dir.getX() * 8, dir.getY(), dir.getZ() * 8);
+				e9 = loc.clone().add(dir.getX() * 9, dir.getY(), dir.getZ() * 9);
+				e10 = loc.clone().add(dir.getX() * 10, dir.getY(), dir.getZ() * 10);
+				e11 = loc.clone().add(dir.getX() * 11, dir.getY(), dir.getZ() * 11);
+				e12 = loc.clone().add(dir.getX() * 12, dir.getY(), dir.getZ() * 12);
+				e13 = loc.clone().add(dir.getX() * 13, dir.getY(), dir.getZ() * 13);
+				e14 = loc.clone().add(dir.getX() * 14, dir.getY(), dir.getZ() * 14);
+				e15 = loc.clone().add(dir.getX() * 15, dir.getY(), dir.getZ() * 15);
+				e16 = loc.clone().add(dir.getX() * 16, dir.getY(), dir.getZ() * 16);
+				e17 = loc.clone().add(dir.getX() * 17, dir.getY(), dir.getZ() * 17);
+				e18 = loc.clone().add(dir.getX() * 18, dir.getY(), dir.getZ() * 18);
+				e19 = loc.clone().add(dir.getX() * 19, dir.getY(), dir.getZ() * 19);
+				e20 = loc.clone().add(dir.getX() * 20, dir.getY(), dir.getZ() * 20);
+
+				player.getWorld().spawnParticle(Particle.CRIT, e1, 0);
+				player.getWorld().spawnParticle(Particle.CRIT, e2, 0);
+				player.getWorld().spawnParticle(Particle.CRIT, e3, 0);
+				player.getWorld().spawnParticle(Particle.CRIT, e4, 0);
+				player.getWorld().spawnParticle(Particle.CRIT, e5, 0);
+				player.getWorld().spawnParticle(Particle.CRIT, e6, 0);
+				player.getWorld().spawnParticle(Particle.CRIT, e7, 0);
+				player.getWorld().spawnParticle(Particle.CRIT, e8, 0);
+				player.getWorld().spawnParticle(Particle.CRIT, e9, 0);
+				player.getWorld().spawnParticle(Particle.CRIT, e10, 0);
+				player.getWorld().spawnParticle(Particle.CRIT, e11, 0);
+				player.getWorld().spawnParticle(Particle.CRIT, e12, 0);
+				player.getWorld().spawnParticle(Particle.CRIT, e13, 0);
+				player.getWorld().spawnParticle(Particle.CRIT, e14, 0);
+				player.getWorld().spawnParticle(Particle.CRIT, e15, 0);
+				player.getWorld().spawnParticle(Particle.CRIT, e16, 0);
+				player.getWorld().spawnParticle(Particle.CRIT, e17, 0);
+				player.getWorld().spawnParticle(Particle.CRIT, e18, 0);
+				player.getWorld().spawnParticle(Particle.CRIT, e19, 0);
+				player.getWorld().spawnParticle(Particle.CRIT, e20, 0);
+
+				time++;
+
+			}
+		}, 0, 1);
+	}
+	
 ////몬스터 기술////	
 	
 	

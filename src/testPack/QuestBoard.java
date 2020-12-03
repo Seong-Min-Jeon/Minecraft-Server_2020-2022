@@ -2151,8 +2151,6 @@ public class QuestBoard {
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			msg.msg(player, "주민: 으으음?%주민: 모험가님 그 사람들은 광신도 녀석들이 아니라 도망친 마을 사람들이에요.%주민: 물론 포보르들에게 개조되어 비정상적인 힘을 얻고 타락하게 되었지만요.%"
 					+ "주민: ...%주민: 사실 저도 광신도 집단의 위치를 잘 아는게 아니라서요.%주민: 알아보고 다시 연락드릴게요.");
-			QuestBoard qb = new QuestBoard();
-			qb.mq42_1(player, 0);
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();

@@ -100,6 +100,8 @@ import org.bukkit.event.entity.ProjectileHitEvent;
 import org.bukkit.event.entity.SheepDyeWoolEvent;
 import org.bukkit.event.entity.SlimeSplitEvent;
 import org.bukkit.event.hanging.HangingBreakByEntityEvent;
+import org.bukkit.event.hanging.HangingBreakEvent;
+import org.bukkit.event.hanging.HangingBreakEvent.RemoveCause;
 import org.bukkit.event.inventory.ClickType;
 import org.bukkit.event.inventory.CraftItemEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
@@ -308,11 +310,11 @@ public class Main extends JavaPlugin implements Listener{
 		} else if(player.getDisplayName().equalsIgnoreCase("_nanoboost_")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.RED + "'백수의 왕' 나노부스트.");
 		} else if(player.getDisplayName().equalsIgnoreCase("why9196")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.BLUE + "'프리스트로 300레벨을 달성한' 와이.");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.BLUE + "'프리스트로 400레벨을 달성한' 와이.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Akilae3102")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.AQUA + "'시공의 힘을 얻은' 아킬레.");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.AQUA + "'그림자 무사의 달인' 아킬레.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Espina_ID")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.BOLD + "'솔로의 검을 가진' 에스피나.");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.BOLD + "'그저 군인' 에스피나.");
 		} else if(player.getDisplayName().equalsIgnoreCase("KangOSung")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.YELLOW + "'울링의 조수' 캉!");
 		} else {
@@ -2638,6 +2640,21 @@ public class Main extends JavaPlugin implements Listener{
 		} catch (Exception e) {
 
 		}
+		// target change
+		try {
+			if (event.getEntity() instanceof Mob) {
+				if (event.getDamager() instanceof Player) {
+					int num = rnd.nextInt(5);
+					if(num==0) {
+						Player player = (Player) event.getDamager();
+						Mob mob = (Mob) event.getEntity();
+						mob.setTarget(player);
+					}
+				}
+			}
+		} catch (Exception e) {
+
+		}
 		//enderman target
 		try {
 			if(event.getEntity() instanceof Enderman) {
@@ -3173,16 +3190,16 @@ public class Main extends JavaPlugin implements Listener{
 						weaponMul = 4.0;
 						enchMul *= 1;
 					}
-					if(arrow.getDamage() == 0) {
+					if(arrow.getDamage() == 0.01) {
 						skillMul = 2;
 					}
-					if(arrow.getDamage() == 1) {
+					if(arrow.getDamage() == 0.02) {
 						skillMul = 20;
 					}
-					if(arrow.getDamage() == 2) {
+					if(arrow.getDamage() == 0.03) {
 						skillMul = 100;
 					}
-					if(arrow.getDamage() == 3) {
+					if(arrow.getDamage() == 0.04) {
 						skillMul = 300;
 					}
 					double damage = (lvl * jobMul * skillMul * weaponMul) + enchMul;
@@ -3727,7 +3744,8 @@ public class Main extends JavaPlugin implements Listener{
 		if(event.getEntity().getType() == EntityType.PIG || event.getEntity().getType() == EntityType.COW 
 				|| event.getEntity().getType() == EntityType.CHICKEN || event.getEntity().getType() == EntityType.SHEEP || event.getEntity().getType() == EntityType.VILLAGER
 				|| event.getEntity().getType() == EntityType.HORSE || event.getEntity().getType() == EntityType.SKELETON_HORSE || event.getEntity().getType() == EntityType.ZOMBIE_HORSE
-				|| event.getEntity().getType() == EntityType.WOLF || event.getEntity().getType() == EntityType.CAT || event.getEntity().getType() == EntityType.DONKEY) {
+				|| event.getEntity().getType() == EntityType.WOLF || event.getEntity().getType() == EntityType.CAT || event.getEntity().getType() == EntityType.DONKEY
+				|| event.getEntity().getType() == EntityType.ITEM_FRAME || event.getEntity().getType() == EntityType.DROPPED_ITEM) {
 			event.setCancelled(true);
 			return;
 		}
@@ -6466,6 +6484,9 @@ public class Main extends JavaPlugin implements Listener{
 					if(ent.getType() == EntityType.LLAMA) {
 						ent.remove();
 					}
+					if(ent.getType() == EntityType.CREEPER) {
+						ent.remove();
+					}
 					if(ent.getType() == EntityType.HORSE) {
 						if(((Horse) ent).isCustomNameVisible()) {
 							ent.remove();
@@ -6637,6 +6658,13 @@ public class Main extends JavaPlugin implements Listener{
 	public void blockBurnEvent(BlockBurnEvent event) {
 		event.setCancelled(true);
 		return;
+	}
+	
+	@EventHandler
+	public void onHangingBreak (HangingBreakEvent event) {
+	    if (event.getCause () == RemoveCause.EXPLOSION) {
+	        event.setCancelled(true);
+	    }
 	}
 	
 	@EventHandler

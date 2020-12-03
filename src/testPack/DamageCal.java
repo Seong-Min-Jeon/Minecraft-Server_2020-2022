@@ -94,7 +94,7 @@ public class DamageCal {
 				|| entity.getType() == EntityType.IRON_GOLEM) {
 			return (int)(damAll*3 + damIm*3.5);
 		} else {
-			return damAll*5;
+			return damAll*4;
 		}
 	}
 

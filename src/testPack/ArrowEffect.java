@@ -159,13 +159,35 @@ public class ArrowEffect {
 				bool = reload(player, 700);
 			}
 			if(bool) {
-				Location loc = player.getLocation();
+				Location loc = player.getEyeLocation();
 				world = player.getWorld();
 				SmallFireball arrow = player.launchProjectile(SmallFireball.class);
 				arrow.setShooter(player);
 				arrow.setIsIncendiary(false);
 				arrow.setVelocity(player.getLocation().getDirection().multiply(4.0f));
-				player.getWorld().spawnParticle(Particle.FLAME, loc.add(0, 1, 0), 0);
+				Vector dir = loc.getDirection();
+				Location e1, e2, e3, e4, e5, e6, e7, e8, e9, e10;
+				e1 = loc.clone().add(dir.getX(), dir.getY(), dir.getZ());
+				e2 = loc.clone().add(dir.getX() * 2, dir.getY() * 2, dir.getZ() * 2);
+				e3 = loc.clone().add(dir.getX() * 3, dir.getY() * 3, dir.getZ() * 3);
+				e4 = loc.clone().add(dir.getX() * 4, dir.getY() * 4, dir.getZ() * 4);
+				e5 = loc.clone().add(dir.getX() * 5, dir.getY() * 5, dir.getZ() * 5);
+				e6 = loc.clone().add(dir.getX() * 6, dir.getY() * 6, dir.getZ() * 6);
+				e7 = loc.clone().add(dir.getX() * 7, dir.getY() * 7, dir.getZ() * 7);
+				e8 = loc.clone().add(dir.getX() * 8, dir.getY() * 8, dir.getZ() * 8);
+				e9 = loc.clone().add(dir.getX() * 9, dir.getY() * 9, dir.getZ() * 9);
+				e10 = loc.clone().add(dir.getX() * 10, dir.getY() * 10, dir.getZ() * 10);
+
+				player.getWorld().spawnParticle(Particle.ASH, e1, 0);
+				player.getWorld().spawnParticle(Particle.ASH, e2, 0);
+				player.getWorld().spawnParticle(Particle.ASH, e3, 0);
+				player.getWorld().spawnParticle(Particle.ASH, e4, 0);
+				player.getWorld().spawnParticle(Particle.ASH, e5, 0);
+				player.getWorld().spawnParticle(Particle.ASH, e6, 0);
+				player.getWorld().spawnParticle(Particle.ASH, e7, 0);
+				player.getWorld().spawnParticle(Particle.ASH, e8, 0);
+				player.getWorld().spawnParticle(Particle.ASH, e9, 0);
+				player.getWorld().spawnParticle(Particle.ASH, e10, 0);
 				world.playSound(player.getLocation(), Sound.ENTITY_ARMOR_STAND_HIT, 1.0f, 1.0f);
 			}
 		}

@@ -181,6 +181,9 @@ public class RefreshServer {
 								if(ent.getType() == EntityType.LLAMA) {
 									ent.remove();
 								}
+								if(ent.getType() == EntityType.CREEPER) {
+									ent.remove();
+								}
 								if(ent.getType() == EntityType.HORSE) {
 									if(((Horse) ent).isCustomNameVisible()) {
 										ent.remove();
