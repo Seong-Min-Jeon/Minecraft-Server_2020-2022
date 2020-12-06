@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import org.bukkit.ChatColor;
+import org.bukkit.Color;
 import org.bukkit.Material;
 import org.bukkit.Sound;
 import org.bukkit.enchantments.Enchantment;
@@ -12,29 +13,20 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.inventory.meta.PotionMeta;
 
-public class CraftingItem {
+public class CraftingPotion {
 	
 	public void make(Player player, Inventory inv) {
 		try {
-			// type, amount, name, rank, localizeName(10)
-			// gray = 0; white = 3; yellow = 9; light_purple = 27; aqua = 81; dark_red = 243; dark_purple = 729; green = 15; dark_aqua = 51; gold = 2;
-			int[] ary = {0,1,2,3,4,9,10,11,12,13,18,19,20,21,22,27,28,29,30,31,36,37,38,39,40};
+			int[] ary = {1,2,3,10,11,12,19,20,21};
 			
-			String[] type = new String[26];
-			int[] amount = new int[26];
-			String[] name = new String[26];
-			int[] rank = new int[26];
-			int[] damAll = new int[26];
-			int[] damUndead = new int[26];
-			int[] damArth = new int[26];
-			int[] impaling = new int[26];
-			int[] sweeping = new int[26];
-			int[] protAll = new int[26];
-			int[] protFire = new int[26];
-			int[] protExplosion = new int[26];
-			int[] protProject = new int[26];
-			int[] thorns = new int[26];
+			String[] type = new String[10];
+			int[] amount = new int[10];
+			String[] name = new String[10];
+			int red = 0;
+			int green = 0;
+			int blue = 0;
 			
 			int idx = 0;
 			
@@ -44,45 +36,22 @@ public class CraftingItem {
 				try {amount[idx] = item.getAmount();} catch(Exception e) {}
 				try {name[idx] = item.getItemMeta().getDisplayName();} catch(Exception e) {}
 				try { 
-					String tmp = item.getItemMeta().getDisplayName().substring(0, 2);
-					if(tmp.equals("§7")) {
-						rank[idx] = 0;
-					} else if(tmp.equals("§f")) {
-						rank[idx] = 3;
-					} else if(tmp.equals("§e")) {
-						rank[idx] = 9;
-					} else if(tmp.equals("§d")) {
-						rank[idx] = 27;
-					} else if(tmp.equals("§b")) {
-						rank[idx] = 81;
-					} else if(tmp.equals("§4")) {
-						rank[idx] = 243;
-					} else if(tmp.equals("§5")) {
-						rank[idx] = 729;
-					} else if(tmp.equals("§a")) {
-						rank[idx] = 15;
-					} else if(tmp.equals("§3")) {
-						rank[idx] = 51;
-					} else if(tmp.equals("§6")) {
-						rank[idx] = 3;
+					if(item.getType() == Material.POTION) {
+						try {
+							PotionMeta p = (PotionMeta) item.getItemMeta();
+							red += p.getColor().getRed();
+							green += p.getColor().getGreen();
+							blue += p.getColor().getBlue();
+						} catch(Exception e) {
+							red += 255;
+							green += 50;
+							blue += 50;
+						}
 					} else {
-						rank[idx] = 1;
+						red -= 30;
+						green -= 30;
+						blue -= 30;
 					}
-				} catch(Exception e) {
-					
-				}
-				try {
-					String[] tmp = item.getItemMeta().getLocalizedName().split(",");
-					damAll[idx] = Integer.parseInt(tmp[0]);
-					damUndead[idx] = Integer.parseInt(tmp[1]);
-					damArth[idx] = Integer.parseInt(tmp[2]);
-					impaling[idx] = Integer.parseInt(tmp[3]);
-					sweeping[idx] = Integer.parseInt(tmp[4]);
-					protAll[idx] = Integer.parseInt(tmp[5]);
-					protFire[idx] = Integer.parseInt(tmp[6]);
-					protExplosion[idx] = Integer.parseInt(tmp[7]);
-					protProject[idx] = Integer.parseInt(tmp[8]);
-					thorns[idx] = Integer.parseInt(tmp[9]);
 				} catch(Exception e) {
 					
 				}
@@ -92,314 +61,97 @@ public class CraftingItem {
 			removeItem(inv);
 			
 			int totalStat = 0;
-			int var = 25;
+			int var = 9;
 			
-			for(int i = 0 ; i < 25 ; i++) {
+			for(int i = 0 ; i < 9 ; i++) {
 				if(type[i] == null) {
 					var -= 1;
 					continue;
 				}
-				
-				if(type[i].equalsIgnoreCase("EMERALD")) {
-					totalStat += amount[i]; 
-				}
-				if(type[i].equalsIgnoreCase("EMERALD_BLOCK")) {
-					totalStat += amount[i] * 3; 
-				}
-				if(type[i].equalsIgnoreCase("SCUTE")) {
-					totalStat += amount[i] * 5; 
-				}
-				if(type[i].equalsIgnoreCase("RABBIT_HIDE")) {
-					totalStat += amount[i] * 7; 
-				}
-				if(type[i].equalsIgnoreCase("FLOWER_BANNER_PATTERN")) {
-					totalStat += amount[i] * -1; 
-				}
-				if(type[i].equalsIgnoreCase("CREEPER_BANNER_PATTERN")) {
-					totalStat += amount[i] * -1; 
-				}
-				if(type[i].equalsIgnoreCase("SKULL_BANNER_PATTERN")) {
-					totalStat += amount[i] * -1; 
-				}
-				if(type[i].equalsIgnoreCase("MOJANG_BANNER_PATTERN")) {
-					totalStat += amount[i] * -1; 
-				}
-				if(type[i].equalsIgnoreCase("GLOBE_BANNER_PATTERN")) {
-					totalStat += amount[i] * -1; 
-				}
 				if(type[i].equalsIgnoreCase("POTION")) {
-					totalStat += amount[i] * -1; 
+					totalStat += amount[i] * 20; 
 				}
-				
 			}
 			
-			for(int i : amount) {
-				
-			}
-			
-			
-			for(int i = 0 ; i < 25 ; i++) {
+			for(int i = 0 ; i < 9 ; i++) {
 				if(name[i] == null) {
 					continue;
 				}
-				
-				//광석류
-				if(name[i].equalsIgnoreCase(ChatColor.GRAY + "흠집이 생긴 석탄 광석")) {
-					totalStat += amount[i]; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "석탄 광석")) {
-					totalStat += amount[i] * 2; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "깨끗한 석탄 광석")) {
-					totalStat += amount[i] * 3; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "순수도가 높은 석탄 광석")) {
-					totalStat += amount[i] * 4; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "절대적인 석탄 광석")) {
-					totalStat += amount[i] * 5; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "신의 힘이 담긴 석탄 광석")) {
-					totalStat += amount[i] * 7; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "상태가 좋지 않은 철 광석")) {
-					totalStat += amount[i] * 4; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "철 광석")) {
-					totalStat += amount[i] * 5; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "빛이나는 철 광석")) {
-					totalStat += amount[i] * 6; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "순백의 철 광석")) {
-					totalStat += amount[i] * 7; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "신의 힘이 담긴 철 광석")) {
-					totalStat += amount[i] * 9; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "가치가 떨어진 금 광석")) {
-					totalStat += amount[i] * 7; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "금 광석")) {
-					totalStat += amount[i] * 8; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "쉽게 녹지 않는 금 광석")) {
-					totalStat += amount[i] * 9; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "신의 힘이 담긴 금 광석")) {
-					totalStat += amount[i] * 11; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석")) {
-					totalStat += amount[i] * 10; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "다이아몬드 원석")) {
-					totalStat += amount[i] * 11; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "빛나는 다이아몬드 원석")) {
-					totalStat += amount[i] * 12; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "신의 힘이 담긴 다이아몬드 원석")) {
-					totalStat += amount[i] * 15; 
-				}
-				
-				//광물류
-				if(name[i].equalsIgnoreCase(ChatColor.GRAY + "흠집이 생긴 석탄")) {
-					totalStat += amount[i] * 2; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "석탄")) {
-					totalStat += amount[i] * 3; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "깨끗한 석탄")) {
-					totalStat += amount[i] * 4; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "순수도가 높은 석탄")) {
-					totalStat += amount[i] * 6; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "절대적인 석탄")) {
-					totalStat += amount[i] * 7; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "신의 힘이 담긴 석탄")) {
-					totalStat += amount[i] * 9; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "상태가 좋지 않은 철")) {
-					totalStat += amount[i] * 5; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "철")) {
-					totalStat += amount[i] * 6; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "빛이나는 철")) {
-					totalStat += amount[i] * 8; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "순백의 철")) {
-					totalStat += amount[i] * 9; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "신의 힘이 담긴 철")) {
-					totalStat += amount[i] * 11; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "가치가 떨어진 금")) {
-					totalStat += amount[i] * 9; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "금")) {
-					totalStat += amount[i] * 10; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "쉽게 녹지 않는 금")) {
-					totalStat += amount[i] * 11; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "신의 힘이 담긴 금")) {
-					totalStat += amount[i] * 13; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드")) {
-					totalStat += amount[i] * 12; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "다이아몬드")) {
-					totalStat += amount[i] * 13; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "빛나는 다이아몬드")) {
-					totalStat += amount[i] * 14; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "신의 힘이 담긴 다이아몬드")) {
-					totalStat += amount[i] * 18; 
-				}
-				
-				//밀류
-				if(name[i].equalsIgnoreCase(ChatColor.GRAY + "상처가 많은 밀")) {
-					totalStat += amount[i]; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "밀")) {
-					totalStat += amount[i] * 2; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "좋은 식재료가 될 밀")) {
-					totalStat += amount[i] * 3; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "정교한 힘으로 잘린 밀")) {
-					totalStat += amount[i] * 4; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "윤기가 나는 밀")) {
-					totalStat += amount[i] * 5; 
-				}
-				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "신이 먹는다고 알려진 밀")) {
-					totalStat += amount[i] * 7; 
-				}
-				
 				//제작 전용 아이템
 				if(name[i].equalsIgnoreCase(ChatColor.GRAY + "하급 포보르의 피")) {
-					totalStat += amount[i] * 3; 
+					totalStat += amount[i] * 30; 
 				}
 				if(name[i].equalsIgnoreCase(ChatColor.GRAY + "하급 포보르의 쓸개")) {
-					totalStat += amount[i] * 4; 
+					totalStat += amount[i] * 40; 
 				}
 				if(name[i].equalsIgnoreCase(ChatColor.GRAY + "하급 포보르의 살점")) {
-					totalStat += amount[i] * 5; 
+					totalStat += amount[i] * 50; 
 				}
 				if(name[i].equalsIgnoreCase(ChatColor.GRAY + "하급 포보르의 간")) {
-					totalStat += amount[i] * 6; 
+					totalStat += amount[i] * 60; 
 				}
 				if(name[i].equalsIgnoreCase(ChatColor.GRAY + "하급 포보르의 심장")) {
-					totalStat += amount[i] * 8;
+					totalStat += amount[i] * 80;
 				}
 				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "중급 포보르의 피")) {
-					totalStat += amount[i] * 7; 
+					totalStat += amount[i] * 70; 
 				}
 				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "중급 포보르의 쓸개")) {
-					totalStat += amount[i] * 8; 
+					totalStat += amount[i] * 80; 
 				}
 				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "중급 포보르의 살점")) {
-					totalStat += amount[i] * 9; 
+					totalStat += amount[i] * 90; 
 				}
 				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "중급 포보르의 간")) {
-					totalStat += amount[i] * 10; 
+					totalStat += amount[i] * 100; 
 				}
 				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "중급 포보르의 심장")) {
-					totalStat += amount[i] * 12;
+					totalStat += amount[i] * 120;
 				}
 				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "중급 포보르의 뿔")) {
-					totalStat += amount[i] * 15;
+					totalStat += amount[i] * 150;
 				}
 				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "상급 포보르의 피")) {
-					totalStat += amount[i] * 11; 
+					totalStat += amount[i] * 110; 
 				}
 				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "상급 포보르의 쓸개")) {
-					totalStat += amount[i] * 12; 
+					totalStat += amount[i] * 120; 
 				}
 				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "상급 포보르의 살점")) {
-					totalStat += amount[i] * 13; 
+					totalStat += amount[i] * 130; 
 				}
 				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "상급 포보르의 간")) {
-					totalStat += amount[i] * 14; 
+					totalStat += amount[i] * 140; 
 				}
 				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "상급 포보르의 심장")) {
-					totalStat += amount[i] * 16;
+					totalStat += amount[i] * 160;
 				}
 				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "상급 포보르의 뿔")) {
-					totalStat += amount[i] * 19;
+					totalStat += amount[i] * 190;
 				}
 				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "최상급 포보르의 피")) {
-					totalStat += amount[i] * 15; 
+					totalStat += amount[i] * 150; 
 				}
 				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개")) {
-					totalStat += amount[i] * 16; 
+					totalStat += amount[i] * 160; 
 				}
 				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점")) {
-					totalStat += amount[i] * 17; 
+					totalStat += amount[i] * 170; 
 				}
 				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "최상급 포보르의 간")) {
-					totalStat += amount[i] * 18; 
+					totalStat += amount[i] * 180; 
 				}
 				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장")) {
-					totalStat += amount[i] * 20;
+					totalStat += amount[i] * 200;
 				}
 				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "최상급 포보르의 뿔")) {
-					totalStat += amount[i] * 23;
+					totalStat += amount[i] * 230;
 				}
-			}
-			
-			for(int i : rank) {
-				totalStat += i / 3;
-			}
-			
-			for(int i : damAll) {
-				totalStat += i / 2;
-			}
-			
-			for(int i : damUndead) {
-				totalStat += i / 2;
-			}
-			
-			for(int i : damArth) {
-				totalStat += i / 2;
-			}
-
-			for(int i : impaling) {
-				totalStat += i / 2;
-			}
-			
-			for(int i : sweeping) {
-				totalStat += i / 2;
-			}
-			
-			for(int i : protAll) {
-				totalStat += i / 2;
-			}
-			
-			for(int i : protFire) {
-				totalStat += i / 2;
-			}
-			
-			for(int i : protExplosion) {
-				totalStat += i / 2;
-			}
-			
-			for(int i : protProject) {
-				totalStat += i / 2;
-			}
-			
-			for(int i : thorns) {
-				totalStat += i / 2;
 			}
 			
 			Random rnd = new Random();
 			
-			double mul = (700 + rnd.nextInt(500)) / 1000.0;
+			double mul = (700 + rnd.nextInt(500)) / 400.0;
 			
 			int resultStat = (int)((totalStat / Math.pow(var, 0.5)) * mul);
 			
@@ -432,7 +184,7 @@ public class CraftingItem {
 			//생활 레벨 보너스
 			ItemStack item = player.getInventory().getItem(7);
 			ItemMeta im = item.getItemMeta();
-			double lvl = Double.parseDouble(im.getLore().get(0).split(": ")[1]);
+			double lvl = Double.parseDouble(im.getLore().get(1).split(": ")[1]);
 			resultStat = resultStat + (int)(resultStat*lvl/50);
 			
 			//생활 레벨 상승
@@ -441,129 +193,748 @@ public class CraftingItem {
 			ArrayList<String> lore = (ArrayList<String>) im.getLore(); 
 			double newLevel = ((100*lvl) + exp)/100.0;
 			if(newLevel >= 200.0) {
-				lore.set(0, ChatColor.GRAY + "장비 제작 레벨: " + "200.0");
+				lore.set(1, ChatColor.GRAY + "포션 제작 레벨: " + "200.0");
 			} else {
-				lore.set(0, ChatColor.GRAY + "장비 제작 레벨: " + newLevel);
+				lore.set(1, ChatColor.GRAY + "포션 제작 레벨: " + newLevel);
 			}
 			im.setLore(lore);
 			item.setItemMeta(im);
 			player.getInventory().setItem(7, item);
 
-			// 장비 부위와 레벨
-			// 0: helmet, 1: chest, 2: leggings, 3: boots, ...: weapon
+			// 포션 색, 성능 결정
+			// 회복, 흡수, 힘, 속도 증가, 점프 증가, 저항, 속도 감소, 독, 위더, 멀미, 기간
 			int[] stat = {0,0,0,0,0,0,0,0,0,0,0};
+			String[] buff = {"즉시 회복: ","추가 체력: ","힘: ","속도 증가: ","점프 증가: ","저항: ","속도 감소: ","독: ","위더: ","멀미: "};
 			
 			stat[10] = (int)(Math.pow((Math.log(resultStat)),3));
 			
-			int equipType = rnd.nextInt(6);
+			red /= var;
+			green /= var;
+			blue /= var;
 			
-			int statNum = rnd.nextInt(2);
+			if(red > 255) {
+				red = 255;
+			} else if(red < 0) {
+				red = 0;
+			}
 			
-			if(statNum == 0) {
-				int tmp = rnd.nextInt(resultStat);
-				stat[5] = tmp;
-				resultStat -= tmp;
-				tmp = rnd.nextInt(resultStat);
-				stat[6] = tmp;
-				resultStat -= tmp;
-				tmp = rnd.nextInt(resultStat);
-				stat[7] = tmp;
-				resultStat -= tmp;
-				tmp = rnd.nextInt(resultStat);
-				stat[8] = tmp;
-				resultStat -= tmp;
-				tmp = rnd.nextInt(resultStat);
-				stat[9] = tmp;
-				resultStat -= tmp;
-				tmp = rnd.nextInt(resultStat);
-				stat[0] = tmp;
-				resultStat -= tmp;
-				tmp = rnd.nextInt(resultStat);
-				stat[1] = tmp;
-				resultStat -= tmp;
-				tmp = rnd.nextInt(resultStat);
-				stat[2] = tmp;
-				resultStat -= tmp;
-				tmp = rnd.nextInt(resultStat);
-				stat[3] = tmp;
-				resultStat -= tmp;
-				tmp = rnd.nextInt(resultStat);
-				stat[4] = tmp;
-				resultStat -= tmp;
+			if(green > 255) {
+				green = 255;
+			} else if(green < 0) {
+				green = 0;
+			}
+			
+			if(blue > 255) {
+				blue = 255;
+			} else if(blue < 0) {
+				blue = 0;
+			}
+			
+			if(red >= green) {
+				if(red >= blue) {
+					if(red > 200) {
+						int tmp = rnd.nextInt(resultStat);
+						stat[0] = tmp;
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[1] = tmp / 500;
+						if(stat[1] > 5) {
+							stat[1] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[2] = tmp / 2;
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[3] = tmp / 500;
+						if(stat[3] > 5) {
+							stat[3] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[4] = tmp / 500;
+						if(stat[4] > 3) {
+							stat[4] = 3;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[5] = tmp / 1000;
+						if(stat[5] > 4) {
+							stat[5] = 4;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[6] = tmp / 300;
+						if(stat[6] > 5) {
+							stat[6] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[7] = tmp / 500;
+						if(stat[7] > 10) {
+							stat[7] = 10;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[8] = tmp / 500;
+						if(stat[8] > 10) {
+							stat[8] = 10;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[9] = tmp / 700;
+						if(stat[9] > 1) {
+							stat[9] = 1;
+						}
+						resultStat -= tmp;
+					} else if(red > 100) {
+						int tmp = rnd.nextInt(resultStat);
+						stat[0] = tmp / 2;
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[1] = tmp / 1000;
+						if(stat[1] > 5) {
+							stat[1] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[2] = tmp / 2;
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[3] = tmp / 500;
+						if(stat[3] > 5) {
+							stat[3] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[4] = tmp / 500;
+						if(stat[4] > 3) {
+							stat[4] = 3;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[5] = tmp / 1000;
+						if(stat[5] > 4) {
+							stat[5] = 4;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[6] = tmp / 300;
+						if(stat[6] > 5) {
+							stat[6] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[7] = tmp / 500;
+						if(stat[7] > 10) {
+							stat[7] = 10;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[8] = tmp / 500;
+						if(stat[8] > 10) {
+							stat[8] = 10;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[9] = tmp / 700;
+						if(stat[9] > 1) {
+							stat[9] = 1;
+						}
+						resultStat -= tmp;
+					} else if(red > 50) {
+						int tmp = rnd.nextInt(resultStat);
+						stat[0] = tmp / 4;
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[1] = tmp / 1000;
+						if(stat[1] > 5) {
+							stat[1] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[2] = tmp / 2;
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[3] = tmp / 500;
+						if(stat[3] > 5) {
+							stat[3] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[4] = tmp / 500;
+						if(stat[4] > 3) {
+							stat[4] = 3;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[5] = tmp / 1000;
+						if(stat[5] > 4) {
+							stat[5] = 4;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[6] = tmp / 300;
+						if(stat[6] > 5) {
+							stat[6] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[7] = tmp / 500;
+						if(stat[7] > 10) {
+							stat[7] = 10;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[8] = tmp / 500;
+						if(stat[8] > 10) {
+							stat[8] = 10;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[9] = tmp / 700;
+						if(stat[9] > 1) {
+							stat[9] = 1;
+						}
+						resultStat -= tmp;
+					} else {
+						int tmp = rnd.nextInt(resultStat);
+						stat[6] = tmp / 300;
+						if(stat[6] > 5) {
+							stat[6] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[7] = tmp / 500;
+						if(stat[7] > 10) {
+							stat[7] = 10;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[8] = tmp / 500;
+						if(stat[8] > 10) {
+							stat[8] = 10;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[9] = tmp / 700;
+						if(stat[9] > 1) {
+							stat[9] = 1;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[0] = tmp / 4;
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[1] = tmp / 1000;
+						if(stat[1] > 5) {
+							stat[1] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[2] = tmp / 2;
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[3] = tmp / 500;
+						if(stat[3] > 5) {
+							stat[3] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[4] = tmp / 500;
+						if(stat[4] > 3) {
+							stat[4] = 3;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[5] = tmp / 1000;
+						if(stat[5] > 4) {
+							stat[5] = 4;
+						}
+						resultStat -= tmp;
+					}
+				} else {
+					if(blue > 200) {
+						int tmp = rnd.nextInt(resultStat);
+						stat[3] = tmp / 500;
+						if(stat[3] > 5) {
+							stat[3] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[4] = tmp / 500;
+						if(stat[4] > 3) {
+							stat[4] = 3;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[0] = tmp / 2;
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[1] = tmp / 1000;
+						if(stat[1] > 5) {
+							stat[1] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[2] = tmp / 2;
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[5] = tmp / 1000;
+						if(stat[5] > 4) {
+							stat[5] = 4;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[6] = tmp / 300;
+						if(stat[6] > 5) {
+							stat[6] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[7] = tmp / 500;
+						if(stat[7] > 10) {
+							stat[7] = 10;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[8] = tmp / 500;
+						if(stat[8] > 10) {
+							stat[8] = 10;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[9] = tmp / 700;
+						if(stat[9] > 1) {
+							stat[9] = 1;
+						}
+						resultStat -= tmp;
+					} else if(blue > 100) {
+						int tmp = rnd.nextInt(resultStat);
+						stat[3] = tmp / 1000;
+						if(stat[3] > 5) {
+							stat[3] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[4] = tmp / 1000;
+						if(stat[4] > 3) {
+							stat[4] = 3;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[0] = tmp / 4;
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[1] = tmp / 1000;
+						if(stat[1] > 5) {
+							stat[1] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[2] = tmp / 2;
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[5] = tmp / 1000;
+						if(stat[5] > 4) {
+							stat[5] = 4;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[6] = tmp / 300;
+						if(stat[6] > 5) {
+							stat[6] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[7] = tmp / 500;
+						if(stat[7] > 10) {
+							stat[7] = 10;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[8] = tmp / 500;
+						if(stat[8] > 10) {
+							stat[8] = 10;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[9] = tmp / 700;
+						if(stat[9] > 1) {
+							stat[9] = 1;
+						}
+						resultStat -= tmp;
+					} else if(blue > 50) {
+						int tmp = rnd.nextInt(resultStat);
+						stat[3] = tmp / 1500;
+						if(stat[3] > 5) {
+							stat[3] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[4] = tmp / 1500;
+						if(stat[4] > 3) {
+							stat[4] = 3;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[0] = tmp / 5;
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[1] = tmp / 1000;
+						if(stat[1] > 5) {
+							stat[1] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[2] = tmp / 2;
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[5] = tmp / 1000;
+						if(stat[5] > 4) {
+							stat[5] = 4;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[6] = tmp / 300;
+						if(stat[6] > 5) {
+							stat[6] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[7] = tmp / 500;
+						if(stat[7] > 10) {
+							stat[7] = 10;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[8] = tmp / 500;
+						if(stat[8] > 10) {
+							stat[8] = 10;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[9] = tmp / 700;
+						if(stat[9] > 1) {
+							stat[9] = 1;
+						}
+						resultStat -= tmp;
+					} else {
+						int tmp = rnd.nextInt(resultStat);
+						stat[6] = tmp / 300;
+						if(stat[6] > 5) {
+							stat[6] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[7] = tmp / 500;
+						if(stat[7] > 10) {
+							stat[7] = 10;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[8] = tmp / 500;
+						if(stat[8] > 10) {
+							stat[8] = 10;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[9] = tmp / 700;
+						if(stat[9] > 1) {
+							stat[9] = 1;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[3] = tmp / 1000;
+						if(stat[3] > 5) {
+							stat[3] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[4] = tmp / 1000;
+						if(stat[4] > 3) {
+							stat[4] = 3;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[0] = tmp / 4;
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[1] = tmp / 1000;
+						if(stat[1] > 5) {
+							stat[1] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[2] = tmp / 2;
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[5] = tmp / 1000;
+						if(stat[5] > 4) {
+							stat[5] = 4;
+						}
+						resultStat -= tmp;
+					}
+				}
 			} else {
-				int tmp = rnd.nextInt(resultStat);
-				stat[0] = tmp;
-				resultStat -= tmp;
-				tmp = rnd.nextInt(resultStat);
-				stat[1] = tmp;
-				resultStat -= tmp;
-				tmp = rnd.nextInt(resultStat);
-				stat[2] = tmp;
-				resultStat -= tmp;
-				tmp = rnd.nextInt(resultStat);
-				stat[3] = tmp;
-				resultStat -= tmp;
-				tmp = rnd.nextInt(resultStat);
-				stat[4] = tmp;
-				resultStat -= tmp;
-				tmp = rnd.nextInt(resultStat);
-				stat[9] = tmp;
-				resultStat -= tmp;
-				tmp = rnd.nextInt(resultStat);
-				stat[5] = tmp;
-				resultStat -= tmp;
-				tmp = rnd.nextInt(resultStat);
-				stat[6] = tmp;
-				resultStat -= tmp;
-				tmp = rnd.nextInt(resultStat);
-				stat[7] = tmp;
-				resultStat -= tmp;
-				tmp = rnd.nextInt(resultStat);
-				stat[8] = tmp;
-				resultStat -= tmp;
+				if(green >= blue) {
+					if(green > 200) {
+						int tmp = rnd.nextInt(resultStat);
+						stat[0] = tmp;
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[5] = tmp / 1000;
+						if(stat[5] > 4) {
+							stat[5] = 4;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[1] = tmp / 500;
+						if(stat[1] > 5) {
+							stat[1] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[6] = tmp / 300;
+						if(stat[6] > 5) {
+							stat[6] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[2] = tmp / 2;
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[4] = tmp / 500;
+						if(stat[4] > 3) {
+							stat[4] = 3;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[3] = tmp / 500;
+						if(stat[3] > 5) {
+							stat[3] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[7] = tmp / 500;
+						if(stat[7] > 10) {
+							stat[7] = 10;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[8] = tmp / 500;
+						if(stat[8] > 10) {
+							stat[8] = 10;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[9] = tmp / 700;
+						if(stat[9] > 1) {
+							stat[9] = 1;
+						}
+						resultStat -= tmp;
+					} else if(green > 100) {
+						int tmp = rnd.nextInt(resultStat);
+						stat[0] = tmp / 2;
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[5] = tmp / 2000;
+						if(stat[5] > 4) {
+							stat[5] = 4;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[1] = tmp / 1000;
+						if(stat[1] > 5) {
+							stat[1] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[6] = tmp / 300;
+						if(stat[6] > 5) {
+							stat[6] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[2] = tmp / 2;
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[4] = tmp / 500;
+						if(stat[4] > 3) {
+							stat[4] = 3;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[3] = tmp / 500;
+						if(stat[3] > 5) {
+							stat[3] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[7] = tmp / 500;
+						if(stat[7] > 10) {
+							stat[7] = 10;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[8] = tmp / 500;
+						if(stat[8] > 10) {
+							stat[8] = 10;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[9] = tmp / 700;
+						if(stat[9] > 1) {
+							stat[9] = 1;
+						}
+						resultStat -= tmp;
+					} else if(green > 50) {
+						int tmp = rnd.nextInt(resultStat);
+						stat[0] = tmp / 4;
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[5] = tmp / 3000;
+						if(stat[5] > 4) {
+							stat[5] = 4;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[1] = tmp / 1000;
+						if(stat[1] > 5) {
+							stat[1] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[6] = tmp / 300;
+						if(stat[6] > 5) {
+							stat[6] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[2] = tmp / 2;
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[4] = tmp / 500;
+						if(stat[4] > 3) {
+							stat[4] = 3;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[3] = tmp / 500;
+						if(stat[3] > 5) {
+							stat[3] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[7] = tmp / 500;
+						if(stat[7] > 10) {
+							stat[7] = 10;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[8] = tmp / 500;
+						if(stat[8] > 10) {
+							stat[8] = 10;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[9] = tmp / 700;
+						if(stat[9] > 1) {
+							stat[9] = 1;
+						}
+						resultStat -= tmp;
+					} else {
+						int tmp = rnd.nextInt(resultStat);
+						stat[6] = tmp / 300;
+						if(stat[6] > 5) {
+							stat[6] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[7] = tmp / 500;
+						if(stat[7] > 10) {
+							stat[7] = 10;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[8] = tmp / 500;
+						if(stat[8] > 10) {
+							stat[8] = 10;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[9] = tmp / 700;
+						if(stat[9] > 1) {
+							stat[9] = 1;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[0] = tmp / 4;
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[5] = tmp / 3000;
+						if(stat[5] > 4) {
+							stat[5] = 4;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[1] = tmp / 1000;
+						if(stat[1] > 5) {
+							stat[1] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[2] = tmp / 2;
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[4] = tmp / 500;
+						if(stat[4] > 3) {
+							stat[4] = 3;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[3] = tmp / 500;
+						if(stat[3] > 5) {
+							stat[3] = 5;
+						}
+						resultStat -= tmp;
+					}
+				}
 			}
 			
-			if(stat[0] > 100000) {
-				stat[0] = 100000;
-			}
-			if(stat[1] > 100000) {
-				stat[1] = 100000;
-			}
-			if(stat[2] > 100000) {
-				stat[2] = 100000;
-			}
-			if(stat[3] > 100000) {
-				stat[3] = 100000;
-			}
-			if(stat[4] > 100000) {
-				stat[4] = 100000;
-			}
-			if(stat[5] > 30000) {
-				stat[5] = 30000;
-			}
-			if(stat[6] > 30000) {
-				stat[6] = 30000;
-			}
-			if(stat[7] > 30000) {
-				stat[7] = 30000;
-			}
-			if(stat[8] > 30000) {
-				stat[8] = 30000;
-			}
-			if(stat[9] > 100000) {
-				stat[9] = 100000;
-			}
-			if(stat[10] > 1000) {
-				stat[10] = 1000;
+			for(int i = 0 ; i < 10 ; i++) {
+				stat[i]--;
 			}
 			
 			String localName = Integer.toString(stat[0]) + "," + stat[1] + "," + stat[2] + "," + stat[3] + "," + stat[4] + "," + stat[5] + "," + stat[6] + "," + stat[7] + "," + stat[8] + "," + stat[9] + "," + stat[10];
 			
-			if(inv.getItem(25) != null) {
-				player.getInventory().addItem(inv.getItem(25));
+			ItemStack potion = new ItemStack(Material.POTION, 3);
+			ItemMeta potionIm = potion.getItemMeta();
+			potionIm.setLocalizedName(localName);
+			potionIm.setDisplayName(ChatColor.DARK_AQUA + player.getDisplayName() + "님이 제작한 포션");
+			ArrayList<String> potionLore = new ArrayList();
+			potionLore.add(ChatColor.GRAY + "지속 시간: " + stat[10]/20 + "초");
+			potionLore.add(ChatColor.GRAY + " ");
+			potionLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+			potionLore.add(ChatColor.GRAY + " ");
+			for(int i = 0 ; i < 10 ; i++) {
+				if(stat[i] < 0) {
+					continue;
+				}
+				potionLore.add(ChatColor.GRAY + buff[i] + (stat[i] + 1));
 			}
+			potionIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+			potionIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+			potionIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+			potionIm.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
+			potionIm.setUnbreakable(true);
+			potionIm.setLore(potionLore);
+			PotionMeta pm = (PotionMeta) potionIm;
+			pm.setColor(Color.fromRGB(red, green, blue));
+			potionIm = pm;
+			potion.setItemMeta(potionIm);
 			
-			inv.setItem(25, makeItem(player, equipType, stat, localName));
+			inv.setItem(15, potion);
 			
 		} catch(Exception e) {
 			player.sendMessage(ChatColor.WHITE + "알 수 없는 오류. 스샷 찍어서 운영자한테 보내주세요.");
@@ -571,31 +942,15 @@ public class CraftingItem {
 	}
 	
 	public void removeItem(Inventory inv) {
-		inv.remove(inv.getItem(0));
 		inv.remove(inv.getItem(1));
 		inv.remove(inv.getItem(2));
 		inv.remove(inv.getItem(3));
-		inv.remove(inv.getItem(4));
-		inv.remove(inv.getItem(9));
 		inv.remove(inv.getItem(10));
 		inv.remove(inv.getItem(11));
 		inv.remove(inv.getItem(12));
-		inv.remove(inv.getItem(13));
-		inv.remove(inv.getItem(18));
 		inv.remove(inv.getItem(19));
 		inv.remove(inv.getItem(20));
 		inv.remove(inv.getItem(21));
-		inv.remove(inv.getItem(22));
-		inv.remove(inv.getItem(27));
-		inv.remove(inv.getItem(28));
-		inv.remove(inv.getItem(29));
-		inv.remove(inv.getItem(30));
-		inv.remove(inv.getItem(31));
-		inv.remove(inv.getItem(36));
-		inv.remove(inv.getItem(37));
-		inv.remove(inv.getItem(38));
-		inv.remove(inv.getItem(39));
-		inv.remove(inv.getItem(40));
 	}
 	
 	public ItemStack makeItem(Player player, int equipType, int[] stat, String localName) {

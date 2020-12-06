@@ -17,6 +17,8 @@ import org.bukkit.block.Block;
 import org.bukkit.block.Chest;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 
 public class SaveAll {
 
@@ -227,6 +229,52 @@ public class SaveAll {
 					fw.write((int) player.getLevel() + "/" + player.getExp());
 					fw.close();
 					bufReader.close();
+				}
+			}
+		} catch (Exception e) {
+
+		}
+		// 생활 레벨 데이터 저장
+		try {
+			ItemStack item = player.getInventory().getItem(7);
+			if(item.hasItemMeta()) {
+				if((item.getType() == Material.RED_DYE) || (item.getType() == Material.GREEN_DYE) || (item.getType() == Material.LAPIS_LAZULI)
+						|| (item.getType() == Material.CYAN_DYE) || (item.getType() == Material.LIGHT_GRAY_DYE) || (item.getType() == Material.GRAY_DYE)
+						|| (item.getType() == Material.PINK_DYE) || (item.getType() == Material.LIME_DYE) || (item.getType() == Material.YELLOW_DYE)
+						|| (item.getType() == Material.LIGHT_BLUE_DYE) || (item.getType() == Material.MAGENTA_DYE) || (item.getType() == Material.ORANGE_DYE)
+						|| (item.getType() == Material.BLUE_DYE) || (item.getType() == Material.BROWN_DYE) || (item.getType() == Material.BLACK_DYE)
+						|| (item.getType() == Material.INK_SAC) || (item.getType() == Material.CLAY_BALL) || (item.getType() == Material.GLOWSTONE_DUST)) {
+					File dataFolder = folder;
+					if (!dataFolder.exists()) {
+						dataFolder.mkdir();
+					} else {
+						File dir = new File(folder + "/" + player.getUniqueId().toString());
+						if (!dir.exists()) {
+							try {
+								dir.mkdir();
+							} catch (Exception e) {
+								e.getStackTrace();
+							}
+						}
+						File file = new File(dir,"fantasy_life_level.dat");
+						if (!file.exists()) {
+							try {
+								file.createNewFile();
+							} catch (IOException e) {
+								e.printStackTrace();
+							}
+						}
+						FileReader filereader = new FileReader(file);
+						BufferedReader bufReader = new BufferedReader(filereader);
+						BufferedWriter fw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), "UTF-8"));
+						ItemMeta im = item.getItemMeta();
+						String lvl1 = im.getLore().get(0);
+						String lvl2 = im.getLore().get(1);
+						String lvl3 = im.getLore().get(2);
+						fw.write(lvl1.split(": ")[1] + " " + lvl2.split(": ")[1] + " " + lvl3.split(": ")[1]);
+						fw.close();
+						bufReader.close();
+					}
 				}
 			}
 		} catch (Exception e) {

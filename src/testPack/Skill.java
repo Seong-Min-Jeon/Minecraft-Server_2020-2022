@@ -2421,7 +2421,7 @@ public class Skill {
 					
 					ArmorStand proTotem = (ArmorStand) player.getWorld().spawnEntity(player.getLocation(), EntityType.ARMOR_STAND);
 					proTotem.setVisible(false);
-					proTotem.setHelmet(new ItemStack(Material.ANDESITE_STAIRS));
+					proTotem.setHelmet(new ItemStack(Material.RED_NETHER_BRICK_STAIRS));
 					proTotem.setVelocity(player.getLocation().getDirection().multiply(1.0f));
 					
 					SkillThread t = new SkillThread(player.getUniqueId());
@@ -2439,7 +2439,7 @@ public class Skill {
 							if(proTotem.isOnGround() && time == 0) {	
 								totem = (ArmorStand) player.getWorld().spawnEntity(proTotem.getLocation(), EntityType.ARMOR_STAND);
 								totem.setVisible(false);
-								totem.setHelmet(new ItemStack(Material.ANDESITE_STAIRS));
+								totem.setHelmet(new ItemStack(Material.RED_NETHER_BRICK_STAIRS));
 								proTotem.remove();
 								time++;
 							}
@@ -3920,7 +3920,7 @@ public class Skill {
 					}
 					player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 100, 1, true, false, false));
 					player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 2, true, false, false));
-					player.sendMessage(ChatColor.GREEN + "[스킬]각개전투가 발동됩니다.");
+					player.sendMessage(ChatColor.GREEN + "[스킬]용의 버프가 발동됩니다.");
 					player.sendMessage(ChatColor.GREEN + "5초간 아군에게 저항이 부여됩니다.");
 					player.sendMessage(ChatColor.GREEN + "5초간 아군에게 추가 체력이 부여됩니다.");
 					world.playSound(loc, Sound.BLOCK_CHAIN_BREAK, 2.0f, 0.5f);	
@@ -4044,8 +4044,8 @@ public class Skill {
 							} else if(time%4 == 0) {
 								Arrow arrow = totem.launchProjectile(Arrow.class);
 								arrow.setShooter(player);
-								arrow.setDamage(0.04);
-								arrow.setVelocity(totem.getLocation().getDirection().multiply(10.0f));		
+								arrow.setDamage(0.05);
+								arrow.setVelocity(totem.getLocation().getDirection().multiply(new Vector(10, 0, 10)));		
 								world.playSound(totem.getLocation(), Sound.ENTITY_ARMOR_STAND_HIT, 1.5f, 1.0f);
 							}
 							

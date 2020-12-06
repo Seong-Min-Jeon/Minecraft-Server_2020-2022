@@ -40,7 +40,9 @@ import org.bukkit.entity.Chicken;
 import org.bukkit.entity.Cow;
 import org.bukkit.entity.Creeper;
 import org.bukkit.entity.Drowned;
+import org.bukkit.entity.Egg;
 import org.bukkit.entity.ElderGuardian;
+import org.bukkit.entity.EnderPearl;
 import org.bukkit.entity.Enderman;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
@@ -97,6 +99,7 @@ import org.bukkit.event.entity.ExplosionPrimeEvent;
 import org.bukkit.event.entity.LingeringPotionSplashEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.entity.ProjectileHitEvent;
+import org.bukkit.event.entity.ProjectileLaunchEvent;
 import org.bukkit.event.entity.SheepDyeWoolEvent;
 import org.bukkit.event.entity.SlimeSplitEvent;
 import org.bukkit.event.hanging.HangingBreakByEntityEvent;
@@ -299,7 +302,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("woolring")) { 
 			
 		} else {
-			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/783199240984985601/aile_texture_pack_6.zip");
+			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/784381749932458004/aile_texture_pack_7.zip");
 		}
 		
 		//Message
@@ -316,7 +319,7 @@ public class Main extends JavaPlugin implements Listener{
 		} else if(player.getDisplayName().equalsIgnoreCase("Espina_ID")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.BOLD + "'그저 군인' 에스피나.");
 		} else if(player.getDisplayName().equalsIgnoreCase("KangOSung")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.YELLOW + "'울링의 조수' 캉!");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.YELLOW + "'노예2' 캉!");
 		} else {
 			event.setJoinMessage("야생의 누군가가 등장했다.");
 		}
@@ -499,6 +502,37 @@ public class Main extends JavaPlugin implements Listener{
 			}
 		} catch (Exception e) {
 			
+		}
+		
+		// 생활 레벨 파일
+		try {
+			File dataFolder = getDataFolder();
+			if (!dataFolder.exists()) {
+				dataFolder.mkdir();
+			} else {
+				File dir = new File(getDataFolder() + "/" + player.getUniqueId().toString());
+				if (!dir.exists()) {
+					try {
+						dir.mkdir();
+					} catch (Exception e) {
+						e.getStackTrace();
+					}
+				}
+				File file = new File(dir, "fantasy_life_level.dat");
+				if (!file.exists()) {
+					try {
+						file.createNewFile();
+						BufferedWriter fw = new BufferedWriter(
+								new OutputStreamWriter(new FileOutputStream(file), "UTF-8"));
+						fw.write("1.00 1.00 1.00");
+						fw.close();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
+			}
+		} catch (Exception e) {
+
 		}
 		
 		//플레이어 접속 시 로비로 이동 & 캐릭터 선택창 활성화
@@ -1768,6 +1802,12 @@ public class Main extends JavaPlugin implements Listener{
 			Location longue = new Location(world,822,71,511,270,0);
 			Location hamabe = new Location(world,973,62,40,180,0);
 			
+			//캐릭터 선택창 3668 47 3671 3660 39 3680
+			if(loc.getX() <= 3668 && loc.getZ() <= 3680 &&
+					loc.getX() >= 3660 && loc.getZ() >= 3671) {
+				event.setRespawnLocation(new Location(world,3665,41,3675.5,180,0));
+				return;
+			}
 			//포르간 항구 주변 -2000 101 2856  -1817 93 2546
 			if(loc.getX() <= -1817 && loc.getZ() <= 2856 &&
 					loc.getX() >= -2000 && loc.getZ() >= 2546) {
@@ -2025,6 +2065,41 @@ public class Main extends JavaPlugin implements Listener{
 	@EventHandler
 	public void consumeItem(PlayerItemConsumeEvent event) {
 		Player player = (Player)event.getPlayer();
+		//제작 포션
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().substring(0, 2).equals("§3")) {
+			String buff = player.getInventory().getItemInMainHand().getItemMeta().getLocalizedName();
+			String[] buffList = buff.split(",");
+			PotionRatio pr = new PotionRatio();
+			pr.calculation(player, Double.parseDouble(buffList[0]));
+			int dur = Integer.parseInt(buffList[10]);
+			if(Integer.parseInt(buffList[1]) >= 0) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION,dur,Integer.parseInt(buffList[1]),true,false,false));
+			}
+			if(Integer.parseInt(buffList[2]) >= 0) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,dur,Integer.parseInt(buffList[2]),true,false,false));
+			}
+			if(Integer.parseInt(buffList[3]) >= 0) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED,dur,Integer.parseInt(buffList[3]),true,false,false));
+			}
+			if(Integer.parseInt(buffList[4]) >= 0) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,dur,Integer.parseInt(buffList[4]),true,false,false));
+			}
+			if(Integer.parseInt(buffList[5]) >= 0) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,dur,Integer.parseInt(buffList[5]),true,false,false));
+			}
+			if(Integer.parseInt(buffList[6]) >= 0) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,dur,Integer.parseInt(buffList[6]),true,false,false));
+			}
+			if(Integer.parseInt(buffList[7]) >= 0) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.POISON,dur,Integer.parseInt(buffList[7]),true,false,false));
+			}
+			if(Integer.parseInt(buffList[8]) >= 0) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER,dur,Integer.parseInt(buffList[8]),true,false,false));
+			}
+			if(Integer.parseInt(buffList[9]) >= 0) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION,dur,Integer.parseInt(buffList[9]),true,false,false));
+			}
+		}
 		//HP포션
 		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "힐링 포션 I")) {
 			PotionRatio pr = new PotionRatio();
@@ -2321,6 +2396,7 @@ public class Main extends JavaPlugin implements Listener{
 		AnotherScroll as = new AnotherScroll();
 		ItemDestroyScroll ids = new ItemDestroyScroll();
 		CraftingScroll cs = new CraftingScroll();
+		CraftingPotionScroll cps = new CraftingPotionScroll();
 		
 		try {
 			//마을 스크롤
@@ -2341,8 +2417,10 @@ public class Main extends JavaPlugin implements Listener{
 			as.effect(player, itemArg);
 			//아이템 파기 스크롤
 			ids.openInv(player, itemArg);
-			//제작 스크롤
+			//장비 제작 스크롤
 			cs.openInv(player, itemArg);
+			//포션 제작 스크롤
+			cps.openInv(player, itemArg);
 			//캐릭터 삭제 스크롤
 			new RemoveCharacter(player, itemArg, getDataFolder());
 		} catch(Exception e) {
@@ -2535,6 +2613,47 @@ public class Main extends JavaPlugin implements Listener{
 			player.sendMessage(ChatColor.RED + "드랍 불가 아이템입니다.");
 			event.setCancelled(true);
 		}
+		if(event.getItemDrop().getItemStack().getType() == Material.DEAD_BRAIN_CORAL_BLOCK) {
+			player.sendMessage(ChatColor.RED + "드랍 불가 아이템입니다.");
+			event.setCancelled(true);
+		}
+		if(event.getItemDrop().getItemStack().getType() == Material.DEAD_BUBBLE_CORAL_BLOCK) {
+			player.sendMessage(ChatColor.RED + "드랍 불가 아이템입니다.");
+			event.setCancelled(true);
+		}
+		if(event.getItemDrop().getItemStack().getType() == Material.DEAD_FIRE_CORAL_BLOCK) {
+			player.sendMessage(ChatColor.RED + "드랍 불가 아이템입니다.");
+			event.setCancelled(true);
+		}
+		if(event.getItemDrop().getItemStack().getType() == Material.DEAD_HORN_CORAL_BLOCK) {
+			player.sendMessage(ChatColor.RED + "드랍 불가 아이템입니다.");
+			event.setCancelled(true);
+		}
+		if(event.getItemDrop().getItemStack().getType() == Material.DEAD_TUBE_CORAL_BLOCK) {
+			player.sendMessage(ChatColor.RED + "드랍 불가 아이템입니다.");
+			event.setCancelled(true);
+		}
+		if(event.getItemDrop().getItemStack().getType() == Material.BRAIN_CORAL_BLOCK) {
+			player.sendMessage(ChatColor.RED + "드랍 불가 아이템입니다.");
+			event.setCancelled(true);
+		}
+		if(event.getItemDrop().getItemStack().getType() == Material.HORN_CORAL_BLOCK) {
+			player.sendMessage(ChatColor.RED + "드랍 불가 아이템입니다.");
+			event.setCancelled(true);
+		}
+		if(event.getItemDrop().getItemStack().getType() == Material.TUBE_CORAL_BLOCK) {
+			player.sendMessage(ChatColor.RED + "드랍 불가 아이템입니다.");
+			event.setCancelled(true);
+		}
+		if(event.getItemDrop().getItemStack().getType() == Material.BUBBLE_CORAL_BLOCK) {
+			player.sendMessage(ChatColor.RED + "드랍 불가 아이템입니다.");
+			event.setCancelled(true);
+		}
+		if(event.getItemDrop().getItemStack().getType() == Material.FIRE_CORAL_BLOCK) {
+			player.sendMessage(ChatColor.RED + "드랍 불가 아이템입니다.");
+			event.setCancelled(true);
+		}
+		
 	}
 	
 	@EventHandler
@@ -2643,12 +2762,14 @@ public class Main extends JavaPlugin implements Listener{
 		// target change
 		try {
 			if (event.getEntity() instanceof Mob) {
-				if (event.getDamager() instanceof Player) {
-					int num = rnd.nextInt(5);
-					if(num==0) {
-						Player player = (Player) event.getDamager();
-						Mob mob = (Mob) event.getEntity();
-						mob.setTarget(player);
+				if (!(event.getEntity() instanceof IronGolem)) {
+					if (event.getDamager() instanceof Player) {
+						int num = rnd.nextInt(5);
+						if(num==0) {
+							Player player = (Player) event.getDamager();
+							Mob mob = (Mob) event.getEntity();
+							mob.setTarget(player);
+						}
 					}
 				}
 			}
@@ -3201,6 +3322,9 @@ public class Main extends JavaPlugin implements Listener{
 					}
 					if(arrow.getDamage() == 0.04) {
 						skillMul = 300;
+					}
+					if(arrow.getDamage() == 0.05) {
+						skillMul = 2000;
 					}
 					double damage = (lvl * jobMul * skillMul * weaponMul) + enchMul;
 					try {
@@ -4182,6 +4306,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(event.getEntity().getType() == EntityType.MUSHROOM_COW) {
 			event.getEntity().setCustomName(Integer.toString((int) event.getFinalDamage()));
 			event.getEntity().setCustomNameVisible(true);
+			((LivingEntity) event.getEntity()).setHealth(999999999);
 		}
 		
 		// 보스바
@@ -5540,7 +5665,7 @@ public class Main extends JavaPlugin implements Listener{
 			Block block = player.getTargetBlockExact(5);
 			if(player.getGameMode() == GameMode.ADVENTURE || player.isOp() == false) {
 				FantasyLife fl = new FantasyLife();	        		
-				fl.fantasyLift(player, block, loc);
+				fl.fantasyLife(player, block, loc);
 				if(block.getType() == Material.WHEAT) {
 					player.getWorld().playEffect(block.getLocation(), Effect.STEP_SOUND, Material.WHEAT);
 				} else if(block.getType() == Material.COAL_ORE || block.getType() == Material.IRON_ORE || block.getType() == Material.GOLD_ORE
@@ -6266,10 +6391,17 @@ public class Main extends JavaPlugin implements Listener{
 		        			return;
 		        		}
 		        	}
-		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "제작하기")) {
+		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "장비 제작")) {
 		        		Inventory inv = event.getInventory();
 		        		CraftingItem ci = new CraftingItem();
 		        		ci.make(player, inv);
+		        		event.setCancelled(true);
+		        		return;
+		        	}
+		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "포션 제작")) {
+		        		Inventory inv = event.getInventory();
+		        		CraftingPotion cp = new CraftingPotion();
+		        		cp.make(player, inv);
 		        		event.setCancelled(true);
 		        		return;
 		        	}
@@ -6351,7 +6483,7 @@ public class Main extends JavaPlugin implements Listener{
 	
 	@EventHandler
 	public void offPlayer(PlayerQuitEvent event) {
-		Player player = event.getPlayer();		
+		Player player = event.getPlayer();	
 		
 		//adventure
 		player.setGameMode(GameMode.ADVENTURE);
@@ -6534,8 +6666,8 @@ public class Main extends JavaPlugin implements Listener{
 	@EventHandler
 	public void blockPhysicsEvent(BlockPhysicsEvent event) {
 		if(event.getBlock().getType() == Material.SAND) {
-			Location loc = event.getBlock().getLocation().add(0,-1,0);
-			loc.getBlock().setType(Material.SANDSTONE);
+//			Location loc = event.getBlock().getLocation().add(0,-1,0);
+//			loc.getBlock().setType(Material.SANDSTONE);
 		}
 	}
 	
@@ -6611,6 +6743,13 @@ public class Main extends JavaPlugin implements Listener{
 	@EventHandler
 	public void craftEvent(CraftItemEvent event) {
 		event.setCancelled(true);
+	}
+	
+	@EventHandler
+	public void throwEvent(ProjectileLaunchEvent event) {
+		if(event.getEntity() instanceof Egg || event.getEntity() instanceof EnderPearl) {
+			event.setCancelled(true);
+		}
 	}
 	
 	@EventHandler
@@ -6797,6 +6936,28 @@ public class Main extends JavaPlugin implements Listener{
 							try {player.getInventory().addItem(inv.getItem(40));} catch(Exception e) {}
 							
 							try {player.getInventory().addItem(inv.getItem(25));} catch(Exception e) {}
+						}
+					}
+				}
+			} catch(Exception e) {
+				
+			}
+			
+			try {
+				if(inv.getItem(25).getType() == Material.SLIME_BALL) {
+					if(inv.getItem(26).getType() == Material.SHULKER_SHELL) {
+						if(inv.getSize() == 27) {
+							try {player.getInventory().addItem(inv.getItem(1));} catch(Exception e) {}
+							try {player.getInventory().addItem(inv.getItem(2));} catch(Exception e) {}
+							try {player.getInventory().addItem(inv.getItem(3));} catch(Exception e) {}
+							try {player.getInventory().addItem(inv.getItem(10));} catch(Exception e) {}
+							try {player.getInventory().addItem(inv.getItem(11));} catch(Exception e) {}
+							try {player.getInventory().addItem(inv.getItem(12));} catch(Exception e) {}
+							try {player.getInventory().addItem(inv.getItem(19));} catch(Exception e) {}
+							try {player.getInventory().addItem(inv.getItem(20));} catch(Exception e) {}
+							try {player.getInventory().addItem(inv.getItem(21));} catch(Exception e) {}
+							
+							try {player.getInventory().addItem(inv.getItem(15));} catch(Exception e) {}
 						}
 					}
 				}

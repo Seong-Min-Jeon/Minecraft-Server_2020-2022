@@ -16,7 +16,7 @@ public class FantasyLife {
 	Random rnd = new Random();
 	ExpSystem es = new ExpSystem();
 	
-	public boolean fantasyLift(Player player, Block block, Location loc) {
+	public boolean fantasyLife(Player player, Block block, Location loc) {
 		if(wheat(player, block, loc) && coal(player, block, loc) && iron(player, block, loc) && gold(player, block, loc) &&
 				dia(player, block, loc) && eme(player, block, loc) && quartz(player, block, loc)) {
 			return true;

@@ -1572,7 +1572,7 @@ public class QuestBoard {
 		score.setScore(3);
 		Score score2 = obj.getScore("유적에서 마법사와 대화");
 		score2.setScore(2);
-		Score score3 = obj.getScore("(-926,51,858)");
+		Score score3 = obj.getScore("위치: -926,51,858");
 		score3.setScore(1);
 		Score score4 = obj.getScore("(" + num + "/1)");
 		score4.setScore(0);
@@ -1596,7 +1596,7 @@ public class QuestBoard {
 		score.setScore(3);
 		Score score2 = obj.getScore("죽음의 탑에서 관리인과 대화");
 		score2.setScore(2);
-		Score score3 = obj.getScore("(76,63,-22)");
+		Score score3 = obj.getScore("위치: 76,63,-22");
 		score3.setScore(1);
 		Score score4 = obj.getScore("(" + num + "/1)");
 		score4.setScore(0);
@@ -1781,7 +1781,7 @@ public class QuestBoard {
 		score.setScore(3);
 		Score score2 = obj.getScore("마법탑에서 카타리나와 대화");
 		score2.setScore(2);
-		Score score3 = obj.getScore("(221,80,725)");
+		Score score3 = obj.getScore("위치: 221,80,725");
 		score3.setScore(1);
 		Score score4 = obj.getScore("(" + num + "/1)");
 		score4.setScore(0);
@@ -2137,7 +2137,7 @@ public class QuestBoard {
 		score.setScore(3);
 		Score score2 = obj.getScore("하마베 마을에서 주민과 대화");
 		score2.setScore(2);
-		Score score3 = obj.getScore("(978,62,92)");
+		Score score3 = obj.getScore("위치: 978,62,92");
 		score3.setScore(1);
 		Score score4 = obj.getScore("(" + num + "/1)");
 		score4.setScore(0);
@@ -2183,7 +2183,7 @@ public class QuestBoard {
 		score.setScore(3);
 		Score score2 = obj.getScore("클레어흐의 광신도 100마리 사냥");
 		score2.setScore(2);
-		Score score3 = obj.getScore("(978,62,92)");
+		Score score3 = obj.getScore("위치: 1033,61,258");
 		score3.setScore(1);
 		Score score4 = obj.getScore("(" + num + "/100)");
 		score4.setScore(0);
@@ -2207,7 +2207,7 @@ public class QuestBoard {
 		score.setScore(3);
 		Score score2 = obj.getScore("클레어흐의 광신도 간부 50마리 사냥");
 		score2.setScore(2);
-		Score score3 = obj.getScore("(914,68,173)");
+		Score score3 = obj.getScore("위치: 914,68,173");
 		score3.setScore(1);
 		Score score4 = obj.getScore("(" + num + "/50)");
 		score4.setScore(0);

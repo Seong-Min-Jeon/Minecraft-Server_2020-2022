@@ -7,6 +7,7 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
+import java.util.ArrayList;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -24,6 +25,7 @@ public class ReloadPlayerData {
 	public ReloadPlayerData(Player player, String job, File folder) {
 		try {
 			File dataFolder = folder;
+			String fLevel = null;
             if(!dataFolder.exists()) {
                 dataFolder.mkdir();
             } else {
@@ -62,9 +64,26 @@ public class ReloadPlayerData {
             	} catch(Exception e) {
             		
             	}
+            	// 생활 레벨 리로드
+            	try {
+            		File file = new File(dir, "fantasy_life_level.dat");
+    				if (!file.exists()) {
+    					try {
+    						file.createNewFile();
+    					} catch (IOException e) {
+    						e.printStackTrace();
+    					}
+    				}
+    				FileReader filereader = new FileReader(file);
+    				BufferedReader bufReader = new BufferedReader(filereader);
+    				fLevel = bufReader.readLine();
+    				bufReader.close();
+            	} catch(Exception e) {
+            		
+            	}
             	// 증표 리로드
             	try {
-            		giveMemento(player, job);
+            		giveMemento(player, job, fLevel);
             	} catch(Exception e) {
             		
             	}
@@ -452,7 +471,7 @@ public class ReloadPlayerData {
 		}
 	}
 	
-	public void giveMemento(Player player, String job) {
+	public void giveMemento(Player player, String job, String fLevel) {
 		if(job.equals("boneFighter")) {
 			ItemStack memento = new ItemStack(Material.RED_DYE);
 			ItemMeta mementoIm = memento.getItemMeta();
@@ -461,6 +480,7 @@ public class ReloadPlayerData {
 			mementoIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			mementoIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			memento.setItemMeta(mementoIm);
+			fantasyLifeLevel(player, memento, fLevel);
 			player.getInventory().setItem(7, memento);
 		} else if(job.equals("knight")) {
 			ItemStack memento = new ItemStack(Material.GREEN_DYE);
@@ -470,6 +490,7 @@ public class ReloadPlayerData {
 			mementoIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			mementoIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			memento.setItemMeta(mementoIm);
+			fantasyLifeLevel(player, memento, fLevel);
 			player.getInventory().setItem(7, memento);
 		} else if(job.equals("priest")) {
 			ItemStack memento = new ItemStack(Material.LAPIS_LAZULI);
@@ -479,6 +500,7 @@ public class ReloadPlayerData {
 			mementoIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			mementoIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			memento.setItemMeta(mementoIm);
+			fantasyLifeLevel(player, memento, fLevel);
 			player.getInventory().setItem(7, memento);
 		} else if(job.equals("berserker1")) {
 			ItemStack memento = new ItemStack(Material.CYAN_DYE);
@@ -488,6 +510,7 @@ public class ReloadPlayerData {
 			mementoIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			mementoIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			memento.setItemMeta(mementoIm);
+			fantasyLifeLevel(player, memento, fLevel);
 			player.getInventory().setItem(7, memento);
 		} else if(job.equals("gambler")) {
 			ItemStack memento = new ItemStack(Material.LIGHT_GRAY_DYE);
@@ -497,6 +520,7 @@ public class ReloadPlayerData {
 			mementoIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			mementoIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			memento.setItemMeta(mementoIm);
+			fantasyLifeLevel(player, memento, fLevel);
 			player.getInventory().setItem(7, memento);
 		} else if(job.equals("devil")) {
 			ItemStack memento = new ItemStack(Material.GRAY_DYE);
@@ -506,6 +530,7 @@ public class ReloadPlayerData {
 			mementoIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			mementoIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			memento.setItemMeta(mementoIm);
+			fantasyLifeLevel(player, memento, fLevel);
 			player.getInventory().setItem(7, memento);
 		} else if(job.equals("angel")) {
 			ItemStack memento = new ItemStack(Material.PINK_DYE);
@@ -515,6 +540,7 @@ public class ReloadPlayerData {
 			mementoIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			mementoIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			memento.setItemMeta(mementoIm);
+			fantasyLifeLevel(player, memento, fLevel);
 			player.getInventory().setItem(7, memento);
 		} else if(job.equals("agent")) {
 			ItemStack memento = new ItemStack(Material.LIME_DYE);
@@ -524,6 +550,7 @@ public class ReloadPlayerData {
 			mementoIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			mementoIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			memento.setItemMeta(mementoIm);
+			fantasyLifeLevel(player, memento, fLevel);
 			player.getInventory().setItem(7, memento);
 		} else if(job.equals("shadowKnight")) {
 			ItemStack memento = new ItemStack(Material.YELLOW_DYE);
@@ -533,6 +560,7 @@ public class ReloadPlayerData {
 			mementoIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			mementoIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			memento.setItemMeta(mementoIm);
+			fantasyLifeLevel(player, memento, fLevel);
 			player.getInventory().setItem(7, memento);
 		} else if(job.equals("berserker2")) {
 			ItemStack memento = new ItemStack(Material.LIGHT_BLUE_DYE);
@@ -542,6 +570,7 @@ public class ReloadPlayerData {
 			mementoIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			mementoIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			memento.setItemMeta(mementoIm);
+			fantasyLifeLevel(player, memento, fLevel);
 			player.getInventory().setItem(7, memento);
 		} else if(job.equals("soldier")) {
 			ItemStack memento = new ItemStack(Material.MAGENTA_DYE);
@@ -551,6 +580,7 @@ public class ReloadPlayerData {
 			mementoIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			mementoIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			memento.setItemMeta(mementoIm);
+			fantasyLifeLevel(player, memento, fLevel);
 			player.getInventory().setItem(7, memento);
 		} else if(job.equals("grimReaper")) {
 			ItemStack memento = new ItemStack(Material.ORANGE_DYE);
@@ -560,6 +590,7 @@ public class ReloadPlayerData {
 			mementoIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			mementoIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			memento.setItemMeta(mementoIm);
+			fantasyLifeLevel(player, memento, fLevel);
 			player.getInventory().setItem(7, memento);
 		} else if(job.equals("akuma")) {
 			ItemStack memento = new ItemStack(Material.BLUE_DYE);
@@ -569,6 +600,7 @@ public class ReloadPlayerData {
 			mementoIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			mementoIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			memento.setItemMeta(mementoIm);
+			fantasyLifeLevel(player, memento, fLevel);
 			player.getInventory().setItem(7, memento);
 		} else if(job.equals("paladin")) {
 			ItemStack memento = new ItemStack(Material.BROWN_DYE);
@@ -578,6 +610,7 @@ public class ReloadPlayerData {
 			mementoIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			mementoIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			memento.setItemMeta(mementoIm);
+			fantasyLifeLevel(player, memento, fLevel);
 			player.getInventory().setItem(7, memento);
 		} else if(job.equals("dragonKnight")) {
 			ItemStack memento = new ItemStack(Material.BLACK_DYE);
@@ -587,6 +620,7 @@ public class ReloadPlayerData {
 			mementoIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			mementoIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			memento.setItemMeta(mementoIm);
+			fantasyLifeLevel(player, memento, fLevel);
 			player.getInventory().setItem(7, memento);
 		} else if(job.equals("commander")) {
 			ItemStack memento = new ItemStack(Material.INK_SAC);
@@ -596,6 +630,7 @@ public class ReloadPlayerData {
 			mementoIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			mementoIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			memento.setItemMeta(mementoIm);
+			fantasyLifeLevel(player, memento, fLevel);
 			player.getInventory().setItem(7, memento);
 		} else if(job.equals("archer")) {
 			ItemStack memento = new ItemStack(Material.CLAY_BALL);
@@ -605,6 +640,7 @@ public class ReloadPlayerData {
 			mementoIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			mementoIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			memento.setItemMeta(mementoIm);
+			fantasyLifeLevel(player, memento, fLevel);
 			player.getInventory().setItem(7, memento);
 		} else if(job.equals("powerRanger")) {
 			ItemStack memento = new ItemStack(Material.GLOWSTONE_DUST);
@@ -614,8 +650,20 @@ public class ReloadPlayerData {
 			mementoIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			mementoIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			memento.setItemMeta(mementoIm);
+			fantasyLifeLevel(player, memento, fLevel);
 			player.getInventory().setItem(7, memento);
 		}
+	}
+	
+	public void fantasyLifeLevel(Player player, ItemStack item, String level) {
+		String[] lvl = level.split(" ");
+		ArrayList<String> lore = new ArrayList();
+		lore.add(ChatColor.GRAY + "장비 제작 레벨: " + lvl[0]);
+		lore.add(ChatColor.GRAY + "포션 제작 레벨: " + lvl[1]);
+		lore.add(ChatColor.GRAY + "음식 제작 레벨: " + lvl[2]);
+		ItemMeta im = item.getItemMeta();
+		im.setLore(lore);
+		item.setItemMeta(im);
 	}
 	
 }

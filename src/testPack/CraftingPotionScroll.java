@@ -12,15 +12,15 @@ import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-public class CraftingScroll {
+public class CraftingPotionScroll {
 
 	public void openInv(Player player, Item itemArg) {
-		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "장비 제작 스크롤")) {
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "포션 제작 스크롤")) {
 			itemArg.remove();
-			Inventory inv = Bukkit.createInventory(player, 45, "Crafting table");
+			Inventory inv = Bukkit.createInventory(player, 27, "Crafting table");
 			ItemStack ok = new ItemStack(Material.SLIME_BALL);
 			ItemMeta okIm = ok.getItemMeta();
-			okIm.setDisplayName(ChatColor.GREEN + "장비 제작");
+			okIm.setDisplayName(ChatColor.GREEN + "포션 제작");
 			ArrayList<String> okLore = new ArrayList();
 			okLore.add(ChatColor.GRAY + "왼쪽 테이블에 제작 소재를 넣고 버튼을 눌러주세요.");
 			okIm.setLore(okLore);
@@ -51,25 +51,23 @@ public class CraftingScroll {
 			arrow2Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			arrow2Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			arrow2.setItemMeta(arrow2Im);
+			inv.setItem(0, bar);
+			inv.setItem(4, bar);
 			inv.setItem(5, bar);
 			inv.setItem(6, bar);
 			inv.setItem(7, bar);
 			inv.setItem(8, bar);
-			inv.setItem(14, bar);
-			inv.setItem(15, bar);
+			inv.setItem(9, bar);
+			inv.setItem(13, arrow);
+			inv.setItem(14, arrow2);
 			inv.setItem(16, bar);
 			inv.setItem(17, bar);
-			inv.setItem(23, arrow);
-			inv.setItem(24, arrow2);
-			inv.setItem(26, bar);
-			inv.setItem(32, bar);
-			inv.setItem(33, bar);
-			inv.setItem(34, bar);
-			inv.setItem(35, bar);
-			inv.setItem(41, bar);
-			inv.setItem(42, bar);
-			inv.setItem(43, ok);
-			inv.setItem(44, no);
+			inv.setItem(18, bar);
+			inv.setItem(22, bar);
+			inv.setItem(23, bar);
+			inv.setItem(24, bar);
+			inv.setItem(25, ok);
+			inv.setItem(26, no);
 			player.openInventory(inv);
 		}
 	}

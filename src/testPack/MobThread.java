@@ -328,7 +328,7 @@ public class MobThread {
 						} else if(loc.getX() <= 1072 && loc.getY() <= 165 && loc.getZ() <= 247 && 
 								loc.getX() >= 904 && loc.getY() >= 60 && loc.getZ() >= 110) {
 							kleah2(player, loc);
-						} else if(loc.getX() <= 1068 && loc.getY() <= 100 && loc.getZ() <= 504 && 
+						} else if(loc.getX() <= 1068 && loc.getY() <= 100 && loc.getZ() <= 480 && 
 								loc.getX() >= 860 && loc.getY() >= 50 && loc.getZ() >= 419) {
 							kleahSouth(player, loc);
 						} else if(loc.getX() <= 1164 && loc.getY() <= 100 && loc.getZ() <= 679 && 
@@ -355,6 +355,24 @@ public class MobThread {
 						} else if(loc.getX() <= 532 && loc.getY() <= 255 && loc.getZ() <= 1267 
 								&& loc.getX() >= 120 && loc.getY() >= 0 && loc.getZ() >= 1029) {
 							desert1(player, loc);
+						} else if(loc.getX() <= 599 && loc.getY() <= 255 && loc.getZ() <= 1657 
+								&& loc.getX() >= -161 && loc.getY() >= 47 && loc.getZ() >= 1268) {
+							desert2(player, loc);
+						} else if(loc.getX() <= 599 && loc.getY() <= 46 && loc.getZ() <= 1657 
+								&& loc.getX() >= -161 && loc.getY() >= 0 && loc.getZ() >= 1268) {
+							desert3(player, loc);
+						} else if(loc.getX() <= 599 && loc.getY() <= 106 && loc.getZ() <= 2617 
+								&& loc.getX() >= 230 && loc.getY() >= 0 && loc.getZ() >= 1795) {
+							desert4(player, loc);
+						} else if(loc.getX() <= 599 && loc.getY() <= 180 && loc.getZ() <= 2617 
+								&& loc.getX() >= 230 && loc.getY() >= 107 && loc.getZ() >= 1795) {
+							desert5(player, loc);
+						} else if(loc.getX() <= 599 && loc.getY() <= 255 && loc.getZ() <= 2617 
+								&& loc.getX() >= 230 && loc.getY() >= 181 && loc.getZ() >= 1795) {
+							desert6(player, loc);
+						} else if(loc.getX() <= -190 && loc.getY() <= 85 && loc.getZ() <= 1716 
+								&& loc.getX() >= -342 && loc.getY() >= 45 && loc.getZ() >= 1565) {
+							desert7(player, loc);
 						}
 						
 					} 
@@ -2027,7 +2045,7 @@ public class MobThread {
 	public void kleahSouth(Player player, Location loc) {
 		int num = rnd.nextInt(2);
 		loc = location(loc);
-		if (!(loc.getX() <= 1068 && loc.getY() <= 100 && loc.getZ() <= 504 && 
+		if (!(loc.getX() <= 1068 && loc.getY() <= 100 && loc.getZ() <= 480 && 
 				loc.getX() >= 860 && loc.getY() >= 50 && loc.getZ() >= 419)) {
 			return;
 		}
@@ -2161,6 +2179,91 @@ public class MobThread {
 		} else if (num == 2) {
 			loc.getWorld().spawnEntity(loc, EntityType.ENDERMAN);
 		}
+	}
+	
+	public void desert2(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 599 && loc.getY() <= 255 && loc.getZ() <= 1657 
+				&& loc.getX() >= -161 && loc.getY() >= 47 && loc.getZ() >= 1268)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		}
+	}
+	
+	public void desert3(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 599 && loc.getY() <= 46 && loc.getZ() <= 1657 
+				&& loc.getX() >= -161 && loc.getY() >= 0 && loc.getZ() >= 1268)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.SILVERFISH);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.RAVAGER);
+		}
+	}
+	
+	public void desert4(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 599 && loc.getY() <= 106 && loc.getZ() <= 2617 
+				&& loc.getX() >= 230 && loc.getY() >= 0 && loc.getZ() >= 1795)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.SILVERFISH);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		} 
+	}
+	
+	public void desert5(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 599 && loc.getY() <= 180 && loc.getZ() <= 2617 
+				&& loc.getX() >= 230 && loc.getY() >= 107 && loc.getZ() >= 1795)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		} 
+	}
+	
+	public void desert6(Player player, Location loc) {
+		loc = location(loc);
+		if (!(loc.getX() <= 599 && loc.getY() <= 255 && loc.getZ() <= 2617 
+				&& loc.getX() >= 230 && loc.getY() >= 181 && loc.getZ() >= 1795)) {
+			return;
+		}
+		
+		loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+	}
+	
+	public void desert7(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= -190 && loc.getY() <= 85 && loc.getZ() <= 1716 
+				&& loc.getX() >= -342 && loc.getY() >= 45 && loc.getZ() >= 1565)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		} 
 	}
 	
 	public Location location(Location loc) {

@@ -857,6 +857,54 @@ public class MobDeath {
 				if (name.equalsIgnoreCase("공허" + ChatColor.YELLOW + " [Lv.448]")) {
 					mobloot.mob192(lootPlayer);
 				}
+				// 개조된 버서커 플레이어
+				if (name.equalsIgnoreCase("개조된 버서커 플레이어" + ChatColor.YELLOW + " [Lv.450]")) {
+					mobloot.mob193(lootPlayer);
+				}
+				// 개조된 아처 플레이어
+				if (name.equalsIgnoreCase("개조된 아처 플레이어" + ChatColor.YELLOW + " [Lv.453]")) {
+					mobloot.mob194(lootPlayer);
+				}
+				// 사막 노래기
+				if (name.equalsIgnoreCase("사막 노래기" + ChatColor.YELLOW + " [Lv.455]")) {
+					mobloot.mob195(lootPlayer);
+				}
+				// 사막 곰
+				if (name.equalsIgnoreCase("사막 곰" + ChatColor.YELLOW + " [Lv.458]")) {
+					mobloot.mob196(lootPlayer);
+				}
+				// 사막 전갈
+				if (name.equalsIgnoreCase("사막 전갈" + ChatColor.YELLOW + " [Lv.465]")) {
+					mobloot.mob197(lootPlayer);
+				}
+				// 쌍창 전사 석상
+				if (name.equalsIgnoreCase("쌍창 전사 석상" + ChatColor.YELLOW + " [Lv.468]")) {
+					mobloot.mob198(lootPlayer);
+				}
+				// 빛의 궁수 석상
+				if (name.equalsIgnoreCase("빛의 궁수 석상" + ChatColor.YELLOW + " [Lv.471]")) {
+					mobloot.mob199(lootPlayer);
+				}
+				// 쌍검 전사 석상
+				if (name.equalsIgnoreCase("쌍검 전사 석상" + ChatColor.YELLOW + " [Lv.474]")) {
+					mobloot.mob200(lootPlayer);
+				}
+				// 루 라바다의 석상
+				if (name.equalsIgnoreCase("루 라바다의 석상" + ChatColor.YELLOW + " [Lv.475]")) {
+					mobloot.mob201(lootPlayer);
+				}
+				// 누아다의 석상
+				if (name.equalsIgnoreCase("누아다의 석상" + ChatColor.YELLOW + " [Lv.479]")) {
+					mobloot.mob202(lootPlayer);
+				}
+				// 길을 잃은 검은 수염단
+				if (name.equalsIgnoreCase("길을 잃은 검은 수염단" + ChatColor.YELLOW + " [Lv.459]")) {
+					mobloot.mob203(lootPlayer);
+				}
+				// 길을 잃은 검은 수염단
+				if (name.equalsIgnoreCase("길을 잃은 검은 수염단" + ChatColor.YELLOW + " [Lv.463]")) {
+					mobloot.mob204(lootPlayer);
+				}
 			} catch (Exception e) {
 
 			}
