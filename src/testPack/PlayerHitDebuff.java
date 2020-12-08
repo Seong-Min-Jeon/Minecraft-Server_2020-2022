@@ -62,6 +62,7 @@ public class PlayerHitDebuff {
 		mob20(player, mob);
 		mob21(player, mob);
 		mob22(player, mob);
+		mob23(player, mob);
 	}
 
 	// 시련의 형상
@@ -1012,8 +1013,11 @@ public class PlayerHitDebuff {
 
 	}
 
+	// 사막 전갈
 	public void mob23(Player player, Entity mob) {
-
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("사막 전갈" + ChatColor.YELLOW + " [Lv.465]")) {
+			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 200, 0, true, false, false));
+		}
 	}
 
 	public void mob24(Player player, Entity mob) {

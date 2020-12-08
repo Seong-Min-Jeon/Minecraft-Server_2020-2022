@@ -44,15 +44,14 @@ public class MouseClickForSkill {
  		SimpleDateFormat hms = new SimpleDateFormat("hhmmssSSS");
  		String strTime = hms.format(new Date(dayTime));
  		Integer time = Integer.parseInt(strTime);
- 		System.out.println(time);
- 		if(time-timeArg <= 3000 && time-timeArg > 30) {
+ 		if(Math.abs(time-timeArg) <= 3000 && Math.abs(time-timeArg) > 30) {
  			bowPlayerPlaySound(player, key);
  			swordPlayerPlaySound(player, key);
  			timer.remove(player);
  			timer.put(player, time);
  			String newKey = makeKey(player, key); 
  			push(player, newKey); 			
- 		} else if(time-timeArg < 500){
+ 		} else if(Math.abs(time-timeArg) < 500){
  			
  		} else {
  			bowPlayerPlaySound(player, key);

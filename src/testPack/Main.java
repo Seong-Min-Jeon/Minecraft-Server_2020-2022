@@ -2065,259 +2065,392 @@ public class Main extends JavaPlugin implements Listener{
 	@EventHandler
 	public void consumeItem(PlayerItemConsumeEvent event) {
 		Player player = (Player)event.getPlayer();
-		//제작 포션
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().substring(0, 2).equals("§3")) {
-			String buff = player.getInventory().getItemInMainHand().getItemMeta().getLocalizedName();
-			String[] buffList = buff.split(",");
-			PotionRatio pr = new PotionRatio();
-			pr.calculation(player, Double.parseDouble(buffList[0]));
-			int dur = Integer.parseInt(buffList[10]);
-			if(Integer.parseInt(buffList[1]) >= 0) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION,dur,Integer.parseInt(buffList[1]),true,false,false));
-			}
-			if(Integer.parseInt(buffList[2]) >= 0) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,dur,Integer.parseInt(buffList[2]),true,false,false));
-			}
-			if(Integer.parseInt(buffList[3]) >= 0) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED,dur,Integer.parseInt(buffList[3]),true,false,false));
-			}
-			if(Integer.parseInt(buffList[4]) >= 0) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,dur,Integer.parseInt(buffList[4]),true,false,false));
-			}
-			if(Integer.parseInt(buffList[5]) >= 0) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,dur,Integer.parseInt(buffList[5]),true,false,false));
-			}
-			if(Integer.parseInt(buffList[6]) >= 0) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,dur,Integer.parseInt(buffList[6]),true,false,false));
-			}
-			if(Integer.parseInt(buffList[7]) >= 0) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.POISON,dur,Integer.parseInt(buffList[7]),true,false,false));
-			}
-			if(Integer.parseInt(buffList[8]) >= 0) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER,dur,Integer.parseInt(buffList[8]),true,false,false));
-			}
-			if(Integer.parseInt(buffList[9]) >= 0) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION,dur,Integer.parseInt(buffList[9]),true,false,false));
-			}
-		}
 		//HP포션
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "힐링 포션 I")) {
-			PotionRatio pr = new PotionRatio();
-			pr.calculation(player, 10.0);
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "힐링 포션 II")) {
-			PotionRatio pr = new PotionRatio();
-			pr.calculation(player, 30.0);
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "힐링 포션 III")) {
-			PotionRatio pr = new PotionRatio();
-			pr.calculation(player, 100.0);
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "힐링 포션 IV")) {
-			PotionRatio pr = new PotionRatio();
-			pr.calculation(player, 200.0);
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "힐링 포션 V")) {
-			PotionRatio pr = new PotionRatio();
-			pr.calculation(player, 300.0);
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "힐링 포션 VI")) {
-			PotionRatio pr = new PotionRatio();
-			pr.calculation(player, 500.0);
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "힐링 포션 VII")) {
-			PotionRatio pr = new PotionRatio();
-			pr.calculation(player, 800.0);
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "힐링 포션 VIII")) {
-			PotionRatio pr = new PotionRatio();
-			pr.calculation(player, 1100.0);
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "힐링 포션 IX")) {
-			PotionRatio pr = new PotionRatio();
-			pr.calculation(player, 1300.0);
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "힐링 포션 X")) {
-			PotionRatio pr = new PotionRatio();
-			pr.calculation(player, 1600.0);
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "힐링 포션 XI")) {
-			PotionRatio pr = new PotionRatio();
-			pr.calculation(player, 2000.0);
-		}
-		//특이 포션
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "엘릭서")) {
-			for(PotionEffect effect : player.getActivePotionEffects ()){
-		        player.removePotionEffect(effect.getType());
-		    }
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "냉기의 포션")) {
-			player.setFireTicks(0);
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "바람의 포션 I")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED,2400,0,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "바람의 포션 II")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED,2400,1,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "강화된 바람의 포션 II")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED,6000,1,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "바위의 포션 I")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,1800,0,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "바위의 포션 II")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,1800,1,true,false,false));
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,1800,0,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "강화된 바위의 포션 I")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,3600,0,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "강화된 바위의 포션 II")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,3000,1,true,false,false));
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,3000,0,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "근육의 포션 I")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,1800,10,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "강화된 근육의 포션 I")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,3600,100,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "강화된 근육의 포션 II")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,3600,500,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "도약의 포션 I")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,1200,0,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "코코넛 음료")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 6, 0,true,false,false));
-			player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 0,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "워그닐 특제 와인")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION,1800,0,true,false,false));
-			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,1800,2,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "해골물")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED,1200,2,true,false,false));
-			player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,1200,0,true,false,false));
-			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON,1200,0,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "검은 인간의 피")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER,600,0,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "약재 우린 물")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 600, 4,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "거북이 우린 물")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 1,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "눈에 좋은 포션")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, 1200, 0,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "사랑의 묘약")) {
-			try {
-				Cmd8Party cp = new Cmd8Party();
-				ArrayList<Player> party = cp.getPlayerParty(player);
-				if(party.size() != 0) {
-					player.teleport(party.get(rnd.nextInt(party.size())).getLocation());
-				}
-			} catch(Exception e) {
-				
+		try {
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "힐링 포션 I")) {
+				PotionRatio pr = new PotionRatio();
+				pr.calculation(player, 10.0);
 			}
-		}
-		//음식
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "대구구이")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 2, 0,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "맛있는 치킨")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 50, 0,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "구운 치킨")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 80, 0,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "파티용 칠면조")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 80, 1,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GRAY + "포르간식 돼지구이")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 140, 1,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GRAY + "좋은 장비로 구운 닭고기")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 2400, 1,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "미푀르유식 닭요리")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 100, 2,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GRAY + "조리한 돼지고기")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 2400, 0,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "특제양념 돼지구이")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 100, 0,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "카이만식 양요리")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 20, 10,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "고급진 카이만식 양요리")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 1,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "훈제 연어")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 30, 10,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "코리아 김")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, 100, 5,true,false,false));
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 200, 2,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "갓잡은 생선")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 200, 0,true,false,false));
-			player.sendMessage(ChatColor.RED + "물고기에 기생충이 있었던 것 같다.");
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "바다 위에서 구운 생선구이")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 200, 0,true,false,false));
-			player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 1,true,false,false));
-			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 2,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "강한 불에 익힌 스테이크")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 100, 0,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "수비드 스테이크")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 600, 0,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "베아그 돼지 요리")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 150, 1,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "베아그식 특제 돼지 구이")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 300, 1,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "이것이 스테이크")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 600, 1,true,false,false));
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 1,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "티본 스테이크")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 300, 2,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "하마베산 생선구이")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 1200, 1,true,false,false));
-			player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 600, 1,true,false,false));
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 20, 10,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "하마베산 생선찜")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 1200, 0,true,false,false));
-			player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 600, 1,true,false,false));
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 20, 10,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "허니 콤보")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 1200, 2,true,false,false));
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 20, 10,true,false,false));
-		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "레드 콤보")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 1200, 2,true,false,false));
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 20, 10,true,false,false));
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "힐링 포션 II")) {
+				PotionRatio pr = new PotionRatio();
+				pr.calculation(player, 30.0);
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "힐링 포션 III")) {
+				PotionRatio pr = new PotionRatio();
+				pr.calculation(player, 100.0);
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "힐링 포션 IV")) {
+				PotionRatio pr = new PotionRatio();
+				pr.calculation(player, 200.0);
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "힐링 포션 V")) {
+				PotionRatio pr = new PotionRatio();
+				pr.calculation(player, 300.0);
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "힐링 포션 VI")) {
+				PotionRatio pr = new PotionRatio();
+				pr.calculation(player, 500.0);
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "힐링 포션 VII")) {
+				PotionRatio pr = new PotionRatio();
+				pr.calculation(player, 800.0);
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "힐링 포션 VIII")) {
+				PotionRatio pr = new PotionRatio();
+				pr.calculation(player, 1100.0);
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "힐링 포션 IX")) {
+				PotionRatio pr = new PotionRatio();
+				pr.calculation(player, 1300.0);
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "힐링 포션 X")) {
+				PotionRatio pr = new PotionRatio();
+				pr.calculation(player, 1600.0);
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "힐링 포션 XI")) {
+				PotionRatio pr = new PotionRatio();
+				pr.calculation(player, 2000.0);
+			}
+			//특이 포션
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "엘릭서")) {
+				for(PotionEffect effect : player.getActivePotionEffects ()){
+			        player.removePotionEffect(effect.getType());
+			    }
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "냉기의 포션")) {
+				player.setFireTicks(0);
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "바람의 포션 I")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED,2400,0,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "바람의 포션 II")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED,2400,1,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "강화된 바람의 포션 II")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED,6000,1,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "바위의 포션 I")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,1800,0,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "바위의 포션 II")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,1800,1,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,1800,0,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "강화된 바위의 포션 I")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,3600,0,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "강화된 바위의 포션 II")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,3000,1,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,3000,0,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "근육의 포션 I")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,1800,10,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "강화된 근육의 포션 I")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,3600,100,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "강화된 근육의 포션 II")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,3600,500,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "도약의 포션 I")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,1200,0,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "코코넛 음료")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 6, 0,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 0,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "워그닐 특제 와인")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION,1800,0,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,1800,2,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "해골물")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED,1200,2,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,1200,0,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.POISON,1200,0,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "검은 인간의 피")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER,600,0,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "약재 우린 물")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 600, 4,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "거북이 우린 물")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 1,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "눈에 좋은 포션")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, 1200, 0,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "사랑의 묘약")) {
+				try {
+					Cmd8Party cp = new Cmd8Party();
+					ArrayList<Player> party = cp.getPlayerParty(player);
+					if(party.size() != 0) {
+						player.teleport(party.get(rnd.nextInt(party.size())).getLocation());
+					}
+				} catch(Exception e) {
+					
+				}
+			}
+			//음식
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "대구구이")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 2, 0,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "맛있는 치킨")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 50, 0,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "구운 치킨")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 80, 0,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "파티용 칠면조")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 80, 1,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GRAY + "포르간식 돼지구이")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 140, 1,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GRAY + "좋은 장비로 구운 닭고기")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 2400, 1,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "미푀르유식 닭요리")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 100, 2,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GRAY + "조리한 돼지고기")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 2400, 0,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "특제양념 돼지구이")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 100, 0,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "카이만식 양요리")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 20, 10,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "고급진 카이만식 양요리")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 1,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "훈제 연어")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 30, 10,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "코리아 김")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, 100, 5,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 200, 2,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "갓잡은 생선")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 200, 0,true,false,false));
+				player.sendMessage(ChatColor.RED + "물고기에 기생충이 있었던 것 같다.");
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "바다 위에서 구운 생선구이")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 200, 0,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 1,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 2,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "강한 불에 익힌 스테이크")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 100, 0,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "수비드 스테이크")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 600, 0,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "베아그 돼지 요리")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 150, 1,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "베아그식 특제 돼지 구이")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 300, 1,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "이것이 스테이크")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 600, 1,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 1,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "티본 스테이크")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 300, 2,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "하마베산 생선구이")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 1200, 1,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 600, 1,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 20, 10,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "하마베산 생선찜")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 1200, 0,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 600, 1,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 20, 10,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "허니 콤보")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 1200, 2,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 20, 10,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "레드 콤보")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 1200, 2,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 20, 10,true,false,false));
+			}
+			
+		} catch(Exception e) {
+			
 		}
 		
-		if(player.getInventory().getItemInMainHand().getType() == Material.POTION) {
-			event.setCancelled(true);
-			player.getInventory().getItemInMainHand().setAmount(player.getInventory().getItemInMainHand().getAmount()-1);
+		//제작템
+		try {
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().substring(0, 2).equals("§3")) {
+				int limit = 0;
+				try {
+					limit = Integer.parseInt(player.getInventory().getItemInMainHand().getItemMeta().getLore().get(0).split(": ")[1]);
+				} catch(Exception e) {
+					
+				}
+				if(player.getLevel() >= limit) {
+					if(player.getInventory().getItemInMainHand().getType() == Material.POTION) {
+						String buff = player.getInventory().getItemInMainHand().getItemMeta().getLocalizedName();
+						String[] buffList = buff.split(",");
+						PotionRatio pr = new PotionRatio();
+						pr.calculation(player, Double.parseDouble(buffList[0]));
+						int dur = Integer.parseInt(buffList[10]);
+						if(Integer.parseInt(buffList[1]) >= 0) {
+							player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION,dur,Integer.parseInt(buffList[1]),true,false,false));
+						}
+						if(Integer.parseInt(buffList[2]) >= 0) {
+							player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,dur,Integer.parseInt(buffList[2]),true,false,false));
+						}
+						if(Integer.parseInt(buffList[3]) >= 0) {
+							player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED,dur,Integer.parseInt(buffList[3]),true,false,false));
+						}
+						if(Integer.parseInt(buffList[4]) >= 0) {
+							player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,dur,Integer.parseInt(buffList[4]),true,false,false));
+						}
+						if(Integer.parseInt(buffList[5]) >= 0) {
+							player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,dur,Integer.parseInt(buffList[5]),true,false,false));
+						}
+						if(Integer.parseInt(buffList[6]) >= 0) {
+							player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,dur,Integer.parseInt(buffList[6]),true,false,false));
+						}
+						if(Integer.parseInt(buffList[7]) >= 0) {
+							player.addPotionEffect(new PotionEffect(PotionEffectType.POISON,dur,Integer.parseInt(buffList[7]),true,false,false));
+						}
+						if(Integer.parseInt(buffList[8]) >= 0) {
+							player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER,dur,Integer.parseInt(buffList[8]),true,false,false));
+						}
+						if(Integer.parseInt(buffList[9]) >= 0) {
+							player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION,dur,Integer.parseInt(buffList[9]),true,false,false));
+						}
+					} else {
+						try {
+							String buff = player.getInventory().getItemInMainHand().getItemMeta().getLocalizedName();
+							String[] buffList = buff.split(",");
+							PotionRatio pr = new PotionRatio();
+							
+							Cmd8Party cp = new Cmd8Party();
+							ArrayList<Player> party = cp.getPlayerParty(player);
+							if(party.size() != 0) {
+								for(Player pp : party) {
+									List<Entity> near = player.getNearbyEntities(6, 4, 6);
+									near.add(player);
+									if(near.contains(pp)) {
+										if(pp.getLevel() >= limit) {
+											pr.calculation(pp, Double.parseDouble(buffList[0]));
+											int dur = Integer.parseInt(buffList[10]);
+											if(Integer.parseInt(buffList[1]) >= 0) {
+												pp.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION,dur,Integer.parseInt(buffList[1]),true,false,false));
+											}
+											if(Integer.parseInt(buffList[2]) >= 0) {
+												pp.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,dur,Integer.parseInt(buffList[2]),true,false,false));
+											}
+											if(Integer.parseInt(buffList[3]) >= 0) {
+												pp.addPotionEffect(new PotionEffect(PotionEffectType.SPEED,dur,Integer.parseInt(buffList[3]),true,false,false));
+											}
+											if(Integer.parseInt(buffList[4]) >= 0) {
+												pp.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,dur,Integer.parseInt(buffList[4]),true,false,false));
+											}
+											if(Integer.parseInt(buffList[5]) >= 0) {
+												pp.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,dur,Integer.parseInt(buffList[5]),true,false,false));
+											}
+											if(Integer.parseInt(buffList[6]) >= 0) {
+												pp.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,dur,Integer.parseInt(buffList[6]),true,false,false));
+											}
+											if(Integer.parseInt(buffList[7]) >= 0) {
+												pp.addPotionEffect(new PotionEffect(PotionEffectType.POISON,dur,Integer.parseInt(buffList[7]),true,false,false));
+											}
+											if(Integer.parseInt(buffList[8]) >= 0) {
+												pp.addPotionEffect(new PotionEffect(PotionEffectType.WITHER,dur,Integer.parseInt(buffList[8]),true,false,false));
+											}
+											if(Integer.parseInt(buffList[9]) >= 0) {
+												pp.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION,dur,Integer.parseInt(buffList[9]),true,false,false));
+											}
+											pp.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님이 음식을 공유합니다. " + ChatColor.AQUA 
+															+ "[음식 이름: " + player.getInventory().getItemInHand().getItemMeta().getDisplayName() + ChatColor.AQUA + "]");
+										} else {
+											pp.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님이 음식을 공유합니다. " + ChatColor.AQUA 
+													+ "[음식 이름: " + player.getInventory().getItemInHand().getItemMeta().getDisplayName() + ChatColor.AQUA + "]");
+											pp.sendMessage(ChatColor.RED + "레벨이 부족하여 음식을 먹을 수 없습니다.");
+										}
+									}
+								}
+							} else {
+								pr.calculation(player, Double.parseDouble(buffList[0]));
+								int dur = Integer.parseInt(buffList[10]);
+								if(Integer.parseInt(buffList[1]) >= 0) {
+									player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION,dur,Integer.parseInt(buffList[1]),true,false,false));
+								}
+								if(Integer.parseInt(buffList[2]) >= 0) {
+									player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,dur,Integer.parseInt(buffList[2]),true,false,false));
+								}
+								if(Integer.parseInt(buffList[3]) >= 0) {
+									player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED,dur,Integer.parseInt(buffList[3]),true,false,false));
+								}
+								if(Integer.parseInt(buffList[4]) >= 0) {
+									player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,dur,Integer.parseInt(buffList[4]),true,false,false));
+								}
+								if(Integer.parseInt(buffList[5]) >= 0) {
+									player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,dur,Integer.parseInt(buffList[5]),true,false,false));
+								}
+								if(Integer.parseInt(buffList[6]) >= 0) {
+									player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,dur,Integer.parseInt(buffList[6]),true,false,false));
+								}
+								if(Integer.parseInt(buffList[7]) >= 0) {
+									player.addPotionEffect(new PotionEffect(PotionEffectType.POISON,dur,Integer.parseInt(buffList[7]),true,false,false));
+								}
+								if(Integer.parseInt(buffList[8]) >= 0) {
+									player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER,dur,Integer.parseInt(buffList[8]),true,false,false));
+								}
+								if(Integer.parseInt(buffList[9]) >= 0) {
+									player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION,dur,Integer.parseInt(buffList[9]),true,false,false));
+								}
+								player.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님이 음식을 공유합니다. " + ChatColor.AQUA 
+										+ "[음식 이름: " + player.getInventory().getItemInHand().getItemMeta().getDisplayName() + ChatColor.AQUA + "]");
+							}
+						} catch(Exception e) {
+							
+						}
+					}
+				} else {
+					player.sendMessage(ChatColor.RED + "레벨이 부족하여 사용할 수 없습니다.");
+					event.setCancelled(true);
+					return;
+				}
+			}
+		} catch(Exception e) {
+			
 		}
 		
+		try {
+			if(player.getInventory().getItemInMainHand().getType() == Material.POTION) {
+				event.setCancelled(true);
+				player.getInventory().getItemInMainHand().setAmount(player.getInventory().getItemInMainHand().getAmount()-1);
+			} else if(player.getInventory().getItemInMainHand().getType() == Material.MUSHROOM_STEW) {
+				event.setCancelled(true);
+				player.getInventory().getItemInMainHand().setAmount(player.getInventory().getItemInMainHand().getAmount()-1);
+			} else if(player.getInventory().getItemInMainHand().getType() == Material.RABBIT_STEW) {
+				event.setCancelled(true);
+				player.getInventory().getItemInMainHand().setAmount(player.getInventory().getItemInMainHand().getAmount()-1);
+			} else if(player.getInventory().getItemInMainHand().getType() == Material.BEETROOT_SOUP) {
+				event.setCancelled(true);
+				player.getInventory().getItemInMainHand().setAmount(player.getInventory().getItemInMainHand().getAmount()-1);
+			} else if(player.getInventory().getItemInMainHand().getType() == Material.SUSPICIOUS_STEW) {
+				event.setCancelled(true);
+				player.getInventory().getItemInMainHand().setAmount(player.getInventory().getItemInMainHand().getAmount()-1);
+			} else if(player.getInventory().getItemInMainHand().getType() == Material.HONEY_BOTTLE) {
+				event.setCancelled(true);
+				player.getInventory().getItemInMainHand().setAmount(player.getInventory().getItemInMainHand().getAmount()-1);
+			} else if(player.getInventory().getItemInMainHand().getType() == Material.ROTTEN_FLESH) {
+				event.setCancelled(true);
+				player.getInventory().getItemInMainHand().setAmount(player.getInventory().getItemInMainHand().getAmount()-1);
+			}
+		} catch(Exception e) {
+			
+		}
 	}
 	
 	@EventHandler
@@ -2397,6 +2530,7 @@ public class Main extends JavaPlugin implements Listener{
 		ItemDestroyScroll ids = new ItemDestroyScroll();
 		CraftingScroll cs = new CraftingScroll();
 		CraftingPotionScroll cps = new CraftingPotionScroll();
+		CraftingFoodScroll cfs = new CraftingFoodScroll();
 		
 		try {
 			//마을 스크롤
@@ -2421,6 +2555,8 @@ public class Main extends JavaPlugin implements Listener{
 			cs.openInv(player, itemArg);
 			//포션 제작 스크롤
 			cps.openInv(player, itemArg);
+			//음식 제작 스크롤
+			cfs.openInv(player, itemArg);
 			//캐릭터 삭제 스크롤
 			new RemoveCharacter(player, itemArg, getDataFolder());
 		} catch(Exception e) {
@@ -6401,6 +6537,13 @@ public class Main extends JavaPlugin implements Listener{
 		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "포션 제작")) {
 		        		Inventory inv = event.getInventory();
 		        		CraftingPotion cp = new CraftingPotion();
+		        		cp.make(player, inv);
+		        		event.setCancelled(true);
+		        		return;
+		        	}
+		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "음식 제작")) {
+		        		Inventory inv = event.getInventory();
+		        		CraftingFood cp = new CraftingFood();
 		        		cp.make(player, inv);
 		        		event.setCancelled(true);
 		        		return;

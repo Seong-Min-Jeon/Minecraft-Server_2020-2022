@@ -42,7 +42,7 @@ public class CraftingItem {
 				ItemStack item = inv.getItem(i);
 				try {type[idx] = item.getType().toString();} catch(Exception e) {}
 				try {amount[idx] = item.getAmount();} catch(Exception e) {}
-				try {name[idx] = item.getItemMeta().getDisplayName();} catch(Exception e) {}
+				try {name[idx] = item.getItemMeta().getDisplayName();} catch(Exception e) {name[idx] = null;}
 				try { 
 					String tmp = item.getItemMeta().getDisplayName().substring(0, 2);
 					if(tmp.equals("§7")) {
@@ -437,9 +437,8 @@ public class CraftingItem {
 			
 			//생활 레벨 상승
 			double exp = ((int)(Math.pow((Math.log(resultStat)),3)) / 100.0) / lvl;
-			exp = ((int)(exp*100));
 			ArrayList<String> lore = (ArrayList<String>) im.getLore(); 
-			double newLevel = ((100*lvl) + exp)/100.0;
+			double newLevel = Double.parseDouble(String.format("%.2f", lvl+exp));
 			if(newLevel >= 200.0) {
 				lore.set(0, ChatColor.GRAY + "장비 제작 레벨: " + "200.0");
 			} else {
@@ -566,7 +565,7 @@ public class CraftingItem {
 			inv.setItem(25, makeItem(player, equipType, stat, localName));
 			
 		} catch(Exception e) {
-			player.sendMessage(ChatColor.WHITE + "알 수 없는 오류. 스샷 찍어서 운영자한테 보내주세요.");
+			player.sendMessage("제작 결과 아무것도 얻지 못했습니다.");
 		}
 	}
 	
