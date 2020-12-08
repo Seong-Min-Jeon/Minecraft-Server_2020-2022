@@ -464,7 +464,7 @@ public class ReloadPlayerData {
 					bufReader.close();
 				} catch (Exception e) {
             		
-            	}
+				}
 			}
 		} catch(Exception e) {
 			

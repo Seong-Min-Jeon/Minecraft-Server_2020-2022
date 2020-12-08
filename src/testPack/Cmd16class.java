@@ -25,6 +25,9 @@ public class Cmd16class implements CommandExecutor {
 		if(sender instanceof Player) {
 			Player player = (Player) sender;
 			
+			// Off in Dungeon
+			new OffInDungeon(player);
+			
 			//저장
 			new SaveAll(player, folder);
 			

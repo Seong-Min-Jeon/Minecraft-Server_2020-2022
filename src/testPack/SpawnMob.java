@@ -174,7 +174,7 @@ public class SpawnMob {
 		// 베아그 18 153 -253  155 86 -349
 		if (loc.getX() <= 155 && loc.getY() <= 153
 				&& loc.getZ() <= -253 && loc.getX() >= 18
-				&& loc.getY() >= 86 && loc.getZ() >= -349) {
+				&& loc.getY() >= 79 && loc.getZ() >= -349) {
 			if (entity.getType() == (EntityType) EntityType.BLAZE) {
 				return false;
 			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {

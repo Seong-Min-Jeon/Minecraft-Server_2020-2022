@@ -302,7 +302,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("woolring")) { 
 			
 		} else {
-			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/784381749932458004/aile_texture_pack_7.zip");
+			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/785785413818122260/aile_texture_pack_8.zip");
 		}
 		
 		//Message
@@ -315,7 +315,7 @@ public class Main extends JavaPlugin implements Listener{
 		} else if(player.getDisplayName().equalsIgnoreCase("why9196")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.BLUE + "'프리스트로 400레벨을 달성한' 와이.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Akilae3102")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.AQUA + "'그림자 무사의 달인' 아킬레.");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.AQUA + "'데빌로 갈아탄' 아킬레.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Espina_ID")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.BOLD + "'그저 군인' 에스피나.");
 		} else if(player.getDisplayName().equalsIgnoreCase("KangOSung")) {
@@ -566,6 +566,7 @@ public class Main extends JavaPlugin implements Listener{
 //		if(player.getDisplayName().equalsIgnoreCase("yumehama") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
 //		if(player.getDisplayName().equalsIgnoreCase("WoolRing") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
 		
+		
 //		ItemStack var1 = new ItemStack(Material.IRON_HELMET);
 //		ItemMeta var1Im = var1.getItemMeta();
 //		var1Im.setLocalizedName("300,200,200,300,100,500,800,800,800,500,400");
@@ -602,7 +603,6 @@ public class Main extends JavaPlugin implements Listener{
 //		var2Im.setLore(var2Lore);
 //		var2.setItemMeta(var2Im);
 //		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var2);}
-		
 		
 //		ItemStack var1 = new ItemStack(Material.OAK_PLANKS);
 //		ItemMeta var1Im = var1.getItemMeta();
@@ -3866,9 +3866,9 @@ public class Main extends JavaPlugin implements Listener{
 					if(entity.getType() == EntityType.ZOMBIE || entity.getType() == EntityType.ZOMBIE_VILLAGER || entity.getType() == EntityType.HUSK
 							|| entity.getType() == EntityType.DROWNED || entity.getType() == EntityType.SKELETON || entity.getType() == EntityType.WITHER_SKELETON
 							|| entity.getType() == EntityType.WITHER) {
-						((LivingEntity) entity).addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, poison));
+						((LivingEntity) entity).addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 100, poison));
 					} else {
-						((LivingEntity) entity).addPotionEffect(new PotionEffect(PotionEffectType.HARM, 200, poison));
+						((LivingEntity) entity).addPotionEffect(new PotionEffect(PotionEffectType.HARM, 100, poison));
 					}
 				}
 				//===========================================================================
@@ -3901,9 +3901,9 @@ public class Main extends JavaPlugin implements Listener{
 					if(entity.getType() == EntityType.ZOMBIE || entity.getType() == EntityType.ZOMBIE_VILLAGER || entity.getType() == EntityType.HUSK
 							|| entity.getType() == EntityType.DROWNED || entity.getType() == EntityType.SKELETON || entity.getType() == EntityType.WITHER_SKELETON
 							|| entity.getType() == EntityType.WITHER) {
-						((LivingEntity) entity).addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, poison));
+						((LivingEntity) entity).addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 100, poison));
 					} else {
-						((LivingEntity) entity).addPotionEffect(new PotionEffect(PotionEffectType.HARM, 200, poison));
+						((LivingEntity) entity).addPotionEffect(new PotionEffect(PotionEffectType.HARM, 100, poison));
 					}
 				}
 				//===========================================================================
@@ -6641,13 +6641,13 @@ public class Main extends JavaPlugin implements Listener{
 		if (player.getDisplayName().equalsIgnoreCase("yumehama")) {
 			event.setQuitMessage(ChatColor.DARK_RED + "'더 게임 종결자' 유메하마" + ChatColor.WHITE + "님이 로그아웃 하였습니다.");
 		} else if (player.getDisplayName().equalsIgnoreCase("WoolRing")) {
-			event.setQuitMessage(ChatColor.GREEN + "'그린 일렉트로닉 전사' 울링" + ChatColor.WHITE + "님이 말도 없이 탈주합니다.");
+			event.setQuitMessage(ChatColor.GREEN + "'노란 머리가 젤다죠?' 울링" + ChatColor.WHITE + "님이 말도 없이 탈주합니다.");
 		} else if (player.getDisplayName().equalsIgnoreCase("_nanoboost_")) {
 			event.setQuitMessage(ChatColor.RED + "나노부스트는 잠이 들었습니다.");
 		} else if(player.getDisplayName().equalsIgnoreCase("why9196")) {
 			event.setQuitMessage(ChatColor.BLUE + "????????????????");
 		} else if(player.getDisplayName().equalsIgnoreCase("Akilae3102")) {
-			event.setQuitMessage("천저 준제가 슬픈 " + ChatColor.AQUA + "'최강의 듀얼리스트' 아킬레가 세상을 떠났습니다.");
+			event.setQuitMessage(ChatColor.AQUA + "'철권의 신이 될' 아킬레가 세상을 떠났습니다.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Espina_ID")) {
 			event.setQuitMessage(ChatColor.BOLD + "'훈련병' 에스피나의 시간이 얼마 남지 않았습니다.");
 		} else if(player.getDisplayName().equalsIgnoreCase("KangOSung")) {
