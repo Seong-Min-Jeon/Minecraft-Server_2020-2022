@@ -48,6 +48,10 @@ public class MobThread {
 
 				Location loc = player.getLocation();
 				
+				if(!player.isValid()) {
+					Bukkit.getScheduler().cancelTask(sleep);
+				}
+				
 				if(loc.getBlock().getType() != Material.WATER) {
 					if(time % 360 == 10) {
 						if (loc.getX() <= 3712 && loc.getY() <= 47 && loc.getZ() <= 3708 && loc.getX() >= 3686

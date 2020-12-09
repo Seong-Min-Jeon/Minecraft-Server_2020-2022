@@ -20,15 +20,29 @@ public class RenameCraftingItem {
 				ItemStack item = player.getInventory().getItemInMainHand();
 				ItemMeta im = item.getItemMeta();
 				if(im.getDisplayName().substring(0, 2).equals("§3")) {
-					String maker = im.getLore().get(2).split(": ")[1];
-					System.out.println(maker);
-					if(!maker.equalsIgnoreCase(player.getDisplayName())) {
-						player.sendMessage(ChatColor.RED + "장비를 제작한 플레이어만 이름 변경이 가능합니다.");
-						return false;
+					String maker1 = null;
+					String maker2 = null;
+					try {
+						maker1 = im.getLore().get(2).split(": ")[1];
+					} catch(Exception e) {
+						
 					}
-					im.setDisplayName("§3" + msg.substring(1, msg.length()-1));
-					item.setItemMeta(im);
-					player.sendMessage(ChatColor.GREEN + "아이템의 이름이 변경되었습니다.");
+					try {
+						maker2 = im.getLore().get(4).split(": ")[1];
+					} catch(Exception e) {
+						
+					}
+					try {
+						if(!maker1.equalsIgnoreCase(player.getDisplayName()) && !maker2.equalsIgnoreCase(player.getDisplayName())) {
+							player.sendMessage(ChatColor.RED + "장비를 제작한 플레이어만 이름 변경이 가능합니다.");
+							return false;
+						} 
+						im.setDisplayName("§3" + msg.substring(1, msg.length()-1));
+						item.setItemMeta(im);
+						player.sendMessage(ChatColor.GREEN + "아이템의 이름이 변경되었습니다.");
+					} catch(Exception e) {
+						
+					}
 					return false;
 				}
 				player.sendMessage(ChatColor.RED + "이름 변경이 불가능한 아이템입니다.");

@@ -34,6 +34,7 @@ import org.bukkit.boss.BarColor;
 import org.bukkit.boss.BarStyle;
 import org.bukkit.boss.BossBar;
 import org.bukkit.enchantments.Enchantment;
+import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Arrow;
 import org.bukkit.entity.CaveSpider;
 import org.bukkit.entity.Chicken;
@@ -565,7 +566,6 @@ public class Main extends JavaPlugin implements Listener{
 		master.setItemMeta(masterIm);
 //		if(player.getDisplayName().equalsIgnoreCase("yumehama") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
 //		if(player.getDisplayName().equalsIgnoreCase("WoolRing") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
-		
 		
 //		ItemStack var1 = new ItemStack(Material.IRON_HELMET);
 //		ItemMeta var1Im = var1.getItemMeta();
@@ -5173,10 +5173,10 @@ public class Main extends JavaPlugin implements Listener{
 	    					Skeleton mob = (Skeleton) world.spawnEntity(new Location(world, -1083, 186, 1453.5), EntityType.SKELETON);
 	    					EntityEquipment head = mob.getEquipment();
 	    					head.setHelmet(skull);
-	    					((LivingEntity)mob).setMaxHealth(player.getLevel() * 5000);
-	    					((LivingEntity)mob).setHealth(player.getLevel() * 5000);
+	    					((LivingEntity)mob).setMaxHealth(player.getLevel() * 50000 + 5);
+	    					((LivingEntity)mob).setHealth(player.getLevel() * 50000 + 5);
 	    					((LivingEntity)mob).addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 2));
-	    					((LivingEntity)mob).addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, player.getLevel()));
+	    					((LivingEntity)mob).addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, player.getLevel()*100));
 	    				}
 	    				event.setCancelled(true);
 	    			}
@@ -6764,6 +6764,16 @@ public class Main extends JavaPlugin implements Listener{
 					}
 					if(ent.getType() == EntityType.HORSE) {
 						if(((Horse) ent).isCustomNameVisible()) {
+							ent.remove();
+						}
+					}
+					if(ent.getType() == EntityType.ARMOR_STAND) {
+						ArmorStand as = (ArmorStand) ent;
+						if(as.getHelmet().getType() == Material.ANDESITE_STAIRS) {
+							ent.remove();
+						} else if(as.getHelmet().getType() == Material.RED_NETHER_BRICK_STAIRS) {
+							ent.remove();
+						} else if(as.getItemInHand().getType() == Material.POLISHED_BLACKSTONE_SLAB) {
 							ent.remove();
 						}
 					}

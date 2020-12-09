@@ -10,6 +10,7 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.block.Biome;
+import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Horse;
@@ -186,6 +187,16 @@ public class RefreshServer {
 								}
 								if(ent.getType() == EntityType.HORSE) {
 									if(((Horse) ent).isCustomNameVisible()) {
+										ent.remove();
+									}
+								}
+								if(ent.getType() == EntityType.ARMOR_STAND) {
+									ArmorStand as = (ArmorStand) ent;
+									if(as.getHelmet().getType() == Material.ANDESITE_STAIRS) {
+										ent.remove();
+									} else if(as.getHelmet().getType() == Material.RED_NETHER_BRICK_STAIRS) {
+										ent.remove();
+									} else if(as.getItemInHand().getType() == Material.POLISHED_BLACKSTONE_SLAB) {
 										ent.remove();
 									}
 								}

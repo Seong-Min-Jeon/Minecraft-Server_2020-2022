@@ -2448,19 +2448,19 @@ public class Skill {
 								time++;
 							}
 							
-							if(time == 30 || time == 60 || time == 90) {
+							if(time == 30 || time == 60 || time == 90 || time == 120 || time == 150 || time == 180) {
 								List<Entity> entitylist = totem.getNearbyEntities(8, 5, 8);
 								for(Entity nearEntity : entitylist) {
 									if(nearEntity instanceof Player) {
 										Player nearPlayer = (Player) nearEntity;
 										PotionRatio pr = new PotionRatio();
-										pr.calculation(nearPlayer, player.getLevel());
-										nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님의 토템으로 아군의 체력이 회복됩니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() + ChatColor.RED + "]");
+										pr.calculation(nearPlayer, player.getLevel() * 2);
+										nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님의 토템으로 아군의 체력이 회복됩니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 2 + ChatColor.RED + "]");
 									}
 								}
 							}
 							
-							if(time >= 100) {
+							if(time >= 200) {
 								totem.remove();
 								t.endTask();
 								t.removeID();
