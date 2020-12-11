@@ -181,6 +181,14 @@ public class ReloadPlayerData {
 						QuestBoard qb = new QuestBoard();
 						qb.q18(player, Integer.parseInt(num));
 					}
+					if (quest.equals("q19")) {
+						QuestBoard qb = new QuestBoard();
+						qb.q19(player, Integer.parseInt(num));
+					}
+					if (quest.equals("q20")) {
+						QuestBoard qb = new QuestBoard();
+						qb.q20(player, Integer.parseInt(num));
+					}
 					if (quest.equals("eq1")) {
 						QuestBoard qb = new QuestBoard();
 						qb.eq1(player, Integer.parseInt(num));

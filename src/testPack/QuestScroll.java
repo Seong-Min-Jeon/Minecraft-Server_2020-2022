@@ -38,6 +38,8 @@ public class QuestScroll {
 				q16(player, itemArg, world);
 				q17(player, itemArg, world);
 				q18(player, itemArg, world);
+				q19(player, itemArg, world);
+				q20(player, itemArg, world);
 				eq1(player, itemArg, world);
 				eq2(player, itemArg, world);
 				mq1(player, itemArg, world);
@@ -193,7 +195,7 @@ public class QuestScroll {
 	
 	public void q13(Player player, Item itemArg, World world) {	
 		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "퀘스트: 새로운 고블린")) {
-			msg.msg(player, "§7푸르 평원에 도달하니 새로운 종류의 고블린들을 볼 수 있었다.%§7...%§7오크보다 강한 고블린은 처음 보는군!");
+			msg.msg(player, "§7푸르 평원에 도달하니 새로운 종류의 고블린들을 볼 수 있었다.%§7흐음...%§7오크보다 강한 고블린은 처음 보는군!");
 			QuestBoard qb = new QuestBoard();
 			qb.q13(player, 0);
 		}	
@@ -237,6 +239,24 @@ public class QuestScroll {
 					+ "§7그러나 그 여파로 기억이 누락되거나 희미해져 누가 오리지널인지 잊게 되었다.");
 			QuestBoard qb = new QuestBoard();
 			qb.q18(player, 0);
+		}	
+	}
+	
+	public void q19(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "퀘스트: 악마 자미엘")) {
+			msg.msg(player, "§7포보르들 중에서도 악질인 녀석들이 있었다.%§7그들의 특기는 총알과 같은 빠른 암살이었기 때문에 마탄환이라고도 불렸다.%§7카스파르, 와일드 그리고 자미엘%"
+					+ "§7이 녀석들은 클레어흐 주변에 나타나는 마탄환이다.%§7카스파르와 와일드는 자미엘의 부하들로, 이들을 처리하다보면 자미엘이 등장한다고 한다.");
+			QuestBoard qb = new QuestBoard();
+			qb.q19(player, 0);
+		}	
+	}
+	
+	public void q20(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "퀘스트: 붉은 악마")) {
+			msg.msg(player, "§7동굴 속에서 숨어사는 붉은 악마인 레드 블럭은 사람들을 밀어 용암에 빠뜨린다.%§7글씨가 흐려서 잘보이지 않는다.%"
+					+ "§7대충 클레어흐의 관광 명소인 용암 동굴을 망치는 녀석들을 사냥해 달라는 내용인 것 같다.");
+			QuestBoard qb = new QuestBoard();
+			qb.q20(player, 0);
 		}	
 	}
 	

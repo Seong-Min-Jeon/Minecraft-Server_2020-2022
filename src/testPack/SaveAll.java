@@ -417,6 +417,14 @@ public class SaveAll {
 						int number = qb.getNum(player);
 						fw.write("q18\n");
 						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===악마 자미엘===")) {
+						int number = qb.getNum(player);
+						fw.write("q19\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===붉은 악마===")) {
+						int number = qb.getNum(player);
+						fw.write("q20\n");
+						fw.write(Integer.toString(number));
 					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===설원의 가희1===")) {
 						int number = qb.getNum(player);
 						fw.write("eq1\n");

@@ -48,7 +48,7 @@ public class MobThread {
 
 				Location loc = player.getLocation();
 				
-				if(!player.isValid()) {
+				if(!player.isOnline()) {
 					Bukkit.getScheduler().cancelTask(sleep);
 				}
 				

@@ -112,7 +112,7 @@ public class QuestBoard {
 			var1.setItemMeta(var1Im);
 			player.getInventory().addItem(var1);
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.GRAY + "상처가 많은 밀" + ChatColor.WHITE + "을 획득했다.");
+			player.sendMessage(ChatColor.GRAY + "상처가 많은 밀" + ChatColor.WHITE + " 64개를 획득했다.");
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			return;
 		}
@@ -138,7 +138,7 @@ public class QuestBoard {
 			var1Im.setDisplayName(ChatColor.GRAY + "흠집이 생긴 석탄 광석");
 			var1.setItemMeta(var1Im);
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.GRAY + "흠집이 생긴 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+			player.sendMessage(ChatColor.GRAY + "흠집이 생긴 석탄 광석" + ChatColor.WHITE + " 64개를 획득했다.");
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			return;
 		}
@@ -216,6 +216,7 @@ public class QuestBoard {
 			im.setDisplayName(ChatColor.YELLOW + "에메랄드 주머니");
 			item.setItemMeta(im);
 			player.getInventory().addItem(item);
+			player.sendMessage(ChatColor.YELLOW + "에메랄드 주머니" + ChatColor.WHITE + "를 획득했다.");
 			es.giveExp(player, 30000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			return;
@@ -433,6 +434,7 @@ public class QuestBoard {
 			var1Im.setDisplayName(ChatColor.YELLOW + "가치가 떨어진 금광석");
 			var1.setItemMeta(var1Im);
 			player.getInventory().addItem(var1);
+			player.sendMessage(ChatColor.YELLOW + "가치가 떨어진 금광석" + ChatColor.WHITE + " 64개를 획득했다.");
 			es.giveExp(player, 4000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			return;
@@ -474,6 +476,62 @@ public class QuestBoard {
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1000)");
 		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void q19(Player player, int num) {
+		//상점
+		if(num>=3) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			ItemStack var1 = new ItemStack(Material.GOLD_ORE, 64);
+			ItemMeta var1Im = var1.getItemMeta();
+			var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "금광석");
+			var1.setItemMeta(var1Im);
+			player.getInventory().addItem(var1);
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "금광석" + ChatColor.WHITE + " 64개를 획득했다.");
+			es.giveExp(player, 6000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.YELLOW + "A급 퀘스트");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===악마 자미엘===");
+		score.setScore(2);
+		Score score2 = obj.getScore("자미엘 3마리 사냥");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/3)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void q20(Player player, int num) {
+		//상점
+		if(num>=50) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			ItemStack item = new ItemStack(Material.RABBIT_HIDE, 15);
+			ItemMeta im = item.getItemMeta();
+			im.setDisplayName(ChatColor.AQUA + "에메랄드 결정");
+			item.setItemMeta(im);
+			player.getInventory().addItem(item);
+			player.sendMessage(ChatColor.AQUA + "에메랄드 결정" + ChatColor.WHITE + " 15개를 획득했다.");
+			es.giveExp(player, 6500000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.YELLOW + "A급 퀘스트");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===붉은 악마===");
+		score.setScore(3);
+		Score score2 = obj.getScore("레드 블럭 50마리 사냥");
+		score2.setScore(2);
+		Score score3 = obj.getScore("위치: 849,6,-18");
+		score3.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/50)");
+		score4.setScore(0);
 		player.setScoreboard(board);
 	}
 	

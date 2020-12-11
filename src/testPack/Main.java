@@ -564,7 +564,7 @@ public class Main extends JavaPlugin implements Listener{
 		masterIm.setUnbreakable(true);
 		masterIm.setLore(masterLore);
 		master.setItemMeta(masterIm);
-//		if(player.getDisplayName().equalsIgnoreCase("yumehama") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
+		if(player.getDisplayName().equalsIgnoreCase("yumehama") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
 //		if(player.getDisplayName().equalsIgnoreCase("WoolRing") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
 		
 //		ItemStack var1 = new ItemStack(Material.IRON_HELMET);

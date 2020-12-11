@@ -4072,6 +4072,12 @@ public class MobLoot {
 		var1.setItemMeta(var1im);
 		player.getInventory().addItem(var1);
 		player.sendMessage(ChatColor.YELLOW + "상급 포보르의 뿔" + ChatColor.WHITE + "을 획득했다.");
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===악마 자미엘===")) {
+			int qNum = cb.getNum(player);
+			cb.q19(player, qNum + 1);
+		}
 	}
 	
 	// 나무 벌레
@@ -4355,6 +4361,12 @@ public class MobLoot {
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 1480000);
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===붉은 악마===")) {
+			int qNum = cb.getNum(player);
+			cb.q20(player, qNum + 1);
+		}
 	}
 	
 	// 사막 망령 전사

@@ -277,14 +277,14 @@ public class CraftingPotion {
 						resultStat -= tmp;
 						tmp = rnd.nextInt(resultStat);
 						stat[7] = tmp / 500;
-						if(stat[7] > 10) {
-							stat[7] = 10;
+						if(stat[7] > 50) {
+							stat[7] = 50;
 						}
 						resultStat -= tmp;
 						tmp = rnd.nextInt(resultStat);
 						stat[8] = tmp / 500;
-						if(stat[8] > 10) {
-							stat[8] = 10;
+						if(stat[8] > 50) {
+							stat[8] = 50;
 						}
 						resultStat -= tmp;
 						tmp = rnd.nextInt(resultStat);
@@ -332,14 +332,14 @@ public class CraftingPotion {
 						resultStat -= tmp;
 						tmp = rnd.nextInt(resultStat);
 						stat[7] = tmp / 500;
-						if(stat[7] > 10) {
-							stat[7] = 10;
+						if(stat[7] > 50) {
+							stat[7] = 50;
 						}
 						resultStat -= tmp;
 						tmp = rnd.nextInt(resultStat);
 						stat[8] = tmp / 500;
-						if(stat[8] > 10) {
-							stat[8] = 10;
+						if(stat[8] > 50) {
+							stat[8] = 50;
 						}
 						resultStat -= tmp;
 						tmp = rnd.nextInt(resultStat);
@@ -387,14 +387,14 @@ public class CraftingPotion {
 						resultStat -= tmp;
 						tmp = rnd.nextInt(resultStat);
 						stat[7] = tmp / 500;
-						if(stat[7] > 10) {
-							stat[7] = 10;
+						if(stat[7] > 50) {
+							stat[7] = 50;
 						}
 						resultStat -= tmp;
 						tmp = rnd.nextInt(resultStat);
 						stat[8] = tmp / 500;
-						if(stat[8] > 10) {
-							stat[8] = 10;
+						if(stat[8] > 50) {
+							stat[8] = 50;
 						}
 						resultStat -= tmp;
 						tmp = rnd.nextInt(resultStat);
@@ -412,14 +412,14 @@ public class CraftingPotion {
 						resultStat -= tmp;
 						tmp = rnd.nextInt(resultStat);
 						stat[7] = tmp / 500;
-						if(stat[7] > 10) {
-							stat[7] = 10;
+						if(stat[7] > 50) {
+							stat[7] = 50;
 						}
 						resultStat -= tmp;
 						tmp = rnd.nextInt(resultStat);
 						stat[8] = tmp / 500;
-						if(stat[8] > 10) {
-							stat[8] = 10;
+						if(stat[8] > 50) {
+							stat[8] = 50;
 						}
 						resultStat -= tmp;
 						tmp = rnd.nextInt(resultStat);
@@ -499,14 +499,14 @@ public class CraftingPotion {
 						resultStat -= tmp;
 						tmp = rnd.nextInt(resultStat);
 						stat[7] = tmp / 500;
-						if(stat[7] > 10) {
-							stat[7] = 10;
+						if(stat[7] > 50) {
+							stat[7] = 50;
 						}
 						resultStat -= tmp;
 						tmp = rnd.nextInt(resultStat);
 						stat[8] = tmp / 500;
-						if(stat[8] > 10) {
-							stat[8] = 10;
+						if(stat[8] > 50) {
+							stat[8] = 50;
 						}
 						resultStat -= tmp;
 						tmp = rnd.nextInt(resultStat);
@@ -554,14 +554,14 @@ public class CraftingPotion {
 						resultStat -= tmp;
 						tmp = rnd.nextInt(resultStat);
 						stat[7] = tmp / 500;
-						if(stat[7] > 10) {
-							stat[7] = 10;
+						if(stat[7] > 50) {
+							stat[7] = 50;
 						}
 						resultStat -= tmp;
 						tmp = rnd.nextInt(resultStat);
 						stat[8] = tmp / 500;
-						if(stat[8] > 10) {
-							stat[8] = 10;
+						if(stat[8] > 50) {
+							stat[8] = 50;
 						}
 						resultStat -= tmp;
 						tmp = rnd.nextInt(resultStat);
@@ -609,14 +609,14 @@ public class CraftingPotion {
 						resultStat -= tmp;
 						tmp = rnd.nextInt(resultStat);
 						stat[7] = tmp / 500;
-						if(stat[7] > 10) {
-							stat[7] = 10;
+						if(stat[7] > 50) {
+							stat[7] = 50;
 						}
 						resultStat -= tmp;
 						tmp = rnd.nextInt(resultStat);
 						stat[8] = tmp / 500;
-						if(stat[8] > 10) {
-							stat[8] = 10;
+						if(stat[8] > 50) {
+							stat[8] = 50;
 						}
 						resultStat -= tmp;
 						tmp = rnd.nextInt(resultStat);
@@ -634,14 +634,14 @@ public class CraftingPotion {
 						resultStat -= tmp;
 						tmp = rnd.nextInt(resultStat);
 						stat[7] = tmp / 500;
-						if(stat[7] > 10) {
-							stat[7] = 10;
+						if(stat[7] > 50) {
+							stat[7] = 50;
 						}
 						resultStat -= tmp;
 						tmp = rnd.nextInt(resultStat);
 						stat[8] = tmp / 500;
-						if(stat[8] > 10) {
-							stat[8] = 10;
+						if(stat[8] > 50) {
+							stat[8] = 50;
 						}
 						resultStat -= tmp;
 						tmp = rnd.nextInt(resultStat);
@@ -723,14 +723,14 @@ public class CraftingPotion {
 						resultStat -= tmp;
 						tmp = rnd.nextInt(resultStat);
 						stat[7] = tmp / 500;
-						if(stat[7] > 10) {
-							stat[7] = 10;
+						if(stat[7] > 50) {
+							stat[7] = 50;
 						}
 						resultStat -= tmp;
 						tmp = rnd.nextInt(resultStat);
 						stat[8] = tmp / 500;
-						if(stat[8] > 10) {
-							stat[8] = 10;
+						if(stat[8] > 50) {
+							stat[8] = 50;
 						}
 						resultStat -= tmp;
 						tmp = rnd.nextInt(resultStat);
@@ -778,14 +778,14 @@ public class CraftingPotion {
 						resultStat -= tmp;
 						tmp = rnd.nextInt(resultStat);
 						stat[7] = tmp / 500;
-						if(stat[7] > 10) {
-							stat[7] = 10;
+						if(stat[7] > 50) {
+							stat[7] = 50;
 						}
 						resultStat -= tmp;
 						tmp = rnd.nextInt(resultStat);
 						stat[8] = tmp / 500;
-						if(stat[8] > 10) {
-							stat[8] = 10;
+						if(stat[8] > 50) {
+							stat[8] = 50;
 						}
 						resultStat -= tmp;
 						tmp = rnd.nextInt(resultStat);
@@ -833,14 +833,14 @@ public class CraftingPotion {
 						resultStat -= tmp;
 						tmp = rnd.nextInt(resultStat);
 						stat[7] = tmp / 500;
-						if(stat[7] > 10) {
-							stat[7] = 10;
+						if(stat[7] > 50) {
+							stat[7] = 50;
 						}
 						resultStat -= tmp;
 						tmp = rnd.nextInt(resultStat);
 						stat[8] = tmp / 500;
-						if(stat[8] > 10) {
-							stat[8] = 10;
+						if(stat[8] > 50) {
+							stat[8] = 50;
 						}
 						resultStat -= tmp;
 						tmp = rnd.nextInt(resultStat);
@@ -858,14 +858,14 @@ public class CraftingPotion {
 						resultStat -= tmp;
 						tmp = rnd.nextInt(resultStat);
 						stat[7] = tmp / 500;
-						if(stat[7] > 10) {
-							stat[7] = 10;
+						if(stat[7] > 50) {
+							stat[7] = 50;
 						}
 						resultStat -= tmp;
 						tmp = rnd.nextInt(resultStat);
 						stat[8] = tmp / 500;
-						if(stat[8] > 10) {
-							stat[8] = 10;
+						if(stat[8] > 50) {
+							stat[8] = 50;
 						}
 						resultStat -= tmp;
 						tmp = rnd.nextInt(resultStat);

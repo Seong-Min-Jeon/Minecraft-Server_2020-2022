@@ -209,14 +209,10 @@ public class RefreshServer {
 						}
 					}
 					
-					// 설원 지역 추움
+					// 날씨 데미지
 					for(Player allPlayer : Bukkit.getOnlinePlayers()) {
 						Location loc = allPlayer.getLocation();
 						if(loc.getBlock().getBiome() == Biome.BASALT_DELTAS || loc.getBlock().getBiome() == Biome.SNOWY_TUNDRA) {
-							
-//							if(allPlayer.getDisplayName().equalsIgnoreCase("yumehama") || allPlayer.getDisplayName().equalsIgnoreCase("woolring")) {
-//								continue;
-//							}
 							
 							if(allPlayer.getInventory().contains(Material.ORANGE_DYE)) {
 								continue;
@@ -262,12 +258,33 @@ public class RefreshServer {
 								}
 							}
 							
+							if (allPlayer.getInventory().getItemInOffHand().getItemMeta() != null) {
+								if(allPlayer.getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "가시고기의 눈물")) {
+									wear = true;
+								}
+							}
+							
 							if(wear == false) {
 								allPlayer.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 600, 2,true,false,false));
 								allPlayer.addPotionEffect(new PotionEffect(PotionEffectType.HARM, 600, 2,true,false,false));
 								allPlayer.sendMessage(ChatColor.RED + "추워서 몸이 얼어붙는 것 같다.");
 							}
+						} else if(loc.getBlock().getBiome() == Biome.DESERT_HILLS || loc.getBlock().getBiome() == Biome.CRIMSON_FOREST) {
 							
+							boolean wear = false;
+							
+							for(PotionEffect effect : allPlayer.getActivePotionEffects()){
+								if(effect.getType().getName().equals("HERO_OF_THE_VILLAGE")) {
+									wear = true;
+									break;
+								}
+						    }
+							
+							if(wear == false) {
+								allPlayer.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 600, 10000,true,false,false));
+								allPlayer.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 600, 0,true,false,false));
+								allPlayer.sendMessage(ChatColor.RED + "열사병으로 쓰러질 것 같다.");
+							}
 						}
 					}
 				}
