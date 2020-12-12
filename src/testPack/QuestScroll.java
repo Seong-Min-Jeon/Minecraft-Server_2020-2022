@@ -661,5 +661,12 @@ public class QuestScroll {
 		}	
 	}
 	
+	public void mq45(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "메인퀘스트 45장")) {
+			msg.msg(player, "주민: 광신도 녀석들에 대해 새로 알아낸게 있는 것 같아요!%주민: 한번 와주세요.");
+			QuestBoard qb = new QuestBoard();
+			qb.mq45(player, 0);
+		}	
+	}
 	
 }
