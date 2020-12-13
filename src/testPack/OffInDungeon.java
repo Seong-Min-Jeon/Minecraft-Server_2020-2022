@@ -23,8 +23,8 @@ public class OffInDungeon {
 			player.teleport(new Location(player.getWorld(), -1808, 53, 3024));
 			return;
 		}
-		//숲의 유적 3563 69 3787  3439 8 3681
-		if(loc.getX() <= 3563 && loc.getY() <= 69 && loc.getZ() <= 3787 &&
+		//숲의 유적 3590 109 3787  3439 8 3681
+		if(loc.getX() <= 3590 && loc.getY() <= 109 && loc.getZ() <= 3787 &&
 				loc.getX() >= 3439 && loc.getY() >= 8 && loc.getZ() >= 3681) {
 			player.teleport(new Location(player.getWorld(), -2050, 64, 2455));
 			return;

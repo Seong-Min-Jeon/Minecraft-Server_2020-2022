@@ -86,6 +86,7 @@ public class QuestScroll {
 				mq42(player, itemArg, world);
 				mq43(player, itemArg, world);
 				mq44(player, itemArg, world);
+				mq45(player, itemArg, world);
 			} else {
 				itemArg.remove();
 				player.getInventory().addItem(itemArg.getItemStack());

@@ -42,7 +42,7 @@ public class InteractVillager {
 		}
 		
 		return vil0() || vil1() || vil2() || vil3() || vil4() || vil5() || vil6() || vil7() || vil8() || vil9() || vil10() || vil11() || vil12() || vil13() || vil14()
-				|| vil15();
+				|| vil15() || vil16();
 	}
 	
 	public boolean vil0() {
@@ -374,11 +374,49 @@ public class InteractVillager {
 				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===항구 마을, 하마베 마을===")) {
 					int qNum = cb.getNum(player);
 					cb.mq42(player, qNum+1);	
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===대사막1===")) {
+					int qNum = cb.getNum(player);
+					cb.mq45(player, qNum+1);	
 				} else {
 					player.sendMessage("주민: 이곳은 하마베 마을이에요.");
 				}
 			} catch(Exception e) {
 				player.sendMessage("주민: 이곳은 하마베 마을이에요.");
+			}
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean vil16() {
+		//사막 정찰병 210 946  212 948  
+		if(loc.getX() <= 212 && loc.getZ() <= 948
+				&& loc.getX() >= 210 && loc.getZ() >= 946) {
+			QuestBoard cb = new QuestBoard();
+			try {
+				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===대사막2===")) {
+					int qNum = cb.getNum(player);
+					cb.mq45_1(player, qNum+1);	
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===축복의 포션2===")) {
+					int qNum = cb.getNum(player);
+					cb.mq45_3(player, qNum+1);	
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===대사막3===")) {
+					int qNum = cb.getNum(player);
+					cb.mq45_5(player, qNum+1);	
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===대사막4===")) {
+					int qNum = cb.getNum(player);
+					cb.mq45_7(player, qNum+1);	
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===대사막5===")) {
+					int qNum = cb.getNum(player);
+					cb.mq45_9(player, qNum+1);	
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===대사막6===")) {
+					int qNum = cb.getNum(player);
+					cb.mq45_11(player, qNum+1);	
+				} else {
+					player.sendMessage("사막 정찰병: 이 앞부터 사막이다. 조심하도록.");
+				}
+			} catch(Exception e) {
+				player.sendMessage("사막 정찰병: 이 앞부터 사막이다. 조심하도록.");
 			}
 			return true;
 		}

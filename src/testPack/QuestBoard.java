@@ -1547,7 +1547,7 @@ public class QuestBoard {
 			rewardKeyIm.setDisplayName(ChatColor.LIGHT_PURPLE + "검의 손잡이");
 			ArrayList<String> rewardLore = new ArrayList();
 			rewardLore.add(ChatColor.GRAY + "영웅 루 라바다가 사용했다는 검의 손잡이");
-			rewardLore.add(ChatColor.GRAY + "이것으로 용사의 검을 강화할 수 있다고 한다.");
+			rewardLore.add(ChatColor.GRAY + "이것으로 달의 힘이 깃든 검/태양의 힘이 깃든 검을 초월할 수 있다고 한다.");
 			rewardKeyIm.setLore(rewardLore);
 			rewardKey.setItemMeta(rewardKeyIm);
 			player.getInventory().addItem(rewardKey);
@@ -2340,7 +2340,7 @@ public class QuestBoard {
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
 		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===축복의 포션1===");
 		score.setScore(3);
-		Score score2 = obj.getScore("묘지기 몬스터들을 잡아서 성수 획득");
+		Score score2 = obj.getScore("네크로벨리 몬스터들을 잡아서 성수 획득");
 		score2.setScore(2);
 		Score score3 = obj.getScore("위치: -134,9,664");
 		score3.setScore(1);

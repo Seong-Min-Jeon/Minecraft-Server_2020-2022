@@ -2312,7 +2312,7 @@ public class Skill {
 												&& (nearEntity.getType() != EntityType.HORSE) && (nearEntity.getType() != EntityType.SKELETON_HORSE) && (nearEntity.getType() != EntityType.ZOMBIE_HORSE)
 												&& (nearEntity.getType() != EntityType.WOLF) && (nearEntity.getType() != EntityType.CAT) && (nearEntity.getType() != EntityType.DONKEY)
 												&& (nearEntity.getType() != EntityType.ARMOR_STAND) && (nearEntity.getType() != EntityType.IRON_GOLEM)) {
-											((LivingEntity) nearEntity).damage(player.getLevel()*40);
+											((LivingEntity) nearEntity).damage(player.getLevel()*50);
 										}
 									}
 								}
@@ -2558,7 +2558,7 @@ public class Skill {
 											if (nearEntity.getType() != EntityType.PLAYER) {
 												if (nearEntity instanceof LivingEntity) {
 													LivingEntity nearMob = (LivingEntity) nearEntity;
-													nearMob.damage(player.getLevel() * 15);
+													nearMob.damage(player.getLevel() * 30);
 												}
 											}
 										}
@@ -2572,7 +2572,7 @@ public class Skill {
 											if (nearEntity.getType() != EntityType.PLAYER) {
 												if (nearEntity instanceof LivingEntity) {
 													LivingEntity nearMob = (LivingEntity) nearEntity;
-													nearMob.damage(player.getLevel() * 40);
+													nearMob.damage(player.getLevel() * 60);
 												}
 											}
 										}		
@@ -2588,7 +2588,7 @@ public class Skill {
 											if (nearEntity.getType() != EntityType.PLAYER) {
 												if (nearEntity instanceof LivingEntity) {
 													LivingEntity nearMob = (LivingEntity) nearEntity;
-													nearMob.damage(player.getLevel() * 60);
+													nearMob.damage(player.getLevel() * 100);
 												}
 											}
 										}		

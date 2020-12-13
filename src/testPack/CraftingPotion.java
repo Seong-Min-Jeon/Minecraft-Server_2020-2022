@@ -28,6 +28,8 @@ public class CraftingPotion {
 			int green = 0;
 			int blue = 0;
 			
+			int blessednessPotion = 0;
+			
 			int idx = 0;
 			
 			for(int i : ary) {
@@ -150,6 +152,21 @@ public class CraftingPotion {
 				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "최상급 포보르의 뿔")) {
 					totalStat += amount[i] * 230;
 				}
+				//축복의 포션 제작
+				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "성수")) {
+					if(blessednessPotion == 0) {
+						blessednessPotion = 1;
+					} else if(blessednessPotion == 10) {
+						blessednessPotion = 11;
+					}
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "달콤한 열매")) {
+					if(blessednessPotion == 0) {
+						blessednessPotion = 10;
+					} else if(blessednessPotion == 1) {
+						blessednessPotion = 11;
+					}
+				}
 			}
 			
 			Random rnd = new Random();
@@ -164,6 +181,40 @@ public class CraftingPotion {
 			 * 아래부터 그 수치를 이용한 코드
 			 * */
 			
+			//==================================================================특수 제작
+			if(blessednessPotion == 11) {
+				ItemStack potion = new ItemStack(Material.POTION);
+				ItemMeta potionIm = potion.getItemMeta();
+				potionIm.setDisplayName(ChatColor.LIGHT_PURPLE + "축복의 포션");
+				ArrayList<String> potionLore = new ArrayList();
+				potionLore.add(ChatColor.GRAY + "주민들의 축복을 담은 포션");
+				potionLore.add(ChatColor.GRAY + "사막의 더위를 버틸 수 있게 해준다.");
+				potionIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+				potionIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+				potionIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+				potionIm.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
+				potionIm.setUnbreakable(true);
+				potionIm.setLore(potionLore);
+				PotionMeta pm = (PotionMeta) potionIm;
+				pm.setColor(Color.fromRGB(255, 255, 255));
+				potionIm = pm;
+				potion.setItemMeta(potionIm);
+				inv.setItem(15, potion);
+				player.sendMessage("제작 성공!");
+				
+				try {
+					QuestBoard cb = new QuestBoard();
+					if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===축복의 포션3===")) {
+						int qNum = cb.getNum(player);
+						cb.mq45_4(player, qNum + 1);
+					}
+				} catch(Exception e) {
+					
+				}
+				return;
+			}
+			
+			//==================================================================일반 제작
 			if(resultStat <= 0) {
 				player.sendMessage("제작 결과 아무것도 얻지 못했습니다.");
 				return;

@@ -6,6 +6,7 @@ import java.util.Random;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.Color;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.World;
@@ -20,6 +21,7 @@ import org.bukkit.entity.Skeleton;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.inventory.meta.PotionMeta;
 
 public class MobLoot {
 
@@ -130,23 +132,6 @@ public class MobLoot {
 		int num = rnd.nextInt(10) + 3;
 		ItemStack item = new ItemStack(Material.EMERALD, num * multyEme);
 		player.getInventory().addItem(item);
-		int num2 = rnd.nextInt(30);
-		if (num2 <= 0) {
-			ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
-			ItemMeta scrollIm = scroll.getItemMeta();
-			scrollIm.setDisplayName(ChatColor.WHITE + "퀘스트: 밀 사냥꾼");
-			ArrayList<String> scrollLore = new ArrayList();
-			scrollLore.add(ChatColor.GRAY + "'밀 사냥꾼' 퀘스트를 진행할 수 있다.");
-			scrollIm.setLore(scrollLore);
-			scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-			scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-			scrollIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
-			scrollIm.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
-			scrollIm.setUnbreakable(true);
-			scroll.setItemMeta(scrollIm);
-			player.getInventory().addItem(scroll);
-			player.sendMessage(ChatColor.WHITE + "퀘스트: 밀 사냥꾼" + ChatColor.WHITE + "을 획득했다.");
-		}
 		es.giveExp(player, 524);
 
 		QuestBoard cb = new QuestBoard();
@@ -346,23 +331,6 @@ public class MobLoot {
 		int num = rnd.nextInt(30);
 		ItemStack item = new ItemStack(Material.EMERALD, num * multyEme);
 		player.getInventory().addItem(item);
-		int num2 = rnd.nextInt(10);
-		if (num2 <= 0) {
-			ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
-			ItemMeta scrollIm = scroll.getItemMeta();
-			scrollIm.setDisplayName(ChatColor.YELLOW + "퀘스트: 숲 깊은 곳");
-			ArrayList<String> scrollLore = new ArrayList();
-			scrollLore.add(ChatColor.GRAY + "'숲 깊은 곳' 퀘스트를 진행할 수 있다.");
-			scrollIm.setLore(scrollLore);
-			scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-			scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-			scrollIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
-			scrollIm.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
-			scrollIm.setUnbreakable(true);
-			scroll.setItemMeta(scrollIm);
-			player.getInventory().addItem(scroll);
-			player.sendMessage(ChatColor.YELLOW + "퀘스트: 숲 깊은 곳" + ChatColor.WHITE + "을 획득했다.");
-		}
 		es.giveExp(player, 3572);
 	}
 
@@ -2956,6 +2924,31 @@ public class MobLoot {
 		player.getInventory().addItem(item);
 		es.giveExp(player, 690412);
 		
+		int tmp = rnd.nextInt(10);
+		if(tmp == 0) {
+			ItemStack var1 = new ItemStack(Material.POTION);
+			ItemMeta var1im = var1.getItemMeta();
+			var1im.setDisplayName(ChatColor.YELLOW + "성수");
+			ArrayList<String> var1Lore = new ArrayList();
+			var1Lore.add(ChatColor.GRAY + "축복의 포션을 제작하기 위한 재료");
+			var1im.setLore(var1Lore);
+			var1im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+			var1im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+			var1im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+			var1im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
+			PotionMeta pm = (PotionMeta) var1im;
+			pm.setColor(Color.fromRGB(0, 50, 200));
+			var1.setItemMeta(pm);
+			player.getInventory().addItem(var1);
+			player.sendMessage(ChatColor.YELLOW + "성수" + ChatColor.WHITE + "를 획득했다.");
+			
+			QuestBoard cb = new QuestBoard();
+			if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===축복의 포션1===")) {
+				int qNum = cb.getNum(player);
+				cb.mq45_2(player, qNum + 1);
+			}
+		}
+		
 		QuestBoard cb = new QuestBoard();
 		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===묘지를 지키는 자===")) {
 			int qNum = cb.getNum(player);
@@ -2973,6 +2966,31 @@ public class MobLoot {
 		player.getInventory().addItem(item);
 		es.giveExp(player, 723432);
 		
+		int tmp = rnd.nextInt(10);
+		if(tmp == 0) {
+			ItemStack var1 = new ItemStack(Material.POTION);
+			ItemMeta var1im = var1.getItemMeta();
+			var1im.setDisplayName(ChatColor.YELLOW + "성수");
+			ArrayList<String> var1Lore = new ArrayList();
+			var1Lore.add(ChatColor.GRAY + "축복의 포션을 제작하기 위한 재료");
+			var1im.setLore(var1Lore);
+			var1im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+			var1im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+			var1im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+			var1im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
+			PotionMeta pm = (PotionMeta) var1im;
+			pm.setColor(Color.fromRGB(0, 50, 200));
+			var1.setItemMeta(pm);
+			player.getInventory().addItem(var1);
+			player.sendMessage(ChatColor.YELLOW + "성수" + ChatColor.WHITE + "를 획득했다.");
+			
+			QuestBoard cb = new QuestBoard();
+			if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===축복의 포션1===")) {
+				int qNum = cb.getNum(player);
+				cb.mq45_2(player, qNum + 1);
+			}
+		}
+		
 		QuestBoard cb = new QuestBoard();
 		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===묘지를 지키는 자===")) {
 			int qNum = cb.getNum(player);
@@ -2989,6 +3007,31 @@ public class MobLoot {
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 752145);
+		
+		int tmp = rnd.nextInt(10);
+		if(tmp == 0) {
+			ItemStack var1 = new ItemStack(Material.POTION);
+			ItemMeta var1im = var1.getItemMeta();
+			var1im.setDisplayName(ChatColor.YELLOW + "성수");
+			ArrayList<String> var1Lore = new ArrayList();
+			var1Lore.add(ChatColor.GRAY + "축복의 포션을 제작하기 위한 재료");
+			var1im.setLore(var1Lore);
+			var1im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+			var1im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+			var1im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+			var1im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
+			PotionMeta pm = (PotionMeta) var1im;
+			pm.setColor(Color.fromRGB(0, 50, 200));
+			var1.setItemMeta(pm);
+			player.getInventory().addItem(var1);
+			player.sendMessage(ChatColor.YELLOW + "성수" + ChatColor.WHITE + "를 획득했다.");
+			
+			QuestBoard cb = new QuestBoard();
+			if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===축복의 포션1===")) {
+				int qNum = cb.getNum(player);
+				cb.mq45_2(player, qNum + 1);
+			}
+		}
 		
 		QuestBoard cb = new QuestBoard();
 		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===묘지를 지키는 자===")) {
@@ -4475,6 +4518,12 @@ public class MobLoot {
 			player.getInventory().addItem(var5);
 			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===Death Gun===")) {
+			int qNum = cb.getNum(player);
+			cb.mq45_6(player, qNum + 1);
+		}
 	}
 	
 	// 공허
@@ -4573,6 +4622,12 @@ public class MobLoot {
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 1680000);
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===사막 곰===")) {
+			int qNum = cb.getNum(player);
+			cb.mq45_8(player, qNum + 1);
+		}
 	}
 	
 	// 사막 전갈
