@@ -978,10 +978,9 @@ public class SpawnMob {
 	}
 
 	public boolean mob18(LivingEntity entity, Location loc) {
-		// 유적의 주인 3522 15 3726 3556 35 3691
-		if (loc.getX() <= 3556 && loc.getY() <= 35
-				&& loc.getZ() <= 3726 && loc.getX() >= 3522
-				&& loc.getY() >= 15 && loc.getZ() >= 3691) {
+		// 유적의 주인 3537 0 3685  3587 57 3737
+		if (loc.getX() <= 3587 && loc.getY() <= 57 && loc.getZ() <= 3737 
+				&& loc.getX() >= 3537 && loc.getY() >= 0 && loc.getZ() >= 3685) {
 			if (entity.getType() == (EntityType) EntityType.GHAST) {
 				entity.setCustomName(ChatColor.GRAY + "유적의 주인" + ChatColor.YELLOW + " [Lv.43]");
 				entity.setCustomNameVisible(true);

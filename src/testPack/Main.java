@@ -1801,6 +1801,7 @@ public class Main extends JavaPlugin implements Listener{
 			Location magicTower = new Location(world,221,81,725,90,0);
 			Location longue = new Location(world,822,71,511,270,0);
 			Location hamabe = new Location(world,973,62,40,180,0);
+			Location samak = new Location(world,228,85,945);
 			
 			//캐릭터 선택창 3668 47 3671 3660 39 3680
 			if(loc.getX() <= 3668 && loc.getZ() <= 3680 &&
@@ -1821,7 +1822,7 @@ public class Main extends JavaPlugin implements Listener{
 				return;
 			}
 			//숲의 유적 3563 69 3787  3439 8 3681
-			if(loc.getX() <= 3563 && loc.getY() <= 69 && loc.getZ() <= 3787 &&
+			if(loc.getX() <= 3590 && loc.getY() <= 109 && loc.getZ() <= 3787 &&
 					loc.getX() >= 3439 && loc.getY() >= 8 && loc.getZ() >= 3681) {
 				event.setRespawnLocation(forgan);
 				return;
@@ -1868,6 +1869,7 @@ public class Main extends JavaPlugin implements Listener{
 			int length15 = (int)(Math.pow(loc.getX()-magicTower.getX(), 2) + Math.pow(loc.getY()-magicTower.getY(), 2) + Math.pow(loc.getZ()-magicTower.getZ(), 2));
 			int length16 = (int)(Math.pow(loc.getX()-longue.getX(), 2) + Math.pow(loc.getY()-longue.getY(), 2) + Math.pow(loc.getZ()-longue.getZ(), 2));
 			int length17 = (int)(Math.pow(loc.getX()-hamabe.getX(), 2) + Math.pow(loc.getY()-hamabe.getY(), 2) + Math.pow(loc.getZ()-hamabe.getZ(), 2));
+			int length18 = (int)(Math.pow(loc.getX()-samak.getX(), 2) + Math.pow(loc.getY()-samak.getY(), 2) + Math.pow(loc.getZ()-samak.getZ(), 2));
 			ArrayList<Integer> ary = new ArrayList<>();
 			ary.add(length1);
 			ary.add(length2);
@@ -1886,6 +1888,7 @@ public class Main extends JavaPlugin implements Listener{
 			ary.add(length15);
 			ary.add(length16);
 			ary.add(length17);
+			ary.add(length18);
 			Collections.sort(ary);
 			if(ary.get(0) == length1) {
 				event.setRespawnLocation(wargunil);
@@ -1921,6 +1924,8 @@ public class Main extends JavaPlugin implements Listener{
 				event.setRespawnLocation(longue);
 			} else if(ary.get(0) == length17) {
 				event.setRespawnLocation(hamabe);
+			} else if(ary.get(0) == length18) {
+				event.setRespawnLocation(samak);
 			}			
 			player.setNoDamageTicks(200);
 		} catch(Exception e11) {
@@ -6030,11 +6035,11 @@ public class Main extends JavaPlugin implements Listener{
 				for (Entity nearEntity : entitylist) {
 					if (nearEntity.getType() == EntityType.PLAYER) {
 						Player nearplayer = (Player) nearEntity;
-						if (nearplayer.getLocation().getX() <= 3556 && nearplayer.getLocation().getY() <= 35
-								&& nearplayer.getLocation().getZ() <= 3726 && nearplayer.getLocation().getX() >= 3522
-								&& nearplayer.getLocation().getY() >= 15 && nearplayer.getLocation().getZ() >= 3691) {
+						Location loc = nearplayer.getLocation();
+						if (loc.getX() <= 3587 && loc.getY() <= 57 && loc.getZ() <= 3737 
+								&& loc.getX() >= 3537 && loc.getY() >= 0 && loc.getZ() >= 3685) {
 							nearplayer.getInventory().addItem(rewardKey);
-							nearplayer.teleport(new Location(world, 3465, 37, 3749.5, -90f, 1.4f));
+							nearplayer.teleport(new Location(world, 3470.5, 52, 3740));
 							nearplayer.sendMessage("유적 어딘가로 이동했다.");
 						}
 					}

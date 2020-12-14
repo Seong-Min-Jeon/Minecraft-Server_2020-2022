@@ -275,6 +275,9 @@ public class RefreshServer {
 							
 							for(PotionEffect effect : allPlayer.getActivePotionEffects()){
 								if(effect.getType().getName().equals("HERO_OF_THE_VILLAGE")) {
+									if(effect.getDuration() <= 600) {
+										allPlayer.sendMessage(ChatColor.RED + "축복의 포션의 효과가 곧 사라집니다.");
+									}
 									wear = true;
 									break;
 								}

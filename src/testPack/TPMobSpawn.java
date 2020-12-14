@@ -37,6 +37,7 @@ public class TPMobSpawn {
 		tower(player, loc);
 		maze(player, loc);
 		aracune(player, loc);
+		forest(player, loc);
 	}
 
 	public void fairy(Player player, Location loc) {
@@ -932,6 +933,43 @@ public class TPMobSpawn {
 			
 			new BossHealth().getBar11().setProgress(1.0);
 			new BossHealth().getBar11().addPlayer(player);
+			return;
+		}
+	}
+	
+	public void forest(Player player, Location loc) {
+		// 유적의 주인
+		if (loc.getX() == 3562.5 && loc.getY() == 25 && loc.getZ() == 3736.5) {
+			player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "이곳에 모험가가 오다니 오랜만이군.");
+
+			player.teleport(new Location(player.getWorld(), 3562.6, 25, 3736.6));
+			int num = 0;
+			List<Entity> entitylist = player.getNearbyEntities(50, 50, 50);
+			for (Entity nearEntity : entitylist) {
+				if (nearEntity.getType() == EntityType.PLAYER) {
+					Player nearPlayer = (Player) nearEntity;
+					Location loc2 = nearPlayer.getLocation();
+					if (loc2.getX() <= 3587 && loc2.getY() <= 57 && loc2.getZ() <= 3737 
+							&& loc2.getX() >= 3537 && loc2.getY() >= 0 && loc2.getZ() >= 3685) {
+						num++;
+						return;
+					}
+				}
+			}
+
+			if (num == 0) {
+				for (Entity nearEntity : entitylist) {
+					if (nearEntity instanceof Mob) {
+						Location loc2 = nearEntity.getLocation();
+						if (loc2.getX() <= 3587 && loc2.getY() <= 57 && loc2.getZ() <= 3737 
+								&& loc2.getX() >= 3537 && loc2.getY() >= 0 && loc2.getZ() >= 3685) {
+							nearEntity.remove();
+						}
+					}
+				}
+			}
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3562, 30, 3712), EntityType.GHAST);
+			
 			return;
 		}
 	}

@@ -48,6 +48,7 @@ public class Cmd10VilTp implements CommandExecutor {
 			Location magicTower = new Location(world,221,81,725,90,0); 
 			Location longue = new Location(world,822,71,511,270,0); //프랑스어 long
 			Location hamabe = new Location(world,973,62,40,180,0);
+			Location samak = new Location(world,228,85,945);
 			
 			if(player.isOp() == false) {
 				return false;
@@ -55,7 +56,7 @@ public class Cmd10VilTp implements CommandExecutor {
 			if(cmd.getName().equalsIgnoreCase("VilTp")) {
 				if(args.length == 0) {
 					player.sendMessage(ChatColor.WHITE + "1: 워그닐/2: 포르간/3: 티르/4: 시드광산/5: 미푀르유/6: 카이만/7: 오스/"
-							+ "8: 콘노/9: 프휘 드 메흐/10: 시타사이디/11: 칼스/12: 크레드라트/13: 베아그/14: 마법탑/15: 롱게/16: 하마베");
+							+ "8: 콘노/9: 프휘 드 메흐/10: 시타사이디/11: 칼스/12: 크레드라트/13: 베아그/14: 마법탑/15: 롱게/16: 하마베/17: 사막정찰캠프");
 					return true;
 				}
 				try { 
@@ -109,6 +110,9 @@ public class Cmd10VilTp implements CommandExecutor {
 					}
 					if(args[0].equalsIgnoreCase("16")) {
 						player.teleport(hamabe);
+					}
+					if(args[0].equalsIgnoreCase("17")) {
+						player.teleport(samak);
 					}
 				} catch(Exception e) {
 					player.sendMessage(ChatColor.RED + "잘못된 입력입니다만?");

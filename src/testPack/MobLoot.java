@@ -377,18 +377,8 @@ public class MobLoot {
 			player.teleport(new Location(world, 3514.5, 18, 3745));
 			player.sendMessage("유적 어딘가로 이동했다.");
 		} else if (num2 == 4) {
-			player.teleport(new Location(world, 3539.5, 18, 3698));
+			player.teleport(new Location(world, 3515.5, 48, 3706));
 			player.sendMessage("유적 어딘가로 이동했다.");
-			int cnt = 0;
-			List<Entity> list = player.getNearbyEntities(30, 10, 30);
-			for (Entity ent : list) {
-				if (ent.getType() == EntityType.GHAST) {
-					cnt++;
-				}
-			}
-			if (cnt == 0) {
-				Ghast mob = (Ghast) world.spawnEntity(new Location(world, 3539.5, 25, 3708.5), EntityType.GHAST);
-			}
 		}
 	}
 
@@ -413,18 +403,8 @@ public class MobLoot {
 			player.teleport(new Location(world, 3514.5, 18, 3745));
 			player.sendMessage("유적 어딘가로 이동했다.");
 		} else if (num2 == 4) {
-			player.teleport(new Location(world, 3539.5, 18, 3698));
+			player.teleport(new Location(world, 3515.5, 48, 3706));
 			player.sendMessage("유적 어딘가로 이동했다.");
-			int cnt = 0;
-			List<Entity> list = player.getNearbyEntities(30, 10, 30);
-			for (Entity ent : list) {
-				if (ent.getType() == EntityType.GHAST) {
-					cnt++;
-				}
-			}
-			if (cnt == 0) {
-				Ghast mob = (Ghast) world.spawnEntity(new Location(world, 3539.5, 25, 3708.5), EntityType.GHAST);
-			}
 		}
 	}
 
@@ -441,26 +421,6 @@ public class MobLoot {
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
 		player.sendMessage(ChatColor.YELLOW + "숲의 유적 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
-
-		World world = player.getWorld();
-
-		List<Entity> entitylist = player.getNearbyEntities(40, 20, 40);
-		for (Entity nearEntity : entitylist) {
-			if (nearEntity.getType() == EntityType.PLAYER) {
-				Player nearplayer = (Player) nearEntity;
-				if (nearplayer.getLocation().getX() <= 3556 && nearplayer.getLocation().getY() <= 35
-						&& nearplayer.getLocation().getZ() <= 3726 && nearplayer.getLocation().getX() >= 3522
-						&& nearplayer.getLocation().getY() >= 15 && nearplayer.getLocation().getZ() >= 3691) {
-					nearplayer.getInventory().addItem(rewardKey);
-					nearplayer.sendMessage(ChatColor.YELLOW + "숲의 유적 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
-					nearplayer.teleport(new Location(world, 3465, 37, 3749.5, -90f, 1.4f));
-					nearplayer.sendMessage("유적 어딘가로 이동했다.");
-				}
-			}
-		}
-
-		player.teleport(new Location(world, 3465, 37, 3749.5, -90f, -1.4f));
-		player.sendMessage("유적 어딘가로 이동했다.");
 
 	}
 
