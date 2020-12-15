@@ -2324,7 +2324,6 @@ public class Skill {
 								t.removeID();
 							}
 							
-							
 						}						
 						
 					}, 0, 1);

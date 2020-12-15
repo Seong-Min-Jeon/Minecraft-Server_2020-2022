@@ -4881,27 +4881,72 @@ public class MobLoot {
 		es.giveExp(player, 1760000);
 	}
 	
+	// 암석 전사
 	public void mob205(Player player) {
-
+		es.giveExp(player, 1750000);
 	}
 	
+	// 암석 전사
 	public void mob206(Player player) {
-
+		es.giveExp(player, 1780000);
 	}
 	
+	// 암석 전사
 	public void mob207(Player player) {
-
+		es.giveExp(player, 1800000);
 	}
 	
+	// 스톤 가디언
 	public void mob208(Player player) {
-
+		es.giveExp(player, 2000000);
 	}
 	
+	// 석상 파수꾼
 	public void mob209(Player player) {
-
+		es.giveExp(player, 8000000);
 	}
 	
 	public void mob210(Player player) {
+
+	}
+	
+	public void mob211(Player player) {
+
+	}
+	
+	public void mob212(Player player) {
+
+	}
+	
+	public void mob213(Player player) {
+
+	}
+	
+	public void mob214(Player player) {
+
+	}
+	
+	public void mob215(Player player) {
+
+	}
+	
+	public void mob216(Player player) {
+
+	}
+	
+	public void mob217(Player player) {
+
+	}
+	
+	public void mob218(Player player) {
+
+	}
+	
+	public void mob219(Player player) {
+
+	}
+	
+	public void mob220(Player player) {
 
 	}
 }

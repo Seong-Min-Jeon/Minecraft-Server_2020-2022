@@ -198,6 +198,8 @@ public class RefreshServer {
 										ent.remove();
 									} else if(as.getItemInHand().getType() == Material.POLISHED_BLACKSTONE_SLAB) {
 										ent.remove();
+									} else if(as.getItemInHand().getType() == Material.GREEN_CARPET) {
+										ent.remove();
 									}
 								}
 								if(ent.getType() == EntityType.DROPPED_ITEM) {
@@ -269,6 +271,7 @@ public class RefreshServer {
 								allPlayer.addPotionEffect(new PotionEffect(PotionEffectType.HARM, 600, 2,true,false,false));
 								allPlayer.sendMessage(ChatColor.RED + "추워서 몸이 얼어붙는 것 같다.");
 							}
+							
 						} else if(loc.getBlock().getBiome() == Biome.DESERT_HILLS || loc.getBlock().getBiome() == Biome.CRIMSON_FOREST) {
 							
 							boolean wear = false;

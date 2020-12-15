@@ -38,6 +38,7 @@ public class TPMobSpawn {
 		maze(player, loc);
 		aracune(player, loc);
 		forest(player, loc);
+		samak(player, loc);
 	}
 
 	public void fairy(Player player, Location loc) {
@@ -99,8 +100,12 @@ public class TPMobSpawn {
 					if (loc2.getX() <= 3797 && loc2.getY() <= 91 && loc2.getZ() <= 3497 && loc2.getX() >= 3754
 							&& loc2.getY() >= 75 && loc2.getZ() >= 3456) {
 						num++;
-						new BossHealth().getBar9().addPlayer(player);
-						new BossHealth().getBar10().addPlayer(player);
+						if(new BossHealth().getBar9().getProgress() != 0) {
+							new BossHealth().getBar9().addPlayer(player);
+						}
+						if(new BossHealth().getBar10().getProgress() != 0) {
+							new BossHealth().getBar10().addPlayer(player);
+						}
 						return;
 					}
 				}
@@ -188,14 +193,6 @@ public class TPMobSpawn {
 			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3778, 14, 3222), EntityType.SKELETON);
 			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3778, 14, 3222), EntityType.SKELETON);
 			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3778, 14, 3222), EntityType.SKELETON);
-//			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3773, 25, 3228), EntityType.WITHER_SKELETON);
-//			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3773, 25, 3228), EntityType.SKELETON);
-//			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3773, 25, 3228), EntityType.SKELETON);
-//			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3773, 25, 3228), EntityType.SKELETON);
-//			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3775, 24, 3220), EntityType.SKELETON);
-//			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3774, 23, 3215), EntityType.SKELETON);
-//			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3775, 22, 3211), EntityType.SKELETON);
-//			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3774, 21, 3207), EntityType.SKELETON);
 			return;
 		}
 		
@@ -215,7 +212,9 @@ public class TPMobSpawn {
 					if (loc2.getX() <= 3807 && loc2.getY() <= 93 && loc2.getZ() <= 3227 && loc2.getX() >= 3783
 							&& loc2.getY() >= 63 && loc2.getZ() >= 3201) {
 						num++;
-						new BossHealth().getBar7().addPlayer(player);
+						if(new BossHealth().getBar7().getProgress() != 0) {
+							new BossHealth().getBar7().addPlayer(player);
+						}
 						return;
 					}
 				}
@@ -256,7 +255,9 @@ public class TPMobSpawn {
 					if (loc2.getX() <= 3769 && loc2.getY() <= 163 && loc2.getZ() <= 3254 && loc2.getX() >= 3711
 							&& loc2.getY() >= 133 && loc2.getZ() >= 3217) {
 						num++;
-						new BossHealth().getBar8().addPlayer(player);
+						if(new BossHealth().getBar8().getProgress() != 0) {
+							new BossHealth().getBar8().addPlayer(player);
+						}
 						return;
 					}
 				}
@@ -393,7 +394,9 @@ public class TPMobSpawn {
 					if (loc2.getX() <= 3336 && loc2.getY() <= 45 && loc2.getZ() <= 3762 && loc2.getX() >= 3299
 							&& loc2.getY() >= 10 && loc2.getZ() >= 3725) {
 						num++;
-						new BossHealth().getBar5().addPlayer(player);
+						if(new BossHealth().getBar5().getProgress() != 0) {
+							new BossHealth().getBar5().addPlayer(player);
+						}
 						return;
 					}
 				}
@@ -475,7 +478,9 @@ public class TPMobSpawn {
 					if (loc2.getX() <= 90 && loc2.getY() <= 87 && loc2.getZ() <= -5 && 
 							loc2.getX() >= 54 && loc2.getY() >= 75 && loc2.getZ() >= -41) {
 						num++;
-						new BossHealth().getBar2().addPlayer(player);
+						if(new BossHealth().getBar2().getProgress() != 0) {
+							new BossHealth().getBar2().addPlayer(player);
+						}
 						return;
 					}
 				}
@@ -511,7 +516,9 @@ public class TPMobSpawn {
 					if (loc2.getX() <= 90 && loc2.getY() <= 100 && loc2.getZ() <= -5 && 
 							loc2.getX() >= 54 && loc2.getY() >= 88 && loc2.getZ() >= -41) {
 						num++;
-						new BossHealth().getBar3().addPlayer(player);
+						if(new BossHealth().getBar3().getProgress() != 0) {
+							new BossHealth().getBar3().addPlayer(player);
+						}
 						return;
 					}
 				}
@@ -546,7 +553,9 @@ public class TPMobSpawn {
 					if (loc2.getX() <= 90 && loc2.getY() <= 115 && loc2.getZ() <= -5 && 
 							loc2.getX() >= 54 && loc2.getY() >= 101 && loc2.getZ() >= -41) {
 						num++;
-						new BossHealth().getBar4().addPlayer(player);
+						if(new BossHealth().getBar4().getProgress() != 0) {
+							new BossHealth().getBar4().addPlayer(player);
+						}
 						return;
 					}
 				}
@@ -869,7 +878,9 @@ public class TPMobSpawn {
 					if (loc2.getX() <= 49 && loc2.getY() <= 61 && loc2.getZ() <= 696 && 
 							loc2.getX() >= 16 && loc2.getY() >= 51 && loc2.getZ() >= 654) {
 						num++;
-						new BossHealth().getBar1().addPlayer(player);
+						if(new BossHealth().getBar1().getProgress() != 0) {
+							new BossHealth().getBar1().addPlayer(player);
+						}
 						return;
 					}
 				}
@@ -912,7 +923,9 @@ public class TPMobSpawn {
 					if (loc2.getX() <= 776 && loc2.getY() <= 31 && loc2.getZ() <= 605 
 							&& loc2.getX() >= 727 && loc2.getY() >= 0 && loc2.getZ() >= 555) {
 						num++;
-						new BossHealth().getBar11().addPlayer(player);
+						if(new BossHealth().getBar11().getProgress() != 0) {
+							new BossHealth().getBar11().addPlayer(player);
+						}
 						return;
 					}
 				}
@@ -970,6 +983,127 @@ public class TPMobSpawn {
 			}
 			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3562, 30, 3712), EntityType.GHAST);
 			
+			return;
+		}
+	}
+	
+	public void samak(Player player, Location loc) {
+		// 고대의 암석 협곡 던전
+		if (loc.getX() == 3759.01 && loc.getY() == 28 && loc.getZ() == 3078.26) {
+			player.teleport(new Location(player.getWorld(), 3759, 28, 3078.25));
+			int num = 0;
+			List<Entity> entitylist = player.getNearbyEntities(50, 30, 50);
+			for (Entity nearEntity : entitylist) {
+				if (nearEntity.getType() == EntityType.PLAYER) {
+					Player nearPlayer = (Player) nearEntity;
+					Location loc2 = nearPlayer.getLocation();
+					if (loc2.getX() <= 3832 && loc2.getY() <= 122 && loc2.getZ() <= 3086 
+							&& loc2.getX() >= 3648 && loc2.getY() >= 11 && loc2.getZ() >= 2981) {
+						num++;
+						return;
+					}
+				}
+			}
+			if (num == 0) {
+				for (Entity nearEntity : entitylist) {
+					if (nearEntity instanceof Mob) {
+						Location loc2 = nearEntity.getLocation();
+						if (loc2.getX() <= 3832 && loc2.getY() <= 122 && loc2.getZ() <= 3086 
+								&& loc2.getX() >= 3648 && loc2.getY() >= 11 && loc2.getZ() >= 2981) {
+							nearEntity.remove();
+						}
+					}
+				}
+			}
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3788, 23, 3058), EntityType.ZOMBIE);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3788, 23, 3058), EntityType.ZOMBIE);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3788, 23, 3058), EntityType.ZOMBIE);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3788, 23, 3058), EntityType.ZOMBIE);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3788, 23, 3058), EntityType.ZOMBIE);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3788, 23, 3058), EntityType.ZOMBIE);
+			return;
+		}
+		
+		// 고대의 암석 협곡 중간보스
+		if (loc.getX() == 3824.39 && loc.getY() == 34 && loc.getZ() == 2857.79) {
+			player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "이 앞은 지나갈 수 없다.");
+
+			player.teleport(new Location(player.getWorld(), 3724.3, 34, 2857.8));
+			int num = 0;
+			List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
+			for (Entity nearEntity : entitylist) {
+				if (nearEntity.getType() == EntityType.PLAYER) {
+					Player nearPlayer = (Player) nearEntity;
+					Location loc2 = nearPlayer.getLocation();
+					if (loc2.getX() <= 3824 && loc2.getY() <= 52 && loc2.getZ() <= 2896 
+							&& loc2.getX() >= 3707 && loc2.getY() >= 16 && loc2.getZ() >= 2834) {
+						num++;
+						if(new BossHealth().getBar12().getProgress() != 0) {
+							new BossHealth().getBar12().addPlayer(player);
+						}
+						return;
+					}
+				}
+			}
+
+			if (num == 0) {
+				for (Entity nearEntity : entitylist) {
+					if (nearEntity instanceof Mob) {
+						Location loc2 = nearEntity.getLocation();
+						if (loc2.getX() <= 3824 && loc2.getY() <= 52 && loc2.getZ() <= 2896 
+								&& loc2.getX() >= 3707 && loc2.getY() >= 16 && loc2.getZ() >= 2834) {
+							nearEntity.remove();
+						}
+					}
+				}
+			}
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3800, 33, 2855), EntityType.ZOMBIE);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3800, 33, 2861), EntityType.ZOMBIE);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3772, 34, 2858), EntityType.SKELETON);
+			
+			new BossHealth().getBar12().setProgress(1.0);
+			new BossHealth().getBar12().addPlayer(player);
+			return;
+		}
+		
+
+		// 카루 던전 보스
+		if (loc.getX() == 370 && loc.getY() == -79 && loc.getZ() == 3236) {
+			player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "나의 제물이 되어라. 애송이.");
+
+			player.teleport(new Location(player.getWorld(), 3730.1, 179, 3236));
+			int num = 0;
+			List<Entity> entitylist = player.getNearbyEntities(50, 50, 50);
+			for (Entity nearEntity : entitylist) {
+				if (nearEntity.getType() == EntityType.PLAYER) {
+					Player nearPlayer = (Player) nearEntity;
+					Location loc2 = nearPlayer.getLocation();
+					// 3711 163 3254  3769 133 3217
+					if (loc2.getX() <= 3769 && loc2.getY() <= 163 && loc2.getZ() <= 3254 && loc2.getX() >= 3711
+							&& loc2.getY() >= 133 && loc2.getZ() >= 3217) {
+						num++;
+						new BossHealth().getBar8().addPlayer(player);
+						return;
+					}
+				}
+			}
+
+			if (num == 0) {
+				for (Entity nearEntity : entitylist) {
+					if (nearEntity instanceof Mob) {
+						Location loc2 = nearEntity.getLocation();
+						// 3711 163 3254  3769 133 3217
+						if (loc2.getX() <= 3769 && loc2.getY() <= 163 && loc2.getZ() <= 3254 && loc2.getX() >= 3711
+								&& loc2.getY() >= 133 && loc2.getZ() >= 3217) {
+							nearEntity.remove();
+						}
+					}
+				}
+			}
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3740, 140, 3236), EntityType.SKELETON);
+			
+			new BossHealth().getBar8().setProgress(1.0);
+			new BossHealth().getBar8().addPlayer(player);
 			return;
 		}
 	}

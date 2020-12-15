@@ -316,7 +316,7 @@ public class Main extends JavaPlugin implements Listener{
 		} else if(player.getDisplayName().equalsIgnoreCase("why9196")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.BLUE + "'프리스트로 400레벨을 달성한' 와이.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Akilae3102")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.AQUA + "'데빌로 갈아탄' 아킬레.");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.AQUA + "'하와와 여고생 샤오유를 사용하는' 아킬레.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Espina_ID")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.BOLD + "'그저 군인' 에스피나.");
 		} else if(player.getDisplayName().equalsIgnoreCase("KangOSung")) {
@@ -1851,6 +1851,12 @@ public class Main extends JavaPlugin implements Listener{
 				event.setRespawnLocation(tiru);
 				return;
 			}
+			//고대의 암석 협곡 3839 255 3096  3626 0 2810 
+			if(loc.getX() <= 3839 && loc.getY() <= 255 && loc.getZ() <= 3096 
+					&& loc.getX() >= 3626 && loc.getY() >= 0 && loc.getZ() >= 2810) {
+				event.setRespawnLocation(samak);
+				return;
+			}
 			
 			int length1 = (int)(Math.pow(loc.getX()-wargunil.getX(), 2) + Math.pow(loc.getY()-wargunil.getY(), 2) + Math.pow(loc.getZ()-wargunil.getZ(), 2));
 			int length2 = (int)(Math.pow(loc.getX()-forgan.getX(), 2) + Math.pow(loc.getY()-forgan.getY(), 2) + Math.pow(loc.getZ()-forgan.getZ(), 2));
@@ -2115,6 +2121,10 @@ public class Main extends JavaPlugin implements Listener{
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "힐링 포션 XI")) {
 				PotionRatio pr = new PotionRatio();
 				pr.calculation(player, 2000.0);
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "힐링 포션 XII")) {
+				PotionRatio pr = new PotionRatio();
+				pr.calculation(player, 2500.0);
 			}
 			//특이 포션
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "엘릭서")) {
@@ -4464,10 +4474,11 @@ public class Main extends JavaPlugin implements Listener{
 					
 					if(boss.getHealth() - event.getFinalDamage() <= 0) {
 						for(Player p : new BossHealth().getBar1().getPlayers()) {
+							new BossHealth().getBar1().setProgress(0);
 							new BossHealth().getBar1().removePlayer(p);
 						}
 					} else {
-						new BossHealth().getBar1().setProgress(boss.getHealth() / 700000.0);
+						new BossHealth().getBar1().setProgress(boss.getHealth()-event.getFinalDamage() / 700000.0);
 					}
 				}
 				// 탑 1층
@@ -4477,10 +4488,11 @@ public class Main extends JavaPlugin implements Listener{
 					
 					if(boss.getHealth() - event.getFinalDamage() <= 0) {
 						for(Player p : new BossHealth().getBar2().getPlayers()) {
+							new BossHealth().getBar2().setProgress(0);
 							new BossHealth().getBar2().removePlayer(p);
 						}
 					} else {
-						new BossHealth().getBar2().setProgress(boss.getHealth() / 250000.0);
+						new BossHealth().getBar2().setProgress((boss.getHealth()-event.getFinalDamage()) / 250000.0);
 					}
 				}
 				// 탑 2층
@@ -4490,10 +4502,11 @@ public class Main extends JavaPlugin implements Listener{
 					
 					if(boss.getHealth() - event.getFinalDamage() <= 0) {
 						for(Player p : new BossHealth().getBar3().getPlayers()) {
+							new BossHealth().getBar3().setProgress(0);
 							new BossHealth().getBar3().removePlayer(p);
 						}
 					} else {
-						new BossHealth().getBar3().setProgress(boss.getHealth() / 550000.0);
+						new BossHealth().getBar3().setProgress((boss.getHealth()-event.getFinalDamage()) / 550000.0);
 					}
 				}
 				// 탑 3층
@@ -4503,10 +4516,11 @@ public class Main extends JavaPlugin implements Listener{
 					
 					if(boss.getHealth() - event.getFinalDamage() <= 0) {
 						for(Player p : new BossHealth().getBar4().getPlayers()) {
+							new BossHealth().getBar4().setProgress(0);
 							new BossHealth().getBar4().removePlayer(p);
 						}
 					} else {
-						new BossHealth().getBar4().setProgress(boss.getHealth() / 1000000.0);
+						new BossHealth().getBar4().setProgress((boss.getHealth()-event.getFinalDamage()) / 1000000.0);
 					}
 				}
 				// 아덴
@@ -4516,10 +4530,11 @@ public class Main extends JavaPlugin implements Listener{
 					
 					if(boss.getHealth() - event.getFinalDamage() <= 0) {
 						for(Player p : new BossHealth().getBar5().getPlayers()) {
+							new BossHealth().getBar5().setProgress(0);
 							new BossHealth().getBar5().removePlayer(p);
 						}
 					} else {
-						new BossHealth().getBar5().setProgress(boss.getHealth() / 20000.0);
+						new BossHealth().getBar5().setProgress((boss.getHealth()-event.getFinalDamage()) / 20000.0);
 					}
 				}
 				// 특급 요리사
@@ -4529,10 +4544,11 @@ public class Main extends JavaPlugin implements Listener{
 					
 					if(boss.getHealth() - event.getFinalDamage() <= 0) {
 						for(Player p : new BossHealth().getBar6().getPlayers()) {
+							new BossHealth().getBar6().setProgress(0);
 							new BossHealth().getBar6().removePlayer(p);
 						}
 					} else {
-						new BossHealth().getBar6().setProgress(boss.getHealth() / 60000.0);
+						new BossHealth().getBar6().setProgress((boss.getHealth()-event.getFinalDamage()) / 60000.0);
 					}
 				}
 				// 케흘렌
@@ -4542,10 +4558,11 @@ public class Main extends JavaPlugin implements Listener{
 					
 					if(boss.getHealth() - event.getFinalDamage() <= 0) {
 						for(Player p : new BossHealth().getBar7().getPlayers()) {
+							new BossHealth().getBar7().setProgress(0);
 							new BossHealth().getBar7().removePlayer(p);
 						}
 					} else {
-						new BossHealth().getBar7().setProgress(boss.getHealth() / 70000.0);
+						new BossHealth().getBar7().setProgress((boss.getHealth()-event.getFinalDamage()) / 70000.0);
 					}
 				}
 				// 발로르
@@ -4555,10 +4572,11 @@ public class Main extends JavaPlugin implements Listener{
 					
 					if(boss.getHealth() - event.getFinalDamage() <= 0) {
 						for(Player p : new BossHealth().getBar8().getPlayers()) {
+							new BossHealth().getBar8().setProgress(0);
 							new BossHealth().getBar8().removePlayer(p);
 						}
 					} else {
-						new BossHealth().getBar8().setProgress(boss.getHealth() / 150000.0);
+						new BossHealth().getBar8().setProgress((boss.getHealth()-event.getFinalDamage()) / 150000.0);
 					}
 				}
 				// 티타니아
@@ -4568,10 +4586,11 @@ public class Main extends JavaPlugin implements Listener{
 					
 					if(boss.getHealth() - event.getFinalDamage() <= 0) {
 						for(Player p : new BossHealth().getBar9().getPlayers()) {
+							new BossHealth().getBar9().setProgress(0);
 							new BossHealth().getBar9().removePlayer(p);
 						}
 					} else {
-						new BossHealth().getBar9().setProgress(boss.getHealth() / 30000.0);
+						new BossHealth().getBar9().setProgress((boss.getHealth()-event.getFinalDamage()) / 30000.0);
 					}
 				}
 				// 오베론
@@ -4581,10 +4600,11 @@ public class Main extends JavaPlugin implements Listener{
 					
 					if(boss.getHealth() - event.getFinalDamage() <= 0) {
 						for(Player p : new BossHealth().getBar10().getPlayers()) {
+							new BossHealth().getBar10().setProgress(0);
 							new BossHealth().getBar10().removePlayer(p);
 						}
 					} else {
-						new BossHealth().getBar10().setProgress(boss.getHealth() / 30000.0);
+						new BossHealth().getBar10().setProgress((boss.getHealth()-event.getFinalDamage()) / 30000.0);
 					}
 				}
 				// 아라크네
@@ -4594,10 +4614,25 @@ public class Main extends JavaPlugin implements Listener{
 					
 					if(boss.getHealth() - event.getFinalDamage() <= 0) {
 						for(Player p : new BossHealth().getBar11().getPlayers()) {
+							new BossHealth().getBar11().setProgress(0);
 							new BossHealth().getBar11().removePlayer(p);
 						}
 					} else {
-						new BossHealth().getBar11().setProgress(boss.getHealth() / 800000.0);
+						new BossHealth().getBar11().setProgress((boss.getHealth()-event.getFinalDamage()) / 800000.0);
+					}
+				}
+				// 석상 파수꾼
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("석상 파수꾼" + ChatColor.YELLOW + " [Lv.??]")) {
+
+					LivingEntity boss = (LivingEntity) mob;
+					
+					if(boss.getHealth() - event.getFinalDamage() <= 0) {
+						for(Player p : new BossHealth().getBar12().getPlayers()) {
+							new BossHealth().getBar12().setProgress(0);
+							new BossHealth().getBar12().removePlayer(p);
+						}
+					} else {
+						new BossHealth().getBar12().setProgress((boss.getHealth()-event.getFinalDamage()) / 1800000.0);
 					}
 				}
 			}
@@ -6782,6 +6817,8 @@ public class Main extends JavaPlugin implements Listener{
 						} else if(as.getHelmet().getType() == Material.RED_NETHER_BRICK_STAIRS) {
 							ent.remove();
 						} else if(as.getItemInHand().getType() == Material.POLISHED_BLACKSTONE_SLAB) {
+							ent.remove();
+						} else if(as.getItemInHand().getType() == Material.GREEN_CARPET) {
 							ent.remove();
 						}
 					}

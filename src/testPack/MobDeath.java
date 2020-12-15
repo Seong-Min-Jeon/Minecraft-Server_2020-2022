@@ -905,6 +905,26 @@ public class MobDeath {
 				if (name.equalsIgnoreCase("길을 잃은 검은 수염단" + ChatColor.YELLOW + " [Lv.463]")) {
 					mobloot.mob204(lootPlayer);
 				}
+				// 암석 전사
+				if (name.equalsIgnoreCase("암석 전사" + ChatColor.YELLOW + " [Lv.463]")) {
+					mobloot.mob205(lootPlayer);
+				}
+				// 암석 전사
+				if (name.equalsIgnoreCase("암석 전사" + ChatColor.YELLOW + " [Lv.465]")) {
+					mobloot.mob206(lootPlayer);
+				}
+				// 암석 전사
+				if (name.equalsIgnoreCase("암석 전사" + ChatColor.YELLOW + " [Lv.470]")) {
+					mobloot.mob207(lootPlayer);
+				}
+				// 스톤 가디언
+				if (name.equalsIgnoreCase("스톤 가디언" + ChatColor.YELLOW + " [Lv.475]")) {
+					mobloot.mob208(lootPlayer);
+				}
+				// 석상 파수꾼
+				if (name.equalsIgnoreCase("석상 파수꾼" + ChatColor.YELLOW + " [Lv.??]")) {
+					mobloot.mob209(lootPlayer);
+				}
 			} catch (Exception e) {
 
 			}

@@ -16,6 +16,8 @@ import org.bukkit.Particle.DustOptions;
 import org.bukkit.block.Block;
 import org.bukkit.block.Chest;
 import org.bukkit.craftbukkit.v1_16_R3.CraftWorld;
+import org.bukkit.entity.ArmorStand;
+import org.bukkit.entity.Arrow;
 import org.bukkit.entity.CaveSpider;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
@@ -24,12 +26,15 @@ import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Mob;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Skeleton;
+import org.bukkit.entity.SpectralArrow;
 import org.bukkit.entity.WitherSkeleton;
 import org.bukkit.entity.Zombie;
 import org.bukkit.inventory.EntityEquipment;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
+import org.bukkit.util.EulerAngle;
 import org.bukkit.util.Vector;
 
 import net.minecraft.server.v1_16_R3.WorldServer;
@@ -63,6 +68,7 @@ public class PlayerHitDebuff {
 		mob21(player, mob);
 		mob22(player, mob);
 		mob23(player, mob);
+		mob24(player, mob);
 	}
 
 	// 시련의 형상
@@ -1020,8 +1026,242 @@ public class PlayerHitDebuff {
 		}
 	}
 
+	// 석상 파수꾼
 	public void mob24(Player player, Entity mob) {
 
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("석상 파수꾼" + ChatColor.YELLOW + " [Lv.??]")) {
+			
+			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 5)) {
+				
+				EntityEquipment weapon = ((LivingEntity) mob).getEquipment();
+				ItemStack weaponItem = new ItemStack(Material.BOW);
+				ItemMeta im = weaponItem.getItemMeta();
+				im.setLocalizedName("400");
+				weaponItem.setItemMeta(im);
+				weapon.setItemInMainHand(weaponItem);
+				EntityEquipment mobBow = ((LivingEntity) mob).getEquipment();
+				ItemStack mobBowItem = new ItemStack(Material.DEAD_TUBE_CORAL_BLOCK);
+				mobBow.setItemInOffHand(mobBowItem);
+				
+				int num = rnd.nextInt(5);
+				if (num == 0) {
+					mob.setVelocity(((Skeleton) mob).getEyeLocation().getDirection().add(new Vector(0, 2, 0)));
+					((Skeleton) mob).setTarget(player);
+					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+						int time = 0;
+						ThreadData td = new ThreadData(player.getUniqueId());
+
+						@Override
+						public void run() {
+							
+							if (!td.hasID()) {
+								td.setID(taskID);
+							}
+							
+							if(time % 10 == 0) {
+								mob.getWorld().spawnParticle(Particle.FLAME, mob.getLocation(), 10);
+							}
+							
+							if(time >= 40) {
+								td.endTask();
+								td.removeID();
+							}
+							
+							time++;
+
+						}
+
+					}, 0, 1);
+				} else if (num == 1) {
+					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+						int time = 0;
+						ThreadData td = new ThreadData(player.getUniqueId());
+
+						@Override
+						public void run() {
+							if (!td.hasID()) {
+								td.setID(taskID);
+							}
+						
+							if(time>=20) {								
+								td.endTask();
+								td.removeID();
+							} else if(time%2 == 0) {
+								Arrow arrow = player.launchProjectile(Arrow.class);
+								arrow.setShooter((LivingEntity) mob);
+								arrow.setDamage(1000);
+								arrow.setVelocity(mob.getLocation().getDirection().multiply(1.8f));		
+								mob.getWorld().spawnParticle(Particle.FLAME, arrow.getLocation(), 5);
+								mob.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ARROW_SHOOT, 1.0f, 1.0f);
+								
+								SpectralArrow sarrow = (SpectralArrow) arrow.getWorld().spawnEntity(arrow.getLocation(), EntityType.SPECTRAL_ARROW);
+								sarrow.setVelocity(arrow.getVelocity());
+							}
+							
+							time++;
+						}	
+
+					}, 0, 1);
+				}
+			} else if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
+				
+				EntityEquipment weapon = ((LivingEntity) mob).getEquipment();
+				ItemStack weaponItem = new ItemStack(Material.BOW);
+				ItemMeta im = weaponItem.getItemMeta();
+				im.setLocalizedName("400");
+				weaponItem.setItemMeta(im);
+				weapon.setItemInMainHand(weaponItem);
+				EntityEquipment mobBow = ((LivingEntity) mob).getEquipment();
+				ItemStack mobBowItem = new ItemStack(Material.MUSIC_DISC_CHIRP);
+				mobBow.setItemInOffHand(mobBowItem);
+				
+				int num = rnd.nextInt(8);
+				if (num == 0) {
+					mob.setVelocity(((Skeleton) mob).getEyeLocation().getDirection().add(new Vector(0, 2, 0)));
+					((Skeleton) mob).setTarget(player);
+					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+						int time = 0;
+						ThreadData td = new ThreadData(player.getUniqueId());
+
+						@Override
+						public void run() {
+							
+							if (!td.hasID()) {
+								td.setID(taskID);
+							}
+							
+							if(time % 10 == 0) {
+								mob.getWorld().spawnParticle(Particle.FLAME, mob.getLocation(), 10);
+							}
+							
+							if(time >= 40) {
+								td.endTask();
+								td.removeID();
+							}
+							
+							time++;
+
+						}
+
+					}, 0, 1);
+				} else if (num == 1) {
+					((Skeleton) mob).setTarget(player);
+					for(int i = 0 ; i < 10 ; i++) {
+						player.getWorld().spawnParticle(Particle.NOTE, mob.getLocation().add(0, 0.5, 0), 1);
+					}
+					LivingEntity ent = (LivingEntity) mob;
+					ent.setHealth(ent.getHealth() + 50000);
+					player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ENDER_DRAGON_FLAP, 1.0f, 1.0f);
+					player.sendMessage(ChatColor.RED + "석상 파수꾼이 치유의 노래를 부릅니다.");
+					sendMessage(player, ChatColor.RED + "석상 파수꾼이 치유의 노래를 부릅니다.");
+				}
+			} else {
+				
+				EntityEquipment weapon = ((LivingEntity) mob).getEquipment();
+				ItemStack weaponItem = new ItemStack(Material.GREEN_CARPET);
+				weapon.setItemInMainHand(weaponItem);
+				EntityEquipment mobBow = ((LivingEntity) mob).getEquipment();
+				ItemStack mobBowItem = new ItemStack(Material.AIR);
+				mobBow.setItemInOffHand(mobBowItem);
+				
+				int num = rnd.nextInt(15);
+				if (num == 0) {
+					mob.setVelocity(((Skeleton) mob).getEyeLocation().getDirection().add(new Vector(0, 2, 0)));
+					((Skeleton) mob).setTarget(player);
+					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+						int time = 0;
+						ThreadData td = new ThreadData(player.getUniqueId());
+
+						@Override
+						public void run() {
+							
+							if (!td.hasID()) {
+								td.setID(taskID);
+							}
+							
+							if(time % 10 == 0) {
+								mob.getWorld().spawnParticle(Particle.FLAME, mob.getLocation(), 10);
+							}
+							
+							if(time >= 40) {
+								td.endTask();
+								td.removeID();
+							}
+							
+							time++;
+
+						}
+
+					}, 0, 1);
+				} else if (num == 1) {
+					player.teleport(mob);
+					((Skeleton) mob).setTarget(player);
+					player.sendMessage(ChatColor.RED + "석상 파수꾼 잠영참를 시전합니다.");
+					sendMessage(player, ChatColor.RED + "석상 파수꾼이 잠영참를 시전합니다.");
+					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+						int time = 0;
+						ThreadData td = new ThreadData(player.getUniqueId());
+
+						@Override
+						public void run() {
+							
+							if (!td.hasID()) {
+								td.setID(taskID);
+							}
+							
+							if(time == 5 || time == 25) {
+								List<Entity> entitylist = mob.getNearbyEntities(30, 30, 30);
+								for(Entity nearEntity : entitylist) {
+									if (nearEntity instanceof Player) {
+										nearEntity.sendMessage(ChatColor.RED + "잠영참이 발동됩니다.");
+										((Player) nearEntity).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 20, 200, true, false, false));
+										((Player) nearEntity).addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 20, 200, true, false, false));
+										ArmorStand as = (ArmorStand) player.getWorld().spawnEntity(nearEntity.getLocation().add(0, 8, 0), EntityType.ARMOR_STAND);
+										as.setVisible(false);
+										as.setArms(true);
+										as.setItemInHand(new ItemStack(Material.GREEN_CARPET));
+										as.setRightArmPose(new EulerAngle(Math.toRadians(90), 0, 0));
+									}
+								}
+							}
+							
+							if(time == 20 || time == 40) {
+								List<Entity> entitylist = mob.getNearbyEntities(30, 30, 30);
+								for(Entity nearEntity : entitylist) {
+									if(nearEntity instanceof ArmorStand) {
+										ArmorStand as = (ArmorStand) nearEntity;
+										if((as.getItemInHand().getType() == Material.GREEN_CARPET) && (as.getRightArmPose().getX() == Math.toRadians(90))) {
+											as.remove();
+											continue;
+										}
+									}
+									if(nearEntity instanceof Player) {
+										if(nearEntity.getType() != EntityType.PLAYER) {
+											((Player) nearEntity).setHealth(((Player) nearEntity).getHealth() / 2);
+										}
+									}
+								}
+							}
+							
+							if(time >= 50) {
+								td.endTask();
+								td.removeID();
+							}
+							
+							time++;
+
+						}
+
+					}, 0, 1);
+				}
+			}
+		}
+		
 	}
 
 	public void mob25(Player player, Entity mob) {
@@ -1066,67 +1306,6 @@ public class PlayerHitDebuff {
 
 	public void mob35(Player player, Entity mob) {
 
-	}
-	
-	public static ArrayList<FallingBlock> summonWool(ArrayList<FallingBlock> ary, Location loc, int num) {
-		
-		int x1 = num;
-		for (int y1 = -1; y1 < 0; y1++) {
-			for (int z1 = -num; z1 < num+1; z1++) {
-				Location loc2 = loc.clone().add(new Vector(x1, y1 + 0.5, z1));
-				if (loc2.getBlock().getType() != Material.AIR) {
-					FallingBlock fb = (FallingBlock) loc.getWorld().spawnFallingBlock(loc2, Material.RED_WOOL, (byte) 0);
-					fb.setVelocity(new Vector(0, 0, 0));
-					fb.setDropItem(false);
-					fb.setGravity(false);
-					ary.add(fb);
-				}
-			}
-		}
-		
-		x1 = num * -1;
-		for (int y1 = -1; y1 < 0; y1++) {
-			for (int z1 = -num; z1 < num+1; z1++) {
-				Location loc2 = loc.clone().add(new Vector(x1, y1 + 0.5, z1));
-				if (loc2.getBlock().getType() != Material.AIR) {
-					FallingBlock fb = (FallingBlock) loc.getWorld().spawnFallingBlock(loc2, Material.RED_WOOL, (byte) 0);
-					fb.setVelocity(new Vector(0, 0, 0));
-					fb.setDropItem(false);
-					fb.setGravity(false);
-					ary.add(fb);
-				}
-			}
-		}
-		
-		int z2 = num;
-		for (int x2 = -25; x2 < 26; x2++) {
-			for (int y2 = -1; y2 < 0; y2++) {
-				Location loc2 = loc.clone().add(new Vector(x2, y2 + 0.5, z2));
-				if (loc2.getBlock().getType() != Material.AIR) {
-					FallingBlock fb = (FallingBlock) loc.getWorld().spawnFallingBlock(loc2, Material.RED_WOOL, (byte) 0);
-					fb.setVelocity(new Vector(0, 0, 0));
-					fb.setDropItem(false);
-					fb.setGravity(false);
-					ary.add(fb);
-				}
-			}
-		}
-		
-		z2 = num * -1;
-		for (int x2 = -25; x2 < 26; x2++) {
-			for (int y2 = -1; y2 < 0; y2++) {
-				Location loc2 = loc.clone().add(new Vector(x2, y2 + 0.5, z2));
-				if (loc2.getBlock().getType() != Material.AIR) {
-					FallingBlock fb = (FallingBlock) loc.getWorld().spawnFallingBlock(loc2, Material.RED_WOOL, (byte) 0);
-					fb.setVelocity(new Vector(0, 0, 0));
-					fb.setDropItem(false);
-					fb.setGravity(false);
-					ary.add(fb);
-				}
-			}
-		}
-		
-		return ary;
 	}
 
 	public void sendMessage(Player player, String msg) {

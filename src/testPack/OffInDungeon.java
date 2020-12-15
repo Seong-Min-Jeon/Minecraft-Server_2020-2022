@@ -65,15 +65,21 @@ public class OffInDungeon {
 			return;
 		}
 		// 코낭그 미궁 10 61 609  102 50 702
-		if (loc.getX() <= 102 && loc.getY() <= 68 && loc.getZ() <= 702 && loc.getX() >= 10 && loc.getY() >= 50
-				&& loc.getZ() >= 609) {
+		if (loc.getX() <= 102 && loc.getY() <= 68 && loc.getZ() <= 702 
+				&& loc.getX() >= 10 && loc.getY() >= 50 && loc.getZ() >= 609) {
 			player.teleport(new Location(player.getWorld(), 221, 81, 725));
 			return;
 		}
 		// 아라크네의 저주 699 59 552  789 0 634
-		if (loc.getX() <= 789 && loc.getY() <= 59 && loc.getZ() <= 634 && loc.getX() >= 699 && loc.getY() >= 0
-				&& loc.getZ() >= 552) {
+		if (loc.getX() <= 789 && loc.getY() <= 59 && loc.getZ() <= 634 
+				&& loc.getX() >= 699 && loc.getY() >= 0 && loc.getZ() >= 552) {
 			player.teleport(new Location(player.getWorld(), 686, 49, 588));
+			return;
+		}
+		// 고대의 사막 협곡
+		if (loc.getX() <= 3839 && loc.getY() <= 255 && loc.getZ() <= 3096 
+				&& loc.getX() >= 3626 && loc.getY() >= 0 && loc.getZ() >= 2810) {
+			player.teleport(new Location(player.getWorld(), 164, 23, 1057));
 			return;
 		}
 	}
