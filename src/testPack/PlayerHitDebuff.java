@@ -1221,7 +1221,7 @@ public class PlayerHitDebuff {
 										nearEntity.sendMessage(ChatColor.RED + "잠영참이 발동됩니다.");
 										((Player) nearEntity).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 20, 200, true, false, false));
 										((Player) nearEntity).addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 20, 200, true, false, false));
-										ArmorStand as = (ArmorStand) player.getWorld().spawnEntity(nearEntity.getLocation().add(0, 8, 0), EntityType.ARMOR_STAND);
+										ArmorStand as = (ArmorStand) player.getWorld().spawnEntity(nearEntity.getLocation().add(0, 5, 0), EntityType.ARMOR_STAND);
 										as.setVisible(false);
 										as.setArms(true);
 										as.setItemInHand(new ItemStack(Material.GREEN_CARPET));

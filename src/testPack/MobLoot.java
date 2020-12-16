@@ -4906,12 +4906,24 @@ public class MobLoot {
 		es.giveExp(player, 8000000);
 	}
 	
-	public void mob210(Player player) {
-
+	// 암석 거인의 파편
+	public void mob210(Entity mob, Player player) {
+		es.giveExp(player, 1900000);
+		
+		int tmp2 = rnd.nextInt(4);
+		if(tmp2 == 0) {
+			Location loc = mob.getLocation().add(0, 3, 0);
+			loc.getWorld().spawnEntity(loc, EntityType.CREEPER);
+		}
 	}
 	
-	public void mob211(Player player) {
-
+	// 유황 골렘
+	public void mob211(Entity mob, Player player) {
+		ItemStack var1 = new ItemStack(Material.TNT);
+		ItemMeta var1Im = var1.getItemMeta();
+		var1Im.setDisplayName(ChatColor.WHITE + "유황 폭탄");
+		var1.setItemMeta(var1Im);
+		player.getWorld().dropItem(mob.getLocation(), var1);
 	}
 	
 	public void mob212(Player player) {

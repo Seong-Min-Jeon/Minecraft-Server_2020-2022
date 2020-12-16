@@ -312,7 +312,7 @@ public class Main extends JavaPlugin implements Listener{
 		} else if(player.getDisplayName().equalsIgnoreCase("WoolRing")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.GREEN + "'도트랑 도트가 제일 좋아' 울링.");
 		} else if(player.getDisplayName().equalsIgnoreCase("_nanoboost_")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.RED + "'백수의 왕' 나노부스트.");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.RED + "'그저 낫쿨' 나노부스트.");
 		} else if(player.getDisplayName().equalsIgnoreCase("why9196")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.BLUE + "'프리스트로 400레벨을 달성한' 와이.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Akilae3102")) {
@@ -4027,6 +4027,28 @@ public class Main extends JavaPlugin implements Listener{
 			event.setCancelled(true);
 			return;
 		}
+		//몹 스킬 트리거
+		try {
+			try {
+				if (event.getEntity() instanceof Mob) {
+					Entity entity = (Entity) event.getEntity();
+					Player player = null;
+					List<Entity> nearEntity = entity.getNearbyEntities(20, 20, 20);
+					for(Entity ent : nearEntity) {
+					    if(ent instanceof Player) {
+					        player = (Player) ent;
+					        break;
+					    }
+					}
+					PlayerHitDebuff debuff = new PlayerHitDebuff();
+					debuff.playerHitDebuff(player, entity);
+				}
+			} catch (Exception e) {
+				
+			}
+		} catch(Exception e) {
+			
+		}
 		//회피
 		try {
 			if (event.getEntity() instanceof Player) {
@@ -5782,6 +5804,87 @@ public class Main extends JavaPlugin implements Listener{
 		} catch(Exception e) {
 					
 		}
+		//발판 이벤트
+		try {
+			if (event.getAction() == Action.PHYSICAL) {
+				if(event.getClickedBlock().getType() == Material.STONE_PRESSURE_PLATE) {
+					
+					//======================================================================================================
+					// 암석 거인
+					if(event.getClickedBlock().getX() == 3658 && event.getClickedBlock().getZ() == 2858) {
+						Player player = event.getPlayer();
+						
+						int i = 0;
+						for (ItemStack is : player.getInventory().getContents()) {
+							if(is == null) continue;
+						    if (is.getType() == Material.TNT) {
+						    	try {
+						    		if(is.getItemMeta().getDisplayName().equals(ChatColor.WHITE + "유황 폭탄")) {
+						    			 i = i + is.getAmount();
+						    			 is.setAmount(is.getAmount() - 1);
+						    			 
+						    			// 암석 거인
+										BossBar bb = new BossHealth().getBar13();
+										if(bb.getProgress() - 0.1 <= 0) {
+											
+											ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
+											ItemMeta rewardKeyIm = rewardKey.getItemMeta();
+											rewardKeyIm.setDisplayName(ChatColor.YELLOW + "고대의 암석 협곡 보상 열쇠");
+											rewardKey.setItemMeta(rewardKeyIm);
+											player.getInventory().addItem(rewardKey);
+											player.sendMessage(ChatColor.YELLOW + "고대의 암석 협곡 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+
+											List<Entity> entitylist = player.getNearbyEntities(50, 50, 50);
+											for (Entity nearEntity : entitylist) {
+												if (nearEntity.getType() == EntityType.PLAYER) {
+													Player nearPlayer = (Player) nearEntity;
+													Location loc2 = nearPlayer.getLocation();
+													if (loc2.getX() <= 3697 && loc2.getY() <= 58 && loc2.getZ() <= 2898 
+															&& loc2.getX() >= 3658 && loc2.getY() >= 41 && loc2.getZ() >= 2823) {
+														nearPlayer.getInventory().addItem(rewardKey);
+														nearPlayer.sendMessage(ChatColor.YELLOW + "고대의 암석 협곡 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+													}
+												}
+											}
+											
+											for(Player p : new BossHealth().getBar13().getPlayers()) {
+												new BossHealth().getBar13().setProgress(0);
+												new BossHealth().getBar13().removePlayer(p);
+											}
+											List<Entity> nearEntity = player.getNearbyEntities(50, 50, 50);
+											for(Entity ent : nearEntity) {
+												if(ent instanceof Player) {
+													Player nearPlayer = (Player) ent;
+													Location loc2 = nearPlayer.getLocation();
+													if (loc2.getX() <= 3697 && loc2.getY() <= 58 && loc2.getZ() <= 2898 
+															&& loc2.getX() >= 3658 && loc2.getY() >= 41 && loc2.getZ() >= 2823) {
+														nearPlayer.getInventory().remove(Material.TNT);
+														nearPlayer.teleport(new Location(player.getWorld(), 3685, 151, 2858.5));
+													}
+												}
+											}
+											player.getInventory().remove(Material.TNT);
+											player.teleport(new Location(player.getWorld(), 3685, 151, 2858.5));
+										} else {
+											bb.setProgress(bb.getProgress() - 0.1);
+											int p = rnd.nextInt(10);
+											int q = rnd.nextInt(10);
+											world.playSound(new Location(world, 3652, 48+p, 2848+2*q), Sound.ENTITY_GENERIC_EXPLODE, 2.5f, 1.0f);
+											world.spawnParticle(Particle.EXPLOSION_LARGE, new Location(world, 3652, 48+p, 2848+2*q), 5);
+										}
+						    		}
+						    	} catch(Exception e) {
+						    		
+						    	}
+						    }
+						}
+					}
+					//======================================================================================================
+				}
+			}
+		} catch (Exception e) {
+
+		}
 	}
 	
 	@EventHandler
@@ -6684,9 +6787,9 @@ public class Main extends JavaPlugin implements Listener{
 		if (player.getDisplayName().equalsIgnoreCase("yumehama")) {
 			event.setQuitMessage(ChatColor.DARK_RED + "'더 게임 종결자' 유메하마" + ChatColor.WHITE + "님이 로그아웃 하였습니다.");
 		} else if (player.getDisplayName().equalsIgnoreCase("WoolRing")) {
-			event.setQuitMessage(ChatColor.GREEN + "'노란 머리가 젤다죠?' 울링" + ChatColor.WHITE + "님이 말도 없이 탈주합니다.");
+			event.setQuitMessage(ChatColor.GREEN + "'노란 머리가 젤다죠?' 울링" + ChatColor.WHITE + "님이 아뇨 뚱인데요?");
 		} else if (player.getDisplayName().equalsIgnoreCase("_nanoboost_")) {
-			event.setQuitMessage(ChatColor.RED + "나노부스트는 잠이 들었습니다.");
+			event.setQuitMessage(ChatColor.RED + "뽀모슐라");
 		} else if(player.getDisplayName().equalsIgnoreCase("why9196")) {
 			event.setQuitMessage(ChatColor.BLUE + "????????????????");
 		} else if(player.getDisplayName().equalsIgnoreCase("Akilae3102")) {

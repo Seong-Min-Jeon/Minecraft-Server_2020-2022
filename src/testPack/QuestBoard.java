@@ -2497,7 +2497,7 @@ public class QuestBoard {
 			es.giveExp(player, 18000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			msg.msg(player, "사막 정찰병: 이번에는 지혜를 증명할 차례다.%사막 정찰병: 이번 시련은 매우 어려울 것이나 이것이 마지막 시련이다.%"
-					+ "사막 정찰병: 이면에 잠든 거인 석상을 처리하는 일이다.%사막 정찰병: 혼자가면 위험할 수도 있으니 부디 동료와 함께 가길 바란다.");
+					+ "사막 정찰병: 이면에 잠든 암석 거인을 처리하는 일이다.%사막 정찰병: 혼자가면 위험할 수도 있으니 부디 동료와 함께 가길 바란다.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq45_10(player, 0);
 			return;

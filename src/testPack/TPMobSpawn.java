@@ -208,8 +208,8 @@ public class TPMobSpawn {
 				if (nearEntity.getType() == EntityType.PLAYER) {
 					Player nearPlayer = (Player) nearEntity;
 					Location loc2 = nearPlayer.getLocation();
-					// 3807 93 3201  3783 63 3227
-					if (loc2.getX() <= 3807 && loc2.getY() <= 93 && loc2.getZ() <= 3227 && loc2.getX() >= 3783
+					// 3809 93 3201  3783 63 3227
+					if (loc2.getX() <= 3809 && loc2.getY() <= 93 && loc2.getZ() <= 3227 && loc2.getX() >= 3783
 							&& loc2.getY() >= 63 && loc2.getZ() >= 3201) {
 						num++;
 						if(new BossHealth().getBar7().getProgress() != 0) {
@@ -224,8 +224,8 @@ public class TPMobSpawn {
 				for (Entity nearEntity : entitylist) {
 					if (nearEntity instanceof Mob) {
 						Location loc2 = nearEntity.getLocation();
-						// 3807 93 3201  3783 63 3227
-						if (loc2.getX() <= 3807 && loc2.getY() <= 93 && loc2.getZ() <= 3227 && loc2.getX() >= 3783
+						// 3809 93 3201  3783 63 3227
+						if (loc2.getX() <= 3809 && loc2.getY() <= 93 && loc2.getZ() <= 3227 && loc2.getX() >= 3783
 								&& loc2.getY() >= 63 && loc2.getZ() >= 3201) {
 							nearEntity.remove();
 						}
@@ -1028,9 +1028,9 @@ public class TPMobSpawn {
 		if (loc.getX() == 3824.39 && loc.getY() == 34 && loc.getZ() == 2857.79) {
 			player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "이 앞은 지나갈 수 없다.");
 
-			player.teleport(new Location(player.getWorld(), 3724.3, 34, 2857.8));
+			player.teleport(new Location(player.getWorld(), 3824.3, 34, 2857.8));
 			int num = 0;
-			List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
+			List<Entity> entitylist = player.getNearbyEntities(120, 20, 30);
 			for (Entity nearEntity : entitylist) {
 				if (nearEntity.getType() == EntityType.PLAYER) {
 					Player nearPlayer = (Player) nearEntity;
@@ -1066,23 +1066,23 @@ public class TPMobSpawn {
 			return;
 		}
 		
+		// 고대의 암석 협곡 보스
+		if (loc.getX() == 3697.5 && loc.getY() == 52 && loc.getZ() == 2858.5) {
+			player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "여기가 너의 무덤이 될 것이다.");
 
-		// 카루 던전 보스
-		if (loc.getX() == 370 && loc.getY() == -79 && loc.getZ() == 3236) {
-			player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "나의 제물이 되어라. 애송이.");
-
-			player.teleport(new Location(player.getWorld(), 3730.1, 179, 3236));
+			player.teleport(new Location(player.getWorld(), 3697.4, 52, 2858.8));
 			int num = 0;
-			List<Entity> entitylist = player.getNearbyEntities(50, 50, 50);
+			List<Entity> entitylist = player.getNearbyEntities(30, 20, 50);
 			for (Entity nearEntity : entitylist) {
 				if (nearEntity.getType() == EntityType.PLAYER) {
 					Player nearPlayer = (Player) nearEntity;
 					Location loc2 = nearPlayer.getLocation();
-					// 3711 163 3254  3769 133 3217
-					if (loc2.getX() <= 3769 && loc2.getY() <= 163 && loc2.getZ() <= 3254 && loc2.getX() >= 3711
-							&& loc2.getY() >= 133 && loc2.getZ() >= 3217) {
+					if (loc2.getX() <= 3697 && loc2.getY() <= 58 && loc2.getZ() <= 2898 
+							&& loc2.getX() >= 3658 && loc2.getY() >= 41 && loc2.getZ() >= 2823) {
 						num++;
-						new BossHealth().getBar8().addPlayer(player);
+						if (new BossHealth().getBar13().getProgress() != 0) {
+							new BossHealth().getBar13().addPlayer(player);
+						}
 						return;
 					}
 				}
@@ -1092,20 +1092,19 @@ public class TPMobSpawn {
 				for (Entity nearEntity : entitylist) {
 					if (nearEntity instanceof Mob) {
 						Location loc2 = nearEntity.getLocation();
-						// 3711 163 3254  3769 133 3217
-						if (loc2.getX() <= 3769 && loc2.getY() <= 163 && loc2.getZ() <= 3254 && loc2.getX() >= 3711
-								&& loc2.getY() >= 133 && loc2.getZ() >= 3217) {
+						if (loc2.getX() <= 3697 && loc2.getY() <= 58 && loc2.getZ() <= 2898 
+								&& loc2.getX() >= 3658 && loc2.getY() >= 41 && loc2.getZ() >= 2823) {
 							nearEntity.remove();
 						}
 					}
 				}
 			}
-			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3740, 140, 3236), EntityType.SKELETON);
-			
-			new BossHealth().getBar8().setProgress(1.0);
-			new BossHealth().getBar8().addPlayer(player);
+
+			new BossHealth().getBar13().setProgress(1.0);
+			new BossHealth().getBar13().addPlayer(player);
 			return;
 		}
+
 	}
 	
 }

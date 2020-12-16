@@ -380,6 +380,9 @@ public class MobThread {
 						} else if(loc.getX() <= 3832 && loc.getY() <= 122 && loc.getZ() <= 3086 
 								&& loc.getX() >= 3648 && loc.getY() >= 11 && loc.getZ() >= 2981) {
 							desertDungeon(player, loc);
+						} else if(loc.getX() <= 3697 && loc.getY() <= 58 && loc.getZ() <= 2898 
+								&& loc.getX() >= 3658 && loc.getY() >= 41 && loc.getZ() >= 2823) {
+							desertDungeonBoss(player, loc);
 						}
 						
 					} 
@@ -2288,6 +2291,19 @@ public class MobThread {
 		} else if (num == 2) {
 			loc.getWorld().spawnEntity(loc, EntityType.ZOMBIE);
 		}  
+	}
+	
+	public void desertDungeonBoss(Player player, Location loc) {
+		int num = rnd.nextInt(1);
+		loc = location(loc);
+		if (!(loc.getX() <= 3697 && loc.getY() <= 58 && loc.getZ() <= 2898 
+				&& loc.getX() >= 3658 && loc.getY() >= 41 && loc.getZ() >= 2823)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		}
 	}
 	
 	public Location location(Location loc) {

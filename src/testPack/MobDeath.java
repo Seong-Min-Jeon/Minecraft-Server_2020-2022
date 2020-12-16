@@ -925,6 +925,14 @@ public class MobDeath {
 				if (name.equalsIgnoreCase("석상 파수꾼" + ChatColor.YELLOW + " [Lv.??]")) {
 					mobloot.mob209(lootPlayer);
 				}
+				// 암석 거인의 파편
+				if (name.equalsIgnoreCase("암석 거인의 파편" + ChatColor.YELLOW + " [Lv.480]")) {
+					mobloot.mob210(mob, lootPlayer);
+				}
+				// 유황 골렘
+				if (name.equalsIgnoreCase("유황 골렘" + ChatColor.YELLOW + " [Lv.??]")) {
+					mobloot.mob211(mob, lootPlayer);
+				}
 			} catch (Exception e) {
 
 			}
