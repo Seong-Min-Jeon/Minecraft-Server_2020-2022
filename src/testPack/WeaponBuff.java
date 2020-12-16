@@ -295,6 +295,7 @@ public class WeaponBuff {
 								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "법술 -「하」")) {
 									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "법술 -「마」")) {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 5,true,false,false));
+										player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0,true,false,false));
 									}
 								}
 							}
@@ -306,6 +307,7 @@ public class WeaponBuff {
 									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "불타는 여명의 신발")) {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 400,true,false,false));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 3,true,false,false));
+										player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0,true,false,false));
 									}
 								}
 							}
@@ -327,6 +329,7 @@ public class WeaponBuff {
 								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "거미 여왕의 각반")) {
 									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "거미 여왕의 신발")) {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 6,true,false,false));
+										player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0,true,false,false));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 1,true,false,false));
 									}
 								}

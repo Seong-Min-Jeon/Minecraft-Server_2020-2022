@@ -71,7 +71,6 @@ public class PlayerHitDebuff {
 		mob24(player, mob);
 	}
 
-	// 시련의 형상
 	public void mob1(Player player, Entity mob) {
 		if(mob.getCustomName().substring(2).equalsIgnoreCase("시련의 형상" + ChatColor.YELLOW + " [Lv.??]")) {
 			if(((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
