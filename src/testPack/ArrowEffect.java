@@ -3,17 +3,22 @@ package testPack;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.Effect;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Particle;
 import org.bukkit.Sound;
 import org.bukkit.World;
 import org.bukkit.entity.Arrow;
+import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Item;
+import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.SmallFireball;
 import org.bukkit.entity.SpectralArrow;
@@ -27,6 +32,7 @@ public class ArrowEffect {
 	
 	Player player = null;
 	World world = null;
+	private int taskID;
 	private static Map<Player, Integer> timer = new HashMap<>();
 	
 	public void useStaff(Player playerArg) {
@@ -45,8 +51,7 @@ public class ArrowEffect {
 							bool = reload(player, 1000);
 						}
 					} 
-				}
-				if(im.getDisplayName().equals(ChatColor.YELLOW + "질풍의 지팡이")) {
+				} else if(im.getDisplayName().equals(ChatColor.YELLOW + "질풍의 지팡이")) {
 					if(player.getLevel() >= 300) {
 						if(removeMana(player, 1)) {
 							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BEACON_ACTIVATE, 6.0f, 8.0f);
@@ -54,8 +59,7 @@ public class ArrowEffect {
 							player.sendMessage(ChatColor.GREEN + "신속이 부여됩니다.");
 						}
 					} 
-				}
-				if(im.getDisplayName().equals(ChatColor.LIGHT_PURPLE + "고목나무 지팡이")) {
+				} else if(im.getDisplayName().equals(ChatColor.LIGHT_PURPLE + "고목나무 지팡이")) {
 					if(player.getLevel() >= 300) {
 						if(removeMana(player, 2)) {
 							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BEACON_ACTIVATE, 6.0f, 8.0f);
@@ -67,9 +71,35 @@ public class ArrowEffect {
 							player.sendMessage(ChatColor.GREEN + "체력이 회복되었습니다.");
 						}
 					} 
-				}
-				if(im.getDisplayName().equals(ChatColor.AQUA + "테스트용")) {
-					player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 1, true, false, false));
+				} else if(im.getDisplayName().equals(ChatColor.YELLOW + "암석 스태프")) {
+					if(player.getLevel() >= 450) {
+						if(removeMana(player, 2)) {
+							bool = reload(player, 3000);
+						}
+					} 
+				} else if(im.getDisplayName().equals(ChatColor.LIGHT_PURPLE + "대지의 스태프")) {
+					if(player.getLevel() >= 470) {
+						if(removeMana(player, 3)) {
+							bool = reload(player, 2000);
+						}
+					} 
+				} else if(im.getDisplayName().equals(ChatColor.AQUA + "에이션트 윙")) {
+					if(player.getLevel() >= 480) {
+						if(removeMana(player, 3)) {
+							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BEACON_ACTIVATE, 6.0f, 8.0f);
+							player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 1, true, false, false));
+							Vector vec = player.getEyeLocation().getDirection().multiply(2.5f);
+							player.setVelocity(vec);
+							player.getWorld().playSound(player.getLocation(), Sound.ENTITY_BLAZE_AMBIENT, 1.0f, 1.8f);
+							player.sendMessage(ChatColor.GREEN + "신속이 부여됩니다.");
+						}
+					} 
+				} else if(im.getDisplayName().equals(ChatColor.DARK_RED + "트리니티 스태프")) {
+					if(player.getLevel() >= 500) {
+						if(removeMana(player, 10)) {
+							bool = reload(player, 3000);
+						}
+					} 
 				}
 				if(bool) {
 					
@@ -81,17 +111,13 @@ public class ArrowEffect {
 					world.playSound(player.getLocation(), Sound.BLOCK_BEACON_ACTIVATE, 6.0f, 8.0f);
 					
 					if(im.getDisplayName().equals(ChatColor.AQUA + "죽음의 서약")) {
-						Item passenger = arrow.getWorld().dropItem(arrow.getLocation(), new ItemStack(Material.END_CRYSTAL));
-						passenger.setPickupDelay(10000000);
-						arrow.addPassenger(passenger);
-						Location origin = player.getEyeLocation().add(0,-0.2,0);
-						Vector direction = origin.getDirection();
-						direction.multiply(10);
-						direction.normalize();
-						for (int i = 0; i < 10; i++) {
-						    Location loc = origin.add(direction);
-						    loc.getWorld().spawnParticle(Particle.SMOKE_NORMAL, loc, 0);
-						}
+						staffE1(arrow);
+					} else if(im.getDisplayName().equals(ChatColor.YELLOW + "암석 스태프")) {
+						staffE2(arrow);
+					} else if(im.getDisplayName().equals(ChatColor.LIGHT_PURPLE + "대지의 스태프")) {
+						staffE3(arrow);
+					} else if(im.getDisplayName().equals(ChatColor.DARK_RED + "트리니티 스태프")) {
+						staffE4(arrow);
 					}
 					
 				}
@@ -249,4 +275,113 @@ public class ArrowEffect {
 		return false;
 	}
 
+	public void staffE1(Arrow arrow) {
+		Item passenger = arrow.getWorld().dropItem(arrow.getLocation(), new ItemStack(Material.END_CRYSTAL));
+		passenger.setPickupDelay(10000000);
+		arrow.addPassenger(passenger);
+		Location origin = player.getEyeLocation().add(0,-0.2,0);
+		Vector direction = origin.getDirection();
+		direction.multiply(10);
+		direction.normalize();
+		for (int i = 0; i < 10; i++) {
+		    Location loc = origin.add(direction);
+		    loc.getWorld().spawnParticle(Particle.SMOKE_NORMAL, loc, 0);
+		}
+	}
+	
+	public void staffE2(Arrow arrow) {
+		Item passenger = arrow.getWorld().dropItem(arrow.getLocation(), new ItemStack(Material.SAND));
+		passenger.setPickupDelay(10000000);
+		arrow.addPassenger(passenger);
+		Location origin = player.getEyeLocation().add(0,-0.2,0);
+		Vector direction = origin.getDirection();
+		direction.multiply(10);
+		direction.normalize();
+		for (int i = 0; i < 10; i++) {
+		    Location loc = origin.add(direction);
+		    loc.getWorld().spawnParticle(Particle.CRIT, loc, 0);
+		}
+	}
+	
+	public void staffE3(Arrow arrow) {
+		Item passenger = arrow.getWorld().dropItem(arrow.getLocation(), new ItemStack(Material.CHARCOAL));
+		passenger.setPickupDelay(10000000);
+		arrow.addPassenger(passenger);
+		Location origin = player.getEyeLocation().add(0,-0.2,0);
+		Vector direction = origin.getDirection();
+		direction.multiply(10);
+		direction.normalize();
+		for (int i = 0; i < 10; i++) {
+		    Location loc = origin.add(direction);
+		    loc.getWorld().spawnParticle(Particle.LAVA, loc, 0);
+		}
+	}
+	
+	public void staffE4(Arrow arrow) {
+		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+			
+			int time;
+			ThreadData td = new ThreadData(player.getUniqueId());
+
+			@Override
+			public void run() {
+				
+				if(!td.hasID()) {
+					td.setID(taskID);
+				}
+				
+				if(time == 40) {
+					arrow.setVelocity(new Vector(0, 0, 0));
+					List<Entity> entitylist = arrow.getNearbyEntities(6, 6, 6);
+					for (Entity nearEntity : entitylist) {
+						if (nearEntity.getType() != EntityType.PLAYER) {
+							if (nearEntity instanceof LivingEntity) {
+								LivingEntity nearMob = (LivingEntity) nearEntity;
+								nearMob.damage(player.getLevel()*300);
+							}
+						}
+					}
+					world.playSound(arrow.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 1.0f, 1.0f);
+					world.spawnParticle(Particle.EXPLOSION_LARGE, arrow.getLocation(), 0);
+					world.spawnParticle(Particle.FLAME, arrow.getLocation(), 10);
+				}
+				
+				if(time == 60) {
+					List<Entity> entitylist = arrow.getNearbyEntities(6, 6, 6);
+					for (Entity nearEntity : entitylist) {
+						if (nearEntity.getType() != EntityType.PLAYER) {
+							if (nearEntity instanceof LivingEntity) {
+								LivingEntity nearMob = (LivingEntity) nearEntity;
+								nearMob.damage(player.getLevel()*300);
+							}
+						}
+					}
+					world.playSound(arrow.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 1.0f, 1.0f);
+					world.spawnParticle(Particle.EXPLOSION_LARGE, arrow.getLocation(), 0);
+					world.spawnParticle(Particle.FLAME, arrow.getLocation(), 10);
+				}
+				
+				if(time == 80) {
+					List<Entity> entitylist = arrow.getNearbyEntities(6, 6, 6);
+					for (Entity nearEntity : entitylist) {
+						if (nearEntity.getType() != EntityType.PLAYER) {
+							if (nearEntity instanceof LivingEntity) {
+								LivingEntity nearMob = (LivingEntity) nearEntity;
+								nearMob.damage(player.getLevel()*300);
+							}
+						}
+					}
+					world.playSound(arrow.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 1.0f, 1.0f);
+					world.spawnParticle(Particle.EXPLOSION_LARGE, arrow.getLocation(), 0);
+					world.spawnParticle(Particle.FLAME, arrow.getLocation(), 10);
+					
+					td.endTask();
+					td.removeID();
+				}
+				
+			}
+
+		}, 0, 1);
+	}
+	
 }

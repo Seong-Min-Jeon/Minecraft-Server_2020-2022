@@ -3484,9 +3484,12 @@ public class Main extends JavaPlugin implements Listener{
 					try {
 						if (player.getInventory().getItemInMainHand().getType() == Material.BONE) {
 							damage = player.getLevel() * 10;
-						}
-						if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "죽음의 서약")) {
-							damage = player.getLevel() * 50;
+						} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "죽음의 서약")) {
+							damage = player.getLevel() * 80;
+						} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "암석 스태프")) {
+							damage = player.getLevel() * 300;
+						} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "대지의 스태프")) {
+							damage = player.getLevel() * 500;
 						}
 					} catch(Exception e) {
 	
@@ -5241,7 +5244,7 @@ public class Main extends JavaPlugin implements Listener{
 	    					((LivingEntity)mob).setMaxHealth(player.getLevel() * 50000 + 5);
 	    					((LivingEntity)mob).setHealth(player.getLevel() * 50000 + 5);
 	    					((LivingEntity)mob).addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 2));
-	    					((LivingEntity)mob).addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, player.getLevel()*100));
+	    					((LivingEntity)mob).addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, player.getLevel()*10000));
 	    				}
 	    				event.setCancelled(true);
 	    			}

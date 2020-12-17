@@ -69,6 +69,7 @@ public class PlayerHitDebuff {
 		mob22(player, mob);
 		mob23(player, mob);
 		mob24(player, mob);
+		mob25(player, mob);
 	}
 
 	public void mob1(Player player, Entity mob) {
@@ -371,14 +372,14 @@ public class PlayerHitDebuff {
 					((Zombie) mob).setTarget(player);
 				} else if (num == 1) {
 					player.setFireTicks(200);
-					player.sendMessage(ChatColor.RED + "특급 요리사: 맛있게 구워지거라.");
+					player.sendMessage(ChatColor.RED + "맛있게 구워지거라.");
 					((Zombie) mob).setTarget(player);
 				}
 			} else {
 				int num = rnd.nextInt(8);
 				if (num == 0) {
 					player.setFireTicks(200);
-					player.sendMessage(ChatColor.RED + "특급 요리사: 맛있게 구워지거라.");
+					player.sendMessage(ChatColor.RED + "맛있게 구워지거라.");
 					((Zombie) mob).setTarget(player);
 				}
 			}
@@ -1240,7 +1241,7 @@ public class PlayerHitDebuff {
 										}
 									}
 									if(nearEntity instanceof Player) {
-										if(nearEntity.getType() != EntityType.PLAYER) {
+										if(nearEntity.getType() == EntityType.PLAYER) {
 											((Player) nearEntity).setHealth(((Player) nearEntity).getHealth() / 2);
 										}
 									}
@@ -1263,8 +1264,89 @@ public class PlayerHitDebuff {
 		
 	}
 
+	// 암석 거인의 파편
 	public void mob25(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("암석 거인의 파편" + ChatColor.YELLOW + " [Lv.480]")) {
 
+			int num = rnd.nextInt(15);
+			if (num == 0) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, 120, 0, true, false, false));
+				player.sendMessage(ChatColor.RED + "암석 거인이 당신을 잡아듭니다.");
+				taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+					int time = 0;
+					ThreadData td = new ThreadData(player.getUniqueId());
+
+					@Override
+					public void run() {
+						
+						if (!td.hasID()) {
+							td.setID(taskID);
+						}
+						
+						if(time == 40 || time == 60 || time == 80 || time == 100 || time == 120) {
+							player.damage(1000);
+						}
+						
+						if(time >= 120) {
+							td.endTask();
+							td.removeID();
+						}
+						
+						time++;
+
+					}
+
+				}, 0, 1);
+			} else if (num == 1) {
+				List<Entity> nearPlayer = player.getNearbyEntities(8, 10, 8);
+				for(Entity p : nearPlayer) {
+					if(p instanceof Player) {
+						p.setFireTicks(140);
+						p.sendMessage(ChatColor.RED + "암석 거인의 불이 강해집니다.");
+					}
+				}
+				player.setFireTicks(140);
+				player.sendMessage(ChatColor.RED + "암석 거인의 불이 강해집니다.");
+			} else if (num == 2) {
+				player.teleport(new Location(player.getWorld(), 3672.5, 86.1, 2857.5));
+				player.sendMessage(ChatColor.RED + "암석 거인이 돌 가두기를 사용합니다.");
+				
+				taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+					int time = 0;
+					ThreadData td = new ThreadData(player.getUniqueId());
+
+					@Override
+					public void run() {
+						
+						if (!td.hasID()) {
+							td.setID(taskID);
+						}
+						
+						if(!player.isValid()) {
+							player.teleport(new Location(player.getWorld(), 228, 85, 945));
+							td.endTask();
+							td.removeID();
+						}
+						
+						if(time >= 60) {
+							player.teleport(new Location(player.getWorld(), 3685, 51, 2858.5));
+							td.endTask();
+							td.removeID();
+						}
+						
+						player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_HURT, 1.0f, 1.0f);
+						player.setHealth(player.getHealth() * 99.0 / 100.0);
+						
+						time++;
+
+					}
+
+				}, 0, 1);
+				
+			}
+		}
 	}
 
 	public void mob26(Player player, Entity mob) {

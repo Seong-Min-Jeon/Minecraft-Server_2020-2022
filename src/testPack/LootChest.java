@@ -165,6 +165,11 @@ public class LootChest {
 					}
 				}				
 			}
+			if(block.getX()==3658 && block.getY()==100 && block.getZ()==2868) {
+				if(removeKey(player, "고대의 암석 협곡 보상 열쇠")) {
+					dungeon9(player);
+				}				
+			}
 			
 		}
 	}
@@ -2064,7 +2069,7 @@ public class LootChest {
 		var5Im.setLore(var5Lore);
 		var5.setItemMeta(var5Im);
 		
-		ItemStack var6 = new ItemStack(Material.IRON_HELMET);
+		ItemStack var6 = new ItemStack(Material.MUSIC_DISC_CHIRP);
 		ItemMeta var6Im = var6.getItemMeta();
 		var6Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,450");
 		var6Im.setDisplayName(ChatColor.YELLOW + "암석 스태프");
@@ -2075,11 +2080,12 @@ public class LootChest {
 		var6Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var6Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var6Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var6Im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
 		var6Im.setUnbreakable(true);
 		var6Im.setLore(var6Lore);
 		var6.setItemMeta(var6Im);
 		
-		ItemStack var7 = new ItemStack(Material.IRON_CHESTPLATE);
+		ItemStack var7 = new ItemStack(Material.MUSIC_DISC_13);
 		ItemMeta var7Im = var7.getItemMeta();
 		var7Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,470");
 		var7Im.setDisplayName(ChatColor.LIGHT_PURPLE + "대지의 스태프");
@@ -2090,11 +2096,12 @@ public class LootChest {
 		var7Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var7Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var7Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var7Im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
 		var7Im.setUnbreakable(true);
 		var7Im.setLore(var7Lore);
 		var7.setItemMeta(var7Im);
 		
-		ItemStack var8 = new ItemStack(Material.IRON_LEGGINGS);
+		ItemStack var8 = new ItemStack(Material.MUSIC_DISC_BLOCKS);
 		ItemMeta var8Im = var8.getItemMeta();
 		var8Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,480");
 		var8Im.setDisplayName(ChatColor.AQUA + "에이션트 윙");
@@ -2105,11 +2112,12 @@ public class LootChest {
 		var8Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var8Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var8Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var8Im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
 		var8Im.setUnbreakable(true);
 		var8Im.setLore(var8Lore);
 		var8.setItemMeta(var8Im);
 		
-		ItemStack var9 = new ItemStack(Material.IRON_BOOTS);
+		ItemStack var9 = new ItemStack(Material.MUSIC_DISC_CAT);
 		ItemMeta var9Im = var9.getItemMeta();
 		var9Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,500");
 		var9Im.setDisplayName(ChatColor.DARK_RED + "트리니티 스태프");
@@ -2120,6 +2128,7 @@ public class LootChest {
 		var9Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var9Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var9Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var9Im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
 		var9Im.setUnbreakable(true);
 		var9Im.setLore(var9Lore);
 		var9.setItemMeta(var9Im);
