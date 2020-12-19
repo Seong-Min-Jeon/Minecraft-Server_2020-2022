@@ -136,6 +136,7 @@ import org.bukkit.event.player.PlayerTeleportEvent;
 import org.bukkit.event.player.PlayerTeleportEvent.TeleportCause;
 import org.bukkit.event.server.MapInitializeEvent;
 import org.bukkit.event.vehicle.VehicleCollisionEvent;
+import org.bukkit.event.vehicle.VehicleExitEvent;
 import org.bukkit.event.world.ChunkLoadEvent;
 import org.bukkit.event.world.WorldEvent;
 import org.bukkit.inventory.EntityEquipment;
@@ -303,7 +304,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("woolring")) { 
 			
 		} else {
-			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/785785413818122260/aile_texture_pack_8.zip");
+			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/789402550696017940/aile_texture_pack_9.zip");
 		}
 		
 		//Message
@@ -550,7 +551,7 @@ public class Main extends JavaPlugin implements Listener{
 		player.setFoodLevel(20);
 		
 		//Mob Spawning Field	
-		new MobThread(player);	
+		this.getServer().getPluginManager().registerEvents(new MobThread(player), this);
 			
 		ItemStack master = new ItemStack(Material.DIAMOND_SWORD);
 		ItemMeta masterIm = master.getItemMeta();
@@ -2465,6 +2466,9 @@ public class Main extends JavaPlugin implements Listener{
 			} else if(player.getInventory().getItemInMainHand().getType() == Material.ROTTEN_FLESH) {
 				event.setCancelled(true);
 				player.getInventory().getItemInMainHand().setAmount(player.getInventory().getItemInMainHand().getAmount()-1);
+			} else if(player.getInventory().getItemInMainHand().getType() == Material.GOLDEN_APPLE) {
+				event.setCancelled(true);
+				player.getInventory().getItemInMainHand().setAmount(player.getInventory().getItemInMainHand().getAmount()-1);
 			}
 		} catch(Exception e) {
 			
@@ -4036,7 +4040,7 @@ public class Main extends JavaPlugin implements Listener{
 				if (event.getEntity() instanceof Mob) {
 					Entity entity = (Entity) event.getEntity();
 					Player player = null;
-					List<Entity> nearEntity = entity.getNearbyEntities(20, 20, 20);
+					List<Entity> nearEntity = entity.getNearbyEntities(20, 10, 20);
 					for(Entity ent : nearEntity) {
 					    if(ent instanceof Player) {
 					        player = (Player) ent;
@@ -7030,11 +7034,9 @@ public class Main extends JavaPlugin implements Listener{
 	public void conversionEvent(EntityTransformEvent event) {
 		if(event.getEntity().getType() == EntityType.ZOMBIE) {
 			event.getEntity().remove();
-		}
-		if(event.getEntity().getType() == EntityType.HUSK) {
+		} else if(event.getEntity().getType() == EntityType.HUSK) {
 			event.getEntity().remove();
-		}
-		if(event.getEntity().getType() == EntityType.PIGLIN) {
+		} else if(event.getEntity().getType() == EntityType.PIGLIN) {
 			event.getEntity().remove();
 		}
 	}
@@ -7108,6 +7110,15 @@ public class Main extends JavaPlugin implements Listener{
 	    if (event.getCause () == RemoveCause.EXPLOSION) {
 	        event.setCancelled(true);
 	    }
+	}
+	
+	@EventHandler
+	public void dismountEvent(VehicleExitEvent event) {
+		if(event.getExited() instanceof Player) {
+			if(event.getVehicle() instanceof Horse) {
+				event.getVehicle().remove();
+			}
+		}
 	}
 	
 	@EventHandler
