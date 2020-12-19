@@ -849,7 +849,10 @@ public class Main extends JavaPlugin implements Listener{
 	
 	@EventHandler
 	public void levelUp(PlayerLevelChangeEvent event) {
-		Player player = (Player)event.getPlayer();	
+		Player player = (Player) event.getPlayer();	
+		player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 0.5f);
+		
+		// 레벨 초과
 		if(player.getLevel() > 700 && player.getLevel() < 800) {
 			player.setLevel(700);
 			player.setExp(0);
@@ -931,10 +934,9 @@ public class Main extends JavaPlugin implements Listener{
 			player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
 			return;
 		}
-		player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 0.5f);
 		
-		//메인퀘스트
-		if(event.getOldLevel() != 0) {
+		// 메인퀘스트
+		if (event.getOldLevel() != 0) {
 			new MainQuest(player);
 		}
 		
@@ -969,7 +971,27 @@ public class Main extends JavaPlugin implements Listener{
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
 						    allPlayer.sendMessage(player.getDisplayName() + "님이 본 파이터 500레벨을 달성했습니다!");
 						}	
-					}			
+					} else if(player.getLevel()==600) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 본 파이터 600레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==700 && event.getOldLevel() == 699) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 본 파이터 700레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==800 && event.getOldLevel() == 799) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 본 파이터 800레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==900 && event.getOldLevel() == 899) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 본 파이터 900레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==1000 && event.getOldLevel() == 999) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 본 파이터 1000레벨을 달성했습니다!");
+						}	
+					} 		
 				}
 				//기사
 				if(player.getInventory().contains(Material.GREEN_DYE)) {
@@ -1769,6 +1791,159 @@ public class Main extends JavaPlugin implements Listener{
 				player.sendMessage(ChatColor.WHITE + "총 체력: " + (20 + lvl*60));
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
 			}
+		}
+		
+		// 키어컬 발걸음
+		if(event.getNewLevel() == 100 && event.getOldLevel() == 99) {
+			ItemStack item = new ItemStack(Material.GOLDEN_APPLE, 1);
+			ItemMeta im = item.getItemMeta();
+			im.setDisplayName(ChatColor.GOLD + "키어컬의 발걸음");
+			ArrayList<String> lore = new ArrayList();
+			lore.add(ChatColor.GRAY + "섭취하면 5분간 평소보다 빠르게 몬스터가 나타난다.");
+			lore.add(ChatColor.GRAY + " ");
+			lore.add(ChatColor.RED + "※주의 사항※");
+			lore.add(ChatColor.RED + "1. 효과가 남아있는 동안에 섭취해도 효과는 중첩되지 않는다.");
+			lore.add(ChatColor.RED + "2. 효과가 남아있는 동안에 섭취하면 다시 5분간 효과가 적용된다.");
+			lore.add(ChatColor.RED + "3. 서버에서 로그아웃을 하면 효과가 바로 사라진다.");
+			im.setLore(lore);
+			item.setItemMeta(im);
+			player.getInventory().addItem(item);
+			player.sendMessage("레벨업 보상으로 " + ChatColor.GOLD + "키어컬의 발걸음" + ChatColor.WHITE + "을 획득하였다.");
+		} else if(event.getNewLevel() == 200 && event.getOldLevel() == 199) {
+			ItemStack item = new ItemStack(Material.GOLDEN_APPLE, 2);
+			ItemMeta im = item.getItemMeta();
+			im.setDisplayName(ChatColor.GOLD + "키어컬의 발걸음");
+			ArrayList<String> lore = new ArrayList();
+			lore.add(ChatColor.GRAY + "섭취하면 5분간 평소보다 빠르게 몬스터가 나타난다.");
+			lore.add(ChatColor.GRAY + " ");
+			lore.add(ChatColor.RED + "※주의 사항※");
+			lore.add(ChatColor.RED + "1. 효과가 남아있는 동안에 섭취해도 효과는 중첩되지 않는다.");
+			lore.add(ChatColor.RED + "2. 효과가 남아있는 동안에 섭취하면 다시 5분간 효과가 적용된다.");
+			lore.add(ChatColor.RED + "3. 서버에서 로그아웃을 하면 효과가 바로 사라진다.");
+			im.setLore(lore);
+			item.setItemMeta(im);
+			player.getInventory().addItem(item);
+			player.sendMessage("레벨업 보상으로 " + ChatColor.GOLD + "키어컬의 발걸음" + ChatColor.WHITE + "을 획득하였다.");
+		} else if(event.getNewLevel() == 300 && event.getOldLevel() == 299) {
+			ItemStack item = new ItemStack(Material.GOLDEN_APPLE, 3);
+			ItemMeta im = item.getItemMeta();
+			im.setDisplayName(ChatColor.GOLD + "키어컬의 발걸음");
+			ArrayList<String> lore = new ArrayList();
+			lore.add(ChatColor.GRAY + "섭취하면 5분간 평소보다 빠르게 몬스터가 나타난다.");
+			lore.add(ChatColor.GRAY + " ");
+			lore.add(ChatColor.RED + "※주의 사항※");
+			lore.add(ChatColor.RED + "1. 효과가 남아있는 동안에 섭취해도 효과는 중첩되지 않는다.");
+			lore.add(ChatColor.RED + "2. 효과가 남아있는 동안에 섭취하면 다시 5분간 효과가 적용된다.");
+			lore.add(ChatColor.RED + "3. 서버에서 로그아웃을 하면 효과가 바로 사라진다.");
+			im.setLore(lore);
+			item.setItemMeta(im);
+			player.getInventory().addItem(item);
+			player.sendMessage("레벨업 보상으로 " + ChatColor.GOLD + "키어컬의 발걸음" + ChatColor.WHITE + "을 획득하였다.");
+		} else if(event.getNewLevel() == 400 && event.getOldLevel() == 399) {
+			ItemStack item = new ItemStack(Material.GOLDEN_APPLE, 4);
+			ItemMeta im = item.getItemMeta();
+			im.setDisplayName(ChatColor.GOLD + "키어컬의 발걸음");
+			ArrayList<String> lore = new ArrayList();
+			lore.add(ChatColor.GRAY + "섭취하면 5분간 평소보다 빠르게 몬스터가 나타난다.");
+			lore.add(ChatColor.GRAY + " ");
+			lore.add(ChatColor.RED + "※주의 사항※");
+			lore.add(ChatColor.RED + "1. 효과가 남아있는 동안에 섭취해도 효과는 중첩되지 않는다.");
+			lore.add(ChatColor.RED + "2. 효과가 남아있는 동안에 섭취하면 다시 5분간 효과가 적용된다.");
+			lore.add(ChatColor.RED + "3. 서버에서 로그아웃을 하면 효과가 바로 사라진다.");
+			im.setLore(lore);
+			item.setItemMeta(im);
+			player.getInventory().addItem(item);
+			player.sendMessage("레벨업 보상으로 " + ChatColor.GOLD + "키어컬의 발걸음" + ChatColor.WHITE + "을 획득하였다.");
+		} else if(event.getNewLevel() == 500 && event.getOldLevel() == 499) {
+			ItemStack item = new ItemStack(Material.GOLDEN_APPLE, 5);
+			ItemMeta im = item.getItemMeta();
+			im.setDisplayName(ChatColor.GOLD + "키어컬의 발걸음");
+			ArrayList<String> lore = new ArrayList();
+			lore.add(ChatColor.GRAY + "섭취하면 5분간 평소보다 빠르게 몬스터가 나타난다.");
+			lore.add(ChatColor.GRAY + " ");
+			lore.add(ChatColor.RED + "※주의 사항※");
+			lore.add(ChatColor.RED + "1. 효과가 남아있는 동안에 섭취해도 효과는 중첩되지 않는다.");
+			lore.add(ChatColor.RED + "2. 효과가 남아있는 동안에 섭취하면 다시 5분간 효과가 적용된다.");
+			lore.add(ChatColor.RED + "3. 서버에서 로그아웃을 하면 효과가 바로 사라진다.");
+			im.setLore(lore);
+			item.setItemMeta(im);
+			player.getInventory().addItem(item);
+			player.sendMessage("레벨업 보상으로 " + ChatColor.GOLD + "키어컬의 발걸음" + ChatColor.WHITE + "을 획득하였다.");
+		} else if(event.getNewLevel() == 600 && event.getOldLevel() == 599) {
+			ItemStack item = new ItemStack(Material.GOLDEN_APPLE, 6);
+			ItemMeta im = item.getItemMeta();
+			im.setDisplayName(ChatColor.GOLD + "키어컬의 발걸음");
+			ArrayList<String> lore = new ArrayList();
+			lore.add(ChatColor.GRAY + "섭취하면 5분간 평소보다 빠르게 몬스터가 나타난다.");
+			lore.add(ChatColor.GRAY + " ");
+			lore.add(ChatColor.RED + "※주의 사항※");
+			lore.add(ChatColor.RED + "1. 효과가 남아있는 동안에 섭취해도 효과는 중첩되지 않는다.");
+			lore.add(ChatColor.RED + "2. 효과가 남아있는 동안에 섭취하면 다시 5분간 효과가 적용된다.");
+			lore.add(ChatColor.RED + "3. 서버에서 로그아웃을 하면 효과가 바로 사라진다.");
+			im.setLore(lore);
+			item.setItemMeta(im);
+			player.getInventory().addItem(item);
+			player.sendMessage("레벨업 보상으로 " + ChatColor.GOLD + "키어컬의 발걸음" + ChatColor.WHITE + "을 획득하였다.");
+		} else if(event.getNewLevel() == 700 && event.getOldLevel() == 699) {
+			ItemStack item = new ItemStack(Material.GOLDEN_APPLE, 7);
+			ItemMeta im = item.getItemMeta();
+			im.setDisplayName(ChatColor.GOLD + "키어컬의 발걸음");
+			ArrayList<String> lore = new ArrayList();
+			lore.add(ChatColor.GRAY + "섭취하면 5분간 평소보다 빠르게 몬스터가 나타난다.");
+			lore.add(ChatColor.GRAY + " ");
+			lore.add(ChatColor.RED + "※주의 사항※");
+			lore.add(ChatColor.RED + "1. 효과가 남아있는 동안에 섭취해도 효과는 중첩되지 않는다.");
+			lore.add(ChatColor.RED + "2. 효과가 남아있는 동안에 섭취하면 다시 5분간 효과가 적용된다.");
+			lore.add(ChatColor.RED + "3. 서버에서 로그아웃을 하면 효과가 바로 사라진다.");
+			im.setLore(lore);
+			item.setItemMeta(im);
+			player.getInventory().addItem(item);
+			player.sendMessage("레벨업 보상으로 " + ChatColor.GOLD + "키어컬의 발걸음" + ChatColor.WHITE + "을 획득하였다.");
+		} else if(event.getNewLevel() == 800 && event.getOldLevel() == 799) {
+			ItemStack item = new ItemStack(Material.GOLDEN_APPLE, 8);
+			ItemMeta im = item.getItemMeta();
+			im.setDisplayName(ChatColor.GOLD + "키어컬의 발걸음");
+			ArrayList<String> lore = new ArrayList();
+			lore.add(ChatColor.GRAY + "섭취하면 5분간 평소보다 빠르게 몬스터가 나타난다.");
+			lore.add(ChatColor.GRAY + " ");
+			lore.add(ChatColor.RED + "※주의 사항※");
+			lore.add(ChatColor.RED + "1. 효과가 남아있는 동안에 섭취해도 효과는 중첩되지 않는다.");
+			lore.add(ChatColor.RED + "2. 효과가 남아있는 동안에 섭취하면 다시 5분간 효과가 적용된다.");
+			lore.add(ChatColor.RED + "3. 서버에서 로그아웃을 하면 효과가 바로 사라진다.");
+			im.setLore(lore);
+			item.setItemMeta(im);
+			player.getInventory().addItem(item);
+			player.sendMessage("레벨업 보상으로 " + ChatColor.GOLD + "키어컬의 발걸음" + ChatColor.WHITE + "을 획득하였다.");
+		} else if(event.getNewLevel() == 900 && event.getOldLevel() == 899) {
+			ItemStack item = new ItemStack(Material.GOLDEN_APPLE, 9);
+			ItemMeta im = item.getItemMeta();
+			im.setDisplayName(ChatColor.GOLD + "키어컬의 발걸음");
+			ArrayList<String> lore = new ArrayList();
+			lore.add(ChatColor.GRAY + "섭취하면 5분간 평소보다 빠르게 몬스터가 나타난다.");
+			lore.add(ChatColor.GRAY + " ");
+			lore.add(ChatColor.RED + "※주의 사항※");
+			lore.add(ChatColor.RED + "1. 효과가 남아있는 동안에 섭취해도 효과는 중첩되지 않는다.");
+			lore.add(ChatColor.RED + "2. 효과가 남아있는 동안에 섭취하면 다시 5분간 효과가 적용된다.");
+			lore.add(ChatColor.RED + "3. 서버에서 로그아웃을 하면 효과가 바로 사라진다.");
+			im.setLore(lore);
+			item.setItemMeta(im);
+			player.getInventory().addItem(item);
+			player.sendMessage("레벨업 보상으로 " + ChatColor.GOLD + "키어컬의 발걸음" + ChatColor.WHITE + "을 획득하였다.");
+		} else if(event.getNewLevel() == 1000 && event.getOldLevel() == 999) {
+			ItemStack item = new ItemStack(Material.GOLDEN_APPLE, 10);
+			ItemMeta im = item.getItemMeta();
+			im.setDisplayName(ChatColor.GOLD + "키어컬의 발걸음");
+			ArrayList<String> lore = new ArrayList();
+			lore.add(ChatColor.GRAY + "섭취하면 5분간 평소보다 빠르게 몬스터가 나타난다.");
+			lore.add(ChatColor.GRAY + " ");
+			lore.add(ChatColor.RED + "※주의 사항※");
+			lore.add(ChatColor.RED + "1. 효과가 남아있는 동안에 섭취해도 효과는 중첩되지 않는다.");
+			lore.add(ChatColor.RED + "2. 효과가 남아있는 동안에 섭취하면 다시 5분간 효과가 적용된다.");
+			lore.add(ChatColor.RED + "3. 서버에서 로그아웃을 하면 효과가 바로 사라진다.");
+			im.setLore(lore);
+			item.setItemMeta(im);
+			player.getInventory().addItem(item);
+			player.sendMessage("레벨업 보상으로 " + ChatColor.GOLD + "키어컬의 발걸음" + ChatColor.WHITE + "을 획득하였다.");
 		}
 		
 	}

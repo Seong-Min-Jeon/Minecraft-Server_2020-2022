@@ -1,5 +1,7 @@
 package testPack;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 import org.bukkit.Bukkit;
@@ -39,8 +41,8 @@ public class MobThread implements Listener{
 
 	private Player player = null;
 	int sleep;
-	int goldenTime = 0;
 	Random rnd = new Random();
+	GoldenPlayer gp = new GoldenPlayer();
 
 	public MobThread(Player player) {
 		
@@ -66,8 +68,18 @@ public class MobThread implements Listener{
 							tutozone(player, loc);
 						}
 					}
-
-					if ((time % 80 == 10) || (time % 40 == 10 && goldenTime != 0)) {
+					
+					if ((time % 80 == 10) || (time % 40 == 10 && gp.returnTime(player) != 0)) {
+						
+						// 키어컬의 발걸음 사용 중일 때
+						if(gp.returnTime(player) > 150) {
+							gp.remove(player);
+							player.sendMessage(ChatColor.GREEN + "더이상 키어컬의 발걸음이 느껴지지 않습니다.");
+						} else {
+							gp.addTime(player);
+						}
+						
+						// 몹 스폰이 안되는 지형인가
 						Boolean edge = false;
 						if((loc.clone().add(1, -2, 0).getBlock().getType() != Material.AIR) && (loc.clone().add(-1, -2, 0).getBlock().getType() != Material.AIR)
 								&& (loc.clone().add(0, -2, 1).getBlock().getType() != Material.AIR) && (loc.clone().add(0, -2, -1).getBlock().getType() != Material.AIR)) {
@@ -404,14 +416,6 @@ public class MobThread implements Listener{
 					
 					time++;
 					
-					if(goldenTime != 0) {
-						goldenTime++;
-					}
-					
-					if(goldenTime >= 6000) {
-						goldenTime = 0;
-						player.sendMessage(ChatColor.GREEN + "더이상 키어컬의 발걸음이 느껴지지 않습니다.");
-					}
 				}
 				
 			}
@@ -423,8 +427,14 @@ public class MobThread implements Listener{
 	public void comsumeGoldenApple(PlayerItemConsumeEvent event) {
 		try {
 			if(event.getItem().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "키어컬의 발걸음")) {
-				goldenTime++;
-				player.sendMessage(ChatColor.GREEN + "주변에서 키어컬의 발걸음이 느껴집니다.");
+				Player goldenPlayer = event.getPlayer();
+				if(gp.returnTime(goldenPlayer) == 0) {
+					gp.put(goldenPlayer, 1);
+					goldenPlayer.sendMessage(ChatColor.GREEN + "주변에서 키어컬의 발걸음이 느껴집니다.");
+				} else {
+					gp.remove(goldenPlayer);
+					gp.put(goldenPlayer, 1);
+				}
 			}
 		} catch(Exception e) {
 			

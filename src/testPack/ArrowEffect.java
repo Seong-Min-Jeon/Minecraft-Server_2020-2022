@@ -360,6 +360,7 @@ public class ArrowEffect {
 				}
 				
 				if(time == 4) {
+					arrow.setVelocity(new Vector(0, 0, 0));
 					List<Entity> entitylist = arrow.getNearbyEntities(6, 6, 6);
 					for (Entity nearEntity : entitylist) {
 						if (nearEntity.getType() != EntityType.PLAYER) {
