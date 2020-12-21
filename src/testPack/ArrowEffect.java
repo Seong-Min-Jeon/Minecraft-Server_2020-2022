@@ -361,6 +361,7 @@ public class ArrowEffect {
 				
 				if(time == 4) {
 					arrow.setVelocity(new Vector(0, 0, 0));
+					arrow.setGravity(false);
 					List<Entity> entitylist = arrow.getNearbyEntities(6, 6, 6);
 					for (Entity nearEntity : entitylist) {
 						if (nearEntity.getType() != EntityType.PLAYER) {
@@ -398,6 +399,7 @@ public class ArrowEffect {
 				}
 				
 				if(time == 44) {
+					arrow.setGravity(true);
 					List<Entity> entitylist = arrow.getNearbyEntities(6, 6, 6);
 					for (Entity nearEntity : entitylist) {
 						if (nearEntity.getType() != EntityType.PLAYER) {

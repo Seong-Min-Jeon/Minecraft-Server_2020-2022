@@ -133,12 +133,6 @@ public class MobLoot {
 		ItemStack item = new ItemStack(Material.EMERALD, num * multyEme);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 524);
-
-		QuestBoard cb = new QuestBoard();
-		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===밀 사냥꾼===")) {
-			int qNum = cb.getNum(player);
-			cb.q4(player, qNum + 1);
-		}
 	}
 
 	// 크리스탈 워리어
@@ -237,24 +231,6 @@ public class MobLoot {
 		player.getInventory().addItem(item);
 		es.giveExp(player, 8226);
 
-		int num2 = rnd.nextInt(20);
-		if (num2 == 0) {
-			ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
-			ItemMeta scrollIm = scroll.getItemMeta();
-			scrollIm.setDisplayName(ChatColor.WHITE + "퀘스트: 같아보이지만 다른");
-			ArrayList<String> scrollLore = new ArrayList();
-			scrollLore.add(ChatColor.GRAY + "'같아보이지만 다른' 퀘스트를 진행할 수 있다.");
-			scrollIm.setLore(scrollLore);
-			scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-			scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-			scrollIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
-			scrollIm.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
-			scrollIm.setUnbreakable(true);
-			scroll.setItemMeta(scrollIm);
-			player.getInventory().addItem(scroll);
-			player.sendMessage(ChatColor.WHITE + "퀘스트: 같아보이지만 다른" + ChatColor.WHITE + "을 획득했다.");
-		}
-
 		QuestBoard cb = new QuestBoard();
 		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===촌장의 부탁3===")) {
 			int qNum = cb.getNum(player);
@@ -275,23 +251,6 @@ public class MobLoot {
 		int num = rnd.nextInt(4) + 20;
 		ItemStack item = new ItemStack(Material.EMERALD, num * multyEme);
 		player.getInventory().addItem(item);
-		int num2 = rnd.nextInt(50);
-		if (num2 == 0) {
-			ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
-			ItemMeta scrollIm = scroll.getItemMeta();
-			scrollIm.setDisplayName(ChatColor.LIGHT_PURPLE + "퀘스트: 유적을 정화하는 자");
-			ArrayList<String> scrollLore = new ArrayList();
-			scrollLore.add(ChatColor.GRAY + "'유적을 정화하는 자' 퀘스트를 진행할 수 있다.");
-			scrollIm.setLore(scrollLore);
-			scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-			scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-			scrollIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
-			scrollIm.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
-			scrollIm.setUnbreakable(true);
-			scroll.setItemMeta(scrollIm);
-			player.getInventory().addItem(scroll);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "퀘스트: 유적을 정화하는 자" + ChatColor.WHITE + "을 획득했다.");
-		}
 		es.giveExp(player, 10374);
 	}
 
@@ -4636,7 +4595,7 @@ public class MobLoot {
 		var5im.setDisplayName(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장");
 		var5.setItemMeta(var5im);
 		
-		int tmp = rnd.nextInt(40);
+		int tmp = rnd.nextInt(30);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
 			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
@@ -4652,6 +4611,12 @@ public class MobLoot {
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
 			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+		}
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===죽은 듯 살아있는 자1===")) {
+			int qNum = cb.getNum(player);
+			cb.mq45_13(player, qNum + 1);
 		}
 	}
 	
@@ -4690,7 +4655,7 @@ public class MobLoot {
 		var5im.setDisplayName(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장");
 		var5.setItemMeta(var5im);
 		
-		int tmp = rnd.nextInt(40);
+		int tmp = rnd.nextInt(30);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
 			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
@@ -4706,6 +4671,12 @@ public class MobLoot {
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
 			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+		}
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===죽은 듯 살아있는 자2===")) {
+			int qNum = cb.getNum(player);
+			cb.mq45_15(player, qNum + 1);
 		}
 	}
 	
@@ -4744,7 +4715,7 @@ public class MobLoot {
 		var5im.setDisplayName(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장");
 		var5.setItemMeta(var5im);
 		
-		int tmp = rnd.nextInt(40);
+		int tmp = rnd.nextInt(30);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
 			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
@@ -4760,6 +4731,12 @@ public class MobLoot {
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
 			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+		}
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===죽은 듯 살아있는 자3===")) {
+			int qNum = cb.getNum(player);
+			cb.mq45_17(player, qNum + 1);
 		}
 	}
 	
@@ -4798,7 +4775,7 @@ public class MobLoot {
 		var5im.setDisplayName(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장");
 		var5.setItemMeta(var5im);
 		
-		int tmp = rnd.nextInt(40);
+		int tmp = rnd.nextInt(25);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
 			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
@@ -4814,6 +4791,12 @@ public class MobLoot {
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
 			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+		}
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===죽은 듯 살아있는 자4===")) {
+			int qNum = cb.getNum(player);
+			cb.mq45_19(player, qNum + 1);
 		}
 	}
 	
@@ -4852,7 +4835,7 @@ public class MobLoot {
 		var5im.setDisplayName(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장");
 		var5.setItemMeta(var5im);
 		
-		int tmp = rnd.nextInt(40);
+		int tmp = rnd.nextInt(25);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
 			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
@@ -4868,6 +4851,12 @@ public class MobLoot {
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
 			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+		}
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===죽은 듯 살아있는 자5===")) {
+			int qNum = cb.getNum(player);
+			cb.mq45_21(player, qNum + 1);
 		}
 	}
 	

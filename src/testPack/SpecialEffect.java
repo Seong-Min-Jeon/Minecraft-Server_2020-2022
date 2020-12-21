@@ -122,6 +122,17 @@ public class SpecialEffect {
 		return 0;
 	}
 	
+	public int a11(Player player) {
+		try {
+			if(player.getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "골든 임펙트")) {
+				return 10;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
 	public int h1(Player player) {

@@ -3627,7 +3627,6 @@ public class Skill {
 						}
 					}	
 					
-					ArrayList<FallingBlock> ary = new ArrayList<>();
 					Location loc = player.getLocation();
 					Location loc2;
 					FallingBlock fb;
@@ -3635,105 +3634,62 @@ public class Skill {
 					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, Material.SAND, (byte) 0);
 					fb.setVelocity(new Vector(0, 0.5, 0));
 					fb.setDropItem(false);
-					fb.setPersistent(false);
-					ary.add(fb);
 					
 					loc2 = loc.clone().add(new Vector(2, 0, 1));
 					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, Material.SAND, (byte) 0);
 					fb.setVelocity(new Vector(0, 0.5, 0));
 					fb.setDropItem(false);
-					fb.setPersistent(false);
-					ary.add(fb);
 					
 					loc2 = loc.clone().add(new Vector(1, 0, 2));
 					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, Material.SAND, (byte) 0);
 					fb.setVelocity(new Vector(0, 0.5, 0));
 					fb.setDropItem(false);
 					fb.setPersistent(false);
-					ary.add(fb);
 					
 					loc2 = loc.clone().add(new Vector(0, 0, 3));
 					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, Material.SAND, (byte) 0);
 					fb.setVelocity(new Vector(0, 0.5, 0));
 					fb.setDropItem(false);
-					fb.setPersistent(false);
-					ary.add(fb);
 					
 					loc2 = loc.clone().add(new Vector(-3, 0, 0));
 					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, Material.SAND, (byte) 0);
 					fb.setVelocity(new Vector(0, 0.5, 0));
 					fb.setDropItem(false);
-					fb.setPersistent(false);
-					ary.add(fb);
 					
 					loc2 = loc.clone().add(new Vector(-2, 0, 1));
 					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, Material.SAND, (byte) 0);
 					fb.setVelocity(new Vector(0, 0.5, 0));
 					fb.setDropItem(false);
-					fb.setPersistent(false);
-					ary.add(fb);
 					
 					loc2 = loc.clone().add(new Vector(-1, 0, 2));
 					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, Material.SAND, (byte) 0);
 					fb.setVelocity(new Vector(0, 0.5, 0));
 					fb.setDropItem(false);
-					fb.setPersistent(false);
-					ary.add(fb);
 					
 					loc2 = loc.clone().add(new Vector(-2, 0, -1));
 					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, Material.SAND, (byte) 0);
 					fb.setVelocity(new Vector(0, 0.5, 0));
 					fb.setDropItem(false);
-					fb.setPersistent(false);
-					ary.add(fb);
 					
 					loc2 = loc.clone().add(new Vector(-1, 0, -2));
 					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, Material.SAND, (byte) 0);
 					fb.setVelocity(new Vector(0, 0.5, 0));
 					fb.setDropItem(false);
-					fb.setPersistent(false);
-					ary.add(fb);
 					
 					loc2 = loc.clone().add(new Vector(0, 0, -3));
 					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, Material.SAND, (byte) 0);
 					fb.setVelocity(new Vector(0, 0.5, 0));
 					fb.setDropItem(false);
-					fb.setPersistent(false);
-					ary.add(fb);
 					
 					loc2 = loc.clone().add(new Vector(1, 0, -2));
 					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, Material.SAND, (byte) 0);
 					fb.setVelocity(new Vector(0, 0.5, 0));
 					fb.setDropItem(false);
-					fb.setPersistent(false);
-					ary.add(fb);
 					
 					loc2 = loc.clone().add(new Vector(2, 0, -1));
 					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, Material.SAND, (byte) 0);
 					fb.setVelocity(new Vector(0, 0.5, 0));
 					fb.setDropItem(false);
-					fb.setPersistent(false);
-					ary.add(fb);
-					
-					Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
-
-						int time = 0;
-						ArrayList<FallingBlock> ary2 = ary;
-
-						@Override
-						public void run() {
-							
-							if (time >= 80) {
-								for(FallingBlock fb : ary2) {
-									fb.remove();
-								}
-							}
-							
-							time++;
-
-						}
-
-					}, 0, 1);
 					
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");

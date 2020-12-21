@@ -225,7 +225,7 @@ public class Transcendence {
 				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
 				ItemStack weapon = new ItemStack(Material.IRON_HELMET);
 				ItemMeta weaponIm = weapon.getItemMeta();
-				weaponIm.setLocalizedName("500,0,0,0,0,800,0,0,0,0,400");
+				weaponIm.setLocalizedName("500,100,100,100,0,800,0,0,0,0,400");
 				weaponIm.setDisplayName(ChatColor.GREEN + "불타는 여명의 헬멧");
 				ArrayList<String> weaponLore = new ArrayList();
 				weaponLore.add(ChatColor.GRAY + "레벨 제한: 400");
@@ -245,7 +245,7 @@ public class Transcendence {
 				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
 				ItemStack weapon = new ItemStack(Material.IRON_CHESTPLATE);
 				ItemMeta weaponIm = weapon.getItemMeta();
-				weaponIm.setLocalizedName("0,500,0,0,0,800,0,0,0,0,400");
+				weaponIm.setLocalizedName("100,500,100,100,0,800,0,0,0,0,400");
 				weaponIm.setDisplayName(ChatColor.GREEN + "불타는 여명의 갑옷");
 				ArrayList<String> weaponLore = new ArrayList();
 				weaponLore.add(ChatColor.GRAY + "레벨 제한: 400");
@@ -265,7 +265,7 @@ public class Transcendence {
 				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
 				ItemStack weapon = new ItemStack(Material.IRON_LEGGINGS);
 				ItemMeta weaponIm = weapon.getItemMeta();
-				weaponIm.setLocalizedName("0,0,500,0,0,800,0,0,0,0,400");
+				weaponIm.setLocalizedName("100,100,500,100,0,800,0,0,0,0,400");
 				weaponIm.setDisplayName(ChatColor.GREEN + "불타는 여명의 각반");
 				ArrayList<String> weaponLore = new ArrayList();
 				weaponLore.add(ChatColor.GRAY + "레벨 제한: 400");
@@ -285,7 +285,7 @@ public class Transcendence {
 				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
 				ItemStack weapon = new ItemStack(Material.IRON_BOOTS);
 				ItemMeta weaponIm = weapon.getItemMeta();
-				weaponIm.setLocalizedName("0,0,0,500,0,800,0,0,0,0,400");
+				weaponIm.setLocalizedName("100,100,100,500,0,800,0,0,0,0,400");
 				weaponIm.setDisplayName(ChatColor.GREEN + "불타는 여명의 신발");
 				ArrayList<String> weaponLore = new ArrayList();
 				weaponLore.add(ChatColor.GRAY + "레벨 제한: 400");

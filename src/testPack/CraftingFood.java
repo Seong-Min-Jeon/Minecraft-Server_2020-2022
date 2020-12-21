@@ -99,6 +99,8 @@ public class CraftingFood {
 						salad++;
 					} else if(item.getType() == Material.GOLDEN_CARROT) {
 						salad++;
+					} else if(item.getType() == Material.WHEAT) {
+						salad++;
 					} else if(item.getType() == Material.MUSHROOM_STEW) {
 						meat++;
 					} else if(item.getType() == Material.RABBIT_STEW) {
@@ -188,6 +190,8 @@ public class CraftingFood {
 					totalStat += amount[i] * 5; 
 				} else if(type[i].equalsIgnoreCase("GOLDEN_CARROT")) {
 					totalStat += amount[i] * 5; 
+				} else if(type[i].equalsIgnoreCase("WHEAT")) {
+					totalStat += amount[i] * 3; 
 				} else if(type[i].equalsIgnoreCase("MUSHROOM_STEW")) {
 					totalStat += amount[i] * 5; 
 				} else if(type[i].equalsIgnoreCase("RABBIT_STEW")) {

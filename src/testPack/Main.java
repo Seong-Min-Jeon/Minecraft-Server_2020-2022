@@ -568,6 +568,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("yumehama") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
 //		if(player.getDisplayName().equalsIgnoreCase("WoolRing") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
 		
+		
 //		ItemStack var1 = new ItemStack(Material.IRON_HELMET);
 //		ItemMeta var1Im = var1.getItemMeta();
 //		var1Im.setLocalizedName("300,200,200,300,100,500,800,800,800,500,400");
@@ -979,15 +980,15 @@ public class Main extends JavaPlugin implements Listener{
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
 						    allPlayer.sendMessage(player.getDisplayName() + "님이 본 파이터 700레벨을 달성했습니다!");
 						}	
-					} else if(player.getLevel()==800 && event.getOldLevel() == 799) {
+					} else if(player.getLevel()==800 && event.getOldLevel() == 700) {
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
 						    allPlayer.sendMessage(player.getDisplayName() + "님이 본 파이터 800레벨을 달성했습니다!");
 						}	
-					} else if(player.getLevel()==900 && event.getOldLevel() == 899) {
+					} else if(player.getLevel()==900 && event.getOldLevel() == 800) {
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
 						    allPlayer.sendMessage(player.getDisplayName() + "님이 본 파이터 900레벨을 달성했습니다!");
 						}	
-					} else if(player.getLevel()==1000 && event.getOldLevel() == 999) {
+					} else if(player.getLevel()==1000 && event.getOldLevel() == 900) {
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
 						    allPlayer.sendMessage(player.getDisplayName() + "님이 본 파이터 1000레벨을 달성했습니다!");
 						}	
@@ -1022,7 +1023,27 @@ public class Main extends JavaPlugin implements Listener{
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
 						    allPlayer.sendMessage(player.getDisplayName() + "님이 기사 500레벨을 달성했습니다!");
 						}	
-					}
+					} else if(player.getLevel()==600) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 기사 600레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==700 && event.getOldLevel() == 699) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 기사 700레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==800 && event.getOldLevel() == 700) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 기사 800레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==900 && event.getOldLevel() == 800) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 기사 900레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==1000 && event.getOldLevel() == 900) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 기사 1000레벨을 달성했습니다!");
+						}	
+					} 
 				}
 				//프리스트
 				if(player.getInventory().contains(Material.LAPIS_LAZULI)) {
@@ -1052,6 +1073,26 @@ public class Main extends JavaPlugin implements Listener{
 					} else if(player.getLevel()==500) {
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
 						    allPlayer.sendMessage(player.getDisplayName() + "님이 프리스트 500레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==600) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 프리스트 600레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==700 && event.getOldLevel() == 699) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 프리스트 700레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==800 && event.getOldLevel() == 700) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 프리스트 800레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==900 && event.getOldLevel() == 800) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 프리스트 900레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==1000 && event.getOldLevel() == 900) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 프리스트 1000레벨을 달성했습니다!");
 						}	
 					}
 				}
@@ -1084,6 +1125,26 @@ public class Main extends JavaPlugin implements Listener{
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
 						    allPlayer.sendMessage(player.getDisplayName() + "님이 광전사 500레벨을 달성했습니다!");
 						}	
+					} else if(player.getLevel()==600) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 광전사 600레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==700 && event.getOldLevel() == 699) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 광전사 700레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==800 && event.getOldLevel() == 700) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 광전사 800레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==900 && event.getOldLevel() == 800) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 광전사 900레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==1000 && event.getOldLevel() == 900) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 광전사 1000레벨을 달성했습니다!");
+						}	
 					}
 				}
 				//도박사
@@ -1114,6 +1175,26 @@ public class Main extends JavaPlugin implements Listener{
 					} else if(player.getLevel()==500) {
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
 						    allPlayer.sendMessage(player.getDisplayName() + "님이 도박사 500레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==600) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 도박사 600레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==700 && event.getOldLevel() == 699) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 도박사 700레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==800 && event.getOldLevel() == 700) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 도박사 800레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==900 && event.getOldLevel() == 800) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 도박사 900레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==1000 && event.getOldLevel() == 900) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 도박사 1000레벨을 달성했습니다!");
 						}	
 					}
 				}
@@ -1146,6 +1227,26 @@ public class Main extends JavaPlugin implements Listener{
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
 						    allPlayer.sendMessage(player.getDisplayName() + "님이 데빌 특성으로 500레벨을 달성했습니다!");
 						}	
+					} else if(player.getLevel()==600) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 데빌 특성으로 600레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==700 && event.getOldLevel() == 699) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 데빌 특성으로 700레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==800 && event.getOldLevel() == 700) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 데빌 특성으로 800레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==900 && event.getOldLevel() == 800) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 데빌 특성으로 900레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==1000 && event.getOldLevel() == 900) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 데빌 특성으로 1000레벨을 달성했습니다!");
+						}	
 					}
 				}
 				//엔젤
@@ -1176,6 +1277,26 @@ public class Main extends JavaPlugin implements Listener{
 					} else if(player.getLevel()==500) {
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
 						    allPlayer.sendMessage(player.getDisplayName() + "님이 엔젤 특성으로 500레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==600) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 엔젤 특성으로 600레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==700 && event.getOldLevel() == 699) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 엔젤 특성으로 700레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==800 && event.getOldLevel() == 700) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 엔젤 특성으로 800레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==900 && event.getOldLevel() == 800) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 엔젤 특성으로 900레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==1000 && event.getOldLevel() == 900) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 엔젤 특성으로 1000레벨을 달성했습니다!");
 						}	
 					}
 				}
@@ -1208,6 +1329,26 @@ public class Main extends JavaPlugin implements Listener{
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
 						    allPlayer.sendMessage(player.getDisplayName() + "님이 대행자 500레벨을 달성했습니다!");
 						}	
+					} else if(player.getLevel()==600) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 대행자 600레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==700 && event.getOldLevel() == 699) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 대행자 700레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==800 && event.getOldLevel() == 700) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 대행자 800레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==900 && event.getOldLevel() == 800) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 대행자 900레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==1000 && event.getOldLevel() == 900) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 대행자 1000레벨을 달성했습니다!");
+						}	
 					}
 				}
 				//그림자 무사
@@ -1238,6 +1379,26 @@ public class Main extends JavaPlugin implements Listener{
 					} else if(player.getLevel()==500) {
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
 						    allPlayer.sendMessage(player.getDisplayName() + "님이 그림자 무사 500레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==600) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 그림자 무사 600레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==700 && event.getOldLevel() == 699) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 그림자 무사 700레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==800 && event.getOldLevel() == 700) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 그림자 무사 800레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==900 && event.getOldLevel() == 800) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 그림자 무사 900레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==1000 && event.getOldLevel() == 900) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 그림자 무사 1000레벨을 달성했습니다!");
 						}	
 					}
 				}
@@ -1270,6 +1431,26 @@ public class Main extends JavaPlugin implements Listener{
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
 						    allPlayer.sendMessage(player.getDisplayName() + "님이 버서커 500레벨을 달성했습니다!");
 						}	
+					} else if(player.getLevel()==600) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 버서커 600레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==700 && event.getOldLevel() == 699) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 버서커 700레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==800 && event.getOldLevel() == 700) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 버서커 800레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==900 && event.getOldLevel() == 800) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 버서커 900레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==1000 && event.getOldLevel() == 900) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 버서커 1000레벨을 달성했습니다!");
+						}	
 					}
 				}
 				//군인
@@ -1301,8 +1482,28 @@ public class Main extends JavaPlugin implements Listener{
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
 						    allPlayer.sendMessage(player.getDisplayName() + "님이 군인 500레벨을 달성했습니다!");
 						}	
+					} else if(player.getLevel()==600) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 군인 600레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==700 && event.getOldLevel() == 699) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 군인 700레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==800 && event.getOldLevel() == 700) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 군인 800레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==900 && event.getOldLevel() == 800) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 군인 900레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==1000 && event.getOldLevel() == 900) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 군인 1000레벨을 달성했습니다!");
+						}	
 					}
-					if(player.getLevel()>=900) {
+					if(player.getLevel()==900 && event.getOldLevel() == 800) {
 						if(player.getInventory().contains(Material.MAGENTA_DYE)) {
 							// 생성 가능 캐릭터 파일
 	    					try {
@@ -1373,6 +1574,26 @@ public class Main extends JavaPlugin implements Listener{
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
 						    allPlayer.sendMessage(player.getDisplayName() + "님이 그림 리퍼 특성으로 500레벨을 달성했습니다!");
 						}	
+					} else if(player.getLevel()==600) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 그림 리퍼 특성으로 600레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==700 && event.getOldLevel() == 699) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 그림 리퍼 특성으로 700레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==800 && event.getOldLevel() == 700) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 그림 리퍼 특성으로 800레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==900 && event.getOldLevel() == 800) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 그림 리퍼 특성으로 900레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==1000 && event.getOldLevel() == 900) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 그림 리퍼 특성으로 1000레벨을 달성했습니다!");
+						}	
 					}
 				}
 				//마인
@@ -1403,6 +1624,26 @@ public class Main extends JavaPlugin implements Listener{
 					} else if(player.getLevel()==500) {
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
 						    allPlayer.sendMessage(player.getDisplayName() + "님이 마인 특성으로 500레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==600) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 마인 특성으로 600레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==700 && event.getOldLevel() == 699) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 마인 특성으로 700레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==800 && event.getOldLevel() == 700) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 마인 특성으로 800레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==900 && event.getOldLevel() == 800) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 마인 특성으로 900레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==1000 && event.getOldLevel() == 900) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 마인 특성으로 1000레벨을 달성했습니다!");
 						}	
 					}
 				}
@@ -1435,6 +1676,26 @@ public class Main extends JavaPlugin implements Listener{
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
 						    allPlayer.sendMessage(player.getDisplayName() + "님이 팔라딘 특성으로 500레벨을 달성했습니다!");
 						}	
+					} else if(player.getLevel()==600) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 팔라딘 특성으로 600레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==700 && event.getOldLevel() == 699) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 팔라딘 특성으로 700레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==800 && event.getOldLevel() == 700) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 팔라딘 특성으로 800레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==900 && event.getOldLevel() == 800) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 팔라딘 특성으로 900레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==1000 && event.getOldLevel() == 900) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 팔라딘 특성으로 1000레벨을 달성했습니다!");
+						}	
 					}
 				}
 				//용기사
@@ -1465,6 +1726,26 @@ public class Main extends JavaPlugin implements Listener{
 					} else if(player.getLevel()==500) {
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
 						    allPlayer.sendMessage(player.getDisplayName() + "님이 용기사 500레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==600) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 용기사 600레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==700 && event.getOldLevel() == 699) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 용기사 700레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==800 && event.getOldLevel() == 700) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 용기사 800레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==900 && event.getOldLevel() == 800) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 용기사 900레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==1000 && event.getOldLevel() == 900) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 용기사 1000레벨을 달성했습니다!");
 						}	
 					}
 				}
@@ -1497,6 +1778,26 @@ public class Main extends JavaPlugin implements Listener{
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
 						    allPlayer.sendMessage(player.getDisplayName() + "님이 대대장 직책으로 500레벨을 달성했습니다!");
 						}	
+					} else if(player.getLevel()==600) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 대대장 직책으로 600레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==700 && event.getOldLevel() == 699) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 대대장 직책으로 700레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==800 && event.getOldLevel() == 700) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 대대장 직책으로 800레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==900 && event.getOldLevel() == 800) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 대대장 직책으로 900레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==1000 && event.getOldLevel() == 900) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 대대장 직책으로 1000레벨을 달성했습니다!");
+						}	
 					}
 				}
 				//아처
@@ -1528,8 +1829,28 @@ public class Main extends JavaPlugin implements Listener{
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
 						    allPlayer.sendMessage(player.getDisplayName() + "님이 아처 500레벨을 달성했습니다!");
 						}	
+					} else if(player.getLevel()==600) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 아처 600레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==700 && event.getOldLevel() == 699) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 아처 700레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==800 && event.getOldLevel() == 700) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 아처 800레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==900 && event.getOldLevel() == 800) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 아처 900레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==1000 && event.getOldLevel() == 900) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 아처 1000레벨을 달성했습니다!");
+						}	
 					}
-					if(player.getLevel()>=900) {
+					if(player.getLevel()==900 && event.getOldLevel() == 800) {
 						if(player.getInventory().contains(Material.CLAY_BALL)) {
 							// 생성 가능 캐릭터 파일
 	    					try {
@@ -1604,6 +1925,31 @@ public class Main extends JavaPlugin implements Listener{
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
 						    allPlayer.sendMessage(player.getDisplayName() + "님이 " + ChatColor.RED + "파" + ChatColor.BLUE + "워" + 
 						    		ChatColor.BLACK + "레" + ChatColor.YELLOW + "인" + ChatColor.GREEN +"저 " + ChatColor.WHITE + "500레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==600) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 " + ChatColor.RED + "파" + ChatColor.BLUE + "워" + 
+						    		ChatColor.BLACK + "레" + ChatColor.YELLOW + "인" + ChatColor.GREEN +"저 " + ChatColor.WHITE + "600레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==700 && event.getOldLevel() == 699) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 " + ChatColor.RED + "파" + ChatColor.BLUE + "워" + 
+						    		ChatColor.BLACK + "레" + ChatColor.YELLOW + "인" + ChatColor.GREEN +"저 " + ChatColor.WHITE + "700레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==800 && event.getOldLevel() == 700) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 " + ChatColor.RED + "파" + ChatColor.BLUE + "워" + 
+						    		ChatColor.BLACK + "레" + ChatColor.YELLOW + "인" + ChatColor.GREEN +"저 " + ChatColor.WHITE + "800레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==900 && event.getOldLevel() == 800) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 " + ChatColor.RED + "파" + ChatColor.BLUE + "워" + 
+						    		ChatColor.BLACK + "레" + ChatColor.YELLOW + "인" + ChatColor.GREEN +"저 " + ChatColor.WHITE + "900레벨을 달성했습니다!");
+						}	
+					} else if(player.getLevel()==1000 && event.getOldLevel() == 900) {
+						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 " + ChatColor.RED + "파" + ChatColor.BLUE + "워" + 
+						    		ChatColor.BLACK + "레" + ChatColor.YELLOW + "인" + ChatColor.GREEN +"저 " + ChatColor.WHITE + "1000레벨을 달성했습니다!");
 						}	
 					}
 				}
@@ -1899,7 +2245,7 @@ public class Main extends JavaPlugin implements Listener{
 			item.setItemMeta(im);
 			player.getInventory().addItem(item);
 			player.sendMessage("레벨업 보상으로 " + ChatColor.GOLD + "키어컬의 발걸음" + ChatColor.WHITE + "을 획득하였다.");
-		} else if(event.getNewLevel() == 800 && event.getOldLevel() == 799) {
+		} else if(event.getNewLevel() == 800 && event.getOldLevel() == 700) {
 			ItemStack item = new ItemStack(Material.GOLDEN_APPLE, 8);
 			ItemMeta im = item.getItemMeta();
 			im.setDisplayName(ChatColor.GOLD + "키어컬의 발걸음");
@@ -1914,7 +2260,7 @@ public class Main extends JavaPlugin implements Listener{
 			item.setItemMeta(im);
 			player.getInventory().addItem(item);
 			player.sendMessage("레벨업 보상으로 " + ChatColor.GOLD + "키어컬의 발걸음" + ChatColor.WHITE + "을 획득하였다.");
-		} else if(event.getNewLevel() == 900 && event.getOldLevel() == 899) {
+		} else if(event.getNewLevel() == 900 && event.getOldLevel() == 800) {
 			ItemStack item = new ItemStack(Material.GOLDEN_APPLE, 9);
 			ItemMeta im = item.getItemMeta();
 			im.setDisplayName(ChatColor.GOLD + "키어컬의 발걸음");
@@ -1929,7 +2275,7 @@ public class Main extends JavaPlugin implements Listener{
 			item.setItemMeta(im);
 			player.getInventory().addItem(item);
 			player.sendMessage("레벨업 보상으로 " + ChatColor.GOLD + "키어컬의 발걸음" + ChatColor.WHITE + "을 획득하였다.");
-		} else if(event.getNewLevel() == 1000 && event.getOldLevel() == 999) {
+		} else if(event.getNewLevel() == 1000 && event.getOldLevel() == 900) {
 			ItemStack item = new ItemStack(Material.GOLDEN_APPLE, 10);
 			ItemMeta im = item.getItemMeta();
 			im.setDisplayName(ChatColor.GOLD + "키어컬의 발걸음");
@@ -4072,6 +4418,18 @@ public class Main extends JavaPlugin implements Listener{
 					}
 				}
 				//===========================================================================
+				// 회복
+				int percent10 = 0;
+				percent10 += new SpecialEffect().a11(player);
+				
+				if(rnd.nextInt(100) < percent10) {
+					if(player.getHealth() >= 18) {
+						player.setHealth(20);
+					} else {
+						player.setHealth(player.getHealth() + 2);
+					}
+				}
+				//===========================================================================
 				PlayerHitDebuff debuff = new PlayerHitDebuff();
 				debuff.playerHitDebuff(player, entity);
 			}
@@ -4240,6 +4598,9 @@ public class Main extends JavaPlugin implements Listener{
 				num += new SpecialEffect().l1(player);
 				num += new SpecialEffect().b2(player);
 				
+				if(num > 70) {
+					num = 70;
+				}
 				if(rnd.nextInt(100) < num) {
 					event.setCancelled(true);
 					return;
@@ -4682,7 +5043,7 @@ public class Main extends JavaPlugin implements Listener{
 							new BossHealth().getBar1().removePlayer(p);
 						}
 					} else {
-						new BossHealth().getBar1().setProgress(boss.getHealth()-event.getFinalDamage() / 700000.0);
+						new BossHealth().getBar1().setProgress((boss.getHealth()-event.getFinalDamage()) / 700000.0);
 					}
 				}
 				// 탑 1층
@@ -7235,8 +7596,8 @@ public class Main extends JavaPlugin implements Listener{
 	
 	@EventHandler
 	public void onBlockChange(EntityChangeBlockEvent event) {
-		event.getEntity().remove();
 		event.setCancelled(true);
+		event.getBlock().setType(Material.AIR);
 	}
 	
 	@EventHandler

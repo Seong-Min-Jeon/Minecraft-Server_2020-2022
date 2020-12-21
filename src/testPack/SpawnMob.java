@@ -64,7 +64,7 @@ public class SpawnMob {
 				&& mob134(entity, loc) && mob135(entity, loc) && mob136(entity, loc) && mob137(entity, loc) && mob138(entity, loc) && mob139(entity, loc)
 				&& mob140(entity, loc) && mob141(entity, loc) && mob142(entity, loc) && mob143(entity, loc) && mob144(entity, loc) && mob145(entity, loc)
 				&& antimob1(entity, loc) && antimob2(entity, loc) && antimob3(entity, loc) && antimob4(entity, loc) && antimob5(entity, loc)
-				&& antimob6(entity, loc) && antimob7(entity, loc)) {
+				&& antimob6(entity, loc) && antimob7(entity, loc) && antimob8(entity, loc)) {
 			return true;
 		}
 		return false;
@@ -228,6 +228,35 @@ public class SpawnMob {
 			if (entity.getType() == (EntityType) EntityType.SLIME) {
 				return false;
 			} else if (entity.getType() == (EntityType) EntityType.ENDERMAN) {
+				return false;
+			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM
+					|| entity.getType() == (EntityType) EntityType.SALMON
+					|| entity.getType() == (EntityType) EntityType.ITEM_FRAME
+					|| entity.getType() == (EntityType) EntityType.DROPPED_ITEM
+					|| entity.getType() == (EntityType) EntityType.ARMOR_STAND
+					|| entity.getType() == (EntityType) EntityType.VILLAGER
+					|| entity.getType() == (EntityType) EntityType.SKELETON_HORSE
+					|| entity.getType() == (EntityType) EntityType.PIG
+					|| entity.getType() == (EntityType) EntityType.MUSHROOM_COW) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	public boolean antimob8(LivingEntity entity, Location loc) {
+		// 사막 채석장 -23 255 1427  -162 0 1529
+		if (loc.getX() <= -23 && loc.getY() <= 255 && loc.getZ() <= 1529 
+				&& loc.getX() >= -162 && loc.getY() >= 0 && loc.getZ() >= 1427) {
+			if (entity.getType() == (EntityType) EntityType.SKELETON) {
+				return false;
+			} else if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
+				return false;
+			} else if (entity.getType() == (EntityType) EntityType.SILVERFISH) {
+				return false;
+			} else if (entity.getType() == (EntityType) EntityType.RAVAGER) {
 				return false;
 			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM
 					|| entity.getType() == (EntityType) EntityType.SALMON

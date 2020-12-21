@@ -85,7 +85,9 @@ public class MobThread implements Listener{
 								&& (loc.clone().add(0, -2, 1).getBlock().getType() != Material.AIR) && (loc.clone().add(0, -2, -1).getBlock().getType() != Material.AIR)) {
 							edge = true;
 						} else if(loc.clone().add(0, -1, 0).getBlock().getType() == Material.AIR) {
-							edge = true;
+							if(loc.clone().add(0, -2, 0).getBlock().getType() != Material.AIR) {
+								edge = true;
+							}
 						}
 						if(edge) {
 							if (loc.getX() <= -1833 && loc.getY() <= 60 && loc.getZ() <= 3107 && loc.getX() >= -1882

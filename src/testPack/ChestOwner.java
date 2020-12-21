@@ -16,6 +16,10 @@ public class ChestOwner {
 			espina_id(player, num, inv);
 		} else if(player.getUniqueId().toString().equals("e2c3d778-b9f7-42b2-b39d-163b93d4ab89")) {
 			_nanoboost_(player, num, inv);
+		} else if(player.getUniqueId().toString().equals("0dca3279-a6b0-474f-94fd-fa6e970fc31a")) {
+			why9196(player, num, inv);
+		} else if(player.getUniqueId().toString().equals("83ed61a8-c6db-4155-8af7-c9b0cfb8d9ba")) {
+			akilae3102(player, num, inv);
 		} 
 		
 	}
@@ -80,6 +84,37 @@ public class ChestOwner {
 			closeInv(chestLoc.getBlock(), inv);
 		} else if(num == 4) {
 			Location chestLoc = new Location(player.getWorld(), 3774, 3, 3745);
+			if(inv == null) {
+				openInv(player, chestLoc.getBlock());
+				return;
+			}
+			closeInv(chestLoc.getBlock(), inv);
+		}
+		
+	}
+	
+	public void why9196(Player player, int num, Inventory inv) {
+		if(num == 2) {
+			Location chestLoc = new Location(player.getWorld(), 3772, 3, 3745);
+			if(inv == null) {
+				openInv(player, chestLoc.getBlock());
+				return;
+			}
+			closeInv(chestLoc.getBlock(), inv);
+		} else if(num == 3) {
+			Location chestLoc = new Location(player.getWorld(), 3770, 3, 3745);
+			if(inv == null) {
+				openInv(player, chestLoc.getBlock());
+				return;
+			}
+			closeInv(chestLoc.getBlock(), inv);
+		}
+		
+	}
+	
+	public void akilae3102(Player player, int num, Inventory inv) {
+		if(num == 2) {
+			Location chestLoc = new Location(player.getWorld(), 3768, 3, 3745);
 			if(inv == null) {
 				openInv(player, chestLoc.getBlock());
 				return;

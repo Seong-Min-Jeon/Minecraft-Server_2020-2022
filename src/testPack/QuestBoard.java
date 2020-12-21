@@ -2800,7 +2800,8 @@ public class QuestBoard {
 			es.giveExp(player, 22000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			msg.msg(player, "주민: 석상들을 토벌하면서 투기장 스크롤을 주우신 적이 있나요?%주민: 전통적으로 석상들을 제작할 때는 그 안에 포보르를 봉인해둔 스크롤을 넣어두기도 해요.%"
-					+ "주민: 그래야 석상에 힘이 생기고 마을을 지켜준다는 믿음이 있었거든요.%주민: 투기장 스크롤은 사막에 있는 투기장에서 사용할 수 있어요.");
+					+ "주민: 그래야 석상에 힘이 생기고 마을을 지켜준다는 믿음이 있었거든요.%주민: 투기장 스크롤은 사막에 있는 투기장에서 사용할 수 있어요.%"
+					+ "주민: 투기장 안쪽은 전장의 서늘함이 느껴져서 덥지 않다고 해요.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq45_23(player, 0);
 			return;
@@ -2833,7 +2834,7 @@ public class QuestBoard {
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
 		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===투기장===");
 		score.setScore(3);
-		Score score2 = obj.getScore("A급 투기장 스크롤을 사용");
+		Score score2 = obj.getScore("C급 투기장 스크롤을 사용");
 		score2.setScore(2);
 		Score score3 = obj.getScore("위치: 128,63,1955");
 		score3.setScore(1);

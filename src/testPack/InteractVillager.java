@@ -42,7 +42,7 @@ public class InteractVillager {
 		}
 		
 		return vil0() || vil1() || vil2() || vil3() || vil4() || vil5() || vil6() || vil7() || vil8() || vil9() || vil10() || vil11() || vil12() || vil13() || vil14()
-				|| vil15() || vil16();
+				|| vil15() || vil16() || vil17();
 	}
 	
 	public boolean vil0() {
@@ -417,6 +417,41 @@ public class InteractVillager {
 				}
 			} catch(Exception e) {
 				player.sendMessage("사막 정찰병: 이 앞부터 사막이다. 조심하도록.");
+			}
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean vil17() {
+		//채석장  -99 1487  -101 1485
+		if(loc.getX() <= -99 && loc.getZ() <= 1487
+				&& loc.getX() >= -101 && loc.getZ() >= 1485) {
+			QuestBoard cb = new QuestBoard();
+			try {
+				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===대사막7===")) {
+					int qNum = cb.getNum(player);
+					cb.mq45_12(player, qNum+1);	
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===대사막8===")) {
+					int qNum = cb.getNum(player);
+					cb.mq45_14(player, qNum+1);	
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===대사막9===")) {
+					int qNum = cb.getNum(player);
+					cb.mq45_16(player, qNum+1);	
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===대사막10===")) {
+					int qNum = cb.getNum(player);
+					cb.mq45_18(player, qNum+1);	
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===대사막11===")) {
+					int qNum = cb.getNum(player);
+					cb.mq45_20(player, qNum+1);	
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===대사막12===")) {
+					int qNum = cb.getNum(player);
+					cb.mq45_22(player, qNum+1);	
+				} else {
+					player.sendMessage("주민: 여기는 무료 철광산이에요.");
+				}
+			} catch(Exception e) {
+				player.sendMessage("주민: 여기는 무료 철광산이에요.");
 			}
 			return true;
 		}
