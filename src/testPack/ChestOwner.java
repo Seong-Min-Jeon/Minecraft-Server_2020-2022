@@ -21,7 +21,6 @@ public class ChestOwner {
 		} else if(player.getUniqueId().toString().equals("83ed61a8-c6db-4155-8af7-c9b0cfb8d9ba")) {
 			akilae3102(player, num, inv);
 		} 
-		
 	}
 	
 	public void yumehama(Player player, int num, Inventory inv) {

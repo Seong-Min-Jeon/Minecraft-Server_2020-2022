@@ -57,6 +57,7 @@ public class BossTicket {
 		if (player.getLocation().getX() <= 136 && player.getLocation().getZ() <= 1963 
 				&& player.getLocation().getX() >= 121 && player.getLocation().getZ() >= 1948) {
 			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GRAY + "C급 투기장 스크롤")) {
+				itemArg.remove();
 				player.teleport(new Location(player.getWorld(), 3887, 84, 2641));
 				int num = 0;
 				List<Entity> entitylist = player.getNearbyEntities(120, 20, 120);
@@ -68,8 +69,8 @@ public class BossTicket {
 						if (loc2.getX() <= 4030 && loc2.getY() <= 120 && loc2.getZ() <= 2728 
 								&& loc2.getX() >= 3853 && loc2.getY() >= 75 && loc2.getZ() >= 2548) {
 							num++;
-							if(new BossHealth().getBar11().getProgress() != 0) {
-								new BossHealth().getBar11().addPlayer(player);
+							if(new BossHealth().getBar14().getProgress() != 0) {
+								new BossHealth().getBar14().addPlayer(player);
 							}
 							return;
 						}
@@ -88,10 +89,10 @@ public class BossTicket {
 						}
 					}
 				}
-				player.getWorld().spawnEntity(new Location(player.getWorld(), 3938, 84, 2641), EntityType.GHAST);
+				player.getWorld().spawnEntity(new Location(player.getWorld(), 3938, 84, 2641), EntityType.SKELETON);
 				
-				new BossHealth().getBar11().setProgress(1.0);
-				new BossHealth().getBar11().addPlayer(player);
+				new BossHealth().getBar14().setProgress(1.0);
+				new BossHealth().getBar14().addPlayer(player);
 				return;
 			}
 		}
@@ -102,6 +103,7 @@ public class BossTicket {
 		if (player.getLocation().getX() <= 136 && player.getLocation().getZ() <= 1963 
 				&& player.getLocation().getX() >= 121 && player.getLocation().getZ() >= 1948) {
 			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "B급 투기장 스크롤")) {
+				itemArg.remove();
 				player.teleport(new Location(player.getWorld(), 4070, 84, 2641));
 				int num = 0;
 				List<Entity> entitylist = player.getNearbyEntities(120, 20, 120);
@@ -113,8 +115,8 @@ public class BossTicket {
 						if (loc2.getX() <= 4207 && loc2.getY() <= 120 && loc2.getZ() <= 2730 
 								&& loc2.getX() >= 4037 && loc2.getY() >= 75 && loc2.getZ() >= 2547) {
 							num++;
-							if(new BossHealth().getBar11().getProgress() != 0) {
-								new BossHealth().getBar11().addPlayer(player);
+							if(new BossHealth().getBar15().getProgress() != 0) {
+								new BossHealth().getBar15().addPlayer(player);
 							}
 							return;
 						}
@@ -133,10 +135,10 @@ public class BossTicket {
 						}
 					}
 				}
-				player.getWorld().spawnEntity(new Location(player.getWorld(), 3562, 30, 3712), EntityType.GHAST);
+				player.getWorld().spawnEntity(new Location(player.getWorld(), 4120, 84, 2641), EntityType.SKELETON);
 				
-				new BossHealth().getBar11().setProgress(1.0);
-				new BossHealth().getBar11().addPlayer(player);
+				new BossHealth().getBar15().setProgress(1.0);
+				new BossHealth().getBar15().addPlayer(player);
 				return;
 			}
 		}
@@ -147,6 +149,7 @@ public class BossTicket {
 		if (player.getLocation().getX() <= 136 && player.getLocation().getZ() <= 1963 
 				&& player.getLocation().getX() >= 121 && player.getLocation().getZ() >= 1948) {
 			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "A급 투기장 스크롤")) {
+				itemArg.remove();
 				player.teleport(new Location(player.getWorld(), 3887, 84, 2456));
 				int num = 0;
 				List<Entity> entitylist = player.getNearbyEntities(120, 20, 120);
@@ -158,8 +161,8 @@ public class BossTicket {
 						if (loc2.getX() <= 4023 && loc2.getY() <= 120 && loc2.getZ() <= 2546 
 								&& loc2.getX() >= 3846 && loc2.getY() >= 75 && loc2.getZ() >= 2369) {
 							num++;
-							if(new BossHealth().getBar11().getProgress() != 0) {
-								new BossHealth().getBar11().addPlayer(player);
+							if(new BossHealth().getBar16().getProgress() != 0) {
+								new BossHealth().getBar16().addPlayer(player);
 							}
 							return;
 						}
@@ -178,10 +181,10 @@ public class BossTicket {
 						}
 					}
 				}
-				player.getWorld().spawnEntity(new Location(player.getWorld(), 3562, 30, 3712), EntityType.GHAST);
+				player.getWorld().spawnEntity(new Location(player.getWorld(), 3937, 84, 2456), EntityType.SKELETON);
 				
-				new BossHealth().getBar11().setProgress(1.0);
-				new BossHealth().getBar11().addPlayer(player);
+				new BossHealth().getBar16().setProgress(1.0);
+				new BossHealth().getBar16().addPlayer(player);
 				return;
 			}
 		}
@@ -192,6 +195,7 @@ public class BossTicket {
 		if (player.getLocation().getX() <= 136 && player.getLocation().getZ() <= 1963 
 				&& player.getLocation().getX() >= 121 && player.getLocation().getZ() >= 1948) {
 			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤")) {
+				itemArg.remove();
 				player.teleport(new Location(player.getWorld(), 4068, 84, 2456));
 				int num = 0;
 				List<Entity> entitylist = player.getNearbyEntities(120, 20, 120);
@@ -203,8 +207,8 @@ public class BossTicket {
 						if (loc2.getX() <= 4210 && loc2.getY() <= 120 && loc2.getZ() <= 2543 
 								&& loc2.getX() >= 4031 && loc2.getY() >= 75 && loc2.getZ() >= 2366) {
 							num++;
-							if(new BossHealth().getBar11().getProgress() != 0) {
-								new BossHealth().getBar11().addPlayer(player);
+							if(new BossHealth().getBar17().getProgress() != 0) {
+								new BossHealth().getBar17().addPlayer(player);
 							}
 							return;
 						}
@@ -223,10 +227,10 @@ public class BossTicket {
 						}
 					}
 				}
-				player.getWorld().spawnEntity(new Location(player.getWorld(), 3562, 30, 3712), EntityType.GHAST);
+				player.getWorld().spawnEntity(new Location(player.getWorld(), 4118, 84, 2456), EntityType.SKELETON);
 				
-				new BossHealth().getBar11().setProgress(1.0);
-				new BossHealth().getBar11().addPlayer(player);
+				new BossHealth().getBar17().setProgress(1.0);
+				new BossHealth().getBar17().addPlayer(player);
 				return;
 			}
 		}

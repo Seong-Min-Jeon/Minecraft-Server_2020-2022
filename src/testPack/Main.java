@@ -2815,7 +2815,8 @@ public class Main extends JavaPlugin implements Listener{
 				player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 20, 10,true,false,false));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "레드 콤보")) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 1200, 2,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 1200, 3,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 1200, 1,true,false,false));
 				player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 20, 10,true,false,false));
 			}
 			
@@ -4609,397 +4610,410 @@ public class Main extends JavaPlugin implements Listener{
 		} catch(Exception e) {
 			
 		}
-		//특수뎀
+		
+		// 데미지 처리
 		try {
-			DamageRatio dr = new DamageRatio();
-			if (event.getCause() == DamageCause.FIRE_TICK || event.getCause() == DamageCause.FIRE || event.getCause() == DamageCause.HOT_FLOOR) {
-				if (event.getEntity() instanceof Player) {
-					Player player = (Player) event.getEntity();
-					int resist = 0;
-					try {
-						if (player.getInventory().getItemInMainHand().getItemMeta() != null) {
-							try {
-								String[] ench = player.getInventory().getItemInMainHand().getItemMeta().getLocalizedName().split(",");
-								resist += Integer.parseInt(ench[6]);
-							} catch(Exception e) {
-								
-							}
-						}
-					} catch (Exception e) {
-
-					}
-					try {
-						if (player.getInventory().getHelmet() != null) {
-							String[] ench = player.getInventory().getHelmet().getItemMeta().getLocalizedName().split(",");
-							resist += Integer.parseInt(ench[6]);
-						}
-					} catch (Exception e) {
-
-					}
-					try {
-						if (player.getInventory().getChestplate() != null) {
-							String[] ench = player.getInventory().getChestplate().getItemMeta().getLocalizedName().split(",");
-							resist += Integer.parseInt(ench[6]);
-						}
-					} catch (Exception e) {
-
-					}
-					try {
-						if (player.getInventory().getLeggings() != null) {
-							String[] ench = player.getInventory().getLeggings().getItemMeta().getLocalizedName().split(",");
-							resist += Integer.parseInt(ench[6]);
-						}
-					} catch (Exception e) {
-
-					}
-					try {
-						if (player.getInventory().getBoots() != null) {
-							String[] ench = player.getInventory().getBoots().getItemMeta().getLocalizedName().split(",");
-							resist += Integer.parseInt(ench[6]);
-						}
-					} catch (Exception e) {
-
-					}
-					double damage = dr.calculation(player, event.getDamage());
-					Inventory inv = player.getInventory();
-					if(inv.contains(Material.RED_DYE) || inv.contains(Material.GREEN_DYE) || inv.contains(Material.LAPIS_LAZULI)
-							|| inv.contains(Material.CYAN_DYE) || inv.contains(Material.LIGHT_GRAY_DYE)) {
-						damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
-					} else if(inv.contains(Material.YELLOW_DYE) || inv.contains(Material.LIGHT_BLUE_DYE) || inv.contains(Material.MAGENTA_DYE)
-							|| inv.contains(Material.ORANGE_DYE) || inv.contains(Material.CLAY_BALL)) {
-						damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
-					} else if(inv.contains(Material.GRAY_DYE) || inv.contains(Material.PINK_DYE) || inv.contains(Material.LIME_DYE)) {
-						damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
-					} else if(inv.contains(Material.BLUE_DYE) || inv.contains(Material.BROWN_DYE) || inv.contains(Material.BLACK_DYE)
-							|| inv.contains(Material.INK_SAC) || inv.contains(Material.GLOWSTONE_DUST)) {
-						damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
-					} else {
-						damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
-					}
-					if(damage < 0.001) {
-						damage = 0.001;
-					}
-					event.setDamage(damage);
-				}
-			}
-			if (event.getCause() == DamageCause.VOID) {
-				if (event.getEntity() instanceof Player) {
-					Player player = (Player) event.getEntity();
-					event.setDamage(player.getMaxHealth());
-				}
-			}
-			if (event.getCause() == DamageCause.DROWNING) {
-				if (event.getEntity() instanceof Player) {
-					Player player = (Player) event.getEntity();
-					event.setDamage(0.6);
-					player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 200, 1));
-				}
-			}
-			if (event.getCause() == DamageCause.POISON) {
-				if (event.getEntity() instanceof Player) {
-					Player player = (Player) event.getEntity();
-					Inventory inv = player.getInventory();
-					if(inv.contains(Material.RED_DYE) || inv.contains(Material.GREEN_DYE) || inv.contains(Material.LAPIS_LAZULI)
-							|| inv.contains(Material.CYAN_DYE) || inv.contains(Material.LIGHT_GRAY_DYE)) {
-						event.setDamage(dr.calculation(player, player.getLevel()/6));
-					} else if(inv.contains(Material.YELLOW_DYE) || inv.contains(Material.LIGHT_BLUE_DYE) || inv.contains(Material.MAGENTA_DYE)
-							|| inv.contains(Material.ORANGE_DYE) || inv.contains(Material.CLAY_BALL)) {
-						event.setDamage(dr.calculation(player, player.getLevel()/4));
-					} else if(inv.contains(Material.GRAY_DYE) || inv.contains(Material.PINK_DYE) || inv.contains(Material.LIME_DYE)) {
-						event.setDamage(dr.calculation(player, player.getLevel()/2));
-					} else if(inv.contains(Material.BLUE_DYE) || inv.contains(Material.BROWN_DYE) || inv.contains(Material.BLACK_DYE)
-							|| inv.contains(Material.INK_SAC) || inv.contains(Material.GLOWSTONE_DUST)) {
-						event.setDamage(dr.calculation(player, player.getLevel()));
-					} else {
-						event.setDamage(dr.calculation(player, player.getLevel()/4));
-					}
-				}
-			}
-			if (event.getCause() == DamageCause.WITHER) {
-				if (event.getEntity() instanceof Player) {
-					Player player = (Player) event.getEntity();
-					Inventory inv = player.getInventory();
-					if(inv.contains(Material.RED_DYE) || inv.contains(Material.GREEN_DYE) || inv.contains(Material.LAPIS_LAZULI)
-							|| inv.contains(Material.CYAN_DYE) || inv.contains(Material.LIGHT_GRAY_DYE)) {
-						event.setDamage(dr.calculation(player, player.getLevel()/3));
-					} else if(inv.contains(Material.YELLOW_DYE) || inv.contains(Material.LIGHT_BLUE_DYE) || inv.contains(Material.MAGENTA_DYE)
-							|| inv.contains(Material.ORANGE_DYE) || inv.contains(Material.CLAY_BALL)) {
-						event.setDamage(dr.calculation(player, player.getLevel()/2));
-					} else if(inv.contains(Material.GRAY_DYE) || inv.contains(Material.PINK_DYE) || inv.contains(Material.LIME_DYE)) {
-						event.setDamage(dr.calculation(player, player.getLevel()));
-					} else if(inv.contains(Material.BLUE_DYE) || inv.contains(Material.BROWN_DYE) || inv.contains(Material.BLACK_DYE)
-							|| inv.contains(Material.INK_SAC) || inv.contains(Material.GLOWSTONE_DUST)) {
-						event.setDamage(dr.calculation(player, player.getLevel()*2));
-					} else {
-						event.setDamage(dr.calculation(player, player.getLevel()/2));
-					}
-				}
-			}
-			if (event.getCause() == DamageCause.BLOCK_EXPLOSION) {
-				if (event.getEntity() instanceof Player) {
-					Player player = (Player) event.getEntity();
-					int resist = 0;
-					try {
-						if (player.getInventory().getItemInMainHand().getItemMeta() != null) {
-							try {
-								String[] ench = player.getInventory().getItemInMainHand().getItemMeta().getLocalizedName().split(",");
-								resist += Integer.parseInt(ench[7]);
-							} catch(Exception e) {
-								
-							}
-						}
-					} catch (Exception e) {
-
-					}
-					try {
-						if (player.getInventory().getHelmet() != null) {
-							String[] ench = player.getInventory().getHelmet().getItemMeta().getLocalizedName().split(",");
-							resist += Integer.parseInt(ench[7]);
-						}
-					} catch (Exception e) {
-
-					}
-					try {
-						if (player.getInventory().getChestplate() != null) {
-							String[] ench = player.getInventory().getChestplate().getItemMeta().getLocalizedName().split(",");
-							resist += Integer.parseInt(ench[7]);
-						}
-					} catch (Exception e) {
-
-					}
-					try {
-						if (player.getInventory().getLeggings() != null) {
-							String[] ench = player.getInventory().getLeggings().getItemMeta().getLocalizedName().split(",");
-							resist += Integer.parseInt(ench[7]);
-						}
-					} catch (Exception e) {
-
-					}
-					try {
-						if (player.getInventory().getBoots() != null) {
-							String[] ench = player.getInventory().getBoots().getItemMeta().getLocalizedName().split(",");
-							resist += Integer.parseInt(ench[7]);
-						}
-					} catch (Exception e) {
-
-					}
-					double damage = dr.calculation(player, event.getDamage());
-					Inventory inv = player.getInventory();
-					if(inv.contains(Material.RED_DYE) || inv.contains(Material.GREEN_DYE) || inv.contains(Material.LAPIS_LAZULI)
-							|| inv.contains(Material.CYAN_DYE) || inv.contains(Material.LIGHT_GRAY_DYE)) {
-						damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
-					} else if(inv.contains(Material.YELLOW_DYE) || inv.contains(Material.LIGHT_BLUE_DYE) || inv.contains(Material.MAGENTA_DYE)
-							|| inv.contains(Material.ORANGE_DYE) || inv.contains(Material.CLAY_BALL)) {
-						damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
-					} else if(inv.contains(Material.GRAY_DYE) || inv.contains(Material.PINK_DYE) || inv.contains(Material.LIME_DYE)) {
-						damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
-					} else if(inv.contains(Material.BLUE_DYE) || inv.contains(Material.BROWN_DYE) || inv.contains(Material.BLACK_DYE)
-							|| inv.contains(Material.INK_SAC) || inv.contains(Material.GLOWSTONE_DUST)) {
-						damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
-					} else {
-						damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
-					}
-					if(damage < 0.001) {
-						damage = 0.001;
-					}
-					event.setDamage(damage);
-					player.setFireTicks(120);
-				}
-			}
-			if (event.getCause() == DamageCause.ENTITY_EXPLOSION) {
-				if (event.getEntity() instanceof Player) {
-					Player player = (Player) event.getEntity();
-					int resist = 0;
-					try {
-						if (player.getInventory().getItemInMainHand() != null) {
-							try {
-								String[] ench = player.getInventory().getItemInMainHand().getItemMeta().getLocalizedName().split(",");
-								resist += Integer.parseInt(ench[7]);
-							} catch(Exception e) {
-								
-							}
-						}
-					} catch (Exception e) {
-
-					}
-					try {
-						if (player.getInventory().getHelmet() != null) {
-							String[] ench = player.getInventory().getHelmet().getItemMeta().getLocalizedName().split(",");
-							resist += Integer.parseInt(ench[7]);
-						}
-					} catch (Exception e) {
-
-					}
-					try {
-						if (player.getInventory().getChestplate() != null) {
-							String[] ench = player.getInventory().getChestplate().getItemMeta().getLocalizedName().split(",");
-							resist += Integer.parseInt(ench[7]);
-						}
-					} catch (Exception e) {
-
-					}
-					try {
-						if (player.getInventory().getLeggings() != null) {
-							String[] ench = player.getInventory().getLeggings().getItemMeta().getLocalizedName().split(",");
-							resist += Integer.parseInt(ench[7]);
-						}
-					} catch (Exception e) {
-
-					}
-					try {
-						if (player.getInventory().getBoots() != null) {
-							String[] ench = player.getInventory().getBoots().getItemMeta().getLocalizedName().split(",");
-							resist += Integer.parseInt(ench[7]);
-						}
-					} catch (Exception e) {
-
-					}
-					double damage = dr.calculation(player, event.getDamage());
-					Inventory inv = player.getInventory();
-					if(inv.contains(Material.RED_DYE) || inv.contains(Material.GREEN_DYE) || inv.contains(Material.LAPIS_LAZULI)
-							|| inv.contains(Material.CYAN_DYE) || inv.contains(Material.LIGHT_GRAY_DYE)) {
-						damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
-					} else if(inv.contains(Material.YELLOW_DYE) || inv.contains(Material.LIGHT_BLUE_DYE) || inv.contains(Material.MAGENTA_DYE)
-							|| inv.contains(Material.ORANGE_DYE) || inv.contains(Material.CLAY_BALL)) {
-						damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
-					} else if(inv.contains(Material.GRAY_DYE) || inv.contains(Material.PINK_DYE) || inv.contains(Material.LIME_DYE)) {
-						damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
-					} else if(inv.contains(Material.BLUE_DYE) || inv.contains(Material.BROWN_DYE) || inv.contains(Material.BLACK_DYE)
-							|| inv.contains(Material.INK_SAC) || inv.contains(Material.GLOWSTONE_DUST)) {
-						damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
-					} else {
-						damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
-					}
-					if(damage < 0.001) {
-						damage = 0.001;
-					}
-					event.setDamage(damage);
-					player.setFireTicks(120);
-				}
-			}
-			if(event.getCause() == DamageCause.MAGIC) {
+			//콜로세움 전투
+			if ((new Colosseum()).colosseum(event.getEntity())) {
+				System.out.println("col");
+				event.setDamage(1);
+			} else {
+				//특수뎀
 				try {
-					if(event.getEntity() instanceof Player) {
-						Player player = (Player) event.getEntity();
-						event.setDamage(dr.calculation(player, event.getDamage()));
+					DamageRatio dr = new DamageRatio();
+					if (event.getCause() == DamageCause.FIRE_TICK || event.getCause() == DamageCause.FIRE || event.getCause() == DamageCause.HOT_FLOOR) {
+						if (event.getEntity() instanceof Player) {
+							Player player = (Player) event.getEntity();
+							int resist = 0;
+							try {
+								if (player.getInventory().getItemInMainHand().getItemMeta() != null) {
+									try {
+										String[] ench = player.getInventory().getItemInMainHand().getItemMeta().getLocalizedName().split(",");
+										resist += Integer.parseInt(ench[6]);
+									} catch(Exception e) {
+										
+									}
+								}
+							} catch (Exception e) {
+
+							}
+							try {
+								if (player.getInventory().getHelmet() != null) {
+									String[] ench = player.getInventory().getHelmet().getItemMeta().getLocalizedName().split(",");
+									resist += Integer.parseInt(ench[6]);
+								}
+							} catch (Exception e) {
+
+							}
+							try {
+								if (player.getInventory().getChestplate() != null) {
+									String[] ench = player.getInventory().getChestplate().getItemMeta().getLocalizedName().split(",");
+									resist += Integer.parseInt(ench[6]);
+								}
+							} catch (Exception e) {
+
+							}
+							try {
+								if (player.getInventory().getLeggings() != null) {
+									String[] ench = player.getInventory().getLeggings().getItemMeta().getLocalizedName().split(",");
+									resist += Integer.parseInt(ench[6]);
+								}
+							} catch (Exception e) {
+
+							}
+							try {
+								if (player.getInventory().getBoots() != null) {
+									String[] ench = player.getInventory().getBoots().getItemMeta().getLocalizedName().split(",");
+									resist += Integer.parseInt(ench[6]);
+								}
+							} catch (Exception e) {
+
+							}
+							double damage = dr.calculation(player, event.getDamage());
+							Inventory inv = player.getInventory();
+							if(inv.contains(Material.RED_DYE) || inv.contains(Material.GREEN_DYE) || inv.contains(Material.LAPIS_LAZULI)
+									|| inv.contains(Material.CYAN_DYE) || inv.contains(Material.LIGHT_GRAY_DYE)) {
+								damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+							} else if(inv.contains(Material.YELLOW_DYE) || inv.contains(Material.LIGHT_BLUE_DYE) || inv.contains(Material.MAGENTA_DYE)
+									|| inv.contains(Material.ORANGE_DYE) || inv.contains(Material.CLAY_BALL)) {
+								damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+							} else if(inv.contains(Material.GRAY_DYE) || inv.contains(Material.PINK_DYE) || inv.contains(Material.LIME_DYE)) {
+								damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+							} else if(inv.contains(Material.BLUE_DYE) || inv.contains(Material.BROWN_DYE) || inv.contains(Material.BLACK_DYE)
+									|| inv.contains(Material.INK_SAC) || inv.contains(Material.GLOWSTONE_DUST)) {
+								damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+							} else {
+								damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+							}
+							if(damage < 0.001) {
+								damage = 0.001;
+							}
+							event.setDamage(damage);
+						}
+					}
+					if (event.getCause() == DamageCause.VOID) {
+						if (event.getEntity() instanceof Player) {
+							Player player = (Player) event.getEntity();
+							event.setDamage(player.getMaxHealth());
+						}
+					}
+					if (event.getCause() == DamageCause.DROWNING) {
+						if (event.getEntity() instanceof Player) {
+							Player player = (Player) event.getEntity();
+							event.setDamage(0.6);
+							player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 200, 1));
+						}
+					}
+					if (event.getCause() == DamageCause.POISON) {
+						if (event.getEntity() instanceof Player) {
+							Player player = (Player) event.getEntity();
+							Inventory inv = player.getInventory();
+							if(inv.contains(Material.RED_DYE) || inv.contains(Material.GREEN_DYE) || inv.contains(Material.LAPIS_LAZULI)
+									|| inv.contains(Material.CYAN_DYE) || inv.contains(Material.LIGHT_GRAY_DYE)) {
+								event.setDamage(dr.calculation(player, player.getLevel()/6));
+							} else if(inv.contains(Material.YELLOW_DYE) || inv.contains(Material.LIGHT_BLUE_DYE) || inv.contains(Material.MAGENTA_DYE)
+									|| inv.contains(Material.ORANGE_DYE) || inv.contains(Material.CLAY_BALL)) {
+								event.setDamage(dr.calculation(player, player.getLevel()/4));
+							} else if(inv.contains(Material.GRAY_DYE) || inv.contains(Material.PINK_DYE) || inv.contains(Material.LIME_DYE)) {
+								event.setDamage(dr.calculation(player, player.getLevel()/2));
+							} else if(inv.contains(Material.BLUE_DYE) || inv.contains(Material.BROWN_DYE) || inv.contains(Material.BLACK_DYE)
+									|| inv.contains(Material.INK_SAC) || inv.contains(Material.GLOWSTONE_DUST)) {
+								event.setDamage(dr.calculation(player, player.getLevel()));
+							} else {
+								event.setDamage(dr.calculation(player, player.getLevel()/4));
+							}
+						}
+					}
+					if (event.getCause() == DamageCause.WITHER) {
+						if (event.getEntity() instanceof Player) {
+							Player player = (Player) event.getEntity();
+							Inventory inv = player.getInventory();
+							if(inv.contains(Material.RED_DYE) || inv.contains(Material.GREEN_DYE) || inv.contains(Material.LAPIS_LAZULI)
+									|| inv.contains(Material.CYAN_DYE) || inv.contains(Material.LIGHT_GRAY_DYE)) {
+								event.setDamage(dr.calculation(player, player.getLevel()/3));
+							} else if(inv.contains(Material.YELLOW_DYE) || inv.contains(Material.LIGHT_BLUE_DYE) || inv.contains(Material.MAGENTA_DYE)
+									|| inv.contains(Material.ORANGE_DYE) || inv.contains(Material.CLAY_BALL)) {
+								event.setDamage(dr.calculation(player, player.getLevel()/2));
+							} else if(inv.contains(Material.GRAY_DYE) || inv.contains(Material.PINK_DYE) || inv.contains(Material.LIME_DYE)) {
+								event.setDamage(dr.calculation(player, player.getLevel()));
+							} else if(inv.contains(Material.BLUE_DYE) || inv.contains(Material.BROWN_DYE) || inv.contains(Material.BLACK_DYE)
+									|| inv.contains(Material.INK_SAC) || inv.contains(Material.GLOWSTONE_DUST)) {
+								event.setDamage(dr.calculation(player, player.getLevel()*2));
+							} else {
+								event.setDamage(dr.calculation(player, player.getLevel()/2));
+							}
+						}
+					}
+					if (event.getCause() == DamageCause.BLOCK_EXPLOSION) {
+						if (event.getEntity() instanceof Player) {
+							Player player = (Player) event.getEntity();
+							int resist = 0;
+							try {
+								if (player.getInventory().getItemInMainHand().getItemMeta() != null) {
+									try {
+										String[] ench = player.getInventory().getItemInMainHand().getItemMeta().getLocalizedName().split(",");
+										resist += Integer.parseInt(ench[7]);
+									} catch(Exception e) {
+										
+									}
+								}
+							} catch (Exception e) {
+
+							}
+							try {
+								if (player.getInventory().getHelmet() != null) {
+									String[] ench = player.getInventory().getHelmet().getItemMeta().getLocalizedName().split(",");
+									resist += Integer.parseInt(ench[7]);
+								}
+							} catch (Exception e) {
+
+							}
+							try {
+								if (player.getInventory().getChestplate() != null) {
+									String[] ench = player.getInventory().getChestplate().getItemMeta().getLocalizedName().split(",");
+									resist += Integer.parseInt(ench[7]);
+								}
+							} catch (Exception e) {
+
+							}
+							try {
+								if (player.getInventory().getLeggings() != null) {
+									String[] ench = player.getInventory().getLeggings().getItemMeta().getLocalizedName().split(",");
+									resist += Integer.parseInt(ench[7]);
+								}
+							} catch (Exception e) {
+
+							}
+							try {
+								if (player.getInventory().getBoots() != null) {
+									String[] ench = player.getInventory().getBoots().getItemMeta().getLocalizedName().split(",");
+									resist += Integer.parseInt(ench[7]);
+								}
+							} catch (Exception e) {
+
+							}
+							double damage = dr.calculation(player, event.getDamage());
+							Inventory inv = player.getInventory();
+							if(inv.contains(Material.RED_DYE) || inv.contains(Material.GREEN_DYE) || inv.contains(Material.LAPIS_LAZULI)
+									|| inv.contains(Material.CYAN_DYE) || inv.contains(Material.LIGHT_GRAY_DYE)) {
+								damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+							} else if(inv.contains(Material.YELLOW_DYE) || inv.contains(Material.LIGHT_BLUE_DYE) || inv.contains(Material.MAGENTA_DYE)
+									|| inv.contains(Material.ORANGE_DYE) || inv.contains(Material.CLAY_BALL)) {
+								damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+							} else if(inv.contains(Material.GRAY_DYE) || inv.contains(Material.PINK_DYE) || inv.contains(Material.LIME_DYE)) {
+								damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+							} else if(inv.contains(Material.BLUE_DYE) || inv.contains(Material.BROWN_DYE) || inv.contains(Material.BLACK_DYE)
+									|| inv.contains(Material.INK_SAC) || inv.contains(Material.GLOWSTONE_DUST)) {
+								damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+							} else {
+								damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+							}
+							if(damage < 0.001) {
+								damage = 0.001;
+							}
+							event.setDamage(damage);
+							player.setFireTicks(120);
+						}
+					}
+					if (event.getCause() == DamageCause.ENTITY_EXPLOSION) {
+						if (event.getEntity() instanceof Player) {
+							Player player = (Player) event.getEntity();
+							int resist = 0;
+							try {
+								if (player.getInventory().getItemInMainHand() != null) {
+									try {
+										String[] ench = player.getInventory().getItemInMainHand().getItemMeta().getLocalizedName().split(",");
+										resist += Integer.parseInt(ench[7]);
+									} catch(Exception e) {
+										
+									}
+								}
+							} catch (Exception e) {
+
+							}
+							try {
+								if (player.getInventory().getHelmet() != null) {
+									String[] ench = player.getInventory().getHelmet().getItemMeta().getLocalizedName().split(",");
+									resist += Integer.parseInt(ench[7]);
+								}
+							} catch (Exception e) {
+
+							}
+							try {
+								if (player.getInventory().getChestplate() != null) {
+									String[] ench = player.getInventory().getChestplate().getItemMeta().getLocalizedName().split(",");
+									resist += Integer.parseInt(ench[7]);
+								}
+							} catch (Exception e) {
+
+							}
+							try {
+								if (player.getInventory().getLeggings() != null) {
+									String[] ench = player.getInventory().getLeggings().getItemMeta().getLocalizedName().split(",");
+									resist += Integer.parseInt(ench[7]);
+								}
+							} catch (Exception e) {
+
+							}
+							try {
+								if (player.getInventory().getBoots() != null) {
+									String[] ench = player.getInventory().getBoots().getItemMeta().getLocalizedName().split(",");
+									resist += Integer.parseInt(ench[7]);
+								}
+							} catch (Exception e) {
+
+							}
+							double damage = dr.calculation(player, event.getDamage());
+							Inventory inv = player.getInventory();
+							if(inv.contains(Material.RED_DYE) || inv.contains(Material.GREEN_DYE) || inv.contains(Material.LAPIS_LAZULI)
+									|| inv.contains(Material.CYAN_DYE) || inv.contains(Material.LIGHT_GRAY_DYE)) {
+								damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+							} else if(inv.contains(Material.YELLOW_DYE) || inv.contains(Material.LIGHT_BLUE_DYE) || inv.contains(Material.MAGENTA_DYE)
+									|| inv.contains(Material.ORANGE_DYE) || inv.contains(Material.CLAY_BALL)) {
+								damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+							} else if(inv.contains(Material.GRAY_DYE) || inv.contains(Material.PINK_DYE) || inv.contains(Material.LIME_DYE)) {
+								damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+							} else if(inv.contains(Material.BLUE_DYE) || inv.contains(Material.BROWN_DYE) || inv.contains(Material.BLACK_DYE)
+									|| inv.contains(Material.INK_SAC) || inv.contains(Material.GLOWSTONE_DUST)) {
+								damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+							} else {
+								damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+							}
+							if(damage < 0.001) {
+								damage = 0.001;
+							}
+							event.setDamage(damage);
+							player.setFireTicks(120);
+						}
+					}
+					if(event.getCause() == DamageCause.MAGIC) {
+						try {
+							if(event.getEntity() instanceof Player) {
+								Player player = (Player) event.getEntity();
+								event.setDamage(dr.calculation(player, event.getDamage()));
+							}
+						} catch(Exception e) {
+							
+						}
+					}
+					if(event.getCause() == DamageCause.LIGHTNING) {
+						try {
+							if(event.getEntity() instanceof Player) {
+								Player player = (Player) event.getEntity();
+								player.setHealth(player.getHealth()/2);
+								event.setDamage(0);
+							}
+						} catch(Exception e) {
+							
+						}
+					}
+					if(event.getCause() == DamageCause.CUSTOM) {
+						try {
+							if(event.getEntity() instanceof Player) {
+								Player player = (Player) event.getEntity();
+								event.setDamage(dr.calculation(player, event.getDamage()));
+							}
+						} catch(Exception e) {
+							
+						}
+					}
+					if(event.getCause() == DamageCause.STARVATION) {
+						event.setCancelled(true);
 					}
 				} catch(Exception e) {
 					
 				}
-			}
-			if(event.getCause() == DamageCause.LIGHTNING) {
+				// Mob Loot
 				try {
-					if(event.getEntity() instanceof Player) {
-						Player player = (Player) event.getEntity();
-						player.setHealth(player.getHealth()/2);
-						event.setDamage(0);
+					if (event.getCause() == DamageCause.ENTITY_SWEEP_ATTACK) {
+						if (event.getEntity() instanceof Mob) {				
+							Entity mob = event.getEntity();
+							double damage = event.getFinalDamage();
+							MobDeath md = new MobDeath(mob, damage);
+						}
+					} else if (event.getCause() == DamageCause.ENTITY_EXPLOSION) {
+						if (event.getEntity() instanceof Mob) {				
+							Entity mob = event.getEntity();
+							double damage = event.getFinalDamage();
+							MobDeath md = new MobDeath(mob, damage);
+						}
+					} else if (event.getCause() == DamageCause.MAGIC) {
+						if (event.getEntity() instanceof Mob) {				
+							Entity mob = event.getEntity();
+							double damage = event.getFinalDamage();
+							MobDeath md = new MobDeath(mob, damage);
+						}
+					} else if (event.getCause() == DamageCause.WITHER) {
+						if (event.getEntity() instanceof Mob) {				
+							Entity mob = event.getEntity();
+							double damage = event.getFinalDamage();
+							MobDeath md = new MobDeath(mob, damage);
+						}
+					} else if (event.getCause() == DamageCause.FIRE_TICK || event.getCause() == DamageCause.FIRE) {
+						if (event.getEntity() instanceof Mob) {				
+							Entity mob = event.getEntity();
+							
+							String str = mob.getCustomName().split("\\.")[1];
+							String num = str.split("]")[0];
+							try {
+								int mobLvl = Integer.parseInt(num);
+								event.setDamage(mobLvl/2);
+							} catch (Exception e) {
+								event.setDamage(1);
+							}
+							
+							double damage = event.getFinalDamage();
+							MobDeath md = new MobDeath(mob, damage);
+						}
+					} else if (event.getCause() == DamageCause.POISON) {
+						if (event.getEntity() instanceof Mob) {				
+							Entity mob = event.getEntity();
+							double damage = event.getFinalDamage();
+							MobDeath md = new MobDeath(mob, damage);
+						}
+					} else if (event.getCause() == DamageCause.HOT_FLOOR) {
+						if (event.getEntity() instanceof Mob) {				
+							Entity mob = event.getEntity();
+							double damage = event.getFinalDamage();
+							MobDeath md = new MobDeath(mob, damage);
+						}
+					} else if (event.getCause() == DamageCause.CUSTOM) {
+						if (event.getEntity() instanceof Mob) {				
+							Entity mob = event.getEntity();
+							double damage = event.getFinalDamage();
+							MobDeath md = new MobDeath(mob, damage);
+						}
+					} else if (event.getCause() == DamageCause.FALL) {
+						if (event.getEntity() instanceof Mob) {				
+							event.setCancelled(true);
+							return;
+						}
 					}
-				} catch(Exception e) {
-					
-				}
-			}
-			if(event.getCause() == DamageCause.CUSTOM) {
-				try {
-					if(event.getEntity() instanceof Player) {
-						Player player = (Player) event.getEntity();
-						event.setDamage(dr.calculation(player, event.getDamage()));
+					//몹 정리
+					if (event.getCause() == DamageCause.DROWNING) {
+						if (event.getEntity() instanceof Mob) {
+							Mob mob = (Mob) event.getEntity();
+							mob.remove();
+						}
+					} else if (event.getCause() == DamageCause.SUFFOCATION) {
+						if (event.getEntity() instanceof Mob) {
+							Mob mob = (Mob) event.getEntity();
+							mob.remove();
+						}
+					} else if (event.getCause() == DamageCause.VOID) {
+						if (event.getEntity() instanceof Mob) {
+							Mob mob = (Mob) event.getEntity();
+							mob.remove();
+						}
 					}
-				} catch(Exception e) {
-					
-				}
-			}
-			if(event.getCause() == DamageCause.STARVATION) {
-				event.setCancelled(true);
-			}
-		} catch(Exception e) {
-			
-		}
-		// Mob Loot
-		try {
-			if (event.getCause() == DamageCause.ENTITY_SWEEP_ATTACK) {
-				if (event.getEntity() instanceof Mob) {				
-					Entity mob = event.getEntity();
-					double damage = event.getFinalDamage();
-					MobDeath md = new MobDeath(mob, damage);
-				}
-			} else if (event.getCause() == DamageCause.ENTITY_EXPLOSION) {
-				if (event.getEntity() instanceof Mob) {				
-					Entity mob = event.getEntity();
-					double damage = event.getFinalDamage();
-					MobDeath md = new MobDeath(mob, damage);
-				}
-			} else if (event.getCause() == DamageCause.MAGIC) {
-				if (event.getEntity() instanceof Mob) {				
-					Entity mob = event.getEntity();
-					double damage = event.getFinalDamage();
-					MobDeath md = new MobDeath(mob, damage);
-				}
-			} else if (event.getCause() == DamageCause.WITHER) {
-				if (event.getEntity() instanceof Mob) {				
-					Entity mob = event.getEntity();
-					double damage = event.getFinalDamage();
-					MobDeath md = new MobDeath(mob, damage);
-				}
-			} else if (event.getCause() == DamageCause.FIRE_TICK || event.getCause() == DamageCause.FIRE) {
-				if (event.getEntity() instanceof Mob) {				
-					Entity mob = event.getEntity();
-					
-					String str = mob.getCustomName().split("\\.")[1];
-					String num = str.split("]")[0];
-					try {
-						int mobLvl = Integer.parseInt(num);
-						event.setDamage(mobLvl/2);
-					} catch (Exception e) {
-						event.setDamage(1);
-					}
-					
-					double damage = event.getFinalDamage();
-					MobDeath md = new MobDeath(mob, damage);
-				}
-			} else if (event.getCause() == DamageCause.POISON) {
-				if (event.getEntity() instanceof Mob) {				
-					Entity mob = event.getEntity();
-					double damage = event.getFinalDamage();
-					MobDeath md = new MobDeath(mob, damage);
-				}
-			} else if (event.getCause() == DamageCause.HOT_FLOOR) {
-				if (event.getEntity() instanceof Mob) {				
-					Entity mob = event.getEntity();
-					double damage = event.getFinalDamage();
-					MobDeath md = new MobDeath(mob, damage);
-				}
-			} else if (event.getCause() == DamageCause.CUSTOM) {
-				if (event.getEntity() instanceof Mob) {				
-					Entity mob = event.getEntity();
-					double damage = event.getFinalDamage();
-					MobDeath md = new MobDeath(mob, damage);
-				}
-			} else if (event.getCause() == DamageCause.FALL) {
-				if (event.getEntity() instanceof Mob) {				
-					event.setCancelled(true);
-					return;
-				}
-			}
-			//몹 정리
-			if (event.getCause() == DamageCause.DROWNING) {
-				if (event.getEntity() instanceof Mob) {
-					Mob mob = (Mob) event.getEntity();
-					mob.remove();
-				}
-			} else if (event.getCause() == DamageCause.SUFFOCATION) {
-				if (event.getEntity() instanceof Mob) {
-					Mob mob = (Mob) event.getEntity();
-					mob.remove();
-				}
-			} else if (event.getCause() == DamageCause.VOID) {
-				if (event.getEntity() instanceof Mob) {
-					Mob mob = (Mob) event.getEntity();
-					mob.remove();
+				} catch (Exception e) {
+
 				}
 			}
 		} catch (Exception e) {
 
 		}
+		
 		//Change Name Color
 		try {
 			if(!(event.getEntity() instanceof Player)) {
@@ -5198,6 +5212,62 @@ public class Main extends JavaPlugin implements Listener{
 						}
 					} else {
 						new BossHealth().getBar12().setProgress((boss.getHealth()-event.getFinalDamage()) / 1800000.0);
+					}
+				}
+				// 레티아리우스
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("레티아리우스" + ChatColor.YELLOW + " [Lv.??]")) {
+				
+					LivingEntity boss = (LivingEntity) mob;
+					
+					if(boss.getHealth() - event.getFinalDamage() <= 0) {
+						for(Player p : new BossHealth().getBar14().getPlayers()) {
+							new BossHealth().getBar14().setProgress(0);
+							new BossHealth().getBar14().removePlayer(p);
+						}
+					} else {
+						new BossHealth().getBar14().setProgress((boss.getHealth()-event.getFinalDamage()) / 20.0);
+					}
+				}
+				// 갈리
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("갈리" + ChatColor.YELLOW + " [Lv.??]")) {
+				
+					LivingEntity boss = (LivingEntity) mob;
+					
+					if(boss.getHealth() - event.getFinalDamage() <= 0) {
+						for(Player p : new BossHealth().getBar15().getPlayers()) {
+							new BossHealth().getBar15().setProgress(0);
+							new BossHealth().getBar15().removePlayer(p);
+						}
+					} else {
+						new BossHealth().getBar15().setProgress((boss.getHealth()-event.getFinalDamage()) / 20.0);
+					}
+				}
+				// 디마카에루스
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("디마카에루스" + ChatColor.YELLOW + " [Lv.??]")) {
+				
+					LivingEntity boss = (LivingEntity) mob;
+					
+					if(boss.getHealth() - event.getFinalDamage() <= 0) {
+						for(Player p : new BossHealth().getBar16().getPlayers()) {
+							new BossHealth().getBar16().setProgress(0);
+							new BossHealth().getBar16().removePlayer(p);
+						}
+					} else {
+						new BossHealth().getBar16().setProgress((boss.getHealth()-event.getFinalDamage()) / 20.0);
+					}
+				}
+				// 프라에그나리
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("프라에그나리" + ChatColor.YELLOW + " [Lv.??]")) {
+				
+					LivingEntity boss = (LivingEntity) mob;
+					
+					if(boss.getHealth() - event.getFinalDamage() <= 0) {
+						for(Player p : new BossHealth().getBar17().getPlayers()) {
+							new BossHealth().getBar17().setProgress(0);
+							new BossHealth().getBar17().removePlayer(p);
+						}
+					} else {
+						new BossHealth().getBar17().setProgress((boss.getHealth()-event.getFinalDamage()) / 20.0);
 					}
 				}
 			}
@@ -7596,8 +7666,10 @@ public class Main extends JavaPlugin implements Listener{
 	
 	@EventHandler
 	public void onBlockChange(EntityChangeBlockEvent event) {
-		event.setCancelled(true);
-		event.getBlock().setType(Material.AIR);
+		if(event.getBlock().getType() != Material.REDSTONE_ORE) {
+			event.setCancelled(true);
+			event.getBlock().setType(Material.AIR);
+		}
 	}
 	
 	@EventHandler

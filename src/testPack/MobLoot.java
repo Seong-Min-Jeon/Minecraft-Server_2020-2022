@@ -374,12 +374,12 @@ public class MobLoot {
 		player.getInventory().addItem(item);
 		es.giveExp(player, 20000);
 
-		ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
-		ItemMeta rewardKeyIm = rewardKey.getItemMeta();
-		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "숲의 유적 보상 열쇠");
-		rewardKey.setItemMeta(rewardKeyIm);
-		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "숲의 유적 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+//		ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
+//		ItemMeta rewardKeyIm = rewardKey.getItemMeta();
+//		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "숲의 유적 보상 열쇠");
+//		rewardKey.setItemMeta(rewardKeyIm);
+//		player.getInventory().addItem(rewardKey);
+//		player.sendMessage(ChatColor.YELLOW + "숲의 유적 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 
 	}
 

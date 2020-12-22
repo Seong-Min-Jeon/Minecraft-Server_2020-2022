@@ -573,7 +573,7 @@ public class QuestScroll {
 
 	public void mq34(Player player, Item itemArg, World world) {	
 		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "메인퀘스트 34장")) {
-			msg.msg(player, "빨간소녀: 하위!%빨간소녀: 나를 잊지 않았겠지영?%빨간모자: 또 의뢰할께 있으니 나한테 와줘여.");
+			msg.msg(player, "빨간모자: 하위!%빨간모자: 나를 잊지 않았겠지영?%빨간모자: 또 의뢰할께 있으니 나한테 와줘여.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq34(player, 0);
 		}	

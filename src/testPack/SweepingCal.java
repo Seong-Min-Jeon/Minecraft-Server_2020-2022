@@ -81,6 +81,27 @@ public class SweepingCal {
 								&& Math.abs(nearMobLoc.getZ() - mobLoc.getZ()) <= 2+sweep/300) {
 							if(nearMob.getType() != EntityType.PLAYER || nearMob.getType() != EntityType.IRON_GOLEM) {
 								nearMob.damage(sweep * 3);
+								
+								try {
+									//===========================================================================
+									// 독뎀
+									int poison = 0;
+									poison += new SpecialEffect().a10(player);
+									
+									if(poison != 0) {
+										if(nearMob.getType() == EntityType.ZOMBIE || nearMob.getType() == EntityType.ZOMBIE_VILLAGER || nearMob.getType() == EntityType.HUSK
+												|| nearMob.getType() == EntityType.DROWNED || nearMob.getType() == EntityType.SKELETON || nearMob.getType() == EntityType.WITHER_SKELETON
+												|| nearMob.getType() == EntityType.WITHER) {
+											nearMob.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 100, poison));
+										} else {
+											nearMob.addPotionEffect(new PotionEffect(PotionEffectType.HARM, 100, poison));
+										}
+									}
+									//===========================================================================
+								} catch(Exception e) {
+									
+								}
+								
 							}
 						}							
 					}

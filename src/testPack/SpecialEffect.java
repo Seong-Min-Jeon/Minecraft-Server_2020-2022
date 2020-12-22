@@ -114,7 +114,7 @@ public class SpecialEffect {
 	public int a10(Player player) {
 		try {
 			if(player.getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "녹슨 반지")) {
-				return 5;
+				return 7;
 			}
 		} catch(Exception e) {
 			
@@ -149,7 +149,7 @@ public class SpecialEffect {
 	public int h2(Player player) {
 		try {
 			if(player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "호크아이")) {
-				return 5;
+				return 9;
 			}
 		} catch(Exception e) {
 			

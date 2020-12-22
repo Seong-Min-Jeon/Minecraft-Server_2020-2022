@@ -63,7 +63,7 @@ public class WeaponBuff {
 													player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 6,true,false,false));
 													player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 2,true,false,false));
 													player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0,true,false,false));
-													player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 100,true,false,false));
+													player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 500,true,false,false));
 												}
 											}
 										}
