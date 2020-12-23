@@ -72,6 +72,7 @@ public class PlayerHitDebuff {
 		mob25(player, mob);
 	}
 
+	// 시련의 형상
 	public void mob1(Player player, Entity mob) {
 		if(mob.getCustomName().substring(2).equalsIgnoreCase("시련의 형상" + ChatColor.YELLOW + " [Lv.??]")) {
 			if(((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
@@ -1349,8 +1350,98 @@ public class PlayerHitDebuff {
 		}
 	}
 
+	// 레티아리우스
 	public void mob26(Player player, Entity mob) {
+		
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("레티아리우스" + ChatColor.YELLOW + " [Lv.??]")) {
+			
+			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
+				int num = rnd.nextInt(10);
+				if (num == 0) {
+					mob.getWorld().playSound(player.getLocation(), Sound.ITEM_TRIDENT_THROW, 8.0f, 1.0f);
 
+					ArmorStand proTotem = (ArmorStand) mob.getWorld().spawnEntity(mob.getLocation(),EntityType.ARMOR_STAND);
+					proTotem.setVisible(false);
+					proTotem.setArms(true);
+					proTotem.setItemInHand(new ItemStack(Material.TRIDENT));
+					proTotem.setRightArmPose(new EulerAngle(Math.toRadians(5), 0, 0));
+					proTotem.setVelocity(mob.getLocation().getDirection().multiply(4.0f));
+					proTotem.setVelocity(proTotem.getVelocity().multiply(new Vector(1, 0.1 ,1)));
+
+					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+						int time = 0;
+						ArmorStand totem = proTotem;
+						ThreadData td = new ThreadData(player.getUniqueId());
+
+						@Override
+						public void run() {
+							if (!td.hasID()) {
+								td.setID(taskID);
+							}
+
+							if (time % 5 == 0) {
+								List<Entity> entitylist = totem.getNearbyEntities(8, 8, 8);
+								for (Entity nearEntity : entitylist) {
+									if (nearEntity instanceof Player) {
+										Player player = (Player) nearEntity;
+										player.setHealth(player.getHealth()/2);
+									}
+								}
+								mob.getWorld().playSound(totem.getLocation(), Sound.ITEM_TRIDENT_THROW, 5.0f, 1.0f);
+							}
+
+							if (time >= 50) {
+								totem.remove();
+								td.endTask();
+								td.removeID();
+							}
+
+							time++;
+						}
+
+					}, 0, 1);
+				}
+				if (num == 1) {
+					List<Entity> nearEntity = mob.getNearbyEntities(30, 10, 30);
+					for(Entity ent : nearEntity) {
+						if(ent instanceof Player) {
+							Player nearPlayer = (Player) ent;
+							nearPlayer.teleport(mob.getLocation());
+							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,100,100,true,false,false));
+							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,100,200,true,false,false));
+							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION,100,200,true,false,false));
+							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS,100,10000,true,false,false));
+							nearPlayer.getWorld().playSound(mob.getLocation(), Sound.BLOCK_CHAIN_HIT, 1.0f, 1.0f);
+							nearPlayer.sendMessage(ChatColor.RED + "그물에 걸렸습니다.");
+						}
+					}
+				}
+			} else {
+				int num = rnd.nextInt(10);
+				if (num == 0) {
+					Vector vec = ((LivingEntity) mob).getEyeLocation().getDirection().multiply(5.0f);
+					mob.setVelocity(vec);
+					((Skeleton) mob).setTarget(player);
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 3.0f, 1.0f);
+				} else if(num == 1) {
+					List<Entity> nearEntity = mob.getNearbyEntities(30, 10, 30);
+					for(Entity ent : nearEntity) {
+						if(ent instanceof Player) {
+							Player nearPlayer = (Player) ent;
+							nearPlayer.teleport(mob.getLocation());
+							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,100,100,true,false,false));
+							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,100,200,true,false,false));
+							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION,100,200,true,false,false));
+							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS,100,10000,true,false,false));
+							nearPlayer.getWorld().playSound(mob.getLocation(), Sound.BLOCK_CHAIN_HIT, 1.0f, 1.0f);
+							nearPlayer.sendMessage(ChatColor.RED + "그물에 걸렸습니다.");
+						}
+					}
+				}
+			}
+		}
+		
 	}
 
 	public void mob27(Player player, Entity mob) {

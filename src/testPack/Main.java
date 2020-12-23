@@ -4615,7 +4615,6 @@ public class Main extends JavaPlugin implements Listener{
 		try {
 			//콜로세움 전투
 			if ((new Colosseum()).colosseum(event.getEntity())) {
-				System.out.println("col");
 				event.setDamage(1);
 			} else {
 				//특수뎀
