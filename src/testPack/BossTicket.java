@@ -58,7 +58,7 @@ public class BossTicket {
 				&& player.getLocation().getX() >= 121 && player.getLocation().getZ() >= 1948) {
 			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GRAY + "C급 투기장 스크롤")) {
 				itemArg.remove();
-				player.teleport(new Location(player.getWorld(), 3887, 84, 2641));
+				player.teleport(new Location(player.getWorld(), 3887, 84, 2641, 270, 0));
 				int num = 0;
 				List<Entity> entitylist = player.getNearbyEntities(120, 20, 120);
 				for (Entity nearEntity : entitylist) {
@@ -104,7 +104,7 @@ public class BossTicket {
 				&& player.getLocation().getX() >= 121 && player.getLocation().getZ() >= 1948) {
 			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "B급 투기장 스크롤")) {
 				itemArg.remove();
-				player.teleport(new Location(player.getWorld(), 4070, 84, 2641));
+				player.teleport(new Location(player.getWorld(), 4070, 84, 2641, 270, 0));
 				int num = 0;
 				List<Entity> entitylist = player.getNearbyEntities(120, 20, 120);
 				for (Entity nearEntity : entitylist) {
@@ -150,7 +150,7 @@ public class BossTicket {
 				&& player.getLocation().getX() >= 121 && player.getLocation().getZ() >= 1948) {
 			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "A급 투기장 스크롤")) {
 				itemArg.remove();
-				player.teleport(new Location(player.getWorld(), 3887, 84, 2456));
+				player.teleport(new Location(player.getWorld(), 3887, 84, 2456, 270, 0));
 				int num = 0;
 				List<Entity> entitylist = player.getNearbyEntities(120, 20, 120);
 				for (Entity nearEntity : entitylist) {
@@ -196,7 +196,7 @@ public class BossTicket {
 				&& player.getLocation().getX() >= 121 && player.getLocation().getZ() >= 1948) {
 			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤")) {
 				itemArg.remove();
-				player.teleport(new Location(player.getWorld(), 4068, 84, 2456));
+				player.teleport(new Location(player.getWorld(), 4068, 84, 2456, 270, 0));
 				int num = 0;
 				List<Entity> entitylist = player.getNearbyEntities(120, 20, 120);
 				for (Entity nearEntity : entitylist) {

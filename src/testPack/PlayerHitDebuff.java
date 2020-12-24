@@ -70,6 +70,10 @@ public class PlayerHitDebuff {
 		mob23(player, mob);
 		mob24(player, mob);
 		mob25(player, mob);
+		mob26(player, mob);
+		mob27(player, mob);
+		mob28(player, mob);
+		mob29(player, mob);
 	}
 
 	// 시련의 형상
@@ -850,7 +854,7 @@ public class PlayerHitDebuff {
 					Vector vec = ((LivingEntity) mob).getEyeLocation().getDirection().multiply(5.0f);
 					mob.setVelocity(vec);
 					((Skeleton) mob).setTarget(player);
-					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 3.0f, 1.0f);
+					player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 3.0f, 1.0f);
 				}
 			}
 		}
@@ -1354,17 +1358,18 @@ public class PlayerHitDebuff {
 	public void mob26(Player player, Entity mob) {
 		
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("레티아리우스" + ChatColor.YELLOW + " [Lv.??]")) {
+			((LivingEntity) mob).removePotionEffect(PotionEffectType.HEAL);
 			
 			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
 				int num = rnd.nextInt(10);
 				if (num == 0) {
-					mob.getWorld().playSound(player.getLocation(), Sound.ITEM_TRIDENT_THROW, 8.0f, 1.0f);
+					mob.getWorld().playSound(mob.getLocation(), Sound.ITEM_TRIDENT_THROW, 8.0f, 1.0f);
 
 					ArmorStand proTotem = (ArmorStand) mob.getWorld().spawnEntity(mob.getLocation(),EntityType.ARMOR_STAND);
 					proTotem.setVisible(false);
 					proTotem.setArms(true);
 					proTotem.setItemInHand(new ItemStack(Material.TRIDENT));
-					proTotem.setRightArmPose(new EulerAngle(Math.toRadians(5), 0, 0));
+					proTotem.setRightArmPose(new EulerAngle(Math.toRadians(3), 0, 0));
 					proTotem.setVelocity(mob.getLocation().getDirection().multiply(4.0f));
 					proTotem.setVelocity(proTotem.getVelocity().multiply(new Vector(1, 0.1 ,1)));
 
@@ -1385,13 +1390,12 @@ public class PlayerHitDebuff {
 								for (Entity nearEntity : entitylist) {
 									if (nearEntity instanceof Player) {
 										Player player = (Player) nearEntity;
-										player.setHealth(player.getHealth()/2);
+										player.setHealth(player.getHealth()/3);
 									}
 								}
-								mob.getWorld().playSound(totem.getLocation(), Sound.ITEM_TRIDENT_THROW, 5.0f, 1.0f);
 							}
 
-							if (time >= 50) {
+							if (time >= 40) {
 								totem.remove();
 								td.endTask();
 								td.removeID();
@@ -1401,8 +1405,8 @@ public class PlayerHitDebuff {
 						}
 
 					}, 0, 1);
-				}
-				if (num == 1) {
+					((Skeleton) mob).setTarget(player);
+				} else if (num == 1) {
 					List<Entity> nearEntity = mob.getNearbyEntities(30, 10, 30);
 					for(Entity ent : nearEntity) {
 						if(ent instanceof Player) {
@@ -1416,6 +1420,7 @@ public class PlayerHitDebuff {
 							nearPlayer.sendMessage(ChatColor.RED + "그물에 걸렸습니다.");
 						}
 					}
+					((Skeleton) mob).setTarget(player);
 				}
 			} else {
 				int num = rnd.nextInt(10);
@@ -1423,7 +1428,7 @@ public class PlayerHitDebuff {
 					Vector vec = ((LivingEntity) mob).getEyeLocation().getDirection().multiply(5.0f);
 					mob.setVelocity(vec);
 					((Skeleton) mob).setTarget(player);
-					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 3.0f, 1.0f);
+					player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 3.0f, 1.0f);
 				} else if(num == 1) {
 					List<Entity> nearEntity = mob.getNearbyEntities(30, 10, 30);
 					for(Entity ent : nearEntity) {
@@ -1438,22 +1443,183 @@ public class PlayerHitDebuff {
 							nearPlayer.sendMessage(ChatColor.RED + "그물에 걸렸습니다.");
 						}
 					}
+					((Skeleton) mob).setTarget(player);
 				}
 			}
 		}
 		
 	}
 
+	// 갈리
 	public void mob27(Player player, Entity mob) {
-
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("갈리" + ChatColor.YELLOW + " [Lv.??]")) {
+			((LivingEntity) mob).removePotionEffect(PotionEffectType.HEAL);
+			
+			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
+				int num = rnd.nextInt(12);
+				if (num <= 1) {
+					player.getWorld().playSound(mob.getLocation(), Sound.ITEM_SHIELD_BLOCK, 2.0f, 1.0f);
+					player.setVelocity(player.getEyeLocation().getDirection().multiply(3.0f));
+					player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 100, 0, true, false, false));
+					player.damage(10);
+				} else if (num == 2) {
+					((LivingEntity) mob).setHealth(((LivingEntity) mob).getHealth() + 5);
+					player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_GENERIC_EAT, 1.0f, 1.0f);
+					player.sendMessage(ChatColor.RED + "갈리가 피의 함성에 희열을 느낍니다.");
+					sendMessage(player, ChatColor.RED + "갈리가 피의 함성에 희열을 느낍니다.");
+					((Skeleton) mob).setTarget(player);
+				}
+			} else {
+				int num = rnd.nextInt(12);
+				if (num <= 1) {
+					Vector vec = ((LivingEntity) mob).getEyeLocation().getDirection().multiply(5.0f);
+					mob.setVelocity(vec);
+					((Skeleton) mob).setTarget(player);
+					player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 3.0f, 1.0f);
+				} else if(num == 2) {
+					((LivingEntity) mob).setHealth(((LivingEntity) mob).getHealth() + 5);
+					player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_GENERIC_EAT, 1.0f, 1.0f);
+					player.sendMessage(ChatColor.RED + "갈리가 피의 함성에 희열을 느낍니다.");
+					sendMessage(player, ChatColor.RED + "갈리가 피의 함성에 희열을 느낍니다.");
+					((Skeleton) mob).setTarget(player);
+				}
+			}
+		}
 	}
 
+	// 디마카에루스
 	public void mob28(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("디마카에루스" + ChatColor.YELLOW + " [Lv.??]")) {
+			((LivingEntity) mob).removePotionEffect(PotionEffectType.HEAL);
+			
+			int num = rnd.nextInt(8);
+			if (num == 0) {
 
+				player.addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, 100, 0, true, false, false));
+				
+				taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+					int time = 0;
+					ThreadData td = new ThreadData(player.getUniqueId());
+
+					@Override
+					public void run() {
+						if (!td.hasID()) {
+							td.setID(taskID);
+						}
+
+						if (time >= 30 && time % 2 == 0) {
+							player.damage(1);
+						}
+
+						if (time >= 80) {
+							td.endTask();
+							td.removeID();
+						}
+
+						time++;
+					}
+
+				}, 0, 1);
+				
+			}
+		}
 	}
 
+	// 프라에그나리
 	public void mob29(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("프라에그나리" + ChatColor.YELLOW + " [Lv.??]")) {
+			((LivingEntity) mob).removePotionEffect(PotionEffectType.HEAL);
+			
+			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
+				int num = rnd.nextInt(12);
+				if (num <= 1) {
+					player.getWorld().playSound(mob.getLocation(), Sound.ITEM_SHIELD_BLOCK, 2.0f, 1.0f);
+					player.setVelocity(player.getEyeLocation().getDirection().multiply(3.0f));
+					player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 100, 0, true, false, false));
+					player.damage(10);
+				} else if (num == 2) {
+					((LivingEntity) mob).setHealth(((LivingEntity) mob).getHealth() + 10);
+					player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 1.0f, 1.0f);
+					player.sendMessage(ChatColor.RED + "드래곤의 광주가 울려퍼집니다.");
+					sendMessage(player, ChatColor.RED + "드래곤의 광주가 울려퍼집니다.");
+					((Skeleton) mob).setTarget(player);
+				}
+			} else {
+				int num = rnd.nextInt(12);
+				if (num == 0) {
+					Vector vec = ((LivingEntity) mob).getEyeLocation().getDirection().multiply(5.0f);
+					mob.setVelocity(vec);
+					((Skeleton) mob).setTarget(player);
+					player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 3.0f, 1.0f);
+				} else if(num == 1) {
+					Location loc = mob.getLocation();
+					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
+						int time = 0;
+						ThreadData td = new ThreadData(player.getUniqueId());
+
+						@Override
+						public void run() {
+							
+							if (!td.hasID()) {
+								td.setID(taskID);
+							}
+							
+							if (time % 20 == 0) {
+								for(int x = -12 ; x < 13 ; x++) {
+									for(int y = -1 ; y < 0 ; y++) {
+										for(int z = -12 ; z < 13 ; z++) {
+											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
+											player.getWorld().spawnParticle(Particle.REDSTONE, loc2, 0, new DustOptions(Color.RED, 1));
+										}
+									}
+								}
+							}
+							
+							if (time == 60 || time == 80 || time == 100 || time == 120) {
+								// ===============================================================
+								ParticleData pd = new ParticleData(player.getUniqueId());
+								if (pd.hasID()) {
+									pd.endTask();
+									pd.removeID();
+								}
+								ParticleEffect pe = new ParticleEffect(player, mob);
+								pe.startE35();
+								// ================================================================
+								List<Entity> nearEntity = mob.getNearbyEntities(12, 10, 12);
+								for (Entity ent : nearEntity) {
+									if (ent instanceof Player) {
+										Player player = (Player) ent;
+										player.getWorld().playEffect(mob.getLocation(), Effect.END_GATEWAY_SPAWN, 2);
+										player.setHealth(player.getHealth()/5);
+									}
+								}
+								List<Entity> nearPlayer = mob.getNearbyEntities(120, 10, 120);
+								for (Entity ent : nearPlayer) {
+									if (ent instanceof Player) {
+										Player player = (Player) ent;
+										player.teleport(mob);
+									}
+								}
+							}
+							
+							if (time >= 140) {
+								td.endTask();
+								td.removeID();
+							}
+							
+							time++;
+
+						}
+
+					}, 0, 1);
+					player.sendMessage(ChatColor.RED + "전장의 서곡이 울려퍼집니다.");
+					sendMessage(player, ChatColor.RED + "전장의 서곡이 울려퍼집니다.");
+					((Skeleton) mob).setTarget(player);
+				}
+			}
+		}
 	}
 
 	public void mob30(Player player, Entity mob) {

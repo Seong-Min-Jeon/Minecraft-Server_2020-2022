@@ -2192,7 +2192,6 @@ public class Skill {
 					((LivingEntity) golem).setHealth((20 + player.getLevel() * 30));
 					int golemLv = player.getLevel();
 					golem.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, golemLv * 2));
-					golem.addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, Integer.MAX_VALUE, 0));
 					go.put(golem.getUniqueId(), player);
 					player.sendMessage(ChatColor.GREEN + "[스킬]천사의 기사단이 발동됩니다.");
 					player.sendMessage(ChatColor.GREEN + "기사단이 소환됩니다. 레벨: " + player.getLevel());
@@ -2762,7 +2761,7 @@ public class Skill {
 						if (nearEntity.getType() != EntityType.PLAYER) {
 							if (nearEntity instanceof LivingEntity) {
 								LivingEntity nearMob = (LivingEntity) nearEntity;
-								nearMob.damage(player.getLevel()*10 + damNum*10);
+								nearMob.damage(player.getLevel()*10 + damNum*8);
 							}
 						}
 					}
@@ -2962,7 +2961,7 @@ public class Skill {
 							if(ent.getType() != EntityType.MUSHROOM_COW) {
 								ent.setVelocity(vec);
 							}
-							ent.damage(player.getLevel()*5 + damNum * 15);
+							ent.damage(player.getLevel()*5 + damNum * 10);
 						}
 					}	
 				} else {
@@ -2988,7 +2987,7 @@ public class Skill {
 							if(ent.getType() != EntityType.MUSHROOM_COW) {
 								ent.setVelocity(vec.multiply(3.0f));
 							}
-							ent.damage(player.getLevel()*10 + damNum * 10);
+							ent.damage(player.getLevel()*10 + damNum * 5);
 						}
 					}	
 				} else {
@@ -3066,7 +3065,7 @@ public class Skill {
 									if (nearEntity.getType() != EntityType.PLAYER) {
 										if (nearEntity instanceof LivingEntity) {
 											LivingEntity nearMob = (LivingEntity) nearEntity;
-											nearMob.damage(player.getLevel() * 30);
+											nearMob.damage(player.getLevel() * 25);
 										}
 									}
 								}

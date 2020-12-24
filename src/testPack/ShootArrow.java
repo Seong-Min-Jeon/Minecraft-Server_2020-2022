@@ -5,13 +5,16 @@ import java.util.Random;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.Particle;
 import org.bukkit.entity.Arrow;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
+import org.bukkit.entity.Skeleton;
 import org.bukkit.entity.SpectralArrow;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.util.Vector;
 
 public class ShootArrow {
 
@@ -26,7 +29,8 @@ public class ShootArrow {
 		Entity mob = (Entity) arrow.getShooter();
 		if(arrow1(arrow, mob, loc) && arrow2(arrow, mob, loc) && arrow3(arrow, mob, loc) && arrow4(arrow, mob, loc) 
 				&& arrow5(arrow, mob, loc) && arrow6(arrow, mob, loc) && arrow7(arrow, mob, loc) && arrow8(arrow, mob, loc)
-				&& arrow9(arrow, mob, loc) && arrow10(arrow, mob, loc)) {
+				&& arrow9(arrow, mob, loc) && arrow10(arrow, mob, loc) && arrow11(arrow, mob, loc) && arrow12(arrow, mob, loc)
+				&& arrow13(arrow, mob, loc)) {
 			SpectralArrow sarrow = (SpectralArrow) arrow.getWorld().spawnEntity(loc, EntityType.SPECTRAL_ARROW);
 			sarrow.setVelocity(arrow.getVelocity());
 		}
@@ -158,6 +162,63 @@ public class ShootArrow {
 			Item item = arrow.getWorld().dropItem(loc, new ItemStack(Material.FIRE_CHARGE));
 			item.setPickupDelay(10000000);
 			arrow.addPassenger(item);
+			return false;
+		}
+		return true;
+	}
+	
+	public boolean arrow11(Arrow arrow, Entity mob, Location loc) {
+		if(mob.getCustomName().substring(2).equalsIgnoreCase("길을 잃은 검은 수염단" + ChatColor.YELLOW + " [Lv.459]")) {
+			if (arrow.getPassenger() != null) {
+				arrow.removePassenger(arrow.getPassenger());
+			}
+			Item item = arrow.getWorld().dropItem(loc, new ItemStack(Material.FIRE_CHARGE));
+			item.setPickupDelay(10000000);
+			arrow.addPassenger(item);
+			return false;
+		}
+		return true;
+	}
+	
+	public boolean arrow12(Arrow arrow, Entity mob, Location loc) {
+		if(mob.getCustomName().substring(2).equalsIgnoreCase("길을 잃은 검은 수염단" + ChatColor.YELLOW + " [Lv.463]")) {
+			if (arrow.getPassenger() != null) {
+				arrow.removePassenger(arrow.getPassenger());
+			}
+			Item item = arrow.getWorld().dropItem(loc, new ItemStack(Material.FIRE_CHARGE));
+			item.setPickupDelay(10000000);
+			arrow.addPassenger(item);
+			return false;
+		}
+		return true;
+	}
+	
+	public boolean arrow13(Arrow arrow, Entity mob, Location loc) {
+		if(mob.getCustomName().substring(2).equalsIgnoreCase("프라에그나리" + ChatColor.YELLOW + " [Lv.??]")) {
+			Location e0 = ((Skeleton) mob).getEyeLocation();
+			Location e1, e2, e3, e4, e5, e6, e7, e8, e9, e10;
+			Vector dir = e0.getDirection();
+			e1 = loc.clone().add(dir.getX(), dir.getY(), dir.getZ());
+			e2 = loc.clone().add(dir.getX() * 3, dir.getY() * 3, dir.getZ() * 3);
+			e3 = loc.clone().add(dir.getX() * 5, dir.getY() * 5, dir.getZ() * 5);
+			e4 = loc.clone().add(dir.getX() * 7, dir.getY() * 7, dir.getZ() * 7);
+			e5 = loc.clone().add(dir.getX() * 9, dir.getY() * 9, dir.getZ() * 9);
+			e6 = loc.clone().add(dir.getX() * 11, dir.getY() * 11, dir.getZ() * 11);
+			e7 = loc.clone().add(dir.getX() * 13, dir.getY() * 13, dir.getZ() * 13);
+			e8 = loc.clone().add(dir.getX() * 15, dir.getY() * 15, dir.getZ() * 15);
+			e9 = loc.clone().add(dir.getX() * 17, dir.getY() * 17, dir.getZ() * 17);
+			e10 = loc.clone().add(dir.getX() * 19, dir.getY() * 19, dir.getZ() * 19);
+
+			mob.getWorld().spawnParticle(Particle.NOTE, e1, 0);
+			mob.getWorld().spawnParticle(Particle.NOTE, e2, 0);
+			mob.getWorld().spawnParticle(Particle.NOTE, e3, 0);
+			mob.getWorld().spawnParticle(Particle.NOTE, e4, 0);
+			mob.getWorld().spawnParticle(Particle.NOTE, e5, 0);
+			mob.getWorld().spawnParticle(Particle.NOTE, e6, 0);
+			mob.getWorld().spawnParticle(Particle.NOTE, e7, 0);
+			mob.getWorld().spawnParticle(Particle.NOTE, e8, 0);
+			mob.getWorld().spawnParticle(Particle.NOTE, e9, 0);
+			mob.getWorld().spawnParticle(Particle.NOTE, e10, 0);
 			return false;
 		}
 		return true;

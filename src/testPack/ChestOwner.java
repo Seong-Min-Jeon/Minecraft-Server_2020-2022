@@ -50,14 +50,14 @@ public class ChestOwner {
 			}
 			closeInv(chestLoc.getBlock(), inv);
 		} else if(num == 3) {
-			Location chestLoc = new Location(player.getWorld(), 3782, 3, 3745);
+			Location chestLoc = new Location(player.getWorld(), 3784, 5, 3745);
 			if(inv == null) {
 				openInv(player, chestLoc.getBlock());
 				return;
 			}
 			closeInv(chestLoc.getBlock(), inv);
 		} else if(num == 4) {
-			Location chestLoc = new Location(player.getWorld(), 3780, 3, 3745);
+			Location chestLoc = new Location(player.getWorld(), 3784, 7, 3745);
 			if(inv == null) {
 				openInv(player, chestLoc.getBlock());
 				return;
@@ -68,21 +68,28 @@ public class ChestOwner {
 	
 	public void _nanoboost_(Player player, int num, Inventory inv) {
 		if(num == 2) {
-			Location chestLoc = new Location(player.getWorld(), 3778, 3, 3745);
+			Location chestLoc = new Location(player.getWorld(), 3782, 3, 3745);
 			if(inv == null) {
 				openInv(player, chestLoc.getBlock());
 				return;
 			}
 			closeInv(chestLoc.getBlock(), inv);
 		} else if(num == 3) {
-			Location chestLoc = new Location(player.getWorld(), 3776, 3, 3745);
+			Location chestLoc = new Location(player.getWorld(), 3782, 5, 3745);
 			if(inv == null) {
 				openInv(player, chestLoc.getBlock());
 				return;
 			}
 			closeInv(chestLoc.getBlock(), inv);
 		} else if(num == 4) {
-			Location chestLoc = new Location(player.getWorld(), 3774, 3, 3745);
+			Location chestLoc = new Location(player.getWorld(), 3782, 7, 3745);
+			if(inv == null) {
+				openInv(player, chestLoc.getBlock());
+				return;
+			}
+			closeInv(chestLoc.getBlock(), inv);
+		} else if(num == 5) {
+			Location chestLoc = new Location(player.getWorld(), 3782, 9, 3745);
 			if(inv == null) {
 				openInv(player, chestLoc.getBlock());
 				return;
@@ -94,14 +101,14 @@ public class ChestOwner {
 	
 	public void why9196(Player player, int num, Inventory inv) {
 		if(num == 2) {
-			Location chestLoc = new Location(player.getWorld(), 3772, 3, 3745);
+			Location chestLoc = new Location(player.getWorld(), 3780, 3, 3745);
 			if(inv == null) {
 				openInv(player, chestLoc.getBlock());
 				return;
 			}
 			closeInv(chestLoc.getBlock(), inv);
 		} else if(num == 3) {
-			Location chestLoc = new Location(player.getWorld(), 3770, 3, 3745);
+			Location chestLoc = new Location(player.getWorld(), 3780, 5, 3745);
 			if(inv == null) {
 				openInv(player, chestLoc.getBlock());
 				return;
@@ -113,7 +120,7 @@ public class ChestOwner {
 	
 	public void akilae3102(Player player, int num, Inventory inv) {
 		if(num == 2) {
-			Location chestLoc = new Location(player.getWorld(), 3768, 3, 3745);
+			Location chestLoc = new Location(player.getWorld(), 3778, 3, 3745);
 			if(inv == null) {
 				openInv(player, chestLoc.getBlock());
 				return;

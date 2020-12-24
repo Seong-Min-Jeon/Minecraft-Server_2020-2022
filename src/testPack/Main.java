@@ -4615,7 +4615,11 @@ public class Main extends JavaPlugin implements Listener{
 		try {
 			//콜로세움 전투
 			if ((new Colosseum()).colosseum(event.getEntity())) {
-				event.setDamage(1);
+				if(event.getEntity() instanceof Player) {
+					event.setDamage(3);
+				} else {
+					event.setDamage(1);
+				}
 			} else {
 				//특수뎀
 				try {
@@ -5238,7 +5242,7 @@ public class Main extends JavaPlugin implements Listener{
 							new BossHealth().getBar15().removePlayer(p);
 						}
 					} else {
-						new BossHealth().getBar15().setProgress((boss.getHealth()-event.getFinalDamage()) / 20.0);
+						new BossHealth().getBar15().setProgress((boss.getHealth()-event.getFinalDamage()) / 30.0);
 					}
 				}
 				// 디마카에루스
@@ -5252,7 +5256,7 @@ public class Main extends JavaPlugin implements Listener{
 							new BossHealth().getBar16().removePlayer(p);
 						}
 					} else {
-						new BossHealth().getBar16().setProgress((boss.getHealth()-event.getFinalDamage()) / 20.0);
+						new BossHealth().getBar16().setProgress((boss.getHealth()-event.getFinalDamage()) / 40.0);
 					}
 				}
 				// 프라에그나리
@@ -5266,7 +5270,7 @@ public class Main extends JavaPlugin implements Listener{
 							new BossHealth().getBar17().removePlayer(p);
 						}
 					} else {
-						new BossHealth().getBar17().setProgress((boss.getHealth()-event.getFinalDamage()) / 20.0);
+						new BossHealth().getBar17().setProgress((boss.getHealth()-event.getFinalDamage()) / 50.0);
 					}
 				}
 			}
@@ -7796,7 +7800,7 @@ public class Main extends JavaPlugin implements Listener{
 			if(event.getInventory().getType() == InventoryType.CHEST) {
 				Player player = (Player) event.getPlayer();
 				Inventory inv = event.getInventory();
-				if(inv.getSize() == 27 && !player.isOp()) {
+				if(inv.getSize() == 27 && !player.isOp() && inv.getItem(26).getType() != Material.SHULKER_SHELL) {
 					Cmd13Chest cc = new Cmd13Chest();
 			    	if(cc.isPlayerInSelectAL(player.getUniqueId().toString())) {
 			    		int num = cc.getChestNum(player.getUniqueId().toString());

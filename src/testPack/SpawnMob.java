@@ -8586,8 +8586,8 @@ public class SpawnMob {
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
 				entity.setCustomName(ChatColor.GRAY + "갈리" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
-				entity.setMaxHealth(20);
-				entity.setHealth(20);
+				entity.setMaxHealth(30);
+				entity.setHealth(30);
 				EntityEquipment weapon = entity.getEquipment();
 				ItemStack weaponItem = new ItemStack(Material.DARK_OAK_SLAB);
 				weapon.setItemInMainHand(weaponItem);
@@ -8633,8 +8633,8 @@ public class SpawnMob {
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
 				entity.setCustomName(ChatColor.GRAY + "디마카에루스" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
-				entity.setMaxHealth(20);
-				entity.setHealth(20);
+				entity.setMaxHealth(40);
+				entity.setHealth(40);
 				EntityEquipment weapon = entity.getEquipment();
 				ItemStack weaponItem = new ItemStack(Material.BROWN_CARPET);
 				weapon.setItemInMainHand(weaponItem);
@@ -8680,8 +8680,8 @@ public class SpawnMob {
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
 				entity.setCustomName(ChatColor.GRAY + "프라에그나리" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
-				entity.setMaxHealth(20);
-				entity.setHealth(20);
+				entity.setMaxHealth(50);
+				entity.setHealth(50);
 				EntityEquipment weapon = entity.getEquipment();
 				ItemStack weaponItem = new ItemStack(Material.BOW);
 				weapon.setItemInMainHand(weaponItem);
