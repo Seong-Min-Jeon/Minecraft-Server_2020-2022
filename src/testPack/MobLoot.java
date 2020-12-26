@@ -4915,20 +4915,104 @@ public class MobLoot {
 		player.getWorld().dropItem(mob.getLocation(), var1);
 	}
 	
+	// 레티아리우스
 	public void mob212(Player player) {
+		ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
+		ItemMeta rewardKeyIm = rewardKey.getItemMeta();
+		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "C급 투기장 보상 열쇠");
+		rewardKey.setItemMeta(rewardKeyIm);
+		player.getInventory().addItem(rewardKey);
+		player.sendMessage(ChatColor.YELLOW + "C급 투기장 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 
+		List<Entity> entitylist = player.getNearbyEntities(120, 20, 120);
+		for (Entity nearEntity : entitylist) {
+			if (nearEntity.getType() == EntityType.PLAYER) {
+				Player nearPlayer = (Player) nearEntity;
+				Location loc = nearPlayer.getLocation();
+				if (loc.getX() <= 4030 && loc.getY() <= 120 && loc.getZ() <= 2728 
+						&& loc.getX() >= 3853 && loc.getY() >= 75 && loc.getZ() >= 2548) {
+					nearPlayer.getInventory().addItem(rewardKey);
+					nearPlayer.sendMessage(ChatColor.YELLOW + "C급 투기장 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					nearPlayer.teleport(new Location(player.getWorld(), 128, 64, 1955, 90, 0));
+				}
+			}
+		}
+		player.teleport(new Location(player.getWorld(), 128, 64, 1955, 90, 0));
 	}
 	
+	// 갈리
 	public void mob213(Player player) {
+		ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
+		ItemMeta rewardKeyIm = rewardKey.getItemMeta();
+		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "B급 투기장 보상 열쇠");
+		rewardKey.setItemMeta(rewardKeyIm);
+		player.getInventory().addItem(rewardKey);
+		player.sendMessage(ChatColor.YELLOW + "B급 투기장 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 
+		List<Entity> entitylist = player.getNearbyEntities(120, 20, 120);
+		for (Entity nearEntity : entitylist) {
+			if (nearEntity.getType() == EntityType.PLAYER) {
+				Player nearPlayer = (Player) nearEntity;
+				Location loc = nearPlayer.getLocation();
+				if (loc.getX() <= 4207 && loc.getY() <= 120 && loc.getZ() <= 2730 
+						&& loc.getX() >= 4037 && loc.getY() >= 75 && loc.getZ() >= 2547) {
+					nearPlayer.getInventory().addItem(rewardKey);
+					nearPlayer.sendMessage(ChatColor.YELLOW + "B급 투기장 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					nearPlayer.teleport(new Location(player.getWorld(), 128, 64, 1955, 90, 0));
+				}
+			}
+		}
+		player.teleport(new Location(player.getWorld(), 128, 64, 1955, 90, 0));
 	}
 	
+	// 디마카에루스
 	public void mob214(Player player) {
+		ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
+		ItemMeta rewardKeyIm = rewardKey.getItemMeta();
+		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "A급 투기장 보상 열쇠");
+		rewardKey.setItemMeta(rewardKeyIm);
+		player.getInventory().addItem(rewardKey);
+		player.sendMessage(ChatColor.YELLOW + "A급 투기장 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 
+		List<Entity> entitylist = player.getNearbyEntities(120, 20, 120);
+		for (Entity nearEntity : entitylist) {
+			if (nearEntity.getType() == EntityType.PLAYER) {
+				Player nearPlayer = (Player) nearEntity;
+				Location loc = nearPlayer.getLocation();
+				if (loc.getX() <= 4023 && loc.getY() <= 120 && loc.getZ() <= 2546 
+						&& loc.getX() >= 3846 && loc.getY() >= 75 && loc.getZ() >= 2369) {
+					nearPlayer.getInventory().addItem(rewardKey);
+					nearPlayer.sendMessage(ChatColor.YELLOW + "A급 투기장 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					nearPlayer.teleport(new Location(player.getWorld(), 128, 64, 1955, 90, 0));
+				}
+			}
+		}
+		player.teleport(new Location(player.getWorld(), 128, 64, 1955, 90, 0));
 	}
 	
+	// 프라에그나리
 	public void mob215(Player player) {
+		ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
+		ItemMeta rewardKeyIm = rewardKey.getItemMeta();
+		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "S급 투기장 보상 열쇠");
+		rewardKey.setItemMeta(rewardKeyIm);
+		player.getInventory().addItem(rewardKey);
+		player.sendMessage(ChatColor.YELLOW + "S급 투기장 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 
+		List<Entity> entitylist = player.getNearbyEntities(120, 20, 120);
+		for (Entity nearEntity : entitylist) {
+			if (nearEntity.getType() == EntityType.PLAYER) {
+				Player nearPlayer = (Player) nearEntity;
+				Location loc = nearPlayer.getLocation();
+				if (loc.getX() <= 4210 && loc.getY() <= 120 && loc.getZ() <= 2543 
+						&& loc.getX() >= 4031 && loc.getY() >= 75 && loc.getZ() >= 2366) {
+					nearPlayer.getInventory().addItem(rewardKey);
+					nearPlayer.sendMessage(ChatColor.YELLOW + "S급 투기장 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					nearPlayer.teleport(new Location(player.getWorld(), 128, 64, 1955, 90, 0));
+				}
+			}
+		}
+		player.teleport(new Location(player.getWorld(), 128, 64, 1955, 90, 0));
 	}
 	
 	public void mob216(Player player) {

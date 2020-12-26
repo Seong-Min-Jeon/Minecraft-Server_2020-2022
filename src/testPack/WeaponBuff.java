@@ -46,7 +46,7 @@ public class WeaponBuff {
 										if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "황혼의 용사 갑옷")) {
 											if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "황혼의 용사 각반")) {
 												if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "황혼의 용사 신발")) {
-													player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 3,true,false,false));
+													player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 2,true,false,false));
 													player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 1200, 1,true,false,false));
 													player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 400,true,false,false));
 												}
@@ -60,7 +60,7 @@ public class WeaponBuff {
 										if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "거미 여왕의 갑옷")) {
 											if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "거미 여왕의 각반")) {
 												if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "거미 여왕의 신발")) {
-													player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 6,true,false,false));
+													player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 3,true,false,false));
 													player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 2,true,false,false));
 													player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0,true,false,false));
 													player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 500,true,false,false));
@@ -170,7 +170,7 @@ public class WeaponBuff {
 								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "아다마스 각반")) {
 									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "아다마스 신발")) {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0,true,false,false));
-										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 2,true,false,false));
+										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 1,true,false,false));
 									}
 								}
 							}
@@ -180,7 +180,8 @@ public class WeaponBuff {
 							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "루나 페어리 갑옷")) {
 								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "루나 페어리 각반")) {
 									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "루나 페어리 신발")) {
-										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 300, 3,true,false,false));
+										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 300, 1,true,false,false));
+										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 300, 50,true,false,false));
 									}
 								}
 							}
@@ -224,7 +225,7 @@ public class WeaponBuff {
 							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "우울한 절망의 갑옷")) {
 								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "우울한 절망의 각반")) {
 									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "우울한 절망의 신발")) {
-										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 2,true,false,false));
+										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 1,true,false,false));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 150,true,false,false));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 1,true,false,false));
 									}
@@ -294,7 +295,7 @@ public class WeaponBuff {
 							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "법술 -「메」")) {
 								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "법술 -「하」")) {
 									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "법술 -「마」")) {
-										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 5,true,false,false));
+										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 3,true,false,false));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0,true,false,false));
 									}
 								}
@@ -328,7 +329,7 @@ public class WeaponBuff {
 							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "거미 여왕의 갑옷")) {
 								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "거미 여왕의 각반")) {
 									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "거미 여왕의 신발")) {
-										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 6,true,false,false));
+										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 4,true,false,false));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0,true,false,false));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 1,true,false,false));
 									}
@@ -340,7 +341,7 @@ public class WeaponBuff {
 							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "F-Killer 갑옷")) {
 								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "F-Killer 각반")) {
 									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "F-Killer 신발")) {
-										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 5,true,false,false));
+										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 3,true,false,false));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0,true,false,false));
 									}
 								}

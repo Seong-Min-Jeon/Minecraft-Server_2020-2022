@@ -2379,6 +2379,12 @@ public class Main extends JavaPlugin implements Listener{
 				event.setRespawnLocation(samak);
 				return;
 			}
+			//콜로세움 3841 70 2736  4204 120 2178
+			if(loc.getX() <= 4204 && loc.getY() <= 120 && loc.getZ() <= 2736 
+					&& loc.getX() >= 3841 && loc.getY() >= 70 && loc.getZ() >= 2178) {
+				event.setRespawnLocation(new Location(player.getWorld(), 128, 64, 1955, 90, 0));
+				return;
+			}
 			
 			int length1 = (int)(Math.pow(loc.getX()-wargunil.getX(), 2) + Math.pow(loc.getY()-wargunil.getY(), 2) + Math.pow(loc.getZ()-wargunil.getZ(), 2));
 			int length2 = (int)(Math.pow(loc.getX()-forgan.getX(), 2) + Math.pow(loc.getY()-forgan.getY(), 2) + Math.pow(loc.getZ()-forgan.getZ(), 2));
@@ -3998,7 +4004,7 @@ public class Main extends JavaPlugin implements Listener{
 						skillMul = 20;
 					}
 					if(arrow.getDamage() == 0.03) {
-						skillMul = 100;
+						skillMul = 200;
 					}
 					if(arrow.getDamage() == 0.04) {
 						skillMul = 300;
@@ -4497,18 +4503,20 @@ public class Main extends JavaPlugin implements Listener{
 		try {
 			if (event.getDamager() instanceof LivingEntity && !(event.getDamager() instanceof Player)) {
 				if (event.getEntity() instanceof Player) {
-					try {
-						DisableAttack da = new DisableAttack();
-						Player player = (Player) event.getEntity();
-						if (da.disable(player)) {
-							if(player.getVehicle() == null) {
-								LivingEntity entity = (LivingEntity) event.getDamager();
-								Thorns t = new Thorns();
-								entity.damage(t.thorns(player, entity));
+					if(!(new Colosseum()).colosseum(event.getEntity())) {
+						try {
+							DisableAttack da = new DisableAttack();
+							Player player = (Player) event.getEntity();
+							if (da.disable(player)) {
+								if(player.getVehicle() == null) {
+									LivingEntity entity = (LivingEntity) event.getDamager();
+									Thorns t = new Thorns();
+									entity.damage(t.thorns(player, entity));
+								}
 							}
-						}
-					} catch (Exception e) {
+						} catch (Exception e) {
 
+						}
 					}
 				}
 			}
@@ -4616,9 +4624,18 @@ public class Main extends JavaPlugin implements Listener{
 			//콜로세움 전투
 			if ((new Colosseum()).colosseum(event.getEntity())) {
 				if(event.getEntity() instanceof Player) {
-					event.setDamage(3);
+					event.setDamage(1);
+					Player player = (Player) event.getEntity();
+					if(player.getHealth()-2 > 0) {
+						player.setHealth(player.getHealth()-2);
+					} else {
+						player.setHealth(0);
+					}
 				} else {
 					event.setDamage(1);
+					Entity mob = event.getEntity();
+					double damage = event.getFinalDamage();
+					new MobDeath(mob, damage);
 				}
 			} else {
 				//특수뎀
@@ -5277,7 +5294,6 @@ public class Main extends JavaPlugin implements Listener{
 		} catch(Exception e) {
 			
 		}
-		
 	}
 	
 	@EventHandler
@@ -6764,7 +6780,7 @@ public class Main extends JavaPlugin implements Listener{
 				for (Entity nearEntity : entitylist) { 
 				    if (nearEntity.getType() != EntityType.PLAYER) { 
 				    	LivingEntity entity = (LivingEntity) nearEntity;
-				    	entity.damage(num * 40);
+				    	entity.damage(num * 50);
 				    }        
 				}   
 			}
@@ -7669,7 +7685,9 @@ public class Main extends JavaPlugin implements Listener{
 	
 	@EventHandler
 	public void onBlockChange(EntityChangeBlockEvent event) {
-		if(event.getBlock().getType() != Material.REDSTONE_ORE) {
+		if(event.getBlock().getType() != Material.REDSTONE_ORE && event.getBlock().getType() != Material.REDSTONE && event.getBlock().getType() != Material.REDSTONE_WIRE
+				 && event.getBlock().getType() != Material.REDSTONE_BLOCK && event.getBlock().getType() != Material.REDSTONE_LAMP && event.getBlock().getType() != Material.REDSTONE_TORCH
+				 && event.getBlock().getType() != Material.REDSTONE_WALL_TORCH && event.getBlock().getType() != Material.REPEATER && event.getBlock().getType() != Material.COMPARATOR) {
 			event.setCancelled(true);
 			event.getBlock().setType(Material.AIR);
 		}
@@ -7800,15 +7818,28 @@ public class Main extends JavaPlugin implements Listener{
 			if(event.getInventory().getType() == InventoryType.CHEST) {
 				Player player = (Player) event.getPlayer();
 				Inventory inv = event.getInventory();
-				if(inv.getSize() == 27 && !player.isOp() && inv.getItem(26).getType() != Material.SHULKER_SHELL) {
-					Cmd13Chest cc = new Cmd13Chest();
-			    	if(cc.isPlayerInSelectAL(player.getUniqueId().toString())) {
-			    		int num = cc.getChestNum(player.getUniqueId().toString());
-			    		if(num != 1) {
-			    			world.playSound(player.getLocation(), Sound.BLOCK_ENDER_CHEST_CLOSE, 1.0f, 1.0f);
-			    			new ChestOwner(player, num, inv);
-			    		}
-			    	}
+				if(inv.getSize() == 27 && !player.isOp()) {
+					if(inv.getItem(26) == null) {
+						Cmd13Chest cc = new Cmd13Chest();
+				    	if(cc.isPlayerInSelectAL(player.getUniqueId().toString())) {
+				    		int num = cc.getChestNum(player.getUniqueId().toString());
+				    		if(num != 1) {
+				    			world.playSound(player.getLocation(), Sound.BLOCK_ENDER_CHEST_CLOSE, 1.0f, 1.0f);
+				    			new ChestOwner(player, num, inv);
+				    		}
+				    	}
+					} else {
+						if(inv.getItem(26).getType() != Material.SHULKER_SHELL) {
+							Cmd13Chest cc = new Cmd13Chest();
+					    	if(cc.isPlayerInSelectAL(player.getUniqueId().toString())) {
+					    		int num = cc.getChestNum(player.getUniqueId().toString());
+					    		if(num != 1) {
+					    			world.playSound(player.getLocation(), Sound.BLOCK_ENDER_CHEST_CLOSE, 1.0f, 1.0f);
+					    			new ChestOwner(player, num, inv);
+					    		}
+					    	}
+						}
+					}
 				}
 			}
 		} catch(Exception e) {

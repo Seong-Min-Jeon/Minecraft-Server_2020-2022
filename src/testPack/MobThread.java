@@ -1574,7 +1574,7 @@ public class MobThread implements Listener{
 		int num = rnd.nextInt(2);
 		loc = location(loc);
 		if (!(loc.getX() <= 3388 && loc.getY() <= 37 && loc.getZ() <= 3827 
-				&& loc.getX() >= 3354 && loc.getY() >= 13 && loc.getZ() >= 3803)) {
+				&& loc.getX() >= 3354 && loc.getY() >= 13 && loc.getZ() >= 3804)) {
 			return;
 		}
 		
@@ -1588,7 +1588,7 @@ public class MobThread implements Listener{
 	public void senMansion4(Player player, Location loc) {
 		int num = rnd.nextInt(1);
 		loc = location(loc);
-		if (!(loc.getX() <= 3383 && loc.getY() <= 32 && loc.getZ() <= 3803 
+		if (!(loc.getX() <= 3383 && loc.getY() <= 32 && loc.getZ() <= 3802 
 				&& loc.getX() >= 3355 && loc.getY() >= 11 && loc.getZ() >= 3766)) {
 			return;
 		}

@@ -57,6 +57,7 @@ public class BossTicket {
 		if (player.getLocation().getX() <= 136 && player.getLocation().getZ() <= 1963 
 				&& player.getLocation().getX() >= 121 && player.getLocation().getZ() >= 1948) {
 			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GRAY + "C급 투기장 스크롤")) {
+				player.sendMessage(ChatColor.WHITE + "[System] 투기장에서는 모든 데미지가 고정됩니다. 또한 투기장의 보스 몬스터는 특정 방법으로 입는 데미지가 0입니다.");
 				itemArg.remove();
 				player.teleport(new Location(player.getWorld(), 3887, 84, 2641, 270, 0));
 				int num = 0;
@@ -103,6 +104,7 @@ public class BossTicket {
 		if (player.getLocation().getX() <= 136 && player.getLocation().getZ() <= 1963 
 				&& player.getLocation().getX() >= 121 && player.getLocation().getZ() >= 1948) {
 			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "B급 투기장 스크롤")) {
+				player.sendMessage(ChatColor.WHITE + "[System] 투기장에서는 모든 데미지가 고정됩니다. 또한 투기장의 보스 몬스터는 특정 방법으로 입는 데미지가 0입니다.");
 				itemArg.remove();
 				player.teleport(new Location(player.getWorld(), 4070, 84, 2641, 270, 0));
 				int num = 0;
@@ -149,6 +151,7 @@ public class BossTicket {
 		if (player.getLocation().getX() <= 136 && player.getLocation().getZ() <= 1963 
 				&& player.getLocation().getX() >= 121 && player.getLocation().getZ() >= 1948) {
 			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "A급 투기장 스크롤")) {
+				player.sendMessage(ChatColor.WHITE + "[System] 투기장에서는 모든 데미지가 고정됩니다. 또한 투기장의 보스 몬스터는 특정 방법으로 입는 데미지가 0입니다.");
 				itemArg.remove();
 				player.teleport(new Location(player.getWorld(), 3887, 84, 2456, 270, 0));
 				int num = 0;
@@ -195,6 +198,7 @@ public class BossTicket {
 		if (player.getLocation().getX() <= 136 && player.getLocation().getZ() <= 1963 
 				&& player.getLocation().getX() >= 121 && player.getLocation().getZ() >= 1948) {
 			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤")) {
+				player.sendMessage(ChatColor.WHITE + "[System] 투기장에서는 모든 데미지가 고정됩니다. 또한 투기장의 보스 몬스터는 특정 방법으로 입는 데미지가 0입니다.");
 				itemArg.remove();
 				player.teleport(new Location(player.getWorld(), 4068, 84, 2456, 270, 0));
 				int num = 0;

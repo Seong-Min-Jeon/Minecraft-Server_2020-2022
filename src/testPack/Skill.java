@@ -2063,7 +2063,7 @@ public class Skill {
 						if(!(nearEntity instanceof Player)) {
 							if (nearEntity instanceof LivingEntity) {
 								LivingEntity nearMob = (LivingEntity) nearEntity;
-								nearMob.damage(player.getLevel()*10 + damNum*15);
+								nearMob.damage(player.getLevel()*20 + damNum*20);
 							}
 						}
 					}
@@ -2182,7 +2182,7 @@ public class Skill {
 						((LivingEntity) golem).setMaxHealth((20 + player.getLevel() * 30) / 2);
 						((LivingEntity) golem).setHealth((20 + player.getLevel() * 30) / 2);
 						int golemLv = (player.getLevel() / 2);
-						golem.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, golemLv * 2));						
+						golem.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, golemLv * 3));						
 						go.put(golem.getUniqueId(), player);
 					}
 					IronGolem golem = (IronGolem) world.spawnEntity(loc, EntityType.IRON_GOLEM);
@@ -2191,7 +2191,7 @@ public class Skill {
 					((LivingEntity) golem).setMaxHealth((20 + player.getLevel() * 30));
 					((LivingEntity) golem).setHealth((20 + player.getLevel() * 30));
 					int golemLv = player.getLevel();
-					golem.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, golemLv * 2));
+					golem.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, golemLv * 4));
 					go.put(golem.getUniqueId(), player);
 					player.sendMessage(ChatColor.GREEN + "[스킬]천사의 기사단이 발동됩니다.");
 					player.sendMessage(ChatColor.GREEN + "기사단이 소환됩니다. 레벨: " + player.getLevel());
@@ -2311,7 +2311,7 @@ public class Skill {
 												&& (nearEntity.getType() != EntityType.HORSE) && (nearEntity.getType() != EntityType.SKELETON_HORSE) && (nearEntity.getType() != EntityType.ZOMBIE_HORSE)
 												&& (nearEntity.getType() != EntityType.WOLF) && (nearEntity.getType() != EntityType.CAT) && (nearEntity.getType() != EntityType.DONKEY)
 												&& (nearEntity.getType() != EntityType.ARMOR_STAND) && (nearEntity.getType() != EntityType.IRON_GOLEM)) {
-											((LivingEntity) nearEntity).damage(player.getLevel()*50);
+											((LivingEntity) nearEntity).damage(player.getLevel()*80);
 										}
 									}
 								}
@@ -2556,7 +2556,7 @@ public class Skill {
 											if (nearEntity.getType() != EntityType.PLAYER) {
 												if (nearEntity instanceof LivingEntity) {
 													LivingEntity nearMob = (LivingEntity) nearEntity;
-													nearMob.damage(player.getLevel() * 30);
+													nearMob.damage(player.getLevel() * 60);
 												}
 											}
 										}
@@ -2570,7 +2570,7 @@ public class Skill {
 											if (nearEntity.getType() != EntityType.PLAYER) {
 												if (nearEntity instanceof LivingEntity) {
 													LivingEntity nearMob = (LivingEntity) nearEntity;
-													nearMob.damage(player.getLevel() * 60);
+													nearMob.damage(player.getLevel() * 120);
 												}
 											}
 										}		
@@ -2586,7 +2586,7 @@ public class Skill {
 											if (nearEntity.getType() != EntityType.PLAYER) {
 												if (nearEntity instanceof LivingEntity) {
 													LivingEntity nearMob = (LivingEntity) nearEntity;
-													nearMob.damage(player.getLevel() * 100);
+													nearMob.damage(player.getLevel() * 200);
 												}
 											}
 										}		

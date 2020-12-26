@@ -933,6 +933,22 @@ public class MobDeath {
 				if (name.equalsIgnoreCase("유황 골렘" + ChatColor.YELLOW + " [Lv.??]")) {
 					mobloot.mob211(mob, lootPlayer);
 				}
+				// 레티아리우스
+				if (name.equalsIgnoreCase("레티아리우스" + ChatColor.YELLOW + " [Lv.??]")) {
+					mobloot.mob212(lootPlayer);
+				}
+				// 갈리
+				if (name.equalsIgnoreCase("갈리" + ChatColor.YELLOW + " [Lv.??]")) {
+					mobloot.mob213(lootPlayer);
+				}
+				// 디마카에루스
+				if (name.equalsIgnoreCase("디마카에루스" + ChatColor.YELLOW + " [Lv.??]")) {
+					mobloot.mob214(lootPlayer);
+				}
+				// 프라에그나리
+				if (name.equalsIgnoreCase("프라에그나리" + ChatColor.YELLOW + " [Lv.??]")) {
+					mobloot.mob215(lootPlayer);
+				}
 			} catch (Exception e) {
 
 			}

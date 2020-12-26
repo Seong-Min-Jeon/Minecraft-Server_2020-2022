@@ -12,6 +12,7 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Particle;
 import org.bukkit.Sound;
+import org.bukkit.SoundCategory;
 import org.bukkit.Particle.DustOptions;
 import org.bukkit.block.Block;
 import org.bukkit.block.Chest;
@@ -262,7 +263,7 @@ public class PlayerHitDebuff {
 								ParticleEffect pe = new ParticleEffect(player, mob);
 								pe.startE30();
 								// ================================================================
-								List<Entity> nearPlayer = mob.getNearbyEntities(8, 10, 8);
+								List<Entity> nearPlayer = mob.getNearbyEntities(8, 30, 8);
 								for(Entity p : nearPlayer) {
 									if(p instanceof Player) {
 										((Player) p).damage(500);
@@ -820,7 +821,7 @@ public class PlayerHitDebuff {
 								ParticleEffect pe = new ParticleEffect(player, mob);
 								pe.startE34();
 								// ================================================================
-								List<Entity> nearPlayer = mob.getNearbyEntities(12, 10, 12);
+								List<Entity> nearPlayer = mob.getNearbyEntities(12, 5, 12);
 								for (Entity p : nearPlayer) {
 									if (p instanceof Player) {
 										p.getWorld().playEffect(p.getLocation(), Effect.END_GATEWAY_SPAWN, 2);
@@ -1456,13 +1457,13 @@ public class PlayerHitDebuff {
 			((LivingEntity) mob).removePotionEffect(PotionEffectType.HEAL);
 			
 			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
-				int num = rnd.nextInt(12);
-				if (num <= 1) {
+				int num = rnd.nextInt(24);
+				if (num <= 2) {
 					player.getWorld().playSound(mob.getLocation(), Sound.ITEM_SHIELD_BLOCK, 2.0f, 1.0f);
-					player.setVelocity(player.getEyeLocation().getDirection().multiply(3.0f));
-					player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 100, 0, true, false, false));
+					player.setVelocity(player.getEyeLocation().getDirection().multiply(-10.0f));
+					player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 150, 0, true, false, false));
 					player.damage(10);
-				} else if (num == 2) {
+				} else if (num == 3) {
 					((LivingEntity) mob).setHealth(((LivingEntity) mob).getHealth() + 5);
 					player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_GENERIC_EAT, 1.0f, 1.0f);
 					player.sendMessage(ChatColor.RED + "갈리가 피의 함성에 희열을 느낍니다.");
@@ -1470,14 +1471,14 @@ public class PlayerHitDebuff {
 					((Skeleton) mob).setTarget(player);
 				}
 			} else {
-				int num = rnd.nextInt(12);
-				if (num <= 1) {
+				int num = rnd.nextInt(24);
+				if (num <= 3) {
 					Vector vec = ((LivingEntity) mob).getEyeLocation().getDirection().multiply(5.0f);
 					mob.setVelocity(vec);
 					((Skeleton) mob).setTarget(player);
 					player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 3.0f, 1.0f);
-				} else if(num == 2) {
-					((LivingEntity) mob).setHealth(((LivingEntity) mob).getHealth() + 5);
+				} else if(num == 4) {
+					((LivingEntity) mob).setHealth(((LivingEntity) mob).getHealth() + 3);
 					player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_GENERIC_EAT, 1.0f, 1.0f);
 					player.sendMessage(ChatColor.RED + "갈리가 피의 함성에 희열을 느낍니다.");
 					sendMessage(player, ChatColor.RED + "갈리가 피의 함성에 희열을 느낍니다.");
@@ -1532,14 +1533,108 @@ public class PlayerHitDebuff {
 			((LivingEntity) mob).removePotionEffect(PotionEffectType.HEAL);
 			
 			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
-				int num = rnd.nextInt(12);
-				if (num <= 1) {
-					player.getWorld().playSound(mob.getLocation(), Sound.ITEM_SHIELD_BLOCK, 2.0f, 1.0f);
-					player.setVelocity(player.getEyeLocation().getDirection().multiply(3.0f));
-					player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 100, 0, true, false, false));
-					player.damage(10);
-				} else if (num == 2) {
-					((LivingEntity) mob).setHealth(((LivingEntity) mob).getHealth() + 10);
+				int num = rnd.nextInt(24);
+				if (num <= 3) {
+					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+						int time = 0;
+						ThreadData td = new ThreadData(player.getUniqueId());
+
+						@Override
+						public void run() {
+							if (!td.hasID()) {
+								td.setID(taskID);
+							}
+
+							if (time == 0) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.0f);
+							} else if (time == 9) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.4f);
+							} else if (time == 18) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 0.9f);
+							} else if (time == 24) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.0f);
+							} else if (time == 27) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.4f);
+							} else if (time == 36) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.1f);
+							} else if (time == 42) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.0f);
+							} else if (time == 45) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.1f);
+							} else if (time == 51) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.2f);
+							} else if (time == 54) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.1f);
+							} else if (time == 60) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.0f);
+							} else if (time == 63) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 0.8f);
+							}
+
+							if (time >= 80) {
+								td.endTask();
+								td.removeID();
+							}
+
+							time++;
+						}
+
+					}, 0, 1);
+					player.sendMessage(ChatColor.RED + "소환의 협주가 들려옵니다.");
+					sendMessage(player, ChatColor.RED + "소환의 협주가 들려옵니다.");
+					((Skeleton) mob).setTarget(player);
+					player.getWorld().spawnEntity(mob.getLocation(), EntityType.SILVERFISH);
+					player.getWorld().spawnEntity(mob.getLocation(), EntityType.SILVERFISH);
+					player.getWorld().spawnEntity(mob.getLocation(), EntityType.SILVERFISH);
+				} else if (num == 4) {
+					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+						int time = 0;
+						ThreadData td = new ThreadData(player.getUniqueId());
+
+						@Override
+						public void run() {
+							if (!td.hasID()) {
+								td.setID(taskID);
+							}
+
+							if (time == 0) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.3f);
+							} else if (time == 5) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.2f);
+							} else if (time == 10) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.1f);
+							} else if (time == 15) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.2f);
+							} else if (time == 25) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.1f);
+							} else if (time == 35) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.2f);
+							} else if (time == 45) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.1f);
+							} else if (time == 50) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.2f);
+							} else if (time == 60) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.3f);
+							} else if (time == 65) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 0.9f);
+							} else if (time == 70) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 0.8f);
+							} else if (time == 75) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 0.9f);
+							}
+
+							if (time >= 90) {
+								td.endTask();
+								td.removeID();
+							}
+
+							time++;
+						}
+
+					}, 0, 1);
+					((LivingEntity) mob).setHealth(((LivingEntity) mob).getHealth() + 8);
 					player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 1.0f, 1.0f);
 					player.sendMessage(ChatColor.RED + "드래곤의 광주가 울려퍼집니다.");
 					sendMessage(player, ChatColor.RED + "드래곤의 광주가 울려퍼집니다.");
@@ -1548,10 +1643,58 @@ public class PlayerHitDebuff {
 			} else {
 				int num = rnd.nextInt(12);
 				if (num == 0) {
-					Vector vec = ((LivingEntity) mob).getEyeLocation().getDirection().multiply(5.0f);
-					mob.setVelocity(vec);
+					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+						int time = 0;
+						ThreadData td = new ThreadData(player.getUniqueId());
+
+						@Override
+						public void run() {
+							if (!td.hasID()) {
+								td.setID(taskID);
+							}
+
+							if (time == 0) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.0f);
+							} else if (time == 9) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.4f);
+							} else if (time == 18) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 0.9f);
+							} else if (time == 24) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.0f);
+							} else if (time == 27) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.4f);
+							} else if (time == 36) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.1f);
+							} else if (time == 42) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.0f);
+							} else if (time == 45) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.1f);
+							} else if (time == 51) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.2f);
+							} else if (time == 54) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.1f);
+							} else if (time == 60) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.0f);
+							} else if (time == 63) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 0.8f);
+							}
+
+							if (time >= 80) {
+								td.endTask();
+								td.removeID();
+							}
+
+							time++;
+						}
+
+					}, 0, 1);
+					player.sendMessage(ChatColor.RED + "소환의 협주가 들려옵니다.");
+					sendMessage(player, ChatColor.RED + "소환의 협주가 들려옵니다.");
 					((Skeleton) mob).setTarget(player);
-					player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 3.0f, 1.0f);
+					player.getWorld().spawnEntity(mob.getLocation(), EntityType.SILVERFISH);
+					player.getWorld().spawnEntity(mob.getLocation(), EntityType.SILVERFISH);
+					player.getWorld().spawnEntity(mob.getLocation(), EntityType.SILVERFISH);
 				} else if(num == 1) {
 					Location loc = mob.getLocation();
 					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
@@ -1577,7 +1720,7 @@ public class PlayerHitDebuff {
 								}
 							}
 							
-							if (time == 60 || time == 80 || time == 100 || time == 120) {
+							if (time == 60 || time == 100) {
 								// ===============================================================
 								ParticleData pd = new ParticleData(player.getUniqueId());
 								if (pd.hasID()) {
@@ -1592,7 +1735,7 @@ public class PlayerHitDebuff {
 									if (ent instanceof Player) {
 										Player player = (Player) ent;
 										player.getWorld().playEffect(mob.getLocation(), Effect.END_GATEWAY_SPAWN, 2);
-										player.setHealth(player.getHealth()/5);
+										player.setHealth(player.getHealth()/3);
 									}
 								}
 								List<Entity> nearPlayer = mob.getNearbyEntities(120, 10, 120);

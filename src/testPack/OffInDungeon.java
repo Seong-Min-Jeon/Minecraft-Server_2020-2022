@@ -82,6 +82,12 @@ public class OffInDungeon {
 			player.teleport(new Location(player.getWorld(), 164, 23, 1057));
 			return;
 		}
+		// 콜로세움
+		if (loc.getX() <= 4204 && loc.getY() <= 120 && loc.getZ() <= 2736 
+				&& loc.getX() >= 3841 && loc.getY() >= 70 && loc.getZ() >= 2178) {
+			player.teleport(new Location(player.getWorld(), 128, 64, 1955, 90, 0));
+			return;
+		}
 	}
 
 	public void removeMana(Player player) {

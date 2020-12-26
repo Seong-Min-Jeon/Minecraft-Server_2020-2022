@@ -176,7 +176,26 @@ public class LootChest {
 					}
 				}				
 			}
-			
+			if(block.getX()==118 && block.getY()==64 && block.getZ()==1958) {
+				if(removeKey(player, "C급 투기장 보상 열쇠")) {
+					dungeon10(player);
+				}				
+			}
+			if(block.getX()==116 && block.getY()==64 && block.getZ()==1956) {
+				if(removeKey(player, "B급 투기장 보상 열쇠")) {
+					dungeon11(player);
+				}				
+			}
+			if(block.getX()==116 && block.getY()==64 && block.getZ()==1954) {
+				if(removeKey(player, "A급 투기장 보상 열쇠")) {
+					dungeon12(player);
+				}				
+			}
+			if(block.getX()==118 && block.getY()==64 && block.getZ()==1952) {
+				if(removeKey(player, "S급 투기장 보상 열쇠")) {
+					dungeon13(player);
+				}				
+			}
 		}
 	}
 	
@@ -2186,6 +2205,74 @@ public class LootChest {
 			idx = rnd.nextInt(9);
 			inv.setItem(idx, var9);
 		}
+		if(tokenPercent==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, token);
+		}
+		player.openInventory(inv);	
+	}
+	
+	public void dungeon10(Player player) {
+		Inventory inv = Bukkit.createInventory(player, 9, "Dungeon Reward");
+		int idx;
+		int tokenPercent = rnd.nextInt(3) + 1;
+		
+		ItemStack token = new ItemStack(Material.GOLD_BLOCK, tokenPercent);
+		ItemMeta tokenIm = token.getItemMeta();
+		tokenIm.setDisplayName(ChatColor.YELLOW + "C급 검투사의 인장");
+		token.setItemMeta(tokenIm);
+		
+		if(tokenPercent==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, token);
+		}
+		player.openInventory(inv);	
+	}
+	
+	public void dungeon11(Player player) {
+		Inventory inv = Bukkit.createInventory(player, 9, "Dungeon Reward");
+		int idx;
+		int tokenPercent = rnd.nextInt(3) + 1;
+		
+		ItemStack token = new ItemStack(Material.GOLD_BLOCK, tokenPercent);
+		ItemMeta tokenIm = token.getItemMeta();
+		tokenIm.setDisplayName(ChatColor.YELLOW + "B급 검투사의 인장");
+		token.setItemMeta(tokenIm);
+		
+		if(tokenPercent==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, token);
+		}
+		player.openInventory(inv);	
+	}
+	
+	public void dungeon12(Player player) {
+		Inventory inv = Bukkit.createInventory(player, 9, "Dungeon Reward");
+		int idx;
+		int tokenPercent = rnd.nextInt(3) + 1;
+		
+		ItemStack token = new ItemStack(Material.GOLD_BLOCK, tokenPercent);
+		ItemMeta tokenIm = token.getItemMeta();
+		tokenIm.setDisplayName(ChatColor.YELLOW + "A급 검투사의 인장");
+		token.setItemMeta(tokenIm);
+		
+		if(tokenPercent==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, token);
+		}
+		player.openInventory(inv);	
+	}
+	
+	public void dungeon13(Player player) {
+		Inventory inv = Bukkit.createInventory(player, 9, "Dungeon Reward");
+		int idx;
+		int tokenPercent = rnd.nextInt(3) + 1;
+		
+		ItemStack token = new ItemStack(Material.GOLD_BLOCK, tokenPercent);
+		ItemMeta tokenIm = token.getItemMeta();
+		tokenIm.setDisplayName(ChatColor.YELLOW + "S급 검투사의 인장");
+		token.setItemMeta(tokenIm);
+		
 		if(tokenPercent==0) {
 			idx = rnd.nextInt(9);
 			inv.setItem(idx, token);

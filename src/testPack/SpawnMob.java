@@ -4776,10 +4776,10 @@ public class SpawnMob {
 	}
 
 	public boolean mob77(LivingEntity entity, Location loc) {
-		// 센 마그 던전5 3354 37 3827  3388 13 3803
+		// 센 마그 던전5 3354 37 3827  3388 13 3804
 		if (loc.getX() <= 3388 && loc.getY() <= 37
 				&& loc.getZ() <= 3827 && loc.getX() >= 3354
-				&& loc.getY() >= 13 && loc.getZ() >= 3803) {
+				&& loc.getY() >= 13 && loc.getZ() >= 3804) {
 			Location chestLoc = new Location(entity.getWorld(), -1830, 92, 3043);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
@@ -4868,9 +4868,9 @@ public class SpawnMob {
 	}
 
 	public boolean mob78(LivingEntity entity, Location loc) {
-		// 센 마그 던전6 3355 32 3803  3383 11 3766
+		// 센 마그 던전6 3355 32 3802  3383 11 3766
 		if (loc.getX() <= 3383 && loc.getY() <= 32
-				&& loc.getZ() <= 3803 && loc.getX() >= 3355
+				&& loc.getZ() <= 3802 && loc.getX() >= 3355
 				&& loc.getY() >= 11 && loc.getZ() >= 3766) {
 			Location chestLoc = new Location(entity.getWorld(), -1830, 92, 3043);
 			Block block = chestLoc.getBlock();
@@ -8700,6 +8700,13 @@ public class SpawnMob {
 				EntityEquipment boots = entity.getEquipment();
 				ItemStack bootsItem = new ItemStack(Material.GOLDEN_BOOTS);
 				boots.setBoots(bootsItem);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
+				return true;
+			} else if(entity.getType() == (EntityType) EntityType.SILVERFISH) { 
+				entity.setCustomName(ChatColor.GRAY + "귀찮은 녀석" + ChatColor.YELLOW + " [Lv.1]");
+				entity.setCustomNameVisible(true);
+				entity.setMaxHealth(3);
+				entity.setHealth(3);
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM
