@@ -2255,6 +2255,7 @@ public class Skill {
 					proTotem.setVisible(false);
 					proTotem.setHelmet(new ItemStack(Material.ANDESITE_STAIRS));
 					proTotem.setVelocity(player.getLocation().getDirection().multiply(1.0f));
+					proTotem.setRemoveWhenFarAway(true);
 					
 					SkillThread t = new SkillThread(player.getUniqueId());
 					sleep = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
@@ -2271,6 +2272,7 @@ public class Skill {
 								totem = (ArmorStand) player.getWorld().spawnEntity(proTotem.getLocation(), EntityType.ARMOR_STAND);
 								totem.setVisible(false);
 								totem.setHelmet(new ItemStack(Material.ANDESITE_STAIRS));
+								totem.setRemoveWhenFarAway(true);
 								proTotem.remove();
 								time++;
 							}
@@ -2294,6 +2296,7 @@ public class Skill {
 											as.setArms(true);
 											as.setItemInHand(new ItemStack(Material.POLISHED_BLACKSTONE_SLAB));
 											as.setRightArmPose(new EulerAngle(Math.toRadians(90), 0, 0));
+											as.setRemoveWhenFarAway(true);
 										}
 									}
 								}
@@ -2425,6 +2428,7 @@ public class Skill {
 					proTotem.setVisible(false);
 					proTotem.setHelmet(new ItemStack(Material.RED_NETHER_BRICK_STAIRS));
 					proTotem.setVelocity(player.getLocation().getDirection().multiply(1.0f));
+					proTotem.setRemoveWhenFarAway(true);
 					
 					SkillThread t = new SkillThread(player.getUniqueId());
 					sleep = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
@@ -2442,6 +2446,7 @@ public class Skill {
 								totem = (ArmorStand) player.getWorld().spawnEntity(proTotem.getLocation(), EntityType.ARMOR_STAND);
 								totem.setVisible(false);
 								totem.setHelmet(new ItemStack(Material.RED_NETHER_BRICK_STAIRS));
+								totem.setRemoveWhenFarAway(true);
 								proTotem.remove();
 								time++;
 							}
@@ -3716,6 +3721,7 @@ public class Skill {
 					proTotem.setRightArmPose(new EulerAngle(Math.toRadians(5), 0, 0));
 					proTotem.setVelocity(player.getLocation().getDirection().multiply(4.0f));
 					proTotem.setVelocity(proTotem.getVelocity().multiply(new Vector(1, 0.1 ,1)));
+					proTotem.setRemoveWhenFarAway(true);
 					
 					SkillThread t = new SkillThread(player.getUniqueId());
 					sleep = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
@@ -3902,6 +3908,7 @@ public class Skill {
 					proTotem.setVisible(false);
 					proTotem.setHelmet(new ItemStack(Material.DRAGON_HEAD));
 					proTotem.setVelocity(player.getLocation().getDirection().multiply(4.0f));
+					proTotem.setRemoveWhenFarAway(true);
 
 					SkillThread t = new SkillThread(player.getUniqueId());
 					sleep = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
@@ -3972,6 +3979,7 @@ public class Skill {
 					ArmorStand proTotem = (ArmorStand) player.getWorld().spawnEntity(player.getLocation(), EntityType.ARMOR_STAND);
 					proTotem.setVisible(false);
 					proTotem.setHelmet(new ItemStack(Material.ANDESITE_STAIRS));
+					proTotem.setRemoveWhenFarAway(true);
 					
 					// ===============================================================
 					ParticleData pd = new ParticleData(player.getUniqueId());

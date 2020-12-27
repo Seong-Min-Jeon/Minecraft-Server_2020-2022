@@ -4383,6 +4383,7 @@ public class MobLoot {
 			player.getInventory().addItem(var5);
 			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
+		
 	}
 	
 	// Death Gun
@@ -4613,6 +4614,41 @@ public class MobLoot {
 			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
 		
+		ItemStack col1 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
+		ItemMeta col1im = col1.getItemMeta();
+		col1im.setDisplayName(ChatColor.GRAY + "C급 투기장 스크롤");
+		col1.setItemMeta(col1im);
+		
+		ItemStack col2 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
+		ItemMeta col2im = col2.getItemMeta();
+		col2im.setDisplayName(ChatColor.WHITE + "B급 투기장 스크롤");
+		col2.setItemMeta(col2im);
+		
+		ItemStack col3 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
+		ItemMeta col3im = col3.getItemMeta();
+		col3im.setDisplayName(ChatColor.YELLOW + "A급 투기장 스크롤");
+		col3.setItemMeta(col3im);
+		
+		ItemStack col4 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
+		ItemMeta col4im = col4.getItemMeta();
+		col4im.setDisplayName(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤");
+		col4.setItemMeta(col4im);
+		
+		int colP = rnd.nextInt(100);
+		if(colP < 4) {
+			player.getInventory().addItem(col1);
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "C급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
+		} else if(colP < 7) {
+			player.getInventory().addItem(col2);
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "B급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
+		} else if(colP < 9) {
+			player.getInventory().addItem(col3);
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "A급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+		} else if(colP == 9) {
+			player.getInventory().addItem(col4);
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+		}
+		
 		QuestBoard cb = new QuestBoard();
 		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===죽은 듯 살아있는 자1===")) {
 			int qNum = cb.getNum(player);
@@ -4671,6 +4707,41 @@ public class MobLoot {
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
 			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+		}
+		
+		ItemStack col1 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
+		ItemMeta col1im = col1.getItemMeta();
+		col1im.setDisplayName(ChatColor.GRAY + "C급 투기장 스크롤");
+		col1.setItemMeta(col1im);
+		
+		ItemStack col2 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
+		ItemMeta col2im = col2.getItemMeta();
+		col2im.setDisplayName(ChatColor.WHITE + "B급 투기장 스크롤");
+		col2.setItemMeta(col2im);
+		
+		ItemStack col3 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
+		ItemMeta col3im = col3.getItemMeta();
+		col3im.setDisplayName(ChatColor.YELLOW + "A급 투기장 스크롤");
+		col3.setItemMeta(col3im);
+		
+		ItemStack col4 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
+		ItemMeta col4im = col4.getItemMeta();
+		col4im.setDisplayName(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤");
+		col4.setItemMeta(col4im);
+		
+		int colP = rnd.nextInt(100);
+		if(colP < 4) {
+			player.getInventory().addItem(col1);
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "C급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
+		} else if(colP < 7) {
+			player.getInventory().addItem(col2);
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "B급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
+		} else if(colP < 9) {
+			player.getInventory().addItem(col3);
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "A급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+		} else if(colP == 9) {
+			player.getInventory().addItem(col4);
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
 		}
 		
 		QuestBoard cb = new QuestBoard();
@@ -4733,6 +4804,41 @@ public class MobLoot {
 			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
 		
+		ItemStack col1 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
+		ItemMeta col1im = col1.getItemMeta();
+		col1im.setDisplayName(ChatColor.GRAY + "C급 투기장 스크롤");
+		col1.setItemMeta(col1im);
+		
+		ItemStack col2 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
+		ItemMeta col2im = col2.getItemMeta();
+		col2im.setDisplayName(ChatColor.WHITE + "B급 투기장 스크롤");
+		col2.setItemMeta(col2im);
+		
+		ItemStack col3 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
+		ItemMeta col3im = col3.getItemMeta();
+		col3im.setDisplayName(ChatColor.YELLOW + "A급 투기장 스크롤");
+		col3.setItemMeta(col3im);
+		
+		ItemStack col4 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
+		ItemMeta col4im = col4.getItemMeta();
+		col4im.setDisplayName(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤");
+		col4.setItemMeta(col4im);
+		
+		int colP = rnd.nextInt(100);
+		if(colP < 4) {
+			player.getInventory().addItem(col1);
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "C급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
+		} else if(colP < 7) {
+			player.getInventory().addItem(col2);
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "B급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
+		} else if(colP < 9) {
+			player.getInventory().addItem(col3);
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "A급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+		} else if(colP == 9) {
+			player.getInventory().addItem(col4);
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+		}
+		
 		QuestBoard cb = new QuestBoard();
 		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===죽은 듯 살아있는 자3===")) {
 			int qNum = cb.getNum(player);
@@ -4793,6 +4899,41 @@ public class MobLoot {
 			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
 		
+		ItemStack col1 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
+		ItemMeta col1im = col1.getItemMeta();
+		col1im.setDisplayName(ChatColor.GRAY + "C급 투기장 스크롤");
+		col1.setItemMeta(col1im);
+		
+		ItemStack col2 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
+		ItemMeta col2im = col2.getItemMeta();
+		col2im.setDisplayName(ChatColor.WHITE + "B급 투기장 스크롤");
+		col2.setItemMeta(col2im);
+		
+		ItemStack col3 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
+		ItemMeta col3im = col3.getItemMeta();
+		col3im.setDisplayName(ChatColor.YELLOW + "A급 투기장 스크롤");
+		col3.setItemMeta(col3im);
+		
+		ItemStack col4 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
+		ItemMeta col4im = col4.getItemMeta();
+		col4im.setDisplayName(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤");
+		col4.setItemMeta(col4im);
+		
+		int colP = rnd.nextInt(100);
+		if(colP < 4) {
+			player.getInventory().addItem(col1);
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "C급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
+		} else if(colP < 7) {
+			player.getInventory().addItem(col2);
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "B급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
+		} else if(colP < 9) {
+			player.getInventory().addItem(col3);
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "A급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+		} else if(colP == 9) {
+			player.getInventory().addItem(col4);
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+		}
+		
 		QuestBoard cb = new QuestBoard();
 		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===죽은 듯 살아있는 자4===")) {
 			int qNum = cb.getNum(player);
@@ -4851,6 +4992,41 @@ public class MobLoot {
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
 			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+		}
+		
+		ItemStack col1 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
+		ItemMeta col1im = col1.getItemMeta();
+		col1im.setDisplayName(ChatColor.GRAY + "C급 투기장 스크롤");
+		col1.setItemMeta(col1im);
+		
+		ItemStack col2 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
+		ItemMeta col2im = col2.getItemMeta();
+		col2im.setDisplayName(ChatColor.WHITE + "B급 투기장 스크롤");
+		col2.setItemMeta(col2im);
+		
+		ItemStack col3 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
+		ItemMeta col3im = col3.getItemMeta();
+		col3im.setDisplayName(ChatColor.YELLOW + "A급 투기장 스크롤");
+		col3.setItemMeta(col3im);
+		
+		ItemStack col4 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
+		ItemMeta col4im = col4.getItemMeta();
+		col4im.setDisplayName(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤");
+		col4.setItemMeta(col4im);
+		
+		int colP = rnd.nextInt(100);
+		if(colP < 4) {
+			player.getInventory().addItem(col1);
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "C급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
+		} else if(colP < 7) {
+			player.getInventory().addItem(col2);
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "B급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
+		} else if(colP < 9) {
+			player.getInventory().addItem(col3);
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "A급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+		} else if(colP == 9) {
+			player.getInventory().addItem(col4);
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
 		}
 		
 		QuestBoard cb = new QuestBoard();
