@@ -118,7 +118,7 @@ public class MobLoot {
 			ItemMeta reinIm = rein.getItemMeta();
 			reinIm.setDisplayName(ChatColor.AQUA + "검은 수염의 증표");
 			ArrayList<String> reinLore = new ArrayList();
-			reinLore.add(ChatColor.GRAY + "검은 수염단의 검의 초월 소재");
+			reinLore.add(ChatColor.GRAY + "검은 수염단의 검을 초월시킬 수 있는 소재");
 			reinIm.setLore(reinLore);
 			rein.setItemMeta(reinIm);
 			player.getInventory().addItem(rein);

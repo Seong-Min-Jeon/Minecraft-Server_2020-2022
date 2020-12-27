@@ -1,5 +1,6 @@
 package testPack;
 
+import java.util.List;
 import java.util.Random;
 
 import org.bukkit.ChatColor;
@@ -18,6 +19,7 @@ import org.bukkit.entity.MagmaCube;
 import org.bukkit.entity.Phantom;
 import org.bukkit.entity.PigZombie;
 import org.bukkit.entity.Piglin;
+import org.bukkit.entity.Player;
 import org.bukkit.entity.PolarBear;
 import org.bukkit.entity.Skeleton;
 import org.bukkit.entity.Slime;
@@ -6093,6 +6095,7 @@ public class SpawnMob {
 			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
 				entity.setCustomName(ChatColor.GRAY + "코낭그" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
+				entity.setRemoveWhenFarAway(false);
 				entity.setMaxHealth(700000);
 				entity.setHealth(700000);
 				EntityEquipment weapon = entity.getEquipment();
@@ -6511,6 +6514,7 @@ public class SpawnMob {
 			if (entity.getType() == (EntityType) EntityType.CAVE_SPIDER) {
 				entity.setCustomName(ChatColor.GRAY + "아라크네" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
+				entity.setRemoveWhenFarAway(false);
 				entity.setMaxHealth(800000);
 				entity.setHealth(800000);
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 150));
@@ -8533,6 +8537,7 @@ public class SpawnMob {
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
 				entity.setCustomName(ChatColor.GRAY + "레티아리우스" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
+				entity.setRemoveWhenFarAway(false);
 				entity.setMaxHealth(20);
 				entity.setHealth(20);
 				EntityEquipment weapon = entity.getEquipment();
@@ -8561,6 +8566,9 @@ public class SpawnMob {
 				boots.setBoots(bootsItem);
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
 				return true;
+			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM) {
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, Integer.MAX_VALUE, 1));
+				return true;
 			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM
 					|| entity.getType() == (EntityType) EntityType.SALMON
 					|| entity.getType() == (EntityType) EntityType.ITEM_FRAME
@@ -8586,6 +8594,7 @@ public class SpawnMob {
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
 				entity.setCustomName(ChatColor.GRAY + "갈리" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
+				entity.setRemoveWhenFarAway(false);
 				entity.setMaxHealth(30);
 				entity.setHealth(30);
 				EntityEquipment weapon = entity.getEquipment();
@@ -8607,6 +8616,9 @@ public class SpawnMob {
 				ItemStack bootsItem = new ItemStack(Material.CHAINMAIL_BOOTS);
 				boots.setBoots(bootsItem);
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
+				return true;
+			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM) {
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, Integer.MAX_VALUE, 1));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM
 					|| entity.getType() == (EntityType) EntityType.SALMON
@@ -8633,6 +8645,7 @@ public class SpawnMob {
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
 				entity.setCustomName(ChatColor.GRAY + "디마카에루스" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
+				entity.setRemoveWhenFarAway(false);
 				entity.setMaxHealth(40);
 				entity.setHealth(40);
 				EntityEquipment weapon = entity.getEquipment();
@@ -8654,6 +8667,9 @@ public class SpawnMob {
 				ItemStack bootsItem = new ItemStack(Material.IRON_BOOTS);
 				boots.setBoots(bootsItem);
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
+				return true;
+			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM) {
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, Integer.MAX_VALUE, 1));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM
 					|| entity.getType() == (EntityType) EntityType.SALMON
@@ -8680,6 +8696,7 @@ public class SpawnMob {
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
 				entity.setCustomName(ChatColor.GRAY + "프라에그나리" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
+				entity.setRemoveWhenFarAway(false);
 				entity.setMaxHealth(50);
 				entity.setHealth(50);
 				EntityEquipment weapon = entity.getEquipment();
@@ -8708,6 +8725,9 @@ public class SpawnMob {
 				entity.setMaxHealth(3);
 				entity.setHealth(3);
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
+				return true;
+			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM) {
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, Integer.MAX_VALUE, 1));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM
 					|| entity.getType() == (EntityType) EntityType.SALMON

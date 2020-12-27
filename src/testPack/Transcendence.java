@@ -3,6 +3,7 @@ package testPack;
 import java.util.ArrayList;
 
 import org.bukkit.ChatColor;
+import org.bukkit.Color;
 import org.bukkit.Material;
 import org.bukkit.Sound;
 import org.bukkit.enchantments.Enchantment;
@@ -11,6 +12,7 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.inventory.meta.LeatherArmorMeta;
 
 public class Transcendence {
 
@@ -231,6 +233,7 @@ public class Transcendence {
 				weaponLore.add(ChatColor.GRAY + "레벨 제한: 400");
 				weaponLore.add(ChatColor.GRAY + " ");
 				weaponLore.add(ChatColor.GRAY + "탑의 초심자 헬멧이 진정한 모습을 찾았다.");
+				weaponLore.add(ChatColor.GRAY + "(세트 아이템)");
 				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -251,6 +254,7 @@ public class Transcendence {
 				weaponLore.add(ChatColor.GRAY + "레벨 제한: 400");
 				weaponLore.add(ChatColor.GRAY + " ");
 				weaponLore.add(ChatColor.GRAY + "탑의 초심자 갑옷이 진정한 모습을 찾았다.");
+				weaponLore.add(ChatColor.GRAY + "(세트 아이템)");
 				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -271,6 +275,7 @@ public class Transcendence {
 				weaponLore.add(ChatColor.GRAY + "레벨 제한: 400");
 				weaponLore.add(ChatColor.GRAY + " ");
 				weaponLore.add(ChatColor.GRAY + "탑의 초심자 각반이 진정한 모습을 찾았다.");
+				weaponLore.add(ChatColor.GRAY + "(세트 아이템)");
 				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -291,6 +296,7 @@ public class Transcendence {
 				weaponLore.add(ChatColor.GRAY + "레벨 제한: 400");
 				weaponLore.add(ChatColor.GRAY + " ");
 				weaponLore.add(ChatColor.GRAY + "탑의 초심자 신발이 진정한 모습을 찾았다.");
+				weaponLore.add(ChatColor.GRAY + "(세트 아이템)");
 				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -331,6 +337,7 @@ public class Transcendence {
 				weaponLore.add(ChatColor.GRAY + "레벨 제한: 400");
 				weaponLore.add(ChatColor.GRAY + " ");
 				weaponLore.add(ChatColor.GRAY + "탑의 도전자 헬멧이 진정한 모습을 찾았다.");
+				weaponLore.add(ChatColor.GRAY + "(세트 아이템)");
 				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -351,6 +358,7 @@ public class Transcendence {
 				weaponLore.add(ChatColor.GRAY + "레벨 제한: 400");
 				weaponLore.add(ChatColor.GRAY + " ");
 				weaponLore.add(ChatColor.GRAY + "탑의 도전자 갑옷이 진정한 모습을 찾았다.");
+				weaponLore.add(ChatColor.GRAY + "(세트 아이템)");
 				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -371,6 +379,7 @@ public class Transcendence {
 				weaponLore.add(ChatColor.GRAY + "레벨 제한: 400");
 				weaponLore.add(ChatColor.GRAY + " ");
 				weaponLore.add(ChatColor.GRAY + "탑의 도전자 각반이 진정한 모습을 찾았다.");
+				weaponLore.add(ChatColor.GRAY + "(세트 아이템)");
 				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -391,6 +400,7 @@ public class Transcendence {
 				weaponLore.add(ChatColor.GRAY + "레벨 제한: 400");
 				weaponLore.add(ChatColor.GRAY + " ");
 				weaponLore.add(ChatColor.GRAY + "탑의 도전자 신발이 진정한 모습을 찾았다.");
+				weaponLore.add(ChatColor.GRAY + "(세트 아이템)");
 				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -405,6 +415,195 @@ public class Transcendence {
 			player.sendMessage(ChatColor.WHITE + "조건에 맞는 장비, 소재를 넣어주세요.");
 		}
 		
+		if(is2.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "천옥개")) {
+			if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "주작")) {
+				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
+				ItemStack weapon = new ItemStack(Material.LEATHER_HELMET);
+				LeatherArmorMeta leatherIm = (LeatherArmorMeta) weapon.getItemMeta();
+				leatherIm.setColor(Color.fromRGB(255, 0, 0));
+				weapon.setItemMeta(leatherIm);
+				ItemMeta weaponIm = weapon.getItemMeta();
+				weaponIm.setLocalizedName("1000,300,300,300,100,1000,0,0,0,0,450");
+				weaponIm.setDisplayName(ChatColor.GREEN + "천옥개 염봉");
+				ArrayList<String> weaponLore = new ArrayList();
+				weaponLore.add(ChatColor.GRAY + "레벨 제한: 450");
+				weaponLore.add(ChatColor.GRAY + " ");
+				weaponLore.add(ChatColor.GRAY + "천옥개에 의해 주작의 힘이 각성하였다.");
+				weaponLore.add(ChatColor.GRAY + "(세트 아이템)");
+				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+				weaponIm.setUnbreakable(true);
+				weaponIm.setLore(weaponLore);
+				weapon.setItemMeta(weaponIm);
+				inv.setItem(0, weapon);
+				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				return;
+			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "청룡")) {
+				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
+				ItemStack weapon = new ItemStack(Material.LEATHER_CHESTPLATE);
+				LeatherArmorMeta leatherIm = (LeatherArmorMeta) weapon.getItemMeta();
+				leatherIm.setColor(Color.fromRGB(0, 0, 255));
+				weapon.setItemMeta(leatherIm);
+				ItemMeta weaponIm = weapon.getItemMeta();
+				weaponIm.setLocalizedName("1500,0,0,0,300,800,0,0,0,0,450");
+				weaponIm.setDisplayName(ChatColor.GREEN + "천옥개 창룡");
+				ArrayList<String> weaponLore = new ArrayList();
+				weaponLore.add(ChatColor.GRAY + "레벨 제한: 450");
+				weaponLore.add(ChatColor.GRAY + " ");
+				weaponLore.add(ChatColor.GRAY + "천옥개에 의해 청룡의 힘이 각성하였다.");
+				weaponLore.add(ChatColor.GRAY + "(세트 아이템)");
+				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+				weaponIm.setUnbreakable(true);
+				weaponIm.setLore(weaponLore);
+				weapon.setItemMeta(weaponIm);
+				inv.setItem(0, weapon);
+				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				return;
+			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "백호")) {
+				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
+				ItemStack weapon = new ItemStack(Material.LEATHER_LEGGINGS);
+				LeatherArmorMeta leatherIm = (LeatherArmorMeta) weapon.getItemMeta();
+				leatherIm.setColor(Color.fromRGB(255, 255, 255));
+				weapon.setItemMeta(leatherIm);
+				ItemMeta weaponIm = weapon.getItemMeta();
+				weaponIm.setLocalizedName("600,500,500,500,150,700,0,0,0,300,450");
+				weaponIm.setDisplayName(ChatColor.GREEN + "천옥개 노호");
+				ArrayList<String> weaponLore = new ArrayList();
+				weaponLore.add(ChatColor.GRAY + "레벨 제한: 450");
+				weaponLore.add(ChatColor.GRAY + " ");
+				weaponLore.add(ChatColor.GRAY + "천옥개에 의해 백호의 힘이 각성하였다.");
+				weaponLore.add(ChatColor.GRAY + "(세트 아이템)");
+				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+				weaponIm.setUnbreakable(true);
+				weaponIm.setLore(weaponLore);
+				weapon.setItemMeta(weaponIm);
+				inv.setItem(0, weapon);
+				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				return;
+			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "현무")) {
+				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
+				ItemStack weapon = new ItemStack(Material.LEATHER_BOOTS);
+				LeatherArmorMeta leatherIm = (LeatherArmorMeta) weapon.getItemMeta();
+				leatherIm.setColor(Color.fromRGB(0, 0, 0));
+				weapon.setItemMeta(leatherIm);
+				ItemMeta weaponIm = weapon.getItemMeta();
+				weaponIm.setLocalizedName("300,100,100,100,0,2000,0,0,0,0,450");
+				weaponIm.setDisplayName(ChatColor.GREEN + "천옥개 진무");
+				ArrayList<String> weaponLore = new ArrayList();
+				weaponLore.add(ChatColor.GRAY + "레벨 제한: 450");
+				weaponLore.add(ChatColor.GRAY + " ");
+				weaponLore.add(ChatColor.GRAY + "탑의 초심자 신발이 진정한 모습을 찾았다.");
+				weaponLore.add(ChatColor.GRAY + "(세트 아이템)");
+				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+				weaponIm.setUnbreakable(true);
+				weaponIm.setLore(weaponLore);
+				weapon.setItemMeta(weaponIm);
+				inv.setItem(0, weapon);
+				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				return;
+			}
+			player.sendMessage(ChatColor.WHITE + "조건에 맞는 장비, 소재를 넣어주세요.");
+		}
+		
+		if(is2.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "패왕의 힘")) {
+			if(is1.getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "리벨리온")) {
+				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
+				ItemStack weapon = new ItemStack(Material.GOLDEN_HELMET);
+				ItemMeta weaponIm = weapon.getItemMeta();
+				weaponIm.setLocalizedName("2500,0,0,0,0,2000,0,0,0,0,500");
+				weaponIm.setDisplayName(ChatColor.GREEN + "패왕권룡 다크 리벨리온");
+				ArrayList<String> weaponLore = new ArrayList();
+				weaponLore.add(ChatColor.GRAY + "레벨 제한: 500");
+				weaponLore.add(ChatColor.GRAY + " ");
+				weaponLore.add(ChatColor.GRAY + "'칠흑의 어둠에서 살고 있는 반역의 송곳니'라는 별명의 신발");
+				weaponLore.add(ChatColor.GRAY + "(세트 아이템)");
+				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+				weaponIm.setUnbreakable(true);
+				weaponIm.setLore(weaponLore);
+				weapon.setItemMeta(weaponIm);
+				inv.setItem(0, weapon);
+				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				return;
+			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "베놈")) {
+				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
+				ItemStack weapon = new ItemStack(Material.GOLDEN_CHESTPLATE);
+				ItemMeta weaponIm = weapon.getItemMeta();
+				weaponIm.setLocalizedName("2800,0,0,0,0,2000,0,0,0,0,500");
+				weaponIm.setDisplayName(ChatColor.GREEN + "패왕권룡 스타브 베놈");
+				ArrayList<String> weaponLore = new ArrayList();
+				weaponLore.add(ChatColor.GRAY + "레벨 제한: 500");
+				weaponLore.add(ChatColor.GRAY + " ");
+				weaponLore.add(ChatColor.GRAY + "굶주린 송곳니를 가진 독룡이 그려진 갑옷");
+				weaponLore.add(ChatColor.GRAY + "(세트 아이템)");
+				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+				weaponIm.setUnbreakable(true);
+				weaponIm.setLore(weaponLore);
+				weapon.setItemMeta(weaponIm);
+				inv.setItem(0, weapon);
+				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				return;
+			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "오드아이즈")) {
+				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
+				ItemStack weapon = new ItemStack(Material.GOLDEN_LEGGINGS);
+				ItemMeta weaponIm = weapon.getItemMeta();
+				weaponIm.setLocalizedName("2500,0,0,0,0,2000,0,0,0,0,500");
+				weaponIm.setDisplayName(ChatColor.GREEN + "패왕권룡 오드아이즈");
+				ArrayList<String> weaponLore = new ArrayList();
+				weaponLore.add(ChatColor.GRAY + "레벨 제한: 500");
+				weaponLore.add(ChatColor.GRAY + " ");
+				weaponLore.add(ChatColor.GRAY + "두 색의 눈동자를 가진 드래곤의 뿔로 만든 각반");
+				weaponLore.add(ChatColor.GRAY + "(세트 아이템)");
+				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+				weaponIm.setUnbreakable(true);
+				weaponIm.setLore(weaponLore);
+				weapon.setItemMeta(weaponIm);
+				inv.setItem(0, weapon);
+				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				return;
+			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "클리어윙")) {
+				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
+				ItemStack weapon = new ItemStack(Material.GOLDEN_BOOTS);
+				ItemMeta weaponIm = weapon.getItemMeta();
+				weaponIm.setLocalizedName("2500,0,0,0,0,2000,0,0,0,0,500");
+				weaponIm.setDisplayName(ChatColor.GREEN + "패왕권룡 클리어윙");
+				ArrayList<String> weaponLore = new ArrayList();
+				weaponLore.add(ChatColor.GRAY + "레벨 제한: 500");
+				weaponLore.add(ChatColor.GRAY + " ");
+				weaponLore.add(ChatColor.GRAY + "빛의 날개를 가진 드래곤의 비늘로 만든 각반");
+				weaponLore.add(ChatColor.GRAY + "(세트 아이템)");
+				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+				weaponIm.setUnbreakable(true);
+				weaponIm.setLore(weaponLore);
+				weapon.setItemMeta(weaponIm);
+				inv.setItem(0, weapon);
+				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				return;
+			}
+			player.sendMessage(ChatColor.WHITE + "조건에 맞는 장비, 소재를 넣어주세요.");
+		}
 	}
 	
 	public String makeEnch(String[] ary, String str, int num) {

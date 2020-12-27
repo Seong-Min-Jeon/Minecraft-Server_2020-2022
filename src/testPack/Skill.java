@@ -1124,6 +1124,7 @@ public class Skill {
 						golem.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, Integer.MAX_VALUE, 2));
 					}
 					golem.setPlayerCreated(true);
+					golem.setRemoveWhenFarAway(true);
 					// ===============================================================
 					ParticleData pd = new ParticleData(player.getUniqueId());
 					if (pd.hasID()) {
@@ -1812,6 +1813,7 @@ public class Skill {
 										golem.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, Integer.MAX_VALUE, 2));
 									}
 									golem.setPlayerCreated(true);
+									golem.setRemoveWhenFarAway(true);
 									// ===============================================================
 									ParticleData pd = new ParticleData(player.getUniqueId());
 									if (pd.hasID()) {
@@ -2182,6 +2184,7 @@ public class Skill {
 						((LivingEntity) golem).setMaxHealth((20 + player.getLevel() * 30) / 2);
 						((LivingEntity) golem).setHealth((20 + player.getLevel() * 30) / 2);
 						int golemLv = (player.getLevel() / 2);
+						golem.setRemoveWhenFarAway(true);
 						golem.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, golemLv * 3));						
 						go.put(golem.getUniqueId(), player);
 					}
@@ -2191,6 +2194,7 @@ public class Skill {
 					((LivingEntity) golem).setMaxHealth((20 + player.getLevel() * 30));
 					((LivingEntity) golem).setHealth((20 + player.getLevel() * 30));
 					int golemLv = player.getLevel();
+					golem.setRemoveWhenFarAway(true);
 					golem.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, golemLv * 4));
 					go.put(golem.getUniqueId(), player);
 					player.sendMessage(ChatColor.GREEN + "[스킬]천사의 기사단이 발동됩니다.");

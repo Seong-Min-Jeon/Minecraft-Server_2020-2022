@@ -2222,10 +2222,8 @@ public class LootChest {
 		tokenIm.setDisplayName(ChatColor.YELLOW + "C급 검투사의 인장");
 		token.setItemMeta(tokenIm);
 		
-		if(tokenPercent==0) {
-			idx = rnd.nextInt(9);
-			inv.setItem(idx, token);
-		}
+		idx = rnd.nextInt(9);
+		inv.setItem(idx, token);
 		player.openInventory(inv);	
 	}
 	
@@ -2239,10 +2237,8 @@ public class LootChest {
 		tokenIm.setDisplayName(ChatColor.YELLOW + "B급 검투사의 인장");
 		token.setItemMeta(tokenIm);
 		
-		if(tokenPercent==0) {
-			idx = rnd.nextInt(9);
-			inv.setItem(idx, token);
-		}
+		idx = rnd.nextInt(9);
+		inv.setItem(idx, token);
 		player.openInventory(inv);	
 	}
 	
@@ -2256,10 +2252,8 @@ public class LootChest {
 		tokenIm.setDisplayName(ChatColor.YELLOW + "A급 검투사의 인장");
 		token.setItemMeta(tokenIm);
 		
-		if(tokenPercent==0) {
-			idx = rnd.nextInt(9);
-			inv.setItem(idx, token);
-		}
+		idx = rnd.nextInt(9);
+		inv.setItem(idx, token);
 		player.openInventory(inv);	
 	}
 	
@@ -2273,10 +2267,8 @@ public class LootChest {
 		tokenIm.setDisplayName(ChatColor.YELLOW + "S급 검투사의 인장");
 		token.setItemMeta(tokenIm);
 		
-		if(tokenPercent==0) {
-			idx = rnd.nextInt(9);
-			inv.setItem(idx, token);
-		}
+		idx = rnd.nextInt(9);
+		inv.setItem(idx, token);
 		player.openInventory(inv);	
 	}
 	

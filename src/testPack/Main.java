@@ -352,7 +352,7 @@ public class Main extends JavaPlugin implements Listener{
 		bar.setVisible(false);
 		bar.addPlayer(player);
 		BossBar bar2 = Bukkit.createBossBar(ChatColor.BOLD + "" + ChatColor.DARK_PURPLE + "강화확률 증가", BarColor.PURPLE, BarStyle.SOLID);
-		bar2.setVisible(false);
+		bar2.setVisible(true);
 		bar2.addPlayer(player);
 		BossBar bar3 = Bukkit.createBossBar(ChatColor.BOLD + "" + ChatColor.DARK_GREEN + "에메랄드 획득량 증가 2배(전투)", BarColor.GREEN, BarStyle.SOLID);
 		bar3.setVisible(false);
@@ -3858,7 +3858,9 @@ public class Main extends JavaPlugin implements Listener{
 						return;
 					} else {
 						Player player = (Player) arrow.getShooter();
-						((Mob) event.getEntity()).setTarget(player);
+						if(!(event.getEntity() instanceof IronGolem)) {
+							((Mob) event.getEntity()).setTarget(player);
+						}
 					}
 				}
 				if(event.getEntity() instanceof Player) {
@@ -4043,7 +4045,9 @@ public class Main extends JavaPlugin implements Listener{
 						return;
 					} else {
 						Player player = (Player) arrow.getShooter();
-						((Mob) event.getEntity()).setTarget(player);
+						if(!(event.getEntity() instanceof IronGolem)) {
+							((Mob) event.getEntity()).setTarget(player);
+						}
 					}
 				}
 				if(event.getEntity() instanceof Player) {
@@ -4631,6 +4635,8 @@ public class Main extends JavaPlugin implements Listener{
 					} else {
 						player.setHealth(0);
 					}
+				} else if(event.getEntity() instanceof IronGolem) {
+					event.setDamage(999999999);
 				} else {
 					event.setDamage(1);
 					Entity mob = event.getEntity();
@@ -5328,6 +5334,7 @@ public class Main extends JavaPlugin implements Listener{
 								horse.setAdult();
 								horse.setTamed(true);
 								horse.setOwner(player);
+								horse.setRemoveWhenFarAway(true);
 								horse.getInventory().setSaddle(new ItemStack(Material.SADDLE));
 								int num = rnd.nextInt(100);
 								if(num < 60) {
@@ -5356,6 +5363,7 @@ public class Main extends JavaPlugin implements Listener{
 								horse.setAdult();
 								horse.setTamed(true);
 								horse.setOwner(player);
+								horse.setRemoveWhenFarAway(true);
 								horse.getInventory().setSaddle(new ItemStack(Material.SADDLE));
 								int num = rnd.nextInt(100);
 								if(num < 60) {
@@ -5370,7 +5378,7 @@ public class Main extends JavaPlugin implements Listener{
 									horse.setStyle(Horse.Style.BLACK_DOTS);
 								}
 								horse.setColor(Horse.Color.DARK_BROWN);
-								horse.getAttribute(Attribute.GENERIC_MOVEMENT_SPEED).setBaseValue(0.25);
+								horse.getAttribute(Attribute.GENERIC_MOVEMENT_SPEED).setBaseValue(0.23);
 								ho.put(player, horse);
 							}
 							if(im.getDisplayName().equals(ChatColor.YELLOW + "황갈마")) {
@@ -5384,6 +5392,7 @@ public class Main extends JavaPlugin implements Listener{
 								horse.setAdult();
 								horse.setTamed(true);
 								horse.setOwner(player);
+								horse.setRemoveWhenFarAway(true);
 								horse.getInventory().setSaddle(new ItemStack(Material.SADDLE));
 								int num = rnd.nextInt(100);
 								if(num < 60) {
@@ -5398,7 +5407,7 @@ public class Main extends JavaPlugin implements Listener{
 									horse.setStyle(Horse.Style.BLACK_DOTS);
 								}
 								horse.setColor(Horse.Color.CREAMY);
-								horse.getAttribute(Attribute.GENERIC_MOVEMENT_SPEED).setBaseValue(0.3);
+								horse.getAttribute(Attribute.GENERIC_MOVEMENT_SPEED).setBaseValue(0.26);
 								ho.put(player, horse);
 							}
 							if(im.getDisplayName().equals(ChatColor.LIGHT_PURPLE + "회색마")) {
@@ -5412,6 +5421,7 @@ public class Main extends JavaPlugin implements Listener{
 								horse.setAdult();
 								horse.setTamed(true);
 								horse.setOwner(player);
+								horse.setRemoveWhenFarAway(true);
 								horse.getInventory().setSaddle(new ItemStack(Material.SADDLE));
 								int num = rnd.nextInt(100);
 								if(num < 60) {
@@ -5426,7 +5436,7 @@ public class Main extends JavaPlugin implements Listener{
 									horse.setStyle(Horse.Style.BLACK_DOTS);
 								}
 								horse.setColor(Horse.Color.GRAY);
-								horse.getAttribute(Attribute.GENERIC_MOVEMENT_SPEED).setBaseValue(0.35);
+								horse.getAttribute(Attribute.GENERIC_MOVEMENT_SPEED).setBaseValue(0.29);
 								ho.put(player, horse);
 							}
 							if(im.getDisplayName().equals(ChatColor.AQUA + "황금갈기마")) {
@@ -5440,6 +5450,7 @@ public class Main extends JavaPlugin implements Listener{
 								horse.setAdult();
 								horse.setTamed(true);
 								horse.setOwner(player);
+								horse.setRemoveWhenFarAway(true);
 								horse.getInventory().setSaddle(new ItemStack(Material.SADDLE));
 								int num = rnd.nextInt(100);
 								if(num < 60) {
@@ -5454,7 +5465,7 @@ public class Main extends JavaPlugin implements Listener{
 									horse.setStyle(Horse.Style.BLACK_DOTS);
 								}
 								horse.setColor(Horse.Color.CHESTNUT);
-								horse.getAttribute(Attribute.GENERIC_MOVEMENT_SPEED).setBaseValue(0.4);
+								horse.getAttribute(Attribute.GENERIC_MOVEMENT_SPEED).setBaseValue(0.32);
 								ho.put(player, horse);
 							}
 							if(im.getDisplayName().equals(ChatColor.DARK_RED + "흑마")) {
@@ -5468,6 +5479,7 @@ public class Main extends JavaPlugin implements Listener{
 								horse.setAdult();
 								horse.setTamed(true);
 								horse.setOwner(player);
+								horse.setRemoveWhenFarAway(true);
 								horse.getInventory().setSaddle(new ItemStack(Material.SADDLE));
 								int num = rnd.nextInt(100);
 								if(num < 60) {
@@ -5482,7 +5494,7 @@ public class Main extends JavaPlugin implements Listener{
 									horse.setStyle(Horse.Style.BLACK_DOTS);
 								}
 								horse.setColor(Horse.Color.BLACK);
-								horse.getAttribute(Attribute.GENERIC_MOVEMENT_SPEED).setBaseValue(0.45);
+								horse.getAttribute(Attribute.GENERIC_MOVEMENT_SPEED).setBaseValue(0.35);
 								ho.put(player, horse);
 							}
 							if(im.getDisplayName().equals(ChatColor.DARK_PURPLE + "백마")) {
@@ -5496,6 +5508,7 @@ public class Main extends JavaPlugin implements Listener{
 								horse.setAdult();
 								horse.setTamed(true);
 								horse.setOwner(player);
+								horse.setRemoveWhenFarAway(true);
 								horse.getInventory().setSaddle(new ItemStack(Material.SADDLE));
 								int num = rnd.nextInt(100);
 								if(num < 60) {
@@ -5510,7 +5523,7 @@ public class Main extends JavaPlugin implements Listener{
 									horse.setStyle(Horse.Style.BLACK_DOTS);
 								}
 								horse.setColor(Horse.Color.WHITE);
-								horse.getAttribute(Attribute.GENERIC_MOVEMENT_SPEED).setBaseValue(0.5);
+								horse.getAttribute(Attribute.GENERIC_MOVEMENT_SPEED).setBaseValue(0.38);
 								ho.put(player, horse);
 							}
 						}
