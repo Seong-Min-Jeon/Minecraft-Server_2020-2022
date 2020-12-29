@@ -2277,8 +2277,8 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 15000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "주민: 이 광신도 녀석들 생각보다 대규모 집단인 것 같아요.%주민: 모험가님이 광신도 녀석들을 혼내주는 동안 사막쪽으로 도망가는 광신도 녀석들을 제가 똑똑히 봤는걸요.%주민: 이 땅에 처음으로 다섯 포보르의 왕이 나타났을 때, 셋은 거대한 바다에 나타났다고 해요.%"
-					+ "주민: 바로 발로르, 코낭그, 모르크에요.%주민: 셋이서 영역 싸움을 한 것인지 어떤 일이 있었던 것인지는 모르지만 결국 바다는 사막이 되었어요.%주민: 그리고 신의 군대가 그들을 쓰러뜨리는 과정에서 일부 지역이 함께 소멸되어 공허만 남게 되었다고 해요.%"
+			msg.msg(player, "주민: 이 광신도 녀석들 생각보다 대규모 집단인 것 같아요.%주민: 모험가님이 광신도 녀석들을 혼내주는 동안 사막쪽으로 도망가는 광신도 녀석들을 제가 똑똑히 봤는걸요.%주민: 이 땅에 처음으로 §e다섯 포보르의 왕§f이 나타났을 때, 셋은 거대한 바다에 나타났다고 해요.%"
+					+ "주민: 바로 발로르, 코낭그, 모르크에요.%주민: 셋이서 영역 싸움을 한 것인지 어떤 일이 있었던 것인지는 모르지만 결국 바다는 §e사막§f이 되었어요.%주민: 그리고 신의 군대가 그들을 쓰러뜨리는 과정에서 일부 지역이 함께 소멸되어 공허만 남게 되었다고 해요.%"
 					+ "주민: 아마도 광신도 녀석들은 사막에서 무언가 꾸미고 있는게 분명해요.%주민: 그 목적이 포보르의 왕을 재림시키는 것일지 그들의 힘을 찾아내려는 것인지는 알 수 없어요.%주민: 그러니 부디 모험가님이 사막에 한번 다녀와주세요.%"
 					+ "주민: 사막은 매우 넓고 위험하니 말을 가져가시는게 도움이 될 거에요.");
 			QuestBoard qb = new QuestBoard();
@@ -2304,7 +2304,7 @@ public class QuestBoard {
 			es.giveExp(player, 15000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			msg.msg(player, "사막 정찰병: 이곳까지는 어쩐 일인가.%사막 정찰병: 이곳은 위험하네.%사막 정찰병: 흐음?%사막 정찰병: 자네 나름 쓸만한 실력을 가지고 있지 않은가.%"
-					+ "사막 정찰병: 좋아. 무슨 용건인지는 몰라도 일단 우리를 도와주어야겠어.%사막 정찰병: 우선 사막에 들어가기 위해서는 축복의 포션이 필요해.%"
+					+ "사막 정찰병: 좋아. 무슨 용건인지는 몰라도 일단 우리를 도와주어야겠어.%사막 정찰병: 우선 사막에 들어가기 위해서는 §e축복의 포션§f이 필요해.%"
 					+ "사막 정찰병: 그 재료를 구하는걸 퀘스트로 주지.%사막 정찰병: 사막 정찰병: 혹시라도 미리 사막에 들어가보고 싶으면 옆에 있는 친구가 포션을 팔아주긴 할거야.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq45_2(player, 0);
@@ -2354,7 +2354,7 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 16000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "사막 정찰병: 그래 이단치고는 성수를 사용하더군.%사막 정찰병: 이제 남은 재료는 하마베에서 파는 달콤한 열매다.%사막 정찰병: 그 두 개를 이용해 포션을 만들면 축복의 포션이 만들어질거다.");
+			msg.msg(player, "사막 정찰병: 그래 이단치고는 §e성수§f를 사용하더군.%사막 정찰병: 이제 남은 재료는 §e하마베§f에서 파는 §e달콤한 열매§f다.%사막 정찰병: 그 두 개를 이용해 포션을 만들면 축복의 포션이 만들어질거다.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq45_4(player, 0);
 			return;
@@ -2400,8 +2400,8 @@ public class QuestBoard {
 			es.giveExp(player, 16000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			msg.msg(player, "사막 정찰병: 그래. 축복의 포션을 사용하면 5분 동안은 사막의 더위에서 벗어날 수 있을거다.%사막 정찰병: 밤이 된 사막은 원래 덥지 않았는데 말이다.%"
-					+ "사막 정찰병: 언제부터인가 사막에 붉은 모래가 날리게 되었고 해가 진 밤에도 죽을 것 같이 더워지게 되었다.%사막 정찰병: 좋아.%"
-					+ "사막 정찰병: 설명은 이쯤으로 해두고 사막의 Death Gun을 사냥해 너의 힘을 증명해라.%사막 정찰병: 모든 시련이 끝내면 큰 보상을 주도록 하겠다.");
+					+ "사막 정찰병: 언제부터인가 사막에 §e붉은 모래§f가 날리게 되었고 해가 진 밤에도 죽을 것 같이 더워지게 되었다.%사막 정찰병: 좋아.%"
+					+ "사막 정찰병: 설명은 이쯤으로 해두고 사막의 §eDeath Gun§f을 사냥해 너의 힘을 증명해라.%사막 정찰병: 모든 시련이 끝내면 큰 보상을 주도록 하겠다.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq45_6(player, 0);
 			return;
@@ -2448,7 +2448,7 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 17000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "사막 정찰병: 이번에는 사막 곰을 사냥해 너의 용기를 증명해라.%사막 정찰병: 사막 곰이란 생명체는 원래 존재하지 않았으나 붉은 모래가 날리기 시작했을 때였지.%"
+			msg.msg(player, "사막 정찰병: 이번에는 §e사막 곰§f을 사냥해 너의 용기를 증명해라.%사막 정찰병: 사막 곰이란 생명체는 원래 존재하지 않았으나 붉은 모래가 날리기 시작했을 때였지.%"
 					+ "사막 정찰병: 사막 여우가 변이되어 곰처럼 커지게 되었다.%사막 정찰병: 그 뒤틀린 모습이 마치 이 세계의 곰과 같아 그를 사막 곰이라고 명명했다.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq45_8(player, 0);
@@ -2497,7 +2497,7 @@ public class QuestBoard {
 			es.giveExp(player, 18000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			msg.msg(player, "사막 정찰병: 이번에는 지혜를 증명할 차례다.%사막 정찰병: 이번 시련은 매우 어려울 것이나 이것이 마지막 시련이다.%"
-					+ "사막 정찰병: 이면에 잠든 암석 거인을 처리하는 일이다.%사막 정찰병: 혼자가면 위험할 수도 있으니 부디 동료와 함께 가길 바란다.");
+					+ "사막 정찰병: 이면에 잠든 §e암석 거인§f을 처리하는 일이다.%사막 정찰병: 혼자가면 위험할 수도 있으니 부디 동료와 함께 가길 바란다.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq45_10(player, 0);
 			return;
@@ -2545,7 +2545,7 @@ public class QuestBoard {
 			es.giveExp(player, 18000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			msg.msg(player, "사막 정찰병: 이 정도 실력이면 제대로 사막을 탐사해도 되겠군.%사막 정찰병: 사막에는 편히 쉴 수 있는 곳이 거의 없을꺼다.%"
-					+ "사막 정찰병: 철 채석장으로 가거라.%사막 정찰병: 거기가 사막의 유일한 마을이다.%사막 정찰병: 그 마을에 가면 신의 물건에 대한 정보를 얻을 수 있을거다.%"
+					+ "사막 정찰병: §e철 채석장§f으로 가거라.%사막 정찰병: 거기가 사막의 §e유일한 마을§f이다.%사막 정찰병: 그 마을에 가면 §e성물§f에 대한 정보를 얻을 수 있을거다.%"
 					+ "사막 정찰병: 이 정보가 내 보상이다.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq45_12(player, 0);
@@ -2570,7 +2570,7 @@ public class QuestBoard {
 			es.giveExp(player, 19000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			msg.msg(player, "주민: 사막을 탐험하러 오신 모험가군요.%주민: 반갑습니다.%주민: 아마도 성물을 찾으러 오신거겠죠?%주민: 이번 일을 마쳐주시면 성물의 위치를 알려드릴게요.%"
-					+ "주민: 우선 쌍창 전사 석상을 토벌해주십쇼.%주민: 녀석들의 위치는 아직 파악되지 않았어요.%주민: 임무 중 필요하시면 이곳의 철을 캐셔도 좋아요.");
+					+ "주민: 우선 §e쌍창 전사 석상§f을 토벌해주십쇼.%주민: 녀석들의 위치는 아직 파악되지 않았어요.%주민: 임무 중 필요하시면 이곳의 §e철§f을 캐셔도 좋아요.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq45_13(player, 0);
 			return;
@@ -2617,7 +2617,7 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 19000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "주민: 이번에는 빛의 궁수 석상을 토벌해주십쇼.");
+			msg.msg(player, "주민: 이번에는 §e빛의 궁수 석상§f을 토벌해주십쇼.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq45_15(player, 0);
 			return;
@@ -2662,7 +2662,7 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 20000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "주민: 이번에는 쌍검 전사 석상을 토벌해주십쇼.");
+			msg.msg(player, "주민: 이번에는 §e쌍검 전사 석상§f을 토벌해주십쇼.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq45_17(player, 0);
 			return;
@@ -2707,7 +2707,7 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 21000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "주민: 이번에는 루 라바다의 석상을 토벌해주십쇼.%주민: 저희는 원래 루 라바다님을 따르던 민족의 후손입니다.%주민: 마을에 루 라바다님의 석상과 그의 스승이신 누아다님의 석상이 있었죠.%"
+			msg.msg(player, "주민: 이번에는 §e루 라바다의 석상§f을 토벌해주십쇼.%주민: 저희는 원래 루 라바다님을 따르던 민족의 후손입니다.%주민: 마을에 §e루 라바다§f님의 석상과 그의 스승이신 §e누아다§f님의 석상이 있었죠.%"
 					+ "주민: 포보르들이 마을의 석상들을 탈환하기 전까지는요.%주민: 그렇게 빼앗긴 석상들이 포보르의 인형이 되어 마을을 침범했을 때 사람들은 공격하지도 못하고 당하기만 했어요.%"
 					+ "주민: 석상을 공격할 수 없는 저희 대신 모험가님에게 부탁드립니다.");
 			QuestBoard qb = new QuestBoard();
@@ -2754,7 +2754,7 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 21000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "주민: 이번에는 누아다의 석상을 토벌해주십쇼.");
+			msg.msg(player, "주민: 이번에는 §e누아다의 석상§f을 토벌해주십쇼.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq45_21(player, 0);
 			return;
@@ -2799,8 +2799,8 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 22000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "주민: 석상들을 토벌하면서 투기장 스크롤을 주우신 적이 있나요?%주민: 전통적으로 석상들을 제작할 때는 그 안에 포보르를 봉인해둔 스크롤을 넣어두기도 해요.%"
-					+ "주민: 그래야 석상에 힘이 생기고 마을을 지켜준다는 믿음이 있었거든요.%주민: 투기장 스크롤은 사막에 있는 투기장에서 사용할 수 있어요.%"
+			msg.msg(player, "주민: 석상들을 토벌하면서 §e투기장 스크롤§f을 주우신 적이 있나요?%주민: 전통적으로 석상들을 제작할 때는 그 안에 포보르를 봉인해둔 스크롤을 넣어두기도 해요.%"
+					+ "주민: 그래야 석상에 힘이 생기고 마을을 지켜준다는 믿음이 있었거든요.%주민: 투기장 스크롤은 §e사막에 있는 투기장§f에서 사용할 수 있어요.%"
 					+ "주민: 투기장 안쪽은 전장의 서늘함이 느껴져서 덥지 않다고 해요.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq45_23(player, 0);
@@ -2848,7 +2848,7 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 23000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "주민: 마법탑에서 사막으로 올 때 거대한 거인상을 보셨나요?%주민: 거기 발굴 현장에서 성물 같은 걸 발견한 걸로 알아요.%주민: 그쪽으로 가면 성물에 대한 정보를 구할 수 있을 것 같아요.");
+			msg.msg(player, "주민: 마법탑에서 사막으로 올 때 §e거대한 거인상§f을 보셨나요?%주민: 거기 발굴 현장에서 성물 같은 걸 발견한 걸로 알아요.%주민: 그쪽으로 가면 성물에 대한 정보를 구할 수 있을 것 같아요.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq45_25(player, 0);
 			return;
@@ -2872,8 +2872,18 @@ public class QuestBoard {
 			es.giveExp(player, 25000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			msg.msg(player, "연구원: 흐음 여긴 어떤 일이시죠?%연구원: 당연히 성물을 찾아 오셨겠죠.%연구원: 다른 사람들에게는 성물이라고 했지만..%연구원: 연구원들 사이에선 성물이 아니라고 보고 있긴 합니다.%"
-					+ "연구원: 굉장히 불길하고 어두운 힘이 느껴지는데 저희가 알아낼 수 있는 부분이 없었습니다.%연구원: 모험가님이 가져가신다면 그냥 드리겠습니다.%연구원: 저희도 이걸 처리할 수 있다면 감사하죠.");
-			// 보상 주기
+					+ "연구원: 굉장히 불길하고 어두운 힘이 느껴지는데 저희가 알아낼 수 있는 부분이 없었습니다.%연구원: 모험가님이 가져가신다면 그냥 드리겠습니다.%연구원: 저희도 이걸 처리할 수 있다면 감사하죠.%"
+					+ "§4무명의 성물§f을 획득했다.%네비: 흐으음..?%네비: 이건 나도 처음보는 힘인 것 같아.%네비: 아무래도 고위 마법사에게 물어봐야할 것 같은데?%§7마법탑의 카타리나는 어떻냐고 물어본다.%"
+					+ "네비: 그쪽은 너무 고지식해서 재미없단 말이지.%연구원: 사막에 왕궁 출시 마법사분이 계시는데 그분은 어떨까요?%네비: 왕궁 출신이면 실력은 확실하겠다.%연구원: 그럼 좌표 찍어드리겠습니다.");
+			ItemStack rein = new ItemStack(Material.CHARCOAL);
+			ItemMeta reinIm = rein.getItemMeta();
+			reinIm.setDisplayName(ChatColor.DARK_RED + "무명의 성물");
+			ArrayList<String> reinLore = new ArrayList();
+			reinLore.add(ChatColor.GRAY + "사막 발굴 현장에서 발견된 성물");
+			reinLore.add(ChatColor.GRAY + "아직 성물의 힘이 파악되지 않아 이름이 존재하지 않는다.");
+			reinIm.setLore(reinLore);
+			rein.setItemMeta(reinIm);
+			player.getInventory().addItem(rein);
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();

@@ -52,6 +52,17 @@ public class BossTicket {
 		if (player.getLocation().getX() <= 136 && player.getLocation().getZ() <= 1963 
 				&& player.getLocation().getX() >= 121 && player.getLocation().getZ() >= 1948) {
 			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GRAY + "C급 투기장 스크롤")) {
+				
+				try {
+					QuestBoard cb = new QuestBoard();
+					if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===투기장===")) {
+						int qNum = cb.getNum(player);
+						cb.mq45_23(player, qNum + 1);
+					}
+				} catch(Exception e) {
+					
+				}
+				
 				player.sendMessage(ChatColor.WHITE + "[System] 투기장에서는 모든 데미지가 고정됩니다. 또한 투기장의 보스 몬스터는 특정 방법으로 입는 데미지가 0입니다.");
 				itemArg.remove();
 				taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
@@ -77,8 +88,8 @@ public class BossTicket {
 								if (nearEntity.getType() == EntityType.PLAYER) {
 									Player nearPlayer = (Player) nearEntity;
 									Location loc2 = nearPlayer.getLocation();
-									// 4030 120 2548  3853 75 2728
-									if (loc2.getX() <= 4030 && loc2.getY() <= 120 && loc2.getZ() <= 2728 
+									// 4030 91 2548  3853 75 2728
+									if (loc2.getX() <= 4030 && loc2.getY() <= 91 && loc2.getZ() <= 2728 
 											&& loc2.getX() >= 3853 && loc2.getY() >= 75 && loc2.getZ() >= 2548) {
 										num++;
 										if(new BossHealth().getBar14().getProgress() != 0) {
@@ -95,8 +106,8 @@ public class BossTicket {
 								for (Entity nearEntity : entitylist) {
 									if (nearEntity instanceof Mob) {
 										Location loc2 = nearEntity.getLocation();
-										// 4030 120 2548  3853 75 2728
-										if (loc2.getX() <= 4030 && loc2.getY() <= 120 && loc2.getZ() <= 2728 
+										// 4030 91 2548  3853 75 2728
+										if (loc2.getX() <= 4030 && loc2.getY() <= 91 && loc2.getZ() <= 2728 
 												&& loc2.getX() >= 3853 && loc2.getY() >= 75 && loc2.getZ() >= 2548) {
 											nearEntity.remove();
 										}
@@ -150,8 +161,8 @@ public class BossTicket {
 								if (nearEntity.getType() == EntityType.PLAYER) {
 									Player nearPlayer = (Player) nearEntity;
 									Location loc2 = nearPlayer.getLocation();
-									// 4037 120 2730  4207 75 2547
-									if (loc2.getX() <= 4207 && loc2.getY() <= 120 && loc2.getZ() <= 2730 
+									// 4037 91 2730  4207 75 2547
+									if (loc2.getX() <= 4207 && loc2.getY() <= 91 && loc2.getZ() <= 2730 
 											&& loc2.getX() >= 4037 && loc2.getY() >= 75 && loc2.getZ() >= 2547) {
 										num++;
 										if(new BossHealth().getBar15().getProgress() != 0) {
@@ -168,8 +179,8 @@ public class BossTicket {
 								for (Entity nearEntity : entitylist) {
 									if (nearEntity instanceof Mob) {
 										Location loc2 = nearEntity.getLocation();
-										// 4037 120 2730  4207 75 2547
-										if (loc2.getX() <= 4207 && loc2.getY() <= 120 && loc2.getZ() <= 2730 
+										// 4037 91 2730  4207 75 2547
+										if (loc2.getX() <= 4207 && loc2.getY() <= 91 && loc2.getZ() <= 2730 
 												&& loc2.getX() >= 4037 && loc2.getY() >= 75 && loc2.getZ() >= 2547) {
 											nearEntity.remove();
 										}
@@ -223,8 +234,8 @@ public class BossTicket {
 								if (nearEntity.getType() == EntityType.PLAYER) {
 									Player nearPlayer = (Player) nearEntity;
 									Location loc2 = nearPlayer.getLocation();
-									// 3846 120 2546  4023 75 2369
-									if (loc2.getX() <= 4023 && loc2.getY() <= 120 && loc2.getZ() <= 2546 
+									// 3846 91 2546  4023 75 2369
+									if (loc2.getX() <= 4023 && loc2.getY() <= 91 && loc2.getZ() <= 2546 
 											&& loc2.getX() >= 3846 && loc2.getY() >= 75 && loc2.getZ() >= 2369) {
 										num++;
 										if(new BossHealth().getBar16().getProgress() != 0) {
@@ -241,8 +252,8 @@ public class BossTicket {
 								for (Entity nearEntity : entitylist) {
 									if (nearEntity instanceof Mob) {
 										Location loc2 = nearEntity.getLocation();
-										// 3846 120 2546  4023 75 2369
-										if (loc2.getX() <= 4023 && loc2.getY() <= 120 && loc2.getZ() <= 2546 
+										// 3846 91 2546  4023 75 2369
+										if (loc2.getX() <= 4023 && loc2.getY() <= 91 && loc2.getZ() <= 2546 
 												&& loc2.getX() >= 3846 && loc2.getY() >= 75 && loc2.getZ() >= 2369) {
 											nearEntity.remove();
 										}
@@ -296,8 +307,8 @@ public class BossTicket {
 								if (nearEntity.getType() == EntityType.PLAYER) {
 									Player nearPlayer = (Player) nearEntity;
 									Location loc2 = nearPlayer.getLocation();
-									// 4031 120 2543  4210 75 2366
-									if (loc2.getX() <= 4210 && loc2.getY() <= 120 && loc2.getZ() <= 2543 
+									// 4031 91 2543  4210 75 2366
+									if (loc2.getX() <= 4210 && loc2.getY() <= 91 && loc2.getZ() <= 2543 
 											&& loc2.getX() >= 4031 && loc2.getY() >= 75 && loc2.getZ() >= 2366) {
 										num++;
 										if(new BossHealth().getBar17().getProgress() != 0) {
@@ -314,8 +325,8 @@ public class BossTicket {
 								for (Entity nearEntity : entitylist) {
 									if (nearEntity instanceof Mob) {
 										Location loc2 = nearEntity.getLocation();
-										// 4031 120 2543  4210 75 2366
-										if (loc2.getX() <= 4210 && loc2.getY() <= 120 && loc2.getZ() <= 2543 
+										// 4031 91 2543  4210 75 2366
+										if (loc2.getX() <= 4210 && loc2.getY() <= 91 && loc2.getZ() <= 2543 
 												&& loc2.getX() >= 4031 && loc2.getY() >= 75 && loc2.getZ() >= 236) {
 											nearEntity.remove();
 										}

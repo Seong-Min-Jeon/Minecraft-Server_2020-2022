@@ -1547,29 +1547,29 @@ public class PlayerHitDebuff {
 							}
 
 							if (time == 0) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.0f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 14.0f, 1.0f);
 							} else if (time == 9) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.4f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 14.0f, 1.4f);
 							} else if (time == 18) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 0.9f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 14.0f, 0.9f);
 							} else if (time == 24) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.0f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 14.0f, 1.0f);
 							} else if (time == 27) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.4f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 14.0f, 1.4f);
 							} else if (time == 36) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.1f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 14.0f, 1.1f);
 							} else if (time == 42) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.0f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 14.0f, 1.0f);
 							} else if (time == 45) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.1f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 14.0f, 1.1f);
 							} else if (time == 51) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.2f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 14.0f, 1.2f);
 							} else if (time == 54) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.1f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 14.0f, 1.1f);
 							} else if (time == 60) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.0f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 14.0f, 1.0f);
 							} else if (time == 63) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 0.8f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 14.0f, 0.8f);
 							}
 
 							if (time >= 80) {
@@ -1600,29 +1600,29 @@ public class PlayerHitDebuff {
 							}
 
 							if (time == 0) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.3f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 14.0f, 1.3f);
 							} else if (time == 5) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.2f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 14.0f, 1.2f);
 							} else if (time == 10) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.1f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 14.0f, 1.1f);
 							} else if (time == 15) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.2f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 14.0f, 1.2f);
 							} else if (time == 25) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.1f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 14.0f, 1.1f);
 							} else if (time == 35) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.2f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 14.0f, 1.2f);
 							} else if (time == 45) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.1f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 14.0f, 1.1f);
 							} else if (time == 50) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.2f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 14.0f, 1.2f);
 							} else if (time == 60) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.3f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 14.0f, 1.3f);
 							} else if (time == 65) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 0.9f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 14.0f, 0.9f);
 							} else if (time == 70) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 0.8f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 14.0f, 0.8f);
 							} else if (time == 75) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 0.9f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 14.0f, 0.9f);
 							}
 
 							if (time >= 90) {
@@ -1655,29 +1655,29 @@ public class PlayerHitDebuff {
 							}
 
 							if (time == 0) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.0f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 14.0f, 1.0f);
 							} else if (time == 9) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.4f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 14.0f, 1.4f);
 							} else if (time == 18) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 0.9f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 14.0f, 0.9f);
 							} else if (time == 24) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.0f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 14.0f, 1.0f);
 							} else if (time == 27) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.4f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 14.0f, 1.4f);
 							} else if (time == 36) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.1f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 14.0f, 1.1f);
 							} else if (time == 42) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.0f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 14.0f, 1.0f);
 							} else if (time == 45) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.1f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 14.0f, 1.1f);
 							} else if (time == 51) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.2f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 14.0f, 1.2f);
 							} else if (time == 54) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.1f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 14.0f, 1.1f);
 							} else if (time == 60) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 1.0f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 14.0f, 1.0f);
 							} else if (time == 63) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 6.0f, 0.8f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 14.0f, 0.8f);
 							}
 
 							if (time >= 80) {

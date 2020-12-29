@@ -352,7 +352,7 @@ public class Main extends JavaPlugin implements Listener{
 		bar.setVisible(false);
 		bar.addPlayer(player);
 		BossBar bar2 = Bukkit.createBossBar(ChatColor.BOLD + "" + ChatColor.DARK_PURPLE + "강화확률 증가", BarColor.PURPLE, BarStyle.SOLID);
-		bar2.setVisible(true);
+		bar2.setVisible(false);
 		bar2.addPlayer(player);
 		BossBar bar3 = Bukkit.createBossBar(ChatColor.BOLD + "" + ChatColor.DARK_GREEN + "에메랄드 획득량 증가 2배(전투)", BarColor.GREEN, BarStyle.SOLID);
 		bar3.setVisible(false);
@@ -606,102 +606,18 @@ public class Main extends JavaPlugin implements Listener{
 //		var2.setItemMeta(var2Im);
 //		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var2);}
 		
-//		ItemStack var1 = new ItemStack(Material.OAK_PLANKS);
-//		ItemMeta var1Im = var1.getItemMeta();
-//		var1Im.setLocalizedName("866,24,47,346,429,500,100,100,100,547,250");
-//		var1Im.setDisplayName(ChatColor.DARK_RED + "일루시데이터");
-//		ArrayList<String> var1Lore = new ArrayList();
-//		var1Lore.add(ChatColor.GRAY + "레벨 제한: 250");
-//		var1Lore.add(ChatColor.GRAY + " ");
-//		var1Lore.add(ChatColor.GRAY + "부유성 50층 보스에게 드랍된 마검");
-//		var1Lore.add(ChatColor.GRAY + "평범한 마스터 클래스의 검보다도 성능이 좋다.");
-//		var1Lore.add(ChatColor.GRAY + "신의 힘으로 소멸당한 후 복구되었다.");
-//		var1Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-//		var1Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-//		var1Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
-//		var1Im.setUnbreakable(true);
-//		var1Im.setLore(var1Lore);
-//		var1.setItemMeta(var1Im);
-//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var1);}
-//		
-//		ItemStack var2 = new ItemStack(Material.SPRUCE_PLANKS);
-//		ItemMeta var2Im = var2.getItemMeta();
-//		var2Im.setLocalizedName("300,0,0,100,300,200,100,0,0,0,250");
-//		var2Im.setDisplayName(ChatColor.DARK_RED + "다크 리펄서");
-//		ArrayList<String> var2Lore = new ArrayList();
-//		var2Lore.add(ChatColor.GRAY + "레벨 제한: 250");
-//		var2Lore.add(ChatColor.GRAY + " ");
-//		var2Lore.add(ChatColor.GRAY + "크리스탈라이즈 주괴로 만들어진 직검");
-//		var2Lore.add(ChatColor.GRAY + "이름의 뜻은 '어둠을 물리치는 자'이다.");	
-//		var2Lore.add(ChatColor.GRAY + "신의 힘으로 소멸당한 후 복구되었다.");
-//		var2Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-//		var2Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-//		var2Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
-//		var2Im.setUnbreakable(true);
-//		var2Im.setLore(var2Lore);
-//		var2.setItemMeta(var2Im);
-//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var2);}
-//		
-//		ItemStack var3 = new ItemStack(Material.COBBLESTONE_WALL);
-//		ItemMeta var3Im = var3.getItemMeta();
-//		var3Im.setLocalizedName("0,0,0,0,0,699,3,0,1,0,276");
-//		var3Im.setDisplayName(ChatColor.DARK_BLUE + "인류보호자");
-//		ArrayList<String> var3Lore = new ArrayList();
-//		var3Lore.add(ChatColor.GRAY + "레벨 제한: 276");
-//		var3Lore.add(ChatColor.GRAY + " ");
-//		var3Lore.add(ChatColor.GRAY + "제작자: _nanoboost_");
-//		var3Lore.add(ChatColor.GRAY + "신의 힘으로 소멸당한 후 복구되었다.");
-//		var3Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-//		var3Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-//		var3Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
-//		var3Im.setUnbreakable(true);
-//		var3Im.setLore(var3Lore);
-//		var3.setItemMeta(var3Im);
-//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var3);}
-//		
-//		ItemStack var4 = new ItemStack(Material.JUNGLE_PLANKS);
-//		ItemMeta var4Im = var4.getItemMeta();
-//		var4Im.setLocalizedName("1021,544,609,184,215,0,7,0,0,1124,95");
-//		var4Im.setDisplayName(ChatColor.DARK_BLUE + "인류학살자");
-//		ArrayList<String> var4Lore = new ArrayList();
-//		var4Lore.add(ChatColor.GRAY + "레벨 제한: 95");
-//		var4Lore.add(ChatColor.GRAY + " ");
-//		var4Lore.add(ChatColor.GRAY + "제작자: _nanoboost_");
-//		var4Lore.add(ChatColor.GRAY + "신의 힘으로 소멸당한 후 복구되었다.");
-//		var4Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-//		var4Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-//		var4Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
-//		var4Im.setUnbreakable(true);
-//		var4Im.setLore(var4Lore);
-//		var4.setItemMeta(var4Im);
-//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var4);}
-//		
-//		ItemStack var5 = new ItemStack(Material.CYAN_WOOL);
-//		ItemMeta var5Im = var5.getItemMeta();
-//		var5Im.setLocalizedName("859,100,0,100,10,200,100,100,100,858,200");
-//		var5Im.setDisplayName(ChatColor.AQUA + "요정여왕의 검");
-//		ArrayList<String> var5Lore = new ArrayList();
-//		var5Lore.add(ChatColor.GRAY + "레벨 제한: 200");
-//		var5Lore.add(ChatColor.GRAY + " ");
-//		var5Lore.add(ChatColor.GRAY + "요정여왕이 사용하는 검이다.");
-//		var5Lore.add(ChatColor.GRAY + "신의 힘으로 소멸당한 후 복구되었다.");
-//		var5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-//		var5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-//		var5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
-//		var5Im.setUnbreakable(true);
-//		var5Im.setLore(var5Lore);
-//		var5.setItemMeta(var5Im);
-//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var5);}
 		
-//		ItemStack helmet = new ItemStack(Material.IRON_HELMET);
+//		ItemStack helmet = new ItemStack(Material.GOLDEN_HELMET);
 //		ItemMeta helmetIm = helmet.getItemMeta();
-//		helmetIm.setLocalizedName("0,0,1000,0,200,500,0,0,0,150,380");
-//		helmetIm.setDisplayName(ChatColor.GREEN + "F-Killer 헬멧");
+//		helmetIm.setLocalizedName("500,500,500,500,500,500,500,500,500,500,500");
+//		helmetIm.setDisplayName(ChatColor.GREEN + "투기장의 지배자 헬멧");
 //		ArrayList<String> helmetLore = new ArrayList();
-//		helmetLore.add(ChatColor.GRAY + "레벨 제한: 380");
+//		helmetLore.add(ChatColor.GRAY + "레벨 제한: 500");
 //		helmetLore.add(ChatColor.GRAY + " ");
-//		helmetLore.add(ChatColor.GRAY + "벌레를 학살하기 위해 만들어진 헬멧");
+//		helmetLore.add(ChatColor.GRAY + "투기장을 평정한 사람만이 착용할 수 있다는 헬멧");
 //		helmetLore.add(ChatColor.GRAY + "(세트 아이템)");
+//		helmetLore.add(ChatColor.GRAY + " ");
+//		helmetLore.add(ChatColor.BLUE + "-전투 경험치 100% 증가(세트 효과)");
 //		helmetIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 //		helmetIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 //		helmetIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -710,15 +626,17 @@ public class Main extends JavaPlugin implements Listener{
 //		helmet.setItemMeta(helmetIm);
 //		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(helmet);}
 //
-//		ItemStack chestplate = new ItemStack(Material.IRON_CHESTPLATE);
+//		ItemStack chestplate = new ItemStack(Material.GOLDEN_CHESTPLATE);
 //		ItemMeta chestplateIm = chestplate.getItemMeta();
-//		chestplateIm.setLocalizedName("0,0,1000,0,200,500,0,0,0,150,380");
-//		chestplateIm.setDisplayName(ChatColor.GREEN + "F-Killer 갑옷");
+//		chestplateIm.setLocalizedName("500,500,500,500,500,500,500,500,500,500,500");
+//		chestplateIm.setDisplayName(ChatColor.GREEN + "투기장의 지배자 갑옷");
 //		ArrayList<String> chestplateLore = new ArrayList();
-//		chestplateLore.add(ChatColor.GRAY + "레벨 제한: 380");
+//		chestplateLore.add(ChatColor.GRAY + "레벨 제한: 500");
 //		chestplateLore.add(ChatColor.GRAY + " ");
-//		chestplateLore.add(ChatColor.GRAY + "벌레를 학살하기 위해 만들어진 갑옷");
+//		chestplateLore.add(ChatColor.GRAY + "투기장을 평정한 사람만이 착용할 수 있다는 갑옷");
 //		chestplateLore.add(ChatColor.GRAY + "(세트 아이템)");
+//		chestplateLore.add(ChatColor.GRAY + " ");
+//		chestplateLore.add(ChatColor.BLUE + "-전투 경험치 100% 증가(세트 효과)");
 //		chestplateIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 //		chestplateIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 //		chestplateIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -727,15 +645,17 @@ public class Main extends JavaPlugin implements Listener{
 //		chestplate.setItemMeta(chestplateIm);
 //		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(chestplate);}
 //
-//		ItemStack leggings = new ItemStack(Material.IRON_LEGGINGS);
+//		ItemStack leggings = new ItemStack(Material.GOLDEN_LEGGINGS);
 //		ItemMeta leggingsIm = leggings.getItemMeta();
-//		leggingsIm.setLocalizedName("0,0,1000,0,200,500,0,0,0,150,380");
-//		leggingsIm.setDisplayName(ChatColor.GREEN + "F-Killer 각반");
+//		leggingsIm.setLocalizedName("500,500,500,500,500,500,500,500,500,500,500");
+//		leggingsIm.setDisplayName(ChatColor.GREEN + "투기장의 지배자 각반");
 //		ArrayList<String> leggingsLore = new ArrayList();
-//		leggingsLore.add(ChatColor.GRAY + "레벨 제한: 380");
+//		leggingsLore.add(ChatColor.GRAY + "레벨 제한: 500");
 //		leggingsLore.add(ChatColor.GRAY + " ");
-//		leggingsLore.add(ChatColor.GRAY + "벌레를 학살하기 위해 만들어진 각반");
+//		leggingsLore.add(ChatColor.GRAY + "투기장을 평정한 사람만이 착용할 수 있다는 각반");
 //		leggingsLore.add(ChatColor.GRAY + "(세트 아이템)");
+//		leggingsLore.add(ChatColor.GRAY + " ");
+//		leggingsLore.add(ChatColor.BLUE + "-전투 경험치 100% 증가(세트 효과)");
 //		leggingsIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 //		leggingsIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 //		leggingsIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -744,15 +664,17 @@ public class Main extends JavaPlugin implements Listener{
 //		leggings.setItemMeta(leggingsIm);
 //		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(leggings);}
 //
-//		ItemStack boots = new ItemStack(Material.IRON_BOOTS);
+//		ItemStack boots = new ItemStack(Material.GOLDEN_BOOTS);
 //		ItemMeta bootsIm = boots.getItemMeta();
-//		bootsIm.setLocalizedName("0,0,1000,0,200,500,0,0,0,150,380");
-//		bootsIm.setDisplayName(ChatColor.GREEN + "F-Killer 신발");
+//		bootsIm.setLocalizedName("500,500,500,500,500,500,500,500,500,500,500");
+//		bootsIm.setDisplayName(ChatColor.GREEN + "투기장의 지배자 신발");
 //		ArrayList<String> bootsLore = new ArrayList();
-//		bootsLore.add(ChatColor.GRAY + "레벨 제한: 380");
+//		bootsLore.add(ChatColor.GRAY + "레벨 제한: 500");
 //		bootsLore.add(ChatColor.GRAY + " ");
-//		bootsLore.add(ChatColor.GRAY + "벌레를 학살하기 위해 만들어진 신발");
+//		bootsLore.add(ChatColor.GRAY + "투기장을 평정한 사람만이 착용할 수 있다는 신발");
 //		bootsLore.add(ChatColor.GRAY + "(세트 아이템)");
+//		bootsLore.add(ChatColor.GRAY + " ");
+//		bootsLore.add(ChatColor.BLUE + "-전투 경험치 100% 증가(세트 효과)");
 //		bootsIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 //		bootsIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 //		bootsIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -760,7 +682,6 @@ public class Main extends JavaPlugin implements Listener{
 //		bootsIm.setLore(bootsLore);
 //		boots.setItemMeta(bootsIm);
 //		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(boots);}
-		
 		
 //		ItemStack weapon = new ItemStack(Material.BIRCH_SLAB);
 //		ItemMeta weaponIm = weapon.getItemMeta();
@@ -2520,6 +2441,7 @@ public class Main extends JavaPlugin implements Listener{
 		} catch(Exception e) {
 			
 		}
+		// 패널티
 		try { 
 			Player player = (Player)event.getEntity();		
 			if(player.getInventory().contains(Material.EMERALD)) {
@@ -4317,47 +4239,47 @@ public class Main extends JavaPlugin implements Listener{
 				}
 				// 데빌
 				if (player.getInventory().contains(Material.GRAY_DYE)) {
-					event.setDamage(event.getDamage() + num * 5);
+					event.setDamage(event.getDamage() + ((num*num)/10) + num);
 				}
 				// 엔젤
 				if (player.getInventory().contains(Material.PINK_DYE)) {
-					event.setDamage(event.getDamage() + num * 4);
+					event.setDamage(event.getDamage() + ((num*num)/15) + num);
 				}
 				// 대행자
 				if (player.getInventory().contains(Material.LIME_DYE)) {
-					event.setDamage(event.getDamage() + num * 4.5);
+					event.setDamage(event.getDamage() + ((num*num)/13) + num);
 				}
 				// 그림자 무사
 				if (player.getInventory().contains(Material.YELLOW_DYE)) {
-					event.setDamage(event.getDamage() + num * 0.5);
+					event.setDamage(event.getDamage() + ((num*num)/40) + num);
 				}
 				// 버서커
 				if (player.getInventory().contains(Material.LIGHT_BLUE_DYE)) {
-					event.setDamage(event.getDamage() + num * 2);
+					event.setDamage(event.getDamage() + ((num*num)/30) + num);
 				}
 				// 그림 리퍼		
 				if (player.getInventory().contains(Material.ORANGE_DYE)) {
-					event.setDamage(event.getDamage() + num * 3);
+					event.setDamage(event.getDamage() + ((num*num)/25) + num);
 				}
 				// 군인	
 				if (player.getInventory().contains(Material.MAGENTA_DYE)) {
-					event.setDamage(event.getDamage() + num * 2);
+					event.setDamage(event.getDamage() + ((num*num)/30) + num);
 				}
 				// 마인
 				if (player.getInventory().contains(Material.BLUE_DYE)) {
-					event.setDamage(event.getDamage() + num * 30);
+					event.setDamage(event.getDamage() + ((num*num)/5) + num);
 				}
 				// 팔라딘		
 				if (player.getInventory().contains(Material.BROWN_DYE)) {
-					event.setDamage(event.getDamage() + num * 25);
+					event.setDamage(event.getDamage() + ((num*num)/7) + num);
 				}
 				// 용기사
 				if (player.getInventory().contains(Material.BLACK_DYE)) {
-					event.setDamage(event.getDamage() + num * 28);
+					event.setDamage(event.getDamage() + ((num*num)/6) + num);
 				}
 				// 대대장
 				if (player.getInventory().contains(Material.INK_SAC)) {
-					event.setDamage(event.getDamage() + num * 15);
+					event.setDamage(event.getDamage() + ((num*num)/8) + num);
 				}
 			}
 		} catch(Exception e) {
@@ -4384,6 +4306,7 @@ public class Main extends JavaPlugin implements Listener{
 				int num = 0;
 				num += new SpecialEffect().a1(player);
 				num += new SpecialEffect().a9(player);
+				num += new SpecialEffect().a15(player);
 				
 				if(rnd.nextInt(100) < num) {
 					ItemStack mana = new ItemStack(Material.HEART_OF_THE_SEA);
@@ -4409,6 +4332,7 @@ public class Main extends JavaPlugin implements Listener{
 				// 흡혈
 				int addHealthPercent = 0;
 				addHealthPercent += new SpecialEffect().c1(player);
+				addHealthPercent += new SpecialEffect().a13(player);
 				
 				int addHealth = (int) (event.getDamage() * addHealthPercent / 100); 
 				
@@ -4456,6 +4380,7 @@ public class Main extends JavaPlugin implements Listener{
 				// 흡혈
 				int addHealthPercent = 0;
 				addHealthPercent += new SpecialEffect().c1(player);
+				addHealthPercent += new SpecialEffect().a13(player);
 				
 				int addHealth = (int) (event.getDamage() * addHealthPercent / 100); 
 				
@@ -4610,6 +4535,7 @@ public class Main extends JavaPlugin implements Listener{
 				num += new SpecialEffect().a7(player);
 				num += new SpecialEffect().l1(player);
 				num += new SpecialEffect().b2(player);
+				num += new SpecialEffect().a14(player);
 				
 				if(num > 70) {
 					num = 70;
@@ -5237,7 +5163,7 @@ public class Main extends JavaPlugin implements Listener{
 							new BossHealth().getBar12().removePlayer(p);
 						}
 					} else {
-						new BossHealth().getBar12().setProgress((boss.getHealth()-event.getFinalDamage()) / 1800000.0);
+						new BossHealth().getBar12().setProgress((boss.getHealth()-event.getFinalDamage()) / 1300000.0);
 					}
 				}
 				// 레티아리우스

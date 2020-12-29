@@ -4637,13 +4637,13 @@ public class MobLoot {
 		int colP = rnd.nextInt(100);
 		if(colP < 4) {
 			player.getInventory().addItem(col1);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "C급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
+			player.sendMessage(ChatColor.GRAY + "C급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
 		} else if(colP < 7) {
 			player.getInventory().addItem(col2);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "B급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
+			player.sendMessage(ChatColor.WHITE + "B급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
 		} else if(colP < 9) {
 			player.getInventory().addItem(col3);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "A급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+			player.sendMessage(ChatColor.YELLOW + "A급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
 		} else if(colP == 9) {
 			player.getInventory().addItem(col4);
 			player.sendMessage(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
@@ -4732,13 +4732,13 @@ public class MobLoot {
 		int colP = rnd.nextInt(100);
 		if(colP < 4) {
 			player.getInventory().addItem(col1);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "C급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
+			player.sendMessage(ChatColor.GRAY + "C급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
 		} else if(colP < 7) {
 			player.getInventory().addItem(col2);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "B급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
+			player.sendMessage(ChatColor.WHITE + "B급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
 		} else if(colP < 9) {
 			player.getInventory().addItem(col3);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "A급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+			player.sendMessage(ChatColor.YELLOW + "A급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
 		} else if(colP == 9) {
 			player.getInventory().addItem(col4);
 			player.sendMessage(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
@@ -4827,13 +4827,13 @@ public class MobLoot {
 		int colP = rnd.nextInt(100);
 		if(colP < 4) {
 			player.getInventory().addItem(col1);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "C급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
+			player.sendMessage(ChatColor.GRAY + "C급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
 		} else if(colP < 7) {
 			player.getInventory().addItem(col2);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "B급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
+			player.sendMessage(ChatColor.WHITE + "B급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
 		} else if(colP < 9) {
 			player.getInventory().addItem(col3);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "A급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+			player.sendMessage(ChatColor.YELLOW + "A급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
 		} else if(colP == 9) {
 			player.getInventory().addItem(col4);
 			player.sendMessage(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
@@ -4922,13 +4922,13 @@ public class MobLoot {
 		int colP = rnd.nextInt(100);
 		if(colP < 4) {
 			player.getInventory().addItem(col1);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "C급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
+			player.sendMessage(ChatColor.GRAY + "C급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
 		} else if(colP < 7) {
 			player.getInventory().addItem(col2);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "B급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
+			player.sendMessage(ChatColor.WHITE + "B급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
 		} else if(colP < 9) {
 			player.getInventory().addItem(col3);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "A급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+			player.sendMessage(ChatColor.YELLOW + "A급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
 		} else if(colP == 9) {
 			player.getInventory().addItem(col4);
 			player.sendMessage(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
@@ -5017,13 +5017,13 @@ public class MobLoot {
 		int colP = rnd.nextInt(100);
 		if(colP < 4) {
 			player.getInventory().addItem(col1);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "C급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
+			player.sendMessage(ChatColor.GRAY + "C급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
 		} else if(colP < 7) {
 			player.getInventory().addItem(col2);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "B급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
+			player.sendMessage(ChatColor.WHITE + "B급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
 		} else if(colP < 9) {
 			player.getInventory().addItem(col3);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "A급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+			player.sendMessage(ChatColor.YELLOW + "A급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
 		} else if(colP == 9) {
 			player.getInventory().addItem(col4);
 			player.sendMessage(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");

@@ -42,7 +42,7 @@ public class InteractVillager {
 		}
 		
 		return vil0() || vil1() || vil2() || vil3() || vil4() || vil5() || vil6() || vil7() || vil8() || vil9() || vil10() || vil11() || vil12() || vil13() || vil14()
-				|| vil15() || vil16() || vil17();
+				|| vil15() || vil16() || vil17() || vil18();
 	}
 	
 	public boolean vil0() {
@@ -447,11 +447,34 @@ public class InteractVillager {
 				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===대사막12===")) {
 					int qNum = cb.getNum(player);
 					cb.mq45_22(player, qNum+1);	
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===대사막13===")) {
+					int qNum = cb.getNum(player);
+					cb.mq45_24(player, qNum+1);	
 				} else {
 					player.sendMessage("주민: 여기는 무료 철광산이에요.");
 				}
 			} catch(Exception e) {
 				player.sendMessage("주민: 여기는 무료 철광산이에요.");
+			}
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean vil18() {
+		//사막 연구원 333 1087  335 1089
+		if(loc.getX() <= 335 && loc.getZ() <= 1089
+				&& loc.getX() >= 333 && loc.getZ() >= 1087) {
+			QuestBoard cb = new QuestBoard();
+			try {
+				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===대사막14===")) {
+					int qNum = cb.getNum(player);
+					cb.mq45_25(player, qNum+1);	
+				} else {
+					player.sendMessage("연구원: 용건이 없으면 비켜주십시오.");
+				}
+			} catch(Exception e) {
+				player.sendMessage("연구원: 용건이 없으면 비켜주십시오.");
 			}
 			return true;
 		}

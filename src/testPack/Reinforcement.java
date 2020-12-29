@@ -15,11 +15,11 @@ import org.bukkit.inventory.meta.ItemMeta;
 public class Reinforcement {
 	
 	Random rnd = new Random();
-	private final int percent = 18; //30  18
-	private final int percentDia = 33; //50  33
-	private final int percentArmor = 42; //50  42
-	private final int percentArrow = 6000; //10000  6000
-	private final int percentArrowKami = 70; //100  70
+	private final int percent = 30; //30  18
+	private final int percentDia = 50; //50  33
+	private final int percentArmor = 50; //50  42
+	private final int percentArrow = 10000; //10000  6000
+	private final int percentArrowKami = 100; //100  70
 
 	public ItemMeta coalReinWeapon(Player player, ItemMeta item, ItemMeta itemResource) {
 		
