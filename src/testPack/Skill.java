@@ -3884,7 +3884,7 @@ public class Skill {
 					}
 					player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 100, 1, true, false, false));
 					player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 2, true, false, false));
-					player.sendMessage(ChatColor.GREEN + "[스킬]용의 버프가 발동됩니다.");
+					player.sendMessage(ChatColor.GREEN + "[스킬]드래곤의 가호가 발동됩니다.");
 					player.sendMessage(ChatColor.GREEN + "5초간 아군에게 저항이 부여됩니다.");
 					player.sendMessage(ChatColor.GREEN + "5초간 아군에게 추가 체력이 부여됩니다.");
 					world.playSound(loc, Sound.BLOCK_CHAIN_BREAK, 2.0f, 0.5f);	

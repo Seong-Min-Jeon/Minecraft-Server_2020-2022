@@ -1071,7 +1071,11 @@ public class TPMobSpawn {
 		if (loc.getX() == 3697.5 && loc.getY() == 52 && loc.getZ() == 2858.5) {
 			player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "여기가 너의 무덤이 될 것이다.");
 			
-			player.getInventory().remove(Material.TNT);
+			try {
+				player.getInventory().remove(Material.TNT);
+			} catch(Exception e) {
+				
+			}
 
 			player.teleport(new Location(player.getWorld(), 3697.4, 52, 2858.8));
 			int num = 0;

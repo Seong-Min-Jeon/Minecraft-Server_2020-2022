@@ -2869,7 +2869,7 @@ public class QuestBoard {
 	public void mq45_25(Player player, int num) {
 		if(num>=1) {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
-			es.giveExp(player, 25000000);
+			es.giveExp(player, 24000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			msg.msg(player, "연구원: 흐음 여긴 어떤 일이시죠?%연구원: 당연히 성물을 찾아 오셨겠죠.%연구원: 다른 사람들에게는 성물이라고 했지만..%연구원: 연구원들 사이에선 성물이 아니라고 보고 있긴 합니다.%"
 					+ "연구원: 굉장히 불길하고 어두운 힘이 느껴지는데 저희가 알아낼 수 있는 부분이 없었습니다.%연구원: 모험가님이 가져가신다면 그냥 드리겠습니다.%연구원: 저희도 이걸 처리할 수 있다면 감사하죠.%"
@@ -2884,6 +2884,8 @@ public class QuestBoard {
 			reinIm.setLore(reinLore);
 			rein.setItemMeta(reinIm);
 			player.getInventory().addItem(rein);
+			QuestBoard qb = new QuestBoard();
+			qb.mq45_26(player, 0);
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
@@ -2895,6 +2897,34 @@ public class QuestBoard {
 		Score score2 = obj.getScore("발굴 현장에서 연구원과 대화");
 		score2.setScore(2);
 		Score score3 = obj.getScore("위치: 334,64,1088");
+		score3.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/1)");
+		score4.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq45_26(Player player, int num) {
+		if(num>=1) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 25000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "니세리나: 알고 있다.%니세리나: 5km 밖에서부터 기척을 느꼈으니까.%니세리나: 그래서 용건이 뭐지?%니세리나: 그래 마법탑의 카타리나와 닮았다고?%니세리나: 그야 내가 그녀의 언니이기 때문이지.%"
+					+ "니세리나: 용건이 끝났다면 이제 가봐라.%§7그런 문제가 아니라 성물을 봐달라고 한다.%니세리나: 훗, 알고 있지.%니세리나: 내가 바로 그 성물을 봉인한 사람이니까.%니세리나: 놀라지 말거라.%"
+					+ "니세리나: 내가 이 땅 최고의 마법사니까.%니세리나: 하지만 내가 너무 강력한 봉인을 해버렸다.%니세리나: 그래서 나도 봉인을 풀 수 없어.%니세리나: 내 IQ300의 두뇌가 말하는군.%"
+					+ "니세리나: 이 성물은 그냥 사용해도 된다.%니세리나: 믿어도 된다.%니세리나: 난 아인슈타인과 뉴턴의 스승이니까..!%니세리나: 아마도 봉인된 성물의 힘은 약화되어서..%"
+					+ "니세리나: §d달의 힘이 깃든 검+§f, §d태양의 힘이 깃든 검+§f 이 두가지 무기를 초월할 수 있을 것 같군.%니세리나: 칫. 내가 너무 강력한 봉인을 해서 이정도가 한계같군.%"
+					+ "니세리나: 내가 너무 강해서 미안하다.%니세리나: 이걸 알려준 김에 부탁을 하나 하지.%니세리나: 사막 남쪽 바다쪽을 보면 외딴 섬이 4개 있다네.%니세리나: 거기를 갔다와주게.");
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 45장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===대사막15===");
+		score.setScore(3);
+		Score score2 = obj.getScore("니세리나와 대화");
+		score2.setScore(2);
+		Score score3 = obj.getScore("위치: -113,51,1866");
 		score3.setScore(1);
 		Score score4 = obj.getScore("(" + num + "/1)");
 		score4.setScore(0);

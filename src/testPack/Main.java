@@ -2218,10 +2218,12 @@ public class Main extends JavaPlugin implements Listener{
 	@EventHandler
 	public void reSpawn(PlayerRespawnEvent event) {
 		try {
-			Player player = (Player)event.getPlayer();
+			Player player = (Player) event.getPlayer();
 			
 			try {				
-				player.setExp(0);
+				if(!(new Colosseum().colosseum(player))) {
+					player.setExp(0);
+				}
 			} catch(Exception e10) {
 
 			}
@@ -2443,78 +2445,80 @@ public class Main extends JavaPlugin implements Listener{
 		}
 		// 패널티
 		try { 
-			Player player = (Player)event.getEntity();		
-			if(player.getInventory().contains(Material.EMERALD)) {
-				for (ItemStack is : player.getInventory().getContents()) {
-					if(is == null) continue;
-				    if (is.getType() == Material.EMERALD) {			
-				         is.setAmount(is.getAmount()/3 + 1);
-				    }
+			Player player = (Player)event.getEntity();
+			if(!(new Colosseum().colosseum(player))) {
+				if(player.getInventory().contains(Material.EMERALD)) {
+					for (ItemStack is : player.getInventory().getContents()) {
+						if(is == null) continue;
+					    if (is.getType() == Material.EMERALD) {			
+					         is.setAmount(is.getAmount()/3 + 1);
+					    }
+					}
 				}
-			}
-			if(player.getInventory().contains(Material.EMERALD_BLOCK)) {
-				for (ItemStack is : player.getInventory().getContents()) {
-					if(is == null) continue;
-				    if (is.getType() == Material.EMERALD_BLOCK) {			
-				         is.setAmount(is.getAmount()/3 + 1);
-				    }
+				if(player.getInventory().contains(Material.EMERALD_BLOCK)) {
+					for (ItemStack is : player.getInventory().getContents()) {
+						if(is == null) continue;
+					    if (is.getType() == Material.EMERALD_BLOCK) {			
+					         is.setAmount(is.getAmount()/3 + 1);
+					    }
+					}
 				}
-			}
-			if(player.getInventory().contains(Material.SCUTE)) {
-				for (ItemStack is : player.getInventory().getContents()) {
-					if(is == null) continue;
-				    if (is.getType() == Material.SCUTE) {			
-				         is.setAmount(is.getAmount()/3 + 1);
-				    }
+				if(player.getInventory().contains(Material.SCUTE)) {
+					for (ItemStack is : player.getInventory().getContents()) {
+						if(is == null) continue;
+					    if (is.getType() == Material.SCUTE) {			
+					         is.setAmount(is.getAmount()/3 + 1);
+					    }
+					}
 				}
-			}
-			if(player.getInventory().contains(Material.RABBIT_HIDE)) {
-				for (ItemStack is : player.getInventory().getContents()) {
-					if(is == null) continue;
-				    if (is.getType() == Material.RABBIT_HIDE) {			
-				         is.setAmount(is.getAmount()/3 + 1);
-				    }
+				if(player.getInventory().contains(Material.RABBIT_HIDE)) {
+					for (ItemStack is : player.getInventory().getContents()) {
+						if(is == null) continue;
+					    if (is.getType() == Material.RABBIT_HIDE) {			
+					         is.setAmount(is.getAmount()/3 + 1);
+					    }
+					}
 				}
-			}
-			if(player.getInventory().contains(Material.RABBIT_FOOT)) {
-				for (ItemStack is : player.getInventory().getContents()) {
-					if(is == null) continue;
-				    if (is.getType() == Material.RABBIT_FOOT) {			
-				         is.setAmount(is.getAmount()/3 + 1);
-				    }
+				if(player.getInventory().contains(Material.RABBIT_FOOT)) {
+					for (ItemStack is : player.getInventory().getContents()) {
+						if(is == null) continue;
+					    if (is.getType() == Material.RABBIT_FOOT) {			
+					         is.setAmount(is.getAmount()/3 + 1);
+					    }
+					}
 				}
-			}
 
-			if(player.getInventory().contains(Material.COAL_ORE)) {
-				for (ItemStack is : player.getInventory().getContents()) {
-					if(is == null) continue;
-				    if (is.getType() == Material.COAL_ORE) {			
-				         is.setAmount(is.getAmount()/3);
-				    }
+				if(player.getInventory().contains(Material.COAL_ORE)) {
+					for (ItemStack is : player.getInventory().getContents()) {
+						if(is == null) continue;
+					    if (is.getType() == Material.COAL_ORE) {			
+					         is.setAmount(is.getAmount()/3);
+					    }
+					}
 				}
-			}
-			if(player.getInventory().contains(Material.IRON_ORE)) {
-				for (ItemStack is : player.getInventory().getContents()) {
-					if(is == null) continue;
-				    if (is.getType() == Material.IRON_ORE) {			
-				         is.setAmount(is.getAmount()/3);
-				    }
+				if(player.getInventory().contains(Material.IRON_ORE)) {
+					for (ItemStack is : player.getInventory().getContents()) {
+						if(is == null) continue;
+					    if (is.getType() == Material.IRON_ORE) {			
+					         is.setAmount(is.getAmount()/3);
+					    }
+					}
 				}
-			}
-			if(player.getInventory().contains(Material.GOLD_ORE)) {
-				for (ItemStack is : player.getInventory().getContents()) {
-					if(is == null) continue;
-				    if (is.getType() == Material.GOLD_ORE) {			
-				         is.setAmount(is.getAmount()/3);
-				    }
+				if(player.getInventory().contains(Material.GOLD_ORE)) {
+					for (ItemStack is : player.getInventory().getContents()) {
+						if(is == null) continue;
+					    if (is.getType() == Material.GOLD_ORE) {			
+					         is.setAmount(is.getAmount()/3);
+					    }
+					}
 				}
-			}
-			if(player.getInventory().contains(Material.DIAMOND_ORE)) {
-				for (ItemStack is : player.getInventory().getContents()) {
-					if(is == null) continue;
-				    if (is.getType() == Material.DIAMOND_ORE) {			
-				         is.setAmount(is.getAmount()/3);
-				    }
+				if(player.getInventory().contains(Material.DIAMOND_ORE)) {
+					for (ItemStack is : player.getInventory().getContents()) {
+						if(is == null) continue;
+					    if (is.getType() == Material.DIAMOND_ORE) {			
+					         is.setAmount(is.getAmount()/3);
+					    }
+					}
 				}
 			}
 		} catch(Exception e7) {
@@ -3266,6 +3270,13 @@ public class Main extends JavaPlugin implements Listener{
 	
 	@EventHandler
 	public void onHit(EntityDamageByEntityEvent event){
+		try {
+			if(event.getEntity() instanceof LivingEntity) {
+				((LivingEntity) event.getEntity()).setArrowsInBody(0);
+			}
+		} catch(Exception e) {
+			
+		}
 		try {
 			if(event.getDamager() instanceof Player) {
 				Player player = (Player) event.getDamager();
@@ -5037,7 +5048,7 @@ public class Main extends JavaPlugin implements Listener{
 							new BossHealth().getBar3().removePlayer(p);
 						}
 					} else {
-						new BossHealth().getBar3().setProgress((boss.getHealth()-event.getFinalDamage()) / 550000.0);
+						new BossHealth().getBar3().setProgress((boss.getHealth()-event.getFinalDamage()) / 600000.0);
 					}
 				}
 				// 탑 3층
@@ -5051,7 +5062,7 @@ public class Main extends JavaPlugin implements Listener{
 							new BossHealth().getBar4().removePlayer(p);
 						}
 					} else {
-						new BossHealth().getBar4().setProgress((boss.getHealth()-event.getFinalDamage()) / 1000000.0);
+						new BossHealth().getBar4().setProgress((boss.getHealth()-event.getFinalDamage()) / 1200000.0);
 					}
 				}
 				// 아덴
@@ -5079,7 +5090,7 @@ public class Main extends JavaPlugin implements Listener{
 							new BossHealth().getBar6().removePlayer(p);
 						}
 					} else {
-						new BossHealth().getBar6().setProgress((boss.getHealth()-event.getFinalDamage()) / 60000.0);
+						new BossHealth().getBar6().setProgress((boss.getHealth()-event.getFinalDamage()) / 100000.0);
 					}
 				}
 				// 케흘렌
@@ -5093,7 +5104,7 @@ public class Main extends JavaPlugin implements Listener{
 							new BossHealth().getBar7().removePlayer(p);
 						}
 					} else {
-						new BossHealth().getBar7().setProgress((boss.getHealth()-event.getFinalDamage()) / 70000.0);
+						new BossHealth().getBar7().setProgress((boss.getHealth()-event.getFinalDamage()) / 120000.0);
 					}
 				}
 				// 발로르
@@ -5107,7 +5118,7 @@ public class Main extends JavaPlugin implements Listener{
 							new BossHealth().getBar8().removePlayer(p);
 						}
 					} else {
-						new BossHealth().getBar8().setProgress((boss.getHealth()-event.getFinalDamage()) / 150000.0);
+						new BossHealth().getBar8().setProgress((boss.getHealth()-event.getFinalDamage()) / 200000.0);
 					}
 				}
 				// 티타니아
@@ -5121,7 +5132,7 @@ public class Main extends JavaPlugin implements Listener{
 							new BossHealth().getBar9().removePlayer(p);
 						}
 					} else {
-						new BossHealth().getBar9().setProgress((boss.getHealth()-event.getFinalDamage()) / 30000.0);
+						new BossHealth().getBar9().setProgress((boss.getHealth()-event.getFinalDamage()) / 35000.0);
 					}
 				}
 				// 오베론
@@ -5135,7 +5146,7 @@ public class Main extends JavaPlugin implements Listener{
 							new BossHealth().getBar10().removePlayer(p);
 						}
 					} else {
-						new BossHealth().getBar10().setProgress((boss.getHealth()-event.getFinalDamage()) / 30000.0);
+						new BossHealth().getBar10().setProgress((boss.getHealth()-event.getFinalDamage()) / 35000.0);
 					}
 				}
 				// 아라크네
@@ -5149,7 +5160,7 @@ public class Main extends JavaPlugin implements Listener{
 							new BossHealth().getBar11().removePlayer(p);
 						}
 					} else {
-						new BossHealth().getBar11().setProgress((boss.getHealth()-event.getFinalDamage()) / 800000.0);
+						new BossHealth().getBar11().setProgress((boss.getHealth()-event.getFinalDamage()) / 1200000.0);
 					}
 				}
 				// 석상 파수꾼
@@ -5163,7 +5174,7 @@ public class Main extends JavaPlugin implements Listener{
 							new BossHealth().getBar12().removePlayer(p);
 						}
 					} else {
-						new BossHealth().getBar12().setProgress((boss.getHealth()-event.getFinalDamage()) / 1300000.0);
+						new BossHealth().getBar12().setProgress((boss.getHealth()-event.getFinalDamage()) / 2000000.0);
 					}
 				}
 				// 레티아리우스
@@ -5220,6 +5231,34 @@ public class Main extends JavaPlugin implements Listener{
 						}
 					} else {
 						new BossHealth().getBar17().setProgress((boss.getHealth()-event.getFinalDamage()) / 50.0);
+					}
+				}
+				// 4층의 지배자
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("4층의 지배자" + ChatColor.YELLOW + " [Lv.??]")) {
+
+					LivingEntity boss = (LivingEntity) mob;
+					
+					if(boss.getHealth() - event.getFinalDamage() <= 0) {
+						for(Player p : new BossHealth().getBar18().getPlayers()) {
+							new BossHealth().getBar18().setProgress(0);
+							new BossHealth().getBar18().removePlayer(p);
+						}
+					} else {
+						new BossHealth().getBar18().setProgress((boss.getHealth()-event.getFinalDamage()) / 2000000.0);
+					}
+				}
+				// 5층의 지배자
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("5층의 지배자" + ChatColor.YELLOW + " [Lv.??]")) {
+
+					LivingEntity boss = (LivingEntity) mob;
+					
+					if(boss.getHealth() - event.getFinalDamage() <= 0) {
+						for(Player p : new BossHealth().getBar19().getPlayers()) {
+							new BossHealth().getBar19().setProgress(0);
+							new BossHealth().getBar19().removePlayer(p);
+						}
+					} else {
+						new BossHealth().getBar19().setProgress((boss.getHealth()-event.getFinalDamage()) / 3500000.0);
 					}
 				}
 			}
@@ -6427,14 +6466,22 @@ public class Main extends JavaPlugin implements Listener{
 												if(ent instanceof Player) {
 													Player nearPlayer = (Player) ent;
 													Location loc2 = nearPlayer.getLocation();
-													if (loc2.getX() <= 3697 && loc2.getY() <= 58 && loc2.getZ() <= 2898 
-															&& loc2.getX() >= 3658 && loc2.getY() >= 41 && loc2.getZ() >= 2823) {
-														nearPlayer.getInventory().remove(Material.TNT);
+													if (loc2.getX() <= 3697 && loc2.getY() <= 95 && loc2.getZ() <= 2900 
+															&& loc2.getX() >= 3658 && loc2.getY() >= 41 && loc2.getZ() >= 2820) {
+														try {
+															nearPlayer.getInventory().remove(Material.TNT);
+														} catch(Exception e) {
+															
+														}
 														nearPlayer.teleport(new Location(player.getWorld(), 3685, 151, 2858.5));
 													}
 												}
 											}
-											player.getInventory().remove(Material.TNT);
+											try {
+												player.getInventory().remove(Material.TNT);
+											} catch(Exception e) {
+												
+											}
 											player.teleport(new Location(player.getWorld(), 3685, 151, 2858.5));
 										} else {
 											bb.setProgress(bb.getProgress() - 0.1);

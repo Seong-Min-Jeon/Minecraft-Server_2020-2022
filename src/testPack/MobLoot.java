@@ -1896,7 +1896,7 @@ public class MobLoot {
 		scrollIm.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
 		scrollIm.setUnbreakable(true);
 		scroll.setItemMeta(scrollIm);		
-		player.getInventory().addItem(scroll);
+		player.getWorld().dropItem(player.getLocation(), scroll);
 		
 		QuestBoard cb = new QuestBoard();
 		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===늪지의 마신왕===")) {
@@ -2512,8 +2512,8 @@ public class MobLoot {
 			if (nearEntity.getType() == EntityType.PLAYER) {
 				Player nearPlayer = (Player) nearEntity;
 				Location loc = nearPlayer.getLocation();
-				if (loc.getX() <= 90 && loc.getY() <= 87 && loc.getZ() <= -5 && 
-						loc.getX() >= 54 && loc.getY() >= 75 && loc.getZ() >= -41) {
+				if (loc.getX() <= 90 && loc.getY() <= 100 && loc.getZ() <= -5 && 
+						loc.getX() >= 54 && loc.getY() >= 88 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
 					nearPlayer.sendMessage(ChatColor.YELLOW + "죽음의 탑 2층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 				}
@@ -2535,8 +2535,8 @@ public class MobLoot {
 			if (nearEntity.getType() == EntityType.PLAYER) {
 				Player nearPlayer = (Player) nearEntity;
 				Location loc = nearPlayer.getLocation();
-				if (loc.getX() <= 90 && loc.getY() <= 87 && loc.getZ() <= -5 && 
-						loc.getX() >= 54 && loc.getY() >= 75 && loc.getZ() >= -41) {
+				if (loc.getX() <= 90 && loc.getY() <= 113 && loc.getZ() <= -5 && 
+						loc.getX() >= 54 && loc.getY() >= 101 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
 					nearPlayer.sendMessage(ChatColor.YELLOW + "죽음의 탑 3층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 				}
@@ -2558,8 +2558,8 @@ public class MobLoot {
 			if (nearEntity.getType() == EntityType.PLAYER) {
 				Player nearPlayer = (Player) nearEntity;
 				Location loc = nearPlayer.getLocation();
-				if (loc.getX() <= 90 && loc.getY() <= 87 && loc.getZ() <= -5 && 
-						loc.getX() >= 54 && loc.getY() >= 75 && loc.getZ() >= -41) {
+				if (loc.getX() <= 90 && loc.getY() <= 126 && loc.getZ() <= -5 && 
+						loc.getX() >= 54 && loc.getY() >= 114 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
 					nearPlayer.sendMessage(ChatColor.YELLOW + "죽음의 탑 4층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 				}
@@ -2581,8 +2581,8 @@ public class MobLoot {
 			if (nearEntity.getType() == EntityType.PLAYER) {
 				Player nearPlayer = (Player) nearEntity;
 				Location loc = nearPlayer.getLocation();
-				if (loc.getX() <= 90 && loc.getY() <= 87 && loc.getZ() <= -5 && 
-						loc.getX() >= 54 && loc.getY() >= 75 && loc.getZ() >= -41) {
+				if (loc.getX() <= 90 && loc.getY() <= 139 && loc.getZ() <= -5 && 
+						loc.getX() >= 54 && loc.getY() >= 127 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
 					nearPlayer.sendMessage(ChatColor.YELLOW + "죽음의 탑 5층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 				}
@@ -4617,36 +4617,40 @@ public class MobLoot {
 		ItemStack col1 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
 		ItemMeta col1im = col1.getItemMeta();
 		col1im.setDisplayName(ChatColor.GRAY + "C급 투기장 스크롤");
+		col1im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
 		col1.setItemMeta(col1im);
 		
 		ItemStack col2 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
 		ItemMeta col2im = col2.getItemMeta();
 		col2im.setDisplayName(ChatColor.WHITE + "B급 투기장 스크롤");
+		col2im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
 		col2.setItemMeta(col2im);
 		
 		ItemStack col3 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
 		ItemMeta col3im = col3.getItemMeta();
 		col3im.setDisplayName(ChatColor.YELLOW + "A급 투기장 스크롤");
+		col3im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
 		col3.setItemMeta(col3im);
 		
 		ItemStack col4 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
 		ItemMeta col4im = col4.getItemMeta();
 		col4im.setDisplayName(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤");
+		col4im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
 		col4.setItemMeta(col4im);
 		
 		int colP = rnd.nextInt(100);
 		if(colP < 4) {
-			player.getInventory().addItem(col1);
-			player.sendMessage(ChatColor.GRAY + "C급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
+			player.getWorld().dropItem(player.getLocation(), col1);
+			player.sendMessage(ChatColor.GRAY + "C급 투기장 스크롤" + ChatColor.WHITE + "이 드랍되었다.");
 		} else if(colP < 7) {
-			player.getInventory().addItem(col2);
-			player.sendMessage(ChatColor.WHITE + "B급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
+			player.getWorld().dropItem(player.getLocation(), col2);
+			player.sendMessage(ChatColor.WHITE + "B급 투기장 스크롤" + ChatColor.WHITE + "이 드랍되었다.");
 		} else if(colP < 9) {
-			player.getInventory().addItem(col3);
-			player.sendMessage(ChatColor.YELLOW + "A급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+			player.getWorld().dropItem(player.getLocation(), col3);
+			player.sendMessage(ChatColor.YELLOW + "A급 투기장 스크롤" + ChatColor.WHITE + "이 드랍되었다.");
 		} else if(colP == 9) {
-			player.getInventory().addItem(col4);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+			player.getWorld().dropItem(player.getLocation(), col4);
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤" + ChatColor.WHITE + "이 드랍되었다.");
 		}
 		
 		QuestBoard cb = new QuestBoard();
@@ -4712,36 +4716,40 @@ public class MobLoot {
 		ItemStack col1 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
 		ItemMeta col1im = col1.getItemMeta();
 		col1im.setDisplayName(ChatColor.GRAY + "C급 투기장 스크롤");
+		col1im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
 		col1.setItemMeta(col1im);
 		
 		ItemStack col2 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
 		ItemMeta col2im = col2.getItemMeta();
 		col2im.setDisplayName(ChatColor.WHITE + "B급 투기장 스크롤");
+		col2im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
 		col2.setItemMeta(col2im);
 		
 		ItemStack col3 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
 		ItemMeta col3im = col3.getItemMeta();
 		col3im.setDisplayName(ChatColor.YELLOW + "A급 투기장 스크롤");
+		col3im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
 		col3.setItemMeta(col3im);
 		
 		ItemStack col4 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
 		ItemMeta col4im = col4.getItemMeta();
 		col4im.setDisplayName(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤");
+		col4im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
 		col4.setItemMeta(col4im);
 		
 		int colP = rnd.nextInt(100);
 		if(colP < 4) {
-			player.getInventory().addItem(col1);
-			player.sendMessage(ChatColor.GRAY + "C급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
+			player.getWorld().dropItem(player.getLocation(), col1);
+			player.sendMessage(ChatColor.GRAY + "C급 투기장 스크롤" + ChatColor.WHITE + "이 드랍되었다.");
 		} else if(colP < 7) {
-			player.getInventory().addItem(col2);
-			player.sendMessage(ChatColor.WHITE + "B급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
+			player.getWorld().dropItem(player.getLocation(), col2);
+			player.sendMessage(ChatColor.WHITE + "B급 투기장 스크롤" + ChatColor.WHITE + "이 드랍되었다.");
 		} else if(colP < 9) {
-			player.getInventory().addItem(col3);
-			player.sendMessage(ChatColor.YELLOW + "A급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+			player.getWorld().dropItem(player.getLocation(), col3);
+			player.sendMessage(ChatColor.YELLOW + "A급 투기장 스크롤" + ChatColor.WHITE + "이 드랍되었다.");
 		} else if(colP == 9) {
-			player.getInventory().addItem(col4);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+			player.getWorld().dropItem(player.getLocation(), col4);
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤" + ChatColor.WHITE + "이 드랍되었다.");
 		}
 		
 		QuestBoard cb = new QuestBoard();
@@ -4807,36 +4815,40 @@ public class MobLoot {
 		ItemStack col1 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
 		ItemMeta col1im = col1.getItemMeta();
 		col1im.setDisplayName(ChatColor.GRAY + "C급 투기장 스크롤");
+		col1im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
 		col1.setItemMeta(col1im);
 		
 		ItemStack col2 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
 		ItemMeta col2im = col2.getItemMeta();
 		col2im.setDisplayName(ChatColor.WHITE + "B급 투기장 스크롤");
+		col2im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
 		col2.setItemMeta(col2im);
 		
 		ItemStack col3 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
 		ItemMeta col3im = col3.getItemMeta();
 		col3im.setDisplayName(ChatColor.YELLOW + "A급 투기장 스크롤");
+		col3im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
 		col3.setItemMeta(col3im);
 		
 		ItemStack col4 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
 		ItemMeta col4im = col4.getItemMeta();
 		col4im.setDisplayName(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤");
+		col4im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
 		col4.setItemMeta(col4im);
 		
 		int colP = rnd.nextInt(100);
 		if(colP < 4) {
-			player.getInventory().addItem(col1);
-			player.sendMessage(ChatColor.GRAY + "C급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
+			player.getWorld().dropItem(player.getLocation(), col1);
+			player.sendMessage(ChatColor.GRAY + "C급 투기장 스크롤" + ChatColor.WHITE + "이 드랍되었다.");
 		} else if(colP < 7) {
-			player.getInventory().addItem(col2);
-			player.sendMessage(ChatColor.WHITE + "B급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
+			player.getWorld().dropItem(player.getLocation(), col2);
+			player.sendMessage(ChatColor.WHITE + "B급 투기장 스크롤" + ChatColor.WHITE + "이 드랍되었다.");
 		} else if(colP < 9) {
-			player.getInventory().addItem(col3);
-			player.sendMessage(ChatColor.YELLOW + "A급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+			player.getWorld().dropItem(player.getLocation(), col3);
+			player.sendMessage(ChatColor.YELLOW + "A급 투기장 스크롤" + ChatColor.WHITE + "이 드랍되었다.");
 		} else if(colP == 9) {
-			player.getInventory().addItem(col4);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+			player.getWorld().dropItem(player.getLocation(), col4);
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤" + ChatColor.WHITE + "이 드랍되었다.");
 		}
 		
 		QuestBoard cb = new QuestBoard();
@@ -4902,36 +4914,40 @@ public class MobLoot {
 		ItemStack col1 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
 		ItemMeta col1im = col1.getItemMeta();
 		col1im.setDisplayName(ChatColor.GRAY + "C급 투기장 스크롤");
+		col1im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
 		col1.setItemMeta(col1im);
 		
 		ItemStack col2 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
 		ItemMeta col2im = col2.getItemMeta();
 		col2im.setDisplayName(ChatColor.WHITE + "B급 투기장 스크롤");
+		col2im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
 		col2.setItemMeta(col2im);
 		
 		ItemStack col3 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
 		ItemMeta col3im = col3.getItemMeta();
 		col3im.setDisplayName(ChatColor.YELLOW + "A급 투기장 스크롤");
+		col3im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
 		col3.setItemMeta(col3im);
 		
 		ItemStack col4 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
 		ItemMeta col4im = col4.getItemMeta();
 		col4im.setDisplayName(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤");
+		col4im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
 		col4.setItemMeta(col4im);
 		
 		int colP = rnd.nextInt(100);
 		if(colP < 4) {
-			player.getInventory().addItem(col1);
-			player.sendMessage(ChatColor.GRAY + "C급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
+			player.getWorld().dropItem(player.getLocation(), col1);
+			player.sendMessage(ChatColor.GRAY + "C급 투기장 스크롤" + ChatColor.WHITE + "이 드랍되었다.");
 		} else if(colP < 7) {
-			player.getInventory().addItem(col2);
-			player.sendMessage(ChatColor.WHITE + "B급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
+			player.getWorld().dropItem(player.getLocation(), col2);
+			player.sendMessage(ChatColor.WHITE + "B급 투기장 스크롤" + ChatColor.WHITE + "이 드랍되었다.");
 		} else if(colP < 9) {
-			player.getInventory().addItem(col3);
-			player.sendMessage(ChatColor.YELLOW + "A급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+			player.getWorld().dropItem(player.getLocation(), col3);
+			player.sendMessage(ChatColor.YELLOW + "A급 투기장 스크롤" + ChatColor.WHITE + "이 드랍되었다.");
 		} else if(colP == 9) {
-			player.getInventory().addItem(col4);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+			player.getWorld().dropItem(player.getLocation(), col4);
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤" + ChatColor.WHITE + "이 드랍되었다.");
 		}
 		
 		QuestBoard cb = new QuestBoard();
@@ -4997,36 +5013,40 @@ public class MobLoot {
 		ItemStack col1 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
 		ItemMeta col1im = col1.getItemMeta();
 		col1im.setDisplayName(ChatColor.GRAY + "C급 투기장 스크롤");
+		col1im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
 		col1.setItemMeta(col1im);
 		
 		ItemStack col2 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
 		ItemMeta col2im = col2.getItemMeta();
 		col2im.setDisplayName(ChatColor.WHITE + "B급 투기장 스크롤");
+		col2im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
 		col2.setItemMeta(col2im);
 		
 		ItemStack col3 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
 		ItemMeta col3im = col3.getItemMeta();
 		col3im.setDisplayName(ChatColor.YELLOW + "A급 투기장 스크롤");
+		col3im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
 		col3.setItemMeta(col3im);
 		
 		ItemStack col4 = new ItemStack(Material.FLOWER_BANNER_PATTERN);
 		ItemMeta col4im = col4.getItemMeta();
 		col4im.setDisplayName(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤");
+		col4im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
 		col4.setItemMeta(col4im);
 		
 		int colP = rnd.nextInt(100);
 		if(colP < 4) {
-			player.getInventory().addItem(col1);
-			player.sendMessage(ChatColor.GRAY + "C급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
+			player.getWorld().dropItem(player.getLocation(), col1);
+			player.sendMessage(ChatColor.GRAY + "C급 투기장 스크롤" + ChatColor.WHITE + "이 드랍되었다.");
 		} else if(colP < 7) {
-			player.getInventory().addItem(col2);
-			player.sendMessage(ChatColor.WHITE + "B급 투기장 스크롤" + ChatColor.WHITE + "를 획득했다.");
+			player.getWorld().dropItem(player.getLocation(), col2);
+			player.sendMessage(ChatColor.WHITE + "B급 투기장 스크롤" + ChatColor.WHITE + "이 드랍되었다.");
 		} else if(colP < 9) {
-			player.getInventory().addItem(col3);
-			player.sendMessage(ChatColor.YELLOW + "A급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+			player.getWorld().dropItem(player.getLocation(), col3);
+			player.sendMessage(ChatColor.YELLOW + "A급 투기장 스크롤" + ChatColor.WHITE + "이 드랍되었다.");
 		} else if(colP == 9) {
-			player.getInventory().addItem(col4);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+			player.getWorld().dropItem(player.getLocation(), col4);
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤" + ChatColor.WHITE + "이 드랍되었다.");
 		}
 		
 		QuestBoard cb = new QuestBoard();

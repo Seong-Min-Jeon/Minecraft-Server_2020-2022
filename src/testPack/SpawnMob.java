@@ -3093,8 +3093,8 @@ public class SpawnMob {
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
 				entity.setCustomName(ChatColor.GRAY + "요정왕 오베론" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
-				entity.setMaxHealth(30000);
-				entity.setHealth(30000);
+				entity.setMaxHealth(35000);
+				entity.setHealth(35000);
 				EntityEquipment weapon = entity.getEquipment();
 				ItemStack weaponItem = new ItemStack(Material.STONE);
 				weapon.setItemInMainHand(weaponItem);
@@ -3129,8 +3129,8 @@ public class SpawnMob {
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
 				entity.setCustomName(ChatColor.GRAY + "요정여왕 티타니아" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
-				entity.setMaxHealth(30000);
-				entity.setHealth(30000);
+				entity.setMaxHealth(35000);
+				entity.setHealth(35000);
 				EntityEquipment weapon = entity.getEquipment();
 				ItemStack weaponItem = new ItemStack(Material.CYAN_WOOL);
 				weapon.setItemInMainHand(weaponItem);
@@ -3575,8 +3575,8 @@ public class SpawnMob {
 			if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
 				entity.setCustomName(ChatColor.GRAY + "케흘렌" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
-				entity.setMaxHealth(70000);
-				entity.setHealth(70000);
+				entity.setMaxHealth(120000);
+				entity.setHealth(120000);
 				EntityEquipment weapon = entity.getEquipment();
 				ItemStack weaponItem = new ItemStack(Material.OAK_SLAB);
 				weapon.setItemInMainHand(weaponItem);
@@ -3621,8 +3621,8 @@ public class SpawnMob {
 			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
 				entity.setCustomName(ChatColor.GRAY + "발로르" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
-				entity.setMaxHealth(150000);
-				entity.setHealth(150000);
+				entity.setMaxHealth(200000);
+				entity.setHealth(200000);
 				Zombie zombie = (Zombie) entity;
 				zombie.setBaby(false);
 				EntityEquipment weapon = entity.getEquipment();
@@ -4880,8 +4880,8 @@ public class SpawnMob {
 			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
 				entity.setCustomName(ChatColor.GRAY + "특급 요리사" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
-				entity.setMaxHealth(60000);
-				entity.setHealth(60000);
+				entity.setMaxHealth(100000);
+				entity.setHealth(100000);
 				Zombie zombie = (Zombie) entity;
 				zombie.setBaby(false);
 				EntityEquipment weapon = entity.getEquipment();
@@ -5111,27 +5111,27 @@ public class SpawnMob {
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "2층의 지배자" + ChatColor.YELLOW + " [Lv.??]");
+				entity.setCustomName(ChatColor.GRAY + "4층의 지배자" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
-				entity.setMaxHealth(600000);
-				entity.setHealth(600000);
+				entity.setMaxHealth(2000000);
+				entity.setHealth(2000000);
 				EntityEquipment weapon = entity.getEquipment();
-				ItemStack weaponItem = new ItemStack(Material.GREEN_CARPET);
+				ItemStack weaponItem = new ItemStack(Material.STONE);
 				weapon.setItemInMainHand(weaponItem);
 				EntityEquipment head = entity.getEquipment();
-				ItemStack headItem = chest.getInventory().getItem(1);
+				ItemStack headItem = chest.getInventory().getItem(3);
 				head.setHelmet(headItem);
 				EntityEquipment chestplate = entity.getEquipment();
-				ItemStack chestplateItem = new ItemStack(Material.IRON_CHESTPLATE);
+				ItemStack chestplateItem = new ItemStack(Material.GOLDEN_CHESTPLATE);
 				chestplate.setChestplate(chestplateItem);
 				EntityEquipment leggings = entity.getEquipment();
-				ItemStack leggingsItem = new ItemStack(Material.IRON_LEGGINGS);
+				ItemStack leggingsItem = new ItemStack(Material.GOLDEN_LEGGINGS);
 				leggings.setLeggings(leggingsItem);
 				EntityEquipment boots = entity.getEquipment();
-				ItemStack bootsItem = new ItemStack(Material.IRON_BOOTS);
+				ItemStack bootsItem = new ItemStack(Material.GOLDEN_BOOTS);
 				boots.setBoots(bootsItem);
-				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 400));
-				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 2));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 600));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 3));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM
 					|| entity.getType() == (EntityType) EntityType.SALMON
@@ -5156,27 +5156,27 @@ public class SpawnMob {
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "2층의 지배자" + ChatColor.YELLOW + " [Lv.??]");
+				entity.setCustomName(ChatColor.GRAY + "5층의 지배자" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
-				entity.setMaxHealth(600000);
-				entity.setHealth(600000);
+				entity.setMaxHealth(3500000);
+				entity.setHealth(3500000);
 				EntityEquipment weapon = entity.getEquipment();
-				ItemStack weaponItem = new ItemStack(Material.GREEN_CARPET);
+				ItemStack weaponItem = new ItemStack(Material.BIRCH_PLANKS);
 				weapon.setItemInMainHand(weaponItem);
 				EntityEquipment head = entity.getEquipment();
-				ItemStack headItem = chest.getInventory().getItem(1);
+				ItemStack headItem = chest.getInventory().getItem(4);
 				head.setHelmet(headItem);
 				EntityEquipment chestplate = entity.getEquipment();
-				ItemStack chestplateItem = new ItemStack(Material.IRON_CHESTPLATE);
+				ItemStack chestplateItem = new ItemStack(Material.LEATHER_CHESTPLATE);
 				chestplate.setChestplate(chestplateItem);
 				EntityEquipment leggings = entity.getEquipment();
-				ItemStack leggingsItem = new ItemStack(Material.IRON_LEGGINGS);
+				ItemStack leggingsItem = new ItemStack(Material.LEATHER_LEGGINGS);
 				leggings.setLeggings(leggingsItem);
 				EntityEquipment boots = entity.getEquipment();
-				ItemStack bootsItem = new ItemStack(Material.IRON_BOOTS);
+				ItemStack bootsItem = new ItemStack(Material.LEATHER_BOOTS);
 				boots.setBoots(bootsItem);
-				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 400));
-				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 2));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 1000));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 3));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM
 					|| entity.getType() == (EntityType) EntityType.SALMON
@@ -6515,9 +6515,9 @@ public class SpawnMob {
 				entity.setCustomName(ChatColor.GRAY + "아라크네" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
 				entity.setRemoveWhenFarAway(false);
-				entity.setMaxHealth(800000);
-				entity.setHealth(800000);
-				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 150));
+				entity.setMaxHealth(1200000);
+				entity.setHealth(1200000);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 250));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SPIDER) {
 				entity.setCustomName(ChatColor.GRAY + "아라크네의 하수인" + ChatColor.YELLOW + " [Lv.383]");
@@ -8441,8 +8441,8 @@ public class SpawnMob {
 				entity.setCustomName(ChatColor.GRAY + "석상 파수꾼" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
 				entity.setRemoveWhenFarAway(false);
-				entity.setMaxHealth(1300000);
-				entity.setHealth(1300000);
+				entity.setMaxHealth(2000000);
+				entity.setHealth(2000000);
 				EntityEquipment weapon = entity.getEquipment();
 				ItemStack weaponItem = new ItemStack(Material.GREEN_CARPET);
 				weapon.setItemInMainHand(weaponItem);

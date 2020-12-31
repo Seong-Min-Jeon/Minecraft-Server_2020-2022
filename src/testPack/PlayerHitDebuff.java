@@ -75,6 +75,11 @@ public class PlayerHitDebuff {
 		mob27(player, mob);
 		mob28(player, mob);
 		mob29(player, mob);
+		mob30(player, mob);
+		mob31(player, mob);
+		mob32(player, mob);
+		mob33(player, mob);
+		mob34(player, mob);
 	}
 
 	// 시련의 형상
@@ -145,7 +150,7 @@ public class PlayerHitDebuff {
 				ent.setHealth(ent.getHealth() + 5000);
 				List<Entity> nearMob = ent.getNearbyEntities(10, 3, 10);
 				for(Entity mob2 : nearMob) {
-					if(mob2 instanceof Mob) {
+					if(mob2 instanceof Skeleton) {
 						LivingEntity ent2 = (LivingEntity) mob2;
 						ent2.setHealth(ent2.getHealth() + 5000);
 					}
@@ -474,10 +479,14 @@ public class PlayerHitDebuff {
 								ParticleEffect pe = new ParticleEffect(player, mob);
 								pe.startE33();
 								// ================================================================
-								List<Entity> nearPlayer = mob.getNearbyEntities(15, 10, 15);
-								for (Entity p : nearPlayer) {
-									if (p instanceof Player) {
-										((Player) p).damage(300);
+								List<Entity> nearEntity = mob.getNearbyEntities(15, 20, 15);
+								for (Entity nearPlayer : nearEntity) {
+									if (nearPlayer instanceof Player) {
+										Location loc2 = nearPlayer.getLocation();
+										if (loc2.getX() <= 90 && loc2.getY() <= 87 && loc2.getZ() <= -5 && 
+												loc2.getX() >= 54 && loc2.getY() >= 75 && loc2.getZ() >= -41) {
+											((Player) nearPlayer).damage(300);
+										}
 									}
 								}
 								
@@ -568,11 +577,15 @@ public class PlayerHitDebuff {
 								ParticleEffect pe = new ParticleEffect(player, mob);
 								pe.startE33();
 								// ================================================================
-								List<Entity> nearPlayer = mob.getNearbyEntities(15, 10, 15);
-								for (Entity p : nearPlayer) {
-									if (p instanceof Player) {
-										((Player) p).damage(450);
-									} 
+								List<Entity> nearEntity = mob.getNearbyEntities(15, 20, 15);
+								for (Entity nearPlayer : nearEntity) {
+									if (nearPlayer instanceof Player) {
+										Location loc2 = nearPlayer.getLocation();
+										if (loc2.getX() <= 90 && loc2.getY() <= 100 && loc2.getZ() <= -5 && 
+												loc2.getX() >= 54 && loc2.getY() >= 88 && loc2.getZ() >= -41) {
+											((Player) nearPlayer).damage(500);
+										}
+									}
 								}
 								
 								td.endTask();
@@ -598,7 +611,7 @@ public class PlayerHitDebuff {
 					ParticleEffect pe = new ParticleEffect(player, mob);
 					pe.startE32();
 					// ================================================================
-					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 2000, true, false, false));
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 10000, true, false, false));
 					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, 100, 0, true, false, false));
 					player.sendMessage(ChatColor.RED + "탑의 저주로 지배자가 강화됩니다.");
 					sendMessage(player, ChatColor.RED + "탑의 저주로 지배자가 강화됩니다.");
@@ -665,11 +678,15 @@ public class PlayerHitDebuff {
 								ParticleEffect pe = new ParticleEffect(player, mob);
 								pe.startE33();
 								// ================================================================
-								List<Entity> nearPlayer = mob.getNearbyEntities(15, 10, 15);
-								for (Entity p : nearPlayer) {
-									if (p instanceof Player) {
-										((Player) p).damage(800);
-									} 
+								List<Entity> nearEntity = mob.getNearbyEntities(15, 20, 15);
+								for (Entity nearPlayer : nearEntity) {
+									if (nearPlayer instanceof Player) {
+										Location loc2 = nearPlayer.getLocation();
+										if (loc2.getX() <= 90 && loc2.getY() <= 113 && loc2.getZ() <= -5 && 
+												loc2.getX() >= 54 && loc2.getY() >= 101 && loc2.getZ() >= -41) {
+											((Player) nearPlayer).damage(4000);
+										}
+									}
 								}
 								
 								td.endTask();
@@ -695,7 +712,7 @@ public class PlayerHitDebuff {
 					ParticleEffect pe = new ParticleEffect(player, mob);
 					pe.startE32();
 					// ================================================================
-					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 2000, true, false, false));
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 50000, true, false, false));
 					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, 100, 0, true, false, false));
 					mob.teleport(player.getLocation().add(0,1,0));
 					player.sendMessage(ChatColor.RED + "탑의 저주로 지배자가 강화됩니다.");
@@ -708,7 +725,461 @@ public class PlayerHitDebuff {
 
 	// 4층의 지배자
 	public void mob11(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("4층의 지배자" + ChatColor.YELLOW + " [Lv.??]")) {
+			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
+				int num = rnd.nextInt(12);
+				if (num == 0) {
+					LivingEntity ent = (LivingEntity) mob;
+					EntityEquipment weapon = ent.getEquipment();
+					Material mat = weapon.getItemInMainHand().getType();
+					if(mat == Material.RED_DYE) {
+						List<Entity> entitylist = ent.getNearbyEntities(10, 15, 10);
+						for (Entity nearEntity : entitylist) {
+							if (nearEntity instanceof Player) {
+								Player nearPlayer = (Player) nearEntity;
+								Location loc2 = nearPlayer.getLocation();
+								if (loc2.getX() <= 90 && loc2.getY() <= 126 && loc2.getZ() <= -5 
+										&& loc2.getX() >= 54 && loc2.getY() >= 114 && loc2.getZ() >= -41) {
+									nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 100, 32700));
+									nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 100, 140));
+									nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 100, 32700));
+									// ===============================================================
+									ParticleData pd = new ParticleData(nearPlayer.getUniqueId());
+									if (pd.hasID()) {
+										pd.endTask();
+										pd.removeID();
+									}
+									ParticleEffect pe = new ParticleEffect(nearPlayer);
+									pe.startE2();
+									// ================================================================
+									player.sendMessage(ChatColor.RED + "지배자의 뼈감옥이 발동됩니다.");
+									player.sendMessage(ChatColor.RED + "5초간 움직임이 멈춥니다.");
+								}
+							}
+						}
+					} else if(mat == Material.GREEN_DYE) {
+						List<Entity> entitylist = ent.getNearbyEntities(10, 4, 10);
+						for (Entity nearEntity : entitylist) {
+							if (nearEntity.getType() != EntityType.PLAYER) {
+								Player nearPlayer = (Player) nearEntity;
+								nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0, true, false, false));
+							}
+						}
+						player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0, true, false, false));
+						player.sendMessage(ChatColor.RED + "지배자의 전투의 의지가 발동됩니다.");
+						sendMessage(player, ChatColor.RED + "지배자의 전투의 의지가 발동됩니다.");
+						player.sendMessage(ChatColor.RED + "10초간 지배자에게 저항이 부여됩니다.");
+						sendMessage(player, ChatColor.RED + "10초간 지배자에게 저항이 부여됩니다.");
+						ent.getWorld().playSound(ent.getLocation(), Sound.BLOCK_CHAIN_BREAK, 2.0f, 0.5f);			
+					} else if(mat == Material.LAPIS_LAZULI) {
+						for(int i = 0 ; i < 10 ; i++) {
+							player.getWorld().spawnParticle(Particle.CLOUD, mob.getLocation(), 0);
+						}
+						ent.setHealth(ent.getHealth() + 50000);
+						player.sendMessage(ChatColor.RED + "지배자의 넬의 사랑이 발동됩니다.");
+						sendMessage(player, ChatColor.RED + "지배자의 넬의 사랑이 발동됩니다.");
+						player.sendMessage(ChatColor.RED + "지배자가 회복합니다.");
+						sendMessage(player, ChatColor.RED + "지배자가 회복합니다.");
+						player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ENDER_DRAGON_FLAP, 1.0f, 1.0f);
+					} else if(mat == Material.CYAN_DYE) {
+						List<Entity> entitylist = player.getNearbyEntities(10, 15, 10);
+						for (Entity nearEntity : entitylist) {
+							if (nearEntity.getType() == EntityType.PLAYER) {
+								if (nearEntity instanceof Player) {
+									Player nearPlayer = (Player) nearEntity;
+									Location loc2 = nearPlayer.getLocation();
+									if (loc2.getX() <= 90 && loc2.getY() <= 126 && loc2.getZ() <= -5 
+											&& loc2.getX() >= 54 && loc2.getY() >= 114 && loc2.getZ() >= -41) {
+										nearPlayer.damage(player.getLevel() * 15);
+									}
+								}
+							}
+						}
+						ent.getWorld().playSound(ent.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 1.0f, 1.5f);
+						ent.getWorld().spawnParticle(Particle.EXPLOSION_LARGE, ent.getLocation(), 0);
+						player.sendMessage(ChatColor.RED + "지배자의 마인권이 발동됩니다.");
+						sendMessage(player, ChatColor.RED + "지배자의 마인권이 발동됩니다.");
+					} else if(mat == Material.LIGHT_GRAY_DYE) {
+						int job = rnd.nextInt(5);
+						if(job == 0) {
+							ItemStack weaponItem = new ItemStack(Material.BLUE_DYE);
+							weapon.setItemInMainHand(weaponItem);
+						} else if(job == 1) {
+							ItemStack weaponItem = new ItemStack(Material.BROWN_DYE);
+							weapon.setItemInMainHand(weaponItem);
+						} else if(job == 2) {
+							ItemStack weaponItem = new ItemStack(Material.BLACK_DYE);
+							weapon.setItemInMainHand(weaponItem);
+						} else if(job == 3) {
+							ItemStack weaponItem = new ItemStack(Material.INK_SAC);
+							weapon.setItemInMainHand(weaponItem);
+						} else if(job == 4) {
+							ItemStack weaponItem = new ItemStack(Material.GLOWSTONE_DUST);
+							weapon.setItemInMainHand(weaponItem);
+						}
+						player.sendMessage(ChatColor.RED + "지배자의 도박사의 판으로 변화가 일어났습니다.");
+						sendMessage(player, ChatColor.RED + "지배자의 도박사의 판으로 변화가 일어났습니다.");
+					} else if(mat == Material.GRAY_DYE) {
+						List<Entity> entitylist = ent.getNearbyEntities(10, 15, 10);
+						for (Entity nearEntity : entitylist) {
+							if (nearEntity instanceof Player) {
+								Player nearPlayer = (Player) nearEntity;
+								// ===============================================================
+								ParticleData pd = new ParticleData(nearPlayer.getUniqueId());
+								if (pd.hasID()) {
+									pd.endTask();
+									pd.removeID();
+								}
+								ParticleEffect pe = new ParticleEffect(nearPlayer);
+								pe.startE10();
+								// ================================================================
+								Location loc2 = nearPlayer.getLocation();
+								if (loc2.getX() <= 90 && loc2.getY() <= 126 && loc2.getZ() <= -5 
+										&& loc2.getX() >= 54 && loc2.getY() >= 114 && loc2.getZ() >= -41) {
+									nearPlayer.setHealth(2);
+								}
+							}
+						}
+						ent.getWorld().playSound(ent.getLocation(), Sound.BLOCK_PORTAL_TRIGGER, 1.0f, 1.0f);
+						player.sendMessage(ChatColor.RED + "지배자의 데빌 블레스터가 발동됩니다.");
+						sendMessage(player, ChatColor.RED + "지배자의 데빌 블레스터가 발동됩니다.");
+					} else if(mat == Material.PINK_DYE) {
+						for(int i = 0 ; i < 10 ; i++) {
+							player.getWorld().spawnParticle(Particle.CLOUD, mob.getLocation(), 0);
+						}
+						ent.setHealth(ent.getHealth() + 500000);
+						ent.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 1, true, false, false));
+						player.sendMessage(ChatColor.RED + "지배자의 천사의 축복이 발동됩니다.");
+						sendMessage(player, ChatColor.RED + "지배자의 천사의 축복이 발동됩니다.");
+						player.sendMessage(ChatColor.RED + "지배자가 회복하며 저항이 부여됩니다.");
+						sendMessage(player, ChatColor.RED + "지배자가 회복하며 저항이 부여됩니다.");
+						player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ENDER_DRAGON_FLAP, 1.0f, 1.0f);
+					} else if(mat == Material.LIME_DYE) {
+						player.sendMessage(ChatColor.RED + "지배자의 신의 주사위가 발동됩니다.");
+						sendMessage(player, ChatColor.RED + "지배자의 신의 주사위가 발동됩니다.");
+						ent.getWorld().playSound(ent.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
+						taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
+							int time = 0;
+							ThreadData td = new ThreadData(player.getUniqueId());
+							int dice = rnd.nextInt(5);
+							
+							@Override
+							public void run() {
+								if(!td.hasID()) {
+									td.setID(taskID);
+								}
+								
+								if(time==30) {
+									if (dice == 0) {
+										player.sendMessage(ChatColor.RED + "주사위의 눈은 1!");
+										sendMessage(player, ChatColor.RED + "주사위의 눈은 1!");
+									} else if (dice == 1) {
+										player.sendMessage(ChatColor.RED + "주사위의 눈은 2!");
+										sendMessage(player, ChatColor.RED + "주사위의 눈은 2!");
+									} else if (dice == 2) {
+										player.sendMessage(ChatColor.RED + "주사위의 눈은 3!");
+										sendMessage(player, ChatColor.RED + "주사위의 눈은 3!");
+									} else if (dice == 3) {
+										player.sendMessage(ChatColor.RED + "주사위의 눈은 4!");
+										sendMessage(player, ChatColor.RED + "주사위의 눈은 4!");
+									} else if (dice == 4) {
+										player.sendMessage(ChatColor.RED + "주사위의 눈은 5!");
+										sendMessage(player, ChatColor.RED + "주사위의 눈은 5!");
+									}
+								}
+								
+								if(time==60) {
+									if (dice == 0) {
+										ent.setHealth(ent.getMaxHealth());
+										player.sendMessage(ChatColor.RED + "신의 경고에 의해 지배자가 정신을 차립니다.");
+										sendMessage(player, ChatColor.RED + "신의 경고에 의해 지배자가 정신을 차립니다.");
+									} else if (dice == 1) {
+										player.sendMessage(ChatColor.RED + "지배자가 신의 통고를 사용합니다.");
+										sendMessage(player, ChatColor.RED + "지배자가 신의 통고를 사용합니다.");
+										List<Entity> entitylist = ent.getNearbyEntities(10, 15, 10);
+										for (Entity nearEntity : entitylist) {
+											if (nearEntity instanceof Player) {
+												Player nearPlayer = (Player) nearEntity;
+												Location loc2 = nearPlayer.getLocation();
+												if (loc2.getX() <= 90 && loc2.getY() <= 126 && loc2.getZ() <= -5 
+														&& loc2.getX() >= 54 && loc2.getY() >= 114 && loc2.getZ() >= -41) {
+													nearPlayer.damage(5000);
+												}
+											}
+										}
+									} else if (dice == 2) {
+										player.sendMessage(ChatColor.RED + "지배자가 신의 심판를 사용합니다.");
+										sendMessage(player, ChatColor.RED + "지배자가 신의 심판를 사용합니다.");
+										List<Entity> entitylist = ent.getNearbyEntities(10, 15, 10);
+										for (Entity nearEntity : entitylist) {
+											if (nearEntity instanceof Player) {
+												Player nearPlayer = (Player) nearEntity;
+												Location loc2 = nearPlayer.getLocation();
+												if (loc2.getX() <= 90 && loc2.getY() <= 126 && loc2.getZ() <= -5 
+														&& loc2.getX() >= 54 && loc2.getY() >= 114 && loc2.getZ() >= -41) {
+													nearPlayer.damage(10000);
+												}
+											}
+										}
+									} else if (dice == 3) {
+										player.sendMessage(ChatColor.RED + "지배자가 신의 강림를 사용합니다.");
+										sendMessage(player, ChatColor.RED + "지배자가 신의 강림를 사용합니다.");
+										List<Entity> entitylist = ent.getNearbyEntities(10, 15, 10);
+										for (Entity nearEntity : entitylist) {
+											if (nearEntity instanceof Player) {
+												Player nearPlayer = (Player) nearEntity;
+												Location loc2 = nearPlayer.getLocation();
+												if (loc2.getX() <= 90 && loc2.getY() <= 126 && loc2.getZ() <= -5 
+														&& loc2.getX() >= 54 && loc2.getY() >= 114 && loc2.getZ() >= -41) {
+													nearPlayer.damage(20000);
+												}
+											}
+										}
+									} else if (dice == 4) {
+										ent.setNoDamageTicks(200);
+										player.sendMessage(ChatColor.RED + "지배자가 신의 축복을 사용합니다.");
+										sendMessage(player, ChatColor.RED + "지배자가 신의 축복을 사용합니다.");
+										player.sendMessage(ChatColor.RED + "10초간 무적이 됩니다.");
+										sendMessage(player, ChatColor.RED + "10초간 무적이 됩니다.");
+									}
+									td.endTask();
+									td.removeID();
+								}
+								
+								time++;
+								
+							}
+							
+						}, 0, 1);
+					} else if(mat == Material.YELLOW_DYE) {
+						player.sendMessage(ChatColor.RED + "지배자의 화둔이 발동됩니다.");
+						sendMessage(player, ChatColor.RED + "지배자의 화둔이 발동됩니다.");
+						ent.getWorld().playSound(ent.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 0.8f, 6.0f);
+						List<Entity> entitylist = ent.getNearbyEntities(10, 15, 10);
+						for (Entity nearEntity : entitylist) {
+							if (nearEntity instanceof Player) {
+								Player nearPlayer = (Player) nearEntity;
+								Location loc2 = nearPlayer.getLocation();
+								if (loc2.getX() <= 90 && loc2.getY() <= 126 && loc2.getZ() <= -5 
+										&& loc2.getX() >= 54 && loc2.getY() >= 114 && loc2.getZ() >= -41) {
+									nearPlayer.damage(5000);
+									nearPlayer.setFireTicks(100);
+								}
+							}
+						}
+					} else if(mat == Material.LIGHT_BLUE_DYE) {
+						player.sendMessage(ChatColor.RED + "지배자의 엘·초펠이 발동됩니다.");
+						sendMessage(player, ChatColor.RED + "지배자의 엘·초펠이 발동됩니다.");
+						Vector vec = ent.getEyeLocation().getDirection().multiply(3.0f);
+						vec.add(new Vector(0, 1, 0));
+						List<Entity> entitylist = player.getNearbyEntities(10, 15, 10);		
+						for (Entity nearEntity : entitylist) {
+							if (nearEntity instanceof Player) {
+								Player nearPlayer = (Player) nearEntity;
+								nearPlayer.damage(8000);
+								nearPlayer.setVelocity(vec);
+							}
+						}	
+					} else if(mat == Material.MAGENTA_DYE) {
+						player.sendMessage(ChatColor.RED + "지배자의 수류탄 투척이 발동됩니다.");
+						sendMessage(player, ChatColor.RED + "지배자의 수류탄 투척이 발동됩니다.");
+						ent.getWorld().playSound(ent.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 0.8f, 6.0f);
+						List<Entity> entitylist = ent.getNearbyEntities(10, 15, 10);
+						for (Entity nearEntity : entitylist) {
+							if (nearEntity instanceof Player) {
+								Player nearPlayer = (Player) nearEntity;
+								Location loc2 = nearPlayer.getLocation();
+								if (loc2.getX() <= 90 && loc2.getY() <= 126 && loc2.getZ() <= -5 
+										&& loc2.getX() >= 54 && loc2.getY() >= 114 && loc2.getZ() >= -41) {
+									nearPlayer.damage(5000);
+									nearPlayer.setFireTicks(100);
+								}
+							}
+						}
+					} else if(mat == Material.ORANGE_DYE) {
+						player.sendMessage(ChatColor.RED + "지배자의 지옥불이 발동됩니다.");
+						sendMessage(player, ChatColor.RED + "지배자의 지옥불이 발동됩니다.");
+						List<Entity> entitylist = ent.getNearbyEntities(10, 15, 10);
+						for (Entity nearEntity : entitylist) {
+							if (nearEntity instanceof Player) {
+								Player nearPlayer = (Player) nearEntity;
+								Location loc2 = nearPlayer.getLocation();
+								if (loc2.getX() <= 90 && loc2.getY() <= 126 && loc2.getZ() <= -5 
+										&& loc2.getX() >= 54 && loc2.getY() >= 114 && loc2.getZ() >= -41) {
+									nearPlayer.setFireTicks(1200);
+								}
+							}
+						}
+					} else if(mat == Material.BLUE_DYE) {
+						player.sendMessage(ChatColor.RED + "지배자의 루인 오브 노바가 발동됩니다.");
+						sendMessage(player, ChatColor.RED + "지배자의 루인 오브 노바가 발동됩니다.");
+						List<Entity> entitylist = player.getNearbyEntities(10, 15, 10);
+						for (Entity nearEntity : entitylist) {
+							if (nearEntity instanceof Player) {
+								Player nearPlayer = (Player) nearEntity;
+								// ===============================================================
+								ParticleData pd = new ParticleData(nearPlayer.getUniqueId());
+								if (pd.hasID()) {
+									pd.endTask();
+									pd.removeID();
+								}
+								ParticleEffect pe = new ParticleEffect(nearPlayer);
+								pe.startE23();
+								// ================================================================
+								nearPlayer.damage(player.getLevel() * 50);
+								ent.getWorld().spawnParticle(Particle.LAVA, nearPlayer.getLocation(), 10);
+								ent.getWorld().playSound(nearPlayer.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 1.0f, 1.0f);
+							}
+						}
+					} else if(mat == Material.BROWN_DYE) {
+						for(int i = 0 ; i < 10 ; i++) {
+							player.getWorld().spawnParticle(Particle.CLOUD, mob.getLocation(), 0);
+						}
+						ent.setHealth(ent.getHealth() + 1000000);
+						ent.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 2, true, false, false));
+						player.sendMessage(ChatColor.RED + "지배자의 아이 오브 오더가 발동됩니다.");
+						sendMessage(player, ChatColor.RED + "지배자의 아이 오브 오더가 발동됩니다.");
+						player.sendMessage(ChatColor.RED + "지배자가 회복하며 저항이 부여됩니다.");
+						sendMessage(player, ChatColor.RED + "지배자가 회복하며 저항이 부여됩니다.");
+						player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ENDER_DRAGON_FLAP, 1.0f, 1.0f);
+					} else if(mat == Material.BLACK_DYE) {
+						player.sendMessage(ChatColor.RED + "지배자의 돌격이 발동됩니다.");
+						sendMessage(player, ChatColor.RED + "지배자의 돌격이 발동됩니다.");
+						ent.getWorld().playSound(ent.getLocation(), Sound.BLOCK_ENDER_CHEST_CLOSE, 1.0f, 1.0f);
+						
+						Vector vec = ent.getEyeLocation().add(0,2,0).getDirection().multiply(2.3f);
+						ent.setVelocity(vec);						
+						List<Entity> entitylist = ent.getNearbyEntities(5, 5, 5);				
+						for (Entity nearEntity : entitylist) {
+							if (nearEntity instanceof Player) {
+								Player nearPlayer = (Player) nearEntity;
+								nearPlayer.setVelocity(vec);
+								nearPlayer.damage(player.getLevel() * 30);
+							}
+						}	
+					} else if(mat == Material.INK_SAC) {
+						player.sendMessage(ChatColor.RED + "지배자의 수류탄 투척이 발동됩니다.");
+						sendMessage(player, ChatColor.RED + "지배자의 수류탄 투척이 발동됩니다.");
+						ent.getWorld().playSound(ent.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 0.8f, 6.0f);
+						List<Entity> entitylist = ent.getNearbyEntities(10, 15, 10);
+						for (Entity nearEntity : entitylist) {
+							if (nearEntity instanceof Player) {
+								Player nearPlayer = (Player) nearEntity;
+								Location loc2 = nearPlayer.getLocation();
+								if (loc2.getX() <= 90 && loc2.getY() <= 126 && loc2.getZ() <= -5 
+										&& loc2.getX() >= 54 && loc2.getY() >= 114 && loc2.getZ() >= -41) {
+									nearPlayer.damage(player.getLevel() * 40);
+									nearPlayer.setFireTicks(200);
+								}
+							}
+						}
+					} else if(mat == Material.CLAY_BALL) {
+						
+					} else if(mat == Material.GLOWSTONE_DUST) {
+						
+					} else {
+						
+					}
+				}
+				if (num == 1) {
+					player.sendMessage(ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
+					sendMessage(player, ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
+					
+					Location loc = mob.getLocation();
+					
+					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+						int time = 0;
+						ThreadData td = new ThreadData(player.getUniqueId());
+
+						@Override
+						public void run() {
+							
+							if (!td.hasID()) {
+								td.setID(taskID);
+							}
+							
+							if (time % 20 == 0) {
+								for(int x = -15 ; x < 16 ; x++) {
+									for(int y = -1 ; y < 0 ; y++) {
+										for(int z = -15 ; z < 16 ; z++) {
+											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
+											player.getWorld().spawnParticle(Particle.REDSTONE, loc2, 0, new DustOptions(Color.RED, 1));
+										}
+									}
+								}
+							}
+							
+							if (time >= 40) {
+								player.sendMessage(ChatColor.RED + "지배자가 심판IV을 사용하였습니다.");
+								sendMessage(player, ChatColor.RED + "지배자가 심판IV을 사용하였습니다.");
+								// ===============================================================
+								ParticleData pd = new ParticleData(player.getUniqueId());
+								if (pd.hasID()) {
+									pd.endTask();
+									pd.removeID();
+								}
+								ParticleEffect pe = new ParticleEffect(player, mob);
+								pe.startE33();
+								// ================================================================
+								List<Entity> nearEntity = mob.getNearbyEntities(15, 20, 15);
+								for (Entity nearPlayer : nearEntity) {
+									if (nearPlayer instanceof Player) {
+										Location loc2 = nearPlayer.getLocation();
+										if (loc2.getX() <= 90 && loc2.getY() <= 126 && loc2.getZ() <= -5 && 
+												loc2.getX() >= 54 && loc2.getY() >= 114 && loc2.getZ() >= -41) {
+											((Player) nearPlayer).damage(5000);
+										}
+									}
+								}
+								
+								td.endTask();
+								td.removeID();
+							}
+							
+							time++;
+
+						}
+
+					}, 0, 1);
+					
+				} else if(num == 2) {
+					LivingEntity ent = (LivingEntity) mob;
+					EntityEquipment weapon = ent.getEquipment();
+					ItemStack weaponItem = player.getInventory().getItem(7);
+					weapon.setItemInMainHand(weaponItem);
+					player.sendMessage(ChatColor.RED + "지배자가 약탈을 시전합니다.");
+					sendMessage(player, ChatColor.RED + "지배자가 약탈을 시전합니다.");
+				}
+			} else {
+				int num = rnd.nextInt(10);
+				if (num == 0) {
+					// ===============================================================
+					ParticleData pd = new ParticleData(player.getUniqueId());
+					if (pd.hasID()) {
+						pd.endTask();
+						pd.removeID();
+					}
+					ParticleEffect pe = new ParticleEffect(player, mob);
+					pe.startE32();
+					// ================================================================
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 250000, true, false, false));
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, 100, 0, true, false, false));
+					mob.teleport(player.getLocation().add(0,1,0));
+					player.sendMessage(ChatColor.RED + "탑의 저주로 지배자가 강화됩니다.");
+					sendMessage(player, ChatColor.RED + "탑의 저주로 지배자가 강화됩니다.");
+					((Skeleton) mob).setTarget(player);
+				} else if(num == 1) {
+					LivingEntity ent = (LivingEntity) mob;
+					EntityEquipment weapon = ent.getEquipment();
+					ItemStack weaponItem = player.getInventory().getItem(7);
+					weapon.setItemInMainHand(weaponItem);
+					player.sendMessage(ChatColor.RED + "지배자가 약탈을 시전합니다.");
+					sendMessage(player, ChatColor.RED + "지배자가 약탈을 시전합니다.");
+				}
+			}
+		}
 	}
 
 	// 5층의 지배자
@@ -1759,30 +2230,46 @@ public class PlayerHitDebuff {
 					}, 0, 1);
 					player.sendMessage(ChatColor.RED + "전장의 서곡이 울려퍼집니다.");
 					sendMessage(player, ChatColor.RED + "전장의 서곡이 울려퍼집니다.");
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true, false, false));
 					((Skeleton) mob).setTarget(player);
 				}
 			}
 		}
 	}
 
+	// 쌍창 전사 석상
 	public void mob30(Player player, Entity mob) {
-
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("쌍창 전사 석상" + ChatColor.YELLOW + " [Lv.468]")) {
+			player.teleport(mob.getLocation().add(0,1,0));
+		}
 	}
 
+	// 빛의 궁수 석상
 	public void mob31(Player player, Entity mob) {
-
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("빛의 궁수 석상" + ChatColor.YELLOW + " [Lv.471]")) {
+			player.teleport(mob.getLocation().add(0,1,0));
+		}
 	}
 
+	// 쌍검 전사 석상
 	public void mob32(Player player, Entity mob) {
-
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("쌍검 전사 석상" + ChatColor.YELLOW + " [Lv.474]")) {
+			player.teleport(mob.getLocation().add(0,1,0));
+		}
 	}
 
+	// 루 라바다의 석상
 	public void mob33(Player player, Entity mob) {
-
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("루 라바다의 석상" + ChatColor.YELLOW + " [Lv.475]")) {
+			player.teleport(mob.getLocation().add(0,1,0));
+		}
 	}
 
+	// 누아다의 석상
 	public void mob34(Player player, Entity mob) {
-
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("누아다의 석상" + ChatColor.YELLOW + " [Lv.479]")) {
+			player.teleport(mob.getLocation().add(0,1,0));
+		}
 	}
 
 	public void mob35(Player player, Entity mob) {
