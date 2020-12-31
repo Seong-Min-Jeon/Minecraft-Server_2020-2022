@@ -42,7 +42,7 @@ public class InteractVillager {
 		}
 		
 		return vil0() || vil1() || vil2() || vil3() || vil4() || vil5() || vil6() || vil7() || vil8() || vil9() || vil10() || vil11() || vil12() || vil13() || vil14()
-				|| vil15() || vil16() || vil17() || vil18();
+				|| vil15() || vil16() || vil17() || vil18() || vil19();
 	}
 	
 	public boolean vil0() {
@@ -475,6 +475,41 @@ public class InteractVillager {
 				}
 			} catch(Exception e) {
 				player.sendMessage("연구원: 용건이 없으면 비켜주십시오.");
+			}
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean vil19() {
+		//니세리나 -112 1867  -114 1865
+		if(loc.getX() <= -112 && loc.getZ() <= 1867
+				&& loc.getX() >= -114 && loc.getZ() >= 1865) {
+			QuestBoard cb = new QuestBoard();
+			try {
+				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===대사막15===")) {
+					int qNum = cb.getNum(player);
+					cb.mq45_26(player, qNum+1);	
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===대사막16===")) {
+					int qNum = cb.getNum(player);
+					cb.mq45_28(player, qNum+1);	
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===대사막17===")) {
+					int qNum = cb.getNum(player);
+					cb.mq45_30(player, qNum+1);	
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===대사막18===")) {
+					int qNum = cb.getNum(player);
+					cb.mq45_32(player, qNum+1);	
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===대사막19===")) {
+					int qNum = cb.getNum(player);
+					cb.mq45_34(player, qNum+1);	
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===대사막20===")) {
+					int qNum = cb.getNum(player);
+					cb.mq45_36(player, qNum+1);	
+				} else {
+					player.sendMessage("니세리나: 뭐가 궁금한게냐.");
+				}
+			} catch(Exception e) {
+				player.sendMessage("니세리나: 뭐가 궁금한게냐.");
 			}
 			return true;
 		}

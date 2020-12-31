@@ -2065,7 +2065,7 @@ public class Skill {
 						if(!(nearEntity instanceof Player)) {
 							if (nearEntity instanceof LivingEntity) {
 								LivingEntity nearMob = (LivingEntity) nearEntity;
-								nearMob.damage(player.getLevel()*20 + damNum*20);
+								nearMob.damage(player.getLevel()*20 + damNum*13);
 							}
 						}
 					}

@@ -3621,6 +3621,7 @@ public class SpawnMob {
 			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
 				entity.setCustomName(ChatColor.GRAY + "발로르" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
+				entity.setRemoveWhenFarAway(false);
 				entity.setMaxHealth(200000);
 				entity.setHealth(200000);
 				Zombie zombie = (Zombie) entity;
@@ -5113,10 +5114,10 @@ public class SpawnMob {
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
 				entity.setCustomName(ChatColor.GRAY + "4층의 지배자" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
-				entity.setMaxHealth(2000000);
-				entity.setHealth(2000000);
+				entity.setMaxHealth(1600000);
+				entity.setHealth(1600000);
 				EntityEquipment weapon = entity.getEquipment();
-				ItemStack weaponItem = new ItemStack(Material.STONE);
+				ItemStack weaponItem = new ItemStack(Material.AIR);
 				weapon.setItemInMainHand(weaponItem);
 				EntityEquipment head = entity.getEquipment();
 				ItemStack headItem = chest.getInventory().getItem(3);

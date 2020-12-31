@@ -573,6 +573,54 @@ public class ReloadPlayerData {
 						QuestBoard qb = new QuestBoard();
 						qb.mq45_25(player, Integer.parseInt(num));
 					}
+					if (quest.equals("mq45_26")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq45_26(player, Integer.parseInt(num));
+					}
+					if (quest.equals("mq45_27")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq45_27(player, Integer.parseInt(num));
+					}
+					if (quest.equals("mq45_28")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq45_28(player, Integer.parseInt(num));
+					}
+					if (quest.equals("mq45_29")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq45_29(player, Integer.parseInt(num));
+					}
+					if (quest.equals("mq45_30")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq45_30(player, Integer.parseInt(num));
+					}
+					if (quest.equals("mq45_31")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq45_31(player, Integer.parseInt(num));
+					}
+					if (quest.equals("mq45_32")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq45_32(player, Integer.parseInt(num));
+					}
+					if (quest.equals("mq45_33")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq45_33(player, Integer.parseInt(num));
+					}
+					if (quest.equals("mq45_34")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq45_34(player, Integer.parseInt(num));
+					}
+					if (quest.equals("mq45_35")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq45_35(player, Integer.parseInt(num));
+					}
+					if (quest.equals("mq45_36")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq45_36(player, Integer.parseInt(num));
+					}
+					if (quest.equals("mq45_37")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq45_37(player, Integer.parseInt(num));
+					}
 					bufReader.close();
 				} catch (Exception e) {
             		

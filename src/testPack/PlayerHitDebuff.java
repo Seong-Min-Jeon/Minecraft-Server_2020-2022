@@ -1075,11 +1075,40 @@ public class PlayerHitDebuff {
 							}
 						}
 					} else if(mat == Material.CLAY_BALL) {
-						
+						player.sendMessage(ChatColor.RED + "지배자의 밤 에로우가 발동됩니다.");
+						sendMessage(player, ChatColor.RED + "지배자의 밤 에로우가 발동됩니다.");
+						ent.getWorld().playSound(ent.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 0.8f, 6.0f);
+						List<Entity> entitylist = ent.getNearbyEntities(10, 15, 10);
+						for (Entity nearEntity : entitylist) {
+							if (nearEntity instanceof Player) {
+								Player nearPlayer = (Player) nearEntity;
+								Location loc2 = nearPlayer.getLocation();
+								if (loc2.getX() <= 90 && loc2.getY() <= 126 && loc2.getZ() <= -5 
+										&& loc2.getX() >= 54 && loc2.getY() >= 114 && loc2.getZ() >= -41) {
+									nearPlayer.damage(player.getLevel() * 5);
+								}
+							}
+						}
 					} else if(mat == Material.GLOWSTONE_DUST) {
-						
+						player.sendMessage(ChatColor.RED + "지배자의 밤 에로우가 발동됩니다.");
+						sendMessage(player, ChatColor.RED + "지배자의 밤 에로우가 발동됩니다.");
+						ent.getWorld().playSound(ent.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 0.8f, 6.0f);
+						List<Entity> entitylist = ent.getNearbyEntities(10, 15, 10);
+						for (Entity nearEntity : entitylist) {
+							if (nearEntity instanceof Player) {
+								Player nearPlayer = (Player) nearEntity;
+								Location loc2 = nearPlayer.getLocation();
+								if (loc2.getX() <= 90 && loc2.getY() <= 126 && loc2.getZ() <= -5 
+										&& loc2.getX() >= 54 && loc2.getY() >= 114 && loc2.getZ() >= -41) {
+									nearPlayer.damage(player.getLevel() * 40);
+								}
+							}
+						}
 					} else {
-						
+						ItemStack weaponItem = player.getInventory().getItem(7);
+						weapon.setItemInMainHand(weaponItem);
+						player.sendMessage(ChatColor.RED + "지배자가 약탈을 시전합니다.");
+						sendMessage(player, ChatColor.RED + "지배자가 약탈을 시전합니다.");
 					}
 				}
 				if (num == 1) {
@@ -1164,7 +1193,7 @@ public class PlayerHitDebuff {
 					ParticleEffect pe = new ParticleEffect(player, mob);
 					pe.startE32();
 					// ================================================================
-					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 250000, true, false, false));
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 200000, true, false, false));
 					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, 100, 0, true, false, false));
 					mob.teleport(player.getLocation().add(0,1,0));
 					player.sendMessage(ChatColor.RED + "탑의 저주로 지배자가 강화됩니다.");
@@ -1858,7 +1887,7 @@ public class PlayerHitDebuff {
 							}
 
 							if (time % 5 == 0) {
-								List<Entity> entitylist = totem.getNearbyEntities(8, 8, 8);
+								List<Entity> entitylist = totem.getNearbyEntities(4, 3, 4);
 								for (Entity nearEntity : entitylist) {
 									if (nearEntity instanceof Player) {
 										Player player = (Player) nearEntity;
@@ -1867,7 +1896,7 @@ public class PlayerHitDebuff {
 								}
 							}
 
-							if (time >= 40) {
+							if (time >= 30) {
 								totem.remove();
 								td.endTask();
 								td.removeID();
@@ -1933,7 +1962,11 @@ public class PlayerHitDebuff {
 					player.getWorld().playSound(mob.getLocation(), Sound.ITEM_SHIELD_BLOCK, 2.0f, 1.0f);
 					player.setVelocity(player.getEyeLocation().getDirection().multiply(-10.0f));
 					player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 150, 0, true, false, false));
-					player.damage(10);
+					if(player.getHealth() - 10 > 0) {
+						player.setHealth(player.getHealth() - 10);
+					} else {
+						player.setHealth(0);
+					}
 				} else if (num == 3) {
 					((LivingEntity) mob).setHealth(((LivingEntity) mob).getHealth() + 5);
 					player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_GENERIC_EAT, 1.0f, 1.0f);
@@ -1980,8 +2013,13 @@ public class PlayerHitDebuff {
 							td.setID(taskID);
 						}
 
-						if (time >= 30 && time % 2 == 0) {
-							player.damage(1);
+						if (time >= 30 && time % 4 == 0) {
+							player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_HURT, 1.0f, 1.0f);
+							if(player.getHealth() - 1 > 0) {
+								player.setHealth(player.getHealth() - 1);
+							} else {
+								player.setHealth(0);
+							}
 						}
 
 						if (time >= 80) {
@@ -2240,35 +2278,43 @@ public class PlayerHitDebuff {
 	// 쌍창 전사 석상
 	public void mob30(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("쌍창 전사 석상" + ChatColor.YELLOW + " [Lv.468]")) {
-			player.teleport(mob.getLocation().add(0,1,0));
+			if(rnd.nextInt(20) == 0) {
+				player.teleport(mob.getLocation().add(0,1,0));
+			}
 		}
 	}
 
 	// 빛의 궁수 석상
 	public void mob31(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("빛의 궁수 석상" + ChatColor.YELLOW + " [Lv.471]")) {
-			player.teleport(mob.getLocation().add(0,1,0));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 1, true, false, false));
 		}
 	}
 
 	// 쌍검 전사 석상
 	public void mob32(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("쌍검 전사 석상" + ChatColor.YELLOW + " [Lv.474]")) {
-			player.teleport(mob.getLocation().add(0,1,0));
+			if(rnd.nextInt(20) == 0) {
+				player.teleport(mob.getLocation().add(0,1,0));
+			}
 		}
 	}
 
 	// 루 라바다의 석상
 	public void mob33(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("루 라바다의 석상" + ChatColor.YELLOW + " [Lv.475]")) {
-			player.teleport(mob.getLocation().add(0,1,0));
+			if(rnd.nextInt(20) == 0) {
+				player.teleport(mob.getLocation().add(0,1,0));
+			}
 		}
 	}
 
 	// 누아다의 석상
 	public void mob34(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("누아다의 석상" + ChatColor.YELLOW + " [Lv.479]")) {
-			player.teleport(mob.getLocation().add(0,1,0));
+			if(rnd.nextInt(20) == 0) {
+				player.teleport(mob.getLocation().add(0,1,0));
+			}
 		}
 	}
 

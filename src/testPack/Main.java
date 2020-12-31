@@ -5244,7 +5244,7 @@ public class Main extends JavaPlugin implements Listener{
 							new BossHealth().getBar18().removePlayer(p);
 						}
 					} else {
-						new BossHealth().getBar18().setProgress((boss.getHealth()-event.getFinalDamage()) / 2000000.0);
+						new BossHealth().getBar18().setProgress((boss.getHealth()-event.getFinalDamage()) / 1600000.0);
 					}
 				}
 				// 5층의 지배자

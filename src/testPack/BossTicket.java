@@ -8,6 +8,7 @@ import org.bukkit.Effect;
 import org.bukkit.Location;
 import org.bukkit.Sound;
 import org.bukkit.World;
+import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Item;
@@ -104,7 +105,7 @@ public class BossTicket {
 
 							if (num == 0) {
 								for (Entity nearEntity : entitylist) {
-									if (nearEntity instanceof Mob) {
+									if (nearEntity instanceof Mob || nearEntity instanceof ArmorStand) {
 										Location loc2 = nearEntity.getLocation();
 										// 4030 91 2548  3853 75 2728
 										if (loc2.getX() <= 4030 && loc2.getY() <= 91 && loc2.getZ() <= 2728 
@@ -177,7 +178,7 @@ public class BossTicket {
 
 							if (num == 0) {
 								for (Entity nearEntity : entitylist) {
-									if (nearEntity instanceof Mob) {
+									if (nearEntity instanceof Mob || nearEntity instanceof ArmorStand) {
 										Location loc2 = nearEntity.getLocation();
 										// 4037 91 2730  4207 75 2547
 										if (loc2.getX() <= 4207 && loc2.getY() <= 91 && loc2.getZ() <= 2730 
@@ -250,7 +251,7 @@ public class BossTicket {
 
 							if (num == 0) {
 								for (Entity nearEntity : entitylist) {
-									if (nearEntity instanceof Mob) {
+									if (nearEntity instanceof Mob || nearEntity instanceof ArmorStand) {
 										Location loc2 = nearEntity.getLocation();
 										// 3846 91 2546  4023 75 2369
 										if (loc2.getX() <= 4023 && loc2.getY() <= 91 && loc2.getZ() <= 2546 
@@ -323,7 +324,7 @@ public class BossTicket {
 
 							if (num == 0) {
 								for (Entity nearEntity : entitylist) {
-									if (nearEntity instanceof Mob) {
+									if (nearEntity instanceof Mob || nearEntity instanceof ArmorStand) {
 										Location loc2 = nearEntity.getLocation();
 										// 4031 91 2543  4210 75 2366
 										if (loc2.getX() <= 4210 && loc2.getY() <= 91 && loc2.getZ() <= 2543 

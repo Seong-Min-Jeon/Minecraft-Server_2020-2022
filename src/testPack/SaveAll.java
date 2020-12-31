@@ -809,6 +809,54 @@ public class SaveAll {
 						int number = qb.getNum(player);
 						fw.write("mq45_25\n");
 						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===대사막15===")) {
+						int number = qb.getNum(player);
+						fw.write("mq45_26\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===사막의 푸른 땅1===")) {
+						int number = qb.getNum(player);
+						fw.write("mq45_27\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===대사막16===")) {
+						int number = qb.getNum(player);
+						fw.write("mq45_28\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===사막의 푸른 땅2===")) {
+						int number = qb.getNum(player);
+						fw.write("mq45_29\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===대사막17===")) {
+						int number = qb.getNum(player);
+						fw.write("mq45_30\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===사막의 푸른 땅3===")) {
+						int number = qb.getNum(player);
+						fw.write("mq45_31\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===대사막18===")) {
+						int number = qb.getNum(player);
+						fw.write("mq45_32\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===사막의 푸른 땅4===")) {
+						int number = qb.getNum(player);
+						fw.write("mq45_33\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===대사막19===")) {
+						int number = qb.getNum(player);
+						fw.write("mq45_34\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===사막의 푸른 땅5===")) {
+						int number = qb.getNum(player);
+						fw.write("mq45_35\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===대사막20===")) {
+						int number = qb.getNum(player);
+						fw.write("mq45_36\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===대사막-최종장===")) {
+						int number = qb.getNum(player);
+						fw.write("mq45_37\n");
+						fw.write(Integer.toString(number));
 					}
 					fw.close();
 					bufReader.close();

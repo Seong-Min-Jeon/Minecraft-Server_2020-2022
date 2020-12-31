@@ -591,6 +591,9 @@ public class TPMobSpawn {
 					if (loc2.getX() <= 90 && loc2.getY() <= 128 && loc2.getZ() <= -5 && 
 							loc2.getX() >= 54 && loc2.getY() >= 116 && loc2.getZ() >= -41) {
 						num++;
+						if(new BossHealth().getBar18().getProgress() != 0) {
+							new BossHealth().getBar18().addPlayer(player);
+						}
 						return;
 					}
 				}
@@ -607,6 +610,9 @@ public class TPMobSpawn {
 				}
 			}
 			loc.getWorld().spawnEntity(new Location(player.getWorld(), 72, 116, -22), EntityType.SKELETON);
+			
+			new BossHealth().getBar18().setProgress(1.0);
+			new BossHealth().getBar18().addPlayer(player);
 			return;
 		}
 		
@@ -622,6 +628,9 @@ public class TPMobSpawn {
 					if (loc2.getX() <= 90 && loc2.getY() <= 141 && loc2.getZ() <= -5 && 
 							loc2.getX() >= 54 && loc2.getY() >= 129 && loc2.getZ() >= -41) {
 						num++;
+						if(new BossHealth().getBar19().getProgress() != 0) {
+							new BossHealth().getBar19().addPlayer(player);
+						}
 						return;
 					}
 				}
@@ -638,6 +647,9 @@ public class TPMobSpawn {
 				}
 			}
 			loc.getWorld().spawnEntity(new Location(player.getWorld(), 72, 129, -22), EntityType.SKELETON);
+			
+			new BossHealth().getBar19().setProgress(1.0);
+			new BossHealth().getBar19().addPlayer(player);
 			return;
 		}
 		
