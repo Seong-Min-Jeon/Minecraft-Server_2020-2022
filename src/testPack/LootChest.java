@@ -1631,14 +1631,14 @@ public class LootChest {
 		int num5 = rnd.nextInt(44);	// 세트
 		int num6 = 32;
 		
-		ItemStack var1 = new ItemStack(Material.MUSIC_DISC_13);
+		ItemStack var1 = new ItemStack(Material.BEDROCK);
 		ItemMeta var1Im = var1.getItemMeta();
-		var1Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,450");
-		var1Im.setDisplayName(ChatColor.AQUA + "탑의 조율자 스태프");
+		var1Im.setLocalizedName("1500,300,300,300,1000,0,0,0,0,0,450");
+		var1Im.setDisplayName(ChatColor.AQUA + "탑의 조율자 검");
 		ArrayList<String> var1Lore = new ArrayList();
 		var1Lore.add(ChatColor.GRAY + "레벨 제한: 450");
 		var1Lore.add(ChatColor.GRAY + " ");
-		var1Lore.add(ChatColor.GRAY + "죽음의 탑 4층에서 발견한 스태프");
+		var1Lore.add(ChatColor.GRAY + "죽음의 탑 4층에서 발견한 검");
 		var1Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var1Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var1Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);

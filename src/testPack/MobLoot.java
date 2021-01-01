@@ -5211,23 +5211,119 @@ public class MobLoot {
 		player.teleport(new Location(player.getWorld(), 128, 64, 1955, 90, 0));
 	}
 	
+	// 고먐미
 	public void mob216(Player player) {
-
+		int num = rnd.nextInt(8) + 7;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1870000);
 	}
 	
+	// 멈멈미
 	public void mob217(Player player) {
-
+		int num = rnd.nextInt(8) + 7;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1880000);
 	}
 	
+	// 펨뮌
 	public void mob218(Player player) {
-
+		int num = rnd.nextInt(8) + 7;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1887000);
 	}
 	
+	// 맴무새
 	public void mob219(Player player) {
+		int num = rnd.nextInt(8) + 7;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1900000);
+	}
+	
+	// 먐
+	public void mob220(Player player) {
+		int num = rnd.nextInt(8) + 7;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1905000);
+	}
+	
+	// 모짐머
+	public void mob221(Player player) {
+		int num = rnd.nextInt(8) + 7;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1935000);
+	}
+
+	// 뭔숨미
+	public void mob222(Player player) {
+		int num = rnd.nextInt(8) + 7;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1940000);
+	}
+	
+	// 부멈미
+	public void mob223(Player player) {
+		int num = rnd.nextInt(8) + 7;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 1970000);
+	}
+	
+	public void mob224(Player player) {
 
 	}
 	
-	public void mob220(Player player) {
+	public void mob225(Player player) {
+
+	}
+	
+	public void mob226(Player player) {
+
+	}
+	
+	public void mob227(Player player) {
+
+	}
+	
+	public void mob228(Player player) {
+
+	}
+	
+	public void mob229(Player player) {
+
+	}
+	
+	public void mob230(Player player) {
 
 	}
 }

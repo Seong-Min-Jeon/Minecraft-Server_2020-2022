@@ -408,6 +408,18 @@ public class MobThread implements Listener{
 							} else if(loc.getX() <= 3697 && loc.getY() <= 58 && loc.getZ() <= 2898 
 									&& loc.getX() >= 3658 && loc.getY() >= 41 && loc.getZ() >= 2823) {
 								desertDungeonBoss(player, loc);
+							} else if(loc.getX() <= -210 && loc.getY() <= 120 && loc.getZ() <= 2445 
+									&& loc.getX() >= -296 && loc.getY() >= 48 && loc.getZ() >= 2390) {
+								desertIsland1(player, loc);
+							} else if(loc.getX() <= -136 && loc.getY() <= 120 && loc.getZ() <= 2577 
+									&& loc.getX() >= -246 && loc.getY() >= 48 && loc.getZ() >= 2448) {
+								desertIsland2(player, loc);
+							} else if(loc.getX() <= -260 && loc.getY() <= 120 && loc.getZ() <= 2585 
+									&& loc.getX() >= -359 && loc.getY() >= 48 && loc.getZ() >= 2490) {
+								desertIsland3(player, loc);
+							} else if(loc.getX() <= -328 && loc.getY() <= 120 && loc.getZ() <= 2489 
+									&& loc.getX() >= -384 && loc.getY() >= 48 && loc.getZ() >= 2419) {
+								desertIsland4(player, loc);
 							}
 						}
 					} 
@@ -2348,6 +2360,46 @@ public class MobThread implements Listener{
 		if (num == 0) {
 			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
 		}
+	}
+	
+	public void desertIsland1(Player player, Location loc) {
+		loc = location(loc);
+		if (!(loc.getX() <= -210 && loc.getY() <= 120 && loc.getZ() <= 2445 
+				&& loc.getX() >= -296 && loc.getY() >= 48 && loc.getZ() >= 2390)) {
+			return;
+		}
+		
+		loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+	}
+	
+	public void desertIsland2(Player player, Location loc) {
+		loc = location(loc);
+		if (!(loc.getX() <= -136 && loc.getY() <= 120 && loc.getZ() <= 2577 
+				&& loc.getX() >= -246 && loc.getY() >= 48 && loc.getZ() >= 2448)) {
+			return;
+		}
+		
+		loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+	}
+	
+	public void desertIsland3(Player player, Location loc) {
+		loc = location(loc);
+		if (!(loc.getX() <= -260 && loc.getY() <= 120 && loc.getZ() <= 2585 
+				&& loc.getX() >= -359 && loc.getY() >= 48 && loc.getZ() >= 2490)) {
+			return;
+		}
+		
+		loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+	}
+	
+	public void desertIsland4(Player player, Location loc) {
+		loc = location(loc);
+		if (!(loc.getX() <= -328 && loc.getY() <= 120 && loc.getZ() <= 2489 
+				&& loc.getX() >= -384 && loc.getY() >= 48 && loc.getZ() >= 2419)) {
+			return;
+		}
+		
+		loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
 	}
 	
 	public Location location(Location loc) {

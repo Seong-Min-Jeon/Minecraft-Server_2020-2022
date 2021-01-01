@@ -2318,7 +2318,107 @@ public class PlayerHitDebuff {
 		}
 	}
 
+	// 고먐미
 	public void mob35(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("고먐미" + ChatColor.YELLOW + " [Lv.480]")) {
+			if(rnd.nextInt(20) == 0) {
+				mob.teleport(player.getLocation().add(0,1,0));
+			}
+		}
+	}
+	
+	// 멈멈미
+	public void mob36(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("멈멈미" + ChatColor.YELLOW + " [Lv.483]")) {
+			if(rnd.nextInt(20) == 0) {
+				mob.teleport(player.getLocation().add(0,1,0));
+			}
+		}
+	}
+	
+	// 펨뮌
+	public void mob37(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("펨뮌" + ChatColor.YELLOW + " [Lv.484]")) {
+			if(rnd.nextInt(20) == 0) {
+				mob.teleport(player.getLocation().add(0,1,0));
+			}
+		}
+	}
+	
+	// 맴무새
+	public void mob38(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("맴무새" + ChatColor.YELLOW + " [Lv.488]")) {
+			if(rnd.nextInt(20) == 0) {
+				mob.teleport(player.getLocation().add(0,1,0));
+			}
+		}
+	}
+	
+	// 먐
+	public void mob39(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("먐" + ChatColor.YELLOW + " [Lv.489]")) {
+			if(rnd.nextInt(20) == 0) {
+				mob.teleport(player.getLocation().add(0,1,0));
+			}
+		}
+	}
+	
+	// 모짐머
+	public void mob40(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("모짐머" + ChatColor.YELLOW + " [Lv.493]")) {
+			if(rnd.nextInt(20) == 0) {
+				mob.teleport(player.getLocation().add(0,1,0));
+			}
+		}
+	}
+	
+	// 뭔숨미
+	public void mob41(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("뭔숨미" + ChatColor.YELLOW + " [Lv.494]")) {
+			if(rnd.nextInt(20) == 0) {
+				mob.teleport(player.getLocation().add(0,1,0));
+			}
+		}
+	}
+	
+	// 부멈미
+	public void mob42(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("부멈미" + ChatColor.YELLOW + " [Lv.497]")) {
+			if(rnd.nextInt(20) == 0) {
+				mob.teleport(player.getLocation().add(0,1,0));
+			}
+		}
+	}
+	
+	public void mob43(Player player, Entity mob) {
+
+	}
+	
+	public void mob44(Player player, Entity mob) {
+
+	}
+	
+	public void mob45(Player player, Entity mob) {
+
+	}
+	
+	public void mob46(Player player, Entity mob) {
+
+	}
+	
+	public void mob47(Player player, Entity mob) {
+
+	}
+	
+	public void mob48(Player player, Entity mob) {
+
+	}
+	
+	public void mob49(Player player, Entity mob) {
+
+	}
+	
+	public void mob50(Player player, Entity mob) {
 
 	}
 

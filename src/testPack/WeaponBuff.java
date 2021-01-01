@@ -369,18 +369,32 @@ public class WeaponBuff {
 							}
 						}
 						
+						if (!player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "패왕권룡 다크 리벨리온")) {
+							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "패왕권룡 스타브 베놈")) {
+								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "패왕권룡 오드아이즈")) {
+									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "패왕권룡 클리어윙")) {
+										player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 200, 100000,true,false,false));
+									}
+								}
+							}
+						}
+						
 						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "패왕권룡 다크 리벨리온")) {
-							if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "패왕권룡 오드아이즈")) {
-								if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "패왕권룡 클리어윙")) {
-									player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 200, 1000,true,false,false));
+							if (!player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "패왕권룡 스타브 베놈")) {
+								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "패왕권룡 오드아이즈")) {
+									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "패왕권룡 클리어윙")) {
+										player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 200, 100000,true,false,false));
+									}
 								}
 							}
 						}
 						
 						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "패왕권룡 다크 리벨리온")) {
 							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "패왕권룡 스타브 베놈")) {
-								if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "패왕권룡 클리어윙")) {
-									player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 200, 1000,true,false,false));
+								if (!player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "패왕권룡 오드아이즈")) {
+									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "패왕권룡 클리어윙")) {
+										player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 200, 100000,true,false,false));
+									}
 								}
 							}
 						}
@@ -388,15 +402,9 @@ public class WeaponBuff {
 						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "패왕권룡 다크 리벨리온")) {
 							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "패왕권룡 스타브 베놈")) {
 								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "패왕권룡 오드아이즈")) {
-									player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 200, 1000,true,false,false));
-								}
-							}
-						}
-						
-						if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "패왕권룡 스타브 베놈")) {
-							if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "패왕권룡 오드아이즈")) {
-								if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "패왕권룡 클리어윙")) {
-									player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 200, 1000,true,false,false));
+									if (!player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "패왕권룡 클리어윙")) {
+										player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 200, 100000,true,false,false));
+									}
 								}
 							}
 						}

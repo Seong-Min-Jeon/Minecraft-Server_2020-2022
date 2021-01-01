@@ -949,6 +949,38 @@ public class MobDeath {
 				if (name.equalsIgnoreCase("프라에그나리" + ChatColor.YELLOW + " [Lv.??]")) {
 					mobloot.mob215(lootPlayer);
 				}
+				// 고먐미
+				if (name.equalsIgnoreCase("고먐미" + ChatColor.YELLOW + " [Lv.480]")) {
+					mobloot.mob216(lootPlayer);
+				}
+				// 멈멈미
+				if (name.equalsIgnoreCase("멈멈미" + ChatColor.YELLOW + " [Lv.483]")) {
+					mobloot.mob217(lootPlayer);
+				}
+				// 펨뮌
+				if (name.equalsIgnoreCase("펨뮌" + ChatColor.YELLOW + " [Lv.484]")) {
+					mobloot.mob218(lootPlayer);
+				}
+				// 맴무새
+				if (name.equalsIgnoreCase("맴무새" + ChatColor.YELLOW + " [Lv.488]")) {
+					mobloot.mob219(lootPlayer);
+				}
+				// 먐
+				if (name.equalsIgnoreCase("먐" + ChatColor.YELLOW + " [Lv.489]")) {
+					mobloot.mob220(lootPlayer);
+				}
+				// 모짐머
+				if (name.equalsIgnoreCase("모짐머" + ChatColor.YELLOW + " [Lv.493]")) {
+					mobloot.mob221(lootPlayer);
+				}
+				// 뭔숨미
+				if (name.equalsIgnoreCase("뭔숨미" + ChatColor.YELLOW + " [Lv.494]")) {
+					mobloot.mob222(lootPlayer);
+				}
+				// 부멈미
+				if (name.equalsIgnoreCase("부멈미" + ChatColor.YELLOW + " [Lv.497]")) {
+					mobloot.mob223(lootPlayer);
+				}
 			} catch (Exception e) {
 
 			}
