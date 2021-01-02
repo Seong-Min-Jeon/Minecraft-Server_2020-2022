@@ -420,6 +420,9 @@ public class MobThread implements Listener{
 							} else if(loc.getX() <= -328 && loc.getY() <= 120 && loc.getZ() <= 2489 
 									&& loc.getX() >= -384 && loc.getY() >= 48 && loc.getZ() >= 2419) {
 								desertIsland4(player, loc);
+							} else if(loc.getX() <= -275 && loc.getY() <= 47 && loc.getZ() <= 2480 
+									&& loc.getX() >= -309 && loc.getY() >= 30 && loc.getZ() >= 2454) {
+								desertIsland5(player, loc);
 							}
 						}
 					} 
@@ -2400,6 +2403,21 @@ public class MobThread implements Listener{
 		}
 		
 		loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+	}
+	
+	public void desertIsland5(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= -275 && loc.getY() <= 47 && loc.getZ() <= 2480 
+				&& loc.getX() >= -309 && loc.getY() >= 30 && loc.getZ() >= 2454)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		} 
 	}
 	
 	public Location location(Location loc) {

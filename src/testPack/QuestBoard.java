@@ -2913,7 +2913,8 @@ public class QuestBoard {
 					+ "니세리나: 내가 이 땅 최고의 마법사니까.%니세리나: 하지만 내가 너무 강력한 봉인을 해버렸다.%니세리나: 그래서 나도 봉인을 풀 수 없어.%니세리나: 내 IQ300의 두뇌가 말하는군.%"
 					+ "니세리나: 이 성물은 그냥 사용해도 된다.%니세리나: 믿어도 된다.%니세리나: 난 아인슈타인과 뉴턴의 스승이니까..!%니세리나: 아마도 봉인된 성물의 힘은 약화되어서..%"
 					+ "니세리나: §d달의 힘이 깃든 검+§f, §d태양의 힘이 깃든 검+§f 이 두가지 무기를 초월할 수 있을 것 같군.%니세리나: 칫. 내가 너무 강력한 봉인을 해서 이정도가 한계같군.%"
-					+ "니세리나: 내가 너무 강해서 미안하다.%니세리나: 이걸 알려준 김에 부탁을 하나 하지.%니세리나: 사막 남쪽 바다를 보면 외딴 섬이 5개 있다네.%니세리나: 거기를 갔다와주게.");
+					+ "니세리나: 내가 너무 강해서 미안하다.%니세리나: 이걸 알려준 김에 부탁을 하나 하지.%니세리나: 사막 남쪽 바다를 보면 §e외딴 섬들§f이 있다네.%니세리나: 거기를 갔다와주게.%"
+					+ "니세리나: 그곳의 모든 생물은 네모다.%니세리나: 나의 아름다운 코끝을 따라올 수가 없지.%니세리나: 그 녀석들 중 최약체인 §e고먐미§f를 잡아와라.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq45_27(player, 0);
 			return;
@@ -2947,11 +2948,13 @@ public class QuestBoard {
 		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 45장");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
 		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===사막의 푸른 땅1===");
-		score.setScore(2);
-		Score score2 = obj.getScore("아직 안만듬 여까지만 하고 다른거 해줘");
-		score2.setScore(1);
-		Score score3 = obj.getScore("(" + num + "/50)");
-		score3.setScore(0);
+		score.setScore(3);
+		Score score2 = obj.getScore("고먐미 50마리 사냥");
+		score2.setScore(2);
+		Score score3 = obj.getScore("위치: -276,65,2410");
+		score3.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/1)");
+		score4.setScore(0);
 		player.setScoreboard(board);
 	}
 	
@@ -2960,9 +2963,8 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 26000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "주민: 석상들을 토벌하면서 §e투기장 스크롤§f을 주우신 적이 있나요?%주민: 전통적으로 석상들을 제작할 때는 그 안에 포보르를 봉인해둔 스크롤을 넣어두기도 해요.%"
-					+ "주민: 그래야 석상에 힘이 생기고 마을을 지켜준다는 믿음이 있었거든요.%주민: 투기장 스크롤은 §e사막에 있는 투기장§f에서 사용할 수 있어요.%"
-					+ "주민: 투기장 안쪽은 전장의 서늘함이 느껴져서 덥지 않다고 해요.");
+			msg.msg(player, "니세리나: 훗, 역시.%니세리나: 내가 사람을 잘못본게 아니군.%니세리나: 말하지 않아도 알고 있다.%니세리나: 너가 고먐미를 처리했다는 사실은 이미 알고 있으니까.%"
+					+ "니세리나: 5km 밖에서도 그 츄르 냄새는 숨길 수가 없지.%니세리나: 이번에는 §e펨뮌§f을 상대해봐라.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq45_29(player, 0);
 			return;
@@ -2994,22 +2996,23 @@ public class QuestBoard {
 		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 45장");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
 		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===사막의 푸른 땅2===");
-		score.setScore(2);
-		Score score2 = obj.getScore("누아다의 석상 50마리 사냥");
-		score2.setScore(1);
-		Score score3 = obj.getScore("(" + num + "/50)");
-		score3.setScore(0);
+		score.setScore(3);
+		Score score2 = obj.getScore("펨뮌 50마리 사냥");
+		score2.setScore(2);
+		Score score3 = obj.getScore("위치: -205,69,2480");
+		score3.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/1)");
+		score4.setScore(0);
 		player.setScoreboard(board);
 	}
 	
 	public void mq45_30(Player player, int num) {
 		if(num>=1) {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
-			es.giveExp(player, 26000000);
+			es.giveExp(player, 27000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "주민: 석상들을 토벌하면서 §e투기장 스크롤§f을 주우신 적이 있나요?%주민: 전통적으로 석상들을 제작할 때는 그 안에 포보르를 봉인해둔 스크롤을 넣어두기도 해요.%"
-					+ "주민: 그래야 석상에 힘이 생기고 마을을 지켜준다는 믿음이 있었거든요.%주민: 투기장 스크롤은 §e사막에 있는 투기장§f에서 사용할 수 있어요.%"
-					+ "주민: 투기장 안쪽은 전장의 서늘함이 느껴져서 덥지 않다고 해요.");
+			msg.msg(player, "니세리나: 말하지 않아도 알고있지.%니세리나: 너가 펨뮌을 사냥하고 있을 때%니세리나: 펨뮌 특유의 울음소리를 들었으니까.%"
+					+ "니세리나: 이번에는 §e먐§f을 잡아와라.%니세리나: 너가 아는 평범한 양과는 수준이 다를 것이다.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq45_31(player, 0);
 			return;
@@ -3030,7 +3033,7 @@ public class QuestBoard {
 	public void mq45_31(Player player, int num) {
 		if(num>=50) {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
-			es.giveExp(player, 26000000);
+			es.giveExp(player, 27000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			QuestBoard qb = new QuestBoard();
 			qb.mq45_32(player, 0);
@@ -3041,22 +3044,23 @@ public class QuestBoard {
 		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 45장");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
 		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===사막의 푸른 땅3===");
-		score.setScore(2);
-		Score score2 = obj.getScore("누아다의 석상 50마리 사냥");
-		score2.setScore(1);
-		Score score3 = obj.getScore("(" + num + "/50)");
-		score3.setScore(0);
+		score.setScore(3);
+		Score score2 = obj.getScore("먐 50마리 사냥");
+		score2.setScore(2);
+		Score score3 = obj.getScore("위치: -318,76,2518");
+		score3.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/1)");
+		score4.setScore(0);
 		player.setScoreboard(board);
 	}
 	
 	public void mq45_32(Player player, int num) {
 		if(num>=1) {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
-			es.giveExp(player, 26000000);
+			es.giveExp(player, 28000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "주민: 석상들을 토벌하면서 §e투기장 스크롤§f을 주우신 적이 있나요?%주민: 전통적으로 석상들을 제작할 때는 그 안에 포보르를 봉인해둔 스크롤을 넣어두기도 해요.%"
-					+ "주민: 그래야 석상에 힘이 생기고 마을을 지켜준다는 믿음이 있었거든요.%주민: 투기장 스크롤은 §e사막에 있는 투기장§f에서 사용할 수 있어요.%"
-					+ "주민: 투기장 안쪽은 전장의 서늘함이 느껴져서 덥지 않다고 해요.");
+			msg.msg(player, "니세리나: 어떠냐.%니세리나: 이번에는 좀 힘들었나?%니세리나: 아무리 어려워도 너는 해낼 것이란걸 알고 있지.%니세리나: 자 마지막이 보이는군.%"
+					+ "니세리나: 이번에는 §e뭔숨미§f를 잡아와라.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq45_33(player, 0);
 			return;
@@ -3077,7 +3081,7 @@ public class QuestBoard {
 	public void mq45_33(Player player, int num) {
 		if(num>=50) {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
-			es.giveExp(player, 26000000);
+			es.giveExp(player, 28000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			QuestBoard qb = new QuestBoard();
 			qb.mq45_34(player, 0);
@@ -3088,22 +3092,23 @@ public class QuestBoard {
 		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 45장");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
 		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===사막의 푸른 땅4===");
-		score.setScore(2);
-		Score score2 = obj.getScore("누아다의 석상 50마리 사냥");
-		score2.setScore(1);
-		Score score3 = obj.getScore("(" + num + "/50)");
-		score3.setScore(0);
+		score.setScore(3);
+		Score score2 = obj.getScore("뭔숨미 50마리 사냥");
+		score2.setScore(2);
+		Score score3 = obj.getScore("위치: -353,64,2450");
+		score3.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/1)");
+		score4.setScore(0);
 		player.setScoreboard(board);
 	}
 	
 	public void mq45_34(Player player, int num) {
 		if(num>=1) {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
-			es.giveExp(player, 26000000);
+			es.giveExp(player, 29000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "주민: 석상들을 토벌하면서 §e투기장 스크롤§f을 주우신 적이 있나요?%주민: 전통적으로 석상들을 제작할 때는 그 안에 포보르를 봉인해둔 스크롤을 넣어두기도 해요.%"
-					+ "주민: 그래야 석상에 힘이 생기고 마을을 지켜준다는 믿음이 있었거든요.%주민: 투기장 스크롤은 §e사막에 있는 투기장§f에서 사용할 수 있어요.%"
-					+ "주민: 투기장 안쪽은 전장의 서늘함이 느껴져서 덥지 않다고 해요.");
+			msg.msg(player, "니세리나: 좋아. 좋아.%니세리나: 이제 중앙섬 지하로 가서 동물들을 네모로 만들어버린 그 녀석을 처리하자.%니세리나: 방법은 간단해.%"
+					+ "니세리나: 지하에 있는 몬스터들을 잡다보면 알아서 나오겠지뭐.%니세리나: 자기 부하들이 당하고 있는데 그냥 지켜만 보겠어?");
 			QuestBoard qb = new QuestBoard();
 			qb.mq45_35(player, 0);
 			return;
@@ -3122,9 +3127,9 @@ public class QuestBoard {
 	}
 	
 	public void mq45_35(Player player, int num) {
-		if(num>=50) {
+		if(num>=1) {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
-			es.giveExp(player, 26000000);
+			es.giveExp(player, 29000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			QuestBoard qb = new QuestBoard();
 			qb.mq45_36(player, 0);
@@ -3135,22 +3140,29 @@ public class QuestBoard {
 		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 45장");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
 		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===사막의 푸른 땅5===");
-		score.setScore(2);
-		Score score2 = obj.getScore("누아다의 석상 50마리 사냥");
-		score2.setScore(1);
-		Score score3 = obj.getScore("(" + num + "/50)");
-		score3.setScore(0);
+		score.setScore(3);
+		Score score2 = obj.getScore("중앙 섬 지하에서 단서 찾기");
+		score2.setScore(2);
+		Score score3 = obj.getScore("위치: -294,36,2466");
+		score3.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/1)");
+		score4.setScore(0);
 		player.setScoreboard(board);
 	}
 	
 	public void mq45_36(Player player, int num) {
 		if(num>=1) {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
-			es.giveExp(player, 26000000);
+			es.giveExp(player, 30000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "주민: 석상들을 토벌하면서 §e투기장 스크롤§f을 주우신 적이 있나요?%주민: 전통적으로 석상들을 제작할 때는 그 안에 포보르를 봉인해둔 스크롤을 넣어두기도 해요.%"
-					+ "주민: 그래야 석상에 힘이 생기고 마을을 지켜준다는 믿음이 있었거든요.%주민: 투기장 스크롤은 §e사막에 있는 투기장§f에서 사용할 수 있어요.%"
-					+ "주민: 투기장 안쪽은 전장의 서늘함이 느껴져서 덥지 않다고 해요.");
+			msg.msg(player, "니세리나: 그 녀석을 처리했군.%니세리나: 넌 정말 대단한 모험가야.%니세리나: 이 세계 최강의 마법사인 내가 인정하도록 하지.%"
+					+ "§7아직 그런것이 아니라고 한다.%니세리나: 크흣..?%니세리나: 당연히 알고 있지.%니세리나: 내가 모를 것이라고 생각했나..?%"
+					+ "니세리나: 난 그저 니놈이 포보르편에서 거짓말을 하는지 테스트한 것이다.%니세리나: 반응을 보니 포보르 세력은 아닌 듯하군.%"
+					+ "니세리나: 그래서 날 왜 찾아온거지?%§7특이한 스크롤을 주웠다고 알려준다.%니세리나: 이 마나의 흐름은 분명..%"
+					+ "니세리나: 어딘가로 이동시키는 주문서구만.%니세리나: 어디서 사용해야 효력이 발생되는지 알아보도록 하지.%"
+					+ "니세리나: 흐흠.%니세리나: 흐아아.%니세리나: 쿠오오.%니세리나: 흐아앙.%니세리나: 자 결과가 나왔네.%"
+					+ "니세리나: 어디서 사용해야하는지 나와있지 않더군.%니세리나: 내가 찾은 것은 유통기한 뿐이네.%니세리나: 그래서 말이야.%"
+					+ "니세리나: 이 집에 마력을 부여했다.%니세리나: 여기서 사용하면 아마 스크롤이 작동할게야.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq45_37(player, 0);
 			return;
@@ -3171,7 +3183,7 @@ public class QuestBoard {
 	public void mq45_37(Player player, int num) {
 		if(num>=1) {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
-			es.giveExp(player, 26000000);
+			es.giveExp(player, 30000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			msg.msg(player, "주민: 석상들을 토벌하면서 §e투기장 스크롤§f을 주우신 적이 있나요?%주민: 전통적으로 석상들을 제작할 때는 그 안에 포보르를 봉인해둔 스크롤을 넣어두기도 해요.%"
 					+ "주민: 그래야 석상에 힘이 생기고 마을을 지켜준다는 믿음이 있었거든요.%주민: 투기장 스크롤은 §e사막에 있는 투기장§f에서 사용할 수 있어요.%"
@@ -3184,7 +3196,7 @@ public class QuestBoard {
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
 		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===대사막-최종장===");
 		score.setScore(2);
-		Score score2 = obj.getScore("니세리나과 대화");
+		Score score2 = obj.getScore("건축 지연으로 미구현");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);

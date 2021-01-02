@@ -31,7 +31,7 @@ public class BossTicket {
 	public void bossSkelE(Player player, Item itemArg, World world) {
 		//보스 스켈이 3686 39 3730  3712 47 3672
 		if (itemArg.getItemStack().getItemMeta().getDisplayName()
-				.equalsIgnoreCase(ChatColor.YELLOW + "보스 스켈이 소환 티켓")) {
+				.equalsIgnoreCase(ChatColor.YELLOW + "보스 스켈이 소환 스크롤")) {
 			if (player.getLocation().getX() <= 3712 && player.getLocation().getY() <= 47
 					&& player.getLocation().getZ() <= 3730 && player.getLocation().getX() >= 3686
 					&& player.getLocation().getY() >= 39 && player.getLocation().getZ() >= 3672) {

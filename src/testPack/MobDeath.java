@@ -981,6 +981,14 @@ public class MobDeath {
 				if (name.equalsIgnoreCase("부멈미" + ChatColor.YELLOW + " [Lv.497]")) {
 					mobloot.mob223(lootPlayer);
 				}
+				// 포보르화 도마뱀
+				if (name.equalsIgnoreCase("포보르화 도마뱀" + ChatColor.YELLOW + " [Lv.499]")) {
+					mobloot.mob224(lootPlayer);
+				}
+				// 포보르화 복어
+				if (name.equalsIgnoreCase("포보르화 복어" + ChatColor.YELLOW + " [Lv.503]")) {
+					mobloot.mob225(lootPlayer);
+				}
 			} catch (Exception e) {
 
 			}
