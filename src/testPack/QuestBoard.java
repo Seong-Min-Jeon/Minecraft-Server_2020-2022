@@ -2953,7 +2953,7 @@ public class QuestBoard {
 		score2.setScore(2);
 		Score score3 = obj.getScore("위치: -276,65,2410");
 		score3.setScore(1);
-		Score score4 = obj.getScore("(" + num + "/1)");
+		Score score4 = obj.getScore("(" + num + "/50)");
 		score4.setScore(0);
 		player.setScoreboard(board);
 	}
@@ -3001,7 +3001,7 @@ public class QuestBoard {
 		score2.setScore(2);
 		Score score3 = obj.getScore("위치: -205,69,2480");
 		score3.setScore(1);
-		Score score4 = obj.getScore("(" + num + "/1)");
+		Score score4 = obj.getScore("(" + num + "/50)");
 		score4.setScore(0);
 		player.setScoreboard(board);
 	}
@@ -3049,7 +3049,7 @@ public class QuestBoard {
 		score2.setScore(2);
 		Score score3 = obj.getScore("위치: -318,76,2518");
 		score3.setScore(1);
-		Score score4 = obj.getScore("(" + num + "/1)");
+		Score score4 = obj.getScore("(" + num + "/50)");
 		score4.setScore(0);
 		player.setScoreboard(board);
 	}
@@ -3097,7 +3097,7 @@ public class QuestBoard {
 		score2.setScore(2);
 		Score score3 = obj.getScore("위치: -353,64,2450");
 		score3.setScore(1);
-		Score score4 = obj.getScore("(" + num + "/1)");
+		Score score4 = obj.getScore("(" + num + "/50)");
 		score4.setScore(0);
 		player.setScoreboard(board);
 	}

@@ -5258,7 +5258,7 @@ public class Main extends JavaPlugin implements Listener{
 							new BossHealth().getBar19().removePlayer(p);
 						}
 					} else {
-						new BossHealth().getBar19().setProgress((boss.getHealth()-event.getFinalDamage()) / 3500000.0);
+						new BossHealth().getBar19().setProgress((boss.getHealth()-event.getFinalDamage()) / 3000000.0);
 					}
 				}
 			}
@@ -6433,66 +6433,85 @@ public class Main extends JavaPlugin implements Listener{
 						    			 i = i + is.getAmount();
 						    			 is.setAmount(is.getAmount() - 1);
 						    			 
-						    			// 암석 거인
-										BossBar bb = new BossHealth().getBar13();
-										if(bb.getProgress() - 0.1 <= 0) {
-											
-											ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
-											ItemMeta rewardKeyIm = rewardKey.getItemMeta();
-											rewardKeyIm.setDisplayName(ChatColor.YELLOW + "고대의 암석 협곡 보상 열쇠");
-											rewardKey.setItemMeta(rewardKeyIm);
-											player.getInventory().addItem(rewardKey);
-											player.sendMessage(ChatColor.YELLOW + "고대의 암석 협곡 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+						    			 // 암석 거인
+						    			 BossBar bb = new BossHealth().getBar13();
+											if (bb.getProgress() - 0.1 <= 0) {
 
-											List<Entity> entitylist = player.getNearbyEntities(50, 50, 50);
-											for (Entity nearEntity : entitylist) {
-												if (nearEntity.getType() == EntityType.PLAYER) {
-													Player nearPlayer = (Player) nearEntity;
-													Location loc2 = nearPlayer.getLocation();
-													if (loc2.getX() <= 3697 && loc2.getY() <= 58 && loc2.getZ() <= 2898 
-															&& loc2.getX() >= 3658 && loc2.getY() >= 41 && loc2.getZ() >= 2823) {
-														nearPlayer.getInventory().addItem(rewardKey);
-														nearPlayer.sendMessage(ChatColor.YELLOW + "고대의 암석 협곡 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
-													}
-												}
-											}
-											
-											for(Player p : new BossHealth().getBar13().getPlayers()) {
-												new BossHealth().getBar13().setProgress(0);
-												new BossHealth().getBar13().removePlayer(p);
-											}
-											List<Entity> nearEntity = player.getNearbyEntities(50, 50, 50);
-											for(Entity ent : nearEntity) {
-												if(ent instanceof Player) {
-													Player nearPlayer = (Player) ent;
-													Location loc2 = nearPlayer.getLocation();
-													if (loc2.getX() <= 3697 && loc2.getY() <= 95 && loc2.getZ() <= 2900 
-															&& loc2.getX() >= 3658 && loc2.getY() >= 41 && loc2.getZ() >= 2820) {
-														try {
-															nearPlayer.getInventory().remove(Material.TNT);
-														} catch(Exception e) {
-															
+												try {
+													ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
+													ItemMeta rewardKeyIm = rewardKey.getItemMeta();
+													rewardKeyIm.setDisplayName(ChatColor.YELLOW + "고대의 암석 협곡 보상 열쇠");
+													rewardKey.setItemMeta(rewardKeyIm);
+													player.getInventory().addItem(rewardKey);
+													player.sendMessage(ChatColor.YELLOW + "고대의 암석 협곡 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+													
+													List<Entity> entitylist = player.getNearbyEntities(50, 50, 50);
+													for (Entity nearEntity : entitylist) {
+														if (nearEntity instanceof Player) {
+															Player nearPlayer = (Player) nearEntity;
+															Location loc2 = nearPlayer.getLocation();
+															if (loc2.getX() <= 3697 && loc2.getY() <= 95 && loc2.getZ() <= 2900 
+																	&& loc2.getX() >= 3658 && loc2.getY() >= 41 && loc2.getZ() >= 2820) {
+																nearPlayer.getInventory().addItem(rewardKey);
+																nearPlayer.sendMessage(ChatColor.YELLOW + "고대의 암석 협곡 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+															}
 														}
-														nearPlayer.teleport(new Location(player.getWorld(), 3685, 151, 2858.5));
 													}
+												} catch(Exception e) {
+													
 												}
-											}
-											try {
-												player.getInventory().remove(Material.TNT);
-											} catch(Exception e) {
 												
+												try {
+													for (Player p : new BossHealth().getBar13().getPlayers()) {
+														new BossHealth().getBar13().setProgress(0);
+														new BossHealth().getBar13().removePlayer(p);
+													}
+												} catch(Exception e) {
+													
+												}
+												
+												try {
+													List<Entity> entitylist = player.getNearbyEntities(50, 50, 50);
+													for (Entity nearEntity : entitylist) {
+														if (nearEntity instanceof Player) {
+															Player nearPlayer = (Player) nearEntity;
+															Location loc2 = nearPlayer.getLocation();
+															if (loc2.getX() <= 3697 && loc2.getY() <= 95 && loc2.getZ() <= 2900 
+																	&& loc2.getX() >= 3658 && loc2.getY() >= 41 && loc2.getZ() >= 2820) {
+																try {
+																	nearPlayer.getInventory().remove(Material.TNT);
+																} catch (Exception e) {
+
+																}
+																nearPlayer.teleport(new Location(player.getWorld(), 3685, 151, 2858.5));
+															}
+														}
+													}
+												} catch(Exception e) {
+													
+												}
+												
+												try {
+													player.getInventory().remove(Material.TNT);
+												} catch (Exception e) {
+
+												}
+												
+												try {
+													player.teleport(new Location(player.getWorld(), 3685, 151, 2858.5));
+												} catch (Exception e) {
+
+												}
+											} else {
+												bb.setProgress(bb.getProgress() - 0.1);
+												int p = rnd.nextInt(10);
+												int q = rnd.nextInt(10);
+												world.playSound(new Location(world, 3652, 48 + p, 2848 + 2 * q), Sound.ENTITY_GENERIC_EXPLODE, 2.5f, 1.0f);
+												world.spawnParticle(Particle.EXPLOSION_LARGE, new Location(world, 3652, 48 + p, 2848 + 2 * q), 5);
 											}
-											player.teleport(new Location(player.getWorld(), 3685, 151, 2858.5));
-										} else {
-											bb.setProgress(bb.getProgress() - 0.1);
-											int p = rnd.nextInt(10);
-											int q = rnd.nextInt(10);
-											world.playSound(new Location(world, 3652, 48+p, 2848+2*q), Sound.ENTITY_GENERIC_EXPLODE, 2.5f, 1.0f);
-											world.spawnParticle(Particle.EXPLOSION_LARGE, new Location(world, 3652, 48+p, 2848+2*q), 5);
 										}
-						    		}
-						    	} catch(Exception e) {
-						    		
+									} catch (Exception e) {
+
 						    	}
 						    }
 						}

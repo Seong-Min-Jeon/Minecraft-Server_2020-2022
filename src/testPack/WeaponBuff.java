@@ -348,6 +348,18 @@ public class WeaponBuff {
 							}
 						}
 						
+						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "끓어오르는 대지의 헬멧")) {
+							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "끓어오르는 대지의 갑옷")) {
+								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "끓어오르는 대지의 각반")) {
+									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "끓어오르는 대지의 신발")) {
+										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 3,true,false,false));
+										player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0,true,false,false));
+										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 2000,true,false,false));
+									}
+								}
+							}
+						}
+						
 						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "천옥개 염봉")) {
 							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "천옥개 창룡")) {
 								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "천옥개 노호")) {
@@ -414,7 +426,17 @@ public class WeaponBuff {
 								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 조율자 각반")) {
 									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 조율자 신발")) {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 4,true,false,false));
-										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 3333,true,false,false));
+										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 5000,true,false,false));
+									}
+								}
+							}
+						}
+						
+						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 강탈자 헬멧")) {
+							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 강탈자 갑옷")) {
+								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 강탈자 각반")) {
+									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 강탈자 신발")) {
+										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 3000,true,false,false));
 									}
 								}
 							}

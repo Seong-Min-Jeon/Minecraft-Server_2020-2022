@@ -2536,7 +2536,7 @@ public class MobLoot {
 			if (nearEntity.getType() == EntityType.PLAYER) {
 				Player nearPlayer = (Player) nearEntity;
 				Location loc = nearPlayer.getLocation();
-				if (loc.getX() <= 90 && loc.getY() <= 113 && loc.getZ() <= -5 && 
+				if (loc.getX() <= 90 && loc.getY() <= 115 && loc.getZ() <= -5 && 
 						loc.getX() >= 54 && loc.getY() >= 101 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
 					nearPlayer.sendMessage(ChatColor.YELLOW + "죽음의 탑 3층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
@@ -2559,8 +2559,8 @@ public class MobLoot {
 			if (nearEntity.getType() == EntityType.PLAYER) {
 				Player nearPlayer = (Player) nearEntity;
 				Location loc = nearPlayer.getLocation();
-				if (loc.getX() <= 90 && loc.getY() <= 126 && loc.getZ() <= -5 && 
-						loc.getX() >= 54 && loc.getY() >= 114 && loc.getZ() >= -41) {
+				if (loc.getX() <= 90 && loc.getY() <= 128 && loc.getZ() <= -5 && 
+						loc.getX() >= 54 && loc.getY() >= 116 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
 					nearPlayer.sendMessage(ChatColor.YELLOW + "죽음의 탑 4층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 				}
@@ -2582,8 +2582,8 @@ public class MobLoot {
 			if (nearEntity.getType() == EntityType.PLAYER) {
 				Player nearPlayer = (Player) nearEntity;
 				Location loc = nearPlayer.getLocation();
-				if (loc.getX() <= 90 && loc.getY() <= 139 && loc.getZ() <= -5 && 
-						loc.getX() >= 54 && loc.getY() >= 127 && loc.getZ() >= -41) {
+				if (loc.getX() <= 90 && loc.getY() <= 141 && loc.getZ() <= -5 && 
+						loc.getX() >= 54 && loc.getY() >= 129 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
 					nearPlayer.sendMessage(ChatColor.YELLOW + "죽음의 탑 5층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 				}
@@ -2605,8 +2605,8 @@ public class MobLoot {
 			if (nearEntity.getType() == EntityType.PLAYER) {
 				Player nearPlayer = (Player) nearEntity;
 				Location loc = nearPlayer.getLocation();
-				if (loc.getX() <= 90 && loc.getY() <= 87 && loc.getZ() <= -5 && 
-						loc.getX() >= 54 && loc.getY() >= 75 && loc.getZ() >= -41) {
+				if (loc.getX() <= 90 && loc.getY() <= 156 && loc.getZ() <= -5 && 
+						loc.getX() >= 54 && loc.getY() >= 142 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
 					nearPlayer.sendMessage(ChatColor.YELLOW + "죽음의 탑 6층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 				}
@@ -2628,8 +2628,8 @@ public class MobLoot {
 			if (nearEntity.getType() == EntityType.PLAYER) {
 				Player nearPlayer = (Player) nearEntity;
 				Location loc = nearPlayer.getLocation();
-				if (loc.getX() <= 90 && loc.getY() <= 87 && loc.getZ() <= -5 && 
-						loc.getX() >= 54 && loc.getY() >= 75 && loc.getZ() >= -41) {
+				if (loc.getX() <= 90 && loc.getY() <= 169 && loc.getZ() <= -5 && 
+						loc.getX() >= 54 && loc.getY() >= 157 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
 					nearPlayer.sendMessage(ChatColor.YELLOW + "죽음의 탑 7층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 				}
@@ -2651,8 +2651,8 @@ public class MobLoot {
 			if (nearEntity.getType() == EntityType.PLAYER) {
 				Player nearPlayer = (Player) nearEntity;
 				Location loc = nearPlayer.getLocation();
-				if (loc.getX() <= 90 && loc.getY() <= 87 && loc.getZ() <= -5 && 
-						loc.getX() >= 54 && loc.getY() >= 75 && loc.getZ() >= -41) {
+				if (loc.getX() <= 90 && loc.getY() <= 182 && loc.getZ() <= -5 && 
+						loc.getX() >= 54 && loc.getY() >= 170 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
 					nearPlayer.sendMessage(ChatColor.YELLOW + "죽음의 탑 8층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 				}
@@ -2674,8 +2674,8 @@ public class MobLoot {
 			if (nearEntity.getType() == EntityType.PLAYER) {
 				Player nearPlayer = (Player) nearEntity;
 				Location loc = nearPlayer.getLocation();
-				if (loc.getX() <= 90 && loc.getY() <= 87 && loc.getZ() <= -5 && 
-						loc.getX() >= 54 && loc.getY() >= 75 && loc.getZ() >= -41) {
+				if (loc.getX() <= 90 && loc.getY() <= 197 && loc.getZ() <= -5 && 
+						loc.getX() >= 54 && loc.getY() >= 183 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
 					nearPlayer.sendMessage(ChatColor.YELLOW + "죽음의 탑 9층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 				}
@@ -2697,8 +2697,8 @@ public class MobLoot {
 			if (nearEntity.getType() == EntityType.PLAYER) {
 				Player nearPlayer = (Player) nearEntity;
 				Location loc = nearPlayer.getLocation();
-				if (loc.getX() <= 90 && loc.getY() <= 87 && loc.getZ() <= -5 && 
-						loc.getX() >= 54 && loc.getY() >= 75 && loc.getZ() >= -41) {
+				if (loc.getX() <= 90 && loc.getY() <= 210 && loc.getZ() <= -5 && 
+						loc.getX() >= 54 && loc.getY() >= 198 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
 					nearPlayer.sendMessage(ChatColor.YELLOW + "죽음의 탑 10층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 				}
@@ -2720,8 +2720,8 @@ public class MobLoot {
 			if (nearEntity.getType() == EntityType.PLAYER) {
 				Player nearPlayer = (Player) nearEntity;
 				Location loc = nearPlayer.getLocation();
-				if (loc.getX() <= 90 && loc.getY() <= 87 && loc.getZ() <= -5 && 
-						loc.getX() >= 54 && loc.getY() >= 75 && loc.getZ() >= -41) {
+				if (loc.getX() <= 90 && loc.getY() <= 223 && loc.getZ() <= -5 && 
+						loc.getX() >= 54 && loc.getY() >= 211 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
 					nearPlayer.sendMessage(ChatColor.YELLOW + "죽음의 탑 11층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 				}

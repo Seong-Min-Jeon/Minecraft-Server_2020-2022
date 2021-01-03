@@ -16,6 +16,7 @@ import org.bukkit.entity.Mob;
 import org.bukkit.entity.Phantom;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Skeleton;
+import org.bukkit.entity.Spider;
 import org.bukkit.entity.Wither;
 import org.bukkit.entity.WitherSkeleton;
 import org.bukkit.entity.Zombie;
@@ -646,7 +647,8 @@ public class TPMobSpawn {
 					}
 				}
 			}
-			loc.getWorld().spawnEntity(new Location(player.getWorld(), 72, 129, -22), EntityType.SKELETON);
+			Spider sp = (Spider) player.getWorld().spawnEntity(new Location(player.getWorld(), 72, 129, -22), EntityType.SPIDER);
+			sp.addPassenger(player.getWorld().spawnEntity(new Location(player.getWorld(), 72, 129, -22), EntityType.SKELETON));
 			
 			new BossHealth().getBar19().setProgress(1.0);
 			new BossHealth().getBar19().addPlayer(player);
