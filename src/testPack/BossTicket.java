@@ -26,6 +26,7 @@ public class BossTicket {
 		colosseumB(player, itemArg, world);
 		colosseumA(player, itemArg, world);
 		colosseumS(player, itemArg, world);
+		animalKing(player, itemArg, world);
 	}
 
 	public void bossSkelE(Player player, Item itemArg, World world) {
@@ -348,6 +349,85 @@ public class BossTicket {
 
 				}, 0, 1);
 			}
+		}
+	}
+
+	public void animalKing(Player player, Item itemArg, World world) {
+		// 피르볼그 제사장
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "긴급 탈출 스크롤")) {
+			if(player.getLevel() >= 490) {
+				itemArg.remove();
+				taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+					int time = 0;
+					ThreadData td = new ThreadData(player.getUniqueId());
+
+					@Override
+					public void run() {
+						if (!td.hasID()) {
+							td.setID(taskID);
+						}
+
+						if (time == 0) {
+							player.teleport(new Location(player.getWorld(), 3691.5, 104, 2729.7));
+						}
+
+						if (time >= 60) {
+							player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "너도 네모구나? 네모는 정말 좋지.");
+							player.teleport(new Location(player.getWorld(), 3691.5, 103, 2734));
+							int num = 0;
+							List<Entity> entitylist = player.getNearbyEntities(30, 20, 30);
+							for (Entity nearEntity : entitylist) {
+								if (nearEntity.getType() == EntityType.PLAYER) {
+									Player nearPlayer = (Player) nearEntity;
+									Location loc2 = nearPlayer.getLocation();
+									// 3679 118 2732  3703 99 2758
+									if (loc2.getX() <= 3703 && loc2.getY() <= 118 && loc2.getZ() <= 2758
+											&& loc2.getX() >= 3679 && loc2.getY() >= 99 && loc2.getZ() >= 2732) {
+										num++;
+										if (new BossHealth().getBar20().getProgress() != 0) {
+											new BossHealth().getBar20().addPlayer(player);
+										}
+										td.endTask();
+										td.removeID();
+										return;
+									}
+								}
+							}
+
+							if (num == 0) {
+								for (Entity nearEntity : entitylist) {
+									if (nearEntity instanceof Mob || nearEntity instanceof ArmorStand) {
+										Location loc2 = nearEntity.getLocation();
+										// 3679 118 2732  3703 99 2758
+										if (loc2.getX() <= 3703 && loc2.getY() <= 118 && loc2.getZ() <= 2758
+												&& loc2.getX() >= 3679 && loc2.getY() >= 99 && loc2.getZ() >= 2732) {
+											nearEntity.remove();
+										}
+									}
+								}
+							}
+							player.getWorld().spawnEntity(new Location(player.getWorld(), 3691.5, 109, 2745), EntityType.WITHER_SKELETON);
+							player.getWorld().spawnEntity(new Location(player.getWorld(), 3689, 109, 2745), EntityType.ZOMBIE);
+							player.getWorld().spawnEntity(new Location(player.getWorld(), 3687, 109, 2745), EntityType.ZOMBIE);
+							player.getWorld().spawnEntity(new Location(player.getWorld(), 3693, 109, 2745), EntityType.SKELETON);
+							player.getWorld().spawnEntity(new Location(player.getWorld(), 3695, 109, 2745), EntityType.SKELETON);
+
+							new BossHealth().getBar20().setProgress(1.0);
+							new BossHealth().getBar20().addPlayer(player);
+							td.endTask();
+							td.removeID();
+							return;
+						}
+
+						time++;
+					}
+
+				}, 0, 1);
+			} else {
+				player.sendMessage(ChatColor.RED + "이 아이템을 사용하기에는 레벨이 낮다.");
+			}
+			 
 		}
 	}
 

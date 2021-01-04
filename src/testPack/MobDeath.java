@@ -989,6 +989,18 @@ public class MobDeath {
 				if (name.equalsIgnoreCase("포보르화 복어" + ChatColor.YELLOW + " [Lv.503]")) {
 					mobloot.mob225(lootPlayer);
 				}
+				// 되살아난 피르볼그의 제사장
+				if (name.equalsIgnoreCase("되살아난 피르볼그의 제사장" + ChatColor.YELLOW + " [Lv.??]")) {
+					mobloot.mob226(lootPlayer);
+				}
+				// 중장갑 포보르
+				if (name.equalsIgnoreCase("중장갑 포보르" + ChatColor.YELLOW + " [Lv.505]")) {
+					mobloot.mob227(lootPlayer);
+				}
+				// 포보르 사제
+				if (name.equalsIgnoreCase("포보르 사제" + ChatColor.YELLOW + " [Lv.510]")) {
+					mobloot.mob228(lootPlayer);
+				}
 			} catch (Exception e) {
 
 			}

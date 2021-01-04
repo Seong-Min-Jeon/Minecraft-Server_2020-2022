@@ -5856,6 +5856,7 @@ public class Reinforcement {
 			if(num<5000) {
 				item.setLocalizedName("1");				
 				player.sendMessage(ChatColor.GREEN + "첫번째 개방에 성공하였습니다.");
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
 			} else {
 				player.sendMessage(ChatColor.WHITE + "개방에 실패하였습니다.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
@@ -5871,6 +5872,7 @@ public class Reinforcement {
 			if(num<3333) {
 				item.setLocalizedName("5");				
 				player.sendMessage(ChatColor.GREEN + "두번째 개방에 성공하였습니다.");
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
 			} else {
 				player.sendMessage(ChatColor.WHITE + "개방에 실패하였습니다.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
@@ -5886,6 +5888,7 @@ public class Reinforcement {
 			if(num<1000) {
 				item.setLocalizedName("20");
 				player.sendMessage(ChatColor.GREEN + "세번째 개방에 성공하였습니다.");
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
 			} else {
 				player.sendMessage(ChatColor.WHITE + "개방에 실패하였습니다.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
@@ -5901,6 +5904,7 @@ public class Reinforcement {
 			if(num<100) {
 				item.setLocalizedName("100");
 				player.sendMessage(ChatColor.GREEN + "네번째 개방에 성공하였습니다.");
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
 			} else {
 				player.sendMessage(ChatColor.WHITE + "개방에 실패하였습니다.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
@@ -5916,6 +5920,7 @@ public class Reinforcement {
 			if(num<30) {
 				item.setLocalizedName("300");
 				player.sendMessage(ChatColor.GREEN + "다섯번째 개방에 성공하였습니다.");
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
 			} else {
 				player.sendMessage(ChatColor.WHITE + "개방에 실패하였습니다.");
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
@@ -5941,9 +5946,11 @@ public class Reinforcement {
 				} else if (lvl + 100 >= 100000) {
 					item.setLocalizedName("100000");
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 개방이 한계에 도달했습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
 				} else if (lvl >= 300) {
 					item.setLocalizedName(Integer.toString(lvl+100));
 					player.sendMessage(ChatColor.GREEN + "개방에 성공 하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
 				} 
 			} else if(num<13) {
 				int lvl = Integer.parseInt(item.getLocalizedName());

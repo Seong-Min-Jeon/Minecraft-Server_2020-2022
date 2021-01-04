@@ -196,9 +196,9 @@ public class INNTicket {
 	
 	public void hamabe(Player player, Item itemArg, World world) {	
 		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "하마베 숙박 티켓")) {
-			//하마베 980 62 -4  967 85 6
+			//하마베 980 50 -4  967 85 6
 			if (player.getLocation().getX() <= 980 && player.getLocation().getY() <= 85 && player.getLocation().getZ() <= 6 && 
-					player.getLocation().getX() >= 967 && player.getLocation().getY() >= 62 && player.getLocation().getZ() >= -4) {
+					player.getLocation().getX() >= 967 && player.getLocation().getY() >= 50 && player.getLocation().getZ() >= -4) {
 				Location loc = new Location(world,972,66,1);
 				player.teleport(loc);
 				itemArg.remove();

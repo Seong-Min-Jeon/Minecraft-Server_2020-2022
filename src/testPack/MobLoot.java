@@ -5383,10 +5383,13 @@ public class MobLoot {
 		scr1im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
 		scr1.setItemMeta(scr1im);
 		ArrayList<String> scr1Lore = new ArrayList();
+		scr1Lore.add(ChatColor.GRAY + "레벨 제한: 490");
+		scr1Lore.add(ChatColor.GRAY + " ");
 		scr1Lore.add(ChatColor.GRAY + "포보르화 된 동물들이 가지고 있던 스크롤");
 		scr1Lore.add(ChatColor.GRAY + "그들의 주인에게 이동할 수 있는 주문이 걸려있는 것 같다.");
 		scr1Lore.add(ChatColor.GRAY + "사용 방법은 딱히 적혀있지 않다.");
 		scr1im.setLore(scr1Lore);
+		scr1.setItemMeta(scr1im);
 		int scrP = rnd.nextInt(20);
 		if(scrP == 0) {
 			player.getInventory().addItem(scr1);
@@ -5459,10 +5462,13 @@ public class MobLoot {
 		scr1im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
 		scr1.setItemMeta(scr1im);
 		ArrayList<String> scr1Lore = new ArrayList();
+		scr1Lore.add(ChatColor.GRAY + "레벨 제한: 490");
+		scr1Lore.add(ChatColor.GRAY + " ");
 		scr1Lore.add(ChatColor.GRAY + "포보르화 된 동물들이 가지고 있던 스크롤");
 		scr1Lore.add(ChatColor.GRAY + "그들의 주인에게 이동할 수 있는 주문이 걸려있는 것 같다.");
 		scr1Lore.add(ChatColor.GRAY + "사용 방법은 딱히 적혀있지 않다.");
 		scr1im.setLore(scr1Lore);
+		scr1.setItemMeta(scr1im);
 		int scrP = rnd.nextInt(20);
 		if(scrP == 0) {
 			player.getInventory().addItem(scr1);
@@ -5476,16 +5482,61 @@ public class MobLoot {
 		} 
 	}
 	
+	// 되살아난 피르볼그의 제사장
 	public void mob226(Player player) {
-
+		es.giveExp(player, 7777777);
+		
+		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_STAIRS);
+		ItemMeta var1im = var1.getItemMeta();
+		var1im.setDisplayName(ChatColor.LIGHT_PURPLE + "최상급 포보르의 뿔");
+		var1.setItemMeta(var1im);
+		player.getInventory().addItem(var1);
+		player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 뿔" + ChatColor.WHITE + "을 획득했다.");
+		
+		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
+		ItemMeta scrollIm = scroll.getItemMeta();
+		scrollIm.setDisplayName(ChatColor.GOLD + "엑스트라 퀘스트: 피르볼그의 제사장");
+		ArrayList<String> scrollLore = new ArrayList();
+		scrollLore.add(ChatColor.GRAY + "'피르볼그의 제사장' 퀘스트를 진행할 수 있다.");
+		scrollIm.setLore(scrollLore);
+		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		scrollIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		scrollIm.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
+		scrollIm.setUnbreakable(true);
+		scroll.setItemMeta(scrollIm);		
+		player.getInventory().addItem(scroll);
+		player.sendMessage(ChatColor.GOLD + "엑스트라 퀘스트: 피르볼그의 제사장" + ChatColor.WHITE + "을 획득했다.");
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===대사막-최종장===")) {
+			int qNum = cb.getNum(player);
+			cb.mq45_37(player, qNum + 1);
+		}
 	}
 	
+	// 중장갑 포보르
 	public void mob227(Player player) {
-
+		es.giveExp(player, 5000000);
+		
+		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_STAIRS);
+		ItemMeta var1im = var1.getItemMeta();
+		var1im.setDisplayName(ChatColor.LIGHT_PURPLE + "최상급 포보르의 뿔");
+		var1.setItemMeta(var1im);
+		player.getInventory().addItem(var1);
+		player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 뿔" + ChatColor.WHITE + "을 획득했다.");
 	}
 	
+	// 포보르 사제
 	public void mob228(Player player) {
-
+		es.giveExp(player, 5000000);
+		
+		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_STAIRS);
+		ItemMeta var1im = var1.getItemMeta();
+		var1im.setDisplayName(ChatColor.LIGHT_PURPLE + "최상급 포보르의 뿔");
+		var1.setItemMeta(var1im);
+		player.getInventory().addItem(var1);
+		player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 뿔" + ChatColor.WHITE + "을 획득했다.");
 	}
 	
 	public void mob229(Player player) {
@@ -5493,6 +5544,46 @@ public class MobLoot {
 	}
 	
 	public void mob230(Player player) {
+
+	}
+	
+	public void mob231(Player player) {
+
+	}
+	
+	public void mob232(Player player) {
+
+	}
+	
+	public void mob233(Player player) {
+
+	}
+	
+	public void mob234(Player player) {
+
+	}
+	
+	public void mob235(Player player) {
+
+	}
+	
+	public void mob236(Player player) {
+
+	}
+	
+	public void mob237(Player player) {
+
+	}
+	
+	public void mob238(Player player) {
+
+	}
+	
+	public void mob239(Player player) {
+
+	}
+	
+	public void mob240(Player player) {
 
 	}
 }

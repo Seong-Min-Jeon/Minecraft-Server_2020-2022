@@ -10,6 +10,7 @@ import org.bukkit.entity.Arrow;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Item;
+import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Skeleton;
 import org.bukkit.entity.SpectralArrow;
@@ -30,7 +31,7 @@ public class ShootArrow {
 		if(arrow1(arrow, mob, loc) && arrow2(arrow, mob, loc) && arrow3(arrow, mob, loc) && arrow4(arrow, mob, loc) 
 				&& arrow5(arrow, mob, loc) && arrow6(arrow, mob, loc) && arrow7(arrow, mob, loc) && arrow8(arrow, mob, loc)
 				&& arrow9(arrow, mob, loc) && arrow10(arrow, mob, loc) && arrow11(arrow, mob, loc) && arrow12(arrow, mob, loc)
-				&& arrow13(arrow, mob, loc)) {
+				&& arrow13(arrow, mob, loc) && arrow14(arrow, mob, loc) && arrow15(arrow, mob, loc) && arrow16(arrow, mob, loc)) {
 			SpectralArrow sarrow = (SpectralArrow) arrow.getWorld().spawnEntity(loc, EntityType.SPECTRAL_ARROW);
 			sarrow.setVelocity(arrow.getVelocity());
 		}
@@ -224,4 +225,48 @@ public class ShootArrow {
 		return true;
 	}
 
+	public boolean arrow14(Arrow arrow, Entity mob, Location loc) {
+		if(mob.getCustomName().substring(2).equalsIgnoreCase("석상 파수꾼" + ChatColor.YELLOW + " [Lv.??]")) {
+			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
+				if (((LivingEntity) mob).getHealth() >= (((LivingEntity) mob).getMaxHealth() / 5)) {
+					if (arrow.getPassenger() != null) {
+						arrow.removePassenger(arrow.getPassenger());
+					}
+					Item item = arrow.getWorld().dropItem(loc, new ItemStack(Material.MAGMA_CREAM));
+					item.setPickupDelay(10000000);
+					arrow.addPassenger(item);
+					return false;
+				}
+			}
+			return true;
+		}
+		return true;
+	}
+	
+	public boolean arrow15(Arrow arrow, Entity mob, Location loc) {
+		if(mob.getCustomName().substring(2).equalsIgnoreCase("5층의 지배자" + ChatColor.YELLOW + " [Lv.??]")) {
+			if (arrow.getPassenger() != null) {
+				arrow.removePassenger(arrow.getPassenger());
+			}
+			Item item = arrow.getWorld().dropItem(loc, new ItemStack(Material.HEART_OF_THE_SEA));
+			item.setPickupDelay(10000000);
+			arrow.addPassenger(item);
+			return false;
+		}
+		return true;
+	}
+	
+	public boolean arrow16(Arrow arrow, Entity mob, Location loc) {
+		if(mob.getCustomName().substring(2).equalsIgnoreCase("포보르 사제" + ChatColor.YELLOW + " [Lv.510]")) {
+			if (arrow.getPassenger() != null) {
+				arrow.removePassenger(arrow.getPassenger());
+			}
+			Item item = arrow.getWorld().dropItem(loc, new ItemStack(Material.HEART_OF_THE_SEA));
+			item.setPickupDelay(10000000);
+			arrow.addPassenger(item);
+			return false;
+		}
+		return true;
+	}
+	
 }

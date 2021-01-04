@@ -3185,9 +3185,10 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 30000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "주민: 석상들을 토벌하면서 §e투기장 스크롤§f을 주우신 적이 있나요?%주민: 전통적으로 석상들을 제작할 때는 그 안에 포보르를 봉인해둔 스크롤을 넣어두기도 해요.%"
-					+ "주민: 그래야 석상에 힘이 생기고 마을을 지켜준다는 믿음이 있었거든요.%주민: 투기장 스크롤은 §e사막에 있는 투기장§f에서 사용할 수 있어요.%"
-					+ "주민: 투기장 안쪽은 전장의 서늘함이 느껴져서 덥지 않다고 해요.");
+			msg.msg(player, "니세리나: 아아. 마이크 테스트.%니세리나: 니세리나 이즈 온 더 마이크.%니세리나: 들리십니까.%니세리나: 제 명석한 두뇌로 판단해본 결과%"
+					+ "니세리나: 저 사람은 피르볼그 시대의 제사장인 것 같군요.%니세리나: 저 얼굴과 뼈의 형태가 그를 증명하지요.%니세리나: 그가 어떤 이유로 동물들을 이렇게 만든 것인지는 모르겠군요.%"
+					+ "니세리나: 아무튼 제 요청을 들어주셔서 감사합니다.%니세리나: 이 정도 쯤은 저도 쉽게 할 수 있지만..%니세리나: 제 힘이 각성해버리면 저 또한 감당할 수 없습니다.%"
+					+ "니세리나: 다음 생에는 조금만 더 약하게 태어났으면 좋겠군요.%니세리나: 그럼 이만.%니세리나: 봉쥬르.");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
@@ -3196,7 +3197,7 @@ public class QuestBoard {
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
 		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===대사막-최종장===");
 		score.setScore(2);
-		Score score2 = obj.getScore("건축 지연으로 미구현");
+		Score score2 = obj.getScore("동물들을 변이시킨 자에게 승리");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
