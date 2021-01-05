@@ -1,21 +1,29 @@
 package testPack;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.Color;
+import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.Particle;
+import org.bukkit.Particle.DustOptions;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.util.Vector;
 
 public class ExpSystemByMob {
 	
 	Cmd8Party cp = new Cmd8Party();
-	private final int multyExp = 1;
+	private static int multyExp = 1;
 	Random rnd = new Random();
+	private int taskID;
 	
 	public void giveExp(Player player, int exp) {
 		int currentLevel = player.getLevel();
@@ -141,4 +149,45 @@ public class ExpSystemByMob {
 		return str;
 	}
 
+	public void goldenTime(Player player) {
+		multyExp = 2;
+		new ProgressBar().bar1setStat(true);
+		for(Player p : Bukkit.getOnlinePlayers()) {
+			p.sendMessage(ChatColor.AQUA + "" + ChatColor.BOLD + player.getDisplayName() + "님의 핫타임이 시작되었습니다. (전투 경험치 2배)");
+			new ProgressBar().bar1AddPlayer(player);
+		}
+		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+			int time = 0;
+			ThreadData td = new ThreadData(player.getUniqueId());
+
+			@Override
+			public void run() {
+				
+				if (!td.hasID()) {
+					td.setID(taskID);
+				}
+				
+				if (time % 1200 == 0) {
+					new ProgressBar().bar1ChangeTime(10 - time/1200);
+				}
+				
+				if (time >= 12000) {
+					multyExp = 1;
+					new ProgressBar().bar1setStat(false);
+					for(Player p : Bukkit.getOnlinePlayers()) {
+						p.sendMessage(ChatColor.AQUA + "" + ChatColor.BOLD + player.getDisplayName() + "님의 핫타임이 종료되었습니다. (전투 경험치 2배)");
+						new ProgressBar().bar1RemovePlayer(player);
+					}
+					td.endTask();
+					td.removeID();
+				}
+				
+				time++;
+
+			}
+
+		}, 0, 1);
+	}
+	
 }

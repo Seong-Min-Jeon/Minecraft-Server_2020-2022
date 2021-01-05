@@ -562,6 +562,18 @@ public class CraftingItem {
 				player.getInventory().addItem(inv.getItem(25));
 			}
 			
+			if(equipType == 0) {
+				System.out.println(player.getDisplayName() + "이/가 헬멧" + "(" + localName + ")" + ChatColor.WHITE + "을/를 제작하였다.");
+			} else if(equipType == 1) {
+				System.out.println(player.getDisplayName() + "이/가 갑옷" + "(" + localName + ")" + ChatColor.WHITE + "을/를 제작하였다.");
+			} else if(equipType == 2) {
+				System.out.println(player.getDisplayName() + "이/가 각반" + "(" + localName + ")" + ChatColor.WHITE + "을/를 제작하였다.");
+			} else if(equipType == 3) {
+				System.out.println(player.getDisplayName() + "이/가 신발" + "(" + localName + ")" + ChatColor.WHITE + "을/를 제작하였다.");
+			} else {
+				System.out.println(player.getDisplayName() + "이/가 무기" + "(" + localName + ")" + ChatColor.WHITE + "을/를 제작하였다.");
+			}
+			
 			inv.setItem(25, makeItem(player, equipType, stat, localName));
 			
 		} catch(Exception e) {

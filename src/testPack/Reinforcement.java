@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.Random;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.Sound;
@@ -15,11 +16,12 @@ import org.bukkit.inventory.meta.ItemMeta;
 public class Reinforcement {
 	
 	Random rnd = new Random();
-	private final int percent = 30; //30  18
-	private final int percentDia = 50; //50  33
-	private final int percentArmor = 50; //50  42
-	private final int percentArrow = 10000; //10000  6000
-	private final int percentArrowKami = 100; //100  70
+	private static int percent = 30; //30  18
+	private static int percentDia = 50; //50  33
+	private static int percentArmor = 50; //50  42
+	private static int percentArrow = 10000; //10000  6000
+	private static int percentArrowKami = 100; //100  70
+	private int taskID;
 
 	public ItemMeta coalReinWeapon(Player player, ItemMeta item, ItemMeta itemResource) {
 		
@@ -5969,6 +5971,55 @@ public class Reinforcement {
 			}
 		} 
 		return item;
+	}
+	
+	public void goldenTime(Player player) {
+		percent = 18;
+		percentDia = 33;
+		percentArmor = 42;
+		percentArrow = 6000;
+		percentArrowKami = 70;
+		new ProgressBar().bar2setStat(true);
+		for(Player p : Bukkit.getOnlinePlayers()) {
+			p.sendMessage(ChatColor.AQUA + "" + ChatColor.BOLD + player.getDisplayName() + "님의 핫타임이 시작되었습니다. (강화 확률 증가)");
+			new ProgressBar().bar2AddPlayer(player);
+		}
+		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+			int time = 0;
+			ThreadData td = new ThreadData(player.getUniqueId());
+
+			@Override
+			public void run() {
+				
+				if (!td.hasID()) {
+					td.setID(taskID);
+				}
+				
+				if (time % 1200 == 0) {
+					new ProgressBar().bar2ChangeTime(10 - time/1200);
+				}
+				
+				if (time >= 12000) {
+					percent = 30;
+					percentDia = 50;
+					percentArmor = 50;
+					percentArrow = 10000;
+					percentArrowKami = 100;
+					new ProgressBar().bar2setStat(false);
+					for(Player p : Bukkit.getOnlinePlayers()) {
+						p.sendMessage(ChatColor.AQUA + "" + ChatColor.BOLD + player.getDisplayName() + "님의 핫타임이 종료되었습니다. (강화 확률 증가)");
+						new ProgressBar().bar2RemovePlayer(player);
+					}
+					td.endTask();
+					td.removeID();
+				}
+				
+				time++;
+
+			}
+
+		}, 0, 1);
 	}
 	
 }

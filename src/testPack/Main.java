@@ -347,20 +347,6 @@ public class Main extends JavaPlugin implements Listener{
 			}
 		}
 		
-		//bar
-		BossBar bar = Bukkit.createBossBar(ChatColor.BOLD + "" + ChatColor.AQUA + "전투 경험치 2배", BarColor.BLUE, BarStyle.SOLID);
-		bar.setVisible(false);
-		bar.addPlayer(player);
-		BossBar bar2 = Bukkit.createBossBar(ChatColor.BOLD + "" + ChatColor.DARK_PURPLE + "강화확률 증가", BarColor.PURPLE, BarStyle.SOLID);
-		bar2.setVisible(false);
-		bar2.addPlayer(player);
-		BossBar bar3 = Bukkit.createBossBar(ChatColor.BOLD + "" + ChatColor.DARK_GREEN + "에메랄드 획득량 증가 2배(전투)", BarColor.GREEN, BarStyle.SOLID);
-		bar3.setVisible(false);
-		bar3.addPlayer(player);
-		BossBar bar4 = Bukkit.createBossBar(ChatColor.BOLD + "" + ChatColor.DARK_RED + "레이드", BarColor.RED, BarStyle.SOLID);
-		bar4.setVisible(false);
-		bar4.addPlayer(player);
-		
 		//처음 온 플레이어 상자 배정
 		try {
 			File dataFolder = getDataFolder();
@@ -549,6 +535,18 @@ public class Main extends JavaPlugin implements Listener{
 		player.setExp(0);
 		player.setHealth(20);
 		player.setFoodLevel(20);
+		
+		//progress bar
+		ProgressBar pb = new ProgressBar();
+		if(pb.bar1isRun()) {
+			pb.bar1AddPlayer(player);
+		}
+		if(pb.bar2isRun()) {
+			pb.bar2AddPlayer(player);
+		}
+		if(pb.bar3isRun()) {
+			pb.bar3AddPlayer(player);
+		}
 		
 		//Mob Spawning Field	
 		this.getServer().getPluginManager().registerEvents(new MobThread(player), this);
@@ -2530,8 +2528,8 @@ public class Main extends JavaPlugin implements Listener{
 	@EventHandler
 	public void consumeItem(PlayerItemConsumeEvent event) {
 		Player player = (Player)event.getPlayer();
-		//HP포션
 		try {
+			//HP포션
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "힐링 포션 I")) {
 				PotionRatio pr = new PotionRatio();
 				pr.calculation(player, 10.0);
@@ -2752,6 +2750,33 @@ public class Main extends JavaPlugin implements Listener{
 				player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 20, 10,true,false,false));
 			}
 			
+		} catch(Exception e) {
+			
+		}
+		
+		//유료 아이템
+		try {
+			ProgressBar pb = new ProgressBar();
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "핫타임(전투 경험치 2배)")) {
+				if(pb.bar1isRun()) {
+					ItemStack item = event.getItem();
+					item.setAmount(1);
+					player.getInventory().addItem(item);
+					player.sendMessage(ChatColor.RED + "이미 적용중인 효과입니다.");
+				} else {
+					new ExpSystemByMob().goldenTime(player);
+				}
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "핫타임(강화 확률 증가)")) {
+				if(pb.bar2isRun()) {
+					ItemStack item = event.getItem();
+					item.setAmount(1);
+					player.getInventory().addItem(item);
+					player.sendMessage(ChatColor.RED + "이미 적용중인 효과입니다.");
+				} else {
+					new Reinforcement().goldenTime(player);
+				}
+			}
 		} catch(Exception e) {
 			
 		}
@@ -7297,6 +7322,22 @@ public class Main extends JavaPlugin implements Listener{
 		        	if(!clicked.hasItemMeta()) {
 		        		event.setCancelled(true);
 			            return;
+		        	}
+		        }
+		        if(clicked != null && clicked.getType() == Material.GREEN_CONCRETE) {
+		        	int idx = 0;
+		        	for(ItemStack item : event.getInventory().getContents()) {
+		        		if(item == null) {
+		        			idx++;
+		        			continue;
+		        		}
+		        		try {
+		        			System.out.println(player.getDisplayName() + "이/가 " + item.getItemMeta().getDisplayName() 
+		        					+ "(" + item.getItemMeta().getLocalizedName() + ")" + ChatColor.WHITE + "을/를 거래하였다." + "[Idx: " + idx + "]");
+		        		} catch(Exception e) {
+		        			
+		        		}
+		        		idx++;
 		        	}
 		        }
 			} catch(Exception e) {
