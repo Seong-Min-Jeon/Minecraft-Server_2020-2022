@@ -387,6 +387,7 @@ public class WeaponBuff {
 								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "패왕권룡 오드아이즈")) {
 									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "패왕권룡 클리어윙")) {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 4,true,false,false));
+										player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 200, 200,true,false,false));
 									}
 								}
 							}

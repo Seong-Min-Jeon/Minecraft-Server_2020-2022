@@ -206,6 +206,7 @@ public class TPScroll {
 
 									if (time >= 400) {
 										p.teleport(new Location(world, 1756, 53, 2111, 270, 0));
+										p.getWorld().playSound(loc3, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);
 										td.endTask();
 										td.removeID();
 										return;
@@ -259,6 +260,7 @@ public class TPScroll {
 
 									if (time >= 400) {
 										p.teleport(new Location(world, 954, 55, -57));
+										p.getWorld().playSound(loc3, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);
 										td.endTask();
 										td.removeID();
 										return;
