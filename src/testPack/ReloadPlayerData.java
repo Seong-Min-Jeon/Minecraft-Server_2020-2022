@@ -112,512 +112,394 @@ public class ReloadPlayerData {
 					if (quest.equals("q1")) {
 						QuestBoard qb = new QuestBoard();
 						qb.q1(player, Integer.parseInt(num));
-					}
-					if (quest.equals("q2")) {
+					} else if (quest.equals("q2")) {
 						QuestBoard qb = new QuestBoard();
 						qb.q2(player, Integer.parseInt(num));
-					}
-					if (quest.equals("q3")) {
+					} else if (quest.equals("q3")) {
 						QuestBoard qb = new QuestBoard();
 						qb.q3(player, Integer.parseInt(num));
-					}
-					if (quest.equals("q4")) {
+					} else if (quest.equals("q4")) {
 						QuestBoard qb = new QuestBoard();
 						qb.q4(player, Integer.parseInt(num));
-					}
-					if (quest.equals("q5")) {
+					} else if (quest.equals("q5")) {
 						QuestBoard qb = new QuestBoard();
 						qb.q5(player, Integer.parseInt(num));
-					}
-					if (quest.equals("q6")) {
+					} else if (quest.equals("q6")) {
 						QuestBoard qb = new QuestBoard();
 						qb.q6(player, Integer.parseInt(num));
-					}
-					if (quest.equals("q7")) {
+					} else if (quest.equals("q7")) {
 						QuestBoard qb = new QuestBoard();
 						qb.q7(player, Integer.parseInt(num));
-					}
-					if (quest.equals("q8")) {
+					} else if (quest.equals("q8")) {
 						QuestBoard qb = new QuestBoard();
 						qb.q8(player, Integer.parseInt(num));
-					}
-					if (quest.equals("q9")) {
+					} else if (quest.equals("q9")) {
 						QuestBoard qb = new QuestBoard();
 						qb.q9(player, Integer.parseInt(num));
-					}
-					if (quest.equals("q10")) {
+					} else if (quest.equals("q10")) {
 						QuestBoard qb = new QuestBoard();
 						qb.q10(player, Integer.parseInt(num));
-					}
-					if (quest.equals("q11")) {
+					} else if (quest.equals("q11")) {
 						QuestBoard qb = new QuestBoard();
 						qb.q11(player, Integer.parseInt(num));
-					}
-					if (quest.equals("q12")) {
+					} else if (quest.equals("q12")) {
 						QuestBoard qb = new QuestBoard();
 						qb.q12(player, Integer.parseInt(num));
-					}
-					if (quest.equals("q13")) {
+					} else if (quest.equals("q13")) {
 						QuestBoard qb = new QuestBoard();
 						qb.q13(player, Integer.parseInt(num));
-					}
-					if (quest.equals("q14")) {
+					} else if (quest.equals("q14")) {
 						QuestBoard qb = new QuestBoard();
 						qb.q14(player, Integer.parseInt(num));
-					}
-					if (quest.equals("q15")) {
+					} else if (quest.equals("q15")) {
 						QuestBoard qb = new QuestBoard();
 						qb.q15(player, Integer.parseInt(num));
-					}
-					if (quest.equals("q16")) {
+					} else if (quest.equals("q16")) {
 						QuestBoard qb = new QuestBoard();
 						qb.q16(player, Integer.parseInt(num));
-					}
-					if (quest.equals("q17")) {
+					} else if (quest.equals("q17")) {
 						QuestBoard qb = new QuestBoard();
 						qb.q17(player, Integer.parseInt(num));
-					}
-					if (quest.equals("q18")) {
+					} else if (quest.equals("q18")) {
 						QuestBoard qb = new QuestBoard();
 						qb.q18(player, Integer.parseInt(num));
-					}
-					if (quest.equals("q19")) {
+					} else if (quest.equals("q19")) {
 						QuestBoard qb = new QuestBoard();
 						qb.q19(player, Integer.parseInt(num));
-					}
-					if (quest.equals("q20")) {
+					} else if (quest.equals("q20")) {
 						QuestBoard qb = new QuestBoard();
 						qb.q20(player, Integer.parseInt(num));
-					}
-					if (quest.equals("eq1")) {
+					} else if (quest.equals("eq1")) {
 						QuestBoard qb = new QuestBoard();
 						qb.eq1(player, Integer.parseInt(num));
-					}
-					if (quest.equals("eq1_1")) {
+					} else if (quest.equals("eq1_1")) {
 						QuestBoard qb = new QuestBoard();
 						qb.eq1_1(player, Integer.parseInt(num));
-					}
-					if (quest.equals("eq1_2")) {
+					} else if (quest.equals("eq1_2")) {
 						QuestBoard qb = new QuestBoard();
 						qb.eq1_2(player, Integer.parseInt(num));
-					}
-					if (quest.equals("eq1_3")) {
+					} else if (quest.equals("eq1_3")) {
 						QuestBoard qb = new QuestBoard();
 						qb.eq1_3(player, Integer.parseInt(num));
-					}
-					if (quest.equals("eq1_4")) {
+					} else if (quest.equals("eq1_4")) {
 						QuestBoard qb = new QuestBoard();
 						qb.eq1_4(player, Integer.parseInt(num));
-					}
-					if (quest.equals("eq1_5")) {
+					} else if (quest.equals("eq1_5")) {
 						QuestBoard qb = new QuestBoard();
 						qb.eq1_5(player, Integer.parseInt(num));
-					}
-					if (quest.equals("eq1_6")) {
+					} else if (quest.equals("eq1_6")) {
 						QuestBoard qb = new QuestBoard();
 						qb.eq1_6(player, Integer.parseInt(num));
-					}
-					if (quest.equals("eq2")) {
+					} else if (quest.equals("eq2")) {
 						QuestBoard qb = new QuestBoard();
 						qb.eq2(player, Integer.parseInt(num));
-					}
-					if (quest.equals("eq2_1")) {
+					} else if (quest.equals("eq2_1")) {
 						QuestBoard qb = new QuestBoard();
 						qb.eq2_1(player, Integer.parseInt(num));
-					}
-					if (quest.equals("eq2_2")) {
+					} else if (quest.equals("eq2_2")) {
 						QuestBoard qb = new QuestBoard();
 						qb.eq2_2(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq1")) {
+					} else if (quest.equals("eq3")) {
+						QuestBoard qb = new QuestBoard();
+						qb.eq3(player, Integer.parseInt(num));
+					} else if (quest.equals("eq3_1")) {
+						QuestBoard qb = new QuestBoard();
+						qb.eq3_1(player, Integer.parseInt(num));
+					} else if (quest.equals("eq3_2")) {
+						QuestBoard qb = new QuestBoard();
+						qb.eq3_2(player, Integer.parseInt(num));
+					} else if (quest.equals("mq1")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq1(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq2")) {
+					} else if (quest.equals("mq2")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq2(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq3")) {
+					} else if (quest.equals("mq3")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq3(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq4")) {
+					} else if (quest.equals("mq4")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq4(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq5")) {
+					} else if (quest.equals("mq5")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq5(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq6")) {
+					} else if (quest.equals("mq6")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq6(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq7")) {
+					} else if (quest.equals("mq7")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq7(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq8")) {
+					} else if (quest.equals("mq8")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq8(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq9")) {
+					} else if (quest.equals("mq9")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq9(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq10")) {
+					} else if (quest.equals("mq10")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq10(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq11")) {
+					} else if (quest.equals("mq11")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq11(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq12")) {
+					} else if (quest.equals("mq12")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq12(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq13")) {
+					} else if (quest.equals("mq13")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq13(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq14")) {
+					} else if (quest.equals("mq14")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq14(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq15")) {
+					} else if (quest.equals("mq15")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq15(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq15_1")) {
+					} else if (quest.equals("mq15_1")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq15_1(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq16")) {
+					} else if (quest.equals("mq16")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq16(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq17")) {
+					} else if (quest.equals("mq17")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq17(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq18")) {
+					} else if (quest.equals("mq18")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq18(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq19")) {
+					} else if (quest.equals("mq19")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq19(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq20")) {
+					} else if (quest.equals("mq20")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq20(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq20_1")) {
+					} else if (quest.equals("mq20_1")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq20_1(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq20_2")) {
+					} else if (quest.equals("mq20_2")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq20_2(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq21")) {
+					} else if (quest.equals("mq21")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq21(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq22")) {
+					} else if (quest.equals("mq22")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq22(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq23")) {
+					} else if (quest.equals("mq23")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq23(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq24")) {
+					} else if (quest.equals("mq24")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq24(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq25")) {
+					} else if (quest.equals("mq25")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq25(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq26")) {
+					} else if (quest.equals("mq26")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq26(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq26_1")) {
+					} else if (quest.equals("mq26_1")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq26_1(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq27")) {
+					} else if (quest.equals("mq27")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq27(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq28")) {
+					} else if (quest.equals("mq28")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq28(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq29")) {
+					} else if (quest.equals("mq29")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq29(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq29_1")) {
+					} else if (quest.equals("mq29_1")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq29_1(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq30")) {
+					} else if (quest.equals("mq30")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq30(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq31")) {
+					} else if (quest.equals("mq31")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq31(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq32")) {
+					} else if (quest.equals("mq32")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq32(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq33")) {
+					} else if (quest.equals("mq33")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq33(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq33_1")) {
+					} else if (quest.equals("mq33_1")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq33_1(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq34")) {
+					} else if (quest.equals("mq34")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq34(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq34_1")) {
+					} else if (quest.equals("mq34_1")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq34_1(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq35")) {
+					} else if (quest.equals("mq35")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq35(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq35_1")) {
+					} else if (quest.equals("mq35_1")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq35_1(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq36")) {
+					} else if (quest.equals("mq36")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq36(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq37")) {
+					} else if (quest.equals("mq37")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq37(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq37_1")) {
+					} else if (quest.equals("mq37_1")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq37_1(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq37_2")) {
+					} else if (quest.equals("mq37_2")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq37_2(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq38")) {
+					} else if (quest.equals("mq38")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq38(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq38_1")) {
+					} else if (quest.equals("mq38_1")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq38_1(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq38_2")) {
+					} else if (quest.equals("mq38_2")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq38_2(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq39")) {
+					} else if (quest.equals("mq39")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq39(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq39_1")) {
+					} else if (quest.equals("mq39_1")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq39_1(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq39_2")) {
+					} else if (quest.equals("mq39_2")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq39_2(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq40")) {
+					} else if (quest.equals("mq40")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq40(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq41")) {
+					} else if (quest.equals("mq41")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq41(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq41_1")) {
+					} else if (quest.equals("mq41_1")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq41_1(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq42")) {
+					} else if (quest.equals("mq42")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq42(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq42_1")) {
+					} else if (quest.equals("mq42_1")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq42_1(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq43")) {
+					} else if (quest.equals("mq43")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq43(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq44")) {
+					} else if (quest.equals("mq44")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq44(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq45")) {
+					} else if (quest.equals("mq45")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq45(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq45_1")) {
+					} else if (quest.equals("mq45_1")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq45_1(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq45_2")) {
+					} else if (quest.equals("mq45_2")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq45_2(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq45_3")) {
+					} else if (quest.equals("mq45_3")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq45_3(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq45_4")) {
+					} else if (quest.equals("mq45_4")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq45_4(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq45_5")) {
+					} else if (quest.equals("mq45_5")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq45_5(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq45_6")) {
+					} else if (quest.equals("mq45_6")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq45_6(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq45_7")) {
+					} else if (quest.equals("mq45_7")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq45_7(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq45_8")) {
+					} else if (quest.equals("mq45_8")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq45_8(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq45_9")) {
+					} else if (quest.equals("mq45_9")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq45_9(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq45_10")) {
+					} else if (quest.equals("mq45_10")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq45_10(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq45_11")) {
+					} else if (quest.equals("mq45_11")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq45_11(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq45_12")) {
+					} else if (quest.equals("mq45_12")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq45_12(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq45_13")) {
+					} else if (quest.equals("mq45_13")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq45_13(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq45_14")) {
+					} else if (quest.equals("mq45_14")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq45_14(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq45_15")) {
+					} else if (quest.equals("mq45_15")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq45_15(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq45_16")) {
+					} else if (quest.equals("mq45_16")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq45_16(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq45_17")) {
+					} else if (quest.equals("mq45_17")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq45_17(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq45_18")) {
+					} else if (quest.equals("mq45_18")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq45_18(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq45_19")) {
+					} else if (quest.equals("mq45_19")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq45_19(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq45_20")) {
+					} else if (quest.equals("mq45_20")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq45_20(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq45_21")) {
+					} else if (quest.equals("mq45_21")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq45_21(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq45_22")) {
+					} else if (quest.equals("mq45_22")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq45_22(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq45_23")) {
+					} else if (quest.equals("mq45_23")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq45_23(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq45_24")) {
+					} else if (quest.equals("mq45_24")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq45_24(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq45_25")) {
+					} else if (quest.equals("mq45_25")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq45_25(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq45_26")) {
+					} else if (quest.equals("mq45_26")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq45_26(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq45_27")) {
+					} else if (quest.equals("mq45_27")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq45_27(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq45_28")) {
+					} else if (quest.equals("mq45_28")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq45_28(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq45_29")) {
+					} else if (quest.equals("mq45_29")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq45_29(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq45_30")) {
+					} else if (quest.equals("mq45_30")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq45_30(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq45_31")) {
+					} else if (quest.equals("mq45_31")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq45_31(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq45_32")) {
+					} else if (quest.equals("mq45_32")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq45_32(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq45_33")) {
+					} else if (quest.equals("mq45_33")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq45_33(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq45_34")) {
+					} else if (quest.equals("mq45_34")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq45_34(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq45_35")) {
+					} else if (quest.equals("mq45_35")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq45_35(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq45_36")) {
+					} else if (quest.equals("mq45_36")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq45_36(player, Integer.parseInt(num));
-					}
-					if (quest.equals("mq45_37")) {
+					} else if (quest.equals("mq45_37")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq45_37(player, Integer.parseInt(num));
 					}

@@ -1,5 +1,7 @@
 package testPack;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -86,7 +88,12 @@ public class SweepingCal {
 									//===========================================================================
 									// 독뎀
 									int poison = 0;
-									poison += new SpecialEffect().a10(player);
+									ArrayList<Integer> ary = new ArrayList<>(); 
+									ary.add(new SpecialEffect().a10(player));
+									ary.add(new SpecialEffect().s2(player));
+									Collections.sort(ary);
+									Collections.reverse(ary);
+									poison = ary.get(0);
 									
 									if(poison != 0) {
 										if(nearMob.getType() == EntityType.ZOMBIE || nearMob.getType() == EntityType.ZOMBIE_VILLAGER || nearMob.getType() == EntityType.HUSK

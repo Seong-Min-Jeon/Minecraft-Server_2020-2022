@@ -52,6 +52,10 @@ public class LootChest {
 						int qNum = cb.getNum(player);
 						cb.mq5(player, qNum + 1);
 					}
+					if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===제사장의 기억1===")) {
+						int qNum = cb.getNum(player);
+						cb.eq3(player, qNum + 1);
+					}
 				}				
 			}
 			if(block.getX()==3775 && block.getY()==74 && block.getZ()==3561) {
@@ -102,6 +106,12 @@ public class LootChest {
 			if(block.getX()==75 && block.getY()==240 && block.getZ()==-15) {
 				if(removeKey(player, "죽음의 탑 3층 보상 열쇠")) {
 					tower3(player);
+					
+					QuestBoard cb = new QuestBoard();
+					if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===제사장의 기억2===")) {
+						int qNum = cb.getNum(player);
+						cb.eq3_1(player, qNum + 1);
+					}
 				}				
 			}
 			if(block.getX()==69 && block.getY()==240 && block.getZ()==-15) {

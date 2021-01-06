@@ -798,6 +798,95 @@ public class QuestBoard {
 		player.setScoreboard(board);
 	}
 
+	public void eq3(Player player, int num) {
+		// 되살아난 피르볼그의 제사장 보상
+		if (num >= 1) {
+			player.setScoreboard(Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 5000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "§7이 유적은 피르볼그 시대에 포보르를 생성하고%§7검은 흐름을 찬양하던 의식을 하던 장소임을 알게 되었다.%"
+					+ "§7제사장은 이곳에서 포보르들을 소탕하고자 하였다고 한다.%§7다음 기록은 죽음의 탑으로 이어져있다.");
+			QuestBoard qb = new QuestBoard();
+			qb.eq3_1(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "엑스트라 퀘스트");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===제사장의 기억1===");
+		score.setScore(2);
+		Score score2 = obj.getScore("숲의 유적 클리어");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/1)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void eq3_1(Player player, int num) {
+		if (num >= 1) {
+			player.setScoreboard(Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 5000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "§7네메드 왕국의 보물들은 피르볼그 시대에 와서야 봉인될 수 있었다.%§7보통 나라가 망하기 이전 고위계층에 의해 봉인되는 것이 일반적이나%"
+					+ "§7피르볼그는 네메드 왕국의 왕좌를 찬탈하여 생긴 나라였다.%§7때문에 네메드의 보물들은 피르볼그의 전리품이었고%"
+					+ "§7피르볼그 왕가는 그를 봉인하고자 하였다.%§7죽음의 탑은 네메드의 보물들을 봉인해둔 탑이다.%"
+					+ "§7이곳에서 제사장은 화염의 돌을 봉인하는 역할을 하였다고 한다.%§7다음 기록은 바로 사막으로 이어져있다.%"
+					+ "§7어쩌다 이 제사장이 타락하게 된 것인지 단서가 잡히지 않는다.%§7아무래도 동물들에게서 단서를 찾는 것이 좋을 것 같다.");
+			QuestBoard qb = new QuestBoard();
+			qb.eq3_2(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "엑스트라 퀘스트");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===제사장의 기억2===");
+		score.setScore(2);
+		Score score2 = obj.getScore("죽음의 탑 3층 클리어");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/1)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+
+	public void eq3_2(Player player, int num) {
+		if (num >= 50) {
+			player.setScoreboard(Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 5000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "§7복어를 통해 제사장의 남은 기록을 얻게 되었다.%§7그는 현존하는 포보르 왕과 조우하였고%"
+					+ "§7그에 압도당해 정신이 나가버린 것 같다.%§7그가 제정신일 때 남겨놓은 장비들이 있다고도 한다.%"
+					+ "§7장비를 얻기 위한 열쇠도 받았다.%§d피르볼그의 유산§f을 획득했다.%§7사막 마을에 장비를 보관하고 있는 후손이 있다고 한다.");
+			ItemStack scroll = new ItemStack(Material.PRISMARINE_SHARD);
+			ItemMeta scrollIm = scroll.getItemMeta();
+			scrollIm.setDisplayName(ChatColor.LIGHT_PURPLE + "피르볼그의 유산");
+			ArrayList<String> scrollLore = new ArrayList();
+			scrollLore.add(ChatColor.GRAY + "피르볼그의 제사장이 남긴 유산");
+			scrollLore.add(ChatColor.GRAY + "사막 마을에 그의 후손이 있다고 한다.");
+			scrollIm.setLore(scrollLore);
+			scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+			scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+			scrollIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+			scrollIm.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
+			scrollIm.setUnbreakable(true);
+			scroll.setItemMeta(scrollIm);		
+			player.getInventory().addItem(scroll);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "엑스트라 퀘스트");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===제사장의 기억3===");
+		score.setScore(2);
+		Score score2 = obj.getScore("포보르화 복어 50마리 사냥");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/50)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
 	public void mq1(Player player, int num) {
 		if(num>=5) {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard ());

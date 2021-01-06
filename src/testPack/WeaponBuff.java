@@ -126,6 +126,17 @@ public class WeaponBuff {
 			
 		}
 		
+		try {
+			//left hand
+			if (player.getInventory().getItemInOffHand().getItemMeta() != null) {
+				if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "미라클 반사")) {
+					player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 200, 100000,true,false,false));
+				}
+			}
+		} catch(Exception e) {
+			
+		}
+		
 		//set
 		if (player.getInventory().getHelmet() != null) {
 			if (player.getInventory().getChestplate() != null) {
@@ -448,6 +459,16 @@ public class WeaponBuff {
 									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "에골디드 신발")) {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 1000,true,false,false));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0,true,false,false));
+									}
+								}
+							}
+						}
+						
+						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "제사장의 헬멧")) {
+							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "제사장의 갑옷")) {
+								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "제사장의 각반")) {
+									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "제사장의 신발")) {
+										player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 120, 100000,true,false,false));
 									}
 								}
 							}

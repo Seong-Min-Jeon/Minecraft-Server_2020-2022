@@ -465,6 +465,18 @@ public class SaveAll {
 						int number = qb.getNum(player);
 						fw.write("eq2_2\n");
 						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===제사장의 기억1===")) {
+						int number = qb.getNum(player);
+						fw.write("eq3\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===제사장의 기억2===")) {
+						int number = qb.getNum(player);
+						fw.write("eq3_1\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===제사장의 기억3===")) {
+						int number = qb.getNum(player);
+						fw.write("eq3_2\n");
+						fw.write(Integer.toString(number));
 					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===워그닐 섬의 비밀===")) {
 						int number = qb.getNum(player);
 						fw.write("mq1\n");

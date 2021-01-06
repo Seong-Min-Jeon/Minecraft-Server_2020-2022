@@ -49,21 +49,6 @@ public class RefreshServer {
 			@Override
 			public void run() {
 				
-				if(time % 4 == 0) {
-					for(Player player : Bukkit.getOnlinePlayers()) {
-						try {
-							ScoreboardManager manager = Bukkit.getScoreboardManager();
-							Scoreboard board = manager.getNewScoreboard();
-							Objective obj = board.registerNewObjective("health", "health");
-							obj.setDisplaySlot(DisplaySlot.BELOW_NAME);
-							obj.setDisplayName(ChatColor.RED + "♥ " + (int)(player.getHealth()/20*100) + "%");
-							player.setScoreboard(board);
-						} catch(Exception e) {
-							
-						}
-					}
-				}
-				
 				// 보스 자연치유
 				if(time % 20 == 0) {
 					List<Entity> list1 = world.getEntities();

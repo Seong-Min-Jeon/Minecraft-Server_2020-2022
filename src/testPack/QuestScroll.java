@@ -42,6 +42,7 @@ public class QuestScroll {
 				q20(player, itemArg, world);
 				eq1(player, itemArg, world);
 				eq2(player, itemArg, world);
+				eq3(player, itemArg, world);
 				mq1(player, itemArg, world);
 				mq2(player, itemArg, world);
 				mq3(player, itemArg, world);
@@ -272,6 +273,14 @@ public class QuestScroll {
 		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "엑스트라 퀘스트: 마신왕의 계약")) {
 			QuestBoard qb = new QuestBoard();
 			qb.eq2(player, 0);
+		}	
+	}
+	
+	public void eq3(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "엑스트라 퀘스트: 피르볼그의 제사장")) {
+			msg.msg(player, "§7피르볼그 제사장의 발자취가 적혀있다.%§7첫 기록은 숲의 유적에서 시작하는 듯하다.");
+			QuestBoard qb = new QuestBoard();
+			qb.eq3(player, 0);
 		}	
 	}
 	

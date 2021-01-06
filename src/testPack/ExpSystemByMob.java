@@ -10,6 +10,7 @@ import org.bukkit.Color;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Particle;
+import org.bukkit.Sound;
 import org.bukkit.Particle.DustOptions;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
@@ -154,7 +155,8 @@ public class ExpSystemByMob {
 		new ProgressBar().bar1setStat(true);
 		for(Player p : Bukkit.getOnlinePlayers()) {
 			p.sendMessage(ChatColor.AQUA + "" + ChatColor.BOLD + player.getDisplayName() + "님의 핫타임이 시작되었습니다. (전투 경험치 2배)");
-			new ProgressBar().bar1AddPlayer(player);
+			new ProgressBar().bar1AddPlayer(p);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 3.0f, 0.8f);
 		}
 		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -177,8 +179,8 @@ public class ExpSystemByMob {
 					new ProgressBar().bar1setStat(false);
 					for(Player p : Bukkit.getOnlinePlayers()) {
 						p.sendMessage(ChatColor.AQUA + "" + ChatColor.BOLD + player.getDisplayName() + "님의 핫타임이 종료되었습니다. (전투 경험치 2배)");
-						new ProgressBar().bar1RemovePlayer(player);
 					}
+					new ProgressBar().bar1RemovePlayer();
 					td.endTask();
 					td.removeID();
 				}

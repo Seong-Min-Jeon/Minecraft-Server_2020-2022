@@ -5480,6 +5480,12 @@ public class MobLoot {
 				cb.mq45_35(player, qNum + 1);
 			}
 		} 
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===제사장의 기억3===")) {
+			int qNum = cb.getNum(player);
+			cb.eq3_2(player, qNum + 1);
+		}
 	}
 	
 	// 되살아난 피르볼그의 제사장
@@ -5493,20 +5499,20 @@ public class MobLoot {
 		player.getInventory().addItem(var1);
 		player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 뿔" + ChatColor.WHITE + "을 획득했다.");
 		
-//		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
-//		ItemMeta scrollIm = scroll.getItemMeta();
-//		scrollIm.setDisplayName(ChatColor.GOLD + "엑스트라 퀘스트: 피르볼그의 제사장");
-//		ArrayList<String> scrollLore = new ArrayList();
-//		scrollLore.add(ChatColor.GRAY + "'피르볼그의 제사장' 퀘스트를 진행할 수 있다.");
-//		scrollIm.setLore(scrollLore);
-//		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-//		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-//		scrollIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
-//		scrollIm.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
-//		scrollIm.setUnbreakable(true);
-//		scroll.setItemMeta(scrollIm);		
-//		player.getInventory().addItem(scroll);
-//		player.sendMessage(ChatColor.GOLD + "엑스트라 퀘스트: 피르볼그의 제사장" + ChatColor.WHITE + "을 획득했다.");
+		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
+		ItemMeta scrollIm = scroll.getItemMeta();
+		scrollIm.setDisplayName(ChatColor.GOLD + "엑스트라 퀘스트: 피르볼그의 제사장");
+		ArrayList<String> scrollLore = new ArrayList();
+		scrollLore.add(ChatColor.GRAY + "'피르볼그의 제사장' 퀘스트를 진행할 수 있다.");
+		scrollIm.setLore(scrollLore);
+		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		scrollIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		scrollIm.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
+		scrollIm.setUnbreakable(true);
+		scroll.setItemMeta(scrollIm);		
+		player.getInventory().addItem(scroll);
+		player.sendMessage(ChatColor.GOLD + "엑스트라 퀘스트: 피르볼그의 제사장" + ChatColor.WHITE + "을 획득했다.");
 		
 		QuestBoard cb = new QuestBoard();
 		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===대사막-최종장===")) {
