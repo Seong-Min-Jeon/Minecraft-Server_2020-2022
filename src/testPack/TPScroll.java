@@ -2,15 +2,22 @@ package testPack;
 
 import java.util.List;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Sound;
 import org.bukkit.World;
+import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Entity;
+import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Item;
+import org.bukkit.entity.Mob;
 import org.bukkit.entity.Player;
 
 public class TPScroll {
+	
+	private int taskID;
+	private Message msg = new Message();
 	
 	public void teleport(Player player, Item itemArg) {
 		World world = player.getWorld();
@@ -20,6 +27,8 @@ public class TPScroll {
 		ticket4(player, itemArg, world);
 		ticket5(player, itemArg, world);
 		ticket6(player, itemArg, world);
+		ticket7(player, itemArg, world);
+		ticket8(player, itemArg, world);
 	}
 	
 	public void ticket1(Player player, Item itemArg, World world) {
@@ -41,7 +50,7 @@ public class TPScroll {
 					}
 				}
 				player.teleport(loc3);
-				player.getWorld().playSound(loc3, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
+				player.getWorld().playSound(loc3, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);
 				
 			}
 		}
@@ -66,7 +75,7 @@ public class TPScroll {
 					}
 				}
 				player.teleport(loc3);
-				player.getWorld().playSound(loc3, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
+				player.getWorld().playSound(loc3, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);
 			}
 		}
 	}
@@ -90,7 +99,7 @@ public class TPScroll {
 					}
 				}
 				player.teleport(loc3);
-				player.getWorld().playSound(loc3, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
+				player.getWorld().playSound(loc3, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);
 				
 			}
 		}
@@ -115,7 +124,7 @@ public class TPScroll {
 					}
 				}
 				player.teleport(loc3);
-				player.getWorld().playSound(loc3, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
+				player.getWorld().playSound(loc3, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);
 			}
 		}
 	}
@@ -157,6 +166,112 @@ public class TPScroll {
 				player.sendMessage(ChatColor.RED + "이 아이템을 사용하기에는 레벨이 낮다.");
 			}
 			
+		}
+	}
+	
+	public void ticket7(Player player, Item itemArg, World world) {
+		// 하마베->라파누이  952 95 -40  938 45 -82
+		Location loc = player.getLocation();
+		if (loc.getX() <= 952 && loc.getY() <= 95 && loc.getZ() <= -40 && 
+				loc.getX() >= 938 && loc.getY() >= 45 && loc.getZ() >= -82) {
+			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "라파누이행 티켓")) {
+				itemArg.remove();				
+				Location loc3 = new Location(world, 1779, 54, 2970, 270, 0);
+				List<Entity> list = player.getNearbyEntities(10, 10, 10);
+				list.add(player);
+				for(Entity e : list) {
+					if(e instanceof Player) {	
+						Player p = (Player) e;
+						Location loc2 = p.getLocation();
+						if(loc2.getX() <= 952 && loc2.getY() <= 95 && loc2.getZ() <= -40 && 
+								loc2.getX() >= 938 && loc2.getY() >= 45 && loc2.getZ() >= -82) {
+							taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+								int time = 0;
+								ThreadData td = new ThreadData(p.getUniqueId());
+
+								@Override
+								public void run() {
+									if (!td.hasID()) {
+										td.setID(taskID);
+									}
+
+									if (time == 0) {
+										p.teleport(loc3);
+										p.getWorld().playSound(loc3, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);
+										msg.msg(p, "선장: 라파누이에는 어쩐 일로 가는 것이오.%선장: 너무 외딴 섬이라 찾는 이도 없소.%"
+												+ "선장: 나도 이 섬에 가는 것은 몇년만인지..%선장: 지형상 이 배로는 부두에 도착할 순 없고%"
+												+ "선장: 작은 배로 갈아타야 갈 수 있다오.%선장: 곧 도착하겠구만.");
+									}
+
+									if (time >= 400) {
+										p.teleport(new Location(world, 1756, 53, 2111, 270, 0));
+										td.endTask();
+										td.removeID();
+										return;
+									}
+
+									time++;
+								}
+
+							}, 0, 1);
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	public void ticket8(Player player, Item itemArg, World world) {
+		// 라파누이->하마베  1756 40 2122  1750 70 2100
+		Location loc = player.getLocation();
+		if (loc.getX() <= 1756 && loc.getY() <= 70 && loc.getZ() <= 2122 && 
+				loc.getX() >= 1750 && loc.getY() >= 40 && loc.getZ() >= 2100) {
+			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "하마베행 티켓 (라파누이)")) {
+				itemArg.remove();				
+				Location loc3 = new Location(world, 1779, 54, 2970, 270, 0);
+				List<Entity> list = player.getNearbyEntities(10, 10, 10);
+				list.add(player);
+				for(Entity e : list) {
+					if(e instanceof Player) {	
+						Player p = (Player) e;
+						Location loc2 = p.getLocation();
+						if(loc2.getX() <= 1756 && loc2.getY() <= 70 && loc2.getZ() <= 2122 && 
+								loc2.getX() >= 1750 && loc2.getY() >= 40 && loc2.getZ() >= 2100) {
+							taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+								int time = 0;
+								ThreadData td = new ThreadData(p.getUniqueId());
+
+								@Override
+								public void run() {
+									if (!td.hasID()) {
+										td.setID(taskID);
+									}
+
+									if (time == 0) {
+										p.teleport(loc3);
+										p.getWorld().playSound(loc3, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);
+										msg.msg(p, "선장: 라파누이에서 볼 일은 다 보셨소?%선장: 그저 안전히 돌아오는 배에 탄 것으로 다행인 것이오.%"
+												+ "선장: 또 가고 싶다면야 배를 운행해 줄 수 있지만..%선장: 개인적으로 가기는 싫은 섬이구려.%"
+												+ "선장: 거의 다 와가는구만.%선장: 이제 곧 도착이오.");
+									}
+
+									if (time >= 400) {
+										p.teleport(new Location(world, 954, 55, -57));
+										td.endTask();
+										td.removeID();
+										return;
+									}
+
+									time++;
+								}
+
+							}, 0, 1);
+						}
+					}
+				}
+			}
 		}
 	}
 	

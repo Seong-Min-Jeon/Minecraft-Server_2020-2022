@@ -567,86 +567,6 @@ public class Main extends JavaPlugin implements Listener{
 //		if(player.getDisplayName().equalsIgnoreCase("WoolRing") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
 		
 		
-		ItemStack helmet = new ItemStack(Material.GOLDEN_HELMET);
-		ItemMeta helmetIm = helmet.getItemMeta();
-		helmetIm.setLocalizedName("0,0,0,0,300,1200,0,0,0,0,510");
-		helmetIm.setDisplayName(ChatColor.GREEN + "제사장의 헬멧");
-		ArrayList<String> helmetLore = new ArrayList();
-		helmetLore.add(ChatColor.GRAY + "레벨 제한: 510");
-		helmetLore.add(ChatColor.GRAY + " ");
-		helmetLore.add(ChatColor.GRAY + "제사장의 특수한 마법이 부여되어 있는 헬멧");
-		helmetLore.add(ChatColor.GRAY + "(세트 아이템)");
-		helmetLore.add(ChatColor.GRAY + " ");
-		helmetLore.add(ChatColor.BLUE + "-독 데미지 10(세트 효과)");
-		helmetLore.add(ChatColor.BLUE + "-약화(세트 효과)");
-		helmetIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-		helmetIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-		helmetIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
-		helmetIm.setUnbreakable(true);
-		helmetIm.setLore(helmetLore);
-		helmet.setItemMeta(helmetIm);
-		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(helmet);}
-
-		ItemStack chestplate = new ItemStack(Material.GOLDEN_CHESTPLATE);
-		ItemMeta chestplateIm = chestplate.getItemMeta();
-		chestplateIm.setLocalizedName("0,0,0,0,300,1200,0,0,0,0,510");
-		chestplateIm.setDisplayName(ChatColor.GREEN + "제사장의 갑옷");
-		ArrayList<String> chestplateLore = new ArrayList();
-		chestplateLore.add(ChatColor.GRAY + "레벨 제한: 510");
-		chestplateLore.add(ChatColor.GRAY + " ");
-		chestplateLore.add(ChatColor.GRAY + "제사장의 특수한 마법이 부여되어 있는 갑옷");
-		chestplateLore.add(ChatColor.GRAY + "(세트 아이템)");
-		chestplateLore.add(ChatColor.GRAY + " ");
-		chestplateLore.add(ChatColor.BLUE + "-독 데미지 10(세트 효과)");
-		chestplateLore.add(ChatColor.BLUE + "-약화(세트 효과)");
-		chestplateIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-		chestplateIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-		chestplateIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
-		chestplateIm.setUnbreakable(true);
-		chestplateIm.setLore(chestplateLore);
-		chestplate.setItemMeta(chestplateIm);
-		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(chestplate);}
-
-		ItemStack leggings = new ItemStack(Material.GOLDEN_LEGGINGS);
-		ItemMeta leggingsIm = leggings.getItemMeta();
-		leggingsIm.setLocalizedName("0,0,0,0,300,1200,0,0,0,0,510");
-		leggingsIm.setDisplayName(ChatColor.GREEN + "제사장의 각반");
-		ArrayList<String> leggingsLore = new ArrayList();
-		leggingsLore.add(ChatColor.GRAY + "레벨 제한: 510");
-		leggingsLore.add(ChatColor.GRAY + " ");
-		leggingsLore.add(ChatColor.GRAY + "제사장의 특수한 마법이 부여되어 있는 각반");
-		leggingsLore.add(ChatColor.GRAY + "(세트 아이템)");
-		leggingsLore.add(ChatColor.GRAY + " ");
-		leggingsLore.add(ChatColor.BLUE + "-독 데미지 10(세트 효과)");
-		leggingsLore.add(ChatColor.BLUE + "-약화(세트 효과)");
-		leggingsIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-		leggingsIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-		leggingsIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
-		leggingsIm.setUnbreakable(true);
-		leggingsIm.setLore(leggingsLore);
-		leggings.setItemMeta(leggingsIm);
-		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(leggings);}
-
-		ItemStack boots = new ItemStack(Material.GOLDEN_BOOTS);
-		ItemMeta bootsIm = boots.getItemMeta();
-		bootsIm.setLocalizedName("0,0,0,0,300,1200,0,0,0,0,510");
-		bootsIm.setDisplayName(ChatColor.GREEN + "제사장의 신발");
-		ArrayList<String> bootsLore = new ArrayList();
-		bootsLore.add(ChatColor.GRAY + "레벨 제한: 510");
-		bootsLore.add(ChatColor.GRAY + " ");
-		bootsLore.add(ChatColor.GRAY + "제사장의 특수한 마법이 부여되어 있는 신발");
-		bootsLore.add(ChatColor.GRAY + "(세트 아이템)");
-		bootsLore.add(ChatColor.GRAY + " ");
-		bootsLore.add(ChatColor.BLUE + "-독 데미지 10(세트 효과)");
-		bootsLore.add(ChatColor.BLUE + "-약화(세트 효과)");
-		bootsIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-		bootsIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-		bootsIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
-		bootsIm.setUnbreakable(true);
-		bootsIm.setLore(bootsLore);
-		boots.setItemMeta(bootsIm);
-		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(boots);}
-		
 		
 //		ItemStack var1 = new ItemStack(Material.IRON_HELMET);
 //		ItemMeta var1Im = var1.getItemMeta();
@@ -2385,6 +2305,18 @@ public class Main extends JavaPlugin implements Listener{
 			if(loc.getX() <= 4204 && loc.getY() <= 120 && loc.getZ() <= 2736 
 					&& loc.getX() >= 3841 && loc.getY() >= 70 && loc.getZ() >= 2178) {
 				event.setRespawnLocation(new Location(player.getWorld(), 128, 64, 1955, 90, 0));
+				return;
+			}
+			// 피르볼그 제사장
+			if (loc.getX() <= 3703 && loc.getY() <= 120 && loc.getZ() <= 2758 
+					&& loc.getX() >= 3679 && loc.getY() >= 99 && loc.getZ() >= 2732) {
+				player.teleport(samak);
+				return;
+			}
+			// 하마베 배 1792 95 2997  1768 40 2942
+			if (loc.getX() <= 1792 && loc.getY() <= 95 && loc.getZ() <= 2997 
+					&& loc.getX() >= 1768 && loc.getY() >= 40 && loc.getZ() >= 2942) {
+				player.teleport(hamabe);
 				return;
 			}
 			

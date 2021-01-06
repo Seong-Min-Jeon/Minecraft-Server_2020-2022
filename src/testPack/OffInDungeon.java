@@ -88,6 +88,18 @@ public class OffInDungeon {
 			player.teleport(new Location(player.getWorld(), 128, 64, 1955, 90, 0));
 			return;
 		}
+		// 피르볼그 제사장
+		if (loc.getX() <= 3703 && loc.getY() <= 120 && loc.getZ() <= 2758 
+				&& loc.getX() >= 3679 && loc.getY() >= 99 && loc.getZ() >= 2732) {
+			player.teleport(new Location(player.getWorld(), 228, 85, 945));
+			return;
+		}
+		// 하마베 배 1792 95 2997 1768 40 2942
+		if (loc.getX() <= 1792 && loc.getY() <= 95 && loc.getZ() <= 2997 
+				&& loc.getX() >= 1768 && loc.getY() >= 40 && loc.getZ() >= 2942) {
+			player.teleport(new Location(player.getWorld(), 973, 62, 40, 180, 0));
+			return;
+		}
 	}
 
 	public void removeMana(Player player) {

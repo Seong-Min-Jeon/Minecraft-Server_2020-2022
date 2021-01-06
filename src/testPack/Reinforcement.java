@@ -5983,7 +5983,7 @@ public class Reinforcement {
 		for(Player p : Bukkit.getOnlinePlayers()) {
 			p.sendMessage(ChatColor.AQUA + "" + ChatColor.BOLD + player.getDisplayName() + "님의 핫타임이 시작되었습니다. (강화 확률 증가)");
 			new ProgressBar().bar2AddPlayer(p);
-			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 3.0f, 0.8f);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 3.0f, 1.1f);
 		}
 		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
