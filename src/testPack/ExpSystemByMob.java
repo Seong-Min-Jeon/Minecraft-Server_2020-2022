@@ -161,13 +161,13 @@ public class ExpSystemByMob {
 		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
 			int time = 0;
-			ThreadData td = new ThreadData(player.getUniqueId());
+			ThreadExpHotTime th = new ThreadExpHotTime(player.getUniqueId());
 
 			@Override
 			public void run() {
 				
-				if (!td.hasID()) {
-					td.setID(taskID);
+				if (!th.hasID()) {
+					th.setID(taskID);
 				}
 				
 				if (time % 1200 == 0) {
@@ -181,8 +181,8 @@ public class ExpSystemByMob {
 						p.sendMessage(ChatColor.AQUA + "" + ChatColor.BOLD + player.getDisplayName() + "님의 핫타임이 종료되었습니다. (전투 경험치 2배)");
 					}
 					new ProgressBar().bar1RemovePlayer();
-					td.endTask();
-					td.removeID();
+					th.endTask();
+					th.removeID();
 				}
 				
 				time++;

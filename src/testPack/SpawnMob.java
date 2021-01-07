@@ -8781,8 +8781,8 @@ public class SpawnMob {
 			} else if(entity.getType() == (EntityType) EntityType.SILVERFISH) { 
 				entity.setCustomName(ChatColor.GRAY + "귀찮은 녀석" + ChatColor.YELLOW + " [Lv.1]");
 				entity.setCustomNameVisible(true);
-				entity.setMaxHealth(3);
-				entity.setHealth(3);
+				entity.setMaxHealth(6);
+				entity.setHealth(6);
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM) {

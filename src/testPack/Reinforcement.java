@@ -5988,13 +5988,13 @@ public class Reinforcement {
 		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
 			int time = 0;
-			ThreadData td = new ThreadData(player.getUniqueId());
+			ThreadReinHotTime th = new ThreadReinHotTime(player.getUniqueId());
 
 			@Override
 			public void run() {
 				
-				if (!td.hasID()) {
-					td.setID(taskID);
+				if (!th.hasID()) {
+					th.setID(taskID);
 				}
 				
 				if (time % 1200 == 0) {
@@ -6012,8 +6012,8 @@ public class Reinforcement {
 						p.sendMessage(ChatColor.AQUA + "" + ChatColor.BOLD + player.getDisplayName() + "님의 핫타임이 종료되었습니다. (강화 확률 증가)");
 					}
 					new ProgressBar().bar2RemovePlayer();
-					td.endTask();
-					td.removeID();
+					th.endTask();
+					th.removeID();
 				}
 				
 				time++;

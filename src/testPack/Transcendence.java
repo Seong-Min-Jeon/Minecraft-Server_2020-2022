@@ -499,7 +499,7 @@ public class Transcendence {
 				ArrayList<String> weaponLore = new ArrayList();
 				weaponLore.add(ChatColor.GRAY + "레벨 제한: 450");
 				weaponLore.add(ChatColor.GRAY + " ");
-				weaponLore.add(ChatColor.GRAY + "탑의 초심자 신발이 진정한 모습을 찾았다.");
+				weaponLore.add(ChatColor.GRAY + "천옥개에 의해 현무의 힘이 각성하였다.");
 				weaponLore.add(ChatColor.GRAY + "(세트 아이템)");
 				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);

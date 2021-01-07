@@ -2307,6 +2307,12 @@ public class Main extends JavaPlugin implements Listener{
 				event.setRespawnLocation(new Location(player.getWorld(), 128, 64, 1955, 90, 0));
 				return;
 			}
+			//콜로세움(원본) 118 50 1945  138 100 1965
+			if(loc.getX() <= 138 && loc.getY() <= 100 && loc.getZ() <= 1965 
+					&& loc.getX() >= 118 && loc.getY() >= 50 && loc.getZ() >= 1945) {
+				event.setRespawnLocation(new Location(player.getWorld(), 128, 64, 1955, 90, 0));
+				return;
+			}
 			// 피르볼그 제사장
 			if (loc.getX() <= 3703 && loc.getY() <= 120 && loc.getZ() <= 2758 
 					&& loc.getX() >= 3679 && loc.getY() >= 99 && loc.getZ() >= 2732) {
@@ -7356,7 +7362,7 @@ public class Main extends JavaPlugin implements Listener{
 			            return;
 		        	}
 		        }
-		        if(clicked != null && clicked.getType() == Material.GREEN_CONCRETE) {
+		        if(clicked != null && clicked.getType() == Material.LIME_CONCRETE) {
 		        	int idx = 0;
 		        	for(ItemStack item : event.getInventory().getContents()) {
 		        		if(item == null) {

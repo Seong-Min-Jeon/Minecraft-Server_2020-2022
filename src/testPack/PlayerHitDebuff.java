@@ -2279,6 +2279,8 @@ public class PlayerHitDebuff {
 					player.getWorld().spawnEntity(mob.getLocation(), EntityType.SILVERFISH);
 					player.getWorld().spawnEntity(mob.getLocation(), EntityType.SILVERFISH);
 					player.getWorld().spawnEntity(mob.getLocation(), EntityType.SILVERFISH);
+					player.getWorld().spawnEntity(mob.getLocation(), EntityType.SILVERFISH);
+					player.getWorld().spawnEntity(mob.getLocation(), EntityType.SILVERFISH);
 				} else if (num == 4) {
 					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -2428,6 +2430,7 @@ public class PlayerHitDebuff {
 										Player player = (Player) ent;
 										player.getWorld().playEffect(mob.getLocation(), Effect.END_GATEWAY_SPAWN, 2);
 										player.setHealth(player.getHealth()/3);
+										player.setHealth(player.getHealth()-1);
 									}
 								}
 								List<Entity> nearPlayer = mob.getNearbyEntities(120, 10, 120);
