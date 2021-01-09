@@ -304,7 +304,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("woolring")) { 
 			
 		} else {
-			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/789402550696017940/aile_texture_pack_9.zip");
+			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/796998140481896498/aile_texture_pack_10.zip");
 		}
 		
 		//Message
@@ -332,20 +332,6 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("yumehama") || player.getDisplayName().equalsIgnoreCase("WoolRing")) {
 			player.setOp(true);
 		}		
-		
-		//증표 오류 수정
-		for (ItemStack is : player.getInventory().getContents()) {
-			if(is == null) continue;
-			try {
-				int len = is.getItemMeta().getDisplayName().length();
-				if (is.getItemMeta().getDisplayName().substring(len-2,len).equals("증표")) {
-					player.getInventory().remove(is);
-					player.getInventory().setItem(7,is);
-			    }
-			} catch(Exception e) {
-				
-			}
-		}
 		
 		//처음 온 플레이어 상자 배정
 		try {
