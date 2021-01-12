@@ -609,6 +609,7 @@ public class LootChest {
 		var6Im.setDisplayName(ChatColor.LIGHT_PURPLE + "사랑의 묘약");
 		ArrayList<String> var6Lore = new ArrayList();
 		var6Lore.add(ChatColor.GRAY + "눈 밑에 바르면 보이는 사람과 사랑에 빠지게 된다고 한다.");
+		var6Lore.add(ChatColor.GRAY + "사용 시 자신보다 레벨이 낮은 파티원에게 이동할 수도 있다.");
 		var6Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var6Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var6Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);

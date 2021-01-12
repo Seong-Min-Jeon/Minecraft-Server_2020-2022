@@ -304,7 +304,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("woolring")) { 
 			
 		} else {
-			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/796998140481896498/aile_texture_pack_10.zip");
+			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/797410166986506290/aile_texture_pack_11.zip");
 		}
 		
 		//Message
@@ -2657,7 +2657,10 @@ public class Main extends JavaPlugin implements Listener{
 					Cmd8Party cp = new Cmd8Party();
 					ArrayList<Player> party = cp.getPlayerParty(player);
 					if(party.size() != 0) {
-						player.teleport(party.get(rnd.nextInt(party.size())).getLocation());
+						Player p = party.get(rnd.nextInt(party.size()));
+						if(p.getLevel() <= player.getLevel()) {
+							player.teleport(p.getLocation());
+						}
 					}
 				} catch(Exception e) {
 					

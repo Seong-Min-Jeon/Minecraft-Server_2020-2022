@@ -1434,7 +1434,7 @@ public class MobLoot {
 		im.setDisplayName(ChatColor.YELLOW + "에메랄드 주머니");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
-		es.giveExp(player, 450000);
+		es.giveExp(player, 400000);
 	}
 	
 	// 요정왕 오베론
@@ -1445,7 +1445,7 @@ public class MobLoot {
 		im.setDisplayName(ChatColor.YELLOW + "에메랄드 주머니");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
-		es.giveExp(player, 777777);
+		es.giveExp(player, 500000);
 
 		ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
 		ItemMeta rewardKeyIm = rewardKey.getItemMeta();
@@ -1477,7 +1477,7 @@ public class MobLoot {
 		im.setDisplayName(ChatColor.YELLOW + "에메랄드 주머니");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
-		es.giveExp(player, 777777);
+		es.giveExp(player, 500000);
 
 		ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
 		ItemMeta rewardKeyIm = rewardKey.getItemMeta();
@@ -1709,7 +1709,7 @@ public class MobLoot {
 		im.setDisplayName(ChatColor.YELLOW + "에메랄드 주머니");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
-		es.giveExp(player, 1100000);
+		es.giveExp(player, 750000);
 		
 		ItemStack var1 = new ItemStack(Material.CHISELED_POLISHED_BLACKSTONE);
 		ItemMeta var1im = var1.getItemMeta();
@@ -1775,7 +1775,7 @@ public class MobLoot {
 		im.setDisplayName(ChatColor.YELLOW + "에메랄드 주머니");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
-		es.giveExp(player, 1300000);
+		es.giveExp(player, 800000);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_STAIRS);
 		ItemMeta var1im = var1.getItemMeta();
@@ -3458,7 +3458,7 @@ public class MobLoot {
 		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
-		es.giveExp(player, 7000000);
+		es.giveExp(player, 3800000);
 		
 		ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
 		ItemMeta rewardKeyIm = rewardKey.getItemMeta();
@@ -5089,12 +5089,12 @@ public class MobLoot {
 	
 	// 석상 파수꾼
 	public void mob209(Player player) {
-		es.giveExp(player, 8000000);
+		es.giveExp(player, 6700000);
 	}
 	
 	// 암석 거인의 파편
 	public void mob210(Entity mob, Player player) {
-		es.giveExp(player, 1900000);
+		es.giveExp(player, 1850000);
 		
 		int tmp2 = rnd.nextInt(4);
 		if(tmp2 == 0) {
@@ -5523,7 +5523,7 @@ public class MobLoot {
 	
 	// 중장갑 포보르
 	public void mob227(Player player) {
-		es.giveExp(player, 5000000);
+		es.giveExp(player, 4000000);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_STAIRS);
 		ItemMeta var1im = var1.getItemMeta();
@@ -5535,7 +5535,7 @@ public class MobLoot {
 	
 	// 포보르 사제
 	public void mob228(Player player) {
-		es.giveExp(player, 5000000);
+		es.giveExp(player, 4000000);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_STAIRS);
 		ItemMeta var1im = var1.getItemMeta();

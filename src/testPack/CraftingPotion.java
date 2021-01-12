@@ -183,7 +183,7 @@ public class CraftingPotion {
 			
 			//==================================================================특수 제작
 			if(blessednessPotion == 11) {
-				ItemStack potion = new ItemStack(Material.POTION);
+				ItemStack potion = new ItemStack(Material.POTION, 3);
 				ItemMeta potionIm = potion.getItemMeta();
 				potionIm.setDisplayName(ChatColor.LIGHT_PURPLE + "축복의 포션");
 				ArrayList<String> potionLore = new ArrayList();

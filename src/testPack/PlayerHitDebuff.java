@@ -1598,7 +1598,9 @@ public class PlayerHitDebuff {
 								if (10 >= random) {
 									Block b2 = loc.getWorld().getBlockAt(loc.getBlockX() + x, 15, loc.getBlockZ() + z);
 									if (b2.getType() != Material.AIR) {
-										b1.setType(Material.LIGHT_WEIGHTED_PRESSURE_PLATE);
+										if(b1.getType() == Material.AIR) {
+											b1.setType(Material.LIGHT_WEIGHTED_PRESSURE_PLATE);
+										}
 									}
 								}
 							}
@@ -1655,7 +1657,9 @@ public class PlayerHitDebuff {
 								if (10 >= random) {
 									Block b2 = loc.getWorld().getBlockAt(loc.getBlockX() + x, 15, loc.getBlockZ() + z);
 									if (b2.getType() != Material.AIR) {
-										b1.setType(Material.LIGHT_WEIGHTED_PRESSURE_PLATE);
+										if(b1.getType() == Material.AIR) {
+											b1.setType(Material.LIGHT_WEIGHTED_PRESSURE_PLATE);
+										}
 									}
 								}
 							}

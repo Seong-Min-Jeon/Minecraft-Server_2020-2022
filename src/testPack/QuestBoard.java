@@ -892,7 +892,7 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard ());
 			ItemStack item = new ItemStack(Material.EMERALD,10);
 			player.getInventory().addItem(item);
-			es.giveExp(player, 300);
+			es.giveExp(player, 100);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			return;
 		}
