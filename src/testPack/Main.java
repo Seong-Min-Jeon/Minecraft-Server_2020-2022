@@ -2644,7 +2644,7 @@ public class Main extends JavaPlugin implements Listener{
 				player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER,600,0,true,false,false));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "약재 우린 물")) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 600, 4,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 600, 1,true,false,false));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "거북이 우린 물")) {
 				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 1,true,false,false));

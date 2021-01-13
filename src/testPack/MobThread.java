@@ -1,6 +1,7 @@
 package testPack;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
@@ -14,6 +15,7 @@ import org.bukkit.craftbukkit.v1_16_R3.CraftWorld;
 import org.bukkit.entity.Blaze;
 import org.bukkit.entity.CaveSpider;
 import org.bukkit.entity.Enderman;
+import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Evoker;
 import org.bukkit.entity.Husk;
@@ -79,6 +81,13 @@ public class MobThread implements Listener{
 							gp.addTime(player);
 						}
 						
+						// 주변에 몹이 많은가
+						Boolean less = true;
+						List<Entity> list = player.getNearbyEntities(30, 20, 30);
+						if(list.size() > 35) {
+							less = false;
+						}
+						
 						// 몹 스폰이 안되는 지형인가
 						Boolean edge = false;
 						if((loc.clone().add(1, -2, 0).getBlock().getType() != Material.AIR) && (loc.clone().add(-1, -2, 0).getBlock().getType() != Material.AIR)
@@ -89,7 +98,7 @@ public class MobThread implements Listener{
 								edge = true;
 							}
 						}
-						if(edge) {
+						if(edge && less) {
 							if (loc.getX() <= -1833 && loc.getY() <= 60 && loc.getZ() <= 3107 && loc.getX() >= -1882
 									&& loc.getY() >= 50 && loc.getZ() >= 3068) {
 								greenSlime(player, loc);

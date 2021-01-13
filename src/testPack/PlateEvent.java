@@ -89,23 +89,12 @@ public class PlateEvent {
 													Location loc2 = nearPlayer.getLocation();
 													if (loc2.getX() <= 3697 && loc2.getY() <= 95 && loc2.getZ() <= 2900 
 															&& loc2.getX() >= 3658 && loc2.getY() >= 41 && loc2.getZ() >= 2820) {
-														try {
-															nearPlayer.getInventory().remove(Material.TNT);
-														} catch (Exception e) {
-
-														}
 														nearPlayer.teleport(new Location(player.getWorld(), 3685, 151, 2858.5));
 													}
 												}
 											}
 										} catch(Exception e) {
 											
-										}
-										
-										try {
-											player.getInventory().remove(Material.TNT);
-										} catch (Exception e) {
-
 										}
 										
 										try {

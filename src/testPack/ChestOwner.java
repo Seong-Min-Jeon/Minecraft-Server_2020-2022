@@ -20,7 +20,7 @@ public class ChestOwner {
 			why9196(player, num, inv);
 		} else if(player.getUniqueId().toString().equals("83ed61a8-c6db-4155-8af7-c9b0cfb8d9ba")) {
 			akilae3102(player, num, inv);
-		} else if(player.getUniqueId().toString().equals("83ed61a8-c6db-4155-8af7-c9b0cfb8d9ba")) {
+		} else if(player.getUniqueId().toString().equals("69ca53dc-73ab-454e-b3b4-a5cd2e6b4d03")) {
 			woolring(player, num, inv);
 		} 
 	}
@@ -123,6 +123,13 @@ public class ChestOwner {
 	public void akilae3102(Player player, int num, Inventory inv) {
 		if(num == 2) {
 			Location chestLoc = new Location(player.getWorld(), 3778, 3, 3745);
+			if(inv == null) {
+				openInv(player, chestLoc.getBlock());
+				return;
+			}
+			closeInv(chestLoc.getBlock(), inv);
+		} else if(num == 3) {
+			Location chestLoc = new Location(player.getWorld(), 3778, 5, 3745);
 			if(inv == null) {
 				openInv(player, chestLoc.getBlock());
 				return;
