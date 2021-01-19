@@ -28,10 +28,12 @@ public class PlateEvent {
 		samakBoss(player, block, world);
 		hamabeHidden1(player, block, world);
 		hamabeHidden2(player, block, world);
+		laphanui1(player, block, world);
+		laphanui2(player, block, world);
 	}
 	
 	// 암석 거인
-	public void samakBoss(Player player, Block block, World world) {	
+	public void samakBoss(Player player, Block block, World world) {
 		if(block.getType() == Material.STONE_PRESSURE_PLATE) {
 			
 			if(block.getX() == 3658 && block.getZ() == 2858) {
@@ -90,15 +92,18 @@ public class PlateEvent {
 													if (loc2.getX() <= 3697 && loc2.getY() <= 95 && loc2.getZ() <= 2900 
 															&& loc2.getX() >= 3658 && loc2.getY() >= 41 && loc2.getZ() >= 2820) {
 														nearPlayer.teleport(new Location(player.getWorld(), 3685, 151, 2858.5));
+														System.out.println(0);
 													}
 												}
 											}
 										} catch(Exception e) {
 											
 										}
-										
+										System.out.println(1);
 										try {
+											System.out.println(2);
 											player.teleport(new Location(player.getWorld(), 3685, 151, 2858.5));
+											System.out.println(3);
 										} catch (Exception e) {
 
 										}
@@ -121,7 +126,7 @@ public class PlateEvent {
 	}
 
 	// 하마베 히든1
-	public void hamabeHidden1(Player player, Block block, World world) {	
+	public void hamabeHidden1(Player player, Block block, World world) {
 		if(block.getType() == Material.STONE_PRESSURE_PLATE) {
 			Location loc = player.getLocation(); 
 			if (block.getX() == 945 && block.getZ() == -29) {
@@ -175,7 +180,7 @@ public class PlateEvent {
 							td.setID(taskID);
 						}
 
-						if (time >= 2400) {
+						if (time >= 600) {
 							world.getBlockAt(new Location(world, 945, 42, -18)).setType(Material.IRON_BARS);
 							td.endTask();
 							td.removeID();
@@ -190,4 +195,70 @@ public class PlateEvent {
 		}
 	}
 	
+	// 라파누이1
+	public void laphanui1(Player player, Block block, World world) {
+		if (block.getType() == Material.STONE_BUTTON) {
+			if (block.getX() == 1829 && block.getZ() == 2158) {
+
+				world.getBlockAt(new Location(world, 1836, 56, 2154)).setType(Material.AIR);
+
+				taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+					int time = 0;
+					ThreadData td = new ThreadData(player.getUniqueId());
+
+					@Override
+					public void run() {
+						if (!td.hasID()) {
+							td.setID(taskID);
+						}
+
+						if (time >= 150) {
+							world.getBlockAt(new Location(world, 1836, 56, 2154)).setType(Material.OAK_PLANKS);
+							td.endTask();
+							td.removeID();
+						}
+
+						time++;
+					}
+
+				}, 0, 1);
+
+			}
+		}
+	}
+	
+	// 라파누이2
+	public void laphanui2(Player player, Block block, World world) {
+		if (block.getType() == Material.STONE_PRESSURE_PLATE) {
+			if (block.getX() == 1832 && block.getZ() == 2156) {
+
+				world.getBlockAt(new Location(world, 1836, 57, 2154)).setType(Material.AIR);
+
+				taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+					int time = 0;
+					ThreadData td = new ThreadData(player.getUniqueId());
+
+					@Override
+					public void run() {
+						if (!td.hasID()) {
+							td.setID(taskID);
+						}
+
+						if (time >= 150) {
+							world.getBlockAt(new Location(world, 1836, 57, 2154)).setType(Material.OAK_PLANKS);
+							td.endTask();
+							td.removeID();
+						}
+
+						time++;
+					}
+
+				}, 0, 1);
+
+			}
+		}
+	}
+		
 }

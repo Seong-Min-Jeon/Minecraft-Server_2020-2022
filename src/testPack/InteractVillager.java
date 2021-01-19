@@ -42,7 +42,7 @@ public class InteractVillager {
 		}
 		
 		return vil0() || vil1() || vil2() || vil3() || vil4() || vil5() || vil6() || vil7() || vil8() || vil9() || vil10() || vil11() || vil12() || vil13() || vil14()
-				|| vil15() || vil16() || vil17() || vil18() || vil19();
+				|| vil15() || vil16() || vil17() || vil18() || vil19() || vil20() || vil21();
 	}
 	
 	public boolean vil0() {
@@ -510,6 +510,46 @@ public class InteractVillager {
 				}
 			} catch(Exception e) {
 				player.sendMessage("니세리나: 뭐가 궁금한게냐.");
+			}
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean vil20() {
+		//하마베 주민2 953 41  955 43
+		if(loc.getX() <= 955 && loc.getZ() <= 43
+				&& loc.getX() >= 953 && loc.getZ() >= 41) {
+			QuestBoard cb = new QuestBoard();
+			try {
+				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===죽어가는 섬===")) {
+					int qNum = cb.getNum(player);
+					cb.mq46(player, qNum+1);	
+				} else {
+					player.sendMessage("주민: 라파누이에 두고 온 가족이 그리워요.");
+				}
+			} catch(Exception e) {
+				player.sendMessage("주민: 라파누이에 두고 온 가족이 그리워요.");
+			}
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean vil21() {
+		//라파누이 주민 1846 2151  1848 2153
+		if(loc.getX() <= 1848 && loc.getZ() <= 2153
+				&& loc.getX() >= 1846 && loc.getZ() >= 2151) {
+			QuestBoard cb = new QuestBoard();
+			try {
+				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===죽어가는 섬의 주민===")) {
+					int qNum = cb.getNum(player);
+					cb.mq46_1(player, qNum+1);	
+				} else {
+					player.sendMessage("주민: 라파누이에.. 구원을!");
+				}
+			} catch(Exception e) {
+				player.sendMessage("주민: 라파누이에.. 구원을!");
 			}
 			return true;
 		}

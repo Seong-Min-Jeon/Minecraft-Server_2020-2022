@@ -88,6 +88,7 @@ public class QuestScroll {
 				mq43(player, itemArg, world);
 				mq44(player, itemArg, world);
 				mq45(player, itemArg, world);
+				mq46(player, itemArg, world);
 			} else {
 				itemArg.remove();
 				player.getInventory().addItem(itemArg.getItemStack());
@@ -676,6 +677,15 @@ public class QuestScroll {
 			msg.msg(player, "주민: 광신도 녀석들에 대해 새로 알아낸게 있는 것 같아요!%주민: 한번 와주세요.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq45(player, 0);
+		}	
+	}
+	
+	public void mq46(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "메인퀘스트 46장")) {
+			msg.msg(player, "네비: 사막은 너무 더웠당~%네비: 이제 좀 쉬고 싶은걸.%네비: 잠깐 쉬어가는 겸해서 에일 주변 섬들이나 구경가볼까?%"
+					+ "네비: 운 좋게 거기서 뭘 얻을 수 있으면 좋은거구!%네비: 일단 도움이 필요한 섬들에 대해 찾아보자!");
+			QuestBoard qb = new QuestBoard();
+			qb.mq46(player, 0);
 		}	
 	}
 	

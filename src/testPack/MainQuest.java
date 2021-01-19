@@ -104,12 +104,10 @@ public class MainQuest {
 		} else if(lvl == 430) {
 			main45(player);
 		} else if(lvl == 500) {
+			// 다음 메인퀘는 540렙
 			
-		} else if(lvl == 510) {
-			
-		} else if(lvl == 520) {
-			
-		} else if(lvl == 530) {
+			// 미아즈마 1마리 
+			// 종을 울려서 미아즈마
 			
 		} else if(lvl == 540) {
 			

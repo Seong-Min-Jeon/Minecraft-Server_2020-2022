@@ -869,6 +869,46 @@ public class SaveAll {
 						int number = qb.getNum(player);
 						fw.write("mq45_37\n");
 						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===죽어가는 섬===")) {
+						int number = qb.getNum(player);
+						fw.write("mq46\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===죽어가는 섬의 주민===")) {
+						int number = qb.getNum(player);
+						fw.write("mq46_1\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===미아즈마단1===")) {
+						int number = qb.getNum(player);
+						fw.write("mq46_2\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===미아즈마단2===")) {
+						int number = qb.getNum(player);
+						fw.write("mq46_3\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===미아즈마단3===")) {
+						int number = qb.getNum(player);
+						fw.write("mq46_4\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===미아즈마단4===")) {
+						int number = qb.getNum(player);
+						fw.write("mq46_5\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===미아즈마단5===")) {
+						int number = qb.getNum(player);
+						fw.write("mq46_6\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===미아즈마단6===")) {
+						int number = qb.getNum(player);
+						fw.write("mq46_7\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===미아즈마단7===")) {
+						int number = qb.getNum(player);
+						fw.write("mq46_8\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===미아즈마단8===")) {
+						int number = qb.getNum(player);
+						fw.write("mq46_9\n");
+						fw.write(Integer.toString(number));
 					}
 					fw.close();
 					bufReader.close();

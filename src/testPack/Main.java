@@ -2232,6 +2232,7 @@ public class Main extends JavaPlugin implements Listener{
 			Location longue = new Location(world,822,71,511,270,0);
 			Location hamabe = new Location(world,973,62,40,180,0);
 			Location samak = new Location(world,228,85,945);
+			Location samakVil = new Location(world,-100,29,1462);
 			
 			//캐릭터 선택창 3668 47 3671 3660 39 3680
 			if(loc.getX() <= 3668 && loc.getZ() <= 3680 &&
@@ -2311,6 +2312,12 @@ public class Main extends JavaPlugin implements Listener{
 				player.teleport(hamabe);
 				return;
 			}
+			// 라파누이 1600 255 1930  2149 0 2398
+			if (loc.getX() <= 2149 && loc.getY() <= 255 && loc.getZ() <= 2398 
+					&& loc.getX() >= 1600 && loc.getY() >= 0 && loc.getZ() >= 1930) {
+				player.teleport(hamabe);
+				return;
+			}
 			
 			int length1 = (int)(Math.pow(loc.getX()-wargunil.getX(), 2) + Math.pow(loc.getY()-wargunil.getY(), 2) + Math.pow(loc.getZ()-wargunil.getZ(), 2));
 			int length2 = (int)(Math.pow(loc.getX()-forgan.getX(), 2) + Math.pow(loc.getY()-forgan.getY(), 2) + Math.pow(loc.getZ()-forgan.getZ(), 2));
@@ -2330,6 +2337,7 @@ public class Main extends JavaPlugin implements Listener{
 			int length16 = (int)(Math.pow(loc.getX()-longue.getX(), 2) + Math.pow(loc.getY()-longue.getY(), 2) + Math.pow(loc.getZ()-longue.getZ(), 2));
 			int length17 = (int)(Math.pow(loc.getX()-hamabe.getX(), 2) + Math.pow(loc.getY()-hamabe.getY(), 2) + Math.pow(loc.getZ()-hamabe.getZ(), 2));
 			int length18 = (int)(Math.pow(loc.getX()-samak.getX(), 2) + Math.pow(loc.getY()-samak.getY(), 2) + Math.pow(loc.getZ()-samak.getZ(), 2));
+			int length19 = (int)(Math.pow(loc.getX()-samakVil.getX(), 2) + Math.pow(loc.getY()-samakVil.getY(), 2) + Math.pow(loc.getZ()-samakVil.getZ(), 2));
 			ArrayList<Integer> ary = new ArrayList<>();
 			ary.add(length1);
 			ary.add(length2);
@@ -2349,6 +2357,7 @@ public class Main extends JavaPlugin implements Listener{
 			ary.add(length16);
 			ary.add(length17);
 			ary.add(length18);
+			ary.add(length19);
 			Collections.sort(ary);
 			if(ary.get(0) == length1) {
 				event.setRespawnLocation(wargunil);
@@ -2386,6 +2395,8 @@ public class Main extends JavaPlugin implements Listener{
 				event.setRespawnLocation(hamabe);
 			} else if(ary.get(0) == length18) {
 				event.setRespawnLocation(samak);
+			} else if(ary.get(0) == length19) {
+				event.setRespawnLocation(samakVil);
 			}			
 			player.setNoDamageTicks(200);
 		} catch(Exception e11) {
@@ -5875,6 +5886,29 @@ public class Main extends JavaPlugin implements Listener{
 	    				}	    		
 	    				event.setCancelled(true);
 	    			}
+	    			if(block.getType()==Material.GOLD_BLOCK && block.getX() <= 1853 && block.getZ() <= 2115
+	    					&& block.getX() >= 1845 && block.getZ() >= 2109) {
+	    				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BELL_USE, 10.0f, 10.0f);
+	    				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BELL_USE, 10.0f, 10.0f);
+	    				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BELL_USE, 10.0f, 10.0f);
+	    				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BELL_USE, 10.0f, 10.0f);
+	    				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BELL_USE, 10.0f, 10.0f);
+	    				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BELL_USE, 10.0f, 10.0f);
+	    				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BELL_USE, 10.0f, 10.0f);
+	    				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BELL_RESONATE, 10.0f, 10.0f);
+	    				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BELL_RESONATE, 10.0f, 10.0f);
+	    				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BELL_RESONATE, 10.0f, 10.0f);
+	    				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BELL_RESONATE, 10.0f, 10.0f);
+	    				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BELL_RESONATE, 10.0f, 10.0f);
+	    				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BELL_RESONATE, 10.0f, 10.0f);
+	    				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BELL_RESONATE, 10.0f, 10.0f);
+	    				if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===미아즈마단8===")) {
+	    					// 미아즈마 소환
+	    					// 특정 지역에 스켈이 있으면 소환 불가
+	    					// 미아즈마 잡으면 퀘 종료
+	    				}	    		
+	    				event.setCancelled(true);
+	    			}
 	    			if(block.getType()==Material.STONE_BUTTON && block.getX()==-1100 && block.getZ()==1455) {
 	    				boolean bool = true;
 	    				for (Player allPlayer : Bukkit.getOnlinePlayers()) {
@@ -5915,6 +5949,9 @@ public class Main extends JavaPlugin implements Listener{
 	    			}
 	    			if(block.getType()==Material.STONE_BUTTON && block.getX()==3664 && block.getZ()==3674) {
 	    				new CharacterSelectButton(player, getDataFolder());
+	    			}
+	    			if(block.getType()==Material.STONE_BUTTON) {
+	    				new PlateEvent().effect(event.getPlayer(), event.getClickedBlock());
 	    			}
 	    		}
 	        }

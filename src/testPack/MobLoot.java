@@ -5545,51 +5545,217 @@ public class MobLoot {
 		player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 뿔" + ChatColor.WHITE + "을 획득했다.");
 	}
 	
+	// 미아즈마단 신입
 	public void mob229(Player player) {
-
+		int num = rnd.nextInt(8) + 8;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 2000000);
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===미아즈마단1===")) {
+			int qNum = cb.getNum(player);
+			cb.mq46_2(player, qNum + 1);
+		}
 	}
 	
+	// 섬을 좀먹는 벌레
 	public void mob230(Player player) {
-
+		int num = rnd.nextInt(8) + 8;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 2020000);
 	}
 	
+	// 미아즈마단 단원
 	public void mob231(Player player) {
+		int num = rnd.nextInt(8) + 8;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 2025000);
 
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===미아즈마단2===")) {
+			int qNum = cb.getNum(player);
+			cb.mq46_3(player, qNum + 1);
+		}
 	}
 	
+	// 정신이 나간 포로
 	public void mob232(Player player) {
-
+		int num = rnd.nextInt(8) + 8;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 2045000);
 	}
 	
+	// 미아즈마단 보초병
 	public void mob233(Player player) {
-
+		int num = rnd.nextInt(8) + 8;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 2050000);
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===미아즈마단3===")) {
+			int qNum = cb.getNum(player);
+			cb.mq46_4(player, qNum + 1);
+		}
 	}
 	
+	// 미아즈마단 강화병
 	public void mob234(Player player) {
-
+		int num = rnd.nextInt(8) + 8;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 2070000);
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===미아즈마단4===")) {
+			int qNum = cb.getNum(player);
+			cb.mq46_5(player, qNum + 1);
+		}
 	}
 	
+	// 불타는 석탄
 	public void mob235(Player player) {
-
+		int num = rnd.nextInt(8) + 7;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 2080000);
 	}
 	
+	// 녹아내리는 불꽃
 	public void mob236(Player player) {
-
+		int num = rnd.nextInt(8) + 7;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 2100000);
 	}
 	
+	// 미아즈마단 이급 군인
 	public void mob237(Player player) {
-
+		int num = rnd.nextInt(9) + 8;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 2115000);
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===미아즈마단5===")) {
+			int qNum = cb.getNum(player);
+			cb.mq46_6(player, qNum + 1);
+		}
 	}
 	
+	// 미아즈마단 일급 군인
 	public void mob238(Player player) {
-
+		int num = rnd.nextInt(9) + 8;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 2150000);
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===미아즈마단6===")) {
+			int qNum = cb.getNum(player);
+			cb.mq46_7(player, qNum + 1);
+		}
 	}
 	
+	// 미아즈마단 간부
 	public void mob239(Player player) {
+		int num = rnd.nextInt(9) + 8;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 2170000);
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===미아즈마단7===")) {
+			int qNum = cb.getNum(player);
+			cb.mq46_8(player, qNum + 1);
+		}
+	}
+	
+	// 미아즈마단 애완곰
+	public void mob240(Player player) {
+		int num = rnd.nextInt(9) + 8;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 2222222);
+	}
+
+	public void mob241(Player player) {
 
 	}
 	
-	public void mob240(Player player) {
+	public void mob242(Player player) {
+
+	}
+	
+	public void mob243(Player player) {
+
+	}
+	
+	public void mob244(Player player) {
+
+	}
+	
+	public void mob245(Player player) {
+
+	}
+	
+	public void mob246(Player player) {
+
+	}
+	
+	public void mob247(Player player) {
+
+	}
+	
+	public void mob248(Player player) {
+
+	}
+	
+	public void mob249(Player player) {
+
+	}
+	
+	public void mob250(Player player) {
 
 	}
 }

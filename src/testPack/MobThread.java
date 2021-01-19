@@ -432,6 +432,24 @@ public class MobThread implements Listener{
 							} else if(loc.getX() <= -275 && loc.getY() <= 47 && loc.getZ() <= 2480 
 									&& loc.getX() >= -309 && loc.getY() >= 30 && loc.getZ() >= 2454) {
 								desertIsland5(player, loc);
+							} else if(loc.getX() <= 1852 && loc.getY() <= 67 && loc.getZ() <= 2167 
+									&& loc.getX() >= 1787 && loc.getY() >= 40 && loc.getZ() >= 2095) {
+								laphanui1(player, loc);
+							} else if(loc.getX() <= 1852 && loc.getY() <= 67 && loc.getZ() <= 2239 
+									&& loc.getX() >= 1752 && loc.getY() >= 40 && loc.getZ() >= 2169) {
+								laphanui2(player, loc);
+							} else if(loc.getX() <= 1943 && loc.getY() <= 67 && loc.getZ() <= 2175 
+									&& loc.getX() >= 1855 && loc.getY() >= 40 && loc.getZ() >= 2133) {
+								laphanui3(player, loc);
+							} else if(loc.getX() <= 1918 && loc.getY() <= 67 && loc.getZ() <= 2250 
+									&& loc.getX() >= 1855 && loc.getY() >= 40 && loc.getZ() >= 2176) {
+								laphanui4(player, loc);
+							} else if(loc.getX() <= 1940 && loc.getY() <= 100 && loc.getZ() <= 2154 
+									&& loc.getX() >= 1888 && loc.getY() >= 68 && loc.getZ() >= 2067) {
+								laphanui5(player, loc);
+							} else if(loc.getX() <= 1886 && loc.getY() <= 100 && loc.getZ() <= 2140 
+									&& loc.getX() >= 1823 && loc.getY() >= 68 && loc.getZ() >= 2067) {
+								laphanui6(player, loc);
 							}
 						}
 					} 
@@ -485,7 +503,7 @@ public class MobThread implements Listener{
 				&& loc.getZ() >= 3068)) {
 			return;
 		}
-		Slime mob = (Slime) loc.getWorld().spawnEntity(loc, EntityType.SLIME);
+		loc.getWorld().spawnEntity(loc, EntityType.SLIME);
 	}
 
 	public void coastZombie(Player player, Location loc) {
@@ -2426,6 +2444,91 @@ public class MobThread implements Listener{
 			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
 		} else if (num == 1) {
 			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		} 
+	}
+	
+	public void laphanui1(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 1852 && loc.getY() <= 67 && loc.getZ() <= 2167 
+				&& loc.getX() >= 1787 && loc.getY() >= 40 && loc.getZ() >= 2095)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.SILVERFISH);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		} 
+	}
+	
+	public void laphanui2(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 1852 && loc.getY() <= 67 && loc.getZ() <= 2239 
+				&& loc.getX() >= 1752 && loc.getY() >= 40 && loc.getZ() >= 2169)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.ENDERMAN);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		} 
+	}
+	
+	public void laphanui3(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 1943 && loc.getY() <= 67 && loc.getZ() <= 2175 
+				&& loc.getX() >= 1855 && loc.getY() >= 40 && loc.getZ() >= 2133)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		} 
+	}
+	
+	public void laphanui4(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 1918 && loc.getY() <= 67 && loc.getZ() <= 2250 
+				&& loc.getX() >= 1855 && loc.getY() >= 40 && loc.getZ() >= 2176)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.BLAZE);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.MAGMA_CUBE);
+		} 
+	}
+	
+	public void laphanui5(Player player, Location loc) {
+		loc = location(loc);
+		if (!(loc.getX() <= 1940 && loc.getY() <= 100 && loc.getZ() <= 2154 
+				&& loc.getX() >= 1888 && loc.getY() >= 68 && loc.getZ() >= 2067)) {
+			return;
+		}
+		
+		loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
+	}
+	
+	public void laphanui6(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 1886 && loc.getY() <= 100 && loc.getZ() <= 2140 
+				&& loc.getX() >= 1823 && loc.getY() >= 68 && loc.getZ() >= 2067)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.RAVAGER);
 		} 
 	}
 	

@@ -1001,6 +1001,54 @@ public class MobDeath {
 				if (name.equalsIgnoreCase("포보르 사제" + ChatColor.YELLOW + " [Lv.510]")) {
 					mobloot.mob228(lootPlayer);
 				}
+				// 미아즈마단 신입
+				if (name.equalsIgnoreCase("미아즈마단 신입" + ChatColor.YELLOW + " [Lv.500]")) {
+					mobloot.mob229(lootPlayer);
+				}
+				// 섬을 좀먹는 벌레
+				if (name.equalsIgnoreCase("섬을 좀먹는 벌레" + ChatColor.YELLOW + " [Lv.504]")) {
+					mobloot.mob230(lootPlayer);
+				}
+				// 미아즈마단 단원
+				if (name.equalsIgnoreCase("미아즈마단 단원" + ChatColor.YELLOW + " [Lv.505]")) {
+					mobloot.mob231(lootPlayer);
+				}
+				// 정신이 나간 포로
+				if (name.equalsIgnoreCase("정신이 나간 포로" + ChatColor.YELLOW + " [Lv.509]")) {
+					mobloot.mob232(lootPlayer);
+				}
+				// 미아즈마단 보초병
+				if (name.equalsIgnoreCase("미아즈마단 보초병" + ChatColor.YELLOW + " [Lv.510]")) {
+					mobloot.mob233(lootPlayer);
+				}
+				// 미아즈마단 강화병
+				if (name.equalsIgnoreCase("미아즈마단 강화병" + ChatColor.YELLOW + " [Lv.514]")) {
+					mobloot.mob234(lootPlayer);
+				}
+				// 불타는 석탄
+				if (name.equalsIgnoreCase("불타는 석탄" + ChatColor.YELLOW + " [Lv.515]")) {
+					mobloot.mob235(lootPlayer);
+				}
+				// 녹아내리는 불꽃
+				if (name.equalsIgnoreCase("녹아내리는 불꽃" + ChatColor.YELLOW + " [Lv.519]")) {
+					mobloot.mob236(lootPlayer);
+				}
+				// 미아즈마단 이급 군인
+				if (name.equalsIgnoreCase("미아즈마단 이급 군인" + ChatColor.YELLOW + " [Lv.520]")) {
+					mobloot.mob237(lootPlayer);
+				}
+				// 미아즈마단 일급 군인
+				if (name.equalsIgnoreCase("미아즈마단 일급 군인" + ChatColor.YELLOW + " [Lv.524]")) {
+					mobloot.mob238(lootPlayer);
+				}
+				// 미아즈마단 간부
+				if (name.equalsIgnoreCase("미아즈마단 간부" + ChatColor.YELLOW + " [Lv.525]")) {
+					mobloot.mob239(lootPlayer);
+				}
+				// 미아즈마단 애완곰
+				if (name.equalsIgnoreCase("미아즈마단 애완곰" + ChatColor.YELLOW + " [Lv.530]")) {
+					mobloot.mob240(lootPlayer);
+				}
 			} catch (Exception e) {
 
 			}
