@@ -1300,7 +1300,7 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 1000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "불안한 주민: 으아악 날 내보내 주거라.");
+			msg.msg(player, "불안한 로미오: 으아악 날 내보내 주거라.");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
@@ -1323,8 +1323,8 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 1000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "불안한 주민: §e성 안쪽§f에는 아직 사람들이 있어.%불안한 주민: 그리고 몇 달 전에..%불안한 주민: 어느 모험가가 왔어..%불안한 주민: 그는 이 에일땅의 역사를 파해치는 이상한 놈이였어..%불안한 주민: 고서적을 연구하던 사람을 찾아 여기까지 왔다는데..%"
-					+ "불안한 주민: 결국 §e진실§f을 깨닫고는 미쳐 날뛰게 되었지..%불안한 주민: 케케케케케켘..");
+			msg.msg(player, "불안한 로미오: §e성 안쪽§f에는 아직 사람들이 있어.%불안한 로미오: 그리고 몇 달 전에..%불안한 로미오: 어느 모험가가 왔어..%불안한 로미오: 그는 이 에일땅의 역사를 파해치는 이상한 놈이였어..%불안한 로미오: 고서적을 연구하던 사람을 찾아 여기까지 왔다는데..%"
+					+ "불안한 로미오: 결국 §e진실§f을 깨닫고는 미쳐 날뛰게 되었지..%불안한 로미오: 케케케케케켘..");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
@@ -2267,11 +2267,11 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 5000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "주민: 이곳은 §e하마베 마을§f이에요.%주민: 아.. 혹시 모험가님이신가요?%주민: 모험가님 부디 §e클레어흐§f를 탈환해주세요.%주민: 제 앞에 보이는 대도시 보이시죠?%"
-					+ "주민: 저곳은 지금 전쟁터에요.%주민: 과거에는 평화로운 마을이었는데..%주민: 어떤 광신도 집단이 나타나 자기들이 포보르를 낳았다느니%주민: 포보르를 따르지 않으면 지옥에서마저 포보르들에게 영원히 고통받게 된다느니.%"
-					+ "주민: 처음에는 모두가 미친 사람들 취급했지요.%주민: 그런데 그들이 포보르를 마을에 대리고 온거 아니겠어요?%주민: 포보르가 도시를 점령하게 되고 생존자들은 대부분 하마베 마을로 피신하게 되었어요.%"
-					+ "주민: 시간이 지나고 식량이 부족해지자 사람들은 불안에 떨었어요.%주민: 몇몇 용기있는 사람들은 배를 타고 식량을 구하러 나갔지만.. 아무도 돌아오지 못했어요.%주민: 그렇게 사람들은 미쳐갔고 많은 사람들이 광신도 집단에 무릎을 꿇었어요.%"
-					+ "주민: 그 사람들이 떠나서 지금은 식량 문제가 덜하긴 하지만 이건 큰 문제에요.%주민: 부디 광신도 녀석들을 혼내주세요.");
+			msg.msg(player, "에트: 이곳은 §e하마베 마을§f이에요.%에트: 아.. 혹시 모험가님이신가요?%에트: 모험가님 부디 §e클레어흐§f를 탈환해주세요.%에트: 제 앞에 보이는 대도시 보이시죠?%"
+					+ "에트: 저곳은 지금 전쟁터에요.%에트: 과거에는 평화로운 마을이었는데..%에트: 어떤 광신도 집단이 나타나 자기들이 포보르를 낳았다느니%에트: 포보르를 따르지 않으면 지옥에서마저 포보르들에게 영원히 고통받게 된다느니.%"
+					+ "에트: 처음에는 모두가 미친 사람들 취급했지요.%에트: 그런데 그들이 포보르를 마을에 대리고 온거 아니겠어요?%에트: 포보르가 도시를 점령하게 되고 생존자들은 대부분 하마베 마을로 피신하게 되었어요.%"
+					+ "에트: 시간이 지나고 식량이 부족해지자 사람들은 불안에 떨었어요.%에트: 몇몇 용기있는 사람들은 배를 타고 식량을 구하러 나갔지만.. 아무도 돌아오지 못했어요.%에트: 그렇게 사람들은 미쳐갔고 많은 사람들이 광신도 집단에 무릎을 꿇었어요.%"
+					+ "에트: 그 사람들이 떠나서 지금은 식량 문제가 덜하긴 하지만 이건 큰 문제에요.%에트: 부디 광신도 녀석들을 혼내주세요.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq42_1(player, 0);
 			return;
@@ -2282,7 +2282,7 @@ public class QuestBoard {
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
 		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===항구 마을, 하마베 마을===");
 		score.setScore(3);
-		Score score2 = obj.getScore("하마베 마을에서 주민과 대화");
+		Score score2 = obj.getScore("하마베 마을에서 로미오과 대화");
 		score2.setScore(2);
 		Score score3 = obj.getScore("위치: 978,62,92");
 		score3.setScore(1);
@@ -2296,8 +2296,8 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 8000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "주민: 으으음?%주민: 모험가님 그 사람들은 광신도 녀석들이 아니라 도망친 마을 사람들이에요.%주민: 물론 포보르들에게 개조되어 비정상적인 힘을 얻고 타락하게 되었지만요.%"
-					+ "주민: ...%주민: 사실 저도 광신도 집단의 위치를 잘 아는게 아니라서요.%주민: 알아보고 다시 연락드릴게요.");
+			msg.msg(player, "에트: 으으음?%에트: 모험가님 그 사람들은 광신도 녀석들이 아니라 도망친 마을 사람들이에요.%에트: 물론 포보르들에게 개조되어 비정상적인 힘을 얻고 타락하게 되었지만요.%"
+					+ "에트: ...%에트: 사실 저도 광신도 집단의 위치를 잘 아는게 아니라서요.%에트: 알아보고 다시 연락드릴게요.");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
@@ -2306,7 +2306,7 @@ public class QuestBoard {
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
 		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===광신도 집단1===");
 		score.setScore(2);
-		Score score2 = obj.getScore("클레어흐의 주민 몬스터 100마리 사냥");
+		Score score2 = obj.getScore("클레어흐의 로미오 몬스터 100마리 사냥");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/100)");
 		score3.setScore(0);
@@ -2318,8 +2318,8 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 9000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "주민: 맞아요. 그 녀석들이 포보르들을 대려오는걸 제 눈으로 똑똑히 봤다고요.%주민: 그런데 저 녀석들은 간부급이 아닌 것 같아요.%"
-					+ "주민: 광신도 간부들은 강한 포보르들과 함께 다닌다고 들었어요.%주민: 이것도 다시 알아보고 연락드릴게요.");
+			msg.msg(player, "에트: 맞아요. 그 녀석들이 포보르들을 대려오는걸 제 눈으로 똑똑히 봤다고요.%에트: 그런데 저 녀석들은 간부급이 아닌 것 같아요.%"
+					+ "에트: 광신도 간부들은 강한 포보르들과 함께 다닌다고 들었어요.%에트: 이것도 다시 알아보고 연락드릴게요.");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
@@ -2342,8 +2342,8 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 9500000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "주민: 이걸로 평화가 돌아올까요?%주민: 광신도 녀석들 포보르의 힘을 받아서 끝도 없이 재생되나봐요.%주민: 아무래도 포보르의 근원을 없애는게 답인 것 같아요.%주민: §e사막§f에 포보르의 근원이 있다는 소문이 있어요.%"
-					+ "주민: 나중에 기회가 되면 한번 가보세요.");
+			msg.msg(player, "에트: 이걸로 평화가 돌아올까요?%에트: 광신도 녀석들 포보르의 힘을 받아서 끝도 없이 재생되나봐요.%에트: 아무래도 포보르의 근원을 없애는게 답인 것 같아요.%에트: §e사막§f에 포보르의 근원이 있다는 소문이 있어요.%"
+					+ "에트: 나중에 기회가 되면 한번 가보세요.");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
@@ -2366,10 +2366,10 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 15000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "주민: 이 광신도 녀석들 생각보다 대규모 집단인 것 같아요.%주민: 모험가님이 광신도 녀석들을 혼내주는 동안 사막쪽으로 도망가는 광신도 녀석들을 제가 똑똑히 봤는걸요.%주민: 이 땅에 처음으로 §e다섯 포보르의 왕§f이 나타났을 때, 셋은 거대한 바다에 나타났다고 해요.%"
-					+ "주민: 바로 발로르, 코낭그, 모르크에요.%주민: 셋이서 영역 싸움을 한 것인지 어떤 일이 있었던 것인지는 모르지만 결국 바다는 §e사막§f이 되었어요.%주민: 그리고 신의 군대가 그들을 쓰러뜨리는 과정에서 일부 지역이 함께 소멸되어 공허만 남게 되었다고 해요.%"
-					+ "주민: 아마도 광신도 녀석들은 사막에서 무언가 꾸미고 있는게 분명해요.%주민: 그 목적이 포보르의 왕을 재림시키는 것일지 그들의 힘을 찾아내려는 것인지는 알 수 없어요.%주민: 그러니 부디 모험가님이 사막에 한번 다녀와주세요.%"
-					+ "주민: 사막은 매우 넓고 위험하니 말을 가져가시는게 도움이 될 거에요.");
+			msg.msg(player, "에트: 이 광신도 녀석들 생각보다 대규모 집단인 것 같아요.%에트: 모험가님이 광신도 녀석들을 혼내주는 동안 사막쪽으로 도망가는 광신도 녀석들을 제가 똑똑히 봤는걸요.%에트: 이 땅에 처음으로 §e다섯 포보르의 왕§f이 나타났을 때, 셋은 거대한 바다에 나타났다고 해요.%"
+					+ "에트: 바로 발로르, 코낭그, 모르크에요.%에트: 셋이서 영역 싸움을 한 것인지 어떤 일이 있었던 것인지는 모르지만 결국 바다는 §e사막§f이 되었어요.%에트: 그리고 신의 군대가 그들을 쓰러뜨리는 과정에서 일부 지역이 함께 소멸되어 공허만 남게 되었다고 해요.%"
+					+ "에트: 아마도 광신도 녀석들은 사막에서 무언가 꾸미고 있는게 분명해요.%에트: 그 목적이 포보르의 왕을 재림시키는 것일지 그들의 힘을 찾아내려는 것인지는 알 수 없어요.%에트: 그러니 부디 모험가님이 사막에 한번 다녀와주세요.%"
+					+ "에트: 사막은 매우 넓고 위험하니 말을 가져가시는게 도움이 될 거에요.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq45_1(player, 0);
 			return;
@@ -2380,7 +2380,7 @@ public class QuestBoard {
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
 		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===대사막1===");
 		score.setScore(2);
-		Score score2 = obj.getScore("하마베 마을에서 주민과 대화");
+		Score score2 = obj.getScore("하마베 마을에서 에트와 대화");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -2658,8 +2658,8 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 19000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "주민: 사막을 탐험하러 오신 모험가군요.%주민: 반갑습니다.%주민: 아마도 성물을 찾으러 오신거겠죠?%주민: 이번 일을 마쳐주시면 성물의 위치를 알려드릴게요.%"
-					+ "주민: 우선 §e쌍창 전사 석상§f을 토벌해주십쇼.%주민: 녀석들의 위치는 아직 파악되지 않았어요.%주민: 임무 중 필요하시면 이곳의 §e철§f을 캐셔도 좋아요.");
+			msg.msg(player, "니오: 사막을 탐험하러 오신 모험가군요.%니오: 반갑습니다.%니오: 아마도 성물을 찾으러 오신거겠죠?%니오: 이번 일을 마쳐주시면 성물의 위치를 알려드릴게요.%"
+					+ "니오: 우선 §e쌍창 전사 석상§f을 토벌해주십쇼.%니오: 녀석들의 위치는 아직 파악되지 않았어요.%니오: 임무 중 필요하시면 이곳의 §e철§f을 캐셔도 좋아요.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq45_13(player, 0);
 			return;
@@ -2670,7 +2670,7 @@ public class QuestBoard {
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
 		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===대사막7===");
 		score.setScore(3);
-		Score score2 = obj.getScore("채석장 주민과 대화");
+		Score score2 = obj.getScore("채석장의 로미오과 대화");
 		score2.setScore(2);
 		Score score3 = obj.getScore("위치: -100,28,1486");
 		score3.setScore(1);
@@ -2706,7 +2706,7 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 19000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "주민: 이번에는 §e빛의 궁수 석상§f을 토벌해주십쇼.");
+			msg.msg(player, "니오: 이번에는 §e빛의 궁수 석상§f을 토벌해주십쇼.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq45_15(player, 0);
 			return;
@@ -2717,7 +2717,7 @@ public class QuestBoard {
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
 		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===대사막8===");
 		score.setScore(2);
-		Score score2 = obj.getScore("채석장 주민과 대화");
+		Score score2 = obj.getScore("니오와 대화");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -2751,7 +2751,7 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 20000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "주민: 이번에는 §e쌍검 전사 석상§f을 토벌해주십쇼.");
+			msg.msg(player, "니오: 이번에는 §e쌍검 전사 석상§f을 토벌해주십쇼.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq45_17(player, 0);
 			return;
@@ -2762,7 +2762,7 @@ public class QuestBoard {
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
 		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===대사막9===");
 		score.setScore(2);
-		Score score2 = obj.getScore("채석장 주민과 대화");
+		Score score2 = obj.getScore("니오와 대화");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -2796,9 +2796,9 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 21000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "주민: 이번에는 §e루 라바다의 석상§f을 토벌해주십쇼.%주민: 저희는 원래 루 라바다님을 따르던 민족의 후손입니다.%주민: 마을에 §e루 라바다§f님의 석상과 그의 스승이신 §e누아다§f님의 석상이 있었죠.%"
-					+ "주민: 포보르들이 마을의 석상들을 탈환하기 전까지는요.%주민: 그렇게 빼앗긴 석상들이 포보르의 인형이 되어 마을을 침범했을 때 사람들은 공격하지도 못하고 당하기만 했어요.%"
-					+ "주민: 석상을 공격할 수 없는 저희 대신 모험가님에게 부탁드립니다.");
+			msg.msg(player, "니오: 이번에는 §e루 라바다의 석상§f을 토벌해주십쇼.%니오: 저희는 원래 루 라바다님을 따르던 민족의 후손입니다.%니오: 마을에 §e루 라바다§f님의 석상과 그의 스승이신 §e누아다§f님의 석상이 있었죠.%"
+					+ "니오: 포보르들이 마을의 석상들을 탈환하기 전까지는요.%니오: 그렇게 빼앗긴 석상들이 포보르의 인형이 되어 마을을 침범했을 때 사람들은 공격하지도 못하고 당하기만 했어요.%"
+					+ "니오: 석상을 공격할 수 없는 저희 대신 모험가님에게 부탁드립니다.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq45_19(player, 0);
 			return;
@@ -2809,7 +2809,7 @@ public class QuestBoard {
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
 		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===대사막10===");
 		score.setScore(2);
-		Score score2 = obj.getScore("채석장 주민과 대화");
+		Score score2 = obj.getScore("니오와 대화");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -2843,7 +2843,7 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 21000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "주민: 이번에는 §e누아다의 석상§f을 토벌해주십쇼.");
+			msg.msg(player, "니오: 이번에는 §e누아다의 석상§f을 토벌해주십쇼.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq45_21(player, 0);
 			return;
@@ -2854,7 +2854,7 @@ public class QuestBoard {
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
 		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===대사막11===");
 		score.setScore(2);
-		Score score2 = obj.getScore("채석장 주민과 대화");
+		Score score2 = obj.getScore("니오와 대화");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -2888,9 +2888,9 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 22000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "주민: 석상들을 토벌하면서 §e투기장 스크롤§f을 주우신 적이 있나요?%주민: 전통적으로 석상들을 제작할 때는 그 안에 포보르를 봉인해둔 스크롤을 넣어두기도 해요.%"
-					+ "주민: 그래야 석상에 힘이 생기고 마을을 지켜준다는 믿음이 있었거든요.%주민: 투기장 스크롤은 §e사막에 있는 투기장§f에서 사용할 수 있어요.%"
-					+ "주민: 투기장 안쪽은 전장의 서늘함이 느껴져서 덥지 않다고 해요.");
+			msg.msg(player, "니오: 석상들을 토벌하면서 §e투기장 스크롤§f을 주우신 적이 있나요?%니오: 전통적으로 석상들을 제작할 때는 그 안에 포보르를 봉인해둔 스크롤을 넣어두기도 해요.%"
+					+ "니오: 그래야 석상에 힘이 생기고 마을을 지켜준다는 믿음이 있었거든요.%니오: 투기장 스크롤은 §e사막에 있는 투기장§f에서 사용할 수 있어요.%"
+					+ "니오: 투기장 안쪽은 전장의 서늘함이 느껴져서 덥지 않다고 해요.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq45_23(player, 0);
 			return;
@@ -2901,7 +2901,7 @@ public class QuestBoard {
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
 		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===대사막12===");
 		score.setScore(2);
-		Score score2 = obj.getScore("채석장 주민과 대화");
+		Score score2 = obj.getScore("니오와 대화");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -2937,7 +2937,7 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 23000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "주민: 마법탑에서 사막으로 올 때 §e거대한 거인상§f을 보셨나요?%주민: 거기 발굴 현장에서 성물 같은 걸 발견한 걸로 알아요.%주민: 그쪽으로 가면 성물에 대한 정보를 구할 수 있을 것 같아요.");
+			msg.msg(player, "니오: 마법탑에서 사막으로 올 때 §e거대한 거인상§f을 보셨나요?%니오: 거기 발굴 현장에서 성물 같은 걸 발견한 걸로 알아요.%니오: 그쪽으로 가면 성물에 대한 정보를 구할 수 있을 것 같아요.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq45_25(player, 0);
 			return;
@@ -2948,7 +2948,7 @@ public class QuestBoard {
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
 		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===대사막13===");
 		score.setScore(2);
-		Score score2 = obj.getScore("채석장 주민과 대화");
+		Score score2 = obj.getScore("니오와 대화");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -3298,9 +3298,9 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 30000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "주민: 안녕하세요.%주민: 저는 멀고 먼 라파누이라는 섬에서 온 사람이에요.%주민: 여러 섬들을 탐험하실 예정이라고 들었어요.%"
-					+ "주민: 바쁘신 것은 알지만 우선 라파누이에 가주셨으면 좋겠어요.%주민: 라파누이 섬은 미아즈마단이 점령한 이후 죽어가기 시작했어요.%"
-					+ "주민: 부디 저희 섬을 구원해주세요.%주민: 아직 도망쳐 나오지 못한 주민들이 있을거에요.");
+			msg.msg(player, "줄리엣: 안녕하세요.%줄리엣: 저는 멀고 먼 라파누이라는 섬에서 온 사람이에요.%줄리엣: 여러 섬들을 탐험하실 예정이라고 들었어요.%"
+					+ "줄리엣: 바쁘신 것은 알지만 우선 라파누이에 가주셨으면 좋겠어요.%줄리엣: 라파누이 섬은 미아즈마단이 점령한 이후 죽어가기 시작했어요.%"
+					+ "줄리엣: 부디 저희 섬을 구원해주세요.%줄리엣: 아직 도망쳐 나오지 못한 로미오들이 있을거에요.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq46_1(player, 0);
 			return;
@@ -3311,7 +3311,7 @@ public class QuestBoard {
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
 		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===죽어가는 섬===");
 		score.setScore(3);
-		Score score2 = obj.getScore("하마베의 주민과 대화");
+		Score score2 = obj.getScore("하마베의 줄리엣과 대화");
 		score2.setScore(2);
 		Score score3 = obj.getScore("위치: 954,68,42");
 		score3.setScore(1);
@@ -3325,8 +3325,8 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 30000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "주민: 살려주세요..%주민: 저희는 미아즈마단에 쫒겨 여기까지 오게 되었어요.%주민: 여기서 탈출하고자 나간 사람들은 모두 돌아오지 못했어요.%"
-					+ "주민: 아마 미아즈마단에게 걸린거겠죠.%주민: 부디 저희를 구원해주세요.");
+			msg.msg(player, "로미오: 살려주세요..%로미오: 저희는 미아즈마단에 쫒겨 여기까지 오게 되었어요.%로미오: 여기서 탈출하고자 나간 사람들은 모두 돌아오지 못했어요.%"
+					+ "로미오: 아마 미아즈마단에게 걸린거겠죠.%로미오: 부디 저희를 구원해주세요.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq46_2(player, 0);
 			return;
@@ -3335,9 +3335,9 @@ public class QuestBoard {
 		Scoreboard board = manager.getNewScoreboard();
 		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 46장");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===죽어가는 섬의 주민===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===죽어가는 섬의 로미오===");
 		score.setScore(2);
-		Score score2 = obj.getScore("죽어가는 섬에서 주민 찾기");
+		Score score2 = obj.getScore("죽어가는 섬에서 로미오 찾기");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -3481,7 +3481,7 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 30000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "주민: 미아즈마의 집 위에는 종이 있대요.%주민: 종을 울리면 미아즈마가 나타나지 않을까요?%주민: 이 일만 끝나면 하마베로 도망가야겠어요.");
+			msg.msg(player, "로미오: 미아즈마의 집 위에는 종이 있대요.%로미오: 종을 울리면 미아즈마가 나타나지 않을까요?%로미오: 이 일만 끝나면 하마베로 도망가야겠어요.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq46_9(player, 0);
 			return;

@@ -115,6 +115,19 @@ public class ArrowEffect {
 							}
 						}
 					} 
+				} else if(im.getDisplayName().equals(ChatColor.AQUA + "길잡이 지팡이")) {
+					if(player.getLevel() >= 500) {
+						if(checkMana(player, 3)) {
+							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BEACON_ACTIVATE, 6.0f, 8.0f);
+							if(player.getHealth() >= 16) {
+								player.setHealth(20);
+							} else {
+								player.setHealth(player.getHealth() + 4);
+							}
+							player.sendMessage(ChatColor.GREEN + "체력이 회복되었습니다.");
+							removeMana(player, 3);
+						}
+					} 
 				}
 				if(bool) {
 					

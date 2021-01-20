@@ -29,6 +29,8 @@ import org.bukkit.entity.IronGolem;
 import org.bukkit.entity.Item;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Mob;
+import org.bukkit.entity.Monster;
+import org.bukkit.entity.MushroomCow;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Salmon;
 import org.bukkit.entity.Skeleton;
@@ -39,6 +41,7 @@ import org.bukkit.entity.Zombie;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.material.Mushroom;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.potion.Potion;
 import org.bukkit.potion.PotionData;
@@ -1452,7 +1455,7 @@ public class Skill {
 						for (Entity nearEntity : entitylist) {
 							if (nearEntity instanceof Mob) {
 								LivingEntity ent = (LivingEntity) nearEntity;
-								if(ent.getType() != EntityType.MUSHROOM_COW) {
+								if(ent instanceof Monster) {
 									ent.setVelocity(vec.multiply(3.0f));
 								}
 								ent.damage(player.getLevel()*10);
@@ -2967,7 +2970,7 @@ public class Skill {
 					for (Entity nearEntity : entitylist) {
 						if (nearEntity instanceof Mob) {
 							LivingEntity ent = (LivingEntity) nearEntity;
-							if(ent.getType() != EntityType.MUSHROOM_COW) {
+							if(ent instanceof Monster) {
 								ent.setVelocity(vec);
 							}
 							ent.damage(player.getLevel()*5 + damNum * 10);
@@ -2993,7 +2996,7 @@ public class Skill {
 					for (Entity nearEntity : entitylist) {
 						if (nearEntity instanceof Mob) {
 							LivingEntity ent = (LivingEntity) nearEntity;
-							if(ent.getType() != EntityType.MUSHROOM_COW) {
+							if(ent instanceof Monster) {
 								ent.setVelocity(vec.multiply(3.0f));
 							}
 							ent.damage(player.getLevel()*10 + damNum * 5);
@@ -3628,7 +3631,7 @@ public class Skill {
 					for (Entity nearEntity : entitylist) {
 						if (nearEntity instanceof Mob) {
 							LivingEntity ent = (LivingEntity) nearEntity;
-							if(ent.getType() != EntityType.MUSHROOM_COW) {
+							if(ent instanceof Monster) {
 								ent.setVelocity(new Vector(0, 1, 0));
 							}
 							ent.damage(player.getLevel()*50 + damNum * 80);
@@ -3802,7 +3805,7 @@ public class Skill {
 						for (Entity nearEntity : entitylist) {
 							if (nearEntity instanceof Mob) {
 								LivingEntity ent = (LivingEntity) nearEntity;
-								if(ent.getType() != EntityType.MUSHROOM_COW) {
+								if(ent instanceof Monster) {
 									ent.setVelocity(vec);
 								}
 								ent.damage(player.getLevel()*30 + damNum*50);
@@ -3863,31 +3866,67 @@ public class Skill {
 					itemIm.setDisplayName(ChatColor.BLUE + "마나");
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
-					// ===============================================================
-					ParticleData pd = new ParticleData(player.getUniqueId());
-					if (pd.hasID()) {
-						pd.endTask();
-						pd.removeID();
-					}
-					ParticleEffect pe = new ParticleEffect(player);
-					pe.startE27();
-					// ================================================================		
-					List<Entity> entitylist = player.getNearbyEntities(10, 5, 10);
-					for (Entity nearEntity : entitylist) {
-						if (nearEntity.getType() == EntityType.PLAYER) {
-							Player nearPlayer = (Player) nearEntity;
-							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 100, 1, true, false, false));
-							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 2, true, false, false));
-							nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 5초간 저항이 부여됩니다.");
-							nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 5초간 추가 체력이 부여됩니다.");
-						}
-					}
-					player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 100, 1, true, false, false));
-					player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 2, true, false, false));
 					player.sendMessage(ChatColor.GREEN + "[스킬]드래곤의 가호가 발동됩니다.");
-					player.sendMessage(ChatColor.GREEN + "5초간 아군에게 저항이 부여됩니다.");
-					player.sendMessage(ChatColor.GREEN + "5초간 아군에게 추가 체력이 부여됩니다.");
-					world.playSound(loc, Sound.BLOCK_CHAIN_BREAK, 2.0f, 0.5f);	
+					world.playSound(player.getLocation(), Sound.ENTITY_PLAYER_ATTACK_SWEEP, 1.5f, 1.0f);
+					
+					ArmorStand proTotem = (ArmorStand) player.getWorld().spawnEntity(player.getLocation(), EntityType.ARMOR_STAND);
+					proTotem.setVisible(false);
+					proTotem.setHelmet(new ItemStack(Material.DIORITE_STAIRS));
+					proTotem.setVelocity(player.getLocation().getDirection().multiply(1.0f));
+					proTotem.setRemoveWhenFarAway(true);
+					
+					SkillThread t = new SkillThread(player.getUniqueId());
+					sleep = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+						
+						int time = 0;
+						ArmorStand totem;
+						
+						@Override
+						public void run() {
+							if (!t.hasID()) {
+								t.setID(sleep);
+							}
+						
+							if(proTotem.isOnGround() && time == 0) {	
+								totem = (ArmorStand) player.getWorld().spawnEntity(proTotem.getLocation(), EntityType.ARMOR_STAND);
+								totem.setVisible(false);
+								totem.setHelmet(new ItemStack(Material.DIORITE_STAIRS));
+								totem.setRemoveWhenFarAway(true);
+								proTotem.remove();
+								time++;
+							}
+							
+							if(time >= 1) {
+								time++;
+							}
+							
+							if(time == 30 || time == 60 || time == 90 || time == 120 || time == 150 || time == 180) {
+								List<Entity> entitylist = totem.getNearbyEntities(8, 5, 8);
+								for(Entity nearEntity : entitylist) {
+									if(nearEntity instanceof Player) {
+										Player nearPlayer = (Player) nearEntity;
+										PotionRatio pr = new PotionRatio();
+										pr.calculation(nearPlayer, player.getLevel() * 3);
+										nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님의 토템으로 아군의 체력이 회복됩니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 2 + ChatColor.RED + "]");
+									} else if(nearEntity instanceof Mob) {
+										Mob nearMob = (Mob) nearEntity;
+										nearMob.damage(player.getLevel() * 100);
+										if(nearMob instanceof Monster) {
+											nearMob.teleport(totem);
+										}
+									}
+								}
+							}
+							
+							if(time >= 200) {
+								totem.remove();
+								t.endTask();
+								t.removeID();
+							}
+							
+						}						
+						
+					}, 0, 1);
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
 					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
@@ -3900,13 +3939,13 @@ public class Skill {
 					itemIm.setDisplayName(ChatColor.BLUE + "마나");
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
-					player.sendMessage(ChatColor.GREEN + "[스킬]강림이 발동됩니다.");
+					player.sendMessage(ChatColor.GREEN + "[스킬]드래곤의 강림이 발동됩니다.");
 					world.playSound(player.getLocation(), Sound.ENTITY_ENDER_DRAGON_AMBIENT, 3.0f, 1.0f);
 					world.playSound(player.getLocation(), Sound.ENTITY_ENDER_DRAGON_GROWL, 1.0f, 1.0f);
 
 					ArmorStand proTotem = (ArmorStand) player.getWorld().spawnEntity(player.getLocation(),EntityType.ARMOR_STAND);
 					proTotem.setVisible(false);
-					proTotem.setHelmet(new ItemStack(Material.DRAGON_HEAD));
+					proTotem.setHelmet(new ItemStack(Material.POLISHED_GRANITE_SLAB));
 					proTotem.setVelocity(player.getLocation().getDirection().multiply(4.0f));
 					proTotem.setRemoveWhenFarAway(true);
 
@@ -4300,7 +4339,7 @@ public class Skill {
 								if(e instanceof Mob) {
 									LivingEntity mob = (LivingEntity) e; 
 									mob.damage(1);
-									if(mob.getType() != EntityType.MUSHROOM_COW) {
+									if(mob instanceof Monster) {
 										mob.setVelocity(new Vector(0.3,1,0.3));
 									}
 									time += 49;
@@ -4495,7 +4534,7 @@ public class Skill {
 								if(e instanceof Mob) {
 									LivingEntity mob = (LivingEntity) e; 
 									mob.damage(player.getLevel());
-									if(mob.getType() != EntityType.MUSHROOM_COW) {
+									if(mob instanceof Monster) {
 										mob.setVelocity(new Vector(0.3,1,0.3));
 									}
 									time += 49;

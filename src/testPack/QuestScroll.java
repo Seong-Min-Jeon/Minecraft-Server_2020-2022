@@ -658,7 +658,7 @@ public class QuestScroll {
 	
 	public void mq43(Player player, Item itemArg, World world) {	
 		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "메인퀘스트 43장")) {
-			msg.msg(player, "주민: 제가 왜 그 생각을 못했을까요.%주민: 광신도 녀석들은 성당 지하에 있다는 소문이 있어요.");
+			msg.msg(player, "에트: 제가 왜 그 생각을 못했을까요.%에트: 광신도 녀석들은 성당 지하에 있다는 소문이 있어요.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq43(player, 0);
 		}	
@@ -666,7 +666,7 @@ public class QuestScroll {
 	
 	public void mq44(Player player, Item itemArg, World world) {	
 		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "메인퀘스트 44장")) {
-			msg.msg(player, "주민: 이 녀석들 따로 본거지가 있던게 확실합니다.%주민: 제 친구랑 밤중에 포보르를 미행한 결과 그 위치를 알아냈죠.");
+			msg.msg(player, "에트: 이 녀석들 따로 본거지가 있던게 확실합니다.%에트: 제 친구랑 밤중에 포보르를 미행한 결과 그 위치를 알아냈죠.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq44(player, 0);
 		}	
@@ -674,7 +674,7 @@ public class QuestScroll {
 	
 	public void mq45(Player player, Item itemArg, World world) {	
 		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "메인퀘스트 45장")) {
-			msg.msg(player, "주민: 광신도 녀석들에 대해 새로 알아낸게 있는 것 같아요!%주민: 한번 와주세요.");
+			msg.msg(player, "에트: 광신도 녀석들에 대해 새로 알아낸게 있는 것 같아요!%에트: 한번 와주세요.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq45(player, 0);
 		}	

@@ -378,10 +378,10 @@ public class InteractVillager {
 					int qNum = cb.getNum(player);
 					cb.mq45(player, qNum+1);	
 				} else {
-					player.sendMessage("주민: 이곳은 하마베 마을이에요.");
+					player.sendMessage("에트: 이곳은 하마베 마을이에요.");
 				}
 			} catch(Exception e) {
-				player.sendMessage("주민: 이곳은 하마베 마을이에요.");
+				player.sendMessage("에트: 이곳은 하마베 마을이에요.");
 			}
 			return true;
 		}
@@ -451,10 +451,10 @@ public class InteractVillager {
 					int qNum = cb.getNum(player);
 					cb.mq45_24(player, qNum+1);	
 				} else {
-					player.sendMessage("주민: 여기는 무료 철광산이에요.");
+					player.sendMessage("니오: 여기는 무료 철광산이에요.");
 				}
 			} catch(Exception e) {
-				player.sendMessage("주민: 여기는 무료 철광산이에요.");
+				player.sendMessage("니오: 여기는 무료 철광산이에요.");
 			}
 			return true;
 		}
@@ -526,10 +526,10 @@ public class InteractVillager {
 					int qNum = cb.getNum(player);
 					cb.mq46(player, qNum+1);	
 				} else {
-					player.sendMessage("주민: 라파누이에 두고 온 가족이 그리워요.");
+					player.sendMessage("줄리엣: 라파누이에 두고 온 가족이 그리워요.");
 				}
 			} catch(Exception e) {
-				player.sendMessage("주민: 라파누이에 두고 온 가족이 그리워요.");
+				player.sendMessage("줄리엣: 라파누이에 두고 온 가족이 그리워요.");
 			}
 			return true;
 		}
@@ -546,10 +546,10 @@ public class InteractVillager {
 					int qNum = cb.getNum(player);
 					cb.mq46_1(player, qNum+1);	
 				} else {
-					player.sendMessage("주민: 라파누이에.. 구원을!");
+					player.sendMessage("로미오: 라파누이에.. 구원을!");
 				}
 			} catch(Exception e) {
-				player.sendMessage("주민: 라파누이에.. 구원을!");
+				player.sendMessage("로미오: 라파누이에.. 구원을!");
 			}
 			return true;
 		}

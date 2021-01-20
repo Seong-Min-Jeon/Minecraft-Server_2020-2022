@@ -64,6 +64,7 @@ import org.bukkit.entity.Pig;
 import org.bukkit.entity.Piglin;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.PolarBear;
+import org.bukkit.entity.Ravager;
 import org.bukkit.entity.Sheep;
 import org.bukkit.entity.Skeleton;
 import org.bukkit.entity.SmallFireball;
@@ -313,11 +314,11 @@ public class Main extends JavaPlugin implements Listener{
 		} else if(player.getDisplayName().equalsIgnoreCase("WoolRing")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.GREEN + "'도트랑 도트가 제일 좋아' 울링.");
 		} else if(player.getDisplayName().equalsIgnoreCase("_nanoboost_")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.RED + "'그저 낫쿨' 나노부스트.");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.RED + "'에: 에디는 / 디: D등급이다.' 나노부스트.");
 		} else if(player.getDisplayName().equalsIgnoreCase("why9196")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.BLUE + "'프리스트로 400레벨을 달성한' 와이.");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.BLUE + "'최초의 500레벨' 와이.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Akilae3102")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.AQUA + "'하와와 여고생 샤오유를 사용하는' 아킬레.");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.AQUA + "'하와와 하와와 하와와 하와와' 아킬레.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Espina_ID")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.BOLD + "'그저 군인' 에스피나.");
 		} else if(player.getDisplayName().equalsIgnoreCase("KangOSung")) {
@@ -553,7 +554,6 @@ public class Main extends JavaPlugin implements Listener{
 //		if(player.getDisplayName().equalsIgnoreCase("WoolRing") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
 		
 		
-		
 //		ItemStack var1 = new ItemStack(Material.IRON_HELMET);
 //		ItemMeta var1Im = var1.getItemMeta();
 //		var1Im.setLocalizedName("300,200,200,300,100,500,800,800,800,500,400");
@@ -668,14 +668,14 @@ public class Main extends JavaPlugin implements Listener{
 //		boots.setItemMeta(bootsIm);
 //		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(boots);}
 		
-//		ItemStack weapon = new ItemStack(Material.BIRCH_SLAB);
+//		ItemStack weapon = new ItemStack(Material.MUSIC_DISC_CHIRP);
 //		ItemMeta weaponIm = weapon.getItemMeta();
-//		weaponIm.setLocalizedName("200,1000,0,0,100,200,200,200,200,200,410");
-//		weaponIm.setDisplayName(ChatColor.AQUA + "천멸십자창");
+//		weaponIm.setLocalizedName("0,0,0,0,0,0,0,0,0,0,500");
+//		weaponIm.setDisplayName(ChatColor.AQUA + "길잡이 지팡이");
 //		ArrayList<String> weaponLore = new ArrayList();
-//		weaponLore.add(ChatColor.GRAY + "레벨 제한: 410");
+//		weaponLore.add(ChatColor.GRAY + "레벨 제한: 500");
 //		weaponLore.add(ChatColor.GRAY + " ");
-//		weaponLore.add(ChatColor.GRAY + "롱기누스를 본 대장장이가 만들어낸 창");
+//		weaponLore.add(ChatColor.GRAY + "하얀 빛이 매력적인 지팡이");
 //		weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 //		weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 //		weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -686,13 +686,14 @@ public class Main extends JavaPlugin implements Listener{
 //
 //		ItemStack helmet = new ItemStack(Material.GOLDEN_HELMET);
 //		ItemMeta helmetIm = helmet.getItemMeta();
-//		helmetIm.setLocalizedName("0,0,0,0,0,1000,400,400,400,400,410");
-//		helmetIm.setDisplayName(ChatColor.AQUA + "삼보룡");
+//		helmetIm.setLocalizedName("1000,0,0,0,0,1200,800,800,800,800,500");
+//		helmetIm.setDisplayName(ChatColor.AQUA + "백홍원");
 //		ArrayList<String> helmetLore = new ArrayList();
-//		helmetLore.add(ChatColor.GRAY + "레벨 제한: 410");
+//		helmetLore.add(ChatColor.GRAY + "레벨 제한: 500");
 //		helmetLore.add(ChatColor.GRAY + " ");
-//		helmetLore.add(ChatColor.GRAY + "금빛 용의 비늘로 만들어진 헬멧");
-//		helmetLore.add(ChatColor.BLUE + "전투 경험치 5% 증가");
+//		helmetLore.add(ChatColor.GRAY + "웅진권의 마스터가 사용하던 헬멧");
+//		helmetLore.add(ChatColor.GRAY + " ");
+//		helmetLore.add(ChatColor.BLUE + "-회피 확률 5% 증가");
 //		helmetIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 //		helmetIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 //		helmetIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -703,13 +704,14 @@ public class Main extends JavaPlugin implements Listener{
 //
 //		ItemStack chestplate = new ItemStack(Material.GOLDEN_CHESTPLATE);
 //		ItemMeta chestplateIm = chestplate.getItemMeta();
-//		chestplateIm.setLocalizedName("600,50,50,50,100,100,0,0,0,200,410");
-//		chestplateIm.setDisplayName(ChatColor.AQUA + "진월");
+//		chestplateIm.setLocalizedName("0,0,0,0,0,800,0,0,0,1000,500");
+//		chestplateIm.setDisplayName(ChatColor.AQUA + "목영축");
 //		ArrayList<String> chestplateLore = new ArrayList();
-//		chestplateLore.add(ChatColor.GRAY + "레벨 제한: 410");
+//		chestplateLore.add(ChatColor.GRAY + "레벨 제한: 500");
 //		chestplateLore.add(ChatColor.GRAY + " ");
-//		chestplateLore.add(ChatColor.GRAY + "음의 기운이 도는 갑옷");
-//		chestplateLore.add(ChatColor.BLUE + "흡혈 1%");
+//		chestplateLore.add(ChatColor.GRAY + "웅진권의 마스터가 사용하던 갑옷");
+//		chestplateLore.add(ChatColor.GRAY + " ");
+//		chestplateLore.add(ChatColor.BLUE + "-전투 경험치 10% 증가");
 //		chestplateIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 //		chestplateIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 //		chestplateIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -720,13 +722,14 @@ public class Main extends JavaPlugin implements Listener{
 //
 //		ItemStack leggings = new ItemStack(Material.GOLDEN_LEGGINGS);
 //		ItemMeta leggingsIm = leggings.getItemMeta();
-//		leggingsIm.setLocalizedName("0,0,0,0,0,0,500,500,500,0,410");
-//		leggingsIm.setDisplayName(ChatColor.AQUA + "엑스에어리얼");
+//		leggingsIm.setLocalizedName("3000,500,500,500,300,2000,1000,1000,1000,3000,500");
+//		leggingsIm.setDisplayName(ChatColor.AQUA + "박영성");
 //		ArrayList<String> leggingsLore = new ArrayList();
-//		leggingsLore.add(ChatColor.GRAY + "레벨 제한: 410");
+//		leggingsLore.add(ChatColor.GRAY + "레벨 제한: 500");
 //		leggingsLore.add(ChatColor.GRAY + " ");
-//		leggingsLore.add(ChatColor.GRAY + "유연성이 보이는 각반");
-//		leggingsLore.add(ChatColor.BLUE + "회피 확률 5% 증가");
+//		leggingsLore.add(ChatColor.GRAY + "웅진권의 마스터가 사용하던 각반");
+//		leggingsLore.add(ChatColor.GRAY + " ");
+//		leggingsLore.add(ChatColor.BLUE + "-전투 경험치 50% 감소");
 //		leggingsIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 //		leggingsIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 //		leggingsIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -737,13 +740,14 @@ public class Main extends JavaPlugin implements Listener{
 //
 //		ItemStack boots = new ItemStack(Material.GOLDEN_BOOTS);
 //		ItemMeta bootsIm = boots.getItemMeta();
-//		bootsIm.setLocalizedName("500,0,0,0,0,0,0,0,0,0,410");
-//		bootsIm.setDisplayName(ChatColor.AQUA + "스쿠트");
+//		bootsIm.setLocalizedName("1000,1000,300,300,300,0,0,0,0,0,500");
+//		bootsIm.setDisplayName(ChatColor.AQUA + "이천루");
 //		ArrayList<String> bootsLore = new ArrayList();
-//		bootsLore.add(ChatColor.GRAY + "레벨 제한: 410");
+//		bootsLore.add(ChatColor.GRAY + "레벨 제한: 500");
 //		bootsLore.add(ChatColor.GRAY + " ");
-//		bootsLore.add(ChatColor.GRAY + "바다 건너에서 들여온 신비한 신발");
-//		bootsLore.add(ChatColor.BLUE + "회피 확률 5% 증가");
+//		bootsLore.add(ChatColor.GRAY + "웅진권의 마스터가 사용하던 신발");
+//		bootsLore.add(ChatColor.GRAY + " ");
+//		bootsLore.add(ChatColor.BLUE + "-근접 공격 시 10% 확률로 10% 회복");
 //		bootsIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 //		bootsIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 //		bootsIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -2303,19 +2307,19 @@ public class Main extends JavaPlugin implements Listener{
 			// 피르볼그 제사장
 			if (loc.getX() <= 3703 && loc.getY() <= 120 && loc.getZ() <= 2758 
 					&& loc.getX() >= 3679 && loc.getY() >= 99 && loc.getZ() >= 2732) {
-				player.teleport(samak);
+				event.setRespawnLocation(samak);
 				return;
 			}
 			// 하마베 배 1792 95 2997  1768 40 2942
 			if (loc.getX() <= 1792 && loc.getY() <= 95 && loc.getZ() <= 2997 
 					&& loc.getX() >= 1768 && loc.getY() >= 40 && loc.getZ() >= 2942) {
-				player.teleport(hamabe);
+				event.setRespawnLocation(hamabe);
 				return;
 			}
 			// 라파누이 1600 255 1930  2149 0 2398
 			if (loc.getX() <= 2149 && loc.getY() <= 255 && loc.getZ() <= 2398 
 					&& loc.getX() >= 1600 && loc.getY() >= 0 && loc.getZ() >= 1930) {
-				player.teleport(hamabe);
+				event.setRespawnLocation(hamabe);
 				return;
 			}
 			
@@ -2594,6 +2598,10 @@ public class Main extends JavaPlugin implements Listener{
 				PotionRatio pr = new PotionRatio();
 				pr.calculation(player, 2500.0);
 			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "힐링 포션 XIII")) {
+				PotionRatio pr = new PotionRatio();
+				pr.calculation(player, 3000.0);
+			}
 			//특이 포션
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "엘릭서")) {
 				for(PotionEffect effect : player.getActivePotionEffects ()){
@@ -2619,15 +2627,21 @@ public class Main extends JavaPlugin implements Listener{
 				player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,1800,1,true,false,false));
 				player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,1800,0,true,false,false));
 			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "바위의 포션 III")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,1800,1,true,false,false));
+			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "강화된 바위의 포션 I")) {
 				player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,3600,0,true,false,false));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "강화된 바위의 포션 II")) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,3000,1,true,false,false));
-				player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,3000,0,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,3600,1,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,3600,0,true,false,false));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "근육의 포션 I")) {
 				player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,1800,10,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "근육의 포션 III")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,1800,2000,true,false,false));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "강화된 근육의 포션 I")) {
 				player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,3600,100,true,false,false));
@@ -4422,6 +4436,7 @@ public class Main extends JavaPlugin implements Listener{
 				// 회복
 				int percent10 = 0;
 				percent10 += new SpecialEffect().a11(player);
+				percent10 += new SpecialEffect().b3(player);
 				
 				if(rnd.nextInt(100) < percent10) {
 					if(player.getHealth() >= 18) {
@@ -4602,6 +4617,7 @@ public class Main extends JavaPlugin implements Listener{
 				num += new SpecialEffect().l1(player);
 				num += new SpecialEffect().b2(player);
 				num += new SpecialEffect().a14(player);
+				num += new SpecialEffect().h3(player);
 				
 				if(num > 70) {
 					num = 70;
@@ -4691,17 +4707,17 @@ public class Main extends JavaPlugin implements Listener{
 							Inventory inv = player.getInventory();
 							if(inv.contains(Material.RED_DYE) || inv.contains(Material.GREEN_DYE) || inv.contains(Material.LAPIS_LAZULI)
 									|| inv.contains(Material.CYAN_DYE) || inv.contains(Material.LIGHT_GRAY_DYE)) {
-								damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+								damage = 1.5 - (1.5 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
 							} else if(inv.contains(Material.YELLOW_DYE) || inv.contains(Material.LIGHT_BLUE_DYE) || inv.contains(Material.MAGENTA_DYE)
 									|| inv.contains(Material.ORANGE_DYE) || inv.contains(Material.CLAY_BALL)) {
-								damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+								damage = 1.5 - (1.5 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
 							} else if(inv.contains(Material.GRAY_DYE) || inv.contains(Material.PINK_DYE) || inv.contains(Material.LIME_DYE)) {
-								damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+								damage = 1.5 - (1.5 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
 							} else if(inv.contains(Material.BLUE_DYE) || inv.contains(Material.BROWN_DYE) || inv.contains(Material.BLACK_DYE)
 									|| inv.contains(Material.INK_SAC) || inv.contains(Material.GLOWSTONE_DUST)) {
-								damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+								damage = 1.5 - (1.5 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
 							} else {
-								damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+								damage = 1.5 - (1.5 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
 							}
 							if(damage < 0.001) {
 								damage = 0.001;
@@ -4830,7 +4846,7 @@ public class Main extends JavaPlugin implements Listener{
 								damage = 0.001;
 							}
 							event.setDamage(damage);
-							player.setFireTicks(120);
+							player.setFireTicks(160);
 						}
 					}
 					if (event.getCause() == DamageCause.ENTITY_EXPLOSION) {
@@ -4901,7 +4917,7 @@ public class Main extends JavaPlugin implements Listener{
 								damage = 0.001;
 							}
 							event.setDamage(damage);
-							player.setFireTicks(120);
+							player.setFireTicks(160);
 						}
 					}
 					if(event.getCause() == DamageCause.MAGIC) {
@@ -5328,6 +5344,20 @@ public class Main extends JavaPlugin implements Listener{
 						}
 					} else {
 						new BossHealth().getBar20().setProgress((boss.getHealth()-event.getFinalDamage()) / 3500000.0);
+					}
+				}
+				// 미아즈마
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("미아즈마" + ChatColor.YELLOW + " [Lv.??]")) {
+
+					LivingEntity boss = (LivingEntity) mob;
+					
+					if(boss.getHealth() - event.getFinalDamage() <= 0) {
+						for(Player p : new BossHealth().getBar21().getPlayers()) {
+							new BossHealth().getBar21().setProgress(0);
+							new BossHealth().getBar21().removePlayer(p);
+						}
+					} else {
+						new BossHealth().getBar21().setProgress((boss.getHealth()-event.getFinalDamage()) / 3500000.0);
 					}
 				}
 			}
@@ -5888,24 +5918,39 @@ public class Main extends JavaPlugin implements Listener{
 	    			}
 	    			if(block.getType()==Material.GOLD_BLOCK && block.getX() <= 1853 && block.getZ() <= 2115
 	    					&& block.getX() >= 1845 && block.getZ() >= 2109) {
-	    				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BELL_USE, 10.0f, 10.0f);
-	    				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BELL_USE, 10.0f, 10.0f);
-	    				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BELL_USE, 10.0f, 10.0f);
-	    				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BELL_USE, 10.0f, 10.0f);
-	    				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BELL_USE, 10.0f, 10.0f);
-	    				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BELL_USE, 10.0f, 10.0f);
-	    				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BELL_USE, 10.0f, 10.0f);
-	    				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BELL_RESONATE, 10.0f, 10.0f);
-	    				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BELL_RESONATE, 10.0f, 10.0f);
-	    				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BELL_RESONATE, 10.0f, 10.0f);
-	    				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BELL_RESONATE, 10.0f, 10.0f);
-	    				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BELL_RESONATE, 10.0f, 10.0f);
-	    				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BELL_RESONATE, 10.0f, 10.0f);
-	    				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BELL_RESONATE, 10.0f, 10.0f);
+	    				world.playSound(player.getLocation(), Sound.BLOCK_BELL_USE, 10.0f, 10.0f);
+	    				world.playSound(player.getLocation(), Sound.BLOCK_BELL_USE, 10.0f, 10.0f);
+	    				world.playSound(player.getLocation(), Sound.BLOCK_BELL_USE, 10.0f, 10.0f);
+	    				world.playSound(player.getLocation(), Sound.BLOCK_BELL_USE, 10.0f, 10.0f);
+	    				world.playSound(player.getLocation(), Sound.BLOCK_BELL_USE, 10.0f, 10.0f);
+	    				world.playSound(player.getLocation(), Sound.BLOCK_BELL_USE, 10.0f, 10.0f);
+	    				world.playSound(player.getLocation(), Sound.BLOCK_BELL_USE, 10.0f, 10.0f);
+	    				world.playSound(player.getLocation(), Sound.BLOCK_BELL_RESONATE, 10.0f, 10.0f);
+	    				world.playSound(player.getLocation(), Sound.BLOCK_BELL_RESONATE, 10.0f, 10.0f);
+	    				world.playSound(player.getLocation(), Sound.BLOCK_BELL_RESONATE, 10.0f, 10.0f);
+	    				world.playSound(player.getLocation(), Sound.BLOCK_BELL_RESONATE, 10.0f, 10.0f);
+	    				world.playSound(player.getLocation(), Sound.BLOCK_BELL_RESONATE, 10.0f, 10.0f);
+	    				world.playSound(player.getLocation(), Sound.BLOCK_BELL_RESONATE, 10.0f, 10.0f);
+	    				world.playSound(player.getLocation(), Sound.BLOCK_BELL_RESONATE, 10.0f, 10.0f);
 	    				if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===미아즈마단8===")) {
-	    					// 미아즈마 소환
-	    					// 특정 지역에 스켈이 있으면 소환 불가
-	    					// 미아즈마 잡으면 퀘 종료
+	    					int num = 0;
+	    					for(Entity ent : player.getNearbyEntities(30, 25, 30)) {
+	    						if(ent.getType() == EntityType.SKELETON) {
+	    							num++;
+	    						}
+	    					}
+	    					if(num == 0) {
+	    						for(Entity ent : player.getNearbyEntities(30, 25, 30)) {
+		    						if(ent instanceof Player) {
+		    							new BossHealth().getBar21().setProgress(1.0);
+			    						new BossHealth().getBar21().addPlayer(player);
+		    						}
+		    					}
+	    						new BossHealth().getBar21().setProgress(1.0);
+	    						new BossHealth().getBar21().addPlayer(player);
+	    						world.spawnEntity(new Location(world, 1858, 82, 2109), EntityType.SKELETON);
+	    						player.sendMessage(ChatColor.RED + "미아즈마가 집 밖으로 나왔습니다.");
+	    					}
 	    				}	    		
 	    				event.setCancelled(true);
 	    			}

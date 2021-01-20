@@ -365,7 +365,7 @@ public class WeaponBuff {
 									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "끓어오르는 대지의 신발")) {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 3,true,false,false));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0,true,false,false));
-										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 2000,true,false,false));
+										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 3000,true,false,false));
 									}
 								}
 							}

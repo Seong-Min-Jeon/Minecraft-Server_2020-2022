@@ -1049,6 +1049,10 @@ public class MobDeath {
 				if (name.equalsIgnoreCase("미아즈마단 애완곰" + ChatColor.YELLOW + " [Lv.530]")) {
 					mobloot.mob240(lootPlayer);
 				}
+				// 미아즈마
+				if (name.equalsIgnoreCase("미아즈마" + ChatColor.YELLOW + " [Lv.??]")) {
+					mobloot.mob241(lootPlayer);
+				}
 			} catch (Exception e) {
 
 			}

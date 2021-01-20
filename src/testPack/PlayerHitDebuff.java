@@ -88,6 +88,7 @@ public class PlayerHitDebuff {
 		mob40(player, mob);
 		mob41(player, mob);
 		mob42(player, mob);
+		mob43(player, mob);
 	}
 
 	// 시련의 형상
@@ -2580,8 +2581,80 @@ public class PlayerHitDebuff {
 		}
 	}
 	
+	// 미아즈마
 	public void mob43(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("미아즈마" + ChatColor.YELLOW + " [Lv.??]")) {
+			int num = rnd.nextInt(20);
+			if(num == 0) {
+				player.sendMessage(ChatColor.RED + "미아즈마가 곰을 부릅니다.");
+				sendMessage(player, ChatColor.RED + "미아즈마가 곰을 부릅니다.");
+				((Skeleton) mob).setTarget(player);
+				player.getWorld().spawnEntity(mob.getLocation(), EntityType.RAVAGER);
+				player.getWorld().spawnEntity(mob.getLocation(), EntityType.RAVAGER);
+				player.getWorld().spawnEntity(mob.getLocation(), EntityType.RAVAGER);
+			} else if(num == 1) {
+				mob.teleport(player);
+				
+				player.sendMessage(ChatColor.RED + "미아즈마가 땅울림을 시전합니다.");
+				sendMessage(player, ChatColor.RED + "미아즈마가 땅울림을 시전합니다.");
+				
+				((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true, false, false));
+				
+				Location loc = mob.getLocation();
+				
+				taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
+					int time = 0;
+					ThreadData td = new ThreadData(player.getUniqueId());
+
+					@Override
+					public void run() {
+						
+						if (!td.hasID()) {
+							td.setID(taskID);
+						}
+						
+						if (time % 20 == 0) {
+							for(int x = -8 ; x < 9 ; x++) {
+								for(int y = -1 ; y < 0 ; y++) {
+									for(int z = -8 ; z < 9 ; z++) {
+										Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
+										player.getWorld().spawnParticle(Particle.REDSTONE, loc2, 0, new DustOptions(Color.RED, 1));
+									}
+								}
+							}
+						}
+						
+						if (time >= 40) {
+							player.sendMessage(ChatColor.RED + "미아즈마가 땅울림을 사용하였습니다.");
+							sendMessage(player, ChatColor.RED + "미아즈마가 땅울림을 사용하였습니다.");
+							// ===============================================================
+							ParticleData pd = new ParticleData(player.getUniqueId());
+							if (pd.hasID()) {
+								pd.endTask();
+								pd.removeID();
+							}
+							ParticleEffect pe = new ParticleEffect(player, mob);
+							pe.startE30();
+							// ================================================================
+							List<Entity> nearPlayer = mob.getNearbyEntities(8, 30, 8);
+							for(Entity p : nearPlayer) {
+								if(p instanceof Player) {
+									((Player) p).damage(10000);
+								}
+							}
+							
+							td.endTask();
+							td.removeID();
+						}
+						
+						time++;
+
+					}
+
+				}, 0, 1);
+			}
+		}
 	}
 	
 	public void mob44(Player player, Entity mob) {

@@ -44,6 +44,8 @@ public class ExpSystemByMob {
 		percent += new SpecialEffect().h1(player);
 		percent += new SpecialEffect().s1(player);
 		percent += new SpecialEffect().a12(player);
+		percent += new SpecialEffect().c2(player);
+		percent += new SpecialEffect().l2(player);
 		exp += exp * percent / 100;
 		
 		double customExpToLevel = (double)((int)((Math.pow(currentLevel, 3)/10) * Math.log10(currentLevel+1) + 10));

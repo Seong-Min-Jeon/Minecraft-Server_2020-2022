@@ -203,6 +203,10 @@ public class RefreshServer {
 										ent.remove();
 									} else if(as.getHelmet().getType() == Material.RED_NETHER_BRICK_STAIRS) {
 										ent.remove();
+									} else if(as.getHelmet().getType() == Material.DIORITE_STAIRS) {
+										ent.remove();
+									} else if(as.getHelmet().getType() == Material.POLISHED_GRANITE_SLAB) {
+										ent.remove();
 									} else if(as.getItemInHand().getType() == Material.POLISHED_BLACKSTONE_SLAB) {
 										ent.remove();
 									} else if(as.getItemInHand().getType() == Material.GREEN_CARPET) {

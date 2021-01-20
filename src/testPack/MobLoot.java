@@ -5719,8 +5719,21 @@ public class MobLoot {
 		es.giveExp(player, 2222222);
 	}
 
+	// 미아즈마
 	public void mob241(Player player) {
-
+		int num = rnd.nextInt(9) + 8;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 7000000);
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===미아즈마단8===")) {
+			int qNum = cb.getNum(player);
+			cb.mq46_9(player, qNum + 1);
+		}
 	}
 	
 	public void mob242(Player player) {
