@@ -4955,6 +4955,9 @@ public class MobLoot {
 		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===죽은 듯 살아있는 자4===")) {
 			int qNum = cb.getNum(player);
 			cb.mq45_19(player, qNum + 1);
+		} else if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===과거의 영광===")) {
+			int qNum = cb.getNum(player);
+			cb.q21(player, qNum + 1);
 		}
 	}
 	
@@ -5399,6 +5402,9 @@ public class MobLoot {
 			if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===사막의 푸른 땅5===")) {
 				int qNum = cb.getNum(player);
 				cb.mq45_35(player, qNum + 1);
+			} else if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===군도의 강자===")) {
+				int qNum = cb.getNum(player);
+				cb.q22(player, qNum + 1);
 			}
 		} 
 	}
@@ -5644,6 +5650,12 @@ public class MobLoot {
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 2080000);
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===라파누이의 불청객===")) {
+			int qNum = cb.getNum(player);
+			cb.q23(player, qNum + 1);
+		}
 	}
 	
 	// 녹아내리는 불꽃
@@ -5717,6 +5729,12 @@ public class MobLoot {
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 2222222);
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===미아즈마의 오른팔===")) {
+			int qNum = cb.getNum(player);
+			cb.q24(player, qNum + 1);
+		}
 	}
 
 	// 미아즈마

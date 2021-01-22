@@ -535,6 +535,115 @@ public class QuestBoard {
 		player.setScoreboard(board);
 	}
 	
+	public void q21(Player player, int num) {
+		//상점
+		if(num>=50) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			ItemStack col1 = new ItemStack(Material.ACACIA_DOOR, 5);
+			ItemMeta col1im = col1.getItemMeta();
+			col1im.setDisplayName(ChatColor.GRAY + "C급 투기장 스크롤");
+			col1im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
+			col1.setItemMeta(col1im);
+			player.getInventory().addItem(col1);
+			player.sendMessage(ChatColor.GRAY + "C급 투기장 스크롤" + ChatColor.WHITE + " 5개를 획득했다.");
+			es.giveExp(player, 7000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.WHITE + "B급 퀘스트");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===과거의 영광===");
+		score.setScore(2);
+		Score score2 = obj.getScore("루 라바다 석상 50마리 사냥");
+		score2.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/50)");
+		score4.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void q22(Player player, int num) {
+		//상점
+		if(num>=30) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS, 20);
+			ItemMeta var1im = var1.getItemMeta();
+			var1im.setDisplayName(ChatColor.LIGHT_PURPLE + "최상급 포보르의 피");
+			var1.setItemMeta(var1im);
+			player.getInventory().addItem(var1);
+			player.sendMessage(ChatColor.GRAY + "최상급 포보르의 피" + ChatColor.WHITE + " 20개를 획득했다.");
+			es.giveExp(player, 7000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.LIGHT_PURPLE + "S급 퀘스트");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===군도의 강자===");
+		score.setScore(2);
+		Score score2 = obj.getScore("포보르화 도마뱀 30마리 사냥");
+		score2.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/30)");
+		score4.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void q23(Player player, int num) {
+		//상점
+		if(num>=30) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			ItemStack var1 = new ItemStack(Material.GOLD_INGOT, 64);
+			ItemMeta var1Im = var1.getItemMeta();
+			var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "금");
+			var1.setItemMeta(var1Im);
+			player.getInventory().addItem(var1);
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "금" + ChatColor.WHITE + " 64개를 획득했다.");
+			es.giveExp(player, 7500000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.WHITE + "B급 퀘스트");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===라파누이의 불청객===");
+		score.setScore(2);
+		Score score2 = obj.getScore("불타는 석탄 30마리 사냥");
+		score2.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/30)");
+		score4.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void q24(Player player, int num) {
+		//상점
+		if(num>=30) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			ItemStack item = new ItemStack(Material.RABBIT_HIDE, 20);
+			ItemMeta im = item.getItemMeta();
+			im.setDisplayName(ChatColor.AQUA + "에메랄드 결정");
+			item.setItemMeta(im);
+			player.getInventory().addItem(item);
+			player.sendMessage(ChatColor.AQUA + "에메랄드 결정" + ChatColor.WHITE + " 20개를 획득했다.");
+			es.giveExp(player, 8000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.YELLOW + "A급 퀘스트");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===미아즈마의 오른팔===");
+		score.setScore(2);
+		Score score2 = obj.getScore("미아즈마의 애완곰 30마리 사냥");
+		score2.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/30)");
+		score4.setScore(0);
+		player.setScoreboard(board);
+	}
+	
 	public void eq1(Player player, int num) {
 		// mq23 보상
 		if (num >= 1) {
@@ -3300,7 +3409,7 @@ public class QuestBoard {
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			msg.msg(player, "줄리엣: 안녕하세요.%줄리엣: 저는 멀고 먼 라파누이라는 섬에서 온 사람이에요.%줄리엣: 여러 섬들을 탐험하실 예정이라고 들었어요.%"
 					+ "줄리엣: 바쁘신 것은 알지만 우선 라파누이에 가주셨으면 좋겠어요.%줄리엣: 라파누이 섬은 미아즈마단이 점령한 이후 죽어가기 시작했어요.%"
-					+ "줄리엣: 부디 저희 섬을 구원해주세요.%줄리엣: 아직 도망쳐 나오지 못한 로미오들이 있을거에요.");
+					+ "줄리엣: 부디 저희 섬을 구원해주세요.%줄리엣: 아직 도망쳐 나오지 못한 주민들이 있을거에요.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq46_1(player, 0);
 			return;

@@ -425,6 +425,22 @@ public class SaveAll {
 						int number = qb.getNum(player);
 						fw.write("q20\n");
 						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===과거의 영광===")) {
+						int number = qb.getNum(player);
+						fw.write("q21\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===군도의 강자===")) {
+						int number = qb.getNum(player);
+						fw.write("q22\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===라파누이의 불청객===")) {
+						int number = qb.getNum(player);
+						fw.write("q23\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===미아즈마의 오른팔===")) {
+						int number = qb.getNum(player);
+						fw.write("q24\n");
+						fw.write(Integer.toString(number));
 					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===설원의 가희1===")) {
 						int number = qb.getNum(player);
 						fw.write("eq1\n");

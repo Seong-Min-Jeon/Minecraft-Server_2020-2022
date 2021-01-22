@@ -40,6 +40,10 @@ public class QuestScroll {
 				q18(player, itemArg, world);
 				q19(player, itemArg, world);
 				q20(player, itemArg, world);
+				q21(player, itemArg, world);
+				q22(player, itemArg, world);
+				q23(player, itemArg, world);
+				q24(player, itemArg, world);
 				eq1(player, itemArg, world);
 				eq2(player, itemArg, world);
 				eq3(player, itemArg, world);
@@ -260,6 +264,39 @@ public class QuestScroll {
 					+ "§7대충 클레어흐의 관광 명소인 용암 동굴을 망치는 녀석들을 사냥해 달라는 내용인 것 같다.");
 			QuestBoard qb = new QuestBoard();
 			qb.q20(player, 0);
+		}	
+	}
+	
+	public void q21(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "퀘스트: 과거의 영광")) {
+			msg.msg(player, "§7투어허 데 다넌 시대의 영웅 루 라바다.%§7그의 석상을 포보르가 탈취한 이유는 무엇일까.%§7이유는 알 수 없어도 확실한 것은 하나있다.%"
+					+ "§7우리는 그저 적을 섬멸할 뿐.");
+			QuestBoard qb = new QuestBoard();
+			qb.q21(player, 0);
+		}	
+	}
+	
+	public void q22(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "퀘스트: 군도의 강자")) {
+			msg.msg(player, "§7피르볼그의 제사장이 만들어낸 최강의 도마뱀.%§7그는 마치 과거의 공룡을 연상시키게 한다.%§7그들이 더욱 개조되어 강해지기 전에 빠르게 처리하자.");
+			QuestBoard qb = new QuestBoard();
+			qb.q22(player, 0);
+		}	
+	}
+	
+	public void q23(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "퀘스트: 라파누이의 불청객")) {
+			msg.msg(player, "§7미아즈마단이 라파누이를 점령하고 나서 한달 뒤%§7섬에는 큰 변화가 일어났다.%§7섬은 불타게 되었고, 포보르들이 자리잡게 되었다.");
+			QuestBoard qb = new QuestBoard();
+			qb.q23(player, 0);
+		}	
+	}
+	
+	public void q24(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "퀘스트: 미아즈마의 오른팔")) {
+			msg.msg(player, "§7미아즈마에게 직접 권법을 배운 곰은 그의 오른팔이 되었다.%§7곰들이 더욱 강해지기 전에 빠르게 처리하자.");
+			QuestBoard qb = new QuestBoard();
+			qb.q24(player, 0);
 		}	
 	}
 	

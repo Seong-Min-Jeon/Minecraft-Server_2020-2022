@@ -146,10 +146,10 @@ public class SpecialEffect {
 		return 0;
 	}
 	
-	public int a13(Player player) {
+	public double a13(Player player) {
 		try {
 			if(player.getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "빛나는 금빛 반지")) {
-				return 2;
+				return 1.5;
 			}
 		} catch(Exception e) {
 			
@@ -172,6 +172,19 @@ public class SpecialEffect {
 		try {
 			if(player.getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "마나의 인장")) {
 				return 10;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	public double w1(Player player) {
+		try {
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "치유의 나무")) {
+				return 1.5;
 			}
 		} catch(Exception e) {
 			
@@ -323,6 +336,23 @@ public class SpecialEffect {
 					if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "제사장의 각반")) {
 						if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "제사장의 신발")) {
 							return 10;
+						}
+					}
+				}
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+	public int s3(Player player) {
+		try {
+			if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "춘 <체어리 블로섬>")) {
+				if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "하 <힛 웨이브>")) {
+					if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "추 <메이플>")) {
+						if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "동 <애벌랜치>")) {
+							return 6;
 						}
 					}
 				}

@@ -2584,11 +2584,13 @@ public class PlayerHitDebuff {
 	// 미아즈마
 	public void mob43(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("미아즈마" + ChatColor.YELLOW + " [Lv.??]")) {
-			int num = rnd.nextInt(20);
+			int num = rnd.nextInt(15);
 			if(num == 0) {
 				player.sendMessage(ChatColor.RED + "미아즈마가 곰을 부릅니다.");
 				sendMessage(player, ChatColor.RED + "미아즈마가 곰을 부릅니다.");
 				((Skeleton) mob).setTarget(player);
+				player.teleport(new Location(player.getWorld(), 1860, 81, 2110));
+				mob.teleport(player);
 				player.getWorld().spawnEntity(mob.getLocation(), EntityType.RAVAGER);
 				player.getWorld().spawnEntity(mob.getLocation(), EntityType.RAVAGER);
 				player.getWorld().spawnEntity(mob.getLocation(), EntityType.RAVAGER);

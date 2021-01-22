@@ -88,6 +88,7 @@ import org.bukkit.event.entity.CreatureSpawnEvent;
 import org.bukkit.event.entity.CreeperPowerEvent;
 import org.bukkit.event.entity.EntityBreedEvent;
 import org.bukkit.event.entity.EntityChangeBlockEvent;
+import org.bukkit.event.entity.EntityDamageByBlockEvent;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.EntityDamageEvent.DamageCause;
@@ -305,7 +306,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("woolring")) { 
 			
 		} else {
-			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/797410166986506290/aile_texture_pack_11.zip");
+			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/801698648031363082/aile_texture_pack_13.zip");
 		}
 		
 		//Message
@@ -554,6 +555,7 @@ public class Main extends JavaPlugin implements Listener{
 //		if(player.getDisplayName().equalsIgnoreCase("WoolRing") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
 		
 		
+		
 //		ItemStack var1 = new ItemStack(Material.IRON_HELMET);
 //		ItemMeta var1Im = var1.getItemMeta();
 //		var1Im.setLocalizedName("300,200,200,300,100,500,800,800,800,500,400");
@@ -748,6 +750,96 @@ public class Main extends JavaPlugin implements Listener{
 //		bootsLore.add(ChatColor.GRAY + "웅진권의 마스터가 사용하던 신발");
 //		bootsLore.add(ChatColor.GRAY + " ");
 //		bootsLore.add(ChatColor.BLUE + "-근접 공격 시 10% 확률로 10% 회복");
+//		bootsIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		bootsIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		bootsIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		bootsIm.setUnbreakable(true);
+//		bootsIm.setLore(bootsLore);
+//		boots.setItemMeta(bootsIm);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(boots);}
+		
+//		ItemStack weapon = new ItemStack(Material.BIRCH_LEAVES);
+//		ItemMeta weaponIm = weapon.getItemMeta();
+//		weaponIm.setLocalizedName("1000,500,300,200,100,1000,0,0,500,0,550");
+//		weaponIm.setDisplayName(ChatColor.AQUA + "치유의 나무");
+//		ArrayList<String> weaponLore = new ArrayList();
+//		weaponLore.add(ChatColor.GRAY + "레벨 제한: 550");
+//		weaponLore.add(ChatColor.GRAY + " ");
+//		weaponLore.add(ChatColor.GRAY + "피톤치드 향이 느껴지는 나뭇가지");
+//		weaponLore.add(ChatColor.GRAY + " ");
+//		weaponLore.add(ChatColor.GRAY + "-흡혈 1.5%");
+//		weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		weaponIm.setUnbreakable(true);
+//		weaponIm.setLore(weaponLore);
+//		weapon.setItemMeta(weaponIm);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(weapon);}
+//		
+//		ItemStack helmet = new ItemStack(Material.GOLDEN_HELMET);
+//		ItemMeta helmetIm = helmet.getItemMeta();
+//		helmetIm.setLocalizedName("0,0,0,0,0,1000,1000,1000,1000,0,550");
+//		helmetIm.setDisplayName(ChatColor.GREEN + "춘 <체어리 블로섬>");
+//		ArrayList<String> helmetLore = new ArrayList();
+//		helmetLore.add(ChatColor.GRAY + "레벨 제한: 550");
+//		helmetLore.add(ChatColor.GRAY + " ");
+//		helmetLore.add(ChatColor.GRAY + "유구한 시간을 사는 뱀파이어의 헬멧");
+//		helmetLore.add(ChatColor.GRAY + " ");
+//		helmetLore.add(ChatColor.BLUE + "-흡혈 6%(세트 효과)");
+//		helmetIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		helmetIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		helmetIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		helmetIm.setUnbreakable(true);
+//		helmetIm.setLore(helmetLore);
+//		helmet.setItemMeta(helmetIm);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(helmet);}
+//
+//		ItemStack chestplate = new ItemStack(Material.GOLDEN_CHESTPLATE);
+//		ItemMeta chestplateIm = chestplate.getItemMeta();
+//		chestplateIm.setLocalizedName("0,0,0,0,0,1000,1000,1000,1000,0,550");
+//		chestplateIm.setDisplayName(ChatColor.GREEN + "하 <힛 웨이브>");
+//		ArrayList<String> chestplateLore = new ArrayList();
+//		chestplateLore.add(ChatColor.GRAY + "레벨 제한: 550");
+//		chestplateLore.add(ChatColor.GRAY + " ");
+//		chestplateLore.add(ChatColor.GRAY + "유구한 시간을 사는 뱀파이어의 갑옷");
+//		chestplateLore.add(ChatColor.GRAY + " ");
+//		chestplateLore.add(ChatColor.BLUE + "-흡혈 6%(세트 효과)");
+//		chestplateIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		chestplateIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		chestplateIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		chestplateIm.setUnbreakable(true);
+//		chestplateIm.setLore(chestplateLore);
+//		chestplate.setItemMeta(chestplateIm);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(chestplate);}
+//
+//		ItemStack leggings = new ItemStack(Material.GOLDEN_LEGGINGS);
+//		ItemMeta leggingsIm = leggings.getItemMeta();
+//		leggingsIm.setLocalizedName("0,0,0,0,0,1000,1000,1000,1000,0,550");
+//		leggingsIm.setDisplayName(ChatColor.GREEN + "추 <메이플>");
+//		ArrayList<String> leggingsLore = new ArrayList();
+//		leggingsLore.add(ChatColor.GRAY + "레벨 제한: 550");
+//		leggingsLore.add(ChatColor.GRAY + " ");
+//		leggingsLore.add(ChatColor.GRAY + "유구한 시간을 사는 뱀파이어의 각반");
+//		leggingsLore.add(ChatColor.GRAY + " ");
+//		leggingsLore.add(ChatColor.BLUE + "-흡혈 6%(세트 효과)");
+//		leggingsIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		leggingsIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		leggingsIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		leggingsIm.setUnbreakable(true);
+//		leggingsIm.setLore(leggingsLore);
+//		leggings.setItemMeta(leggingsIm);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(leggings);}
+//
+//		ItemStack boots = new ItemStack(Material.GOLDEN_BOOTS);
+//		ItemMeta bootsIm = boots.getItemMeta();
+//		bootsIm.setLocalizedName("0,0,0,0,0,1000,1000,1000,1000,0,550");
+//		bootsIm.setDisplayName(ChatColor.GREEN + "동 <애벌랜치>");
+//		ArrayList<String> bootsLore = new ArrayList();
+//		bootsLore.add(ChatColor.GRAY + "레벨 제한: 550");
+//		bootsLore.add(ChatColor.GRAY + " ");
+//		bootsLore.add(ChatColor.GRAY + "유구한 시간을 사는 뱀파이어의 신발");
+//		bootsLore.add(ChatColor.GRAY + " ");
+//		bootsLore.add(ChatColor.BLUE + "-흡혈 6%(세트 효과)");
 //		bootsIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 //		bootsIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 //		bootsIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -4405,13 +4497,15 @@ public class Main extends JavaPlugin implements Listener{
 				}
 				//===========================================================================
 				// 흡혈
-				int addHealthPercent = 0;
+				double addHealthPercent = 0;
 				addHealthPercent += new SpecialEffect().c1(player);
 				addHealthPercent += new SpecialEffect().a13(player);
+				addHealthPercent += new SpecialEffect().w1(player);
+				addHealthPercent += new SpecialEffect().s3(player);
 				
 				int addHealth = (int) (event.getDamage() * addHealthPercent / 100); 
-				
-				PotionRatio pr = new PotionRatio();
+
+				PotionRatioForVampire pr = new PotionRatioForVampire();
 				pr.calculation(player, addHealth);
 				//===========================================================================
 				// 독뎀
@@ -7655,6 +7749,11 @@ public class Main extends JavaPlugin implements Listener{
 		} catch(Exception e) {
 			
 		}
+	}
+	
+	@EventHandler
+	public void entityChangeBlockEvent(EntityChangeBlockEvent event) {
+		event.setCancelled(true);
 	}
 	
 	@EventHandler

@@ -3859,9 +3859,9 @@ public class Skill {
 					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
 				}
 			} else if(key.equals("RLL")) {
-				if(i>=4) {
+				if(i>=8) {
 					player.getInventory().remove(Material.HEART_OF_THE_SEA);
-					ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 4);
+					ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 8);
 					ItemMeta itemIm = item.getItemMeta();
 					itemIm.setDisplayName(ChatColor.BLUE + "마나");
 					item.setItemMeta(itemIm);

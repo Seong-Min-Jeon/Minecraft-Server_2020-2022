@@ -102,6 +102,7 @@ public class PlateEvent {
 										System.out.println(1);
 										try {
 											System.out.println(2);
+											System.out.println(player.getDisplayName());
 											player.teleport(new Location(player.getWorld(), 3685, 151, 2858.5));
 											System.out.println(3);
 										} catch (Exception e) {
