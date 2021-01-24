@@ -17,7 +17,7 @@ public class SpecialEffect {
 	public int a1(Player player) {
 		try {
 			if(player.getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "은반지")) {
-				return 1;
+				return 10;
 			}
 		} catch(Exception e) {
 			
@@ -105,7 +105,7 @@ public class SpecialEffect {
 	public int a9(Player player) {
 		try {
 			if(player.getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "푸른 기운의 반지")) {
-				return 3;
+				return 20;
 			}
 		} catch(Exception e) {
 			
@@ -171,7 +171,7 @@ public class SpecialEffect {
 	public int a15(Player player) {
 		try {
 			if(player.getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "마나의 인장")) {
-				return 10;
+				return 30;
 			}
 		} catch(Exception e) {
 			

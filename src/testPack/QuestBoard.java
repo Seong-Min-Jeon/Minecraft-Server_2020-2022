@@ -1409,7 +1409,7 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 1000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "불안한 로미오: 으아악 날 내보내 주거라.");
+			msg.msg(player, "불안한 주민: 으아악 날 내보내 주거라.");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
@@ -1432,8 +1432,8 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 1000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "불안한 로미오: §e성 안쪽§f에는 아직 사람들이 있어.%불안한 로미오: 그리고 몇 달 전에..%불안한 로미오: 어느 모험가가 왔어..%불안한 로미오: 그는 이 에일땅의 역사를 파해치는 이상한 놈이였어..%불안한 로미오: 고서적을 연구하던 사람을 찾아 여기까지 왔다는데..%"
-					+ "불안한 로미오: 결국 §e진실§f을 깨닫고는 미쳐 날뛰게 되었지..%불안한 로미오: 케케케케케켘..");
+			msg.msg(player, "불안한 주민: §e성 안쪽§f에는 아직 사람들이 있어.%불안한 주민: 그리고 몇 달 전에..%불안한 주민: 어느 모험가가 왔어..%불안한 주민: 그는 이 에일땅의 역사를 파해치는 이상한 놈이였어..%불안한 주민: 고서적을 연구하던 사람을 찾아 여기까지 왔다는데..%"
+					+ "불안한 주민: 결국 §e진실§f을 깨닫고는 미쳐 날뛰게 되었지..%불안한 주민: 케케케케케켘..");
 			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
@@ -2391,7 +2391,7 @@ public class QuestBoard {
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
 		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===항구 마을, 하마베 마을===");
 		score.setScore(3);
-		Score score2 = obj.getScore("하마베 마을에서 로미오과 대화");
+		Score score2 = obj.getScore("하마베 마을에서 주민과 대화");
 		score2.setScore(2);
 		Score score3 = obj.getScore("위치: 978,62,92");
 		score3.setScore(1);
@@ -2415,7 +2415,7 @@ public class QuestBoard {
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
 		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===광신도 집단1===");
 		score.setScore(2);
-		Score score2 = obj.getScore("클레어흐의 로미오 몬스터 100마리 사냥");
+		Score score2 = obj.getScore("클레어흐의 주민 몬스터 100마리 사냥");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/100)");
 		score3.setScore(0);
@@ -2779,7 +2779,7 @@ public class QuestBoard {
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
 		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===대사막7===");
 		score.setScore(3);
-		Score score2 = obj.getScore("채석장의 로미오과 대화");
+		Score score2 = obj.getScore("채석장의 주민과 대화");
 		score2.setScore(2);
 		Score score3 = obj.getScore("위치: -100,28,1486");
 		score3.setScore(1);
@@ -3444,9 +3444,9 @@ public class QuestBoard {
 		Scoreboard board = manager.getNewScoreboard();
 		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 46장");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===죽어가는 섬의 로미오===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===죽어가는 섬의 주민===");
 		score.setScore(2);
-		Score score2 = obj.getScore("죽어가는 섬에서 로미오 찾기");
+		Score score2 = obj.getScore("죽어가는 섬에서 주민 찾기");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
