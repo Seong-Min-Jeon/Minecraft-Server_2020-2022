@@ -29,6 +29,8 @@ public class TPScroll {
 		ticket6(player, itemArg, world);
 		ticket7(player, itemArg, world);
 		ticket8(player, itemArg, world);
+		ticket9(player, itemArg, world);
+		ticket10(player, itemArg, world);
 	}
 	
 	public void ticket1(Player player, Item itemArg, World world) {
@@ -236,6 +238,92 @@ public class TPScroll {
 							player.getWorld().playSound(loc3, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);
 							msg.msg(player, "선장: 라파누이에서 볼 일은 다 보셨소?%선장: 그저 안전히 돌아오는 배에 탄 것으로 다행인 것이오.%"
 									+ "선장: 또 가고 싶다면야 배를 운행해 줄 수 있지만..%선장: 개인적으로 가기는 싫은 섬이구려.%"
+									+ "선장: 거의 다 와가는구만.%선장: 이제 곧 도착이오.");
+						}
+
+						if (time >= 400) {
+							player.teleport(new Location(world, 954, 55, -57));
+							player.getWorld().playSound(loc3, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);
+							td.endTask();
+							td.removeID();
+							return;
+						}
+
+						time++;
+					}
+
+				}, 0, 1);
+			}
+		}
+	}
+	
+	public void ticket9(Player player, Item itemArg, World world) {
+		// 하마베->라히무호나  952 95 -40  938 45 -82
+		Location loc = player.getLocation();
+		if (loc.getX() <= 952 && loc.getY() <= 95 && loc.getZ() <= -40 && 
+				loc.getX() >= 938 && loc.getY() >= 45 && loc.getZ() >= -82) {
+			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "라히무호나행 티켓")) {
+				itemArg.remove();				
+				Location loc3 = new Location(world, 1779, 54, 2970, 270, 0);
+				taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+					int time = 0;
+					ThreadShip td = new ThreadShip(player.getUniqueId());
+
+					@Override
+					public void run() {
+						if (!td.hasID()) {
+							td.setID(taskID);
+						}
+
+						if (time == 0) {
+							player.teleport(loc3);
+							player.getWorld().playSound(loc3, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);
+							msg.msg(player, "선장: 라히무호나를 가다니 관광용인가?.%선장: 가을만 되면 이곳을 찾는 관광객이 많았다네.%"
+									+ "선장: 지금은 포보르들이 득실거리지만 말일세.%선장: 포보르들을 쓸어버리면서 주변 경관이나 구경하시게.%"
+									+ "선장: 이번에도 작은 배로 갈아타야하네.%선장: 곧 도착하겠구만.");
+						}
+
+						if (time >= 400) {
+							player.teleport(new Location(world, -2017, 53, 1442, 270, 0));
+							player.getWorld().playSound(loc3, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);
+							td.endTask();
+							td.removeID();
+							return;
+						}
+
+						time++;
+					}
+
+				}, 0, 1);
+			}
+		}
+	}
+	
+	public void ticket10(Player player, Item itemArg, World world) {
+		// 라히무호나->하마베 -2027 40 1425  -2013 80 1460
+		Location loc = player.getLocation();
+		if (loc.getX() <= -2013 && loc.getY() <= 80 && loc.getZ() <= 1460 && 
+				loc.getX() >= -2027 && loc.getY() >= 40 && loc.getZ() >= 1425) {
+			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "하마베행 티켓 (라히무호나)")) {
+				itemArg.remove();				
+				Location loc3 = new Location(world, 1779, 54, 2970, 270, 0);
+				taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+					int time = 0;
+					ThreadShip td = new ThreadShip(player.getUniqueId());
+
+					@Override
+					public void run() {
+						if (!td.hasID()) {
+							td.setID(taskID);
+						}
+
+						if (time == 0) {
+							player.teleport(loc3);
+							player.getWorld().playSound(loc3, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);
+							msg.msg(player, "선장: 라히무호나에서 볼 일은 다 보셨소?%선장: 항상 느끼는거지만 섬은 참 아름답구려.%"
+									+ "선장: 포보르들이 있다는 점이 좀 거슬리지만%선장: 자네같은 모험가들이 가끔씩 청소해주면 언젠간 소멸하겠지.%"
 									+ "선장: 거의 다 와가는구만.%선장: 이제 곧 도착이오.");
 						}
 

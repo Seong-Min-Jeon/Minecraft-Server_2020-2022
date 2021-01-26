@@ -2414,6 +2414,12 @@ public class Main extends JavaPlugin implements Listener{
 				event.setRespawnLocation(hamabe);
 				return;
 			}
+			// 라히무호나 -2037 40 1289  -1817 255 1525
+			if (loc.getX() <= -1817 && loc.getY() <= 255 && loc.getZ() <= 1525 
+					&& loc.getX() >= -2037 && loc.getY() >= 40 && loc.getZ() >= 1289) {
+				event.setRespawnLocation(hamabe);
+				return;
+			}
 			
 			int length1 = (int)(Math.pow(loc.getX()-wargunil.getX(), 2) + Math.pow(loc.getY()-wargunil.getY(), 2) + Math.pow(loc.getZ()-wargunil.getZ(), 2));
 			int length2 = (int)(Math.pow(loc.getX()-forgan.getX(), 2) + Math.pow(loc.getY()-forgan.getY(), 2) + Math.pow(loc.getZ()-forgan.getZ(), 2));

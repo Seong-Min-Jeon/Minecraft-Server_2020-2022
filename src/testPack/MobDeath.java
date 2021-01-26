@@ -1053,6 +1053,38 @@ public class MobDeath {
 				if (name.equalsIgnoreCase("미아즈마" + ChatColor.YELLOW + " [Lv.??]")) {
 					mobloot.mob241(lootPlayer);
 				}
+				// 환영병
+				if (name.equalsIgnoreCase("환영병" + ChatColor.YELLOW + " [Lv.532]")) {
+					mobloot.mob242(lootPlayer);
+				}
+				// 타란튤라
+				if (name.equalsIgnoreCase("타란튤라" + ChatColor.YELLOW + " [Lv.536]")) {
+					mobloot.mob243(lootPlayer);
+				}
+				// 붉은 좀비
+				if (name.equalsIgnoreCase("붉은 좀비" + ChatColor.YELLOW + " [Lv.538]")) {
+					mobloot.mob244(lootPlayer);
+				}
+				// 포자를 날리는 검은 버섯
+				if (name.equalsIgnoreCase("포자를 날리는 검은 버섯" + ChatColor.YELLOW + " [Lv.542]")) {
+					mobloot.mob245(lootPlayer);
+				}
+				// 유혹하는 나무
+				if (name.equalsIgnoreCase("유혹하는 나무" + ChatColor.YELLOW + " [Lv.544]")) {
+					mobloot.mob246(lootPlayer);
+				}
+				// 라히무호나의 핵
+				if (name.equalsIgnoreCase("라히무호나의 핵" + ChatColor.YELLOW + " [Lv.548]")) {
+					mobloot.mob247(lootPlayer);
+				}
+				// 재앙을 날리는 검은 버섯
+				if (name.equalsIgnoreCase("재앙을 날리는 검은 버섯" + ChatColor.YELLOW + " [Lv.550]")) {
+					mobloot.mob248(lootPlayer);
+				}
+				// 중급 파괴수
+				if (name.equalsIgnoreCase("중급 파괴수" + ChatColor.YELLOW + " [Lv.554]")) {
+					mobloot.mob249(lootPlayer);
+				}
 			} catch (Exception e) {
 
 			}

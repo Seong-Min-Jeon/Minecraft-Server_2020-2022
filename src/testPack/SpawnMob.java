@@ -9768,9 +9768,9 @@ public class SpawnMob {
 	}
 	
 	public boolean mob153(LivingEntity entity, Location loc) {
-		// 라히무호나1 -2037 40 1289  -1817 66 1525
+		// 라히무호나1 -2010 40 1289  -1817 66 1525
 		if (loc.getX() <= -1817 && loc.getY() <= 66 && loc.getZ() <= 1525 
-				&& loc.getX() >= -2037 && loc.getY() >= 40 && loc.getZ() >= 1289) {
+				&& loc.getX() >= -2010 && loc.getY() >= 40 && loc.getZ() >= 1289) {
 			Location chestLoc = new Location(entity.getWorld(), -1834, 92, 3050);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();

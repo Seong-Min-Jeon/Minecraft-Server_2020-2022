@@ -130,6 +130,20 @@ public class ChestOwner {
 				return;
 			}
 			closeInv(chestLoc.getBlock(), inv);
+		} else if(num == 4) {
+			Location chestLoc = new Location(player.getWorld(), 3780, 7, 3745);
+			if(inv == null) {
+				openInv(player, chestLoc.getBlock());
+				return;
+			}
+			closeInv(chestLoc.getBlock(), inv);
+		} else if(num == 5) {
+			Location chestLoc = new Location(player.getWorld(), 3780, 9, 3745);
+			if(inv == null) {
+				openInv(player, chestLoc.getBlock());
+				return;
+			}
+			closeInv(chestLoc.getBlock(), inv);
 		}
 		
 	}
@@ -144,6 +158,13 @@ public class ChestOwner {
 			closeInv(chestLoc.getBlock(), inv);
 		} else if(num == 3) {
 			Location chestLoc = new Location(player.getWorld(), 3778, 5, 3745);
+			if(inv == null) {
+				openInv(player, chestLoc.getBlock());
+				return;
+			}
+			closeInv(chestLoc.getBlock(), inv);
+		} else if(num == 4) {
+			Location chestLoc = new Location(player.getWorld(), 3778, 7, 3745);
 			if(inv == null) {
 				openInv(player, chestLoc.getBlock());
 				return;

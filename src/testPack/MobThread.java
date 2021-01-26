@@ -450,6 +450,18 @@ public class MobThread implements Listener{
 							} else if(loc.getX() <= 1886 && loc.getY() <= 100 && loc.getZ() <= 2140 
 									&& loc.getX() >= 1823 && loc.getY() >= 68 && loc.getZ() >= 2067) {
 								laphanui6(player, loc);
+							} else if(loc.getX() <= -1817 && loc.getY() <= 66 && loc.getZ() <= 1525 
+									&& loc.getX() >= -2010 && loc.getY() >= 40 && loc.getZ() >= 1289) {
+								lahimuhona1(player, loc);
+							} else if(loc.getX() <= -1948 && loc.getY() <= 150 && loc.getZ() <= 1393 
+									&& loc.getX() >= -2006 && loc.getY() >= 67 && loc.getZ() >= 1337) {
+								lahimuhona2(player, loc);
+							} else if(loc.getX() <= -1862 && loc.getY() <= 150 && loc.getZ() <= 1393 
+									&& loc.getX() >= -1947 && loc.getY() >= 67 && loc.getZ() >= 1324) {
+								lahimuhona3(player, loc);
+							} else if(loc.getX() <= -1886 && loc.getY() <= 150 && loc.getZ() <= 1484 
+									&& loc.getX() >= -2000 && loc.getY() >= 67 && loc.getZ() >= 1394) {
+								lahimuhona4(player, loc);
 							}
 						}
 					} 
@@ -2529,6 +2541,66 @@ public class MobThread implements Listener{
 			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
 		} else if (num == 1) {
 			loc.getWorld().spawnEntity(loc, EntityType.RAVAGER);
+		} 
+	}
+	
+	public void lahimuhona1(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= -1817 && loc.getY() <= 66 && loc.getZ() <= 1525 
+				&& loc.getX() >= -2010 && loc.getY() >= 40 && loc.getZ() >= 1289)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.ZOMBIE);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.CAVE_SPIDER);
+		} 
+	}
+	
+	public void lahimuhona2(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= -1948 && loc.getY() <= 150 && loc.getZ() <= 1393 
+				&& loc.getX() >= -2006 && loc.getY() >= 67 && loc.getZ() >= 1337)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.ZOMBIE);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.ENDERMAN);
+		} 
+	}
+	
+	public void lahimuhona3(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= -1862 && loc.getY() <= 150 && loc.getZ() <= 1393 
+				&& loc.getX() >= -1947 && loc.getY() >= 67 && loc.getZ() >= 1324)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.BLAZE);
+		} 
+	}
+	
+	public void lahimuhona4(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= -1886 && loc.getY() <= 150 && loc.getZ() <= 1484 
+				&& loc.getX() >= -2000 && loc.getY() >= 67 && loc.getZ() >= 1394)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.RAVAGER);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.ENDERMITE);
 		} 
 	}
 	
