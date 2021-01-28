@@ -306,7 +306,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("woolring")) { 
 			
 		} else {
-			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/801698648031363082/aile_texture_pack_13.zip");
+			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/804237076140261386/aile_texture_pack_14.zip");
 		}
 		
 		//Message
@@ -4562,10 +4562,12 @@ public class Main extends JavaPlugin implements Listener{
 				int addHealthPercent = 0;
 				addHealthPercent += new SpecialEffect().c1(player);
 				addHealthPercent += new SpecialEffect().a13(player);
+				addHealthPercent += new SpecialEffect().w1(player);
+				addHealthPercent += new SpecialEffect().s3(player);
 				
 				int addHealth = (int) (event.getDamage() * addHealthPercent / 100); 
 				
-				PotionRatio pr = new PotionRatio();
+				PotionRatioForVampire pr = new PotionRatioForVampire();
 				pr.calculation(player, addHealth);
 				//===========================================================================
 				// 독뎀
@@ -4597,11 +4599,28 @@ public class Main extends JavaPlugin implements Listener{
 				// 흡혈
 				int addHealthPercent = 0;
 				addHealthPercent += new SpecialEffect().c1(player);
+				addHealthPercent += new SpecialEffect().a13(player);
+				addHealthPercent += new SpecialEffect().w1(player);
+				addHealthPercent += new SpecialEffect().s3(player);
 				
 				int addHealth = (int) (event.getDamage() * addHealthPercent / 100); 
 				
-				PotionRatio pr = new PotionRatio();
+				PotionRatioForVampire pr = new PotionRatioForVampire();
 				pr.calculation(player, addHealth);
+				//===========================================================================
+				// 독뎀
+				int poison = 0;
+				poison += new SpecialEffect().h2(player);
+				
+				if(poison != 0) {
+					if(entity.getType() == EntityType.ZOMBIE || entity.getType() == EntityType.ZOMBIE_VILLAGER || entity.getType() == EntityType.HUSK
+							|| entity.getType() == EntityType.DROWNED || entity.getType() == EntityType.SKELETON || entity.getType() == EntityType.WITHER_SKELETON
+							|| entity.getType() == EntityType.WITHER) {
+						((LivingEntity) entity).addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 100, poison));
+					} else {
+						((LivingEntity) entity).addPotionEffect(new PotionEffect(PotionEffectType.HARM, 100, poison));
+					}
+				}
 				//===========================================================================
 				PlayerHitDebuff debuff = new PlayerHitDebuff();
 				debuff.playerHitDebuff(player, entity);
@@ -5457,7 +5476,7 @@ public class Main extends JavaPlugin implements Listener{
 							new BossHealth().getBar21().removePlayer(p);
 						}
 					} else {
-						new BossHealth().getBar21().setProgress((boss.getHealth()-event.getFinalDamage()) / 3500000.0);
+						new BossHealth().getBar21().setProgress((boss.getHealth()-event.getFinalDamage()) / 3000000.0);
 					}
 				}
 			}
@@ -6042,8 +6061,9 @@ public class Main extends JavaPlugin implements Listener{
 	    					if(num == 0) {
 	    						for(Entity ent : player.getNearbyEntities(30, 25, 30)) {
 		    						if(ent instanceof Player) {
+		    							Player p = (Player) ent; 
 		    							new BossHealth().getBar21().setProgress(1.0);
-			    						new BossHealth().getBar21().addPlayer(player);
+			    						new BossHealth().getBar21().addPlayer(p);
 		    						}
 		    					}
 	    						new BossHealth().getBar21().setProgress(1.0);

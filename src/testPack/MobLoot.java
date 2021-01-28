@@ -5402,11 +5402,15 @@ public class MobLoot {
 			if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===사막의 푸른 땅5===")) {
 				int qNum = cb.getNum(player);
 				cb.mq45_35(player, qNum + 1);
-			} else if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===군도의 강자===")) {
-				int qNum = cb.getNum(player);
-				cb.q22(player, qNum + 1);
 			}
 		} 
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===군도의 강자===")) {
+			int qNum = cb.getNum(player);
+			cb.q22(player, qNum + 1);
+		}
+		
 	}
 	
 	// 포보르화 복어

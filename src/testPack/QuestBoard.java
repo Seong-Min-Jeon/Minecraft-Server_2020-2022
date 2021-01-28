@@ -3407,8 +3407,8 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 30000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "줄리엣: 안녕하세요.%줄리엣: 저는 멀고 먼 라파누이라는 섬에서 온 사람이에요.%줄리엣: 여러 섬들을 탐험하실 예정이라고 들었어요.%"
-					+ "줄리엣: 바쁘신 것은 알지만 우선 라파누이에 가주셨으면 좋겠어요.%줄리엣: 라파누이 섬은 미아즈마단이 점령한 이후 죽어가기 시작했어요.%"
+			msg.msg(player, "줄리엣: 안녕하세요.%줄리엣: 저는 멀고 먼 §e라파누이§f라는 섬에서 온 사람이에요.%줄리엣: 여러 섬들을 탐험하실 예정이라고 들었어요.%"
+					+ "줄리엣: 바쁘신 것은 알지만 우선 라파누이에 가주셨으면 좋겠어요.%줄리엣: 라파누이 섬은 §e미아즈마단§f이 점령한 이후 죽어가기 시작했어요.%"
 					+ "줄리엣: 부디 저희 섬을 구원해주세요.%줄리엣: 아직 도망쳐 나오지 못한 주민들이 있을거에요.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq46_1(player, 0);
@@ -3590,7 +3590,7 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 30000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "로미오: 미아즈마의 집 위에는 종이 있대요.%로미오: 종을 울리면 미아즈마가 나타나지 않을까요?%로미오: 이 일만 끝나면 하마베로 도망가야겠어요.");
+			msg.msg(player, "로미오: 미아즈마의 집 위에는 §e종§f이 있대요.%로미오: 종을 울리면 미아즈마가 나타나지 않을까요?%로미오: 이 일만 끝나면 하마베로 도망가야겠어요.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq46_9(player, 0);
 			return;
@@ -3615,6 +3615,7 @@ public class QuestBoard {
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			msg.msg(player, "네비: 후우~ 오늘도 한건 했네요.%데히트라: 여어. 오랜만이다." + player.getDisplayName() + "%데히트라: 오늘도 고생하는구나.%"
 					+ "데히트라: 곧 나와 만나게 될 것 같군.%데히트라: 그 때까지 잘 살아있어주거라.%네비: 흐으음.. 쟤는 누굴까?");
+			return;
 		}
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
@@ -3625,6 +3626,122 @@ public class QuestBoard {
 		Score score2 = obj.getScore("미아즈마 사냥");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq47(Player player, int num) {
+		if(num>=1) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 30000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "데히트라: 라파누이에서 무슨 생각으로 종을 울린 것인지 먼저 묻겠다.%데히트라: 종의 의미를 모르는 것이냐.%데히트라: 세계에는 포보르를 봉인하는 3개의 종이 있다.%데히트라: 반대로 말하면 포보르를 깨우기 위한 종이기도 하지.%"
+					+ "데히트라: 네놈이 모든 종을 울리게 되면 무슨 일이 일어나는지 알려주지.%데히트라: 어딘가에 존재하는 요정들의 문이며 이계로 향하는 문.%데히트라: 먼 옛날 투어허 데 다넌의 영웅들이 팔리아스나 다른 땅에서 왔다는 그 문.%"
+					+ "데히트라: 그 문이 열리게 되는 것이다.%데히트라: 그 문을 열게되면 너는 강해지겠지.%데히트라: 하지만 그게 끝이 아니라는건 알고 있을텐데.%데히트라: 각지의 포보르들은 힘을 되찾을꺼야.%데히트라: 왜?%데히트라: 문으로 봉인된 포보르의 왕들도 깨어나게 될꺼니까.%"
+					+ "데히트라: 너는 포보르의 왕을 쓰러뜨릴 재목이 될 수 있어.%데히트라: 하지만 그걸로 끝일까?%데히트라: 그게 과연 해피엔딩을 위한 길일까?%데히트라: 선택은 너에게 맡기도록 하지.%데히트라: ... 서론이 길었군.%"
+					+ "데히트라: 3개의 종 중 두번째 종은 내가 가지고 있다.%데히트라: 이쪽 종은 크기가 작아서 말이지.%데히트라: 네놈이 나의 퀘스트를 충실히 이행한다면 종을 주도록 하지.%데히트라: 자, 어떤가 충분한 보상이 아닌가?");
+			QuestBoard qb = new QuestBoard();
+			qb.mq47_1(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 47장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===3개의 종===");
+		score.setScore(3);
+		Score score2 = obj.getScore("데히트라와 대화");
+		score2.setScore(2);
+		Score score3 = obj.getScore("위치: ,,");
+		score3.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/1)");
+		score4.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq47_1(Player player, int num) {
+		if(num>=50) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 30000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			QuestBoard qb = new QuestBoard();
+			qb.mq47_2(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 47장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===라히무호나 섬1===");
+		score.setScore(2);
+		Score score2 = obj.getScore("환영병 50마리 사냥");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/50)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq47_2(Player player, int num) {
+		if(num>=50) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 30000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			QuestBoard qb = new QuestBoard();
+			qb.mq47_3(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 47장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===라히무호나 섬2===");
+		score.setScore(2);
+		Score score2 = obj.getScore("붉은 좀비 50마리 사냥");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/50)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq47_3(Player player, int num) {
+		if(num>=50) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 30000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			QuestBoard qb = new QuestBoard();
+			qb.mq47_4(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 47장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===라히무호나 섬3===");
+		score.setScore(2);
+		Score score2 = obj.getScore("유혹하는 나무 50마리 사냥");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/50)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq47_4(Player player, int num) {
+		if(num>=30) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 30000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "데히트라: 크큭.. 수고했다.%데히트라: 종을 울리거라.%§7맑은 음색의 공명이 세계를 뒤덮는다.%데히트라: 이제 하나 남았구나.%데히트라: 크하하하하하.");
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 47장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===라히무호나 섬4===");
+		score.setScore(2);
+		Score score2 = obj.getScore("중급 파괴수 30마리 사냥");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/30)");
 		score3.setScore(0);
 		player.setScoreboard(board);
 	}

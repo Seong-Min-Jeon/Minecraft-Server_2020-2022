@@ -89,6 +89,12 @@ public class PlayerHitDebuff {
 		mob41(player, mob);
 		mob42(player, mob);
 		mob43(player, mob);
+		mob44(player, mob);
+		mob45(player, mob);
+		mob46(player, mob);
+		mob47(player, mob);
+		mob48(player, mob);
+		mob49(player, mob);
 	}
 
 	// 시련의 형상
@@ -2334,7 +2340,6 @@ public class PlayerHitDebuff {
 
 					}, 0, 1);
 					((LivingEntity) mob).setHealth(((LivingEntity) mob).getHealth() + 8);
-					player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 1.0f, 1.0f);
 					player.sendMessage(ChatColor.RED + "드래곤의 광주가 울려퍼집니다.");
 					sendMessage(player, ChatColor.RED + "드래곤의 광주가 울려퍼집니다.");
 					((Skeleton) mob).setTarget(player);
@@ -2659,31 +2664,95 @@ public class PlayerHitDebuff {
 		}
 	}
 	
+	// 환영병
 	public void mob44(Player player, Entity mob) {
-
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("환영병" + ChatColor.YELLOW + " [Lv.532]")) {
+			player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_GHAST_SCREAM, 0.5f, 1.0f);
+		}
 	}
 	
+	// 붉은 좀비
 	public void mob45(Player player, Entity mob) {
-
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("붉은 좀비" + ChatColor.YELLOW + " [Lv.538]")) {
+			player.setFireTicks(100);
+		}
 	}
 	
+	// 포자를 날리는 검은 버섯
 	public void mob46(Player player, Entity mob) {
-
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("포자를 날리는 검은 버섯" + ChatColor.YELLOW + " [Lv.542]")) {
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 100, 0, true, false, false));
+		}
 	}
 	
+	// 유혹하는 나무
 	public void mob47(Player player, Entity mob) {
-
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("유혹하는 나무" + ChatColor.YELLOW + " [Lv.544]")) {
+			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 100, 0, true, false, false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 100, 50, true, false, false));
+			player.damage(500);
+		}
 	}
 	
+	// 재앙을 날리는 검은 버섯
 	public void mob48(Player player, Entity mob) {
-
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("재앙을 날리는 검은 버섯" + ChatColor.YELLOW + " [Lv.550]")) {
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 100, 0, true, false, false));
+		}
 	}
 	
+	// 중급 파괴수
 	public void mob49(Player player, Entity mob) {
-
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("중급 파괴수" + ChatColor.YELLOW + " [Lv.554]")) {
+			int num = rnd.nextInt(8);
+			if (num == 0) {
+				player.setVelocity(new Vector(0, 3, 0));
+				player.damage(2000);
+			}
+		}
 	}
 	
 	public void mob50(Player player, Entity mob) {
+
+	}
+	
+	public void mob51(Player player, Entity mob) {
+
+	}
+	
+	public void mob52(Player player, Entity mob) {
+
+	}
+	
+	public void mob53(Player player, Entity mob) {
+
+	}
+	
+	public void mob54(Player player, Entity mob) {
+
+	}
+	
+	public void mob55(Player player, Entity mob) {
+
+	}
+	
+	public void mob56(Player player, Entity mob) {
+
+	}
+	
+	public void mob57(Player player, Entity mob) {
+
+	}
+	
+	public void mob58(Player player, Entity mob) {
+
+	}
+	
+	public void mob59(Player player, Entity mob) {
+
+	}
+	
+	public void mob60(Player player, Entity mob) {
 
 	}
 
