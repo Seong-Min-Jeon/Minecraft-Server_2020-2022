@@ -5944,6 +5944,9 @@ public class MobLoot {
 		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===라히무호나 섬1===")) {
 			int qNum = cb.getNum(player);
 			cb.mq47_1(player, qNum + 1);
+		} else if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===환영하는 병사===")) {
+			int qNum = cb.getNum(player);
+			cb.q25(player, qNum + 1);
 		}
 	}
 	
@@ -6129,6 +6132,9 @@ public class MobLoot {
 		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===라히무호나 섬3===")) {
 			int qNum = cb.getNum(player);
 			cb.mq47_3(player, qNum + 1);
+		} else if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===움직이지 않는 자===")) {
+			int qNum = cb.getNum(player);
+			cb.q26(player, qNum + 1);
 		}
 	}
 	

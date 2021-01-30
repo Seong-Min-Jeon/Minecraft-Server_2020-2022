@@ -627,7 +627,7 @@ public class QuestBoard {
 			item.setItemMeta(im);
 			player.getInventory().addItem(item);
 			player.sendMessage(ChatColor.AQUA + "에메랄드 결정" + ChatColor.WHITE + " 20개를 획득했다.");
-			es.giveExp(player, 8000000);
+			es.giveExp(player, 7500000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			return;
 		}
@@ -640,6 +640,60 @@ public class QuestBoard {
 		Score score2 = obj.getScore("미아즈마의 애완곰 30마리 사냥");
 		score2.setScore(1);
 		Score score4 = obj.getScore("(" + num + "/30)");
+		score4.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void q25(Player player, int num) {
+		//상점
+		if(num>=30) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			Location chestLoc = new Location(player.getWorld(), -1833, 92, 3036);
+			Block block = chestLoc.getBlock();
+			Chest chest = (Chest) block.getState();
+			ItemStack weapon1 = chest.getInventory().getItem(15);
+			player.getInventory().addItem(weapon1);
+			player.sendMessage(ChatColor.WHITE + "환영병의 북" + ChatColor.WHITE + "을 획득했다.");
+			es.giveExp(player, 8000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.YELLOW + "A급 퀘스트");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===환영하는 병사===");
+		score.setScore(2);
+		Score score2 = obj.getScore("환영병 30마리 사냥");
+		score2.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/30)");
+		score4.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void q26(Player player, int num) {
+		//상점
+		if(num>=100) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			ItemStack var1 = new ItemStack(Material.DIAMOND_ORE, 64);
+			ItemMeta var1Im = var1.getItemMeta();
+			var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석");
+			var1.setItemMeta(var1Im);
+			player.getInventory().addItem(var1);
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석" + ChatColor.WHITE + " 64개를 획득했다.");
+			es.giveExp(player, 8000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.AQUA + "SS급 퀘스트");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===움직이지 않는 자===");
+		score.setScore(2);
+		Score score2 = obj.getScore("유혹하는 나무 100마리 사냥");
+		score2.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/100)");
 		score4.setScore(0);
 		player.setScoreboard(board);
 	}

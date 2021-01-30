@@ -441,6 +441,14 @@ public class SaveAll {
 						int number = qb.getNum(player);
 						fw.write("q24\n");
 						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===환영하는 병사===")) {
+						int number = qb.getNum(player);
+						fw.write("q25\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===움직이지 않는 자===")) {
+						int number = qb.getNum(player);
+						fw.write("q26\n");
+						fw.write(Integer.toString(number));
 					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===설원의 가희1===")) {
 						int number = qb.getNum(player);
 						fw.write("eq1\n");

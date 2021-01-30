@@ -44,6 +44,8 @@ public class QuestScroll {
 				q22(player, itemArg, world);
 				q23(player, itemArg, world);
 				q24(player, itemArg, world);
+				q25(player, itemArg, world);
+				q26(player, itemArg, world);
 				eq1(player, itemArg, world);
 				eq2(player, itemArg, world);
 				eq3(player, itemArg, world);
@@ -298,6 +300,22 @@ public class QuestScroll {
 			msg.msg(player, "§7미아즈마에게 직접 권법을 배운 곰은 그의 오른팔이 되었다.%§7곰들이 더욱 강해지기 전에 빠르게 처리하자.");
 			QuestBoard qb = new QuestBoard();
 			qb.q24(player, 0);
+		}	
+	}
+	
+	public void q25(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "퀘스트: 환영하는 병사")) {
+			msg.msg(player, "§7라히무호나는 관광으로 유명한 섬이었다.%§7하지만 포보르들이 점령한 뒤로는 발걸음이 끊기게 되었다고 한다.%§7포보르들은 지나가는 배를 끌어들이기 위해 환영을 사용했다.%§7그들은 먹잇감을 환영하였고, 이러한 행위를 위한 부대를 만들었다.");
+			QuestBoard qb = new QuestBoard();
+			qb.q25(player, 0);
+		}	
+	}
+	
+	public void q26(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "퀘스트: 움직이지 않는 자")) {
+			msg.msg(player, "§7유혹하는 나무는 거대한 고목의 가지였다.%§7고목은 포보르에 의해 사람 모양으로 나누어졌다.%§7나누어진 나무들은 포보르를 위한 전사가 되었다.%§7그들은 검은 흐름과 심장 속 보석의 힘으로 강력한 힘을 가지게 되었다.");
+			QuestBoard qb = new QuestBoard();
+			qb.q26(player, 0);
 		}	
 	}
 	
