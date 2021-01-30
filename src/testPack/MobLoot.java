@@ -5939,6 +5939,12 @@ public class MobLoot {
 			player.getInventory().addItem(var5);
 			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===라히무호나 섬1===")) {
+			int qNum = cb.getNum(player);
+			cb.mq47_1(player, qNum + 1);
+		}
 	}
 	
 	// 타란튤라
@@ -6003,6 +6009,12 @@ public class MobLoot {
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
 			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+		}
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===라히무호나 섬2===")) {
+			int qNum = cb.getNum(player);
+			cb.mq47_2(player, qNum + 1);
 		}
 	}
 	
@@ -6111,6 +6123,12 @@ public class MobLoot {
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
 			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+		}
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===라히무호나 섬3===")) {
+			int qNum = cb.getNum(player);
+			cb.mq47_3(player, qNum + 1);
 		}
 	}
 	
@@ -6231,6 +6249,12 @@ public class MobLoot {
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 2470000);
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===라히무호나 섬4===")) {
+			int qNum = cb.getNum(player);
+			cb.mq47_4(player, qNum + 1);
+		}
 	}
 	
 	public void mob250(Player player) {

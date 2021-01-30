@@ -925,6 +925,26 @@ public class SaveAll {
 						int number = qb.getNum(player);
 						fw.write("mq46_9\n");
 						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===3개의 종===")) {
+						int number = qb.getNum(player);
+						fw.write("mq47\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===라히무호나 섬1===")) {
+						int number = qb.getNum(player);
+						fw.write("mq47_1\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===라히무호나 섬2===")) {
+						int number = qb.getNum(player);
+						fw.write("mq47_2\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===라히무호나 섬3===")) {
+						int number = qb.getNum(player);
+						fw.write("mq47_3\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===라히무호나 섬4===")) {
+						int number = qb.getNum(player);
+						fw.write("mq47_4\n");
+						fw.write(Integer.toString(number));
 					}
 					fw.close();
 					bufReader.close();

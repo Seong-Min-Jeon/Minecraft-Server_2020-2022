@@ -106,18 +106,7 @@ public class MainQuest {
 		} else if(lvl == 500) {
 			main46(player);
 		} else if(lvl == 530) {
-			// 데히트라가 방울에 대한 정보를 줌 - 하마베에서 만남(버튼을 누름)
-			// 나 또한 이 세계에서는 NPC다. 즉, 너에게 퀘스트를 강요할 힘이 있다는 것이지.
-			// 라히무호나에 있는 종은 지금 나에게 있다. 이쪽 종은 크기가 작아서 말이지.
-			// 네놈이 나의 퀘스트를 충실히 이행한다면 종을 주도록 하지. 자, 어떤가 충분한 보상이 아닌가?
-			//
-			// 몹 잡기를 계속 시킴
-			//
-			// 크큭.. 수고했다. 
-			// 종을 울리거라.
-			// (맑은 음색의 공명이 세계를 뒤덮는다.)
-			// 이제 하나 남았구나.
-			// 크하하하하하.
+			main47(player);
 		} else if(lvl == 550) {
 			
 		} else if(lvl == 560) {
@@ -895,6 +884,27 @@ public class MainQuest {
 		scrollLore.add(ChatColor.RED + "1. 해당 퀘스트 스크롤을 사용하면 라파누이의");
 		scrollLore.add(ChatColor.RED + "모든 메인 퀘스트를 순서대로 진행할 수 있습니다.");
 		scrollLore.add(ChatColor.RED + "2. 다음 메인 퀘스트 스크롤은 530레벨에 받을 수 있습니다.");
+		scrollIm.setLore(scrollLore);
+		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		scrollIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		scrollIm.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
+		scrollIm.setUnbreakable(true);
+		scroll.setItemMeta(scrollIm);		
+		player.getInventory().addItem(scroll);
+	}
+	
+	public void main47(Player player) {
+		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
+		ItemMeta scrollIm = scroll.getItemMeta();
+		scrollIm.setDisplayName(ChatColor.GOLD + "메인퀘스트 47장");
+		ArrayList<String> scrollLore = new ArrayList();
+		scrollLore.add(ChatColor.GRAY + "'3개의 종' 퀘스트를 진행할 수 있다.");
+		scrollLore.add(ChatColor.GRAY + " ");
+		scrollLore.add(ChatColor.RED + "※주의 사항※");
+		scrollLore.add(ChatColor.RED + "1. 해당 퀘스트 스크롤을 사용하면 라히무호나의");
+		scrollLore.add(ChatColor.RED + "모든 메인 퀘스트를 순서대로 진행할 수 있습니다.");
+		scrollLore.add(ChatColor.RED + "2. 다음 메인 퀘스트 스크롤은 550레벨에 받을 수 있습니다.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);

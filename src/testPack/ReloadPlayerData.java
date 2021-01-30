@@ -544,6 +544,21 @@ public class ReloadPlayerData {
 					} else if (quest.equals("mq46_9")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq46_9(player, Integer.parseInt(num));
+					} else if (quest.equals("mq47")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq47(player, Integer.parseInt(num));
+					} else if (quest.equals("mq47_1")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq47_1(player, Integer.parseInt(num));
+					} else if (quest.equals("mq47_2")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq47_2(player, Integer.parseInt(num));
+					} else if (quest.equals("mq47_3")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq47_3(player, Integer.parseInt(num));
+					} else if (quest.equals("mq47_4")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq47_4(player, Integer.parseInt(num));
 					}
 					bufReader.close();
 				} catch (Exception e) {

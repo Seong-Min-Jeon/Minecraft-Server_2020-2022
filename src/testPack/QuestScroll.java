@@ -93,6 +93,7 @@ public class QuestScroll {
 				mq44(player, itemArg, world);
 				mq45(player, itemArg, world);
 				mq46(player, itemArg, world);
+				mq47(player, itemArg, world);
 			} else {
 				itemArg.remove();
 				player.getInventory().addItem(itemArg.getItemStack());
@@ -723,6 +724,14 @@ public class QuestScroll {
 					+ "네비: 운 좋게 거기서 뭘 얻을 수 있으면 좋은거구!%네비: 일단 도움이 필요한 섬들에 대해 찾아보자!");
 			QuestBoard qb = new QuestBoard();
 			qb.mq46(player, 0);
+		}	
+	}
+	
+	public void mq47(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "메인퀘스트 47장")) {
+			msg.msg(player, "네비: 익명의 어떤 분이 퀘스트를 보냈지 뭐야.%네비: 정해진 좌표로 오기만 하면 된다는데..%네비: 가기만 하면 경험치라도 주겠지.");
+			QuestBoard qb = new QuestBoard();
+			qb.mq47(player, 0);
 		}	
 	}
 	

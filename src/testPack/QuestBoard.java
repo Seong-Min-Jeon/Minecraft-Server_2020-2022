@@ -3613,7 +3613,7 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 30000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "네비: 후우~ 오늘도 한건 했네요.%데히트라: 여어. 오랜만이다." + player.getDisplayName() + "%데히트라: 오늘도 고생하는구나.%"
+			msg.msg(player, "네비: 후우~ 오늘도 한건 했네요.%데히트라: 여어. 오랜만이다. " + player.getDisplayName() + "%데히트라: 오늘도 고생하는구나.%"
 					+ "데히트라: 곧 나와 만나게 될 것 같군.%데히트라: 그 때까지 잘 살아있어주거라.%네비: 흐으음.. 쟤는 누굴까?");
 			return;
 		}
@@ -3635,11 +3635,11 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 30000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "데히트라: 라파누이에서 무슨 생각으로 종을 울린 것인지 먼저 묻겠다.%데히트라: 종의 의미를 모르는 것이냐.%데히트라: 세계에는 포보르를 봉인하는 3개의 종이 있다.%데히트라: 반대로 말하면 포보르를 깨우기 위한 종이기도 하지.%"
+			msg.msg(player, "데히트라: 잘 왔다 나의 오랜 친구여.%데히트라: 먼저 물어볼 것이 있다.%데히트라: 라파누이에서 무슨 생각으로 종을 울린 것이냐.%데히트라: 종의 의미를 모르는 것이냐.%데히트라: 세계에는 포보르를 봉인하는 3개의 종이 있다.%데히트라: 반대로 말하면 포보르를 깨우기 위한 종이기도 하지.%"
 					+ "데히트라: 네놈이 모든 종을 울리게 되면 무슨 일이 일어나는지 알려주지.%데히트라: 어딘가에 존재하는 요정들의 문이며 이계로 향하는 문.%데히트라: 먼 옛날 투어허 데 다넌의 영웅들이 팔리아스나 다른 땅에서 왔다는 그 문.%"
 					+ "데히트라: 그 문이 열리게 되는 것이다.%데히트라: 그 문을 열게되면 너는 강해지겠지.%데히트라: 하지만 그게 끝이 아니라는건 알고 있을텐데.%데히트라: 각지의 포보르들은 힘을 되찾을꺼야.%데히트라: 왜?%데히트라: 문으로 봉인된 포보르의 왕들도 깨어나게 될꺼니까.%"
 					+ "데히트라: 너는 포보르의 왕을 쓰러뜨릴 재목이 될 수 있어.%데히트라: 하지만 그걸로 끝일까?%데히트라: 그게 과연 해피엔딩을 위한 길일까?%데히트라: 선택은 너에게 맡기도록 하지.%데히트라: ... 서론이 길었군.%"
-					+ "데히트라: 3개의 종 중 두번째 종은 내가 가지고 있다.%데히트라: 이쪽 종은 크기가 작아서 말이지.%데히트라: 네놈이 나의 퀘스트를 충실히 이행한다면 종을 주도록 하지.%데히트라: 자, 어떤가 충분한 보상이 아닌가?");
+					+ "데히트라: 3개의 종 중 두번째 종은 내가 가지고 있다.%데히트라: 이쪽 종은 크기가 작아서 말이지.%데히트라: 네놈이 나의 퀘스트를 충실히 이행한다면 종을 주도록 하지.%데히트라: 자, 어떤가 충분한 보상이 아닌가?%tp887 55 -25");
 			QuestBoard qb = new QuestBoard();
 			qb.mq47_1(player, 0);
 			return;
@@ -3650,9 +3650,9 @@ public class QuestBoard {
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
 		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===3개의 종===");
 		score.setScore(3);
-		Score score2 = obj.getScore("데히트라와 대화");
+		Score score2 = obj.getScore("정해진 장소로 이동");
 		score2.setScore(2);
-		Score score3 = obj.getScore("위치: ,,");
+		Score score3 = obj.getScore("위치: 887,54,-24");
 		score3.setScore(1);
 		Score score4 = obj.getScore("(" + num + "/1)");
 		score4.setScore(0);

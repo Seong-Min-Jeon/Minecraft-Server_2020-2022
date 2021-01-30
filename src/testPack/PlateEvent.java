@@ -30,6 +30,7 @@ public class PlateEvent {
 		hamabeHidden2(player, block, world);
 		laphanui1(player, block, world);
 		laphanui2(player, block, world);
+		hamabe1(player, block, world);
 	}
 	
 	// 암석 거인
@@ -262,4 +263,18 @@ public class PlateEvent {
 		}
 	}
 		
+	// 하마베 데히트라
+	public void hamabe1(Player player, Block block, World world) {
+		if (block.getType() == Material.STONE_BUTTON) {
+			if (block.getX() == 887 && block.getZ() == -24) {
+				QuestBoard cb = new QuestBoard();
+				if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===3개의 종===")) {
+					player.teleport(new Location(world, 3796, 19, 3799.5));
+					int qNum = cb.getNum(player);
+					cb.mq47(player, qNum + 1);
+				}
+			}
+		}
+	}
+	
 }

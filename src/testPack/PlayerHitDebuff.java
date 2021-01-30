@@ -2339,7 +2339,7 @@ public class PlayerHitDebuff {
 						}
 
 					}, 0, 1);
-					((LivingEntity) mob).setHealth(((LivingEntity) mob).getHealth() + 8);
+					((LivingEntity) mob).setHealth(((LivingEntity) mob).getHealth() + 10);
 					player.sendMessage(ChatColor.RED + "드래곤의 광주가 울려퍼집니다.");
 					sendMessage(player, ChatColor.RED + "드래곤의 광주가 울려퍼집니다.");
 					((Skeleton) mob).setTarget(player);
@@ -2399,6 +2399,8 @@ public class PlayerHitDebuff {
 					player.getWorld().spawnEntity(mob.getLocation(), EntityType.SILVERFISH);
 					player.getWorld().spawnEntity(mob.getLocation(), EntityType.SILVERFISH);
 					player.getWorld().spawnEntity(mob.getLocation(), EntityType.SILVERFISH);
+					player.getWorld().spawnEntity(mob.getLocation(), EntityType.SILVERFISH);
+					player.getWorld().spawnEntity(mob.getLocation(), EntityType.SILVERFISH);
 				} else if(num == 1) {
 					Location loc = mob.getLocation();
 					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
@@ -2439,8 +2441,7 @@ public class PlayerHitDebuff {
 									if (ent instanceof Player) {
 										Player player = (Player) ent;
 										player.getWorld().playEffect(mob.getLocation(), Effect.END_GATEWAY_SPAWN, 2);
-										player.setHealth(player.getHealth()/3);
-										player.setHealth(player.getHealth()-1);
+										player.setHealth(player.getHealth()-5);
 									}
 								}
 								List<Entity> nearPlayer = mob.getNearbyEntities(120, 10, 120);
