@@ -31,6 +31,15 @@ public class PlateEvent {
 		laphanui1(player, block, world);
 		laphanui2(player, block, world);
 		hamabe1(player, block, world);
+		hamabeHidden21(player, block, world);
+		hamabeHidden221(player, block, world);
+		hamabeHidden222(player, block, world);
+		hamabeHidden223(player, block, world);
+		hamabeHidden224(player, block, world);
+		hamabeHidden231(player, block, world);
+		hamabeHidden232(player, block, world);
+		hamabeHidden233(player, block, world);
+		hamabeHidden234(player, block, world);
 	}
 	
 	// 암석 거인
@@ -272,6 +281,150 @@ public class PlateEvent {
 					player.teleport(new Location(world, 3796, 19, 3799.5));
 					int qNum = cb.getNum(player);
 					cb.mq47(player, qNum + 1);
+				}
+			}
+		}
+	}
+	
+	// 하마베 히든2 1
+	public void hamabeHidden21(Player player, Block block, World world) {
+		if (block.getType() == Material.STONE_PRESSURE_PLATE) {
+			if (block.getX() == 1070 && block.getZ() == 56) {
+				for (ItemStack is : player.getInventory().getContents()) {
+					if(is == null) continue;
+					if(is.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "에메랄드 결정")) {
+		    			is.setAmount(is.getAmount() - 1);
+		    			player.teleport(new Location(player.getWorld(), 1070.5, 68, 53.5, 180, 0));
+		    			return;
+					}
+				}
+			}
+		}
+	}
+	
+	// 하마베 히든2 2_1
+	public void hamabeHidden221(Player player, Block block, World world) {
+		if (block.getType() == Material.STONE_PRESSURE_PLATE) {
+			if (block.getX() == 1068 && block.getZ() == 48) {
+				for (ItemStack is : player.getInventory().getContents()) {
+					if(is == null) continue;
+					if(is.getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "에메랄드 주머니")) {
+		    			is.setAmount(is.getAmount() - 1);
+		    			player.teleport(new Location(player.getWorld(), 1066.5, 68, 48.5, 90, 0));
+		    			return;
+					}
+				}
+			}
+		}
+	}
+	
+	// 하마베 히든2 2_2
+	public void hamabeHidden222(Player player, Block block, World world) {
+		if (block.getType() == Material.STONE_PRESSURE_PLATE) {
+			if (block.getX() == 1062 && block.getZ() == 47) {
+				for (ItemStack is : player.getInventory().getContents()) {
+					if (is == null) continue;
+					if (is.getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "미래를 예지하는 눈")) {
+						is.setAmount(is.getAmount() - 1);
+						player.teleport(new Location(player.getWorld(), 1062.5, 68, 45.5, 180, 0));
+						return;
+					}
+				}
+			}
+		}
+	}
+	
+	// 하마베 히든2 2_3
+	public void hamabeHidden223(Player player, Block block, World world) {
+		if (block.getType() == Material.STONE_PRESSURE_PLATE) {
+			if (block.getX() == 1061 && block.getZ() == 40) {
+				for (ItemStack is : player.getInventory().getContents()) {
+					if (is == null) continue;
+					if (is.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "금")) {
+						is.setAmount(is.getAmount() - 1);
+						player.teleport(new Location(player.getWorld(), 1059.5, 68, 40.5, 90, 0));
+						return;
+					}
+				}
+			}
+		}
+	}
+	
+	// 하마베 히든2 2_4
+	public void hamabeHidden224(Player player, Block block, World world) {
+		if (block.getType() == Material.STONE_PRESSURE_PLATE) {
+			if (block.getX() == 1055 && block.getZ() == 41) {
+				for (ItemStack is : player.getInventory().getContents()) {
+					if (is == null) continue;
+					if (is.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장")) {
+						is.setAmount(is.getAmount() - 1);
+						player.teleport(new Location(player.getWorld(), 1055.5, 68, 43.5, 0, 0));
+						return;
+					}
+				}
+			}
+		}
+	}
+
+	// 하마베 히든2 3_1
+	public void hamabeHidden231(Player player, Block block, World world) {
+		if (block.getType() == Material.STONE_PRESSURE_PLATE) {
+			if (block.getX() == 1072 && block.getZ() == 48) {
+				for (ItemStack is : player.getInventory().getContents()) {
+					if(is == null) continue;
+					if(is.getItemMeta().getDisplayName().equals(ChatColor.WHITE + "김치")) {
+		    			is.setAmount(is.getAmount() - 1);
+		    			player.teleport(new Location(player.getWorld(), 1074.5, 68, 48.5, 270, 0));
+		    			return;
+					}
+				}
+			}
+		}
+	}
+	
+	// 하마베 히든2 3_2
+	public void hamabeHidden232(Player player, Block block, World world) {
+		if (block.getType() == Material.STONE_PRESSURE_PLATE) {
+			if (block.getX() == 1078 && block.getZ() == 47) {
+				for (ItemStack is : player.getInventory().getContents()) {
+					if(is == null) continue;
+					if(is.getItemMeta().getDisplayName().equals(ChatColor.WHITE + "순수한 얼음")) {
+		    			is.setAmount(is.getAmount() - 1);
+		    			player.teleport(new Location(player.getWorld(), 1078.5, 68, 45.5, 180, 0));
+		    			return;
+					}
+				}
+			}
+		}
+	}
+	
+	// 하마베 히든2 3_3
+	public void hamabeHidden233(Player player, Block block, World world) {
+		if (block.getType() == Material.STONE_PRESSURE_PLATE) {
+			if (block.getX() == 1077 && block.getZ() == 41) {
+				for (ItemStack is : player.getInventory().getContents()) {
+					if(is == null) continue;
+					if(is.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "포보르의 마나")) {
+		    			is.setAmount(is.getAmount() - 1);
+		    			player.teleport(new Location(player.getWorld(), 1075.5, 68, 41.5, 90, 0));
+		    			return;
+					}
+				}
+			}
+		}
+	}
+	
+	// 하마베 히든2 3_4
+	public void hamabeHidden234(Player player, Block block, World world) {
+		if (block.getType() == Material.STONE_PRESSURE_PLATE) {
+			if (block.getX() == 1070 && block.getZ() == 40) {
+				for (ItemStack is : player.getInventory().getContents()) {
+					if(is == null) continue;
+					if(is.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드")) {
+		    			is.setAmount(is.getAmount() - 1);
+		    			player.teleport(new Location(player.getWorld(), 1070.5, 68, 38.5, 90, 0));
+		    			return;
+					}
 				}
 			}
 		}

@@ -363,6 +363,40 @@ public class SpecialEffect {
 		return 0;
 	}
 	
+	public int s4(Player player) {
+		try {
+			if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "데이드릭 헬멧")) {
+				if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "데이드릭 갑옷")) {
+					if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "데이드릭 각반")) {
+						if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "데이드릭 신발")) {
+							return -50;
+						}
+					}
+				}
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+	public int s5(Player player) {
+		try {
+			if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "데이드릭 헬멧")) {
+				if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "데이드릭 갑옷")) {
+					if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "데이드릭 각반")) {
+						if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "데이드릭 신발")) {
+							return -100;
+						}
+					}
+				}
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
 	
 	
 	

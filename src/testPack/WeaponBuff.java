@@ -475,6 +475,18 @@ public class WeaponBuff {
 							}
 						}
 						
+						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "데이드릭 헬멧")) {
+							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "데이드릭 갑옷")) {
+								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "데이드릭 각반")) {
+									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "데이드릭 신발")) {
+										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 10000,true,false,false));
+										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 4,true,false,false));
+										player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 1,true,false,false));
+									}
+								}
+							}
+						}
+						
 					}
 				}
 			}
