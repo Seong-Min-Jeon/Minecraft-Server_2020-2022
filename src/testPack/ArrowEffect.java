@@ -97,13 +97,16 @@ public class ArrowEffect {
 				} else if(im.getDisplayName().equals(ChatColor.AQUA + "에이션트 윙")) {
 					if(player.getLevel() >= 480) {
 						if(checkMana(player, 3)) {
-							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BEACON_ACTIVATE, 1.0f, 8.0f);
-							player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 1, true, false, false));
-							Vector vec = player.getEyeLocation().getDirection().multiply(2.5f);
-							player.setVelocity(vec);
-							player.getWorld().playSound(player.getLocation(), Sound.ENTITY_BLAZE_AMBIENT, 1.0f, 1.8f);
-							player.sendMessage(ChatColor.GREEN + "신속이 부여됩니다.");
-							removeMana(player, 3);
+							if ((player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) || (player.getLocation().getBlock().getType() != Material.AIR)
+									|| (player.getLocation().add(0,-2,0).getBlock().getType() != Material.AIR)) {		
+								player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BEACON_ACTIVATE, 1.0f, 8.0f);
+								player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 1, true, false, false));
+								Vector vec = player.getEyeLocation().getDirection().multiply(2.5f);
+								player.setVelocity(vec);
+								player.getWorld().playSound(player.getLocation(), Sound.ENTITY_BLAZE_AMBIENT, 1.0f, 1.8f);
+								player.sendMessage(ChatColor.GREEN + "신속이 부여됩니다.");
+								removeMana(player, 3);
+							}
 						}
 					} 
 				} else if(im.getDisplayName().equals(ChatColor.DARK_RED + "트리니티 스태프")) {

@@ -102,19 +102,35 @@ public class PlateEvent {
 													if (loc2.getX() <= 3697 && loc2.getY() <= 95 && loc2.getZ() <= 2900 
 															&& loc2.getX() >= 3658 && loc2.getY() >= 41 && loc2.getZ() >= 2820) {
 														nearPlayer.teleport(new Location(player.getWorld(), 3685, 151, 2858.5));
-														System.out.println(0);
 													}
 												}
 											}
 										} catch(Exception e) {
 											
 										}
-										System.out.println(1);
+										
 										try {
-											System.out.println(2);
-											System.out.println(player.getDisplayName());
-											player.teleport(new Location(player.getWorld(), 3685, 151, 2858.5));
-											System.out.println(3);
+											taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+												int time = 0;
+												ThreadData td = new ThreadData(player.getUniqueId());
+
+												@Override
+												public void run() {
+													if (!td.hasID()) {
+														td.setID(taskID);
+													}
+
+													if (time >= 10) {
+														player.teleport(new Location(player.getWorld(), 3685, 151, 2858.5));
+														td.endTask();
+														td.removeID();
+													}
+
+													time++;
+												}
+
+											}, 0, 1);
 										} catch (Exception e) {
 
 										}
@@ -122,7 +138,7 @@ public class PlateEvent {
 										bb.setProgress(bb.getProgress() - 0.1);
 										int p = rnd.nextInt(10);
 										int q = rnd.nextInt(10);
-										world.playSound(new Location(world, 3652, 48 + p, 2848 + 2 * q), Sound.ENTITY_GENERIC_EXPLODE, 2.5f, 1.0f);
+										world.playSound(new Location(world, 3652, 48 + p, 2848 + 2 * q), Sound.ENTITY_GENERIC_EXPLODE, 20f, 1.0f);
 										world.spawnParticle(Particle.EXPLOSION_LARGE, new Location(world, 3652, 48 + p, 2848 + 2 * q), 5);
 									}
 								}
@@ -356,7 +372,7 @@ public class PlateEvent {
 			if (block.getX() == 1055 && block.getZ() == 41) {
 				for (ItemStack is : player.getInventory().getContents()) {
 					if (is == null) continue;
-					if (is.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장")) {
+					if (is.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "최상급 포보르의 뿔")) {
 						is.setAmount(is.getAmount() - 1);
 						player.teleport(new Location(player.getWorld(), 1055.5, 68, 43.5, 0, 0));
 						return;
@@ -422,7 +438,7 @@ public class PlateEvent {
 					if(is == null) continue;
 					if(is.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드")) {
 		    			is.setAmount(is.getAmount() - 1);
-		    			player.teleport(new Location(player.getWorld(), 1070.5, 68, 38.5, 90, 0));
+		    			player.teleport(new Location(player.getWorld(), 1070.5, 68, 38.5, 180, 0));
 		    			return;
 					}
 				}

@@ -557,7 +557,7 @@ public class Main extends JavaPlugin implements Listener{
 		
 		ItemStack helmet = new ItemStack(Material.GOLDEN_HELMET);
 		ItemMeta helmetIm = helmet.getItemMeta();
-		helmetIm.setLocalizedName("0,0,0,0,0,1000,1000,1000,1000,0,550");
+		helmetIm.setLocalizedName("0,0,0,0,0,1000,500,500,500,1000,530");
 		helmetIm.setDisplayName(ChatColor.GREEN + "데이드릭 헬멧");
 		ArrayList<String> helmetLore = new ArrayList();
 		helmetLore.add(ChatColor.GRAY + "레벨 제한: 530");
@@ -576,7 +576,7 @@ public class Main extends JavaPlugin implements Listener{
 
 		ItemStack chestplate = new ItemStack(Material.GOLDEN_CHESTPLATE);
 		ItemMeta chestplateIm = chestplate.getItemMeta();
-		chestplateIm.setLocalizedName("0,0,0,0,0,1000,1000,1000,1000,0,550");
+		chestplateIm.setLocalizedName("0,0,0,0,0,1000,500,500,500,1000,530");
 		chestplateIm.setDisplayName(ChatColor.GREEN + "데이드릭 갑옷");
 		ArrayList<String> chestplateLore = new ArrayList();
 		chestplateLore.add(ChatColor.GRAY + "레벨 제한: 530");
@@ -595,7 +595,7 @@ public class Main extends JavaPlugin implements Listener{
 
 		ItemStack leggings = new ItemStack(Material.GOLDEN_LEGGINGS);
 		ItemMeta leggingsIm = leggings.getItemMeta();
-		leggingsIm.setLocalizedName("0,0,0,0,0,1000,1000,1000,1000,0,550");
+		leggingsIm.setLocalizedName("0,0,0,0,0,1000,500,500,500,1000,530");
 		leggingsIm.setDisplayName(ChatColor.GREEN + "데이드릭 각반");
 		ArrayList<String> leggingsLore = new ArrayList();
 		leggingsLore.add(ChatColor.GRAY + "레벨 제한: 530");
@@ -614,7 +614,7 @@ public class Main extends JavaPlugin implements Listener{
 
 		ItemStack boots = new ItemStack(Material.GOLDEN_BOOTS);
 		ItemMeta bootsIm = boots.getItemMeta();
-		bootsIm.setLocalizedName("0,0,0,0,0,1000,1000,1000,1000,0,550");
+		bootsIm.setLocalizedName("0,0,0,0,0,1000,500,500,500,1000,530");
 		bootsIm.setDisplayName(ChatColor.GREEN + "데이드릭 신발");
 		ArrayList<String> bootsLore = new ArrayList();
 		bootsLore.add(ChatColor.GRAY + "레벨 제한: 530");
@@ -630,9 +630,7 @@ public class Main extends JavaPlugin implements Listener{
 		bootsIm.setLore(bootsLore);
 		boots.setItemMeta(bootsIm);
 		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(boots);}
-		
-		
-		
+//		
 //		ItemStack var1 = new ItemStack(Material.IRON_HELMET);
 //		ItemMeta var1Im = var1.getItemMeta();
 //		var1Im.setLocalizedName("300,200,200,300,100,500,800,800,800,500,400");
