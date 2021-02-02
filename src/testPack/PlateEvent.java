@@ -294,7 +294,27 @@ public class PlateEvent {
 			if (block.getX() == 887 && block.getZ() == -24) {
 				QuestBoard cb = new QuestBoard();
 				if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===3개의 종===")) {
-					player.teleport(new Location(world, 3796, 19, 3799.5));
+					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+						int time = 0;
+						ThreadData td = new ThreadData(player.getUniqueId());
+
+						@Override
+						public void run() {
+							if (!td.hasID()) {
+								td.setID(taskID);
+							}
+
+							if (time >= 10) {
+								player.teleport(new Location(world, 3796, 19, 3799.5));
+								td.endTask();
+								td.removeID();
+							}
+
+							time++;
+						}
+
+					}, 0, 1);
 					int qNum = cb.getNum(player);
 					cb.mq47(player, qNum + 1);
 				}
@@ -310,7 +330,27 @@ public class PlateEvent {
 					if(is == null) continue;
 					if(is.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "에메랄드 결정")) {
 		    			is.setAmount(is.getAmount() - 1);
-		    			player.teleport(new Location(player.getWorld(), 1070.5, 68, 53.5, 180, 0));
+		    			taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+							int time = 0;
+							ThreadData td = new ThreadData(player.getUniqueId());
+
+							@Override
+							public void run() {
+								if (!td.hasID()) {
+									td.setID(taskID);
+								}
+
+								if (time >= 10) {
+									player.teleport(new Location(player.getWorld(), 1070.5, 68, 53.5, 180, 0));
+									td.endTask();
+									td.removeID();
+								}
+
+								time++;
+							}
+
+						}, 0, 1);
 		    			return;
 					}
 				}
@@ -326,7 +366,27 @@ public class PlateEvent {
 					if(is == null) continue;
 					if(is.getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "에메랄드 주머니")) {
 		    			is.setAmount(is.getAmount() - 1);
-		    			player.teleport(new Location(player.getWorld(), 1066.5, 68, 48.5, 90, 0));
+		    			taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+							int time = 0;
+							ThreadData td = new ThreadData(player.getUniqueId());
+
+							@Override
+							public void run() {
+								if (!td.hasID()) {
+									td.setID(taskID);
+								}
+
+								if (time >= 10) {
+									player.teleport(new Location(player.getWorld(), 1066.5, 68, 48.5, 90, 0));
+									td.endTask();
+									td.removeID();
+								}
+
+								time++;
+							}
+
+						}, 0, 1);
 		    			return;
 					}
 				}
@@ -342,7 +402,27 @@ public class PlateEvent {
 					if (is == null) continue;
 					if (is.getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "미래를 예지하는 눈")) {
 						is.setAmount(is.getAmount() - 1);
-						player.teleport(new Location(player.getWorld(), 1062.5, 68, 45.5, 180, 0));
+						taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+							int time = 0;
+							ThreadData td = new ThreadData(player.getUniqueId());
+
+							@Override
+							public void run() {
+								if (!td.hasID()) {
+									td.setID(taskID);
+								}
+
+								if (time >= 10) {
+									player.teleport(new Location(player.getWorld(), 1062.5, 68, 45.5, 180, 0));
+									td.endTask();
+									td.removeID();
+								}
+
+								time++;
+							}
+
+						}, 0, 1);
 						return;
 					}
 				}
@@ -358,7 +438,27 @@ public class PlateEvent {
 					if (is == null) continue;
 					if (is.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "금")) {
 						is.setAmount(is.getAmount() - 1);
-						player.teleport(new Location(player.getWorld(), 1059.5, 68, 40.5, 90, 0));
+						taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+							int time = 0;
+							ThreadData td = new ThreadData(player.getUniqueId());
+
+							@Override
+							public void run() {
+								if (!td.hasID()) {
+									td.setID(taskID);
+								}
+
+								if (time >= 10) {
+									player.teleport(new Location(player.getWorld(), 1059.5, 68, 40.5, 90, 0));
+									td.endTask();
+									td.removeID();
+								}
+
+								time++;
+							}
+
+						}, 0, 1);
 						return;
 					}
 				}
@@ -374,7 +474,27 @@ public class PlateEvent {
 					if (is == null) continue;
 					if (is.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "최상급 포보르의 뿔")) {
 						is.setAmount(is.getAmount() - 1);
-						player.teleport(new Location(player.getWorld(), 1055.5, 68, 43.5, 0, 0));
+						taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+							int time = 0;
+							ThreadData td = new ThreadData(player.getUniqueId());
+
+							@Override
+							public void run() {
+								if (!td.hasID()) {
+									td.setID(taskID);
+								}
+
+								if (time >= 10) {
+									player.teleport(new Location(player.getWorld(), 1055.5, 68, 43.5, 0, 0));
+									td.endTask();
+									td.removeID();
+								}
+
+								time++;
+							}
+
+						}, 0, 1);
 						return;
 					}
 				}
@@ -390,7 +510,27 @@ public class PlateEvent {
 					if(is == null) continue;
 					if(is.getItemMeta().getDisplayName().equals(ChatColor.WHITE + "김치")) {
 		    			is.setAmount(is.getAmount() - 1);
-		    			player.teleport(new Location(player.getWorld(), 1074.5, 68, 48.5, 270, 0));
+		    			taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+							int time = 0;
+							ThreadData td = new ThreadData(player.getUniqueId());
+
+							@Override
+							public void run() {
+								if (!td.hasID()) {
+									td.setID(taskID);
+								}
+
+								if (time >= 10) {
+									player.teleport(new Location(player.getWorld(), 1074.5, 68, 48.5, 270, 0));
+									td.endTask();
+									td.removeID();
+								}
+
+								time++;
+							}
+
+						}, 0, 1);
 		    			return;
 					}
 				}
@@ -406,7 +546,27 @@ public class PlateEvent {
 					if(is == null) continue;
 					if(is.getItemMeta().getDisplayName().equals(ChatColor.WHITE + "순수한 얼음")) {
 		    			is.setAmount(is.getAmount() - 1);
-		    			player.teleport(new Location(player.getWorld(), 1078.5, 68, 45.5, 180, 0));
+		    			taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+							int time = 0;
+							ThreadData td = new ThreadData(player.getUniqueId());
+
+							@Override
+							public void run() {
+								if (!td.hasID()) {
+									td.setID(taskID);
+								}
+
+								if (time >= 10) {
+									player.teleport(new Location(player.getWorld(), 1078.5, 68, 45.5, 180, 0));
+									td.endTask();
+									td.removeID();
+								}
+
+								time++;
+							}
+
+						}, 0, 1);
 		    			return;
 					}
 				}
@@ -422,7 +582,27 @@ public class PlateEvent {
 					if(is == null) continue;
 					if(is.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "포보르의 마나")) {
 		    			is.setAmount(is.getAmount() - 1);
-		    			player.teleport(new Location(player.getWorld(), 1075.5, 68, 41.5, 90, 0));
+		    			taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+							int time = 0;
+							ThreadData td = new ThreadData(player.getUniqueId());
+
+							@Override
+							public void run() {
+								if (!td.hasID()) {
+									td.setID(taskID);
+								}
+
+								if (time >= 10) {
+									player.teleport(new Location(player.getWorld(), 1075.5, 68, 41.5, 90, 0));
+									td.endTask();
+									td.removeID();
+								}
+
+								time++;
+							}
+
+						}, 0, 1);
 		    			return;
 					}
 				}
@@ -438,7 +618,27 @@ public class PlateEvent {
 					if(is == null) continue;
 					if(is.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드")) {
 		    			is.setAmount(is.getAmount() - 1);
-		    			player.teleport(new Location(player.getWorld(), 1070.5, 68, 38.5, 180, 0));
+		    			taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+							int time = 0;
+							ThreadData td = new ThreadData(player.getUniqueId());
+
+							@Override
+							public void run() {
+								if (!td.hasID()) {
+									td.setID(taskID);
+								}
+
+								if (time >= 10) {
+									player.teleport(new Location(player.getWorld(), 1070.5, 68, 38.5, 180, 0));
+									td.endTask();
+									td.removeID();
+								}
+
+								time++;
+							}
+
+						}, 0, 1);
 		    			return;
 					}
 				}

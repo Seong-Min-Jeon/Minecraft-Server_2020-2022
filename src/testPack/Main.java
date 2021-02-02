@@ -555,81 +555,81 @@ public class Main extends JavaPlugin implements Listener{
 //		if(player.getDisplayName().equalsIgnoreCase("WoolRing") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
 		
 		
-		ItemStack helmet = new ItemStack(Material.GOLDEN_HELMET);
-		ItemMeta helmetIm = helmet.getItemMeta();
-		helmetIm.setLocalizedName("0,0,0,0,0,1000,500,500,500,1000,530");
-		helmetIm.setDisplayName(ChatColor.GREEN + "데이드릭 헬멧");
-		ArrayList<String> helmetLore = new ArrayList();
-		helmetLore.add(ChatColor.GRAY + "레벨 제한: 530");
-		helmetLore.add(ChatColor.GRAY + " ");
-		helmetLore.add(ChatColor.GRAY + "상급 데이드라들이 제식 무구로 사용하는 헬멧");
-		helmetLore.add(ChatColor.GRAY + " ");
-		helmetLore.add(ChatColor.BLUE + "-회피 확률 50% 감소(세트 효과)");
-		helmetLore.add(ChatColor.BLUE + "-흡혈 불가(세트 효과)");
-		helmetIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-		helmetIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-		helmetIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
-		helmetIm.setUnbreakable(true);
-		helmetIm.setLore(helmetLore);
-		helmet.setItemMeta(helmetIm);
-		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(helmet);}
-
-		ItemStack chestplate = new ItemStack(Material.GOLDEN_CHESTPLATE);
-		ItemMeta chestplateIm = chestplate.getItemMeta();
-		chestplateIm.setLocalizedName("0,0,0,0,0,1000,500,500,500,1000,530");
-		chestplateIm.setDisplayName(ChatColor.GREEN + "데이드릭 갑옷");
-		ArrayList<String> chestplateLore = new ArrayList();
-		chestplateLore.add(ChatColor.GRAY + "레벨 제한: 530");
-		chestplateLore.add(ChatColor.GRAY + " ");
-		chestplateLore.add(ChatColor.GRAY + "상급 데이드라들이 제식 무구로 사용하는 갑옷");
-		chestplateLore.add(ChatColor.GRAY + " ");
-		chestplateLore.add(ChatColor.BLUE + "-회피 확률 50% 감소(세트 효과)");
-		chestplateLore.add(ChatColor.BLUE + "-흡혈 불가(세트 효과)");
-		chestplateIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-		chestplateIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-		chestplateIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
-		chestplateIm.setUnbreakable(true);
-		chestplateIm.setLore(chestplateLore);
-		chestplate.setItemMeta(chestplateIm);
-		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(chestplate);}
-
-		ItemStack leggings = new ItemStack(Material.GOLDEN_LEGGINGS);
-		ItemMeta leggingsIm = leggings.getItemMeta();
-		leggingsIm.setLocalizedName("0,0,0,0,0,1000,500,500,500,1000,530");
-		leggingsIm.setDisplayName(ChatColor.GREEN + "데이드릭 각반");
-		ArrayList<String> leggingsLore = new ArrayList();
-		leggingsLore.add(ChatColor.GRAY + "레벨 제한: 530");
-		leggingsLore.add(ChatColor.GRAY + " ");
-		leggingsLore.add(ChatColor.GRAY + "상급 데이드라들이 제식 무구로 사용하는 각반");
-		leggingsLore.add(ChatColor.GRAY + " ");
-		leggingsLore.add(ChatColor.BLUE + "-회피 확률 50% 감소(세트 효과)");
-		leggingsLore.add(ChatColor.BLUE + "-흡혈 불가(세트 효과)");
-		leggingsIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-		leggingsIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-		leggingsIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
-		leggingsIm.setUnbreakable(true);
-		leggingsIm.setLore(leggingsLore);
-		leggings.setItemMeta(leggingsIm);
-		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(leggings);}
-
-		ItemStack boots = new ItemStack(Material.GOLDEN_BOOTS);
-		ItemMeta bootsIm = boots.getItemMeta();
-		bootsIm.setLocalizedName("0,0,0,0,0,1000,500,500,500,1000,530");
-		bootsIm.setDisplayName(ChatColor.GREEN + "데이드릭 신발");
-		ArrayList<String> bootsLore = new ArrayList();
-		bootsLore.add(ChatColor.GRAY + "레벨 제한: 530");
-		bootsLore.add(ChatColor.GRAY + " ");
-		bootsLore.add(ChatColor.GRAY + "상급 데이드라들이 제식 무구로 사용하는 신발");
-		bootsLore.add(ChatColor.GRAY + " ");
-		bootsLore.add(ChatColor.BLUE + "-회피 확률 50% 감소(세트 효과)");
-		bootsLore.add(ChatColor.BLUE + "-흡혈 불가(세트 효과)");
-		bootsIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-		bootsIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-		bootsIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
-		bootsIm.setUnbreakable(true);
-		bootsIm.setLore(bootsLore);
-		boots.setItemMeta(bootsIm);
-		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(boots);}
+//		ItemStack helmet = new ItemStack(Material.GOLDEN_HELMET);
+//		ItemMeta helmetIm = helmet.getItemMeta();
+//		helmetIm.setLocalizedName("0,0,0,0,0,1000,500,500,500,1000,530");
+//		helmetIm.setDisplayName(ChatColor.GREEN + "데이드릭 헬멧");
+//		ArrayList<String> helmetLore = new ArrayList();
+//		helmetLore.add(ChatColor.GRAY + "레벨 제한: 530");
+//		helmetLore.add(ChatColor.GRAY + " ");
+//		helmetLore.add(ChatColor.GRAY + "상급 데이드라들이 제식 무구로 사용하는 헬멧");
+//		helmetLore.add(ChatColor.GRAY + " ");
+//		helmetLore.add(ChatColor.BLUE + "-회피 확률 50% 감소(세트 효과)");
+//		helmetLore.add(ChatColor.BLUE + "-흡혈 불가(세트 효과)");
+//		helmetIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		helmetIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		helmetIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		helmetIm.setUnbreakable(true);
+//		helmetIm.setLore(helmetLore);
+//		helmet.setItemMeta(helmetIm);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(helmet);}
+//
+//		ItemStack chestplate = new ItemStack(Material.GOLDEN_CHESTPLATE);
+//		ItemMeta chestplateIm = chestplate.getItemMeta();
+//		chestplateIm.setLocalizedName("0,0,0,0,0,1000,500,500,500,1000,530");
+//		chestplateIm.setDisplayName(ChatColor.GREEN + "데이드릭 갑옷");
+//		ArrayList<String> chestplateLore = new ArrayList();
+//		chestplateLore.add(ChatColor.GRAY + "레벨 제한: 530");
+//		chestplateLore.add(ChatColor.GRAY + " ");
+//		chestplateLore.add(ChatColor.GRAY + "상급 데이드라들이 제식 무구로 사용하는 갑옷");
+//		chestplateLore.add(ChatColor.GRAY + " ");
+//		chestplateLore.add(ChatColor.BLUE + "-회피 확률 50% 감소(세트 효과)");
+//		chestplateLore.add(ChatColor.BLUE + "-흡혈 불가(세트 효과)");
+//		chestplateIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		chestplateIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		chestplateIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		chestplateIm.setUnbreakable(true);
+//		chestplateIm.setLore(chestplateLore);
+//		chestplate.setItemMeta(chestplateIm);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(chestplate);}
+//
+//		ItemStack leggings = new ItemStack(Material.GOLDEN_LEGGINGS);
+//		ItemMeta leggingsIm = leggings.getItemMeta();
+//		leggingsIm.setLocalizedName("0,0,0,0,0,1000,500,500,500,1000,530");
+//		leggingsIm.setDisplayName(ChatColor.GREEN + "데이드릭 각반");
+//		ArrayList<String> leggingsLore = new ArrayList();
+//		leggingsLore.add(ChatColor.GRAY + "레벨 제한: 530");
+//		leggingsLore.add(ChatColor.GRAY + " ");
+//		leggingsLore.add(ChatColor.GRAY + "상급 데이드라들이 제식 무구로 사용하는 각반");
+//		leggingsLore.add(ChatColor.GRAY + " ");
+//		leggingsLore.add(ChatColor.BLUE + "-회피 확률 50% 감소(세트 효과)");
+//		leggingsLore.add(ChatColor.BLUE + "-흡혈 불가(세트 효과)");
+//		leggingsIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		leggingsIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		leggingsIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		leggingsIm.setUnbreakable(true);
+//		leggingsIm.setLore(leggingsLore);
+//		leggings.setItemMeta(leggingsIm);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(leggings);}
+//
+//		ItemStack boots = new ItemStack(Material.GOLDEN_BOOTS);
+//		ItemMeta bootsIm = boots.getItemMeta();
+//		bootsIm.setLocalizedName("0,0,0,0,0,1000,500,500,500,1000,530");
+//		bootsIm.setDisplayName(ChatColor.GREEN + "데이드릭 신발");
+//		ArrayList<String> bootsLore = new ArrayList();
+//		bootsLore.add(ChatColor.GRAY + "레벨 제한: 530");
+//		bootsLore.add(ChatColor.GRAY + " ");
+//		bootsLore.add(ChatColor.GRAY + "상급 데이드라들이 제식 무구로 사용하는 신발");
+//		bootsLore.add(ChatColor.GRAY + " ");
+//		bootsLore.add(ChatColor.BLUE + "-회피 확률 50% 감소(세트 효과)");
+//		bootsLore.add(ChatColor.BLUE + "-흡혈 불가(세트 효과)");
+//		bootsIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		bootsIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		bootsIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		bootsIm.setUnbreakable(true);
+//		bootsIm.setLore(bootsLore);
+//		boots.setItemMeta(bootsIm);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(boots);}
 //		
 //		ItemStack var1 = new ItemStack(Material.IRON_HELMET);
 //		ItemMeta var1Im = var1.getItemMeta();
@@ -4495,7 +4495,7 @@ public class Main extends JavaPlugin implements Listener{
 				}
 				// 대행자
 				if (player.getInventory().contains(Material.LIME_DYE)) {
-					event.setDamage(event.getDamage() + ((num*num)/13) + num);
+					event.setDamage(event.getDamage() + ((num*num)/12) + num);
 				}
 				// 그림자 무사
 				if (player.getInventory().contains(Material.YELLOW_DYE)) {
@@ -7030,6 +7030,7 @@ public class Main extends JavaPlugin implements Listener{
 				for (Entity nearEntity : entitylist) { 
 				    if (nearEntity.getType() != EntityType.PLAYER) { 
 				    	LivingEntity entity = (LivingEntity) nearEntity;
+				    	entity.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 100, 200, true, false, false));
 				    	entity.damage(num * 50);
 				    }        
 				}   

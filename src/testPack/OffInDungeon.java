@@ -100,6 +100,24 @@ public class OffInDungeon {
 			player.teleport(new Location(player.getWorld(), 973, 62, 40, 180, 0));
 			return;
 		}
+		// 슬라임 던전 3829 87 2797  3632 10 2468
+		if (loc.getX() <= 3829 && loc.getY() <= 160 && loc.getZ() <= 2797 
+				&& loc.getX() >= 3632 && loc.getY() >= 10 && loc.getZ() >= 2468) {
+			player.teleport(new Location(player.getWorld(), 973, 62, 40, 180, 0));
+			return;
+		}
+		// 하마베 히든 꼼수1  951 45 -16  938 39 -23
+		if (loc.getX() <= 951 && loc.getY() <= 45 && loc.getZ() <= -16 
+				&& loc.getX() >= 938 && loc.getY() >= 39 && loc.getZ() >= -23) {
+			player.teleport(new Location(player.getWorld(), 973, 62, 40, 180, 0));
+			return;
+		}
+		// 하마베 히든 꼼수2  1050 70 33  1080 66 60 
+		if (loc.getX() <= 1080 && loc.getY() <= 70 && loc.getZ() <= 60 
+				&& loc.getX() >= 1050 && loc.getY() >= 66 && loc.getZ() >= 33) {
+			player.teleport(new Location(player.getWorld(), 973, 62, 40, 180, 0));
+			return;
+		}
 	}
 
 	public void removeMana(Player player) {

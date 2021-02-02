@@ -9995,14 +9995,122 @@ public class SpawnMob {
 	}
 	
 	public boolean mob157(LivingEntity entity, Location loc) {
+		// 슬라임 던전1 3822 63 2735  3737 20 2780
+		if (loc.getX() <= 3822 && loc.getY() <= 63 && loc.getZ() <= 2780 
+				&& loc.getX() >= 3737 && loc.getY() >= 20 && loc.getZ() >= 2735) {
+			if (entity.getType() == (EntityType) EntityType.SLIME) {
+				entity.setCustomName(ChatColor.GRAY + "녹색 슬라임" + ChatColor.YELLOW + " [Lv.560]");
+				entity.setCustomNameVisible(true);
+				entity.setMaxHealth(364000);
+				entity.setHealth(364000);
+				Slime slime = (Slime) entity;
+				slime.setSize(3);
+				entity.setMaxHealth(364000);
+				entity.setHealth(364000);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 1400));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
+				return true;
+			} else if (entity.getType() == (EntityType) EntityType.VEX) {
+				entity.setCustomName(ChatColor.GRAY + "천년의 요정" + ChatColor.YELLOW + " [Lv.563]");
+				entity.setCustomNameVisible(true);
+				entity.setMaxHealth(372000);
+				entity.setHealth(372000);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 1425));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
+				return true;
+			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM
+					|| entity.getType() == (EntityType) EntityType.SALMON
+					|| entity.getType() == (EntityType) EntityType.ITEM_FRAME
+					|| entity.getType() == (EntityType) EntityType.DROPPED_ITEM
+					|| entity.getType() == (EntityType) EntityType.ARMOR_STAND
+					|| entity.getType() == (EntityType) EntityType.VILLAGER
+					|| entity.getType() == (EntityType) EntityType.SKELETON_HORSE) {
+				return true;
+			} else {
+				return false;
+			}
+		}
 		return true;
 	}
 	
 	public boolean mob158(LivingEntity entity, Location loc) {
+		// 슬라임 던전2 3732 38 2793  3682 18 2727
+		if (loc.getX() <= 3732 && loc.getY() <= 38 && loc.getZ() <= 2793 
+				&& loc.getX() >= 3682 && loc.getY() >= 18 && loc.getZ() >= 2727) {
+			if (entity.getType() == (EntityType) EntityType.SLIME) {
+				entity.setCustomName(ChatColor.GRAY + "독극 슬라임" + ChatColor.YELLOW + " [Lv.566]");
+				entity.setCustomNameVisible(true);
+				entity.setMaxHealth(380000);
+				entity.setHealth(380000);
+				Slime slime = (Slime) entity;
+				slime.setSize(5);
+				entity.setMaxHealth(380000);
+				entity.setHealth(380000);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 1450));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
+				return true;
+			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM
+					|| entity.getType() == (EntityType) EntityType.SALMON
+					|| entity.getType() == (EntityType) EntityType.ITEM_FRAME
+					|| entity.getType() == (EntityType) EntityType.DROPPED_ITEM
+					|| entity.getType() == (EntityType) EntityType.ARMOR_STAND
+					|| entity.getType() == (EntityType) EntityType.VILLAGER
+					|| entity.getType() == (EntityType) EntityType.SKELETON_HORSE) {
+				return true;
+			} else {
+				return false;
+			}
+		}
 		return true;
 	}
 	
 	public boolean mob159(LivingEntity entity, Location loc) {
+		// 슬라임 던전3 3711 77 2800  3636 15 2656
+		if (loc.getX() <= 3711 && loc.getY() <= 77 && loc.getZ() <= 2800 
+				&& loc.getX() >= 3636 && loc.getY() >= 15 && loc.getZ() >= 2656) {
+			Location chestLoc = new Location(entity.getWorld(), -1834, 92, 3050);
+			Block block = chestLoc.getBlock();
+			Chest chest = (Chest) block.getState();
+			if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
+				entity.setCustomName(ChatColor.GRAY + "점액에 녹은 스켈레톤" + ChatColor.YELLOW + " [Lv.570]");
+				entity.setCustomNameVisible(true);
+				entity.setMaxHealth(388000);
+				entity.setHealth(388000);
+				EntityEquipment weapon = entity.getEquipment();
+				ItemStack weaponItem = new ItemStack(Material.BOW);
+				ItemMeta im = weaponItem.getItemMeta();
+				im.setLocalizedName("1475");
+				weaponItem.setItemMeta(im);
+				weapon.setItemInMainHand(weaponItem);
+				EntityEquipment mobBow = entity.getEquipment();
+				ItemStack mobBowItem = new ItemStack(Material.AIR);
+				mobBow.setItemInOffHand(mobBowItem);
+				EntityEquipment head = entity.getEquipment();
+				ItemStack headItem = new ItemStack(Material.AIR);
+				head.setHelmet(headItem);
+				EntityEquipment chestplate = entity.getEquipment();
+				ItemStack chestplateItem = new ItemStack(Material.AIR);
+				chestplate.setChestplate(chestplateItem);
+				EntityEquipment leggings = entity.getEquipment();
+				ItemStack leggingsItem = new ItemStack(Material.AIR);
+				leggings.setLeggings(leggingsItem);
+				EntityEquipment boots = entity.getEquipment();
+				ItemStack bootsItem = new ItemStack(Material.AIR);
+				boots.setBoots(bootsItem);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
+				return true;
+			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM
+					|| entity.getType() == (EntityType) EntityType.SALMON
+					|| entity.getType() == (EntityType) EntityType.ITEM_FRAME
+					|| entity.getType() == (EntityType) EntityType.DROPPED_ITEM
+					|| entity.getType() == (EntityType) EntityType.ARMOR_STAND
+					|| entity.getType() == (EntityType) EntityType.VILLAGER
+					|| entity.getType() == (EntityType) EntityType.SKELETON_HORSE) {
+				return true;
+			} else {
+				return false;
+			}
+		}
 		return true;
 	}
 	
