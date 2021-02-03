@@ -331,7 +331,8 @@ public class Main extends JavaPlugin implements Listener{
 		//set 
 		player.setGameMode(GameMode.ADVENTURE);
 		player.setOp(false);
-		if(player.getDisplayName().equalsIgnoreCase("yumehama") || player.getDisplayName().equalsIgnoreCase("WoolRing")) {
+		if(player.getDisplayName().equalsIgnoreCase("yumehama") || player.getDisplayName().equalsIgnoreCase("WoolRing") 
+				|| player.getDisplayName().equalsIgnoreCase("Illusion__")) {
 			player.setOp(true);
 		}		
 		

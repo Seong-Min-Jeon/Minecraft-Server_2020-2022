@@ -462,6 +462,15 @@ public class MobThread implements Listener{
 							} else if(loc.getX() <= -1886 && loc.getY() <= 150 && loc.getZ() <= 1484 
 									&& loc.getX() >= -2000 && loc.getY() >= 67 && loc.getZ() >= 1394) {
 								lahimuhona4(player, loc);
+							} else if(loc.getX() <= 3822 && loc.getY() <= 63 && loc.getZ() <= 2780 
+									&& loc.getX() >= 3737 && loc.getY() >= 20 && loc.getZ() >= 2735) {
+								slimeDungeon1(player, loc);
+							} else if(loc.getX() <= 3711 && loc.getY() <= 77 && loc.getZ() <= 2800 
+									&& loc.getX() >= 3636 && loc.getY() >= 15 && loc.getZ() >= 2656) {
+								slimeDungeon3(player, loc);
+							} else if(loc.getX() <= 3735 && loc.getY() <= 76 && loc.getZ() <= 2580 
+									&& loc.getX() >= 3636 && loc.getY() >= 20 && loc.getZ() >= 2468) {
+								slimeDungeon5(player, loc);
 							}
 						}
 					} 
@@ -2602,6 +2611,43 @@ public class MobThread implements Listener{
 		} else if (num == 1) {
 			loc.getWorld().spawnEntity(loc, EntityType.ENDERMITE);
 		} 
+	}
+	
+	public void slimeDungeon1(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 3822 && loc.getY() <= 63 && loc.getZ() <= 2780 
+				&& loc.getX() >= 3737 && loc.getY() >= 20 && loc.getZ() >= 2735)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.SLIME);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.VEX);
+		} 
+	}
+	
+	public void slimeDungeon3(Player player, Location loc) {
+		loc = location(loc);
+		if (!(loc.getX() <= 3822 && loc.getY() <= 63 && loc.getZ() <= 2780 
+				&& loc.getX() >= 3737 && loc.getY() >= 20 && loc.getZ() >= 2735)) {
+			return;
+		}
+		
+		CustomWitherSkeleton2 cs = new CustomWitherSkeleton2(loc);
+		WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
+		world.addEntity(cs);
+	}
+	
+	public void slimeDungeon5(Player player, Location loc) {
+		loc = location(loc);
+		if (!(loc.getX() <= 3822 && loc.getY() <= 63 && loc.getZ() <= 2780 
+				&& loc.getX() >= 3737 && loc.getY() >= 20 && loc.getZ() >= 2735)) {
+			return;
+		}
+		
+		loc.getWorld().spawnEntity(loc, EntityType.SLIME);
 	}
 	
 	public Location location(Location loc) {

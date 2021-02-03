@@ -1085,6 +1085,38 @@ public class MobDeath {
 				if (name.equalsIgnoreCase("중급 파괴수" + ChatColor.YELLOW + " [Lv.554]")) {
 					mobloot.mob249(lootPlayer);
 				}
+				// 녹색 슬라임
+				if (name.equalsIgnoreCase("녹색 슬라임" + ChatColor.YELLOW + " [Lv.560]")) {
+					mobloot.mob250(lootPlayer);
+				}
+				// 천년의 요정
+				if (name.equalsIgnoreCase("천년의 요정" + ChatColor.YELLOW + " [Lv.563]")) {
+					mobloot.mob251(lootPlayer);
+				}
+				// 독극 슬라임
+				if (name.equalsIgnoreCase("독극 슬라임" + ChatColor.YELLOW + " [Lv.566]")) {
+					mobloot.mob252(lootPlayer);
+				}
+				// 점액에 녹은 스켈레톤
+				if (name.equalsIgnoreCase("점액에 녹은 스켈레톤" + ChatColor.YELLOW + " [Lv.570]")) {
+					mobloot.mob253(lootPlayer);
+				}
+				// 슬라임에게 패배한 모험가
+				if (name.equalsIgnoreCase("슬라임에게 패배한 모험가" + ChatColor.YELLOW + " [Lv.573]")) {
+					mobloot.mob254(lootPlayer);
+				}
+				// 멜랑콜리
+				if (name.equalsIgnoreCase("멜랑콜리" + ChatColor.YELLOW + " [Lv.575]")) {
+					mobloot.mob255(lootPlayer);
+				}
+				// 와우
+				if (name.equalsIgnoreCase("와우" + ChatColor.YELLOW + " [Lv.??]")) {
+					mobloot.mob256(lootPlayer);
+				}
+				// 우와
+				if (name.equalsIgnoreCase("우와" + ChatColor.YELLOW + " [Lv.580]")) {
+					mob.getWorld().createExplosion(mob.getLocation(), 10, false, false);
+				}
 			} catch (Exception e) {
 
 			}

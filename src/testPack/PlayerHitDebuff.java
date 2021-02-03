@@ -27,6 +27,7 @@ import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Mob;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Skeleton;
+import org.bukkit.entity.Slime;
 import org.bukkit.entity.SpectralArrow;
 import org.bukkit.entity.WitherSkeleton;
 import org.bukkit.entity.Zombie;
@@ -95,6 +96,8 @@ public class PlayerHitDebuff {
 		mob47(player, mob);
 		mob48(player, mob);
 		mob49(player, mob);
+		mob50(player, mob);
+		mob51(player, mob);
 	}
 
 	// 시련의 형상
@@ -2441,7 +2444,7 @@ public class PlayerHitDebuff {
 									if (ent instanceof Player) {
 										Player player = (Player) ent;
 										player.getWorld().playEffect(mob.getLocation(), Effect.END_GATEWAY_SPAWN, 2);
-										player.setHealth(player.getHealth()-5);
+										player.setHealth(player.getHealth()-10);
 									}
 								}
 								List<Entity> nearPlayer = mob.getNearbyEntities(120, 10, 120);
@@ -2713,11 +2716,113 @@ public class PlayerHitDebuff {
 		}
 	}
 	
+	// 독극 슬라임
 	public void mob50(Player player, Entity mob) {
-
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("독극 슬라임" + ChatColor.YELLOW + " [Lv.566]")) {
+			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 200, 3, true, false, false));
+		}
 	}
 	
+	// 와우
 	public void mob51(Player player, Entity mob) {
+		
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("와우" + ChatColor.YELLOW + " [Lv.??]")) {
+			
+			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
+				int num = rnd.nextInt(15);
+				if (num < 3) {
+					player.setVelocity(player.getEyeLocation().getDirection().multiply(-3.0f));
+					player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_SLIME_HURT, 3.0f, 1.0f);
+				} else if(num < 6) {
+					player.getWorld().spawnEntity(mob.getLocation(), EntityType.SLIME);
+					player.getWorld().spawnEntity(mob.getLocation(), EntityType.SLIME);
+				} else if(num == 6) {
+					player.sendMessage(ChatColor.RED + "와우가 불꽃비를 내립니다.");
+					sendMessage(player, ChatColor.RED + "와우가 불꽃비를 내립니다.");
+					List<Entity> nearEntity = mob.getNearbyEntities(50, 30, 50);
+					for(Entity ent : nearEntity) {
+						if(ent instanceof Player) {
+							Player p = (Player) ent;
+							p.setFireTicks(200);
+						}
+					}
+					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+						int time = 0;
+						ThreadData td = new ThreadData(player.getUniqueId());
+
+						@Override
+						public void run() {
+							
+							if (!td.hasID()) {
+								td.setID(taskID);
+							}
+							
+							if (time >= 200) {
+								int num = 0;
+								for(Entity ent : nearEntity) {
+									if(ent instanceof Slime) {
+										num++;
+										ent.getWorld().spawnEntity(ent.getLocation(), EntityType.MAGMA_CUBE);
+										ent.remove();
+									}
+								}
+								if(num > 0) {
+									for(Entity ent : nearEntity) {
+										if(ent instanceof Player) {
+											Player p = (Player) ent;
+											p.sendMessage(ChatColor.RED + "주위의 슬라임이 불타오르며 강력한 데미지를 줍니다.");
+											p.setHealth(p.getHealth() - num * 3);
+										}
+									}
+								}
+								td.endTask();
+								td.removeID();
+							}
+							
+							time++;
+
+						}
+
+					}, 0, 1);
+				}
+			} else {
+				int num = rnd.nextInt(15);
+				if (num < 3) {
+					player.setVelocity(player.getEyeLocation().getDirection().multiply(-3.0f));
+					player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_SLIME_HURT, 3.0f, 1.0f);
+				} else if(num < 6) {
+					player.getWorld().spawnEntity(mob.getLocation(), EntityType.SLIME);
+				} else if(num == 6) {
+					player.sendMessage(ChatColor.RED + "몸 속에 슬라임의 점액이 흘러옵니다.");
+					
+					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+						int time = 0;
+						ThreadData td = new ThreadData(player.getUniqueId());
+
+						@Override
+						public void run() {
+							
+							if (!td.hasID()) {
+								td.setID(taskID);
+							}
+							
+							if (time >= 100) {
+								player.setHealth(player.getHealth()/2);
+								player.sendMessage(ChatColor.RED + "몸 속의 점액에 의해 데미지를 받습니다.");
+								td.endTask();
+								td.removeID();
+							}
+							
+							time++;
+
+						}
+
+					}, 0, 1);
+				}
+			}
+		}
 
 	}
 	
