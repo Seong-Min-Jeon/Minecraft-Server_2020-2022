@@ -2444,7 +2444,12 @@ public class PlayerHitDebuff {
 									if (ent instanceof Player) {
 										Player player = (Player) ent;
 										player.getWorld().playEffect(mob.getLocation(), Effect.END_GATEWAY_SPAWN, 2);
-										player.setHealth(player.getHealth()-10);
+										if(player.getHealth() - 10 < 0) {
+											player.setHealth(0);
+										} else {
+											player.setHealth(player.getHealth()-10);
+										}
+										
 									}
 								}
 								List<Entity> nearPlayer = mob.getNearbyEntities(120, 10, 120);
@@ -2772,7 +2777,11 @@ public class PlayerHitDebuff {
 										if(ent instanceof Player) {
 											Player p = (Player) ent;
 											p.sendMessage(ChatColor.RED + "주위의 슬라임이 불타오르며 강력한 데미지를 줍니다.");
-											p.setHealth(p.getHealth() - num * 3);
+											if(p.getHealth() - num * 3 < 0) {
+												player.setHealth(0);
+											} else {
+												player.setHealth(p.getHealth() - num * 3);
+											}
 										}
 									}
 								}
