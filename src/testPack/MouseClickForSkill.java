@@ -140,7 +140,7 @@ public class MouseClickForSkill {
 	}
 	
 	public void playSound(Player player) {
-		player.getWorld().playSound(player.getLocation(), Sound.UI_BUTTON_CLICK, 1.0f, 1.0f);
+		player.getWorld().playSound(player.getLocation(), Sound.UI_BUTTON_CLICK, 0.3f, 1.0f);
 	}
 	
 	public void bowPlayerPlaySound(Player player, String key) {

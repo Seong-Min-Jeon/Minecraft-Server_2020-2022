@@ -80,7 +80,7 @@ public class VilTPScroll {
 				}
 			} else {
 				player.sendMessage(ChatColor.RED + "워프에 필요한 마나가 부족합니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 			}
 		}
 	}
@@ -135,7 +135,7 @@ public class VilTPScroll {
 				}
 			} else {
 				player.sendMessage(ChatColor.RED + "워프에 필요한 마나가 부족합니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 			}
 		}
 	}
@@ -190,7 +190,7 @@ public class VilTPScroll {
 				}
 			} else {
 				player.sendMessage(ChatColor.RED + "워프에 필요한 마나가 부족합니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 			}
 		}
 	}
@@ -245,7 +245,7 @@ public class VilTPScroll {
 				}
 			} else {
 				player.sendMessage(ChatColor.RED + "워프에 필요한 마나가 부족합니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 			}
 		}
 	}
@@ -300,7 +300,7 @@ public class VilTPScroll {
 				}
 			} else {
 				player.sendMessage(ChatColor.RED + "워프에 필요한 마나가 부족합니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 			}
 		}
 	}
@@ -355,7 +355,7 @@ public class VilTPScroll {
 				}
 			} else {
 				player.sendMessage(ChatColor.RED + "워프에 필요한 마나가 부족합니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 			}
 		}
 	}
@@ -410,7 +410,7 @@ public class VilTPScroll {
 				}
 			} else {
 				player.sendMessage(ChatColor.RED + "워프에 필요한 마나가 부족합니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 			}
 		}
 	}
@@ -465,7 +465,7 @@ public class VilTPScroll {
 				}
 			} else {
 				player.sendMessage(ChatColor.RED + "워프에 필요한 마나가 부족합니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 			}
 		}
 	}
@@ -520,7 +520,7 @@ public class VilTPScroll {
 				}
 			} else {
 				player.sendMessage(ChatColor.RED + "워프에 필요한 마나가 부족합니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 			}
 		}
 	}
@@ -575,7 +575,7 @@ public class VilTPScroll {
 				}
 			} else {
 				player.sendMessage(ChatColor.RED + "워프에 필요한 마나가 부족합니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 			}
 		}
 	}
@@ -630,7 +630,7 @@ public class VilTPScroll {
 				}
 			} else {
 				player.sendMessage(ChatColor.RED + "워프에 필요한 마나가 부족합니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 			}
 		}
 	}
@@ -685,7 +685,7 @@ public class VilTPScroll {
 				}
 			} else {
 				player.sendMessage(ChatColor.RED + "워프에 필요한 마나가 부족합니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 			}
 		}
 	}
@@ -740,7 +740,7 @@ public class VilTPScroll {
 				}
 			} else {
 				player.sendMessage(ChatColor.RED + "워프에 필요한 마나가 부족합니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 			}
 		}
 	}
@@ -795,7 +795,7 @@ public class VilTPScroll {
 				}
 			} else {
 				player.sendMessage(ChatColor.RED + "워프에 필요한 마나가 부족합니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 			}
 		}
 	}
@@ -850,7 +850,7 @@ public class VilTPScroll {
 				}
 			} else {
 				player.sendMessage(ChatColor.RED + "워프에 필요한 마나가 부족합니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 			}
 		}
 	}

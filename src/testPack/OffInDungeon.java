@@ -103,7 +103,7 @@ public class OffInDungeon {
 		// 슬라임 던전 3829 87 2797  3632 10 2468
 		if (loc.getX() <= 3829 && loc.getY() <= 160 && loc.getZ() <= 2797 
 				&& loc.getX() >= 3632 && loc.getY() >= 10 && loc.getZ() >= 2468) {
-			player.teleport(new Location(player.getWorld(), 973, 62, 40, 180, 0));
+			player.teleport(new Location(player.getWorld(), -1465, 10, 1980));
 			return;
 		}
 		// 하마베 히든 꼼수1  951 45 -16  938 39 -23

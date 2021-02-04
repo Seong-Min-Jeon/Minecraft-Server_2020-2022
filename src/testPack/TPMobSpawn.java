@@ -1125,6 +1125,21 @@ public class TPMobSpawn {
 			new BossHealth().getBar13().addPlayer(player);
 			return;
 		}
+		
+		// 슬라임 보스 끼워넣기
+		if (loc.getX() == 3740.5 && loc.getY() == 40 && loc.getZ() == 2528.5) {
+			List<Entity> entitylist = player.getNearbyEntities(50, 30, 50);
+			for (Entity nearEntity : entitylist) {
+				if (nearEntity.getType() == EntityType.PLAYER) {
+					if (new BossHealth().getBar22().getProgress() != 0) {
+						new BossHealth().getBar22().addPlayer(player);
+					}
+					return;
+				}
+			}
+			new BossHealth().getBar22().setProgress(1.0);
+			new BossHealth().getBar22().addPlayer(player);
+		}
 
 	}
 	

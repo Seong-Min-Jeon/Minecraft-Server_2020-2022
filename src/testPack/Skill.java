@@ -926,7 +926,7 @@ public class Skill {
 					}
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RRL")) {
 				if(i>=4) {
@@ -976,7 +976,7 @@ public class Skill {
 					
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RLL")) {
 				if(i>=5) {
@@ -1012,7 +1012,7 @@ public class Skill {
 					world.playSound(loc, Sound.ENTITY_WOLF_SHAKE, 1.0f, 1.0f);				
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RLR")) {
 				if(i>=10) {
@@ -1057,7 +1057,7 @@ public class Skill {
 					}, 0, 1);
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			}
 		}
@@ -1100,7 +1100,7 @@ public class Skill {
 					}
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RRL")) {
 				if(i>=3) {
@@ -1170,7 +1170,7 @@ public class Skill {
 					go.put(golem.getUniqueId(), player);
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RLL")) {
 				if(i>=4) {
@@ -1195,7 +1195,7 @@ public class Skill {
 					world.playSound(loc, Sound.BLOCK_CHAIN_BREAK, 2.0f, 0.5f);				
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RLR")) {
 				if(i>=1) {
@@ -1217,7 +1217,7 @@ public class Skill {
 						}
 					}
 					if (num == 0) {
-						world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+						world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 						player.sendMessage(ChatColor.GREEN + "[스킬]자폭이 발동됩니다.");
 						player.sendMessage(ChatColor.RED + "주위에 골렘이 없습니다.");
 					} else {
@@ -1235,7 +1235,7 @@ public class Skill {
 					}
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			}
 		}
@@ -1271,7 +1271,7 @@ public class Skill {
 					}
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RRL")) {
 				if(i>=5) {
@@ -1307,7 +1307,7 @@ public class Skill {
 					player.sendMessage(ChatColor.GREEN + "자신과 주변 아군의 체력이 회복됩니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 3 + ChatColor.RED + "]");
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RLL")) {
 				if(i>=6) {
@@ -1330,7 +1330,7 @@ public class Skill {
 					player.sendMessage(ChatColor.GREEN + "10초간 추가 체력이 부여됩니다.");												
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RLR")) {
 				if(i>=2) {
@@ -1349,7 +1349,7 @@ public class Skill {
 					}
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			}
 		}
@@ -1395,7 +1395,7 @@ public class Skill {
 					}
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RRL")) {
 				if(i>=4) {
@@ -1419,7 +1419,7 @@ public class Skill {
 					player.sendMessage(ChatColor.GREEN + "[스킬]마인권이 발동됩니다.");
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RLL")) {
 				if(i>=1) {
@@ -1434,7 +1434,7 @@ public class Skill {
 					player.sendMessage(ChatColor.GREEN + "1초간 무적이 됩니다.");												
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RLR")) {
 				if(i>=5) {
@@ -1464,7 +1464,7 @@ public class Skill {
 					}
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			}
 		}
@@ -1549,7 +1549,7 @@ public class Skill {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 4));
 									} else {
 										player.sendMessage(ChatColor.RED + "스킬 사용에 실패하였습니다.");
-										world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+										world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 									}
 									world.playEffect(loc, Effect.POTION_BREAK, 0);
 									t.endTask();
@@ -1562,7 +1562,7 @@ public class Skill {
 					}
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RRL")) {
 				if(i>=3) {
@@ -1713,7 +1713,7 @@ public class Skill {
 									player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 600, 4));
 								} else {
 									player.sendMessage(ChatColor.RED + "스킬 사용에 실패하였습니다.");
-									world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+									world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 								}
 								world.playEffect(loc, Effect.POTION_BREAK, 0);
 								t.endTask();
@@ -1725,7 +1725,7 @@ public class Skill {
 					}, 0, 1);
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RLL")) {
 				if(i>=5) {
@@ -1897,7 +1897,7 @@ public class Skill {
 									world.playSound(loc, Sound.ENTITY_BLAZE_DEATH, 1.0f, 1.0f);
 								} else {
 									player.sendMessage(ChatColor.RED + "스킬 사용에 실패하였습니다.");
-									world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+									world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 								}
 								world.playEffect(loc, Effect.POTION_BREAK, 0);
 								t.endTask();
@@ -1909,7 +1909,7 @@ public class Skill {
 					}, 0, 1);										
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RLR")) {
 				if(i>=10) {
@@ -1962,7 +1962,7 @@ public class Skill {
 										player.getInventory().setItem(8, item);
 									} else {
 										player.sendMessage(ChatColor.RED + "스킬 사용에 실패하였습니다.");
-										world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+										world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 									}
 									world.playEffect(loc, Effect.POTION_BREAK, 0);
 									t.endTask();
@@ -1975,12 +1975,12 @@ public class Skill {
 					}
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			}
 		} else {
 			player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-			world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+			world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 		}
 	}
 
@@ -2022,7 +2022,7 @@ public class Skill {
 					}
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RRL")) {
 				if(i>=3) {
@@ -2053,7 +2053,7 @@ public class Skill {
 					// ================================================================
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RLL")) {
 				if(i>=5) {
@@ -2085,7 +2085,7 @@ public class Skill {
 					// ================================================================
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RLR")) {
 				if(i>=8) {
@@ -2133,7 +2133,7 @@ public class Skill {
 					world.playSound(player.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 1.0f, 0.1f);
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			}
 		}
@@ -2168,7 +2168,7 @@ public class Skill {
 					}
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RRL")) {
 				if(i>=7) {
@@ -2240,7 +2240,7 @@ public class Skill {
 					// ================================================================
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RLL")) {
 				if(i>=15) {
@@ -2339,7 +2339,7 @@ public class Skill {
 					
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RLR")) {
 				if(i>=4) {
@@ -2378,7 +2378,7 @@ public class Skill {
 					// ===============================================================
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			}
 		}
@@ -2414,7 +2414,7 @@ public class Skill {
 					}
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RRL")) {
 				if(i>=8) {
@@ -2481,7 +2481,7 @@ public class Skill {
 					}, 0, 1);
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RLL")) {
 				if(i>=20) {
@@ -2559,7 +2559,7 @@ public class Skill {
 										player.setHealth(20);
 										player.sendMessage(ChatColor.GREEN + "신의 경고가 발동됩니다.");
 										player.sendMessage(ChatColor.GREEN + "정신이 번쩍 듭니다.");
-										world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);									
+										world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);									
 									}
 								} else if (num == 1) {
 									if (time > 40) {
@@ -2627,7 +2627,7 @@ public class Skill {
 												player.sendMessage(ChatColor.GREEN + "마나의 수가 40이 됩니다.");
 											} catch (Exception e20) {
 												player.sendMessage(ChatColor.RED + "스킬 발동에 실패하였습니다.");
-												world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+												world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 											}
 										} else {
 											int num4 = rnd.nextInt(20);
@@ -2662,7 +2662,7 @@ public class Skill {
 					}, 0, 1);
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RLR")) {
 				if(i>=5) {
@@ -2702,7 +2702,7 @@ public class Skill {
 					player.sendMessage(ChatColor.GREEN + "10초간 아군에게 신속이 부여됩니다.");
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			}
 		}
@@ -2757,7 +2757,7 @@ public class Skill {
 					}
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RRL")) {
 				if(i>=8) {
@@ -2791,7 +2791,7 @@ public class Skill {
 					player.sendMessage(ChatColor.GREEN + "눈앞의 적이 사라집니다.");
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RLL")) {
 				if(i>=5) {
@@ -2819,7 +2819,7 @@ public class Skill {
 					player.sendMessage(ChatColor.GREEN + "능력치가 대폭 상승합니다.");
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RLR")) {
 				if(i>=15) {
@@ -2874,7 +2874,7 @@ public class Skill {
 					}, 0, 1);
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			}
 		}
@@ -2919,7 +2919,7 @@ public class Skill {
 					}
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RRL")) {
 				if(i>=2) {
@@ -2949,7 +2949,7 @@ public class Skill {
 					player.sendMessage(ChatColor.GREEN + "자신의 체력이 회복됩니다." + ChatColor.RED + " [+" + ChatColor.RED + "50%" + ChatColor.RED + "]");
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RLL")) {
 				if(i>=10) {
@@ -2978,7 +2978,7 @@ public class Skill {
 					}	
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RLR")) {
 				if(i>=6) {
@@ -3004,7 +3004,7 @@ public class Skill {
 					}	
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			}
 		}
@@ -3039,7 +3039,7 @@ public class Skill {
 					}
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RRL")) {
 				if(i>=5) {
@@ -3092,7 +3092,7 @@ public class Skill {
 					}, 0, 1);
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RLL")) {
 				if(i>=8) {
@@ -3129,7 +3129,7 @@ public class Skill {
 					player.sendMessage(ChatColor.GREEN + "자신과 주변 아군의 체력이 회복됩니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 4 + ChatColor.RED + "]");
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RLR")) {
 				if(i>=10) {
@@ -3158,7 +3158,7 @@ public class Skill {
 					world.playSound(loc, Sound.BLOCK_CHAIN_BREAK, 2.0f, 0.5f);		
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			}
 		}
@@ -3200,7 +3200,7 @@ public class Skill {
 					}
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RRL")) {
 				if(i>=1) {
@@ -3242,7 +3242,7 @@ public class Skill {
 							}
 						}
 						if (num == 0) {
-							world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+							world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 							player.sendMessage(ChatColor.GREEN + "[스킬]지옥불이 발동됩니다.");
 							player.sendMessage(ChatColor.RED + "대상이 없습니다.");
 						} else {
@@ -3263,7 +3263,7 @@ public class Skill {
 
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RLL")) {
 				if(i>=5) {
@@ -3294,7 +3294,7 @@ public class Skill {
 					}
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RLR")) {
 				if(i>=1) {
@@ -3353,7 +3353,7 @@ public class Skill {
 					}
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			}
 		}
@@ -3394,7 +3394,7 @@ public class Skill {
 					}
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RRL")) {
 				if(i>=4) {
@@ -3451,7 +3451,7 @@ public class Skill {
 					
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RLL")) {
 				if(i>=2) {
@@ -3501,7 +3501,7 @@ public class Skill {
 					
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RLR")) {
 				if(i>=15) {
@@ -3528,7 +3528,7 @@ public class Skill {
 					world.playSound(player.getLocation(), Sound.ENTITY_DRAGON_FIREBALL_EXPLODE, 1.0f, 1.0f);
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			}
 		}
@@ -3573,7 +3573,7 @@ public class Skill {
 					}
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RRL")) {
 				if(i>=4) {
@@ -3612,7 +3612,7 @@ public class Skill {
 					// ===============================================================
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RLL")) {
 				if(i>=10) {
@@ -3704,7 +3704,7 @@ public class Skill {
 					
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RLR")) {
 				if(i>=4) {
@@ -3762,7 +3762,7 @@ public class Skill {
 					}, 0, 1);
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			}
 		}
@@ -3814,7 +3814,7 @@ public class Skill {
 					}
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RRL")) {
 				if(i>=5) {
@@ -3856,7 +3856,7 @@ public class Skill {
 					}
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RLL")) {
 				if(i>=8) {
@@ -3929,7 +3929,7 @@ public class Skill {
 					}, 0, 1);
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RLR")) {
 				if (i >= 10) {
@@ -3986,7 +3986,7 @@ public class Skill {
 					}, 0, 1);
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			}
 		}
@@ -4060,7 +4060,7 @@ public class Skill {
 					}, 0, 1);
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("LRR")) {
 				if(i>=5) {
@@ -4113,7 +4113,7 @@ public class Skill {
 					}, 0, 1);
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("LLL")) {
 				if(i>=3) {
@@ -4133,7 +4133,7 @@ public class Skill {
 					}
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("LLR")) {
 				if(i>=4) {
@@ -4168,7 +4168,7 @@ public class Skill {
 					world.playSound(loc, Sound.BLOCK_CHAIN_BREAK, 2.0f, 0.5f);
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			}
 		}
@@ -4229,7 +4229,7 @@ public class Skill {
 					
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("LRR")) {
 				if(i>=8) {
@@ -4283,7 +4283,7 @@ public class Skill {
 					
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("LLL")) {
 				if(i>=3) {
@@ -4303,7 +4303,7 @@ public class Skill {
 					}
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("LLR")) {
 				if(i>=3) {
@@ -4361,7 +4361,7 @@ public class Skill {
 					}, 0, 1);
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			}
 		}		
@@ -4422,7 +4422,7 @@ public class Skill {
 					
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("LRR")) {
 				if(i>=4) {
@@ -4476,7 +4476,7 @@ public class Skill {
 					
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("LLL")) {
 				if(i>=1) {
@@ -4498,7 +4498,7 @@ public class Skill {
 					}
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("LLR")) {
 				if(i>=1) {
@@ -4556,7 +4556,7 @@ public class Skill {
 					}, 0, 1);
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			}
 		}	

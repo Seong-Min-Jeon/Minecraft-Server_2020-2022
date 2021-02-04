@@ -10195,9 +10195,10 @@ public class SpawnMob {
 		if (loc.getX() <= 3819 && loc.getY() <= 76 && loc.getZ() <= 2581 
 				&& loc.getX() >= 3740 && loc.getY() >= 30 && loc.getZ() >= 2479) {
 			if (entity.getType() == (EntityType) EntityType.SLIME) {
-				if(loc.getX() == 3770 && loc.getY() == 40 && loc.getZ() == 2526) {
+				if(loc.getX() == 3770.5 && loc.getY() == 40 && loc.getZ() == 2526.5) {
 					entity.setCustomName(ChatColor.GRAY + "와우" + ChatColor.YELLOW + " [Lv.??]");
 					entity.setCustomNameVisible(true);
+					entity.setRemoveWhenFarAway(false);
 					entity.setMaxHealth(4000000);
 					entity.setHealth(4000000);
 					Slime slime = (Slime) entity;
@@ -10209,12 +10210,12 @@ public class SpawnMob {
 				} else {
 					entity.setCustomName(ChatColor.GRAY + "우와" + ChatColor.YELLOW + " [Lv.580]");
 					entity.setCustomNameVisible(true);
-					entity.setMaxHealth(100000);
-					entity.setHealth(100000);
+					entity.setMaxHealth(40000);
+					entity.setHealth(40000);
 					Slime slime = (Slime) entity;
 					slime.setSize(2);
-					entity.setMaxHealth(100000);
-					entity.setHealth(100000);
+					entity.setMaxHealth(40000);
+					entity.setHealth(40000);
 					entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 1500));
 					entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 2));
 					return true;

@@ -88,7 +88,7 @@ public class RefreshServer {
 						}
 						
 						int cnt = 0;
-						List<Entity> list2 = ent.getNearbyEntities(30, 15, 30);
+						List<Entity> list2 = ent.getNearbyEntities(30, 20, 30);
 						for(Entity ent2 : list2) {
 							if(ent2 instanceof Player) {
 								cnt++;

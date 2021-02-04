@@ -2496,6 +2496,12 @@ public class Main extends JavaPlugin implements Listener{
 				event.setRespawnLocation(hamabe);
 				return;
 			}
+			// 슬라임 던전 3829 87 2797  3632 10 2468
+			if (loc.getX() <= 3829 && loc.getY() <= 160 && loc.getZ() <= 2797 
+					&& loc.getX() >= 3632 && loc.getY() >= 10 && loc.getZ() >= 2468) {
+				player.teleport(new Location(player.getWorld(), -1465, 10, 1980));
+				return;
+			}
 			
 			int length1 = (int)(Math.pow(loc.getX()-wargunil.getX(), 2) + Math.pow(loc.getY()-wargunil.getY(), 2) + Math.pow(loc.getZ()-wargunil.getZ(), 2));
 			int length2 = (int)(Math.pow(loc.getX()-forgan.getX(), 2) + Math.pow(loc.getY()-forgan.getY(), 2) + Math.pow(loc.getZ()-forgan.getZ(), 2));
@@ -4591,6 +4597,8 @@ public class Main extends JavaPlugin implements Listener{
 
 					PotionRatioForVampire pr = new PotionRatioForVampire();
 					pr.calculation(player, addHealth);
+					
+					event.setDamage(event.getDamage() * (100 - 10 * addHealthPercent) / 100);
 				}
 				//===========================================================================
 				// 독뎀
@@ -5563,6 +5571,20 @@ public class Main extends JavaPlugin implements Listener{
 						}
 					} else {
 						new BossHealth().getBar21().setProgress((boss.getHealth()-event.getFinalDamage()) / 3000000.0);
+					}
+				}
+				// 와우
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("와우" + ChatColor.YELLOW + " [Lv.??]")) {
+
+					LivingEntity boss = (LivingEntity) mob;
+					
+					if(boss.getHealth() - event.getFinalDamage() <= 0) {
+						for(Player p : new BossHealth().getBar22().getPlayers()) {
+							new BossHealth().getBar22().setProgress(0);
+							new BossHealth().getBar22().removePlayer(p);
+						}
+					} else {
+						new BossHealth().getBar22().setProgress((boss.getHealth()-event.getFinalDamage()) / 4000000.0);
 					}
 				}
 			}

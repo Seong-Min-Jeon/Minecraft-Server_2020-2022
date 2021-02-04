@@ -2630,8 +2630,8 @@ public class MobThread implements Listener{
 	
 	public void slimeDungeon3(Player player, Location loc) {
 		loc = location(loc);
-		if (!(loc.getX() <= 3822 && loc.getY() <= 63 && loc.getZ() <= 2780 
-				&& loc.getX() >= 3737 && loc.getY() >= 20 && loc.getZ() >= 2735)) {
+		if (!(loc.getX() <= 3711 && loc.getY() <= 77 && loc.getZ() <= 2800 
+				&& loc.getX() >= 3636 && loc.getY() >= 15 && loc.getZ() >= 2656)) {
 			return;
 		}
 		
@@ -2642,8 +2642,8 @@ public class MobThread implements Listener{
 	
 	public void slimeDungeon5(Player player, Location loc) {
 		loc = location(loc);
-		if (!(loc.getX() <= 3822 && loc.getY() <= 63 && loc.getZ() <= 2780 
-				&& loc.getX() >= 3737 && loc.getY() >= 20 && loc.getZ() >= 2735)) {
+		if (!(loc.getX() <= 3735 && loc.getY() <= 76 && loc.getZ() <= 2580 
+				&& loc.getX() >= 3636 && loc.getY() >= 20 && loc.getZ() >= 2468)) {
 			return;
 		}
 		

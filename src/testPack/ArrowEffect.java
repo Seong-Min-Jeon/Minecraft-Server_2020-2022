@@ -57,7 +57,7 @@ public class ArrowEffect {
 				} else if(im.getDisplayName().equals(ChatColor.YELLOW + "질풍의 지팡이")) {
 					if(player.getLevel() >= 300) {
 						if(checkMana(player, 1)) {
-							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BEACON_ACTIVATE, 1.0f, 8.0f);
+							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BEACON_ACTIVATE, 0.4f, 8.0f);
 							player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 1, true, false, false));
 							player.sendMessage(ChatColor.GREEN + "신속이 부여됩니다.");
 							removeMana(player, 1);
@@ -66,7 +66,7 @@ public class ArrowEffect {
 				} else if(im.getDisplayName().equals(ChatColor.LIGHT_PURPLE + "고목나무 지팡이")) {
 					if(player.getLevel() >= 300) {
 						if(checkMana(player, 2)) {
-							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BEACON_ACTIVATE, 1.0f, 8.0f);
+							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BEACON_ACTIVATE, 0.4f, 8.0f);
 							if(player.getHealth() >= 18) {
 								player.setHealth(20);
 							} else {
@@ -99,7 +99,7 @@ public class ArrowEffect {
 						if(checkMana(player, 3)) {
 							if ((player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) || (player.getLocation().getBlock().getType() != Material.AIR)
 									|| (player.getLocation().add(0,-2,0).getBlock().getType() != Material.AIR)) {		
-								player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BEACON_ACTIVATE, 1.0f, 8.0f);
+								player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BEACON_ACTIVATE, 0.4f, 8.0f);
 								player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 1, true, false, false));
 								Vector vec = player.getEyeLocation().getDirection().multiply(2.5f);
 								player.setVelocity(vec);
@@ -121,7 +121,7 @@ public class ArrowEffect {
 				} else if(im.getDisplayName().equals(ChatColor.AQUA + "길잡이 지팡이")) {
 					if(player.getLevel() >= 500) {
 						if(checkMana(player, 3)) {
-							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BEACON_ACTIVATE, 1.0f, 8.0f);
+							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BEACON_ACTIVATE, 0.4f, 8.0f);
 							if(player.getHealth() >= 16) {
 								player.setHealth(20);
 							} else {

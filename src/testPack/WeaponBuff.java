@@ -448,7 +448,7 @@ public class WeaponBuff {
 							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 강탈자 갑옷")) {
 								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 강탈자 각반")) {
 									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 강탈자 신발")) {
-										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 3000,true,false,false));
+										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 4000,true,false,false));
 									}
 								}
 							}
@@ -458,7 +458,7 @@ public class WeaponBuff {
 							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "에골디드 갑옷")) {
 								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "에골디드 각반")) {
 									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "에골디드 신발")) {
-										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 1000,true,false,false));
+										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 10000,true,false,false));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0,true,false,false));
 									}
 								}
@@ -479,9 +479,9 @@ public class WeaponBuff {
 							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "데이드릭 갑옷")) {
 								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "데이드릭 각반")) {
 									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "데이드릭 신발")) {
-										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 10000,true,false,false));
+										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 15000,true,false,false));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 4,true,false,false));
-										player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 1,true,false,false));
+										player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0,true,false,false));
 									}
 								}
 							}
