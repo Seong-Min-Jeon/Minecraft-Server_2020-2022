@@ -306,7 +306,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("woolring")) { 
 			
 		} else {
-			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/804237076140261386/aile_texture_pack_14.zip");
+			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/807518710632808448/aile_texture_pack_15.zip");
 		}
 		
 		//Message
