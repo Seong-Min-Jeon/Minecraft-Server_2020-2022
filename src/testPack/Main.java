@@ -323,7 +323,9 @@ public class Main extends JavaPlugin implements Listener{
 		} else if(player.getDisplayName().equalsIgnoreCase("Espina_ID")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.BOLD + "'그저 군인' 에스피나.");
 		} else if(player.getDisplayName().equalsIgnoreCase("KangOSung")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.YELLOW + "'노예2' 캉!");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.YELLOW + "캉캉캉캉캉!");
+		} else if(player.getDisplayName().equalsIgnoreCase("Illusion__")) {
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.GOLD + "일류 건축가 릴륨.");
 		} else {
 			event.setJoinMessage("야생의 누군가가 등장했다.");
 		}
@@ -4198,9 +4200,9 @@ public class Main extends JavaPlugin implements Listener{
 						} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "죽음의 서약")) {
 							damage = player.getLevel() * 80;
 						} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "암석 스태프")) {
-							damage = player.getLevel() * 300;
+							damage = player.getLevel() * 200;
 						} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "대지의 스태프")) {
-							damage = player.getLevel() * 500;
+							damage = player.getLevel() * 400;
 						}
 					} catch(Exception e) {
 	
@@ -4606,6 +4608,7 @@ public class Main extends JavaPlugin implements Listener{
 				ArrayList<Integer> ary = new ArrayList<>(); 
 				ary.add(new SpecialEffect().a10(player));
 				ary.add(new SpecialEffect().s2(player));
+				ary.add(new SpecialEffect().a16(player));
 				Collections.sort(ary);
 				Collections.reverse(ary);
 				poison = ary.get(0);
@@ -4662,7 +4665,12 @@ public class Main extends JavaPlugin implements Listener{
 				//===========================================================================
 				// 독뎀
 				int poison = 0;
-				poison += new SpecialEffect().h2(player);
+				ArrayList<Integer> ary = new ArrayList<>(); 
+				ary.add(new SpecialEffect().h2(player));
+				ary.add(new SpecialEffect().a17(player));
+				Collections.sort(ary);
+				Collections.reverse(ary);
+				poison = ary.get(0);
 				
 				if(poison != 0) {
 					if(entity.getType() == EntityType.ZOMBIE || entity.getType() == EntityType.ZOMBIE_VILLAGER || entity.getType() == EntityType.HUSK
@@ -4703,7 +4711,12 @@ public class Main extends JavaPlugin implements Listener{
 				//===========================================================================
 				// 독뎀
 				int poison = 0;
-				poison += new SpecialEffect().h2(player);
+				ArrayList<Integer> ary = new ArrayList<>(); 
+				ary.add(new SpecialEffect().h2(player));
+				ary.add(new SpecialEffect().a17(player));
+				Collections.sort(ary);
+				Collections.reverse(ary);
+				poison = ary.get(0);
 				
 				if(poison != 0) {
 					if(entity.getType() == EntityType.ZOMBIE || entity.getType() == EntityType.ZOMBIE_VILLAGER || entity.getType() == EntityType.HUSK
@@ -7720,6 +7733,8 @@ public class Main extends JavaPlugin implements Listener{
 			event.setQuitMessage(ChatColor.BOLD + "'훈련병' 에스피나의 시간이 얼마 남지 않았습니다.");
 		} else if(player.getDisplayName().equalsIgnoreCase("KangOSung")) {
 			event.setQuitMessage(ChatColor.BOLD + "'일이 생긴' 캉님이 급히 떠났습니다.");
+		} else if(player.getDisplayName().equalsIgnoreCase("Illusion__")) {
+			event.setQuitMessage(ChatColor.BOLD + "훗, 오늘도 할 일을 끝내버렸군.");
 		} else {
 			event.setQuitMessage("야생의 누군가가 도망쳐버렸다.");
 		}

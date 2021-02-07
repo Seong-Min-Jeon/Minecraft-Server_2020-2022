@@ -178,6 +178,28 @@ public class SpecialEffect {
 		}
 		return 0;
 	}
+	
+	public int a16(Player player) {
+		try {
+			if(player.getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "와우가 삼킨 반지")) {
+				return 12;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+	public int a17(Player player) {
+		try {
+			if(player.getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "와우가 삼킨 반지")) {
+				return 13;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	

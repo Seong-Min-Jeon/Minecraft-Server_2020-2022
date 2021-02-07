@@ -91,6 +91,7 @@ public class SweepingCal {
 									ArrayList<Integer> ary = new ArrayList<>(); 
 									ary.add(new SpecialEffect().a10(player));
 									ary.add(new SpecialEffect().s2(player));
+									ary.add(new SpecialEffect().a16(player));
 									Collections.sort(ary);
 									Collections.reverse(ary);
 									poison = ary.get(0);

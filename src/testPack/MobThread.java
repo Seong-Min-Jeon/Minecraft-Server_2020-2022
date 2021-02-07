@@ -64,7 +64,7 @@ public class MobThread implements Listener{
 				}
 				
 				if(loc.getBlock().getType() != Material.WATER) {
-					if(time % 320 == 10) {
+					if(time % 160 == 10) {
 						if (loc.getX() <= 3712 && loc.getY() <= 47 && loc.getZ() <= 3708 && loc.getX() >= 3686
 								&& loc.getY() >= 39 && loc.getZ() >= 3672) {
 							tutozone(player, loc);

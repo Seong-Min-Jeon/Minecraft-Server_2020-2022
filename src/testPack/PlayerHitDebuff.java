@@ -1792,7 +1792,8 @@ public class PlayerHitDebuff {
 								td.endTask();
 								td.removeID();
 							} else if(time%2 == 0) {
-								Arrow arrow = player.launchProjectile(Arrow.class);
+								Skeleton skl = (Skeleton) mob;
+								Arrow arrow = skl.launchProjectile(Arrow.class);
 								arrow.setShooter((LivingEntity) mob);
 								arrow.setDamage(1000);
 								arrow.setVelocity(mob.getLocation().getDirection().multiply(1.8f));		

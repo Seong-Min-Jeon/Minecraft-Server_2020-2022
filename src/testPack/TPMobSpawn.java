@@ -647,8 +647,7 @@ public class TPMobSpawn {
 					}
 				}
 			}
-			Spider sp = (Spider) player.getWorld().spawnEntity(new Location(player.getWorld(), 72, 129, -22), EntityType.SPIDER);
-			sp.addPassenger(player.getWorld().spawnEntity(new Location(player.getWorld(), 72, 129, -22), EntityType.SKELETON));
+			player.getWorld().spawnEntity(new Location(player.getWorld(), 72, 129, -22), EntityType.SKELETON);
 			
 			new BossHealth().getBar19().setProgress(1.0);
 			new BossHealth().getBar19().addPlayer(player);

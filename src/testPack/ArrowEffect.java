@@ -131,6 +131,14 @@ public class ArrowEffect {
 							removeMana(player, 3);
 						}
 					} 
+				} else if(im.getDisplayName().equals(ChatColor.LIGHT_PURPLE + "슬라임볼 스태프")) {
+					if(player.getLevel() >= 500) {
+						if(checkMana(player, 4)) {
+							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BEACON_ACTIVATE, 0.4f, 8.0f);
+							player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 600, 1, true, false, false));
+							removeMana(player, 4);
+						}
+					} 
 				}
 				if(bool) {
 					
@@ -383,7 +391,7 @@ public class ArrowEffect {
 						if (nearEntity.getType() != EntityType.PLAYER) {
 							if (nearEntity instanceof LivingEntity) {
 								LivingEntity nearMob = (LivingEntity) nearEntity;
-								nearMob.damage(player.getLevel()*300);
+								nearMob.damage(player.getLevel()*200);
 							}
 						}
 					}
@@ -398,7 +406,7 @@ public class ArrowEffect {
 						if (nearEntity.getType() != EntityType.PLAYER) {
 							if (nearEntity instanceof LivingEntity) {
 								LivingEntity nearMob = (LivingEntity) nearEntity;
-								nearMob.damage(player.getLevel()*300);
+								nearMob.damage(player.getLevel()*200);
 							}
 						}
 					}
@@ -421,7 +429,7 @@ public class ArrowEffect {
 						if (nearEntity.getType() != EntityType.PLAYER) {
 							if (nearEntity instanceof LivingEntity) {
 								LivingEntity nearMob = (LivingEntity) nearEntity;
-								nearMob.damage(player.getLevel()*300);
+								nearMob.damage(player.getLevel()*200);
 							}
 						}
 					}
