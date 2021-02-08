@@ -7,6 +7,7 @@ import org.bukkit.entity.Player;
 
 public class ExpSystem {
 	
+	Cmd17ExpToggle et = new Cmd17ExpToggle();
 	Cmd8Party cp = new Cmd8Party();
 	
 	public void giveExp(Player player, int exp) {
@@ -30,7 +31,9 @@ public class ExpSystem {
 		double customRatio = (double)(exp/customExpToLevel);
 		double currentRatio = player.getExp();
 		double totalRatio = customRatio + currentRatio;
-		player.sendMessage(ChatColor.GRAY + "[Exp] " + exchange(exp));
+		if(!et.isOn(player.getDisplayName())) {
+			player.sendMessage(ChatColor.GRAY + "[Exp] " + exchange(exp));
+		}
 		if(totalRatio>=1) {
 			player.setLevel(player.getLevel()+1);
 			player.setExp(0);

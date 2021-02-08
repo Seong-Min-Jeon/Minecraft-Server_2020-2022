@@ -50,4 +50,7 @@ commands:
   class:
    description: class
    usage: /class
+  ExpToggle:
+   description: ExpToggle
+   usage: /ExpToggle
 api-version: 1.16

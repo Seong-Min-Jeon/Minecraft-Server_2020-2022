@@ -213,6 +213,7 @@ public class Main extends JavaPlugin implements Listener{
 		getCommand("ItemLock").setExecutor(new Cmd14ItemLock());
 		getCommand("skiptutorial").setExecutor(new Cmd15skiptutorial());
 		getCommand("class").setExecutor(new Cmd16class());
+		getCommand("exptoggle").setExecutor(new Cmd17ExpToggle());
 		
 		new Cmd16class().setFolder(getDataFolder());
 		
@@ -6605,23 +6606,6 @@ public class Main extends JavaPlugin implements Listener{
 	    		} catch(Exception e1) {
 	    			
 	    		}
-	    		//죽창 특수 이벤트
-	    		try {
-	    			if(event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
-	        			if(player.getInventory().getItemInMainHand().getType()==Material.BAMBOO) {
-	        				List <Entity> entitylist = player.getNearbyEntities (5, 5, 5); 
-	        				for (Entity nearEntity : entitylist) { 
-	        				    if (nearEntity.getType() == EntityType.PLAYER) { 
-	        				    	Player nearPlayer = (Player) nearEntity;
-	        				    	nearPlayer.setHealth(0);
-	        				    	nearPlayer.sendMessage(ChatColor.RED + player.getDisplayName() + "님이 죽창으로 당신을 소멸시켰습니다.");
-	        				    }        
-	        				}   	
-	        			}
-	        		}
-	    		} catch(Exception e1) {
-	    			
-	    		}  		
 	    		//증표
 	    		try {
 	    			if(event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
