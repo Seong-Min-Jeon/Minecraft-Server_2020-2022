@@ -23,7 +23,7 @@ public class Cmd18ItemToggle implements CommandExecutor {
 				ArrayList<String> lores = (ArrayList<String>) im.getLore(); 
 				String lore = lores.get(6);
 				if(cmd.getName().equalsIgnoreCase("ItemToggle")) {
-					if(lore.substring(2).equalsIgnoreCase("§a")) {
+					if(lore.substring(0,2).equalsIgnoreCase("§a")) {
 						player.sendMessage(ChatColor.RED + "You can't be sent Getting Item Message! (When the Mob Loot and Gathering.)");
 						lores.set(6, ChatColor.RED + "Item Toggle: Off");
 						im.setLore(lores);

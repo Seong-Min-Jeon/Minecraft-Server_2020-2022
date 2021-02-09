@@ -23,7 +23,7 @@ public class Cmd17ExpToggle implements CommandExecutor {
 				ArrayList<String> lores = (ArrayList<String>) im.getLore(); 
 				String lore = lores.get(5);
 				if(cmd.getName().equalsIgnoreCase("ExpToggle")) {
-					if(lore.substring(2).equalsIgnoreCase("§a")) {
+					if(lore.substring(0,2).equalsIgnoreCase("§a")) {
 						player.sendMessage(ChatColor.RED + "You can't be sent Exp Message!");
 						lores.set(5, ChatColor.RED + "Exp Toggle: Off");
 						im.setLore(lores);

@@ -27,7 +27,7 @@ public class Cmd12EmeraldToggle implements CommandExecutor {
 				ArrayList<String> lores = (ArrayList<String>) im.getLore(); 
 				String lore = lores.get(4);
 				if(cmd.getName().equalsIgnoreCase("EmeraldToggle")) {
-					if(lore.substring(2).equalsIgnoreCase("§a")) {
+					if(lore.substring(0,2).equalsIgnoreCase("§a")) {
 						player.sendMessage(ChatColor.RED + "You will not change emerald when you open an ender chest!");
 						lores.set(4, ChatColor.RED + "Emerald Toggle: Off");
 						im.setLore(lores);
