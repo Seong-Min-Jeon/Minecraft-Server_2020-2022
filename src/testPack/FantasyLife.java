@@ -15,6 +15,14 @@ public class FantasyLife {
 
 	Random rnd = new Random();
 	ExpSystem es = new ExpSystem();
+	Cmd18ItemToggle it = new Cmd18ItemToggle();
+	
+	// 메세지
+	public void sendMessage(Player player, String msg) {
+		if (it.isOn(player)) {
+			player.sendMessage(msg);
+		}
+	}
 	
 	public boolean fantasyLife(Player player, Block block, Location loc) {
 		if(wheat(player, block, loc) && coal(player, block, loc) && iron(player, block, loc) && gold(player, block, loc) &&
@@ -38,7 +46,7 @@ public class FantasyLife {
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.GRAY + "상처가 많은 밀" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.GRAY + "상처가 많은 밀" + ChatColor.WHITE + "을 획득했다.");
 					} else {
 						if(player.getInventory().contains(Material.ORANGE_DYE)) {
 							ItemStack var1 = new ItemStack(Material.WHEAT);
@@ -47,7 +55,7 @@ public class FantasyLife {
 							var1.setItemMeta(var1Im);
 							player.getInventory().addItem(var1);
 							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-							player.sendMessage(ChatColor.GRAY + "상처가 많은 밀" + ChatColor.WHITE + "을 획득했다.");
+							sendMessage(player, ChatColor.GRAY + "상처가 많은 밀" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "평범한 낫")) {
@@ -59,7 +67,7 @@ public class FantasyLife {
 						var1.setItemMeta(var1Im);
 						player.getInventory().addItem(var1);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.GRAY + "상처가 많은 밀" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.GRAY + "상처가 많은 밀" + ChatColor.WHITE + "을 획득했다.");
 					} else if (num1 == 3) {
 						ItemStack var1 = new ItemStack(Material.WHEAT);
 						ItemMeta var1Im = var1.getItemMeta();
@@ -68,7 +76,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 30000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.WHITE + "밀" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.WHITE + "밀" + ChatColor.WHITE + "을 획득했다.");
 					} else {
 						if(player.getInventory().contains(Material.ORANGE_DYE)) {
 							ItemStack var1 = new ItemStack(Material.WHEAT);
@@ -77,7 +85,7 @@ public class FantasyLife {
 							var1.setItemMeta(var1Im);
 							player.getInventory().addItem(var1);
 							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-							player.sendMessage(ChatColor.GRAY + "상처가 많은 밀" + ChatColor.WHITE + "을 획득했다.");
+							sendMessage(player, ChatColor.GRAY + "상처가 많은 밀" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "광이 나는 낫")) {
@@ -90,7 +98,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 30000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.WHITE + "밀" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.WHITE + "밀" + ChatColor.WHITE + "을 획득했다.");
 					} else if (num1 == 3) {
 						ItemStack var1 = new ItemStack(Material.WHEAT);
 						ItemMeta var1Im = var1.getItemMeta();
@@ -99,7 +107,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 150000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.YELLOW + "좋은 식재료가 될 밀" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.YELLOW + "좋은 식재료가 될 밀" + ChatColor.WHITE + "을 획득했다.");
 					} else {
 						if(player.getInventory().contains(Material.ORANGE_DYE)) {
 							ItemStack var1 = new ItemStack(Material.WHEAT);
@@ -109,7 +117,7 @@ public class FantasyLife {
 							player.getInventory().addItem(var1);
 							//es.giveExp(player, 30000);
 							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-							player.sendMessage(ChatColor.WHITE + "밀" + ChatColor.WHITE + "을 획득했다.");
+							sendMessage(player, ChatColor.WHITE + "밀" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "사신의 낫")) {
@@ -122,7 +130,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 150000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.YELLOW + "좋은 식재료가 될 밀" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.YELLOW + "좋은 식재료가 될 밀" + ChatColor.WHITE + "을 획득했다.");
 					} else if (num1 == 3) {
 						ItemStack var1 = new ItemStack(Material.WHEAT);
 						ItemMeta var1Im = var1.getItemMeta();
@@ -131,7 +139,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 5000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.LIGHT_PURPLE + "정교한 힘으로 잘린 밀" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.LIGHT_PURPLE + "정교한 힘으로 잘린 밀" + ChatColor.WHITE + "을 획득했다.");
 					} else {
 						if(player.getInventory().contains(Material.ORANGE_DYE)) {
 							ItemStack var1 = new ItemStack(Material.WHEAT);
@@ -141,7 +149,7 @@ public class FantasyLife {
 							player.getInventory().addItem(var1);
 							//es.giveExp(player, 150000);
 							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-							player.sendMessage(ChatColor.YELLOW + "좋은 식재료가 될 밀" + ChatColor.WHITE + "을 획득했다.");
+							sendMessage(player, ChatColor.YELLOW + "좋은 식재료가 될 밀" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "마스터 농부의 낫")) {
@@ -154,7 +162,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 5000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.LIGHT_PURPLE + "정교한 힘으로 잘린 밀" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.LIGHT_PURPLE + "정교한 힘으로 잘린 밀" + ChatColor.WHITE + "을 획득했다.");
 					} else if (num1 == 3) {
 						ItemStack var1 = new ItemStack(Material.WHEAT);
 						ItemMeta var1Im = var1.getItemMeta();
@@ -163,7 +171,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 8000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.AQUA + "윤기가 나는 밀" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.AQUA + "윤기가 나는 밀" + ChatColor.WHITE + "을 획득했다.");
 					} else {
 						if(player.getInventory().contains(Material.ORANGE_DYE)) {
 							ItemStack var1 = new ItemStack(Material.WHEAT);
@@ -173,7 +181,7 @@ public class FantasyLife {
 							player.getInventory().addItem(var1);
 							//es.giveExp(player, 5000000);
 							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-							player.sendMessage(ChatColor.LIGHT_PURPLE + "정교한 힘으로 잘린 밀" + ChatColor.WHITE + "을 획득했다.");
+							sendMessage(player, ChatColor.LIGHT_PURPLE + "정교한 힘으로 잘린 밀" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "신의 낫")) {
@@ -186,7 +194,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 8000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.AQUA + "윤기가 나는 밀" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.AQUA + "윤기가 나는 밀" + ChatColor.WHITE + "을 획득했다.");
 					} else if (num1 == 21) {
 						ItemStack var1 = new ItemStack(Material.WHEAT);
 						ItemMeta var1Im = var1.getItemMeta();
@@ -195,7 +203,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 2000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.DARK_RED + "신이 먹는다고 알려진 밀" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.DARK_RED + "신이 먹는다고 알려진 밀" + ChatColor.WHITE + "을 획득했다.");
 					} else {
 						if(player.getInventory().contains(Material.ORANGE_DYE)) {
 							ItemStack var1 = new ItemStack(Material.WHEAT);
@@ -205,7 +213,7 @@ public class FantasyLife {
 							player.getInventory().addItem(var1);
 							//es.giveExp(player, 8000000);
 							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-							player.sendMessage(ChatColor.AQUA + "윤기가 나는 밀" + ChatColor.WHITE + "을 획득했다.");
+							sendMessage(player, ChatColor.AQUA + "윤기가 나는 밀" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_PURPLE + "에포나의 낫")) {
@@ -218,7 +226,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 8000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.AQUA + "윤기가 나는 밀" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.AQUA + "윤기가 나는 밀" + ChatColor.WHITE + "을 획득했다.");
 					} else if (num1 == 21) {
 						ItemStack var1 = new ItemStack(Material.WHEAT);
 						ItemMeta var1Im = var1.getItemMeta();
@@ -227,7 +235,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 2000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.DARK_RED + "신이 먹는다고 알려진 밀" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.DARK_RED + "신이 먹는다고 알려진 밀" + ChatColor.WHITE + "을 획득했다.");
 					} else {
 						if(player.getInventory().contains(Material.ORANGE_DYE)) {
 							ItemStack var1 = new ItemStack(Material.WHEAT);
@@ -237,7 +245,7 @@ public class FantasyLife {
 							player.getInventory().addItem(var1);
 							//es.giveExp(player, 8000000);
 							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-							player.sendMessage(ChatColor.AQUA + "윤기가 나는 밀" + ChatColor.WHITE + "을 획득했다.");
+							sendMessage(player, ChatColor.AQUA + "윤기가 나는 밀" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
 				} else {
@@ -267,7 +275,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 1);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.GRAY + "흠집이 생긴 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.GRAY + "흠집이 생긴 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
 					} else {
 						if(player.getInventory().contains(Material.MAGENTA_DYE)) {
 							ItemStack var1 = new ItemStack(Material.COAL_ORE);
@@ -277,7 +285,7 @@ public class FantasyLife {
 							player.getInventory().addItem(var1);
 							//es.giveExp(player, 1);
 							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-							player.sendMessage(ChatColor.GRAY + "흠집이 생긴 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+							sendMessage(player, ChatColor.GRAY + "흠집이 생긴 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "평범한 곡괭이")) {
@@ -290,7 +298,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 1);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.GRAY + "흠집이 생긴 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.GRAY + "흠집이 생긴 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
 					} else if (num1 == 3) {
 						ItemStack var1 = new ItemStack(Material.COAL_ORE);
 						ItemMeta var1Im = var1.getItemMeta();
@@ -299,7 +307,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 30000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.WHITE + "석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.WHITE + "석탄 광석" + ChatColor.WHITE + "을 획득했다.");
 					} else {
 						if(player.getInventory().contains(Material.MAGENTA_DYE)) {
 							ItemStack var1 = new ItemStack(Material.COAL_ORE);
@@ -309,7 +317,7 @@ public class FantasyLife {
 							player.getInventory().addItem(var1);
 							//es.giveExp(player, 1);
 							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-							player.sendMessage(ChatColor.GRAY + "흠집이 생긴 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+							sendMessage(player, ChatColor.GRAY + "흠집이 생긴 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "수제 곡괭이")) {
@@ -322,7 +330,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 30000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.WHITE + "석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.WHITE + "석탄 광석" + ChatColor.WHITE + "을 획득했다.");
 					} else if (num1 == 3) {
 						ItemStack var1 = new ItemStack(Material.COAL_ORE);
 						ItemMeta var1Im = var1.getItemMeta();
@@ -331,7 +339,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 150000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.YELLOW + "깨끗한 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.YELLOW + "깨끗한 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
 					} else {
 						if(player.getInventory().contains(Material.MAGENTA_DYE)) {
 							ItemStack var1 = new ItemStack(Material.COAL_ORE);
@@ -341,7 +349,7 @@ public class FantasyLife {
 							player.getInventory().addItem(var1);
 							//es.giveExp(player, 30000);
 							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-							player.sendMessage(ChatColor.WHITE + "석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+							sendMessage(player, ChatColor.WHITE + "석탄 광석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "유명한 대장장이의 곡괭이")) {
@@ -354,7 +362,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 150000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.YELLOW + "깨끗한 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.YELLOW + "깨끗한 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
 					} else if (num1 == 3) {
 						ItemStack var1 = new ItemStack(Material.COAL_ORE);
 						ItemMeta var1Im = var1.getItemMeta();
@@ -363,7 +371,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 5000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.LIGHT_PURPLE + "순수도가 높은 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.LIGHT_PURPLE + "순수도가 높은 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
 					} else {
 						if(player.getInventory().contains(Material.MAGENTA_DYE)) {
 							ItemStack var1 = new ItemStack(Material.COAL_ORE);
@@ -373,7 +381,7 @@ public class FantasyLife {
 							player.getInventory().addItem(var1);
 							//es.giveExp(player, 150000);
 							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-							player.sendMessage(ChatColor.YELLOW + "깨끗한 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+							sendMessage(player, ChatColor.YELLOW + "깨끗한 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "마스터 대장장이의 곡괭이")) {
@@ -386,7 +394,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 5000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.LIGHT_PURPLE + "순수도가 높은 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.LIGHT_PURPLE + "순수도가 높은 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
 					} else if (num1 == 3) {
 						ItemStack var1 = new ItemStack(Material.COAL_ORE);
 						ItemMeta var1Im = var1.getItemMeta();
@@ -395,7 +403,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 8000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.AQUA + "절대적인 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.AQUA + "절대적인 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
 					} else {
 						if(player.getInventory().contains(Material.MAGENTA_DYE)) {
 							ItemStack var1 = new ItemStack(Material.COAL_ORE);
@@ -405,7 +413,7 @@ public class FantasyLife {
 							player.getInventory().addItem(var1);
 							//es.giveExp(player, 5000000);
 							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-							player.sendMessage(ChatColor.LIGHT_PURPLE + "순수도가 높은 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+							sendMessage(player, ChatColor.LIGHT_PURPLE + "순수도가 높은 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "신의 곡괭이")) {
@@ -418,7 +426,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 8000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.AQUA + "절대적인 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.AQUA + "절대적인 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
 					} else if (num1 == 21) {
 						ItemStack var1 = new ItemStack(Material.COAL_ORE);
 						ItemMeta var1Im = var1.getItemMeta();
@@ -427,7 +435,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 14000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.DARK_RED + "신의 힘이 담긴 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.DARK_RED + "신의 힘이 담긴 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
 					} else {
 						if(player.getInventory().contains(Material.MAGENTA_DYE)) {
 							ItemStack var1 = new ItemStack(Material.COAL_ORE);
@@ -437,7 +445,7 @@ public class FantasyLife {
 							player.getInventory().addItem(var1);
 							//es.giveExp(player, 8000000);
 							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-							player.sendMessage(ChatColor.AQUA + "절대적인 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+							sendMessage(player, ChatColor.AQUA + "절대적인 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
@@ -451,7 +459,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 8000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.AQUA + "절대적인 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.AQUA + "절대적인 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
 					} else if (num1 == 21) {
 						ItemStack var1 = new ItemStack(Material.COAL_ORE);
 						ItemMeta var1Im = var1.getItemMeta();
@@ -460,7 +468,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 14000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.DARK_RED + "신의 힘이 담긴 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.DARK_RED + "신의 힘이 담긴 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
 					} else {
 						if(player.getInventory().contains(Material.MAGENTA_DYE)) {
 							ItemStack var1 = new ItemStack(Material.COAL_ORE);
@@ -470,7 +478,7 @@ public class FantasyLife {
 							player.getInventory().addItem(var1);
 							//es.giveExp(player, 8000000);
 							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-							player.sendMessage(ChatColor.AQUA + "절대적인 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+							sendMessage(player, ChatColor.AQUA + "절대적인 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
 				} else {
@@ -503,7 +511,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 30000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.WHITE + "상태가 좋지 않은 철광석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.WHITE + "상태가 좋지 않은 철광석" + ChatColor.WHITE + "을 획득했다.");
 					} else {
 						if(player.getInventory().contains(Material.MAGENTA_DYE)) {
 							ItemStack var1 = new ItemStack(Material.IRON_ORE);
@@ -513,7 +521,7 @@ public class FantasyLife {
 							player.getInventory().addItem(var1);
 							//es.giveExp(player, 30000);
 							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-							player.sendMessage(ChatColor.WHITE + "상태가 좋지 않은 철광석" + ChatColor.WHITE + "을 획득했다.");
+							sendMessage(player, ChatColor.WHITE + "상태가 좋지 않은 철광석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
@@ -527,7 +535,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 30000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.WHITE + "상태가 좋지 않은 철광석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.WHITE + "상태가 좋지 않은 철광석" + ChatColor.WHITE + "을 획득했다.");
 					} else if (num1 == 3) {
 						ItemStack var1 = new ItemStack(Material.IRON_ORE);
 						ItemMeta var1Im = var1.getItemMeta();
@@ -536,7 +544,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 150000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.YELLOW + "철광석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.YELLOW + "철광석" + ChatColor.WHITE + "을 획득했다.");
 					} else {
 						if(player.getInventory().contains(Material.MAGENTA_DYE)) {
 							ItemStack var1 = new ItemStack(Material.IRON_ORE);
@@ -546,7 +554,7 @@ public class FantasyLife {
 							player.getInventory().addItem(var1);
 							//es.giveExp(player, 30000);
 							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-							player.sendMessage(ChatColor.WHITE + "상태가 좋지 않은 철광석" + ChatColor.WHITE + "을 획득했다.");
+							sendMessage(player, ChatColor.WHITE + "상태가 좋지 않은 철광석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
@@ -560,7 +568,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 150000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.YELLOW + "철광석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.YELLOW + "철광석" + ChatColor.WHITE + "을 획득했다.");
 					} else if (num1 == 3) {
 						ItemStack var1 = new ItemStack(Material.IRON_ORE);
 						ItemMeta var1Im = var1.getItemMeta();
@@ -569,7 +577,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 5000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.LIGHT_PURPLE + "빛이나는 철광석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.LIGHT_PURPLE + "빛이나는 철광석" + ChatColor.WHITE + "을 획득했다.");
 					} else {
 						if(player.getInventory().contains(Material.MAGENTA_DYE)) {
 							ItemStack var1 = new ItemStack(Material.IRON_ORE);
@@ -579,7 +587,7 @@ public class FantasyLife {
 							player.getInventory().addItem(var1);
 							//es.giveExp(player, 150000);
 							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-							player.sendMessage(ChatColor.YELLOW + "철광석" + ChatColor.WHITE + "을 획득했다.");
+							sendMessage(player, ChatColor.YELLOW + "철광석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
@@ -593,7 +601,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 5000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.LIGHT_PURPLE + "빛이나는 철광석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.LIGHT_PURPLE + "빛이나는 철광석" + ChatColor.WHITE + "을 획득했다.");
 					} else if (num1 == 3) {
 						ItemStack var1 = new ItemStack(Material.IRON_ORE);
 						ItemMeta var1Im = var1.getItemMeta();
@@ -602,7 +610,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 8000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.AQUA + "순백의 철광석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.AQUA + "순백의 철광석" + ChatColor.WHITE + "을 획득했다.");
 					} else {
 						if(player.getInventory().contains(Material.MAGENTA_DYE)) {
 							ItemStack var1 = new ItemStack(Material.IRON_ORE);
@@ -612,7 +620,7 @@ public class FantasyLife {
 							player.getInventory().addItem(var1);
 							//es.giveExp(player, 5000000);
 							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-							player.sendMessage(ChatColor.LIGHT_PURPLE + "빛이나는 철광석" + ChatColor.WHITE + "을 획득했다.");
+							sendMessage(player, ChatColor.LIGHT_PURPLE + "빛이나는 철광석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
@@ -626,7 +634,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 8000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.AQUA + "순백의 철광석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.AQUA + "순백의 철광석" + ChatColor.WHITE + "을 획득했다.");
 					} else if (num1 == 21) {
 						ItemStack var1 = new ItemStack(Material.IRON_ORE);
 						ItemMeta var1Im = var1.getItemMeta();
@@ -635,7 +643,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 14000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.DARK_RED + "신의 힘이 담긴 철광석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.DARK_RED + "신의 힘이 담긴 철광석" + ChatColor.WHITE + "을 획득했다.");
 					} else {
 						if(player.getInventory().contains(Material.MAGENTA_DYE)) {
 							ItemStack var1 = new ItemStack(Material.IRON_ORE);
@@ -645,7 +653,7 @@ public class FantasyLife {
 							player.getInventory().addItem(var1);
 							//es.giveExp(player, 8000000);
 							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-							player.sendMessage(ChatColor.AQUA + "순백의 철광석" + ChatColor.WHITE + "을 획득했다.");
+							sendMessage(player, ChatColor.AQUA + "순백의 철광석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
@@ -659,7 +667,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 8000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.AQUA + "순백의 철광석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.AQUA + "순백의 철광석" + ChatColor.WHITE + "을 획득했다.");
 					} else if (num1 == 21) {
 						ItemStack var1 = new ItemStack(Material.IRON_ORE);
 						ItemMeta var1Im = var1.getItemMeta();
@@ -668,7 +676,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 14000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.DARK_RED + "신의 힘이 담긴 철광석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.DARK_RED + "신의 힘이 담긴 철광석" + ChatColor.WHITE + "을 획득했다.");
 					} else {
 						if(player.getInventory().contains(Material.MAGENTA_DYE)) {
 							ItemStack var1 = new ItemStack(Material.IRON_ORE);
@@ -678,7 +686,7 @@ public class FantasyLife {
 							player.getInventory().addItem(var1);
 							//es.giveExp(player, 8000000);
 							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-							player.sendMessage(ChatColor.AQUA + "순백의 철광석" + ChatColor.WHITE + "을 획득했다.");
+							sendMessage(player, ChatColor.AQUA + "순백의 철광석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
 				} else {
@@ -714,7 +722,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 150000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.YELLOW + "가치가 떨어진 금광석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.YELLOW + "가치가 떨어진 금광석" + ChatColor.WHITE + "을 획득했다.");
 					} else {
 						if(player.getInventory().contains(Material.MAGENTA_DYE)) {
 							ItemStack var1 = new ItemStack(Material.GOLD_ORE);
@@ -724,7 +732,7 @@ public class FantasyLife {
 							player.getInventory().addItem(var1);
 							//es.giveExp(player, 150000);
 							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-							player.sendMessage(ChatColor.YELLOW + "가치가 떨어진 금광석" + ChatColor.WHITE + "을 획득했다.");
+							sendMessage(player, ChatColor.YELLOW + "가치가 떨어진 금광석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
@@ -738,7 +746,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 150000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.YELLOW + "가치가 떨어진 금광석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.YELLOW + "가치가 떨어진 금광석" + ChatColor.WHITE + "을 획득했다.");
 					} else if (num1 == 3) {
 						ItemStack var1 = new ItemStack(Material.GOLD_ORE);
 						ItemMeta var1Im = var1.getItemMeta();
@@ -747,7 +755,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 5000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.LIGHT_PURPLE + "금광석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.LIGHT_PURPLE + "금광석" + ChatColor.WHITE + "을 획득했다.");
 					} else {
 						if(player.getInventory().contains(Material.MAGENTA_DYE)) {
 							ItemStack var1 = new ItemStack(Material.GOLD_ORE);
@@ -757,7 +765,7 @@ public class FantasyLife {
 							player.getInventory().addItem(var1);
 							//es.giveExp(player, 150000);
 							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-							player.sendMessage(ChatColor.YELLOW + "가치가 떨어진 금광석" + ChatColor.WHITE + "을 획득했다.");
+							sendMessage(player, ChatColor.YELLOW + "가치가 떨어진 금광석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
@@ -771,7 +779,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 5000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.LIGHT_PURPLE + "금광석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.LIGHT_PURPLE + "금광석" + ChatColor.WHITE + "을 획득했다.");
 					} else if (num1 == 3) {
 						ItemStack var1 = new ItemStack(Material.GOLD_ORE);
 						ItemMeta var1Im = var1.getItemMeta();
@@ -780,7 +788,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 8000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.AQUA + "쉽게 녹지 않는 금광석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.AQUA + "쉽게 녹지 않는 금광석" + ChatColor.WHITE + "을 획득했다.");
 					} else {
 						if(player.getInventory().contains(Material.MAGENTA_DYE)) {
 							ItemStack var1 = new ItemStack(Material.GOLD_ORE);
@@ -790,7 +798,7 @@ public class FantasyLife {
 							player.getInventory().addItem(var1);
 							//es.giveExp(player, 5000000);
 							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-							player.sendMessage(ChatColor.LIGHT_PURPLE + "금광석" + ChatColor.WHITE + "을 획득했다.");
+							sendMessage(player, ChatColor.LIGHT_PURPLE + "금광석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
@@ -804,7 +812,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 8000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.AQUA + "쉽게 녹지 않는 금광석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.AQUA + "쉽게 녹지 않는 금광석" + ChatColor.WHITE + "을 획득했다.");
 					} else if (num1 == 21) {
 						ItemStack var1 = new ItemStack(Material.GOLD_ORE);
 						ItemMeta var1Im = var1.getItemMeta();
@@ -813,7 +821,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 14000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.DARK_RED + "신의 힘이 담긴 금광석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.DARK_RED + "신의 힘이 담긴 금광석" + ChatColor.WHITE + "을 획득했다.");
 					} else {
 						if(player.getInventory().contains(Material.MAGENTA_DYE)) {
 							ItemStack var1 = new ItemStack(Material.GOLD_ORE);
@@ -823,7 +831,7 @@ public class FantasyLife {
 							player.getInventory().addItem(var1);
 							//es.giveExp(player, 8000000);
 							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-							player.sendMessage(ChatColor.AQUA + "쉽게 녹지 않는 금광석" + ChatColor.WHITE + "을 획득했다.");
+							sendMessage(player, ChatColor.AQUA + "쉽게 녹지 않는 금광석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
@@ -837,7 +845,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 8000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.AQUA + "쉽게 녹지 않는 금광석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.AQUA + "쉽게 녹지 않는 금광석" + ChatColor.WHITE + "을 획득했다.");
 					} else if (num1 == 21) {
 						ItemStack var1 = new ItemStack(Material.GOLD_ORE);
 						ItemMeta var1Im = var1.getItemMeta();
@@ -846,7 +854,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 14000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.DARK_RED + "신의 힘이 담긴 금광석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.DARK_RED + "신의 힘이 담긴 금광석" + ChatColor.WHITE + "을 획득했다.");
 					} else {
 						if(player.getInventory().contains(Material.MAGENTA_DYE)) {
 							ItemStack var1 = new ItemStack(Material.GOLD_ORE);
@@ -856,7 +864,7 @@ public class FantasyLife {
 							player.getInventory().addItem(var1);
 							//es.giveExp(player, 8000000);
 							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-							player.sendMessage(ChatColor.AQUA + "쉽게 녹지 않는 금광석" + ChatColor.WHITE + "을 획득했다.");
+							sendMessage(player, ChatColor.AQUA + "쉽게 녹지 않는 금광석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
 				} else {
@@ -895,7 +903,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 5000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
 					} else {
 						if(player.getInventory().contains(Material.MAGENTA_DYE)) {
 							ItemStack var1 = new ItemStack(Material.DIAMOND_ORE);
@@ -905,7 +913,7 @@ public class FantasyLife {
 							player.getInventory().addItem(var1);
 							//es.giveExp(player, 5000000);
 							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-							player.sendMessage(ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
+							sendMessage(player, ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
@@ -919,7 +927,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 5000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
 					} else if (num1 == 3) {
 						ItemStack var1 = new ItemStack(Material.DIAMOND_ORE);
 						ItemMeta var1Im = var1.getItemMeta();
@@ -928,7 +936,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 8000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.AQUA + "다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.AQUA + "다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
 					} else {
 						if(player.getInventory().contains(Material.MAGENTA_DYE)) {
 							ItemStack var1 = new ItemStack(Material.DIAMOND_ORE);
@@ -938,7 +946,7 @@ public class FantasyLife {
 							player.getInventory().addItem(var1);
 							//es.giveExp(player, 5000000);
 							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-							player.sendMessage(ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
+							sendMessage(player, ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
@@ -952,7 +960,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 5000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
 					} else if (num1 <= 19) {
 						ItemStack var1 = new ItemStack(Material.DIAMOND_ORE);
 						ItemMeta var1Im = var1.getItemMeta();
@@ -961,7 +969,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 8000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.AQUA + "다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.AQUA + "다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
 					} else if (num1 <= 24) {
 						ItemStack var1 = new ItemStack(Material.DIAMOND_ORE);
 						ItemMeta var1Im = var1.getItemMeta();
@@ -970,7 +978,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						player.giveExp(160);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.AQUA + "빛나는 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.AQUA + "빛나는 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
 					} else if (num1 == 25) {
 						ItemStack var1 = new ItemStack(Material.DIAMOND_ORE);
 						ItemMeta var1Im = var1.getItemMeta();
@@ -979,7 +987,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 14000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.DARK_RED + "신의 힘이 담긴 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.DARK_RED + "신의 힘이 담긴 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
 					} else {
 						if(player.getInventory().contains(Material.MAGENTA_DYE)) {
 							ItemStack var1 = new ItemStack(Material.DIAMOND_ORE);
@@ -989,7 +997,7 @@ public class FantasyLife {
 							player.getInventory().addItem(var1);
 							//es.giveExp(player, 5000000);
 							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-							player.sendMessage(ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
+							sendMessage(player, ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
@@ -1003,7 +1011,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 5000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
 					} else if (num1 <= 19) {
 						ItemStack var1 = new ItemStack(Material.DIAMOND_ORE);
 						ItemMeta var1Im = var1.getItemMeta();
@@ -1012,7 +1020,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 8000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.AQUA + "다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.AQUA + "다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
 					} else if (num1 <= 24) {
 						ItemStack var1 = new ItemStack(Material.DIAMOND_ORE);
 						ItemMeta var1Im = var1.getItemMeta();
@@ -1021,7 +1029,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						player.giveExp(160);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.AQUA + "빛나는 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.AQUA + "빛나는 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
 					} else if (num1 == 25) {
 						ItemStack var1 = new ItemStack(Material.DIAMOND_ORE);
 						ItemMeta var1Im = var1.getItemMeta();
@@ -1030,7 +1038,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 14000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.DARK_RED + "신의 힘이 담긴 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.DARK_RED + "신의 힘이 담긴 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
 					} else {
 						if(player.getInventory().contains(Material.MAGENTA_DYE)) {
 							ItemStack var1 = new ItemStack(Material.DIAMOND_ORE);
@@ -1040,7 +1048,7 @@ public class FantasyLife {
 							player.getInventory().addItem(var1);
 							//es.giveExp(player, 5000000);
 							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-							player.sendMessage(ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
+							sendMessage(player, ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
 				} else {
@@ -1133,7 +1141,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 10);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.GRAY + "깨질 듯한 석영" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.GRAY + "깨질 듯한 석영" + ChatColor.WHITE + "을 획득했다.");
 					} else {
 						if(player.getInventory().contains(Material.MAGENTA_DYE)) {
 							ItemStack var1 = new ItemStack(Material.QUARTZ);
@@ -1143,7 +1151,7 @@ public class FantasyLife {
 							player.getInventory().addItem(var1);
 							//es.giveExp(player, 10);
 							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-							player.sendMessage(ChatColor.GRAY + "깨질 듯한 석영" + ChatColor.WHITE + "을 획득했다.");
+							sendMessage(player, ChatColor.GRAY + "깨질 듯한 석영" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "평범한 곡괭이")) {
@@ -1156,7 +1164,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 10);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.GRAY + "깨질 듯한 석영" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.GRAY + "깨질 듯한 석영" + ChatColor.WHITE + "을 획득했다.");
 					} else if (num1 == 3) {
 						ItemStack var1 = new ItemStack(Material.QUARTZ);
 						ItemMeta var1Im = var1.getItemMeta();
@@ -1165,7 +1173,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 30000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.WHITE + "석영" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.WHITE + "석영" + ChatColor.WHITE + "을 획득했다.");
 					} else {
 						if(player.getInventory().contains(Material.MAGENTA_DYE)) {
 							ItemStack var1 = new ItemStack(Material.QUARTZ);
@@ -1175,7 +1183,7 @@ public class FantasyLife {
 							player.getInventory().addItem(var1);
 							//es.giveExp(player, 10);
 							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-							player.sendMessage(ChatColor.GRAY + "깨질 듯한 석영" + ChatColor.WHITE + "을 획득했다.");
+							sendMessage(player, ChatColor.GRAY + "깨질 듯한 석영" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
@@ -1189,7 +1197,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 30000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.WHITE + "석영" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.WHITE + "석영" + ChatColor.WHITE + "을 획득했다.");
 					} else if (num1 == 3) {
 						ItemStack var1 = new ItemStack(Material.QUARTZ);
 						ItemMeta var1Im = var1.getItemMeta();
@@ -1198,7 +1206,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 150000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.YELLOW + "반듯한 석영" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.YELLOW + "반듯한 석영" + ChatColor.WHITE + "을 획득했다.");
 					} else {
 						if(player.getInventory().contains(Material.MAGENTA_DYE)) {
 							ItemStack var1 = new ItemStack(Material.QUARTZ);
@@ -1208,7 +1216,7 @@ public class FantasyLife {
 							player.getInventory().addItem(var1);
 							//es.giveExp(player, 30000);
 							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-							player.sendMessage(ChatColor.WHITE + "석영" + ChatColor.WHITE + "을 획득했다.");
+							sendMessage(player, ChatColor.WHITE + "석영" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
@@ -1222,7 +1230,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 150000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.YELLOW + "반듯한 석영" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.YELLOW + "반듯한 석영" + ChatColor.WHITE + "을 획득했다.");
 					} else if (num1 == 3) {
 						ItemStack var1 = new ItemStack(Material.QUARTZ);
 						ItemMeta var1Im = var1.getItemMeta();
@@ -1231,7 +1239,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 5000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.LIGHT_PURPLE + "매혹적인 석영" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.LIGHT_PURPLE + "매혹적인 석영" + ChatColor.WHITE + "을 획득했다.");
 					} else {
 						if(player.getInventory().contains(Material.MAGENTA_DYE)) {
 							ItemStack var1 = new ItemStack(Material.QUARTZ);
@@ -1241,7 +1249,7 @@ public class FantasyLife {
 							player.getInventory().addItem(var1);
 							//es.giveExp(player, 150000);
 							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-							player.sendMessage(ChatColor.YELLOW + "반듯한 석영" + ChatColor.WHITE + "을 획득했다.");
+							sendMessage(player, ChatColor.YELLOW + "반듯한 석영" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
@@ -1255,7 +1263,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 5000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.LIGHT_PURPLE + "매혹적인 석영" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.LIGHT_PURPLE + "매혹적인 석영" + ChatColor.WHITE + "을 획득했다.");
 					} else if (num1 == 3) {
 						ItemStack var1 = new ItemStack(Material.QUARTZ);
 						ItemMeta var1Im = var1.getItemMeta();
@@ -1264,7 +1272,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 8000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.AQUA + "보석같은 석영" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.AQUA + "보석같은 석영" + ChatColor.WHITE + "을 획득했다.");
 					} else {
 						if(player.getInventory().contains(Material.MAGENTA_DYE)) {
 							ItemStack var1 = new ItemStack(Material.QUARTZ);
@@ -1274,7 +1282,7 @@ public class FantasyLife {
 							player.getInventory().addItem(var1);
 							//es.giveExp(player, 5000000);
 							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-							player.sendMessage(ChatColor.LIGHT_PURPLE + "매혹적인 석영" + ChatColor.WHITE + "을 획득했다.");
+							sendMessage(player, ChatColor.LIGHT_PURPLE + "매혹적인 석영" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
@@ -1288,7 +1296,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 8000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.AQUA + "보석같은 석영" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.AQUA + "보석같은 석영" + ChatColor.WHITE + "을 획득했다.");
 					} else if (num1 <= 23) {
 						ItemStack var1 = new ItemStack(Material.QUARTZ);
 						ItemMeta var1Im = var1.getItemMeta();
@@ -1297,7 +1305,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 14000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.DARK_RED + "신의 힘이 담긴 석영" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.DARK_RED + "신의 힘이 담긴 석영" + ChatColor.WHITE + "을 획득했다.");
 					} else {
 						if(player.getInventory().contains(Material.MAGENTA_DYE)) {
 							ItemStack var1 = new ItemStack(Material.QUARTZ);
@@ -1307,7 +1315,7 @@ public class FantasyLife {
 							player.getInventory().addItem(var1);
 							//es.giveExp(player, 8000000);
 							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-							player.sendMessage(ChatColor.AQUA + "보석같은 석영" + ChatColor.WHITE + "을 획득했다.");
+							sendMessage(player, ChatColor.AQUA + "보석같은 석영" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
@@ -1321,7 +1329,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 8000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.AQUA + "보석같은 석영" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.AQUA + "보석같은 석영" + ChatColor.WHITE + "을 획득했다.");
 					} else if (num1 <= 23) {
 						ItemStack var1 = new ItemStack(Material.QUARTZ);
 						ItemMeta var1Im = var1.getItemMeta();
@@ -1330,7 +1338,7 @@ public class FantasyLife {
 						player.getInventory().addItem(var1);
 						//es.giveExp(player, 14000000);
 						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						player.sendMessage(ChatColor.DARK_RED + "신의 힘이 담긴 석영" + ChatColor.WHITE + "을 획득했다.");
+						sendMessage(player, ChatColor.DARK_RED + "신의 힘이 담긴 석영" + ChatColor.WHITE + "을 획득했다.");
 					} else {
 						if(player.getInventory().contains(Material.MAGENTA_DYE)) {
 							ItemStack var1 = new ItemStack(Material.QUARTZ);
@@ -1340,7 +1348,7 @@ public class FantasyLife {
 							player.getInventory().addItem(var1);
 							//es.giveExp(player, 8000000);
 							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-							player.sendMessage(ChatColor.AQUA + "보석같은 석영" + ChatColor.WHITE + "을 획득했다.");
+							sendMessage(player, ChatColor.AQUA + "보석같은 석영" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
 				} else {

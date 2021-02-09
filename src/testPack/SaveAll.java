@@ -271,7 +271,24 @@ public class SaveAll {
 						String lvl1 = im.getLore().get(0);
 						String lvl2 = im.getLore().get(1);
 						String lvl3 = im.getLore().get(2);
-						fw.write(lvl1.split(": ")[1] + " " + lvl2.split(": ")[1] + " " + lvl3.split(": ")[1]);
+						String lvl4 = "1";
+						String lvl5 = "1";
+						String lvl6 = "1";
+						try {
+							if(!im.getLore().get(4).substring(0,2).equalsIgnoreCase("§a")) {
+								lvl4 = "0";
+							}
+							if(!im.getLore().get(5).substring(0,2).equalsIgnoreCase("§a")) {
+								lvl5 = "0";
+							}
+							if(!im.getLore().get(6).substring(0,2).equalsIgnoreCase("§a")) {
+								lvl6 = "0";
+							}
+						} catch(Exception e) {
+							
+						}
+						
+						fw.write(lvl1.split(": ")[1] + " " + lvl2.split(": ")[1] + " " + lvl3.split(": ")[1] + " " + lvl4 + " " + lvl5 + " " + lvl6);
 						fw.close();
 						bufReader.close();
 					}

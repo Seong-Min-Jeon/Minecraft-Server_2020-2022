@@ -62,7 +62,7 @@ public class ExpSystemByMob {
 		double customRatio = (double)(exp/customExpToLevel);
 		double currentRatio = player.getExp();
 		double totalRatio = customRatio + currentRatio;
-		if(!et.isOn(player.getDisplayName())) {
+		if(et.isOn(player)) {
 			player.sendMessage(ChatColor.GRAY + "[Exp] " + exchange(exp));
 		}
 		if(totalRatio>=1) {
@@ -130,7 +130,7 @@ public class ExpSystemByMob {
 		double customRatio = (double)(exp/customExpToLevel);
 		double currentRatio = player.getExp();
 		double totalRatio = customRatio + currentRatio;
-		if(!et.isOn(player.getDisplayName())) {
+		if(et.isOn(player)) {
 			player.sendMessage(ChatColor.GRAY + "[Exp] " + exchange(exp));
 		}
 		if(totalRatio>=1) {

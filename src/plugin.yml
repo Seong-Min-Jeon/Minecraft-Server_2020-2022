@@ -53,4 +53,7 @@ commands:
   ExpToggle:
    description: ExpToggle
    usage: /ExpToggle
+  ItemToggle:
+   description: ItemToggle
+   usage: /ItemToggle
 api-version: 1.16

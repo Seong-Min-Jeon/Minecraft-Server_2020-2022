@@ -766,6 +766,26 @@ public class ReloadPlayerData {
 		lore.add(ChatColor.GRAY + "장비 제작 레벨: " + lvl[0]);
 		lore.add(ChatColor.GRAY + "포션 제작 레벨: " + lvl[1]);
 		lore.add(ChatColor.GRAY + "음식 제작 레벨: " + lvl[2]);
+		try {
+			lore.add(" ");
+			if(lvl[3].equals("1")) {
+				lore.add(ChatColor.GREEN + "Emerald Toggle: On");
+			} else {
+				lore.add(ChatColor.RED + "Emerald Toggle: Off");
+			}
+			if(lvl[4].equals("1")) {
+				lore.add(ChatColor.GREEN + "Exp Toggle: On");
+			} else {
+				lore.add(ChatColor.RED + "Exp Toggle: Off");
+			}
+			if(lvl[5].equals("1")) {
+				lore.add(ChatColor.GREEN + "Item Toggle: On");
+			} else {
+				lore.add(ChatColor.RED + "Item Toggle: Off");
+			}
+		} catch(Exception e) {
+			
+		}
 		ItemMeta im = item.getItemMeta();
 		im.setLore(lore);
 		item.setItemMeta(im);

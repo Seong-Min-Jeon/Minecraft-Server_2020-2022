@@ -214,6 +214,7 @@ public class Main extends JavaPlugin implements Listener{
 		getCommand("skiptutorial").setExecutor(new Cmd15skiptutorial());
 		getCommand("class").setExecutor(new Cmd16class());
 		getCommand("exptoggle").setExecutor(new Cmd17ExpToggle());
+		getCommand("itemtoggle").setExecutor(new Cmd18ItemToggle());
 		
 		new Cmd16class().setFolder(getDataFolder());
 		
@@ -504,7 +505,7 @@ public class Main extends JavaPlugin implements Listener{
 						file.createNewFile();
 						BufferedWriter fw = new BufferedWriter(
 								new OutputStreamWriter(new FileOutputStream(file), "UTF-8"));
-						fw.write("1.00 1.00 1.00");
+						fw.write("1.00 1.00 1.00 1 1 1");
 						fw.close();
 					} catch (IOException e) {
 						e.printStackTrace();
@@ -7107,7 +7108,7 @@ public class Main extends JavaPlugin implements Listener{
 	        Player player = (Player) event.getPlayer();
 	        if(event.getInventory().getType() == InventoryType.ENDER_CHEST || event.getInventory().getType() == InventoryType.CHEST) {
 	        	
-	        	if(et.isOn(player.getDisplayName())) {
+	        	if(et.isOn(player)) {
 	        		int cnt = 0;
 		        	for(ItemStack item : player.getInventory().getContents()) {
 		        		if(item == null) continue;

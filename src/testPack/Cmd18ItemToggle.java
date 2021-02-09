@@ -10,7 +10,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-public class Cmd17ExpToggle implements CommandExecutor {
+public class Cmd18ItemToggle implements CommandExecutor {
 	
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
@@ -21,18 +21,18 @@ public class Cmd17ExpToggle implements CommandExecutor {
 				ItemStack item = player.getInventory().getItem(7);
 				ItemMeta im = item.getItemMeta();
 				ArrayList<String> lores = (ArrayList<String>) im.getLore(); 
-				String lore = lores.get(5);
-				if(cmd.getName().equalsIgnoreCase("ExpToggle")) {
+				String lore = lores.get(6);
+				if(cmd.getName().equalsIgnoreCase("ItemToggle")) {
 					if(lore.substring(2).equalsIgnoreCase("§a")) {
-						player.sendMessage(ChatColor.RED + "You can't be sent Exp Message!");
-						lores.set(5, ChatColor.RED + "Exp Toggle: Off");
+						player.sendMessage(ChatColor.RED + "You can't be sent Getting Item Message! (When the Mob Loot and Gathering.)");
+						lores.set(6, ChatColor.RED + "Item Toggle: Off");
 						im.setLore(lores);
 						item.setItemMeta(im);
 						player.getInventory().setItem(7, item);
 						return true;
 					} 
-					player.sendMessage(ChatColor.GREEN + "You can be sent Exp Message!");
-					lores.set(5, ChatColor.GREEN + "Exp Toggle: On");
+					player.sendMessage(ChatColor.GREEN + "You can be sent Getting Item Message! (When the Mob Loot and Gathering.)");
+					lores.set(6, ChatColor.GREEN + "Item Toggle: On");
 					im.setLore(lores);
 					item.setItemMeta(im);
 					player.getInventory().setItem(7, item);
@@ -49,7 +49,7 @@ public class Cmd17ExpToggle implements CommandExecutor {
 		ItemStack item = player.getInventory().getItem(7);
 		ItemMeta im = item.getItemMeta();
 		ArrayList<String> lores = (ArrayList<String>) im.getLore(); 
-		String lore = lores.get(5);
+		String lore = lores.get(6);
 		if(lore.substring(2).equalsIgnoreCase("§a")) {
 			return true;
 		} 

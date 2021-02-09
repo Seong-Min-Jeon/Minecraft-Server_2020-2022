@@ -29,10 +29,18 @@ public class MobLoot {
 
 	private final int multyEme = 1;
 	ExpSystemByMob es = new ExpSystemByMob();
+	Cmd18ItemToggle it = new Cmd18ItemToggle();
 
 	// 1:10 10:100 20:1000 30:4000 40:10000 50:21000 100:200000 200:1840000
 	// 400:16660000 700:97600000 1000:300000000
 
+	// 메세지
+	public void sendMessage(Player player, String msg) {
+		if(it.isOn(player)) {
+			player.sendMessage(msg);
+		}
+	}
+	
 	// 공격을 모르는 스켈이
 	public void mob1(Player player) {
 		ItemStack ticket = new ItemStack(Material.ACACIA_DOOR);
@@ -44,7 +52,7 @@ public class MobLoot {
 		ticketIm.setLore(ticketLore);
 		ticket.setItemMeta(ticketIm);
 		player.getInventory().addItem(ticket);
-		player.sendMessage(ChatColor.YELLOW + "보스 스켈이 소환 스크롤" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "보스 스켈이 소환 스크롤" + ChatColor.WHITE + "을 획득했다.");
 		es.giveExp(player, 1);
 	}
 
@@ -59,7 +67,7 @@ public class MobLoot {
 		ticketIm.setLore(ticketLore);
 		ticket.setItemMeta(ticketIm);
 		player.getInventory().addItem(ticket);
-		player.sendMessage(ChatColor.YELLOW + "낫 교환권" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "낫 교환권" + ChatColor.WHITE + "을 획득했다.");
 		es.giveExp(player, 1);
 	}
 
@@ -122,7 +130,7 @@ public class MobLoot {
 			reinIm.setLore(reinLore);
 			rein.setItemMeta(reinIm);
 			player.getInventory().addItem(rein);
-			player.sendMessage(ChatColor.AQUA + "검은 수염의 증표" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.AQUA + "검은 수염의 증표" + ChatColor.WHITE + "을 획득했다.");
 		}
 		es.giveExp(player, 3768);
 	}
@@ -155,10 +163,10 @@ public class MobLoot {
 		int tmp = rnd.nextInt(10);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		}
 
 		QuestBoard cb = new QuestBoard();
@@ -212,14 +220,14 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "잊혀진 바다 신전 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "잊혀진 바다 신전 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "잊혀진 바다 신전 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 
 		List<Entity> entitylist = player.getNearbyEntities(10, 3, 10);
 		for (Entity nearEntity : entitylist) {
 			if (nearEntity.getType() == EntityType.PLAYER) {
-				Player nearplayer = (Player) nearEntity;
-				nearplayer.getInventory().addItem(rewardKey);
-				nearplayer.sendMessage(ChatColor.YELLOW + "잊혀진 바다 신전 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+				Player nearPlayer = (Player) nearEntity;
+				nearPlayer.getInventory().addItem(rewardKey);
+				sendMessage(nearPlayer, ChatColor.YELLOW + "잊혀진 바다 신전 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 			}
 		}
 	}
@@ -266,7 +274,7 @@ public class MobLoot {
 			Chest chest = (Chest) block.getState();
 			ItemStack weapon = chest.getInventory().getItem(0);
 			player.getInventory().addItem(weapon);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "변이의 힘이 담긴 물체" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "변이의 힘이 담긴 물체" + ChatColor.WHITE + "을 획득했다.");
 		}
 		es.giveExp(player, 15554);
 	}
@@ -325,19 +333,19 @@ public class MobLoot {
 		int num2 = rnd.nextInt(15);
 		if (num2 == 0) {
 			player.teleport(new Location(world, 3464.5, 18, 3740));
-			player.sendMessage("유적 어딘가로 이동했다.");
+			sendMessage(player, "유적 어딘가로 이동했다.");
 		} else if (num2 == 1) {
 			player.teleport(new Location(world, 3464.5, 18, 3697));
-			player.sendMessage("유적 어딘가로 이동했다.");
+			sendMessage(player, "유적 어딘가로 이동했다.");
 		} else if (num2 == 2) {
 			player.teleport(new Location(world, 3503.5, 18, 3698));
-			player.sendMessage("유적 어딘가로 이동했다.");
+			sendMessage(player, "유적 어딘가로 이동했다.");
 		} else if (num2 == 3) {
 			player.teleport(new Location(world, 3514.5, 18, 3745));
-			player.sendMessage("유적 어딘가로 이동했다.");
+			sendMessage(player, "유적 어딘가로 이동했다.");
 		} else if (num2 == 4) {
 			player.teleport(new Location(world, 3515.5, 48, 3706));
-			player.sendMessage("유적 어딘가로 이동했다.");
+			sendMessage(player, "유적 어딘가로 이동했다.");
 		}
 	}
 
@@ -351,19 +359,19 @@ public class MobLoot {
 		int num2 = rnd.nextInt(10);
 		if (num2 == 0) {
 			player.teleport(new Location(world, 3464.5, 18, 3740));
-			player.sendMessage("유적 어딘가로 이동했다.");
+			sendMessage(player, "유적 어딘가로 이동했다.");
 		} else if (num2 == 1) {
 			player.teleport(new Location(world, 3464.5, 18, 3697));
-			player.sendMessage("유적 어딘가로 이동했다.");
+			sendMessage(player, "유적 어딘가로 이동했다.");
 		} else if (num2 == 2) {
 			player.teleport(new Location(world, 3503.5, 18, 3698));
-			player.sendMessage("유적 어딘가로 이동했다.");
+			sendMessage(player, "유적 어딘가로 이동했다.");
 		} else if (num2 == 3) {
 			player.teleport(new Location(world, 3514.5, 18, 3745));
-			player.sendMessage("유적 어딘가로 이동했다.");
+			sendMessage(player, "유적 어딘가로 이동했다.");
 		} else if (num2 == 4) {
 			player.teleport(new Location(world, 3515.5, 48, 3706));
-			player.sendMessage("유적 어딘가로 이동했다.");
+			sendMessage(player, "유적 어딘가로 이동했다.");
 		}
 	}
 
@@ -379,7 +387,7 @@ public class MobLoot {
 //		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "숲의 유적 보상 열쇠");
 //		rewardKey.setItemMeta(rewardKeyIm);
 //		player.getInventory().addItem(rewardKey);
-//		player.sendMessage(ChatColor.YELLOW + "숲의 유적 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+//		sendMessage(player, ChatColor.YELLOW + "숲의 유적 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 
 	}
 
@@ -417,7 +425,7 @@ public class MobLoot {
 			Chest chest = (Chest) block.getState();
 			ItemStack weapon1 = chest.getInventory().getItem(10);
 			player.getInventory().addItem(weapon1);
-			player.sendMessage(ChatColor.YELLOW + "미래를 예지하는 눈" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "미래를 예지하는 눈" + ChatColor.WHITE + "을 획득했다.");
 		}
 		
 	}
@@ -456,10 +464,10 @@ public class MobLoot {
 		int tmp = rnd.nextInt(10);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		}
 
 		QuestBoard cb = new QuestBoard();
@@ -507,10 +515,10 @@ public class MobLoot {
 		int tmp = rnd.nextInt(10);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		}
 
 		QuestBoard cb = new QuestBoard();
@@ -587,13 +595,13 @@ public class MobLoot {
 		int tmp = rnd.nextInt(10);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		}
 	}
 
@@ -625,13 +633,13 @@ public class MobLoot {
 		int tmp = rnd.nextInt(10);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		}
 	}
 
@@ -827,7 +835,7 @@ public class MobLoot {
 
 	// 시련의 형상
 	public void mob48(Player player) {
-		player.sendMessage("클리어!");
+		sendMessage(player, "클리어!");
 		player.teleport(new Location(player.getWorld(), -1106, 186, 1453.5, -90.0f, 0.0f));
 		
 		Location chestLoc = new Location(player.getWorld(), -1833, 92, 3036);
@@ -835,7 +843,7 @@ public class MobLoot {
 		Chest chest = (Chest) block.getState();
 		ItemStack item = chest.getInventory().getItem(7);
 		player.getInventory().addItem(item);
-		player.sendMessage(ChatColor.DARK_RED + "숨겨진 달걀 1" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.DARK_RED + "숨겨진 달걀 1" + ChatColor.WHITE + "을 획득했다.");
 	}
 
 	// 귀웅
@@ -898,13 +906,13 @@ public class MobLoot {
 		int tmp = rnd.nextInt(10);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		}
 	}
 
@@ -936,13 +944,13 @@ public class MobLoot {
 		int tmp = rnd.nextInt(10);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		}
 	}
 
@@ -990,16 +998,16 @@ public class MobLoot {
 		int tmp = rnd.nextInt(12);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
 		}
 	}
 
@@ -1085,19 +1093,19 @@ public class MobLoot {
 		int tmp = rnd.nextInt(20);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
 	}
 
@@ -1139,19 +1147,19 @@ public class MobLoot {
 		int tmp = rnd.nextInt(20);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
 	}
 
@@ -1193,19 +1201,19 @@ public class MobLoot {
 		int tmp = rnd.nextInt(20);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
 	}
 
@@ -1247,19 +1255,19 @@ public class MobLoot {
 		int tmp = rnd.nextInt(20);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
 	}
 
@@ -1452,7 +1460,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "타락한 요정 왕국 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "타락한 요정 왕국 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "타락한 요정 왕국 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -1463,7 +1471,7 @@ public class MobLoot {
 				if (loc.getX() <= 3797 && loc.getY() <= 90 && loc.getZ() <= 3497 
 						&& loc.getX() >= 3754 && loc.getY() >= 75 && loc.getZ() >= 3456) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "타락한 요정 왕국 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "타락한 요정 왕국 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 				}
 			}
 		}
@@ -1484,7 +1492,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "타락한 요정 왕국 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "타락한 요정 왕국 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "타락한 요정 왕국 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -1495,7 +1503,7 @@ public class MobLoot {
 				if (loc.getX() <= 3797 && loc.getY() <= 90 && loc.getZ() <= 3497 
 						&& loc.getX() >= 3754 && loc.getY() >= 75 && loc.getZ() >= 3456) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "타락한 요정 왕국 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "타락한 요정 왕국 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 				}
 			}
 		}
@@ -1535,10 +1543,10 @@ public class MobLoot {
 		int tmp = rnd.nextInt(15);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.WHITE + "중급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.WHITE + "중급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.WHITE + "중급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.WHITE + "중급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		}
 		
 		QuestBoard cb = new QuestBoard();
@@ -1571,10 +1579,10 @@ public class MobLoot {
 		int tmp = rnd.nextInt(15);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.WHITE + "중급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.WHITE + "중급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.WHITE + "중급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.WHITE + "중급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		}
 		
 		QuestBoard cb = new QuestBoard();
@@ -1607,10 +1615,10 @@ public class MobLoot {
 		int tmp = rnd.nextInt(15);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.WHITE + "중급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.WHITE + "중급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.WHITE + "중급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.WHITE + "중급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		}
 		
 		QuestBoard cb = new QuestBoard();
@@ -1648,13 +1656,13 @@ public class MobLoot {
 		int tmp = rnd.nextInt(18);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.WHITE + "중급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.WHITE + "중급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.WHITE + "중급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.WHITE + "중급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.WHITE + "중급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.WHITE + "중급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		}
 	}
 	
@@ -1686,13 +1694,13 @@ public class MobLoot {
 		int tmp = rnd.nextInt(18);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.WHITE + "중급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.WHITE + "중급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.WHITE + "중급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.WHITE + "중급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.WHITE + "중급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.WHITE + "중급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		}
 	}
 	
@@ -1716,7 +1724,7 @@ public class MobLoot {
 		var1im.setDisplayName(ChatColor.WHITE + "중급 포보르의 심장");
 		var1.setItemMeta(var1im);
 		player.getInventory().addItem(var1);
-		player.sendMessage(ChatColor.WHITE + "중급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.WHITE + "중급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -1782,14 +1790,14 @@ public class MobLoot {
 		var1im.setDisplayName(ChatColor.WHITE + "중급 포보르의 뿔");
 		var1.setItemMeta(var1im);
 		player.getInventory().addItem(var1);
-		player.sendMessage(ChatColor.WHITE + "중급 포보르의 뿔" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.WHITE + "중급 포보르의 뿔" + ChatColor.WHITE + "을 획득했다.");
 
 		ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
 		ItemMeta rewardKeyIm = rewardKey.getItemMeta();
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "카루 던전 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "카루 던전 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "카루 던전 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -1800,7 +1808,7 @@ public class MobLoot {
 				if (loc.getX() <= 3769 && loc.getY() <= 163 && loc.getZ() <= 3254 && loc.getX() >= 3711
 						&& loc.getY() >= 133 && loc.getZ() >= 3217) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "카루 던전 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "카루 던전 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 				}
 			}
 		}
@@ -1897,7 +1905,7 @@ public class MobLoot {
 		scrollIm.setUnbreakable(true);
 		scroll.setItemMeta(scrollIm);		
 		player.getInventory().addItem(scroll);
-		player.sendMessage(ChatColor.GOLD + "엑스트라 퀘스트: 마신왕의 계약" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.GOLD + "엑스트라 퀘스트: 마신왕의 계약" + ChatColor.WHITE + "을 획득했다.");
 		
 		QuestBoard cb = new QuestBoard();
 		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===늪지의 마신왕===")) {
@@ -1940,10 +1948,10 @@ public class MobLoot {
 		int tmp = rnd.nextInt(10);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		}
 		
 	}
@@ -1971,10 +1979,10 @@ public class MobLoot {
 		int tmp = rnd.nextInt(10);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		}
 		
 	}
@@ -2002,10 +2010,10 @@ public class MobLoot {
 		int tmp = rnd.nextInt(10);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		}
 	}
 	
@@ -2032,10 +2040,10 @@ public class MobLoot {
 		int tmp = rnd.nextInt(10);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		}
 	}
 	
@@ -2062,10 +2070,10 @@ public class MobLoot {
 		int tmp = rnd.nextInt(10);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.GRAY + "하급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "하급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		}
 	}
 	
@@ -2084,14 +2092,14 @@ public class MobLoot {
 		var1im.setDisplayName(ChatColor.GRAY + "하급 포보르의 심장");
 		var1.setItemMeta(var1im);
 		player.getInventory().addItem(var1);
-		player.sendMessage(ChatColor.WHITE + "하급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.WHITE + "하급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 
 		ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
 		ItemMeta rewardKeyIm = rewardKey.getItemMeta();
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "아덴의 저택 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "아덴의 저택 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "아덴의 저택 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2102,7 +2110,7 @@ public class MobLoot {
 				if (loc.getX() <= 3336 && loc.getY() <= 45 && loc.getZ() <= 3762 && loc.getX() >= 3299
 						&& loc.getY() >= 10 && loc.getZ() >= 3725) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "아덴의 저택 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "아덴의 저택 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 				}
 			}
 		}
@@ -2123,7 +2131,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "숨겨진 아덴의 저택 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "숨겨진 아덴의 저택 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "숨겨진 아덴의 저택 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2134,7 +2142,7 @@ public class MobLoot {
 				if (loc.getX() <= 3383 && loc.getY() <= 32 && loc.getZ() <= 3803 && loc.getX() >= 3355
 						&& loc.getY() >= 11 && loc.getZ() >= 3766) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "숨겨진 아덴의 저택 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "숨겨진 아덴의 저택 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 				}
 			}
 		}
@@ -2200,19 +2208,19 @@ public class MobLoot {
 		int tmp = rnd.nextInt(20);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.WHITE + "중급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.WHITE + "중급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.WHITE + "중급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.WHITE + "중급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.WHITE + "중급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.WHITE + "중급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.WHITE + "중급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.WHITE + "중급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.WHITE + "중급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.WHITE + "중급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
 	}
 	
@@ -2265,19 +2273,19 @@ public class MobLoot {
 		int tmp = rnd.nextInt(20);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.WHITE + "중급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.WHITE + "중급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.WHITE + "중급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.WHITE + "중급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.WHITE + "중급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.WHITE + "중급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.WHITE + "중급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.WHITE + "중급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.WHITE + "중급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.WHITE + "중급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
 		
 		QuestBoard cb = new QuestBoard();
@@ -2348,19 +2356,19 @@ public class MobLoot {
 		int tmp = rnd.nextInt(20);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.WHITE + "중급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.WHITE + "중급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.WHITE + "중급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.WHITE + "중급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.WHITE + "중급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.WHITE + "중급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.WHITE + "중급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.WHITE + "중급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.WHITE + "중급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.WHITE + "중급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
 		
 		QuestBoard cb = new QuestBoard();
@@ -2427,10 +2435,10 @@ public class MobLoot {
 		int tmp = rnd.nextInt(10);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		}
 		
 		int tmp2 = rnd.nextInt(20);
@@ -2463,10 +2471,10 @@ public class MobLoot {
 		int tmp = rnd.nextInt(5);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		}
 
 		QuestBoard cb = new QuestBoard();
@@ -2483,7 +2491,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "죽음의 탑 1층 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "죽음의 탑 1층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "죽음의 탑 1층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 		
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2493,7 +2501,7 @@ public class MobLoot {
 				if (loc.getX() <= 90 && loc.getY() <= 87 && loc.getZ() <= -5 && 
 						loc.getX() >= 54 && loc.getY() >= 75 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "죽음의 탑 1층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "죽음의 탑 1층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 				}
 			}
 		}
@@ -2506,7 +2514,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "죽음의 탑 2층 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "죽음의 탑 2층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "죽음의 탑 2층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 		
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2516,7 +2524,7 @@ public class MobLoot {
 				if (loc.getX() <= 90 && loc.getY() <= 100 && loc.getZ() <= -5 && 
 						loc.getX() >= 54 && loc.getY() >= 88 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "죽음의 탑 2층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "죽음의 탑 2층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 				}
 			}
 		}
@@ -2529,7 +2537,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "죽음의 탑 3층 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "죽음의 탑 3층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "죽음의 탑 3층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 		
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2539,7 +2547,7 @@ public class MobLoot {
 				if (loc.getX() <= 90 && loc.getY() <= 115 && loc.getZ() <= -5 && 
 						loc.getX() >= 54 && loc.getY() >= 101 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "죽음의 탑 3층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "죽음의 탑 3층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 				}
 			}
 		}
@@ -2552,7 +2560,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "죽음의 탑 4층 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "죽음의 탑 4층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "죽음의 탑 4층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 		
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2562,7 +2570,7 @@ public class MobLoot {
 				if (loc.getX() <= 90 && loc.getY() <= 128 && loc.getZ() <= -5 && 
 						loc.getX() >= 54 && loc.getY() >= 116 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "죽음의 탑 4층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "죽음의 탑 4층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 				}
 			}
 		}
@@ -2575,7 +2583,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "죽음의 탑 5층 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "죽음의 탑 5층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "죽음의 탑 5층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 		
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2585,7 +2593,7 @@ public class MobLoot {
 				if (loc.getX() <= 90 && loc.getY() <= 141 && loc.getZ() <= -5 && 
 						loc.getX() >= 54 && loc.getY() >= 129 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "죽음의 탑 5층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "죽음의 탑 5층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 				}
 			}
 		}
@@ -2598,7 +2606,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "죽음의 탑 6층 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "죽음의 탑 6층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "죽음의 탑 6층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 		
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2608,7 +2616,7 @@ public class MobLoot {
 				if (loc.getX() <= 90 && loc.getY() <= 156 && loc.getZ() <= -5 && 
 						loc.getX() >= 54 && loc.getY() >= 142 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "죽음의 탑 6층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "죽음의 탑 6층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 				}
 			}
 		}
@@ -2621,7 +2629,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "죽음의 탑 7층 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "죽음의 탑 7층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "죽음의 탑 7층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 		
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2631,7 +2639,7 @@ public class MobLoot {
 				if (loc.getX() <= 90 && loc.getY() <= 169 && loc.getZ() <= -5 && 
 						loc.getX() >= 54 && loc.getY() >= 157 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "죽음의 탑 7층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "죽음의 탑 7층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 				}
 			}
 		}
@@ -2644,7 +2652,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "죽음의 탑 8층 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "죽음의 탑 8층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "죽음의 탑 8층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 		
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2654,7 +2662,7 @@ public class MobLoot {
 				if (loc.getX() <= 90 && loc.getY() <= 182 && loc.getZ() <= -5 && 
 						loc.getX() >= 54 && loc.getY() >= 170 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "죽음의 탑 8층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "죽음의 탑 8층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 				}
 			}
 		}
@@ -2667,7 +2675,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "죽음의 탑 9층 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "죽음의 탑 9층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "죽음의 탑 9층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 		
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2677,7 +2685,7 @@ public class MobLoot {
 				if (loc.getX() <= 90 && loc.getY() <= 197 && loc.getZ() <= -5 && 
 						loc.getX() >= 54 && loc.getY() >= 183 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "죽음의 탑 9층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "죽음의 탑 9층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 				}
 			}
 		}
@@ -2690,7 +2698,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "죽음의 탑 10층 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "죽음의 탑 10층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "죽음의 탑 10층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 		
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2700,7 +2708,7 @@ public class MobLoot {
 				if (loc.getX() <= 90 && loc.getY() <= 210 && loc.getZ() <= -5 && 
 						loc.getX() >= 54 && loc.getY() >= 198 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "죽음의 탑 10층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "죽음의 탑 10층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 				}
 			}
 		}
@@ -2713,7 +2721,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "죽음의 탑 11층 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "죽음의 탑 11층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "죽음의 탑 11층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 		
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2723,7 +2731,7 @@ public class MobLoot {
 				if (loc.getX() <= 90 && loc.getY() <= 223 && loc.getZ() <= -5 && 
 						loc.getX() >= 54 && loc.getY() >= 211 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "죽음의 탑 11층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "죽음의 탑 11층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 				}
 			}
 		}
@@ -2736,7 +2744,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "죽음의 탑 12층 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "죽음의 탑 12층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "죽음의 탑 12층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 		
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2746,7 +2754,7 @@ public class MobLoot {
 				if (loc.getX() <= 90 && loc.getY() <= 87 && loc.getZ() <= -5 && 
 						loc.getX() >= 54 && loc.getY() >= 75 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "죽음의 탑 12층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "죽음의 탑 12층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 				}
 			}
 		}
@@ -2775,10 +2783,10 @@ public class MobLoot {
 		int tmp = rnd.nextInt(5);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		}
 	}
 	
@@ -2805,10 +2813,10 @@ public class MobLoot {
 		int tmp = rnd.nextInt(5);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		}
 	}
 	
@@ -2860,7 +2868,7 @@ public class MobLoot {
 			pm.setColor(Color.fromRGB(0, 50, 200));
 			var1.setItemMeta(pm);
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.YELLOW + "성수" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "성수" + ChatColor.WHITE + "를 획득했다.");
 			
 			QuestBoard cb = new QuestBoard();
 			if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===축복의 포션1===")) {
@@ -2902,7 +2910,7 @@ public class MobLoot {
 			pm.setColor(Color.fromRGB(0, 50, 200));
 			var1.setItemMeta(pm);
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.YELLOW + "성수" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "성수" + ChatColor.WHITE + "를 획득했다.");
 			
 			QuestBoard cb = new QuestBoard();
 			if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===축복의 포션1===")) {
@@ -2944,7 +2952,7 @@ public class MobLoot {
 			pm.setColor(Color.fromRGB(0, 50, 200));
 			var1.setItemMeta(pm);
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.YELLOW + "성수" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "성수" + ChatColor.WHITE + "를 획득했다.");
 			
 			QuestBoard cb = new QuestBoard();
 			if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===축복의 포션1===")) {
@@ -3005,10 +3013,10 @@ public class MobLoot {
 		int tmp = rnd.nextInt(5);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		}
 	}
 	
@@ -3035,10 +3043,10 @@ public class MobLoot {
 		int tmp = rnd.nextInt(5);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		}
 	}
 	
@@ -3087,10 +3095,10 @@ public class MobLoot {
 		int tmp = rnd.nextInt(5);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		}
 		
 		int num2 = rnd.nextInt(20);
@@ -3100,7 +3108,7 @@ public class MobLoot {
 			Chest chest = (Chest) block.getState();
 			ItemStack weapon = chest.getInventory().getItem(12);
 			player.getInventory().addItem(weapon);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "포보르의 마나" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "포보르의 마나" + ChatColor.WHITE + "를 획득했다.");
 			
 			QuestBoard cb = new QuestBoard();
 			if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===포보르의 마나===")) {
@@ -3149,13 +3157,13 @@ public class MobLoot {
 		int tmp = rnd.nextInt(10);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		}
 	}
 	
@@ -3185,7 +3193,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "미궁 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "미궁 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "미궁 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -3196,7 +3204,7 @@ public class MobLoot {
 				if (loc.getX() <= 49 && loc.getY() <= 61 && loc.getZ() <= 696 
 						&& loc.getX() >= 16 && loc.getY() >= 51 && loc.getZ() >= 654) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "미궁 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "미궁 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 					nearPlayer.teleport(new Location(nearPlayer.getWorld(), 28.5, 63, 681));
 				}
 			}
@@ -3255,13 +3263,13 @@ public class MobLoot {
 		int tmp = rnd.nextInt(10);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		}
 		
 		QuestBoard cb = new QuestBoard();
@@ -3299,13 +3307,13 @@ public class MobLoot {
 		int tmp = rnd.nextInt(10);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		}
 		
 		QuestBoard cb = new QuestBoard();
@@ -3413,13 +3421,13 @@ public class MobLoot {
 		int tmp = rnd.nextInt(7);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		}
 	}
 	
@@ -3465,7 +3473,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "아라크네의 저주 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "아라크네의 저주 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "아라크네의 저주 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -3475,7 +3483,7 @@ public class MobLoot {
 				if (loc.getX() <= 776 && loc.getY() <= 31 && loc.getZ() <= 605 
 						&& loc.getX() >= 727 && loc.getY() >= 0 && loc.getZ() >= 555) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "아라크네의 저주 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "아라크네의 저주 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 				}
 			}
 		}
@@ -3509,13 +3517,13 @@ public class MobLoot {
 		int tmp = rnd.nextInt(7);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		}
 	}
 	
@@ -3547,13 +3555,13 @@ public class MobLoot {
 		int tmp = rnd.nextInt(7);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		}
 	}
 	
@@ -3697,19 +3705,19 @@ public class MobLoot {
 		int tmp = rnd.nextInt(20);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
 	}
 	
@@ -3751,19 +3759,19 @@ public class MobLoot {
 		int tmp = rnd.nextInt(20);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
 	}
 	
@@ -3805,19 +3813,19 @@ public class MobLoot {
 		int tmp = rnd.nextInt(20);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
 	}
 	
@@ -3937,19 +3945,19 @@ public class MobLoot {
 		int tmp = rnd.nextInt(20);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
 		
 		int tmp2 = rnd.nextInt(40);
@@ -3997,19 +4005,19 @@ public class MobLoot {
 		int tmp = rnd.nextInt(20);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.YELLOW + "상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
 		
 		int tmp2 = rnd.nextInt(40);
@@ -4034,7 +4042,7 @@ public class MobLoot {
 		var1im.setDisplayName(ChatColor.YELLOW + "상급 포보르의 뿔");
 		var1.setItemMeta(var1im);
 		player.getInventory().addItem(var1);
-		player.sendMessage(ChatColor.YELLOW + "상급 포보르의 뿔" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "상급 포보르의 뿔" + ChatColor.WHITE + "을 획득했다.");
 		
 		QuestBoard cb = new QuestBoard();
 		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===악마 자미엘===")) {
@@ -4170,19 +4178,19 @@ public class MobLoot {
 		int tmp = rnd.nextInt(40);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
 	}
 	
@@ -4234,19 +4242,19 @@ public class MobLoot {
 		int tmp = rnd.nextInt(40);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
 	}
 	
@@ -4288,19 +4296,19 @@ public class MobLoot {
 		int tmp = rnd.nextInt(40);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
 	}
 	
@@ -4370,19 +4378,19 @@ public class MobLoot {
 		int tmp = rnd.nextInt(40);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
 		
 	}
@@ -4425,19 +4433,19 @@ public class MobLoot {
 		int tmp = rnd.nextInt(40);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
 		
 		QuestBoard cb = new QuestBoard();
@@ -4485,19 +4493,19 @@ public class MobLoot {
 		int tmp = rnd.nextInt(40);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
 	}
 	
@@ -4600,19 +4608,19 @@ public class MobLoot {
 		int tmp = rnd.nextInt(30);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
 		
 		ItemStack col1 = new ItemStack(Material.ACACIA_DOOR);
@@ -4642,16 +4650,16 @@ public class MobLoot {
 		int colP = rnd.nextInt(100);
 		if(colP < 4) {
 			player.getInventory().addItem(col1);
-			player.sendMessage(ChatColor.GRAY + "C급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "C급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
 		} else if(colP < 7) {
 			player.getInventory().addItem(col2);
-			player.sendMessage(ChatColor.WHITE + "B급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.WHITE + "B급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
 		} else if(colP < 9) {
 			player.getInventory().addItem(col3);
-			player.sendMessage(ChatColor.YELLOW + "A급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "A급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
 		} else if(colP == 9) {
 			player.getInventory().addItem(col4);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
 		}
 		
 		QuestBoard cb = new QuestBoard();
@@ -4699,19 +4707,19 @@ public class MobLoot {
 		int tmp = rnd.nextInt(30);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
 		
 		ItemStack col1 = new ItemStack(Material.ACACIA_DOOR);
@@ -4741,16 +4749,16 @@ public class MobLoot {
 		int colP = rnd.nextInt(100);
 		if(colP < 4) {
 			player.getInventory().addItem(col1);
-			player.sendMessage(ChatColor.GRAY + "C급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "C급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
 		} else if(colP < 7) {
 			player.getInventory().addItem(col2);
-			player.sendMessage(ChatColor.WHITE + "B급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.WHITE + "B급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
 		} else if(colP < 9) {
 			player.getInventory().addItem(col3);
-			player.sendMessage(ChatColor.YELLOW + "A급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "A급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
 		} else if(colP == 9) {
 			player.getInventory().addItem(col4);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
 		}
 		
 		QuestBoard cb = new QuestBoard();
@@ -4798,19 +4806,19 @@ public class MobLoot {
 		int tmp = rnd.nextInt(30);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
 		
 		ItemStack col1 = new ItemStack(Material.ACACIA_DOOR);
@@ -4840,16 +4848,16 @@ public class MobLoot {
 		int colP = rnd.nextInt(100);
 		if(colP < 4) {
 			player.getInventory().addItem(col1);
-			player.sendMessage(ChatColor.GRAY + "C급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "C급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
 		} else if(colP < 7) {
 			player.getInventory().addItem(col2);
-			player.sendMessage(ChatColor.WHITE + "B급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.WHITE + "B급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
 		} else if(colP < 9) {
 			player.getInventory().addItem(col3);
-			player.sendMessage(ChatColor.YELLOW + "A급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "A급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
 		} else if(colP == 9) {
 			player.getInventory().addItem(col4);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
 		}
 		
 		QuestBoard cb = new QuestBoard();
@@ -4897,19 +4905,19 @@ public class MobLoot {
 		int tmp = rnd.nextInt(25);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
 		
 		ItemStack col1 = new ItemStack(Material.ACACIA_DOOR);
@@ -4939,16 +4947,16 @@ public class MobLoot {
 		int colP = rnd.nextInt(100);
 		if(colP < 4) {
 			player.getInventory().addItem(col1);
-			player.sendMessage(ChatColor.GRAY + "C급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "C급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
 		} else if(colP < 7) {
 			player.getInventory().addItem(col2);
-			player.sendMessage(ChatColor.WHITE + "B급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.WHITE + "B급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
 		} else if(colP < 9) {
 			player.getInventory().addItem(col3);
-			player.sendMessage(ChatColor.YELLOW + "A급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "A급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
 		} else if(colP == 9) {
 			player.getInventory().addItem(col4);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
 		}
 		
 		QuestBoard cb = new QuestBoard();
@@ -4999,19 +5007,19 @@ public class MobLoot {
 		int tmp = rnd.nextInt(25);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
 		
 		ItemStack col1 = new ItemStack(Material.ACACIA_DOOR);
@@ -5041,16 +5049,16 @@ public class MobLoot {
 		int colP = rnd.nextInt(100);
 		if(colP < 4) {
 			player.getInventory().addItem(col1);
-			player.sendMessage(ChatColor.GRAY + "C급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.GRAY + "C급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
 		} else if(colP < 7) {
 			player.getInventory().addItem(col2);
-			player.sendMessage(ChatColor.WHITE + "B급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.WHITE + "B급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
 		} else if(colP < 9) {
 			player.getInventory().addItem(col3);
-			player.sendMessage(ChatColor.YELLOW + "A급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.YELLOW + "A급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
 		} else if(colP == 9) {
 			player.getInventory().addItem(col4);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤" + ChatColor.WHITE + "을 획득했다.");
 		}
 		
 		QuestBoard cb = new QuestBoard();
@@ -5122,7 +5130,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "C급 투기장 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "C급 투기장 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "C급 투기장 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 
 		List<Entity> entitylist = player.getNearbyEntities(120, 20, 120);
 		for (Entity nearEntity : entitylist) {
@@ -5132,7 +5140,7 @@ public class MobLoot {
 				if (loc.getX() <= 4030 && loc.getY() <= 120 && loc.getZ() <= 2728 
 						&& loc.getX() >= 3853 && loc.getY() >= 75 && loc.getZ() >= 2548) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "C급 투기장 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "C급 투기장 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 					nearPlayer.teleport(new Location(player.getWorld(), 128, 64, 1955, 90, 0));
 				}
 			}
@@ -5147,7 +5155,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "B급 투기장 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "B급 투기장 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "B급 투기장 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 
 		List<Entity> entitylist = player.getNearbyEntities(120, 20, 120);
 		for (Entity nearEntity : entitylist) {
@@ -5157,7 +5165,7 @@ public class MobLoot {
 				if (loc.getX() <= 4207 && loc.getY() <= 120 && loc.getZ() <= 2730 
 						&& loc.getX() >= 4037 && loc.getY() >= 75 && loc.getZ() >= 2547) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "B급 투기장 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "B급 투기장 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 					nearPlayer.teleport(new Location(player.getWorld(), 128, 64, 1955, 90, 0));
 				}
 			}
@@ -5172,7 +5180,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "A급 투기장 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "A급 투기장 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "A급 투기장 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 
 		List<Entity> entitylist = player.getNearbyEntities(120, 20, 120);
 		for (Entity nearEntity : entitylist) {
@@ -5182,7 +5190,7 @@ public class MobLoot {
 				if (loc.getX() <= 4023 && loc.getY() <= 120 && loc.getZ() <= 2546 
 						&& loc.getX() >= 3846 && loc.getY() >= 75 && loc.getZ() >= 2369) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "A급 투기장 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "A급 투기장 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 					nearPlayer.teleport(new Location(player.getWorld(), 128, 64, 1955, 90, 0));
 				}
 			}
@@ -5197,7 +5205,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "S급 투기장 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "S급 투기장 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "S급 투기장 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 
 		List<Entity> entitylist = player.getNearbyEntities(120, 20, 120);
 		for (Entity nearEntity : entitylist) {
@@ -5207,7 +5215,7 @@ public class MobLoot {
 				if (loc.getX() <= 4210 && loc.getY() <= 120 && loc.getZ() <= 2543 
 						&& loc.getX() >= 4031 && loc.getY() >= 75 && loc.getZ() >= 2366) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "S급 투기장 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "S급 투기장 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 					nearPlayer.teleport(new Location(player.getWorld(), 128, 64, 1955, 90, 0));
 				}
 			}
@@ -5365,19 +5373,19 @@ public class MobLoot {
 		int tmp = rnd.nextInt(20);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
 		
 		ItemStack scr1 = new ItemStack(Material.ACACIA_DOOR);
@@ -5396,7 +5404,7 @@ public class MobLoot {
 		int scrP = rnd.nextInt(20);
 		if(scrP == 0) {
 			player.getInventory().addItem(scr1);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "긴급 탈출 스크롤" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "긴급 탈출 스크롤" + ChatColor.WHITE + "을 획득했다.");
 			
 			QuestBoard cb = new QuestBoard();
 			if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===사막의 푸른 땅5===")) {
@@ -5451,19 +5459,19 @@ public class MobLoot {
 		int tmp = rnd.nextInt(20);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
 		
 		ItemStack scr1 = new ItemStack(Material.ACACIA_DOOR);
@@ -5482,7 +5490,7 @@ public class MobLoot {
 		int scrP = rnd.nextInt(20);
 		if(scrP == 0) {
 			player.getInventory().addItem(scr1);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "긴급 탈출 스크롤" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "긴급 탈출 스크롤" + ChatColor.WHITE + "을 획득했다.");
 			
 			QuestBoard cb = new QuestBoard();
 			if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===사막의 푸른 땅5===")) {
@@ -5507,7 +5515,7 @@ public class MobLoot {
 		var1im.setDisplayName(ChatColor.LIGHT_PURPLE + "최상급 포보르의 뿔");
 		var1.setItemMeta(var1im);
 		player.getInventory().addItem(var1);
-		player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 뿔" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 뿔" + ChatColor.WHITE + "을 획득했다.");
 		
 		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
@@ -5522,7 +5530,7 @@ public class MobLoot {
 		scrollIm.setUnbreakable(true);
 		scroll.setItemMeta(scrollIm);		
 		player.getInventory().addItem(scroll);
-		player.sendMessage(ChatColor.GOLD + "엑스트라 퀘스트: 피르볼그의 제사장" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.GOLD + "엑스트라 퀘스트: 피르볼그의 제사장" + ChatColor.WHITE + "을 획득했다.");
 		
 		QuestBoard cb = new QuestBoard();
 		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===대사막-최종장===")) {
@@ -5540,7 +5548,7 @@ public class MobLoot {
 		var1im.setDisplayName(ChatColor.LIGHT_PURPLE + "최상급 포보르의 뿔");
 		var1.setItemMeta(var1im);
 		player.getInventory().addItem(var1);
-		player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 뿔" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 뿔" + ChatColor.WHITE + "을 획득했다.");
 	}
 	
 	// 포보르 사제
@@ -5552,7 +5560,7 @@ public class MobLoot {
 		var1im.setDisplayName(ChatColor.LIGHT_PURPLE + "최상급 포보르의 뿔");
 		var1.setItemMeta(var1im);
 		player.getInventory().addItem(var1);
-		player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 뿔" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 뿔" + ChatColor.WHITE + "을 획득했다.");
 	}
 	
 	// 미아즈마단 신입
@@ -5610,19 +5618,19 @@ public class MobLoot {
 		int tmp = rnd.nextInt(15);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
 	}
 	
@@ -5726,19 +5734,19 @@ public class MobLoot {
 		int tmp = rnd.nextInt(15);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
 		
 		QuestBoard cb = new QuestBoard();
@@ -5786,19 +5794,19 @@ public class MobLoot {
 		int tmp = rnd.nextInt(15);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
 	}
 	
@@ -5925,19 +5933,19 @@ public class MobLoot {
 		int tmp = rnd.nextInt(12);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
 		
 		QuestBoard cb = new QuestBoard();
@@ -5999,19 +6007,19 @@ public class MobLoot {
 		int tmp = rnd.nextInt(12);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
 		
 		QuestBoard cb = new QuestBoard();
@@ -6059,19 +6067,19 @@ public class MobLoot {
 		int tmp = rnd.nextInt(12);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
 	}
 	
@@ -6113,19 +6121,19 @@ public class MobLoot {
 		int tmp = rnd.nextInt(12);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
 		
 		QuestBoard cb = new QuestBoard();
@@ -6176,19 +6184,19 @@ public class MobLoot {
 		int tmp = rnd.nextInt(12);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
 	}
 	
@@ -6230,19 +6238,19 @@ public class MobLoot {
 		int tmp = rnd.nextInt(12);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
 	}
 	
@@ -6334,19 +6342,19 @@ public class MobLoot {
 		int tmp = rnd.nextInt(12);
 		if(tmp == 0) {
 			player.getInventory().addItem(var1);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 3) {
 			player.getInventory().addItem(var4);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
 	}
 	
@@ -6387,7 +6395,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "깊숙한 점액 동굴 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		player.sendMessage(ChatColor.YELLOW + "깊숙한 점액 동굴 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "깊숙한 점액 동굴 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 
 		List<Entity> entitylist = player.getNearbyEntities(50, 30, 50);
 		for (Entity nearEntity : entitylist) {
@@ -6397,7 +6405,7 @@ public class MobLoot {
 				if (loc.getX() <= 3819 && loc.getY() <= 76 && loc.getZ() <= 2581 
 						&& loc.getX() >= 3740 && loc.getY() >= 30 && loc.getZ() >= 2479) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					nearPlayer.sendMessage(ChatColor.YELLOW + "깊숙한 점액 동굴 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "깊숙한 점액 동굴 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
 				}
 			}
 		}
