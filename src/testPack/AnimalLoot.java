@@ -20,7 +20,7 @@ public class AnimalLoot {
 	// 메세지
 	public void sendMessage(Player player, String msg) {
 		if (it.isOn(player)) {
-			sendMessage(player, msg);
+			player.sendMessage(msg);
 		}
 	}
 	

@@ -268,7 +268,7 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -8 ; z < 9 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.REDSTONE, loc2, 0, new DustOptions(Color.RED, 1));
+											player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
 										}
 									}
 								}
@@ -479,7 +479,7 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -15 ; z < 16 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.REDSTONE, loc2, 0, new DustOptions(Color.RED, 1));
+											player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
 										}
 									}
 								}
@@ -579,7 +579,7 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -15 ; z < 16 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.REDSTONE, loc2, 0, new DustOptions(Color.RED, 1));
+											player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
 										}
 									}
 								}
@@ -682,7 +682,7 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -15 ; z < 16 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.REDSTONE, loc2, 0, new DustOptions(Color.RED, 1));
+											player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
 										}
 									}
 								}
@@ -1158,7 +1158,7 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -15 ; z < 16 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.REDSTONE, loc2, 0, new DustOptions(Color.RED, 1));
+											player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
 										}
 									}
 								}
@@ -1285,7 +1285,7 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -8 ; z < 9 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.REDSTONE, loc2, 0, new DustOptions(Color.RED, 1));
+											player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
 										}
 									}
 								}
@@ -1347,7 +1347,7 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -15 ; z < 16 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.REDSTONE, loc2, 0, new DustOptions(Color.RED, 1));
+											player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
 										}
 									}
 								}
@@ -1496,7 +1496,7 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -12 ; z < 13 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.REDSTONE, loc2, 0, new DustOptions(Color.RED, 1));
+											player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
 										}
 									}
 								}
@@ -2424,7 +2424,7 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -12 ; z < 13 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.REDSTONE, loc2, 0, new DustOptions(Color.RED, 1));
+											player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
 										}
 									}
 								}
@@ -2636,7 +2636,7 @@ public class PlayerHitDebuff {
 								for(int y = -1 ; y < 0 ; y++) {
 									for(int z = -8 ; z < 9 ; z++) {
 										Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-										player.getWorld().spawnParticle(Particle.REDSTONE, loc2, 0, new DustOptions(Color.RED, 1));
+										player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
 									}
 								}
 							}

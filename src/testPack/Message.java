@@ -24,7 +24,7 @@ public class Message {
 		String[] ary = str.split("%");
 		len = ary.length;
 		
-		Thread t = new Thread(player.getUniqueId());
+		ThreadMessage t = new ThreadMessage(player.getUniqueId());
 		sleep = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
 			int time = 0;

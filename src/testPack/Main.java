@@ -176,7 +176,7 @@ public class Main extends JavaPlugin implements Listener{
 	
 	// gamerule doMobLoot false
 	// gamerule doMobSpawning false
-	// gamerule keepInventory true
+	// gamerule keepInventory trues
 	// gamerule doImmediateRespawn true
 	// gamerule doLimitedCrafting true
 	// gamerule mobGriefing false
@@ -308,7 +308,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("woolring")) { 
 			
 		} else {
-			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/807518710632808448/aile_texture_pack_15.zip");
+			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/809742511593619476/aile_texture_pack_16.zip");
 		}
 		
 		//Message
@@ -2564,7 +2564,11 @@ public class Main extends JavaPlugin implements Listener{
 			} else if(ary.get(0) == length8) {
 				event.setRespawnLocation(osu);
 			} else if(ary.get(0) == length9) {
-				event.setRespawnLocation(konno);
+				if(player.getLevel() > 200) {
+					event.setRespawnLocation(konno);
+				} else {
+					event.setRespawnLocation(osu);
+				}
 			} else if(ary.get(0) == length10) {
 				event.setRespawnLocation(fuhidmeh);
 			} else if(ary.get(0) == length11) {
@@ -2584,7 +2588,11 @@ public class Main extends JavaPlugin implements Listener{
 			} else if(ary.get(0) == length18) {
 				event.setRespawnLocation(samak);
 			} else if(ary.get(0) == length19) {
-				event.setRespawnLocation(samakVil);
+				if(player.getLevel() > 440) {
+					event.setRespawnLocation(samakVil);
+				} else {
+					event.setRespawnLocation(kaiman);
+				}
 			}			
 			player.setNoDamageTicks(200);
 		} catch(Exception e11) {

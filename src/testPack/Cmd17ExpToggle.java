@@ -50,7 +50,7 @@ public class Cmd17ExpToggle implements CommandExecutor {
 		ItemMeta im = item.getItemMeta();
 		ArrayList<String> lores = (ArrayList<String>) im.getLore(); 
 		String lore = lores.get(5);
-		if(lore.substring(2).equalsIgnoreCase("§a")) {
+		if(lore.substring(0,2).equalsIgnoreCase("§a")) {
 			return true;
 		} 
 		return false;
