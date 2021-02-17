@@ -358,6 +358,14 @@ public class MobDeath {
 				if (name.equalsIgnoreCase("공격대 요정" + ChatColor.YELLOW + " [Lv.187]")) {
 					mobloot.mob73(lootPlayer);
 				}
+				// 지키는 요정
+				if (name.equalsIgnoreCase("지키는 요정" + ChatColor.YELLOW + " [Lv.190]")) {
+					mobloot.mob73_5(lootPlayer);
+				}
+				// 돌리
+				if (name.equalsIgnoreCase("돌리" + ChatColor.YELLOW + " [Lv.190]")) {
+					mobloot.mob73_8(lootPlayer);
+				}
 				// 불의 요정
 				if (name.equalsIgnoreCase("불의 요정" + ChatColor.YELLOW + " [Lv.192]")) {
 					mobloot.mob74(lootPlayer);
@@ -373,12 +381,10 @@ public class MobDeath {
 				// 요정왕 오베론
 				if (name.equalsIgnoreCase("요정왕 오베론" + ChatColor.YELLOW + " [Lv.??]")) {
 					mobloot.mob77(lootPlayer);
-					mob.remove();
 				}
 				// 요정여왕 티타니아
 				if (name.equalsIgnoreCase("요정여왕 티타니아" + ChatColor.YELLOW + " [Lv.??]")) {
 					mobloot.mob78(lootPlayer);
-					mob.remove();
 				}
 				// 나비
 				if (name.equalsIgnoreCase("나비" + ChatColor.YELLOW + " [Lv.254]")) {

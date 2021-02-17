@@ -1412,6 +1412,28 @@ public class MobLoot {
 		es.giveExp(player, 222167);
 	}
 	
+	// 지키는 요정
+	public void mob73_5(Player player) {
+		int num = rnd.nextInt(10);
+		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.YELLOW + "에메랄드 주머니");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 282167);
+	}
+	
+	// 돌리
+	public void mob73_8(Player player) {
+		int num = rnd.nextInt(10);
+		ItemStack item = new ItemStack(Material.EMERALD_BLOCK, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.YELLOW + "에메랄드 주머니");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 302167);
+	}
+	
 	// 불의 요정
 	public void mob74(Player player) {
 		int num = rnd.nextInt(10);

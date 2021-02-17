@@ -35,9 +35,9 @@ public class OffInDungeon {
 			player.teleport(new Location(player.getWorld(), -1154, 24, 1558));
 			return;
 		}
-		//타락한 요정 왕국 3706 115 3591  3823 32 3287
+		//타락한 요정 왕국 3658 115 3591  3823 32 3287
 		if(loc.getX() <= 3823 && loc.getY() <= 115 && loc.getZ() <= 3591 
-				&& loc.getX() >= 3706 && loc.getY() >= 32 && loc.getZ() >= 3287) {
+				&& loc.getX() >= 3658 && loc.getY() >= 32 && loc.getZ() >= 3287) {
 			//안전지대  3807 60 3505  3742 27 3585
 			if(!(loc.getX() <= 3807 && loc.getY() <= 60 && loc.getZ() <= 3585 
 				&& loc.getX() >= 3742 && loc.getY() >= 25 && loc.getZ() >= 3505)) {

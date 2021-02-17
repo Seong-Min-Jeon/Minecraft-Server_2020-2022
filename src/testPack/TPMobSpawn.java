@@ -12,6 +12,7 @@ import org.bukkit.craftbukkit.v1_16_R3.CraftWorld;
 import org.bukkit.entity.Blaze;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
+import org.bukkit.entity.Llama;
 import org.bukkit.entity.Mob;
 import org.bukkit.entity.Phantom;
 import org.bukkit.entity.Player;
@@ -44,6 +45,80 @@ public class TPMobSpawn {
 	}
 
 	public void fairy(Player player, Location loc) {
+		// 타락한 요정 왕국 엘리베이터
+		if (loc.getX() == 3699.5 && loc.getY() == 28 && loc.getZ() == 3439.5) {
+			player.teleport(new Location(player.getWorld(), 3699.45, 28.1, 3439.45));
+			int num = 0;
+			List<Entity> entitylist = player.getNearbyEntities(30, 30, 30);
+			for (Entity nearEntity : entitylist) {
+				if (nearEntity.getType() == EntityType.PLAYER) {
+					Player nearPlayer = (Player) nearEntity;
+					Location loc2 = nearPlayer.getLocation();
+					// 3687 36 3441  3715 19 3429
+					if (loc2.getX() <= 3715 && loc2.getY() <= 36 && loc2.getZ() <= 3441 
+							&& loc2.getX() >= 3687 && loc2.getY() >= 19 && loc2.getZ() >= 3429) {
+						num++;
+						return;
+					}
+				}
+			}
+			if (num == 0) {
+				for (Entity nearEntity : entitylist) {
+					if (nearEntity instanceof Skeleton) {
+						nearEntity.remove();
+					}
+				}
+			}
+			Location chestLoc = new Location(loc.getWorld(), -1830, 92, 3041);
+			Block block = chestLoc.getBlock();
+			Chest chest = (Chest) block.getState();
+			
+			Skeleton mob = (Skeleton) loc.getWorld().spawnEntity(new Location(player.getWorld(), 3696, 29, 3433), EntityType.SKELETON);
+			EntityEquipment head = mob.getEquipment();
+			ItemStack headItem = chest.getInventory().getItem(15);
+			head.setHelmet(headItem);
+			
+			Skeleton mob2 = (Skeleton) loc.getWorld().spawnEntity(new Location(player.getWorld(), 3702, 29, 3433), EntityType.SKELETON);
+			EntityEquipment head2 = mob2.getEquipment();
+			ItemStack headItem2 = chest.getInventory().getItem(15);
+			head2.setHelmet(headItem2);
+			return;
+		}
+		
+		
+		// 타락한 요정 왕국 2층
+		if (loc.getX() == 3699.5 && loc.getY() == 46 && loc.getZ() == 3449.5) {
+			player.teleport(new Location(player.getWorld(), 3699.45, 46.1, 3449.45));
+			int num = 0;
+			List<Entity> entitylist = player.getNearbyEntities(40, 30, 40);
+			for (Entity nearEntity : entitylist) {
+				if (nearEntity.getType() == EntityType.PLAYER) {
+					Player nearPlayer = (Player) nearEntity;
+					Location loc2 = nearPlayer.getLocation();
+					// 3688 53 3448  3708 44 3466
+					if (loc2.getX() <= 3708 && loc2.getY() <= 53 && loc2.getZ() <= 3466 
+							&& loc2.getX() >= 3688 && loc2.getY() >= 44 && loc2.getZ() >= 3448) {
+						num++;
+						return;
+					}
+				}
+			}
+			if (num == 0) {
+				for (Entity nearEntity : entitylist) {
+					if (nearEntity instanceof Llama) {
+						nearEntity.remove();
+					}
+				}
+			}
+
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3702, 46, 3460), EntityType.LLAMA);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3702, 46, 3454), EntityType.LLAMA);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3696, 46, 3460), EntityType.LLAMA);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3696, 46, 3454), EntityType.LLAMA);
+			return;
+		}
+
+		
 		// 타락한 요정 왕국 입구
 		if (loc.getX() == 3745.57 && loc.getY() == 77 && loc.getZ() == 3430.3) {
 			player.teleport(new Location(player.getWorld(), 3745.56, 77, 3430.3));

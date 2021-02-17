@@ -64,6 +64,7 @@ import org.bukkit.entity.Pig;
 import org.bukkit.entity.Piglin;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.PolarBear;
+import org.bukkit.entity.Rabbit;
 import org.bukkit.entity.Ravager;
 import org.bukkit.entity.Sheep;
 import org.bukkit.entity.Skeleton;
@@ -308,7 +309,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("woolring")) { 
 			
 		} else {
-			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/809742511593619476/aile_texture_pack_16.zip");
+			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/810009504082821161/aile_texture_pack_17.zip");
 		}
 		
 		//Message
@@ -2440,9 +2441,9 @@ public class Main extends JavaPlugin implements Listener{
 				event.setRespawnLocation(seedMine);
 				return;
 			}
-			//타락한 요정 왕국 3706 115 3591  3823 32 3287
+			//타락한 요정 왕국 3658 115 3591  3823 32 3287
 			if(loc.getX() <= 3823 && loc.getY() <= 115 && loc.getZ() <= 3591 
-					&& loc.getX() >= 3706 && loc.getY() >= 10 && loc.getZ() >= 3287) {
+					&& loc.getX() >= 3658 && loc.getY() >= 10 && loc.getZ() >= 3287) {
 				event.setRespawnLocation(seedMine);
 				return;
 			}
@@ -2506,7 +2507,13 @@ public class Main extends JavaPlugin implements Listener{
 				player.teleport(new Location(player.getWorld(), -1465, 10, 1980));
 				return;
 			}
-			
+			// 시오카나 385 255 -669  648 0 -438
+			if (loc.getX() <= 648 && loc.getY() <= 255 && loc.getZ() <= -438 
+					&& loc.getX() >= 385 && loc.getY() >= 0 && loc.getZ() >= -669) {
+				event.setRespawnLocation(hamabe);
+				return;
+			}
+
 			int length1 = (int)(Math.pow(loc.getX()-wargunil.getX(), 2) + Math.pow(loc.getY()-wargunil.getY(), 2) + Math.pow(loc.getZ()-wargunil.getZ(), 2));
 			int length2 = (int)(Math.pow(loc.getX()-forgan.getX(), 2) + Math.pow(loc.getY()-forgan.getY(), 2) + Math.pow(loc.getZ()-forgan.getZ(), 2));
 			int length3 = (int)(Math.pow(loc.getX()-tiru.getX(), 2) + Math.pow(loc.getY()-tiru.getY(), 2) + Math.pow(loc.getZ()-tiru.getZ(), 2));
@@ -3742,6 +3749,47 @@ public class Main extends JavaPlugin implements Listener{
 						for (Entity nearEntity : entitylist) {
 							if (nearEntity instanceof Llama) {
 								((Llama) nearEntity).setTarget(player);
+							}
+						}
+					}
+				}
+			}
+		} catch (Exception e) {
+
+		}
+		// Rabbit target
+		try {
+			if (event.getEntity() instanceof Rabbit) {
+				if (event.getDamager() instanceof Player) {
+					Player player = (Player) event.getDamager();
+					((Rabbit) event.getEntity()).setTarget(player);
+					List<Entity> entitylist = event.getEntity().getNearbyEntities(30, 5, 30);
+					for (Entity nearEntity : entitylist) {
+						if (nearEntity instanceof Rabbit) {
+							((Rabbit) nearEntity).setTarget(player);
+						}
+					}
+				} else if (event.getDamager() instanceof Arrow) {
+					Arrow proj = (Arrow) event.getDamager();
+					if (proj.getShooter() instanceof Player) {
+						Player player = (Player) proj.getShooter();
+						((Rabbit) event.getEntity()).setTarget(player);
+						List<Entity> entitylist = event.getEntity().getNearbyEntities(30, 5, 30);
+						for (Entity nearEntity : entitylist) {
+							if (nearEntity instanceof Rabbit) {
+								((Rabbit) nearEntity).setTarget(player);
+							}
+						}
+					}
+				} else if (event.getDamager() instanceof SmallFireball) {
+					SmallFireball proj = (SmallFireball) event.getDamager();
+					if (proj.getShooter() instanceof Player) {
+						Player player = (Player) proj.getShooter();
+						((Rabbit) event.getEntity()).setTarget(player);
+						List<Entity> entitylist = event.getEntity().getNearbyEntities(30, 5, 30);
+						for (Entity nearEntity : entitylist) {
+							if (nearEntity instanceof Rabbit) {
+								((Rabbit) nearEntity).setTarget(player);
 							}
 						}
 					}

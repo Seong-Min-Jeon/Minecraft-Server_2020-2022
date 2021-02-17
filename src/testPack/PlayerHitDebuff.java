@@ -170,7 +170,9 @@ public class PlayerHitDebuff {
 				for(Entity mob2 : nearMob) {
 					if(mob2 instanceof Skeleton) {
 						LivingEntity ent2 = (LivingEntity) mob2;
-						ent2.setHealth(ent2.getHealth() + 5000);
+						if(ent2.getHealth() > 1000) {
+							ent2.setHealth(ent2.getHealth() + 5000);
+						}
 					}
 				}
 				player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ENDER_DRAGON_FLAP, 1.0f, 1.0f);

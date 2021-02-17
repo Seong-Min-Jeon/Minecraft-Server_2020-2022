@@ -3500,7 +3500,7 @@ public class QuestBoard {
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
 		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===죽어가는 섬의 주민===");
 		score.setScore(2);
-		Score score2 = obj.getScore("죽어가는 섬에서 주민 찾기");
+		Score score2 = obj.getScore("라파누이 섬에서 주민 찾기");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -3689,8 +3689,8 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 30000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "데히트라: 잘 왔다 나의 오랜 친구여.%데히트라: 먼저 물어볼 것이 있다.%데히트라: 라파누이에서 무슨 생각으로 종을 울린 것이냐.%데히트라: 종의 의미를 모르는 것이냐.%데히트라: 세계에는 포보르를 봉인하는 3개의 종이 있다.%데히트라: 반대로 말하면 포보르를 깨우기 위한 종이기도 하지.%"
-					+ "데히트라: 네놈이 모든 종을 울리게 되면 무슨 일이 일어나는지 알려주지.%데히트라: 어딘가에 존재하는 요정들의 문이며 이계로 향하는 문.%데히트라: 먼 옛날 투어허 데 다넌의 영웅들이 팔리아스나 다른 땅에서 왔다는 그 문.%"
+			msg.msg(player, "데히트라: 잘 왔다 나의 오랜 친구여.%데히트라: 먼저 물어볼 것이 있다.%데히트라: 라파누이에서 무슨 생각으로 종을 울린 것이냐.%데히트라: 종의 의미를 모르는 것이냐.%데히트라: 세계에는 포보르를 봉인하는 §e3개의 종§f이 있다.%데히트라: 반대로 말하면 포보르를 깨우기 위한 종이기도 하지.%"
+					+ "데히트라: 네놈이 모든 종을 울리게 되면 무슨 일이 일어나는지 알려주지.%데히트라: 어딘가에 존재하는 §e요정들의 문이며 이계로 향하는 문§f.%데히트라: 먼 옛날 투어허 데 다넌의 영웅들이 §e팔리아스§f나 다른 땅에서 왔다는 그 문.%"
 					+ "데히트라: 그 문이 열리게 되는 것이다.%데히트라: 그 문을 열게되면 너는 강해지겠지.%데히트라: 하지만 그게 끝이 아니라는건 알고 있을텐데.%데히트라: 각지의 포보르들은 힘을 되찾을꺼야.%데히트라: 왜?%데히트라: 문으로 봉인된 포보르의 왕들도 깨어나게 될꺼니까.%"
 					+ "데히트라: 너는 포보르의 왕을 쓰러뜨릴 재목이 될 수 있어.%데히트라: 하지만 그걸로 끝일까?%데히트라: 그게 과연 해피엔딩을 위한 길일까?%데히트라: 선택은 너에게 맡기도록 하지.%데히트라: ... 서론이 길었군.%"
 					+ "데히트라: 3개의 종 중 두번째 종은 내가 가지고 있다.%데히트라: 이쪽 종은 크기가 작아서 말이지.%데히트라: 네놈이 나의 퀘스트를 충실히 이행한다면 종을 주도록 하지.%데히트라: 자, 어떤가 충분한 보상이 아닌가?%tp887 55 -25");
@@ -3800,6 +3800,54 @@ public class QuestBoard {
 		player.setScoreboard(board);
 	}
 	
+	public void mq48(Player player, int num) {
+		if(num>=1) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 30000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "네비: 이번에는 섬에 사시는 분이 도움을 요청했어.%네비: 지금까지는 하마베에서 요청받은 일을 섬에서 해결해드렸는데..%네비: 신선하네!%"
+					+ "네비: 이번 섬 이름은..%네비: 시..시오카나?%네비: 정확히 어디 계신지는 안적어주셔서 우리가 찾아야 되겠다.");
+			QuestBoard qb = new QuestBoard();
+			qb.mq48_1(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 48장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===시오카나 섬===");
+		score.setScore(2);
+		Score score2 = obj.getScore("시오카나 섬에서 의뢰인 찾기");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/1)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq48_1(Player player, int num) {
+		if(num>=1) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 30000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "네비: 이번에는 섬에 사시는 분이 도움을 요청했어.%네비: 지금까지는 하마베에서 요청받은 일을 섬에서 해결해드렸는데..%네비: 신선하네!%"
+					+ "네비: 이번 섬 이름은..%네비: 시..시오카나?%네비: 정확히 어디 계신지는 안적어주셔서 우리가 찾아야 되겠다.");
+			QuestBoard qb = new QuestBoard();
+//			qb.mq48_2(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 48장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===사라진 닻===");
+		score.setScore(2);
+		Score score2 = obj.getScore("시오카나 섬에서 의뢰인 찾기");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/1)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
 	public int getNum(Player player) {
 		try {
 			ArrayList<String> list = new ArrayList<String>(player.getScoreboard().getEntries());
@@ -3816,7 +3864,6 @@ public class QuestBoard {
 			return 0;
 		}
 	}
-	
 	
 	public String getQuestName(Player player) {
 		try {
