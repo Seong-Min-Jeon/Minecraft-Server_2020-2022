@@ -47,6 +47,7 @@ import org.bukkit.entity.EnderPearl;
 import org.bukkit.entity.Enderman;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
+import org.bukkit.entity.EvokerFangs;
 import org.bukkit.entity.FallingBlock;
 import org.bukkit.entity.Fireball;
 import org.bukkit.entity.Guardian;
@@ -81,10 +82,16 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.BlockBurnEvent;
+import org.bukkit.event.block.BlockDamageEvent;
+import org.bukkit.event.block.BlockDispenseEvent;
+import org.bukkit.event.block.BlockFadeEvent;
+import org.bukkit.event.block.BlockFromToEvent;
 import org.bukkit.event.block.BlockIgniteEvent;
 import org.bukkit.event.block.BlockIgniteEvent.IgniteCause;
 import org.bukkit.event.block.BlockPhysicsEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
+import org.bukkit.event.block.FluidLevelChangeEvent;
+import org.bukkit.event.block.LeavesDecayEvent;
 import org.bukkit.event.entity.CreatureSpawnEvent;
 import org.bukkit.event.entity.CreeperPowerEvent;
 import org.bukkit.event.entity.EntityBreedEvent;
@@ -177,7 +184,7 @@ public class Main extends JavaPlugin implements Listener{
 	
 	// gamerule doMobLoot false
 	// gamerule doMobSpawning false
-	// gamerule keepInventory trues
+	// gamerule keepInventory true
 	// gamerule doImmediateRespawn true
 	// gamerule doLimitedCrafting true
 	// gamerule mobGriefing false
@@ -2410,6 +2417,7 @@ public class Main extends JavaPlugin implements Listener{
 			Location hamabe = new Location(world,973,62,40,180,0);
 			Location samak = new Location(world,228,85,945);
 			Location samakVil = new Location(world,-100,29,1462);
+			Location kekktas = new Location(world,-741,56,-894);
 			
 			//캐릭터 선택창 3668 47 3671 3660 39 3680
 			if(loc.getX() <= 3668 && loc.getZ() <= 3680 &&
@@ -2504,13 +2512,19 @@ public class Main extends JavaPlugin implements Listener{
 			// 슬라임 던전 3829 87 2797  3632 10 2468
 			if (loc.getX() <= 3829 && loc.getY() <= 160 && loc.getZ() <= 2797 
 					&& loc.getX() >= 3632 && loc.getY() >= 10 && loc.getZ() >= 2468) {
-				player.teleport(new Location(player.getWorld(), -1465, 10, 1980));
+				event.setRespawnLocation(new Location(player.getWorld(), -1465, 10, 1980));
 				return;
 			}
 			// 시오카나 385 255 -669  648 0 -438
 			if (loc.getX() <= 648 && loc.getY() <= 255 && loc.getZ() <= -438 
 					&& loc.getX() >= 385 && loc.getY() >= 0 && loc.getZ() >= -669) {
 				event.setRespawnLocation(hamabe);
+				return;
+			}
+			// 스켈리그 -200 255 -515  -1200 0 -1617
+			if (loc.getX() <= -200 && loc.getY() <= 255 && loc.getZ() <= -515 
+					&& loc.getX() >= -1200 && loc.getY() >= 0 && loc.getZ() >= -1617) {
+				event.setRespawnLocation(kekktas);
 				return;
 			}
 
@@ -3209,7 +3223,7 @@ public class Main extends JavaPlugin implements Listener{
 			}
 			try {
 				if(entity.getType() == EntityType.ZOMBIE || entity.getType() == EntityType.SKELETON || entity.getType() == EntityType.WITHER_SKELETON
-						|| entity.getType() == EntityType.WITCH) {
+						|| entity.getType() == EntityType.WITCH || entity.getType() == EntityType.VEX) {
 					if(entity.getCustomName() == null) {
 						entity.remove();
 					}
@@ -4383,6 +4397,21 @@ public class Main extends JavaPlugin implements Listener{
 				if (event.getEntity() instanceof Player) {
 					Player player = (Player) event.getEntity();
 					player.setHealth(player.getHealth()*4 / 5);
+				} else {
+					event.setCancelled(true);
+					return;
+				}
+
+			}
+		} catch (Exception e) {
+
+		}
+		//Evoker
+		try {
+			if (event.getDamager() instanceof EvokerFangs) {
+				if (event.getEntity() instanceof Player) {
+					Player player = (Player) event.getEntity();
+					player.setHealth(player.getHealth() * 4 / 5);
 				} else {
 					event.setCancelled(true);
 					return;
@@ -7953,6 +7982,18 @@ public class Main extends JavaPlugin implements Listener{
 //			Location loc = event.getBlock().getLocation().add(0,-1,0);
 //			loc.getBlock().setType(Material.SANDSTONE);
 		}
+	}
+	
+	@EventHandler
+	public void waterPassEvent(BlockFromToEvent event) {
+//		if (event.getToBlock().getType() == Material.SUNFLOWER) {
+//			event.setCancelled(true);
+//		}
+	}
+	
+	@EventHandler
+	public void coralEvent(BlockFadeEvent event) {
+		event.setCancelled(true);
 	}
 	
 	@EventHandler

@@ -1123,6 +1123,34 @@ public class MobDeath {
 				if (name.equalsIgnoreCase("우와" + ChatColor.YELLOW + " [Lv.580]")) {
 					mob.getWorld().createExplosion(mob.getLocation(), 10, false, false);
 				}
+				// 바다의 포보르
+				if (name.equalsIgnoreCase("바다의 포보르" + ChatColor.YELLOW + " [Lv.556]")) {
+					mobloot.mob257(lootPlayer);
+				}
+				// 익사한 포보르
+				if (name.equalsIgnoreCase("익사한 포보르" + ChatColor.YELLOW + " [Lv.560]")) {
+					mobloot.mob258(lootPlayer);
+				}
+				// 죄수의 유해
+				if (name.equalsIgnoreCase("죄수의 유해" + ChatColor.YELLOW + " [Lv.562]")) {
+					mobloot.mob259(lootPlayer);
+				}
+				// 불타는 영혼
+				if (name.equalsIgnoreCase("불타는 영혼" + ChatColor.YELLOW + " [Lv.566]")) {
+					mobloot.mob260(lootPlayer);
+				}
+				// 무역 상인의 라마
+				if (name.equalsIgnoreCase("무역 상인의 라마" + ChatColor.YELLOW + " [Lv.568]")) {
+					mobloot.mob261(lootPlayer);
+				}
+				// 감금된 곰
+				if (name.equalsIgnoreCase("감금된 곰" + ChatColor.YELLOW + " [Lv.572]")) {
+					mobloot.mob262(lootPlayer);
+				}
+				// 도둑 토끼
+				if (name.equalsIgnoreCase("도둑 토끼" + ChatColor.YELLOW + " [Lv.575]")) {
+					mobloot.mob263(lootPlayer);
+				}
 			} catch (Exception e) {
 
 			}

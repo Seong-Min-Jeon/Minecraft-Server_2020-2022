@@ -471,6 +471,15 @@ public class MobThread implements Listener{
 							} else if(loc.getX() <= 3735 && loc.getY() <= 76 && loc.getZ() <= 2580 
 									&& loc.getX() >= 3636 && loc.getY() >= 20 && loc.getZ() >= 2468) {
 								slimeDungeon5(player, loc);
+							} else if(loc.getX() <= 611 && loc.getY() <= 67 && loc.getZ() <= -485 
+									&& loc.getX() >= 539 && loc.getY() >= 45 && loc.getZ() >= -653) {
+								siokana1(player, loc);
+							} else if(loc.getX() <= 600 && loc.getY() <= 116 && loc.getZ() <= -538 
+									&& loc.getX() >= 459 && loc.getY() >= 70 && loc.getZ() >= -609) {
+								siokana2(player, loc);
+							} else if(loc.getX() <= 489 && loc.getY() <= 39 && loc.getZ() <= -565 
+									&& loc.getX() >= 458 && loc.getY() >= 0 && loc.getZ() >= -634) {
+								siokana3(player, loc);
 							}
 						}
 					} 
@@ -2648,6 +2657,51 @@ public class MobThread implements Listener{
 		}
 		
 		loc.getWorld().spawnEntity(loc, EntityType.SLIME);
+	}
+	
+	public void siokana1(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 611 && loc.getY() <= 67 && loc.getZ() <= -485 
+				&& loc.getX() >= 539 && loc.getY() >= 45 && loc.getZ() >= -653)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
+		} 
+	}
+	
+	public void siokana2(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 600 && loc.getY() <= 116 && loc.getZ() <= -538 
+				&& loc.getX() >= 459 && loc.getY() >= 70 && loc.getZ() >= -609)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.BLAZE);
+		} 
+	}
+	
+	public void siokana3(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 489 && loc.getY() <= 39 && loc.getZ() <= -565 
+				&& loc.getX() >= 458 && loc.getY() >= 0 && loc.getZ() >= -634)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.LLAMA);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.RAVAGER);
+		} 
 	}
 	
 	public Location location(Location loc) {
