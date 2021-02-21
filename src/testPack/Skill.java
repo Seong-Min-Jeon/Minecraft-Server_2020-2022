@@ -1456,7 +1456,7 @@ public class Skill {
 							if (nearEntity instanceof Mob) {
 								LivingEntity ent = (LivingEntity) nearEntity;
 								if(ent instanceof Monster) {
-									ent.setVelocity(vec.multiply(1.2f));
+									ent.setVelocity(vec);
 								}
 								ent.damage(player.getLevel()*10);
 							}
@@ -2971,7 +2971,7 @@ public class Skill {
 						if (nearEntity instanceof Mob) {
 							LivingEntity ent = (LivingEntity) nearEntity;
 							if(ent instanceof Monster) {
-								ent.setVelocity(vec);
+								ent.setVelocity(new Vector(0, 1, 0));
 							}
 							ent.damage(player.getLevel()*5 + damNum * 10);
 						}
@@ -2997,7 +2997,7 @@ public class Skill {
 						if (nearEntity instanceof Mob) {
 							LivingEntity ent = (LivingEntity) nearEntity;
 							if(ent instanceof Monster) {
-								ent.setVelocity(vec.multiply(3.0f));
+								ent.setVelocity(vec);
 							}
 							ent.damage(player.getLevel()*10 + damNum * 5);
 						}

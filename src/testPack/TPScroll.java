@@ -21,6 +21,7 @@ public class TPScroll {
 	
 	public void teleport(Player player, Item itemArg) {
 		World world = player.getWorld();
+		ticket0(player, itemArg, world);
 		ticket1(player, itemArg, world);
 		ticket2(player, itemArg, world);
 		ticket3(player, itemArg, world);
@@ -31,6 +32,24 @@ public class TPScroll {
 		ticket8(player, itemArg, world);
 		ticket9(player, itemArg, world);
 		ticket10(player, itemArg, world);
+		ticket11(player, itemArg, world);
+		ticket12(player, itemArg, world);
+		ticket13(player, itemArg, world);
+		ticket14(player, itemArg, world);
+	}
+	
+	public void ticket0(Player player, Item itemArg, World world) {
+		// 튜토 4041 255 3851  3966 0 3818
+		Location loc = player.getLocation();
+		if (loc.getX() <= 4041 && loc.getY() <= 255 && loc.getZ() <= 3851 && 
+				loc.getX() >= 3966 && loc.getY() >= 0 && loc.getZ() >= 3818) {
+			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "마을 스크롤")) {
+				itemArg.remove();				
+				Location loc2 = new Location(world, 4006, 167, 3853);
+				player.teleport(loc2);
+				player.getWorld().playSound(loc2, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
+			}
+		}
 	}
 	
 	public void ticket1(Player player, Item itemArg, World world) {
@@ -279,7 +298,7 @@ public class TPScroll {
 						if (time == 0) {
 							player.teleport(loc3);
 							player.getWorld().playSound(loc3, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);
-							msg.msg(player, "선장: 라히무호나를 가다니 관광용인가?.%선장: 가을만 되면 이곳을 찾는 관광객이 많았다네.%"
+							msg.msg(player, "선장: 라히무호나를 가다니 관광용인가?%선장: 가을만 되면 이곳을 찾는 관광객이 많았다네.%"
 									+ "선장: 지금은 포보르들이 득실거리지만 말일세.%선장: 포보르들을 쓸어버리면서 주변 경관이나 구경하시게.%"
 									+ "선장: 이번에도 작은 배로 갈아타야하네.%선장: 곧 도착하겠구만.");
 						}
@@ -343,5 +362,176 @@ public class TPScroll {
 		}
 	}
 	
+	public void ticket11(Player player, Item itemArg, World world) {
+		// 시오카나->스켈리그 525 66 -541  534 45 -520
+		Location loc = player.getLocation();
+		if (loc.getX() <= 534 && loc.getY() <= 66 && loc.getZ() <= -520 && 
+				loc.getX() >= 525 && loc.getY() >= 45 && loc.getZ() >= -541) {
+			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "스켈리그행 티켓")) {
+				itemArg.remove();				
+				Location loc3 = new Location(world, 1779, 54, 2970, 270, 0);
+				taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+					int time = 0;
+					ThreadShip td = new ThreadShip(player.getUniqueId());
+
+					@Override
+					public void run() {
+						if (!td.hasID()) {
+							td.setID(taskID);
+						}
+
+						if (time == 0) {
+							player.teleport(loc3);
+							player.getWorld().playSound(loc3, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);
+							msg.msg(player, "선장: 긴 여행에 힘들겠구만.%선장: 그래도 스켈리그섬에는 마을이 있다오.%"
+									+ "선장: 아마 숙소나 포션 상점도 있을걸세.%선장: 얼굴을 보아하니..%"
+									+ "선장: 스켈리그섬에 오래 체류할 것 같구먼.%선장: 이제 곧 도착이오.");
+						}
+
+						if (time >= 400) {
+							player.teleport(new Location(world, -854, 56, -731));
+							player.getWorld().playSound(loc3, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);
+							td.endTask();
+							td.removeID();
+							return;
+						}
+
+						time++;
+					}
+
+				}, 0, 1);
+			}
+		}
+	}
+	
+	public void ticket12(Player player, Item itemArg, World world) {
+		// 시오카나->하마베 525 66 -541  534 45 -520
+		Location loc = player.getLocation();
+		if (loc.getX() <= 534 && loc.getY() <= 66 && loc.getZ() <= -520 && 
+				loc.getX() >= 525 && loc.getY() >= 45 && loc.getZ() >= -541) {
+			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "하마베행 티켓 (시오카나)")) {
+				itemArg.remove();				
+				Location loc3 = new Location(world, 1779, 54, 2970, 270, 0);
+				taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+					int time = 0;
+					ThreadShip td = new ThreadShip(player.getUniqueId());
+
+					@Override
+					public void run() {
+						if (!td.hasID()) {
+							td.setID(taskID);
+						}
+
+						if (time == 0) {
+							player.teleport(loc3);
+							player.getWorld().playSound(loc3, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);
+							msg.msg(player, "선장: 하마베로 돌아가는구만.%선장: 시오카나가 좁아서 오래있을 곳은 아니지.%"
+									+ "선장: 하마베로 돌아가면 편히 쉬시게나.%선장: 어차피 다시 시오카나로 올 것 같구만.%"
+									+ "선장: 다시 만나도록 하지.%선장: 이제 곧 도착이오.");
+						}
+
+						if (time >= 400) {
+							player.teleport(new Location(world, 954, 55, -57));
+							player.getWorld().playSound(loc3, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);
+							td.endTask();
+							td.removeID();
+							return;
+						}
+
+						time++;
+					}
+
+				}, 0, 1);
+			}
+		}
+	}
+	
+	public void ticket13(Player player, Item itemArg, World world) {
+		// 하마베->시오카나  952 95 -40  938 45 -82
+		Location loc = player.getLocation();
+		if (loc.getX() <= 952 && loc.getY() <= 95 && loc.getZ() <= -40 && 
+				loc.getX() >= 938 && loc.getY() >= 45 && loc.getZ() >= -82) {
+			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "시오카나행 티켓 (하마베)")) {
+				itemArg.remove();				
+				Location loc3 = new Location(world, 1779, 54, 2970, 270, 0);
+				taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+					int time = 0;
+					ThreadShip td = new ThreadShip(player.getUniqueId());
+
+					@Override
+					public void run() {
+						if (!td.hasID()) {
+							td.setID(taskID);
+						}
+
+						if (time == 0) {
+							player.teleport(loc3);
+							player.getWorld().playSound(loc3, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);
+							msg.msg(player, "선장: 시오카나는 무역용 섬이었다네.%선장: 지금은 포보르가 점령해버렸지..%"
+									+ "선장: 계층의 약속이 깨져가는걸까..%선장: 본래 마을은 포보르로부터 안전해야만 했지.%"
+									+ "선장: 그 약속이 깨지고 있는것 같구만.%선장: 곧 도착하겠구만.");
+						}
+
+						if (time >= 400) {
+							player.teleport(new Location(world, 533, 53, -531, 270, 0));
+							player.getWorld().playSound(loc3, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);
+							td.endTask();
+							td.removeID();
+							return;
+						}
+
+						time++;
+					}
+
+				}, 0, 1);
+			}
+		}
+	}
+	
+	public void ticket14(Player player, Item itemArg, World world) {
+		// 스켈리그->시오카나  -828 95 -742  -884 45 -699
+		Location loc = player.getLocation();
+		if (loc.getX() <= -828 && loc.getY() <= 95 && loc.getZ() <= -699 && 
+				loc.getX() >= -884 && loc.getY() >= 45 && loc.getZ() >= -742) {
+			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "시오카나행 티켓 (스켈리그)")) {
+				itemArg.remove();				
+				Location loc3 = new Location(world, 1779, 54, 2970, 270, 0);
+				taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+					int time = 0;
+					ThreadShip td = new ThreadShip(player.getUniqueId());
+
+					@Override
+					public void run() {
+						if (!td.hasID()) {
+							td.setID(taskID);
+						}
+
+						if (time == 0) {
+							player.teleport(loc3);
+							player.getWorld().playSound(loc3, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);
+							msg.msg(player, "선장: 이제 하마베로 돌아가는건가.%선장: 시오카나섬을 거쳐서 가야하는게 불편하지..%"
+									+ "선장: 하지만 어쩔 수 없네.%선장: 당신, 돈 많지 않은가.%"
+									+ "선장: 나는 그 덕에 돈도 벌고. 하하하.%선장: 곧 도착하겠구만.");
+						}
+
+						if (time >= 400) {
+							player.teleport(new Location(world, 533, 53, -531, 270, 0));
+							player.getWorld().playSound(loc3, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);
+							td.endTask();
+							td.removeID();
+							return;
+						}
+
+						time++;
+					}
+
+				}, 0, 1);
+			}
+		}
+	}
 	
 }

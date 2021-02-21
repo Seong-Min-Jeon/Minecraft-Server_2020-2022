@@ -73,7 +73,7 @@ public class DefineScroll {
 						list.add("=====인챈트=====");
 						if(Integer.parseInt(ench[0]) != 0) {
 							int lvl = Integer.parseInt(ench[0]);
-							list.add(ChatColor.BLUE + "추가 데미지(모든 객체): " + lvl);
+							list.add(ChatColor.BLUE + "공격력: " + lvl);
 						}
 						if(Integer.parseInt(ench[1]) != 0) {
 							int lvl = Integer.parseInt(ench[1]);
@@ -81,11 +81,11 @@ public class DefineScroll {
 						}
 						if(Integer.parseInt(ench[2]) != 0) {
 							int lvl = Integer.parseInt(ench[2]);
-							list.add(ChatColor.BLUE + "추가 데미지(벌레): " + lvl);
+							list.add(ChatColor.BLUE + "추가 데미지(동물형): " + lvl);
 						}
 						if(Integer.parseInt(ench[3]) != 0) {
 							int lvl = Integer.parseInt(ench[3]);
-							list.add(ChatColor.BLUE + "추가 데미지(거대 객체): " + lvl);
+							list.add(ChatColor.BLUE + "추가 데미지(기타): " + lvl);
 						}					
 						if(Integer.parseInt(ench[4]) != 0) {
 							int lvl = Integer.parseInt(ench[4]);
@@ -93,7 +93,7 @@ public class DefineScroll {
 						}
 						if(Integer.parseInt(ench[5]) != 0) {
 							int lvl = Integer.parseInt(ench[5]);
-							list.add(ChatColor.BLUE + "보호(일반): " + lvl);
+							list.add(ChatColor.BLUE + "방어력: " + lvl);
 						}
 						if(Integer.parseInt(ench[6]) != 0) {
 							int lvl = Integer.parseInt(ench[6]);
@@ -125,7 +125,7 @@ public class DefineScroll {
 						preList = im.getLore();
 						int cnt = 0;
 						for(int i = 0 ; i < preList.size() ; i++) {			
-							if(preList.contains("=====인챈트=====")) {
+							if(preList.get(i).equals("=====인챈트=====")) {
 								break;
 							}
 //							if(i==preList.size()-1) {
@@ -143,7 +143,7 @@ public class DefineScroll {
 						list.add("=====인챈트=====");
 						if(Integer.parseInt(ench) != 0) {
 							int lvl = Integer.parseInt(ench);
-							list.add(ChatColor.BLUE + "추가 데미지: " + lvl);
+							list.add(ChatColor.BLUE + "공격력: " + lvl);
 						}						
 						im.setLore(list);
 						item.setItemMeta(im);					

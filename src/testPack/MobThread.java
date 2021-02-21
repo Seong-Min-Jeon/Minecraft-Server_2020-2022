@@ -19,6 +19,7 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Evoker;
 import org.bukkit.entity.Husk;
+import org.bukkit.entity.Monster;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Ravager;
 import org.bukkit.entity.Silverfish;
@@ -64,12 +65,6 @@ public class MobThread implements Listener{
 				}
 				
 				if(loc.getBlock().getType() != Material.WATER) {
-					if(time % 160 == 10) {
-						if (loc.getX() <= 3712 && loc.getY() <= 47 && loc.getZ() <= 3708 && loc.getX() >= 3686
-								&& loc.getY() >= 39 && loc.getZ() >= 3672) {
-							tutozone(player, loc);
-						}
-					}
 					
 					if ((time % 80 == 10) || (time % 40 == 10 && gp.returnTime(player) != 0)) {
 						
@@ -83,8 +78,14 @@ public class MobThread implements Listener{
 						
 						// 주변에 몹이 많은가
 						Boolean less = true;
+						int cnt = 0;
 						List<Entity> list = player.getNearbyEntities(30, 20, 30);
-						if(list.size() > 35) {
+						for(Entity ent : list) {
+							if(ent instanceof Monster) {
+								cnt++;
+							}
+						}
+						if(cnt > 35) {
 							less = false;
 						}
 						
@@ -99,7 +100,10 @@ public class MobThread implements Listener{
 							}
 						}
 						if(edge && less) {
-							if (loc.getX() <= -1833 && loc.getY() <= 60 && loc.getZ() <= 3107 && loc.getX() >= -1882
+							if (loc.getX() <= 3974 && loc.getY() <= 173 && loc.getZ() <= 3870 
+									&& loc.getX() >= 3924 && loc.getY() >= 160 && loc.getZ() >= 3847) {
+								tutozone(player, loc);
+							} else if (loc.getX() <= -1833 && loc.getY() <= 60 && loc.getZ() <= 3107 && loc.getX() >= -1882
 									&& loc.getY() >= 50 && loc.getZ() >= 3068) {
 								greenSlime(player, loc);
 							} else if(loc.getX() <= -1887 && loc.getY() <= 56 && loc.getZ() <= 3068 && loc.getX() >= -1946
@@ -480,6 +484,42 @@ public class MobThread implements Listener{
 							} else if(loc.getX() <= 489 && loc.getY() <= 39 && loc.getZ() <= -565 
 									&& loc.getX() >= 458 && loc.getY() >= 0 && loc.getZ() >= -634) {
 								siokana3(player, loc);
+							} else if(loc.getX() <= -683 && loc.getY() <= 200 && loc.getZ() <= -712 
+									&& loc.getX() >= -799 && loc.getY() >= 0 && loc.getZ() >= -859) {
+								skelig1(player, loc);
+							} else if(loc.getX() <= -524 && loc.getY() <= 200 && loc.getZ() <= -755 
+									&& loc.getX() >= -682 && loc.getY() >= 0 && loc.getZ() >= -874) {
+								skelig2(player, loc);
+							} else if(loc.getX() <= -520 && loc.getY() <= 200 && loc.getZ() <= -598 
+									&& loc.getX() >= -584 && loc.getY() >= 50 && loc.getZ() >= -754) {
+								skelig3(player, loc);
+							} else if(loc.getX() <= -412 && loc.getY() <= 200 && loc.getZ() <= -588 
+									&& loc.getX() >= -518 && loc.getY() >= 0 && loc.getZ() >= -754) {
+								skelig4(player, loc);
+							} else if(loc.getX() <= -681 && loc.getY() <= 200 && loc.getZ() <= -988 
+									&& loc.getX() >= -773 && loc.getY() >= 0 && loc.getZ() >= -1111) {
+								skelig5(player, loc);
+							} else if(loc.getX() <= -553 && loc.getY() <= 200 && loc.getZ() <= -1013 
+									&& loc.getX() >= -680 && loc.getY() >= 0 && loc.getZ() >= -1078) {
+								skelig6(player, loc);
+							} else if(loc.getX() <= -496 && loc.getY() <= 200 && loc.getZ() <= -1097 
+									&& loc.getX() >= -621 && loc.getY() >= 0 && loc.getZ() >= -1127) {
+								skelig7(player, loc);
+							} else if(loc.getX() <= -519 && loc.getY() <= 200 && loc.getZ() <= -1045 
+									&& loc.getX() >= -560 && loc.getY() >= 124 && loc.getZ() >= -1085) {
+								skelig8(player, loc);
+							} else if(loc.getX() <= -766 && loc.getY() <= 200 && loc.getZ() <= -1080 
+									&& loc.getX() >= -963 && loc.getY() >= 0 && loc.getZ() >= -1191) {
+								skelig9(player, loc);
+							} else if(loc.getX() <= -964 && loc.getY() <= 200 && loc.getZ() <= -1071 
+									&& loc.getX() >= -1071 && loc.getY() >= 0 && loc.getZ() >= -1204) {
+								skelig10(player, loc);
+							} else if(loc.getX() <= -700 && loc.getY() <= 200 && loc.getZ() <= -524 
+									&& loc.getX() >= -838 && loc.getY() >= 0 && loc.getZ() >= -594) {
+								skelig11(player, loc);
+							} else if(loc.getX() <= -484 && loc.getY() <= 49 && loc.getZ() <= -680 
+									&& loc.getX() >= -585 && loc.getY() >= 0 && loc.getZ() >= -765) {
+								skelig12(player, loc);
 							}
 						}
 					} 
@@ -517,14 +557,12 @@ public class MobThread implements Listener{
 	
 	public void tutozone(Player player, Location loc) {
 		loc = location(loc);
-		if (!(loc.getX() <= 3712 && loc.getY() <= 47 && loc.getZ() <= 3708 && loc.getX() >= 3686 && loc.getY() >= 39
-				&& loc.getZ() >= 3672)) {
+		if (!(loc.getX() <= 3974 && loc.getY() <= 173
+				&& loc.getZ() <= 3870 && loc.getX() >= 3924
+				&& loc.getY() >= 160 && loc.getZ() >= 3847)) {
 			return;
 		}
-		Skeleton mob = (Skeleton) loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
-		EntityEquipment head = mob.getEquipment();
-		ItemStack headItem = new ItemStack(Material.SKELETON_SKULL);
-		head.setHelmet(headItem);
+		loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
 	}
 
 	public void greenSlime(Player player, Location loc) {
@@ -2701,6 +2739,192 @@ public class MobThread implements Listener{
 			loc.getWorld().spawnEntity(loc, EntityType.LLAMA);
 		} else if (num == 1) {
 			loc.getWorld().spawnEntity(loc, EntityType.RAVAGER);
+		} 
+	}
+	
+	public void skelig1(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= -683 && loc.getY() <= 200 && loc.getZ() <= -712 
+				&& loc.getX() >= -799 && loc.getY() >= 0 && loc.getZ() >= -859)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.EVOKER);
+		} 
+	}
+
+	public void skelig2(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= -524 && loc.getY() <= 200 && loc.getZ() <= -755 
+				&& loc.getX() >= -682 && loc.getY() >= 0 && loc.getZ() >= -874)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.RAVAGER);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.RABBIT);
+		} 
+	}
+	
+	public void skelig3(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= -520 && loc.getY() <= 200 && loc.getZ() <= -598 
+				&& loc.getX() >= -584 && loc.getY() >= 50 && loc.getZ() >= -754)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.BLAZE);
+		} 
+	}
+	
+	public void skelig4(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= -412 && loc.getY() <= 200 && loc.getZ() <= -588 
+				&& loc.getX() >= -518 && loc.getY() >= 0 && loc.getZ() >= -754)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.ZOMBIE);
+		} else if (num == 1) {
+			CustomPanda cs = new CustomPanda(loc);
+			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
+			world.addEntity(cs);
+		} 
+	}
+	
+	public void skelig5(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= -681 && loc.getY() <= 200 && loc.getZ() <= -988 
+				&& loc.getX() >= -773 && loc.getY() >= 0 && loc.getZ() >= -1111)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.SLIME);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.ZOMBIE);
+		} 
+	}
+	
+	public void skelig6(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= -553 && loc.getY() <= 200 && loc.getZ() <= -1013 
+				&& loc.getX() >= -680 && loc.getY() >= 0 && loc.getZ() >= -1078)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.WITCH);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.ENDERMITE);
+		} 
+	}
+	
+	public void skelig7(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= -496 && loc.getY() <= 200 && loc.getZ() <= -1097 
+				&& loc.getX() >= -621 && loc.getY() >= 0 && loc.getZ() >= -1127)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.SILVERFISH);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.CAVE_SPIDER);
+		} 
+	}
+	
+	public void skelig8(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= -519 && loc.getY() <= 200 && loc.getZ() <= -1045 
+				&& loc.getX() >= -560 && loc.getY() >= 124 && loc.getZ() >= -1085)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.CREEPER);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.RAVAGER);
+		} 
+	}
+	
+	public void skelig9(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= -766 && loc.getY() <= 200 && loc.getZ() <= -1080 
+				&& loc.getX() >= -963 && loc.getY() >= 0 && loc.getZ() >= -1191)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.BLAZE);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.ZOMBIE);
+		} 
+	}
+	
+	public void skelig10(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= -964 && loc.getY() <= 200 && loc.getZ() <= -1071 
+				&& loc.getX() >= -1071 && loc.getY() >= 0 && loc.getZ() >= -1204)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.ENDERMAN);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
+		} 
+	}
+	
+	public void skelig11(Player player, Location loc) {
+		int num = rnd.nextInt(3);
+		loc = location(loc);
+		if (!(loc.getX() <= -700 && loc.getY() <= 200 && loc.getZ() <= -524 
+				&& loc.getX() >= -838 && loc.getY() >= 0 && loc.getZ() >= -594)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
+		} else if (num == 2) {
+			CustomOcelot cs = new CustomOcelot(loc);
+			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
+			world.addEntity(cs);
+		} 
+	}
+	
+	public void skelig12(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= -484 && loc.getY() <= 49 && loc.getZ() <= -680 
+				&& loc.getX() >= -585 && loc.getY() >= 0 && loc.getZ() >= -765)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.MAGMA_CUBE);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.STRAY);
 		} 
 	}
 	

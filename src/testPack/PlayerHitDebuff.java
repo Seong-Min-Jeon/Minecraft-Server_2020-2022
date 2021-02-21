@@ -98,6 +98,9 @@ public class PlayerHitDebuff {
 		mob49(player, mob);
 		mob50(player, mob);
 		mob51(player, mob);
+		mob52(player, mob);
+		mob53(player, mob);
+		mob54(player, mob);
 	}
 
 	// 시련의 형상
@@ -2838,16 +2841,52 @@ public class PlayerHitDebuff {
 
 	}
 	
+	// 도둑 토끼
 	public void mob52(Player player, Entity mob) {
-
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("도둑 토끼" + ChatColor.YELLOW + " [Lv.575]")) {
+			int num = rnd.nextInt(2);
+			if (num == 0) {
+				player.damage(2000);
+			}
+		}
 	}
 	
+	// 야생 토끼
 	public void mob53(Player player, Entity mob) {
-
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("야생 토끼" + ChatColor.YELLOW + " [Lv.579]")) {
+			int num = rnd.nextInt(2);
+			if (num == 0) {
+				player.damage(2500);
+			}
+		}
 	}
 	
+	// 공양을 받는 돼지
 	public void mob54(Player player, Entity mob) {
-
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("공양을 받는 돼지" + ChatColor.YELLOW + " [Lv.??]")) {
+			
+			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
+				int num = rnd.nextInt(13);
+				if (num == 0) {
+					player.setVelocity(new Vector(0, 3, 0));
+					player.damage(5000);
+					player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_PIG_HURT, 3.0f, 1.0f);
+				} else if(num == 1) {
+					player.sendMessage(ChatColor.RED + "돼지가 먹은 것을 토해냅니다.");
+					sendMessage(player, ChatColor.RED + "돼지가 먹은 것을 토해냅니다.");
+					player.getWorld().spawnEntity(mob.getLocation(), EntityType.ZOMBIE);
+					player.getWorld().spawnEntity(mob.getLocation(), EntityType.ZOMBIE);
+					player.getWorld().spawnEntity(mob.getLocation(), EntityType.ZOMBIE);
+				}
+			} else {
+				int num = rnd.nextInt(10);
+				if (num == 0) {
+					player.setVelocity(new Vector(0, 3, 0));
+					player.damage(5000);
+					player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_PIG_HURT, 3.0f, 1.0f);
+				}
+			}
+		}
 	}
 	
 	public void mob55(Player player, Entity mob) {

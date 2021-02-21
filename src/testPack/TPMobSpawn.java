@@ -1,5 +1,6 @@
 package testPack;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.bukkit.ChatColor;
@@ -22,7 +23,9 @@ import org.bukkit.entity.Wither;
 import org.bukkit.entity.WitherSkeleton;
 import org.bukkit.entity.Zombie;
 import org.bukkit.inventory.EntityEquipment;
+import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
@@ -42,6 +45,8 @@ public class TPMobSpawn {
 		aracune(player, loc);
 		forest(player, loc);
 		samak(player, loc);
+		skelig(player, loc);
+		
 	}
 
 	public void fairy(Player player, Location loc) {
@@ -1215,6 +1220,135 @@ public class TPMobSpawn {
 			new BossHealth().getBar22().addPlayer(player);
 		}
 
+	}
+	
+	public void skelig(Player player, Location loc) {
+		// 복도방
+		if (loc.getX() == 3696.5 && loc.getY() == 88 && loc.getZ() == 2382.5) {
+			player.teleport(new Location(player.getWorld(), 3696.5, 88, 2382.45));
+			int num = 0;
+			List<Entity> entitylist = player.getNearbyEntities(20, 30, 70);
+			for (Entity nearEntity : entitylist) {
+				if (nearEntity.getType() == EntityType.PLAYER) {
+					Player nearPlayer = (Player) nearEntity;
+					Location loc2 = nearPlayer.getLocation();
+					if (loc2.getX() <= 3711 && loc2.getY() <= 100 && loc2.getZ() <= 2392 
+							&& loc2.getX() >= 3681 && loc2.getY() >= 80 && loc2.getZ() >= 2310) {
+						num++;
+						return;
+					}
+				}
+			}
+			if (num == 0) {
+				for (Entity nearEntity : entitylist) {
+					if (nearEntity instanceof Mob) {
+						Location loc2 = nearEntity.getLocation();
+						if (loc2.getX() <= 3711 && loc2.getY() <= 100 && loc2.getZ() <= 2392 
+								&& loc2.getX() >= 3681 && loc2.getY() >= 80 && loc2.getZ() >= 2310) {
+							nearEntity.remove();
+						}
+					}
+				}
+			}
+			
+			CustomWither cw = new CustomWither(new Location(player.getWorld(), 3697, 89, 2376));
+			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
+			world.addEntity(cw);
+			
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3706, 88, 2355), EntityType.WITHER_SKELETON);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3706, 88, 2355), EntityType.WITHER_SKELETON);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3706, 88, 2355), EntityType.WITHER_SKELETON);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3688, 88, 2334), EntityType.WITHER_SKELETON);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3688, 88, 2334), EntityType.WITHER_SKELETON);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3688, 88, 2334), EntityType.WITHER_SKELETON);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3697, 88, 2367), EntityType.WITHER_SKELETON);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3697, 88, 2367), EntityType.WITHER_SKELETON);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3697, 88, 2356), EntityType.WITHER_SKELETON);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3697, 88, 2356), EntityType.WITHER_SKELETON);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3697, 88, 2333), EntityType.WITHER_SKELETON);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3697, 88, 2333), EntityType.WITHER_SKELETON);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3697, 88, 2322), EntityType.WITHER_SKELETON);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3697, 88, 2322), EntityType.WITHER_SKELETON);
+			return;
+		}
+		
+		// 보스 
+		if (loc.getX() == 3730.5 && loc.getY() == 88 && loc.getZ() == 2420.5) {
+			player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "꾸읽꾸익꾸이읽");
+
+			player.teleport(new Location(player.getWorld(), 3730.5, 88.1, 2420.5));
+			int num = 0;
+			List<Entity> entitylist = player.getNearbyEntities(50, 40, 50);
+			for (Entity nearEntity : entitylist) {
+				if (nearEntity.getType() == EntityType.PLAYER) {
+					Player nearPlayer = (Player) nearEntity;
+					Location loc2 = nearPlayer.getLocation();
+					if (loc2.getX() <= 3753 && loc2.getY() <= 108 && loc2.getZ() <= 2434 
+							&& loc2.getX() >= 3713 && loc2.getY() >= 80 && loc2.getZ() >= 2376) {
+						num++;
+						if(new BossHealth().getBar23().getProgress() != 0) {
+							new BossHealth().getBar23().addPlayer(player);
+						}
+						return;
+					}
+				}
+			}
+
+			if (num == 0) {
+				for (Entity nearEntity : entitylist) {
+					if (nearEntity instanceof Mob) {
+						Location loc2 = nearEntity.getLocation();
+						if (loc2.getX() <= 3753 && loc2.getY() <= 108 && loc2.getZ() <= 2434 
+								&& loc2.getX() >= 3713 && loc2.getY() >= 80 && loc2.getZ() >= 2376) {
+							nearEntity.remove();
+						}
+					}
+				}
+			}
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3737, 88, 2414), EntityType.ZOMBIE);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3737, 88, 2397), EntityType.ZOMBIE);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3722, 88, 2397), EntityType.ZOMBIE);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3722, 88, 2414), EntityType.ZOMBIE);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3730, 88, 2407), EntityType.ZOMBIE);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3730, 88, 2407), EntityType.ZOMBIE);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3730, 88, 2407), EntityType.ZOMBIE);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3740, 98, 2416), EntityType.ZOMBIE);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3720, 98, 2385), EntityType.ZOMBIE);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3730, 88, 2388), EntityType.ZOGLIN);
+			
+			new BossHealth().getBar23().setProgress(1.0);
+			new BossHealth().getBar23().addPlayer(player);
+			return;
+		}
+		
+		// 튜토 
+		if (loc.getX() == 3968.7 && loc.getY() == 165 && loc.getZ() == 3942.55) {
+			ItemStack weapon = new ItemStack(Material.WOODEN_HOE);
+			ItemMeta weaponIm = weapon.getItemMeta();
+			weaponIm.setDisplayName(ChatColor.GRAY + "낡은 낫");
+			ArrayList<String> weaponLore = new ArrayList();
+			weaponLore.add(ChatColor.GRAY + "돌로 만들어진 낡은 낫");
+			weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+			weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+			weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+			weaponIm.setUnbreakable(true);
+			weaponIm.setLore(weaponLore);
+			weapon.setItemMeta(weaponIm);
+			player.getInventory().addItem(weapon);
+			
+			ItemStack weapon1 = new ItemStack(Material.WOODEN_SHOVEL);
+			ItemMeta weapon1Im = weapon1.getItemMeta();
+			weapon1Im.setDisplayName(ChatColor.GRAY + "낡은 채집도구");
+			ArrayList<String> weapon1Lore = new ArrayList();
+			weapon1Lore.add(ChatColor.GRAY + "날이 무뎌진 채집도구");
+			weapon1Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+			weapon1Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+			weapon1Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+			weapon1Im.setUnbreakable(true);
+			weapon1Im.setLore(weapon1Lore);
+			weapon1.setItemMeta(weapon1Im);
+			player.getInventory().addItem(weapon1);
+		}
 	}
 	
 }

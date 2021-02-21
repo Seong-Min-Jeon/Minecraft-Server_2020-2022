@@ -224,6 +224,12 @@ public class ArrowEffect {
 				bool = reload(player, 700);
 			}
 			if(bool) {
+				if(player.getLevel() < 900) {
+					bool = false;
+					player.sendMessage(ChatColor.RED + "총을 다루기에는 내 힘이 부족하다.");
+				}
+			}
+			if(bool) {
 				Location loc = player.getEyeLocation();
 				world = player.getWorld();
 				SmallFireball arrow = player.launchProjectile(SmallFireball.class);

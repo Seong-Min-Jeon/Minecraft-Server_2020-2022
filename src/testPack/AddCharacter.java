@@ -154,7 +154,7 @@ public class AddCharacter{
 							FileReader filereader = new FileReader(file);
 							BufferedReader bufReader = new BufferedReader(filereader);
 							BufferedWriter fw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), "UTF-8"));
-							fw.write("3697/42/3679");
+							fw.write("3886/165/3825");
 							fw.write("\n");
 							fw.write("20/20");
 							fw.write("\n");

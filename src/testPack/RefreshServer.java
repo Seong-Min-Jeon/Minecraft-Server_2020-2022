@@ -192,6 +192,18 @@ public class RefreshServer {
 								if(ent.getType() == EntityType.CREEPER) {
 									ent.remove();
 								}
+								if(ent.getType() == EntityType.OCELOT) {
+									ent.remove();
+								}
+								if(ent.getType() == EntityType.PANDA) {
+									ent.remove();
+								}
+								if(ent.getType() == EntityType.RABBIT) {
+									ent.remove();
+								}
+								if(ent.getType() == EntityType.ZOGLIN) {
+									ent.remove();
+								}
 								if(ent.getType() == EntityType.HORSE) {
 									if(((Horse) ent).isCustomNameVisible()) {
 										ent.remove();

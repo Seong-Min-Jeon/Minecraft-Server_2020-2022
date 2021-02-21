@@ -50,11 +50,11 @@ public class PlayerJobBuff {
 		if (player.getInventory().contains(Material.MAGENTA_DYE)) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, Integer.MAX_VALUE, 1,true,false,false));
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0,true,false,false));
-			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 80, 3,true,false,false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 80, 0,true,false,false));
 		}
 		// 그림 리퍼		
 		if (player.getInventory().contains(Material.ORANGE_DYE)) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 60, 1,true,false,false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 60, 0,true,false,false));
 		}
 		// 마인
 		if (player.getInventory().contains(Material.BLUE_DYE)) {

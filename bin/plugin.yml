@@ -56,4 +56,7 @@ commands:
   ItemToggle:
    description: ItemToggle
    usage: /ItemToggle
+  k:
+   description: k
+   usage: /k
 api-version: 1.16

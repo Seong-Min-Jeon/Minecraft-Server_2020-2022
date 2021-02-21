@@ -118,6 +118,12 @@ public class OffInDungeon {
 			player.teleport(new Location(player.getWorld(), 973, 62, 40, 180, 0));
 			return;
 		}
+		// 유산 신전 3747 150 2433  3678 80 2308 
+		if (loc.getX() <= 3747 && loc.getY() <= 150 && loc.getZ() <= 2433 
+				&& loc.getX() >= 3678 && loc.getY() >= 80 && loc.getZ() >= 2308) {
+			player.teleport(new Location(player.getWorld(), -741, 56, -894));
+			return;
+		}
 	}
 
 	public void removeMana(Player player) {

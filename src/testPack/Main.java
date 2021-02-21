@@ -60,6 +60,8 @@ import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Llama;
 import org.bukkit.entity.LlamaSpit;
 import org.bukkit.entity.Mob;
+import org.bukkit.entity.Ocelot;
+import org.bukkit.entity.Panda;
 import org.bukkit.entity.Phantom;
 import org.bukkit.entity.Pig;
 import org.bukkit.entity.Piglin;
@@ -75,6 +77,7 @@ import org.bukkit.entity.SpectralArrow;
 import org.bukkit.entity.Spider;
 import org.bukkit.entity.Villager;
 import org.bukkit.entity.Wolf;
+import org.bukkit.entity.Zoglin;
 import org.bukkit.entity.Zombie;
 import org.bukkit.event.Event.Result;
 import org.bukkit.event.EventHandler;
@@ -131,6 +134,7 @@ import org.bukkit.event.player.PlayerChangedWorldEvent;
 import org.bukkit.event.player.PlayerChatEvent;
 import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.event.player.PlayerFishEvent;
+import org.bukkit.event.player.PlayerInteractAtEntityEvent;
 import org.bukkit.event.player.PlayerInteractEntityEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerItemConsumeEvent;
@@ -223,6 +227,7 @@ public class Main extends JavaPlugin implements Listener{
 		getCommand("class").setExecutor(new Cmd16class());
 		getCommand("exptoggle").setExecutor(new Cmd17ExpToggle());
 		getCommand("itemtoggle").setExecutor(new Cmd18ItemToggle());
+		getCommand("k").setExecutor(new Cmd19Kick());
 		
 		new Cmd16class().setFolder(getDataFolder());
 		
@@ -316,7 +321,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("woolring")) { 
 			
 		} else {
-			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/810009504082821161/aile_texture_pack_17.zip");
+			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/812236885761851402/aile_texture_pack_18.zip");
 		}
 		
 		//Message
@@ -325,7 +330,7 @@ public class Main extends JavaPlugin implements Listener{
 		} else if(player.getDisplayName().equalsIgnoreCase("WoolRing")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.GREEN + "'도트랑 도트가 제일 좋아' 울링.");
 		} else if(player.getDisplayName().equalsIgnoreCase("_nanoboost_")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.RED + "'에: 에디는 / 디: D등급이다.' 나노부스트.");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.RED + "'폐관수련 중입니다' 나노부스트.");
 		} else if(player.getDisplayName().equalsIgnoreCase("why9196")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.BLUE + "'최초의 500레벨' 와이.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Akilae3102")) {
@@ -339,6 +344,12 @@ public class Main extends JavaPlugin implements Listener{
 		} else {
 			event.setJoinMessage("야생의 누군가가 등장했다.");
 		}
+		
+		//경고
+//		if(player.getDisplayName().equalsIgnoreCase("Ryu_CY")) {
+//			player.sendMessage("매크로 사용으로 현재 1회 경고를 받은 상황입니다.");
+//			player.sendMessage("경고 2회 때에는 무통보 영구정지 및 캐릭터 삭제가 있을 수 있습니다.");
+//		}
 		
 		//set 
 		player.setGameMode(GameMode.ADVENTURE);
@@ -567,6 +578,91 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("yumehama") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
 //		if(player.getDisplayName().equalsIgnoreCase("WoolRing") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
 		
+		
+//		ItemStack weapon = new ItemStack(Material.JUNGLE_LOG);
+//		ItemMeta weaponIm = weapon.getItemMeta();
+//		weaponIm.setLocalizedName("1000,3000,1000,1000,1000,0,0,0,0,0,530");
+//		weaponIm.setDisplayName(ChatColor.AQUA + "악마의 뿔");
+//		ArrayList<String> weaponLore = new ArrayList();
+//		weaponLore.add(ChatColor.GRAY + "레벨 제한: 530");
+//		weaponLore.add(ChatColor.GRAY + " ");
+//		weaponLore.add(ChatColor.GRAY + "팔라딘이 악마라고 불리는 포보르에게서");
+//		weaponLore.add(ChatColor.GRAY + "얻어낸 오른쪽 뿔");
+//		weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		weaponIm.setUnbreakable(true);
+//		weaponIm.setLore(weaponLore);
+//		weapon.setItemMeta(weaponIm);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(weapon);}
+//		
+//		ItemStack helmet = new ItemStack(Material.GOLDEN_HELMET);
+//		ItemMeta helmetIm = helmet.getItemMeta();
+//		helmetIm.setLocalizedName("1500,1000,1000,2000,0,500,500,500,500,500,530");
+//		helmetIm.setDisplayName(ChatColor.LIGHT_PURPLE + "케마니");
+//		ArrayList<String> helmetLore = new ArrayList();
+//		helmetLore.add(ChatColor.GRAY + "레벨 제한: 530");
+//		helmetLore.add(ChatColor.GRAY + " ");
+//		helmetLore.add(ChatColor.GRAY + "하마베 북서쪽의 광산에서 채취한");
+//		helmetLore.add(ChatColor.GRAY + "금으로 만들어진 헬멧");
+//		helmetIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		helmetIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		helmetIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		helmetIm.setUnbreakable(true);
+//		helmetIm.setLore(helmetLore);
+//		helmet.setItemMeta(helmetIm);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(helmet);}
+//
+//		ItemStack chestplate = new ItemStack(Material.GOLDEN_CHESTPLATE);
+//		ItemMeta chestplateIm = chestplate.getItemMeta();
+//		chestplateIm.setLocalizedName("300,300,0,0,1000,1500,1000,1000,1000,1500,530");
+//		chestplateIm.setDisplayName(ChatColor.LIGHT_PURPLE + "보이그");
+//		ArrayList<String> chestplateLore = new ArrayList();
+//		chestplateLore.add(ChatColor.GRAY + "레벨 제한: 530");
+//		chestplateLore.add(ChatColor.GRAY + " ");
+//		chestplateLore.add(ChatColor.GRAY + "하마베 북서쪽의 광산에서 채취한");
+//		chestplateLore.add(ChatColor.GRAY + "금으로 만들어진 갑옷");
+//		chestplateIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		chestplateIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		chestplateIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		chestplateIm.setUnbreakable(true);
+//		chestplateIm.setLore(chestplateLore);
+//		chestplate.setItemMeta(chestplateIm);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(chestplate);}
+//
+//		ItemStack leggings = new ItemStack(Material.GOLDEN_LEGGINGS);
+//		ItemMeta leggingsIm = leggings.getItemMeta();
+//		leggingsIm.setLocalizedName("0,2000,2000,2000,200,2000,1000,1000,1000,0,530");
+//		leggingsIm.setDisplayName(ChatColor.LIGHT_PURPLE + "에피리튼");
+//		ArrayList<String> leggingsLore = new ArrayList();
+//		leggingsLore.add(ChatColor.GRAY + "레벨 제한: 530");
+//		leggingsLore.add(ChatColor.GRAY + " ");
+//		leggingsLore.add(ChatColor.GRAY + "하마베 북서쪽의 광산에서 채취한");
+//		leggingsLore.add(ChatColor.GRAY + "금으로 만들어진 각반");
+//		leggingsIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		leggingsIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		leggingsIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		leggingsIm.setUnbreakable(true);
+//		leggingsIm.setLore(leggingsLore);
+//		leggings.setItemMeta(leggingsIm);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(leggings);}
+//
+//		ItemStack boots = new ItemStack(Material.GOLDEN_BOOTS);
+//		ItemMeta bootsIm = boots.getItemMeta();
+//		bootsIm.setLocalizedName("0,4000,0,0,0,0,0,0,0,4000,530");
+//		bootsIm.setDisplayName(ChatColor.LIGHT_PURPLE + "할리퍼");
+//		ArrayList<String> bootsLore = new ArrayList();
+//		bootsLore.add(ChatColor.GRAY + "레벨 제한: 530");
+//		bootsLore.add(ChatColor.GRAY + " ");
+//		bootsLore.add(ChatColor.GRAY + "하마베 북서쪽의 광산에서 채취한");
+//		bootsLore.add(ChatColor.GRAY + "금으로 만들어진 신발");
+//		bootsIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		bootsIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		bootsIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		bootsIm.setUnbreakable(true);
+//		bootsIm.setLore(bootsLore);
+//		boots.setItemMeta(bootsIm);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(boots);}
 		
 //		ItemStack helmet = new ItemStack(Material.GOLDEN_HELMET);
 //		ItemMeta helmetIm = helmet.getItemMeta();
@@ -2527,6 +2623,12 @@ public class Main extends JavaPlugin implements Listener{
 				event.setRespawnLocation(kekktas);
 				return;
 			}
+			// 유산 신전 3747 150 2433  3678 80 2308 
+			if (loc.getX() <= 3747 && loc.getY() <= 150 && loc.getZ() <= 2433 
+					&& loc.getX() >= 3678 && loc.getY() >= 80 && loc.getZ() >= 2308) {
+				event.setRespawnLocation(kekktas);
+				return;
+			}
 
 			int length1 = (int)(Math.pow(loc.getX()-wargunil.getX(), 2) + Math.pow(loc.getY()-wargunil.getY(), 2) + Math.pow(loc.getZ()-wargunil.getZ(), 2));
 			int length2 = (int)(Math.pow(loc.getX()-forgan.getX(), 2) + Math.pow(loc.getY()-forgan.getY(), 2) + Math.pow(loc.getZ()-forgan.getZ(), 2));
@@ -3771,6 +3873,129 @@ public class Main extends JavaPlugin implements Listener{
 		} catch (Exception e) {
 
 		}
+		// Ocelot target
+		try {
+			if (event.getEntity() instanceof Ocelot) {
+				if (event.getDamager() instanceof Player) {
+					Player player = (Player) event.getDamager();
+					((Ocelot) event.getEntity()).setTarget(player);
+					List<Entity> entitylist = event.getEntity().getNearbyEntities(30, 5, 30);
+					for (Entity nearEntity : entitylist) {
+						if (nearEntity instanceof Ocelot) {
+							((Ocelot) nearEntity).setTarget(player);
+						}
+					}
+				} else if (event.getDamager() instanceof Arrow) {
+					Arrow proj = (Arrow) event.getDamager();
+					if (proj.getShooter() instanceof Player) {
+						Player player = (Player) proj.getShooter();
+						((Ocelot) event.getEntity()).setTarget(player);
+						List<Entity> entitylist = event.getEntity().getNearbyEntities(30, 5, 30);
+						for (Entity nearEntity : entitylist) {
+							if (nearEntity instanceof Ocelot) {
+								((Ocelot) nearEntity).setTarget(player);
+							}
+						}
+					}
+				} else if (event.getDamager() instanceof SmallFireball) {
+					SmallFireball proj = (SmallFireball) event.getDamager();
+					if (proj.getShooter() instanceof Player) {
+						Player player = (Player) proj.getShooter();
+						((Ocelot) event.getEntity()).setTarget(player);
+						List<Entity> entitylist = event.getEntity().getNearbyEntities(30, 5, 30);
+						for (Entity nearEntity : entitylist) {
+							if (nearEntity instanceof Ocelot) {
+								((Ocelot) nearEntity).setTarget(player);
+							}
+						}
+					}
+				}
+			}
+		} catch (Exception e) {
+
+		}
+		// Panda target
+		try {
+			if (event.getEntity() instanceof Panda) {
+				if (event.getDamager() instanceof Player) {
+					Player player = (Player) event.getDamager();
+					((Panda) event.getEntity()).setTarget(player);
+					List<Entity> entitylist = event.getEntity().getNearbyEntities(30, 5, 30);
+					for (Entity nearEntity : entitylist) {
+						if (nearEntity instanceof Panda) {
+							((Panda) nearEntity).setTarget(player);
+						}
+					}
+				} else if (event.getDamager() instanceof Arrow) {
+					Arrow proj = (Arrow) event.getDamager();
+					if (proj.getShooter() instanceof Player) {
+						Player player = (Player) proj.getShooter();
+						((Panda) event.getEntity()).setTarget(player);
+						List<Entity> entitylist = event.getEntity().getNearbyEntities(30, 5, 30);
+						for (Entity nearEntity : entitylist) {
+							if (nearEntity instanceof Panda) {
+								((Panda) nearEntity).setTarget(player);
+							}
+						}
+					}
+				} else if (event.getDamager() instanceof SmallFireball) {
+					SmallFireball proj = (SmallFireball) event.getDamager();
+					if (proj.getShooter() instanceof Player) {
+						Player player = (Player) proj.getShooter();
+						((Panda) event.getEntity()).setTarget(player);
+						List<Entity> entitylist = event.getEntity().getNearbyEntities(30, 5, 30);
+						for (Entity nearEntity : entitylist) {
+							if (nearEntity instanceof Panda) {
+								((Panda) nearEntity).setTarget(player);
+							}
+						}
+					}
+				}
+			}
+		} catch (Exception e) {
+
+		}
+		// Zoglin target
+		try {
+			if (event.getEntity() instanceof Zoglin) {
+				if (event.getDamager() instanceof Player) {
+					Player player = (Player) event.getDamager();
+					((Zoglin) event.getEntity()).setTarget(player);
+					List<Entity> entitylist = event.getEntity().getNearbyEntities(30, 5, 30);
+					for (Entity nearEntity : entitylist) {
+						if (nearEntity instanceof Zoglin) {
+							((Zoglin) nearEntity).setTarget(player);
+						}
+					}
+				} else if (event.getDamager() instanceof Arrow) {
+					Arrow proj = (Arrow) event.getDamager();
+					if (proj.getShooter() instanceof Player) {
+						Player player = (Player) proj.getShooter();
+						((Zoglin) event.getEntity()).setTarget(player);
+						List<Entity> entitylist = event.getEntity().getNearbyEntities(30, 5, 30);
+						for (Entity nearEntity : entitylist) {
+							if (nearEntity instanceof Zoglin) {
+								((Zoglin) nearEntity).setTarget(player);
+							}
+						}
+					}
+				} else if (event.getDamager() instanceof SmallFireball) {
+					SmallFireball proj = (SmallFireball) event.getDamager();
+					if (proj.getShooter() instanceof Player) {
+						Player player = (Player) proj.getShooter();
+						((Zoglin) event.getEntity()).setTarget(player);
+						List<Entity> entitylist = event.getEntity().getNearbyEntities(30, 5, 30);
+						for (Entity nearEntity : entitylist) {
+							if (nearEntity instanceof Zoglin) {
+								((Zoglin) nearEntity).setTarget(player);
+							}
+						}
+					}
+				}
+			}
+		} catch (Exception e) {
+
+		}
 		// Rabbit target
 		try {
 			if (event.getEntity() instanceof Rabbit) {
@@ -4359,7 +4584,9 @@ public class Main extends JavaPlugin implements Listener{
 	
 					}
 					if (player.getInventory().contains(Material.MAGENTA_DYE)) {
-						jobMul = 20;
+						if(player.getLevel() >= 700) {
+							jobMul = 20;
+						}
 					}
 					if (player.getInventory().contains(Material.INK_SAC)) {
 						jobMul = 200;
@@ -5685,6 +5912,20 @@ public class Main extends JavaPlugin implements Listener{
 						}
 					} else {
 						new BossHealth().getBar22().setProgress((boss.getHealth()-event.getFinalDamage()) / 4000000.0);
+					}
+				}
+				// 공양을 받는 돼지
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("공양을 받는 돼지" + ChatColor.YELLOW + " [Lv.??]")) {
+
+					LivingEntity boss = (LivingEntity) mob;
+					
+					if(boss.getHealth() - event.getFinalDamage() <= 0) {
+						for(Player p : new BossHealth().getBar23().getPlayers()) {
+							new BossHealth().getBar23().setProgress(0);
+							new BossHealth().getBar23().removePlayer(p);
+						}
+					} else {
+						new BossHealth().getBar23().setProgress((boss.getHealth()-event.getFinalDamage()) / 4000000.0);
 					}
 				}
 			}
@@ -7136,7 +7377,7 @@ public class Main extends JavaPlugin implements Listener{
 				for (Entity nearEntity : entitylist) { 
 				    if (nearEntity.getType() != EntityType.PLAYER) { 
 				    	LivingEntity entity = (LivingEntity) nearEntity;
-				    	entity.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 100, 200, true, false, false));
+				    	entity.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 40, 200, true, false, false));
 				    	entity.damage(num * 50);
 				    }        
 				}   
@@ -7300,6 +7541,11 @@ public class Main extends JavaPlugin implements Listener{
 					event.setCancelled(true);
 					return;
 				}
+				if(player.getInventory().getItemInMainHand().getType() == Material.GOLDEN_APPLE) {
+					event.setCancelled(true);
+					player.updateInventory();
+					return;
+				}
 			}
 			// 빌리저 대화
 			if(event.getRightClicked().getType() == EntityType.VILLAGER || event.getRightClicked().getType() == EntityType.ARMOR_STAND) {
@@ -7313,6 +7559,23 @@ public class Main extends JavaPlugin implements Listener{
 				InteractNPC iv = new InteractNPC();
 				if (iv.interactNPC(player, event.getRightClicked()) == true) {
 					event.setCancelled(true);
+				}
+			}
+		}
+	}
+	
+	@EventHandler
+	public void feedEvent(PlayerInteractAtEntityEvent event) {
+		EquipmentSlot e = event.getHand();
+		if(e.equals(EquipmentSlot.HAND)) {
+			Player player = (Player) event.getPlayer();
+			// 말 타기
+			if(event.getRightClicked().getType() == EntityType.HORSE) {
+				Horse horse = (Horse) event.getRightClicked();
+				if(player.getInventory().getItemInMainHand().getType() == Material.GOLDEN_APPLE) {
+					event.setCancelled(true);
+					player.updateInventory();
+					return;
 				}
 			}
 		}
@@ -7794,7 +8057,7 @@ public class Main extends JavaPlugin implements Listener{
 		} else if (player.getDisplayName().equalsIgnoreCase("WoolRing")) {
 			event.setQuitMessage(ChatColor.GREEN + "'노란 머리가 젤다죠?' 울링" + ChatColor.WHITE + "님이 아뇨 뚱인데요?");
 		} else if (player.getDisplayName().equalsIgnoreCase("_nanoboost_")) {
-			event.setQuitMessage(ChatColor.RED + "뽀모슐라");
+			event.setQuitMessage(ChatColor.RED + "강해져서 돌아오겠습니다.");
 		} else if(player.getDisplayName().equalsIgnoreCase("why9196")) {
 			event.setQuitMessage(ChatColor.BLUE + "????????????????");
 		} else if(player.getDisplayName().equalsIgnoreCase("Akilae3102")) {
@@ -7915,6 +8178,18 @@ public class Main extends JavaPlugin implements Listener{
 					if(ent.getType() == EntityType.CREEPER) {
 						ent.remove();
 					}
+					if(ent.getType() == EntityType.RABBIT) {
+						ent.remove();
+					}
+					if(ent.getType() == EntityType.PANDA) {
+						ent.remove();
+					}
+					if(ent.getType() == EntityType.OCELOT) {
+						ent.remove();
+					}
+					if(ent.getType() == EntityType.ZOGLIN) {
+						ent.remove();
+					}
 					if(ent.getType() == EntityType.HORSE) {
 						if(((Horse) ent).isCustomNameVisible()) {
 							ent.remove();
@@ -7978,7 +8253,7 @@ public class Main extends JavaPlugin implements Listener{
 	
 	@EventHandler
 	public void blockPhysicsEvent(BlockPhysicsEvent event) {
-		if(event.getBlock().getType() == Material.SAND) {
+		if(event.getBlock().getType() == Material.SUNFLOWER) {
 //			Location loc = event.getBlock().getLocation().add(0,-1,0);
 //			loc.getBlock().setType(Material.SANDSTONE);
 		}
@@ -7986,9 +8261,7 @@ public class Main extends JavaPlugin implements Listener{
 	
 	@EventHandler
 	public void waterPassEvent(BlockFromToEvent event) {
-//		if (event.getToBlock().getType() == Material.SUNFLOWER) {
-//			event.setCancelled(true);
-//		}
+		
 	}
 	
 	@EventHandler

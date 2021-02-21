@@ -1151,6 +1151,130 @@ public class MobDeath {
 				if (name.equalsIgnoreCase("도둑 토끼" + ChatColor.YELLOW + " [Lv.575]")) {
 					mobloot.mob263(lootPlayer);
 				}
+				// 떠도는 포보르
+				if (name.equalsIgnoreCase("떠도는 포보르" + ChatColor.YELLOW + " [Lv.570]")) {
+					mobloot.mob264(lootPlayer);
+				}
+				// 정신나간 마법사
+				if (name.equalsIgnoreCase("정신나간 마법사" + ChatColor.YELLOW + " [Lv.574]")) {
+					mobloot.mob265(lootPlayer);
+				}
+				// 야생 곰
+				if (name.equalsIgnoreCase("야생 곰" + ChatColor.YELLOW + " [Lv.575]")) {
+					mobloot.mob266(lootPlayer);
+				}
+				// 야생 토끼
+				if (name.equalsIgnoreCase("야생 토끼" + ChatColor.YELLOW + " [Lv.579]")) {
+					mobloot.mob267(lootPlayer);
+				}
+				// 도살자
+				if (name.equalsIgnoreCase("도살자" + ChatColor.YELLOW + " [Lv.580]")) {
+					mobloot.mob268(lootPlayer);
+				}
+				// 사라진 동물의 영혼
+				if (name.equalsIgnoreCase("사라진 동물의 영혼" + ChatColor.YELLOW + " [Lv.584]")) {
+					mobloot.mob269(lootPlayer);
+				}
+				// 464
+				if (name.equalsIgnoreCase("464" + ChatColor.YELLOW + " [Lv.585]")) {
+					mobloot.mob270(lootPlayer);
+				}
+				// 팬더
+				if (name.equalsIgnoreCase("팬더" + ChatColor.YELLOW + " [Lv.589]")) {
+					mobloot.mob271(lootPlayer);
+				}
+				// 솟
+				if (name.equalsIgnoreCase("솟" + ChatColor.YELLOW + " [Lv.595]")) {
+					mobloot.mob272(lootPlayer);
+				}
+				// 마을 앞 슬라임
+				if (name.equalsIgnoreCase("마을 앞 슬라임" + ChatColor.YELLOW + " [Lv.590]")) {
+					mobloot.mob273(lootPlayer);
+				}
+				// 가면을 쓴 좀비
+				if (name.equalsIgnoreCase("가면을 쓴 좀비" + ChatColor.YELLOW + " [Lv.594]")) {
+					mobloot.mob274(lootPlayer);
+				}
+				// 마을을 보는 마녀
+				if (name.equalsIgnoreCase("마을을 보는 마녀" + ChatColor.YELLOW + " [Lv.595]")) {
+					mobloot.mob275(lootPlayer);
+				}
+				// 엘보코로나
+				if (name.equalsIgnoreCase("엘보코로나" + ChatColor.YELLOW + " [Lv.599]")) {
+					mobloot.mob276(lootPlayer);
+				}
+				// 땅벌레
+				if (name.equalsIgnoreCase("땅벌레" + ChatColor.YELLOW + " [Lv.600]")) {
+					mobloot.mob277(lootPlayer);
+				}
+				// 땅거미
+				if (name.equalsIgnoreCase("땅거미" + ChatColor.YELLOW + " [Lv.604]")) {
+					mobloot.mob278(lootPlayer);
+				}
+				// 초록 괴물
+				if (name.equalsIgnoreCase("초록 괴물" + ChatColor.YELLOW + " [Lv.605]")) {
+					mobloot.mob279(lootPlayer);
+				}
+				// 요새를 지키는 곰
+				if (name.equalsIgnoreCase("요새를 지키는 곰" + ChatColor.YELLOW + " [Lv.609]")) {
+					mobloot.mob280(lootPlayer);
+				}
+				// 요새를 지키는 불꽃
+				if (name.equalsIgnoreCase("요새를 지키는 불꽃" + ChatColor.YELLOW + " [Lv.610]")) {
+					mobloot.mob281(lootPlayer);
+				}
+				// 모히칸 좀비
+				if (name.equalsIgnoreCase("모히칸 좀비" + ChatColor.YELLOW + " [Lv.614]")) {
+					mobloot.mob282(lootPlayer);
+				}
+				// 카케
+				if (name.equalsIgnoreCase("카케" + ChatColor.YELLOW + " [Lv.615]")) {
+					mobloot.mob283(lootPlayer);
+				}
+				// 요새의 궁수병
+				if (name.equalsIgnoreCase("요새의 궁수병" + ChatColor.YELLOW + " [Lv.619]")) {
+					mobloot.mob284(lootPlayer);
+				}
+				// 검은 수염단 장교
+				if (name.equalsIgnoreCase("검은 수염단 장교" + ChatColor.YELLOW + " [Lv.600]")) {
+					mobloot.mob285(lootPlayer);
+				}
+				// 검은 수염단 엘리트
+				if (name.equalsIgnoreCase("검은 수염단 엘리트" + ChatColor.YELLOW + " [Lv.605]")) {
+					mobloot.mob286(lootPlayer);
+				}
+				// 검은 수염의 고양이
+				if (name.equalsIgnoreCase("검은 수염의 고양이" + ChatColor.YELLOW + " [Lv.610]")) {
+					mobloot.mob287(lootPlayer);
+				}
+				// 폭주한 검은 수염
+				if (name.equalsIgnoreCase("폭주한 검은 수염" + ChatColor.YELLOW + " [Lv.620]")) {
+					mobloot.mob288(lootPlayer);
+				}
+				// 신전을 지키는 괴물
+				if (name.equalsIgnoreCase("신전을 지키는 괴물" + ChatColor.YELLOW + " [Lv.620]")) {
+					mobloot.mob289(lootPlayer);
+				}
+				// 고대의 시체
+				if (name.equalsIgnoreCase("고대의 시체" + ChatColor.YELLOW + " [Lv.624]")) {
+					mobloot.mob290(lootPlayer);
+				}
+				// 뭉쳐진 포보르의 장기
+				if (name.equalsIgnoreCase("뭉쳐진 포보르의 장기" + ChatColor.YELLOW + " [Lv.620]")) {
+					mobloot.mob291(lootPlayer);
+				}
+				// 타락한 영웅의 갑옷
+				if (name.equalsIgnoreCase("타락한 영웅의 갑옷" + ChatColor.YELLOW + " [Lv.??]")) {
+					mobloot.mob292(lootPlayer);
+				}
+				// 썩은 공양물
+				if (name.equalsIgnoreCase("썩은 공양물" + ChatColor.YELLOW + " [Lv.625]")) {
+					mobloot.mob293(lootPlayer);
+				}
+				// 공양을 받는 돼지
+				if (name.equalsIgnoreCase("공양을 받는 돼지" + ChatColor.YELLOW + " [Lv.??]")) {
+					mobloot.mob294(lootPlayer);
+				}
 			} catch (Exception e) {
 
 			}
