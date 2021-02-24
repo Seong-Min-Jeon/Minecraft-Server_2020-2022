@@ -34,7 +34,7 @@ public class RenameCraftingItem {
 					}
 					try {
 						if(!maker1.equalsIgnoreCase(player.getDisplayName()) && !maker2.equalsIgnoreCase(player.getDisplayName())) {
-							player.sendMessage(ChatColor.RED + "장비를 제작한 플레이어만 이름 변경이 가능합니다.");
+							player.sendMessage(ChatColor.RED + "직접 제작한 플레이어만 이름 변경이 가능합니다.");
 							return false;
 						} 
 						im.setDisplayName("§3" + msg.substring(1, msg.length()-1));

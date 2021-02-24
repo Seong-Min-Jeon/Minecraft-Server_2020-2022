@@ -32,6 +32,7 @@ public class Cmd10VilTp implements CommandExecutor {
 			world = player.getWorld();
 			
 			Location tuto = new Location(world,3700,100,3700);
+			Location tuto2 = new Location(world,3888,200,3826);
 			Location wargunil = new Location(world,-1844,70,3012);
 			Location forgan = new Location(world,-1573,53,2458);
 			Location tiru = new Location(world, -672, 46, 1942);
@@ -63,6 +64,9 @@ public class Cmd10VilTp implements CommandExecutor {
 					return true;
 				}
 				try { 
+					if(args[0].equalsIgnoreCase("00")) {
+						player.teleport(tuto2);
+					}
 					if(args[0].equalsIgnoreCase("0")) {
 						player.teleport(tuto);
 					}

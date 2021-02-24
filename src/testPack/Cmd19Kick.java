@@ -34,7 +34,6 @@ public class Cmd19Kick implements CommandExecutor {
 				try { 
 					if(args[0].equalsIgnoreCase("0")) {
 						num = "0";
-						return true;
 					}
 				} catch(Exception e) {
 					return true;
@@ -42,7 +41,6 @@ public class Cmd19Kick implements CommandExecutor {
 				try { 
 					if(args[0].equalsIgnoreCase("1")) {
 						num = "1";
-						return true;
 					}
 				} catch(Exception e) {
 					return true;
@@ -50,12 +48,10 @@ public class Cmd19Kick implements CommandExecutor {
 				try { 
 					if(args[0].equalsIgnoreCase("2")) {
 						num = "2";
-						return true;
 					}
 				} catch(Exception e) {
 					return true;
 				}
-				System.out.println(num);
 				try { 				
 					name = args[1];
 					Player p = Bukkit.getPlayer(name);

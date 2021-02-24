@@ -965,7 +965,7 @@ public class QuestBoard {
 		// 되살아난 피르볼그의 제사장 보상
 		if (num >= 1) {
 			player.setScoreboard(Bukkit.getScoreboardManager().getNewScoreboard());
-			es.giveExp(player, 5000000);
+			es.giveExp(player, 1000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			msg.msg(player, "§7이 유적은 피르볼그 시대에 포보르를 생성하고%§7검은 흐름을 찬양하던 의식을 하던 장소임을 알게 되었다.%"
 					+ "§7제사장은 이곳에서 포보르들을 소탕하고자 하였다고 한다.%§7다음 기록은 죽음의 탑으로 이어져있다.");
@@ -989,7 +989,7 @@ public class QuestBoard {
 	public void eq3_1(Player player, int num) {
 		if (num >= 1) {
 			player.setScoreboard(Bukkit.getScoreboardManager().getNewScoreboard());
-			es.giveExp(player, 5000000);
+			es.giveExp(player, 3000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			msg.msg(player, "§7네메드 왕국의 보물들은 피르볼그 시대에 와서야 봉인될 수 있었다.%§7보통 나라가 망하기 이전 고위계층에 의해 봉인되는 것이 일반적이나%"
 					+ "§7피르볼그는 네메드 왕국의 왕좌를 찬탈하여 생긴 나라였다.%§7때문에 네메드의 보물들은 피르볼그의 전리품이었고%"
@@ -1016,7 +1016,7 @@ public class QuestBoard {
 	public void eq3_2(Player player, int num) {
 		if (num >= 50) {
 			player.setScoreboard(Bukkit.getScoreboardManager().getNewScoreboard());
-			es.giveExp(player, 5000000);
+			es.giveExp(player, 8000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			msg.msg(player, "§7복어를 통해 제사장의 남은 기록을 얻게 되었다.%§7그는 현존하는 포보르 왕과 조우하였고%"
 					+ "§7그에 압도당해 정신이 나가버린 것 같다.%§7그가 제정신일 때 남겨놓은 장비들이 있다고도 한다.%"

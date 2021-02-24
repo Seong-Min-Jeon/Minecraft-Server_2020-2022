@@ -579,6 +579,154 @@ public class Main extends JavaPlugin implements Listener{
 //		if(player.getDisplayName().equalsIgnoreCase("WoolRing") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
 		
 		
+//		ItemStack helmet = new ItemStack(Material.GOLDEN_HELMET);
+//		ItemMeta helmetIm = helmet.getItemMeta();
+//		helmetIm.setLocalizedName("4000,1000,1000,1000,1500,4000,4000,1000,1000,4000,630");
+//		helmetIm.setDisplayName(ChatColor.GREEN + "라의 헬멧");
+//		ArrayList<String> helmetLore = new ArrayList();
+//		helmetLore.add(ChatColor.GRAY + "레벨 제한: 630");
+//		helmetLore.add(ChatColor.GRAY + " ");
+//		helmetLore.add(ChatColor.GRAY + "태양신 라가 현세에 머무르기 위해 내려왔을 때");
+//		helmetLore.add(ChatColor.GRAY + "착용하고 있었다고 알려진 헬멧");
+//		helmetLore.add(ChatColor.GRAY + " ");
+//		helmetLore.add(ChatColor.BLUE + "-죽음에 이르는 피해를 입었을 때 10% 확률로 체력 50% 회복(세트 효과)");
+//		helmetIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		helmetIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		helmetIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		helmetIm.setUnbreakable(true);
+//		helmetIm.setLore(helmetLore);
+//		helmet.setItemMeta(helmetIm);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(helmet);}
+//
+//		ItemStack chestplate = new ItemStack(Material.GOLDEN_CHESTPLATE);
+//		ItemMeta chestplateIm = chestplate.getItemMeta();
+//		chestplateIm.setLocalizedName("4000,1000,1000,1000,1500,4000,4000,1000,1000,4000,630");
+//		chestplateIm.setDisplayName(ChatColor.GREEN + "라의 갑옷");
+//		ArrayList<String> chestplateLore = new ArrayList();
+//		chestplateLore.add(ChatColor.GRAY + "레벨 제한: 630");
+//		chestplateLore.add(ChatColor.GRAY + " ");
+//		chestplateLore.add(ChatColor.GRAY + "태양신 라가 현세에 머무르기 위해 내려왔을 때");
+//		chestplateLore.add(ChatColor.GRAY + "착용하고 있었다고 알려진 갑옷");
+//		chestplateLore.add(ChatColor.GRAY + " ");
+//		chestplateLore.add(ChatColor.BLUE + "-죽음에 이르는 피해를 입었을 때 10% 확률로 체력 50% 회복(세트 효과)");
+//		chestplateIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		chestplateIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		chestplateIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		chestplateIm.setUnbreakable(true);
+//		chestplateIm.setLore(chestplateLore);
+//		chestplate.setItemMeta(chestplateIm);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(chestplate);}
+//
+//		ItemStack leggings = new ItemStack(Material.GOLDEN_LEGGINGS);
+//		ItemMeta leggingsIm = leggings.getItemMeta();
+//		leggingsIm.setLocalizedName("4000,1000,1000,1000,1500,4000,4000,1000,1000,4000,630");
+//		leggingsIm.setDisplayName(ChatColor.GREEN + "라의 각반");
+//		ArrayList<String> leggingsLore = new ArrayList();
+//		leggingsLore.add(ChatColor.GRAY + "레벨 제한: 630");
+//		leggingsLore.add(ChatColor.GRAY + " ");
+//		leggingsLore.add(ChatColor.GRAY + "태양신 라가 현세에 머무르기 위해 내려왔을 때");
+//		leggingsLore.add(ChatColor.GRAY + "착용하고 있었다고 알려진 각반");
+//		leggingsLore.add(ChatColor.GRAY + " ");
+//		leggingsLore.add(ChatColor.BLUE + "-죽음에 이르는 피해를 입었을 때 10% 확률로 체력 50% 회복(세트 효과)");
+//		leggingsIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		leggingsIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		leggingsIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		leggingsIm.setUnbreakable(true);
+//		leggingsIm.setLore(leggingsLore);
+//		leggings.setItemMeta(leggingsIm);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(leggings);}
+//
+//		ItemStack boots = new ItemStack(Material.GOLDEN_BOOTS);
+//		ItemMeta bootsIm = boots.getItemMeta();
+//		bootsIm.setLocalizedName("4000,1000,1000,1000,1500,4000,4000,1000,1000,4000,630");
+//		bootsIm.setDisplayName(ChatColor.GREEN + "라의 신발");
+//		ArrayList<String> bootsLore = new ArrayList();
+//		bootsLore.add(ChatColor.GRAY + "레벨 제한: 630");
+//		bootsLore.add(ChatColor.GRAY + " ");
+//		bootsLore.add(ChatColor.GRAY + "태양신 라가 현세에 머무르기 위해 내려왔을 때");
+//		bootsLore.add(ChatColor.GRAY + "착용하고 있었다고 알려진 신발");
+//		bootsLore.add(ChatColor.GRAY + " ");
+//		bootsLore.add(ChatColor.BLUE + "-죽음에 이르는 피해를 입었을 때 10% 확률로 체력 50% 회복(세트 효과)");
+//		bootsIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		bootsIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		bootsIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		bootsIm.setUnbreakable(true);
+//		bootsIm.setLore(bootsLore);
+//		boots.setItemMeta(bootsIm);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(boots);}
+//		
+//		ItemStack helmet = new ItemStack(Material.LEATHER_HELMET);
+//		ItemMeta helmetIm = helmet.getItemMeta();
+//		helmetIm.setLocalizedName("2000,0,0,0,0,1000,1000,1000,1000,3000,570");
+//		helmetIm.setDisplayName(ChatColor.GREEN + "케찹");
+//		ArrayList<String> helmetLore = new ArrayList();
+//		helmetLore.add(ChatColor.GRAY + "레벨 제한: 570");
+//		helmetLore.add(ChatColor.GRAY + " ");
+//		helmetLore.add(ChatColor.GRAY + "붉은 기운이 느껴지는 헬멧");
+//		helmetLore.add(ChatColor.GRAY + " ");
+//		helmetLore.add(ChatColor.BLUE + "-회피 확률 20% 증가(세트 효과)");
+//		helmetIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		helmetIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		helmetIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		helmetIm.setUnbreakable(true);
+//		helmetIm.setLore(helmetLore);
+//		helmet.setItemMeta(helmetIm);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(helmet);}
+//
+//		ItemStack chestplate = new ItemStack(Material.LEATHER_CHESTPLATE);
+//		ItemMeta chestplateIm = chestplate.getItemMeta();
+//		chestplateIm.setLocalizedName("0,0,0,0,2500,1000,0,0,0,10000,570");
+//		chestplateIm.setDisplayName(ChatColor.GREEN + "머스타드");
+//		ArrayList<String> chestplateLore = new ArrayList();
+//		chestplateLore.add(ChatColor.GRAY + "레벨 제한: 570");
+//		chestplateLore.add(ChatColor.GRAY + " ");
+//		chestplateLore.add(ChatColor.GRAY + "노란 기운이 느껴지는 갑옷");
+//		chestplateLore.add(ChatColor.GRAY + " ");
+//		chestplateLore.add(ChatColor.BLUE + "-회피 확률 20% 증가(세트 효과)");
+//		chestplateIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		chestplateIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		chestplateIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		chestplateIm.setUnbreakable(true);
+//		chestplateIm.setLore(chestplateLore);
+//		chestplate.setItemMeta(chestplateIm);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(chestplate);}
+//
+//		ItemStack leggings = new ItemStack(Material.LEATHER_LEGGINGS);
+//		ItemMeta leggingsIm = leggings.getItemMeta();
+//		leggingsIm.setLocalizedName("0,0,0,0,0,3000,5000,3000,3000,1000,570");
+//		leggingsIm.setDisplayName(ChatColor.GREEN + "마요네즈");
+//		ArrayList<String> leggingsLore = new ArrayList();
+//		leggingsLore.add(ChatColor.GRAY + "레벨 제한: 570");
+//		leggingsLore.add(ChatColor.GRAY + " ");
+//		leggingsLore.add(ChatColor.GRAY + "하얀 기운이 느껴지는 각반");
+//		leggingsLore.add(ChatColor.GRAY + " ");
+//		leggingsLore.add(ChatColor.BLUE + "-회피 확률 20% 증가(세트 효과)");
+//		leggingsIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		leggingsIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		leggingsIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		leggingsIm.setUnbreakable(true);
+//		leggingsIm.setLore(leggingsLore);
+//		leggings.setItemMeta(leggingsIm);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(leggings);}
+//
+//		ItemStack boots = new ItemStack(Material.LEATHER_BOOTS);
+//		ItemMeta bootsIm = boots.getItemMeta();
+//		bootsIm.setLocalizedName("3000,2000,2000,2000,0,1000,0,0,0,1000,570");
+//		bootsIm.setDisplayName(ChatColor.GREEN + "발사믹");
+//		ArrayList<String> bootsLore = new ArrayList();
+//		bootsLore.add(ChatColor.GRAY + "레벨 제한: 570");
+//		bootsLore.add(ChatColor.GRAY + " ");
+//		bootsLore.add(ChatColor.GRAY + "검붉은 기운이 느껴지는 신발");
+//		bootsLore.add(ChatColor.GRAY + " ");
+//		bootsLore.add(ChatColor.BLUE + "-회피 확률 20% 증가(세트 효과)");
+//		bootsIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		bootsIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		bootsIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		bootsIm.setUnbreakable(true);
+//		bootsIm.setLore(bootsLore);
+//		boots.setItemMeta(bootsIm);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(boots);}
+//		
 //		ItemStack weapon = new ItemStack(Material.JUNGLE_LOG);
 //		ItemMeta weaponIm = weapon.getItemMeta();
 //		weaponIm.setLocalizedName("1000,3000,1000,1000,1000,0,0,0,0,0,530");
@@ -2864,6 +3012,12 @@ public class Main extends JavaPlugin implements Listener{
 	public void consumeItem(PlayerItemConsumeEvent event) {
 		Player player = (Player)event.getPlayer();
 		try {
+			System.out.println(player.getDisplayName() + "이/가 " + player.getInventory().getItemInMainHand().getItemMeta().getDisplayName() 
+					+ ChatColor.WHITE + "을/를 섭취하였다.");
+		} catch(Exception e) {
+			
+		}
+		try {
 			//HP포션
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "힐링 포션 I")) {
 				PotionRatio pr = new PotionRatio();
@@ -2917,6 +3071,10 @@ public class Main extends JavaPlugin implements Listener{
 				PotionRatio pr = new PotionRatio();
 				pr.calculation(player, 3000.0);
 			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "힐링 포션 XIV")) {
+				PotionRatio pr = new PotionRatio();
+				pr.calculation(player, 3500.0);
+			}
 			//특이 포션
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "엘릭서")) {
 				for(PotionEffect effect : player.getActivePotionEffects ()){
@@ -2957,6 +3115,9 @@ public class Main extends JavaPlugin implements Listener{
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "근육의 포션 III")) {
 				player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,1800,2000,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "근육의 포션 IV")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,1800,8000,true,false,false));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "강화된 근육의 포션 I")) {
 				player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,3600,100,true,false,false));
@@ -3096,6 +3257,13 @@ public class Main extends JavaPlugin implements Listener{
 				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 1200, 3,true,false,false));
 				player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 1200, 1,true,false,false));
 				player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 20, 10,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "유목민족의 양요리")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 1200, 3,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "징기스탄")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 1200, 3,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 300, 4,true,false,false));
 			}
 			
 		} catch(Exception e) {
@@ -5158,6 +5326,7 @@ public class Main extends JavaPlugin implements Listener{
 				num += new SpecialEffect().a14(player);
 				num += new SpecialEffect().h3(player);
 				num += new SpecialEffect().s4(player);
+				num += new SpecialEffect().s6(player);
 				
 				if(num > 70) {
 					num = 70;
@@ -5932,6 +6101,27 @@ public class Main extends JavaPlugin implements Listener{
 		} catch(Exception e) {
 			
 		}
+		
+		// 부활
+		try {
+			if (event.getEntity() instanceof Player) {
+				Player player = (Player) event.getEntity();
+				if(player.getHealth() <= event.getFinalDamage()) {
+					
+					int num = 0;
+					num += new SpecialEffect().s7(player);
+					
+					if(rnd.nextInt(100) < num) {
+						player.setHealth(10);
+						event.setDamage(0);
+					}
+					
+				}
+			}
+		} catch(Exception e) {
+			
+		}
+		
 	}
 	
 	@EventHandler

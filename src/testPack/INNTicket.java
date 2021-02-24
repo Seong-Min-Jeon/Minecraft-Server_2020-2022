@@ -24,6 +24,7 @@ public class INNTicket {
 		beiag(player, itemArg, world);
 		longue(player, itemArg, world);
 		hamabe(player, itemArg, world);
+		kekktas(player, itemArg, world);
 	}
 
 	public void wargunil(Player player, Item itemArg, World world) {	
@@ -200,6 +201,20 @@ public class INNTicket {
 			if (player.getLocation().getX() <= 980 && player.getLocation().getY() <= 85 && player.getLocation().getZ() <= 6 && 
 					player.getLocation().getX() >= 967 && player.getLocation().getY() >= 50 && player.getLocation().getZ() >= -4) {
 				Location loc = new Location(world,972,66,1);
+				player.teleport(loc);
+				itemArg.remove();
+				player.getWorld().playSound(loc, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);
+				player.setHealth(player.getMaxHealth());
+			}
+		}	
+	}
+	
+	public void kekktas(Player player, Item itemArg, World world) {	
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "캑터스 숙박 티켓")) {
+			//캑터스 -750 50 -885  -769 82 -907
+			if (player.getLocation().getX() <= -750 && player.getLocation().getY() <= 85 && player.getLocation().getZ() <= -885 && 
+					player.getLocation().getX() >= -769 && player.getLocation().getY() >= 50 && player.getLocation().getZ() >= -907) {
+				Location loc = new Location(world,-756,64,-893);
 				player.teleport(loc);
 				itemArg.remove();
 				player.getWorld().playSound(loc, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);

@@ -419,7 +419,39 @@ public class SpecialEffect {
 		return 0;
 	}
 	
+	public int s6(Player player) {
+		try {
+			if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "케찹")) {
+				if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "머스타드")) {
+					if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "마요네즈")) {
+						if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "발사믹")) {
+							return 20;
+						}
+					}
+				}
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
 	
+	public int s7(Player player) {
+		try {
+			if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "라의 헬멧")) {
+				if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "라의 갑옷")) {
+					if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "라의 각반")) {
+						if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "라의 신발")) {
+							return 10;
+						}
+					}
+				}
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
 	
 	
 	

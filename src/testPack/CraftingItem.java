@@ -522,20 +522,20 @@ public class CraftingItem {
 				resultStat -= tmp;
 			}
 			
-			if(stat[0] > 100000) {
-				stat[0] = 100000;
+			if(stat[0] > 1000000) {
+				stat[0] = 1000000;
 			}
-			if(stat[1] > 100000) {
-				stat[1] = 100000;
+			if(stat[1] > 1000000) {
+				stat[1] = 1000000;
 			}
-			if(stat[2] > 100000) {
-				stat[2] = 100000;
+			if(stat[2] > 1000000) {
+				stat[2] = 1000000;
 			}
-			if(stat[3] > 100000) {
-				stat[3] = 100000;
+			if(stat[3] > 1000000) {
+				stat[3] = 1000000;
 			}
-			if(stat[4] > 100000) {
-				stat[4] = 100000;
+			if(stat[4] > 1000000) {
+				stat[4] = 1000000;
 			}
 			if(stat[5] > 30000) {
 				stat[5] = 30000;
@@ -549,8 +549,8 @@ public class CraftingItem {
 			if(stat[8] > 30000) {
 				stat[8] = 30000;
 			}
-			if(stat[9] > 100000) {
-				stat[9] = 100000;
+			if(stat[9] > 1000000) {
+				stat[9] = 1000000;
 			}
 			if(stat[10] > 1000) {
 				stat[10] = 1000;

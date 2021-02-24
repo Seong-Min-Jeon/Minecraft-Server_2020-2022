@@ -28,6 +28,7 @@ public class VilTPScroll {
 		longue(player, itemArg);
 		hamabe(player, itemArg);
 		colosseum(player, itemArg);
+		kekktas(player, itemArg);
 	}
 
 	public void wargunil(Player player, Item itemArg) {
@@ -839,6 +840,61 @@ public class VilTPScroll {
 				item.setItemMeta(itemIm);
 				player.getInventory().setItem(8, item);
 				Location loc = new Location(world,128, 64, 1955, 90, 0);
+				player.teleport(loc);
+				itemArg.remove();
+				player.getWorld().playSound(loc, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
+				// 보스바 관련
+				try {
+					new BossHealth().removePlayer(player);
+				} catch (Exception e) {
+
+				}
+			} else {
+				player.sendMessage(ChatColor.RED + "워프에 필요한 마나가 부족합니다.");
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
+			}
+		}
+	}
+	
+	public void kekktas(Player player, Item itemArg) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "캑터스 워프 스크롤")) {
+			World world = player.getWorld();
+			// 캑터스
+			int i = 0;
+			for (ItemStack is : player.getInventory().getContents()) {
+				if (is == null)
+					continue;
+				if (is.getType() == Material.HEART_OF_THE_SEA) {
+					i = i + is.getAmount();
+				}
+			}
+			if (i == 5) {
+				player.getInventory().remove(Material.HEART_OF_THE_SEA);
+				Location loc = new Location(world,-741,56,-894);
+				player.teleport(loc);
+				itemArg.remove();
+				player.getWorld().playSound(loc, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
+				if (!player.getInventory().contains(Material.HEART_OF_THE_SEA)) {
+					ItemStack item = new ItemStack(Material.MAGMA_CREAM);
+					ItemMeta itemIm = item.getItemMeta();
+					itemIm.setDisplayName(ChatColor.RED + "마나없음");
+					item.setItemMeta(itemIm);
+					player.getInventory().setItem(8, item);
+				}
+				// 보스바 관련
+				try {
+					new BossHealth().removePlayer(player);
+				} catch (Exception e) {
+
+				}
+			} else if (i > 5) {
+				player.getInventory().remove(Material.HEART_OF_THE_SEA);
+				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 5);
+				ItemMeta itemIm = item.getItemMeta();
+				itemIm.setDisplayName(ChatColor.BLUE + "마나");
+				item.setItemMeta(itemIm);
+				player.getInventory().setItem(8, item);
+				Location loc = new Location(world,-741,56,-894);
 				player.teleport(loc);
 				itemArg.remove();
 				player.getWorld().playSound(loc, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);

@@ -37,10 +37,10 @@ public class Reinforcement {
 			int num = rnd.nextInt(percent);
 			if(num<5) {
 				int lvl = Integer.parseInt(ary[1]);
-				if(lvl==100000) {
+				if(lvl==1000000) {
 					player.sendMessage(ChatColor.WHITE + "추가 데미지(인간형)의 강화는 이미 한계입니다.");
-				} else if(lvl+1 >= 100000) {
-					String result = makeEnch(ary, "100000", 1);
+				} else if(lvl+1 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 1);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 추가 데미지(인간형)의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -51,10 +51,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[2]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "추가 데미지(동물형)의 강화는 이미 한계입니다.");
-				} else if (lvl + 1 >= 100000) {
-					String result = makeEnch(ary, "100000", 2);
+				} else if (lvl + 1 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 2);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 추가 데미지(동물형)의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -65,10 +65,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[9]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
-				} else if (lvl + 1 >= 100000) {
-					String result = makeEnch(ary, "100000", 9);
+				} else if (lvl + 1 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 9);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 반격의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -126,10 +126,10 @@ public class Reinforcement {
 			int num = rnd.nextInt(percent);
 			if(num<5) {
 				int lvl = Integer.parseInt(ary[1]);
-				if(lvl==100000) {
+				if(lvl==1000000) {
 					player.sendMessage(ChatColor.WHITE + "추가 데미지(인간형)의 강화는 이미 한계입니다.");
-				} else if(lvl+2 >= 100000) {
-					String result = makeEnch(ary, "100000", 1);
+				} else if(lvl+2 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 1);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 추가 데미지(인간형)의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -140,10 +140,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[2]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "추가 데미지(동물형)의 강화는 이미 한계입니다.");
-				} else if (lvl + 2 >= 100000) {
-					String result = makeEnch(ary, "100000", 2);
+				} else if (lvl + 2 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 2);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 추가 데미지(동물형)의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -154,10 +154,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[9]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
-				} else if (lvl + 2 >= 100000) {
-					String result = makeEnch(ary, "100000", 9);
+				} else if (lvl + 2 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 9);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 반격의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -215,10 +215,10 @@ public class Reinforcement {
 			int num = rnd.nextInt(percent);
 			if(num<5) {
 				int lvl = Integer.parseInt(ary[1]);
-				if(lvl==100000) {
+				if(lvl==1000000) {
 					player.sendMessage(ChatColor.WHITE + "추가 데미지(인간형)의 강화는 이미 한계입니다.");
-				} else if(lvl+4 >= 100000) {
-					String result = makeEnch(ary, "100000", 1);
+				} else if(lvl+4 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 1);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 추가 데미지(인간형)의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -229,10 +229,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[2]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "추가 데미지(동물형)의 강화는 이미 한계입니다.");
-				} else if (lvl + 4 >= 100000) {
-					String result = makeEnch(ary, "100000", 2);
+				} else if (lvl + 4 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 2);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 추가 데미지(동물형)의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -243,10 +243,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[9]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
-				} else if (lvl + 4 >= 100000) {
-					String result = makeEnch(ary, "100000", 9);
+				} else if (lvl + 4 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 9);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 반격의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -319,10 +319,10 @@ public class Reinforcement {
 			int num = rnd.nextInt(percent);
 			if(num<5) {
 				int lvl = Integer.parseInt(ary[1]);
-				if(lvl==100000) {
+				if(lvl==1000000) {
 					player.sendMessage(ChatColor.WHITE + "추가 데미지(인간형)의 강화는 이미 한계입니다.");
-				} else if(lvl+7 >= 100000) {
-					String result = makeEnch(ary, "100000", 1);
+				} else if(lvl+7 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 1);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 추가 데미지(인간형)의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -333,10 +333,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[2]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "추가 데미지(동물형)의 강화는 이미 한계입니다.");
-				} else if (lvl + 7 >= 100000) {
-					String result = makeEnch(ary, "100000", 2);
+				} else if (lvl + 7 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 2);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 추가 데미지(동물형)의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -347,10 +347,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[9]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
-				} else if (lvl + 7 >= 100000) {
-					String result = makeEnch(ary, "100000", 9);
+				} else if (lvl + 7 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 9);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 반격의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -423,10 +423,10 @@ public class Reinforcement {
 			int num = rnd.nextInt(percent);
 			if(num<5) {
 				int lvl = Integer.parseInt(ary[1]);
-				if(lvl==100000) {
+				if(lvl==1000000) {
 					player.sendMessage(ChatColor.WHITE + "추가 데미지(인간형)의 강화는 이미 한계입니다.");
-				} else if(lvl+10 >= 100000) {
-					String result = makeEnch(ary, "100000", 1);
+				} else if(lvl+10 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 1);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 추가 데미지(인간형)의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -437,10 +437,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[2]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "추가 데미지(동물형)의 강화는 이미 한계입니다.");
-				} else if (lvl + 10 >= 100000) {
-					String result = makeEnch(ary, "100000", 2);
+				} else if (lvl + 10 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 2);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 추가 데미지(동물형)의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -451,10 +451,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[9]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
-				} else if (lvl + 10 >= 100000) {
-					String result = makeEnch(ary, "100000", 9);
+				} else if (lvl + 10 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 9);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 반격의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -527,10 +527,10 @@ public class Reinforcement {
 			int num = rnd.nextInt(percent);
 			if(num<5) {
 				int lvl = Integer.parseInt(ary[1]);
-				if(lvl==100000) {
+				if(lvl==1000000) {
 					player.sendMessage(ChatColor.WHITE + "추가 데미지(인간형)의 강화는 이미 한계입니다.");
-				} else if(lvl+40 >= 100000) {
-					String result = makeEnch(ary, "100000", 1);
+				} else if(lvl+40 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 1);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 추가 데미지(인간형)의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -541,10 +541,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[2]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "추가 데미지(동물형)의 강화는 이미 한계입니다.");
-				} else if (lvl + 40 >= 100000) {
-					String result = makeEnch(ary, "100000", 2);
+				} else if (lvl + 40 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 2);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 추가 데미지(동물형)의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -555,10 +555,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[9]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
-				} else if (lvl + 40 >= 100000) {
-					String result = makeEnch(ary, "100000", 9);
+				} else if (lvl + 40 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 9);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 반격의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -643,10 +643,10 @@ public class Reinforcement {
 			int num = rnd.nextInt(percent);
 			if(num<5) {
 				int lvl = Integer.parseInt(ary[0]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "공격력의 강화는 이미 한계입니다.");
-				} else if (lvl + 2 >= 100000) {
-					String result = makeEnch(ary, "100000", 0);
+				} else if (lvl + 2 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 0);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 공격력의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -657,10 +657,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[9]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
-				} else if (lvl + 2 >= 100000) {
-					String result = makeEnch(ary, "100000", 9);
+				} else if (lvl + 2 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 9);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 반격의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -706,10 +706,10 @@ public class Reinforcement {
 			int num = rnd.nextInt(percent);
 			if(num<5) {
 				int lvl = Integer.parseInt(ary[0]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "공격력의 강화는 이미 한계입니다.");
-				} else if (lvl + 4 >= 100000) {
-					String result = makeEnch(ary, "100000", 0);
+				} else if (lvl + 4 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 0);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 공격력의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -720,10 +720,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[9]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
-				} else if (lvl + 4 >= 100000) {
-					String result = makeEnch(ary, "100000", 9);
+				} else if (lvl + 4 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 9);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 반격의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -779,10 +779,10 @@ public class Reinforcement {
 			int num = rnd.nextInt(percent);
 			if(num<5) {
 				int lvl = Integer.parseInt(ary[0]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "공격력의 강화는 이미 한계입니다.");
-				} else if (lvl + 7 >= 100000) {
-					String result = makeEnch(ary, "100000", 0);
+				} else if (lvl + 7 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 0);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 공격력의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -793,10 +793,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[9]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
-				} else if (lvl + 7 >= 100000) {
-					String result = makeEnch(ary, "100000", 9);
+				} else if (lvl + 7 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 9);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 반격의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -852,10 +852,10 @@ public class Reinforcement {
 			int num = rnd.nextInt(percent);
 			if(num<5) {
 				int lvl = Integer.parseInt(ary[0]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "공격력의 강화는 이미 한계입니다.");
-				} else if (lvl + 10 >= 100000) {
-					String result = makeEnch(ary, "100000", 0);
+				} else if (lvl + 10 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 0);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 공격력의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -866,10 +866,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[9]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
-				} else if (lvl + 10 >= 100000) {
-					String result = makeEnch(ary, "100000", 9);
+				} else if (lvl + 10 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 9);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 반격의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -925,10 +925,10 @@ public class Reinforcement {
 			int num = rnd.nextInt(percent);
 			if(num<5) {
 				int lvl = Integer.parseInt(ary[0]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "공격력의 강화는 이미 한계입니다.");
-				} else if (lvl + 40 >= 100000) {
-					String result = makeEnch(ary, "100000", 0);
+				} else if (lvl + 40 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 0);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 공격력의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -939,10 +939,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[9]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
-				} else if (lvl + 40 >= 100000) {
-					String result = makeEnch(ary, "100000", 9);
+				} else if (lvl + 40 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 9);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 반격의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -1010,10 +1010,10 @@ public class Reinforcement {
 			int num = rnd.nextInt(percent);
 			if(num<5) {
 				int lvl = Integer.parseInt(ary[0]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "공격력의 강화는 이미 한계입니다.");
-				} else if (lvl + 4 >= 100000) {
-					String result = makeEnch(ary, "100000", 0);
+				} else if (lvl + 4 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 0);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 공격력의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -1024,10 +1024,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[3]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "추가 데미지(기타)의 강화는 이미 한계입니다.");
-				} else if (lvl + 4 >= 100000) {
-					String result = makeEnch(ary, "100000", 3);
+				} else if (lvl + 4 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 3);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 추가 데미지(기타)의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -1038,10 +1038,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[4]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "스플레시의 강화는 이미 한계입니다.");
-				} else if (lvl + 4 >= 100000) {
-					String result = makeEnch(ary, "100000", 4);
+				} else if (lvl + 4 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 4);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 스플레시의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -1114,10 +1114,10 @@ public class Reinforcement {
 			int num = rnd.nextInt(percent);
 			if(num<5) {
 				int lvl = Integer.parseInt(ary[0]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "공격력의 강화는 이미 한계입니다.");
-				} else if (lvl + 7 >= 100000) {
-					String result = makeEnch(ary, "100000", 0);
+				} else if (lvl + 7 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 0);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 공격력의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -1128,10 +1128,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[3]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "추가 데미지(기타)의 강화는 이미 한계입니다.");
-				} else if (lvl + 7 >= 100000) {
-					String result = makeEnch(ary, "100000", 3);
+				} else if (lvl + 7 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 3);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 추가 데미지(기타)의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -1142,10 +1142,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[4]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "스플레시의 강화는 이미 한계입니다.");
-				} else if (lvl + 7 >= 100000) {
-					String result = makeEnch(ary, "100000", 4);
+				} else if (lvl + 7 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 4);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 스플레시의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -1218,10 +1218,10 @@ public class Reinforcement {
 			int num = rnd.nextInt(percent);
 			if(num<5) {
 				int lvl = Integer.parseInt(ary[0]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "공격력의 강화는 이미 한계입니다.");
-				} else if (lvl + 10 >= 100000) {
-					String result = makeEnch(ary, "100000", 0);
+				} else if (lvl + 10 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 0);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 공격력의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -1232,10 +1232,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[3]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "추가 데미지(기타)의 강화는 이미 한계입니다.");
-				} else if (lvl + 10 >= 100000) {
-					String result = makeEnch(ary, "100000", 3);
+				} else if (lvl + 10 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 3);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 추가 데미지(기타)의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -1246,10 +1246,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[4]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "스플레시의 강화는 이미 한계입니다.");
-				} else if (lvl + 10 >= 100000) {
-					String result = makeEnch(ary, "100000", 4);
+				} else if (lvl + 10 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 4);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 스플레시의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -1322,10 +1322,10 @@ public class Reinforcement {
 			int num = rnd.nextInt(percent);
 			if(num<5) {
 				int lvl = Integer.parseInt(ary[0]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "공격력의 강화는 이미 한계입니다.");
-				} else if (lvl + 40 >= 100000) {
-					String result = makeEnch(ary, "100000", 0);
+				} else if (lvl + 40 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 0);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 공격력의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -1336,10 +1336,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[3]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "추가 데미지(기타)의 강화는 이미 한계입니다.");
-				} else if (lvl + 40 >= 100000) {
-					String result = makeEnch(ary, "100000", 3);
+				} else if (lvl + 40 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 3);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 추가 데미지(기타)의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -1350,10 +1350,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[4]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "스플레시의 강화는 이미 한계입니다.");
-				} else if (lvl + 40 >= 100000) {
-					String result = makeEnch(ary, "100000", 4);
+				} else if (lvl + 40 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 4);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 스플레시의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -1438,10 +1438,10 @@ public class Reinforcement {
 			int num = rnd.nextInt(percentDia);
 			if(num<5) {
 				int lvl = Integer.parseInt(ary[0]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "공격력의 강화는 이미 한계입니다.");
-				} else if (lvl + 4 >= 100000) {
-					String result = makeEnch(ary, "100000", 0);
+				} else if (lvl + 4 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 0);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 공격력의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -1452,10 +1452,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[1]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "추가 데미지(인간형)의 강화는 이미 한계입니다.");
-				} else if (lvl + 4 >= 100000) {
-					String result = makeEnch(ary, "100000", 1);
+				} else if (lvl + 4 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 1);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 추가 데미지(인간형)의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -1466,10 +1466,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[2]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "추가 데미지(동물형)의 강화는 이미 한계입니다.");
-				} else if (lvl + 4 >= 100000) {
-					String result = makeEnch(ary, "100000", 2);
+				} else if (lvl + 4 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 2);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 추가 데미지(동물형)의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -1480,10 +1480,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<20) {
 				int lvl = Integer.parseInt(ary[3]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "추가 데미지(기타)의 강화는 이미 한계입니다.");
-				} else if (lvl + 4 >= 100000) {
-					String result = makeEnch(ary, "100000", 3);
+				} else if (lvl + 4 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 3);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 추가 데미지(기타)의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -1494,10 +1494,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[4]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "스플레시의 강화는 이미 한계입니다.");
-				} else if (lvl + 4 >= 100000) {
-					String result = makeEnch(ary, "100000", 4);
+				} else if (lvl + 4 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 4);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 스플레시의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -1508,10 +1508,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<30) {
 				int lvl = Integer.parseInt(ary[9]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
-				} else if (lvl + 4 >= 100000) {
-					String result = makeEnch(ary, "100000", 9);
+				} else if (lvl + 4 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 9);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 반격의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -1634,10 +1634,10 @@ public class Reinforcement {
 			int num = rnd.nextInt(percentDia);
 			if(num<5) {
 				int lvl = Integer.parseInt(ary[0]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "공격력의 강화는 이미 한계입니다.");
-				} else if (lvl + 7 >= 100000) {
-					String result = makeEnch(ary, "100000", 0);
+				} else if (lvl + 7 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 0);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 공격력의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -1648,10 +1648,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[1]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "추가 데미지(인간형)의 강화는 이미 한계입니다.");
-				} else if (lvl + 7 >= 100000) {
-					String result = makeEnch(ary, "100000", 1);
+				} else if (lvl + 7 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 1);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 추가 데미지(인간형)의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -1662,10 +1662,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[2]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "추가 데미지(동물형)의 강화는 이미 한계입니다.");
-				} else if (lvl + 7 >= 100000) {
-					String result = makeEnch(ary, "100000", 2);
+				} else if (lvl + 7 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 2);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 추가 데미지(동물형)의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -1676,10 +1676,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<20) {
 				int lvl = Integer.parseInt(ary[3]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "추가 데미지(기타)의 강화는 이미 한계입니다.");
-				} else if (lvl + 7 >= 100000) {
-					String result = makeEnch(ary, "100000", 3);
+				} else if (lvl + 7 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 3);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 추가 데미지(기타)의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -1690,10 +1690,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[4]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "스플레시의 강화는 이미 한계입니다.");
-				} else if (lvl + 7 >= 100000) {
-					String result = makeEnch(ary, "100000", 4);
+				} else if (lvl + 7 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 4);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 스플레시의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -1704,10 +1704,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<30) {
 				int lvl = Integer.parseInt(ary[9]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
-				} else if (lvl + 7 >= 100000) {
-					String result = makeEnch(ary, "100000", 9);
+				} else if (lvl + 7 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 9);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 반격의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -1831,10 +1831,10 @@ public class Reinforcement {
 			int num = rnd.nextInt(percentDia);
 			if(num<5) {
 				int lvl = Integer.parseInt(ary[0]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "공격력의 강화는 이미 한계입니다.");
-				} else if (lvl + 10 >= 100000) {
-					String result = makeEnch(ary, "100000", 0);
+				} else if (lvl + 10 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 0);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 공격력의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -1845,10 +1845,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[1]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "추가 데미지(인간형)의 강화는 이미 한계입니다.");
-				} else if (lvl + 10 >= 100000) {
-					String result = makeEnch(ary, "100000", 1);
+				} else if (lvl + 10 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 1);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 추가 데미지(인간형)의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -1859,10 +1859,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[2]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "추가 데미지(동물형)의 강화는 이미 한계입니다.");
-				} else if (lvl + 10 >= 100000) {
-					String result = makeEnch(ary, "100000", 2);
+				} else if (lvl + 10 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 2);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 추가 데미지(동물형)의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -1873,10 +1873,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<20) {
 				int lvl = Integer.parseInt(ary[3]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "추가 데미지(기타)의 강화는 이미 한계입니다.");
-				} else if (lvl + 10 >= 100000) {
-					String result = makeEnch(ary, "100000", 3);
+				} else if (lvl + 10 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 3);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 추가 데미지(기타)의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -1887,10 +1887,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[4]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "스플레시의 강화는 이미 한계입니다.");
-				} else if (lvl + 10 >= 100000) {
-					String result = makeEnch(ary, "100000", 4);
+				} else if (lvl + 10 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 4);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 스플레시의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -1901,10 +1901,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<30) {
 				int lvl = Integer.parseInt(ary[9]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
-				} else if (lvl + 10 >= 100000) {
-					String result = makeEnch(ary, "100000", 9);
+				} else if (lvl + 10 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 9);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 반격의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -2028,10 +2028,10 @@ public class Reinforcement {
 			int num = rnd.nextInt(percentDia);
 			if(num<5) {
 				int lvl = Integer.parseInt(ary[0]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "공격력의 강화는 이미 한계입니다.");
-				} else if (lvl + 40 >= 100000) {
-					String result = makeEnch(ary, "100000", 0);
+				} else if (lvl + 40 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 0);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 공격력의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -2042,10 +2042,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[1]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "추가 데미지(인간형)의 강화는 이미 한계입니다.");
-				} else if (lvl + 40 >= 100000) {
-					String result = makeEnch(ary, "100000", 1);
+				} else if (lvl + 40 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 1);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 추가 데미지(인간형)의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -2056,10 +2056,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[2]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "추가 데미지(동물형)의 강화는 이미 한계입니다.");
-				} else if (lvl + 40 >= 100000) {
-					String result = makeEnch(ary, "100000", 2);
+				} else if (lvl + 40 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 2);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 추가 데미지(동물형)의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -2070,10 +2070,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<20) {
 				int lvl = Integer.parseInt(ary[3]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "추가 데미지(기타)의 강화는 이미 한계입니다.");
-				} else if (lvl + 40 >= 100000) {
-					String result = makeEnch(ary, "100000", 3);
+				} else if (lvl + 40 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 3);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 추가 데미지(기타)의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -2084,10 +2084,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[4]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "스플레시의 강화는 이미 한계입니다.");
-				} else if (lvl + 40 >= 100000) {
-					String result = makeEnch(ary, "100000", 4);
+				} else if (lvl + 40 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 4);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 스플레시의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -2098,10 +2098,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<30) {
 				int lvl = Integer.parseInt(ary[9]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
-				} else if (lvl + 40 >= 100000) {
-					String result = makeEnch(ary, "100000", 9);
+				} else if (lvl + 40 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 9);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 반격의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -2225,10 +2225,10 @@ public class Reinforcement {
 			int num = rnd.nextInt(percentDia);
 			if(num<5) {
 				int lvl = Integer.parseInt(ary[0]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "공격력의 강화는 이미 한계입니다.");
-				} else if (lvl + 1000 >= 100000) {
-					String result = makeEnch(ary, "100000", 0);
+				} else if (lvl + 1000 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 0);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 공격력의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -2239,10 +2239,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[1]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "추가 데미지(인간형)의 강화는 이미 한계입니다.");
-				} else if (lvl + 1000 >= 100000) {
-					String result = makeEnch(ary, "100000", 1);
+				} else if (lvl + 1000 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 1);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 추가 데미지(인간형)의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -2253,10 +2253,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[2]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "추가 데미지(동물형)의 강화는 이미 한계입니다.");
-				} else if (lvl + 1000 >= 100000) {
-					String result = makeEnch(ary, "100000", 2);
+				} else if (lvl + 1000 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 2);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 추가 데미지(동물형)의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -2267,10 +2267,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<20) {
 				int lvl = Integer.parseInt(ary[3]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "추가 데미지(기타)의 강화는 이미 한계입니다.");
-				} else if (lvl + 1000 >= 100000) {
-					String result = makeEnch(ary, "100000", 3);
+				} else if (lvl + 1000 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 3);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 추가 데미지(기타)의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -2281,10 +2281,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[4]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "스플레시의 강화는 이미 한계입니다.");
-				} else if (lvl + 1000 >= 100000) {
-					String result = makeEnch(ary, "100000", 4);
+				} else if (lvl + 1000 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 4);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 스플레시의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -2295,10 +2295,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<30) {
 				int lvl = Integer.parseInt(ary[9]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
-				} else if (lvl + 1000 >= 100000) {
-					String result = makeEnch(ary, "100000", 9);
+				} else if (lvl + 1000 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 9);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 반격의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -2490,10 +2490,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
-				} else if (lvl + 1 >= 100000) {
-					String result = makeEnch(ary, "100000", 9);
+				} else if (lvl + 1 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 9);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 반격의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -2656,10 +2656,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
-				} else if (lvl + 2 >= 100000) {
-					String result = makeEnch(ary, "100000", 9);
+				} else if (lvl + 2 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 9);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 반격의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -2822,10 +2822,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
-				} else if (lvl + 4 >= 100000) {
-					String result = makeEnch(ary, "100000", 9);
+				} else if (lvl + 4 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 9);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 반격의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -2988,10 +2988,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
-				} else if (lvl + 7 >= 100000) {
-					String result = makeEnch(ary, "100000", 9);
+				} else if (lvl + 7 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 9);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 반격의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -3154,10 +3154,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
-				} else if (lvl + 10 >= 100000) {
-					String result = makeEnch(ary, "100000", 9);
+				} else if (lvl + 10 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 9);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 반격의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -3320,10 +3320,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
-				} else if (lvl + 40 >= 100000) {
-					String result = makeEnch(ary, "100000", 9);
+				} else if (lvl + 40 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 9);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 반격의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -3498,10 +3498,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
-				} else if (lvl + 2 >= 100000) {
-					String result = makeEnch(ary, "100000", 9);
+				} else if (lvl + 2 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 9);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 반격의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -3664,10 +3664,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
-				} else if (lvl + 4 >= 100000) {
-					String result = makeEnch(ary, "100000", 9);
+				} else if (lvl + 4 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 9);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 반격의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -3830,10 +3830,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
-				} else if (lvl + 7 >= 100000) {
-					String result = makeEnch(ary, "100000", 9);
+				} else if (lvl + 7 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 9);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 반격의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -3996,10 +3996,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
-				} else if (lvl + 10 >= 100000) {
-					String result = makeEnch(ary, "100000", 9);
+				} else if (lvl + 10 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 9);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 반격의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -4162,10 +4162,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
-				} else if (lvl + 40 >= 100000) {
-					String result = makeEnch(ary, "100000", 9);
+				} else if (lvl + 40 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 9);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 반격의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -4340,10 +4340,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
-				} else if (lvl + 4 >= 100000) {
-					String result = makeEnch(ary, "100000", 9);
+				} else if (lvl + 4 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 9);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 반격의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -4506,10 +4506,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
-				} else if (lvl + 7 >= 100000) {
-					String result = makeEnch(ary, "100000", 9);
+				} else if (lvl + 7 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 9);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 반격의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -4672,10 +4672,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
-				} else if (lvl + 10 >= 100000) {
-					String result = makeEnch(ary, "100000", 9);
+				} else if (lvl + 10 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 9);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 반격의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -4838,10 +4838,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
-				} else if (lvl + 40 >= 100000) {
-					String result = makeEnch(ary, "100000", 9);
+				} else if (lvl + 40 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 9);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 반격의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -5016,10 +5016,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
-				} else if (lvl + 4 >= 100000) {
-					String result = makeEnch(ary, "100000", 9);
+				} else if (lvl + 4 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 9);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 반격의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -5182,10 +5182,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
-				} else if (lvl + 7 >= 100000) {
-					String result = makeEnch(ary, "100000", 9);
+				} else if (lvl + 7 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 9);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 반격의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -5348,10 +5348,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
-				} else if (lvl + 10 >= 100000) {
-					String result = makeEnch(ary, "100000", 9);
+				} else if (lvl + 10 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 9);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 반격의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -5514,10 +5514,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
-				} else if (lvl + 40 >= 100000) {
-					String result = makeEnch(ary, "100000", 9);
+				} else if (lvl + 40 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 9);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 반격의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -5680,10 +5680,10 @@ public class Reinforcement {
 				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
-				} else if (lvl + 1000 >= 100000) {
-					String result = makeEnch(ary, "100000", 9);
+				} else if (lvl + 1000 >= 1000000) {
+					String result = makeEnch(ary, "1000000", 9);
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 반격의 강화 수치가 한계에 도달했습니다.");
 				} else {
@@ -5943,10 +5943,10 @@ public class Reinforcement {
 			int num = rnd.nextInt(percentArrowKami);
 			if(num<10) {
 				int lvl = Integer.parseInt(item.getLocalizedName());
-				if (lvl == 100000) {
+				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "이 무기의 개방은 이미 한계입니다.");
-				} else if (lvl + 100 >= 100000) {
-					item.setLocalizedName("100000");
+				} else if (lvl + 100 >= 1000000) {
+					item.setLocalizedName("1000000");
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 개방이 한계에 도달했습니다.");
 					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.5f, 2.0f);
 				} else if (lvl >= 300) {

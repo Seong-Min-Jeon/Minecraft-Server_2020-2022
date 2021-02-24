@@ -2566,7 +2566,7 @@ public class LootChest {
 		var2meta.setColor(Color.fromRGB(100, 255, 100));
 		var2.setItemMeta(var2meta);
 		ItemMeta var2Im = var2.getItemMeta();
-		var2Im.setLocalizedName("0,0,0,0,0,2500,4000,2000,3000,0,570");
+		var2Im.setLocalizedName("0,0,0,0,0,3500,4000,2000,3000,0,570");
 		var2Im.setDisplayName(ChatColor.GREEN + "슬라임 헬멧");
 		ArrayList<String> var2Lore = new ArrayList();
 		var2Lore.add(ChatColor.GRAY + "레벨 제한: 570");
@@ -2585,7 +2585,7 @@ public class LootChest {
 		var3meta.setColor(Color.fromRGB(100, 255, 100));
 		var3.setItemMeta(var3meta);
 		ItemMeta var3Im = var3.getItemMeta();
-		var3Im.setLocalizedName("0,0,0,0,0,2500,4000,2000,3000,0,570");
+		var3Im.setLocalizedName("0,0,0,0,0,3500,4000,2000,3000,0,570");
 		var3Im.setDisplayName(ChatColor.GREEN + "슬라임 갑옷");
 		ArrayList<String> var3Lore = new ArrayList();
 		var3Lore.add(ChatColor.GRAY + "레벨 제한: 570");
@@ -2604,7 +2604,7 @@ public class LootChest {
 		var4meta.setColor(Color.fromRGB(100, 255, 100));
 		var4.setItemMeta(var4meta);
 		ItemMeta var4Im = var4.getItemMeta();
-		var4Im.setLocalizedName("0,0,0,0,0,2500,4000,2000,3000,0,570");
+		var4Im.setLocalizedName("0,0,0,0,0,3500,4000,2000,3000,0,570");
 		var4Im.setDisplayName(ChatColor.GREEN + "슬라임 각반");
 		ArrayList<String> var4Lore = new ArrayList();
 		var4Lore.add(ChatColor.GRAY + "레벨 제한: 570");
@@ -2623,7 +2623,7 @@ public class LootChest {
 		var5meta.setColor(Color.fromRGB(100, 255, 100));
 		var5.setItemMeta(var5meta);
 		ItemMeta var5Im = var5.getItemMeta();
-		var5Im.setLocalizedName("0,0,0,0,0,2500,4000,2000,3000,0,570");
+		var5Im.setLocalizedName("0,0,0,0,0,3500,4000,2000,3000,0,570");
 		var5Im.setDisplayName(ChatColor.GREEN + "슬라임 신발");
 		ArrayList<String> var5Lore = new ArrayList();
 		var5Lore.add(ChatColor.GRAY + "레벨 제한: 570");

@@ -216,14 +216,14 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "잊혀진 바다 신전 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		sendMessage(player, ChatColor.YELLOW + "잊혀진 바다 신전 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "잊혀진 바다 신전 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 
 		List<Entity> entitylist = player.getNearbyEntities(10, 3, 10);
 		for (Entity nearEntity : entitylist) {
 			if (nearEntity.getType() == EntityType.PLAYER) {
 				Player nearPlayer = (Player) nearEntity;
 				nearPlayer.getInventory().addItem(rewardKey);
-				sendMessage(nearPlayer, ChatColor.YELLOW + "잊혀진 바다 신전 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+				sendMessage(nearPlayer, ChatColor.YELLOW + "잊혀진 바다 신전 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 			}
 		}
 	}
@@ -1478,7 +1478,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "타락한 요정 왕국 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		sendMessage(player, ChatColor.YELLOW + "타락한 요정 왕국 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "타락한 요정 왕국 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -1489,7 +1489,7 @@ public class MobLoot {
 				if (loc.getX() <= 3797 && loc.getY() <= 90 && loc.getZ() <= 3497 
 						&& loc.getX() >= 3754 && loc.getY() >= 75 && loc.getZ() >= 3456) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					sendMessage(nearPlayer, ChatColor.YELLOW + "타락한 요정 왕국 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "타락한 요정 왕국 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 				}
 			}
 		}
@@ -1510,7 +1510,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "타락한 요정 왕국 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		sendMessage(player, ChatColor.YELLOW + "타락한 요정 왕국 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "타락한 요정 왕국 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -1521,7 +1521,7 @@ public class MobLoot {
 				if (loc.getX() <= 3797 && loc.getY() <= 90 && loc.getZ() <= 3497 
 						&& loc.getX() >= 3754 && loc.getY() >= 75 && loc.getZ() >= 3456) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					sendMessage(nearPlayer, ChatColor.YELLOW + "타락한 요정 왕국 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "타락한 요정 왕국 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 				}
 			}
 		}
@@ -1815,7 +1815,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "카루 던전 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		sendMessage(player, ChatColor.YELLOW + "카루 던전 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "카루 던전 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -1826,7 +1826,7 @@ public class MobLoot {
 				if (loc.getX() <= 3769 && loc.getY() <= 163 && loc.getZ() <= 3254 && loc.getX() >= 3711
 						&& loc.getY() >= 133 && loc.getZ() >= 3217) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					sendMessage(nearPlayer, ChatColor.YELLOW + "카루 던전 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "카루 던전 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 				}
 			}
 		}
@@ -2117,7 +2117,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "아덴의 저택 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		sendMessage(player, ChatColor.YELLOW + "아덴의 저택 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "아덴의 저택 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2128,7 +2128,7 @@ public class MobLoot {
 				if (loc.getX() <= 3336 && loc.getY() <= 45 && loc.getZ() <= 3762 && loc.getX() >= 3299
 						&& loc.getY() >= 10 && loc.getZ() >= 3725) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					sendMessage(nearPlayer, ChatColor.YELLOW + "아덴의 저택 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "아덴의 저택 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 				}
 			}
 		}
@@ -2149,7 +2149,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "숨겨진 아덴의 저택 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		sendMessage(player, ChatColor.YELLOW + "숨겨진 아덴의 저택 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "숨겨진 아덴의 저택 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2160,7 +2160,7 @@ public class MobLoot {
 				if (loc.getX() <= 3383 && loc.getY() <= 32 && loc.getZ() <= 3803 && loc.getX() >= 3355
 						&& loc.getY() >= 11 && loc.getZ() >= 3766) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					sendMessage(nearPlayer, ChatColor.YELLOW + "숨겨진 아덴의 저택 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "숨겨진 아덴의 저택 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 				}
 			}
 		}
@@ -2509,7 +2509,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "죽음의 탑 1층 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		sendMessage(player, ChatColor.YELLOW + "죽음의 탑 1층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "죽음의 탑 1층 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 		
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2519,7 +2519,7 @@ public class MobLoot {
 				if (loc.getX() <= 90 && loc.getY() <= 87 && loc.getZ() <= -5 && 
 						loc.getX() >= 54 && loc.getY() >= 75 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					sendMessage(nearPlayer, ChatColor.YELLOW + "죽음의 탑 1층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "죽음의 탑 1층 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 				}
 			}
 		}
@@ -2532,7 +2532,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "죽음의 탑 2층 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		sendMessage(player, ChatColor.YELLOW + "죽음의 탑 2층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "죽음의 탑 2층 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 		
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2542,7 +2542,7 @@ public class MobLoot {
 				if (loc.getX() <= 90 && loc.getY() <= 100 && loc.getZ() <= -5 && 
 						loc.getX() >= 54 && loc.getY() >= 88 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					sendMessage(nearPlayer, ChatColor.YELLOW + "죽음의 탑 2층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "죽음의 탑 2층 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 				}
 			}
 		}
@@ -2555,7 +2555,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "죽음의 탑 3층 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		sendMessage(player, ChatColor.YELLOW + "죽음의 탑 3층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "죽음의 탑 3층 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 		
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2565,7 +2565,7 @@ public class MobLoot {
 				if (loc.getX() <= 90 && loc.getY() <= 115 && loc.getZ() <= -5 && 
 						loc.getX() >= 54 && loc.getY() >= 101 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					sendMessage(nearPlayer, ChatColor.YELLOW + "죽음의 탑 3층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "죽음의 탑 3층 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 				}
 			}
 		}
@@ -2578,7 +2578,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "죽음의 탑 4층 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		sendMessage(player, ChatColor.YELLOW + "죽음의 탑 4층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "죽음의 탑 4층 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 		
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2588,7 +2588,7 @@ public class MobLoot {
 				if (loc.getX() <= 90 && loc.getY() <= 128 && loc.getZ() <= -5 && 
 						loc.getX() >= 54 && loc.getY() >= 116 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					sendMessage(nearPlayer, ChatColor.YELLOW + "죽음의 탑 4층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "죽음의 탑 4층 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 				}
 			}
 		}
@@ -2601,7 +2601,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "죽음의 탑 5층 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		sendMessage(player, ChatColor.YELLOW + "죽음의 탑 5층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "죽음의 탑 5층 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 		
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2611,7 +2611,7 @@ public class MobLoot {
 				if (loc.getX() <= 90 && loc.getY() <= 141 && loc.getZ() <= -5 && 
 						loc.getX() >= 54 && loc.getY() >= 129 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					sendMessage(nearPlayer, ChatColor.YELLOW + "죽음의 탑 5층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "죽음의 탑 5층 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 				}
 			}
 		}
@@ -2624,7 +2624,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "죽음의 탑 6층 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		sendMessage(player, ChatColor.YELLOW + "죽음의 탑 6층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "죽음의 탑 6층 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 		
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2634,7 +2634,7 @@ public class MobLoot {
 				if (loc.getX() <= 90 && loc.getY() <= 156 && loc.getZ() <= -5 && 
 						loc.getX() >= 54 && loc.getY() >= 142 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					sendMessage(nearPlayer, ChatColor.YELLOW + "죽음의 탑 6층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "죽음의 탑 6층 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 				}
 			}
 		}
@@ -2647,7 +2647,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "죽음의 탑 7층 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		sendMessage(player, ChatColor.YELLOW + "죽음의 탑 7층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "죽음의 탑 7층 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 		
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2657,7 +2657,7 @@ public class MobLoot {
 				if (loc.getX() <= 90 && loc.getY() <= 169 && loc.getZ() <= -5 && 
 						loc.getX() >= 54 && loc.getY() >= 157 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					sendMessage(nearPlayer, ChatColor.YELLOW + "죽음의 탑 7층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "죽음의 탑 7층 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 				}
 			}
 		}
@@ -2670,7 +2670,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "죽음의 탑 8층 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		sendMessage(player, ChatColor.YELLOW + "죽음의 탑 8층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "죽음의 탑 8층 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 		
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2680,7 +2680,7 @@ public class MobLoot {
 				if (loc.getX() <= 90 && loc.getY() <= 182 && loc.getZ() <= -5 && 
 						loc.getX() >= 54 && loc.getY() >= 170 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					sendMessage(nearPlayer, ChatColor.YELLOW + "죽음의 탑 8층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "죽음의 탑 8층 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 				}
 			}
 		}
@@ -2693,7 +2693,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "죽음의 탑 9층 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		sendMessage(player, ChatColor.YELLOW + "죽음의 탑 9층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "죽음의 탑 9층 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 		
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2703,7 +2703,7 @@ public class MobLoot {
 				if (loc.getX() <= 90 && loc.getY() <= 197 && loc.getZ() <= -5 && 
 						loc.getX() >= 54 && loc.getY() >= 183 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					sendMessage(nearPlayer, ChatColor.YELLOW + "죽음의 탑 9층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "죽음의 탑 9층 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 				}
 			}
 		}
@@ -2716,7 +2716,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "죽음의 탑 10층 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		sendMessage(player, ChatColor.YELLOW + "죽음의 탑 10층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "죽음의 탑 10층 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 		
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2726,7 +2726,7 @@ public class MobLoot {
 				if (loc.getX() <= 90 && loc.getY() <= 210 && loc.getZ() <= -5 && 
 						loc.getX() >= 54 && loc.getY() >= 198 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					sendMessage(nearPlayer, ChatColor.YELLOW + "죽음의 탑 10층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "죽음의 탑 10층 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 				}
 			}
 		}
@@ -2739,7 +2739,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "죽음의 탑 11층 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		sendMessage(player, ChatColor.YELLOW + "죽음의 탑 11층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "죽음의 탑 11층 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 		
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2749,7 +2749,7 @@ public class MobLoot {
 				if (loc.getX() <= 90 && loc.getY() <= 223 && loc.getZ() <= -5 && 
 						loc.getX() >= 54 && loc.getY() >= 211 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					sendMessage(nearPlayer, ChatColor.YELLOW + "죽음의 탑 11층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "죽음의 탑 11층 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 				}
 			}
 		}
@@ -2762,7 +2762,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "죽음의 탑 12층 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		sendMessage(player, ChatColor.YELLOW + "죽음의 탑 12층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "죽음의 탑 12층 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 		
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2772,7 +2772,7 @@ public class MobLoot {
 				if (loc.getX() <= 90 && loc.getY() <= 87 && loc.getZ() <= -5 && 
 						loc.getX() >= 54 && loc.getY() >= 75 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					sendMessage(nearPlayer, ChatColor.YELLOW + "죽음의 탑 12층 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "죽음의 탑 12층 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 				}
 			}
 		}
@@ -3211,7 +3211,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "미궁 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		sendMessage(player, ChatColor.YELLOW + "미궁 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "미궁 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -3222,7 +3222,7 @@ public class MobLoot {
 				if (loc.getX() <= 49 && loc.getY() <= 61 && loc.getZ() <= 696 
 						&& loc.getX() >= 16 && loc.getY() >= 51 && loc.getZ() >= 654) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					sendMessage(nearPlayer, ChatColor.YELLOW + "미궁 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "미궁 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 					nearPlayer.teleport(new Location(nearPlayer.getWorld(), 28.5, 63, 681));
 				}
 			}
@@ -3491,7 +3491,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "아라크네의 저주 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		sendMessage(player, ChatColor.YELLOW + "아라크네의 저주 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "아라크네의 저주 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -3501,7 +3501,7 @@ public class MobLoot {
 				if (loc.getX() <= 776 && loc.getY() <= 31 && loc.getZ() <= 605 
 						&& loc.getX() >= 727 && loc.getY() >= 0 && loc.getZ() >= 555) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					sendMessage(nearPlayer, ChatColor.YELLOW + "아라크네의 저주 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "아라크네의 저주 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 				}
 			}
 		}
@@ -5148,7 +5148,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "C급 투기장 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		sendMessage(player, ChatColor.YELLOW + "C급 투기장 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "C급 투기장 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 
 		List<Entity> entitylist = player.getNearbyEntities(120, 20, 120);
 		for (Entity nearEntity : entitylist) {
@@ -5158,7 +5158,7 @@ public class MobLoot {
 				if (loc.getX() <= 4030 && loc.getY() <= 120 && loc.getZ() <= 2728 
 						&& loc.getX() >= 3853 && loc.getY() >= 75 && loc.getZ() >= 2548) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					sendMessage(nearPlayer, ChatColor.YELLOW + "C급 투기장 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "C급 투기장 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 					nearPlayer.teleport(new Location(player.getWorld(), 128, 64, 1955, 90, 0));
 				}
 			}
@@ -5173,7 +5173,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "B급 투기장 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		sendMessage(player, ChatColor.YELLOW + "B급 투기장 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "B급 투기장 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 
 		List<Entity> entitylist = player.getNearbyEntities(120, 20, 120);
 		for (Entity nearEntity : entitylist) {
@@ -5183,7 +5183,7 @@ public class MobLoot {
 				if (loc.getX() <= 4207 && loc.getY() <= 120 && loc.getZ() <= 2730 
 						&& loc.getX() >= 4037 && loc.getY() >= 75 && loc.getZ() >= 2547) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					sendMessage(nearPlayer, ChatColor.YELLOW + "B급 투기장 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "B급 투기장 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 					nearPlayer.teleport(new Location(player.getWorld(), 128, 64, 1955, 90, 0));
 				}
 			}
@@ -5198,7 +5198,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "A급 투기장 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		sendMessage(player, ChatColor.YELLOW + "A급 투기장 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "A급 투기장 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 
 		List<Entity> entitylist = player.getNearbyEntities(120, 20, 120);
 		for (Entity nearEntity : entitylist) {
@@ -5208,7 +5208,7 @@ public class MobLoot {
 				if (loc.getX() <= 4023 && loc.getY() <= 120 && loc.getZ() <= 2546 
 						&& loc.getX() >= 3846 && loc.getY() >= 75 && loc.getZ() >= 2369) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					sendMessage(nearPlayer, ChatColor.YELLOW + "A급 투기장 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "A급 투기장 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 					nearPlayer.teleport(new Location(player.getWorld(), 128, 64, 1955, 90, 0));
 				}
 			}
@@ -5223,7 +5223,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "S급 투기장 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		sendMessage(player, ChatColor.YELLOW + "S급 투기장 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "S급 투기장 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 
 		List<Entity> entitylist = player.getNearbyEntities(120, 20, 120);
 		for (Entity nearEntity : entitylist) {
@@ -5233,7 +5233,7 @@ public class MobLoot {
 				if (loc.getX() <= 4210 && loc.getY() <= 120 && loc.getZ() <= 2543 
 						&& loc.getX() >= 4031 && loc.getY() >= 75 && loc.getZ() >= 2366) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					sendMessage(nearPlayer, ChatColor.YELLOW + "S급 투기장 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "S급 투기장 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 					nearPlayer.teleport(new Location(player.getWorld(), 128, 64, 1955, 90, 0));
 				}
 			}
@@ -6413,7 +6413,7 @@ public class MobLoot {
 		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "깊숙한 점액 동굴 보상 열쇠");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		sendMessage(player, ChatColor.YELLOW + "깊숙한 점액 동굴 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "깊숙한 점액 동굴 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 
 		List<Entity> entitylist = player.getNearbyEntities(50, 30, 50);
 		for (Entity nearEntity : entitylist) {
@@ -6423,7 +6423,7 @@ public class MobLoot {
 				if (loc.getX() <= 3819 && loc.getY() <= 76 && loc.getZ() <= 2581 
 						&& loc.getX() >= 3740 && loc.getY() >= 30 && loc.getZ() >= 2479) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					sendMessage(nearPlayer, ChatColor.YELLOW + "깊숙한 점액 동굴 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "깊숙한 점액 동굴 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 				}
 			}
 		}
@@ -7335,12 +7335,16 @@ public class MobLoot {
 		player.getInventory().addItem(item);
 		es.giveExp(player, 7000000);
 		
-		ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
+		ItemStack rewardKey = new ItemStack(Material.IRON_NUGGET);
 		ItemMeta rewardKeyIm = rewardKey.getItemMeta();
-		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "타락한 영웅의 유산 보상 열쇠");
+		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "의문의 사리");
+		ArrayList<String> keyLore = new ArrayList();
+		keyLore.add(ChatColor.GRAY + "돼지의 몸 안에서 나온 사리");
+		keyLore.add(ChatColor.GRAY + "어째서 돼지의 몸 안에서 나온 것인지는 모르겠다.");
+		rewardKeyIm.setLore(keyLore);
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		sendMessage(player, ChatColor.YELLOW + "타락한 영웅의 유산 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "의문의 사리" + ChatColor.WHITE + "을 획득했다.");
 
 		List<Entity> entitylist = player.getNearbyEntities(50, 30, 50);
 		for (Entity nearEntity : entitylist) {
@@ -7350,7 +7354,7 @@ public class MobLoot {
 				if (loc.getX() <= 3753 && loc.getY() <= 108 && loc.getZ() <= 2434 
 						&& loc.getX() >= 3713 && loc.getY() >= 80 && loc.getZ() >= 2376) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					sendMessage(nearPlayer, ChatColor.YELLOW + "타락한 영웅의 유산 보상 열쇠" + ChatColor.WHITE + "을 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "의문의 사리" + ChatColor.WHITE + "을 획득했다.");
 				}
 			}
 		}
