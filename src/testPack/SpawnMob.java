@@ -3157,6 +3157,7 @@ public class SpawnMob {
 			} else if (entity.getType() == (EntityType) EntityType.WITHER) {
 				entity.setCustomName(ChatColor.GRAY + "거대 요정" + ChatColor.YELLOW + " [Lv.200]");
 				entity.setCustomNameVisible(true);
+				entity.setRemoveWhenFarAway(true);
 				entity.setMaxHealth(30000);
 				entity.setHealth(30000);
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 62));
@@ -3260,6 +3261,7 @@ public class SpawnMob {
 			if (entity.getType() == (EntityType) EntityType.WITHER) {
 				entity.setCustomName(ChatColor.GRAY + "거대 요정" + ChatColor.YELLOW + " [Lv.200]");
 				entity.setCustomNameVisible(true);
+				entity.setRemoveWhenFarAway(true);
 				entity.setMaxHealth(20000);
 				entity.setHealth(20000);
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 62));
@@ -11260,7 +11262,7 @@ public class SpawnMob {
 			} else if (entity.getType() == (EntityType) EntityType.WITHER) {
 				entity.setCustomName(ChatColor.GRAY + "타락한 영웅의 갑옷" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
-				entity.setRemoveWhenFarAway(false);
+				entity.setRemoveWhenFarAway(true);
 				entity.setMaxHealth(3500000);
 				entity.setHealth(3500000);
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 2300));

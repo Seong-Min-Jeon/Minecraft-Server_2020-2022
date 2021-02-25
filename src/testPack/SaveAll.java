@@ -970,6 +970,82 @@ public class SaveAll {
 						int number = qb.getNum(player);
 						fw.write("mq47_4\n");
 						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===시오카나 섬===")) {
+						int number = qb.getNum(player);
+						fw.write("mq48\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===사라진 닻===")) {
+						int number = qb.getNum(player);
+						fw.write("mq48_1\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===새로운 섬===")) {
+						int number = qb.getNum(player);
+						fw.write("mq48_2\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===스켈리그 섬===")) {
+						int number = qb.getNum(player);
+						fw.write("mq48_3\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===리로이의 시련1===")) {
+						int number = qb.getNum(player);
+						fw.write("mq48_4\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===리로이의 시련2===")) {
+						int number = qb.getNum(player);
+						fw.write("mq48_5\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===리로이의 시련3===")) {
+						int number = qb.getNum(player);
+						fw.write("mq48_6\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===리로이의 시련4===")) {
+						int number = qb.getNum(player);
+						fw.write("mq48_7\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===리로이의 시련5===")) {
+						int number = qb.getNum(player);
+						fw.write("mq48_8\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===리로이의 시련6===")) {
+						int number = qb.getNum(player);
+						fw.write("mq48_9\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===리로이의 시련7===")) {
+						int number = qb.getNum(player);
+						fw.write("mq48_10\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===리로이의 시련8===")) {
+						int number = qb.getNum(player);
+						fw.write("mq48_11\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===리로이의 시련9===")) {
+						int number = qb.getNum(player);
+						fw.write("mq48_12\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===시련을 마친 자===")) {
+						int number = qb.getNum(player);
+						fw.write("mq48_13\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===검은 수염===")) {
+						int number = qb.getNum(player);
+						fw.write("mq48_14\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===검은 수염의 보물1===")) {
+						int number = qb.getNum(player);
+						fw.write("mq48_15\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===검은 수염의 보물2===")) {
+						int number = qb.getNum(player);
+						fw.write("mq48_16\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===검은 수염의 보물3===")) {
+						int number = qb.getNum(player);
+						fw.write("mq48_17\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===마지막 종===")) {
+						int number = qb.getNum(player);
+						fw.write("mq48_18\n");
+						fw.write(Integer.toString(number));
 					}
 					fw.close();
 					bufReader.close();

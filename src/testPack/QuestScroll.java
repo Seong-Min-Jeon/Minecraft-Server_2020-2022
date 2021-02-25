@@ -96,6 +96,7 @@ public class QuestScroll {
 				mq45(player, itemArg, world);
 				mq46(player, itemArg, world);
 				mq47(player, itemArg, world);
+				mq48(player, itemArg, world);
 			} else {
 				itemArg.remove();
 				player.getInventory().addItem(itemArg.getItemStack());
@@ -752,5 +753,15 @@ public class QuestScroll {
 			qb.mq47(player, 0);
 		}	
 	}
+	
+	public void mq48(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "메인퀘스트 48장")) {
+			msg.msg(player, "네비: 이번에는 섬에 사시는 분이 도움을 요청했어.%네비: 지금까지는 하마베에서 요청받은 일을 섬에서 해결해드렸는데..%네비: 신선하네!%"
+					+ "네비: 이번 섬 이름은..%네비: 시..§e시오카나§f?%네비: 정확히 어디 계신지는 안적어주셔서 우리가 찾아야 되겠다.");
+			QuestBoard qb = new QuestBoard();
+			qb.mq48(player, 0);
+		}	
+	}
+	
 	
 }

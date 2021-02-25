@@ -127,6 +127,7 @@ public class LootChest {
 //			if(block.getX()==3713 && block.getY()==17 && block.getZ()==3156) {
 //				if(removeKey(player, "죽음의 탑 6층 보상 열쇠")) {
 //					tower1(player);
+			// 텅빈심장
 //				}				
 //			}
 //			if(block.getX()==3713 && block.getY()==17 && block.getZ()==3156) {
