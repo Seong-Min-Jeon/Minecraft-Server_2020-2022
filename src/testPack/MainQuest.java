@@ -108,30 +108,7 @@ public class MainQuest {
 		} else if(lvl == 530) {
 			main47(player);
 		} else if(lvl == 550) {
-			// 스켈리그 섬 -> 뱃사공 대사: 이곳에 종이 있음을 알게됨
-			// 문을 열 증표인 종 뿐만 아니라 이곳에 성물까지 있음
-			// 섬은 달에서 온 파편
-			// 섬을 돌아다니면서 여러가지 잡으면서 종을 찾음
-			// 마을 이름 없음, 텔포 스크롤 증정
-			// 순례의 시대에 종들을 숨겼다는 것을 알게됨
-			// 해적에게서 열쇠를 얻고 신전에 들어감 -> 지속적으로 얻을 수 있음 -> 해적은 보스 스타일
-			// 신전은 소규모 던전 스타일 -> 레벨 최대한 높게 설정
-			// 
-			// 
-			// 몹: 갈망하는 망자, 도살자, 방해꾼, 
-			
-		} else if(lvl == 560) {
-			
-		} else if(lvl == 570) {
-			
-		} else if(lvl == 580) {
-			
-		} else if(lvl == 590) {
-			
-		} else if(lvl == 600) {
-			
-		} else if(lvl == 610) {
-			
+			main48(player);
 		} else if(lvl == 620) {
 			
 		} else if(lvl == 630) {
@@ -916,6 +893,27 @@ public class MainQuest {
 		scrollLore.add(ChatColor.RED + "1. 해당 퀘스트 스크롤을 사용하면 라히무호나의");
 		scrollLore.add(ChatColor.RED + "모든 메인 퀘스트를 순서대로 진행할 수 있습니다.");
 		scrollLore.add(ChatColor.RED + "2. 다음 메인 퀘스트 스크롤은 550레벨에 받을 수 있습니다.");
+		scrollIm.setLore(scrollLore);
+		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		scrollIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		scrollIm.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
+		scrollIm.setUnbreakable(true);
+		scroll.setItemMeta(scrollIm);		
+		player.getInventory().addItem(scroll);
+	}
+	
+	public void main48(Player player) {
+		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
+		ItemMeta scrollIm = scroll.getItemMeta();
+		scrollIm.setDisplayName(ChatColor.GOLD + "메인퀘스트 48장");
+		ArrayList<String> scrollLore = new ArrayList();
+		scrollLore.add(ChatColor.GRAY + "'시오카나 섬' 퀘스트를 진행할 수 있다.");
+		scrollLore.add(ChatColor.GRAY + " ");
+		scrollLore.add(ChatColor.RED + "※주의 사항※");
+		scrollLore.add(ChatColor.RED + "1. 해당 퀘스트 스크롤을 사용하면 마지막 종을 울리기 위한");
+		scrollLore.add(ChatColor.RED + "모든 메인 퀘스트를 순서대로 진행할 수 있습니다.");
+		scrollLore.add(ChatColor.RED + "2. 다음 메인 퀘스트 스크롤은 620레벨에 받을 수 있습니다.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);

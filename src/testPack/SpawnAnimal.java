@@ -12,7 +12,7 @@ public class SpawnAnimal {
 	public boolean spawn(Entity animal) {
 		LivingEntity entity = (LivingEntity) animal;				
 		if(animal0(entity) && animal1(entity) && animal2(entity) && animal3(entity) && animal4(entity) 
-				&& animal5(entity) && animal6(entity) && animal7(entity) && animal8(entity)) {
+				&& animal5(entity) && animal6(entity) && animal7(entity) && animal8(entity) && animal9(entity)) {
 			return true;
 		} 
 		return false;
@@ -200,6 +200,28 @@ public class SpawnAnimal {
 				&& entity.getLocation().getX()>=1037 && entity.getLocation().getY()>=69 && entity.getLocation().getZ()>=37) { 
 			if (entity.getType() == (EntityType) EntityType.CHICKEN) {
 				entity.setCustomName(ChatColor.GREEN + "닭");
+				entity.setCustomNameVisible(true);
+				((LivingEntity) entity).setMaxHealth(99999);
+				((LivingEntity) entity).setHealth(99999);
+				entity.setNoDamageTicks(Integer.MAX_VALUE);
+				entity.setCollidable(false);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, Integer.MAX_VALUE, 32700));
+				return true;
+			} else if(entity.getType() == (EntityType) EntityType.IRON_GOLEM || entity.getType() == (EntityType) EntityType.SALMON) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	public boolean animal9(LivingEntity entity) {
+		//스켈리그 양 -736 58 -940  -715 54 -955
+		if(entity.getLocation().getX()<=-715 && entity.getLocation().getY()<=60 && entity.getLocation().getZ()<=-940
+				&& entity.getLocation().getX()>=-736 && entity.getLocation().getY()>=50 && entity.getLocation().getZ()>=-955) { 
+			if (entity.getType() == (EntityType) EntityType.SHEEP) {
+				entity.setCustomName(ChatColor.GREEN + "양");
 				entity.setCustomNameVisible(true);
 				((LivingEntity) entity).setMaxHealth(99999);
 				((LivingEntity) entity).setHealth(99999);

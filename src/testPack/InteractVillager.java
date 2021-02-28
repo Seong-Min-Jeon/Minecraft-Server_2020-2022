@@ -42,7 +42,7 @@ public class InteractVillager {
 		}
 		
 		return vil0() || vil1() || vil2() || vil3() || vil4() || vil5() || vil6() || vil7() || vil8() || vil9() || vil10() || vil11() || vil12() || vil13() || vil14()
-				|| vil15() || vil16() || vil17() || vil18() || vil19() || vil20() || vil21();
+				|| vil15() || vil16() || vil17() || vil18() || vil19() || vil20() || vil21() || vil22() || vil23();
 	}
 	
 	public boolean vil0() {
@@ -550,6 +550,58 @@ public class InteractVillager {
 				}
 			} catch(Exception e) {
 				player.sendMessage("로미오: 라파누이에.. 구원을!");
+			}
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean vil22() {
+		//시오카나 주민 534 53 -532  530 53 -535
+		if(loc.getX() <= 534 && loc.getZ() <= -532
+				&& loc.getX() >= 530 && loc.getZ() >= -535) {
+			QuestBoard cb = new QuestBoard();
+			try {
+				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===시오카나 섬===")) {
+					int qNum = cb.getNum(player);
+					cb.mq48(player, qNum+1);	
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===새로운 섬===")) {
+					int qNum = cb.getNum(player);
+					cb.mq48_2(player, qNum+1);	
+				} else {
+					player.sendMessage("디아스: 오우! 무슨 일이신가요우?");
+				}
+			} catch(Exception e) {
+				player.sendMessage("디아스: 오우! 무슨 일이신가요우?");
+			}
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean vil23() {
+		//스켈리그 주민 -756 100 -898  -754 100 -900
+		if(loc.getX() <= -754 && loc.getZ() <= -898
+				&& loc.getX() >= -756 && loc.getZ() >= -900) {
+			QuestBoard cb = new QuestBoard();
+			try {
+				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===스켈리그 섬===")) {
+					int qNum = cb.getNum(player);
+					cb.mq48_3(player, qNum+1);	
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===시련을 마친 자===")) {
+					int qNum = cb.getNum(player);
+					cb.mq48_13(player, qNum+1);	
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===검은 수염의 보물1===")) {
+					int qNum = cb.getNum(player);
+					cb.mq48_15(player, qNum+1);	
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===검은 수염의 보물3===")) {
+					int qNum = cb.getNum(player);
+					cb.mq48_17(player, qNum+1);	
+				} else {
+					player.sendMessage("리로이: 나의 강아지 슈가는 어디에 있는 것일까..");
+				}
+			} catch(Exception e) {
+				player.sendMessage("디아스: 나의 강아지 슈가는 어디에 있는 것일까..");
 			}
 			return true;
 		}

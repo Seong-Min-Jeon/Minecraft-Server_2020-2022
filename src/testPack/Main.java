@@ -321,7 +321,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("woolring")) { 
 			
 		} else {
-			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/812236885761851402/aile_texture_pack_18.zip");
+			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/814705716714536960/aile_texture_pack_19.zip");
 		}
 		
 		//Message
@@ -334,7 +334,7 @@ public class Main extends JavaPlugin implements Listener{
 		} else if(player.getDisplayName().equalsIgnoreCase("why9196")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.BLUE + "'최초의 500레벨' 와이.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Akilae3102")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.AQUA + "'하와와 하와와 하와와 하와와' 아킬레.");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.AQUA + "'뇌 속에 지도를 넣은 하와와 하와와 하와와' 아킬레.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Espina_ID")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.BOLD + "'그저 군인' 에스피나.");
 		} else if(player.getDisplayName().equalsIgnoreCase("KangOSung")) {
@@ -565,7 +565,7 @@ public class Main extends JavaPlugin implements Listener{
 			
 		ItemStack master = new ItemStack(Material.DIAMOND_SWORD);
 		ItemMeta masterIm = master.getItemMeta();
-		masterIm.setLocalizedName("100000,100000,100000,100000,0,100000,100000,100000,100000,100000,0");
+		masterIm.setLocalizedName("1000000,1000000,1000000,1000000,0,30000,30000,30000,30000,1000000,0");
 		masterIm.addEnchant(Enchantment.DAMAGE_ALL, 0, true);
 		masterIm.setDisplayName(ChatColor.DARK_RED + "" + ChatColor.MAGIC + "신의 검[범위 축소형]");
 		ArrayList<String> masterLore = new ArrayList();
@@ -3554,6 +3554,7 @@ public class Main extends JavaPlugin implements Listener{
 		CraftingScroll cs = new CraftingScroll();
 		CraftingPotionScroll cps = new CraftingPotionScroll();
 		CraftingFoodScroll cfs = new CraftingFoodScroll();
+		RerollScroll rs = new RerollScroll();
 		
 		try {
 			//마을 스크롤
@@ -3580,6 +3581,8 @@ public class Main extends JavaPlugin implements Listener{
 			cps.openInv(player, itemArg);
 			//음식 제작 스크롤
 			cfs.openInv(player, itemArg);
+			//리롤 스크롤
+			rs.openInv(player, itemArg);
 			//캐릭터 삭제 스크롤
 			new RemoveCharacter(player, itemArg, getDataFolder());
 		} catch(Exception e) {
@@ -6713,6 +6716,43 @@ public class Main extends JavaPlugin implements Listener{
 	    				}	    		
 	    				event.setCancelled(true);
 	    			}
+	    			if(block.getType()==Material.CHEST && block.getX()==-791 && block.getY()==49 && block.getZ()==-561) {
+	    				if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===검은 수염의 보물2===")) {
+	    					if (i != 0) {
+	    						int qNum = qb.getNum(player);
+		    					qb.mq48_16(player, qNum+1);
+							} else {
+								player.sendMessage(ChatColor.RED + "인벤토리에 빈칸이 없습니다.");
+							}
+	    				}	    		
+	    				event.setCancelled(true);
+	    			}
+	    			if(block.getType()==Material.GOLD_BLOCK && block.getX() <= 3731 && block.getZ() <= 2395
+	    					&& block.getX() >= 3716 && block.getZ() >= 2380) {
+	    				world.playSound(player.getLocation(), Sound.BLOCK_BELL_USE, 10.0f, 10.0f);
+	    				world.playSound(player.getLocation(), Sound.BLOCK_BELL_USE, 10.0f, 10.0f);
+	    				world.playSound(player.getLocation(), Sound.BLOCK_BELL_USE, 10.0f, 10.0f);
+	    				world.playSound(player.getLocation(), Sound.BLOCK_BELL_USE, 10.0f, 10.0f);
+	    				world.playSound(player.getLocation(), Sound.BLOCK_BELL_USE, 10.0f, 10.0f);
+	    				world.playSound(player.getLocation(), Sound.BLOCK_BELL_USE, 10.0f, 10.0f);
+	    				world.playSound(player.getLocation(), Sound.BLOCK_BELL_USE, 10.0f, 10.0f);
+	    				world.playSound(player.getLocation(), Sound.BLOCK_BELL_RESONATE, 10.0f, 10.0f);
+	    				world.playSound(player.getLocation(), Sound.BLOCK_BELL_RESONATE, 10.0f, 10.0f);
+	    				world.playSound(player.getLocation(), Sound.BLOCK_BELL_RESONATE, 10.0f, 10.0f);
+	    				world.playSound(player.getLocation(), Sound.BLOCK_BELL_RESONATE, 10.0f, 10.0f);
+	    				world.playSound(player.getLocation(), Sound.BLOCK_BELL_RESONATE, 10.0f, 10.0f);
+	    				world.playSound(player.getLocation(), Sound.BLOCK_BELL_RESONATE, 10.0f, 10.0f);
+	    				world.playSound(player.getLocation(), Sound.BLOCK_BELL_RESONATE, 10.0f, 10.0f);
+	    				if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===마지막 종===")) {
+	    					if (i != 0) {
+	    						int qNum = qb.getNum(player);
+		    					qb.mq48_18(player, qNum+1);
+							} else {
+								player.sendMessage(ChatColor.RED + "인벤토리에 빈칸이 없습니다.");
+							}
+	    				}	
+	    				event.setCancelled(true);
+	    			}
 	    			if(block.getType()==Material.STONE_BUTTON && block.getX()==-1100 && block.getZ()==1455) {
 	    				boolean bool = true;
 	    				for (Player allPlayer : Bukkit.getOnlinePlayers()) {
@@ -8253,7 +8293,7 @@ public class Main extends JavaPlugin implements Listener{
 		} else if(player.getDisplayName().equalsIgnoreCase("Akilae3102")) {
 			event.setQuitMessage(ChatColor.AQUA + "'철권의 신이 될' 아킬레가 세상을 떠났습니다.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Espina_ID")) {
-			event.setQuitMessage(ChatColor.BOLD + "'훈련병' 에스피나의 시간이 얼마 남지 않았습니다.");
+			event.setQuitMessage(ChatColor.BOLD + "'탈영병' 에스피나의 시간이 얼마 남지 않았습니다.");
 		} else if(player.getDisplayName().equalsIgnoreCase("KangOSung")) {
 			event.setQuitMessage(ChatColor.BOLD + "'일이 생긴' 캉님이 급히 떠났습니다.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Illusion__")) {

@@ -6568,6 +6568,7 @@ public class MobLoot {
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 2640000);
+		
 		int tmp2 = rnd.nextInt(40);
 		if(tmp2 == 0) {
 			Location loc = player.getLocation().add(0, 1, 0);
@@ -6601,6 +6602,12 @@ public class MobLoot {
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 4500000);
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===사라진 닻===")) {
+			int qNum = cb.getNum(player);
+			cb.mq48_1(player, qNum + 1);
+		}
 	}
 	
 	// 떠도는 포보르
@@ -6677,6 +6684,12 @@ public class MobLoot {
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 2720000);
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===리로이의 시련1===")) {
+			int qNum = cb.getNum(player);
+			cb.mq48_4(player, qNum + 1);
+		}
 	}
 	
 	// 야생 토끼
@@ -6741,6 +6754,12 @@ public class MobLoot {
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
 			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+		}
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===리로이의 시련2===")) {
+			int qNum = cb.getNum(player);
+			cb.mq48_5(player, qNum + 1);
 		}
 	}
 	
@@ -6830,6 +6849,12 @@ public class MobLoot {
 			Location loc = player.getLocation().add(0, 1, 0);
 			loc.getWorld().spawnEntity(loc, EntityType.HUSK);
 		}
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===리로이의 시련3===")) {
+			int qNum = cb.getNum(player);
+			cb.mq48_6(player, qNum + 1);
+		}
 	}
 
 	// 솟
@@ -6906,6 +6931,12 @@ public class MobLoot {
 			player.getInventory().addItem(var5);
 			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===리로이의 시련4===")) {
+			int qNum = cb.getNum(player);
+			cb.mq48_7(player, qNum + 1);
+		}
 	}
 	
 	// 마을을 보는 마녀
@@ -6971,6 +7002,12 @@ public class MobLoot {
 			player.getInventory().addItem(var5);
 			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===리로이의 시련5===")) {
+			int qNum = cb.getNum(player);
+			cb.mq48_8(player, qNum + 1);
+		}
 	}
 	
 	// 땅벌레
@@ -7004,6 +7041,12 @@ public class MobLoot {
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 3030000);
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===리로이의 시련6===")) {
+			int qNum = cb.getNum(player);
+			cb.mq48_9(player, qNum + 1);
+		}
 	}
 	
 	// 요새를 지키는 곰
@@ -7026,6 +7069,12 @@ public class MobLoot {
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 3080000);
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===리로이의 시련7===")) {
+			int qNum = cb.getNum(player);
+			cb.mq48_10(player, qNum + 1);
+		}
 	}
 	
 	// 모히칸 좀비
@@ -7079,6 +7128,12 @@ public class MobLoot {
 		} else if(tmp == 4) {
 			player.getInventory().addItem(var5);
 			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+		}
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===리로이의 시련8===")) {
+			int qNum = cb.getNum(player);
+			cb.mq48_11(player, qNum + 1);
 		}
 	}
 	
@@ -7188,6 +7243,12 @@ public class MobLoot {
 			player.getInventory().addItem(var5);
 			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===리로이의 시련9===")) {
+			int qNum = cb.getNum(player);
+			cb.mq48_12(player, qNum + 1);
+		}
 	}
 	
 	// 검은 수염단 장교
@@ -7235,6 +7296,12 @@ public class MobLoot {
 			ItemStack weapon = chest.getInventory().getItem(16);
 			player.getInventory().addItem(weapon);
 			sendMessage(player, ChatColor.LIGHT_PURPLE + "폭주의 근원" + ChatColor.WHITE + "를 획득했다.");
+		}
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===검은 수염===")) {
+			int qNum = cb.getNum(player);
+			cb.mq48_14(player, qNum + 1);
 		}
 	}
 	

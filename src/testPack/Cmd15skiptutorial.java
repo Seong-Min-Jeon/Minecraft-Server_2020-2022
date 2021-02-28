@@ -18,9 +18,9 @@ public class Cmd15skiptutorial implements CommandExecutor {
 			World world = player.getWorld();
 			Location loc = player.getLocation();
 			
-			// 튜토존 3674 85 3735  3775 30 3654
-			if(loc.getX() <= 3775 && loc.getY() <= 85 && loc.getZ() <= 3735 
-					&& loc.getX() >= 3674 && loc.getY() >= 30 && loc.getZ() >= 3654) {
+			// 튜토존 3838 255 3965  4066 0 3798
+			if(loc.getX() <= 4066 && loc.getY() <= 255 && loc.getZ() <= 3965 
+					&& loc.getX() >= 3838 && loc.getY() >= 0 && loc.getZ() >= 3798) {
 				Location wargunil = new Location(world,-1844,70,3012);
 				player.teleport(wargunil);
 				if(player.getLevel() == 0) {

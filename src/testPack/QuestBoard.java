@@ -3806,7 +3806,7 @@ public class QuestBoard {
 			es.giveExp(player, 30000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			msg.msg(player, "디아스: 오우! 당신이 나의 의뢰를 해결해줄 영웅님!%디아스: 어쩌다 이곳에 갇혀버렸어요우...%디아스: 그런데 이걸 어쩐다.%디아스: §e닻§f을 잃어버린거 아니겠어요우?%"
-					+ "디아스: 나갈 수 있는 방법이 사라졌다요. 완전!%디아스: 닻은 어떤 §e도둑§f이 가져갔다.%디아스: 닻을 찾아와주면 내가 항해를 도와주겠어요우.%"
+					+ "디아스: 나갈 수 있는 방법이 사라졌다요. 완전!%디아스: 닻은 어떤 §e도둑§f이 가져갔다.%디아스: 도둑은 아마 섬에 숨어있다요!%디아스: 닻을 찾아와주면 내가 항해를 도와주겠어요우.%"
 					+ "디아스: 우리 일족만 아는 §e숨겨진 섬§f이다요우.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq48_1(player, 0);
@@ -4136,7 +4136,7 @@ public class QuestBoard {
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
 		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===검은 수염===");
 		score.setScore(2);
-		Score score2 = obj.getScore("검은 수염 사냥");
+		Score score2 = obj.getScore("폭주한 검은 수염 사냥");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);
@@ -4172,6 +4172,12 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 30000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			Location chestLoc = new Location(player.getWorld(), -1833, 92, 3036);
+			Block block = chestLoc.getBlock();
+			Chest chest = (Chest) block.getState();
+			ItemStack weapon = chest.getInventory().getItem(17);
+			player.getInventory().addItem(weapon);
+			player.sendMessage(ChatColor.DARK_RED + "텅 빈 심장" + ChatColor.WHITE + "를 획득했다.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq48_17(player, 0);
 			return;
