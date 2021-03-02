@@ -214,6 +214,28 @@ public class SpecialEffect {
 		return 0;
 	}
 	
+	public double w2(Player player) {
+		try {
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "검은 태양+")) {
+				return 1;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+	public double w3(Player player) {
+		try {
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "검은 달+")) {
+				return 40;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
 	public int h1(Player player) {

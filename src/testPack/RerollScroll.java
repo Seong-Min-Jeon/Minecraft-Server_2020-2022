@@ -498,7 +498,14 @@ public class RerollScroll {
 								list.add(ChatColor.BLUE + "반격: " + lvl);
 							}
 							newItemMeta.setLore(list);
-							item.setItemMeta(newItemMeta);					
+							item.setItemMeta(newItemMeta);		
+							
+							try {
+								System.out.println(player.getDisplayName() + "이/가 재분배를 통해" + newItemMeta.getDisplayName() + "(" + localName + ")" + ChatColor.WHITE + "을/를 획득하였다.");
+							} catch(Exception e) {
+								
+							}
+							
 						} 
 						
 					}

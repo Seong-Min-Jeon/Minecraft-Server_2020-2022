@@ -621,12 +621,12 @@ public class QuestBoard {
 		//상점
 		if(num>=30) {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
-			ItemStack item = new ItemStack(Material.RABBIT_HIDE, 20);
+			ItemStack item = new ItemStack(Material.RABBIT_HIDE, 15);
 			ItemMeta im = item.getItemMeta();
 			im.setDisplayName(ChatColor.AQUA + "에메랄드 결정");
 			item.setItemMeta(im);
 			player.getInventory().addItem(item);
-			player.sendMessage(ChatColor.AQUA + "에메랄드 결정" + ChatColor.WHITE + " 20개를 획득했다.");
+			player.sendMessage(ChatColor.AQUA + "에메랄드 결정" + ChatColor.WHITE + " 15개를 획득했다.");
 			es.giveExp(player, 7500000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			return;
@@ -692,6 +692,108 @@ public class QuestBoard {
 		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===움직이지 않는 자===");
 		score.setScore(2);
 		Score score2 = obj.getScore("유혹하는 나무 100마리 사냥");
+		score2.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/100)");
+		score4.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void q27(Player player, int num) {
+		//상점
+		if(num>=30) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 7000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.YELLOW + "A급 퀘스트");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===백일몽 토끼===");
+		score.setScore(2);
+		Score score2 = obj.getScore("야생 토끼 30마리 사냥");
+		score2.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/30)");
+		score4.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void q28(Player player, int num) {
+		//상점
+		if(num>=3) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			ItemStack item = new ItemStack(Material.RABBIT_HIDE, 20);
+			ItemMeta im = item.getItemMeta();
+			im.setDisplayName(ChatColor.AQUA + "에메랄드 결정");
+			item.setItemMeta(im);
+			player.getInventory().addItem(item);
+			player.sendMessage(ChatColor.AQUA + "에메랄드 결정" + ChatColor.WHITE + " 20개를 획득했다.");
+			es.giveExp(player, 8000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.LIGHT_PURPLE + "S급 퀘스트");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===위 러브 팬더===");
+		score.setScore(2);
+		Score score2 = obj.getScore("솟 3마리 사냥");
+		score2.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/3)");
+		score4.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void q29(Player player, int num) {
+		//상점
+		if(num>=100) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			Location chestLoc = new Location(player.getWorld(), -1833, 92, 3036);
+			Block block = chestLoc.getBlock();
+			Chest chest = (Chest) block.getState();
+			ItemStack weapon = chest.getInventory().getItem(18);
+			player.getInventory().addItem(weapon);
+			player.sendMessage(ChatColor.AQUA + "초록 괴물의 헤드" + ChatColor.WHITE + "를 획득했다.");
+			es.giveExp(player, 13000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.AQUA + "SS급 퀘스트");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===초록의 그 녀석===");
+		score.setScore(2);
+		Score score2 = obj.getScore("초록 괴물 100마리 사냥");
+		score2.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/100)");
+		score4.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void q30(Player player, int num) {
+		//상점
+		if(num>=100) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			Location chestLoc = new Location(player.getWorld(), -1833, 92, 3036);
+			Block block = chestLoc.getBlock();
+			Chest chest = (Chest) block.getState();
+			ItemStack weapon = chest.getInventory().getItem(19);
+			player.getInventory().addItem(weapon);
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "고양이의 털뭉치" + ChatColor.WHITE + "를 획득했다.");
+			es.giveExp(player, 13000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.LIGHT_PURPLE + "S급 퀘스트");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===귀여운 고양이===");
+		score.setScore(2);
+		Score score2 = obj.getScore("검은 수염의 고양이 100마리 사냥");
 		score2.setScore(1);
 		Score score4 = obj.getScore("(" + num + "/100)");
 		score4.setScore(0);

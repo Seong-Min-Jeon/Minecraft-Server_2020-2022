@@ -46,6 +46,10 @@ public class QuestScroll {
 				q24(player, itemArg, world);
 				q25(player, itemArg, world);
 				q26(player, itemArg, world);
+				q27(player, itemArg, world);
+				q28(player, itemArg, world);
+				q29(player, itemArg, world);
+				q30(player, itemArg, world);
 				eq1(player, itemArg, world);
 				eq2(player, itemArg, world);
 				eq3(player, itemArg, world);
@@ -317,6 +321,43 @@ public class QuestScroll {
 			msg.msg(player, "§7유혹하는 나무는 거대한 고목의 가지였다.%§7고목은 포보르에 의해 사람 모양으로 나누어졌다.%§7나누어진 나무들은 포보르를 위한 전사가 되었다.%§7그들은 검은 흐름과 심장 속 보석의 힘으로 강력한 힘을 가지게 되었다.");
 			QuestBoard qb = new QuestBoard();
 			qb.q26(player, 0);
+		}	
+	}
+	
+	public void q27(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "퀘스트: 백일몽 토끼")) {
+			msg.msg(player, "§7스켈리그 섬에는 아주 특이한 생물이 있다.%§7그것은 토끼이다.%§7하지만 그냥 토끼가 아니다.%§7그들은 곰과 함께 이 섬 일부를 차지하고 있는 무법자이다.%"
+					+ "§7일반적인 토끼와 다른 그들은 매우 강력한 이빨을 가지고 있다.%§7토끼들을 혼내주어 주민들을 안전하게 해주자.");
+			QuestBoard qb = new QuestBoard();
+			qb.q27(player, 0);
+		}	
+	}
+	
+	public void q28(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "퀘스트: 위 러브 팬더")) {
+			msg.msg(player, "§7모두들 팬더를 좋아한다.%§7팬더를 키우는 사육사들도 팬더를 좋아한다.%§7하지만 팬더를 싫어하는 한 남자가 있었으니.%§7그의 이름은 솟이다.%"
+					+ "§7문제는 팬더를 싫어하지만, 팬더를 사냥하는 우리를 공격한다는 것이다.%§7팬더를 괴롭히는 것은 자신뿐이라나..");
+			QuestBoard qb = new QuestBoard();
+			qb.q28(player, 0);
+		}	
+	}
+	
+	public void q29(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "퀘스트: 초록의 그 녀석")) {
+			msg.msg(player, "§7초록색의 폭발하는 그 몬스터는 예로부터 사람들을 공포에 떨게 하였다.%§7불행하게도 그 존재는 스켈리그 섬에도 존재했다.%§7어쩔 수 없다.%"
+					+ "§7그것이 운명이라면 받아드려야지.%§7이 퀘스트를 완료하는 자에게는 마을 사람들이 큰 보상을 준다고 한다.");
+			QuestBoard qb = new QuestBoard();
+			qb.q29(player, 0);
+		}	
+	}
+	
+	public void q30(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "퀘스트: 귀여운 고양이")) {
+			msg.msg(player, "§7고양이는 에일의 사람들이 모두 좋아하는 동물이다.%§7주로 카이만과 미푀르유 근처에서 발견되며, 가끔은 이상한 곳에 있기도 한다.%"
+					+ "§7그런 자유분방한 고양이를 길들인 남자가 있었으니.%§7그의 이름은 검은 수염이었다.%§7검은 수염이 폭주하여 이성을 잃은 뒤로도 그의 고양이는 그와 함께했다.%"
+					+ "§7고양이를 혼내주어 도망가게 만들자.");
+			QuestBoard qb = new QuestBoard();
+			qb.q30(player, 0);
 		}	
 	}
 	

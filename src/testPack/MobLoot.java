@@ -6701,6 +6701,12 @@ public class MobLoot {
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 2755000);
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===백일몽 토끼===")) {
+			int qNum = cb.getNum(player);
+			cb.q27(player, qNum + 1);
+		}
 	}
 	
 	// 도살자
@@ -6866,6 +6872,12 @@ public class MobLoot {
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 4500000);
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===위 러브 팬더===")) {
+			int qNum = cb.getNum(player);
+			cb.q28(player, qNum + 1);
+		}
 	}
 	
 	// 마을 앞 슬라임
@@ -7046,7 +7058,11 @@ public class MobLoot {
 		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===리로이의 시련6===")) {
 			int qNum = cb.getNum(player);
 			cb.mq48_9(player, qNum + 1);
+		} else if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===초록의 그 녀석===")) {
+			int qNum = cb.getNum(player);
+			cb.q29(player, qNum + 1);
 		}
+		
 	}
 	
 	// 요새를 지키는 곰
@@ -7281,6 +7297,12 @@ public class MobLoot {
 		if(tmp2 == 0) {
 			Location loc = player.getLocation().add(0, 1, 0);
 			loc.getWorld().spawnEntity(loc, EntityType.ZOMBIE);
+		}
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===귀여운 고양이===")) {
+			int qNum = cb.getNum(player);
+			cb.q30(player, qNum + 1);
 		}
 	}
 	

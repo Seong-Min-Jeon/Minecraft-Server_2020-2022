@@ -29,6 +29,8 @@ public class Transcendence {
 		t10(player, is1, is2, inv);
 		t11(player, is1, is2, inv);
 		t12(player, is1, is2, inv);
+		t13(player, is1, is2, inv);
+		t14(player, is1, is2, inv);
 	}
 	
 	public void t1(Player player, ItemStack is1, ItemStack is2, Inventory inv) {
@@ -633,12 +635,70 @@ public class Transcendence {
 				ItemStack weapon = new ItemStack(Material.MOSSY_COBBLESTONE_WALL);
 				ItemMeta weaponIm = weapon.getItemMeta();
 				weaponIm.setLocalizedName("3000,0,0,0,0,1500,0,0,0,1500,500");
-				weaponIm.setDisplayName(ChatColor.AQUA + "검은 달");
+				weaponIm.setDisplayName(ChatColor.AQUA + "검은 태양");
 				ArrayList<String> weaponLore = new ArrayList();
 				weaponLore.add(ChatColor.GRAY + "레벨 제한: 500");
 				weaponLore.add(ChatColor.GRAY + " ");
 				weaponLore.add(ChatColor.GRAY + "어둠의 기운과 태양의 기운이 만나 초월된 용사의 검");
 				weaponLore.add(ChatColor.GRAY + "태양의 강렬한 힘을 잃고 어둠의 힘만 남게 되었다.");
+				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+				weaponIm.setUnbreakable(true);
+				weaponIm.setLore(weaponLore);
+				weapon.setItemMeta(weaponIm);
+				inv.setItem(0, weapon);
+				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+			}
+		}
+	}
+	
+	public void t13(Player player, ItemStack is1, ItemStack is2, Inventory inv) {
+		if(is2.getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "텅 빈 심장")) {
+			if(is1.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "검은 달")) {
+				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
+				ItemStack weapon = new ItemStack(Material.MOSSY_COBBLESTONE_WALL);
+				ItemMeta weaponIm = weapon.getItemMeta();
+				weaponIm.setLocalizedName("3000,500,500,500,1000,3000,1000,1000,1000,2000,600");
+				weaponIm.setDisplayName(ChatColor.AQUA + "검은 달+");
+				ArrayList<String> weaponLore = new ArrayList();
+				weaponLore.add(ChatColor.GRAY + "레벨 제한: 600");
+				weaponLore.add(ChatColor.GRAY + " ");
+				weaponLore.add(ChatColor.GRAY + "어둠의 기운과 달의 기운이 만나 초월된 용사의 검");
+				weaponLore.add(ChatColor.GRAY + "달의 찬란한 힘을 잃고 어둠의 힘만 남게 되었다.");
+				weaponLore.add(ChatColor.GRAY + "검은 수염이 숨겨둔 보물을 사용해 잠재력이 깨어났다.");
+				weaponLore.add(ChatColor.GRAY + " ");
+				weaponLore.add(ChatColor.BLUE + "-근접 공격 시 40% 확률로 마나 획득");
+				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+				weaponIm.setUnbreakable(true);
+				weaponIm.setLore(weaponLore);
+				weapon.setItemMeta(weaponIm);
+				inv.setItem(0, weapon);
+				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+			}
+		}
+	}
+	
+	public void t14(Player player, ItemStack is1, ItemStack is2, Inventory inv) {
+		if(is2.getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "텅 빈 심장")) {
+			if(is1.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "검은 태양")) {
+				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
+				ItemStack weapon = new ItemStack(Material.MOSSY_COBBLESTONE_WALL);
+				ItemMeta weaponIm = weapon.getItemMeta();
+				weaponIm.setLocalizedName("5000,1500,1500,1500,1500,2000,0,0,0,1000,600");
+				weaponIm.setDisplayName(ChatColor.AQUA + "검은 태양+");
+				ArrayList<String> weaponLore = new ArrayList();
+				weaponLore.add(ChatColor.GRAY + "레벨 제한: 600");
+				weaponLore.add(ChatColor.GRAY + " ");
+				weaponLore.add(ChatColor.GRAY + "어둠의 기운과 태양의 기운이 만나 초월된 용사의 검");
+				weaponLore.add(ChatColor.GRAY + "태양의 강렬한 힘을 잃고 어둠의 힘만 남게 되었다.");
+				weaponLore.add(ChatColor.GRAY + "검은 수염이 숨겨둔 보물을 사용해 잠재력이 깨어났다.");
+				weaponLore.add(ChatColor.GRAY + " ");
+				weaponLore.add(ChatColor.BLUE + "-흡혈 1%");
 				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);

@@ -5049,6 +5049,7 @@ public class Main extends JavaPlugin implements Listener{
 				num += new SpecialEffect().a1(player);
 				num += new SpecialEffect().a9(player);
 				num += new SpecialEffect().a15(player);
+				num += new SpecialEffect().w3(player);
 				
 				if(rnd.nextInt(100) < num) {
 					ItemStack mana = new ItemStack(Material.HEART_OF_THE_SEA);
@@ -5078,6 +5079,7 @@ public class Main extends JavaPlugin implements Listener{
 				addHealthPercent += new SpecialEffect().w1(player);
 				addHealthPercent += new SpecialEffect().s3(player);
 				addHealthPercent += new SpecialEffect().s5(player);
+				addHealthPercent += new SpecialEffect().w2(player);
 				
 				if(addHealthPercent > 0) {
 					int addHealth = (int) (event.getDamage() * addHealthPercent / 100); 
@@ -5140,6 +5142,7 @@ public class Main extends JavaPlugin implements Listener{
 				addHealthPercent += new SpecialEffect().w1(player);
 				addHealthPercent += new SpecialEffect().s3(player);
 				addHealthPercent += new SpecialEffect().s5(player);
+				addHealthPercent += new SpecialEffect().w2(player);
 				
 				if(addHealthPercent > 0) {
 					int addHealth = (int) (event.getDamage() * addHealthPercent / 100); 
@@ -5186,6 +5189,7 @@ public class Main extends JavaPlugin implements Listener{
 				addHealthPercent += new SpecialEffect().w1(player);
 				addHealthPercent += new SpecialEffect().s3(player);
 				addHealthPercent += new SpecialEffect().s5(player);
+				addHealthPercent += new SpecialEffect().w2(player);
 				
 				if(addHealthPercent > 0) {
 					int addHealth = (int) (event.getDamage() * addHealthPercent / 100); 

@@ -10540,13 +10540,13 @@ public class SpawnMob {
 				entity.setMaxHealth(408000);
 				entity.setHealth(408000);
 				EntityEquipment weapon = entity.getEquipment();
-				ItemStack weaponItem = new ItemStack(Material.MUSIC_DISC_CHIRP);
+				ItemStack weaponItem = new ItemStack(Material.BOW);
 				ItemMeta im = weaponItem.getItemMeta();
 				im.setLocalizedName("1550");
 				weaponItem.setItemMeta(im);
 				weapon.setItemInMainHand(weaponItem);
 				EntityEquipment mobBow = entity.getEquipment();
-				ItemStack mobBowItem = new ItemStack(Material.AIR);
+				ItemStack mobBowItem = new ItemStack(Material.MUSIC_DISC_CHIRP);
 				mobBow.setItemInOffHand(mobBowItem);
 				EntityEquipment head = entity.getEquipment();
 				ItemStack headItem = chest.getInventory().getItem(20);
@@ -10567,6 +10567,9 @@ public class SpawnMob {
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(416000);
 				entity.setHealth(416000);
+				EntityEquipment head = entity.getEquipment();
+				ItemStack headItem = new ItemStack(Material.AIR);
+				head.setHelmet(headItem);
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 1575));
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;

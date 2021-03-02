@@ -466,6 +466,22 @@ public class SaveAll {
 						int number = qb.getNum(player);
 						fw.write("q26\n");
 						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===백일몽 토끼===")) {
+						int number = qb.getNum(player);
+						fw.write("q27\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===위 러브 팬더===")) {
+						int number = qb.getNum(player);
+						fw.write("q28\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===초록의 그 녀석===")) {
+						int number = qb.getNum(player);
+						fw.write("q29\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===귀여운 고양이===")) {
+						int number = qb.getNum(player);
+						fw.write("q30\n");
+						fw.write(Integer.toString(number));
 					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===설원의 가희1===")) {
 						int number = qb.getNum(player);
 						fw.write("eq1\n");
