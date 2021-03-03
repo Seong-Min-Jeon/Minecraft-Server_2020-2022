@@ -1,9 +1,14 @@
 package testPack;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import org.bukkit.ChatColor;
+import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.block.Block;
+import org.bukkit.block.Chest;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Guardian;
@@ -11,12 +16,22 @@ import org.bukkit.entity.IronGolem;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Mob;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 public class MobDeath {
 
 	Player player = null;
+	Cmd18ItemToggle it = new Cmd18ItemToggle();
+	Random rnd = new Random();
+	
+	// 메세지
+	public void sendMessage(Player player, String msg) {
+		if (it.isOn(player)) {
+			player.sendMessage(msg);
+		}
+	}
 
 	public MobDeath(Player playerArg, Entity mobArg, double damageArg) {
 		Entity mob = mobArg;
@@ -1280,6 +1295,66 @@ public class MobDeath {
 			}
 			
 //================================================================================================================================
+			try {
+
+				Location chestLoc = new Location(lootPlayer.getWorld(), -1843, 92, 3043);
+
+				int mobLvl = 0;
+				int dist = 0;
+				
+				try {
+					mobLvl = Integer.parseInt(num);
+					dist = lootPlayer.getLevel() - mobLvl;
+				} catch(Exception e) {
+					mobLvl = lootPlayer.getLevel();
+					dist = 0;
+				}
+				
+				int per = rnd.nextInt(1000000);
+				
+				if(per < (10000 - 10000*2*dist/100)) {
+					Block block = chestLoc.getBlock();
+					Chest chest = (Chest) block.getState();
+					ItemStack weapon = chest.getInventory().getItem(0).clone();
+					ItemStack item = setStat(0, weapon, mobLvl);
+					lootPlayer.getInventory().addItem(item);
+					sendMessage(lootPlayer, ChatColor.YELLOW + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
+				} else if(per < (15000 - 15000*2*dist/100)) {
+					Block block = chestLoc.getBlock();
+					Chest chest = (Chest) block.getState();
+					ItemStack weapon = chest.getInventory().getItem(1).clone();
+					ItemStack item = setStat(1, weapon, mobLvl);
+					lootPlayer.getInventory().addItem(item);
+					sendMessage(lootPlayer, ChatColor.LIGHT_PURPLE + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
+				} else if(per < (17000 - 17000*2*dist/100)) {
+					Block block = chestLoc.getBlock();
+					Chest chest = (Chest) block.getState();
+					ItemStack weapon = chest.getInventory().getItem(2).clone();
+					ItemStack item = setStat(2, weapon, mobLvl);
+					lootPlayer.getInventory().addItem(item);
+					sendMessage(lootPlayer, ChatColor.AQUA + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
+				} else if(per < (18000 - 18000*2*dist/100)) {
+					Block block = chestLoc.getBlock();
+					Chest chest = (Chest) block.getState();
+					ItemStack weapon = chest.getInventory().getItem(3).clone();
+					ItemStack item = setStat(3, weapon, mobLvl);
+					lootPlayer.getInventory().addItem(item);
+					sendMessage(lootPlayer, ChatColor.DARK_RED + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
+				} else if(per < (18010 - 18010*2*dist/100)) {
+					Block block = chestLoc.getBlock();
+					Chest chest = (Chest) block.getState();
+					ItemStack weapon = chest.getInventory().getItem(4).clone();
+					ItemStack item = setStat(4, weapon, mobLvl);
+					lootPlayer.getInventory().addItem(item);
+					sendMessage(lootPlayer, ChatColor.DARK_PURPLE + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+				
+				
+			} catch(Exception e) {
+				
+			}
+			
+//================================================================================================================================
 
 			try {
 				mob.getVehicle().remove();
@@ -1380,5 +1455,38 @@ public class MobDeath {
 			
 		}
 	}
+	
+	public ItemStack setStat(int num, ItemStack item, int lvl) {
+		ItemMeta im = item.getItemMeta();
+		if(num == 0) {
+			im.setDisplayName(ChatColor.YELLOW + "의문의 상자");
+		} else if(num == 1) {
+			im.setDisplayName(ChatColor.LIGHT_PURPLE + "의문의 상자");
+		} else if(num == 2) {
+			im.setDisplayName(ChatColor.AQUA + "의문의 상자");
+		} else if(num == 3) {
+			im.setDisplayName(ChatColor.DARK_RED + "의문의 상자");
+		} else if(num == 4) {
+			im.setDisplayName(ChatColor.DARK_PURPLE + "의문의 상자");
+		}
+		
+		int minLvl = ((int)(lvl/10)) * 10;
+		int maxLvl = minLvl + 10;
+		
+		ArrayList<String> lore = new ArrayList();
+		lore.add(ChatColor.GRAY + "레벨 범위: " + ChatColor.WHITE + minLvl + "-" + maxLvl);
+		lore.add(ChatColor.GRAY + " ");
+		lore.add(ChatColor.GRAY + "신비한 힘으로 굳게 닫힌 상자");
+		lore.add(ChatColor.GRAY + "요정의 테이블에서 열 수 있을 것 같다.");
+		im.setLore(lore);
+		
+		im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		
+		item.setItemMeta(im);
+		return item;
+	}
+	
 
 }

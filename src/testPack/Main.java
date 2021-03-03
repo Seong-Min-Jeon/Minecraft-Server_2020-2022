@@ -2645,7 +2645,7 @@ public class Main extends JavaPlugin implements Listener{
 			Location wargunil = new Location(world,-1844,70,3012);
 			Location forgan = new Location(world,-1573,53,2458);
 			Location tiru = new Location(world, -672, 46, 1942);
-			Location tutoZone = new Location(world,3697,43,3679);
+			Location tutoZone = new Location(world,3886,165,3826);
 			Location seedMine = new Location(world,-1159,42,1729);
 			Location miyu = new Location(world,-1143,181,1461);
 			Location kaiman = new Location(world,-478,55,1302);
@@ -2693,9 +2693,9 @@ public class Main extends JavaPlugin implements Listener{
 				event.setRespawnLocation(seedMine);
 				return;
 			}
-			//타락한 요정 왕국 3658 115 3591  3823 32 3287
-			if(loc.getX() <= 3823 && loc.getY() <= 115 && loc.getZ() <= 3591 
-					&& loc.getX() >= 3658 && loc.getY() >= 10 && loc.getZ() >= 3287) {
+			//타락한 요정 왕국 3658 255 3591  3823 0 3287
+			if(loc.getX() <= 3823 && loc.getY() <= 255 && loc.getZ() <= 3591 
+					&& loc.getX() >= 3658 && loc.getY() >= 0 && loc.getZ() >= 3287) {
 				event.setRespawnLocation(seedMine);
 				return;
 			}
@@ -6894,9 +6894,6 @@ public class Main extends JavaPlugin implements Listener{
 	    			if(block.getType() == Material.JUKEBOX && event.getPlayer().isOp() == false) {
 	    				event.setCancelled(true);
 	    			}
-	    			if(block.getType() == Material.ENCHANTING_TABLE && event.getPlayer().isOp() == false) {
-	    				event.setCancelled(true);
-	    			}
 	    			if(block.getType() == Material.ANVIL && event.getPlayer().isOp() == false) {
 	    				event.setCancelled(true);
 	    			}
@@ -7147,6 +7144,12 @@ public class Main extends JavaPlugin implements Listener{
 	    				event.setCancelled(true);
 	    			}
 	    			if(block.getType() == Material.ARMOR_STAND && event.getPlayer().isOp() == false) {
+	    				event.setCancelled(true);
+	    			}
+	    			
+	    			if(block.getType() == Material.ENCHANTING_TABLE) {
+	    				MysteryChestTableOpen mcto = new MysteryChestTableOpen();
+	    				mcto.openInv(player);
 	    				event.setCancelled(true);
 	    			}
 	    			
@@ -8192,6 +8195,13 @@ public class Main extends JavaPlugin implements Listener{
 		        		event.setCancelled(true);
 		        		return;
 		        	}
+		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "상자 열기")) {
+		        		Inventory inv = event.getInventory();
+		        		MysteryChestOpen mco = new MysteryChestOpen();
+		        		mco.make(player, inv);
+		        		event.setCancelled(true);
+		        		return;
+		        	}
 		            event.setCancelled(true);
 		            return;
 		        }
@@ -8748,12 +8758,15 @@ public class Main extends JavaPlugin implements Listener{
 			Inventory inv = event.getInventory();
 			Player player = (Player) event.getPlayer();
 			
+			// 강화
 			try {
 				if(inv.getItem(7).getType() == Material.SLIME_BALL) {
 					if(inv.getItem(8).getType() == Material.SHULKER_SHELL) {
-						if(inv.getSize() == 9) {
-							try {player.getInventory().addItem(inv.getItem(0));} catch(Exception e) {}
-							try {player.getInventory().addItem(inv.getItem(1));} catch(Exception e) {}
+						if(inv.getItem(2).getType() == Material.LIGHT_GRAY_STAINED_GLASS_PANE) {
+							if(inv.getSize() == 9) {
+								try {player.getInventory().addItem(inv.getItem(0));} catch(Exception e) {}
+								try {player.getInventory().addItem(inv.getItem(1));} catch(Exception e) {}
+							}
 						}
 					}
 				}
@@ -8761,6 +8774,22 @@ public class Main extends JavaPlugin implements Listener{
 				
 			}
 			
+			// 의문의 상자 열기
+			try {
+				if(inv.getItem(7).getType() == Material.SLIME_BALL) {
+					if(inv.getItem(8).getType() == Material.SHULKER_SHELL) {
+						if((inv.getItem(2).getType() != Material.LIGHT_GRAY_STAINED_GLASS_PANE) || inv.getItem(2) == null) {
+							if(inv.getSize() == 9) {
+								player.sendMessage(ChatColor.RED + "상자를 여는 도중 실수로 망가져버렸다.");
+							}
+						}
+					}
+				}
+			} catch(Exception e) {
+				
+			}
+			
+			// 장비 제작
 			try {
 				if(inv.getItem(43).getType() == Material.SLIME_BALL) {
 					if(inv.getItem(44).getType() == Material.SHULKER_SHELL) {
@@ -8799,6 +8828,7 @@ public class Main extends JavaPlugin implements Listener{
 				
 			}
 			
+			// 음식, 포션 제작
 			try {
 				if(inv.getItem(25).getType() == Material.SLIME_BALL) {
 					if(inv.getItem(26).getType() == Material.SHULKER_SHELL) {
