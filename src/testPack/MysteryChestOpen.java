@@ -102,7 +102,9 @@ public class MysteryChestOpen {
 							}
 							if(item.getType() == Material.PLAYER_HEAD) {
 								if(item.getAmount() == 1) {
-									item.setType(Material.HEART_OF_THE_SEA);
+									if(item.getItemMeta().getDisplayName().substring(2).equals("의문의 상자")) {
+										item.setType(Material.HEART_OF_THE_SEA);
+									}
 								}
 							}
 						}
@@ -523,15 +525,15 @@ public class MysteryChestOpen {
 		int equipType = rnd.nextInt(6);
 		
 		if(equipType == 0) {
-			System.out.println(player.getDisplayName() + "이/가 헬멧" + "(" + localName + ")" + ChatColor.WHITE + "을/를 획득하였다.(상자)");
+			System.out.println(player.getDisplayName() + "이/가" + grade + " 헬멧" + "(" + localName + ")" + ChatColor.WHITE + "을/를 획득하였다.(상자)");
 		} else if(equipType == 1) {
-			System.out.println(player.getDisplayName() + "이/가 갑옷" + "(" + localName + ")" + ChatColor.WHITE + "을/를 획득하였다.(상자)");
+			System.out.println(player.getDisplayName() + "이/가" + grade + " 갑옷" + "(" + localName + ")" + ChatColor.WHITE + "을/를 획득하였다.(상자)");
 		} else if(equipType == 2) {
-			System.out.println(player.getDisplayName() + "이/가 각반" + "(" + localName + ")" + ChatColor.WHITE + "을/를 획득하였다.(상자)");
+			System.out.println(player.getDisplayName() + "이/가" + grade + " 각반" + "(" + localName + ")" + ChatColor.WHITE + "을/를 획득하였다.(상자)");
 		} else if(equipType == 3) {
-			System.out.println(player.getDisplayName() + "이/가 신발" + "(" + localName + ")" + ChatColor.WHITE + "을/를 획득하였다.(상자)");
+			System.out.println(player.getDisplayName() + "이/가" + grade + " 신발" + "(" + localName + ")" + ChatColor.WHITE + "을/를 획득하였다.(상자)");
 		} else {
-			System.out.println(player.getDisplayName() + "이/가 무기" + "(" + localName + ")" + ChatColor.WHITE + "을/를 획득하였다.(상자)");
+			System.out.println(player.getDisplayName() + "이/가" + grade + " 무기" + "(" + localName + ")" + ChatColor.WHITE + "을/를 획득하였다.(상자)");
 		}
 		
 		ItemStack result = makeItem(player, equipType, lvl, localName, grade);

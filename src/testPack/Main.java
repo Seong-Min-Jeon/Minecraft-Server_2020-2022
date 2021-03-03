@@ -8778,9 +8778,27 @@ public class Main extends JavaPlugin implements Listener{
 			try {
 				if(inv.getItem(7).getType() == Material.SLIME_BALL) {
 					if(inv.getItem(8).getType() == Material.SHULKER_SHELL) {
-						if((inv.getItem(2).getType() != Material.LIGHT_GRAY_STAINED_GLASS_PANE) || inv.getItem(2) == null) {
+						if(inv.getItem(2) == null || (inv.getItem(2).getType() != Material.LIGHT_GRAY_STAINED_GLASS_PANE)) {
 							if(inv.getSize() == 9) {
-								player.sendMessage(ChatColor.RED + "상자를 여는 도중 실수로 망가져버렸다.");
+								boolean bool = true;
+								for(ItemStack item : inv.getContents()) {
+									if (item == null) {
+										continue;
+									} 
+									if(item.getType() == Material.HEART_OF_THE_SEA) {
+										bool = false;
+									}
+								}
+								if(bool) {
+									try {player.getInventory().addItem(inv.getItem(0));} catch(Exception e) {}
+									try {player.getInventory().addItem(inv.getItem(1));} catch(Exception e) {}
+									try {player.getInventory().addItem(inv.getItem(2));} catch(Exception e) {}
+									try {player.getInventory().addItem(inv.getItem(3));} catch(Exception e) {}
+									try {player.getInventory().addItem(inv.getItem(4));} catch(Exception e) {}
+									try {player.getInventory().addItem(inv.getItem(5));} catch(Exception e) {}
+								} else {
+									player.sendMessage(ChatColor.RED + "상자를 여는 도중 실수로 망가져버렸다.");
+								}
 							}
 						}
 					}

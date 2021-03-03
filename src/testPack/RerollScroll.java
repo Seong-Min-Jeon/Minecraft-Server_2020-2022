@@ -501,7 +501,7 @@ public class RerollScroll {
 							item.setItemMeta(newItemMeta);		
 							
 							try {
-								System.out.println(player.getDisplayName() + "이/가 재분배를 통해" + newItemMeta.getDisplayName() + "(" + localName + ")" + ChatColor.WHITE + "을/를 획득하였다.");
+								System.out.println(player.getDisplayName() + "이/가 재분배를 통해 " + newItemMeta.getDisplayName() + "(" + localName + ")" + ChatColor.WHITE + "을/를 획득하였다.");
 							} catch(Exception e) {
 								
 							}

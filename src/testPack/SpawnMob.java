@@ -1998,6 +1998,7 @@ public class SpawnMob {
 			if (entity.getType() == (EntityType) EntityType.VEX) {
 				entity.setCustomName(ChatColor.GRAY + "영혼을 탐하는 요정" + ChatColor.YELLOW + " [Lv.200]");
 				entity.setCustomNameVisible(true);
+				entity.setRemoveWhenFarAway(true);
 				entity.setMaxHealth(5000);
 				entity.setHealth(5000);
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 60));
@@ -3020,6 +3021,7 @@ public class SpawnMob {
 			if (entity.getType() == (EntityType) EntityType.VEX) {
 				entity.setCustomName(ChatColor.GRAY + "보초를 서는 요정" + ChatColor.YELLOW + " [Lv.183]");
 				entity.setCustomNameVisible(true);
+				entity.setRemoveWhenFarAway(true);
 				entity.setMaxHealth(4000);
 				entity.setHealth(4000);
 				EntityEquipment weapon = entity.getEquipment();
@@ -10101,6 +10103,7 @@ public class SpawnMob {
 			} else if (entity.getType() == (EntityType) EntityType.VEX) {
 				entity.setCustomName(ChatColor.GRAY + "천년의 요정" + ChatColor.YELLOW + " [Lv.563]");
 				entity.setCustomNameVisible(true);
+				entity.setRemoveWhenFarAway(true);
 				entity.setMaxHealth(372000);
 				entity.setHealth(372000);
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 1425));
@@ -10576,6 +10579,7 @@ public class SpawnMob {
 			} else if (entity.getType() == (EntityType) EntityType.VEX) {
 				entity.setCustomName(ChatColor.GRAY + "마법사의 소환물" + ChatColor.YELLOW + " [Lv.1]");
 				entity.setCustomNameVisible(true);
+				entity.setRemoveWhenFarAway(true);
 				entity.setMaxHealth(300000);
 				entity.setHealth(300000);
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 1500));
