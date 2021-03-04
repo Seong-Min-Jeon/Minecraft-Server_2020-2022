@@ -1177,11 +1177,25 @@ public class QuestBoard {
 	public void mq2(Player player, int num) {
 		if(num>=1) {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard ());
-			ItemStack item = new ItemStack(Material.EMERALD_BLOCK);
-			ItemMeta im = item.getItemMeta();
-			im.setDisplayName(ChatColor.YELLOW + "에메랄드 주머니");
-			item.setItemMeta(im);
-			player.getInventory().addItem(item);
+			ItemStack var2 = new ItemStack(Material.GRANITE_STAIRS);
+			ItemMeta var2Im = var2.getItemMeta();
+			var2Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,10");
+			var2Im.setDisplayName(ChatColor.AQUA + "일꾼의 증표");
+			ArrayList<String> var2Lore = new ArrayList();
+			var2Lore.add(ChatColor.GRAY + "레벨 제한: 10");
+			var2Lore.add(ChatColor.GRAY + " ");
+			var2Lore.add(ChatColor.GRAY + "열심히 일한 대가를 다른 식으로");
+			var2Lore.add(ChatColor.GRAY + "받고 싶은 사람을 위한 증표");
+			var2Lore.add(ChatColor.GRAY + " ");
+			var2Lore.add(ChatColor.BLUE + "-의문의 상자 발견 확률 30% 증가");
+			var2Lore.add(ChatColor.BLUE + "-전투 경험치 1000% 감소");
+			var2Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+			var2Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+			var2Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+			var2Im.setUnbreakable(true);
+			var2Im.setLore(var2Lore);
+			var2.setItemMeta(var2Im);
+			player.getInventory().addItem(var2);
 			es.giveExp(player, 1000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			return;

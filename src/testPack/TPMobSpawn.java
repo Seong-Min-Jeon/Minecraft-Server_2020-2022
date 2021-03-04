@@ -46,6 +46,7 @@ public class TPMobSpawn {
 		forest(player, loc);
 		samak(player, loc);
 		skelig(player, loc);
+		hardSea(player, loc);
 		
 	}
 
@@ -1350,5 +1351,99 @@ public class TPMobSpawn {
 			player.getInventory().addItem(weapon1);
 		}
 	}
-	
+
+	public void hardSea(Player player, Location loc) {
+		// 복도방1
+		if (loc.getX() == 3771 && loc.getY() == 72 && loc.getZ() == 3867) {
+			player.teleport(new Location(player.getWorld(), 3771, 72.1, 3867));
+			int num = 0;
+			List<Entity> entitylist = player.getNearbyEntities(40, 30, 20);
+			for (Entity nearEntity : entitylist) {
+				if (nearEntity.getType() == EntityType.PLAYER) {
+					Player nearPlayer = (Player) nearEntity;
+					Location loc2 = nearPlayer.getLocation();
+					if (loc2.getX() <= 3772 && loc2.getY() <= 85 && loc2.getZ() <= 3878 
+							&& loc2.getX() >= 3737 && loc2.getY() >= 65 && loc2.getZ() >= 3857) {
+						num++;
+						return;
+					}
+				}
+			}
+			if (num == 0) {
+				for (Entity nearEntity : entitylist) {
+					if (nearEntity instanceof Mob) {
+						Location loc2 = nearEntity.getLocation();
+						if (loc2.getX() <= 3772 && loc2.getY() <= 85 && loc2.getZ() <= 3878 
+								&& loc2.getX() >= 3737 && loc2.getY() >= 65 && loc2.getZ() >= 3857) {
+							nearEntity.remove();
+						}
+					}
+				}
+			}
+			
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3761, 70, 3868), EntityType.ZOMBIE);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3761, 70, 3866), EntityType.ZOMBIE);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3755, 70, 3868), EntityType.ZOMBIE);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3755, 70, 3866), EntityType.ZOMBIE);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3749, 70, 3868), EntityType.ZOMBIE);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3749, 70, 3866), EntityType.ZOMBIE);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3757, 71, 3871), EntityType.WITHER_SKELETON);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3753, 71, 3871), EntityType.WITHER_SKELETON);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3757, 71, 3863), EntityType.WITHER_SKELETON);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3753, 71, 3863), EntityType.WITHER_SKELETON);
+			return;
+		}
+		
+		// 복도방2
+		if (loc.getX() == 3736.5 && loc.getY() == 70 && loc.getZ() == 3867.5) {
+			player.teleport(new Location(player.getWorld(), 3736.5, 70.1, 3867.5));
+			int num = 0;
+			List<Entity> entitylist = player.getNearbyEntities(70, 30, 20);
+			for (Entity nearEntity : entitylist) {
+				if (nearEntity.getType() == EntityType.PLAYER) {
+					Player nearPlayer = (Player) nearEntity;
+					Location loc2 = nearPlayer.getLocation();
+					if (loc2.getX() <= 3736 && loc2.getY() <= 85 && loc2.getZ() <= 3873 
+							&& loc2.getX() >= 3690 && loc2.getY() >= 65 && loc2.getZ() >= 3862) {
+						num++;
+						return;
+					}
+				}
+			}
+			if (num == 0) {
+				for (Entity nearEntity : entitylist) {
+					if (nearEntity instanceof Mob) {
+						Location loc2 = nearEntity.getLocation();
+						if (loc2.getX() <= 3736 && loc2.getY() <= 85 && loc2.getZ() <= 3873 
+								&& loc2.getX() >= 3690 && loc2.getY() >= 65 && loc2.getZ() >= 3862) {
+							nearEntity.remove();
+						}
+					}
+				}
+			}
+			
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3713, 70, 3869), EntityType.ZOMBIE);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3713, 70, 3865), EntityType.ZOMBIE);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3710, 70, 3866), EntityType.ZOMBIE);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3710, 70, 3868), EntityType.ZOMBIE);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3726, 70, 3868), EntityType.WITHER_SKELETON);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3723, 70, 3868), EntityType.WITHER_SKELETON);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3720, 70, 3868), EntityType.WITHER_SKELETON);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3726, 70, 3866), EntityType.WITHER_SKELETON);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3723, 70, 3866), EntityType.WITHER_SKELETON);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3720, 70, 3866), EntityType.WITHER_SKELETON);
+			
+			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
+			CustomSkeleton2 cs = new CustomSkeleton2(new Location(player.getWorld(), 3702, 70, 3869));
+			world.addEntity(cs);
+			CustomSkeleton2 cs2 = new CustomSkeleton2(new Location(player.getWorld(), 3702, 70, 3865));
+			world.addEntity(cs2);
+			CustomSkeleton2 cs3 = new CustomSkeleton2(new Location(player.getWorld(), 3700, 70, 3866));
+			world.addEntity(cs3);
+			CustomSkeleton2 cs4 = new CustomSkeleton2(new Location(player.getWorld(), 3700, 70, 3868));
+			world.addEntity(cs4);
+			return;
+		}
+		
+	}
 }

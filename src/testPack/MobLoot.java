@@ -7310,7 +7310,7 @@ public class MobLoot {
 	public void mob288(Player player) {
 		es.giveExp(player, 3500000);
 		
-		int num1 = rnd.nextInt(20);
+		int num1 = rnd.nextInt(7);
 		if (num1 <= 0) {
 			Location chestLoc = new Location(player.getWorld(), -1833, 92, 3036);
 			Block block = chestLoc.getBlock();

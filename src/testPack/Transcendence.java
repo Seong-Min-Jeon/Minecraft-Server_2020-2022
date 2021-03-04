@@ -436,6 +436,7 @@ public class Transcendence {
 				weaponLore.add(ChatColor.GRAY + "(세트 아이템)");
 				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+				weaponIm.addItemFlags(ItemFlag.HIDE_DYE);
 				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
 				weaponIm.setUnbreakable(true);
 				weaponIm.setLore(weaponLore);
@@ -459,6 +460,7 @@ public class Transcendence {
 				weaponLore.add(ChatColor.GRAY + "(세트 아이템)");
 				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+				weaponIm.addItemFlags(ItemFlag.HIDE_DYE);
 				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
 				weaponIm.setUnbreakable(true);
 				weaponIm.setLore(weaponLore);
@@ -482,6 +484,7 @@ public class Transcendence {
 				weaponLore.add(ChatColor.GRAY + "(세트 아이템)");
 				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+				weaponIm.addItemFlags(ItemFlag.HIDE_DYE);
 				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
 				weaponIm.setUnbreakable(true);
 				weaponIm.setLore(weaponLore);
@@ -505,6 +508,7 @@ public class Transcendence {
 				weaponLore.add(ChatColor.GRAY + "(세트 아이템)");
 				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+				weaponIm.addItemFlags(ItemFlag.HIDE_DYE);
 				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
 				weaponIm.setUnbreakable(true);
 				weaponIm.setLore(weaponLore);

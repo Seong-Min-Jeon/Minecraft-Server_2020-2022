@@ -7,6 +7,7 @@ import java.util.Random;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemFlag;
@@ -103,6 +104,7 @@ public class MysteryChestOpen {
 							if(item.getType() == Material.PLAYER_HEAD) {
 								if(item.getAmount() == 1) {
 									if(item.getItemMeta().getDisplayName().substring(2).equals("의문의 상자")) {
+										player.getWorld().playSound(player.getLocation(), Sound.BLOCK_CHEST_OPEN, 1.0f, 1.0f);
 										item.setType(Material.HEART_OF_THE_SEA);
 									}
 								}
@@ -150,9 +152,9 @@ public class MysteryChestOpen {
 		} else if(grade.equals("§d")) {
 			mul = 1;
 		} else if(grade.equals("§b")) {
-			mul = 1.2;
+			mul = 1.3;
 		} else if(grade.equals("§4")) {
-			mul = 1.5;
+			mul = 1.7;
 		} else if(grade.equals("§5")) {
 			mul = 3;
 		}
@@ -166,7 +168,24 @@ public class MysteryChestOpen {
 		if(lvl > maxLvl) {
 			lvl = maxLvl;
 		}
-		int total = (int) (Math.exp(Math.pow((double)lvl, 0.35)) * mul);
+		
+		if(lvl >= 700) {
+			if(lvl >= 800) {
+				if(lvl >= 900) {
+					if(lvl >= 1000) {
+						lvl = 1000;
+					} else {
+						lvl = 900;
+					}
+				} else {
+					lvl = 800;
+				}
+			} else {
+				lvl = 700;
+			}
+		}
+		
+		int total = (int) (Math.exp(Math.pow((double)lvl, 0.34)) * mul);
 		
 		int[] stat = {0,0,0,0,0,0,0,0,0,0,0};
 		

@@ -101,6 +101,7 @@ public class PlayerHitDebuff {
 		mob52(player, mob);
 		mob53(player, mob);
 		mob54(player, mob);
+		mob55(player, mob);
 	}
 
 	// 시련의 형상
@@ -2889,8 +2890,11 @@ public class PlayerHitDebuff {
 		}
 	}
 	
+	// 어린 복어 병사
 	public void mob55(Player player, Entity mob) {
-
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("어린 복어 병사" + ChatColor.YELLOW + " [Lv.700]")) {
+			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 100, 0, true, false, false));
+		}
 	}
 	
 	public void mob56(Player player, Entity mob) {

@@ -552,8 +552,20 @@ public class CraftingItem {
 			if(stat[9] > 1000000) {
 				stat[9] = 1000000;
 			}
-			if(stat[10] > 1000) {
-				stat[10] = 1000;
+			if(stat[10] >= 700) {
+				if(stat[10] >= 800) {
+					if(stat[10] >= 900) {
+						if(stat[10] >= 1000) {
+							stat[10] = 1000;
+						} else {
+							stat[10] = 900;
+						}
+					} else {
+						stat[10] = 800;
+					}
+				} else {
+					stat[10] = 700;
+				}
 			}
 			
 			String localName = Integer.toString(stat[0]) + "," + stat[1] + "," + stat[2] + "," + stat[3] + "," + stat[4] + "," + stat[5] + "," + stat[6] + "," + stat[7] + "," + stat[8] + "," + stat[9] + "," + stat[10];

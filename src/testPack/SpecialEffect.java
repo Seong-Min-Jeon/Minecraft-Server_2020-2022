@@ -200,6 +200,28 @@ public class SpecialEffect {
 		}
 		return 0;
 	}
+	
+	public int a18(Player player) {
+		try {
+			if(player.getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "일꾼의 증표")) {
+				return 30;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+	public int a19(Player player) {
+		try {
+			if(player.getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "일꾼의 증표")) {
+				return -1000;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
@@ -271,6 +293,17 @@ public class SpecialEffect {
 		return 0;
 	}
 	
+	public int h4(Player player) {
+		try {
+			if(player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "럭키한 클로에의 헬멧")) {
+				return 10;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
 	public int c1(Player player) {
@@ -287,6 +320,17 @@ public class SpecialEffect {
 	public int c2(Player player) {
 		try {
 			if(player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "목영축")) {
+				return 10;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+	public int c3(Player player) {
+		try {
+			if(player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "럭키한 클로에의 갑옷")) {
 				return 10;
 			}
 		} catch(Exception e) {
@@ -312,6 +356,17 @@ public class SpecialEffect {
 		try {
 			if(player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "박영성")) {
 				return -50;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+	public int l3(Player player) {
+		try {
+			if(player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "럭키한 클로에의 각반")) {
+				return 10;
 			}
 		} catch(Exception e) {
 			
@@ -346,6 +401,17 @@ public class SpecialEffect {
 	public int b3(Player player) {
 		try {
 			if(player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "이천루")) {
+				return 10;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+	public int b4(Player player) {
+		try {
+			if(player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "럭키한 클로에의 신발")) {
 				return 10;
 			}
 		} catch(Exception e) {
@@ -464,6 +530,23 @@ public class SpecialEffect {
 				if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "라의 갑옷")) {
 					if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "라의 각반")) {
 						if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "라의 신발")) {
+							return 10;
+						}
+					}
+				}
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+	public int s8(Player player) {
+		try {
+			if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "럭키한 클로에의 헬멧")) {
+				if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "럭키한 클로에의 갑옷")) {
+					if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "럭키한 클로에의 각반")) {
+						if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "럭키한 클로에의 신발")) {
 							return 10;
 						}
 					}

@@ -4,9 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.Sound;
 import org.bukkit.block.Block;
 import org.bukkit.block.Chest;
 import org.bukkit.entity.Entity;
@@ -25,6 +27,8 @@ public class MobDeath {
 	Player player = null;
 	Cmd18ItemToggle it = new Cmd18ItemToggle();
 	Random rnd = new Random();
+	private static int multyChance = 0;
+	private int taskID;
 	
 	// 메세지
 	public void sendMessage(Player player, String msg) {
@@ -33,6 +37,10 @@ public class MobDeath {
 		}
 	}
 
+	public MobDeath() {
+		
+	}
+	
 	public MobDeath(Player playerArg, Entity mobArg, double damageArg) {
 		Entity mob = mobArg;
 		double damage = damageArg;
@@ -1312,41 +1320,53 @@ public class MobDeath {
 				
 				int per = rnd.nextInt(1000000);
 				
-				if(per < (10000 - 10000*2*dist/100)) {
+				//===========================================================================
+				// 상자 획득확률 증가
+				int mul = 0;
+				mul += new SpecialEffect().h4(player);
+				mul += new SpecialEffect().c3(player);
+				mul += new SpecialEffect().l3(player);
+				mul += new SpecialEffect().b4(player);
+				mul += new SpecialEffect().a18(player);
+				//===========================================================================
+				
+				if(per < ((10000 - 10000*2*dist/100)*(multyChance+mul+100)/100)) {
 					Block block = chestLoc.getBlock();
 					Chest chest = (Chest) block.getState();
 					ItemStack weapon = chest.getInventory().getItem(0).clone();
 					ItemStack item = setStat(0, weapon, mobLvl);
 					lootPlayer.getInventory().addItem(item);
 					sendMessage(lootPlayer, ChatColor.YELLOW + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
-				} else if(per < (15000 - 15000*2*dist/100)) {
+				} else if(per < ((15000 - 15000*2*dist/100)*(multyChance+mul+100)/100)) {
 					Block block = chestLoc.getBlock();
 					Chest chest = (Chest) block.getState();
 					ItemStack weapon = chest.getInventory().getItem(1).clone();
 					ItemStack item = setStat(1, weapon, mobLvl);
 					lootPlayer.getInventory().addItem(item);
 					sendMessage(lootPlayer, ChatColor.LIGHT_PURPLE + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
-				} else if(per < (17000 - 17000*2*dist/100)) {
+				} else if(per < ((17000 - 17000*2*dist/100)*(multyChance+mul+100)/100)) {
 					Block block = chestLoc.getBlock();
 					Chest chest = (Chest) block.getState();
 					ItemStack weapon = chest.getInventory().getItem(2).clone();
 					ItemStack item = setStat(2, weapon, mobLvl);
 					lootPlayer.getInventory().addItem(item);
 					sendMessage(lootPlayer, ChatColor.AQUA + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
-				} else if(per < (18000 - 18000*2*dist/100)) {
+				} else if(per < ((18000 - 18000*2*dist/100)*(multyChance+mul+100)/100)) {
 					Block block = chestLoc.getBlock();
 					Chest chest = (Chest) block.getState();
 					ItemStack weapon = chest.getInventory().getItem(3).clone();
 					ItemStack item = setStat(3, weapon, mobLvl);
 					lootPlayer.getInventory().addItem(item);
 					sendMessage(lootPlayer, ChatColor.DARK_RED + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
-				} else if(per < (18010 - 18010*2*dist/100)) {
+					System.out.println(lootPlayer.getDisplayName() + "가 " + ChatColor.DARK_RED + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
+				} else if(per < ((18010 - 18010*2*dist/100)*(multyChance+mul+100)/100)) {
 					Block block = chestLoc.getBlock();
 					Chest chest = (Chest) block.getState();
 					ItemStack weapon = chest.getInventory().getItem(4).clone();
 					ItemStack item = setStat(4, weapon, mobLvl);
 					lootPlayer.getInventory().addItem(item);
 					sendMessage(lootPlayer, ChatColor.DARK_PURPLE + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
+					System.out.println(lootPlayer.getDisplayName() + "가 " + ChatColor.DARK_PURPLE + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
 				}
 				
 				
@@ -1488,5 +1508,46 @@ public class MobDeath {
 		return item;
 	}
 	
+	public void goldenTime(Player player) {
+		multyChance = 100;
+		new ProgressBar().bar4setStat(true);
+		for(Player p : Bukkit.getOnlinePlayers()) {
+			p.sendMessage(ChatColor.AQUA + "" + ChatColor.BOLD + player.getDisplayName() + "님의 핫타임이 시작되었습니다. (의문의 상자 발견 확률 2배)");
+			new ProgressBar().bar4AddPlayer(p);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 2.0f, 1.1f);
+		}
+		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
+			int time = 0;
+			ThreadChestHotTime th = new ThreadChestHotTime(player.getUniqueId());
+
+			@Override
+			public void run() {
+				
+				if (!th.hasID()) {
+					th.setID(taskID);
+				}
+				
+				if (time % 1200 == 0) {
+					new ProgressBar().bar4ChangeTime(10 - time/1200);
+				}
+				
+				if (time >= 12000) {
+					multyChance = 1;
+					new ProgressBar().bar4setStat(false);
+					for(Player p : Bukkit.getOnlinePlayers()) {
+						p.sendMessage(ChatColor.AQUA + "" + ChatColor.BOLD + player.getDisplayName() + "님의 핫타임이 종료되었습니다. (의문의 상자 발견 확률 2배)");
+					}
+					new ProgressBar().bar4RemovePlayer();
+					th.endTask();
+					th.removeID();
+				}
+				
+				time++;
+
+			}
+
+		}, 0, 1);
+	}
+	
 }

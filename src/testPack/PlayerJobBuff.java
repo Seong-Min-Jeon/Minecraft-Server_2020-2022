@@ -14,7 +14,7 @@ public class PlayerJobBuff {
 		}
 		// 기사
 		if (player.getInventory().contains(Material.GREEN_DYE)) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 50, 0,true,false,false));
+//			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 50, 0,true,false,false));
 		}
 		// 프리스트
 		if (player.getInventory().contains(Material.LAPIS_LAZULI)) {

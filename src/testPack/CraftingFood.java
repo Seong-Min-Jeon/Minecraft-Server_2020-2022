@@ -615,8 +615,20 @@ public class CraftingFood {
 			String localName = Integer.toString(stat[0]) + "," + stat[1] + "," + stat[2] + "," + stat[3] + "," + stat[4] + "," + stat[5] + "," + stat[6] + "," + stat[7] + "," + stat[8] + "," + stat[9] + "," + stat[10];
 			
 			int limit = (int) (Math.pow(stat[10]/20, 2) / 10);
-			if(limit > 1000) {
-				limit = 1000;
+			if(limit >= 700) {
+				if(limit >= 800) {
+					if(limit >= 900) {
+						if(limit >= 1000) {
+							limit = 1000;
+						} else {
+							limit = 900;
+						}
+					} else {
+						limit = 800;
+					}
+				} else {
+					limit = 700;
+				}
 			}
 			
 			ItemStack food = new ItemStack(Material.valueOf(mat));

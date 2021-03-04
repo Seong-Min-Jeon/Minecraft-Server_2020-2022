@@ -12,9 +12,12 @@ public class ProgressBar {
 	private static BossBar bar1 = Bukkit.createBossBar(ChatColor.BOLD + "" + ChatColor.AQUA + "전투 경험치 2배 [10분]", BarColor.BLUE, BarStyle.SOLID);
 	private static BossBar bar2 = Bukkit.createBossBar(ChatColor.BOLD + "" + ChatColor.DARK_PURPLE + "강화 확률 증가 [10분]", BarColor.PURPLE, BarStyle.SOLID);
 	private static BossBar bar3 = Bukkit.createBossBar(ChatColor.BOLD + "" + ChatColor.DARK_RED + "레이드 [60분]", BarColor.RED, BarStyle.SOLID);
+	private static BossBar bar4 = Bukkit.createBossBar(ChatColor.BOLD + "" + ChatColor.DARK_GREEN + "의문의 상자 발견 확률 2배 [10분]", BarColor.GREEN, BarStyle.SOLID);
+	
 	private static boolean bar1Stat = false;
 	private static boolean bar2Stat = false;
 	private static boolean bar3Stat = false;
+	private static boolean bar4Stat = false;
 	
 	public void bar1AddPlayer(Player player) {
 		bar1.addPlayer(player);
@@ -26,6 +29,10 @@ public class ProgressBar {
 	
 	public void bar3AddPlayer(Player player) {
 		bar3.addPlayer(player);
+	}
+	
+	public void bar4AddPlayer(Player player) {
+		bar4.addPlayer(player);
 	}
 	
 	public void bar1ChangeTime(int num) {
@@ -40,7 +47,12 @@ public class ProgressBar {
 	
 	public void bar3ChangeTime(int num) {
 		bar3.setTitle(ChatColor.BOLD + "" + ChatColor.DARK_RED + "레이드 " + "[" + num + "분]");
-		bar3.setProgress(num/10.0D);
+		bar3.setProgress(num/60.0D);
+	}
+	
+	public void bar4ChangeTime(int num) {
+		bar4.setTitle(ChatColor.BOLD + "" + ChatColor.DARK_GREEN + "의문의 상자 발견 확률 2배 " + "[" + num + "분]");
+		bar4.setProgress(num/10.0D);
 	}
 	
 	public void bar1RemovePlayer() {
@@ -61,6 +73,12 @@ public class ProgressBar {
 		}
 	}
 	
+	public void bar4RemovePlayer() {
+		for(Player player : bar4.getPlayers()) {
+			bar4.removePlayer(player);
+		}
+	}
+	
 	public void bar1setStat(boolean bool) {
 		bar1Stat = bool;
 	}
@@ -73,6 +91,10 @@ public class ProgressBar {
 		bar3Stat = bool;
 	}
 	
+	public void bar4setStat(boolean bool) {
+		bar4Stat = bool;
+	}
+	
 	public boolean bar1isRun() {
 		return bar1Stat;
 	}
@@ -83,6 +105,10 @@ public class ProgressBar {
 	
 	public boolean bar3isRun() {
 		return bar3Stat;
+	}
+	
+	public boolean bar4isRun() {
+		return bar4Stat;
 	}
 	
 }

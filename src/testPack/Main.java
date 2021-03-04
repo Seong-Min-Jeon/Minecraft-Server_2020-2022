@@ -191,7 +191,7 @@ public class Main extends JavaPlugin implements Listener{
 	// gamerule keepInventory true
 	// gamerule doImmediateRespawn true
 	// gamerule doLimitedCrafting true
-	// gamerule mobGriefing false
+	// gamerule mobGriefing false	
 	// gamerule doWeatherCycle false
 	// Damage_ALL, Damage_Undead, Damage_Arthropods, Impaling, Sweeping, Protection_Environment, Protection_Fire, Protection_Explosion, Protection_Projectile, Thorns, Level
 	
@@ -334,7 +334,7 @@ public class Main extends JavaPlugin implements Listener{
 		} else if(player.getDisplayName().equalsIgnoreCase("why9196")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.BLUE + "'최초의 500레벨' 와이.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Akilae3102")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.AQUA + "'뇌 속에 지도를 넣은 하와와 하와와 하와와' 아킬레.");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.AQUA + "'뇌 속에 지도를 넣은 하와와 무야호 하와와' 아킬레.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Espina_ID")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.BOLD + "'그저 군인' 에스피나.");
 		} else if(player.getDisplayName().equalsIgnoreCase("KangOSung")) {
@@ -559,6 +559,9 @@ public class Main extends JavaPlugin implements Listener{
 		if(pb.bar3isRun()) {
 			pb.bar3AddPlayer(player);
 		}
+		if(pb.bar4isRun()) {
+			pb.bar4AddPlayer(player);
+		}
 		
 		//Mob Spawning Field	
 		this.getServer().getPluginManager().registerEvents(new MobThread(player), this);
@@ -579,6 +582,107 @@ public class Main extends JavaPlugin implements Listener{
 //		if(player.getDisplayName().equalsIgnoreCase("WoolRing") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
 		
 		
+		
+//		ItemStack var2 = new ItemStack(Material.GRANITE_STAIRS);
+//		ItemMeta var2Im = var2.getItemMeta();
+//		var2Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,10");
+//		var2Im.setDisplayName(ChatColor.AQUA + "일꾼의 증표");
+//		ArrayList<String> var2Lore = new ArrayList();
+//		var2Lore.add(ChatColor.GRAY + "레벨 제한: 10");
+//		var2Lore.add(ChatColor.GRAY + " ");
+//		var2Lore.add(ChatColor.GRAY + "열심히 일한 대가를 다른 식으로");
+//		var2Lore.add(ChatColor.GRAY + "받고 싶은 사람을 위한 반지");
+//		var2Lore.add(ChatColor.GRAY + " ");
+//		var2Lore.add(ChatColor.BLUE + "-의문의 상자 발견 확률 30% 증가");
+//		var2Lore.add(ChatColor.BLUE + "-전투 경험치 1000% 감소");
+//		var2Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var2Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var2Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var2Im.setUnbreakable(true);
+//		var2Im.setLore(var2Lore);
+//		var2.setItemMeta(var2Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var2);}
+//		
+//		ItemStack helmet = new ItemStack(Material.LEATHER_HELMET);
+//		ItemMeta helmetIm = helmet.getItemMeta();
+//		helmetIm.setLocalizedName("777,0,0,0,0,777,0,0,0,0,610");
+//		helmetIm.setDisplayName(ChatColor.GREEN + "럭키한 클로에의 헬멧");
+//		ArrayList<String> helmetLore = new ArrayList();
+//		helmetLore.add(ChatColor.GRAY + "레벨 제한: 610");
+//		helmetLore.add(ChatColor.GRAY + " ");
+//		helmetLore.add(ChatColor.GRAY + "엄청한 행운이 느껴지는 헬멧");
+//		helmetLore.add(ChatColor.GRAY + " ");
+//		helmetLore.add(ChatColor.BLUE + "-의문의 상자 발견 확률 10% 증가");
+//		helmetLore.add(ChatColor.BLUE + "-회피 확률 10% 증가(세트 효과)");
+//		helmetIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		helmetIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		helmetIm.addItemFlags(ItemFlag.HIDE_DYE);
+//		helmetIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		helmetIm.setUnbreakable(true);
+//		helmetIm.setLore(helmetLore);
+//		helmet.setItemMeta(helmetIm);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(helmet);}
+//
+//		ItemStack chestplate = new ItemStack(Material.LEATHER_CHESTPLATE);
+//		ItemMeta chestplateIm = chestplate.getItemMeta();
+//		chestplateIm.setLocalizedName("777,0,0,0,0,777,0,0,0,0,610");
+//		chestplateIm.setDisplayName(ChatColor.GREEN + "럭키한 클로에의 갑옷");
+//		ArrayList<String> chestplateLore = new ArrayList();
+//		chestplateLore.add(ChatColor.GRAY + "레벨 제한: 610");
+//		chestplateLore.add(ChatColor.GRAY + " ");
+//		chestplateLore.add(ChatColor.GRAY + "엄청한 행운이 느껴지는 갑옷");
+//		chestplateLore.add(ChatColor.GRAY + " ");
+//		chestplateLore.add(ChatColor.BLUE + "-의문의 상자 발견 확률 10% 증가");
+//		chestplateLore.add(ChatColor.BLUE + "-회피 확률 10% 증가(세트 효과)");
+//		chestplateIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		chestplateIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		chestplateIm.addItemFlags(ItemFlag.HIDE_DYE);
+//		chestplateIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		chestplateIm.setUnbreakable(true);
+//		chestplateIm.setLore(chestplateLore);
+//		chestplate.setItemMeta(chestplateIm);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(chestplate);}
+//
+//		ItemStack leggings = new ItemStack(Material.LEATHER_LEGGINGS);
+//		ItemMeta leggingsIm = leggings.getItemMeta();
+//		leggingsIm.setLocalizedName("777,0,0,0,0,777,0,0,0,0,610");
+//		leggingsIm.setDisplayName(ChatColor.GREEN + "럭키한 클로에의 각반");
+//		ArrayList<String> leggingsLore = new ArrayList();
+//		leggingsLore.add(ChatColor.GRAY + "레벨 제한: 610");
+//		leggingsLore.add(ChatColor.GRAY + " ");
+//		leggingsLore.add(ChatColor.GRAY + "엄청한 행운이 느껴지는 각반");
+//		leggingsLore.add(ChatColor.GRAY + " ");
+//		leggingsLore.add(ChatColor.BLUE + "-의문의 상자 발견 확률 10% 증가");
+//		leggingsLore.add(ChatColor.BLUE + "-회피 확률 10% 증가(세트 효과)");
+//		leggingsIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		leggingsIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		leggingsIm.addItemFlags(ItemFlag.HIDE_DYE);
+//		leggingsIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		leggingsIm.setUnbreakable(true);
+//		leggingsIm.setLore(leggingsLore);
+//		leggings.setItemMeta(leggingsIm);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(leggings);}
+//
+//		ItemStack boots = new ItemStack(Material.LEATHER_BOOTS);
+//		ItemMeta bootsIm = boots.getItemMeta();
+//		bootsIm.setLocalizedName("777,0,0,0,0,777,0,0,0,0,610");
+//		bootsIm.setDisplayName(ChatColor.GREEN + "럭키한 클로에의 신발");
+//		ArrayList<String> bootsLore = new ArrayList();
+//		bootsLore.add(ChatColor.GRAY + "레벨 제한: 610");
+//		bootsLore.add(ChatColor.GRAY + " ");
+//		bootsLore.add(ChatColor.GRAY + "엄청한 행운이 느껴지는 신발");
+//		bootsLore.add(ChatColor.GRAY + " ");
+//		bootsLore.add(ChatColor.BLUE + "-의문의 상자 발견 확률 10% 증가");
+//		bootsLore.add(ChatColor.BLUE + "-회피 확률 10% 증가(세트 효과)");
+//		bootsIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		bootsIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		bootsIm.addItemFlags(ItemFlag.HIDE_DYE);
+//		bootsIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		bootsIm.setUnbreakable(true);
+//		bootsIm.setLore(bootsLore);
+//		boots.setItemMeta(bootsIm);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(boots);}
+//		
 //		ItemStack helmet = new ItemStack(Material.GOLDEN_HELMET);
 //		ItemMeta helmetIm = helmet.getItemMeta();
 //		helmetIm.setLocalizedName("4000,1000,1000,1000,1500,4000,4000,1000,1000,4000,630");
@@ -2662,6 +2766,7 @@ public class Main extends JavaPlugin implements Listener{
 			Location samak = new Location(world,228,85,945);
 			Location samakVil = new Location(world,-100,29,1462);
 			Location kekktas = new Location(world,-741,56,-894);
+			Location hardLobby = new Location(world,3686,190,3861);
 			
 			//캐릭터 선택창 3668 47 3671 3660 39 3680
 			if(loc.getX() <= 3668 && loc.getZ() <= 3680 &&
@@ -2775,6 +2880,12 @@ public class Main extends JavaPlugin implements Listener{
 			if (loc.getX() <= 3747 && loc.getY() <= 150 && loc.getZ() <= 2433 
 					&& loc.getX() >= 3678 && loc.getY() >= 80 && loc.getZ() >= 2308) {
 				event.setRespawnLocation(kekktas);
+				return;
+			}
+			// 하드던전 3841 255 3836  3500 0 4263
+			if (loc.getX() <= 3841 && loc.getY() <= 255 && loc.getZ() <= 4263 
+					&& loc.getX() >= 3500 && loc.getY() >= 0 && loc.getZ() >= 3836) {
+				event.setRespawnLocation(hardLobby);
 				return;
 			}
 
@@ -3291,6 +3402,16 @@ public class Main extends JavaPlugin implements Listener{
 					player.sendMessage(ChatColor.RED + "이미 적용중인 효과입니다.");
 				} else {
 					new Reinforcement().goldenTime(player);
+				}
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "핫타임(의문의 상자 발견 확률 2배)")) {
+				if(pb.bar4isRun()) {
+					ItemStack item = event.getItem();
+					item.setAmount(1);
+					player.getInventory().addItem(item);
+					player.sendMessage(ChatColor.RED + "이미 적용중인 효과입니다.");
+				} else {
+					new MobDeath().goldenTime(player);
 				}
 			}
 		} catch(Exception e) {
@@ -5334,6 +5455,7 @@ public class Main extends JavaPlugin implements Listener{
 				num += new SpecialEffect().h3(player);
 				num += new SpecialEffect().s4(player);
 				num += new SpecialEffect().s6(player);
+				num += new SpecialEffect().s8(player);
 				
 				if(num > 70) {
 					num = 70;
@@ -6159,6 +6281,7 @@ public class Main extends JavaPlugin implements Listener{
 								horse.setCustomName(ChatColor.GRAY + "" + player.getDisplayName() + "'s horse");
 								horse.setCustomNameVisible(true);
 								horse.setBreed(false);
+								horse.setMaxHealth(1);
 								horse.setNoDamageTicks(Integer.MAX_VALUE);
 								horse.setAdult();
 								horse.setTamed(true);
@@ -6188,6 +6311,7 @@ public class Main extends JavaPlugin implements Listener{
 								horse.setCustomName(ChatColor.GRAY + "" + player.getDisplayName() + "'s horse");
 								horse.setCustomNameVisible(true);
 								horse.setBreed(false);
+								horse.setMaxHealth(1);
 								horse.setNoDamageTicks(Integer.MAX_VALUE);
 								horse.setAdult();
 								horse.setTamed(true);
@@ -6217,6 +6341,7 @@ public class Main extends JavaPlugin implements Listener{
 								horse.setCustomName(ChatColor.GRAY + "" + player.getDisplayName() + "'s horse");
 								horse.setCustomNameVisible(true);
 								horse.setBreed(false);
+								horse.setMaxHealth(1);
 								horse.setNoDamageTicks(Integer.MAX_VALUE);
 								horse.setAdult();
 								horse.setTamed(true);
@@ -6246,6 +6371,7 @@ public class Main extends JavaPlugin implements Listener{
 								horse.setCustomName(ChatColor.GRAY + "" + player.getDisplayName() + "'s horse");
 								horse.setCustomNameVisible(true);
 								horse.setBreed(false);
+								horse.setMaxHealth(1);
 								horse.setNoDamageTicks(Integer.MAX_VALUE);
 								horse.setAdult();
 								horse.setTamed(true);
@@ -6275,6 +6401,7 @@ public class Main extends JavaPlugin implements Listener{
 								horse.setCustomName(ChatColor.GRAY + "" + player.getDisplayName() + "'s horse");
 								horse.setCustomNameVisible(true);
 								horse.setBreed(false);
+								horse.setMaxHealth(1);
 								horse.setNoDamageTicks(Integer.MAX_VALUE);
 								horse.setAdult();
 								horse.setTamed(true);
@@ -6304,6 +6431,7 @@ public class Main extends JavaPlugin implements Listener{
 								horse.setCustomName(ChatColor.GRAY + "" + player.getDisplayName() + "'s horse");
 								horse.setCustomNameVisible(true);
 								horse.setBreed(false);
+								horse.setMaxHealth(1);
 								horse.setNoDamageTicks(Integer.MAX_VALUE);
 								horse.setAdult();
 								horse.setTamed(true);
@@ -6333,6 +6461,7 @@ public class Main extends JavaPlugin implements Listener{
 								horse.setCustomName(ChatColor.GRAY + "" + player.getDisplayName() + "'s horse");
 								horse.setCustomNameVisible(true);
 								horse.setBreed(false);
+								horse.setMaxHealth(1);
 								horse.setNoDamageTicks(Integer.MAX_VALUE);
 								horse.setAdult();
 								horse.setTamed(true);

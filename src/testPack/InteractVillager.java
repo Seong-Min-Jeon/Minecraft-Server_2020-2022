@@ -3,6 +3,7 @@ package testPack;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.Sound;
 import org.bukkit.block.Block;
 import org.bukkit.block.Chest;
 import org.bukkit.entity.Entity;
@@ -42,7 +43,7 @@ public class InteractVillager {
 		}
 		
 		return vil0() || vil1() || vil2() || vil3() || vil4() || vil5() || vil6() || vil7() || vil8() || vil9() || vil10() || vil11() || vil12() || vil13() || vil14()
-				|| vil15() || vil16() || vil17() || vil18() || vil19() || vil20() || vil21() || vil22() || vil23();
+				|| vil15() || vil16() || vil17() || vil18() || vil19() || vil20() || vil21() || vil22() || vil23() || vil24();
 	}
 	
 	public boolean vil0() {
@@ -601,7 +602,37 @@ public class InteractVillager {
 					player.sendMessage("리로이: 나의 강아지 슈가는 어디에 있는 것일까..");
 				}
 			} catch(Exception e) {
-				player.sendMessage("디아스: 나의 강아지 슈가는 어디에 있는 것일까..");
+				player.sendMessage("리로이: 나의 강아지 슈가는 어디에 있는 것일까..");
+			}
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean vil24() {
+		//하드 바다 신전 3797 3868 
+		if(loc.getX() <= 3798 && loc.getZ() <= 3869
+				&& loc.getX() >= 3796 && loc.getZ() >= 3867) {
+			Inventory inv = player.getInventory();
+			boolean bool = false;
+			for(ItemStack item : inv.getContents()) {
+				if (item == null) {
+					continue;
+				}
+				if(bool == false) {
+					if(item.getType() == Material.FLOWER_BANNER_PATTERN) {
+						if (item.getItemMeta().getDisplayName().substring(2).equals("잊혀진 바다 신전 통행증")) {
+							item.setAmount(item.getAmount()-1);
+							player.sendMessage("던전 키퍼: 살아서 돌아오시게나.");
+							player.teleport(new Location(player.getWorld(), 3771, 72, 3867));
+							player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 50, 0,true,false,false));
+							bool = true;
+						}
+					}
+				}
+			}
+			if(bool == false) {
+				player.sendMessage("던전 키퍼: 통행증이 없으면 결계 안으로 들어갈 수 없다네.");
 			}
 			return true;
 		}
