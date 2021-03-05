@@ -154,7 +154,7 @@ public class MysteryChestOpen {
 		} else if(grade.equals("§b")) {
 			mul = 1.3;
 		} else if(grade.equals("§4")) {
-			mul = 1.7;
+			mul = 1.8;
 		} else if(grade.equals("§5")) {
 			mul = 3;
 		}

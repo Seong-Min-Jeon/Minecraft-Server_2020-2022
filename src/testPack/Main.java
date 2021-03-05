@@ -321,7 +321,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("woolring")) { 
 			
 		} else {
-			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/814705716714536960/aile_texture_pack_19.zip");
+			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/817295056259907584/aile_texture_pack_20.zip");
 		}
 		
 		//Message
@@ -341,6 +341,10 @@ public class Main extends JavaPlugin implements Listener{
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.YELLOW + "캉캉캉캉캉!");
 		} else if(player.getDisplayName().equalsIgnoreCase("Illusion__")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.GOLD + "일류 건축가 릴륨.");
+		} else if(player.getDisplayName().equalsIgnoreCase("JunletTridner")) {
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.GOLD + "달걀은 아직인가요? JUN.");
+		} else if(player.getDisplayName().equalsIgnoreCase("SARASHINA_RUKA")) {
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.YELLOW + "그저 월브레이커");
 		} else {
 			event.setJoinMessage("야생의 누군가가 등장했다.");
 		}
@@ -8441,6 +8445,10 @@ public class Main extends JavaPlugin implements Listener{
 			event.setQuitMessage(ChatColor.BOLD + "'일이 생긴' 캉님이 급히 떠났습니다.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Illusion__")) {
 			event.setQuitMessage(ChatColor.BOLD + "훗, 오늘도 할 일을 끝내버렸군.");
+		} else if(player.getDisplayName().equalsIgnoreCase("JunletTridner")) {
+			event.setQuitMessage(ChatColor.GOLD + "세계 최고의 운을 가진 그 분이 세상을 떠났습니다.");
+		} else if(player.getDisplayName().equalsIgnoreCase("SARASHINA_RUKA")) {
+			event.setQuitMessage(ChatColor.YELLOW + "그림리퍼그림리퍼그림리퍼그림리퍼그림리퍼그림리퍼");
 		} else {
 			event.setQuitMessage("야생의 누군가가 도망쳐버렸다.");
 		}

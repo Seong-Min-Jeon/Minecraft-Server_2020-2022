@@ -2870,7 +2870,7 @@ public class PlayerHitDebuff {
 				int num = rnd.nextInt(13);
 				if (num == 0) {
 					player.setVelocity(new Vector(0, 3, 0));
-					player.damage(5000);
+					player.damage(10000);
 					player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_PIG_HURT, 3.0f, 1.0f);
 				} else if(num == 1) {
 					player.sendMessage(ChatColor.RED + "돼지가 먹은 것을 토해냅니다.");
@@ -2883,7 +2883,7 @@ public class PlayerHitDebuff {
 				int num = rnd.nextInt(10);
 				if (num == 0) {
 					player.setVelocity(new Vector(0, 3, 0));
-					player.damage(5000);
+					player.damage(10000);
 					player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_PIG_HURT, 3.0f, 1.0f);
 				}
 			}

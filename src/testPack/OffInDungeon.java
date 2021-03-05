@@ -124,6 +124,18 @@ public class OffInDungeon {
 			player.teleport(new Location(player.getWorld(), -741, 56, -894));
 			return;
 		}
+		// 미푀르유 벽뚫 -1101 186 1458  -1073 193 1436
+		if (loc.getX() <= -1073 && loc.getY() <= 193 && loc.getZ() <= 1458 
+				&& loc.getX() >= -1101 && loc.getY() >= 185 && loc.getZ() >= 1436) {
+			player.teleport(new Location(player.getWorld(), -1143, 181, 1461));
+			return;
+		}
+		// 하드 던전 3841 255 3836  3500 0 4263
+		if (loc.getX() <= 3841 && loc.getY() <= 255 && loc.getZ() <= 4263 
+				&& loc.getX() >= 3500 && loc.getY() >= 0 && loc.getZ() >= 3836) {
+			player.teleport(new Location(player.getWorld(), 3686, 190, 3861));
+			return;
+		}
 	}
 
 	public void removeMana(Player player) {

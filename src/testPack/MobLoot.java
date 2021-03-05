@@ -831,15 +831,16 @@ public class MobLoot {
 
 	// 시련의 형상
 	public void mob48(Player player) {
-		sendMessage(player, "클리어!");
+		player.sendMessage("클리어!");
+		player.sendMessage("하지만 무언가 잘못된 것 같다..");
 		player.teleport(new Location(player.getWorld(), -1106, 186, 1453.5, -90.0f, 0.0f));
 		
-		Location chestLoc = new Location(player.getWorld(), -1833, 92, 3036);
-		Block block = chestLoc.getBlock();
-		Chest chest = (Chest) block.getState();
-		ItemStack item = chest.getInventory().getItem(7);
-		player.getInventory().addItem(item);
-		sendMessage(player, ChatColor.DARK_RED + "숨겨진 달걀 1" + ChatColor.WHITE + "을 획득했다.");
+//		Location chestLoc = new Location(player.getWorld(), -1833, 92, 3036);
+//		Block block = chestLoc.getBlock();
+//		Chest chest = (Chest) block.getState();
+//		ItemStack item = chest.getInventory().getItem(7);
+//		player.getInventory().addItem(item);
+//		sendMessage(player, ChatColor.DARK_RED + "숨겨진 달걀 1" + ChatColor.WHITE + "을 획득했다.");
 	}
 
 	// 귀웅
@@ -7411,7 +7412,7 @@ public class MobLoot {
 	
 	// 썩은 공양물
 	public void mob293(Player player) {
-		es.giveExp(player, 3250000);
+		es.giveExp(player, 3000000);
 	}
 	
 	// 공양을 받는 돼지

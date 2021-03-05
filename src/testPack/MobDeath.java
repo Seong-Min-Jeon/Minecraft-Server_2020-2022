@@ -1351,7 +1351,7 @@ public class MobDeath {
 					ItemStack item = setStat(2, weapon, mobLvl);
 					lootPlayer.getInventory().addItem(item);
 					sendMessage(lootPlayer, ChatColor.AQUA + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
-				} else if(per < ((18000 - 18000*2*dist/100)*(multyChance+mul+100)/100)) {
+				} else if(per < ((17800 - 17800*2*dist/100)*(multyChance+mul+100)/100)) {
 					Block block = chestLoc.getBlock();
 					Chest chest = (Chest) block.getState();
 					ItemStack weapon = chest.getInventory().getItem(3).clone();
@@ -1359,7 +1359,7 @@ public class MobDeath {
 					lootPlayer.getInventory().addItem(item);
 					sendMessage(lootPlayer, ChatColor.DARK_RED + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
 					System.out.println(lootPlayer.getDisplayName() + "가 " + ChatColor.DARK_RED + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
-				} else if(per < ((18010 - 18010*2*dist/100)*(multyChance+mul+100)/100)) {
+				} else if(per < ((17810 - 17810*2*dist/100)*(multyChance+mul+100)/100)) {
 					Block block = chestLoc.getBlock();
 					Chest chest = (Chest) block.getState();
 					ItemStack weapon = chest.getInventory().getItem(4).clone();

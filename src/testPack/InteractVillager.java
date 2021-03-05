@@ -624,7 +624,7 @@ public class InteractVillager {
 						if (item.getItemMeta().getDisplayName().substring(2).equals("잊혀진 바다 신전 통행증")) {
 							item.setAmount(item.getAmount()-1);
 							player.sendMessage("던전 키퍼: 살아서 돌아오시게나.");
-							player.teleport(new Location(player.getWorld(), 3771, 72, 3867));
+							player.teleport(new Location(player.getWorld(), 3771, 72, 3867, 90, 0));
 							player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 50, 0,true,false,false));
 							bool = true;
 						}

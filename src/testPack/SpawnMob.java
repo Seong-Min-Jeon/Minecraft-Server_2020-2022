@@ -11530,6 +11530,70 @@ public class SpawnMob {
 	}
 	
 	public boolean mob182(LivingEntity entity, Location loc) {
+		// 중간보스방 3837 91 4001  3746 65 4060
+		if (loc.getX() <= 3837 && loc.getY() <= 91 && loc.getZ() <= 4060 
+				&& loc.getX() >= 3746 && loc.getY() >= 65 && loc.getZ() >= 4001) {
+			Location chestLoc = new Location(entity.getWorld(), -1836, 92, 3050);
+			Block block = chestLoc.getBlock();
+			Chest chest = (Chest) block.getState();
+			if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
+				entity.setCustomName(ChatColor.GRAY + "아빠 상어" + ChatColor.YELLOW + " [Lv.700]");
+				entity.setCustomNameVisible(true);
+				entity.setMaxHealth(7000000);
+				entity.setHealth(7000000);
+				EntityEquipment weapon = entity.getEquipment();
+				ItemStack weaponItem = new ItemStack(Material.ACACIA_SLAB);
+				weapon.setItemInMainHand(weaponItem);
+				EntityEquipment head = entity.getEquipment();
+				ItemStack headItem = chest.getInventory().getItem(6);
+				head.setHelmet(headItem);
+				EntityEquipment chestplate = entity.getEquipment();
+				ItemStack chestplateItem = new ItemStack(Material.IRON_CHESTPLATE);
+				chestplate.setChestplate(chestplateItem);
+				EntityEquipment leggings = entity.getEquipment();
+				ItemStack leggingsItem = new ItemStack(Material.IRON_LEGGINGS);
+				leggings.setLeggings(leggingsItem);
+				EntityEquipment boots = entity.getEquipment();
+				ItemStack bootsItem = new ItemStack(Material.IRON_BOOTS);
+				boots.setBoots(bootsItem);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 6000));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
+				return true;
+			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
+				entity.setCustomName(ChatColor.GRAY + "엄마 상어" + ChatColor.YELLOW + " [Lv.700]");
+				entity.setCustomNameVisible(true);
+				entity.setMaxHealth(2000000);
+				entity.setHealth(2000000);
+				EntityEquipment weapon = entity.getEquipment();
+				ItemStack weaponItem = new ItemStack(Material.ACACIA_LOG);
+				weapon.setItemInMainHand(weaponItem);
+				EntityEquipment head = entity.getEquipment();
+				ItemStack headItem = chest.getInventory().getItem(7);
+				head.setHelmet(headItem);
+				EntityEquipment chestplate = entity.getEquipment();
+				ItemStack chestplateItem = new ItemStack(Material.IRON_CHESTPLATE);
+				chestplate.setChestplate(chestplateItem);
+				EntityEquipment leggings = entity.getEquipment();
+				ItemStack leggingsItem = new ItemStack(Material.IRON_LEGGINGS);
+				leggings.setLeggings(leggingsItem);
+				EntityEquipment boots = entity.getEquipment();
+				ItemStack bootsItem = new ItemStack(Material.IRON_BOOTS);
+				boots.setBoots(bootsItem);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 3750));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
+				return true;
+			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM
+					|| entity.getType() == (EntityType) EntityType.SALMON
+					|| entity.getType() == (EntityType) EntityType.ITEM_FRAME
+					|| entity.getType() == (EntityType) EntityType.DROPPED_ITEM
+					|| entity.getType() == (EntityType) EntityType.ARMOR_STAND
+					|| entity.getType() == (EntityType) EntityType.VILLAGER
+					|| entity.getType() == (EntityType) EntityType.SKELETON_HORSE) {
+				return true;
+			} else {
+				return false;
+			}
+		}
 		return true;
 	}
 	

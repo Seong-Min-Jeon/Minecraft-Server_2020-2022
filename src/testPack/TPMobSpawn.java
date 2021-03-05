@@ -1445,5 +1445,46 @@ public class TPMobSpawn {
 			return;
 		}
 		
+		// 중간보스 
+		if (loc.getX() == 3838.5 && loc.getY() == 74 && loc.getZ() == 4030.5) {
+			player.teleport(new Location(player.getWorld(), 3838.5, 74.1, 4030.5));
+			int num = 0;
+			List<Entity> entitylist = player.getNearbyEntities(100, 40, 30);
+			for (Entity nearEntity : entitylist) {
+				if (nearEntity.getType() == EntityType.PLAYER) {
+					Player nearPlayer = (Player) nearEntity;
+					Location loc2 = nearPlayer.getLocation();
+					if (loc2.getX() <= 3837 && loc2.getY() <= 91 && loc2.getZ() <= 4060 
+							&& loc2.getX() >= 3746 && loc2.getY() >= 65 && loc2.getZ() >= 4001) {
+						num++;
+						return;
+					}
+				}
+			}
+			if (num == 0) {
+				for (Entity nearEntity : entitylist) {
+					if (nearEntity instanceof Mob) {
+						Location loc2 = nearEntity.getLocation();
+						if (loc2.getX() <= 3837 && loc2.getY() <= 91 && loc2.getZ() <= 4060 
+								&& loc2.getX() >= 3746 && loc2.getY() >= 65 && loc2.getZ() >= 4001) {
+							nearEntity.remove();
+						}
+					}
+				}
+			}
+			
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3783, 74, 4030), EntityType.SKELETON);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3781, 74, 4026), EntityType.SKELETON);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3777, 74, 4024), EntityType.SKELETON);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3773, 74, 4026), EntityType.SKELETON);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3771, 74, 4030), EntityType.SKELETON);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3773, 74, 4034), EntityType.SKELETON);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3777, 74, 4036), EntityType.SKELETON);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3781, 74, 4034), EntityType.SKELETON);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3777, 74, 4030), EntityType.WITHER_SKELETON);
+			return;
+		}
+		
 	}
+
 }
