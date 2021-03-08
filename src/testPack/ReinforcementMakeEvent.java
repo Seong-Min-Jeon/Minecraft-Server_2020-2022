@@ -79,7 +79,7 @@ public class ReinforcementMakeEvent {
                 							itemStack.setItemMeta(newMeta);
 			                    			inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 5);
                 						}
-            						} else if(lvl==1) {
+            						} else if(lvl==2) {
             							if(!(itemResource.getDisplayName().equals(ChatColor.WHITE + "석영"))) {
                 							player.sendMessage("이 수준의 석영으로는 개방을 할 수 없을 것 같다.");
                 							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
@@ -88,7 +88,7 @@ public class ReinforcementMakeEvent {
                 							itemStack.setItemMeta(newMeta);
 			                    			inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 5);
                 						}
-            						} else if(lvl==5) {
+            						} else if(lvl==10) {
             							if(!(itemResource.getDisplayName().equals(ChatColor.YELLOW + "반듯한 석영"))) {
                 							player.sendMessage("이 수준의 석영으로는 개방을 할 수 없을 것 같다.");
                 							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
@@ -97,7 +97,7 @@ public class ReinforcementMakeEvent {
                 							itemStack.setItemMeta(newMeta);
 			                    			inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 5);
                 						}
-            						} else if(lvl==20) {
+            						} else if(lvl==50) {
             							if(!(itemResource.getDisplayName().equals(ChatColor.LIGHT_PURPLE + "매혹적인 석영"))) {
                 							player.sendMessage("이 수준의 석영으로는 개방을 할 수 없을 것 같다.");
                 							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
@@ -106,7 +106,7 @@ public class ReinforcementMakeEvent {
                 							itemStack.setItemMeta(newMeta);
 			                    			inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 5);
                 						}
-            						} else if(lvl==100) {
+            						} else if(lvl==300) {
             							if(!(itemResource.getDisplayName().equals(ChatColor.AQUA + "보석같은 석영"))) {
                 							player.sendMessage("이 수준의 석영으로는 개방을 할 수 없을 것 같다.");
                 							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
@@ -115,7 +115,7 @@ public class ReinforcementMakeEvent {
                 							itemStack.setItemMeta(newMeta);
 			                    			inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 5);
                 						}
-            						} else if(lvl>=300) {
+            						} else if(lvl>=1000) {
             							if(!(itemResource.getDisplayName().equals(ChatColor.DARK_RED + "신의 힘이 담긴 석영"))) {
                 							player.sendMessage("이 수준의 석영으로는 개방을 할 수 없을 것 같다.");
                 							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);

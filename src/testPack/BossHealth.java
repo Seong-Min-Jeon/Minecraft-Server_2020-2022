@@ -32,6 +32,8 @@ public class BossHealth {
 	private static BossBar bar21 = Bukkit.createBossBar(ChatColor.DARK_RED + "미아즈마", BarColor.RED, BarStyle.SOLID);
 	private static BossBar bar22 = Bukkit.createBossBar(ChatColor.DARK_RED + "와우", BarColor.RED, BarStyle.SOLID);
 	private static BossBar bar23 = Bukkit.createBossBar(ChatColor.DARK_RED + "공양을 받는 돼지", BarColor.RED, BarStyle.SOLID);
+	private static BossBar bar24 = Bukkit.createBossBar(ChatColor.DARK_RED + "아빠 상어", BarColor.RED, BarStyle.SOLID);
+	private static BossBar bar25 = Bukkit.createBossBar(ChatColor.DARK_RED + "해왕신 포세이돈", BarColor.RED, BarStyle.SOLID);
 	
 	public BossBar getBar1() {
 		return bar1;
@@ -125,6 +127,14 @@ public class BossHealth {
 		return bar23;
 	}
 	
+	public BossBar getBar24() {
+		return bar24;
+	}
+	
+	public BossBar getBar25() {
+		return bar25;
+	}
+	
 	public void removePlayer(Player player) {
 		if(bar1.getPlayers().contains(player)) { 
 			bar1.removePlayer(player);
@@ -170,6 +180,10 @@ public class BossHealth {
 			bar22.removePlayer(player);
 		} else if(bar23.getPlayers().contains(player)) { 
 			bar23.removePlayer(player);
+		} else if(bar24.getPlayers().contains(player)) { 
+			bar24.removePlayer(player);
+		} else if(bar25.getPlayers().contains(player)) { 
+			bar25.removePlayer(player);
 		}
 		if(bar10.getPlayers().contains(player)) { 
 			bar10.removePlayer(player);

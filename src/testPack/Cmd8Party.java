@@ -166,6 +166,7 @@ public class Cmd8Party implements CommandExecutor {
 				playersParty = allParty;
 			}
 		}
+		System.out.println("party size: " + playersParty.size());
 		if(playersParty.size() > 5) {
 			player2.sendMessage(ChatColor.RED + "The party is full!");
 			return;

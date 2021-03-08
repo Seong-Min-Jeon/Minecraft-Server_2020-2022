@@ -212,6 +212,11 @@ public class LootChest {
 					dungeon14(player);
 				}				
 			}
+			if(block.getX()==3825 && block.getY()==135 && block.getZ()==4018) {
+				if(removeKey(player, "잊혀진 바다 신전 하드 보상 열쇠")) {
+					dungeon15(player);
+				}				
+			}
 			
 		}
 	}
@@ -2630,6 +2635,265 @@ public class LootChest {
 		var5Lore.add(ChatColor.GRAY + "레벨 제한: 570");
 		var5Lore.add(ChatColor.GRAY + " ");
 		var5Lore.add(ChatColor.GRAY + "세트를 맞춰 입으면 슬라임이 될 것만 같은 신발");
+		var5Lore.add(ChatColor.GRAY + "(세트 아이템)");
+		var5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		var5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		var5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var5Im.setUnbreakable(true);
+		var5Im.setLore(var5Lore);
+		var5.setItemMeta(var5Im);
+		
+		ItemStack var6 = new ItemStack(Material.MUSIC_DISC_13);
+		ItemMeta var6Im = var6.getItemMeta();
+		var6Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,560");
+		var6Im.setDisplayName(ChatColor.LIGHT_PURPLE + "슬라임볼 스태프");
+		ArrayList<String> var6Lore = new ArrayList();
+		var6Lore.add(ChatColor.GRAY + "레벨 제한: 560");
+		var6Lore.add(ChatColor.GRAY + " ");
+		var6Lore.add(ChatColor.GRAY + "슬라임의 정령이 깃든 스태프");
+		var6Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		var6Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		var6Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var6Im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
+		var6Im.setUnbreakable(true);
+		var6Im.setLore(var6Lore);
+		var6.setItemMeta(var6Im);
+		
+		ItemStack var7 = new ItemStack(Material.MOSSY_STONE_BRICK_STAIRS);
+		ItemMeta var7Im = var7.getItemMeta();
+		var7Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,580");
+		var7Im.setDisplayName(ChatColor.DARK_RED + "와우가 삼킨 반지");
+		ArrayList<String> var7Lore = new ArrayList();
+		var7Lore.add(ChatColor.GRAY + "레벨 제한: 580");
+		var7Lore.add(ChatColor.GRAY + " ");
+		var7Lore.add(ChatColor.GRAY + "와우의 몸 안에서 극한의 독성을 흡수한 반지");
+		var7Lore.add(ChatColor.GRAY + " ");
+		var7Lore.add(ChatColor.BLUE + "-근접 공격 시 독 데미지 12");
+		var7Lore.add(ChatColor.BLUE + "-원거리 공격 시 독 데미지 13");
+		var7Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		var7Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		var7Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var7Im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
+		var7Im.setUnbreakable(true);
+		var7Im.setLore(var7Lore);
+		var7.setItemMeta(var7Im);
+		
+		ItemStack var8 = new ItemStack(Material.SPRUCE_LOG);
+		ItemMeta var8Im = var8.getItemMeta();
+		var8Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,600");
+		var8Im.setDisplayName(ChatColor.AQUA + "말랑말랑 소드");
+		ArrayList<String> var8Lore = new ArrayList();
+		var8Lore.add(ChatColor.GRAY + "레벨 제한: 600");
+		var8Lore.add(ChatColor.GRAY + " ");
+		var8Lore.add(ChatColor.GRAY + "슬라임의 독성에 의해 녹아버린 검");
+		var8Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		var8Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		var8Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var8Im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
+		var8Im.setUnbreakable(true);
+		var8Im.setLore(var8Lore);
+		var8.setItemMeta(var8Im);
+		
+		ItemStack var9 = new ItemStack(Material.DIAMOND_ORE, 64);
+		ItemMeta var9Im = var9.getItemMeta();
+		var9Im.setDisplayName(ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석");
+		var9.setItemMeta(var9Im);
+		
+		ItemStack var10 = new ItemStack(Material.DIAMOND, 64);
+		ItemMeta var10Im = var10.getItemMeta();
+		var10Im.setDisplayName(ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드");
+		var10.setItemMeta(var10Im);
+		
+		ItemStack var11 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS, 64);
+		ItemMeta var11Im = var11.getItemMeta();
+		var11Im.setDisplayName(ChatColor.LIGHT_PURPLE + "최상급 포보르의 피");
+		var11.setItemMeta(var11Im);
+		
+		ItemStack var12 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS, 64);
+		ItemMeta var12Im = var12.getItemMeta();
+		var12Im.setDisplayName(ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개");
+		var12.setItemMeta(var12Im);
+		
+		ItemStack var13 = new ItemStack(Material.CRACKED_POLISHED_BLACKSTONE_BRICKS, 64);
+		ItemMeta var13Im = var13.getItemMeta();
+		var13Im.setDisplayName(ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점");
+		var13.setItemMeta(var13Im);
+		
+		ItemStack var14 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_SLAB, 64);
+		ItemMeta var14Im = var14.getItemMeta();
+		var14Im.setDisplayName(ChatColor.LIGHT_PURPLE + "최상급 포보르의 간");
+		var14.setItemMeta(var14Im);
+		
+		ItemStack token = new ItemStack(Material.SLIME_BLOCK);
+		ItemMeta tokenIm = token.getItemMeta();
+		tokenIm.setDisplayName(ChatColor.YELLOW + "슬라임 블럭");
+		token.setItemMeta(tokenIm);
+		
+		ItemStack emerald = new ItemStack(Material.RABBIT_HIDE, numEme);
+		ItemMeta im = emerald.getItemMeta();
+		im.setDisplayName(ChatColor.AQUA + "에메랄드 결정");
+		emerald.setItemMeta(im);
+		inv.setItem(0, emerald);
+		
+		if(num1==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, var1);
+		}
+		if(num2==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, var2);
+		}
+		if(num3==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, var3);
+		}
+		if(num4==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, var4);
+		}
+		if(num5==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, var5);
+		}
+		if(num6==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, var6);
+		}
+		if(num7==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, var7);
+		}
+		if(num8==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, var8);
+		}
+		if(num9==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, var9);
+		}
+		if(num10==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, var10);
+		}
+		if(num11==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, var11);
+		}
+		if(num12==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, var12);
+		}
+		if(num13==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, var13);
+		}
+		if(num14==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, var14);
+		}
+		if(tokenPercent==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, token);
+		}
+		player.openInventory(inv);	
+	}
+	
+	public void dungeon15(Player player) {
+		Inventory inv = Bukkit.createInventory(player, 9, "Dungeon Reward");
+		int idx;
+		int num1 = rnd.nextInt(100); 	// 무기
+		int num2 = rnd.nextInt(20); 	// 세트
+		int num3 = rnd.nextInt(20);	 	// 세트
+		int num4 = rnd.nextInt(20); 	// 세트
+		int num5 = rnd.nextInt(20);		// 세트
+		int num6 = rnd.nextInt(50);		// 스태프
+		int num7 = rnd.nextInt(100); 	// 반지
+		int num8 = rnd.nextInt(20);		// 상자1
+		int num9 = rnd.nextInt(50);		// 상자2
+		int num10 = rnd.nextInt(100);	// 상자3 
+		int num11 = rnd.nextInt(20);	// 피 64개
+		int num12 = rnd.nextInt(40);	// 쓸개 64개
+		int num13 = rnd.nextInt(80);	// 살점 64개
+		int num14 = rnd.nextInt(160);	// 간 64개
+		int numEme = rnd.nextInt(10) + 5;
+		int tokenPercent = rnd.nextInt(10);
+		
+		ItemStack var1 = new ItemStack(Material.DARK_OAK_PLANKS);
+		ItemMeta var1Im = var1.getItemMeta();
+		var1Im.setLocalizedName("5000,2000,2000,2000,1000,3000,5000,0,0,3000,700");
+		var1Im.setDisplayName(ChatColor.AQUA + "만경창파");
+		ArrayList<String> var1Lore = new ArrayList();
+		var1Lore.add(ChatColor.GRAY + "레벨 제한: 700");
+		var1Lore.add(ChatColor.GRAY + " ");
+		var1Lore.add(ChatColor.GRAY + "포세이돈의 아들이 소중히 여기던 바다의 보물");
+		var1Lore.add(ChatColor.BLUE + "-회피 확률 10% 증가");
+		var1Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		var1Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		var1Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var1Im.setUnbreakable(true);
+		var1Im.setLore(var1Lore);
+		var1.setItemMeta(var1Im);
+		
+		ItemStack var2 = new ItemStack(Material.DIAMOND_HELMET);
+		ItemMeta var2Im = var2.getItemMeta();
+		var2Im.setLocalizedName("2000,1000,1000,1000,1000,5000,5000,0,0,0,700");
+		var2Im.setDisplayName(ChatColor.GREEN + "푸른 소용돌이의 헬멧");
+		ArrayList<String> var2Lore = new ArrayList();
+		var2Lore.add(ChatColor.GRAY + "레벨 제한: 700");
+		var2Lore.add(ChatColor.GRAY + " ");
+		var2Lore.add(ChatColor.GRAY + "푸른 기운이 느껴지는 갑옷");
+		var2Lore.add(ChatColor.GRAY + "소용돌이 문양이 그려져있다.");
+		var2Lore.add(ChatColor.GRAY + "(세트 아이템)");
+		var2Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		var2Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		var2Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var2Im.setUnbreakable(true);
+		var2Im.setLore(var2Lore);
+		var2.setItemMeta(var2Im);
+		
+		ItemStack var3 = new ItemStack(Material.DIAMOND_CHESTPLATE);
+		ItemMeta var3Im = var3.getItemMeta();
+		var3Im.setLocalizedName("2000,1000,1000,1000,1000,5000,5000,0,0,0,700");
+		var3Im.setDisplayName(ChatColor.GREEN + "푸른 소용돌이의 갑옷");
+		ArrayList<String> var3Lore = new ArrayList();
+		var3Lore.add(ChatColor.GRAY + "레벨 제한: 700");
+		var3Lore.add(ChatColor.GRAY + " ");
+		var3Lore.add(ChatColor.GRAY + "푸른 기운이 느껴지는 갑옷");
+		var3Lore.add(ChatColor.GRAY + "소용돌이 문양이 그려져있다.");
+		var3Lore.add(ChatColor.GRAY + "(세트 아이템)");
+		var3Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		var3Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		var3Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var3Im.setUnbreakable(true);
+		var3Im.setLore(var3Lore);
+		var3.setItemMeta(var3Im);
+		
+		ItemStack var4 = new ItemStack(Material.DIAMOND_LEGGINGS);
+		ItemMeta var4Im = var4.getItemMeta();
+		var4Im.setLocalizedName("2000,1000,1000,1000,1000,5000,5000,0,0,0,700");
+		var4Im.setDisplayName(ChatColor.GREEN + "푸른 소용돌이의 각반");
+		ArrayList<String> var4Lore = new ArrayList();
+		var4Lore.add(ChatColor.GRAY + "레벨 제한: 700");
+		var4Lore.add(ChatColor.GRAY + " ");
+		var4Lore.add(ChatColor.GRAY + "푸른 기운이 느껴지는 각반");
+		var4Lore.add(ChatColor.GRAY + "소용돌이 문양이 그려져있다.");
+		var4Lore.add(ChatColor.GRAY + "(세트 아이템)");
+		var4Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		var4Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		var4Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var4Im.setUnbreakable(true);
+		var4Im.setLore(var4Lore);
+		var4.setItemMeta(var4Im);
+		
+		ItemStack var5 = new ItemStack(Material.DIAMOND_BOOTS);
+		ItemMeta var5Im = var5.getItemMeta();
+		var5Im.setLocalizedName("2000,1000,1000,1000,1000,5000,5000,0,0,0,700");
+		var5Im.setDisplayName(ChatColor.GREEN + "푸른 소용돌이의 신발");
+		ArrayList<String> var5Lore = new ArrayList();
+		var5Lore.add(ChatColor.GRAY + "레벨 제한: 700");
+		var5Lore.add(ChatColor.GRAY + " ");
+		var5Lore.add(ChatColor.GRAY + "푸른 기운이 느껴지는 신발");
+		var5Lore.add(ChatColor.GRAY + "소용돌이 문양이 그려져있다.");
 		var5Lore.add(ChatColor.GRAY + "(세트 아이템)");
 		var5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);

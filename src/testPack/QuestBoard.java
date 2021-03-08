@@ -783,7 +783,7 @@ public class QuestBoard {
 			ItemStack weapon = chest.getInventory().getItem(19);
 			player.getInventory().addItem(weapon);
 			player.sendMessage(ChatColor.LIGHT_PURPLE + "고양이의 털뭉치" + ChatColor.WHITE + "를 획득했다.");
-			es.giveExp(player, 13000000);
+			es.giveExp(player, 8500000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			return;
 		}

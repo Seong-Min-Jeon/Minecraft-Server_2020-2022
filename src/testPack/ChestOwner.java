@@ -22,6 +22,10 @@ public class ChestOwner {
 			akilae3102(player, num, inv);
 		} else if(player.getUniqueId().toString().equals("69ca53dc-73ab-454e-b3b4-a5cd2e6b4d03")) {
 			woolring(player, num, inv);
+		} else if(player.getUniqueId().toString().equals("fbdd3c7a-a8cc-4b27-ba54-8f58132b55d4")) {
+			sarashina_ruka(player, num, inv);
+		} else if(player.getUniqueId().toString().equals("eb9ad530-7504-432f-9895-0d3e79f7f9f2")) {
+			junletTridner(player, num, inv);
 		} 
 	}
 	
@@ -195,6 +199,58 @@ public class ChestOwner {
 				openInv(player, chestLoc.getBlock());
 				return;
 			}
+			closeInv(chestLoc.getBlock(), inv);
+		} else if(num == 3) {
+			Location chestLoc = new Location(player.getWorld(), 3776, 5, 3745);
+			if(inv == null) {
+				openInv(player, chestLoc.getBlock());
+				return;
+			}
+			closeInv(chestLoc.getBlock(), inv);
+		} else if(num == 4) {
+			Location chestLoc = new Location(player.getWorld(), 3776, 7, 3745);
+			if(inv == null) {
+				openInv(player, chestLoc.getBlock());
+				return;
+			}
+			closeInv(chestLoc.getBlock(), inv);
+		} 
+		
+	}
+	
+	public void sarashina_ruka(Player player, int num, Inventory inv) {
+		if(num == 2) {
+			Location chestLoc = new Location(player.getWorld(), 3772, 3, 3745);
+			if(inv == null) {
+				openInv(player, chestLoc.getBlock());
+				return;
+			} else 
+			closeInv(chestLoc.getBlock(), inv);
+		} else if(num == 3) {
+			Location chestLoc = new Location(player.getWorld(), 3772, 5, 3745);
+			if(inv == null) {
+				openInv(player, chestLoc.getBlock());
+				return;
+			} else 
+			closeInv(chestLoc.getBlock(), inv);
+		}
+		
+	}
+	
+	public void junletTridner(Player player, int num, Inventory inv) {
+		if(num == 2) {
+			Location chestLoc = new Location(player.getWorld(), 3770, 3, 3745);
+			if(inv == null) {
+				openInv(player, chestLoc.getBlock());
+				return;
+			} else 
+			closeInv(chestLoc.getBlock(), inv);
+		} else if(num == 3) {
+			Location chestLoc = new Location(player.getWorld(), 3770, 5, 3745);
+			if(inv == null) {
+				openInv(player, chestLoc.getBlock());
+				return;
+			} else 
 			closeInv(chestLoc.getBlock(), inv);
 		}
 		

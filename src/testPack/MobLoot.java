@@ -7449,41 +7449,70 @@ public class MobLoot {
 			}
 		}
 	}
-	
+
+	// 오징어 마법사
 	public void mob295(Player player) {
-
+		es.giveExp(player, 4500000);
 	}
 	
+	// 금붕어 아처
 	public void mob296(Player player) {
-
+		es.giveExp(player, 4510000);
 	}
 	
+	// 고등어 전사
 	public void mob297(Player player) {
-
+		es.giveExp(player, 4520000);
 	}
 	
+	// 인간형 가디언
 	public void mob298(Player player) {
-
+		es.giveExp(player, 4530000);
 	}
 	
+	// 어린 복어 병사
 	public void mob299(Player player) {
-
+		es.giveExp(player, 4540000);
 	}
 	
+	// 아빠 상어
 	public void mob300(Player player) {
-
+		es.giveExp(player, 6000000);
 	}
 	
+	// 엄마 상어
 	public void mob301(Player player) {
-
+		es.giveExp(player, 4550000);
 	}
 	
+	// 해왕신 포세이돈
 	public void mob302(Player player) {
+		es.giveExp(player, 10000000);
+		
+		ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
+		ItemMeta rewardKeyIm = rewardKey.getItemMeta();
+		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "잊혀진 바다 신전 하드 보상 열쇠");
+		rewardKey.setItemMeta(rewardKeyIm);
+		player.getInventory().addItem(rewardKey);
+		sendMessage(player, ChatColor.YELLOW + "잊혀진 바다 신전 하드 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 
+		List<Entity> entitylist = player.getNearbyEntities(50, 50, 50);
+		for (Entity nearEntity : entitylist) {
+			if (nearEntity.getType() == EntityType.PLAYER) {
+				Player nearPlayer = (Player) nearEntity;
+				Location loc = nearPlayer.getLocation();
+				if (loc.getX() <= 3672 && loc.getY() <= 200 && loc.getZ() <= 4058 
+						&& loc.getX() >= 3617 && loc.getY() >= 150 && loc.getZ() >= 4005) {
+					nearPlayer.getInventory().addItem(rewardKey);
+					sendMessage(nearPlayer, ChatColor.YELLOW + "잊혀진 바다 신전 하드 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
+				}
+			}
+		}
 	}
 	
+	// 아기 상어
 	public void mob303(Player player) {
-
+		es.giveExp(player, 4500000);
 	}
 	
 	public void mob304(Player player) {

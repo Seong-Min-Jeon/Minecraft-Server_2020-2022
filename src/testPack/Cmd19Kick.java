@@ -55,8 +55,6 @@ public class Cmd19Kick implements CommandExecutor {
 				try { 				
 					name = args[1];
 					Player p = Bukkit.getPlayer(name);
-					System.out.println(p);
-					System.out.println(num.equals("2"));
 					if(num.equals("0")) {
 						p.kickPlayer("서버가 재시작되면서 게임에서 나가졌습니다.");
 					} else if(num.equals("1")) {

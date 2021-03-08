@@ -731,7 +731,7 @@ public class MobDeath {
 					mobloot.mob153(lootPlayer);
 				}
 				// 아라크네의 하수인
-				if (name.equalsIgnoreCase("아라크네의 하수인" + ChatColor.YELLOW + " [Lv.383]")) {
+				if (name.equalsIgnoreCase("아라크네의 하수인" + ChatColor.YELLOW + " [Lv.1]")) {
 					mobloot.mob154(lootPlayer);
 				}
 				// 아라크네
@@ -1143,7 +1143,7 @@ public class MobDeath {
 					mobloot.mob256(lootPlayer);
 				}
 				// 우와
-				if (name.equalsIgnoreCase("우와" + ChatColor.YELLOW + " [Lv.580]")) {
+				if (name.equalsIgnoreCase("우와" + ChatColor.YELLOW + " [Lv.1]")) {
 					mob.getWorld().createExplosion(mob.getLocation(), 10, false, false);
 				}
 				// 바다의 포보르
@@ -1298,6 +1298,43 @@ public class MobDeath {
 				if (name.equalsIgnoreCase("공양을 받는 돼지" + ChatColor.YELLOW + " [Lv.??]")) {
 					mobloot.mob294(lootPlayer);
 				}
+				// 오징어 마법사
+				if (name.equalsIgnoreCase("오징어 마법사" + ChatColor.YELLOW + " [Lv.700]")) {
+					mobloot.mob295(lootPlayer);
+				}
+				// 금붕어 아처
+				if (name.equalsIgnoreCase("금붕어 아처" + ChatColor.YELLOW + " [Lv.700]")) {
+					mobloot.mob296(lootPlayer);
+				}
+				// 고등어 전사
+				if (name.equalsIgnoreCase("고등어 전사" + ChatColor.YELLOW + " [Lv.700]")) {
+					mobloot.mob297(lootPlayer);
+				}
+				// 인간형 가디언
+				if (name.equalsIgnoreCase("인간형 가디언" + ChatColor.YELLOW + " [Lv.700]")) {
+					mob.getWorld().createExplosion(mob.getLocation(), 5, false, false);
+					mobloot.mob298(lootPlayer);
+				}
+				// 어린 복어 병사
+				if (name.equalsIgnoreCase("어린 복어 병사" + ChatColor.YELLOW + " [Lv.700]")) {
+					mobloot.mob299(lootPlayer);
+				}
+				// 아빠 상어
+				if (name.equalsIgnoreCase("아빠 상어" + ChatColor.YELLOW + " [Lv.??]")) {
+					mobloot.mob300(lootPlayer);
+				}
+				// 엄마 상어
+				if (name.equalsIgnoreCase("엄마 상어" + ChatColor.YELLOW + " [Lv.700]")) {
+					mobloot.mob301(lootPlayer);
+				}
+				// 해왕신 포세이돈
+				if (name.equalsIgnoreCase("해왕신 포세이돈" + ChatColor.YELLOW + " [Lv.??]")) {
+					mobloot.mob302(lootPlayer);
+				}
+				// 아기 상어
+				if (name.equalsIgnoreCase("아기 상어" + ChatColor.YELLOW + " [Lv.1]")) {
+					mobloot.mob303(lootPlayer);
+				}
 			} catch (Exception e) {
 
 			}
@@ -1337,21 +1374,21 @@ public class MobDeath {
 					ItemStack item = setStat(0, weapon, mobLvl);
 					lootPlayer.getInventory().addItem(item);
 					sendMessage(lootPlayer, ChatColor.YELLOW + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
-				} else if(per < ((15000 - 15000*2*dist/100)*(multyChance+mul+100)/100)) {
+				} else if(per < ((14500 - 14500*2*dist/100)*(multyChance+mul+100)/100)) {
 					Block block = chestLoc.getBlock();
 					Chest chest = (Chest) block.getState();
 					ItemStack weapon = chest.getInventory().getItem(1).clone();
 					ItemStack item = setStat(1, weapon, mobLvl);
 					lootPlayer.getInventory().addItem(item);
 					sendMessage(lootPlayer, ChatColor.LIGHT_PURPLE + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
-				} else if(per < ((17000 - 17000*2*dist/100)*(multyChance+mul+100)/100)) {
+				} else if(per < ((16000 - 16000*2*dist/100)*(multyChance+mul+100)/100)) {
 					Block block = chestLoc.getBlock();
 					Chest chest = (Chest) block.getState();
 					ItemStack weapon = chest.getInventory().getItem(2).clone();
 					ItemStack item = setStat(2, weapon, mobLvl);
 					lootPlayer.getInventory().addItem(item);
 					sendMessage(lootPlayer, ChatColor.AQUA + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
-				} else if(per < ((17800 - 17800*2*dist/100)*(multyChance+mul+100)/100)) {
+				} else if(per < ((16500 - 16500*2*dist/100)*(multyChance+mul+100)/100)) {
 					Block block = chestLoc.getBlock();
 					Chest chest = (Chest) block.getState();
 					ItemStack weapon = chest.getInventory().getItem(3).clone();
@@ -1359,7 +1396,7 @@ public class MobDeath {
 					lootPlayer.getInventory().addItem(item);
 					sendMessage(lootPlayer, ChatColor.DARK_RED + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
 					System.out.println(lootPlayer.getDisplayName() + "가 " + ChatColor.DARK_RED + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
-				} else if(per < ((17810 - 17810*2*dist/100)*(multyChance+mul+100)/100)) {
+				} else if(per < ((16510 - 16510*2*dist/100)*(multyChance+mul+100)/100)) {
 					Block block = chestLoc.getBlock();
 					Chest chest = (Chest) block.getState();
 					ItemStack weapon = chest.getInventory().getItem(4).clone();

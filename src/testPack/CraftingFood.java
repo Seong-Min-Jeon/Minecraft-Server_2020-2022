@@ -282,6 +282,24 @@ public class CraftingFood {
 				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "최상급 포보르의 뿔")) {
 					totalStat += amount[i] * 230;
 				}
+				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "심연의 포보르의 뿔")) {
+					totalStat += amount[i] * 190; 
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "심연의 포보르의 쓸개")) {
+					totalStat += amount[i] * 200; 
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "심연의 포보르의 살점")) {
+					totalStat += amount[i] * 210; 
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "심연의 포보르의 간")) {
+					totalStat += amount[i] * 220; 
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "심연의 포보르의 심장")) {
+					totalStat += amount[i] * 240;
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "심연의 포보르의 뿔")) {
+					totalStat += amount[i] * 270;
+				}
 			}
 			
 			Random rnd = new Random();

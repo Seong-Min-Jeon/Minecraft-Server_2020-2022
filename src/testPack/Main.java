@@ -149,6 +149,7 @@ import org.bukkit.event.player.PlayerSwapHandItemsEvent;
 import org.bukkit.event.player.PlayerTeleportEvent;
 import org.bukkit.event.player.PlayerTeleportEvent.TeleportCause;
 import org.bukkit.event.server.MapInitializeEvent;
+import org.bukkit.event.server.ServerCommandEvent;
 import org.bukkit.event.vehicle.VehicleCollisionEvent;
 import org.bukkit.event.vehicle.VehicleExitEvent;
 import org.bukkit.event.world.ChunkLoadEvent;
@@ -201,6 +202,7 @@ public class Main extends JavaPlugin implements Listener{
 
 	Cmd12EmeraldToggle et = new Cmd12EmeraldToggle();
 
+	private int taskID;
 	Scoreboard board;
 	Team red;
 	Team blue;
@@ -5460,6 +5462,7 @@ public class Main extends JavaPlugin implements Listener{
 				num += new SpecialEffect().s4(player);
 				num += new SpecialEffect().s6(player);
 				num += new SpecialEffect().s8(player);
+				num += new SpecialEffect().w4(player);
 				
 				if(num > 70) {
 					num = 70;
@@ -6227,7 +6230,35 @@ public class Main extends JavaPlugin implements Listener{
 							new BossHealth().getBar23().removePlayer(p);
 						}
 					} else {
-						new BossHealth().getBar23().setProgress((boss.getHealth()-event.getFinalDamage()) / 4000000.0);
+						new BossHealth().getBar23().setProgress((boss.getHealth()-event.getFinalDamage()) / 5000000.0);
+					}
+				}
+				// 아빠 상어
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("아빠 상어" + ChatColor.YELLOW + " [Lv.??]")) {
+
+					LivingEntity boss = (LivingEntity) mob;
+					
+					if(boss.getHealth() - event.getFinalDamage() <= 0) {
+						for(Player p : new BossHealth().getBar24().getPlayers()) {
+							new BossHealth().getBar24().setProgress(0);
+							new BossHealth().getBar24().removePlayer(p);
+						}
+					} else {
+						new BossHealth().getBar24().setProgress((boss.getHealth()-event.getFinalDamage()) / 7000000.0);
+					}
+				}
+				// 해왕신 포세이돈
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("해왕신 포세이돈" + ChatColor.YELLOW + " [Lv.??]")) {
+
+					LivingEntity boss = (LivingEntity) mob;
+					
+					if(boss.getHealth() - event.getFinalDamage() <= 0) {
+						for(Player p : new BossHealth().getBar25().getPlayers()) {
+							new BossHealth().getBar25().setProgress(0);
+							new BossHealth().getBar25().removePlayer(p);
+						}
+					} else {
+						new BossHealth().getBar25().setProgress((boss.getHealth()-event.getFinalDamage()) / 15000000.0);
 					}
 				}
 			}
@@ -8764,6 +8795,77 @@ public class Main extends JavaPlugin implements Listener{
 	public void breedEvent(EntityBreedEvent event) {
 		event.setCancelled(true);
 		return;
+	}
+	
+	@EventHandler
+	public void consoleEvent(ServerCommandEvent event) {
+		if(event.getCommand().equals("where")) {
+			for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+				getLogger().info(allPlayer.getDisplayName() + " " + (int)(allPlayer.getLocation().getX()) + " " + (int)(allPlayer.getLocation().getY()) + " " + (int)(allPlayer.getLocation().getZ()));
+			}
+		} else if(event.getCommand().split(" ")[0].equals("k")) {
+			String[] ary = event.getCommand().split(" ");
+			if(ary.length == 3) {
+				Player p = Bukkit.getPlayer(ary[2]);
+				try {
+					if(ary[1].equals("0")) {
+						p.kickPlayer("서버가 재시작되면서 게임에서 나가졌습니다.");
+					} else if(ary[1].equals("1")) {
+						p.kickPlayer("점검 중입니다.");
+					} else if(ary[1].equals("2")) {
+						p.kickPlayer("매크로 사용이 감지되었습니다. 현재 1회 경고를 받은 상태이며, 자세한 사항은 디스코드 공지를 확인하시길 바랍니다.");
+					}
+				} catch(Exception e) {
+					
+				}
+			}
+		} else if(event.getCommand().split(" ")[0].equals("trace")) {
+			String[] ary = event.getCommand().split(" ");
+			if(ary.length == 2) {
+				Player player = Bukkit.getPlayer(ary[1]);
+				try {
+					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+						int time = 0;
+						ThreadTracePlayer td = new ThreadTracePlayer(player.getUniqueId());
+
+						@Override
+						public void run() {
+							if (!td.hasID()) {
+								td.setID(taskID);
+							}
+
+							if (time < 600) {
+								getLogger().info(player.getDisplayName() + " " 
+										+ ((int)(player.getLocation().getX()*10))/10.0 + " " 
+										+ ((int)(player.getLocation().getY()*10))/10.0 + " " 
+										+ ((int)(player.getLocation().getZ()*10))/10.0);
+							}
+
+							if (time >= 600) {
+								td.endTask();
+								td.removeID();
+								return;
+							}
+
+							time++;
+						}
+
+					}, 0, 1);
+				} catch(Exception e) {
+					
+				}
+			}
+		} else if(event.getCommand().split(" ")[0].equals("chat")) {
+			String[] args = event.getCommand().substring(4).split(" ");
+			String sentance = "";
+			for(String str : args) {
+				sentance += str + " ";
+			}
+			for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+				allPlayer.sendMessage(sentance);
+			}
+		}
 	}
 	
 	@EventHandler

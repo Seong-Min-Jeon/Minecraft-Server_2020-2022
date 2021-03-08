@@ -1457,6 +1457,9 @@ public class TPMobSpawn {
 					if (loc2.getX() <= 3837 && loc2.getY() <= 91 && loc2.getZ() <= 4060 
 							&& loc2.getX() >= 3746 && loc2.getY() >= 65 && loc2.getZ() >= 4001) {
 						num++;
+						if(new BossHealth().getBar24().getProgress() != 0) {
+							new BossHealth().getBar24().addPlayer(player);
+						}
 						return;
 					}
 				}
@@ -1482,6 +1485,51 @@ public class TPMobSpawn {
 			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3777, 74, 4036), EntityType.SKELETON);
 			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3781, 74, 4034), EntityType.SKELETON);
 			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3777, 74, 4030), EntityType.WITHER_SKELETON);
+			
+			new BossHealth().getBar24().setProgress(1.0);
+			new BossHealth().getBar24().addPlayer(player);
+			return;
+		}
+		
+		// 보스 
+		if (loc.getX() == 3663.42 && loc.getY() == 168.5 && loc.getZ() == 4030.45) {
+			player.teleport(new Location(player.getWorld(), 3663.5, 168.6, 4030.5));
+			int num = 0;
+			List<Entity> entitylist = player.getNearbyEntities(80, 40, 80);
+			for (Entity nearEntity : entitylist) {
+				if (nearEntity.getType() == EntityType.PLAYER) {
+					Player nearPlayer = (Player) nearEntity;
+					Location loc2 = nearPlayer.getLocation();
+					if (loc2.getX() <= 3672 && loc2.getY() <= 200 && loc2.getZ() <= 4058 
+							&& loc2.getX() >= 3617 && loc2.getY() >= 150 && loc2.getZ() >= 4005) {
+						num++;
+						if(new BossHealth().getBar25().getProgress() != 0) {
+							new BossHealth().getBar25().addPlayer(player);
+						}
+						return;
+					}
+				}
+			}
+			if (num == 0) {
+				for (Entity nearEntity : entitylist) {
+					if (nearEntity instanceof Mob) {
+						Location loc2 = nearEntity.getLocation();
+						if (loc2.getX() <= 3672 && loc2.getY() <= 200 && loc2.getZ() <= 4058 
+								&& loc2.getX() >= 3617 && loc2.getY() >= 150 && loc2.getZ() >= 4005) {
+							nearEntity.remove();
+						}
+					}
+				}
+			}
+			
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3645, 169, 4030), EntityType.SKELETON);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3648, 169, 4026), EntityType.ZOMBIE);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3648, 169, 4034), EntityType.ZOMBIE);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3641, 169, 4026), EntityType.ZOMBIE);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3641, 169, 4034), EntityType.ZOMBIE);
+			
+			new BossHealth().getBar25().setProgress(1.0);
+			new BossHealth().getBar25().addPlayer(player);
 			return;
 		}
 		

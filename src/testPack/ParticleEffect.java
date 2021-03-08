@@ -1357,6 +1357,7 @@ public class ParticleEffect {
 		}, 0, 1);
 	}
 	
+	
 ////몬스터 기술////	
 	
 	
@@ -1659,4 +1660,42 @@ public class ParticleEffect {
 		}, 0, 1);
 	}
 
+	// 아빠 상어
+	public void startE36() {
+		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+			int time = 0;
+			double var = 0;
+			Location loc, first, second, first2, second2;
+			ParticleData pd = new ParticleData(player.getUniqueId());
+
+			@Override
+			public void run() {
+				if (!pd.hasID()) {
+					pd.setID(taskID);
+				}
+
+				if (time >= 10) {
+					pd.endTask();
+					pd.removeID();
+				}
+
+				time++;
+				var += Math.PI / 8;
+
+				loc = ent.getLocation();
+
+				first = loc.clone().add(Math.cos(var) * 3, 1, Math.sin(var) * 3);
+				second = loc.clone().add(Math.cos(var) * 3, 1, Math.sin(var) * -3);
+				first2 = loc.clone().add(Math.cos(var) * -3, 1, Math.sin(var) * 3);
+				second2 = loc.clone().add(Math.cos(var) * -3, 1, Math.sin(var) * -3);
+
+				player.getWorld().spawnParticle(Particle.BUBBLE_POP, first, 10);
+				player.getWorld().spawnParticle(Particle.BUBBLE_POP, second, 10);
+				player.getWorld().spawnParticle(Particle.BUBBLE_POP, first2, 10);
+				player.getWorld().spawnParticle(Particle.BUBBLE_POP, second2, 10);
+
+			}
+		}, 0, 1);
+	}
 }

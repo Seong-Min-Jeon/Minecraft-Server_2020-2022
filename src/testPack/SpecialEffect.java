@@ -258,6 +258,17 @@ public class SpecialEffect {
 		return 0;
 	}
 	
+	public double w4(Player player) {
+		try {
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "만경창파")) {
+				return 10;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
 	public int h1(Player player) {
