@@ -6,9 +6,11 @@ import java.util.Random;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Color;
+import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Sound;
 import org.bukkit.block.Block;
+import org.bukkit.block.Chest;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
@@ -2809,8 +2811,8 @@ public class LootChest {
 		int num6 = rnd.nextInt(50);		// 스태프
 		int num7 = rnd.nextInt(100); 	// 반지
 		int num8 = rnd.nextInt(20);		// 상자1
-		int num9 = rnd.nextInt(50);		// 상자2
-		int num10 = rnd.nextInt(100);	// 상자3 
+		int num9 = rnd.nextInt(70);		// 상자2
+		int num10 = rnd.nextInt(200);	// 상자3 
 		int num11 = rnd.nextInt(20);	// 피 64개
 		int num12 = rnd.nextInt(40);	// 쓸개 64개
 		int num13 = rnd.nextInt(80);	// 살점 64개
@@ -2826,6 +2828,7 @@ public class LootChest {
 		var1Lore.add(ChatColor.GRAY + "레벨 제한: 700");
 		var1Lore.add(ChatColor.GRAY + " ");
 		var1Lore.add(ChatColor.GRAY + "포세이돈의 아들이 소중히 여기던 바다의 보물");
+		var1Lore.add(ChatColor.BLUE + " ");
 		var1Lore.add(ChatColor.BLUE + "-회피 확률 10% 증가");
 		var1Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var1Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -2902,14 +2905,14 @@ public class LootChest {
 		var5Im.setLore(var5Lore);
 		var5.setItemMeta(var5Im);
 		
-		ItemStack var6 = new ItemStack(Material.MUSIC_DISC_13);
+		ItemStack var6 = new ItemStack(Material.MUSIC_DISC_FAR);
 		ItemMeta var6Im = var6.getItemMeta();
-		var6Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,560");
-		var6Im.setDisplayName(ChatColor.LIGHT_PURPLE + "슬라임볼 스태프");
+		var6Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,700");
+		var6Im.setDisplayName(ChatColor.LIGHT_PURPLE + "얼음꽃");
 		ArrayList<String> var6Lore = new ArrayList();
-		var6Lore.add(ChatColor.GRAY + "레벨 제한: 560");
+		var6Lore.add(ChatColor.GRAY + "레벨 제한: 700");
 		var6Lore.add(ChatColor.GRAY + " ");
-		var6Lore.add(ChatColor.GRAY + "슬라임의 정령이 깃든 스태프");
+		var6Lore.add(ChatColor.GRAY + "극지방에서 드물게 피는 얼음꽃");
 		var6Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var6Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var6Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -2918,17 +2921,18 @@ public class LootChest {
 		var6Im.setLore(var6Lore);
 		var6.setItemMeta(var6Im);
 		
-		ItemStack var7 = new ItemStack(Material.MOSSY_STONE_BRICK_STAIRS);
+		ItemStack var7 = new ItemStack(Material.SMOOTH_QUARTZ_STAIRS);
 		ItemMeta var7Im = var7.getItemMeta();
-		var7Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,580");
-		var7Im.setDisplayName(ChatColor.DARK_RED + "와우가 삼킨 반지");
+		var7Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,700");
+		var7Im.setDisplayName(ChatColor.AQUA + "얼음별");
 		ArrayList<String> var7Lore = new ArrayList();
-		var7Lore.add(ChatColor.GRAY + "레벨 제한: 580");
+		var7Lore.add(ChatColor.GRAY + "레벨 제한: 700");
 		var7Lore.add(ChatColor.GRAY + " ");
-		var7Lore.add(ChatColor.GRAY + "와우의 몸 안에서 극한의 독성을 흡수한 반지");
+		var7Lore.add(ChatColor.GRAY + "먼 우주의 얼음별과 같은 모양으로 빚은 장신구");
 		var7Lore.add(ChatColor.GRAY + " ");
-		var7Lore.add(ChatColor.BLUE + "-근접 공격 시 독 데미지 12");
-		var7Lore.add(ChatColor.BLUE + "-원거리 공격 시 독 데미지 13");
+		var7Lore.add(ChatColor.BLUE + "-전투 경험치 10% 증가");
+		var7Lore.add(ChatColor.BLUE + "-근접 공격 시 10% 확률로 10% 회복");
+		var7Lore.add(ChatColor.BLUE + "-원거리 공격 시 8% 확률로 10% 회복");
 		var7Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var7Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var7Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -2937,55 +2941,41 @@ public class LootChest {
 		var7Im.setLore(var7Lore);
 		var7.setItemMeta(var7Im);
 		
-		ItemStack var8 = new ItemStack(Material.SPRUCE_LOG);
-		ItemMeta var8Im = var8.getItemMeta();
-		var8Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,600");
-		var8Im.setDisplayName(ChatColor.AQUA + "말랑말랑 소드");
-		ArrayList<String> var8Lore = new ArrayList();
-		var8Lore.add(ChatColor.GRAY + "레벨 제한: 600");
-		var8Lore.add(ChatColor.GRAY + " ");
-		var8Lore.add(ChatColor.GRAY + "슬라임의 독성에 의해 녹아버린 검");
-		var8Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-		var8Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-		var8Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
-		var8Im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
-		var8Im.setUnbreakable(true);
-		var8Im.setLore(var8Lore);
-		var8.setItemMeta(var8Im);
+		Location chestLoc = new Location(player.getWorld(), -1843, 92, 3043);
+		Block block = chestLoc.getBlock();
+		Chest chest = (Chest) block.getState();
+		ItemStack var8Pro = chest.getInventory().getItem(1).clone();
+		ItemStack var8 = setStat(1, var8Pro, player.getLevel());
 		
-		ItemStack var9 = new ItemStack(Material.DIAMOND_ORE, 64);
-		ItemMeta var9Im = var9.getItemMeta();
-		var9Im.setDisplayName(ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석");
-		var9.setItemMeta(var9Im);
+		ItemStack var9Pro = chest.getInventory().getItem(2).clone();
+		ItemStack var9 = setStat(2, var9Pro, player.getLevel());
 		
-		ItemStack var10 = new ItemStack(Material.DIAMOND, 64);
-		ItemMeta var10Im = var10.getItemMeta();
-		var10Im.setDisplayName(ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드");
-		var10.setItemMeta(var10Im);
+		ItemStack var10Pro = chest.getInventory().getItem(3).clone();
+		ItemStack var10 = setStat(3, var10Pro, player.getLevel());
 		
 		ItemStack var11 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS, 64);
 		ItemMeta var11Im = var11.getItemMeta();
-		var11Im.setDisplayName(ChatColor.LIGHT_PURPLE + "최상급 포보르의 피");
+		var11Im.setDisplayName(ChatColor.AQUA + "심연의 포보르의 피");
 		var11.setItemMeta(var11Im);
 		
 		ItemStack var12 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS, 64);
 		ItemMeta var12Im = var12.getItemMeta();
-		var12Im.setDisplayName(ChatColor.LIGHT_PURPLE + "최상급 포보르의 쓸개");
+		var12Im.setDisplayName(ChatColor.AQUA + "심연의 포보르의 쓸개");
 		var12.setItemMeta(var12Im);
 		
 		ItemStack var13 = new ItemStack(Material.CRACKED_POLISHED_BLACKSTONE_BRICKS, 64);
 		ItemMeta var13Im = var13.getItemMeta();
-		var13Im.setDisplayName(ChatColor.LIGHT_PURPLE + "최상급 포보르의 살점");
+		var13Im.setDisplayName(ChatColor.AQUA + "심연의 포보르의 살점");
 		var13.setItemMeta(var13Im);
 		
 		ItemStack var14 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_SLAB, 64);
 		ItemMeta var14Im = var14.getItemMeta();
-		var14Im.setDisplayName(ChatColor.LIGHT_PURPLE + "최상급 포보르의 간");
+		var14Im.setDisplayName(ChatColor.AQUA + "심연의 포보르의 간");
 		var14.setItemMeta(var14Im);
 		
-		ItemStack token = new ItemStack(Material.SLIME_BLOCK);
+		ItemStack token = new ItemStack(Material.PRISMARINE_SHARD);
 		ItemMeta tokenIm = token.getItemMeta();
-		tokenIm.setDisplayName(ChatColor.YELLOW + "슬라임 블럭");
+		tokenIm.setDisplayName(ChatColor.LIGHT_PURPLE + "바다의 파편");
 		token.setItemMeta(tokenIm);
 		
 		ItemStack emerald = new ItemStack(Material.RABBIT_HIDE, numEme);
@@ -3072,6 +3062,38 @@ public class LootChest {
 			
 		}
 		return false;		
+	}
+
+	public ItemStack setStat(int num, ItemStack item, int lvl) {
+		ItemMeta im = item.getItemMeta();
+		if(num == 0) {
+			im.setDisplayName(ChatColor.YELLOW + "의문의 상자");
+		} else if(num == 1) {
+			im.setDisplayName(ChatColor.LIGHT_PURPLE + "의문의 상자");
+		} else if(num == 2) {
+			im.setDisplayName(ChatColor.AQUA + "의문의 상자");
+		} else if(num == 3) {
+			im.setDisplayName(ChatColor.DARK_RED + "의문의 상자");
+		} else if(num == 4) {
+			im.setDisplayName(ChatColor.DARK_PURPLE + "의문의 상자");
+		}
+		
+		int minLvl = ((int)(lvl/10)) * 10;
+		int maxLvl = minLvl + 10;
+		
+		ArrayList<String> lore = new ArrayList();
+		lore.add(ChatColor.GRAY + "레벨 범위: " + ChatColor.WHITE + minLvl + "-" + maxLvl);
+		lore.add(ChatColor.GRAY + " ");
+		lore.add(ChatColor.GRAY + "신비한 힘으로 굳게 닫힌 상자");
+		lore.add(ChatColor.GRAY + "요정의 테이블에서 열 수 있을 것 같다.");
+		im.setLore(lore);
+		
+		im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		
+		item.setItemMeta(im);
+		return item;
 	}
 	
 }

@@ -520,6 +520,9 @@ public class MobThread implements Listener{
 							} else if(loc.getX() <= -484 && loc.getY() <= 49 && loc.getZ() <= -680 
 									&& loc.getX() >= -585 && loc.getY() >= 0 && loc.getZ() >= -765) {
 								skelig12(player, loc);
+							} else if(loc.getX() <= 3839 && loc.getY() <= 134 && loc.getZ() <= 3990 
+									&& loc.getX() >= 3683 && loc.getY() >= 58 && loc.getZ() >= 3932) {
+								hardSeaDungeon(player, loc);
 							}
 						}
 					} 
@@ -2925,6 +2928,21 @@ public class MobThread implements Listener{
 			loc.getWorld().spawnEntity(loc, EntityType.MAGMA_CUBE);
 		} else if (num == 1) {
 			loc.getWorld().spawnEntity(loc, EntityType.STRAY);
+		} 
+	}
+	
+	public void hardSeaDungeon(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 3839 && loc.getY() <= 134 && loc.getZ() <= 3990 
+				&& loc.getX() >= 3683 && loc.getY() >= 58 && loc.getZ() >= 3932)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.ZOMBIE);
 		} 
 	}
 	

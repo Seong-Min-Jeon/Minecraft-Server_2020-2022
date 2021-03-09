@@ -48,6 +48,7 @@ public class ExpSystemByMob {
 		percent += new SpecialEffect().c2(player);
 		percent += new SpecialEffect().l2(player);
 		percent += new SpecialEffect().a19(player);
+		percent += new SpecialEffect().a20(player);
 		exp += exp * percent / 100;
 		
 		if(exp <= 0) {
@@ -125,6 +126,7 @@ public class ExpSystemByMob {
 		percent += new SpecialEffect().c2(player);
 		percent += new SpecialEffect().l2(player);
 		percent += new SpecialEffect().a19(player);
+		percent += new SpecialEffect().a20(player);
 		exp += exp * percent / 100;
 		
 		if(exp <= 0) {

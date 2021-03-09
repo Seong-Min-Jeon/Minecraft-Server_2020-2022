@@ -179,10 +179,10 @@ public class RerollScroll {
 							total -= tmp;
 						} else if(statNum == 3) {
 							int tmp = rnd.nextInt(total);
-							stat[4] = tmp;
+							stat[6] = tmp;
 							total -= tmp;
 							tmp = rnd.nextInt(total);
-							stat[6] = tmp;
+							stat[4] = tmp;
 							total -= tmp;
 							tmp = rnd.nextInt(total);
 							stat[5] = tmp;
@@ -210,13 +210,13 @@ public class RerollScroll {
 							total -= tmp;
 						} else if(statNum == 4) {
 							int tmp = rnd.nextInt(total);
+							stat[8] = tmp;
+							total -= tmp;
+							tmp = rnd.nextInt(total);
 							stat[0] = tmp;
 							total -= tmp;
 							tmp = rnd.nextInt(total);
 							stat[9] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[8] = tmp;
 							total -= tmp;
 							tmp = rnd.nextInt(total);
 							stat[7] = tmp;
@@ -241,13 +241,13 @@ public class RerollScroll {
 							total -= tmp;
 						} else if(statNum == 5) {
 							int tmp = rnd.nextInt(total);
+							stat[8] = tmp;
+							total -= tmp;
+							tmp = rnd.nextInt(total);
 							stat[5] = tmp;
 							total -= tmp;
 							tmp = rnd.nextInt(total);
 							stat[9] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[8] = tmp;
 							total -= tmp;
 							tmp = rnd.nextInt(total);
 							stat[7] = tmp;
@@ -303,13 +303,13 @@ public class RerollScroll {
 							total -= tmp;
 						} else if(statNum == 7) {
 							int tmp = rnd.nextInt(total);
-							stat[4] = tmp;
+							stat[7] = tmp;
 							total -= tmp;
 							tmp = rnd.nextInt(total);
 							stat[6] = tmp;
 							total -= tmp;
 							tmp = rnd.nextInt(total);
-							stat[7] = tmp;
+							stat[4] = tmp;
 							total -= tmp;
 							tmp = rnd.nextInt(total);
 							stat[5] = tmp;

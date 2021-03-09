@@ -5241,6 +5241,7 @@ public class Main extends JavaPlugin implements Listener{
 				int percent10 = 0;
 				percent10 += new SpecialEffect().a11(player);
 				percent10 += new SpecialEffect().b3(player);
+				percent10 += new SpecialEffect().a21(player);
 				
 				if(rnd.nextInt(100) < percent10) {
 					if(player.getHealth() >= 18) {
@@ -5297,6 +5298,18 @@ public class Main extends JavaPlugin implements Listener{
 					}
 				}
 				//===========================================================================
+				// 회복
+				int percent10 = 0;
+				percent10 += new SpecialEffect().a22(player);
+				
+				if(rnd.nextInt(100) < percent10) {
+					if(player.getHealth() >= 18) {
+						player.setHealth(20);
+					} else {
+						player.setHealth(player.getHealth() + 2);
+					}
+				}
+				//===========================================================================
 				PlayerHitDebuff debuff = new PlayerHitDebuff();
 				debuff.playerHitDebuff(player, entity);
 			}
@@ -5341,6 +5354,18 @@ public class Main extends JavaPlugin implements Listener{
 						((LivingEntity) entity).addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 100, poison));
 					} else {
 						((LivingEntity) entity).addPotionEffect(new PotionEffect(PotionEffectType.HARM, 100, poison));
+					}
+				}
+				//===========================================================================
+				// 회복
+				int percent10 = 0;
+				percent10 += new SpecialEffect().a22(player);
+				
+				if(rnd.nextInt(100) < percent10) {
+					if(player.getHealth() >= 18) {
+						player.setHealth(20);
+					} else {
+						player.setHealth(player.getHealth() + 2);
 					}
 				}
 				//===========================================================================
@@ -5492,6 +5517,10 @@ public class Main extends JavaPlugin implements Listener{
 					event.setDamage(999999999);
 				} else {
 					event.setDamage(1);
+					if(event.getCause() == DamageCause.FIRE_TICK || event.getCause() == DamageCause.FIRE
+							 || event.getCause() == DamageCause.MAGIC || event.getCause() == DamageCause.CUSTOM) {
+						event.setDamage(0);
+					}
 					Entity mob = event.getEntity();
 					double damage = event.getFinalDamage();
 					new MobDeath(mob, damage);
@@ -8864,6 +8893,12 @@ public class Main extends JavaPlugin implements Listener{
 			}
 			for (Player allPlayer : Bukkit.getOnlinePlayers()) {
 				allPlayer.sendMessage(sentance);
+			}
+		} else if(event.getCommand().split(" ")[0].equals("killyou")) {
+			String[] ary = event.getCommand().split(" ");
+			if(ary.length == 2) {
+				Player player = Bukkit.getPlayer(ary[1]);
+				player.damage(9999999);
 			}
 		}
 	}

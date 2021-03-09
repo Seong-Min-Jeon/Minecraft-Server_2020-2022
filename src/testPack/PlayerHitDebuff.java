@@ -103,6 +103,9 @@ public class PlayerHitDebuff {
 		mob53(player, mob);
 		mob54(player, mob);
 		mob55(player, mob);
+		mob56(player, mob);
+		mob57(player, mob);
+		mob58(player, mob);
 	}
 
 	// 시련의 형상

@@ -132,11 +132,20 @@ public class ArrowEffect {
 						}
 					} 
 				} else if(im.getDisplayName().equals(ChatColor.LIGHT_PURPLE + "슬라임볼 스태프")) {
-					if(player.getLevel() >= 500) {
+					if(player.getLevel() >= 560) {
 						if(checkMana(player, 4)) {
 							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BEACON_ACTIVATE, 0.4f, 8.0f);
-							player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 600, 1, true, false, false));
+							player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 600, 2, true, false, false));
 							removeMana(player, 4);
+						}
+					} 
+				} else if(im.getDisplayName().equals(ChatColor.LIGHT_PURPLE + "얼음꽃")) {
+					if(player.getLevel() >= 700) {
+						if(checkMana(player, 10)) {
+							bool = reload(player, 2000);
+							if(bool) {
+								removeMana(player, 10);
+							}
 						}
 					} 
 				}
@@ -157,6 +166,8 @@ public class ArrowEffect {
 						staffE3(arrow);
 					} else if(im.getDisplayName().equals(ChatColor.DARK_RED + "트리니티 스태프")) {
 						staffE4(arrow);
+					} else if(im.getDisplayName().equals(ChatColor.LIGHT_PURPLE + "얼음꽃")) {
+						staffE5(arrow);
 					}
 					
 				}
@@ -397,7 +408,7 @@ public class ArrowEffect {
 						if (nearEntity.getType() != EntityType.PLAYER) {
 							if (nearEntity instanceof LivingEntity) {
 								LivingEntity nearMob = (LivingEntity) nearEntity;
-								nearMob.damage(player.getLevel()*200);
+								nearMob.damage(player.getLevel()*150);
 							}
 						}
 					}
@@ -412,7 +423,7 @@ public class ArrowEffect {
 						if (nearEntity.getType() != EntityType.PLAYER) {
 							if (nearEntity instanceof LivingEntity) {
 								LivingEntity nearMob = (LivingEntity) nearEntity;
-								nearMob.damage(player.getLevel()*200);
+								nearMob.damage(player.getLevel()*150);
 							}
 						}
 					}
@@ -435,7 +446,7 @@ public class ArrowEffect {
 						if (nearEntity.getType() != EntityType.PLAYER) {
 							if (nearEntity instanceof LivingEntity) {
 								LivingEntity nearMob = (LivingEntity) nearEntity;
-								nearMob.damage(player.getLevel()*200);
+								nearMob.damage(player.getLevel()*150);
 							}
 						}
 					}
@@ -451,6 +462,22 @@ public class ArrowEffect {
 			}
 
 		}, 0, 1);
+	}
+	
+	public void staffE5(Arrow arrow) {
+		
+		List<Entity> entitylist = arrow.getNearbyEntities(8, 6, 8);
+		for (Entity nearEntity : entitylist) {
+			if (nearEntity.getType() != EntityType.PLAYER) {
+				if (nearEntity instanceof LivingEntity) {
+					LivingEntity nearMob = (LivingEntity) nearEntity;
+					nearMob.damage(player.getLevel()*400);
+					nearMob.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 40, 200, true, false, false));
+				}
+			}
+		}
+		world.playEffect(player.getLocation(), Effect.STEP_SOUND, Material.BLUE_ICE);
+		
 	}
 	
 }

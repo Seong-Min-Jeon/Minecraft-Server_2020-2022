@@ -1357,6 +1357,46 @@ public class ParticleEffect {
 		}, 0, 1);
 	}
 	
+
+///스태프 기술///
+	
+	public void startES1() {
+		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+			final int points = 30;
+			final double radius = 1.2d;
+			int time = 0;
+			double var = 0;
+			Location loc, first, second;
+			ParticleData pd = new ParticleData(player.getUniqueId());
+
+			@Override
+			public void run() {
+				if (!pd.hasID()) {
+					pd.setID(taskID);
+				}
+
+				if (time >= 20) {
+					pd.endTask();
+					pd.removeID();
+				}
+
+				time++;
+				var += Math.PI / 16;
+
+				loc = player.getLocation();
+
+				for (int i = 1; i < 5; i++) {
+					first = loc.clone().add(Math.cos(var) * i, 0, Math.sin(var) * i);
+					second = loc.clone().add(Math.cos(var + Math.PI) * i, 0, Math.sin(var + Math.PI) * i);
+
+					player.getWorld().spawnParticle(Particle.CLOUD, first, 10);
+					player.getWorld().spawnParticle(Particle.CLOUD, second, 10);
+				}
+			}
+		}, 0, 1);
+	}
+	
 	
 ////몬스터 기술////	
 	
