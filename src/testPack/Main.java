@@ -9002,10 +9002,12 @@ public class Main extends JavaPlugin implements Listener{
 			ItemStack item1 = player.getInventory().getItemInMainHand();
 			ItemStack item2 = player.getInventory().getItemInOffHand();
 			if(item1.getItemMeta() == null) {
+				new StepAndRolling().effect(player);
 				event.setCancelled(true);
 				return;
 			}
 			if(item2.getItemMeta() == null) {
+				new StepAndRolling().effect(player);
 				event.setCancelled(true);
 				return;
 			}
@@ -9042,7 +9044,7 @@ public class Main extends JavaPlugin implements Listener{
 			}
 			
 			if(bool == false) {
-				Vector v = player.getVelocity().multiply(new Vector(1.5, 0, 1.5));
+				new StepAndRolling().effect(player);
 			}
 			
 			event.setCancelled(true);
