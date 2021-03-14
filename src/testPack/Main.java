@@ -230,6 +230,7 @@ public class Main extends JavaPlugin implements Listener{
 		getCommand("exptoggle").setExecutor(new Cmd17ExpToggle());
 		getCommand("itemtoggle").setExecutor(new Cmd18ItemToggle());
 		getCommand("k").setExecutor(new Cmd19Kick());
+		getCommand("LoveWood").setExecutor(new Cmd20LoveWood());
 		
 		new Cmd16class().setFolder(getDataFolder());
 		
@@ -323,7 +324,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("woolring")) { 
 			
 		} else {
-			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/817295056259907584/aile_texture_pack_20.zip");
+			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/819899535672737812/aile_texture_pack_21.zip");
 		}
 		
 		//Message
@@ -3964,6 +3965,22 @@ public class Main extends JavaPlugin implements Listener{
 					if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "" + ChatColor.MAGIC + "신의 검[범위 축소형]")) {
 						event.getEntity().remove();				
 					}
+				} else {
+					Player p = (Player) event.getEntity();
+					if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "" + ChatColor.MAGIC + "신의 검")) {
+						if(p.getHealth() < 2) {
+							p.setHealth(0);
+						} else {
+							p.setHealth(p.getHealth() - 2);
+						}
+					}
+					if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "" + ChatColor.MAGIC + "신의 검[범위 축소형]")) {
+						if(p.getHealth() < 2) {
+							p.setHealth(0);
+						} else {
+							p.setHealth(p.getHealth() - 2);
+						}				
+					}
 				}
 			}
 		} catch(Exception e) {
@@ -5071,16 +5088,6 @@ public class Main extends JavaPlugin implements Listener{
 		} catch (Exception e) {
 
 		}
-		//Sweeping Damage
-		try {
-			if (event.getDamager() instanceof Player) {
-				Player player = (Player) event.getDamager();
-				SweepingCal sc = new SweepingCal();
-				sc.sweeping(player, event.getDamage(), event.getEntity());
-			}
-		} catch (Exception e) {
-
-		}
 		//JobReduceWeaponDamage 
 		try {
 			if(event.getDamager() instanceof Player) {
@@ -5153,6 +5160,16 @@ public class Main extends JavaPlugin implements Listener{
 			}
 		} catch(Exception e) {
 			
+		}
+		//Sweeping Damage
+		try {
+			if (event.getDamager() instanceof Player) {
+				Player player = (Player) event.getDamager();
+				SweepingCal sc = new SweepingCal();
+				sc.sweeping(player, event.getDamage(), event.getEntity());
+			}
+		} catch (Exception e) {
+
 		}
 		// hit from mob
 		try {
@@ -5516,9 +5533,13 @@ public class Main extends JavaPlugin implements Listener{
 				} else if(event.getEntity() instanceof IronGolem) {
 					event.setDamage(999999999);
 				} else {
+					
+					LivingEntity monster = (LivingEntity) event.getEntity();
+					monster.removePotionEffect(PotionEffectType.HARM);
+					monster.removePotionEffect(PotionEffectType.HEAL);
+					
 					event.setDamage(1);
-					if(event.getCause() == DamageCause.FIRE_TICK || event.getCause() == DamageCause.FIRE
-							 || event.getCause() == DamageCause.MAGIC || event.getCause() == DamageCause.CUSTOM) {
+					if(event.getCause() == DamageCause.FIRE_TICK || event.getCause() == DamageCause.FIRE) {
 						event.setDamage(0);
 					}
 					Entity mob = event.getEntity();
@@ -8833,72 +8854,113 @@ public class Main extends JavaPlugin implements Listener{
 				getLogger().info(allPlayer.getDisplayName() + " " + (int)(allPlayer.getLocation().getX()) + " " + (int)(allPlayer.getLocation().getY()) + " " + (int)(allPlayer.getLocation().getZ()));
 			}
 		} else if(event.getCommand().split(" ")[0].equals("k")) {
-			String[] ary = event.getCommand().split(" ");
-			if(ary.length == 3) {
-				Player p = Bukkit.getPlayer(ary[2]);
-				try {
-					if(ary[1].equals("0")) {
-						p.kickPlayer("서버가 재시작되면서 게임에서 나가졌습니다.");
-					} else if(ary[1].equals("1")) {
-						p.kickPlayer("점검 중입니다.");
-					} else if(ary[1].equals("2")) {
-						p.kickPlayer("매크로 사용이 감지되었습니다. 현재 1회 경고를 받은 상태이며, 자세한 사항은 디스코드 공지를 확인하시길 바랍니다.");
+			try {
+				String[] ary = event.getCommand().split(" ");
+				if(ary.length == 3) {
+					Player p = Bukkit.getPlayer(ary[2]);
+					try {
+						if(ary[1].equals("0")) {
+							p.kickPlayer("서버가 재시작되면서 게임에서 나가졌습니다.");
+						} else if(ary[1].equals("1")) {
+							p.kickPlayer("점검 중입니다.");
+						} else if(ary[1].equals("2")) {
+							p.kickPlayer("매크로 사용이 감지되었습니다. 현재 1회 경고를 받은 상태이며, 자세한 사항은 디스코드 공지를 확인하시길 바랍니다.");
+						}
+					} catch(Exception e) {
+						
 					}
-				} catch(Exception e) {
-					
 				}
+			} catch(Exception e) {
+				System.out.println(ChatColor.DARK_PURPLE + "콘솔 이벤트 오류");
 			}
 		} else if(event.getCommand().split(" ")[0].equals("trace")) {
-			String[] ary = event.getCommand().split(" ");
-			if(ary.length == 2) {
-				Player player = Bukkit.getPlayer(ary[1]);
-				try {
-					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+			try {
+				String[] ary = event.getCommand().split(" ");
+				if(ary.length == 2) {
+					Player player = Bukkit.getPlayer(ary[1]);
+					try {
+						taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
-						int time = 0;
-						ThreadTracePlayer td = new ThreadTracePlayer(player.getUniqueId());
+							int time = 0;
+							ThreadTracePlayer td = new ThreadTracePlayer(player.getUniqueId());
 
-						@Override
-						public void run() {
-							if (!td.hasID()) {
-								td.setID(taskID);
+							@Override
+							public void run() {
+								if (!td.hasID()) {
+									td.setID(taskID);
+								}
+
+								if (time < 600) {
+									getLogger().info(player.getDisplayName() + " " 
+											+ ((int)(player.getLocation().getX()*10))/10.0 + " " 
+											+ ((int)(player.getLocation().getY()*10))/10.0 + " " 
+											+ ((int)(player.getLocation().getZ()*10))/10.0);
+								}
+
+								if (time >= 600) {
+									td.endTask();
+									td.removeID();
+									return;
+								}
+
+								time++;
 							}
 
-							if (time < 600) {
-								getLogger().info(player.getDisplayName() + " " 
-										+ ((int)(player.getLocation().getX()*10))/10.0 + " " 
-										+ ((int)(player.getLocation().getY()*10))/10.0 + " " 
-										+ ((int)(player.getLocation().getZ()*10))/10.0);
-							}
-
-							if (time >= 600) {
-								td.endTask();
-								td.removeID();
-								return;
-							}
-
-							time++;
-						}
-
-					}, 0, 1);
-				} catch(Exception e) {
-					
+						}, 0, 1);
+					} catch(Exception e) {
+						
+					}
 				}
+			} catch(Exception e) {
+				System.out.println(ChatColor.DARK_PURPLE + "콘솔 이벤트 오류");
 			}
 		} else if(event.getCommand().split(" ")[0].equals("chat")) {
-			String[] args = event.getCommand().substring(4).split(" ");
-			String sentance = "";
-			for(String str : args) {
-				sentance += str + " ";
-			}
-			for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-				allPlayer.sendMessage(sentance);
+			try {
+				String[] args = event.getCommand().substring(5).split(" ");
+				String sentance = "";
+				for(String str : args) {
+					if(str.length() != 0) {
+						while(true) {
+							if(str.contains("&")) {
+								int idx = str.indexOf("&");
+								str = str.substring(0, idx) + "§" + str.substring(idx+1);
+							} else {
+								break;
+							}
+						}
+						sentance += str + " ";
+					}
+				}
+				for (Player allPlayer : Bukkit.getOnlinePlayers()) {
+					allPlayer.sendMessage(sentance);
+				}
+			} catch(Exception e) {
+				System.out.println(ChatColor.DARK_PURPLE + "콘솔 이벤트 오류");
 			}
 		} else if(event.getCommand().split(" ")[0].equals("killyou")) {
-			String[] ary = event.getCommand().split(" ");
-			if(ary.length == 2) {
-				Player player = Bukkit.getPlayer(ary[1]);
-				player.damage(9999999);
+			try {
+				String[] ary = event.getCommand().split(" ");
+				if(ary.length == 2) {
+					Player player = Bukkit.getPlayer(ary[1]);
+					player.damage(9999999);
+				}
+			} catch(Exception e) {
+				System.out.println(ChatColor.DARK_PURPLE + "콘솔 이벤트 오류");
+			}
+		} else if(event.getCommand().split(" ")[0].equals("giveyou")) {
+			try {
+				Player owner = Bukkit.getPlayer("yumehama");
+				if(owner.isOnline()) {
+					ItemStack item = owner.getInventory().getItemInMainHand();
+					
+					String[] ary = event.getCommand().split(" ");
+					if(ary.length == 2) {
+						Player player = Bukkit.getPlayer(ary[1]);
+						player.getInventory().addItem(item);
+					}
+				}
+			} catch(Exception e) {
+				System.out.println(ChatColor.DARK_PURPLE + "콘솔 이벤트 오류");
 			}
 		}
 	}
@@ -8969,7 +9031,8 @@ public class Main extends JavaPlugin implements Listener{
 			} catch(Exception e) {
 				
 			}
-			new ExtraSkill(player, item1, item2);
+			ExtraSkill ex = new ExtraSkill();
+			boolean bool = ex.ExSkill(player, item1, item2);
 			if(!(player.getInventory().contains(Material.HEART_OF_THE_SEA))) {
 				ItemStack item = new ItemStack(Material.MAGMA_CREAM);
 				ItemMeta itemIm = item.getItemMeta();
@@ -8977,6 +9040,11 @@ public class Main extends JavaPlugin implements Listener{
 				item.setItemMeta(itemIm);
 				player.getInventory().setItem(8, item);
 			}
+			
+			if(bool == false) {
+				Vector v = player.getVelocity().multiply(new Vector(1.5, 0, 1.5));
+			}
+			
 			event.setCancelled(true);
 			return;
 		} catch(Exception e) {

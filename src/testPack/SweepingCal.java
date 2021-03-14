@@ -82,7 +82,12 @@ public class SweepingCal {
 						if(Math.abs(nearMobLoc.getX() - mobLoc.getX()) <= 2+sweep/300 && Math.abs(nearMobLoc.getY() - mobLoc.getY()) <= 1.25+sweep/600
 								&& Math.abs(nearMobLoc.getZ() - mobLoc.getZ()) <= 2+sweep/300) {
 							if(nearMob.getType() != EntityType.PLAYER || nearMob.getType() != EntityType.IRON_GOLEM) {
-								nearMob.damage(2 * sweep * (player.getLevel() / 200.0));
+								
+								double sweepDam = 2 * sweep * (player.getLevel()/200.0);
+								if(sweepDam > damage) {
+									sweepDam = damage;
+								}
+								nearMob.damage(sweepDam);
 								
 								try {
 									//===========================================================================

@@ -59,4 +59,7 @@ commands:
   k:
    description: k
    usage: /k
+  LoveWood:
+   description: I love Wood
+   usage: /LoveWood
 api-version: 1.16

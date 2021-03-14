@@ -3188,6 +3188,12 @@ public class SpawnMob {
 				EntityEquipment weapon = entity.getEquipment();
 				ItemStack weaponItem = new ItemStack(Material.STONE);
 				weapon.setItemInMainHand(weaponItem);
+				EntityEquipment mobBow = entity.getEquipment();
+				ItemStack mobBowItem = new ItemStack(Material.NETHERITE_AXE);
+				ItemMeta mobBowIm = mobBowItem.getItemMeta();
+				mobBowIm.setCustomModelData(1);
+				mobBowItem.setItemMeta(mobBowIm);
+				mobBow.setItemInOffHand(mobBowItem);
 				EntityEquipment chestplate = entity.getEquipment();
 				ItemStack chestplateItem = new ItemStack(Material.NETHERITE_CHESTPLATE);
 				chestplate.setChestplate(chestplateItem);
@@ -3225,6 +3231,12 @@ public class SpawnMob {
 				EntityEquipment weapon = entity.getEquipment();
 				ItemStack weaponItem = new ItemStack(Material.CYAN_WOOL);
 				weapon.setItemInMainHand(weaponItem);
+				EntityEquipment mobBow = entity.getEquipment();
+				ItemStack mobBowItem = new ItemStack(Material.NETHERITE_AXE);
+				ItemMeta mobBowIm = mobBowItem.getItemMeta();
+				mobBowIm.setCustomModelData(1);
+				mobBowItem.setItemMeta(mobBowIm);
+				mobBow.setItemInOffHand(mobBowItem);
 				EntityEquipment chestplate = entity.getEquipment();
 				ItemStack chestplateItem = new ItemStack(Material.LEATHER_CHESTPLATE);
 				LeatherArmorMeta chestmeta = (LeatherArmorMeta) chestplateItem.getItemMeta();
@@ -5159,7 +5171,7 @@ public class SpawnMob {
 					entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
 					return true;
 				} else {
-					entity.setCustomName(ChatColor.GRAY + "3층의 지배자?" + ChatColor.YELLOW + " [Lv.??]");
+					entity.setCustomName(ChatColor.GRAY + "3층의 지배자?" + ChatColor.YELLOW + " [Lv.1]");
 					entity.setCustomNameVisible(true);
 					entity.setMaxHealth(300000);
 					entity.setHealth(300000);
@@ -8715,6 +8727,7 @@ public class SpawnMob {
 				bootsmeta.setColor(Color.fromRGB(150, 150, 150));
 				bootsItem.setItemMeta(bootsmeta);
 				boots.setBoots(bootsItem);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 999999));
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM) {
@@ -8766,6 +8779,7 @@ public class SpawnMob {
 				EntityEquipment boots = entity.getEquipment();
 				ItemStack bootsItem = new ItemStack(Material.CHAINMAIL_BOOTS);
 				boots.setBoots(bootsItem);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 999999));
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM) {
@@ -8817,6 +8831,7 @@ public class SpawnMob {
 				EntityEquipment boots = entity.getEquipment();
 				ItemStack bootsItem = new ItemStack(Material.IRON_BOOTS);
 				boots.setBoots(bootsItem);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 999999));
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM) {
@@ -8868,6 +8883,7 @@ public class SpawnMob {
 				EntityEquipment boots = entity.getEquipment();
 				ItemStack bootsItem = new ItemStack(Material.GOLDEN_BOOTS);
 				boots.setBoots(bootsItem);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 999999));
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
 				return true;
 			} else if(entity.getType() == (EntityType) EntityType.SILVERFISH) { 
@@ -8875,6 +8891,7 @@ public class SpawnMob {
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(6);
 				entity.setHealth(6);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 999999));
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM) {

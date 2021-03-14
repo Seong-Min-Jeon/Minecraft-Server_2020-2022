@@ -20,8 +20,9 @@ import org.bukkit.util.Vector;
 
 public class ExtraSkill {
 
-	public ExtraSkill(Player player, ItemStack item1, ItemStack item2) {
+	public boolean ExSkill(Player player, ItemStack item1, ItemStack item2) {
 		
+		boolean bool = false;
 		int i = 0;
 		for (ItemStack is : player.getInventory().getContents()) {
 			if (is == null)
@@ -35,6 +36,7 @@ public class ExtraSkill {
 			// 소아온
 			if(item1.getType() == Material.OAK_PLANKS && item2.getType() == Material.SPRUCE_PLANKS) {
 				if(item1.getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "일루시데이터") && item2.getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "다크 리펄서")) {
+					bool = true;
 					skill1(player, i, item1, item2);
 				}
 			}
@@ -42,12 +44,15 @@ public class ExtraSkill {
 			// 요정셋
 			if(item1.getType() == Material.STONE && item2.getType() == Material.CYAN_WOOL) {
 				if(item1.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "요정왕의 검") && item2.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "요정여왕의 검")) {
+					bool = true;
 					skill2(player, i, item1, item2);
 				}
 			}
 		} catch(Exception e) {
 			
 		}
+	
+		return bool;
 		
 	}
 	

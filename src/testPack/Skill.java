@@ -1766,7 +1766,7 @@ public class Skill {
 										if (nearEntity.getType() != EntityType.PLAYER) {
 											if (nearEntity instanceof LivingEntity) {
 												LivingEntity nearMob = (LivingEntity) nearEntity;
-												nearMob.damage(player.getLevel()*8);
+												nearMob.damage(player.getLevel()*3);
 											}
 										}
 									}
@@ -2451,6 +2451,17 @@ public class Skill {
 								totem.setHelmet(new ItemStack(Material.RED_NETHER_BRICK_STAIRS));
 								totem.setRemoveWhenFarAway(true);
 								proTotem.remove();
+								
+								List<Entity> entitylist = totem.getNearbyEntities(8, 5, 8);
+								for(Entity nearEntity : entitylist) {
+									if(nearEntity instanceof Player) {
+										Player nearPlayer = (Player) nearEntity;
+										PotionRatio pr = new PotionRatio();
+										pr.calculation(nearPlayer, player.getLevel() * 3);
+										nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님의 토템으로 아군의 체력이 회복됩니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 3 + ChatColor.RED + "]");
+									}
+								}
+								
 								time++;
 							}
 							
@@ -2458,7 +2469,7 @@ public class Skill {
 								time++;
 							}
 							
-							if(time == 30 || time == 60 || time == 90 || time == 120 || time == 150 || time == 180) {
+							if(time == 30 || time == 60 || time == 90 || time == 120) {
 								List<Entity> entitylist = totem.getNearbyEntities(8, 5, 8);
 								for(Entity nearEntity : entitylist) {
 									if(nearEntity instanceof Player) {
@@ -2470,7 +2481,7 @@ public class Skill {
 								}
 							}
 							
-							if(time >= 200) {
+							if(time >= 150) {
 								totem.remove();
 								t.endTask();
 								t.removeID();
@@ -2484,9 +2495,9 @@ public class Skill {
 					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
 				}
 			} else if(key.equals("RLL")) {
-				if(i>=20) {
+				if(i>=10) {
 					player.getInventory().remove(Material.HEART_OF_THE_SEA);
-					ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 20);
+					ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 10);
 					ItemMeta itemIm = item.getItemMeta();
 					itemIm.setDisplayName(ChatColor.BLUE + "마나");
 					item.setItemMeta(itemIm);
@@ -2556,7 +2567,11 @@ public class Skill {
 							if(time > 40) {
 								if (num == 0) {
 									if (time > 40) {
-										player.setHealth(20);
+										if(player.getHealth() >= 15) {
+											player.setHealth(20);
+										} else {
+											player.setHealth(player.getHealth() + 5);
+										}
 										player.sendMessage(ChatColor.GREEN + "신의 경고가 발동됩니다.");
 										player.sendMessage(ChatColor.GREEN + "정신이 번쩍 듭니다.");
 										world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);									
@@ -2568,7 +2583,7 @@ public class Skill {
 											if (nearEntity.getType() != EntityType.PLAYER) {
 												if (nearEntity instanceof LivingEntity) {
 													LivingEntity nearMob = (LivingEntity) nearEntity;
-													nearMob.damage(player.getLevel() * 60);
+													nearMob.damage(player.getLevel() * 40);
 												}
 											}
 										}
@@ -2582,7 +2597,7 @@ public class Skill {
 											if (nearEntity.getType() != EntityType.PLAYER) {
 												if (nearEntity instanceof LivingEntity) {
 													LivingEntity nearMob = (LivingEntity) nearEntity;
-													nearMob.damage(player.getLevel() * 120);
+													nearMob.damage(player.getLevel() * 100);
 												}
 											}
 										}		
@@ -2598,7 +2613,7 @@ public class Skill {
 											if (nearEntity.getType() != EntityType.PLAYER) {
 												if (nearEntity instanceof LivingEntity) {
 													LivingEntity nearMob = (LivingEntity) nearEntity;
-													nearMob.damage(player.getLevel() * 200);
+													nearMob.damage(player.getLevel() * 160);
 												}
 											}
 										}		
@@ -2608,8 +2623,8 @@ public class Skill {
 								} else if (num == 4) {
 									if (time > 40) {
 										player.sendMessage(ChatColor.GREEN + "신의 축복이 발동됩니다.");
-										player.sendMessage(ChatColor.GREEN + "10초간 무적이 됩니다.");
-										player.setNoDamageTicks(200);
+										player.sendMessage(ChatColor.GREEN + "7초간 무적이 됩니다.");
+										player.setNoDamageTicks(140);
 										world.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 1.0f);									
 									}
 								} else if (num == 5) {
@@ -2618,13 +2633,13 @@ public class Skill {
 										if (num2 < 215) {
 											try {
 												player.getInventory().remove(Material.HEART_OF_THE_SEA);
-												ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 40);
+												ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 20);
 												ItemMeta itemIm = item.getItemMeta();
 												itemIm.setDisplayName(ChatColor.BLUE + "마나");
 												item.setItemMeta(itemIm);
 												player.getInventory().setItem(8, item);
 												player.sendMessage(ChatColor.GREEN + "신의 탐욕이 발동됩니다.");
-												player.sendMessage(ChatColor.GREEN + "마나의 수가 40이 됩니다.");
+												player.sendMessage(ChatColor.GREEN + "마나의 수가 20이 됩니다.");
 											} catch (Exception e20) {
 												player.sendMessage(ChatColor.RED + "스킬 발동에 실패하였습니다.");
 												world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
@@ -3893,6 +3908,17 @@ public class Skill {
 								totem.setHelmet(new ItemStack(Material.DIORITE_STAIRS));
 								totem.setRemoveWhenFarAway(true);
 								proTotem.remove();
+								
+								List<Entity> entitylist = totem.getNearbyEntities(8, 5, 8);
+								for(Entity nearEntity : entitylist) {
+									if(nearEntity instanceof Player) {
+										Player nearPlayer = (Player) nearEntity;
+										PotionRatio pr = new PotionRatio();
+										pr.calculation(nearPlayer, player.getLevel() * 4);
+										nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님의 토템으로 아군의 체력이 회복됩니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 4 + ChatColor.RED + "]");
+									}
+								}
+								
 								time++;
 							}
 							
@@ -3900,14 +3926,14 @@ public class Skill {
 								time++;
 							}
 							
-							if(time == 30 || time == 60 || time == 90 || time == 120 || time == 150 || time == 180) {
+							if(time == 30 || time == 60 || time == 90 || time == 120) {
 								List<Entity> entitylist = totem.getNearbyEntities(8, 5, 8);
 								for(Entity nearEntity : entitylist) {
 									if(nearEntity instanceof Player) {
 										Player nearPlayer = (Player) nearEntity;
 										PotionRatio pr = new PotionRatio();
 										pr.calculation(nearPlayer, player.getLevel() * 3);
-										nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님의 토템으로 아군의 체력이 회복됩니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 2 + ChatColor.RED + "]");
+										nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님의 토템으로 아군의 체력이 회복됩니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 3 + ChatColor.RED + "]");
 									} else if(nearEntity instanceof Mob) {
 										Mob nearMob = (Mob) nearEntity;
 										nearMob.damage(player.getLevel() * 100);
@@ -3918,7 +3944,7 @@ public class Skill {
 								}
 							}
 							
-							if(time >= 200) {
+							if(time >= 150) {
 								totem.remove();
 								t.endTask();
 								t.removeID();

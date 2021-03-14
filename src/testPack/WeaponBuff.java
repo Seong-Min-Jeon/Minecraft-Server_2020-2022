@@ -512,6 +512,17 @@ public class WeaponBuff {
 							}
 						}
 						
+						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "푸른 소용돌이의 헬멧")) {
+							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "푸른 소용돌이의 갑옷")) {
+								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "푸른 소용돌이의 각반")) {
+									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "푸른 소용돌이의 신발")) {
+										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 35000,true,false,false));
+										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 100, 5,true,false,false));
+									}
+								}
+							}
+						}
+						
 					}
 				}
 			}

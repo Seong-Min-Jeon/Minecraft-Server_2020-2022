@@ -2945,13 +2945,13 @@ public class LootChest {
 		Block block = chestLoc.getBlock();
 		Chest chest = (Chest) block.getState();
 		ItemStack var8Pro = chest.getInventory().getItem(1).clone();
-		ItemStack var8 = setStat(1, var8Pro, player.getLevel());
+		ItemStack var8 = setStat(1, var8Pro, 700);
 		
 		ItemStack var9Pro = chest.getInventory().getItem(2).clone();
-		ItemStack var9 = setStat(2, var9Pro, player.getLevel());
+		ItemStack var9 = setStat(2, var9Pro, 700);
 		
 		ItemStack var10Pro = chest.getInventory().getItem(3).clone();
-		ItemStack var10 = setStat(3, var10Pro, player.getLevel());
+		ItemStack var10 = setStat(3, var10Pro, 700);
 		
 		ItemStack var11 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS, 64);
 		ItemMeta var11Im = var11.getItemMeta();
