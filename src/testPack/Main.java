@@ -9011,10 +9011,6 @@ public class Main extends JavaPlugin implements Listener{
 				event.setCancelled(true);
 				return;
 			}
-			if(player.getInventory().contains(Material.MAGENTA_DYE) || player.getInventory().contains(Material.MAGENTA_DYE) || player.getInventory().contains(Material.ORANGE_DYE)) {
-				event.setCancelled(true);
-				return;
-			}
 			try {
 				if(!(item1.getType() == Material.LEATHER_HELMET || item1.getType() == Material.LEATHER_CHESTPLATE || item1.getType() == Material.LEATHER_LEGGINGS
 						|| item1.getType() == Material.LEATHER_BOOTS || item1.getType() == Material.CHAINMAIL_HELMET || item1.getType() == Material.CHAINMAIL_CHESTPLATE 

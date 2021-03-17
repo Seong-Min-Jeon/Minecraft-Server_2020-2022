@@ -10,10 +10,12 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 
 public class Cmd16class implements CommandExecutor {
 	
 	static File folder;
+	int sleep;
 	
 	public void setFolder(File folder) {
 		Cmd16class.folder = folder;
@@ -24,6 +26,25 @@ public class Cmd16class implements CommandExecutor {
 		
 		if(sender instanceof Player) {
 			Player player = (Player) sender;
+			
+			// 대화 종료
+			ThreadMessage t = new ThreadMessage(player.getUniqueId());
+			sleep = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+				int time = 0;
+				
+				@Override
+				public void run() {
+					if (!t.hasID()) {
+						t.setID(sleep);
+					}
+					if(time >= 0) {
+						t.endTask();
+						t.removeID();
+					}
+					time++;
+				}				
+				
+			}, 0, 1);
 			
 			// Off in Dungeon
 			new OffInDungeon(player);

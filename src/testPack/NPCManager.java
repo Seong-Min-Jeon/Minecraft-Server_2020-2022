@@ -252,7 +252,7 @@ public class NPCManager {
 			public void run() {
 				connection.sendPacket(new PacketPlayOutPlayerInfo(PacketPlayOutPlayerInfo.EnumPlayerInfoAction.REMOVE_PLAYER, npc));
 			}
-		}.runTaskLater(Main.getPlugin(Main.class), 10);
+		}.runTaskLater(Main.getPlugin(Main.class), 20);
 
 		// connection.sendPacket(new PacketPlayOutPlayerInfo(PacketPlayOutPlayerInfo.EnumPlayerInfoAction.REMOVE_PLAYER, npc));
 	}

@@ -28,7 +28,7 @@ public class StepAndRolling {
 		boolean bool = false;
 		ItemStack item = player.getInventory().getItemInMainHand();
 		
-		if(player.isOnGround()) {
+		if(player.isOnGround() && !player.isSwimming()) {
 			if(item.getType() == Material.WOODEN_SWORD || item.getType() == Material.STONE_SWORD || item.getType() == Material.IRON_SWORD
 					|| item.getType() == Material.GOLDEN_SWORD || item.getType() == Material.DIAMOND_SWORD || item.getType() == Material.NETHERITE_SWORD
 					|| item.getType() == Material.OAK_LEAVES || item.getType() == Material.SPRUCE_LEAVES || item.getType() == Material.BIRCH_LEAVES
@@ -110,6 +110,7 @@ public class StepAndRolling {
 		
 		if (player.getFoodLevel() > 6) {
 			player.setFoodLevel(player.getFoodLevel() - 1);
+			player.setNoDamageTicks(10);
 
 			taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 

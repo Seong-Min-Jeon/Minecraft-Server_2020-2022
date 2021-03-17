@@ -1341,71 +1341,72 @@ public class MobDeath {
 			
 //================================================================================================================================
 			try {
+				
+				if(mob.getType() != EntityType.IRON_GOLEM) {
+					Location chestLoc = new Location(lootPlayer.getWorld(), -1843, 92, 3043);
 
-				Location chestLoc = new Location(lootPlayer.getWorld(), -1843, 92, 3043);
-
-				int mobLvl = 0;
-				int dist = 0;
-				
-				try {
-					mobLvl = Integer.parseInt(num);
-					dist = lootPlayer.getLevel() - mobLvl;
-				} catch(Exception e) {
-					mobLvl = lootPlayer.getLevel();
-					dist = 0;
+					int mobLvl = 0;
+					int dist = 0;
+					
+					try {
+						mobLvl = Integer.parseInt(num);
+						dist = lootPlayer.getLevel() - mobLvl;
+					} catch(Exception e) {
+						mobLvl = lootPlayer.getLevel();
+						dist = 0;
+					}
+					
+					int per = rnd.nextInt(1000000);
+					
+					//===========================================================================
+					// 상자 획득확률 증가
+					int mul = 0;
+					mul += new SpecialEffect().h4(player);
+					mul += new SpecialEffect().c3(player);
+					mul += new SpecialEffect().l3(player);
+					mul += new SpecialEffect().b4(player);
+					mul += new SpecialEffect().a18(player);
+					//===========================================================================
+					
+					if(per < ((10000 - 10000*2*dist/100)*(multyChance+mul+100)/100)) {
+						Block block = chestLoc.getBlock();
+						Chest chest = (Chest) block.getState();
+						ItemStack weapon = chest.getInventory().getItem(0).clone();
+						ItemStack item = setStat(0, weapon, mobLvl);
+						lootPlayer.getInventory().addItem(item);
+						sendMessage(lootPlayer, ChatColor.YELLOW + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
+					} else if(per < ((14500 - 14500*2*dist/100)*(multyChance+mul+100)/100)) {
+						Block block = chestLoc.getBlock();
+						Chest chest = (Chest) block.getState();
+						ItemStack weapon = chest.getInventory().getItem(1).clone();
+						ItemStack item = setStat(1, weapon, mobLvl);
+						lootPlayer.getInventory().addItem(item);
+						sendMessage(lootPlayer, ChatColor.LIGHT_PURPLE + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
+					} else if(per < ((16000 - 16000*2*dist/100)*(multyChance+mul+100)/100)) {
+						Block block = chestLoc.getBlock();
+						Chest chest = (Chest) block.getState();
+						ItemStack weapon = chest.getInventory().getItem(2).clone();
+						ItemStack item = setStat(2, weapon, mobLvl);
+						lootPlayer.getInventory().addItem(item);
+						sendMessage(lootPlayer, ChatColor.AQUA + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
+					} else if(per < ((16500 - 16500*2*dist/100)*(multyChance+mul+100)/100)) {
+						Block block = chestLoc.getBlock();
+						Chest chest = (Chest) block.getState();
+						ItemStack weapon = chest.getInventory().getItem(3).clone();
+						ItemStack item = setStat(3, weapon, mobLvl);
+						lootPlayer.getInventory().addItem(item);
+						sendMessage(lootPlayer, ChatColor.DARK_RED + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
+						System.out.println(lootPlayer.getDisplayName() + "가 " + ChatColor.DARK_RED + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
+					} else if(per < ((16510 - 16510*2*dist/100)*(multyChance+mul+100)/100)) {
+						Block block = chestLoc.getBlock();
+						Chest chest = (Chest) block.getState();
+						ItemStack weapon = chest.getInventory().getItem(4).clone();
+						ItemStack item = setStat(4, weapon, mobLvl);
+						lootPlayer.getInventory().addItem(item);
+						sendMessage(lootPlayer, ChatColor.DARK_PURPLE + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
+						System.out.println(lootPlayer.getDisplayName() + "가 " + ChatColor.DARK_PURPLE + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
+					}
 				}
-				
-				int per = rnd.nextInt(1000000);
-				
-				//===========================================================================
-				// 상자 획득확률 증가
-				int mul = 0;
-				mul += new SpecialEffect().h4(player);
-				mul += new SpecialEffect().c3(player);
-				mul += new SpecialEffect().l3(player);
-				mul += new SpecialEffect().b4(player);
-				mul += new SpecialEffect().a18(player);
-				//===========================================================================
-				
-				if(per < ((10000 - 10000*2*dist/100)*(multyChance+mul+100)/100)) {
-					Block block = chestLoc.getBlock();
-					Chest chest = (Chest) block.getState();
-					ItemStack weapon = chest.getInventory().getItem(0).clone();
-					ItemStack item = setStat(0, weapon, mobLvl);
-					lootPlayer.getInventory().addItem(item);
-					sendMessage(lootPlayer, ChatColor.YELLOW + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
-				} else if(per < ((14500 - 14500*2*dist/100)*(multyChance+mul+100)/100)) {
-					Block block = chestLoc.getBlock();
-					Chest chest = (Chest) block.getState();
-					ItemStack weapon = chest.getInventory().getItem(1).clone();
-					ItemStack item = setStat(1, weapon, mobLvl);
-					lootPlayer.getInventory().addItem(item);
-					sendMessage(lootPlayer, ChatColor.LIGHT_PURPLE + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
-				} else if(per < ((16000 - 16000*2*dist/100)*(multyChance+mul+100)/100)) {
-					Block block = chestLoc.getBlock();
-					Chest chest = (Chest) block.getState();
-					ItemStack weapon = chest.getInventory().getItem(2).clone();
-					ItemStack item = setStat(2, weapon, mobLvl);
-					lootPlayer.getInventory().addItem(item);
-					sendMessage(lootPlayer, ChatColor.AQUA + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
-				} else if(per < ((16500 - 16500*2*dist/100)*(multyChance+mul+100)/100)) {
-					Block block = chestLoc.getBlock();
-					Chest chest = (Chest) block.getState();
-					ItemStack weapon = chest.getInventory().getItem(3).clone();
-					ItemStack item = setStat(3, weapon, mobLvl);
-					lootPlayer.getInventory().addItem(item);
-					sendMessage(lootPlayer, ChatColor.DARK_RED + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
-					System.out.println(lootPlayer.getDisplayName() + "가 " + ChatColor.DARK_RED + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
-				} else if(per < ((16510 - 16510*2*dist/100)*(multyChance+mul+100)/100)) {
-					Block block = chestLoc.getBlock();
-					Chest chest = (Chest) block.getState();
-					ItemStack weapon = chest.getInventory().getItem(4).clone();
-					ItemStack item = setStat(4, weapon, mobLvl);
-					lootPlayer.getInventory().addItem(item);
-					sendMessage(lootPlayer, ChatColor.DARK_PURPLE + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
-					System.out.println(lootPlayer.getDisplayName() + "가 " + ChatColor.DARK_PURPLE + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
-				}
-				
 				
 			} catch(Exception e) {
 				
