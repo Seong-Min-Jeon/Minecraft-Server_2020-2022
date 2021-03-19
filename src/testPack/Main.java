@@ -9114,7 +9114,7 @@ public class Main extends JavaPlugin implements Listener{
 			try {
 				if(inv.getItem(7).getType() == Material.SLIME_BALL) {
 					if(inv.getItem(8).getType() == Material.SHULKER_SHELL) {
-						if(inv.getItem(2).getType() == Material.LIGHT_GRAY_STAINED_GLASS_PANE) {
+						if(inv.getItem(2).getType() == Material.WHITE_STAINED_GLASS_PANE) {
 							if(inv.getSize() == 9) {
 								try {player.getInventory().addItem(inv.getItem(0));} catch(Exception e) {}
 								try {player.getInventory().addItem(inv.getItem(1));} catch(Exception e) {}
@@ -9130,7 +9130,7 @@ public class Main extends JavaPlugin implements Listener{
 			try {
 				if(inv.getItem(7).getType() == Material.SLIME_BALL) {
 					if(inv.getItem(8).getType() == Material.SHULKER_SHELL) {
-						if(inv.getItem(2) == null || (inv.getItem(2).getType() != Material.LIGHT_GRAY_STAINED_GLASS_PANE)) {
+						if(inv.getItem(2) == null || (inv.getItem(2).getType() != Material.WHITE_STAINED_GLASS_PANE)) {
 							if(inv.getSize() == 9) {
 								boolean bool = true;
 								for(ItemStack item : inv.getContents()) {

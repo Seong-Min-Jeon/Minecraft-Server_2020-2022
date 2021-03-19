@@ -54,7 +54,7 @@ public class CraftingPotionScroll {
 			ItemStack image = new ItemStack(Material.STONE_AXE);
 			ItemMeta imageIm = image.getItemMeta();
 			imageIm.setDisplayName(ChatColor.RED + " ");
-			imageIm.setCustomModelData(2);
+			imageIm.setCustomModelData(3);
 			imageIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			imageIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			imageIm.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
