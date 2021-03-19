@@ -324,7 +324,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("woolring")) { 
 			
 		} else {
-			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/819899535672737812/aile_texture_pack_21.zip");
+			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/822431212446154762/aile_texture_pack_22.zip");
 		}
 		
 		//Message
@@ -8354,6 +8354,18 @@ public class Main extends JavaPlugin implements Listener{
 		        	}  
 		        }
 		        if(clicked != null && clicked.getType() == Material.GRAY_STAINED_GLASS_PANE) {
+		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.RED + " ")) {
+		        		event.setCancelled(true);
+		                return;             
+		        	}  
+		        }
+		        if(clicked != null && clicked.getType() == Material.WHITE_STAINED_GLASS_PANE) {
+		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.RED + " ")) {
+		        		event.setCancelled(true);
+		                return;             
+		        	}  
+		        }
+		        if(clicked != null && clicked.getType() == Material.STONE_AXE) {
 		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.RED + " ")) {
 		        		event.setCancelled(true);
 		                return;             

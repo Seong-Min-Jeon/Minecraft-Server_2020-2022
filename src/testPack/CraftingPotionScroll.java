@@ -33,7 +33,7 @@ public class CraftingPotionScroll {
 			noIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			noIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			no.setItemMeta(noIm);
-			ItemStack bar = new ItemStack(Material.LIGHT_GRAY_STAINED_GLASS_PANE);
+			ItemStack bar = new ItemStack(Material.WHITE_STAINED_GLASS_PANE);
 			ItemMeta barIm = bar.getItemMeta();
 			barIm.setDisplayName(ChatColor.RED + " ");
 			barIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
@@ -51,7 +51,17 @@ public class CraftingPotionScroll {
 			arrow2Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			arrow2Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			arrow2.setItemMeta(arrow2Im);
-			inv.setItem(0, bar);
+			ItemStack image = new ItemStack(Material.STONE_AXE);
+			ItemMeta imageIm = image.getItemMeta();
+			imageIm.setDisplayName(ChatColor.RED + " ");
+			imageIm.setCustomModelData(2);
+			imageIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+			imageIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+			imageIm.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
+			imageIm.addItemFlags(ItemFlag.HIDE_DYE);
+			imageIm.addItemFlags(ItemFlag.HIDE_PLACED_ON);
+			image.setItemMeta(imageIm);
+			inv.setItem(0, image);
 			inv.setItem(4, bar);
 			inv.setItem(5, bar);
 			inv.setItem(6, bar);
