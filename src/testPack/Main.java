@@ -3263,7 +3263,7 @@ public class Main extends JavaPlugin implements Listener{
 				player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER,600,0,true,false,false));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "약재 우린 물")) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 600, 1,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 600, 0,true,false,false));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "거북이 우린 물")) {
 				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 1,true,false,false));
@@ -3308,7 +3308,7 @@ public class Main extends JavaPlugin implements Listener{
 				player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 2400, 1,true,false,false));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "미푀르유식 닭요리")) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 100, 2,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 100, 1,true,false,false));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GRAY + "조리한 돼지고기")) {
 				player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 2400, 0,true,false,false));
@@ -3336,7 +3336,7 @@ public class Main extends JavaPlugin implements Listener{
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "바다 위에서 구운 생선구이")) {
 				player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 200, 0,true,false,false));
 				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 1,true,false,false));
-				player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 2,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 1,true,false,false));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "강한 불에 익힌 스테이크")) {
 				player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 100, 0,true,false,false));

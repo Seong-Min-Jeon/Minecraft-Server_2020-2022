@@ -1173,12 +1173,12 @@ public class TPMobSpawn {
 
 			player.teleport(new Location(player.getWorld(), 3697.4, 52, 2858.8));
 			int num = 0;
-			List<Entity> entitylist = player.getNearbyEntities(30, 20, 50);
+			List<Entity> entitylist = player.getNearbyEntities(80, 100, 80);
 			for (Entity nearEntity : entitylist) {
 				if (nearEntity.getType() == EntityType.PLAYER) {
 					Player nearPlayer = (Player) nearEntity;
 					Location loc2 = nearPlayer.getLocation();
-					if (loc2.getX() <= 3697 && loc2.getY() <= 58 && loc2.getZ() <= 2898 
+					if (loc2.getX() <= 3697 && loc2.getY() <= 110 && loc2.getZ() <= 2898 
 							&& loc2.getX() >= 3658 && loc2.getY() >= 41 && loc2.getZ() >= 2823) {
 						num++;
 						if (new BossHealth().getBar13().getProgress() != 0) {
@@ -1193,7 +1193,7 @@ public class TPMobSpawn {
 				for (Entity nearEntity : entitylist) {
 					if (nearEntity instanceof Mob) {
 						Location loc2 = nearEntity.getLocation();
-						if (loc2.getX() <= 3697 && loc2.getY() <= 58 && loc2.getZ() <= 2898 
+						if (loc2.getX() <= 3697 && loc2.getY() <= 110 && loc2.getZ() <= 2898 
 								&& loc2.getX() >= 3658 && loc2.getY() >= 41 && loc2.getZ() >= 2823) {
 							nearEntity.remove();
 						}

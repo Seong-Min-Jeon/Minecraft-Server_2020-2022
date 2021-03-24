@@ -1368,6 +1368,13 @@ public class MobDeath {
 					mul += new SpecialEffect().a18(player);
 					//===========================================================================
 					
+//					System.out.println("percent " + per);
+//					System.out.println("Yellow " + (10000 - 10000*2*dist/100)*(multyChance+mul+100)/100);
+//					System.out.println("Light Purple " + (14500 - 14500*2*dist/100)*(multyChance+mul+100)/100);
+//					System.out.println("Aqua " + (16000 - 16000*2*dist/100)*(multyChance+mul+100)/100);
+//					System.out.println("Dark Red " + (16500 - 16500*2*dist/100)*(multyChance+mul+100)/100);
+//					System.out.println("Dark Purple " + (16510 - 16510*2*dist/100)*(multyChance+mul+100)/100);
+					
 					if(per < ((10000 - 10000*2*dist/100)*(multyChance+mul+100)/100)) {
 						Block block = chestLoc.getBlock();
 						Chest chest = (Chest) block.getState();

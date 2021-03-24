@@ -35,6 +35,7 @@ public class QuestBoard {
 			ItemStack item = new ItemStack(Material.EMERALD,20);
 			player.getInventory().addItem(item);
 			es.giveExp(player, 50);
+			player.sendMessage(ChatColor.WHITE + "에메랄드" + ChatColor.WHITE + " 20개를 획득했다.");
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			return;
 		}
@@ -86,6 +87,7 @@ public class QuestBoard {
 			ItemStack item = new ItemStack(Material.EMERALD,50);
 			player.getInventory().addItem(item);
 			es.giveExp(player, 300);
+			player.sendMessage(ChatColor.WHITE + "에메랄드" + ChatColor.WHITE + " 50개를 획득했다.");
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			return;
 		}

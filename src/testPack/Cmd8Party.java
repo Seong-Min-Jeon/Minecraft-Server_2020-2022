@@ -108,7 +108,7 @@ public class Cmd8Party implements CommandExecutor {
 				return;
 			}
 		}
-		if(playersParty.size() > 5) {
+		if(playersParty.size() > 4) {
 			player.sendMessage(ChatColor.RED + "Your party is full!");
 			return;
 		} else if(playersParty.size() == 0) {
@@ -167,7 +167,7 @@ public class Cmd8Party implements CommandExecutor {
 			}
 		}
 		System.out.println("party size: " + playersParty.size());
-		if(playersParty.size() > 5) {
+		if(playersParty.size() > 4) {
 			player2.sendMessage(ChatColor.RED + "The party is full!");
 			return;
 		}

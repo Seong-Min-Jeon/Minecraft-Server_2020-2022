@@ -75,6 +75,13 @@ public class SpawnMob {
 				&& mob170(entity, loc) && mob171(entity, loc) && mob172(entity, loc) && mob173(entity, loc) && mob174(entity, loc) && mob175(entity, loc)
 				&& mob176(entity, loc) && mob177(entity, loc) && mob178(entity, loc) && mob179(entity, loc) && mob180(entity, loc) && mob181(entity, loc)
 				&& mob182(entity, loc) && mob183(entity, loc) && mob184(entity, loc) && mob185(entity, loc) && mob186(entity, loc) && mob187(entity, loc)
+				&& mob188(entity, loc) && mob189(entity, loc) && mob190(entity, loc) && mob191(entity, loc) && mob192(entity, loc) && mob193(entity, loc)
+				&& mob194(entity, loc) && mob195(entity, loc) && mob196(entity, loc) && mob197(entity, loc) && mob198(entity, loc) && mob199(entity, loc)
+				&& mob200(entity, loc) && mob201(entity, loc) && mob202(entity, loc) && mob203(entity, loc) && mob204(entity, loc) && mob205(entity, loc)
+				&& mob206(entity, loc) && mob207(entity, loc) && mob208(entity, loc) && mob209(entity, loc) && mob210(entity, loc) && mob211(entity, loc)
+				&& mob212(entity, loc) && mob213(entity, loc) && mob214(entity, loc) && mob215(entity, loc) && mob216(entity, loc) && mob217(entity, loc)
+				&& mob218(entity, loc) && mob219(entity, loc) && mob220(entity, loc) && mob221(entity, loc) && mob222(entity, loc) && mob223(entity, loc)
+				&& mob224(entity, loc) && mob225(entity, loc) && mob226(entity, loc) && mob227(entity, loc) && mob228(entity, loc) && mob229(entity, loc)
 				&& antimob1(entity, loc) && antimob2(entity, loc) && antimob3(entity, loc) && antimob4(entity, loc) && antimob5(entity, loc)
 				&& antimob6(entity, loc) && antimob7(entity, loc) && antimob8(entity, loc)) {
 			return true;
@@ -11694,30 +11701,396 @@ public class SpawnMob {
 	}
 	
 	public boolean mob184(LivingEntity entity, Location loc) {
+		// 티페라리1  831 110 -697    988 40 -784
+		if (loc.getX() <= 3837 && loc.getY() <= 91 && loc.getZ() <= 4060 
+				&& loc.getX() >= 3746 && loc.getY() >= 65 && loc.getZ() >= 4001) {
+			Location chestLoc = new Location(entity.getWorld(), -1836, 92, 3050);
+			Block block = chestLoc.getBlock();
+			Chest chest = (Chest) block.getState();
+			if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
+				entity.setCustomName(ChatColor.GRAY + "아빠 상어" + ChatColor.YELLOW + " [Lv.??]");
+				entity.setCustomNameVisible(true);
+				entity.setRemoveWhenFarAway(false);
+				entity.setMaxHealth(7000000);
+				entity.setHealth(7000000);
+				EntityEquipment weapon = entity.getEquipment();
+				ItemStack weaponItem = new ItemStack(Material.ACACIA_SLAB);
+				weapon.setItemInMainHand(weaponItem);
+				EntityEquipment head = entity.getEquipment();
+				ItemStack headItem = chest.getInventory().getItem(6);
+				head.setHelmet(headItem);
+				EntityEquipment chestplate = entity.getEquipment();
+				ItemStack chestplateItem = new ItemStack(Material.IRON_CHESTPLATE);
+				chestplate.setChestplate(chestplateItem);
+				EntityEquipment leggings = entity.getEquipment();
+				ItemStack leggingsItem = new ItemStack(Material.IRON_LEGGINGS);
+				leggings.setLeggings(leggingsItem);
+				EntityEquipment boots = entity.getEquipment();
+				ItemStack bootsItem = new ItemStack(Material.IRON_BOOTS);
+				boots.setBoots(bootsItem);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 6000));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
+				return true;
+			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
+				entity.setCustomName(ChatColor.GRAY + "엄마 상어" + ChatColor.YELLOW + " [Lv.700]");
+				entity.setCustomNameVisible(true);
+				entity.setRemoveWhenFarAway(false);
+				entity.setMaxHealth(2000000);
+				entity.setHealth(2000000);
+				EntityEquipment weapon = entity.getEquipment();
+				ItemStack weaponItem = new ItemStack(Material.ACACIA_LOG);
+				weapon.setItemInMainHand(weaponItem);
+				EntityEquipment head = entity.getEquipment();
+				ItemStack headItem = chest.getInventory().getItem(7);
+				head.setHelmet(headItem);
+				EntityEquipment chestplate = entity.getEquipment();
+				ItemStack chestplateItem = new ItemStack(Material.IRON_CHESTPLATE);
+				chestplate.setChestplate(chestplateItem);
+				EntityEquipment leggings = entity.getEquipment();
+				ItemStack leggingsItem = new ItemStack(Material.IRON_LEGGINGS);
+				leggings.setLeggings(leggingsItem);
+				EntityEquipment boots = entity.getEquipment();
+				ItemStack bootsItem = new ItemStack(Material.IRON_BOOTS);
+				boots.setBoots(bootsItem);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 3750));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
+				return true;
+			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM
+					|| entity.getType() == (EntityType) EntityType.SALMON
+					|| entity.getType() == (EntityType) EntityType.ITEM_FRAME
+					|| entity.getType() == (EntityType) EntityType.DROPPED_ITEM
+					|| entity.getType() == (EntityType) EntityType.ARMOR_STAND
+					|| entity.getType() == (EntityType) EntityType.VILLAGER
+					|| entity.getType() == (EntityType) EntityType.SKELETON_HORSE) {
+				return true;
+			} else {
+				return false;
+			}
+		}
 		return true;
 	}
 	
 	public boolean mob185(LivingEntity entity, Location loc) {
+		// 티페라리2  1045 110 -784  768 40 -995
+		if (loc.getX() <= 3837 && loc.getY() <= 91 && loc.getZ() <= 4060 
+				&& loc.getX() >= 3746 && loc.getY() >= 65 && loc.getZ() >= 4001) {
+			Location chestLoc = new Location(entity.getWorld(), -1836, 92, 3050);
+			Block block = chestLoc.getBlock();
+			Chest chest = (Chest) block.getState();
+			if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
+				entity.setCustomName(ChatColor.GRAY + "아빠 상어" + ChatColor.YELLOW + " [Lv.??]");
+				entity.setCustomNameVisible(true);
+				entity.setRemoveWhenFarAway(false);
+				entity.setMaxHealth(7000000);
+				entity.setHealth(7000000);
+				EntityEquipment weapon = entity.getEquipment();
+				ItemStack weaponItem = new ItemStack(Material.ACACIA_SLAB);
+				weapon.setItemInMainHand(weaponItem);
+				EntityEquipment head = entity.getEquipment();
+				ItemStack headItem = chest.getInventory().getItem(6);
+				head.setHelmet(headItem);
+				EntityEquipment chestplate = entity.getEquipment();
+				ItemStack chestplateItem = new ItemStack(Material.IRON_CHESTPLATE);
+				chestplate.setChestplate(chestplateItem);
+				EntityEquipment leggings = entity.getEquipment();
+				ItemStack leggingsItem = new ItemStack(Material.IRON_LEGGINGS);
+				leggings.setLeggings(leggingsItem);
+				EntityEquipment boots = entity.getEquipment();
+				ItemStack bootsItem = new ItemStack(Material.IRON_BOOTS);
+				boots.setBoots(bootsItem);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 6000));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
+				return true;
+			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
+				entity.setCustomName(ChatColor.GRAY + "엄마 상어" + ChatColor.YELLOW + " [Lv.700]");
+				entity.setCustomNameVisible(true);
+				entity.setRemoveWhenFarAway(false);
+				entity.setMaxHealth(2000000);
+				entity.setHealth(2000000);
+				EntityEquipment weapon = entity.getEquipment();
+				ItemStack weaponItem = new ItemStack(Material.ACACIA_LOG);
+				weapon.setItemInMainHand(weaponItem);
+				EntityEquipment head = entity.getEquipment();
+				ItemStack headItem = chest.getInventory().getItem(7);
+				head.setHelmet(headItem);
+				EntityEquipment chestplate = entity.getEquipment();
+				ItemStack chestplateItem = new ItemStack(Material.IRON_CHESTPLATE);
+				chestplate.setChestplate(chestplateItem);
+				EntityEquipment leggings = entity.getEquipment();
+				ItemStack leggingsItem = new ItemStack(Material.IRON_LEGGINGS);
+				leggings.setLeggings(leggingsItem);
+				EntityEquipment boots = entity.getEquipment();
+				ItemStack bootsItem = new ItemStack(Material.IRON_BOOTS);
+				boots.setBoots(bootsItem);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 3750));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
+				return true;
+			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM
+					|| entity.getType() == (EntityType) EntityType.SALMON
+					|| entity.getType() == (EntityType) EntityType.ITEM_FRAME
+					|| entity.getType() == (EntityType) EntityType.DROPPED_ITEM
+					|| entity.getType() == (EntityType) EntityType.ARMOR_STAND
+					|| entity.getType() == (EntityType) EntityType.VILLAGER
+					|| entity.getType() == (EntityType) EntityType.SKELETON_HORSE) {
+				return true;
+			} else {
+				return false;
+			}
+		}
 		return true;
 	}
 	
 	public boolean mob186(LivingEntity entity, Location loc) {
+		// 교회 890 65 -1015  803 110 -1114
+		if (loc.getX() <= 3837 && loc.getY() <= 91 && loc.getZ() <= 4060 
+				&& loc.getX() >= 3746 && loc.getY() >= 65 && loc.getZ() >= 4001) {
+			Location chestLoc = new Location(entity.getWorld(), -1836, 92, 3050);
+			Block block = chestLoc.getBlock();
+			Chest chest = (Chest) block.getState();
+			if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
+				entity.setCustomName(ChatColor.GRAY + "아빠 상어" + ChatColor.YELLOW + " [Lv.??]");
+				entity.setCustomNameVisible(true);
+				entity.setRemoveWhenFarAway(false);
+				entity.setMaxHealth(7000000);
+				entity.setHealth(7000000);
+				EntityEquipment weapon = entity.getEquipment();
+				ItemStack weaponItem = new ItemStack(Material.ACACIA_SLAB);
+				weapon.setItemInMainHand(weaponItem);
+				EntityEquipment head = entity.getEquipment();
+				ItemStack headItem = chest.getInventory().getItem(6);
+				head.setHelmet(headItem);
+				EntityEquipment chestplate = entity.getEquipment();
+				ItemStack chestplateItem = new ItemStack(Material.IRON_CHESTPLATE);
+				chestplate.setChestplate(chestplateItem);
+				EntityEquipment leggings = entity.getEquipment();
+				ItemStack leggingsItem = new ItemStack(Material.IRON_LEGGINGS);
+				leggings.setLeggings(leggingsItem);
+				EntityEquipment boots = entity.getEquipment();
+				ItemStack bootsItem = new ItemStack(Material.IRON_BOOTS);
+				boots.setBoots(bootsItem);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 6000));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
+				return true;
+			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
+				entity.setCustomName(ChatColor.GRAY + "엄마 상어" + ChatColor.YELLOW + " [Lv.700]");
+				entity.setCustomNameVisible(true);
+				entity.setRemoveWhenFarAway(false);
+				entity.setMaxHealth(2000000);
+				entity.setHealth(2000000);
+				EntityEquipment weapon = entity.getEquipment();
+				ItemStack weaponItem = new ItemStack(Material.ACACIA_LOG);
+				weapon.setItemInMainHand(weaponItem);
+				EntityEquipment head = entity.getEquipment();
+				ItemStack headItem = chest.getInventory().getItem(7);
+				head.setHelmet(headItem);
+				EntityEquipment chestplate = entity.getEquipment();
+				ItemStack chestplateItem = new ItemStack(Material.IRON_CHESTPLATE);
+				chestplate.setChestplate(chestplateItem);
+				EntityEquipment leggings = entity.getEquipment();
+				ItemStack leggingsItem = new ItemStack(Material.IRON_LEGGINGS);
+				leggings.setLeggings(leggingsItem);
+				EntityEquipment boots = entity.getEquipment();
+				ItemStack bootsItem = new ItemStack(Material.IRON_BOOTS);
+				boots.setBoots(bootsItem);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 3750));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
+				return true;
+			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM
+					|| entity.getType() == (EntityType) EntityType.SALMON
+					|| entity.getType() == (EntityType) EntityType.ITEM_FRAME
+					|| entity.getType() == (EntityType) EntityType.DROPPED_ITEM
+					|| entity.getType() == (EntityType) EntityType.ARMOR_STAND
+					|| entity.getType() == (EntityType) EntityType.VILLAGER
+					|| entity.getType() == (EntityType) EntityType.SKELETON_HORSE) {
+				return true;
+			} else {
+				return false;
+			}
+		}
 		return true;
 	}
 	
 	public boolean mob187(LivingEntity entity, Location loc) {
+		// 티페라리 앞 동굴1   890 64 -996  717 0 -1155
 		return true;
 	}
 	
 	public boolean mob188(LivingEntity entity, Location loc) {
+		// 티페라리 앞 동굴2  890 39 -995  717 0 -919
 		return true;
 	}
 	
 	public boolean mob189(LivingEntity entity, Location loc) {
+		// 채석장 1148 110 -967  1046 30 -1056
 		return true;
 	}
 	
 	public boolean mob190(LivingEntity entity, Location loc) {
+		// 유적 1083 110 -800  1303 30 -965
+		return true;
+	}
+	
+	public boolean mob191(LivingEntity entity, Location loc) {
+		// 평원1  926 120 -1058  1082 30 -1226
+		return true;
+	}
+	
+	public boolean mob192(LivingEntity entity, Location loc) {
+		// 평원2  1083 120 -1058  1152 30 -1226
+		return true;
+	}
+	
+	public boolean mob193(LivingEntity entity, Location loc) {
+		// 평원3  1153 120 -986  1299 30 -1226
+		return true;
+	}
+	
+	public boolean mob194(LivingEntity entity, Location loc) {
+		// 평원4  960 120 -1307  1299 30 -1227
+		return true;
+	}
+	
+	public boolean mob195(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob196(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob197(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob198(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob199(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob200(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob201(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob202(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob203(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob204(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob205(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob206(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob207(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob208(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob209(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob210(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob211(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob212(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob213(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob214(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob215(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob216(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob217(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob218(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob219(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob220(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob221(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob222(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob223(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob224(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob225(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob226(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob227(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob228(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob229(LivingEntity entity, Location loc) {
+		return true;
+	}
+	
+	public boolean mob230(LivingEntity entity, Location loc) {
 		return true;
 	}
 
