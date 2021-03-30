@@ -32,7 +32,8 @@ public class ShootArrow {
 				&& arrow5(arrow, mob, loc) && arrow6(arrow, mob, loc) && arrow7(arrow, mob, loc) && arrow8(arrow, mob, loc)
 				&& arrow9(arrow, mob, loc) && arrow10(arrow, mob, loc) && arrow11(arrow, mob, loc) && arrow12(arrow, mob, loc)
 				&& arrow13(arrow, mob, loc) && arrow14(arrow, mob, loc) && arrow15(arrow, mob, loc) && arrow16(arrow, mob, loc)
-				&& arrow17(arrow, mob, loc) && arrow18(arrow, mob, loc) && arrow19(arrow, mob, loc) && arrow20(arrow, mob, loc)) {
+				&& arrow17(arrow, mob, loc) && arrow18(arrow, mob, loc) && arrow19(arrow, mob, loc) && arrow20(arrow, mob, loc)
+				&& arrow21(arrow, mob, loc)) {
 			SpectralArrow sarrow = (SpectralArrow) arrow.getWorld().spawnEntity(loc, EntityType.SPECTRAL_ARROW);
 			sarrow.setVelocity(arrow.getVelocity());
 		}
@@ -315,6 +316,19 @@ public class ShootArrow {
 				arrow.removePassenger(arrow.getPassenger());
 			}
 			Item item = arrow.getWorld().dropItem(loc, new ItemStack(Material.SALMON));
+			item.setPickupDelay(10000000);
+			arrow.addPassenger(item);
+			return false;
+		}
+		return true;
+	}
+	
+	public boolean arrow21(Arrow arrow, Entity mob, Location loc) {
+		if(mob.getCustomName().substring(2).equalsIgnoreCase("검은 흐름에 잠식된 주민" + ChatColor.YELLOW + " [Lv.629]")) {
+			if (arrow.getPassenger() != null) {
+				arrow.removePassenger(arrow.getPassenger());
+			}
+			Item item = arrow.getWorld().dropItem(loc, new ItemStack(Material.CHORUS_FRUIT));
 			item.setPickupDelay(10000000);
 			arrow.addPassenger(item);
 			return false;

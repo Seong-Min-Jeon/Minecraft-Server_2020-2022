@@ -10,6 +10,7 @@ import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.scheduler.BukkitRunnable;
 
 public class FantasyLife {
 
@@ -485,6 +486,13 @@ public class FantasyLife {
 					player.sendMessage("곡괭이로 캘 수 있을 것 같다.");
 				}
 				player.getWorld().playSound(loc, Sound.BLOCK_STONE_BREAK, 0.3f, 1.0f);
+				
+				int num = rnd.nextInt(50);
+				if(num == 0) {
+					block.setType(Material.STONE);
+					reload(Material.COAL_ORE, block.getLocation());
+				}
+				
 				return false;
 			} else {
 				player.sendMessage("맨손으로 광물을 캐다니 제정신이십니까? 곡괭이를 들고 하십쇼.");
@@ -693,6 +701,13 @@ public class FantasyLife {
 					player.sendMessage("곡괭이로 캘 수 있을 것 같다.");
 				}
 				player.getWorld().playSound(loc, Sound.BLOCK_STONE_BREAK, 0.3f, 1.0f);
+				
+				int num = rnd.nextInt(50);
+				if(num == 0) {
+					block.setType(Material.STONE);
+					reload(Material.IRON_ORE, block.getLocation());
+				}
+				
 				return false;
 			} else {
 				player.sendMessage("맨손으로 광물을 캐다니 제정신이십니까? 곡괭이를 들고 하십쇼.");
@@ -871,6 +886,13 @@ public class FantasyLife {
 					player.sendMessage("곡괭이로 캘 수 있을 것 같다.");
 				}
 				player.getWorld().playSound(loc, Sound.BLOCK_STONE_BREAK, 0.3f, 1.0f);
+				
+				int num = rnd.nextInt(50);
+				if(num == 0) {
+					block.setType(Material.STONE);
+					reload(Material.GOLD_ORE, block.getLocation());
+				}
+				
 				return false;
 			} else {
 				player.sendMessage("맨손으로 광물을 캐다니 제정신이십니까? 곡괭이를 들고 하십쇼.");
@@ -1055,6 +1077,13 @@ public class FantasyLife {
 					player.sendMessage("곡괭이로 캘 수 있을 것 같다.");
 				}
 				player.getWorld().playSound(loc, Sound.BLOCK_STONE_BREAK, 0.3f, 1.0f);
+				
+				int num = rnd.nextInt(50);
+				if(num == 0) {
+					block.setType(Material.STONE);
+					reload(Material.DIAMOND_ORE, block.getLocation());
+				}
+				
 				return false;
 			} else {
 				player.sendMessage("맨손으로 광물을 캐다니 제정신이십니까? 곡괭이를 들고 하십쇼.");
@@ -1117,6 +1146,13 @@ public class FantasyLife {
 					player.sendMessage("곡괭이로 캘 수 있을 것 같다.");
 				}
 				player.getWorld().playSound(loc, Sound.BLOCK_STONE_BREAK, 0.3f, 1.0f);
+				
+				int num = rnd.nextInt(50);
+				if(num == 0) {
+					block.setType(Material.STONE);
+					reload(Material.EMERALD_ORE, block.getLocation());
+				}
+				
 				return false;
 			} else {
 				player.sendMessage("맨손으로 광물을 캐다니 제정신이십니까? 곡괭이를 들고 하십쇼.");
@@ -1355,6 +1391,13 @@ public class FantasyLife {
 					player.sendMessage("곡괭이로 캘 수 있을 것 같다.");
 				}
 				player.getWorld().playSound(loc, Sound.BLOCK_STONE_BREAK, 0.3f, 1.0f);
+				
+				int num = rnd.nextInt(50);
+				if(num == 0) {
+					block.setType(Material.NETHERRACK);
+					reload(Material.NETHER_QUARTZ_ORE, block.getLocation());
+				}
+				
 				return false;
 			} else {
 				player.sendMessage("맨손으로 광물을 캐다니 제정신이십니까? 곡괭이를 들고 하십쇼.");
@@ -1362,6 +1405,16 @@ public class FantasyLife {
 			}
 		}
 		return true;
+	}
+	
+	public void reload(Material mat, Location loc) {
+		int time = rnd.nextInt(600) + 600;
+		new BukkitRunnable() {
+			@Override
+			public void run() {
+				loc.getBlock().setType(mat);
+			}
+		}.runTaskLater(Main.getPlugin(Main.class), time);
 	}
 	
 }

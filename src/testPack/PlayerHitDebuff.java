@@ -106,6 +106,23 @@ public class PlayerHitDebuff {
 		mob56(player, mob);
 		mob57(player, mob);
 		mob58(player, mob);
+		mob59(player, mob);
+		mob60(player, mob);
+		mob61(player, mob);
+		mob62(player, mob);
+		mob63(player, mob);
+		mob64(player, mob);
+		mob65(player, mob);
+		mob66(player, mob);
+		mob67(player, mob);
+		mob68(player, mob);
+		mob69(player, mob);
+		mob70(player, mob);
+		mob71(player, mob);
+		mob72(player, mob);
+		mob73(player, mob);
+		mob74(player, mob);
+		mob75(player, mob);
 	}
 
 	// 시련의 형상
@@ -2045,13 +2062,15 @@ public class PlayerHitDebuff {
 						}
 						
 						if(time >= 60) {
-							player.teleport(new Location(player.getWorld(), 3685, 51, 2858.5));
+							if(player.getLocation().getY() < 90) {
+								player.teleport(new Location(player.getWorld(), 3685, 51, 2858.5));
+							}
 							td.endTask();
 							td.removeID();
 						}
 						
 						player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_HURT, 1.0f, 1.0f);
-						player.setHealth(player.getHealth() * 99.0 / 100.0);
+						player.setHealth(player.getHealth() * 98.0 / 100.0);
 						
 						time++;
 
@@ -3166,11 +3185,156 @@ public class PlayerHitDebuff {
 		}
 	}
 	
+	// 검은 흐름에 잠식된 주민
 	public void mob59(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("검은 흐름에 잠식된 주민" + ChatColor.YELLOW + " [Lv.625]")) {
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 2, true, false, false));
+		}
+	}
+	
+	// 검은 흐름에 잠식된 주민
+	public void mob60(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("검은 흐름에 잠식된 주민" + ChatColor.YELLOW + " [Lv.629]")) {
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 2, true, false, false));
+		}
+	}
+	
+	// 페라리교의 신도
+	public void mob61(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("페라리교의 신도" + ChatColor.YELLOW + " [Lv.635]")) {
+			int num = rnd.nextInt(5);
+			if (num == 0) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 200, 3, true, false, false));
+			}
+		}
+	}
+	
+	// 페라리교의 상위 신도
+	public void mob62(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("페라리교의 상위 신도" + ChatColor.YELLOW + " [Lv.639]")) {
+			int num = rnd.nextInt(5);
+			if (num == 0) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 2, true, false, false));
+			}
+		}
+	}
+	
+	// 페라리교의 교주
+	public void mob63(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("페라리교의 교주" + ChatColor.YELLOW + " [Lv.650]")) {
+			int num = rnd.nextInt(5);
+			if (num == 0) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 120, 2, true, false, false));
+			}
+		}
+	}
+	
+	// 어푸
+	public void mob64(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("어푸" + ChatColor.YELLOW + " [Lv.645]")) {
+			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 200, 3, true, false, false));
+		}
+	}
+	
+	// 아푸
+	public void mob65(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("아푸" + ChatColor.YELLOW + " [Lv.649]")) {
+			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 200, 3, true, false, false));
+		}
+	}
+	
+	// 쑥을 먹는 곰
+	public void mob66(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("쑥을 먹는 곰" + ChatColor.YELLOW + " [Lv.654]")) {
+			int num = rnd.nextInt(8);
+			if (num == 0) {
+				player.setVelocity(new Vector(0, 3, 0));
+				player.damage(3300);
+			}
+		}
+	}
+	
+	// 위더 스켈레톤
+	public void mob67(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("위더 스켈레톤" + ChatColor.YELLOW + " [Lv.659]")) {
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 2, true, false, false));
+		}
+	}
+	
+	// 화염의 조종자
+	public void mob68(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("화염의 조종자" + ChatColor.YELLOW + " [Lv.660]")) {
+			player.setFireTicks(200);
+		}
+	}
+	
+	// 귀여움의 조종자
+	public void mob69(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("귀여움의 조종자" + ChatColor.YELLOW + " [Lv.664]")) {
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 200, 100, true, false, false));
+			player.damage(3000);
+		}
+	}
+	
+	// 대지의 조종자
+	public void mob70(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("대지의 조종자" + ChatColor.YELLOW + " [Lv.665]")) {
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 2, true, false, false));
+		}
+	}
+	
+	// 포보르의 체액
+	public void mob71(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("포보르의 체액" + ChatColor.YELLOW + " [Lv.670]")) {
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 3, true, false, false));
+		}
+	}
+	
+	// 포보르화 고블린
+	public void mob72(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("포보르화 고블린" + ChatColor.YELLOW + " [Lv.674]")) {
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 3, true, false, false));
+		}
+	}
+	
+	// 포보르화 모험가
+	public void mob73(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("포보르화 모험가" + ChatColor.YELLOW + " [Lv.675]")) {
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 3, true, false, false));
+		}
+	}
+	
+	// 포보르화 오크
+	public void mob74(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("포보르화 오크" + ChatColor.YELLOW + " [Lv.679]")) {
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 3, true, false, false));
+		}
+	}
+	
+	// 포보르라고 불리는 포보르
+	public void mob75(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("포보르라고 불리는 포보르" + ChatColor.YELLOW + " [Lv.690]")) {
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 3, true, false, false));
+		}
+	}
+	
+	public void mob76(Player player, Entity mob) {
 
 	}
 	
-	public void mob60(Player player, Entity mob) {
+	public void mob77(Player player, Entity mob) {
+
+	}
+	
+	public void mob78(Player player, Entity mob) {
+
+	}
+	
+	public void mob79(Player player, Entity mob) {
+
+	}
+	
+	public void mob80(Player player, Entity mob) {
 
 	}
 

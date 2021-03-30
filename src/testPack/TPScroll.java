@@ -208,6 +208,12 @@ public class TPScroll {
 						if (!td.hasID()) {
 							td.setID(taskID);
 						}
+						
+						if(!player.isValid()) {
+							player.teleport(new Location(player.getWorld(), 228, 85, 945));
+							td.endTask();
+							td.removeID();
+						}
 
 						if (time == 0) {
 							player.teleport(loc3);
@@ -252,6 +258,12 @@ public class TPScroll {
 							td.setID(taskID);
 						}
 
+						if(!player.isValid()) {
+							player.teleport(new Location(player.getWorld(), 228, 85, 945));
+							td.endTask();
+							td.removeID();
+						}
+						
 						if (time == 0) {
 							player.teleport(loc3);
 							player.getWorld().playSound(loc3, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);
@@ -293,6 +305,12 @@ public class TPScroll {
 					public void run() {
 						if (!td.hasID()) {
 							td.setID(taskID);
+						}
+						
+						if(!player.isValid()) {
+							player.teleport(new Location(player.getWorld(), 228, 85, 945));
+							td.endTask();
+							td.removeID();
 						}
 
 						if (time == 0) {
@@ -337,6 +355,12 @@ public class TPScroll {
 						if (!td.hasID()) {
 							td.setID(taskID);
 						}
+						
+						if(!player.isValid()) {
+							player.teleport(new Location(player.getWorld(), 228, 85, 945));
+							td.endTask();
+							td.removeID();
+						}
 
 						if (time == 0) {
 							player.teleport(loc3);
@@ -379,6 +403,12 @@ public class TPScroll {
 					public void run() {
 						if (!td.hasID()) {
 							td.setID(taskID);
+						}
+						
+						if(!player.isValid()) {
+							player.teleport(new Location(player.getWorld(), 228, 85, 945));
+							td.endTask();
+							td.removeID();
 						}
 
 						if (time == 0) {
@@ -423,6 +453,12 @@ public class TPScroll {
 						if (!td.hasID()) {
 							td.setID(taskID);
 						}
+						
+						if(!player.isValid()) {
+							player.teleport(new Location(player.getWorld(), 228, 85, 945));
+							td.endTask();
+							td.removeID();
+						}
 
 						if (time == 0) {
 							player.teleport(loc3);
@@ -466,6 +502,12 @@ public class TPScroll {
 						if (!td.hasID()) {
 							td.setID(taskID);
 						}
+						
+						if(!player.isValid()) {
+							player.teleport(new Location(player.getWorld(), 228, 85, 945));
+							td.endTask();
+							td.removeID();
+						}
 
 						if (time == 0) {
 							player.teleport(loc3);
@@ -508,6 +550,12 @@ public class TPScroll {
 					public void run() {
 						if (!td.hasID()) {
 							td.setID(taskID);
+						}
+						
+						if(!player.isValid()) {
+							player.teleport(new Location(player.getWorld(), 228, 85, 945));
+							td.endTask();
+							td.removeID();
 						}
 
 						if (time == 0) {

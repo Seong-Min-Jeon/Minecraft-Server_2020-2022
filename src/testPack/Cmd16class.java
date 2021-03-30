@@ -46,6 +46,44 @@ public class Cmd16class implements CommandExecutor {
 				
 			}, 0, 1);
 			
+			// 항해 종료
+			ThreadShip t1 = new ThreadShip(player.getUniqueId());
+			sleep = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+				int time = 0;
+				
+				@Override
+				public void run() {
+					if (!t1.hasID()) {
+						t1.setID(sleep);
+					}
+					if(time >= 0) {
+						t1.endTask();
+						t1.removeID();
+					}
+					time++;
+				}				
+				
+			}, 0, 1);
+			
+			// 스레드 종료
+			ThreadData t2 = new ThreadData(player.getUniqueId());
+			sleep = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+				int time = 0;
+				
+				@Override
+				public void run() {
+					if (!t2.hasID()) {
+						t2.setID(sleep);
+					}
+					if(time >= 0) {
+						t2.endTask();
+						t2.removeID();
+					}
+					time++;
+				}				
+				
+			}, 0, 1);
+			
 			// Off in Dungeon
 			new OffInDungeon(player);
 			

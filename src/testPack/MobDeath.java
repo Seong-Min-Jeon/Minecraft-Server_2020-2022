@@ -1335,6 +1335,102 @@ public class MobDeath {
 				if (name.equalsIgnoreCase("아기 상어" + ChatColor.YELLOW + " [Lv.1]")) {
 					mobloot.mob303(lootPlayer);
 				}
+				// 검은 흐름에 잠식된 주민
+				if (name.equalsIgnoreCase("검은 흐름에 잠식된 주민" + ChatColor.YELLOW + " [Lv.625]")) {
+					mobloot.mob304(lootPlayer);
+				}
+				// 검은 흐름에 잠식된 주민
+				if (name.equalsIgnoreCase("검은 흐름에 잠식된 주민" + ChatColor.YELLOW + " [Lv.629]")) {
+					mobloot.mob305(lootPlayer);
+				}
+				// 주인을 잃은 라마
+				if (name.equalsIgnoreCase("주인을 잃은 라마" + ChatColor.YELLOW + " [Lv.630]")) {
+					mobloot.mob306(lootPlayer);
+				}
+				// 자아를 잃은 라마 주인
+				if (name.equalsIgnoreCase("자아를 잃은 라마 주인" + ChatColor.YELLOW + " [Lv.634]")) {
+					mobloot.mob307(lootPlayer);
+				}
+				// 페라리교의 신도
+				if (name.equalsIgnoreCase("페라리교의 신도" + ChatColor.YELLOW + " [Lv.635]")) {
+					mobloot.mob308(lootPlayer);
+				}
+				// 페라리교의 상위 신도
+				if (name.equalsIgnoreCase("페라리교의 상위 신도" + ChatColor.YELLOW + " [Lv.639]")) {
+					mobloot.mob309(lootPlayer);
+				}
+				// 페라리교의 교주
+				if (name.equalsIgnoreCase("페라리교의 교주" + ChatColor.YELLOW + " [Lv.650]")) {
+					mobloot.mob310(lootPlayer);
+				}
+				// 인어
+				if (name.equalsIgnoreCase("인어" + ChatColor.YELLOW + " [Lv.640]")) {
+					mobloot.mob311(lootPlayer);
+				}
+				// 물풍선
+				if (name.equalsIgnoreCase("물풍선" + ChatColor.YELLOW + " [Lv.644]")) {
+					mobloot.mob312(lootPlayer);
+				}
+				// 어푸
+				if (name.equalsIgnoreCase("어푸" + ChatColor.YELLOW + " [Lv.645]")) {
+					mobloot.mob313(lootPlayer);
+				}
+				// 아푸
+				if (name.equalsIgnoreCase("아푸" + ChatColor.YELLOW + " [Lv.649]")) {
+					mobloot.mob314(lootPlayer);
+				}
+				// 철을 먹는 벌레
+				if (name.equalsIgnoreCase("철을 먹는 벌레" + ChatColor.YELLOW + " [Lv.650]")) {
+					mobloot.mob315(lootPlayer);
+				}
+				// 쑥을 먹는 곰
+				if (name.equalsIgnoreCase("쑥을 먹는 곰" + ChatColor.YELLOW + " [Lv.654]")) {
+					mobloot.mob316(lootPlayer);
+				}
+				// 떠돌이 고양이
+				if (name.equalsIgnoreCase("떠돌이 고양이" + ChatColor.YELLOW + " [Lv.655]")) {
+					mobloot.mob317(lootPlayer);
+				}
+				// 위더 스켈레톤
+				if (name.equalsIgnoreCase("위더 스켈레톤" + ChatColor.YELLOW + " [Lv.659]")) {
+					mobloot.mob318(lootPlayer);
+				}
+				// 화염의 조종자
+				if (name.equalsIgnoreCase("화염의 조종자" + ChatColor.YELLOW + " [Lv.660]")) {
+					mobloot.mob319(lootPlayer);
+				}
+				// 귀여움의 조종자
+				if (name.equalsIgnoreCase("귀여움의 조종자" + ChatColor.YELLOW + " [Lv.664]")) {
+					mobloot.mob320(lootPlayer);
+				}
+				// 대지의 조종자
+				if (name.equalsIgnoreCase("대지의 조종자" + ChatColor.YELLOW + " [Lv.665]")) {
+					mobloot.mob321(lootPlayer);
+				}
+				// 포션의 조종자
+				if (name.equalsIgnoreCase("포션의 조종자" + ChatColor.YELLOW + " [Lv.669]")) {
+					mobloot.mob322(lootPlayer);
+				}
+				// 포보르의 체액
+				if (name.equalsIgnoreCase("포보르의 체액" + ChatColor.YELLOW + " [Lv.670]")) {
+					mobloot.mob323(lootPlayer);
+				}
+				// 포보르화 고블린
+				if (name.equalsIgnoreCase("포보르화 고블린" + ChatColor.YELLOW + " [Lv.674]")) {
+					mobloot.mob324(lootPlayer);
+				}
+				// 포보르화 모험가
+				if (name.equalsIgnoreCase("포보르화 모험가" + ChatColor.YELLOW + " [Lv.675]")) {
+					mobloot.mob325(lootPlayer);
+				}
+				// 포보르화 오크
+				if (name.equalsIgnoreCase("포보르화 오크" + ChatColor.YELLOW + " [Lv.679]")) {
+					mobloot.mob326(lootPlayer);
+				}
+				// 포보르라고 불리는 포보르
+				if (name.equalsIgnoreCase("포보르라고 불리는 포보르" + ChatColor.YELLOW + " [Lv.690]")) {
+					mobloot.mob327(lootPlayer);
+				}
 			} catch (Exception e) {
 
 			}

@@ -523,7 +523,41 @@ public class MobThread implements Listener{
 							} else if(loc.getX() <= 3839 && loc.getY() <= 134 && loc.getZ() <= 3990 
 									&& loc.getX() >= 3683 && loc.getY() >= 58 && loc.getZ() >= 3932) {
 								hardSeaDungeon(player, loc);
+							} else if(loc.getX() <= 988 && loc.getY() <= 110 && loc.getZ() <= -697 
+									&& loc.getX() >= 831 && loc.getY() >= 40 && loc.getZ() >= -784) {
+								tiperari1(player, loc);
+							} else if(loc.getX() <= 1045 && loc.getY() <= 110 && loc.getZ() <= -784 
+									&& loc.getX() >= 768 && loc.getY() >= 40 && loc.getZ() >= -995) {
+								tiperari2(player, loc);
+							} else if(loc.getX() <= 890 && loc.getY() <= 110 && loc.getZ() <= -1015 
+									&& loc.getX() >= 803 && loc.getY() >= 65 && loc.getZ() >= -1114) {
+								tiperariChurch(player, loc);
+							} else if(loc.getX() <= 890 && loc.getY() <= 64 && loc.getZ() <= -996 
+									&& loc.getX() >= 717 && loc.getY() >= 0 && loc.getZ() >= -1155) {
+								tiperariCave1(player, loc);
+							} else if(loc.getX() <= 890 && loc.getY() <= 39 && loc.getZ() <= -919 
+									&& loc.getX() >= 717 && loc.getY() >= 0 && loc.getZ() >= -995) {
+								tiperariCave2(player, loc);
+							} else if(loc.getX() <= 1148 && loc.getY() <= 110 && loc.getZ() <= -967 
+									&& loc.getX() >= 1046 && loc.getY() >= 30 && loc.getZ() >= -1056) {
+								tiperariOre(player, loc);
+							} else if(loc.getX() <= 1303 && loc.getY() <= 110 && loc.getZ() <= -800 
+									&& loc.getX() >= 1083 && loc.getY() >= 30 && loc.getZ() >= -965) {
+								tiperariRuin(player, loc);
+							} else if(loc.getX() <= 1082 && loc.getY() <= 120 && loc.getZ() <= -1058 
+									&& loc.getX() >= 926 && loc.getY() >= 30 && loc.getZ() >= -1226) {
+								tiperariField1(player, loc);
+							} else if(loc.getX() <= 1152 && loc.getY() <= 120 && loc.getZ() <= -1058 
+									&& loc.getX() >= 1083 && loc.getY() >= 30 && loc.getZ() >= -1226) {
+								tiperariField2(player, loc);
+							} else if(loc.getX() <= 1299 && loc.getY() <= 120 && loc.getZ() <= -986 
+									&& loc.getX() >= 1153 && loc.getY() >= 30 && loc.getZ() >= -1226) {
+								tiperariField3(player, loc);
+							} else if(loc.getX() <= 1299 && loc.getY() <= 120 && loc.getZ() <= -1227 
+									&& loc.getX() >= 960 && loc.getY() >= 30 && loc.getZ() >= -1307) {
+								tiperariField4(player, loc);
 							}
+							
 						}
 					} 
 					
@@ -2941,6 +2975,173 @@ public class MobThread implements Listener{
 		
 		if (num == 0) {
 			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.ZOMBIE);
+		} 
+	}
+	
+	public void tiperari1(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 988 && loc.getY() <= 110 && loc.getZ() <= -697 
+				&& loc.getX() >= 831 && loc.getY() >= 40 && loc.getZ() >= -784)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.ENDERMAN);
+		} 
+	}
+	
+	public void tiperari2(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 1045 && loc.getY() <= 110 && loc.getZ() <= -784 
+				&& loc.getX() >= 768 && loc.getY() >= 40 && loc.getZ() >= -995)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.LLAMA);
+		} 
+	}
+	
+	public void tiperariChurch(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 890 && loc.getY() <= 110 && loc.getZ() <= -1015 
+				&& loc.getX() >= 803 && loc.getY() >= 65 && loc.getZ() >= -1114)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.ZOMBIE);
+		} 
+	}
+	
+	public void tiperariCave1(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 890 && loc.getY() <= 64 && loc.getZ() <= -996 
+				&& loc.getX() >= 717 && loc.getY() >= 0 && loc.getZ() >= -1155)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.CREEPER);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.ZOMBIE);
+		} 
+	}
+	
+	public void tiperariCave2(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 890 && loc.getY() <= 39 && loc.getZ() <= -919 
+				&& loc.getX() >= 717 && loc.getY() >= 0 && loc.getZ() >= -995)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.CAVE_SPIDER);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.SPIDER);
+		} 
+	}
+	
+	public void tiperariOre(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 1148 && loc.getY() <= 110 && loc.getZ() <= -967 
+				&& loc.getX() >= 1046 && loc.getY() >= 30 && loc.getZ() >= -1056)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.SILVERFISH);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.RAVAGER);
+		} 
+	}
+	
+	public void tiperariRuin(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 1303 && loc.getY() <= 110 && loc.getZ() <= -800 
+				&& loc.getX() >= 1083 && loc.getY() >= 30 && loc.getZ() >= -965)) {
+			return;
+		}
+		
+		if (num == 0) {
+			CustomOcelot cs = new CustomOcelot(loc);
+			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
+			world.addEntity(cs);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
+		} 
+	}
+	
+	public void tiperariField1(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 1082 && loc.getY() <= 120 && loc.getZ() <= -1058 
+				&& loc.getX() >= 926 && loc.getY() >= 30 && loc.getZ() >= -1226)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.BLAZE);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.RABBIT);
+		} 
+	}
+	
+	public void tiperariField2(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 1152 && loc.getY() <= 120 && loc.getZ() <= -1058 
+				&& loc.getX() >= 1083 && loc.getY() >= 30 && loc.getZ() >= -1226)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.RAVAGER);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.WITCH);
+		} 
+	}
+	
+	public void tiperariField3(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 1299 && loc.getY() <= 120 && loc.getZ() <= -986 
+				&& loc.getX() >= 1153 && loc.getY() >= 30 && loc.getZ() >= -1226)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.SLIME);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.ZOMBIE);
+		} 
+	}
+	
+	public void tiperariField4(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 1299 && loc.getY() <= 120 && loc.getZ() <= -1227 
+				&& loc.getX() >= 960 && loc.getY() >= 30 && loc.getZ() >= -1307)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
 		} else if (num == 1) {
 			loc.getWorld().spawnEntity(loc, EntityType.ZOMBIE);
 		} 

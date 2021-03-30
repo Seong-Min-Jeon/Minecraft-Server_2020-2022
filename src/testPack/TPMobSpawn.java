@@ -1122,6 +1122,12 @@ public class TPMobSpawn {
 		// 고대의 암석 협곡 중간보스
 		if (loc.getX() == 3824.39 && loc.getY() == 34 && loc.getZ() == 2857.79) {
 			player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "이 앞은 지나갈 수 없다.");
+			
+			try {
+				player.getInventory().remove(Material.TNT);
+			} catch(Exception e) {
+				
+			}
 
 			player.teleport(new Location(player.getWorld(), 3824.3, 34, 2857.8));
 			int num = 0;

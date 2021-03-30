@@ -179,6 +179,7 @@ import org.bukkit.scoreboard.Team;
 import org.bukkit.util.Vector;
 
 import net.minecraft.server.v1_16_R3.IChatBaseComponent.ChatSerializer;
+import net.minecraft.server.v1_16_R3.PacketPlayOutPlayerInfo;
 import net.minecraft.server.v1_16_R3.PacketPlayOutTitle;
 import net.minecraft.server.v1_16_R3.WorldGenDecoratorNetherGlowstone;
 import net.minecraft.server.v1_16_R3.PacketPlayOutTitle.EnumTitleAction;
@@ -324,7 +325,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("woolring")) { 
 			
 		} else {
-			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/822431212446154762/aile_texture_pack_22.zip");
+			player.setResourcePack("https://cdn.discordapp.com/attachments/822077252208033853/824978564105240607/aile_texture_pack_23.zip");
 		}
 		
 		//Message
@@ -2774,6 +2775,7 @@ public class Main extends JavaPlugin implements Listener{
 			Location samakVil = new Location(world,-100,29,1462);
 			Location kekktas = new Location(world,-741,56,-894);
 			Location hardLobby = new Location(world,3686,190,3861);
+			Location tiperari = new Location(world,738,107,-982,270,0);
 			
 			//캐릭터 선택창 3668 47 3671 3660 39 3680
 			if(loc.getX() <= 3668 && loc.getZ() <= 3680 &&
@@ -2915,6 +2917,7 @@ public class Main extends JavaPlugin implements Listener{
 			int length17 = (int)(Math.pow(loc.getX()-hamabe.getX(), 2) + Math.pow(loc.getY()-hamabe.getY(), 2) + Math.pow(loc.getZ()-hamabe.getZ(), 2));
 			int length18 = (int)(Math.pow(loc.getX()-samak.getX(), 2) + Math.pow(loc.getY()-samak.getY(), 2) + Math.pow(loc.getZ()-samak.getZ(), 2));
 			int length19 = (int)(Math.pow(loc.getX()-samakVil.getX(), 2) + Math.pow(loc.getY()-samakVil.getY(), 2) + Math.pow(loc.getZ()-samakVil.getZ(), 2));
+			int length20 = (int)(Math.pow(loc.getX()-tiperari.getX(), 2) + Math.pow(loc.getY()-tiperari.getY(), 2) + Math.pow(loc.getZ()-tiperari.getZ(), 2));
 			ArrayList<Integer> ary = new ArrayList<>();
 			ary.add(length1);
 			ary.add(length2);
@@ -2935,6 +2938,7 @@ public class Main extends JavaPlugin implements Listener{
 			ary.add(length17);
 			ary.add(length18);
 			ary.add(length19);
+			ary.add(length20);
 			Collections.sort(ary);
 			if(ary.get(0) == length1) {
 				event.setRespawnLocation(wargunil);
@@ -2982,7 +2986,13 @@ public class Main extends JavaPlugin implements Listener{
 				} else {
 					event.setRespawnLocation(kaiman);
 				}
-			}			
+			} else if(ary.get(0) == length20) {
+				if(player.getLevel() > 620) {
+					event.setRespawnLocation(tiperari);
+				} else {
+					event.setRespawnLocation(hamabe);
+				}
+			}		
 			player.setNoDamageTicks(200);
 		} catch(Exception e11) {
 
@@ -8773,7 +8783,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(entity instanceof Fireball) {
 			event.setCancelled(true);
 		}
-		if(event.getEntityType() == EntityType.PRIMED_TNT || event.getEntityType() == EntityType.ENDER_CRYSTAL) {
+		if(event.getEntityType() == EntityType.PRIMED_TNT || event.getEntityType() == EntityType.ENDER_CRYSTAL || event.getEntityType() == EntityType.MINECART_TNT) {
 			event.setCancelled(true);
 		}
 	}
@@ -8969,6 +8979,20 @@ public class Main extends JavaPlugin implements Listener{
 					if(ary.length == 2) {
 						Player player = Bukkit.getPlayer(ary[1]);
 						player.getInventory().addItem(item);
+					}
+				}
+			} catch(Exception e) {
+				System.out.println(ChatColor.DARK_PURPLE + "콘솔 이벤트 오류");
+			}
+		} else if(event.getCommand().split(" ")[0].equals("setExp")) {
+			try {
+				String[] ary = event.getCommand().split(" ");
+				if(ary.length == 3) {
+					Player player = Bukkit.getPlayer(ary[1]);
+					try {
+						player.setExp((float) (Integer.parseInt(ary[2]) / 100.0));
+					} catch(Exception e) {
+						
 					}
 				}
 			} catch(Exception e) {

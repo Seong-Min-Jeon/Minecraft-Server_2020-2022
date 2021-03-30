@@ -138,7 +138,7 @@ public class PlateEvent {
 										bb.setProgress(bb.getProgress() - 0.1);
 										int p = rnd.nextInt(10);
 										int q = rnd.nextInt(10);
-										world.playSound(new Location(world, 3652, 48 + p, 2848 + 2 * q), Sound.ENTITY_GENERIC_EXPLODE, 20f, 1.0f);
+										world.playSound(new Location(world, 3652, 48 + p, 2848 + 2 * q), Sound.ENTITY_GENERIC_EXPLODE, 10f, 1.0f);
 										world.spawnParticle(Particle.EXPLOSION_LARGE, new Location(world, 3652, 48 + p, 2848 + 2 * q), 5);
 									}
 								}
