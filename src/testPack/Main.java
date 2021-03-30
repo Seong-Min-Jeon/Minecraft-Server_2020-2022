@@ -3203,6 +3203,10 @@ public class Main extends JavaPlugin implements Listener{
 				PotionRatio pr = new PotionRatio();
 				pr.calculation(player, 3500.0);
 			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "힐링 포션 XV")) {
+				PotionRatio pr = new PotionRatio();
+				pr.calculation(player, 4000.0);
+			}
 			//특이 포션
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "엘릭서")) {
 				for(PotionEffect effect : player.getActivePotionEffects ()){
@@ -3238,6 +3242,9 @@ public class Main extends JavaPlugin implements Listener{
 				player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,3600,1,true,false,false));
 				player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,3600,0,true,false,false));
 			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "강화된 바위의 포션 III")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,3600,1,true,false,false));
+			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "근육의 포션 I")) {
 				player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,1800,10,true,false,false));
 			}
@@ -3248,10 +3255,13 @@ public class Main extends JavaPlugin implements Listener{
 				player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,1800,8000,true,false,false));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "강화된 근육의 포션 I")) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,3600,100,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,3600,10,true,false,false));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "강화된 근육의 포션 II")) {
 				player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,3600,500,true,false,false));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "강화된 근육의 포션 IV")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,3600,8000,true,false,false));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "도약의 포션 I")) {
 				player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,1200,0,true,false,false));

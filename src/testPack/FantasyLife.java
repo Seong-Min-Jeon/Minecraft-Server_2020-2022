@@ -487,7 +487,7 @@ public class FantasyLife {
 				}
 				player.getWorld().playSound(loc, Sound.BLOCK_STONE_BREAK, 0.3f, 1.0f);
 				
-				int num = rnd.nextInt(50);
+				int num = rnd.nextInt(75);
 				if(num == 0) {
 					block.setType(Material.STONE);
 					reload(Material.COAL_ORE, block.getLocation());

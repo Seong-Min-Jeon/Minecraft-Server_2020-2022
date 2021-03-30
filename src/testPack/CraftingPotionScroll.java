@@ -68,8 +68,8 @@ public class CraftingPotionScroll {
 			inv.setItem(7, bar);
 			inv.setItem(8, bar);
 			inv.setItem(9, bar);
-			inv.setItem(13, arrow);
-			inv.setItem(14, arrow2);
+			inv.setItem(13, bar);
+			inv.setItem(14, bar);
 			inv.setItem(16, bar);
 			inv.setItem(17, bar);
 			inv.setItem(18, bar);

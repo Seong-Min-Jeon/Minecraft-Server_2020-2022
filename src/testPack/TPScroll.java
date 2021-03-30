@@ -36,6 +36,8 @@ public class TPScroll {
 		ticket12(player, itemArg, world);
 		ticket13(player, itemArg, world);
 		ticket14(player, itemArg, world);
+		ticket15(player, itemArg, world);
+		ticket16(player, itemArg, world);
 	}
 	
 	public void ticket0(Player player, Item itemArg, World world) {
@@ -564,6 +566,104 @@ public class TPScroll {
 							msg.msg(player, "선장: 이제 하마베로 돌아가는건가.%선장: 시오카나섬을 거쳐서 가야하는게 불편하지..%"
 									+ "선장: 하지만 어쩔 수 없네.%선장: 당신, 돈 많지 않은가.%"
 									+ "선장: 나는 그 덕에 돈도 벌고. 하하하.%선장: 곧 도착하겠구만.");
+						}
+
+						if (time >= 400) {
+							player.teleport(new Location(world, 533, 53, -531, 270, 0));
+							player.getWorld().playSound(loc3, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);
+							td.endTask();
+							td.removeID();
+							return;
+						}
+
+						time++;
+					}
+
+				}, 0, 1);
+			}
+		}
+	}
+	
+	public void ticket15(Player player, Item itemArg, World world) {
+		// 하마베->시오카나  952 95 -40  938 45 -82
+		Location loc = player.getLocation();
+		if (loc.getX() <= 952 && loc.getY() <= 95 && loc.getZ() <= -40 && 
+				loc.getX() >= 938 && loc.getY() >= 45 && loc.getZ() >= -82) {
+			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "티페라리행 티켓")) {
+				itemArg.remove();				
+				Location loc3 = new Location(world, 1779, 54, 2970, 270, 0);
+				taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+					int time = 0;
+					ThreadShip td = new ThreadShip(player.getUniqueId());
+
+					@Override
+					public void run() {
+						if (!td.hasID()) {
+							td.setID(taskID);
+						}
+						
+						if(!player.isValid()) {
+							player.teleport(new Location(player.getWorld(), 228, 85, 945));
+							td.endTask();
+							td.removeID();
+						}
+
+						if (time == 0) {
+							player.teleport(loc3);
+							player.getWorld().playSound(loc3, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);
+							msg.msg(player, "선장: 티페라리는 매우 큰 국가라네.%선장: 전에는 경비가 산엄하여 아무나 갈 수 없었지.%"
+									+ "선장: 하지만 그것도 오래된 말일세.%선장: 이제는 사람이 살지 않으니 말일세.%"
+									+ "선장: 많이 위험한 곳이니 조심하게나.%선장: 곧 도착하겠구만.");
+						}
+
+						if (time >= 400) {
+							player.teleport(new Location(world, 790, 53, -759, 180, 0));
+							player.getWorld().playSound(loc3, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);
+							td.endTask();
+							td.removeID();
+							return;
+						}
+
+						time++;
+					}
+
+				}, 0, 1);
+			}
+		}
+	}
+	
+	public void ticket16(Player player, Item itemArg, World world) {
+		// 티페라리->하마베  741 114 -780  827 45 -731
+		Location loc = player.getLocation();
+		if (loc.getX() <= 827 && loc.getY() <= 114 && loc.getZ() <= -731 && 
+				loc.getX() >= 741 && loc.getY() >= 45 && loc.getZ() >= -780) {
+			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "하마베행 티켓 (티페라리)")) {
+				itemArg.remove();				
+				Location loc3 = new Location(world, 1779, 54, 2970, 270, 0);
+				taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+					int time = 0;
+					ThreadShip td = new ThreadShip(player.getUniqueId());
+
+					@Override
+					public void run() {
+						if (!td.hasID()) {
+							td.setID(taskID);
+						}
+						
+						if(!player.isValid()) {
+							player.teleport(new Location(player.getWorld(), 228, 85, 945));
+							td.endTask();
+							td.removeID();
+						}
+
+						if (time == 0) {
+							player.teleport(loc3);
+							player.getWorld().playSound(loc3, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);
+							msg.msg(player, "선장: 후우..%선장: 드디어 집으로 돌아갈 수 있겠구만.%"
+									+ "선장: 그래도 자네가 배를 이렇게 타주니 이런 상황에서도 돈을 버는구만.%선장: 매우 고맙게 생각하고 있다네.%"
+									+ "선장: 앞으로도 잘 부탁드리겠네.%선장: 곧 도착하겠구만.");
 						}
 
 						if (time >= 400) {
