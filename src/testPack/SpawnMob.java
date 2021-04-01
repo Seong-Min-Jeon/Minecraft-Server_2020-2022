@@ -11776,7 +11776,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 2300));
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;
-			} else if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
+			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
 				entity.setCustomName(ChatColor.GRAY + "자아를 잃은 라마 주인" + ChatColor.YELLOW + " [Lv.634]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(608000);

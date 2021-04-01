@@ -3004,7 +3004,7 @@ public class MobThread implements Listener{
 		}
 		
 		if (num == 0) {
-			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
 		} else if (num == 1) {
 			loc.getWorld().spawnEntity(loc, EntityType.LLAMA);
 		} 
