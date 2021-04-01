@@ -202,7 +202,7 @@ public class Main extends JavaPlugin implements Listener{
 	int sleep = 0;
 
 	Cmd12EmeraldToggle et = new Cmd12EmeraldToggle();
-
+ 
 	private int taskID;
 	Scoreboard board;
 	Team red;
@@ -325,7 +325,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("woolring")) { 
 			
 		} else {
-			player.setResourcePack("https://cdn.discordapp.com/attachments/822077252208033853/824978564105240607/aile_texture_pack_23.zip");
+			player.setResourcePack("https://cdn.discordapp.com/attachments/797824583104462900/827133925515198474/Wynnpack_Port_1.16.4.zip");
 		}
 		
 		//Message
@@ -334,11 +334,11 @@ public class Main extends JavaPlugin implements Listener{
 		} else if(player.getDisplayName().equalsIgnoreCase("WoolRing")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.GREEN + "'도트랑 도트가 제일 좋아' 울링.");
 		} else if(player.getDisplayName().equalsIgnoreCase("_nanoboost_")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.RED + "'폐관수련 중입니다' 나노부스트.");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.RED + "'Lucille, Give me strength. Punishment!' 나노부스트.");
 		} else if(player.getDisplayName().equalsIgnoreCase("why9196")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.BLUE + "'최초의 500레벨' 와이.");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.BLUE + "'3차 직업 마스터' 와이.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Akilae3102")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.AQUA + "'뇌 속에 지도를 넣은 하와와 무야호 하와와' 아킬레.");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.AQUA + "'하와와 무야호 멈춰!' 아킬레.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Espina_ID")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.BOLD + "'그저 군인' 에스피나.");
 		} else if(player.getDisplayName().equalsIgnoreCase("KangOSung")) {
@@ -3299,6 +3299,11 @@ public class Main extends JavaPlugin implements Listener{
 						Player p = party.get(rnd.nextInt(party.size()));
 						if(p.getLevel() <= player.getLevel()) {
 							player.teleport(p.getLocation());
+							try {
+								player.getInventory().remove(Material.TNT);
+							} catch(Exception e) {
+								
+							}
 						}
 					}
 				} catch(Exception e) {
@@ -4958,7 +4963,11 @@ public class Main extends JavaPlugin implements Listener{
 			if (event.getDamager() instanceof LlamaSpit) {
 				if (event.getEntity() instanceof Player) {
 					Player player = (Player) event.getEntity();
-					player.setHealth(player.getHealth()*4 / 5);
+					if(player.getHealth() <= 4) {
+						player.setHealth(0);
+					} else {
+						player.setHealth(player.getHealth() - 4);
+					}
 				} else {
 					event.setCancelled(true);
 					return;
@@ -8547,11 +8556,11 @@ public class Main extends JavaPlugin implements Listener{
 		} else if (player.getDisplayName().equalsIgnoreCase("WoolRing")) {
 			event.setQuitMessage(ChatColor.GREEN + "'노란 머리가 젤다죠?' 울링" + ChatColor.WHITE + "님이 아뇨 뚱인데요?");
 		} else if (player.getDisplayName().equalsIgnoreCase("_nanoboost_")) {
-			event.setQuitMessage(ChatColor.RED + "강해져서 돌아오겠습니다.");
+			event.setQuitMessage(ChatColor.RED + "거 뭐 루실같은거 없어?");
 		} else if(player.getDisplayName().equalsIgnoreCase("why9196")) {
-			event.setQuitMessage(ChatColor.BLUE + "????????????????");
+			event.setQuitMessage(ChatColor.BLUE + "??????????!?????");
 		} else if(player.getDisplayName().equalsIgnoreCase("Akilae3102")) {
-			event.setQuitMessage(ChatColor.AQUA + "'철권의 신이 될' 아킬레가 세상을 떠났습니다.");
+			event.setQuitMessage(ChatColor.AQUA + "'철권 그마는 가벼운' 아킬레가 세상을 떠났습니다.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Espina_ID")) {
 			event.setQuitMessage(ChatColor.BOLD + "'탈영병' 에스피나의 시간이 얼마 남지 않았습니다.");
 		} else if(player.getDisplayName().equalsIgnoreCase("KangOSung")) {

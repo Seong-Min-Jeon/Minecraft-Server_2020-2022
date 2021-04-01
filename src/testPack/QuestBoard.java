@@ -4220,7 +4220,7 @@ public class QuestBoard {
 			es.giveExp(player, 30000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			msg.msg(player, "리로이: 오우! 모든 시련을 마친다!%리로이: 살아온 김에 새로운 시련 받는다. 하하.%리로이: 스켈리그 앞바다 해적선있다.%리로이: 이곳 마치 지중해.%"
-					+ "리로이: 해적 §e검은 수염§f 매우 강하다.%리로이: 한번 잡아봐라. 재미있다.%리로이: 모든 적, 나의 지팡이 앞에 무력. 하하.%리로이: 살아 돌아오면 나의 보물 증정.%"
+					+ "리로이: 해적 §e검은 수염§f 매우 강하다.%리로이: 한번 잡아봐라. 재미있다.%리로이: 모든 적, 나의 지팡이 앞에 무력. 하하.%리로이: 살아 돌아오면 §e나의 보물§f 증정.%"
 					+ "리로이: 특히 §e고양이§f가 매우 날렵하니 조심!");
 			QuestBoard qb = new QuestBoard();
 			qb.mq48_14(player, 0);
@@ -4266,7 +4266,7 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 30000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "리로이: 오우! 나쁜 검은 수염 처리 완료!%리로이: 하지만 그는 나쁜 녀석.%리로이: 아마 그의 배에 보물이 있을 것!%"
+			msg.msg(player, "리로이: 오우! 나쁜 검은 수염 처리 완료!%리로이: 하지만 그는 나쁜 녀석.%리로이: 아마 §e그의 배에 보물§f이 있을 것!%"
 					+ "리로이: 아마 열 수 있다.%리로이: 가라. 영웅이여!");
 			QuestBoard qb = new QuestBoard();
 			qb.mq48_16(player, 0);
@@ -4353,6 +4353,194 @@ public class QuestBoard {
 		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===마지막 종===");
 		score.setScore(2);
 		Score score2 = obj.getScore("신전에서 종 울리기");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/1)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq49(Player player, int num) {
+		if(num>=1) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 50000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			QuestBoard qb = new QuestBoard();
+			qb.mq49_1(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 49장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===신대륙 칼라아릿===");
+		score.setScore(2);
+		Score score2 = obj.getScore("티페라리로 향하는 배에 탑승");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/1)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq49_1(Player player, int num) {
+		if(num>=1) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 50000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "마가이: §e세계의 문§f?%마가이: 왜 그곳에 향하려 하는거지?%마가이: 애초에 꼬맹이 따위가 열 수 있는 문이 아니다.%§7이미 세 개의 종을 모두 울려 문을 열 자격이 있다고 하였다.%마가이: 뭐..뭐랏?%"
+					 + "마가이: 생각보다 위험한 녀석이군..%마가이: 어쩔 수 없지.%마가이: 그럼 이 안건은 의회에서 처리하도록 하지.%마가이: 의장님께서 결정하실게다.%"
+					 + "마가이: 네 녀석이 문을 열고 싶다면 마을 사람들에게 도움이 되는 일을 하거라.%마가이: 흠.. 이게 적당하겠군.%마가이: 어렵겠지만 이것만큼 확실한 것이 없다.%"
+					 + "마가이: §e검은 흐름에 잠식된 주민§f들을 안식에 들게 하거라.");
+			QuestBoard qb = new QuestBoard();
+			qb.mq49_2(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 49장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===티페라리의 영웅1===");
+		score.setScore(3);
+		Score score2 = obj.getScore("티페라리의 빛나는 나무로 이동");
+		score2.setScore(2);
+		Score score3 = obj.getScore("위치: 726,90,-966");
+		score3.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/1)");
+		score4.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq49_2(Player player, int num) {
+		if(num>=50) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 50000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			QuestBoard qb = new QuestBoard();
+			qb.mq49_3(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 49장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===티페라리의 영웅2===");
+		score.setScore(2);
+		Score score2 = obj.getScore("검은 흐름에 잠식된 주민 50마리 사냥");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/50)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq49_3(Player player, int num) {
+		if(num>=1) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 50000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "마가이: §e주인을 잃은 라마§f들이 시끄럽다는 사람들이 많다네.%마가이: 국가의 안전도 중요하지만 국민을 위한 일이 더욱 중요하지.%"
+					+ "마가이: 가서 라마들을 잠재우거라.");
+			QuestBoard qb = new QuestBoard();
+			qb.mq49_4(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 49장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===티페라리의 영웅3===");
+		score.setScore(2);
+		Score score2 = obj.getScore("마가이와 대화");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/1)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq49_4(Player player, int num) {
+		if(num>=50) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 50000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			QuestBoard qb = new QuestBoard();
+			qb.mq49_5(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 49장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===티페라리의 영웅4===");
+		score.setScore(2);
+		Score score2 = obj.getScore("주인을 잃은 라마 50마리 사냥");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/50)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq49_5(Player player, int num) {
+		if(num>=1) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 50000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "마가이: 이곳 §e교회§f에는 이단들이 자리잡고 있다.%마가이: 도시와 먼 곳에 교회가 있어서 관리하기 힘든 상황이라네.%"
+					+ "마가이: 의회에서 인정받기 위해 이보다 더 좋은 일은 없을 것이다.%마가이: §e이단들의 교주§f를 처단하거라.");
+			QuestBoard qb = new QuestBoard();
+			qb.mq49_6(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 49장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===티페라리의 영웅5===");
+		score.setScore(2);
+		Score score2 = obj.getScore("마가이와 대화");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/1)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq49_6(Player player, int num) {
+		if(num>=1) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 50000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			QuestBoard qb = new QuestBoard();
+			qb.mq49_7(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 49장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===티페라리의 영웅6===");
+		score.setScore(3);
+		Score score2 = obj.getScore("페라리교의 교주 사냥");
+		score2.setScore(2);
+		Score score3 = obj.getScore("위치: 726,90,-966");
+		score3.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/1)");
+		score4.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq49_7(Player player, int num) {
+		if(num>=1) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 50000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "마가이: 좋다.%마가이: 이 정도면 티페라리를 위한 일을 충분히 한 것 같구나.%마가이: 의회에 가서 너에 대한 안건을 보고하겠다."
+					+ "%마가이: 기다리고 있거라.");
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 49장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===티페라리의 영웅7===");
+		score.setScore(2);
+		Score score2 = obj.getScore("마가이와 대화");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/1)");
 		score3.setScore(0);

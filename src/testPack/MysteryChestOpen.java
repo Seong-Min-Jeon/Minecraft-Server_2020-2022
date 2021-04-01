@@ -568,7 +568,7 @@ public class MysteryChestOpen {
 	
 	public ItemStack makeItem(Player player, int equipType, int lvl, String localName, String grade) {
 		String name = name(grade);
-		if(equipType == 0 && lvl <= 100) {
+		if(equipType == 0 && lvl < 100) {
 			ItemStack equip = new ItemStack(Material.LEATHER_HELMET);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
@@ -584,7 +584,7 @@ public class MysteryChestOpen {
 			equipIm.setLore(equipLore);
 			equip.setItemMeta(equipIm);
 			return equip;
-		} else if(equipType == 0 && lvl <= 200) {
+		} else if(equipType == 0 && lvl < 200) {
 			ItemStack equip = new ItemStack(Material.CHAINMAIL_HELMET);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
@@ -600,7 +600,7 @@ public class MysteryChestOpen {
 			equipIm.setLore(equipLore);
 			equip.setItemMeta(equipIm);
 			return equip;
-		} else if(equipType == 0 && lvl <= 400) {
+		} else if(equipType == 0 && lvl < 400) {
 			ItemStack equip = new ItemStack(Material.IRON_HELMET);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
@@ -616,7 +616,7 @@ public class MysteryChestOpen {
 			equipIm.setLore(equipLore);
 			equip.setItemMeta(equipIm);
 			return equip;
-		} else if(equipType == 0 && lvl <= 700) {
+		} else if(equipType == 0 && lvl < 700) {
 			ItemStack equip = new ItemStack(Material.GOLDEN_HELMET);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
@@ -632,7 +632,7 @@ public class MysteryChestOpen {
 			equipIm.setLore(equipLore);
 			equip.setItemMeta(equipIm);
 			return equip;
-		} else if(equipType == 0 && lvl <= 900) {
+		} else if(equipType == 0 && lvl < 900) {
 			ItemStack equip = new ItemStack(Material.DIAMOND_HELMET);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
@@ -664,7 +664,7 @@ public class MysteryChestOpen {
 			equipIm.setLore(equipLore);
 			equip.setItemMeta(equipIm);
 			return equip;
-		} else if(equipType == 1 && lvl <= 100) {
+		} else if(equipType == 1 && lvl < 100) {
 			ItemStack equip = new ItemStack(Material.LEATHER_CHESTPLATE);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
@@ -680,7 +680,7 @@ public class MysteryChestOpen {
 			equipIm.setLore(equipLore);
 			equip.setItemMeta(equipIm);
 			return equip;
-		} else if(equipType == 1 && lvl <= 200) {
+		} else if(equipType == 1 && lvl < 200) {
 			ItemStack equip = new ItemStack(Material.CHAINMAIL_CHESTPLATE);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
@@ -696,7 +696,7 @@ public class MysteryChestOpen {
 			equipIm.setLore(equipLore);
 			equip.setItemMeta(equipIm);
 			return equip;
-		} else if(equipType == 1 && lvl <= 400) {
+		} else if(equipType == 1 && lvl < 400) {
 			ItemStack equip = new ItemStack(Material.IRON_CHESTPLATE);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
@@ -712,7 +712,7 @@ public class MysteryChestOpen {
 			equipIm.setLore(equipLore);
 			equip.setItemMeta(equipIm);
 			return equip;
-		} else if(equipType == 1 && lvl <= 700) {
+		} else if(equipType == 1 && lvl < 700) {
 			ItemStack equip = new ItemStack(Material.GOLDEN_CHESTPLATE);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
@@ -728,7 +728,7 @@ public class MysteryChestOpen {
 			equipIm.setLore(equipLore);
 			equip.setItemMeta(equipIm);
 			return equip;
-		} else if(equipType == 1 && lvl <= 900) {
+		} else if(equipType == 1 && lvl < 900) {
 			ItemStack equip = new ItemStack(Material.DIAMOND_CHESTPLATE);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
@@ -760,7 +760,7 @@ public class MysteryChestOpen {
 			equipIm.setLore(equipLore);
 			equip.setItemMeta(equipIm);
 			return equip;
-		} else if(equipType == 2 && lvl <= 100) {
+		} else if(equipType == 2 && lvl < 100) {
 			ItemStack equip = new ItemStack(Material.LEATHER_LEGGINGS);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
@@ -776,7 +776,7 @@ public class MysteryChestOpen {
 			equipIm.setLore(equipLore);
 			equip.setItemMeta(equipIm);
 			return equip;
-		} else if(equipType == 2 && lvl <= 200) {
+		} else if(equipType == 2 && lvl < 200) {
 			ItemStack equip = new ItemStack(Material.CHAINMAIL_LEGGINGS);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
@@ -792,7 +792,7 @@ public class MysteryChestOpen {
 			equipIm.setLore(equipLore);
 			equip.setItemMeta(equipIm);
 			return equip;
-		} else if(equipType == 2 && lvl <= 400) {
+		} else if(equipType == 2 && lvl < 400) {
 			ItemStack equip = new ItemStack(Material.IRON_LEGGINGS);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
@@ -808,7 +808,7 @@ public class MysteryChestOpen {
 			equipIm.setLore(equipLore);
 			equip.setItemMeta(equipIm);
 			return equip;
-		} else if(equipType == 2 && lvl <= 700) {
+		} else if(equipType == 2 && lvl < 700) {
 			ItemStack equip = new ItemStack(Material.GOLDEN_LEGGINGS);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
@@ -824,7 +824,7 @@ public class MysteryChestOpen {
 			equipIm.setLore(equipLore);
 			equip.setItemMeta(equipIm);
 			return equip;
-		} else if(equipType == 2 && lvl <= 900) {
+		} else if(equipType == 2 && lvl < 900) {
 			ItemStack equip = new ItemStack(Material.DIAMOND_LEGGINGS);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
@@ -856,7 +856,7 @@ public class MysteryChestOpen {
 			equipIm.setLore(equipLore);
 			equip.setItemMeta(equipIm);
 			return equip;
-		} else if(equipType == 3 && lvl <= 100) {
+		} else if(equipType == 3 && lvl < 100) {
 			ItemStack equip = new ItemStack(Material.LEATHER_BOOTS);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
@@ -872,7 +872,7 @@ public class MysteryChestOpen {
 			equipIm.setLore(equipLore);
 			equip.setItemMeta(equipIm);
 			return equip;
-		} else if(equipType == 3 && lvl <= 200) {
+		} else if(equipType == 3 && lvl < 200) {
 			ItemStack equip = new ItemStack(Material.CHAINMAIL_BOOTS);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
@@ -888,7 +888,7 @@ public class MysteryChestOpen {
 			equipIm.setLore(equipLore);
 			equip.setItemMeta(equipIm);
 			return equip;
-		} else if(equipType == 3 && lvl <= 400) {
+		} else if(equipType == 3 && lvl < 400) {
 			ItemStack equip = new ItemStack(Material.IRON_BOOTS);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
@@ -904,7 +904,7 @@ public class MysteryChestOpen {
 			equipIm.setLore(equipLore);
 			equip.setItemMeta(equipIm);
 			return equip;
-		} else if(equipType == 3 && lvl <= 700) {
+		} else if(equipType == 3 && lvl < 700) {
 			ItemStack equip = new ItemStack(Material.GOLDEN_BOOTS);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
@@ -920,7 +920,7 @@ public class MysteryChestOpen {
 			equipIm.setLore(equipLore);
 			equip.setItemMeta(equipIm);
 			return equip;
-		} else if(equipType == 3 && lvl <= 900) {
+		} else if(equipType == 3 && lvl < 900) {
 			ItemStack equip = new ItemStack(Material.DIAMOND_BOOTS);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);

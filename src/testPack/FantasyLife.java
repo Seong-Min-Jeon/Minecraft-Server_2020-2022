@@ -487,7 +487,7 @@ public class FantasyLife {
 				}
 				player.getWorld().playSound(loc, Sound.BLOCK_STONE_BREAK, 0.3f, 1.0f);
 				
-				int num = rnd.nextInt(75);
+				int num = rnd.nextInt(60);
 				if(num == 0) {
 					block.setType(Material.STONE);
 					reload(Material.COAL_ORE, block.getLocation());
@@ -702,7 +702,7 @@ public class FantasyLife {
 				}
 				player.getWorld().playSound(loc, Sound.BLOCK_STONE_BREAK, 0.3f, 1.0f);
 				
-				int num = rnd.nextInt(50);
+				int num = rnd.nextInt(55);
 				if(num == 0) {
 					block.setType(Material.STONE);
 					reload(Material.IRON_ORE, block.getLocation());
@@ -887,7 +887,7 @@ public class FantasyLife {
 				}
 				player.getWorld().playSound(loc, Sound.BLOCK_STONE_BREAK, 0.3f, 1.0f);
 				
-				int num = rnd.nextInt(50);
+				int num = rnd.nextInt(45);
 				if(num == 0) {
 					block.setType(Material.STONE);
 					reload(Material.GOLD_ORE, block.getLocation());
@@ -1078,7 +1078,7 @@ public class FantasyLife {
 				}
 				player.getWorld().playSound(loc, Sound.BLOCK_STONE_BREAK, 0.3f, 1.0f);
 				
-				int num = rnd.nextInt(50);
+				int num = rnd.nextInt(40);
 				if(num == 0) {
 					block.setType(Material.STONE);
 					reload(Material.DIAMOND_ORE, block.getLocation());

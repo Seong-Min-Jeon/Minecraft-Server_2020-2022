@@ -662,12 +662,12 @@ public class TPScroll {
 							player.teleport(loc3);
 							player.getWorld().playSound(loc3, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);
 							msg.msg(player, "선장: 후우..%선장: 드디어 집으로 돌아갈 수 있겠구만.%"
-									+ "선장: 그래도 자네가 배를 이렇게 타주니 이런 상황에서도 돈을 버는구만.%선장: 매우 고맙게 생각하고 있다네.%"
+									+ "선장: 그래도 자네가 배를 이렇게 타주니 이 시국에도 돈을 버는구만.%선장: 매우 고맙게 생각하고 있다네.%"
 									+ "선장: 앞으로도 잘 부탁드리겠네.%선장: 곧 도착하겠구만.");
 						}
 
 						if (time >= 400) {
-							player.teleport(new Location(world, 533, 53, -531, 270, 0));
+							player.teleport(new Location(world, 954, 55, -57));
 							player.getWorld().playSound(loc3, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);
 							td.endTask();
 							td.removeID();

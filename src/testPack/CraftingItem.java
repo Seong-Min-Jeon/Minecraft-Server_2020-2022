@@ -640,7 +640,7 @@ public class CraftingItem {
 	}
 	
 	public ItemStack makeItem(Player player, int equipType, int[] stat, String localName) {
-		if(equipType == 0 && stat[10] <= 100) {
+		if(equipType == 0 && stat[10] < 100) {
 			ItemStack equip = new ItemStack(Material.LEATHER_HELMET);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
@@ -656,7 +656,7 @@ public class CraftingItem {
 			equipIm.setLore(equipLore);
 			equip.setItemMeta(equipIm);
 			return equip;
-		} else if(equipType == 0 && stat[10] <= 200) {
+		} else if(equipType == 0 && stat[10] < 200) {
 			ItemStack equip = new ItemStack(Material.CHAINMAIL_HELMET);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
@@ -672,7 +672,7 @@ public class CraftingItem {
 			equipIm.setLore(equipLore);
 			equip.setItemMeta(equipIm);
 			return equip;
-		} else if(equipType == 0 && stat[10] <= 400) {
+		} else if(equipType == 0 && stat[10] < 400) {
 			ItemStack equip = new ItemStack(Material.IRON_HELMET);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
@@ -688,7 +688,7 @@ public class CraftingItem {
 			equipIm.setLore(equipLore);
 			equip.setItemMeta(equipIm);
 			return equip;
-		} else if(equipType == 0 && stat[10] <= 700) {
+		} else if(equipType == 0 && stat[10] < 700) {
 			ItemStack equip = new ItemStack(Material.GOLDEN_HELMET);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
@@ -704,7 +704,7 @@ public class CraftingItem {
 			equipIm.setLore(equipLore);
 			equip.setItemMeta(equipIm);
 			return equip;
-		} else if(equipType == 0 && stat[10] <= 900) {
+		} else if(equipType == 0 && stat[10] < 900) {
 			ItemStack equip = new ItemStack(Material.DIAMOND_HELMET);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
@@ -736,7 +736,7 @@ public class CraftingItem {
 			equipIm.setLore(equipLore);
 			equip.setItemMeta(equipIm);
 			return equip;
-		} else if(equipType == 1 && stat[10] <= 100) {
+		} else if(equipType == 1 && stat[10] < 100) {
 			ItemStack equip = new ItemStack(Material.LEATHER_CHESTPLATE);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
@@ -752,7 +752,7 @@ public class CraftingItem {
 			equipIm.setLore(equipLore);
 			equip.setItemMeta(equipIm);
 			return equip;
-		} else if(equipType == 1 && stat[10] <= 200) {
+		} else if(equipType == 1 && stat[10] < 200) {
 			ItemStack equip = new ItemStack(Material.CHAINMAIL_CHESTPLATE);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
@@ -768,7 +768,7 @@ public class CraftingItem {
 			equipIm.setLore(equipLore);
 			equip.setItemMeta(equipIm);
 			return equip;
-		} else if(equipType == 1 && stat[10] <= 400) {
+		} else if(equipType == 1 && stat[10] < 400) {
 			ItemStack equip = new ItemStack(Material.IRON_CHESTPLATE);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
@@ -784,7 +784,7 @@ public class CraftingItem {
 			equipIm.setLore(equipLore);
 			equip.setItemMeta(equipIm);
 			return equip;
-		} else if(equipType == 1 && stat[10] <= 700) {
+		} else if(equipType == 1 && stat[10] < 700) {
 			ItemStack equip = new ItemStack(Material.GOLDEN_CHESTPLATE);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
@@ -800,7 +800,7 @@ public class CraftingItem {
 			equipIm.setLore(equipLore);
 			equip.setItemMeta(equipIm);
 			return equip;
-		} else if(equipType == 1 && stat[10] <= 900) {
+		} else if(equipType == 1 && stat[10] < 900) {
 			ItemStack equip = new ItemStack(Material.DIAMOND_CHESTPLATE);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
@@ -832,7 +832,7 @@ public class CraftingItem {
 			equipIm.setLore(equipLore);
 			equip.setItemMeta(equipIm);
 			return equip;
-		} else if(equipType == 2 && stat[10] <= 100) {
+		} else if(equipType == 2 && stat[10] < 100) {
 			ItemStack equip = new ItemStack(Material.LEATHER_LEGGINGS);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
@@ -848,7 +848,7 @@ public class CraftingItem {
 			equipIm.setLore(equipLore);
 			equip.setItemMeta(equipIm);
 			return equip;
-		} else if(equipType == 2 && stat[10] <= 200) {
+		} else if(equipType == 2 && stat[10] < 200) {
 			ItemStack equip = new ItemStack(Material.CHAINMAIL_LEGGINGS);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
@@ -864,7 +864,7 @@ public class CraftingItem {
 			equipIm.setLore(equipLore);
 			equip.setItemMeta(equipIm);
 			return equip;
-		} else if(equipType == 2 && stat[10] <= 400) {
+		} else if(equipType == 2 && stat[10] < 400) {
 			ItemStack equip = new ItemStack(Material.IRON_LEGGINGS);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
@@ -880,7 +880,7 @@ public class CraftingItem {
 			equipIm.setLore(equipLore);
 			equip.setItemMeta(equipIm);
 			return equip;
-		} else if(equipType == 2 && stat[10] <= 700) {
+		} else if(equipType == 2 && stat[10] < 700) {
 			ItemStack equip = new ItemStack(Material.GOLDEN_LEGGINGS);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
@@ -896,7 +896,7 @@ public class CraftingItem {
 			equipIm.setLore(equipLore);
 			equip.setItemMeta(equipIm);
 			return equip;
-		} else if(equipType == 2 && stat[10] <= 900) {
+		} else if(equipType == 2 && stat[10] < 900) {
 			ItemStack equip = new ItemStack(Material.DIAMOND_LEGGINGS);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
@@ -928,7 +928,7 @@ public class CraftingItem {
 			equipIm.setLore(equipLore);
 			equip.setItemMeta(equipIm);
 			return equip;
-		} else if(equipType == 3 && stat[10] <= 100) {
+		} else if(equipType == 3 && stat[10] < 100) {
 			ItemStack equip = new ItemStack(Material.LEATHER_BOOTS);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
@@ -944,7 +944,7 @@ public class CraftingItem {
 			equipIm.setLore(equipLore);
 			equip.setItemMeta(equipIm);
 			return equip;
-		} else if(equipType == 3 && stat[10] <= 200) {
+		} else if(equipType == 3 && stat[10] < 200) {
 			ItemStack equip = new ItemStack(Material.CHAINMAIL_BOOTS);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
@@ -960,7 +960,7 @@ public class CraftingItem {
 			equipIm.setLore(equipLore);
 			equip.setItemMeta(equipIm);
 			return equip;
-		} else if(equipType == 3 && stat[10] <= 400) {
+		} else if(equipType == 3 && stat[10] < 400) {
 			ItemStack equip = new ItemStack(Material.IRON_BOOTS);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
@@ -976,7 +976,7 @@ public class CraftingItem {
 			equipIm.setLore(equipLore);
 			equip.setItemMeta(equipIm);
 			return equip;
-		} else if(equipType == 3 && stat[10] <= 700) {
+		} else if(equipType == 3 && stat[10] < 700) {
 			ItemStack equip = new ItemStack(Material.GOLDEN_BOOTS);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
@@ -992,7 +992,7 @@ public class CraftingItem {
 			equipIm.setLore(equipLore);
 			equip.setItemMeta(equipIm);
 			return equip;
-		} else if(equipType == 3 && stat[10] <= 900) {
+		} else if(equipType == 3 && stat[10] < 900) {
 			ItemStack equip = new ItemStack(Material.DIAMOND_BOOTS);
 			ItemMeta equipIm = equip.getItemMeta();
 			equipIm.setLocalizedName(localName);
