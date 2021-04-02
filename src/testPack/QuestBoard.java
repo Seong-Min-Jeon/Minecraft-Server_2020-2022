@@ -4530,6 +4530,53 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 50000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "마가이: 자네도 많이 봐왔겠지만 이 대륙에는 §e고양이§f가 많다네.%마가이: 뭐.. 못봤다면 어쩔 수 없지만 말일세.%"
+					+ "마가이: 그런 고양이 중에서도 무리를 짓고 사람들을 해치는 녀석들이 있다네.%마가이: 그들을 처치해주시게나.%"
+					+ "마가이: 분명 어딘가에서 떠돌고 있을 것이네.");
+			QuestBoard qb = new QuestBoard();
+			qb.mq49_8(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 49장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===티페라리의 영웅7===");
+		score.setScore(2);
+		Score score2 = obj.getScore("마가이와 대화");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/1)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq49_8(Player player, int num) {
+		if(num>=50) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 50000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			QuestBoard qb = new QuestBoard();
+			qb.mq49_9(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 49장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===티페라리의 영웅8===");
+		score.setScore(2);
+		Score score2 = obj.getScore("떠돌이 고양이 50마리 사냥");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/50)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq49_9(Player player, int num) {
+		if(num>=1) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 50000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			msg.msg(player, "마가이: 좋다.%마가이: 이 정도면 티페라리를 위한 일을 충분히 한 것 같구나.%마가이: 의회에 가서 너에 대한 안건을 보고하겠다."
 					+ "%마가이: 기다리고 있거라.");
 			return;
@@ -4538,7 +4585,7 @@ public class QuestBoard {
 		Scoreboard board = manager.getNewScoreboard();
 		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 49장");
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===티페라리의 영웅7===");
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===티페라리의 영웅9===");
 		score.setScore(2);
 		Score score2 = obj.getScore("마가이와 대화");
 		score2.setScore(1);

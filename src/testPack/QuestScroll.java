@@ -101,6 +101,7 @@ public class QuestScroll {
 				mq46(player, itemArg, world);
 				mq47(player, itemArg, world);
 				mq48(player, itemArg, world);
+				mq49(player, itemArg, world);
 			} else {
 				itemArg.remove();
 				player.getInventory().addItem(itemArg.getItemStack());
@@ -801,6 +802,16 @@ public class QuestScroll {
 					+ "네비: 이번 섬 이름은..%네비: 시..§e시오카나§f?%네비: 정확히 어디 계신지는 안적어주셔서 우리가 찾아야 되겠다.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq48(player, 0);
+		}	
+	}
+	
+	public void mq49(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "메인퀘스트 49장")) {
+			msg.msg(player, "네비: 아.. 저번에 만났던 디아스라는 사람 기억나?%네비: 계속 귀찮게 하네.%네비: 용건이 뭐냐고 물어봐도 일단 오라고 재촉해.%"
+					+ "네비: 게다가 의뢰 요청도 하루에 한번씩은 꼭 한다니깐.%네비: 의뢰 내용도 매일 똑같아.%네비: 마음 같아서는 가고 싶지도 않은데 연락을 끊으려면 이 방법 밖에는 없다.%"
+					+ "네비: 저번에 기억하지?%네비: 시오카나 섬으로 가보자.");
+			QuestBoard qb = new QuestBoard();
+			qb.mq49(player, 0);
 		}	
 	}
 	

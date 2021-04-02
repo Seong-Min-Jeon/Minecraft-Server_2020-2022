@@ -110,15 +110,7 @@ public class MainQuest {
 		} else if(lvl == 550) {
 			main48(player);
 		} else if(lvl == 620) {
-			// 디아스와 대화 -> 여어 오랜만이에요우! 리로이에게 들었다 소식. 그에 대한 일은 미안하다 고맙다. 리로이와는 다르도록 프레젠트준다. 내가 이 바다는 다 안다. 가고 싶은 곳 말해라. 경치 좋은 섬, 무서운 섬, 악마들이 사는 섬 모두 안다.
-			//              세계의 문에 대해 묻는다. 오우! 세계의 문! 그것, 익히 들어 알고 있는. 문은 칼라아릿이라는 대륙에 위치! 특히 티페라리라는 대도시와 근접! 하지만 그곳은 매우 위험한..! 일단 티페라리로 가면 알게 될 것. 
-			// 티페라리로 향하는 배에 탑승
-			// 티페라리의 빛나는 나무로 이동(좌표)[마기아] -> 세계의 문? 왜 그곳에 향하려 하는거지? 애초에 꼬맹이 따위가 열 수 있는 문이 아니다. 이미 세 개의 종을 모두 울려 문을 열 자격이 있다고 하였다. 뭐..뭐랏?
-			//                              생각보다 위험한 녀석이군.. 어쩔 수 없지. 그럼 이 안건은 의회에서 처리하도록 하지. 의장님께서 결정하실게다. 네 녀석이 문을 열고 싶다면 마을 사람들에게 도움이 되는 일을 하거라.
-			//                              흠.. 이게 적당하겠군. 어렵겠지만 이것만큼 확실한 것이 없다. 검은 흐름에 잠식된 주민들을 안식에 들게 하거라.
-			// 마기아와 대화 -> 라마가 시끄러워.  주인을 잃은 라마를 처리하거라. (좌표)
-			// 마기아와 대화 -> 이곳 교회에는 이단들이 자리잡고 있다. 그들의 교주를 처리하거라. (좌표)
-			// 마기아와 대화 -> 고양이가 생선들 훔쳐가. 떠돌이 고양이를 처리하거라. (좌표)
+			main49(player);
 		} else if(lvl == 650) {
 			
 		} else if(lvl == 660) {
@@ -918,6 +910,27 @@ public class MainQuest {
 		scrollLore.add(ChatColor.RED + "1. 해당 퀘스트 스크롤을 사용하면 마지막 종을 울리기 위한");
 		scrollLore.add(ChatColor.RED + "모든 메인 퀘스트를 순서대로 진행할 수 있습니다.");
 		scrollLore.add(ChatColor.RED + "2. 다음 메인 퀘스트 스크롤은 620레벨에 받을 수 있습니다.");
+		scrollIm.setLore(scrollLore);
+		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		scrollIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		scrollIm.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
+		scrollIm.setUnbreakable(true);
+		scroll.setItemMeta(scrollIm);		
+		player.getInventory().addItem(scroll);
+	}
+	
+	public void main49(Player player) {
+		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
+		ItemMeta scrollIm = scroll.getItemMeta();
+		scrollIm.setDisplayName(ChatColor.GOLD + "메인퀘스트 49장");
+		ArrayList<String> scrollLore = new ArrayList();
+		scrollLore.add(ChatColor.GRAY + "'신대륙 칼라아릿' 퀘스트를 진행할 수 있다.");
+		scrollLore.add(ChatColor.GRAY + " ");
+		scrollLore.add(ChatColor.RED + "※주의 사항※");
+		scrollLore.add(ChatColor.RED + "1. 해당 퀘스트 스크롤을 사용하면 칼라아릿의");
+		scrollLore.add(ChatColor.RED + "메인 퀘스트(상)를 순서대로 진행할 수 있습니다.");
+		scrollLore.add(ChatColor.RED + "2. 다음 메인 퀘스트 스크롤은 650레벨에 받을 수 있습니다.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);

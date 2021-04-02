@@ -1062,6 +1062,46 @@ public class SaveAll {
 						int number = qb.getNum(player);
 						fw.write("mq48_18\n");
 						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===신대륙 칼라아릿===")) {
+						int number = qb.getNum(player);
+						fw.write("mq49\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===티페라리의 영웅1===")) {
+						int number = qb.getNum(player);
+						fw.write("mq49_1\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===티페라리의 영웅2===")) {
+						int number = qb.getNum(player);
+						fw.write("mq49_2\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===티페라리의 영웅3===")) {
+						int number = qb.getNum(player);
+						fw.write("mq49_3\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===티페라리의 영웅4===")) {
+						int number = qb.getNum(player);
+						fw.write("mq49_4\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===티페라리의 영웅5===")) {
+						int number = qb.getNum(player);
+						fw.write("mq49_5\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===티페라리의 영웅6===")) {
+						int number = qb.getNum(player);
+						fw.write("mq49_6\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===티페라리의 영웅7===")) {
+						int number = qb.getNum(player);
+						fw.write("mq49_7\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===티페라리의 영웅8===")) {
+						int number = qb.getNum(player);
+						fw.write("mq49_8\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===티페라리의 영웅9===")) {
+						int number = qb.getNum(player);
+						fw.write("mq49_9\n");
+						fw.write(Integer.toString(number));
 					}
 					fw.close();
 					bufReader.close();
