@@ -482,6 +482,26 @@ public class SaveAll {
 						int number = qb.getNum(player);
 						fw.write("q30\n");
 						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===성 밖의 이단===")) {
+						int number = qb.getNum(player);
+						fw.write("q31\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===워터파크===")) {
+						int number = qb.getNum(player);
+						fw.write("q32\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===철분 덩어리===")) {
+						int number = qb.getNum(player);
+						fw.write("q33\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===주문은 토끼입니까?===")) {
+						int number = qb.getNum(player);
+						fw.write("q34\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===흐콰===")) {
+						int number = qb.getNum(player);
+						fw.write("q35\n");
+						fw.write(Integer.toString(number));
 					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===설원의 가희1===")) {
 						int number = qb.getNum(player);
 						fw.write("eq1\n");

@@ -802,6 +802,141 @@ public class QuestBoard {
 		player.setScoreboard(board);
 	}
 	
+	public void q31(Player player, int num) {
+		//상점
+		if(num>=100) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			ItemStack item = new ItemStack(Material.RABBIT_HIDE, 40);
+			ItemMeta im = item.getItemMeta();
+			im.setDisplayName(ChatColor.AQUA + "에메랄드 결정");
+			item.setItemMeta(im);
+			player.getInventory().addItem(item);
+			player.sendMessage(ChatColor.AQUA + "에메랄드 결정" + ChatColor.WHITE + " 40개를 획득했다.");
+			es.giveExp(player, 9000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.YELLOW + "A급 퀘스트");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===성 밖의 이단===");
+		score.setScore(2);
+		Score score2 = obj.getScore("페라리교의 교단원 100마리 사냥");
+		score2.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/100)");
+		score4.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void q32(Player player, int num) {
+		//상점
+		if(num>=200) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			ItemStack var1 = new ItemStack(Material.DIAMOND, 64);
+			ItemMeta var1Im = var1.getItemMeta();
+			var1Im.setDisplayName(ChatColor.AQUA + "다이아몬드");
+			var1.setItemMeta(var1Im);
+			player.getInventory().addItem(var1);
+			player.sendMessage(ChatColor.AQUA + "다이아몬드" + ChatColor.WHITE + " 64개를 획득했다.");
+			es.giveExp(player, 10000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.AQUA + "SS급 퀘스트");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===워터파크===");
+		score.setScore(2);
+		Score score2 = obj.getScore("물풍선 200마리 사냥");
+		score2.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/200)");
+		score4.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void q33(Player player, int num) {
+		//상점
+		if(num>=50) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			ItemStack var1 = new ItemStack(Material.IRON_INGOT, 64);
+			ItemMeta var1Im = var1.getItemMeta();
+			var1Im.setDisplayName(ChatColor.AQUA + "순백의 철");
+			var1.setItemMeta(var1Im);
+			player.getInventory().addItem(var1);
+			player.sendMessage(ChatColor.AQUA + "순백의 철" + ChatColor.WHITE + " 64개를 획득했다.");
+			es.giveExp(player, 8500000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.LIGHT_PURPLE + "S급 퀘스트");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===철분 덩어리===");
+		score.setScore(2);
+		Score score2 = obj.getScore("철을 먹는 벌레 50마리 사냥");
+		score2.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/50)");
+		score4.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void q34(Player player, int num) {
+		//상점
+		if(num>=100) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			Location chestLoc = new Location(player.getWorld(), -1833, 92, 3036);
+			Block block = chestLoc.getBlock();
+			Chest chest = (Chest) block.getState();
+			ItemStack weapon = chest.getInventory().getItem(21);
+			player.getInventory().addItem(weapon);
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "토끼의 털뭉치" + ChatColor.WHITE + "를 획득했다.");
+			es.giveExp(player, 10000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.LIGHT_PURPLE + "S급 퀘스트");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===주문은 토끼입니까?===");
+		score.setScore(2);
+		Score score2 = obj.getScore("귀여움의 조종자 100마리 사냥");
+		score2.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/100)");
+		score4.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void q35(Player player, int num) {
+		//상점
+		if(num>=50) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			ItemStack var5 = new ItemStack(Material.CHISELED_POLISHED_BLACKSTONE, 10);
+			ItemMeta var5im = var5.getItemMeta();
+			var5im.setDisplayName(ChatColor.AQUA + "심연의 포보르의 심장");
+			var5.setItemMeta(var5im);
+			player.getInventory().addItem(var5);
+			player.sendMessage(ChatColor.AQUA + "심연의 포보르의 심장" + ChatColor.WHITE + "10개를 획득했다.");
+			es.giveExp(player, 8500000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.LIGHT_PURPLE + "S급 퀘스트");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===흐콰===");
+		score.setScore(2);
+		Score score2 = obj.getScore("포보르화 모험가 50마리 사냥");
+		score2.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/50)");
+		score4.setScore(0);
+		player.setScoreboard(board);
+	}
+	
 	public void eq1(Player player, int num) {
 		// mq23 보상
 		if (num >= 1) {
@@ -3808,7 +3943,7 @@ public class QuestBoard {
 			es.giveExp(player, 30000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			msg.msg(player, "데히트라: 잘 왔다 나의 오랜 친구여.%데히트라: 먼저 물어볼 것이 있다.%데히트라: 라파누이에서 무슨 생각으로 종을 울린 것이냐.%데히트라: 종의 의미를 모르는 것이냐.%데히트라: 세계에는 포보르를 봉인하는 §e3개의 종§f이 있다.%데히트라: 반대로 말하면 포보르를 깨우기 위한 종이기도 하지.%"
-					+ "데히트라: 네놈이 모든 종을 울리게 되면 무슨 일이 일어나는지 알려주지.%데히트라: 어딘가에 존재하는 §e요정들의 문이며 이계로 향하는 문§f.%데히트라: 먼 옛날 투어허 데 다넌의 영웅들이 §e팔리아스§f나 다른 땅에서 왔다는 그 문.%"
+					+ "데히트라: 네놈이 모든 종을 울리게 되면 무슨 일이 일어나는지 알려주지.%데히트라: 어딘가에 존재하는 §e요정들의 문이며 이계로 향하는 문§f.%데히트라: 먼 옛날 투어허 데 다넌의 영웅들이 §e팔리아스§f나 다른 땅에서 왔다는 그 문.%데히트라: 그래, 인간들은 그것을 §e세계의 문§f이라고 부르지."
 					+ "데히트라: 그 문이 열리게 되는 것이다.%데히트라: 그 문을 열게되면 너는 강해지겠지.%데히트라: 하지만 그게 끝이 아니라는건 알고 있을텐데.%데히트라: 각지의 포보르들은 힘을 되찾을꺼야.%데히트라: 왜?%데히트라: 문으로 봉인된 포보르의 왕들도 깨어나게 될꺼니까.%"
 					+ "데히트라: 너는 포보르의 왕을 쓰러뜨릴 재목이 될 수 있어.%데히트라: 하지만 그걸로 끝일까?%데히트라: 그게 과연 해피엔딩을 위한 길일까?%데히트라: 선택은 너에게 맡기도록 하지.%데히트라: ... 서론이 길었군.%"
 					+ "데히트라: 3개의 종 중 두번째 종은 내가 가지고 있다.%데히트라: 이쪽 종은 크기가 작아서 말이지.%데히트라: 네놈이 나의 퀘스트를 충실히 이행한다면 종을 주도록 하지.%데히트라: 자, 어떤가 충분한 보상이 아닌가?%tp887 55 -25");
@@ -4518,7 +4653,7 @@ public class QuestBoard {
 		score.setScore(3);
 		Score score2 = obj.getScore("페라리교의 교주 사냥");
 		score2.setScore(2);
-		Score score3 = obj.getScore("위치: 726,90,-966");
+		Score score3 = obj.getScore("위치: 846,69,-1077");
 		score3.setScore(1);
 		Score score4 = obj.getScore("(" + num + "/1)");
 		score4.setScore(0);

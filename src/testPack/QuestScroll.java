@@ -50,6 +50,11 @@ public class QuestScroll {
 				q28(player, itemArg, world);
 				q29(player, itemArg, world);
 				q30(player, itemArg, world);
+				q31(player, itemArg, world);
+				q32(player, itemArg, world);
+				q33(player, itemArg, world);
+				q34(player, itemArg, world);
+				q35(player, itemArg, world);
 				eq1(player, itemArg, world);
 				eq2(player, itemArg, world);
 				eq3(player, itemArg, world);
@@ -359,6 +364,49 @@ public class QuestScroll {
 					+ "§7고양이를 혼내주어 도망가게 만들자.");
 			QuestBoard qb = new QuestBoard();
 			qb.q30(player, 0);
+		}	
+	}
+	
+	public void q31(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "퀘스트: 성 밖의 이단")) {
+			msg.msg(player, "§7수많은 모험가들이 교주를 혼내주었지만%§7아직도 이단들이 활동하고 있는 듯하다.%§7한번 더 그들에게 진짜 지옥이란 무엇인지 보여주자.%"
+					+ "§7좋은 보상은 덤이겠지..?");
+			QuestBoard qb = new QuestBoard();
+			qb.q31(player, 0);
+		}	
+	}
+	
+	public void q32(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "퀘스트: 워터파크")) {
+			msg.msg(player, "§7동굴에는 물이 있어요.%§7그런데 왜 물풍선은 터지면 불이 붙는거죠?%§7물론 옆에 있는 물에 들어가면 살 수 있지만..%§7매우 귀찮군요..!");
+			QuestBoard qb = new QuestBoard();
+			qb.q32(player, 0);
+		}	
+	}
+	
+	public void q33(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "퀘스트: 철분 덩어리")) {
+			msg.msg(player, "§7철을 먹고 자란 벌레는 무슨 맛일까?%§7아니 아니.%§7마을 사람들이 방치해둔 광산에 벌레가 등장했다고 한다.%§7다행히 광산에 있던 금과 다이아몬드는 이미 주민들이 모두 가져간 것 같지만%"
+					+ "§7아직 철과 석탄은 남아있다고 한다.%§7아무튼 철을 먹은 벌레는 공격력이 매우 높다고 한다.%§7벌레들이 더 이상 강해질 수 없도록 녀석들을 처리하자.");
+			QuestBoard qb = new QuestBoard();
+			qb.q33(player, 0);
+		}	
+	}
+	
+	public void q34(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "퀘스트: 주문은 토끼입니까?")) {
+			msg.msg(player, "§7토끼는 누군가에겐 매우 사랑받는 존재이지만 어쩐지 모험가들은 매우 싫어한다고 한다.%§7평원을 점령하고 있는 그들을 처리하여 퐁실퐁실한 털뭉치를 얻자.");
+			QuestBoard qb = new QuestBoard();
+			qb.q34(player, 0);
+		}	
+	}
+	
+	public void q35(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "퀘스트: 흐콰")) {
+			msg.msg(player, "§7모험가중에서도 최강의 다크워리어가 울부짓었다.%§7다크워리어는 졸라짱쎄서 모험가중에서 최강이엇다.%§7신이나 마족도 이겼따 다덤벼도 이겼따.%"
+					+ "§7하지만 걔는 부족했다.%§7어쨌든 더 강한 힘을 찾았다.%§7하지만 늙어서 약해졌따.");
+			QuestBoard qb = new QuestBoard();
+			qb.q35(player, 0);
 		}	
 	}
 	
@@ -807,9 +855,11 @@ public class QuestScroll {
 	
 	public void mq49(Player player, Item itemArg, World world) {	
 		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "메인퀘스트 49장")) {
-			msg.msg(player, "네비: 아.. 저번에 만났던 디아스라는 사람 기억나?%네비: 계속 귀찮게 하네.%네비: 용건이 뭐냐고 물어봐도 일단 오라고 재촉해.%"
-					+ "네비: 게다가 의뢰 요청도 하루에 한번씩은 꼭 한다니깐.%네비: 의뢰 내용도 매일 똑같아.%네비: 마음 같아서는 가고 싶지도 않은데 연락을 끊으려면 이 방법 밖에는 없다.%"
-					+ "네비: 저번에 기억하지?%네비: 시오카나 섬으로 가보자.");
+			msg.msg(player, "네비: 아.. 저번에 만났던 디아스라는 사람 기억나?%네비: 그 사람이 계속 연락을 하는데 어쩔 수가 없네.%네비: 통화 연결 해줘도 괜찮지?%"
+					+ "디아스: 여어 오랜만이에요우!%디아스: 리로이에게 들었다 소식.%디아스: 그에 대한 일은 미안하다 고맙다.%디아스: 리로이와는 다르도록 프레젠트준다.%"
+					+ "디아스: 내가 이 바다는 다 안다.%디아스: 가고 싶은 곳 말해라.%디아스: 경치 좋은 섬, 무서운 섬, 악마들이 사는 섬 모두 안다.%"
+					+ "§7세계의 문에 대해 묻는다.%디아스: 오우! 세계의 문!%디아스: 그것, 익히 들어 알고 있는.%디아스: 문은 칼라아릿이라는 대륙에 위치!%"
+					+ "디아스: 특히 티페라리라는 대도시와 근접!%디아스: 하지만 그곳은 매우 위험한..!%디아스: 일단 티페라리로 가면 알게 될 것.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq49(player, 0);
 		}	

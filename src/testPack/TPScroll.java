@@ -591,6 +591,13 @@ public class TPScroll {
 				loc.getX() >= 938 && loc.getY() >= 45 && loc.getZ() >= -82) {
 			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "티페라리행 티켓")) {
 				itemArg.remove();				
+				
+				QuestBoard cb = new QuestBoard();
+				if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===신대륙 칼라아릿===")) {
+					int qNum = cb.getNum(player);
+					cb.mq49(player, qNum + 1);
+				}
+				
 				Location loc3 = new Location(world, 1779, 54, 2970, 270, 0);
 				taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 

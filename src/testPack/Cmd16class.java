@@ -15,7 +15,9 @@ import org.bukkit.potion.PotionEffectType;
 public class Cmd16class implements CommandExecutor {
 	
 	static File folder;
-	int sleep;
+	private int sleep1;
+	private int sleep2;
+	private int sleep3;
 	
 	public void setFolder(File folder) {
 		Cmd16class.folder = folder;
@@ -29,13 +31,13 @@ public class Cmd16class implements CommandExecutor {
 			
 			// 대화 종료
 			ThreadMessage t = new ThreadMessage(player.getUniqueId());
-			sleep = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+			sleep1 = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 				int time = 0;
 				
 				@Override
 				public void run() {
 					if (!t.hasID()) {
-						t.setID(sleep);
+						t.setID(sleep1);
 					}
 					if(time >= 0) {
 						t.endTask();
@@ -48,13 +50,13 @@ public class Cmd16class implements CommandExecutor {
 			
 			// 항해 종료
 			ThreadShip t1 = new ThreadShip(player.getUniqueId());
-			sleep = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+			sleep2 = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 				int time = 0;
 				
 				@Override
 				public void run() {
 					if (!t1.hasID()) {
-						t1.setID(sleep);
+						t1.setID(sleep2);
 					}
 					if(time >= 0) {
 						t1.endTask();
@@ -67,13 +69,13 @@ public class Cmd16class implements CommandExecutor {
 			
 			// 스레드 종료
 			ThreadData t2 = new ThreadData(player.getUniqueId());
-			sleep = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+			sleep3 = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 				int time = 0;
 				
 				@Override
 				public void run() {
 					if (!t2.hasID()) {
-						t2.setID(sleep);
+						t2.setID(sleep3);
 					}
 					if(time >= 0) {
 						t2.endTask();

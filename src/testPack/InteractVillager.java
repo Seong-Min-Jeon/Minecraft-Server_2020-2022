@@ -43,7 +43,7 @@ public class InteractVillager {
 		}
 		
 		return vil0() || vil1() || vil2() || vil3() || vil4() || vil5() || vil6() || vil7() || vil8() || vil9() || vil10() || vil11() || vil12() || vil13() || vil14()
-				|| vil15() || vil16() || vil17() || vil18() || vil19() || vil20() || vil21() || vil22() || vil23() || vil24();
+				|| vil15() || vil16() || vil17() || vil18() || vil19() || vil20() || vil21() || vil22() || vil23() || vil24() || vil25();
 	}
 	
 	public boolean vil0() {
@@ -633,6 +633,38 @@ public class InteractVillager {
 			}
 			if(bool == false) {
 				player.sendMessage("던전 키퍼: 통행증이 없으면 결계 안으로 들어갈 수 없다네.");
+			}
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean vil25() {
+		// 마가이 726 -966
+		if(loc.getX() <= 727 && loc.getZ() <= -965
+				&& loc.getX() >= 725 && loc.getZ() >= -967) {
+			QuestBoard cb = new QuestBoard();
+			try {
+				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===티페라리의 영웅1===")) {
+					int qNum = cb.getNum(player);
+					cb.mq49_1(player, qNum+1);	
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===티페라리의 영웅3===")) {
+					int qNum = cb.getNum(player);
+					cb.mq49_3(player, qNum+1);	
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===티페라리의 영웅5===")) {
+					int qNum = cb.getNum(player);
+					cb.mq49_5(player, qNum+1);	
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===티페라리의 영웅7===")) {
+					int qNum = cb.getNum(player);
+					cb.mq49_7(player, qNum+1);	
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===티페라리의 영웅9===")) {
+					int qNum = cb.getNum(player);
+					cb.mq49_9(player, qNum+1);	
+				} else {
+					player.sendMessage("마가이: 마가도 형님은 잘 계실까나.");
+				}
+			} catch(Exception e) {
+				player.sendMessage("마가이: 마가도 형님은 잘 계실까나.");
 			}
 			return true;
 		}

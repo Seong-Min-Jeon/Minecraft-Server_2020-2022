@@ -7568,6 +7568,12 @@ public class MobLoot {
 			player.getInventory().addItem(var5);
 			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===티페라리의 영웅2===")) {
+			int qNum = cb.getNum(player);
+			cb.mq49_2(player, qNum + 1);
+		}
 	}
 	
 	// 검은 흐름에 잠식된 주민
@@ -7622,6 +7628,12 @@ public class MobLoot {
 			player.getInventory().addItem(var5);
 			sendMessage(player, ChatColor.LIGHT_PURPLE + "최상급 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===티페라리의 영웅2===")) {
+			int qNum = cb.getNum(player);
+			cb.mq49_2(player, qNum + 1);
+		}
 	}
 	
 	// 주인을 잃은 라마
@@ -7633,6 +7645,12 @@ public class MobLoot {
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 3310000);
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===티페라리의 영웅4===")) {
+			int qNum = cb.getNum(player);
+			cb.mq49_4(player, qNum + 1);
+		}
 	}
 
 	// 자아를 잃은 라마 주인
@@ -7661,6 +7679,12 @@ public class MobLoot {
 			Location loc = player.getLocation().add(0, 1, 0);
 			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
 		}
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===성 밖의 이단===")) {
+			int qNum = cb.getNum(player);
+			cb.q31(player, qNum + 1);
+		}
 	}
 	
 	// 페라리교의 상위 신도
@@ -7678,6 +7702,12 @@ public class MobLoot {
 			Location loc = player.getLocation().add(0, 1, 0);
 			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
 		}
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===성 밖의 이단===")) {
+			int qNum = cb.getNum(player);
+			cb.q31(player, qNum + 1);
+		}
 	}
 	
 	// 페라리교의 교주
@@ -7689,6 +7719,15 @@ public class MobLoot {
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 5000000);
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===티페라리의 영웅6===")) {
+			int qNum = cb.getNum(player);
+			cb.mq49_6(player, qNum + 1);
+		} else if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===성 밖의 이단===")) {
+			int qNum = cb.getNum(player);
+			cb.q31(player, qNum + 1);
+		}
 	}
 	
 	// 인어
@@ -7711,6 +7750,12 @@ public class MobLoot {
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 3480000);
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===워터파크===")) {
+			int qNum = cb.getNum(player);
+			cb.q32(player, qNum + 1);
+		}
 	}
 	
 	// 어푸
@@ -7755,6 +7800,12 @@ public class MobLoot {
 			player.getInventory().addItem(var1);
 			sendMessage(player, ChatColor.AQUA + "순백의 철광석" + ChatColor.WHITE + "을 획득했다.");
 		} 
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===철분 덩어리===")) {
+			int qNum = cb.getNum(player);
+			cb.q33(player, qNum + 1);
+		}
 	}
 	
 	// 쑥을 먹는 곰
@@ -7781,6 +7832,12 @@ public class MobLoot {
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 3610000);
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===티페라리의 영웅8===")) {
+			int qNum = cb.getNum(player);
+			cb.mq49_8(player, qNum + 1);
+		}
 	}
 	
 	// 위더 스켈레톤
@@ -7870,6 +7927,12 @@ public class MobLoot {
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
 			sendMessage(player, ChatColor.AQUA + "심연의 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+		}
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===주문은 토끼입니까?===")) {
+			int qNum = cb.getNum(player);
+			cb.q34(player, qNum + 1);
 		}
 	}
 	
@@ -8017,7 +8080,13 @@ public class MobLoot {
 		int tmp2 = rnd.nextInt(40);
 		if(tmp2 == 0) {
 			Location loc = player.getLocation().add(0, 1, 0);
-			loc.getWorld().spawnEntity(loc, EntityType.HUSK);
+			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
+		}
+		
+		QuestBoard cb = new QuestBoard();
+		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===흐콰===")) {
+			int qNum = cb.getNum(player);
+			cb.q35(player, qNum + 1);
 		}
 	}
 
@@ -8053,7 +8122,7 @@ public class MobLoot {
 		int tmp2 = rnd.nextInt(40);
 		if(tmp2 == 0) {
 			Location loc = player.getLocation().add(0, 1, 0);
-			loc.getWorld().spawnEntity(loc, EntityType.HUSK);
+			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
 		}
 	}
 	

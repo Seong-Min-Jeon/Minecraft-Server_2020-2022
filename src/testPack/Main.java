@@ -313,10 +313,10 @@ public class Main extends JavaPlugin implements Listener{
 //				player.kickPlayer("서버 점검 중 입니다.");
 //				return;
 //			}
-			if ((player.getUniqueId().toString().equalsIgnoreCase("5d5f3cf5-bbec-4dba-b97c-fe2ddf900191"))) {
-				player.kickPlayer("You are Banned");
-				return;
-			}
+//			if ((player.getUniqueId().toString().equalsIgnoreCase("5d5f3cf5-bbec-4dba-b97c-fe2ddf900191"))) {
+//				player.kickPlayer("You are Banned");
+//				return;
+//			}
 		} catch (Exception e) {
 			System.err.println(player.getDisplayName() + "이 접속을 시도하였습니다.");
 		}
@@ -325,7 +325,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("woolring")) { 
 			
 		} else {
-			player.setResourcePack("https://cdn.discordapp.com/attachments/797824583104462900/827133925515198474/Wynnpack_Port_1.16.4.zip");
+			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/827516472486002719/aile_texture_pack_24.zip");
 		}
 		
 		//Message

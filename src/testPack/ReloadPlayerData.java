@@ -199,6 +199,21 @@ public class ReloadPlayerData {
 					} else if (quest.equals("q30")) {
 						QuestBoard qb = new QuestBoard();
 						qb.q30(player, Integer.parseInt(num));
+					} else if (quest.equals("q31")) {
+						QuestBoard qb = new QuestBoard();
+						qb.q31(player, Integer.parseInt(num));
+					} else if (quest.equals("q32")) {
+						QuestBoard qb = new QuestBoard();
+						qb.q32(player, Integer.parseInt(num));
+					} else if (quest.equals("q33")) {
+						QuestBoard qb = new QuestBoard();
+						qb.q33(player, Integer.parseInt(num));
+					} else if (quest.equals("q34")) {
+						QuestBoard qb = new QuestBoard();
+						qb.q34(player, Integer.parseInt(num));
+					} else if (quest.equals("q35")) {
+						QuestBoard qb = new QuestBoard();
+						qb.q35(player, Integer.parseInt(num));
 					} else if (quest.equals("eq1")) {
 						QuestBoard qb = new QuestBoard();
 						qb.eq1(player, Integer.parseInt(num));
