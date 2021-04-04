@@ -182,33 +182,89 @@ public class ArrowEffect {
 		Material mat = player.getInventory().getItemInMainHand().getType();
 		if(mat == Material.DEAD_BRAIN_CORAL_BLOCK || mat == Material.DEAD_BUBBLE_CORAL_BLOCK || mat == Material.DEAD_FIRE_CORAL_BLOCK
 				|| mat == Material.DEAD_HORN_CORAL_BLOCK || mat == Material.DEAD_TUBE_CORAL_BLOCK) {
+			
+			//===========================================================================
+			// 빠른 발사
+			int speedStat = 0;
+			speedStat += new SpecialEffect().a24(player);
+			
+			int speed1 = 0;
+			int speed2 = 0;
+			int speed3 = 0;
+			int speed4 = 0;
+			int speed5 = 0;
+			if(speedStat == 1) {
+				speed1 += 250;
+				speed2 += 120;
+				speed3 += 80;
+				speed4 += 20;
+				speed5 += 500;
+			}
+			//===========================================================================
+			
 			boolean bool = false;
 			if(mat == Material.DEAD_BRAIN_CORAL_BLOCK) {
-				bool = reload(player, 1000);
+				bool = reload(player, 1000-speed1);
 			}
 			if(mat == Material.DEAD_BUBBLE_CORAL_BLOCK) {
-				bool = reload(player, 500);
+				bool = reload(player, 500-speed2);
 			}
 			if(mat == Material.DEAD_FIRE_CORAL_BLOCK) {
-				bool = reload(player, 200);
+				bool = reload(player, 200-speed3);
 			}
 			if(mat == Material.DEAD_HORN_CORAL_BLOCK) {
-				bool = reload(player, 80);
+				bool = reload(player, 80-speed4);
 			}
 			if(mat == Material.DEAD_TUBE_CORAL_BLOCK) {
-				bool = reload(player, 2000);
+				bool = reload(player, 2000-speed5);
 			}
 			if(bool) {
 				Location loc = player.getLocation();
 				world = player.getWorld();
-				Arrow arrow = player.launchProjectile(Arrow.class);
-				arrow.setShooter(player);
-				arrow.setVelocity(player.getLocation().getDirection().multiply(3.0f));
-				player.getWorld().spawnParticle(Particle.FIREWORKS_SPARK, loc.add(0,1,0), 0);			
-				world.playSound(player.getLocation(), Sound.ENTITY_ARROW_SHOOT, 1.0f, 1.0f);
 				
-				SpectralArrow sarrow = (SpectralArrow) arrow.getWorld().spawnEntity(loc, EntityType.SPECTRAL_ARROW);
-				sarrow.setVelocity(arrow.getVelocity());
+				//===========================================================================
+				// 확산 화살
+				int numStat = 0;
+				numStat += new SpecialEffect().a23(player);
+				
+				if(numStat == 0) {
+					Arrow arrow = player.launchProjectile(Arrow.class);
+					arrow.setShooter(player);
+					arrow.setVelocity(player.getLocation().getDirection().multiply(3.0f));
+					player.getWorld().spawnParticle(Particle.FIREWORKS_SPARK, loc.add(0,1,0), 0);			
+					world.playSound(player.getLocation(), Sound.ENTITY_ARROW_SHOOT, 1.0f, 1.0f);
+					
+					SpectralArrow sarrow = (SpectralArrow) arrow.getWorld().spawnEntity(loc, EntityType.SPECTRAL_ARROW);
+					sarrow.setVelocity(arrow.getVelocity());
+				} else if(numStat == 1) {
+					
+					Vector normal = player.getLocation().getDirection().multiply(3.0f);
+					
+					Arrow arrow1 = player.launchProjectile(Arrow.class);
+					arrow1.setShooter(player);
+					arrow1.setVelocity(rotateVector(normal, 30.0));
+					SpectralArrow sarrow1 = (SpectralArrow) arrow1.getWorld().spawnEntity(loc, EntityType.SPECTRAL_ARROW);
+					sarrow1.setVelocity(arrow1.getVelocity());
+					
+//					Arrow arrow2 = player.launchProjectile(Arrow.class);
+//					arrow2.setShooter(player);
+//					arrow2.setVelocity(player.getLocation().getDirection().multiply(3.0f));
+//					player.getWorld().spawnParticle(Particle.FIREWORKS_SPARK, loc.add(0,1,0), 0);			
+//					SpectralArrow sarrow2 = (SpectralArrow) arrow2.getWorld().spawnEntity(loc, EntityType.SPECTRAL_ARROW);
+//					sarrow2.setVelocity(arrow2.getVelocity());
+					
+//					Arrow arrow3 = player.launchProjectile(Arrow.class);
+//					arrow3.setShooter(player);
+//					arrow3.setVelocity(player.getLocation().clone().add(Math.cos(60), 0, Math.sin(60)).getDirection().multiply(3.0f));
+//					player.getWorld().spawnParticle(Particle.FIREWORKS_SPARK, loc.add(0,1,0), 0);			
+//					world.playSound(player.getLocation(), Sound.ENTITY_ARROW_SHOOT, 1.0f, 1.0f);
+//					SpectralArrow sarrow3 = (SpectralArrow) arrow3.getWorld().spawnEntity(loc, EntityType.SPECTRAL_ARROW);
+//					sarrow3.setVelocity(arrow3.getVelocity());
+					
+					player.getWorld().spawnParticle(Particle.FIREWORKS_SPARK, loc.add(0,1,0), 0);			
+					world.playSound(player.getLocation(), Sound.ENTITY_ARROW_SHOOT, 1.0f, 1.0f);
+				}
+				//===========================================================================
 			}			
 		}
 	}
@@ -345,6 +401,15 @@ public class ArrowEffect {
 		return false;
 	}
 
+	 public Vector rotateVector(Vector vector, double whatAngle) {
+	        double sin = Math.sin(whatAngle);
+	        double cos = Math.cos(whatAngle);
+	        double x = vector.getX() * cos + vector.getZ() * sin;
+	        double z = vector.getX() * -sin + vector.getZ() * cos;
+	     
+	        return vector.setX(x).setZ(z);
+	 }
+	
 	public void staffE1(Arrow arrow) {
 		Item passenger = arrow.getWorld().dropItem(arrow.getLocation(), new ItemStack(Material.END_CRYSTAL));
 		passenger.setPickupDelay(10000000);

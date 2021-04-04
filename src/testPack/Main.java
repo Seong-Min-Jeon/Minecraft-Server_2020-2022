@@ -590,7 +590,120 @@ public class Main extends JavaPlugin implements Listener{
 //		if(player.getDisplayName().equalsIgnoreCase("WoolRing") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
 		
 		
-		
+//		ItemStack var1 = new ItemStack(Material.MOSSY_COBBLESTONE_STAIRS);
+//		ItemMeta var1Im = var1.getItemMeta();
+//		var1Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,400");
+//		var1Im.setDisplayName(ChatColor.AQUA + "클러스터 유닛");
+//		ArrayList<String> var1Lore = new ArrayList();
+//		var1Lore.add(ChatColor.GRAY + "레벨 제한: 400");
+//		var1Lore.add(ChatColor.GRAY + " ");
+//		var1Lore.add(ChatColor.GRAY + "활 쏘기에 능통한 전사들은 한번에");
+//		var1Lore.add(ChatColor.GRAY + "세 마리의 사냥감을 잡았다고 한다.");
+//		var1Lore.add(ChatColor.GRAY + " ");
+//		var1Lore.add(ChatColor.BLUE + "-확산 화살 I");
+//		var1Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var1Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var1Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var1Im.setUnbreakable(true);
+//		var1Im.setLore(var1Lore);
+//		var1.setItemMeta(var1Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var1);}
+//		
+//		ItemStack var2 = new ItemStack(Material.SMOOTH_SANDSTONE_STAIRS);
+//		ItemMeta var2Im = var2.getItemMeta();
+//		var2Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,450");
+//		var2Im.setDisplayName(ChatColor.AQUA + "스피디 유닛");
+//		ArrayList<String> var2Lore = new ArrayList();
+//		var2Lore.add(ChatColor.GRAY + "레벨 제한: 450");
+//		var2Lore.add(ChatColor.GRAY + " ");
+//		var2Lore.add(ChatColor.GRAY + "활 쏘기에 능통한 전사들은 빠르게");
+//		var2Lore.add(ChatColor.GRAY + "화살을 쏘는 것을 가장 중요하게 여겼다.");
+//		var2Lore.add(ChatColor.GRAY + " ");
+//		var2Lore.add(ChatColor.BLUE + "-화살 장전 속도 감소 I");
+//		var2Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var2Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var2Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var2Im.setUnbreakable(true);
+//		var2Im.setLore(var2Lore);
+//		var2.setItemMeta(var2Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var2);}
+//		
+//		ItemStack var3 = new ItemStack(Material.MOSSY_COBBLESTONE_STAIRS);
+//		ItemMeta var3Im = var3.getItemMeta();
+//		var3Im.setLocalizedName("3000,0,0,0,0,0,0,0,0,0,600");
+//		var3Im.setDisplayName(ChatColor.LIGHT_PURPLE + "공격의 보주");
+//		ArrayList<String> var3Lore = new ArrayList();
+//		var3Lore.add(ChatColor.GRAY + "레벨 제한: 600");
+//		var3Lore.add(ChatColor.GRAY + " ");
+//		var3Lore.add(ChatColor.GRAY + "미약하지만 무기의 힘을 가지고 있는 보주");
+//		var3Lore.add(ChatColor.GRAY + " ");
+//		var3Lore.add("=====인챈트=====");
+//		var3Lore.add(ChatColor.BLUE + "공격력: 3000");
+//		var3Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var3Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var3Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var3Im.setUnbreakable(true);
+//		var3Im.setLore(var3Lore);
+//		var3.setItemMeta(var3Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var3);}
+//		
+//		ItemStack var4 = new ItemStack(Material.MOSSY_COBBLESTONE_STAIRS);
+//		ItemMeta var4Im = var4.getItemMeta();
+//		var4Im.setLocalizedName("0,2500,0,0,0,0,0,0,0,0,600");
+//		var4Im.setDisplayName(ChatColor.LIGHT_PURPLE + "공격의 보주");
+//		ArrayList<String> var4Lore = new ArrayList();
+//		var4Lore.add(ChatColor.GRAY + "레벨 제한: 600");
+//		var4Lore.add(ChatColor.GRAY + " ");
+//		var4Lore.add(ChatColor.GRAY + "미약하지만 무기의 힘을 가지고 있는 보주");
+//		var4Lore.add(ChatColor.GRAY + " ");
+//		var4Lore.add("=====인챈트=====");
+//		var4Lore.add(ChatColor.BLUE + "추가 데미지(인간형): 2500");
+//		var4Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var4Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var4Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var4Im.setUnbreakable(true);
+//		var4Im.setLore(var4Lore);
+//		var4.setItemMeta(var4Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var4);}
+//		
+//		ItemStack var5 = new ItemStack(Material.MOSSY_COBBLESTONE_STAIRS);
+//		ItemMeta var5Im = var5.getItemMeta();
+//		var5Im.setLocalizedName("0,0,2500,0,0,0,0,0,0,0,600");
+//		var5Im.setDisplayName(ChatColor.LIGHT_PURPLE + "공격의 보주");
+//		ArrayList<String> var5Lore = new ArrayList();
+//		var5Lore.add(ChatColor.GRAY + "레벨 제한: 600");
+//		var5Lore.add(ChatColor.GRAY + " ");
+//		var5Lore.add(ChatColor.GRAY + "미약하지만 무기의 힘을 가지고 있는 보주");
+//		var5Lore.add(ChatColor.GRAY + " ");
+//		var5Lore.add("=====인챈트=====");
+//		var5Lore.add(ChatColor.BLUE + "추가 데미지(동물형): 2500");
+//		var5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var5Im.setUnbreakable(true);
+//		var5Im.setLore(var5Lore);
+//		var5.setItemMeta(var5Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var5);}
+//		
+//		ItemStack var6 = new ItemStack(Material.MOSSY_COBBLESTONE_STAIRS);
+//		ItemMeta var6Im = var6.getItemMeta();
+//		var6Im.setLocalizedName("0,0,0,2500,0,0,0,0,0,0,600");
+//		var6Im.setDisplayName(ChatColor.LIGHT_PURPLE + "공격의 보주");
+//		ArrayList<String> var6Lore = new ArrayList();
+//		var6Lore.add(ChatColor.GRAY + "레벨 제한: 600");
+//		var6Lore.add(ChatColor.GRAY + " ");
+//		var6Lore.add(ChatColor.GRAY + "미약하지만 무기의 힘을 가지고 있는 보주");
+//		var6Lore.add(ChatColor.GRAY + " ");
+//		var6Lore.add("=====인챈트=====");
+//		var6Lore.add(ChatColor.BLUE + "추가 데미지(기타): 2500");
+//		var6Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var6Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var6Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var6Im.setUnbreakable(true);
+//		var6Im.setLore(var6Lore);
+//		var6.setItemMeta(var6Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var6);}
+//		
 //		ItemStack var2 = new ItemStack(Material.GRANITE_STAIRS);
 //		ItemMeta var2Im = var2.getItemMeta();
 //		var2Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,10");
@@ -9074,7 +9187,9 @@ public class Main extends JavaPlugin implements Listener{
 						|| item1.getType() == Material.GOLDEN_HELMET || item1.getType() == Material.GOLDEN_CHESTPLATE || item1.getType() == Material.GOLDEN_LEGGINGS 
 						|| item1.getType() == Material.GOLDEN_BOOTS || item1.getType() == Material.DIAMOND_HELMET || item1.getType() == Material.DIAMOND_CHESTPLATE 
 						|| item1.getType() == Material.DIAMOND_LEGGINGS || item1.getType() == Material.DIAMOND_BOOTS || item1.getType() == Material.NETHERITE_HELMET 
-						|| item1.getType() == Material.NETHERITE_CHESTPLATE || item1.getType() == Material.NETHERITE_LEGGINGS || item1.getType() == Material.NETHERITE_BOOTS)) {
+						|| item1.getType() == Material.NETHERITE_CHESTPLATE || item1.getType() == Material.NETHERITE_LEGGINGS || item1.getType() == Material.NETHERITE_BOOTS)
+						|| item1.getType() == Material.RABBIT_STEW || item1.getType() == Material.BEETROOT_SOUP || item1.getType() == Material.MUSHROOM_STEW
+						|| item1.getType() == Material.SUSPICIOUS_STEW || item1.getType() == Material.POTION || item1.getType() == Material.HONEY_BOTTLE) {
 					LimitLevel la = new LimitLevel();
 					if(la.limit(player, item1) == false) {
 						player.sendMessage(ChatColor.RED + "아직 이 무기를 다루기에는 내 힘이 부족하다.");

@@ -255,6 +255,28 @@ public class SpecialEffect {
 		}
 		return 0;
 	}
+	
+	public int a23(Player player) {
+		try {
+			if(player.getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "클러스터 유닛")) {
+				return 1;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+	public int a24(Player player) {
+		try {
+			if(player.getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "스피디 유닛")) {
+				return 1;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	

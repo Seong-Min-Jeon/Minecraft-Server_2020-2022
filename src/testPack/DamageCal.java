@@ -2,11 +2,13 @@ package testPack;
 
 import java.util.Map;
 
+import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 public class DamageCal {
@@ -30,6 +32,26 @@ public class DamageCal {
 					damIm += Integer.parseInt(ench[3]);
 				} catch (Exception e) {
 
+				}
+			}
+		} catch (Exception e) {
+
+		}
+		try {
+			ItemStack item = player.getInventory().getItemInOffHand();
+			if (item.getItemMeta() != null) {
+				if(item.getType() == Material.POLISHED_GRANITE_STAIRS || item.getType() == Material.SMOOTH_RED_SANDSTONE_STAIRS || item.getType() == Material.MOSSY_STONE_BRICK_STAIRS 
+						|| item.getType() == Material.POLISHED_DIORITE_STAIRS || item.getType() == Material.MOSSY_COBBLESTONE_STAIRS || item.getType() == Material.END_STONE_BRICK_STAIRS 
+						|| item.getType() == Material.SMOOTH_SANDSTONE_STAIRS || item.getType() == Material.SMOOTH_QUARTZ_STAIRS || item.getType() == Material.GRANITE_STAIRS) {
+					try {
+						String[] ench = item.getItemMeta().getLocalizedName().split(",");
+						damAll += Integer.parseInt(ench[0]);
+						damUn += Integer.parseInt(ench[1]);
+						damAr += Integer.parseInt(ench[2]);
+						damIm += Integer.parseInt(ench[3]);
+					} catch (Exception e) {
+
+					}
 				}
 			}
 		} catch (Exception e) {
@@ -95,7 +117,7 @@ public class DamageCal {
 				|| entity.getType() == EntityType.WITHER || entity.getType() == EntityType.CREEPER || entity.getType() == EntityType.IRON_GOLEM) {
 			return (int)(damAll*2 + damIm*6);
 		} else {
-			return damAll*4;
+			return damAll*2;
 		}
 	}
 
