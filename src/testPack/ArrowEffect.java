@@ -230,7 +230,7 @@ public class ArrowEffect {
 				if(numStat == 0) {
 					Arrow arrow = player.launchProjectile(Arrow.class);
 					arrow.setShooter(player);
-					arrow.setVelocity(player.getLocation().getDirection().multiply(3.0f));
+					arrow.setVelocity(player.getEyeLocation().getDirection().multiply(3.0f));
 					player.getWorld().spawnParticle(Particle.FIREWORKS_SPARK, loc.add(0,1,0), 0);			
 					world.playSound(player.getLocation(), Sound.ENTITY_ARROW_SHOOT, 1.0f, 1.0f);
 					
@@ -238,28 +238,33 @@ public class ArrowEffect {
 					sarrow.setVelocity(arrow.getVelocity());
 				} else if(numStat == 1) {
 					
-					Vector normal = player.getLocation().getDirection().multiply(3.0f);
+					Location normal = player.getEyeLocation();
 					
-					Arrow arrow1 = player.launchProjectile(Arrow.class);
+					double arrowAngle1 = 75;
+			        double totalAngle1 = normal.getYaw() + arrowAngle1;
+			        double arrowDirX1 = Math.cos(Math.toRadians(totalAngle1));
+			        double arrowDirZ1 = Math.sin(Math.toRadians(totalAngle1));
+			        Vector arrowDir1 = new Vector(arrowDirX1, normal.getDirection().getY(), arrowDirZ1).multiply(3.0f);
+					Arrow arrow1 = player.launchProjectile(Arrow.class, arrowDir1);
 					arrow1.setShooter(player);
-					arrow1.setVelocity(rotateVector(normal, 30.0));
-					SpectralArrow sarrow1 = (SpectralArrow) arrow1.getWorld().spawnEntity(loc, EntityType.SPECTRAL_ARROW);
-					sarrow1.setVelocity(arrow1.getVelocity());
+					SpectralArrow sarrow1 = (SpectralArrow) arrow1.getWorld().spawnEntity(normal, EntityType.SPECTRAL_ARROW);
+					sarrow1.setVelocity(arrowDir1);
 					
-//					Arrow arrow2 = player.launchProjectile(Arrow.class);
-//					arrow2.setShooter(player);
-//					arrow2.setVelocity(player.getLocation().getDirection().multiply(3.0f));
-//					player.getWorld().spawnParticle(Particle.FIREWORKS_SPARK, loc.add(0,1,0), 0);			
-//					SpectralArrow sarrow2 = (SpectralArrow) arrow2.getWorld().spawnEntity(loc, EntityType.SPECTRAL_ARROW);
-//					sarrow2.setVelocity(arrow2.getVelocity());
+					Arrow arrow2 = player.launchProjectile(Arrow.class);
+					arrow2.setShooter(player);
+					arrow2.setVelocity(normal.getDirection().multiply(3.0f));
+					SpectralArrow sarrow2 = (SpectralArrow) arrow2.getWorld().spawnEntity(normal, EntityType.SPECTRAL_ARROW);
+					sarrow2.setVelocity(arrow2.getVelocity());
 					
-//					Arrow arrow3 = player.launchProjectile(Arrow.class);
-//					arrow3.setShooter(player);
-//					arrow3.setVelocity(player.getLocation().clone().add(Math.cos(60), 0, Math.sin(60)).getDirection().multiply(3.0f));
-//					player.getWorld().spawnParticle(Particle.FIREWORKS_SPARK, loc.add(0,1,0), 0);			
-//					world.playSound(player.getLocation(), Sound.ENTITY_ARROW_SHOOT, 1.0f, 1.0f);
-//					SpectralArrow sarrow3 = (SpectralArrow) arrow3.getWorld().spawnEntity(loc, EntityType.SPECTRAL_ARROW);
-//					sarrow3.setVelocity(arrow3.getVelocity());
+					double arrowAngle3 = 105;
+			        double totalAngle3 = normal.getYaw() + arrowAngle3;
+			        double arrowDirX3 = Math.cos(Math.toRadians(totalAngle3));
+			        double arrowDirZ3 = Math.sin(Math.toRadians(totalAngle3));
+			        Vector arrowDir3 = new Vector(arrowDirX3, normal.getDirection().getY(), arrowDirZ3).multiply(3.0f);
+					Arrow arrow3 = player.launchProjectile(Arrow.class, arrowDir3);
+					arrow3.setShooter(player);
+					SpectralArrow sarrow3 = (SpectralArrow) arrow3.getWorld().spawnEntity(normal, EntityType.SPECTRAL_ARROW);
+					sarrow3.setVelocity(arrowDir3);
 					
 					player.getWorld().spawnParticle(Particle.FIREWORKS_SPARK, loc.add(0,1,0), 0);			
 					world.playSound(player.getLocation(), Sound.ENTITY_ARROW_SHOOT, 1.0f, 1.0f);
@@ -302,7 +307,7 @@ public class ArrowEffect {
 				SmallFireball arrow = player.launchProjectile(SmallFireball.class);
 				arrow.setShooter(player);
 				arrow.setIsIncendiary(false);
-				arrow.setVelocity(player.getLocation().getDirection().multiply(4.0f));
+				arrow.setVelocity(player.getEyeLocation().getDirection().multiply(4.0f));
 				Vector dir = loc.getDirection();
 				Location e1, e2, e3, e4, e5, e6, e7, e8, e9, e10;
 				e1 = loc.clone().add(dir.getX(), dir.getY(), dir.getZ());
@@ -401,15 +406,6 @@ public class ArrowEffect {
 		return false;
 	}
 
-	 public Vector rotateVector(Vector vector, double whatAngle) {
-	        double sin = Math.sin(whatAngle);
-	        double cos = Math.cos(whatAngle);
-	        double x = vector.getX() * cos + vector.getZ() * sin;
-	        double z = vector.getX() * -sin + vector.getZ() * cos;
-	     
-	        return vector.setX(x).setZ(z);
-	 }
-	
 	public void staffE1(Arrow arrow) {
 		Item passenger = arrow.getWorld().dropItem(arrow.getLocation(), new ItemStack(Material.END_CRYSTAL));
 		passenger.setPickupDelay(10000000);

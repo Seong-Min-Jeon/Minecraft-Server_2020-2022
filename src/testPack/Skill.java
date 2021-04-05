@@ -4240,7 +4240,7 @@ public class Skill {
 								Arrow arrow = player.launchProjectile(Arrow.class);
 								arrow.setShooter(player);
 								arrow.setDamage(0.01);
-								arrow.setVelocity(player.getLocation().getDirection().multiply(1.8f));		
+								arrow.setVelocity(player.getEyeLocation().getDirection().multiply(2.0f));		
 								world.spawnParticle(Particle.FLAME, arrow.getLocation(), 5);
 								world.playSound(player.getLocation(), Sound.ENTITY_ARROW_SHOOT, 1.0f, 1.0f);
 								
@@ -4270,7 +4270,7 @@ public class Skill {
 					
 					Arrow arrow = player.launchProjectile(Arrow.class);
 					arrow.setShooter(player);
-					arrow.setVelocity(player.getLocation().getDirection().multiply(1.8f));		
+					arrow.setVelocity(player.getEyeLocation().getDirection().multiply(2.0f));		
 					world.spawnParticle(Particle.FLAME, arrow.getLocation(), 5);
 					world.playSound(player.getLocation(), Sound.ENTITY_ARROW_SHOOT, 1.0f, 1.0f);
 					
@@ -4430,15 +4430,39 @@ public class Skill {
 								t.endTask();
 								t.removeID();
 							} else if(time%2 == 0) {
-								Arrow arrow = player.launchProjectile(Arrow.class);
-								arrow.setShooter(player);
-								arrow.setDamage(0.02);
-								arrow.setVelocity(player.getLocation().getDirection().multiply(1.8f));		
-								world.spawnParticle(Particle.FLAME, arrow.getLocation(), 5);
-								world.playSound(player.getLocation(), Sound.ENTITY_ARROW_SHOOT, 1.0f, 1.0f);	
+								Location normal = player.getEyeLocation();
 								
-								SpectralArrow sarrow = (SpectralArrow) arrow.getWorld().spawnEntity(arrow.getLocation(), EntityType.SPECTRAL_ARROW);
-								sarrow.setVelocity(arrow.getVelocity());
+								double arrowAngle1 = 75;
+						        double totalAngle1 = normal.getYaw() + arrowAngle1;
+						        double arrowDirX1 = Math.cos(Math.toRadians(totalAngle1));
+						        double arrowDirZ1 = Math.sin(Math.toRadians(totalAngle1));
+						        Vector arrowDir1 = new Vector(arrowDirX1, normal.getDirection().getY(), arrowDirZ1).multiply(3.0f);
+								Arrow arrow1 = player.launchProjectile(Arrow.class, arrowDir1);
+								arrow1.setShooter(player);
+								arrow1.setDamage(0.02);
+								SpectralArrow sarrow1 = (SpectralArrow) arrow1.getWorld().spawnEntity(normal, EntityType.SPECTRAL_ARROW);
+								sarrow1.setVelocity(arrowDir1);
+								
+								Arrow arrow2 = player.launchProjectile(Arrow.class);
+								arrow2.setShooter(player);
+								arrow2.setDamage(0.02);
+								arrow2.setVelocity(normal.getDirection().multiply(3.0f));
+								SpectralArrow sarrow2 = (SpectralArrow) arrow2.getWorld().spawnEntity(normal, EntityType.SPECTRAL_ARROW);
+								sarrow2.setVelocity(arrow2.getVelocity());
+								
+								double arrowAngle3 = 105;
+						        double totalAngle3 = normal.getYaw() + arrowAngle3;
+						        double arrowDirX3 = Math.cos(Math.toRadians(totalAngle3));
+						        double arrowDirZ3 = Math.sin(Math.toRadians(totalAngle3));
+						        Vector arrowDir3 = new Vector(arrowDirX3, normal.getDirection().getY(), arrowDirZ3).multiply(3.0f);
+								Arrow arrow3 = player.launchProjectile(Arrow.class, arrowDir3);
+								arrow3.setShooter(player);
+								arrow3.setDamage(0.02);
+								SpectralArrow sarrow3 = (SpectralArrow) arrow3.getWorld().spawnEntity(normal, EntityType.SPECTRAL_ARROW);
+								sarrow3.setVelocity(arrowDir3);
+								
+								world.spawnParticle(Particle.FLAME, arrow2.getLocation(), 5);
+								world.playSound(player.getLocation(), Sound.ENTITY_ARROW_SHOOT, 1.0f, 1.0f);
 							}
 							
 							time++;
@@ -4463,7 +4487,7 @@ public class Skill {
 					
 					Arrow arrow = player.launchProjectile(Arrow.class);
 					arrow.setShooter(player);
-					arrow.setVelocity(player.getLocation().getDirection().multiply(1.8f));		
+					arrow.setVelocity(player.getEyeLocation().getDirection().multiply(1.8f));		
 					world.spawnParticle(Particle.FLAME, arrow.getLocation(), 5);
 					world.playSound(player.getLocation(), Sound.ENTITY_ARROW_SHOOT, 1.0f, 1.0f);
 					
