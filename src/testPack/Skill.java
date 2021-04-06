@@ -4240,7 +4240,7 @@ public class Skill {
 								Arrow arrow = player.launchProjectile(Arrow.class);
 								arrow.setShooter(player);
 								arrow.setDamage(0.01);
-								arrow.setVelocity(player.getEyeLocation().getDirection().multiply(2.0f));		
+								arrow.setVelocity(player.getEyeLocation().getDirection().multiply(3.0f));		
 								world.spawnParticle(Particle.FLAME, arrow.getLocation(), 5);
 								world.playSound(player.getLocation(), Sound.ENTITY_ARROW_SHOOT, 1.0f, 1.0f);
 								
@@ -4270,7 +4270,7 @@ public class Skill {
 					
 					Arrow arrow = player.launchProjectile(Arrow.class);
 					arrow.setShooter(player);
-					arrow.setVelocity(player.getEyeLocation().getDirection().multiply(2.0f));		
+					arrow.setVelocity(player.getEyeLocation().getDirection().multiply(3.0f));		
 					world.spawnParticle(Particle.FLAME, arrow.getLocation(), 5);
 					world.playSound(player.getLocation(), Sound.ENTITY_ARROW_SHOOT, 1.0f, 1.0f);
 					
@@ -4296,7 +4296,8 @@ public class Skill {
 										}
 									}
 								}
-								world.playSound(arrow.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 1.0f, 1.0f);
+								world.playSound(arrow.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 2.0f, 1.0f);
+								world.playSound(player.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 0.5f, 1.0f);
 								world.spawnParticle(Particle.EXPLOSION_LARGE, arrow.getLocation(), 0);
 								world.spawnParticle(Particle.FLAME, arrow.getLocation(), 10);
 								t.endTask();
@@ -4487,7 +4488,7 @@ public class Skill {
 					
 					Arrow arrow = player.launchProjectile(Arrow.class);
 					arrow.setShooter(player);
-					arrow.setVelocity(player.getEyeLocation().getDirection().multiply(1.8f));		
+					arrow.setVelocity(player.getEyeLocation().getDirection().multiply(3.0f));		
 					world.spawnParticle(Particle.FLAME, arrow.getLocation(), 5);
 					world.playSound(player.getLocation(), Sound.ENTITY_ARROW_SHOOT, 1.0f, 1.0f);
 					
@@ -4513,7 +4514,8 @@ public class Skill {
 										}
 									}
 								}
-								world.playSound(arrow.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 1.0f, 1.0f);
+								world.playSound(arrow.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 2.0f, 1.0f);
+								world.playSound(player.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 0.5f, 1.0f);
 								world.spawnParticle(Particle.EXPLOSION_HUGE, arrow.getLocation(), 0);
 								world.spawnParticle(Particle.FLAME, arrow.getLocation(), 10);
 								t.endTask();

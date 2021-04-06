@@ -7154,7 +7154,7 @@ public class Main extends JavaPlugin implements Listener{
 	    			if(block.getType()==Material.STONE_BUTTON && block.getX()==3664 && block.getZ()==3674) {
 	    				new CharacterSelectButton(player, getDataFolder());
 	    			}
-	    			if(block.getType()==Material.STONE_BUTTON) {
+	    			if(block.getType()==Material.STONE_BUTTON || block.getType()==Material.PLAYER_HEAD) {
 	    				new PlateEvent().effect(event.getPlayer(), event.getClickedBlock());
 	    			}
 	    		}

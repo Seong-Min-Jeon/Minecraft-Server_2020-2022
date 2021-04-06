@@ -234,7 +234,7 @@ public class ArrowEffect {
 					player.getWorld().spawnParticle(Particle.FIREWORKS_SPARK, loc.add(0,1,0), 0);			
 					world.playSound(player.getLocation(), Sound.ENTITY_ARROW_SHOOT, 1.0f, 1.0f);
 					
-					SpectralArrow sarrow = (SpectralArrow) arrow.getWorld().spawnEntity(loc, EntityType.SPECTRAL_ARROW);
+					SpectralArrow sarrow = (SpectralArrow) arrow.getWorld().spawnEntity(player.getEyeLocation(), EntityType.SPECTRAL_ARROW);
 					sarrow.setVelocity(arrow.getVelocity());
 				} else if(numStat == 1) {
 					

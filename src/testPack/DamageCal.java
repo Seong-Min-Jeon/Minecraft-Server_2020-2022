@@ -1,5 +1,6 @@
 package testPack;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import org.bukkit.Material;
@@ -11,6 +12,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import net.md_5.bungee.api.ChatColor;
+
 public class DamageCal {
 	
 	private int damAll = 0;
@@ -18,14 +21,16 @@ public class DamageCal {
 	private int damUn = 0;
 	private int damIm = 0;
 	private int protect = 0;
+	
+	private static HashMap<Player, Integer> beiagTester = new HashMap<>();
+	
 
 	public int Edamage(Player player, Entity entity) {
 
 		try {
 			if (player.getInventory().getItemInMainHand().getItemMeta() != null) {
 				try {
-					String[] ench = player.getInventory().getItemInMainHand().getItemMeta().getLocalizedName()
-							.split(",");
+					String[] ench = player.getInventory().getItemInMainHand().getItemMeta().getLocalizedName().split(",");
 					damAll += Integer.parseInt(ench[0]);
 					damUn += Integer.parseInt(ench[1]);
 					damAr += Integer.parseInt(ench[2]);
@@ -116,8 +121,23 @@ public class DamageCal {
 		} else if(entity.getType() == EntityType.SLIME || entity.getType() == EntityType.MAGMA_CUBE || entity.getType() == EntityType.GHAST
 				|| entity.getType() == EntityType.WITHER || entity.getType() == EntityType.CREEPER || entity.getType() == EntityType.IRON_GOLEM) {
 			return (int)(damAll*2 + damIm*6);
+		} else if(entity.getType() == EntityType.MUSHROOM_COW) {
+			if(beiagTester.containsKey(player)) {
+				int type = beiagTester.get(player);
+				if(type == 1) {
+					return (int)(damAll*2 + damUn*4);
+				} else if(type == 2) {
+					return (int)(damAll*2 + damAr*5);
+				} else if(type == 3) {
+					return (int)(damAll*2 + damIm*6);
+				}
+			} else {
+				player.sendMessage(ChatColor.RED + "대련 상대가 선택되지 않았습니다.");
+				return (int)(damAll*2);
+			}
+			return (int)(damAll*2);
 		} else {
-			return damAll*2;
+			return (int)(damAll*2);
 		}
 	}
 
@@ -171,6 +191,15 @@ public class DamageCal {
 		damage = damage - (damage * ((42.6/Math.sqrt(2)) * Math.log10((protect*0.18+14.15) / (10*Math.sqrt(2)))) / 100.0);
 		return damage;
 		
+	}
+	
+	public void HashPut(Player player, int type) {
+		if(beiagTester.containsKey(player)) {
+			beiagTester.remove(player);
+			beiagTester.put(player, type);
+		} else {
+			beiagTester.put(player, type);
+		}
 	}
 	
 }
