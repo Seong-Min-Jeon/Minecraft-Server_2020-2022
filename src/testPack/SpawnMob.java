@@ -11821,16 +11821,20 @@ public class SpawnMob {
 			Location chestLoc = new Location(entity.getWorld(), -1836, 92, 3050);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
-			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
+			if (entity.getType() == (EntityType) EntityType.SKELETON) {
 				entity.setCustomName(ChatColor.GRAY + "페라리교의 신도" + ChatColor.YELLOW + " [Lv.635]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(616000);
 				entity.setHealth(616000);
-				Zombie z = (Zombie) entity;
-				z.setBaby(false);
 				EntityEquipment weapon = entity.getEquipment();
-				ItemStack weaponItem = new ItemStack(Material.DARK_OAK_LOG);
+				ItemStack weaponItem = new ItemStack(Material.BOW);
+				ItemMeta im = weaponItem.getItemMeta();
+				im.setLocalizedName("2400");
+				weaponItem.setItemMeta(im);
 				weapon.setItemInMainHand(weaponItem);
+				EntityEquipment mobBow = entity.getEquipment();
+				ItemStack mobBowItem = new ItemStack(Material.MUSIC_DISC_13);
+				mobBow.setItemInOffHand(mobBowItem);
 				EntityEquipment head = entity.getEquipment();
 				ItemStack headItem = chest.getInventory().getItem(12);
 				head.setHelmet(headItem);
@@ -11855,11 +11859,13 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 2400));
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
 				return true;
-			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
+			} else if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
 				entity.setCustomName(ChatColor.GRAY + "페라리교의 상위 신도" + ChatColor.YELLOW + " [Lv.639]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(624000);
 				entity.setHealth(624000);
+				Zombie z = (Zombie) entity;
+				z.setBaby(false);
 				EntityEquipment weapon = entity.getEquipment();
 				ItemStack weaponItem = new ItemStack(Material.SPRUCE_SLAB);
 				weapon.setItemInMainHand(weaponItem);

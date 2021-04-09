@@ -368,7 +368,7 @@ public class QuestScroll {
 	}
 	
 	public void q31(Player player, Item itemArg, World world) {	
-		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "퀘스트: 성 밖의 이단")) {
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "퀘스트: 성 밖의 이단")) {
 			msg.msg(player, "§7수많은 모험가들이 교주를 혼내주었지만%§7아직도 이단들이 활동하고 있는 듯하다.%§7한번 더 그들에게 진짜 지옥이란 무엇인지 보여주자.%"
 					+ "§7좋은 보상은 덤이겠지..?");
 			QuestBoard qb = new QuestBoard();
@@ -377,7 +377,7 @@ public class QuestScroll {
 	}
 	
 	public void q32(Player player, Item itemArg, World world) {	
-		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "퀘스트: 워터파크")) {
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "퀘스트: 워터파크")) {
 			msg.msg(player, "§7동굴에는 물이 있어요.%§7그런데 왜 물풍선은 터지면 불이 붙는거죠?%§7물론 옆에 있는 물에 들어가면 살 수 있지만..%§7매우 귀찮군요..!");
 			QuestBoard qb = new QuestBoard();
 			qb.q32(player, 0);

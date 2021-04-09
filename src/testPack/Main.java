@@ -1,5 +1,6 @@
 package testPack;
 
+import java.awt.Paint;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -325,7 +326,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("woolring")) { 
 			
 		} else {
-			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/827516472486002719/aile_texture_pack_24.zip");
+			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/830042481507696690/aile_texture_pack_25.zip");
 		}
 		
 		//Message
@@ -3521,6 +3522,10 @@ public class Main extends JavaPlugin implements Listener{
 				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 1200, 3,true,false,false));
 				player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 300, 4,true,false,false));
 			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "탐욕의 사과")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 1200, 4,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 5,true,false,false));
+			}
 			
 		} catch(Exception e) {
 			
@@ -4034,6 +4039,10 @@ public class Main extends JavaPlugin implements Listener{
 			event.setCancelled(true);
 		}
 		if(event.getItemDrop().getItemStack().getType() == Material.GRANITE_STAIRS) {
+			player.sendMessage(ChatColor.RED + "드랍 불가 아이템입니다.");
+			event.setCancelled(true);
+		}
+		if(event.getItemDrop().getItemStack().getType() == Material.DIAMOND_AXE) {
 			player.sendMessage(ChatColor.RED + "드랍 불가 아이템입니다.");
 			event.setCancelled(true);
 		}
@@ -4744,9 +4753,42 @@ public class Main extends JavaPlugin implements Listener{
 				if(event.getDamager() instanceof SmallFireball) {
 					event.setCancelled(true);
 				}
+				if(event.getDamager() instanceof LlamaSpit) {
+					event.setCancelled(true);
+				}
 			}
 		} catch(Exception e) {
 			
+		}
+		//paint
+		try {
+			if (event.getEntity() instanceof Paint) {
+				if (event.getDamager() instanceof Player) {
+					Player player = (Player) event.getDamager();
+					if (player.getGameMode() == GameMode.ADVENTURE) {
+						event.setCancelled(true);
+					} else {
+						event.setCancelled(false);
+					}
+				}
+				if (event.getDamager() instanceof Arrow) {
+					event.setCancelled(true);
+				}
+				if (event.getDamager() instanceof Snowball) {
+					event.setCancelled(true);
+				}
+				if (event.getDamager() instanceof Fireball) {
+					event.setCancelled(true);
+				}
+				if (event.getDamager() instanceof SmallFireball) {
+					event.setCancelled(true);
+				}
+				if (event.getDamager() instanceof LlamaSpit) {
+					event.setCancelled(true);
+				}
+			}
+		} catch (Exception e) {
+
 		}
 		//Fireball
 		try {
@@ -5698,11 +5740,36 @@ public class Main extends JavaPlugin implements Listener{
 							int resist = 0;
 							try {
 								if (player.getInventory().getItemInMainHand().getItemMeta() != null) {
-									try {
-										String[] ench = player.getInventory().getItemInMainHand().getItemMeta().getLocalizedName().split(",");
-										resist += Integer.parseInt(ench[6]);
-									} catch(Exception e) {
-										
+									ItemStack item = player.getInventory().getItemInMainHand();
+									if(item.getType() == Material.WOODEN_SWORD || item.getType() == Material.STONE_SWORD || item.getType() == Material.IRON_SWORD
+											|| item.getType() == Material.GOLDEN_SWORD || item.getType() == Material.DIAMOND_SWORD || item.getType() == Material.NETHERITE_SWORD
+											|| item.getType() == Material.OAK_LEAVES || item.getType() == Material.SPRUCE_LEAVES || item.getType() == Material.BIRCH_LEAVES
+											|| item.getType() == Material.JUNGLE_LEAVES || item.getType() == Material.ACACIA_LEAVES || item.getType() == Material.DARK_OAK_LEAVES
+											|| item.getType() == Material.COBBLESTONE_WALL || item.getType() == Material.MOSSY_COBBLESTONE_WALL || item.getType() == Material.BROWN_CARPET
+											|| item.getType() == Material.GREEN_CARPET || item.getType() == Material.BLACK_CARPET || item.getType() == Material.STONE
+											|| item.getType() == Material.OAK_PLANKS || item.getType() == Material.SPRUCE_PLANKS || item.getType() == Material.BIRCH_PLANKS
+											|| item.getType() == Material.JUNGLE_PLANKS || item.getType() == Material.ACACIA_PLANKS || item.getType() == Material.DARK_OAK_PLANKS
+											|| item.getType() == Material.BEDROCK || item.getType() == Material.SPRUCE_LOG || item.getType() == Material.BIRCH_LOG
+											|| item.getType() == Material.JUNGLE_LOG || item.getType() == Material.ACACIA_LOG || item.getType() == Material.DARK_OAK_LOG
+											|| item.getType() == Material.SANDSTONE || item.getType() == Material.CHISELED_SANDSTONE || item.getType() == Material.CUT_SANDSTONE
+											|| item.getType() == Material.LAPIS_BLOCK || item.getType() == Material.MAGENTA_WOOL || item.getType() == Material.LIME_WOOL
+											|| item.getType() == Material.GRAY_WOOL || item.getType() == Material.LIGHT_GRAY_WOOL || item.getType() == Material.CYAN_WOOL
+											|| item.getType() == Material.PURPLE_WOOL || item.getType() == Material.OAK_SLAB || item.getType() == Material.SPRUCE_SLAB
+											|| item.getType() == Material.BIRCH_SLAB || item.getType() == Material.JUNGLE_SLAB || item.getType() == Material.ACACIA_SLAB
+											|| item.getType() == Material.DARK_OAK_SLAB || item.getType() == Material.STONE_SLAB || item.getType() == Material.COBBLESTONE_SLAB 
+											|| item.getType() == Material.STONE_BRICK_SLAB || item.getType() == Material.NETHER_BRICK_SLAB || item.getType() == Material.QUARTZ_SLAB
+											|| item.getType() == Material.RED_SANDSTONE || item.getType() == Material.RED_SANDSTONE_SLAB || item.getType() == Material.SMOOTH_RED_SANDSTONE
+											|| item.getType() == Material.OBSIDIAN || item.getType() == Material.SMOOTH_SANDSTONE || item.getType() == Material.CHISELED_RED_SANDSTONE
+											|| item.getType() == Material.CUT_RED_SANDSTONE || item.getType() == Material.RED_SANDSTONE_STAIRS || item.getType() == Material.STONE_STAIRS) {
+										LimitLevel la = new LimitLevel();
+										if(la.limit(player, item) == true) {
+											try {
+												String[] ench = player.getInventory().getItemInMainHand().getItemMeta().getLocalizedName().split(",");
+												resist += Integer.parseInt(ench[6]);
+											} catch(Exception e) {
+												
+											}
+										}
 									}
 								}
 							} catch (Exception e) {
@@ -5821,11 +5888,36 @@ public class Main extends JavaPlugin implements Listener{
 							int resist = 0;
 							try {
 								if (player.getInventory().getItemInMainHand().getItemMeta() != null) {
-									try {
-										String[] ench = player.getInventory().getItemInMainHand().getItemMeta().getLocalizedName().split(",");
-										resist += Integer.parseInt(ench[7]);
-									} catch(Exception e) {
-										
+									ItemStack item = player.getInventory().getItemInMainHand();
+									if(item.getType() == Material.WOODEN_SWORD || item.getType() == Material.STONE_SWORD || item.getType() == Material.IRON_SWORD
+											|| item.getType() == Material.GOLDEN_SWORD || item.getType() == Material.DIAMOND_SWORD || item.getType() == Material.NETHERITE_SWORD
+											|| item.getType() == Material.OAK_LEAVES || item.getType() == Material.SPRUCE_LEAVES || item.getType() == Material.BIRCH_LEAVES
+											|| item.getType() == Material.JUNGLE_LEAVES || item.getType() == Material.ACACIA_LEAVES || item.getType() == Material.DARK_OAK_LEAVES
+											|| item.getType() == Material.COBBLESTONE_WALL || item.getType() == Material.MOSSY_COBBLESTONE_WALL || item.getType() == Material.BROWN_CARPET
+											|| item.getType() == Material.GREEN_CARPET || item.getType() == Material.BLACK_CARPET || item.getType() == Material.STONE
+											|| item.getType() == Material.OAK_PLANKS || item.getType() == Material.SPRUCE_PLANKS || item.getType() == Material.BIRCH_PLANKS
+											|| item.getType() == Material.JUNGLE_PLANKS || item.getType() == Material.ACACIA_PLANKS || item.getType() == Material.DARK_OAK_PLANKS
+											|| item.getType() == Material.BEDROCK || item.getType() == Material.SPRUCE_LOG || item.getType() == Material.BIRCH_LOG
+											|| item.getType() == Material.JUNGLE_LOG || item.getType() == Material.ACACIA_LOG || item.getType() == Material.DARK_OAK_LOG
+											|| item.getType() == Material.SANDSTONE || item.getType() == Material.CHISELED_SANDSTONE || item.getType() == Material.CUT_SANDSTONE
+											|| item.getType() == Material.LAPIS_BLOCK || item.getType() == Material.MAGENTA_WOOL || item.getType() == Material.LIME_WOOL
+											|| item.getType() == Material.GRAY_WOOL || item.getType() == Material.LIGHT_GRAY_WOOL || item.getType() == Material.CYAN_WOOL
+											|| item.getType() == Material.PURPLE_WOOL || item.getType() == Material.OAK_SLAB || item.getType() == Material.SPRUCE_SLAB
+											|| item.getType() == Material.BIRCH_SLAB || item.getType() == Material.JUNGLE_SLAB || item.getType() == Material.ACACIA_SLAB
+											|| item.getType() == Material.DARK_OAK_SLAB || item.getType() == Material.STONE_SLAB || item.getType() == Material.COBBLESTONE_SLAB 
+											|| item.getType() == Material.STONE_BRICK_SLAB || item.getType() == Material.NETHER_BRICK_SLAB || item.getType() == Material.QUARTZ_SLAB
+											|| item.getType() == Material.RED_SANDSTONE || item.getType() == Material.RED_SANDSTONE_SLAB || item.getType() == Material.SMOOTH_RED_SANDSTONE
+											|| item.getType() == Material.OBSIDIAN || item.getType() == Material.SMOOTH_SANDSTONE || item.getType() == Material.CHISELED_RED_SANDSTONE
+											|| item.getType() == Material.CUT_RED_SANDSTONE || item.getType() == Material.RED_SANDSTONE_STAIRS || item.getType() == Material.STONE_STAIRS) {
+										LimitLevel la = new LimitLevel();
+										if(la.limit(player, item) == true) {
+											try {
+												String[] ench = player.getInventory().getItemInMainHand().getItemMeta().getLocalizedName().split(",");
+												resist += Integer.parseInt(ench[7]);
+											} catch(Exception e) {
+												
+											}
+										}
 									}
 								}
 							} catch (Exception e) {
@@ -5892,11 +5984,36 @@ public class Main extends JavaPlugin implements Listener{
 							int resist = 0;
 							try {
 								if (player.getInventory().getItemInMainHand() != null) {
-									try {
-										String[] ench = player.getInventory().getItemInMainHand().getItemMeta().getLocalizedName().split(",");
-										resist += Integer.parseInt(ench[7]);
-									} catch(Exception e) {
-										
+									ItemStack item = player.getInventory().getItemInMainHand();
+									if(item.getType() == Material.WOODEN_SWORD || item.getType() == Material.STONE_SWORD || item.getType() == Material.IRON_SWORD
+											|| item.getType() == Material.GOLDEN_SWORD || item.getType() == Material.DIAMOND_SWORD || item.getType() == Material.NETHERITE_SWORD
+											|| item.getType() == Material.OAK_LEAVES || item.getType() == Material.SPRUCE_LEAVES || item.getType() == Material.BIRCH_LEAVES
+											|| item.getType() == Material.JUNGLE_LEAVES || item.getType() == Material.ACACIA_LEAVES || item.getType() == Material.DARK_OAK_LEAVES
+											|| item.getType() == Material.COBBLESTONE_WALL || item.getType() == Material.MOSSY_COBBLESTONE_WALL || item.getType() == Material.BROWN_CARPET
+											|| item.getType() == Material.GREEN_CARPET || item.getType() == Material.BLACK_CARPET || item.getType() == Material.STONE
+											|| item.getType() == Material.OAK_PLANKS || item.getType() == Material.SPRUCE_PLANKS || item.getType() == Material.BIRCH_PLANKS
+											|| item.getType() == Material.JUNGLE_PLANKS || item.getType() == Material.ACACIA_PLANKS || item.getType() == Material.DARK_OAK_PLANKS
+											|| item.getType() == Material.BEDROCK || item.getType() == Material.SPRUCE_LOG || item.getType() == Material.BIRCH_LOG
+											|| item.getType() == Material.JUNGLE_LOG || item.getType() == Material.ACACIA_LOG || item.getType() == Material.DARK_OAK_LOG
+											|| item.getType() == Material.SANDSTONE || item.getType() == Material.CHISELED_SANDSTONE || item.getType() == Material.CUT_SANDSTONE
+											|| item.getType() == Material.LAPIS_BLOCK || item.getType() == Material.MAGENTA_WOOL || item.getType() == Material.LIME_WOOL
+											|| item.getType() == Material.GRAY_WOOL || item.getType() == Material.LIGHT_GRAY_WOOL || item.getType() == Material.CYAN_WOOL
+											|| item.getType() == Material.PURPLE_WOOL || item.getType() == Material.OAK_SLAB || item.getType() == Material.SPRUCE_SLAB
+											|| item.getType() == Material.BIRCH_SLAB || item.getType() == Material.JUNGLE_SLAB || item.getType() == Material.ACACIA_SLAB
+											|| item.getType() == Material.DARK_OAK_SLAB || item.getType() == Material.STONE_SLAB || item.getType() == Material.COBBLESTONE_SLAB 
+											|| item.getType() == Material.STONE_BRICK_SLAB || item.getType() == Material.NETHER_BRICK_SLAB || item.getType() == Material.QUARTZ_SLAB
+											|| item.getType() == Material.RED_SANDSTONE || item.getType() == Material.RED_SANDSTONE_SLAB || item.getType() == Material.SMOOTH_RED_SANDSTONE
+											|| item.getType() == Material.OBSIDIAN || item.getType() == Material.SMOOTH_SANDSTONE || item.getType() == Material.CHISELED_RED_SANDSTONE
+											|| item.getType() == Material.CUT_RED_SANDSTONE || item.getType() == Material.RED_SANDSTONE_STAIRS || item.getType() == Material.STONE_STAIRS) {
+										LimitLevel la = new LimitLevel();
+										if(la.limit(player, item) == true) {
+											try {
+												String[] ench = player.getInventory().getItemInMainHand().getItemMeta().getLocalizedName().split(",");
+												resist += Integer.parseInt(ench[7]);
+											} catch(Exception e) {
+												
+											}
+										}
 									}
 								}
 							} catch (Exception e) {
@@ -8165,7 +8282,8 @@ public class Main extends JavaPlugin implements Listener{
 			// 말 타기
 			if(event.getRightClicked().getType() == EntityType.HORSE) {
 				Horse horse = (Horse) event.getRightClicked();
-				if(player.getInventory().getItemInMainHand().getType() == Material.GOLDEN_APPLE) {
+				if(player.getInventory().getItemInMainHand().getType() == Material.GOLDEN_APPLE || player.getInventory().getItemInMainHand().getType() == Material.APPLE
+						|| player.getInventory().getItemInMainHand().getType() == Material.CARROT || player.getInventory().getItemInMainHand().getType() == Material.GOLDEN_CARROT) {
 					event.setCancelled(true);
 					player.updateInventory();
 					return;

@@ -1452,47 +1452,51 @@ public class MobDeath {
 						dist = 0;
 					}
 					
-					int per = rnd.nextInt(1000000);
-					
 					//===========================================================================
 					// 상자 획득확률 증가
 					int mul = 0;
-					mul += new SpecialEffect().h4(player);
-					mul += new SpecialEffect().c3(player);
-					mul += new SpecialEffect().l3(player);
-					mul += new SpecialEffect().b4(player);
-					mul += new SpecialEffect().a18(player);
+					mul += new SpecialEffect().h4(lootPlayer);
+					mul += new SpecialEffect().c3(lootPlayer);
+					mul += new SpecialEffect().l3(lootPlayer);
+					mul += new SpecialEffect().b4(lootPlayer);
+					mul += new SpecialEffect().a18(lootPlayer);
 					//===========================================================================
 					
-//					System.out.println("percent " + per);
-//					System.out.println("Yellow " + (10000 - 10000*2*dist/100)*(multyChance+mul+100)/100);
-//					System.out.println("Light Purple " + (14500 - 14500*2*dist/100)*(multyChance+mul+100)/100);
-//					System.out.println("Aqua " + (16000 - 16000*2*dist/100)*(multyChance+mul+100)/100);
-//					System.out.println("Dark Red " + (16500 - 16500*2*dist/100)*(multyChance+mul+100)/100);
-//					System.out.println("Dark Purple " + (16510 - 16510*2*dist/100)*(multyChance+mul+100)/100);
+					int tmp = 1000000 + (100000*Math.abs(dist));
+					int per = rnd.nextInt((int)(tmp / (((multyChance+mul)/100.0)+1)));
 					
-					if(per < ((10000 - 10000*2*dist/100)*(multyChance+mul+100)/100)) {
+//					int total = (int)(tmp / (((multyChance+mul)/100.0)+1));
+//					System.out.println("mul: " + mul);
+//					System.out.println("total: " + total);
+//					System.out.println("number: " + per);
+//					System.out.println("Yellow: " + ((int)(((10000.0/total)*100)*10000))/10000.0 + "%");
+//					System.out.println("Light Purple: " + ((int)(((5000.0/total)*100)*10000))/10000.0 + "%");
+//					System.out.println("Aqua: " + ((int)(((2000.0/total)*100)*10000))/10000.0 + "%");
+//					System.out.println("Dark Red: " + ((int)(((800.0/total)*100)*10000))/10000.0 + "%");
+//					System.out.println("Dark Purple: " + ((int)(((10.0/total)*100)*10000))/10000.0 + "%");
+					
+					if(per < 10000) {
 						Block block = chestLoc.getBlock();
 						Chest chest = (Chest) block.getState();
 						ItemStack weapon = chest.getInventory().getItem(0).clone();
 						ItemStack item = setStat(0, weapon, mobLvl);
 						lootPlayer.getInventory().addItem(item);
 						sendMessage(lootPlayer, ChatColor.YELLOW + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
-					} else if(per < ((14500 - 14500*2*dist/100)*(multyChance+mul+100)/100)) {
+					} else if(per < 14500) {
 						Block block = chestLoc.getBlock();
 						Chest chest = (Chest) block.getState();
 						ItemStack weapon = chest.getInventory().getItem(1).clone();
 						ItemStack item = setStat(1, weapon, mobLvl);
 						lootPlayer.getInventory().addItem(item);
 						sendMessage(lootPlayer, ChatColor.LIGHT_PURPLE + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
-					} else if(per < ((16000 - 16000*2*dist/100)*(multyChance+mul+100)/100)) {
+					} else if(per < 16000) {
 						Block block = chestLoc.getBlock();
 						Chest chest = (Chest) block.getState();
 						ItemStack weapon = chest.getInventory().getItem(2).clone();
 						ItemStack item = setStat(2, weapon, mobLvl);
 						lootPlayer.getInventory().addItem(item);
 						sendMessage(lootPlayer, ChatColor.AQUA + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
-					} else if(per < ((16500 - 16500*2*dist/100)*(multyChance+mul+100)/100)) {
+					} else if(per < 16500) {
 						Block block = chestLoc.getBlock();
 						Chest chest = (Chest) block.getState();
 						ItemStack weapon = chest.getInventory().getItem(3).clone();
@@ -1500,7 +1504,7 @@ public class MobDeath {
 						lootPlayer.getInventory().addItem(item);
 						sendMessage(lootPlayer, ChatColor.DARK_RED + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
 						System.out.println(lootPlayer.getDisplayName() + "가 " + ChatColor.DARK_RED + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
-					} else if(per < ((16510 - 16510*2*dist/100)*(multyChance+mul+100)/100)) {
+					} else if(per < 16510) {
 						Block block = chestLoc.getBlock();
 						Chest chest = (Chest) block.getState();
 						ItemStack weapon = chest.getInventory().getItem(4).clone();

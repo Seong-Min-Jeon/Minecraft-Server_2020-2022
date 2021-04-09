@@ -7666,7 +7666,7 @@ public class MobLoot {
 	
 	// 페라리교의 신도
 	public void mob308(Player player) {
-		int num = rnd.nextInt(15) + 10;
+		int num = rnd.nextInt(15) + 12;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
 		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
@@ -7689,7 +7689,7 @@ public class MobLoot {
 	
 	// 페라리교의 상위 신도
 	public void mob309(Player player) {
-		int num = rnd.nextInt(15) + 10;
+		int num = rnd.nextInt(15) + 12;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
 		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
@@ -7743,7 +7743,7 @@ public class MobLoot {
 	
 	// 물풍선
 	public void mob312(Player player) {
-		int num = rnd.nextInt(15) + 10;
+		int num = rnd.nextInt(15) + 15;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
 		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
@@ -7872,7 +7872,7 @@ public class MobLoot {
 	
 	// 화염의 조종자
 	public void mob319(Player player) {
-		int num = rnd.nextInt(15) + 10;
+		int num = rnd.nextInt(15) + 13;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
 		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
@@ -7902,7 +7902,7 @@ public class MobLoot {
 	
 	// 귀여움의 조종자
 	public void mob320(Player player) {
-		int num = rnd.nextInt(15) + 10;
+		int num = rnd.nextInt(15) + 13;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
 		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
@@ -7938,7 +7938,7 @@ public class MobLoot {
 	
 	// 대지의 조종자
 	public void mob321(Player player) {
-		int num = rnd.nextInt(15) + 10;
+		int num = rnd.nextInt(15) + 13;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
 		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
@@ -7968,7 +7968,7 @@ public class MobLoot {
 	
 	// 포션의 조종자
 	public void mob322(Player player) {
-		int num = rnd.nextInt(15) + 10;
+		int num = rnd.nextInt(15) + 13;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
 		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
@@ -7998,7 +7998,7 @@ public class MobLoot {
 	
 	// 포보르의 체액
 	public void mob323(Player player) {
-		int num = rnd.nextInt(15) + 10;
+		int num = rnd.nextInt(15) + 14;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
 		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
@@ -8020,7 +8020,7 @@ public class MobLoot {
 	
 	// 포보르화 고블린
 	public void mob324(Player player) {
-		int num = rnd.nextInt(15) + 10;
+		int num = rnd.nextInt(15) + 14;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
 		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
@@ -8050,7 +8050,7 @@ public class MobLoot {
 	
 	// 포보르화 모험가
 	public void mob325(Player player) {
-		int num = rnd.nextInt(15) + 10;
+		int num = rnd.nextInt(10) + 15;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
 		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
@@ -8092,7 +8092,7 @@ public class MobLoot {
 
 	// 포보르화 오크
 	public void mob326(Player player) {
-		int num = rnd.nextInt(15) + 10;
+		int num = rnd.nextInt(15) + 14;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
 		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
@@ -8128,7 +8128,7 @@ public class MobLoot {
 	
 	// 포보르라고 불리는 포보르
 	public void mob327(Player player) {
-		int num = rnd.nextInt(15) + 10;
+		int num = rnd.nextInt(15) + 30;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
 		ItemMeta im = item.getItemMeta();
 		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");

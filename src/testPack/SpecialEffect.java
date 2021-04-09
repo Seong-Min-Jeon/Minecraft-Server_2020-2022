@@ -361,7 +361,7 @@ public class SpecialEffect {
 	
 	public int h4(Player player) {
 		try {
-			if(player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "럭키한 클로에의 헬멧")) {
+			if(player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "럭키한 클로에의 헬멧")) {
 				return 10;
 			}
 		} catch(Exception e) {
@@ -396,7 +396,7 @@ public class SpecialEffect {
 	
 	public int c3(Player player) {
 		try {
-			if(player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "럭키한 클로에의 갑옷")) {
+			if(player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "럭키한 클로에의 갑옷")) {
 				return 10;
 			}
 		} catch(Exception e) {
@@ -431,7 +431,7 @@ public class SpecialEffect {
 	
 	public int l3(Player player) {
 		try {
-			if(player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "럭키한 클로에의 각반")) {
+			if(player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "럭키한 클로에의 각반")) {
 				return 10;
 			}
 		} catch(Exception e) {
