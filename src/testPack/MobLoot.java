@@ -7786,19 +7786,19 @@ public class MobLoot {
 		
 		int num1 = rnd.nextInt(10);
 		if (num1 <= 2) {
-			ItemStack var1 = new ItemStack(Material.IRON_ORE);
+			ItemStack var1 = new ItemStack(Material.IRON_INGOT);
 			ItemMeta var1Im = var1.getItemMeta();
-			var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "빛이나는 철광석");
+			var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "빛이나는 철");
 			var1.setItemMeta(var1Im);
 			player.getInventory().addItem(var1);
-			sendMessage(player, ChatColor.LIGHT_PURPLE + "빛이나는 철광석" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "빛이나는 철" + ChatColor.WHITE + "을 획득했다.");
 		} else if (num1 == 3) {
-			ItemStack var1 = new ItemStack(Material.IRON_ORE);
+			ItemStack var1 = new ItemStack(Material.IRON_INGOT);
 			ItemMeta var1Im = var1.getItemMeta();
-			var1Im.setDisplayName(ChatColor.AQUA + "순백의 철광석");
+			var1Im.setDisplayName(ChatColor.AQUA + "순백의 철");
 			var1.setItemMeta(var1Im);
 			player.getInventory().addItem(var1);
-			sendMessage(player, ChatColor.AQUA + "순백의 철광석" + ChatColor.WHITE + "을 획득했다.");
+			sendMessage(player, ChatColor.AQUA + "순백의 철" + ChatColor.WHITE + "을 획득했다.");
 		} 
 		
 		QuestBoard cb = new QuestBoard();

@@ -495,7 +495,7 @@ public class FantasyLife {
 				
 				return false;
 			} else {
-				player.sendMessage("맨손으로 광물을 캐다니 제정신이십니까? 곡괭이를 들고 하십쇼.");
+				player.sendMessage("곡괭이로 캘 수 있을 것 같다.");
 				return false;
 			}
 		}
@@ -710,7 +710,7 @@ public class FantasyLife {
 				
 				return false;
 			} else {
-				player.sendMessage("맨손으로 광물을 캐다니 제정신이십니까? 곡괭이를 들고 하십쇼.");
+				player.sendMessage("곡괭이로 캘 수 있을 것 같다.");
 				return false;
 			}
 		}
@@ -895,7 +895,7 @@ public class FantasyLife {
 				
 				return false;
 			} else {
-				player.sendMessage("맨손으로 광물을 캐다니 제정신이십니까? 곡괭이를 들고 하십쇼.");
+				player.sendMessage("곡괭이로 캘 수 있을 것 같다.");
 				return false;
 			}
 		}
@@ -1086,7 +1086,7 @@ public class FantasyLife {
 				
 				return false;
 			} else {
-				player.sendMessage("맨손으로 광물을 캐다니 제정신이십니까? 곡괭이를 들고 하십쇼.");
+				player.sendMessage("곡괭이로 캘 수 있을 것 같다.");
 				return false;
 			}
 		}
@@ -1155,7 +1155,7 @@ public class FantasyLife {
 				
 				return false;
 			} else {
-				player.sendMessage("맨손으로 광물을 캐다니 제정신이십니까? 곡괭이를 들고 하십쇼.");
+				player.sendMessage("곡괭이로 캘 수 있을 것 같다.");
 				return false;
 			}
 		}
@@ -1400,7 +1400,7 @@ public class FantasyLife {
 				
 				return false;
 			} else {
-				player.sendMessage("맨손으로 광물을 캐다니 제정신이십니까? 곡괭이를 들고 하십쇼.");
+				player.sendMessage("곡괭이로 캘 수 있을 것 같다.");
 				return false;
 			}
 		}

@@ -12276,8 +12276,6 @@ public class SpawnMob {
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(728000);
 				entity.setHealth(728000);
-				Husk z = (Husk) entity;
-				z.setBaby(false);
 				EntityEquipment weapon = entity.getEquipment();
 				ItemStack weaponItem = new ItemStack(Material.BOW);
 				ItemMeta im = weaponItem.getItemMeta();
