@@ -314,10 +314,10 @@ public class Main extends JavaPlugin implements Listener{
 //				player.kickPlayer("서버 점검 중 입니다.");
 //				return;
 //			}
-//			if ((player.getUniqueId().toString().equalsIgnoreCase("5d5f3cf5-bbec-4dba-b97c-fe2ddf900191"))) {
-//				player.kickPlayer("You are Banned");
-//				return;
-//			}
+			if ((player.getUniqueId().toString().equalsIgnoreCase("5d5f3cf5-bbec-4dba-b97c-fe2ddf900191"))) {
+				player.kickPlayer("You are Banned");
+				return;
+			}
 		} catch (Exception e) {
 			System.err.println(player.getDisplayName() + "이 접속을 시도하였습니다.");
 		}
