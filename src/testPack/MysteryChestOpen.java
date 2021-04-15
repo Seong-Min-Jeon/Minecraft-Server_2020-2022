@@ -160,6 +160,8 @@ public class MysteryChestOpen {
 			mul = 1.8;
 		} else if(grade.equals("§5")) {
 			mul = 3;
+		} else if(grade.equals("§2")) {
+			return randomAccessory();
 		}
 		
 		String range = im.getLore().get(0);
@@ -1775,6 +1777,218 @@ public class MysteryChestOpen {
 			}
 		}
 		return null;
+	}
+	
+	public ItemStack randomAccessory() {
+		int rndRank = rnd.nextInt(10000);
+		int rank = 1;
+		if(rndRank < 5) {
+			rank = 7;
+		} else if(rndRank < 20) {
+			rank = 6;
+		} else if(rndRank < 50) {
+			rank = 5;
+		} else if(rndRank < 100) {
+			rank = 4;
+		} else if(rndRank < 300) {
+			rank = 3;
+		} else if(rndRank < 1000) {
+			rank = 2;
+		} else {
+			rank = 1;
+		}
+		
+		int rndLine = rnd.nextInt(10000);
+		int line = 1;
+		if(rndLine < 1) {
+			line = 5;
+		} else if(rndLine < 5) {
+			line = 4;
+		} else if(rndLine < 50) {
+			line = 3;
+		} else if(rndLine < 200) {
+			line = 2;
+		} else {
+			line = 1;
+		}
+		
+		return makeAccessory(rank, line);
+	}
+	
+	public ItemStack makeAccessory(int rank, int line) {
+		// 잠재력이 숨겨진 반지
+		// 희미한 광택의 반지
+		// 황금빛이 맴도는 반지
+		// 매혹적인 타락의 반지
+		// 빛나는 보주의 반지
+		// 피의 서리 반지
+		// 검은 기운의 반지
+		
+		ItemStack equip = null;
+		
+		if(rank == 1) {
+			equip = new ItemStack(Material.POLISHED_GRANITE_STAIRS);
+			ItemMeta equipIm = equip.getItemMeta();
+			equipIm.setLocalizedName("0,0,0,0,0,0,0,0,0,0,700");
+			equipIm.setDisplayName(ChatColor.GRAY + "잠재력이 숨겨진 반지");
+			ArrayList<String> equipLore = new ArrayList();
+			equipLore.add(ChatColor.GRAY + "레벨 제한: 700");
+			equipLore.add(ChatColor.GRAY + " ");
+			equipLore.add(ChatColor.GRAY + "Rank: 1");
+			equipLore.add(ChatColor.GRAY + " ");
+			equipLore.add(ChatColor.GRAY + "아직 발견된지 얼마 안된 반지");
+			equipLore.add(ChatColor.GRAY + "회색빛의 탁한 보석안에 숨겨진 잠재력은 아무도 모른다.");
+			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+			equipIm.setUnbreakable(true);
+			equipIm.setLore(equipLore);
+			equip.setItemMeta(equipIm);
+		} else if(rank == 2) {
+			equip = new ItemStack(Material.POLISHED_GRANITE_STAIRS);
+			ItemMeta equipIm = equip.getItemMeta();
+			equipIm.setLocalizedName("0,0,0,0,0,0,0,0,0,0,700");
+			equipIm.setDisplayName(ChatColor.WHITE + "희미한 광택의 반지");
+			ArrayList<String> equipLore = new ArrayList();
+			equipLore.add(ChatColor.GRAY + "레벨 제한: 700");
+			equipLore.add(ChatColor.GRAY + " ");
+			equipLore.add(ChatColor.GRAY + "Rank: 2");
+			equipLore.add(ChatColor.GRAY + " ");
+			equipLore.add(ChatColor.GRAY + "하얀 보석이 돋보이는 반지");
+			equipLore.add(ChatColor.GRAY + "아직 보석에 특성이 부여되지 않았다.");
+			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+			equipIm.setUnbreakable(true);
+			equipIm.setLore(equipLore);
+			equip.setItemMeta(equipIm);
+		} else if(rank == 3) {
+			equip = new ItemStack(Material.POLISHED_GRANITE_STAIRS);
+			ItemMeta equipIm = equip.getItemMeta();
+			equipIm.setLocalizedName("0,0,0,0,0,0,0,0,0,0,700");
+			equipIm.setDisplayName(ChatColor.YELLOW + "황금빛이 맴도는 반지");
+			ArrayList<String> equipLore = new ArrayList();
+			equipLore.add(ChatColor.GRAY + "레벨 제한: 700");
+			equipLore.add(ChatColor.GRAY + " ");
+			equipLore.add(ChatColor.GRAY + "Rank: 3");
+			equipLore.add(ChatColor.GRAY + " ");
+			equipLore.add(ChatColor.GRAY + "황금색 보석이 비싸보이는 반지");
+			equipLore.add(ChatColor.GRAY + "에일에서 평범하게 볼 수 있는 보석이다.");
+			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+			equipIm.setUnbreakable(true);
+			equipIm.setLore(equipLore);
+			equip.setItemMeta(equipIm);
+		} else if(rank == 4) {
+			equip = new ItemStack(Material.POLISHED_GRANITE_STAIRS);
+			ItemMeta equipIm = equip.getItemMeta();
+			equipIm.setLocalizedName("0,0,0,0,0,0,0,0,0,0,700");
+			equipIm.setDisplayName(ChatColor.LIGHT_PURPLE + "매혹적인 타락의 반지");
+			ArrayList<String> equipLore = new ArrayList();
+			equipLore.add(ChatColor.GRAY + "레벨 제한: 700");
+			equipLore.add(ChatColor.GRAY + " ");
+			equipLore.add(ChatColor.GRAY + "Rank: 4");
+			equipLore.add(ChatColor.GRAY + " ");
+			equipLore.add(ChatColor.GRAY + "보라색의 매혹적인 빛이 풍기는 반지");
+			equipLore.add(ChatColor.GRAY + "포보르의 힘이 약간 첨가되었다.");
+			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+			equipIm.setUnbreakable(true);
+			equipIm.setLore(equipLore);
+			equip.setItemMeta(equipIm);
+		} else if(rank == 5) {
+			equip = new ItemStack(Material.POLISHED_GRANITE_STAIRS);
+			ItemMeta equipIm = equip.getItemMeta();
+			equipIm.setLocalizedName("0,0,0,0,0,0,0,0,0,0,700");
+			equipIm.setDisplayName(ChatColor.AQUA + "빛나는 보주의 반지");
+			ArrayList<String> equipLore = new ArrayList();
+			equipLore.add(ChatColor.GRAY + "레벨 제한: 700");
+			equipLore.add(ChatColor.GRAY + " ");
+			equipLore.add(ChatColor.GRAY + "Rank: 5");
+			equipLore.add(ChatColor.GRAY + " ");
+			equipLore.add(ChatColor.GRAY + "다이아몬드를 연상시키는 반지");
+			equipLore.add(ChatColor.GRAY + "포보르의 힘이 정화되어 깨끗해졌다.");
+			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+			equipIm.setUnbreakable(true);
+			equipIm.setLore(equipLore);
+			equip.setItemMeta(equipIm);
+		} else if(rank == 6) {
+			equip = new ItemStack(Material.POLISHED_GRANITE_STAIRS);
+			ItemMeta equipIm = equip.getItemMeta();
+			equipIm.setLocalizedName("0,0,0,0,0,0,0,0,0,0,700");
+			equipIm.setDisplayName(ChatColor.DARK_RED + "피의 서리 반지");
+			ArrayList<String> equipLore = new ArrayList();
+			equipLore.add(ChatColor.GRAY + "레벨 제한: 700");
+			equipLore.add(ChatColor.GRAY + " ");
+			equipLore.add(ChatColor.GRAY + "Rank: 6");
+			equipLore.add(ChatColor.GRAY + " ");
+			equipLore.add(ChatColor.GRAY + "기나긴 살육 끝에 피 빛을 보이는 반지");
+			equipLore.add(ChatColor.GRAY + "지금까지 죽인 영혼들이 반지를 감싸고 있다.");
+			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+			equipIm.setUnbreakable(true);
+			equipIm.setLore(equipLore);
+			equip.setItemMeta(equipIm);
+		} else if(rank == 7) {
+			equip = new ItemStack(Material.POLISHED_GRANITE_STAIRS);
+			ItemMeta equipIm = equip.getItemMeta();
+			equipIm.setLocalizedName("0,0,0,0,0,0,0,0,0,0,700");
+			equipIm.setDisplayName(ChatColor.DARK_PURPLE + "검은 기운의 반지");
+			ArrayList<String> equipLore = new ArrayList();
+			equipLore.add(ChatColor.GRAY + "레벨 제한: 700");
+			equipLore.add(ChatColor.GRAY + " ");
+			equipLore.add(ChatColor.GRAY + "Rank: 7");
+			equipLore.add(ChatColor.GRAY + " ");
+			equipLore.add(ChatColor.GRAY + "포보르 왕의 힘이 담긴 반지");
+			equipLore.add(ChatColor.GRAY + "더 강화를 하면 반지에 무리가 갈 것 같다.");
+			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+			equipIm.setUnbreakable(true);
+			equipIm.setLore(equipLore);
+			equip.setItemMeta(equipIm);
+		}
+	
+		if(line == 1) {
+			ItemMeta equipIm = equip.getItemMeta();
+			ArrayList<String> equipLore = (ArrayList<String>) equipIm.getLore();
+			String[] ary = equipIm.getLocalizedName().split(",");
+			String result = makeEnch(ary, "1000000", 9);
+			equipIm.setLocalizedName(result);
+		} else if(line == 2) {
+			ItemMeta equipIm = equip.getItemMeta();
+		} else if(line == 3) {
+			ItemMeta equipIm = equip.getItemMeta();
+		} else if(line == 4) {
+			ItemMeta equipIm = equip.getItemMeta();
+		} else if(line == 5) {
+			ItemMeta equipIm = equip.getItemMeta();
+		}
+		
+		return equip;
+	}
+	
+	public String makeEnch(String[] ary, String str, int num) {
+		String result = "";
+		for(int i = 0 ; i < 10 ; i++) {
+			if(i == num) {
+				result = result + "," + str;
+				continue;
+			}
+			result = result + "," + ary[i];
+		}
+		String data = result.substring(1);
+		try {
+			data = data.concat("," + ary[10]);
+		} catch(Exception e) {
+			
+		}
+		return data;
 	}
 	
 	public String name(String grade) {

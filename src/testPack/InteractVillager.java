@@ -218,11 +218,15 @@ public class InteractVillager {
 					if(rnd.nextInt(100) == 0) {
 						player.sendMessage("얼음 장인: 아란모어에서 발견되는 크리스탈라이즈 주괴로 전설의 쌍검을 더욱 단단하게 만들 수 있다는 말이 있더군..");
 					} else {
-						player.sendMessage("얼음 장인: 아란모어에서 발견되는 크리스탈라이즈 주괴로 전설의 쌍검을 더욱 단단하게 만들 수 있다는 말이 있더군..");
+						player.sendMessage("얼음 장인: 후우.. 일이 너무 힘들구만.");
 					}
 				}
 			} catch(Exception e) {
-				player.sendMessage("얼음 장인: 후우.. 일이 너무 힘들구만.");
+				if(rnd.nextInt(100) == 0) {
+					player.sendMessage("얼음 장인: 아란모어에서 발견되는 크리스탈라이즈 주괴로 전설의 쌍검을 더욱 단단하게 만들 수 있다는 말이 있더군..");
+				} else {
+					player.sendMessage("얼음 장인: 후우.. 일이 너무 힘들구만.");
+				}
 			}
 			return true;
 		}

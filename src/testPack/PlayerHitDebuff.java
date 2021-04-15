@@ -2766,15 +2766,15 @@ public class PlayerHitDebuff {
 			
 			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
 				int num = rnd.nextInt(15);
-				if (num < 3) {
+				if (num < 2) {
 					((Slime) mob).setTarget(player);
-					player.setVelocity(player.getEyeLocation().getDirection().multiply(-3.0f));
+					player.setVelocity(player.getEyeLocation().getDirection().multiply(-1.6f));
 					player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_SLIME_HURT, 3.0f, 1.0f);
-				} else if(num < 6) {
+				} else if(num < 5) {
 					((Slime) mob).setTarget(player);
 					player.getWorld().spawnEntity(mob.getLocation(), EntityType.SLIME);
 					player.getWorld().spawnEntity(mob.getLocation(), EntityType.SLIME);
-				} else if(num == 6) {
+				} else if(num == 5) {
 					((Slime) mob).setTarget(player);
 					player.sendMessage(ChatColor.RED + "와우가 불꽃비를 내립니다.");
 					sendMessage(player, ChatColor.RED + "와우가 불꽃비를 내립니다.");
@@ -2811,10 +2811,10 @@ public class PlayerHitDebuff {
 										if(ent instanceof Player) {
 											Player p = (Player) ent;
 											p.sendMessage(ChatColor.RED + "주위의 슬라임이 불타오르며 강력한 데미지를 줍니다.");
-											if(p.getHealth() - num * 3 < 0) {
+											if(p.getHealth() - num * 2 < 0) {
 												player.setHealth(0);
 											} else {
-												player.setHealth(p.getHealth() - num * 3);
+												player.setHealth(p.getHealth() - num * 2);
 											}
 										}
 									}
@@ -2831,14 +2831,14 @@ public class PlayerHitDebuff {
 				}
 			} else {
 				int num = rnd.nextInt(15);
-				if (num < 3) {
+				if (num < 2) {
 					((Slime) mob).setTarget(player);
-					player.setVelocity(player.getEyeLocation().getDirection().multiply(-3.0f));
+					player.setVelocity(player.getEyeLocation().getDirection().multiply(-1.6f));
 					player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_SLIME_HURT, 3.0f, 1.0f);
-				} else if(num < 6) {
+				} else if(num < 5) {
 					((Slime) mob).setTarget(player);
 					player.getWorld().spawnEntity(mob.getLocation(), EntityType.SLIME);
-				} else if(num == 6) {
+				} else if(num == 5) {
 					((Slime) mob).setTarget(player);
 					player.sendMessage(ChatColor.RED + "몸 속에 슬라임의 점액이 흘러옵니다.");
 					

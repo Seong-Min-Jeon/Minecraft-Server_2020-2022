@@ -1214,17 +1214,40 @@ public class TPMobSpawn {
 		
 		// 슬라임 보스 끼워넣기
 		if (loc.getX() == 3740.5 && loc.getY() == 40 && loc.getZ() == 2528.5) {
-			List<Entity> entitylist = player.getNearbyEntities(50, 30, 50);
+
+			player.teleport(new Location(player.getWorld(), 3740.4, 40, 2528.6));
+			int num = 0;
+			List<Entity> entitylist = player.getNearbyEntities(80, 100, 80);
 			for (Entity nearEntity : entitylist) {
 				if (nearEntity.getType() == EntityType.PLAYER) {
-					if (new BossHealth().getBar22().getProgress() != 0) {
-						new BossHealth().getBar22().addPlayer(player);
+					Player nearPlayer = (Player) nearEntity;
+					Location loc2 = nearPlayer.getLocation();
+					if (loc2.getX() <= 3819 && loc2.getY() <= 76 && loc2.getZ() <= 2581 
+							&& loc2.getX() >= 3740 && loc2.getY() >= 30 && loc2.getZ() >= 2479) {
+						num++;
+						if (new BossHealth().getBar22().getProgress() != 0) {
+							new BossHealth().getBar22().addPlayer(player);
+						}
+						return;
 					}
-					return;
 				}
 			}
+
+			if (num == 0) {
+				for (Entity nearEntity : entitylist) {
+					if (nearEntity instanceof Mob) {
+						Location loc2 = nearEntity.getLocation();
+						if (loc2.getX() <= 3819 && loc2.getY() <= 76 && loc2.getZ() <= 2581 
+								&& loc2.getX() >= 3740 && loc2.getY() >= 30 && loc2.getZ() >= 2479) {
+							nearEntity.remove();
+						}
+					}
+				}
+			}
+
 			new BossHealth().getBar22().setProgress(1.0);
 			new BossHealth().getBar22().addPlayer(player);
+			return;
 		}
 
 	}

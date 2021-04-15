@@ -339,7 +339,7 @@ public class Main extends JavaPlugin implements Listener{
 		} else if(player.getDisplayName().equalsIgnoreCase("_nanoboost_")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.RED + "'Lucille, Give me strength. Punishment!' 나노부스트.");
 		} else if(player.getDisplayName().equalsIgnoreCase("why9196")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.BLUE + "'3차 직업 마스터' 와이.");
+			event.setJoinMessage("확률이 뭐죠? " + ChatColor.BLUE + "'0.0068% 돌파한' 와이.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Akilae3102")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.AQUA + "'하와와 무야호 멈춰!' 아킬레.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Espina_ID")) {

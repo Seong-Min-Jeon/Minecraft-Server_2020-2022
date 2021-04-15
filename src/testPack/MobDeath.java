@@ -1512,9 +1512,18 @@ public class MobDeath {
 						lootPlayer.getInventory().addItem(item);
 						sendMessage(lootPlayer, ChatColor.DARK_PURPLE + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
 						System.out.println(lootPlayer.getDisplayName() + "가 " + ChatColor.DARK_PURPLE + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
+					} else if(per < 17510) {
+						Block block = chestLoc.getBlock();
+						Chest chest = (Chest) block.getState();
+						ItemStack weapon = chest.getInventory().getItem(5).clone();
+						ItemStack item = setStat(5, weapon, mobLvl);
+						if(mobLvl >= 700) {
+							lootPlayer.getInventory().addItem(item);
+							sendMessage(lootPlayer, ChatColor.DARK_GREEN + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
+							System.out.println(lootPlayer.getDisplayName() + "가 " + ChatColor.DARK_GREEN + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
+						}
 					}
 				}
-				
 			} catch(Exception e) {
 				
 			}
@@ -1633,16 +1642,23 @@ public class MobDeath {
 			im.setDisplayName(ChatColor.DARK_RED + "의문의 상자");
 		} else if(num == 4) {
 			im.setDisplayName(ChatColor.DARK_PURPLE + "의문의 상자");
+		} else if(num == 5) {
+			im.setDisplayName(ChatColor.DARK_GREEN + "의문의 상자");
 		}
 		
 		int minLvl = ((int)(lvl/10)) * 10;
 		int maxLvl = minLvl + 10;
 		
 		ArrayList<String> lore = new ArrayList();
-		lore.add(ChatColor.GRAY + "레벨 범위: " + ChatColor.WHITE + minLvl + "-" + maxLvl);
-		lore.add(ChatColor.GRAY + " ");
-		lore.add(ChatColor.GRAY + "신비한 힘으로 굳게 닫힌 상자");
-		lore.add(ChatColor.GRAY + "요정의 테이블에서 열 수 있을 것 같다.");
+		if(num == 5) {
+			lore.add(ChatColor.GRAY + "신비한 힘으로 굳게 닫힌 상자");
+			lore.add(ChatColor.GRAY + "요정의 테이블에서 열 수 있을 것 같다.");
+		} else {
+			lore.add(ChatColor.GRAY + "레벨 범위: " + ChatColor.WHITE + minLvl + "-" + maxLvl);
+			lore.add(ChatColor.GRAY + " ");
+			lore.add(ChatColor.GRAY + "신비한 힘으로 굳게 닫힌 상자");
+			lore.add(ChatColor.GRAY + "요정의 테이블에서 열 수 있을 것 같다.");
+		}
 		im.setLore(lore);
 		
 		im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
