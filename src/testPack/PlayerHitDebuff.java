@@ -123,6 +123,7 @@ public class PlayerHitDebuff {
 		mob73(player, mob);
 		mob74(player, mob);
 		mob75(player, mob);
+		mob76(player, mob);
 	}
 
 	// 시련의 형상
@@ -3318,8 +3319,11 @@ public class PlayerHitDebuff {
 		}
 	}
 	
+	// 인어
 	public void mob76(Player player, Entity mob) {
-
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("인어" + ChatColor.YELLOW + " [Lv.640]")) {
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 1, true, false, false));
+		}
 	}
 	
 	public void mob77(Player player, Entity mob) {

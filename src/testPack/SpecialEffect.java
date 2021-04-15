@@ -277,6 +277,28 @@ public class SpecialEffect {
 		}
 		return 0;
 	}
+	
+	public int a25(Player player) {
+		try {
+			if(player.getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "Wither with Eraser")) {
+				return 30;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+	public int a26(Player player) {
+		try {
+			if(player.getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "독괴룡의 용옥")) {
+				return 30;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
@@ -291,7 +313,7 @@ public class SpecialEffect {
 		return 0;
 	}
 	
-	public double w2(Player player) {
+	public int w2(Player player) {
 		try {
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "검은 태양+")) {
 				return 1;
@@ -302,7 +324,7 @@ public class SpecialEffect {
 		return 0;
 	}
 	
-	public double w3(Player player) {
+	public int w3(Player player) {
 		try {
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "검은 달+")) {
 				return 40;
@@ -313,10 +335,54 @@ public class SpecialEffect {
 		return 0;
 	}
 	
-	public double w4(Player player) {
+	public int w4(Player player) {
 		try {
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "만경창파")) {
 				return 10;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+	public double w5(Player player) {
+		try {
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "일루시데이터+")) {
+				return 0.8;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+	public int w6(Player player) {
+		try {
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "일루시데이터+")) {
+				return 20;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+	public int w7(Player player) {
+		try {
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "다크 리펄서+")) {
+				return 10;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+	public int w8(Player player) {
+		try {
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "다크 리펄서+")) {
+				return 30;
 			}
 		} catch(Exception e) {
 			

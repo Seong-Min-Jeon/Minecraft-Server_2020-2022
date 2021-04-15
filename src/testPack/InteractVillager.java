@@ -1,5 +1,7 @@
 package testPack;
 
+import java.util.Random;
+
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -21,6 +23,7 @@ public class InteractVillager {
 	Player player;
 	Location loc;
 	Entity ent;
+	Random rnd = new Random();
 	
 	public boolean interactVillager(Player player, Entity ent) {
 		this.player = player;
@@ -212,7 +215,11 @@ public class InteractVillager {
 					int qNum = cb.getNum(player);
 					cb.mq25(player, qNum+1);		
 				} else {
-					player.sendMessage("얼음 장인: 후우.. 일이 너무 힘들구만.");
+					if(rnd.nextInt(100) == 0) {
+						player.sendMessage("얼음 장인: 아란모어에서 발견되는 크리스탈라이즈 주괴로 전설의 쌍검을 더욱 단단하게 만들 수 있다는 말이 있더군..");
+					} else {
+						player.sendMessage("얼음 장인: 아란모어에서 발견되는 크리스탈라이즈 주괴로 전설의 쌍검을 더욱 단단하게 만들 수 있다는 말이 있더군..");
+					}
 				}
 			} catch(Exception e) {
 				player.sendMessage("얼음 장인: 후우.. 일이 너무 힘들구만.");

@@ -1,6 +1,7 @@
 package testPack;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Color;
@@ -15,6 +16,8 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
 
 public class Transcendence {
+	
+	Random rnd = new Random();
 
 	public void transcendence(Player player, ItemStack is1, ItemStack is2, Inventory inv) {
 		t1(player, is1, is2, inv);
@@ -31,6 +34,8 @@ public class Transcendence {
 		t12(player, is1, is2, inv);
 		t13(player, is1, is2, inv);
 		t14(player, is1, is2, inv);
+		t15(player, is1, is2, inv);
+		t16(player, is1, is2, inv);
 	}
 	
 	public void t1(Player player, ItemStack is1, ItemStack is2, Inventory inv) {
@@ -53,7 +58,7 @@ public class Transcendence {
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
 				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			}
 		}
 	}
@@ -78,7 +83,7 @@ public class Transcendence {
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
 				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			}
 		}
 	}
@@ -103,7 +108,7 @@ public class Transcendence {
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
 				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			}
 		}
 	}
@@ -129,7 +134,7 @@ public class Transcendence {
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
 				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			}
 		}
 	}
@@ -155,7 +160,7 @@ public class Transcendence {
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
 				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			}
 		}
 	}
@@ -181,7 +186,7 @@ public class Transcendence {
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
 				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			}
 		}
 	}
@@ -209,7 +214,7 @@ public class Transcendence {
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
 				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			}
 		}
 	}
@@ -234,7 +239,7 @@ public class Transcendence {
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
 				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 초심자 헬멧")) {
 				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
 				ItemStack weapon = new ItemStack(Material.IRON_HELMET);
@@ -254,7 +259,7 @@ public class Transcendence {
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
 				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 초심자 갑옷")) {
 				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
 				ItemStack weapon = new ItemStack(Material.IRON_CHESTPLATE);
@@ -274,7 +279,7 @@ public class Transcendence {
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
 				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 초심자 각반")) {
 				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
 				ItemStack weapon = new ItemStack(Material.IRON_LEGGINGS);
@@ -294,7 +299,7 @@ public class Transcendence {
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
 				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 초심자 신발")) {
 				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
 				ItemStack weapon = new ItemStack(Material.IRON_BOOTS);
@@ -314,7 +319,7 @@ public class Transcendence {
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
 				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "탑의 도전자 도끼")) {
 				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
 				ItemStack weapon = new ItemStack(Material.GREEN_CARPET);
@@ -333,7 +338,7 @@ public class Transcendence {
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
 				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 도전자 헬멧")) {
 				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
 				ItemStack weapon = new ItemStack(Material.IRON_HELMET);
@@ -353,7 +358,7 @@ public class Transcendence {
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
 				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 도전자 갑옷")) {
 				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
 				ItemStack weapon = new ItemStack(Material.IRON_CHESTPLATE);
@@ -373,7 +378,7 @@ public class Transcendence {
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
 				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 도전자 각반")) {
 				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
 				ItemStack weapon = new ItemStack(Material.IRON_LEGGINGS);
@@ -393,7 +398,7 @@ public class Transcendence {
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
 				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 도전자 신발")) {
 				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
 				ItemStack weapon = new ItemStack(Material.IRON_BOOTS);
@@ -413,7 +418,7 @@ public class Transcendence {
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
 				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			}
 		}
 	}
@@ -443,7 +448,7 @@ public class Transcendence {
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
 				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "청룡")) {
 				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
 				ItemStack weapon = new ItemStack(Material.LEATHER_CHESTPLATE);
@@ -467,7 +472,7 @@ public class Transcendence {
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
 				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "백호")) {
 				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
 				ItemStack weapon = new ItemStack(Material.LEATHER_LEGGINGS);
@@ -491,7 +496,7 @@ public class Transcendence {
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
 				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "현무")) {
 				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
 				ItemStack weapon = new ItemStack(Material.LEATHER_BOOTS);
@@ -515,7 +520,7 @@ public class Transcendence {
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
 				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			}
 		}
 	}
@@ -541,7 +546,7 @@ public class Transcendence {
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
 				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "베놈")) {
 				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
 				ItemStack weapon = new ItemStack(Material.GOLDEN_CHESTPLATE);
@@ -561,7 +566,7 @@ public class Transcendence {
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
 				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "오드아이즈")) {
 				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
 				ItemStack weapon = new ItemStack(Material.GOLDEN_LEGGINGS);
@@ -581,7 +586,7 @@ public class Transcendence {
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
 				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "클리어윙")) {
 				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
 				ItemStack weapon = new ItemStack(Material.GOLDEN_BOOTS);
@@ -601,7 +606,7 @@ public class Transcendence {
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
 				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			}
 		}
 	}
@@ -627,7 +632,7 @@ public class Transcendence {
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
 				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			}
 		}
 	}
@@ -653,7 +658,7 @@ public class Transcendence {
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
 				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			}
 		}
 	}
@@ -682,7 +687,7 @@ public class Transcendence {
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
 				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			}
 		}
 	}
@@ -711,7 +716,79 @@ public class Transcendence {
 				weapon.setItemMeta(weaponIm);
 				inv.setItem(0, weapon);
 				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 2.0f, 2.0f);
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+			}
+		}
+	}
+	
+	public void t15(Player player, ItemStack is1, ItemStack is2, Inventory inv) {
+		if(is2.getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "크리스탈라이즈 주괴")) {
+			if(is1.getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "일루시데이터")) {
+				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
+				if(rnd.nextInt(10) == 0) {
+					ItemStack weapon = new ItemStack(Material.OAK_PLANKS);
+					ItemMeta weaponIm = weapon.getItemMeta();
+					weaponIm.setLocalizedName("2000,1000,1000,1000,1000,2000,0,0,0,1000,500");
+					weaponIm.setDisplayName(ChatColor.DARK_RED + "일루시데이터+");
+					ArrayList<String> weaponLore = new ArrayList();
+					weaponLore.add(ChatColor.GRAY + "레벨 제한: 500");
+					weaponLore.add(ChatColor.GRAY + " ");
+					weaponLore.add(ChatColor.GRAY + "부유성 50층 보스에게 드랍된 마검");
+					weaponLore.add(ChatColor.GRAY + "평범한 마스터 클래스의 검보다도 성능이 좋다.");
+					weaponLore.add(ChatColor.GRAY + "크리스탈라이즈 주괴의 숨겨진 힘으로");
+					weaponLore.add(ChatColor.GRAY + "한층 더 단단해졌다.");
+					weaponLore.add(ChatColor.GRAY + " ");
+					weaponLore.add(ChatColor.BLUE + "-흡혈 0.8%");
+					weaponLore.add(ChatColor.BLUE + "-근접 공격 시 20% 확률로 마나 획득");
+					weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+					weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+					weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+					weaponIm.setUnbreakable(true);
+					weaponIm.setLore(weaponLore);
+					weapon.setItemMeta(weaponIm);
+					inv.setItem(0, weapon);
+					player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				} else {
+					player.sendMessage(ChatColor.WHITE + "장비 초월에 실패하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				}
+			}
+		}
+	}
+	
+	public void t16(Player player, ItemStack is1, ItemStack is2, Inventory inv) {
+		if(is2.getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "크리스탈라이즈 주괴")) {
+			if(is1.getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "다크 리펄서")) {
+				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
+				if(rnd.nextInt(10) == 0) {
+					ItemStack weapon = new ItemStack(Material.SPRUCE_PLANKS);
+					ItemMeta weaponIm = weapon.getItemMeta();
+					weaponIm.setLocalizedName("1500,1200,1200,1200,1000,2000,800,800,800,1500,500");
+					weaponIm.setDisplayName(ChatColor.DARK_RED + "다크 리펄서+");
+					ArrayList<String> weaponLore = new ArrayList();
+					weaponLore.add(ChatColor.GRAY + "레벨 제한: 500");
+					weaponLore.add(ChatColor.GRAY + " ");
+					weaponLore.add(ChatColor.GRAY + "크리스탈라이즈 주괴로 만들어진 직검");
+					weaponLore.add(ChatColor.GRAY + "이름의 뜻은 '어둠을 물리치는 자'이다.");
+					weaponLore.add(ChatColor.GRAY + "크리스탈라이즈 주괴의 숨겨진 힘으로");
+					weaponLore.add(ChatColor.GRAY + "한층 더 단단해졌다.");
+					weaponLore.add(ChatColor.GRAY + " ");
+					weaponLore.add(ChatColor.BLUE + "-전투 경험치 10% 증가");
+					weaponLore.add(ChatColor.BLUE + "-근접 공격 시 30% 확률로 마나 획득");
+					weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+					weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+					weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+					weaponIm.setUnbreakable(true);
+					weaponIm.setLore(weaponLore);
+					weapon.setItemMeta(weaponIm);
+					inv.setItem(0, weapon);
+					player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				} else {
+					player.sendMessage(ChatColor.WHITE + "장비 초월에 실패하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				}
 			}
 		}
 	}

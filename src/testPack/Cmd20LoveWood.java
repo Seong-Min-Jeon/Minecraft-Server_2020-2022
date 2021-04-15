@@ -84,8 +84,11 @@ public class Cmd20LoveWood implements CommandExecutor {
 						                		 || b.getType() == Material.STRIPPED_JUNGLE_WOOD || b.getType() == Material.STRIPPED_ACACIA_WOOD || b.getType() == Material.STRIPPED_DARK_OAK_LOG
 						                		 || b.getType() == Material.STRIPPED_CRIMSON_HYPHAE || b.getType() == Material.STRIPPED_WARPED_HYPHAE || b.getType() == Material.OAK_LEAVES
 						                		 || b.getType() == Material.SPRUCE_LEAVES || b.getType() == Material.BIRCH_LEAVES || b.getType() == Material.JUNGLE_LEAVES
-						                		 || b.getType() == Material.ACACIA_LEAVES || b.getType() == Material.DARK_OAK_LEAVES || b.getType() == Material.WARPED_WART_BLOCK)
-						                ary.add(b);
+						                		 || b.getType() == Material.ACACIA_LEAVES || b.getType() == Material.DARK_OAK_LEAVES || b.getType() == Material.WARPED_WART_BLOCK
+						                		 || b.getType() == Material.LIME_STAINED_GLASS || b.getType() == Material.GREEN_STAINED_GLASS
+						                		 || b.getType() == Material.LIME_STAINED_GLASS_PANE || b.getType() == Material.GREEN_STAINED_GLASS_PANE) {
+						                	 ary.add(b);
+						                }
 						            }
 						        }
 						    }
