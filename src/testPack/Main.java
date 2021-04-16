@@ -678,8 +678,7 @@ public class Main extends JavaPlugin implements Listener{
 //		var3Lore.add(ChatColor.GRAY + " ");
 //		var3Lore.add(ChatColor.GRAY + "미약하지만 무기의 힘을 가지고 있는 보주");
 //		var3Lore.add(ChatColor.GRAY + " ");
-//		var3Lore.add("=====인챈트=====");
-//		var3Lore.add(ChatColor.BLUE + "공격력: 3000");
+//		var3Lore.add(ChatColor.BLUE + "-공격력: 3000");
 //		var3Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 //		var3Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 //		var3Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -697,8 +696,7 @@ public class Main extends JavaPlugin implements Listener{
 //		var4Lore.add(ChatColor.GRAY + " ");
 //		var4Lore.add(ChatColor.GRAY + "미약하지만 무기의 힘을 가지고 있는 보주");
 //		var4Lore.add(ChatColor.GRAY + " ");
-//		var4Lore.add("=====인챈트=====");
-//		var4Lore.add(ChatColor.BLUE + "추가 데미지(인간형): 2500");
+//		var4Lore.add(ChatColor.BLUE + "-추가 데미지(인간형): 2500");
 //		var4Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 //		var4Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 //		var4Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -716,8 +714,7 @@ public class Main extends JavaPlugin implements Listener{
 //		var5Lore.add(ChatColor.GRAY + " ");
 //		var5Lore.add(ChatColor.GRAY + "미약하지만 무기의 힘을 가지고 있는 보주");
 //		var5Lore.add(ChatColor.GRAY + " ");
-//		var5Lore.add("=====인챈트=====");
-//		var5Lore.add(ChatColor.BLUE + "추가 데미지(동물형): 2500");
+//		var5Lore.add(ChatColor.BLUE + "-추가 데미지(동물형): 2500");
 //		var5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 //		var5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 //		var5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -735,8 +732,7 @@ public class Main extends JavaPlugin implements Listener{
 //		var6Lore.add(ChatColor.GRAY + " ");
 //		var6Lore.add(ChatColor.GRAY + "미약하지만 무기의 힘을 가지고 있는 보주");
 //		var6Lore.add(ChatColor.GRAY + " ");
-//		var6Lore.add("=====인챈트=====");
-//		var6Lore.add(ChatColor.BLUE + "추가 데미지(기타): 2500");
+//		var6Lore.add(ChatColor.BLUE + "-추가 데미지(기타): 2500");
 //		var6Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 //		var6Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 //		var6Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -6695,6 +6691,13 @@ public class Main extends JavaPlugin implements Listener{
 								horse.setOwner(player);
 								horse.setRemoveWhenFarAway(true);
 								horse.getInventory().setSaddle(new ItemStack(Material.SADDLE));
+								ItemStack bar = new ItemStack(Material.WHITE_STAINED_GLASS_PANE);
+								ItemMeta barIm = bar.getItemMeta();
+								barIm.setDisplayName(ChatColor.RED + " ");
+								barIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+								barIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+								bar.setItemMeta(barIm);
+								horse.getInventory().setArmor(bar);
 								int num = rnd.nextInt(100);
 								if(num < 60) {
 									horse.setStyle(Horse.Style.NONE);
@@ -6725,6 +6728,13 @@ public class Main extends JavaPlugin implements Listener{
 								horse.setOwner(player);
 								horse.setRemoveWhenFarAway(true);
 								horse.getInventory().setSaddle(new ItemStack(Material.SADDLE));
+								ItemStack bar = new ItemStack(Material.WHITE_STAINED_GLASS_PANE);
+								ItemMeta barIm = bar.getItemMeta();
+								barIm.setDisplayName(ChatColor.RED + " ");
+								barIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+								barIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+								bar.setItemMeta(barIm);
+								horse.getInventory().setArmor(bar);
 								int num = rnd.nextInt(100);
 								if(num < 60) {
 									horse.setStyle(Horse.Style.NONE);
@@ -6755,6 +6765,13 @@ public class Main extends JavaPlugin implements Listener{
 								horse.setOwner(player);
 								horse.setRemoveWhenFarAway(true);
 								horse.getInventory().setSaddle(new ItemStack(Material.SADDLE));
+								ItemStack bar = new ItemStack(Material.WHITE_STAINED_GLASS_PANE);
+								ItemMeta barIm = bar.getItemMeta();
+								barIm.setDisplayName(ChatColor.RED + " ");
+								barIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+								barIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+								bar.setItemMeta(barIm);
+								horse.getInventory().setArmor(bar);
 								int num = rnd.nextInt(100);
 								if(num < 60) {
 									horse.setStyle(Horse.Style.NONE);
@@ -6785,6 +6802,13 @@ public class Main extends JavaPlugin implements Listener{
 								horse.setOwner(player);
 								horse.setRemoveWhenFarAway(true);
 								horse.getInventory().setSaddle(new ItemStack(Material.SADDLE));
+								ItemStack bar = new ItemStack(Material.WHITE_STAINED_GLASS_PANE);
+								ItemMeta barIm = bar.getItemMeta();
+								barIm.setDisplayName(ChatColor.RED + " ");
+								barIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+								barIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+								bar.setItemMeta(barIm);
+								horse.getInventory().setArmor(bar);
 								int num = rnd.nextInt(100);
 								if(num < 60) {
 									horse.setStyle(Horse.Style.NONE);
@@ -6815,6 +6839,13 @@ public class Main extends JavaPlugin implements Listener{
 								horse.setOwner(player);
 								horse.setRemoveWhenFarAway(true);
 								horse.getInventory().setSaddle(new ItemStack(Material.SADDLE));
+								ItemStack bar = new ItemStack(Material.WHITE_STAINED_GLASS_PANE);
+								ItemMeta barIm = bar.getItemMeta();
+								barIm.setDisplayName(ChatColor.RED + " ");
+								barIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+								barIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+								bar.setItemMeta(barIm);
+								horse.getInventory().setArmor(bar);
 								int num = rnd.nextInt(100);
 								if(num < 60) {
 									horse.setStyle(Horse.Style.NONE);
@@ -6845,6 +6876,13 @@ public class Main extends JavaPlugin implements Listener{
 								horse.setOwner(player);
 								horse.setRemoveWhenFarAway(true);
 								horse.getInventory().setSaddle(new ItemStack(Material.SADDLE));
+								ItemStack bar = new ItemStack(Material.WHITE_STAINED_GLASS_PANE);
+								ItemMeta barIm = bar.getItemMeta();
+								barIm.setDisplayName(ChatColor.RED + " ");
+								barIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+								barIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+								bar.setItemMeta(barIm);
+								horse.getInventory().setArmor(bar);
 								int num = rnd.nextInt(100);
 								if(num < 60) {
 									horse.setStyle(Horse.Style.NONE);
@@ -6875,6 +6913,13 @@ public class Main extends JavaPlugin implements Listener{
 								horse.setOwner(player);
 								horse.setRemoveWhenFarAway(true);
 								horse.getInventory().setSaddle(new ItemStack(Material.SADDLE));
+								ItemStack bar = new ItemStack(Material.WHITE_STAINED_GLASS_PANE);
+								ItemMeta barIm = bar.getItemMeta();
+								barIm.setDisplayName(ChatColor.RED + " ");
+								barIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+								barIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+								bar.setItemMeta(barIm);
+								horse.getInventory().setArmor(bar);
 								int num = rnd.nextInt(100);
 								if(num < 60) {
 									horse.setStyle(Horse.Style.NONE);
@@ -8357,6 +8402,21 @@ public class Main extends JavaPlugin implements Listener{
 	
 	@EventHandler
 	public void clickInv(InventoryClickEvent event) {
+		
+		if(event.getWhoClicked() instanceof Player) {
+			Player player = (Player) event.getWhoClicked();
+			if(event.getClick() == ClickType.MIDDLE) {
+				if(player.getGameMode() == GameMode.CREATIVE) {
+					if(player.isOp() == true) {
+						event.getCurrentItem().setAmount(1);
+					} else {
+						event.setCancelled(true);
+						return;
+					}
+				}
+			}
+		}
+		
 		if(event.getClick() != ClickType.MIDDLE) {
 			// 핫키 제한
 			try {
