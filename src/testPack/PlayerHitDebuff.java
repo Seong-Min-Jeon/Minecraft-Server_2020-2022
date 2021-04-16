@@ -2803,7 +2803,7 @@ public class PlayerHitDebuff {
 									if(ent instanceof Slime) {
 										num++;
 										ent.getWorld().spawnEntity(ent.getLocation(), EntityType.MAGMA_CUBE);
-										ent.remove();
+										((Slime) ent).setHealth(0);
 									}
 								}
 								if(num > 0) {
