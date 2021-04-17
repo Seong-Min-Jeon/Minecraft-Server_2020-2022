@@ -1455,6 +1455,7 @@ public class MobDeath {
 					//===========================================================================
 					// 상자 획득확률 증가
 					int mul = 0;
+					mul += new SpecialEffect().a10110(lootPlayer);
 					mul += new SpecialEffect().h4(lootPlayer);
 					mul += new SpecialEffect().c3(lootPlayer);
 					mul += new SpecialEffect().l3(lootPlayer);

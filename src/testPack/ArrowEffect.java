@@ -1,6 +1,8 @@
 package testPack;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -186,7 +188,12 @@ public class ArrowEffect {
 			//===========================================================================
 			// 빠른 발사
 			int speedStat = 0;
-			speedStat += new SpecialEffect().a24(player);
+			ArrayList<Integer> ary = new ArrayList<>(); 
+			ary.add(new SpecialEffect().a10130(player));
+			ary.add(new SpecialEffect().a24(player));
+			Collections.sort(ary);
+			Collections.reverse(ary);
+			speedStat = ary.get(0);
 			
 			int speed1 = 0;
 			int speed2 = 0;
@@ -194,11 +201,35 @@ public class ArrowEffect {
 			int speed4 = 0;
 			int speed5 = 0;
 			if(speedStat == 1) {
-				speed1 += 250;
-				speed2 += 120;
-				speed3 += 80;
-				speed4 += 20;
-				speed5 += 500;
+				speed1 += 120;
+				speed2 += 60;
+				speed3 += 40;
+				speed4 += 10;
+				speed5 += 250;
+			} else if(speedStat == 2) {
+				speed1 += 180;
+				speed2 += 100;
+				speed3 += 70;
+				speed4 += 25;
+				speed5 += 400;
+			} else if(speedStat == 3) {
+				speed1 += 300;
+				speed2 += 150;
+				speed3 += 100;
+				speed4 += 40;
+				speed5 += 550;
+			} else if(speedStat == 4) {
+				speed1 += 400;
+				speed2 += 200;
+				speed3 += 125;
+				speed4 += 55;
+				speed5 += 700;
+			} else if(speedStat == 5) {
+				speed1 += 600;
+				speed2 += 300;
+				speed3 += 150;
+				speed4 += 70;
+				speed5 += 1000;
 			}
 			//===========================================================================
 			
@@ -225,7 +256,12 @@ public class ArrowEffect {
 				//===========================================================================
 				// 확산 화살
 				int numStat = 0;
-				numStat += new SpecialEffect().a23(player);
+				ArrayList<Integer> ary2 = new ArrayList<>(); 
+				ary2.add(new SpecialEffect().a10140(player));
+				ary2.add(new SpecialEffect().a23(player));
+				Collections.sort(ary2);
+				Collections.reverse(ary2);
+				numStat = ary2.get(0);
 				
 				if(numStat == 0) {
 					Arrow arrow = player.launchProjectile(Arrow.class);
@@ -279,21 +315,69 @@ public class ArrowEffect {
 		Material mat = player.getInventory().getItemInMainHand().getType();
 		if(mat == Material.BRAIN_CORAL_BLOCK || mat == Material.HORN_CORAL_BLOCK || mat == Material.TUBE_CORAL_BLOCK 
 				|| mat == Material.BUBBLE_CORAL_BLOCK || mat == Material.FIRE_CORAL_BLOCK) {
+			
+			//===========================================================================
+			// 빠른 발사
+			int speedStat = 0;
+			ArrayList<Integer> ary = new ArrayList<>(); 
+			ary.add(new SpecialEffect().a10180(player));
+			Collections.sort(ary);
+			Collections.reverse(ary);
+			speedStat = ary.get(0);
+			
+			int speed1 = 0;
+			int speed2 = 0;
+			int speed3 = 0;
+			int speed4 = 0;
+			int speed5 = 0;
+			if(speedStat == 1) {
+				speed1 += 10;
+				speed2 += 250;
+				speed3 += 10;
+				speed4 += 150;
+				speed5 += 100;
+			} else if(speedStat == 2) {
+				speed1 += 25;
+				speed2 += 400;
+				speed3 += 15;
+				speed4 += 250;
+				speed5 += 150;
+			} else if(speedStat == 3) {
+				speed1 += 40;
+				speed2 += 550;
+				speed3 += 20;
+				speed4 += 350;
+				speed5 += 200;
+			} else if(speedStat == 4) {
+				speed1 += 55;
+				speed2 += 700;
+				speed3 += 20;
+				speed4 += 450;
+				speed5 += 250;
+			} else if(speedStat == 5) {
+				speed1 += 70;
+				speed2 += 1000;
+				speed3 += 20;
+				speed4 += 550;
+				speed5 += 300;
+			}
+			//===========================================================================
+			
 			boolean bool = false;
 			if(mat == Material.BRAIN_CORAL_BLOCK) {
-				bool = reload(player, 80);
+				bool = reload(player, 80-speed1);
 			}
 			if(mat == Material.BUBBLE_CORAL_BLOCK) {
-				bool = reload(player, 2500);
+				bool = reload(player, 2500-speed2);
 			}
 			if(mat == Material.FIRE_CORAL_BLOCK) {
-				bool = reload(player, 30);
+				bool = reload(player, 30-speed3);
 			}
 			if(mat == Material.HORN_CORAL_BLOCK) {
-				bool = reload(player, 1000);
+				bool = reload(player, 1000-speed4);
 			}
 			if(mat == Material.TUBE_CORAL_BLOCK) {
-				bool = reload(player, 700);
+				bool = reload(player, 700-speed5);
 			}
 			if(bool) {
 				if(player.getLevel() < 900) {

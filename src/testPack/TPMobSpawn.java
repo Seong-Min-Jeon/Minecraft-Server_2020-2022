@@ -1245,6 +1245,7 @@ public class TPMobSpawn {
 				}
 			}
 
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3770.5, 40, 2526.5), EntityType.SLIME);
 			new BossHealth().getBar22().setProgress(1.0);
 			new BossHealth().getBar22().addPlayer(player);
 			return;

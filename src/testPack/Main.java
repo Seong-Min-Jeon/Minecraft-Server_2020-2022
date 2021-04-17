@@ -3854,6 +3854,7 @@ public class Main extends JavaPlugin implements Listener{
 		INNTicket ticket = new INNTicket();
 		BossTicket boss = new BossTicket();
 		ReinforcementScroll reinScroll = new ReinforcementScroll();
+		MetalwareToolScroll metalwareScroll = new MetalwareToolScroll();
 		DefineScroll define = new DefineScroll();
 		QuestScroll qs = new QuestScroll();
 		AnotherScroll as = new AnotherScroll();
@@ -3874,6 +3875,8 @@ public class Main extends JavaPlugin implements Listener{
 			boss.summon(player, itemArg);
 			//강화
 			reinScroll.openInv(player, itemArg);
+			//세공
+			metalwareScroll.openInv(player, itemArg);
 			//감정
 			define.effect(player, itemArg);
 			//퀘스트 스크롤
@@ -5946,6 +5949,7 @@ public class Main extends JavaPlugin implements Listener{
 							// 독 데미지 경감
 							try {
 								int num = 0;
+								num += new SpecialEffect().a10150(player);
 								num += new SpecialEffect().a26(player);
 
 								if (num > 100) {
@@ -5985,6 +5989,7 @@ public class Main extends JavaPlugin implements Listener{
 							// 위더 데미지 경감
 							try {
 								int num = 0;
+								num += new SpecialEffect().a10160(player);
 								num += new SpecialEffect().a25(player);
 
 								if (num > 100) {
@@ -6702,6 +6707,7 @@ public class Main extends JavaPlugin implements Listener{
 				if(player.getHealth() <= event.getFinalDamage()) {
 					
 					int num = 0;
+					num += new SpecialEffect().a10120(player);
 					num += new SpecialEffect().s7(player);
 					
 					if(rnd.nextInt(100) < num) {
@@ -8869,6 +8875,13 @@ public class Main extends JavaPlugin implements Listener{
 		        		Inventory inv = event.getInventory();
 		        		MysteryChestOpen mco = new MysteryChestOpen();
 		        		mco.make(player, inv);
+		        		event.setCancelled(true);
+		        		return;
+		        	}
+		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "세공하기")) {
+		        		Inventory inv = event.getInventory();
+		        		MetalwareMakeEvent rm = new MetalwareMakeEvent();
+		        		rm.rein(player, inv);
 		        		event.setCancelled(true);
 		        		return;
 		        	}
