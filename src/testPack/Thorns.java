@@ -79,6 +79,7 @@ public class Thorns {
 			
 		}
 		
+		thorns += new SpecialEffect().a10030(player, thorns);
 		thorns += new SpecialEffect().a2(player, thorns);
 		thorns += new SpecialEffect().a3(player, thorns);
 		thorns += new SpecialEffect().a4(player, thorns);

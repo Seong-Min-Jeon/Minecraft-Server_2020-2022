@@ -1308,6 +1308,15 @@ public class MysteryChestOpen {
 			{"170", "§9-추위 면역"},
 			{"170", "§9-추위 면역"},
 			
+			{"180", "§9-탄환 장전 속도 감소 I"},
+			{"180", "§9-탄환 장전 속도 감소 I"},
+			{"180", "§9-탄환 장전 속도 감소 I"},
+			
+			{"181", "§9-탄환 장전 속도 감소 II"},
+			{"181", "§9-탄환 장전 속도 감소 II"},
+			
+			{"182", "§9-탄환 장전 속도 감소 III"},
+			
 			{"1000", "§9-공격력: 1000"}, 
 			
 			{"1001", "§9-공격력: 2000"}, 
@@ -1755,6 +1764,23 @@ public class MysteryChestOpen {
 			{"170", "§9-추위 면역"},
 			{"170", "§9-추위 면역"},
 			
+			{"180", "§9-탄환 장전 속도 감소 I"},
+			{"180", "§9-탄환 장전 속도 감소 I"},
+			{"180", "§9-탄환 장전 속도 감소 I"},
+			{"180", "§9-탄환 장전 속도 감소 I"},
+			
+			{"181", "§9-탄환 장전 속도 감소 II"},
+			{"181", "§9-탄환 장전 속도 감소 II"},
+			{"181", "§9-탄환 장전 속도 감소 II"},
+			{"181", "§9-탄환 장전 속도 감소 II"},
+			
+			{"182", "§9-탄환 장전 속도 감소 III"},
+			{"182", "§9-탄환 장전 속도 감소 III"},
+			
+			{"183", "§9-탄환 장전 속도 감소 IV"},
+			
+			{"184", "§9-탄환 장전 속도 감소 V"},
+			
 			{"1000", "§9-공격력: 1000"}, 
 			
 			{"1001", "§9-공격력: 2000"}, 
@@ -1770,6 +1796,19 @@ public class MysteryChestOpen {
 			{"1003", "§9-공격력: 4000"}, 
 			{"1003", "§9-공격력: 4000"}, 
 			{"1003", "§9-공격력: 4000"}, 
+			
+			{"1004", "§9-공격력: 5000"}, 
+			{"1004", "§9-공격력: 5000"}, 
+			
+			{"1005", "§9-공격력: 6000"}, 
+			
+			{"1006", "§9-공격력: 7000"}, 
+			
+			{"1007", "§9-공격력: 8000"}, 
+			
+			{"1008", "§9-공격력: 9000"}, 
+			
+			{"1009", "§9-공격력: 10000"}, 
 			
 			{"1100", "§9-추가 데미지(인간형): 1000"},
 			{"1100", "§9-추가 데미지(인간형): 1000"},
@@ -3648,8 +3687,9 @@ public class MysteryChestOpen {
 		String[][] allTable = null;
 		
 		if(rank == 1) {
-			equip = new ItemStack(Material.POLISHED_GRANITE_STAIRS);
+			equip = new ItemStack(Material.DIAMOND_AXE);
 			ItemMeta equipIm = equip.getItemMeta();
+			equipIm.setCustomModelData(10000);
 			equipIm.setLocalizedName("0,0,0,0,0,0,0,0,0,0,700");
 			equipIm.setDisplayName(ChatColor.GRAY + "잠재력이 숨겨진 반지");
 			ArrayList<String> equipLore = new ArrayList();
@@ -3668,8 +3708,9 @@ public class MysteryChestOpen {
 			
 			allTable = accessoryEffectRank1;
 		} else if(rank == 2) {
-			equip = new ItemStack(Material.POLISHED_GRANITE_STAIRS);
+			equip = new ItemStack(Material.DIAMOND_AXE);
 			ItemMeta equipIm = equip.getItemMeta();
+			equipIm.setCustomModelData(10001);
 			equipIm.setLocalizedName("0,0,0,0,0,0,0,0,0,0,700");
 			equipIm.setDisplayName(ChatColor.WHITE + "희미한 광택의 반지");
 			ArrayList<String> equipLore = new ArrayList();
@@ -3688,8 +3729,9 @@ public class MysteryChestOpen {
 			
 			allTable = accessoryEffectRank2;
 		} else if(rank == 3) {
-			equip = new ItemStack(Material.POLISHED_GRANITE_STAIRS);
+			equip = new ItemStack(Material.DIAMOND_AXE);
 			ItemMeta equipIm = equip.getItemMeta();
+			equipIm.setCustomModelData(10002);
 			equipIm.setLocalizedName("0,0,0,0,0,0,0,0,0,0,700");
 			equipIm.setDisplayName(ChatColor.YELLOW + "황금빛이 맴도는 반지");
 			ArrayList<String> equipLore = new ArrayList();
@@ -3708,8 +3750,9 @@ public class MysteryChestOpen {
 			
 			allTable = accessoryEffectRank3;
 		} else if(rank == 4) {
-			equip = new ItemStack(Material.POLISHED_GRANITE_STAIRS);
+			equip = new ItemStack(Material.DIAMOND_AXE);
 			ItemMeta equipIm = equip.getItemMeta();
+			equipIm.setCustomModelData(10003);
 			equipIm.setLocalizedName("0,0,0,0,0,0,0,0,0,0,700");
 			equipIm.setDisplayName(ChatColor.LIGHT_PURPLE + "매혹적인 타락의 반지");
 			ArrayList<String> equipLore = new ArrayList();
@@ -3728,8 +3771,9 @@ public class MysteryChestOpen {
 			
 			allTable = accessoryEffectRank4;
 		} else if(rank == 5) {
-			equip = new ItemStack(Material.POLISHED_GRANITE_STAIRS);
+			equip = new ItemStack(Material.DIAMOND_AXE);
 			ItemMeta equipIm = equip.getItemMeta();
+			equipIm.setCustomModelData(10004);
 			equipIm.setLocalizedName("0,0,0,0,0,0,0,0,0,0,700");
 			equipIm.setDisplayName(ChatColor.AQUA + "빛나는 보주의 반지");
 			ArrayList<String> equipLore = new ArrayList();
@@ -3748,8 +3792,9 @@ public class MysteryChestOpen {
 			
 			allTable = accessoryEffectRank5;
 		} else if(rank == 6) {
-			equip = new ItemStack(Material.POLISHED_GRANITE_STAIRS);
+			equip = new ItemStack(Material.DIAMOND_AXE);
 			ItemMeta equipIm = equip.getItemMeta();
+			equipIm.setCustomModelData(10005);
 			equipIm.setLocalizedName("0,0,0,0,0,0,0,0,0,0,700");
 			equipIm.setDisplayName(ChatColor.DARK_RED + "피의 서리 반지");
 			ArrayList<String> equipLore = new ArrayList();
@@ -3768,8 +3813,9 @@ public class MysteryChestOpen {
 			
 			allTable = accessoryEffectRank6;
 		} else if(rank == 7) {
-			equip = new ItemStack(Material.POLISHED_GRANITE_STAIRS);
+			equip = new ItemStack(Material.DIAMOND_AXE);
 			ItemMeta equipIm = equip.getItemMeta();
+			equipIm.setCustomModelData(10006);
 			equipIm.setLocalizedName("0,0,0,0,0,0,0,0,0,0,700");
 			equipIm.setDisplayName(ChatColor.DARK_PURPLE + "검은 기운의 반지");
 			ArrayList<String> equipLore = new ArrayList();
@@ -3878,7 +3924,534 @@ public class MysteryChestOpen {
 			equip.setItemMeta(equipIm);
 		}
 		
-		return equip;
+		return fixStat(equip);
+	}
+
+	public ItemStack fixStat(ItemStack item) {
+		ItemMeta itemIm = item.getItemMeta();
+
+		String localName = itemIm.getLocalizedName();
+		localName = makeEnch(localName, "0", 0);
+		localName = makeEnch(localName, "0", 1);
+		localName = makeEnch(localName, "0", 2);
+		localName = makeEnch(localName, "0", 3);
+		localName = makeEnch(localName, "0", 4);
+		itemIm.setLocalizedName(localName);
+		
+		String[] spac = itemIm.getLocalizedName().split(",");
+		if(spac[5].equals("1000")) {
+			localName = addEnch(localName, "1000", 0);
+		} else if(spac[5].equals("1001")) {
+			localName = addEnch(localName, "2000", 0);
+		} else if(spac[5].equals("1002")) {
+			localName = addEnch(localName, "3000", 0);
+		} else if(spac[5].equals("1003")) {
+			localName = addEnch(localName, "4000", 0);
+		} else if(spac[5].equals("1004")) {
+			localName = addEnch(localName, "5000", 0);
+		} else if(spac[5].equals("1005")) {
+			localName = addEnch(localName, "6000", 0);
+		} else if(spac[5].equals("1006")) {
+			localName = addEnch(localName, "7000", 0);
+		} else if(spac[5].equals("1007")) {
+			localName = addEnch(localName, "8000", 0);
+		} else if(spac[5].equals("1008")) {
+			localName = addEnch(localName, "9000", 0);
+		} else if(spac[5].equals("1009")) {
+			localName = addEnch(localName, "10000", 0);
+		} else if(spac[5].equals("1100")) {
+			localName = addEnch(localName, "1000", 1);
+		} else if(spac[5].equals("1101")) {
+			localName = addEnch(localName, "2000", 1);
+		} else if(spac[5].equals("1102")) {
+			localName = addEnch(localName, "3000", 1);
+		} else if(spac[5].equals("1103")) {
+			localName = addEnch(localName, "4000", 1);
+		} else if(spac[5].equals("1104")) {
+			localName = addEnch(localName, "5000", 1);
+		} else if(spac[5].equals("1105")) {
+			localName = addEnch(localName, "6000", 1);
+		} else if(spac[5].equals("1106")) {
+			localName = addEnch(localName, "7000", 1);
+		} else if(spac[5].equals("1107")) {
+			localName = addEnch(localName, "8000", 1);
+		} else if(spac[5].equals("1108")) {
+			localName = addEnch(localName, "9000", 1);
+		} else if(spac[5].equals("1109")) {
+			localName = addEnch(localName, "10000", 1);
+		} else if(spac[5].equals("1200")) {
+			localName = addEnch(localName, "1000", 2);
+		} else if(spac[5].equals("1201")) {
+			localName = addEnch(localName, "2000", 2);
+		} else if(spac[5].equals("1202")) {
+			localName = addEnch(localName, "3000", 2);
+		} else if(spac[5].equals("1203")) {
+			localName = addEnch(localName, "4000", 2);
+		} else if(spac[5].equals("1204")) {
+			localName = addEnch(localName, "5000", 2);
+		} else if(spac[5].equals("1205")) {
+			localName = addEnch(localName, "6000", 2);
+		} else if(spac[5].equals("1206")) {
+			localName = addEnch(localName, "7000", 2);
+		} else if(spac[5].equals("1207")) {
+			localName = addEnch(localName, "8000", 2);
+		} else if(spac[5].equals("1208")) {
+			localName = addEnch(localName, "9000", 2);
+		} else if(spac[5].equals("1209")) {
+			localName = addEnch(localName, "10000", 2);
+		} else if(spac[5].equals("1300")) {
+			localName = addEnch(localName, "1000", 3);
+		} else if(spac[5].equals("1301")) {
+			localName = addEnch(localName, "2000", 3);
+		} else if(spac[5].equals("1302")) {
+			localName = addEnch(localName, "3000", 3);
+		} else if(spac[5].equals("1303")) {
+			localName = addEnch(localName, "4000", 3);
+		} else if(spac[5].equals("1304")) {
+			localName = addEnch(localName, "5000", 3);
+		} else if(spac[5].equals("1305")) {
+			localName = addEnch(localName, "6000", 3);
+		} else if(spac[5].equals("1306")) {
+			localName = addEnch(localName, "7000", 3);
+		} else if(spac[5].equals("1307")) {
+			localName = addEnch(localName, "8000", 3);
+		} else if(spac[5].equals("1308")) {
+			localName = addEnch(localName, "9000", 3);
+		} else if(spac[5].equals("1309")) {
+			localName = addEnch(localName, "10000", 3);
+		} else if(spac[5].equals("1400")) {
+			localName = addEnch(localName, "1000", 4);
+		} else if(spac[5].equals("1401")) {
+			localName = addEnch(localName, "2000", 4);
+		} else if(spac[5].equals("1402")) {
+			localName = addEnch(localName, "3000", 4);
+		} else if(spac[5].equals("1403")) {
+			localName = addEnch(localName, "4000", 4);
+		} else if(spac[5].equals("1404")) {
+			localName = addEnch(localName, "5000", 4);
+		} else if(spac[5].equals("1405")) {
+			localName = addEnch(localName, "6000", 4);
+		} else if(spac[5].equals("1406")) {
+			localName = addEnch(localName, "7000", 4);
+		} else if(spac[5].equals("1407")) {
+			localName = addEnch(localName, "8000", 4);
+		} else if(spac[5].equals("1408")) {
+			localName = addEnch(localName, "9000", 4);
+		} else if(spac[5].equals("1409")) {
+			localName = addEnch(localName, "10000", 4);
+		}
+		
+		if(spac[6].equals("1000")) {
+			localName = addEnch(localName, "1000", 0);
+		} else if(spac[6].equals("1001")) {
+			localName = addEnch(localName, "2000", 0);
+		} else if(spac[6].equals("1002")) {
+			localName = addEnch(localName, "3000", 0);
+		} else if(spac[6].equals("1003")) {
+			localName = addEnch(localName, "4000", 0);
+		} else if(spac[6].equals("1004")) {
+			localName = addEnch(localName, "5000", 0);
+		} else if(spac[6].equals("1005")) {
+			localName = addEnch(localName, "6000", 0);
+		} else if(spac[6].equals("1006")) {
+			localName = addEnch(localName, "7000", 0);
+		} else if(spac[6].equals("1007")) {
+			localName = addEnch(localName, "8000", 0);
+		} else if(spac[6].equals("1008")) {
+			localName = addEnch(localName, "9000", 0);
+		} else if(spac[6].equals("1009")) {
+			localName = addEnch(localName, "10000", 0);
+		} else if(spac[6].equals("1100")) {
+			localName = addEnch(localName, "1000", 1);
+		} else if(spac[6].equals("1101")) {
+			localName = addEnch(localName, "2000", 1);
+		} else if(spac[6].equals("1102")) {
+			localName = addEnch(localName, "3000", 1);
+		} else if(spac[6].equals("1103")) {
+			localName = addEnch(localName, "4000", 1);
+		} else if(spac[6].equals("1104")) {
+			localName = addEnch(localName, "5000", 1);
+		} else if(spac[6].equals("1105")) {
+			localName = addEnch(localName, "6000", 1);
+		} else if(spac[6].equals("1106")) {
+			localName = addEnch(localName, "7000", 1);
+		} else if(spac[6].equals("1107")) {
+			localName = addEnch(localName, "8000", 1);
+		} else if(spac[6].equals("1108")) {
+			localName = addEnch(localName, "9000", 1);
+		} else if(spac[6].equals("1109")) {
+			localName = addEnch(localName, "10000", 1);
+		} else if(spac[6].equals("1200")) {
+			localName = addEnch(localName, "1000", 2);
+		} else if(spac[6].equals("1201")) {
+			localName = addEnch(localName, "2000", 2);
+		} else if(spac[6].equals("1202")) {
+			localName = addEnch(localName, "3000", 2);
+		} else if(spac[6].equals("1203")) {
+			localName = addEnch(localName, "4000", 2);
+		} else if(spac[6].equals("1204")) {
+			localName = addEnch(localName, "5000", 2);
+		} else if(spac[6].equals("1205")) {
+			localName = addEnch(localName, "6000", 2);
+		} else if(spac[6].equals("1206")) {
+			localName = addEnch(localName, "7000", 2);
+		} else if(spac[6].equals("1207")) {
+			localName = addEnch(localName, "8000", 2);
+		} else if(spac[6].equals("1208")) {
+			localName = addEnch(localName, "9000", 2);
+		} else if(spac[6].equals("1209")) {
+			localName = addEnch(localName, "10000", 2);
+		} else if(spac[6].equals("1300")) {
+			localName = addEnch(localName, "1000", 3);
+		} else if(spac[6].equals("1301")) {
+			localName = addEnch(localName, "2000", 3);
+		} else if(spac[6].equals("1302")) {
+			localName = addEnch(localName, "3000", 3);
+		} else if(spac[6].equals("1303")) {
+			localName = addEnch(localName, "4000", 3);
+		} else if(spac[6].equals("1304")) {
+			localName = addEnch(localName, "5000", 3);
+		} else if(spac[6].equals("1305")) {
+			localName = addEnch(localName, "6000", 3);
+		} else if(spac[6].equals("1306")) {
+			localName = addEnch(localName, "7000", 3);
+		} else if(spac[6].equals("1307")) {
+			localName = addEnch(localName, "8000", 3);
+		} else if(spac[6].equals("1308")) {
+			localName = addEnch(localName, "9000", 3);
+		} else if(spac[6].equals("1309")) {
+			localName = addEnch(localName, "10000", 3);
+		} else if(spac[6].equals("1400")) {
+			localName = addEnch(localName, "1000", 4);
+		} else if(spac[6].equals("1401")) {
+			localName = addEnch(localName, "2000", 4);
+		} else if(spac[6].equals("1402")) {
+			localName = addEnch(localName, "3000", 4);
+		} else if(spac[6].equals("1403")) {
+			localName = addEnch(localName, "4000", 4);
+		} else if(spac[6].equals("1404")) {
+			localName = addEnch(localName, "5000", 4);
+		} else if(spac[6].equals("1405")) {
+			localName = addEnch(localName, "6000", 4);
+		} else if(spac[6].equals("1406")) {
+			localName = addEnch(localName, "7000", 4);
+		} else if(spac[6].equals("1407")) {
+			localName = addEnch(localName, "8000", 4);
+		} else if(spac[6].equals("1408")) {
+			localName = addEnch(localName, "9000", 4);
+		} else if(spac[6].equals("1409")) {
+			localName = addEnch(localName, "10000", 4);
+		}
+		
+		if(spac[7].equals("1000")) {
+			localName = addEnch(localName, "1000", 0);
+		} else if(spac[7].equals("1001")) {
+			localName = addEnch(localName, "2000", 0);
+		} else if(spac[7].equals("1002")) {
+			localName = addEnch(localName, "3000", 0);
+		} else if(spac[7].equals("1003")) {
+			localName = addEnch(localName, "4000", 0);
+		} else if(spac[7].equals("1004")) {
+			localName = addEnch(localName, "5000", 0);
+		} else if(spac[7].equals("1005")) {
+			localName = addEnch(localName, "6000", 0);
+		} else if(spac[7].equals("1006")) {
+			localName = addEnch(localName, "7000", 0);
+		} else if(spac[7].equals("1007")) {
+			localName = addEnch(localName, "8000", 0);
+		} else if(spac[7].equals("1008")) {
+			localName = addEnch(localName, "9000", 0);
+		} else if(spac[7].equals("1009")) {
+			localName = addEnch(localName, "10000", 0);
+		} else if(spac[7].equals("1100")) {
+			localName = addEnch(localName, "1000", 1);
+		} else if(spac[7].equals("1101")) {
+			localName = addEnch(localName, "2000", 1);
+		} else if(spac[7].equals("1102")) {
+			localName = addEnch(localName, "3000", 1);
+		} else if(spac[7].equals("1103")) {
+			localName = addEnch(localName, "4000", 1);
+		} else if(spac[7].equals("1104")) {
+			localName = addEnch(localName, "5000", 1);
+		} else if(spac[7].equals("1105")) {
+			localName = addEnch(localName, "6000", 1);
+		} else if(spac[7].equals("1106")) {
+			localName = addEnch(localName, "7000", 1);
+		} else if(spac[7].equals("1107")) {
+			localName = addEnch(localName, "8000", 1);
+		} else if(spac[7].equals("1108")) {
+			localName = addEnch(localName, "9000", 1);
+		} else if(spac[7].equals("1109")) {
+			localName = addEnch(localName, "10000", 1);
+		} else if(spac[7].equals("1200")) {
+			localName = addEnch(localName, "1000", 2);
+		} else if(spac[7].equals("1201")) {
+			localName = addEnch(localName, "2000", 2);
+		} else if(spac[7].equals("1202")) {
+			localName = addEnch(localName, "3000", 2);
+		} else if(spac[7].equals("1203")) {
+			localName = addEnch(localName, "4000", 2);
+		} else if(spac[7].equals("1204")) {
+			localName = addEnch(localName, "5000", 2);
+		} else if(spac[7].equals("1205")) {
+			localName = addEnch(localName, "6000", 2);
+		} else if(spac[7].equals("1206")) {
+			localName = addEnch(localName, "7000", 2);
+		} else if(spac[7].equals("1207")) {
+			localName = addEnch(localName, "8000", 2);
+		} else if(spac[7].equals("1208")) {
+			localName = addEnch(localName, "9000", 2);
+		} else if(spac[7].equals("1209")) {
+			localName = addEnch(localName, "10000", 2);
+		} else if(spac[7].equals("1300")) {
+			localName = addEnch(localName, "1000", 3);
+		} else if(spac[7].equals("1301")) {
+			localName = addEnch(localName, "2000", 3);
+		} else if(spac[7].equals("1302")) {
+			localName = addEnch(localName, "3000", 3);
+		} else if(spac[7].equals("1303")) {
+			localName = addEnch(localName, "4000", 3);
+		} else if(spac[7].equals("1304")) {
+			localName = addEnch(localName, "5000", 3);
+		} else if(spac[7].equals("1305")) {
+			localName = addEnch(localName, "6000", 3);
+		} else if(spac[7].equals("1306")) {
+			localName = addEnch(localName, "7000", 3);
+		} else if(spac[7].equals("1307")) {
+			localName = addEnch(localName, "8000", 3);
+		} else if(spac[7].equals("1308")) {
+			localName = addEnch(localName, "9000", 3);
+		} else if(spac[7].equals("1309")) {
+			localName = addEnch(localName, "10000", 3);
+		} else if(spac[7].equals("1400")) {
+			localName = addEnch(localName, "1000", 4);
+		} else if(spac[7].equals("1401")) {
+			localName = addEnch(localName, "2000", 4);
+		} else if(spac[7].equals("1402")) {
+			localName = addEnch(localName, "3000", 4);
+		} else if(spac[7].equals("1403")) {
+			localName = addEnch(localName, "4000", 4);
+		} else if(spac[7].equals("1404")) {
+			localName = addEnch(localName, "5000", 4);
+		} else if(spac[7].equals("1405")) {
+			localName = addEnch(localName, "6000", 4);
+		} else if(spac[7].equals("1406")) {
+			localName = addEnch(localName, "7000", 4);
+		} else if(spac[7].equals("1407")) {
+			localName = addEnch(localName, "8000", 4);
+		} else if(spac[7].equals("1408")) {
+			localName = addEnch(localName, "9000", 4);
+		} else if(spac[7].equals("1409")) {
+			localName = addEnch(localName, "10000", 4);
+		}
+		
+		if(spac[8].equals("1000")) {
+			localName = addEnch(localName, "1000", 0);
+		} else if(spac[8].equals("1001")) {
+			localName = addEnch(localName, "2000", 0);
+		} else if(spac[8].equals("1002")) {
+			localName = addEnch(localName, "3000", 0);
+		} else if(spac[8].equals("1003")) {
+			localName = addEnch(localName, "4000", 0);
+		} else if(spac[8].equals("1004")) {
+			localName = addEnch(localName, "5000", 0);
+		} else if(spac[8].equals("1005")) {
+			localName = addEnch(localName, "6000", 0);
+		} else if(spac[8].equals("1006")) {
+			localName = addEnch(localName, "7000", 0);
+		} else if(spac[8].equals("1007")) {
+			localName = addEnch(localName, "8000", 0);
+		} else if(spac[8].equals("1008")) {
+			localName = addEnch(localName, "9000", 0);
+		} else if(spac[8].equals("1009")) {
+			localName = addEnch(localName, "10000", 0);
+		} else if(spac[8].equals("1100")) {
+			localName = addEnch(localName, "1000", 1);
+		} else if(spac[8].equals("1101")) {
+			localName = addEnch(localName, "2000", 1);
+		} else if(spac[8].equals("1102")) {
+			localName = addEnch(localName, "3000", 1);
+		} else if(spac[8].equals("1103")) {
+			localName = addEnch(localName, "4000", 1);
+		} else if(spac[8].equals("1104")) {
+			localName = addEnch(localName, "5000", 1);
+		} else if(spac[8].equals("1105")) {
+			localName = addEnch(localName, "6000", 1);
+		} else if(spac[8].equals("1106")) {
+			localName = addEnch(localName, "7000", 1);
+		} else if(spac[8].equals("1107")) {
+			localName = addEnch(localName, "8000", 1);
+		} else if(spac[8].equals("1108")) {
+			localName = addEnch(localName, "9000", 1);
+		} else if(spac[8].equals("1109")) {
+			localName = addEnch(localName, "10000", 1);
+		} else if(spac[8].equals("1200")) {
+			localName = addEnch(localName, "1000", 2);
+		} else if(spac[8].equals("1201")) {
+			localName = addEnch(localName, "2000", 2);
+		} else if(spac[8].equals("1202")) {
+			localName = addEnch(localName, "3000", 2);
+		} else if(spac[8].equals("1203")) {
+			localName = addEnch(localName, "4000", 2);
+		} else if(spac[8].equals("1204")) {
+			localName = addEnch(localName, "5000", 2);
+		} else if(spac[8].equals("1205")) {
+			localName = addEnch(localName, "6000", 2);
+		} else if(spac[8].equals("1206")) {
+			localName = addEnch(localName, "7000", 2);
+		} else if(spac[8].equals("1207")) {
+			localName = addEnch(localName, "8000", 2);
+		} else if(spac[8].equals("1208")) {
+			localName = addEnch(localName, "9000", 2);
+		} else if(spac[8].equals("1209")) {
+			localName = addEnch(localName, "10000", 2);
+		} else if(spac[8].equals("1300")) {
+			localName = addEnch(localName, "1000", 3);
+		} else if(spac[8].equals("1301")) {
+			localName = addEnch(localName, "2000", 3);
+		} else if(spac[8].equals("1302")) {
+			localName = addEnch(localName, "3000", 3);
+		} else if(spac[8].equals("1303")) {
+			localName = addEnch(localName, "4000", 3);
+		} else if(spac[8].equals("1304")) {
+			localName = addEnch(localName, "5000", 3);
+		} else if(spac[8].equals("1305")) {
+			localName = addEnch(localName, "6000", 3);
+		} else if(spac[8].equals("1306")) {
+			localName = addEnch(localName, "7000", 3);
+		} else if(spac[8].equals("1307")) {
+			localName = addEnch(localName, "8000", 3);
+		} else if(spac[8].equals("1308")) {
+			localName = addEnch(localName, "9000", 3);
+		} else if(spac[8].equals("1309")) {
+			localName = addEnch(localName, "10000", 3);
+		} else if(spac[8].equals("1400")) {
+			localName = addEnch(localName, "1000", 4);
+		} else if(spac[8].equals("1401")) {
+			localName = addEnch(localName, "2000", 4);
+		} else if(spac[8].equals("1402")) {
+			localName = addEnch(localName, "3000", 4);
+		} else if(spac[8].equals("1403")) {
+			localName = addEnch(localName, "4000", 4);
+		} else if(spac[8].equals("1404")) {
+			localName = addEnch(localName, "5000", 4);
+		} else if(spac[8].equals("1405")) {
+			localName = addEnch(localName, "6000", 4);
+		} else if(spac[8].equals("1406")) {
+			localName = addEnch(localName, "7000", 4);
+		} else if(spac[8].equals("1407")) {
+			localName = addEnch(localName, "8000", 4);
+		} else if(spac[8].equals("1408")) {
+			localName = addEnch(localName, "9000", 4);
+		} else if(spac[8].equals("1409")) {
+			localName = addEnch(localName, "10000", 4);
+		}
+		
+		if(spac[9].equals("1000")) {
+			localName = addEnch(localName, "1000", 0);
+		} else if(spac[9].equals("1001")) {
+			localName = addEnch(localName, "2000", 0);
+		} else if(spac[9].equals("1002")) {
+			localName = addEnch(localName, "3000", 0);
+		} else if(spac[9].equals("1003")) {
+			localName = addEnch(localName, "4000", 0);
+		} else if(spac[9].equals("1004")) {
+			localName = addEnch(localName, "5000", 0);
+		} else if(spac[9].equals("1005")) {
+			localName = addEnch(localName, "6000", 0);
+		} else if(spac[9].equals("1006")) {
+			localName = addEnch(localName, "7000", 0);
+		} else if(spac[9].equals("1007")) {
+			localName = addEnch(localName, "8000", 0);
+		} else if(spac[9].equals("1008")) {
+			localName = addEnch(localName, "9000", 0);
+		} else if(spac[9].equals("1009")) {
+			localName = addEnch(localName, "10000", 0);
+		} else if(spac[9].equals("1100")) {
+			localName = addEnch(localName, "1000", 1);
+		} else if(spac[9].equals("1101")) {
+			localName = addEnch(localName, "2000", 1);
+		} else if(spac[9].equals("1102")) {
+			localName = addEnch(localName, "3000", 1);
+		} else if(spac[9].equals("1103")) {
+			localName = addEnch(localName, "4000", 1);
+		} else if(spac[9].equals("1104")) {
+			localName = addEnch(localName, "5000", 1);
+		} else if(spac[9].equals("1105")) {
+			localName = addEnch(localName, "6000", 1);
+		} else if(spac[9].equals("1106")) {
+			localName = addEnch(localName, "7000", 1);
+		} else if(spac[9].equals("1107")) {
+			localName = addEnch(localName, "8000", 1);
+		} else if(spac[9].equals("1108")) {
+			localName = addEnch(localName, "9000", 1);
+		} else if(spac[9].equals("1109")) {
+			localName = addEnch(localName, "10000", 1);
+		} else if(spac[9].equals("1200")) {
+			localName = addEnch(localName, "1000", 2);
+		} else if(spac[9].equals("1201")) {
+			localName = addEnch(localName, "2000", 2);
+		} else if(spac[9].equals("1202")) {
+			localName = addEnch(localName, "3000", 2);
+		} else if(spac[9].equals("1203")) {
+			localName = addEnch(localName, "4000", 2);
+		} else if(spac[9].equals("1204")) {
+			localName = addEnch(localName, "5000", 2);
+		} else if(spac[9].equals("1205")) {
+			localName = addEnch(localName, "6000", 2);
+		} else if(spac[9].equals("1206")) {
+			localName = addEnch(localName, "7000", 2);
+		} else if(spac[9].equals("1207")) {
+			localName = addEnch(localName, "8000", 2);
+		} else if(spac[9].equals("1208")) {
+			localName = addEnch(localName, "9000", 2);
+		} else if(spac[9].equals("1209")) {
+			localName = addEnch(localName, "10000", 2);
+		} else if(spac[9].equals("1300")) {
+			localName = addEnch(localName, "1000", 3);
+		} else if(spac[9].equals("1301")) {
+			localName = addEnch(localName, "2000", 3);
+		} else if(spac[9].equals("1302")) {
+			localName = addEnch(localName, "3000", 3);
+		} else if(spac[9].equals("1303")) {
+			localName = addEnch(localName, "4000", 3);
+		} else if(spac[9].equals("1304")) {
+			localName = addEnch(localName, "5000", 3);
+		} else if(spac[9].equals("1305")) {
+			localName = addEnch(localName, "6000", 3);
+		} else if(spac[9].equals("1306")) {
+			localName = addEnch(localName, "7000", 3);
+		} else if(spac[9].equals("1307")) {
+			localName = addEnch(localName, "8000", 3);
+		} else if(spac[9].equals("1308")) {
+			localName = addEnch(localName, "9000", 3);
+		} else if(spac[9].equals("1309")) {
+			localName = addEnch(localName, "10000", 3);
+		} else if(spac[9].equals("1400")) {
+			localName = addEnch(localName, "1000", 4);
+		} else if(spac[9].equals("1401")) {
+			localName = addEnch(localName, "2000", 4);
+		} else if(spac[9].equals("1402")) {
+			localName = addEnch(localName, "3000", 4);
+		} else if(spac[9].equals("1403")) {
+			localName = addEnch(localName, "4000", 4);
+		} else if(spac[9].equals("1404")) {
+			localName = addEnch(localName, "5000", 4);
+		} else if(spac[9].equals("1405")) {
+			localName = addEnch(localName, "6000", 4);
+		} else if(spac[9].equals("1406")) {
+			localName = addEnch(localName, "7000", 4);
+		} else if(spac[9].equals("1407")) {
+			localName = addEnch(localName, "8000", 4);
+		} else if(spac[9].equals("1408")) {
+			localName = addEnch(localName, "9000", 4);
+		} else if(spac[9].equals("1409")) {
+			localName = addEnch(localName, "10000", 4);
+		}
+		
+		itemIm.setLocalizedName(localName);
+		item.setItemMeta(itemIm);
+		return item;
 	}
 	
 	public String makeEnch(String aryStr, String str, int num) {
@@ -3887,6 +4460,25 @@ public class MysteryChestOpen {
 		for(int i = 0 ; i < 10 ; i++) {
 			if(i == num) {
 				result = result + "," + str;
+				continue;
+			}
+			result = result + "," + ary[i];
+		}
+		String data = result.substring(1);
+		try {
+			data = data.concat("," + ary[10]);
+		} catch(Exception e) {
+			
+		}
+		return data;
+	}
+	
+	public String addEnch(String aryStr, String str, int num) {
+		String[] ary = aryStr.split(",");
+		String result = "";
+		for(int i = 0 ; i < 10 ; i++) {
+			if(i == num) {
+				result = result + "," + Integer.toString(Integer.getInteger(str) + Integer.getInteger(ary[i]));
 				continue;
 			}
 			result = result + "," + ary[i];
@@ -3925,4 +4517,5 @@ public class MysteryChestOpen {
 	    int rnd = new Random().nextInt(array.length);
 	    return array[rnd];
 	}
+
 }

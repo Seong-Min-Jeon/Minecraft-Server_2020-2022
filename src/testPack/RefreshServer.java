@@ -284,8 +284,28 @@ public class RefreshServer {
 							}
 							
 							if (allPlayer.getInventory().getItemInOffHand().getItemMeta() != null) {
-								if(allPlayer.getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "가시고기의 눈물")) {
-									wear = true;
+								try {
+									if(allPlayer.getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "가시고기의 눈물")) {
+										wear = true;
+									}
+									String[] spac = allPlayer.getInventory().getItemInOffHand().getItemMeta().getLocalizedName().split(",");
+									if(spac[5].equals("170")) {
+										wear = true;
+									}
+									if(spac[6].equals("170")) {
+										wear = true;
+									}
+									if(spac[7].equals("170")) {
+										wear = true;
+									}
+									if(spac[8].equals("170")) {
+										wear = true;
+									}
+									if(spac[9].equals("170")) {
+										wear = true;
+									}
+								} catch(Exception e) {
+									
 								}
 							}
 							

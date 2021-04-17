@@ -305,7 +305,7 @@ public class SpecialEffect {
 	public int a10010(Player player) {
 		ItemStack item = player.getInventory().getItemInOffHand();
 		int total = 0;
-		if(item.getType() == Material.POLISHED_GRANITE_STAIRS) {
+		if(item.getType() == Material.DIAMOND_AXE) {
 			String[] ary = item.getItemMeta().getLocalizedName().split(",");
 			try {
 				if(ary[5].equals("10")) {
@@ -421,7 +421,7 @@ public class SpecialEffect {
 	public int a10020(Player player) {
 		ItemStack item = player.getInventory().getItemInOffHand();
 		int total = 0;
-		if(item.getType() == Material.POLISHED_GRANITE_STAIRS) {
+		if(item.getType() == Material.DIAMOND_AXE) {
 			String[] ary = item.getItemMeta().getLocalizedName().split(",");
 			try {
 				if(ary[5].equals("20")) {
@@ -517,7 +517,7 @@ public class SpecialEffect {
 	public int a10030(Player player, int thorns) {
 		ItemStack item = player.getInventory().getItemInOffHand();
 		int max = 0;
-		if(item.getType() == Material.POLISHED_GRANITE_STAIRS) {
+		if(item.getType() == Material.DIAMOND_AXE) {
 			String[] ary = item.getItemMeta().getLocalizedName().split(",");
 			try {
 				if(ary[5].equals("30")) {
@@ -642,7 +642,7 @@ public class SpecialEffect {
 	public double a10040(Player player) {
 		ItemStack item = player.getInventory().getItemInOffHand();
 		int total = 0;
-		if(item.getType() == Material.POLISHED_GRANITE_STAIRS) {
+		if(item.getType() == Material.DIAMOND_AXE) {
 			String[] ary = item.getItemMeta().getLocalizedName().split(",");
 			try {
 				if(ary[5].equals("40")) {
@@ -738,7 +738,7 @@ public class SpecialEffect {
 	public int a10050(Player player) {
 		ItemStack item = player.getInventory().getItemInOffHand();
 		int total = 0;
-		if(item.getType() == Material.POLISHED_GRANITE_STAIRS) {
+		if(item.getType() == Material.DIAMOND_AXE) {
 			String[] ary = item.getItemMeta().getLocalizedName().split(",");
 			try {
 				if(ary[5].equals("50")) {
@@ -844,7 +844,7 @@ public class SpecialEffect {
 	public int a10060(Player player) {
 		ItemStack item = player.getInventory().getItemInOffHand();
 		int total = 0;
-		if(item.getType() == Material.POLISHED_GRANITE_STAIRS) {
+		if(item.getType() == Material.DIAMOND_AXE) {
 			String[] ary = item.getItemMeta().getLocalizedName().split(",");
 			try {
 				if(ary[5].equals("60")) {
@@ -949,200 +949,320 @@ public class SpecialEffect {
 	// 근접 공격 시 독 데미지
 	public int a10070(Player player) {
 		ItemStack item = player.getInventory().getItemInOffHand();
-		int total = 0;
-		if(item.getType() == Material.POLISHED_GRANITE_STAIRS) {
+		int max = 0;
+		if(item.getType() == Material.DIAMOND_AXE) {
 			String[] ary = item.getItemMeta().getLocalizedName().split(",");
 			try {
 				if(ary[5].equals("70")) {
-					total += 8;
+					if(max <= 8) {
+						max = 8;
+					}
 				} else if(ary[5].equals("71")) {
-					total += 9;
+					if(max <= 9) {
+						max = 9;
+					}
 				} else if(ary[5].equals("72")) {
-					total += 10;
+					if(max <= 10) {
+						max = 10;
+					}
 				} else if(ary[5].equals("73")) {
-					total += 11;
+					if(max <= 11) {
+						max = 11;
+					}
 				} else if(ary[5].equals("74")) {
-					total += 12;
+					if(max <= 12) {
+						max = 12;
+					}
 				} else if(ary[5].equals("75")) {
-					total += 13;
+					if(max <= 13) {
+						max = 13;
+					}
 				}
 			} catch(Exception e) {
 				
 			}
 			try {
 				if(ary[6].equals("70")) {
-					total += 8;
+					if(max <= 8) {
+						max = 8;
+					}
 				} else if(ary[6].equals("71")) {
-					total += 9;
+					if(max <= 9) {
+						max = 9;
+					}
 				} else if(ary[6].equals("72")) {
-					total += 10;
+					if(max <= 10) {
+						max = 10;
+					}
 				} else if(ary[6].equals("73")) {
-					total += 11;
+					if(max <= 11) {
+						max = 11;
+					}
 				} else if(ary[6].equals("74")) {
-					total += 12;
+					if(max <= 12) {
+						max = 12;
+					}
 				} else if(ary[6].equals("75")) {
-					total += 13;
+					if(max <= 13) {
+						max = 13;
+					}
 				}
 			} catch(Exception e) {
 				
 			}
 			try {
 				if(ary[7].equals("70")) {
-					total += 8;
+					if(max <= 8) {
+						max = 8;
+					}
 				} else if(ary[7].equals("71")) {
-					total += 9;
+					if(max <= 9) {
+						max = 9;
+					}
 				} else if(ary[7].equals("72")) {
-					total += 10;
+					if(max <= 10) {
+						max = 10;
+					}
 				} else if(ary[7].equals("73")) {
-					total += 11;
+					if(max <= 11) {
+						max = 11;
+					}
 				} else if(ary[7].equals("74")) {
-					total += 12;
+					if(max <= 12) {
+						max = 12;
+					}
 				} else if(ary[7].equals("75")) {
-					total += 13;
+					if(max <= 13) {
+						max = 13;
+					}
 				}
 			} catch(Exception e) {
 				
 			}
 			try {
 				if(ary[8].equals("70")) {
-					total += 8;
+					if(max <= 8) {
+						max = 8;
+					}
 				} else if(ary[8].equals("71")) {
-					total += 9;
+					if(max <= 9) {
+						max = 9;
+					}
 				} else if(ary[8].equals("72")) {
-					total += 10;
+					if(max <= 10) {
+						max = 10;
+					}
 				} else if(ary[8].equals("73")) {
-					total += 11;
+					if(max <= 11) {
+						max = 11;
+					}
 				} else if(ary[8].equals("74")) {
-					total += 12;
+					if(max <= 12) {
+						max = 12;
+					}
 				} else if(ary[8].equals("75")) {
-					total += 13;
+					if(max <= 13) {
+						max = 13;
+					}
 				}
 			} catch(Exception e) {
 				
 			}
 			try {
 				if(ary[9].equals("70")) {
-					total += 8;
+					if(max <= 8) {
+						max = 8;
+					}
 				} else if(ary[9].equals("71")) {
-					total += 9;
+					if(max <= 9) {
+						max = 9;
+					}
 				} else if(ary[9].equals("72")) {
-					total += 10;
+					if(max <= 10) {
+						max = 10;
+					}
 				} else if(ary[9].equals("73")) {
-					total += 11;
+					if(max <= 11) {
+						max = 11;
+					}
 				} else if(ary[9].equals("74")) {
-					total += 12;
+					if(max <= 12) {
+						max = 12;
+					}
 				} else if(ary[9].equals("75")) {
-					total += 13;
+					if(max <= 13) {
+						max = 13;
+					}
 				}
 			} catch(Exception e) {
 				
 			}
-			return total;
+			return max;
 		}
-		return total;
+		return max;
 	}
 	
 	// 원거리 공격 시 독 데미지
 	public int a10080(Player player) {
 		ItemStack item = player.getInventory().getItemInOffHand();
-		int total = 0;
-		if(item.getType() == Material.POLISHED_GRANITE_STAIRS) {
+		int max = 0;
+		if(item.getType() == Material.DIAMOND_AXE) {
 			String[] ary = item.getItemMeta().getLocalizedName().split(",");
 			try {
 				if(ary[5].equals("80")) {
-					total += 8;
+					if(max <= 8) {
+						max = 8;
+					}
 				} else if(ary[5].equals("81")) {
-					total += 9;
+					if(max <= 9) {
+						max = 9;
+					}
 				} else if(ary[5].equals("82")) {
-					total += 10;
+					if(max <= 10) {
+						max = 10;
+					}
 				} else if(ary[5].equals("83")) {
-					total += 11;
+					if(max <= 11) {
+						max = 11;
+					}
 				} else if(ary[5].equals("84")) {
-					total += 12;
+					if(max <= 12) {
+						max = 12;
+					}
 				} else if(ary[5].equals("85")) {
-					total += 13;
+					if(max <= 13) {
+						max = 13;
+					}
 				}
 			} catch(Exception e) {
 				
 			}
 			try {
 				if(ary[6].equals("80")) {
-					total += 8;
+					if(max <= 8) {
+						max = 8;
+					}
 				} else if(ary[6].equals("81")) {
-					total += 9;
+					if(max <= 9) {
+						max = 9;
+					}
 				} else if(ary[6].equals("82")) {
-					total += 10;
+					if(max <= 10) {
+						max = 10;
+					}
 				} else if(ary[6].equals("83")) {
-					total += 11;
+					if(max <= 11) {
+						max = 11;
+					}
 				} else if(ary[6].equals("84")) {
-					total += 12;
+					if(max <= 12) {
+						max = 12;
+					}
 				} else if(ary[6].equals("85")) {
-					total += 13;
+					if(max <= 13) {
+						max = 13;
+					}
 				}
 			} catch(Exception e) {
 				
 			}
 			try {
 				if(ary[7].equals("80")) {
-					total += 8;
+					if(max <= 8) {
+						max = 8;
+					}
 				} else if(ary[7].equals("81")) {
-					total += 9;
+					if(max <= 9) {
+						max = 9;
+					}
 				} else if(ary[7].equals("82")) {
-					total += 10;
+					if(max <= 10) {
+						max = 10;
+					}
 				} else if(ary[7].equals("83")) {
-					total += 11;
+					if(max <= 11) {
+						max = 11;
+					}
 				} else if(ary[7].equals("84")) {
-					total += 12;
+					if(max <= 12) {
+						max = 12;
+					}
 				} else if(ary[7].equals("85")) {
-					total += 13;
+					if(max <= 13) {
+						max = 13;
+					}
 				}
 			} catch(Exception e) {
 				
 			}
 			try {
 				if(ary[8].equals("80")) {
-					total += 8;
+					if(max <= 8) {
+						max = 8;
+					}
 				} else if(ary[8].equals("81")) {
-					total += 9;
+					if(max <= 9) {
+						max = 9;
+					}
 				} else if(ary[8].equals("82")) {
-					total += 10;
+					if(max <= 10) {
+						max = 10;
+					}
 				} else if(ary[8].equals("83")) {
-					total += 11;
+					if(max <= 11) {
+						max = 11;
+					}
 				} else if(ary[8].equals("84")) {
-					total += 12;
+					if(max <= 12) {
+						max = 12;
+					}
 				} else if(ary[8].equals("85")) {
-					total += 13;
+					if(max <= 13) {
+						max = 13;
+					}
 				}
 			} catch(Exception e) {
 				
 			}
 			try {
 				if(ary[9].equals("80")) {
-					total += 8;
+					if(max <= 8) {
+						max = 8;
+					}
 				} else if(ary[9].equals("81")) {
-					total += 9;
+					if(max <= 9) {
+						max = 9;
+					}
 				} else if(ary[9].equals("82")) {
-					total += 10;
+					if(max <= 10) {
+						max = 10;
+					}
 				} else if(ary[9].equals("83")) {
-					total += 11;
+					if(max <= 11) {
+						max = 11;
+					}
 				} else if(ary[9].equals("84")) {
-					total += 12;
+					if(max <= 12) {
+						max = 12;
+					}
 				} else if(ary[9].equals("85")) {
-					total += 13;
+					if(max <= 13) {
+						max = 13;
+					}
 				}
 			} catch(Exception e) {
 				
 			}
-			return total;
+			return max;
 		}
-		return total;
+		return max;
 	}
 	
 	// 근접 공격 시 n% 확률로 10% 회복
 	public int a10090(Player player) {
 		ItemStack item = player.getInventory().getItemInOffHand();
 		int total = 0;
-		if(item.getType() == Material.POLISHED_GRANITE_STAIRS) {
+		if(item.getType() == Material.DIAMOND_AXE) {
 			String[] ary = item.getItemMeta().getLocalizedName().split(",");
 			try {
 				if(ary[5].equals("90")) {
@@ -1248,7 +1368,7 @@ public class SpecialEffect {
 	public int a10100(Player player) {
 		ItemStack item = player.getInventory().getItemInOffHand();
 		int total = 0;
-		if(item.getType() == Material.POLISHED_GRANITE_STAIRS) {
+		if(item.getType() == Material.DIAMOND_AXE) {
 			String[] ary = item.getItemMeta().getLocalizedName().split(",");
 			try {
 				if(ary[5].equals("100")) {
@@ -1354,7 +1474,7 @@ public class SpecialEffect {
 	public int a10110(Player player) {
 		ItemStack item = player.getInventory().getItemInOffHand();
 		int total = 0;
-		if(item.getType() == Material.POLISHED_GRANITE_STAIRS) {
+		if(item.getType() == Material.DIAMOND_AXE) {
 			String[] ary = item.getItemMeta().getLocalizedName().split(",");
 			try {
 				if(ary[5].equals("110")) {
@@ -1490,7 +1610,7 @@ public class SpecialEffect {
 	public int a10120(Player player) {
 		ItemStack item = player.getInventory().getItemInOffHand();
 		int total = 0;
-		if(item.getType() == Material.POLISHED_GRANITE_STAIRS) {
+		if(item.getType() == Material.DIAMOND_AXE) {
 			String[] ary = item.getItemMeta().getLocalizedName().split(",");
 			try {
 				if(ary[5].equals("120")) {
@@ -1575,80 +1695,312 @@ public class SpecialEffect {
 	// 화살 장전 속도 감소
 	public int a10130(Player player) {
 		ItemStack item = player.getInventory().getItemInOffHand();
-		int total = 0;
-		if(item.getType() == Material.POLISHED_GRANITE_STAIRS) {
+		int max = 0;
+		if(item.getType() == Material.DIAMOND_AXE) {
 			String[] ary = item.getItemMeta().getLocalizedName().split(",");
 			try {
 				if(ary[5].equals("130")) {
-					total += 1;
+					if(max <= 1) {
+						max = 1;
+					}
 				} else if(ary[5].equals("131")) {
-					total += 2;
+					if(max <= 2) {
+						max = 2;
+					}
 				} else if(ary[5].equals("132")) {
-					total += 3;
+					if(max <= 3) {
+						max = 3;
+					}
 				} else if(ary[5].equals("133")) {
-					total += 4;
+					if(max <= 4) {
+						max = 4;
+					}
 				} else if(ary[5].equals("134")) {
-					total += 5;
+					if(max <= 5) {
+						max = 5;
+					}
 				}
 			} catch(Exception e) {
 				
 			}
 			try {
 				if(ary[6].equals("130")) {
-					total += 1;
+					if(max <= 1) {
+						max = 1;
+					}
 				} else if(ary[6].equals("131")) {
-					total += 2;
+					if(max <= 2) {
+						max = 2;
+					}
 				} else if(ary[6].equals("132")) {
-					total += 3;
+					if(max <= 3) {
+						max = 3;
+					}
 				} else if(ary[6].equals("133")) {
-					total += 4;
+					if(max <= 4) {
+						max = 4;
+					}
 				} else if(ary[6].equals("134")) {
-					total += 5;
+					if(max <= 5) {
+						max = 5;
+					}
 				}
 			} catch(Exception e) {
 				
 			}
 			try {
 				if(ary[7].equals("130")) {
-					total += 1;
+					if(max <= 1) {
+						max = 1;
+					}
 				} else if(ary[7].equals("131")) {
-					total += 2;
+					if(max <= 2) {
+						max = 2;
+					}
 				} else if(ary[7].equals("132")) {
-					total += 3;
+					if(max <= 3) {
+						max = 3;
+					}
 				} else if(ary[7].equals("133")) {
-					total += 4;
+					if(max <= 4) {
+						max = 4;
+					}
 				} else if(ary[7].equals("134")) {
-					total += 5;
+					if(max <= 5) {
+						max = 5;
+					}
 				}
 			} catch(Exception e) {
 				
 			}
 			try {
 				if(ary[8].equals("130")) {
-					total += 1;
+					if(max <= 1) {
+						max = 1;
+					}
 				} else if(ary[8].equals("131")) {
-					total += 2;
+					if(max <= 2) {
+						max = 2;
+					}
 				} else if(ary[8].equals("132")) {
-					total += 3;
+					if(max <= 3) {
+						max = 3;
+					}
 				} else if(ary[8].equals("133")) {
-					total += 4;
+					if(max <= 4) {
+						max = 4;
+					}
 				} else if(ary[8].equals("134")) {
-					total += 5;
+					if(max <= 5) {
+						max = 5;
+					}
 				}
 			} catch(Exception e) {
 				
 			}
 			try {
 				if(ary[9].equals("130")) {
-					total += 1;
+					if(max <= 1) {
+						max = 1;
+					}
 				} else if(ary[9].equals("131")) {
-					total += 2;
+					if(max <= 2) {
+						max = 2;
+					}
 				} else if(ary[9].equals("132")) {
-					total += 3;
+					if(max <= 3) {
+						max = 3;
+					}
 				} else if(ary[9].equals("133")) {
-					total += 4;
+					if(max <= 4) {
+						max = 4;
+					}
 				} else if(ary[9].equals("134")) {
-					total += 5;
+					if(max <= 5) {
+						max = 5;
+					}
+				}
+			} catch(Exception e) {
+				
+			}
+			return max;
+		}
+		return max;
+	}
+	
+	// 확산 화살
+	public int a10140(Player player) {
+		ItemStack item = player.getInventory().getItemInOffHand();
+		int max = 0;
+		if(item.getType() == Material.DIAMOND_AXE) {
+			String[] ary = item.getItemMeta().getLocalizedName().split(",");
+			try {
+				if(ary[5].equals("140")) {
+					if(max <= 1) {
+						max = 1;
+					}
+				} else if(ary[5].equals("141")) {
+					if(max <= 2) {
+						max = 2;
+					}
+				} else if(ary[5].equals("142")) {
+					if(max <= 3) {
+						max = 3;
+					}
+				}
+			} catch(Exception e) {
+				
+			}
+			try {
+				if(ary[6].equals("140")) {
+					if(max <= 1) {
+						max = 1;
+					}
+				} else if(ary[6].equals("141")) {
+					if(max <= 2) {
+						max = 2;
+					}
+				} else if(ary[6].equals("142")) {
+					if(max <= 3) {
+						max = 3;
+					}
+				}
+			} catch(Exception e) {
+				
+			}
+			try {
+				if(ary[7].equals("140")) {
+					if(max <= 1) {
+						max = 1;
+					}
+				} else if(ary[7].equals("141")) {
+					if(max <= 2) {
+						max = 2;
+					}
+				} else if(ary[7].equals("142")) {
+					if(max <= 3) {
+						max = 3;
+					}
+				}
+			} catch(Exception e) {
+				
+			}
+			try {
+				if(ary[8].equals("140")) {
+					if(max <= 1) {
+						max = 1;
+					}
+				} else if(ary[8].equals("141")) {
+					if(max <= 2) {
+						max = 2;
+					}
+				} else if(ary[8].equals("142")) {
+					if(max <= 3) {
+						max = 3;
+					}
+				}
+			} catch(Exception e) {
+				
+			}
+			try {
+				if(ary[9].equals("140")) {
+					if(max <= 1) {
+						max = 1;
+					}
+				} else if(ary[9].equals("141")) {
+					if(max <= 2) {
+						max = 2;
+					}
+				} else if(ary[9].equals("142")) {
+					if(max <= 3) {
+						max = 3;
+					}
+				}
+			} catch(Exception e) {
+				
+			}
+			return max;
+		}
+		return max;
+	}
+
+	// 독 데미지 경감
+	public int a10150(Player player) {
+		ItemStack item = player.getInventory().getItemInOffHand();
+		int total = 0;
+		if(item.getType() == Material.DIAMOND_AXE) {
+			String[] ary = item.getItemMeta().getLocalizedName().split(",");
+			try {
+				if(ary[5].equals("150")) {
+					total += 10;
+				} else if(ary[5].equals("151")) {
+					total += 20;
+				} else if(ary[5].equals("152")) {
+					total += 30;
+				} else if(ary[5].equals("153")) {
+					total += 40;
+				} else if(ary[5].equals("154")) {
+					total += 50;
+				}
+			} catch(Exception e) {
+				
+			}
+			try {
+				if(ary[6].equals("150")) {
+					total += 10;
+				} else if(ary[6].equals("151")) {
+					total += 20;
+				} else if(ary[6].equals("152")) {
+					total += 30;
+				} else if(ary[6].equals("153")) {
+					total += 40;
+				} else if(ary[6].equals("154")) {
+					total += 50;
+				}
+			} catch(Exception e) {
+				
+			}
+			try {
+				if(ary[7].equals("150")) {
+					total += 10;
+				} else if(ary[7].equals("151")) {
+					total += 20;
+				} else if(ary[7].equals("152")) {
+					total += 30;
+				} else if(ary[7].equals("153")) {
+					total += 40;
+				} else if(ary[7].equals("154")) {
+					total += 50;
+				}
+			} catch(Exception e) {
+				
+			}
+			try {
+				if(ary[8].equals("150")) {
+					total += 10;
+				} else if(ary[8].equals("151")) {
+					total += 20;
+				} else if(ary[8].equals("152")) {
+					total += 30;
+				} else if(ary[8].equals("153")) {
+					total += 40;
+				} else if(ary[8].equals("154")) {
+					total += 50;
+				}
+			} catch(Exception e) {
+				
+			}
+			try {
+				if(ary[9].equals("150")) {
+					total += 10;
+				} else if(ary[9].equals("151")) {
+					total += 20;
+				} else if(ary[9].equals("152")) {
+					total += 30;
+				} else if(ary[9].equals("153")) {
+					total += 40;
+				} else if(ary[9].equals("154")) {
+					total += 50;
 				}
 			} catch(Exception e) {
 				
@@ -1656,6 +2008,228 @@ public class SpecialEffect {
 			return total;
 		}
 		return total;
+	}
+
+	// 위더 데미지 경감
+	public int a10160(Player player) {
+		ItemStack item = player.getInventory().getItemInOffHand();
+		int total = 0;
+		if(item.getType() == Material.DIAMOND_AXE) {
+			String[] ary = item.getItemMeta().getLocalizedName().split(",");
+			try {
+				if(ary[5].equals("160")) {
+					total += 10;
+				} else if(ary[5].equals("161")) {
+					total += 20;
+				} else if(ary[5].equals("162")) {
+					total += 30;
+				} else if(ary[5].equals("163")) {
+					total += 40;
+				} else if(ary[5].equals("164")) {
+					total += 50;
+				}
+			} catch(Exception e) {
+				
+			}
+			try {
+				if(ary[6].equals("160")) {
+					total += 10;
+				} else if(ary[6].equals("161")) {
+					total += 20;
+				} else if(ary[6].equals("162")) {
+					total += 30;
+				} else if(ary[6].equals("163")) {
+					total += 40;
+				} else if(ary[6].equals("164")) {
+					total += 50;
+				}
+			} catch(Exception e) {
+				
+			}
+			try {
+				if(ary[7].equals("160")) {
+					total += 10;
+				} else if(ary[7].equals("161")) {
+					total += 20;
+				} else if(ary[7].equals("162")) {
+					total += 30;
+				} else if(ary[7].equals("163")) {
+					total += 40;
+				} else if(ary[7].equals("164")) {
+					total += 50;
+				}
+			} catch(Exception e) {
+				
+			}
+			try {
+				if(ary[8].equals("160")) {
+					total += 10;
+				} else if(ary[8].equals("161")) {
+					total += 20;
+				} else if(ary[8].equals("162")) {
+					total += 30;
+				} else if(ary[8].equals("163")) {
+					total += 40;
+				} else if(ary[8].equals("164")) {
+					total += 50;
+				}
+			} catch(Exception e) {
+				
+			}
+			try {
+				if(ary[9].equals("160")) {
+					total += 10;
+				} else if(ary[9].equals("161")) {
+					total += 20;
+				} else if(ary[9].equals("162")) {
+					total += 30;
+				} else if(ary[9].equals("163")) {
+					total += 40;
+				} else if(ary[9].equals("164")) {
+					total += 50;
+				}
+			} catch(Exception e) {
+				
+			}
+			return total;
+		}
+		return total;
+	}
+	
+	// 탄환 장전 속도 감소
+	public int a10180(Player player) {
+		ItemStack item = player.getInventory().getItemInOffHand();
+		int max = 0;
+		if(item.getType() == Material.DIAMOND_AXE) {
+			String[] ary = item.getItemMeta().getLocalizedName().split(",");
+			try {
+				if(ary[5].equals("180")) {
+					if(max <= 1) {
+						max = 1;
+					}
+				} else if(ary[5].equals("181")) {
+					if(max <= 2) {
+						max = 2;
+					}
+				} else if(ary[5].equals("182")) {
+					if(max <= 3) {
+						max = 3;
+					}
+				} else if(ary[5].equals("183")) {
+					if(max <= 4) {
+						max = 4;
+					}
+				} else if(ary[5].equals("184")) {
+					if(max <= 5) {
+						max = 5;
+					}
+				}
+			} catch(Exception e) {
+				
+			}
+			try {
+				if(ary[6].equals("180")) {
+					if(max <= 1) {
+						max = 1;
+					}
+				} else if(ary[6].equals("181")) {
+					if(max <= 2) {
+						max = 2;
+					}
+				} else if(ary[6].equals("182")) {
+					if(max <= 3) {
+						max = 3;
+					}
+				} else if(ary[6].equals("183")) {
+					if(max <= 4) {
+						max = 4;
+					}
+				} else if(ary[6].equals("184")) {
+					if(max <= 5) {
+						max = 5;
+					}
+				}
+			} catch(Exception e) {
+				
+			}
+			try {
+				if(ary[7].equals("180")) {
+					if(max <= 1) {
+						max = 1;
+					}
+				} else if(ary[7].equals("181")) {
+					if(max <= 2) {
+						max = 2;
+					}
+				} else if(ary[7].equals("182")) {
+					if(max <= 3) {
+						max = 3;
+					}
+				} else if(ary[7].equals("183")) {
+					if(max <= 4) {
+						max = 4;
+					}
+				} else if(ary[7].equals("184")) {
+					if(max <= 5) {
+						max = 5;
+					}
+				}
+			} catch(Exception e) {
+				
+			}
+			try {
+				if(ary[8].equals("180")) {
+					if(max <= 1) {
+						max = 1;
+					}
+				} else if(ary[8].equals("181")) {
+					if(max <= 2) {
+						max = 2;
+					}
+				} else if(ary[8].equals("182")) {
+					if(max <= 3) {
+						max = 3;
+					}
+				} else if(ary[8].equals("183")) {
+					if(max <= 4) {
+						max = 4;
+					}
+				} else if(ary[8].equals("184")) {
+					if(max <= 5) {
+						max = 5;
+					}
+				}
+			} catch(Exception e) {
+				
+			}
+			try {
+				if(ary[9].equals("180")) {
+					if(max <= 1) {
+						max = 1;
+					}
+				} else if(ary[9].equals("181")) {
+					if(max <= 2) {
+						max = 2;
+					}
+				} else if(ary[9].equals("182")) {
+					if(max <= 3) {
+						max = 3;
+					}
+				} else if(ary[9].equals("183")) {
+					if(max <= 4) {
+						max = 4;
+					}
+				} else if(ary[9].equals("184")) {
+					if(max <= 5) {
+						max = 5;
+					}
+				}
+			} catch(Exception e) {
+				
+			}
+			return max;
+		}
+		return max;
 	}
 	
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -40,6 +40,7 @@ public class ExpSystemByMob {
 		}
 		
 		int percent = 0;
+		percent += new SpecialEffect().a10010(player);
 		percent += new SpecialEffect().b1(player);
 		percent += new SpecialEffect().a8(player);
 		percent += new SpecialEffect().h1(player);
@@ -119,6 +120,7 @@ public class ExpSystemByMob {
 		}
 		
 		int percent = 0;
+		percent += new SpecialEffect().a10010(player);
 		percent += new SpecialEffect().b1(player);
 		percent += new SpecialEffect().a8(player);
 		percent += new SpecialEffect().h1(player);

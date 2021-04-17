@@ -94,6 +94,7 @@ public class SweepingCal {
 									// 독뎀
 									int poison = 0;
 									ArrayList<Integer> ary = new ArrayList<>(); 
+									ary.add(new SpecialEffect().a10070(player));
 									ary.add(new SpecialEffect().a10(player));
 									ary.add(new SpecialEffect().s2(player));
 									ary.add(new SpecialEffect().a16(player));

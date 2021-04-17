@@ -5350,6 +5350,7 @@ public class Main extends JavaPlugin implements Listener{
 				//===========================================================================
 				// 타격 시 확률적 마나 증가
 				int num = 0;
+				num += new SpecialEffect().a10050(player);
 				num += new SpecialEffect().a1(player);
 				num += new SpecialEffect().a9(player);
 				num += new SpecialEffect().a15(player);
@@ -5380,6 +5381,7 @@ public class Main extends JavaPlugin implements Listener{
 				//===========================================================================
 				// 흡혈
 				double addHealthPercent = 0;
+				addHealthPercent += new SpecialEffect().a10040(player);
 				addHealthPercent += new SpecialEffect().c1(player);
 				addHealthPercent += new SpecialEffect().a13(player);
 				addHealthPercent += new SpecialEffect().w1(player);
@@ -5400,6 +5402,7 @@ public class Main extends JavaPlugin implements Listener{
 				// 독뎀
 				int poison = 0;
 				ArrayList<Integer> ary = new ArrayList<>(); 
+				ary.add(new SpecialEffect().a10070(player));
 				ary.add(new SpecialEffect().a10(player));
 				ary.add(new SpecialEffect().s2(player));
 				ary.add(new SpecialEffect().a16(player));
@@ -5419,6 +5422,7 @@ public class Main extends JavaPlugin implements Listener{
 				//===========================================================================
 				// 회복
 				int percent10 = 0;
+				percent10 += new SpecialEffect().a10090(player);
 				percent10 += new SpecialEffect().a11(player);
 				percent10 += new SpecialEffect().b3(player);
 				percent10 += new SpecialEffect().a21(player);
@@ -5443,8 +5447,34 @@ public class Main extends JavaPlugin implements Listener{
 				Entity entity = (Entity) event.getEntity();
 				Player player = ((Player)((Arrow) event.getDamager()).getShooter());
 				//===========================================================================
+				// 타격 시 확률적 마나 증가
+				int num = 0;
+				num += new SpecialEffect().a10060(player);
+				
+				if(rnd.nextInt(100) < num) {
+					ItemStack mana = new ItemStack(Material.HEART_OF_THE_SEA);
+					ItemMeta manaIm = mana.getItemMeta();
+					manaIm.setDisplayName(ChatColor.BLUE + "마나");
+					mana.setItemMeta(manaIm);
+					if (player.getInventory().contains(Material.HEART_OF_THE_SEA)) {
+						int i = 0;
+						for (ItemStack is : player.getInventory().getContents()) {
+							if (is == null)
+								continue;
+							if (is.getType() == Material.HEART_OF_THE_SEA) {
+								i = i + is.getAmount();
+							}
+						}
+						if (i < 20)
+							player.getInventory().addItem(mana);
+					} else {
+						player.getInventory().setItem(8, mana);
+					}
+				}
+				//===========================================================================
 				// 흡혈
 				int addHealthPercent = 0;
+				addHealthPercent += new SpecialEffect().a10040(player);
 				addHealthPercent += new SpecialEffect().c1(player);
 				addHealthPercent += new SpecialEffect().a13(player);
 				addHealthPercent += new SpecialEffect().w1(player);
@@ -5463,6 +5493,7 @@ public class Main extends JavaPlugin implements Listener{
 				// 독뎀
 				int poison = 0;
 				ArrayList<Integer> ary = new ArrayList<>(); 
+				ary.add(new SpecialEffect().a10080(player));
 				ary.add(new SpecialEffect().h2(player));
 				ary.add(new SpecialEffect().a17(player));
 				Collections.sort(ary);
@@ -5481,6 +5512,7 @@ public class Main extends JavaPlugin implements Listener{
 				//===========================================================================
 				// 회복
 				int percent10 = 0;
+				percent10 += new SpecialEffect().a10100(player);
 				percent10 += new SpecialEffect().a22(player);
 				
 				if(rnd.nextInt(100) < percent10) {
@@ -5503,8 +5535,34 @@ public class Main extends JavaPlugin implements Listener{
 				Entity entity = (Entity) event.getEntity();
 				Player player = ((Player)((SmallFireball) event.getDamager()).getShooter());
 				//===========================================================================
+				// 타격 시 확률적 마나 증가
+				int num = 0;
+				num += new SpecialEffect().a10060(player);
+				
+				if(rnd.nextInt(100) < num) {
+					ItemStack mana = new ItemStack(Material.HEART_OF_THE_SEA);
+					ItemMeta manaIm = mana.getItemMeta();
+					manaIm.setDisplayName(ChatColor.BLUE + "마나");
+					mana.setItemMeta(manaIm);
+					if (player.getInventory().contains(Material.HEART_OF_THE_SEA)) {
+						int i = 0;
+						for (ItemStack is : player.getInventory().getContents()) {
+							if (is == null)
+								continue;
+							if (is.getType() == Material.HEART_OF_THE_SEA) {
+								i = i + is.getAmount();
+							}
+						}
+						if (i < 20)
+							player.getInventory().addItem(mana);
+					} else {
+						player.getInventory().setItem(8, mana);
+					}
+				}
+				//===========================================================================
 				// 흡혈
 				int addHealthPercent = 0;
+				addHealthPercent += new SpecialEffect().a10040(player);
 				addHealthPercent += new SpecialEffect().c1(player);
 				addHealthPercent += new SpecialEffect().a13(player);
 				addHealthPercent += new SpecialEffect().w1(player);
@@ -5522,7 +5580,8 @@ public class Main extends JavaPlugin implements Listener{
 				//===========================================================================
 				// 독뎀
 				int poison = 0;
-				ArrayList<Integer> ary = new ArrayList<>(); 
+				ArrayList<Integer> ary = new ArrayList<>();
+				ary.add(new SpecialEffect().a10080(player));
 				ary.add(new SpecialEffect().h2(player));
 				ary.add(new SpecialEffect().a17(player));
 				Collections.sort(ary);
@@ -5541,6 +5600,7 @@ public class Main extends JavaPlugin implements Listener{
 				//===========================================================================
 				// 회복
 				int percent10 = 0;
+				percent10 += new SpecialEffect().a10100(player);
 				percent10 += new SpecialEffect().a22(player);
 				
 				if(rnd.nextInt(100) < percent10) {
@@ -5701,6 +5761,7 @@ public class Main extends JavaPlugin implements Listener{
 			if (event.getEntity() instanceof Player) {
 				Player player = (Player) event.getEntity();
 				int num = 0;
+				num += new SpecialEffect().a10020(player);
 				num += new SpecialEffect().a7(player);
 				num += new SpecialEffect().l1(player);
 				num += new SpecialEffect().b2(player);
