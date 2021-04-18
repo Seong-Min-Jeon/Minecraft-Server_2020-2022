@@ -304,6 +304,142 @@ public class ArrowEffect {
 					
 					player.getWorld().spawnParticle(Particle.FIREWORKS_SPARK, loc.add(0,1,0), 0);			
 					world.playSound(player.getLocation(), Sound.ENTITY_ARROW_SHOOT, 1.0f, 1.0f);
+				} else if(numStat == 2) {
+					
+					Location normal = player.getEyeLocation();
+					
+					double arrowAngle1 = 75;
+			        double totalAngle1 = normal.getYaw() + arrowAngle1;
+			        double arrowDirX1 = Math.cos(Math.toRadians(totalAngle1));
+			        double arrowDirZ1 = Math.sin(Math.toRadians(totalAngle1));
+			        Vector arrowDir1 = new Vector(arrowDirX1, normal.getDirection().getY(), arrowDirZ1).multiply(3.0f);
+					Arrow arrow1 = player.launchProjectile(Arrow.class, arrowDir1);
+					arrow1.setShooter(player);
+					SpectralArrow sarrow1 = (SpectralArrow) arrow1.getWorld().spawnEntity(normal, EntityType.SPECTRAL_ARROW);
+					sarrow1.setVelocity(arrowDir1);
+					
+					Arrow arrow2 = player.launchProjectile(Arrow.class);
+					arrow2.setShooter(player);
+					arrow2.setVelocity(normal.getDirection().multiply(3.0f));
+					SpectralArrow sarrow2 = (SpectralArrow) arrow2.getWorld().spawnEntity(normal, EntityType.SPECTRAL_ARROW);
+					sarrow2.setVelocity(arrow2.getVelocity());
+					
+					double arrowAngle3 = 105;
+			        double totalAngle3 = normal.getYaw() + arrowAngle3;
+			        double arrowDirX3 = Math.cos(Math.toRadians(totalAngle3));
+			        double arrowDirZ3 = Math.sin(Math.toRadians(totalAngle3));
+			        Vector arrowDir3 = new Vector(arrowDirX3, normal.getDirection().getY(), arrowDirZ3).multiply(3.0f);
+					Arrow arrow3 = player.launchProjectile(Arrow.class, arrowDir3);
+					arrow3.setShooter(player);
+					SpectralArrow sarrow3 = (SpectralArrow) arrow3.getWorld().spawnEntity(normal, EntityType.SPECTRAL_ARROW);
+					sarrow3.setVelocity(arrowDir3);
+					
+					double arrowAngle4 = 82.5;
+			        double totalAngle4 = normal.getYaw() + arrowAngle4;
+			        double arrowDirX4 = Math.cos(Math.toRadians(totalAngle4));
+			        double arrowDirZ4 = Math.sin(Math.toRadians(totalAngle4));
+			        Vector arrowDir4 = new Vector(arrowDirX4, normal.getDirection().getY(), arrowDirZ4).multiply(3.0f);
+					Arrow arrow4 = player.launchProjectile(Arrow.class, arrowDir4);
+					arrow4.setShooter(player);
+					SpectralArrow sarrow4 = (SpectralArrow) arrow4.getWorld().spawnEntity(normal, EntityType.SPECTRAL_ARROW);
+					sarrow4.setVelocity(arrowDir4);
+					
+					double arrowAngle5 = 97.5;
+			        double totalAngle5 = normal.getYaw() + arrowAngle5;
+			        double arrowDirX5 = Math.cos(Math.toRadians(totalAngle5));
+			        double arrowDirZ5 = Math.sin(Math.toRadians(totalAngle5));
+			        Vector arrowDir5 = new Vector(arrowDirX5, normal.getDirection().getY(), arrowDirZ5).multiply(3.0f);
+					Arrow arrow5 = player.launchProjectile(Arrow.class, arrowDir5);
+					arrow5.setShooter(player);
+					SpectralArrow sarrow5 = (SpectralArrow) arrow5.getWorld().spawnEntity(normal, EntityType.SPECTRAL_ARROW);
+					sarrow5.setVelocity(arrowDir5);
+					
+					player.getWorld().spawnParticle(Particle.FIREWORKS_SPARK, loc.add(0,1,0), 0);			
+					world.playSound(player.getLocation(), Sound.ENTITY_ARROW_SHOOT, 1.0f, 1.0f);
+				} else if(numStat == 3) {
+					
+					Location normal = player.getEyeLocation();
+					
+					double arrowAngle1 = 72;
+			        double totalAngle1 = normal.getYaw() + arrowAngle1;
+			        double arrowDirX1 = Math.cos(Math.toRadians(totalAngle1));
+			        double arrowDirZ1 = Math.sin(Math.toRadians(totalAngle1));
+			        Vector arrowDir1 = new Vector(arrowDirX1, normal.getDirection().getY(), arrowDirZ1).multiply(3.0f);
+					Arrow arrow1 = player.launchProjectile(Arrow.class, arrowDir1);
+					arrow1.setShooter(player);
+					SpectralArrow sarrow1 = (SpectralArrow) arrow1.getWorld().spawnEntity(normal, EntityType.SPECTRAL_ARROW);
+					sarrow1.setVelocity(arrowDir1);
+					
+					Arrow arrow2 = player.launchProjectile(Arrow.class);
+					arrow2.setShooter(player);
+					arrow2.setVelocity(normal.getDirection().multiply(3.0f));
+					SpectralArrow sarrow2 = (SpectralArrow) arrow2.getWorld().spawnEntity(normal, EntityType.SPECTRAL_ARROW);
+					sarrow2.setVelocity(arrow2.getVelocity());
+					
+					double arrowAngle3 = 108;
+			        double totalAngle3 = normal.getYaw() + arrowAngle3;
+			        double arrowDirX3 = Math.cos(Math.toRadians(totalAngle3));
+			        double arrowDirZ3 = Math.sin(Math.toRadians(totalAngle3));
+			        Vector arrowDir3 = new Vector(arrowDirX3, normal.getDirection().getY(), arrowDirZ3).multiply(3.0f);
+					Arrow arrow3 = player.launchProjectile(Arrow.class, arrowDir3);
+					arrow3.setShooter(player);
+					SpectralArrow sarrow3 = (SpectralArrow) arrow3.getWorld().spawnEntity(normal, EntityType.SPECTRAL_ARROW);
+					sarrow3.setVelocity(arrowDir3);
+					
+					double arrowAngle4 = 78;
+			        double totalAngle4 = normal.getYaw() + arrowAngle4;
+			        double arrowDirX4 = Math.cos(Math.toRadians(totalAngle4));
+			        double arrowDirZ4 = Math.sin(Math.toRadians(totalAngle4));
+			        Vector arrowDir4 = new Vector(arrowDirX4, normal.getDirection().getY(), arrowDirZ4).multiply(3.0f);
+					Arrow arrow4 = player.launchProjectile(Arrow.class, arrowDir4);
+					arrow4.setShooter(player);
+					SpectralArrow sarrow4 = (SpectralArrow) arrow4.getWorld().spawnEntity(normal, EntityType.SPECTRAL_ARROW);
+					sarrow4.setVelocity(arrowDir4);
+					
+					double arrowAngle5 = 102;
+			        double totalAngle5 = normal.getYaw() + arrowAngle5;
+			        double arrowDirX5 = Math.cos(Math.toRadians(totalAngle5));
+			        double arrowDirZ5 = Math.sin(Math.toRadians(totalAngle5));
+			        Vector arrowDir5 = new Vector(arrowDirX5, normal.getDirection().getY(), arrowDirZ5).multiply(3.0f);
+					Arrow arrow5 = player.launchProjectile(Arrow.class, arrowDir5);
+					arrow5.setShooter(player);
+					SpectralArrow sarrow5 = (SpectralArrow) arrow5.getWorld().spawnEntity(normal, EntityType.SPECTRAL_ARROW);
+					sarrow5.setVelocity(arrowDir5);
+					
+					player.getWorld().spawnParticle(Particle.FIREWORKS_SPARK, loc.add(0,1,0), 0);			
+					world.playSound(player.getLocation(), Sound.ENTITY_ARROW_SHOOT, 1.0f, 1.0f);
+					
+					double arrowAngle6 = 84;
+			        double totalAngle6 = normal.getYaw() + arrowAngle6;
+			        double arrowDirX6 = Math.cos(Math.toRadians(totalAngle6));
+			        double arrowDirZ6 = Math.sin(Math.toRadians(totalAngle6));
+			        Vector arrowDir6 = new Vector(arrowDirX6, normal.getDirection().getY(), arrowDirZ6).multiply(3.0f);
+					Arrow arrow6 = player.launchProjectile(Arrow.class, arrowDir6);
+					arrow6.setShooter(player);
+					SpectralArrow sarrow6 = (SpectralArrow) arrow6.getWorld().spawnEntity(normal, EntityType.SPECTRAL_ARROW);
+					sarrow6.setVelocity(arrowDir6);
+					
+					double arrowAngle7 = 96;
+			        double totalAngle7 = normal.getYaw() + arrowAngle7;
+			        double arrowDirX7 = Math.cos(Math.toRadians(totalAngle7));
+			        double arrowDirZ7 = Math.sin(Math.toRadians(totalAngle7));
+			        Vector arrowDir7 = new Vector(arrowDirX7, normal.getDirection().getY(), arrowDirZ7).multiply(3.0f);
+					Arrow arrow7 = player.launchProjectile(Arrow.class, arrowDir7);
+					arrow7.setShooter(player);
+					SpectralArrow sarrow7 = (SpectralArrow) arrow7.getWorld().spawnEntity(normal, EntityType.SPECTRAL_ARROW);
+					sarrow7.setVelocity(arrowDir7);
+					
+					player.getWorld().spawnParticle(Particle.FIREWORKS_SPARK, loc.add(0,1,0), 0);			
+					world.playSound(player.getLocation(), Sound.ENTITY_ARROW_SHOOT, 1.0f, 1.0f);
+				} else {
+					Arrow arrow = player.launchProjectile(Arrow.class);
+					arrow.setShooter(player);
+					arrow.setVelocity(player.getEyeLocation().getDirection().multiply(3.0f));
+					player.getWorld().spawnParticle(Particle.FIREWORKS_SPARK, loc.add(0,1,0), 0);			
+					world.playSound(player.getLocation(), Sound.ENTITY_ARROW_SHOOT, 1.0f, 1.0f);
+					
+					SpectralArrow sarrow = (SpectralArrow) arrow.getWorld().spawnEntity(player.getEyeLocation(), EntityType.SPECTRAL_ARROW);
+					sarrow.setVelocity(arrow.getVelocity());
 				}
 				//===========================================================================
 			}			

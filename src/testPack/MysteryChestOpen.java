@@ -3698,6 +3698,8 @@ public class MysteryChestOpen {
 			equipLore.add(ChatColor.GRAY + " ");
 			equipLore.add(ChatColor.GRAY + "Rank: 1");
 			equipLore.add(ChatColor.GRAY + " ");
+			equipLore.add(ChatColor.DARK_GRAY + "내구도: 300/300");
+			equipLore.add(ChatColor.GRAY + " ");
 			equipLore.add(ChatColor.GRAY + "아직 발견된지 얼마 안된 반지");
 			equipLore.add(ChatColor.GRAY + "회색빛의 탁한 보석안에 숨겨진 잠재력은 아무도 모른다.");
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
@@ -3718,6 +3720,8 @@ public class MysteryChestOpen {
 			equipLore.add(ChatColor.GRAY + "레벨 제한: 700");
 			equipLore.add(ChatColor.GRAY + " ");
 			equipLore.add(ChatColor.GRAY + "Rank: 2");
+			equipLore.add(ChatColor.GRAY + " ");
+			equipLore.add(ChatColor.DARK_GRAY + "내구도: 300/300");
 			equipLore.add(ChatColor.GRAY + " ");
 			equipLore.add(ChatColor.GRAY + "하얀 보석이 돋보이는 반지");
 			equipLore.add(ChatColor.GRAY + "아직 보석에 특성이 부여되지 않았다.");
@@ -3740,6 +3744,8 @@ public class MysteryChestOpen {
 			equipLore.add(ChatColor.GRAY + " ");
 			equipLore.add(ChatColor.GRAY + "Rank: 3");
 			equipLore.add(ChatColor.GRAY + " ");
+			equipLore.add(ChatColor.DARK_GRAY + "내구도: 300/300");
+			equipLore.add(ChatColor.GRAY + " ");
 			equipLore.add(ChatColor.GRAY + "황금색 보석이 비싸보이는 반지");
 			equipLore.add(ChatColor.GRAY + "에일에서 평범하게 볼 수 있는 보석이다.");
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
@@ -3760,6 +3766,8 @@ public class MysteryChestOpen {
 			equipLore.add(ChatColor.GRAY + "레벨 제한: 700");
 			equipLore.add(ChatColor.GRAY + " ");
 			equipLore.add(ChatColor.GRAY + "Rank: 4");
+			equipLore.add(ChatColor.GRAY + " ");
+			equipLore.add(ChatColor.DARK_GRAY + "내구도: 300/300");
 			equipLore.add(ChatColor.GRAY + " ");
 			equipLore.add(ChatColor.GRAY + "보라색의 매혹적인 빛이 풍기는 반지");
 			equipLore.add(ChatColor.GRAY + "포보르의 힘이 약간 첨가되었다.");
@@ -3782,6 +3790,8 @@ public class MysteryChestOpen {
 			equipLore.add(ChatColor.GRAY + " ");
 			equipLore.add(ChatColor.GRAY + "Rank: 5");
 			equipLore.add(ChatColor.GRAY + " ");
+			equipLore.add(ChatColor.DARK_GRAY + "내구도: 300/300");
+			equipLore.add(ChatColor.GRAY + " ");
 			equipLore.add(ChatColor.GRAY + "다이아몬드를 연상시키는 반지");
 			equipLore.add(ChatColor.GRAY + "포보르의 힘이 정화되어 깨끗해졌다.");
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
@@ -3803,6 +3813,8 @@ public class MysteryChestOpen {
 			equipLore.add(ChatColor.GRAY + " ");
 			equipLore.add(ChatColor.GRAY + "Rank: 6");
 			equipLore.add(ChatColor.GRAY + " ");
+			equipLore.add(ChatColor.DARK_GRAY + "내구도: 300/300");
+			equipLore.add(ChatColor.GRAY + " ");
 			equipLore.add(ChatColor.GRAY + "기나긴 살육 끝에 피 빛을 보이는 반지");
 			equipLore.add(ChatColor.GRAY + "지금까지 죽인 영혼들이 반지를 감싸고 있다.");
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
@@ -3823,6 +3835,8 @@ public class MysteryChestOpen {
 			equipLore.add(ChatColor.GRAY + "레벨 제한: 700");
 			equipLore.add(ChatColor.GRAY + " ");
 			equipLore.add(ChatColor.GRAY + "Rank: 7");
+			equipLore.add(ChatColor.GRAY + " ");
+			equipLore.add(ChatColor.DARK_GRAY + "내구도: 300/300");
 			equipLore.add(ChatColor.GRAY + " ");
 			equipLore.add(ChatColor.GRAY + "포보르 왕의 힘이 담긴 반지");
 			equipLore.add(ChatColor.GRAY + "더 강화를 하면 반지에 무리가 갈 것 같다.");

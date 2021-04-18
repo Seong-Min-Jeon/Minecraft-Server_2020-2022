@@ -16,7 +16,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 public class MetalwareToolScroll {
 
 	public void openInv(Player player, Item itemArg) {
-		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "세공 주문서")) {
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "세공 주문서")) {
 			itemArg.remove();
 			Inventory inv = Bukkit.createInventory(player, 9, "Metalware tool table");
 			ItemStack ok = new ItemStack(Material.SLIME_BALL);

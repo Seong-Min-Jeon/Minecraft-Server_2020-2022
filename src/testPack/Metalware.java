@@ -1912,8 +1912,19 @@ public class Metalware {
 			return;
 		}
 		
+		int dura = durability(is1);
+		if(is2.getItemMeta().getDisplayName().equals(ChatColor.DARK_PURPLE + "크레드네의 세공 도구")) {
+			dura++;
+		}
+		if(dura == 0) {
+			player.sendMessage("장신구의 내구도가 0입니다.");
+			inv.setItem(0, is1);
+			return;
+		}
+		
 		System.out.println(player.getDisplayName() + "님이 " + cRank + "랭크, " + cLine + "줄 장신구를 획득했다. (세공)");
-		inv.setItem(0, makeAccessory(cRank, cLine));
+		inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
+		inv.setItem(0, makeAccessory(cRank, cLine, dura));
 		player.sendMessage(ChatColor.GREEN + "장신구 세공에 성공하였습니다.");
 		player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 	}
@@ -1983,66 +1994,108 @@ public class Metalware {
 			if(pRank == 1) {
 				if(rndRank < 5) {
 					cRank = 7;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 20) {
 					cRank = 6;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 50) {
 					cRank = 5;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 100) {
 					cRank = 4;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 300) {
 					cRank = 3;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 1000) {
 					cRank = 2;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else {
 					cRank = 1;
 				}
 			} else if(pRank == 2) {
 				if(rndRank < 5) {
 					cRank = 7;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 20) {
 					cRank = 6;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 50) {
 					cRank = 5;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 150) {
 					cRank = 4;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 500) {
 					cRank = 3;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else {
 					cRank = 2;
 				}
 			} else if(pRank == 3) {
 				if(rndRank < 5) {
 					cRank = 7;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 20) {
 					cRank = 6;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 70) {
 					cRank = 5;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 300) {
 					cRank = 4;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else {
 					cRank = 3;
 				}
 			} else if(pRank == 4) {
 				if(rndRank < 5) {
 					cRank = 7;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 40) {
 					cRank = 6;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 100) {
 					cRank = 5;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else {
 					cRank = 4;
 				}
 			} else if(pRank == 5) {
 				if(rndRank < 10) {
 					cRank = 7;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 50) {
 					cRank = 6;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else {
 					cRank = 5;
 				}
 			} else if(pRank == 6) {
 				if(rndRank < 20) {
 					cRank = 7;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else {
 					cRank = 6;
 				}
@@ -2065,36 +2118,56 @@ public class Metalware {
 			if(pLine == 1) {
 				if(rndLine < 1) {
 					cLine = 5;
+					player.sendMessage(ChatColor.GREEN + "장신구의 효과 개수가 증가하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndLine < 5) {
 					cLine = 4;
+					player.sendMessage(ChatColor.GREEN + "장신구의 효과 개수가 증가하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndLine < 50) {
 					cLine = 3;
+					player.sendMessage(ChatColor.GREEN + "장신구의 효과 개수가 증가하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndLine < 200) {
 					cLine = 2;
+					player.sendMessage(ChatColor.GREEN + "장신구의 효과 개수가 증가하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else {
 					cLine = 1;
 				}
 			} else if(pLine == 2) {
 				if(rndLine < 1) {
 					cLine = 5;
+					player.sendMessage(ChatColor.GREEN + "장신구의 효과 개수가 증가하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndLine < 5) {
 					cLine = 4;
-				} else if(rndLine < 50) {
+					player.sendMessage(ChatColor.GREEN + "장신구의 효과 개수가 증가하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
+				} else if(rndLine < 100) {
 					cLine = 3;
+					player.sendMessage(ChatColor.GREEN + "장신구의 효과 개수가 증가하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else {
 					cLine = 2;
 				}
 			} else if(pLine == 3) {
 				if(rndLine < 1) {
 					cLine = 5;
+					player.sendMessage(ChatColor.GREEN + "장신구의 효과 개수가 증가하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndLine < 5) {
 					cLine = 4;
+					player.sendMessage(ChatColor.GREEN + "장신구의 효과 개수가 증가하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else {
 					cLine = 3;
 				}
 			} else if(pLine == 4) {
 				if(rndLine < 1) {
 					cLine = 5;
+					player.sendMessage(ChatColor.GREEN + "장신구의 효과 개수가 증가하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else {
 					cLine = 4;
 				}
@@ -2117,66 +2190,108 @@ public class Metalware {
 			if(pRank == 1) {
 				if(rndRank < 10) {
 					cRank = 7;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 50) {
 					cRank = 6;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 100) {
 					cRank = 5;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 200) {
 					cRank = 4;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 500) {
 					cRank = 3;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 1500) {
 					cRank = 2;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else {
 					cRank = 1;
 				}
 			} else if(pRank == 2) {
 				if(rndRank < 10) {
 					cRank = 7;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 50) {
 					cRank = 6;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 100) {
 					cRank = 5;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 250) {
 					cRank = 4;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 800) {
 					cRank = 3;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else {
 					cRank = 2;
 				}
 			} else if(pRank == 3) {
 				if(rndRank < 10) {
 					cRank = 7;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 50) {
 					cRank = 6;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 100) {
 					cRank = 5;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 500) {
 					cRank = 4;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else {
 					cRank = 3;
 				}
 			} else if(pRank == 4) {
 				if(rndRank < 10) {
 					cRank = 7;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 100) {
 					cRank = 6;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 200) {
 					cRank = 5;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else {
 					cRank = 4;
 				}
 			} else if(pRank == 5) {
 				if(rndRank < 30) {
 					cRank = 7;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 120) {
 					cRank = 6;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else {
 					cRank = 5;
 				}
 			} else if(pRank == 6) {
 				if(rndRank < 50) {
 					cRank = 7;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else {
 					cRank = 6;
 				}
@@ -2199,36 +2314,56 @@ public class Metalware {
 			if(pLine == 1) {
 				if(rndLine < 1) {
 					cLine = 5;
+					player.sendMessage(ChatColor.GREEN + "장신구의 효과 개수가 증가하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndLine < 5) {
 					cLine = 4;
+					player.sendMessage(ChatColor.GREEN + "장신구의 효과 개수가 증가하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndLine < 50) {
 					cLine = 3;
+					player.sendMessage(ChatColor.GREEN + "장신구의 효과 개수가 증가하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndLine < 200) {
 					cLine = 2;
+					player.sendMessage(ChatColor.GREEN + "장신구의 효과 개수가 증가하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else {
 					cLine = 1;
 				}
 			} else if(pLine == 2) {
 				if(rndLine < 1) {
 					cLine = 5;
+					player.sendMessage(ChatColor.GREEN + "장신구의 효과 개수가 증가하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndLine < 5) {
 					cLine = 4;
+					player.sendMessage(ChatColor.GREEN + "장신구의 효과 개수가 증가하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndLine < 50) {
 					cLine = 3;
+					player.sendMessage(ChatColor.GREEN + "장신구의 효과 개수가 증가하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else {
 					cLine = 2;
 				}
 			} else if(pLine == 3) {
 				if(rndLine < 1) {
 					cLine = 5;
+					player.sendMessage(ChatColor.GREEN + "장신구의 효과 개수가 증가하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndLine < 5) {
 					cLine = 4;
+					player.sendMessage(ChatColor.GREEN + "장신구의 효과 개수가 증가하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else {
 					cLine = 3;
 				}
 			} else if(pLine == 4) {
 				if(rndLine < 1) {
 					cLine = 5;
+					player.sendMessage(ChatColor.GREEN + "장신구의 효과 개수가 증가하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else {
 					cLine = 4;
 				}
@@ -2251,66 +2386,108 @@ public class Metalware {
 			if(pRank == 1) {
 				if(rndRank < 5) {
 					cRank = 7;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 20) {
 					cRank = 6;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 50) {
 					cRank = 5;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 100) {
 					cRank = 4;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 300) {
 					cRank = 3;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 1000) {
 					cRank = 2;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else {
 					cRank = 1;
 				}
 			} else if(pRank == 2) {
 				if(rndRank < 5) {
 					cRank = 7;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 20) {
 					cRank = 6;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 50) {
 					cRank = 5;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 150) {
 					cRank = 4;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 500) {
 					cRank = 3;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else {
 					cRank = 2;
 				}
 			} else if(pRank == 3) {
 				if(rndRank < 5) {
 					cRank = 7;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 20) {
 					cRank = 6;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 70) {
 					cRank = 5;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 300) {
 					cRank = 4;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else {
 					cRank = 3;
 				}
 			} else if(pRank == 4) {
 				if(rndRank < 5) {
 					cRank = 7;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 40) {
 					cRank = 6;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 100) {
 					cRank = 5;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else {
 					cRank = 4;
 				}
 			} else if(pRank == 5) {
 				if(rndRank < 10) {
 					cRank = 7;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndRank < 50) {
 					cRank = 6;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else {
 					cRank = 5;
 				}
 			} else if(pRank == 6) {
 				if(rndRank < 20) {
 					cRank = 7;
+					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else {
 					cRank = 6;
 				}
@@ -2333,36 +2510,56 @@ public class Metalware {
 			if(pLine == 1) {
 				if(rndLine < 3) {
 					cLine = 5;
+					player.sendMessage(ChatColor.GREEN + "장신구의 효과 개수가 증가하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndLine < 8) {
 					cLine = 4;
+					player.sendMessage(ChatColor.GREEN + "장신구의 효과 개수가 증가하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndLine < 100) {
 					cLine = 3;
+					player.sendMessage(ChatColor.GREEN + "장신구의 효과 개수가 증가하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndLine < 400) {
 					cLine = 2;
+					player.sendMessage(ChatColor.GREEN + "장신구의 효과 개수가 증가하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else {
 					cLine = 1;
 				}
 			} else if(pLine == 2) {
 				if(rndLine < 3) {
 					cLine = 5;
+					player.sendMessage(ChatColor.GREEN + "장신구의 효과 개수가 증가하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndLine < 8) {
 					cLine = 4;
-				} else if(rndLine < 120) {
+					player.sendMessage(ChatColor.GREEN + "장신구의 효과 개수가 증가하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
+				} else if(rndLine < 150) {
 					cLine = 3;
+					player.sendMessage(ChatColor.GREEN + "장신구의 효과 개수가 증가하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else {
 					cLine = 2;
 				}
 			} else if(pLine == 3) {
 				if(rndLine < 3) {
 					cLine = 5;
+					player.sendMessage(ChatColor.GREEN + "장신구의 효과 개수가 증가하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else if(rndLine < 10) {
 					cLine = 4;
+					player.sendMessage(ChatColor.GREEN + "장신구의 효과 개수가 증가하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else {
 					cLine = 3;
 				}
 			} else if(pLine == 4) {
 				if(rndLine < 5) {
 					cLine = 5;
+					player.sendMessage(ChatColor.GREEN + "장신구의 효과 개수가 증가하였습니다.");
+					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
 				} else {
 					cLine = 4;
 				}
@@ -2376,15 +2573,7 @@ public class Metalware {
 		return cLine;
 	}
 	
-	public ItemStack makeAccessory(int rank, int line) {
-		// 잠재력이 숨겨진 반지
-		// 희미한 광택의 반지
-		// 황금빛이 맴도는 반지
-		// 매혹적인 타락의 반지
-		// 빛나는 보주의 반지
-		// 피의 서리 반지
-		// 검은 기운의 반지
-		
+	public ItemStack makeAccessory(int rank, int line, int dura) {
 		ItemStack equip = null;
 		String[][] allTable = null;
 		
@@ -2398,6 +2587,8 @@ public class Metalware {
 			equipLore.add(ChatColor.GRAY + "레벨 제한: 700");
 			equipLore.add(ChatColor.GRAY + " ");
 			equipLore.add(ChatColor.GRAY + "Rank: 1");
+			equipLore.add(ChatColor.GRAY + " ");
+			equipLore.add(ChatColor.DARK_GRAY + "내구도: " + (dura-1) + "/300");
 			equipLore.add(ChatColor.GRAY + " ");
 			equipLore.add(ChatColor.GRAY + "아직 발견된지 얼마 안된 반지");
 			equipLore.add(ChatColor.GRAY + "회색빛의 탁한 보석안에 숨겨진 잠재력은 아무도 모른다.");
@@ -2420,6 +2611,8 @@ public class Metalware {
 			equipLore.add(ChatColor.GRAY + " ");
 			equipLore.add(ChatColor.GRAY + "Rank: 2");
 			equipLore.add(ChatColor.GRAY + " ");
+			equipLore.add(ChatColor.DARK_GRAY + "내구도: " + (dura-1) + "/300");
+			equipLore.add(ChatColor.GRAY + " ");
 			equipLore.add(ChatColor.GRAY + "하얀 보석이 돋보이는 반지");
 			equipLore.add(ChatColor.GRAY + "아직 보석에 특성이 부여되지 않았다.");
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
@@ -2440,6 +2633,8 @@ public class Metalware {
 			equipLore.add(ChatColor.GRAY + "레벨 제한: 700");
 			equipLore.add(ChatColor.GRAY + " ");
 			equipLore.add(ChatColor.GRAY + "Rank: 3");
+			equipLore.add(ChatColor.GRAY + " ");
+			equipLore.add(ChatColor.DARK_GRAY + "내구도: " + (dura-1) + "/300");
 			equipLore.add(ChatColor.GRAY + " ");
 			equipLore.add(ChatColor.GRAY + "황금색 보석이 비싸보이는 반지");
 			equipLore.add(ChatColor.GRAY + "에일에서 평범하게 볼 수 있는 보석이다.");
@@ -2462,6 +2657,8 @@ public class Metalware {
 			equipLore.add(ChatColor.GRAY + " ");
 			equipLore.add(ChatColor.GRAY + "Rank: 4");
 			equipLore.add(ChatColor.GRAY + " ");
+			equipLore.add(ChatColor.DARK_GRAY + "내구도: " + (dura-1) + "/300");
+			equipLore.add(ChatColor.GRAY + " ");
 			equipLore.add(ChatColor.GRAY + "보라색의 매혹적인 빛이 풍기는 반지");
 			equipLore.add(ChatColor.GRAY + "포보르의 힘이 약간 첨가되었다.");
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
@@ -2482,6 +2679,8 @@ public class Metalware {
 			equipLore.add(ChatColor.GRAY + "레벨 제한: 700");
 			equipLore.add(ChatColor.GRAY + " ");
 			equipLore.add(ChatColor.GRAY + "Rank: 5");
+			equipLore.add(ChatColor.GRAY + " ");
+			equipLore.add(ChatColor.DARK_GRAY + "내구도: " + (dura-1) + "/300");
 			equipLore.add(ChatColor.GRAY + " ");
 			equipLore.add(ChatColor.GRAY + "다이아몬드를 연상시키는 반지");
 			equipLore.add(ChatColor.GRAY + "포보르의 힘이 정화되어 깨끗해졌다.");
@@ -2504,6 +2703,8 @@ public class Metalware {
 			equipLore.add(ChatColor.GRAY + " ");
 			equipLore.add(ChatColor.GRAY + "Rank: 6");
 			equipLore.add(ChatColor.GRAY + " ");
+			equipLore.add(ChatColor.DARK_GRAY + "내구도: " + (dura-1) + "/300");
+			equipLore.add(ChatColor.GRAY + " ");
 			equipLore.add(ChatColor.GRAY + "기나긴 살육 끝에 피 빛을 보이는 반지");
 			equipLore.add(ChatColor.GRAY + "지금까지 죽인 영혼들이 반지를 감싸고 있다.");
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
@@ -2524,6 +2725,8 @@ public class Metalware {
 			equipLore.add(ChatColor.GRAY + "레벨 제한: 700");
 			equipLore.add(ChatColor.GRAY + " ");
 			equipLore.add(ChatColor.GRAY + "Rank: 7");
+			equipLore.add(ChatColor.GRAY + " ");
+			equipLore.add(ChatColor.DARK_GRAY + "내구도: " + (dura-1) + "/300");
 			equipLore.add(ChatColor.GRAY + " ");
 			equipLore.add(ChatColor.GRAY + "포보르 왕의 힘이 담긴 반지");
 			equipLore.add(ChatColor.GRAY + "더 강화를 하면 반지에 무리가 갈 것 같다.");
@@ -2625,7 +2828,7 @@ public class Metalware {
 			equipIm.setLocalizedName(localName);
 			equip.setItemMeta(equipIm);
 		}
-		
+
 		return fixStat(equip);
 	}
 
@@ -2639,7 +2842,7 @@ public class Metalware {
 		localName = makeEnch(localName, "0", 3);
 		localName = makeEnch(localName, "0", 4);
 		itemIm.setLocalizedName(localName);
-		
+
 		String[] spac = itemIm.getLocalizedName().split(",");
 		if(spac[5].equals("1000")) {
 			localName = addEnch(localName, "1000", 0);
@@ -2742,7 +2945,7 @@ public class Metalware {
 		} else if(spac[5].equals("1409")) {
 			localName = addEnch(localName, "10000", 4);
 		}
-		
+
 		if(spac[6].equals("1000")) {
 			localName = addEnch(localName, "1000", 0);
 		} else if(spac[6].equals("1001")) {
@@ -2844,7 +3047,7 @@ public class Metalware {
 		} else if(spac[6].equals("1409")) {
 			localName = addEnch(localName, "10000", 4);
 		}
-		
+
 		if(spac[7].equals("1000")) {
 			localName = addEnch(localName, "1000", 0);
 		} else if(spac[7].equals("1001")) {
@@ -2946,7 +3149,7 @@ public class Metalware {
 		} else if(spac[7].equals("1409")) {
 			localName = addEnch(localName, "10000", 4);
 		}
-		
+
 		if(spac[8].equals("1000")) {
 			localName = addEnch(localName, "1000", 0);
 		} else if(spac[8].equals("1001")) {
@@ -3048,7 +3251,7 @@ public class Metalware {
 		} else if(spac[8].equals("1409")) {
 			localName = addEnch(localName, "10000", 4);
 		}
-		
+
 		if(spac[9].equals("1000")) {
 			localName = addEnch(localName, "1000", 0);
 		} else if(spac[9].equals("1001")) {
@@ -3150,7 +3353,7 @@ public class Metalware {
 		} else if(spac[9].equals("1409")) {
 			localName = addEnch(localName, "10000", 4);
 		}
-		
+
 		itemIm.setLocalizedName(localName);
 		item.setItemMeta(itemIm);
 		return item;
@@ -3180,7 +3383,7 @@ public class Metalware {
 		String result = "";
 		for(int i = 0 ; i < 10 ; i++) {
 			if(i == num) {
-				result = result + "," + Integer.toString(Integer.getInteger(str) + Integer.getInteger(ary[i]));
+				result = result + "," + Integer.toString(Integer.parseInt(str) + Integer.parseInt(ary[i]));
 				continue;
 			}
 			result = result + "," + ary[i];
@@ -3192,6 +3395,30 @@ public class Metalware {
 			
 		}
 		return data;
+	}
+	
+	public int durability(ItemStack itemStack) {
+		try {
+			ItemMeta item = itemStack.getItemMeta();
+			
+			ArrayList<String> lores = (ArrayList<String>) item.getLore();
+			int lineNum = -1;
+			for(int i = 0 ; i < lores.size() ; i++) {
+				if(lores.get(i).split(": ")[0].equals(ChatColor.DARK_GRAY + "내구도")) {
+					lineNum = i;
+					break;
+				}
+			}
+			if(lineNum != -1) {
+				int dura = Integer.parseInt(lores.get(lineNum).split(": ")[1].split("/")[0]);
+				return dura;
+			} else {
+				return 0;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
 	}
 	
 	public static String[] getRandom(String[][] array) {
