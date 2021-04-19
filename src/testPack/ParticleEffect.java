@@ -1307,7 +1307,7 @@ public class ParticleEffect {
 					pd.removeID();
 				}
 
-				loc = ent.getLocation().add(new Vector(0, 2, 0));
+				loc = ent.getLocation().add(0,1.4,0);
 				dir = loc.getDirection();
 				e1 = loc.clone().add(dir.getX(), dir.getY(), dir.getZ());
 				e2 = loc.clone().add(dir.getX() * 2, dir.getY(), dir.getZ() * 2);

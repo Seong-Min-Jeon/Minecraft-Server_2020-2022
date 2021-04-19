@@ -6,12 +6,12 @@ import java.util.UUID;
 
 import org.bukkit.Bukkit;
 
-public class SkillThread {
+public class ThreadForSkill {
 
 	private static Map<UUID, Integer> TRAILS = new HashMap<>();
 	private final UUID uuid;
 	
-	public SkillThread(UUID uuid) {
+	public ThreadForSkill(UUID uuid) {
 		this.uuid = uuid;
 	}
 	

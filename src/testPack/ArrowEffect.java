@@ -516,7 +516,7 @@ public class ArrowEffect {
 				bool = reload(player, 700-speed5);
 			}
 			if(bool) {
-				if(player.getLevel() < 900) {
+				if(player.getLevel() < 900 && !player.getInventory().contains(Material.INK_SAC)) {
 					bool = false;
 					player.sendMessage(ChatColor.RED + "총을 다루기에는 내 힘이 부족하다.");
 				}

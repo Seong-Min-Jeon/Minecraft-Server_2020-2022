@@ -1880,7 +1880,7 @@ public class Metalware {
 			
 			{"1408", "§9-스플레시: 9000"},
 			
-			{"1409", "§9-스플레시: 10000"},
+			{"1409", "§9-스플레시: 10000"}
 				};
 	
 	public void effect(Player player, ItemStack is1, ItemStack is2, Inventory inv) {

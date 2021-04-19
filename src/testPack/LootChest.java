@@ -2985,65 +2985,78 @@ public class LootChest {
 		inv.setItem(0, emerald);
 		
 		if(num1==0) {
-			idx = rnd.nextInt(9);
+			idx = rnd.nextInt(8);
 			inv.setItem(idx, var1);
 		}
 		if(num2==0) {
-			idx = rnd.nextInt(9);
+			idx = rnd.nextInt(8);
 			inv.setItem(idx, var2);
 		}
 		if(num3==0) {
-			idx = rnd.nextInt(9);
+			idx = rnd.nextInt(8);
 			inv.setItem(idx, var3);
 		}
 		if(num4==0) {
-			idx = rnd.nextInt(9);
+			idx = rnd.nextInt(8);
 			inv.setItem(idx, var4);
 		}
 		if(num5==0) {
-			idx = rnd.nextInt(9);
+			idx = rnd.nextInt(8);
 			inv.setItem(idx, var5);
 		}
 		if(num6==0) {
-			idx = rnd.nextInt(9);
+			idx = rnd.nextInt(8);
 			inv.setItem(idx, var6);
 		}
 		if(num7==0) {
-			idx = rnd.nextInt(9);
+			idx = rnd.nextInt(8);
 			inv.setItem(idx, var7);
 		}
 		if(num8==0) {
-			idx = rnd.nextInt(9);
+			idx = rnd.nextInt(8);
 			inv.setItem(idx, var8);
 		}
 		if(num9==0) {
-			idx = rnd.nextInt(9);
+			idx = rnd.nextInt(8);
 			inv.setItem(idx, var9);
 		}
 		if(num10==0) {
-			idx = rnd.nextInt(9);
+			idx = rnd.nextInt(8);
 			inv.setItem(idx, var10);
 		}
 		if(num11==0) {
-			idx = rnd.nextInt(9);
+			idx = rnd.nextInt(8);
 			inv.setItem(idx, var11);
 		}
 		if(num12==0) {
-			idx = rnd.nextInt(9);
+			idx = rnd.nextInt(8);
 			inv.setItem(idx, var12);
 		}
 		if(num13==0) {
-			idx = rnd.nextInt(9);
+			idx = rnd.nextInt(8);
 			inv.setItem(idx, var13);
 		}
 		if(num14==0) {
-			idx = rnd.nextInt(9);
+			idx = rnd.nextInt(8);
 			inv.setItem(idx, var14);
 		}
 		if(tokenPercent==0) {
-			idx = rnd.nextInt(9);
+			idx = rnd.nextInt(8);
 			inv.setItem(idx, token);
 		}
+		
+		idx = rnd.nextInt(3) + 3;
+		ItemStack metalware = new ItemStack(Material.SMOOTH_QUARTZ_STAIRS, idx);
+		ItemMeta metalwareIm = metalware.getItemMeta();
+		metalwareIm.setDisplayName(ChatColor.LIGHT_PURPLE + "세공 도구 부품");
+		ArrayList<String> metalwareLore = new ArrayList();
+		metalwareLore.add(ChatColor.GRAY + "순도 높은 검은 흐름이 느껴지는 부품");
+		metalwareLore.add(ChatColor.GRAY + "장인의 손길을 거친다면 검은 흐름의");
+		metalwareLore.add(ChatColor.GRAY + "마력을 이용한 세공 도구를 만들 수 있다.");
+		metalwareIm.setLore(metalwareLore);
+		metalware.setItemMeta(metalwareIm);
+		inv.setItem(8, metalware);
+		
 		player.openInventory(inv);	
 	}
 	

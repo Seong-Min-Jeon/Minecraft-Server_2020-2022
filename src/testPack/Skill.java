@@ -2260,7 +2260,7 @@ public class Skill {
 					proTotem.setVelocity(player.getLocation().getDirection().multiply(1.0f));
 					proTotem.setRemoveWhenFarAway(true);
 					
-					SkillThread t = new SkillThread(player.getUniqueId());
+					ThreadForSkill t = new ThreadForSkill(player.getUniqueId());
 					sleep = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 						
 						int time = 0;
@@ -2433,7 +2433,7 @@ public class Skill {
 					proTotem.setVelocity(player.getLocation().getDirection().multiply(1.0f));
 					proTotem.setRemoveWhenFarAway(true);
 					
-					SkillThread t = new SkillThread(player.getUniqueId());
+					ThreadForSkill t = new ThreadForSkill(player.getUniqueId());
 					sleep = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 						
 						int time = 0;
@@ -3741,7 +3741,7 @@ public class Skill {
 					proTotem.setVelocity(proTotem.getVelocity().multiply(new Vector(1, 0.1 ,1)));
 					proTotem.setRemoveWhenFarAway(true);
 					
-					SkillThread t = new SkillThread(player.getUniqueId());
+					ThreadForSkill t = new ThreadForSkill(player.getUniqueId());
 					sleep = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 						
 						int time = 0;
@@ -3890,7 +3890,7 @@ public class Skill {
 					proTotem.setVelocity(player.getLocation().getDirection().multiply(1.0f));
 					proTotem.setRemoveWhenFarAway(true);
 					
-					SkillThread t = new SkillThread(player.getUniqueId());
+					ThreadForSkill t = new ThreadForSkill(player.getUniqueId());
 					sleep = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 						
 						int time = 0;
@@ -3975,7 +3975,7 @@ public class Skill {
 					proTotem.setVelocity(player.getLocation().getDirection().multiply(4.0f));
 					proTotem.setRemoveWhenFarAway(true);
 
-					SkillThread t = new SkillThread(player.getUniqueId());
+					ThreadForSkill t = new ThreadForSkill(player.getUniqueId());
 					sleep = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
 						int time = 0;
@@ -4043,24 +4043,14 @@ public class Skill {
 					
 					ArmorStand proTotem = (ArmorStand) player.getWorld().spawnEntity(player.getLocation(), EntityType.ARMOR_STAND);
 					proTotem.setVisible(false);
-					proTotem.setHelmet(new ItemStack(Material.ANDESITE_STAIRS));
+					proTotem.setHelmet(new ItemStack(Material.POLISHED_ANDESITE_STAIRS));
 					proTotem.setRemoveWhenFarAway(true);
 					
-					// ===============================================================
-					ParticleData pd = new ParticleData(player.getUniqueId());
-					if (pd.hasID()) {
-						pd.endTask();
-						pd.removeID();
-					}
-					ParticleEffect pe = new ParticleEffect(player, proTotem);
-					pe.startE0_6();
-					// ================================================================
-					
-					SkillThread t = new SkillThread(player.getUniqueId());
 					sleep = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 						
 						int time = 0;
-						ArmorStand totem = proTotem;
+						ArmorStand totem;
+						ThreadForSkill t = new ThreadForSkill(player.getUniqueId());
 						
 						@Override
 						public void run() {
@@ -4068,19 +4058,46 @@ public class Skill {
 								t.setID(sleep);
 							}
 						
+							if(proTotem.isOnGround() && time == 0) {	
+								totem = (ArmorStand) player.getWorld().spawnEntity(proTotem.getLocation(), EntityType.ARMOR_STAND);
+								totem.setVisible(false);
+								totem.setHelmet(new ItemStack(Material.POLISHED_ANDESITE_STAIRS));
+								totem.setRemoveWhenFarAway(true);
+								proTotem.remove();
+
+								// ===============================================================
+								ParticleData pd = new ParticleData(totem.getUniqueId());
+								if (pd.hasID()) {
+									pd.endTask();
+									pd.removeID();
+								}
+								ParticleEffect pe = new ParticleEffect(player, totem);
+								pe.startE0_6();
+								// ================================================================
+								
+								time++;
+							}
+							
+							if(time >= 1) {
+								time++;
+							}
+							
 							if(time>=200) {			
 								totem.remove();
 								t.endTask();
 								t.removeID();
-							} else if(time%4 == 0) {
-								Arrow arrow = totem.launchProjectile(Arrow.class);
-								arrow.setShooter(player);
-								arrow.setDamage(0.05);
-								arrow.setVelocity(totem.getLocation().getDirection().multiply(new Vector(10, 0, 10)));		
-								world.playSound(totem.getLocation(), Sound.ENTITY_ARMOR_STAND_HIT, 1.5f, 1.0f);
+							} else if(time%4 == 0 && time >= 1) {
+								try {
+									Arrow arrow = totem.launchProjectile(Arrow.class);
+									arrow.setShooter(player);
+									arrow.setDamage(0.05);
+									arrow.setVelocity(totem.getLocation().getDirection().multiply(new Vector(10, 0, 10)));		
+									world.playSound(totem.getLocation(), Sound.ENTITY_ARMOR_STAND_HIT, 1.5f, 1.0f);
+								} catch(Exception e) {
+									
+								}
 							}
 							
-							time++;
 						}						
 						
 					}, 0, 1);
