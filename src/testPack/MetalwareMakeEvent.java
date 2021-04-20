@@ -21,6 +21,8 @@ public class MetalwareMakeEvent {
 				} else {
 					player.sendMessage(ChatColor.WHITE + "세공용 장신구를 넣어주세요.");
 				}
+			} else {
+				player.sendMessage(ChatColor.WHITE + "세공용 장신구를 넣어주세요.");
 			}
 		} catch(Exception e) {
 			player.sendMessage(ChatColor.WHITE + "첫번째 칸에는 세공할 장신구, 두번째 칸에는 세공 도구를 넣어주세요.");

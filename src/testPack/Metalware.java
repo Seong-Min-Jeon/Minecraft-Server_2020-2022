@@ -2280,7 +2280,7 @@ public class Metalware {
 					cRank = 7;
 					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
 					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
-				} else if(rndRank < 120) {
+				} else if(rndRank < 130) {
 					cRank = 6;
 					player.sendMessage(ChatColor.GREEN + "장신구 랭크업에 성공하였습니다.");
 					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
@@ -2512,7 +2512,7 @@ public class Metalware {
 					cLine = 5;
 					player.sendMessage(ChatColor.GREEN + "장신구의 효과 개수가 증가하였습니다.");
 					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
-				} else if(rndLine < 8) {
+				} else if(rndLine < 10) {
 					cLine = 4;
 					player.sendMessage(ChatColor.GREEN + "장신구의 효과 개수가 증가하였습니다.");
 					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
@@ -2532,7 +2532,7 @@ public class Metalware {
 					cLine = 5;
 					player.sendMessage(ChatColor.GREEN + "장신구의 효과 개수가 증가하였습니다.");
 					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
-				} else if(rndLine < 8) {
+				} else if(rndLine < 10) {
 					cLine = 4;
 					player.sendMessage(ChatColor.GREEN + "장신구의 효과 개수가 증가하였습니다.");
 					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
@@ -2548,7 +2548,7 @@ public class Metalware {
 					cLine = 5;
 					player.sendMessage(ChatColor.GREEN + "장신구의 효과 개수가 증가하였습니다.");
 					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
-				} else if(rndLine < 10) {
+				} else if(rndLine < 15) {
 					cLine = 4;
 					player.sendMessage(ChatColor.GREEN + "장신구의 효과 개수가 증가하였습니다.");
 					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.5f, 0.7f);
