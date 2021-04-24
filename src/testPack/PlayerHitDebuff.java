@@ -2797,9 +2797,10 @@ public class PlayerHitDebuff {
 								td.setID(taskID);
 							}
 							
-							if (time >= 200) {
+							if (time == 200) {
 								int num = 0;
-								for(Entity ent : nearEntity) {
+								List<Entity> nearSlime = mob.getNearbyEntities(30, 10, 30);
+								for(Entity ent : nearSlime) {
 									if(ent instanceof Slime) {
 										num++;
 										ent.getWorld().spawnEntity(ent.getLocation(), EntityType.MAGMA_CUBE);
@@ -2807,7 +2808,7 @@ public class PlayerHitDebuff {
 									}
 								}
 								if(num > 0) {
-									for(Entity ent : nearEntity) {
+									for(Entity ent : nearSlime) {
 										if(ent instanceof Player) {
 											Player p = (Player) ent;
 											p.sendMessage(ChatColor.RED + "주위의 슬라임이 불타오르며 강력한 데미지를 줍니다.");
@@ -2823,6 +2824,11 @@ public class PlayerHitDebuff {
 								td.removeID();
 							}
 							
+							if(time > 200) {
+								td.endTask();
+								td.removeID();
+							}
+
 							time++;
 
 						}
@@ -3343,7 +3349,7 @@ public class PlayerHitDebuff {
 	}
 
 	public void sendMessage(Player player, String msg) {
-		List<Entity> entitylist = player.getNearbyEntities(20, 10, 20);
+		List<Entity> entitylist = player.getNearbyEntities(30, 10, 30);
 		for (Entity nearEntity : entitylist) {
 			if (nearEntity.getType() == EntityType.PLAYER) {
 				Player nearPlayer = (Player) nearEntity;

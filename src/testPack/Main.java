@@ -3022,6 +3022,12 @@ public class Main extends JavaPlugin implements Listener{
 				event.setRespawnLocation(new Location(player.getWorld(), -1465, 10, 1980));
 				return;
 			}
+			// 슬라임 던전2 -1479 0 1972  -1440 35 2005
+			if (loc.getX() <= -1440 && loc.getY() <= 35 && loc.getZ() <= 2005 
+					&& loc.getX() >= -1479 && loc.getY() >= 0 && loc.getZ() >= 1972) {
+				event.setRespawnLocation(new Location(player.getWorld(), -1465, 10, 1980));
+				return;
+			}
 			// 시오카나 385 255 -669  648 0 -438
 			if (loc.getX() <= 648 && loc.getY() <= 255 && loc.getZ() <= -438 
 					&& loc.getX() >= 385 && loc.getY() >= 0 && loc.getZ() >= -669) {
@@ -7164,6 +7170,166 @@ public class Main extends JavaPlugin implements Listener{
 		} catch(Exception e) {
 			
 		}
+		//커맨드형 스킬
+		try {
+			EquipmentSlot e = event.getHand(); 
+	        if (e.equals (EquipmentSlot.HAND)) {
+	        	Player player = event.getPlayer();
+	        	try {	    
+	    			if(player.getVehicle() == null) {
+	    				if(event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
+	        				Inventory inv = player.getInventory();
+	        				ItemStack item = player.getInventory().getItemInMainHand();
+	        				if(inv.contains(Material.CLAY_BALL) || inv.contains(Material.GLOWSTONE_DUST)) {
+	        					if(item.getType() == Material.DEAD_BRAIN_CORAL_BLOCK || item.getType() == Material.DEAD_BUBBLE_CORAL_BLOCK || item.getType() == Material.DEAD_FIRE_CORAL_BLOCK
+	        							|| item.getType() == Material.DEAD_HORN_CORAL_BLOCK || item.getType() == Material.DEAD_TUBE_CORAL_BLOCK) {
+	        						MouseClickForSkill mc = new MouseClickForSkill();
+	        						int time = mc.getTime(player);
+	        						if(time==0) {
+	        							mc.click(player, "R");
+	        						} else {
+	        							mc.click(player, "R", time);
+	        						}
+	        					}
+	        				}
+	        				if(inv.contains(Material.INK_SAC)) {
+	        					if(item.getType() == Material.BRAIN_CORAL_BLOCK || item.getType() == Material.BUBBLE_CORAL_BLOCK || item.getType() == Material.FIRE_CORAL_BLOCK
+	        							|| item.getType() == Material.HORN_CORAL_BLOCK || item.getType() == Material.TUBE_CORAL_BLOCK) {
+	        						MouseClickForSkill mc = new MouseClickForSkill();
+	        						int time = mc.getTime(player);
+	        						if(time==0) {
+	        							mc.click(player, "R");
+	        						} else {
+	        							mc.click(player, "R", time);
+	        						}
+	        					}
+	        				}
+	        				if(inv.contains(Material.BLUE_DYE) || inv.contains(Material.BLACK_DYE) || inv.contains(Material.GREEN_DYE) 
+	        						|| inv.contains(Material.LAPIS_LAZULI) || inv.contains(Material.CYAN_DYE) || inv.contains(Material.LIGHT_GRAY_DYE) 
+	        						|| inv.contains(Material.GRAY_DYE) || inv.contains(Material.PINK_DYE) || inv.contains(Material.LIME_DYE) 
+	        						|| inv.contains(Material.YELLOW_DYE) || inv.contains(Material.LIGHT_BLUE_DYE) || inv.contains(Material.BROWN_DYE)) {
+	        					if(item.getType() == Material.WOODEN_SWORD
+	        							|| item.getType() == Material.STONE_SWORD
+	        							|| item.getType() == Material.IRON_SWORD
+	        							|| item.getType() == Material.GOLDEN_SWORD
+	        							|| item.getType() == Material.DIAMOND_SWORD
+	        							|| item.getType() == Material.NETHERITE_SWORD
+	        							|| item.getType() == Material.OAK_LEAVES
+	        							|| item.getType() == Material.SPRUCE_LEAVES
+	        							|| item.getType() == Material.BIRCH_LEAVES
+	        							|| item.getType() == Material.JUNGLE_LEAVES
+	        							|| item.getType() == Material.ACACIA_LEAVES
+	        							|| item.getType() == Material.DARK_OAK_LEAVES
+	        							|| item.getType() == Material.COBBLESTONE_WALL
+	        							|| item.getType() == Material.MOSSY_COBBLESTONE_WALL
+	        							|| item.getType() == Material.BROWN_CARPET
+	        							|| item.getType() == Material.GREEN_CARPET
+	        							|| item.getType() == Material.BLACK_CARPET
+	        							|| item.getType() == Material.STONE
+	        							|| item.getType() == Material.OAK_PLANKS
+	        							|| item.getType() == Material.SPRUCE_PLANKS
+	        							|| item.getType() == Material.BIRCH_PLANKS
+	        							|| item.getType() == Material.JUNGLE_PLANKS
+	        							|| item.getType() == Material.ACACIA_PLANKS
+	        							|| item.getType() == Material.DARK_OAK_PLANKS
+	        							|| item.getType() == Material.BEDROCK
+	        							|| item.getType() == Material.SPRUCE_LOG
+	        							|| item.getType() == Material.BIRCH_LOG
+	        							|| item.getType() == Material.JUNGLE_LOG
+	        							|| item.getType() == Material.ACACIA_LOG
+	        							|| item.getType() == Material.DARK_OAK_LOG
+	        							|| item.getType() == Material.SANDSTONE
+	        							|| item.getType() == Material.CHISELED_SANDSTONE
+	        							|| item.getType() == Material.CUT_SANDSTONE
+	        							|| item.getType() == Material.LAPIS_BLOCK
+	        							|| item.getType() == Material.MAGENTA_WOOL
+	        							|| item.getType() == Material.LIME_WOOL
+	        							|| item.getType() == Material.GRAY_WOOL
+	        							|| item.getType() == Material.LIGHT_GRAY_WOOL
+	        							|| item.getType() == Material.CYAN_WOOL
+	        							|| item.getType() == Material.PURPLE_WOOL
+	        							|| item.getType() == Material.OAK_SLAB
+	        							|| item.getType() == Material.SPRUCE_SLAB
+	        							|| item.getType() == Material.BIRCH_SLAB
+	        							|| item.getType() == Material.JUNGLE_SLAB
+	        							|| item.getType() == Material.ACACIA_SLAB
+	        							|| item.getType() == Material.DARK_OAK_SLAB
+	        							|| item.getType() == Material.STONE_SLAB
+	        							|| item.getType() == Material.COBBLESTONE_SLAB
+	        							|| item.getType() == Material.STONE_BRICK_SLAB
+	        							|| item.getType() == Material.NETHER_BRICK_SLAB
+	        							|| item.getType() == Material.QUARTZ_SLAB
+	        							|| item.getType() == Material.RED_SANDSTONE
+	        							|| item.getType() == Material.RED_SANDSTONE_SLAB
+	        							|| item.getType() == Material.SMOOTH_RED_SANDSTONE
+	        							|| item.getType() == Material.OBSIDIAN
+	        							|| item.getType() == Material.SMOOTH_SANDSTONE
+	        							|| item.getType() == Material.CHISELED_RED_SANDSTONE
+	        							|| item.getType() == Material.CUT_RED_SANDSTONE
+	        							|| item.getType() == Material.RED_SANDSTONE_STAIRS
+	        							|| item.getType() == Material.STONE_STAIRS) {
+	        						MouseClickForSkill mc = new MouseClickForSkill();
+	        						int time = mc.getTime(player);
+	        						if(time==0) {
+	        							mc.click(player, "R");
+	        						} else {
+	        							mc.click(player, "R", time);
+	        						}
+	        					}
+	        				}
+	        				if(inv.contains(Material.RED_DYE)) {
+	        					if(item.getType() == Material.BONE) {
+	        						MouseClickForSkill mc = new MouseClickForSkill();
+	        						int time = mc.getTime(player);
+	        						if(time==0) {
+	        							mc.click(player, "R");
+	        						} else {
+	        							mc.click(player, "R", time);
+	        						}
+	        					}
+	        				}
+	        				if(inv.contains(Material.MAGENTA_DYE)) {
+	        					if(item.getType() == Material.WOODEN_PICKAXE 
+	        							|| item.getType() == Material.STONE_PICKAXE
+	        							|| item.getType() == Material.IRON_PICKAXE
+	        							|| item.getType() == Material.GOLDEN_PICKAXE
+	        							|| item.getType() == Material.DIAMOND_PICKAXE
+	        							|| item.getType() == Material.NETHERITE_PICKAXE) {
+	        						MouseClickForSkill mc = new MouseClickForSkill();
+	        						int time = mc.getTime(player);
+	        						if(time==0) {
+	        							mc.click(player, "R");
+	        						} else {
+	        							mc.click(player, "R", time);
+	        						}
+	        					}
+	        				}
+	        				if(inv.contains(Material.ORANGE_DYE)) {
+	        					if(item.getType() == Material.WOODEN_HOE
+	        							|| item.getType() == Material.STONE_HOE
+	        							|| item.getType() == Material.IRON_HOE
+	        							|| item.getType() == Material.GOLDEN_HOE
+	        							|| item.getType() == Material.DIAMOND_HOE
+	        							|| item.getType() == Material.NETHERITE_HOE) {
+	        						MouseClickForSkill mc = new MouseClickForSkill();
+	        						int time = mc.getTime(player);
+	        						if(time==0) {
+	        							mc.click(player, "R");
+	        						} else {
+	        							mc.click(player, "R", time);
+	        						}
+	        					}
+	        				}
+	        			}
+	    				
+	    			}
+	    		} catch(Exception e1) {
+	    			
+	    		}
+	        }
+		} catch(Exception e) {
+			
+		}
 		//퀘스트
 		try {			
 			QuestBoard qb = new QuestBoard();
@@ -7930,158 +8096,6 @@ public class Main extends JavaPlugin implements Listener{
 	        			PlayerStat ps = new PlayerStat();
 	        			ps.viewStat(player);
 	        		}
-	    		} catch(Exception e1) {
-	    			
-	    		}
-	    		//커맨드형 스킬
-	    		try {	    
-	    			if(player.getVehicle() == null) {
-	    				if(event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
-		    				Inventory inv = player.getInventory();
-		    				ItemStack item = player.getInventory().getItemInMainHand();
-		    				if(inv.contains(Material.CLAY_BALL) || inv.contains(Material.GLOWSTONE_DUST)) {
-		    					if(item.getType() == Material.DEAD_BRAIN_CORAL_BLOCK || item.getType() == Material.DEAD_BUBBLE_CORAL_BLOCK || item.getType() == Material.DEAD_FIRE_CORAL_BLOCK
-		    							|| item.getType() == Material.DEAD_HORN_CORAL_BLOCK || item.getType() == Material.DEAD_TUBE_CORAL_BLOCK) {
-		    						MouseClickForSkill mc = new MouseClickForSkill();
-		    						int time = mc.getTime(player);
-		    						if(time==0) {
-		    							mc.click(player, "R");
-		    						} else {
-		    							mc.click(player, "R", time);
-		    						}
-		    					}
-		    				}
-		    				if(inv.contains(Material.INK_SAC)) {
-		    					if(item.getType() == Material.BRAIN_CORAL_BLOCK || item.getType() == Material.BUBBLE_CORAL_BLOCK || item.getType() == Material.FIRE_CORAL_BLOCK
-		    							|| item.getType() == Material.HORN_CORAL_BLOCK || item.getType() == Material.TUBE_CORAL_BLOCK) {
-		    						MouseClickForSkill mc = new MouseClickForSkill();
-		    						int time = mc.getTime(player);
-		    						if(time==0) {
-		    							mc.click(player, "R");
-		    						} else {
-		    							mc.click(player, "R", time);
-		    						}
-		    					}
-		    				}
-		    				if(inv.contains(Material.BLUE_DYE) || inv.contains(Material.BLACK_DYE) || inv.contains(Material.GREEN_DYE) 
-		    						|| inv.contains(Material.LAPIS_LAZULI) || inv.contains(Material.CYAN_DYE) || inv.contains(Material.LIGHT_GRAY_DYE) 
-		    						|| inv.contains(Material.GRAY_DYE) || inv.contains(Material.PINK_DYE) || inv.contains(Material.LIME_DYE) 
-		    						|| inv.contains(Material.YELLOW_DYE) || inv.contains(Material.LIGHT_BLUE_DYE) || inv.contains(Material.BROWN_DYE)) {
-		    					if(item.getType() == Material.WOODEN_SWORD
-		    							|| item.getType() == Material.STONE_SWORD
-		    							|| item.getType() == Material.IRON_SWORD
-		    							|| item.getType() == Material.GOLDEN_SWORD
-		    							|| item.getType() == Material.DIAMOND_SWORD
-		    							|| item.getType() == Material.NETHERITE_SWORD
-		    							|| item.getType() == Material.OAK_LEAVES
-		    							|| item.getType() == Material.SPRUCE_LEAVES
-		    							|| item.getType() == Material.BIRCH_LEAVES
-		    							|| item.getType() == Material.JUNGLE_LEAVES
-		    							|| item.getType() == Material.ACACIA_LEAVES
-		    							|| item.getType() == Material.DARK_OAK_LEAVES
-		    							|| item.getType() == Material.COBBLESTONE_WALL
-		    							|| item.getType() == Material.MOSSY_COBBLESTONE_WALL
-		    							|| item.getType() == Material.BROWN_CARPET
-		    							|| item.getType() == Material.GREEN_CARPET
-		    							|| item.getType() == Material.BLACK_CARPET
-		    							|| item.getType() == Material.STONE
-		    							|| item.getType() == Material.OAK_PLANKS
-		    							|| item.getType() == Material.SPRUCE_PLANKS
-		    							|| item.getType() == Material.BIRCH_PLANKS
-		    							|| item.getType() == Material.JUNGLE_PLANKS
-		    							|| item.getType() == Material.ACACIA_PLANKS
-		    							|| item.getType() == Material.DARK_OAK_PLANKS
-		    							|| item.getType() == Material.BEDROCK
-		    							|| item.getType() == Material.SPRUCE_LOG
-		    							|| item.getType() == Material.BIRCH_LOG
-		    							|| item.getType() == Material.JUNGLE_LOG
-		    							|| item.getType() == Material.ACACIA_LOG
-		    							|| item.getType() == Material.DARK_OAK_LOG
-		    							|| item.getType() == Material.SANDSTONE
-		    							|| item.getType() == Material.CHISELED_SANDSTONE
-		    							|| item.getType() == Material.CUT_SANDSTONE
-		    							|| item.getType() == Material.LAPIS_BLOCK
-		    							|| item.getType() == Material.MAGENTA_WOOL
-		    							|| item.getType() == Material.LIME_WOOL
-		    							|| item.getType() == Material.GRAY_WOOL
-		    							|| item.getType() == Material.LIGHT_GRAY_WOOL
-		    							|| item.getType() == Material.CYAN_WOOL
-		    							|| item.getType() == Material.PURPLE_WOOL
-		    							|| item.getType() == Material.OAK_SLAB
-		    							|| item.getType() == Material.SPRUCE_SLAB
-		    							|| item.getType() == Material.BIRCH_SLAB
-		    							|| item.getType() == Material.JUNGLE_SLAB
-		    							|| item.getType() == Material.ACACIA_SLAB
-		    							|| item.getType() == Material.DARK_OAK_SLAB
-		    							|| item.getType() == Material.STONE_SLAB
-		    							|| item.getType() == Material.COBBLESTONE_SLAB
-		    							|| item.getType() == Material.STONE_BRICK_SLAB
-		    							|| item.getType() == Material.NETHER_BRICK_SLAB
-		    							|| item.getType() == Material.QUARTZ_SLAB
-		    							|| item.getType() == Material.RED_SANDSTONE
-		    							|| item.getType() == Material.RED_SANDSTONE_SLAB
-		    							|| item.getType() == Material.SMOOTH_RED_SANDSTONE
-		    							|| item.getType() == Material.OBSIDIAN
-		    							|| item.getType() == Material.SMOOTH_SANDSTONE
-		    							|| item.getType() == Material.CHISELED_RED_SANDSTONE
-		    							|| item.getType() == Material.CUT_RED_SANDSTONE
-		    							|| item.getType() == Material.RED_SANDSTONE_STAIRS
-		    							|| item.getType() == Material.STONE_STAIRS) {
-		    						MouseClickForSkill mc = new MouseClickForSkill();
-		    						int time = mc.getTime(player);
-		    						if(time==0) {
-		    							mc.click(player, "R");
-		    						} else {
-		    							mc.click(player, "R", time);
-		    						}
-		    					}
-		    				}
-		    				if(inv.contains(Material.RED_DYE)) {
-		    					if(item.getType() == Material.BONE) {
-		    						MouseClickForSkill mc = new MouseClickForSkill();
-		    						int time = mc.getTime(player);
-		    						if(time==0) {
-		    							mc.click(player, "R");
-		    						} else {
-		    							mc.click(player, "R", time);
-		    						}
-		    					}
-		    				}
-		    				if(inv.contains(Material.MAGENTA_DYE)) {
-		    					if(item.getType() == Material.WOODEN_PICKAXE 
-		    							|| item.getType() == Material.STONE_PICKAXE
-		    							|| item.getType() == Material.IRON_PICKAXE
-		    							|| item.getType() == Material.GOLDEN_PICKAXE
-		    							|| item.getType() == Material.DIAMOND_PICKAXE
-		    							|| item.getType() == Material.NETHERITE_PICKAXE) {
-		    						MouseClickForSkill mc = new MouseClickForSkill();
-		    						int time = mc.getTime(player);
-		    						if(time==0) {
-		    							mc.click(player, "R");
-		    						} else {
-		    							mc.click(player, "R", time);
-		    						}
-		    					}
-		    				}
-		    				if(inv.contains(Material.ORANGE_DYE)) {
-		    					if(item.getType() == Material.WOODEN_HOE
-		    							|| item.getType() == Material.STONE_HOE
-		    							|| item.getType() == Material.IRON_HOE
-		    							|| item.getType() == Material.GOLDEN_HOE
-		    							|| item.getType() == Material.DIAMOND_HOE
-		    							|| item.getType() == Material.NETHERITE_HOE) {
-		    						MouseClickForSkill mc = new MouseClickForSkill();
-		    						int time = mc.getTime(player);
-		    						if(time==0) {
-		    							mc.click(player, "R");
-		    						} else {
-		    							mc.click(player, "R", time);
-		    						}
-		    					}
-		    				}
-		    			}
-	    				
-	    			}
 	    		} catch(Exception e1) {
 	    			
 	    		}
