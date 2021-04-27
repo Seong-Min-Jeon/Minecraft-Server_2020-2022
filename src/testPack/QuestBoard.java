@@ -4729,6 +4729,27 @@ public class QuestBoard {
 		player.setScoreboard(board);
 	}
 	
+	public void mq50(Player player, int num) {
+		if(num>=1) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 50000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "§7네비가 없어져서 퀘스트 진행을 알기 어렵다.%§7일단 마가이에게 가서 다시 세계의 문의 위치를 묻자.");
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 50장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===찾아온 불청객===");
+		score.setScore(2);
+		Score score2 = obj.getScore("데히트라와 대화");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/1)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
 	public int getNum(Player player) {
 		try {
 			ArrayList<String> list = new ArrayList<String>(player.getScoreboard().getEntries());

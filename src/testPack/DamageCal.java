@@ -142,7 +142,8 @@ public class DamageCal {
 				 || entity.getType() == EntityType.PANDA) {
 			return (int)(damAll*2 + damAr*5);
 		} else if(entity.getType() == EntityType.SLIME || entity.getType() == EntityType.MAGMA_CUBE || entity.getType() == EntityType.GHAST
-				|| entity.getType() == EntityType.WITHER || entity.getType() == EntityType.CREEPER || entity.getType() == EntityType.IRON_GOLEM) {
+				|| entity.getType() == EntityType.WITHER || entity.getType() == EntityType.CREEPER || entity.getType() == EntityType.IRON_GOLEM
+				 || entity.getType() == EntityType.BLAZE) {
 			return (int)(damAll*2 + damIm*6);
 		} else if(entity.getType() == EntityType.MUSHROOM_COW) {
 			if(beiagTester.containsKey(player)) {

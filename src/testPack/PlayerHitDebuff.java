@@ -124,6 +124,8 @@ public class PlayerHitDebuff {
 		mob74(player, mob);
 		mob75(player, mob);
 		mob76(player, mob);
+		mob77(player, mob);
+		mob78(player, mob);
 	}
 
 	// 시련의 형상
@@ -2746,7 +2748,7 @@ public class PlayerHitDebuff {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("중급 파괴수" + ChatColor.YELLOW + " [Lv.554]")) {
 			int num = rnd.nextInt(8);
 			if (num == 0) {
-				player.setVelocity(new Vector(0, 3, 0));
+				player.setVelocity(new Vector(0, 2, 0));
 				player.damage(2000);
 			}
 		}
@@ -2906,7 +2908,7 @@ public class PlayerHitDebuff {
 				int num = rnd.nextInt(13);
 				if (num == 0) {
 					((Zoglin) mob).setTarget(player);
-					player.setVelocity(new Vector(0, 3, 0));
+					player.setVelocity(new Vector(0, 2, 0));
 					player.damage(10000);
 					player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_PIG_HURT, 3.0f, 1.0f);
 				} else if(num == 1) {
@@ -3255,7 +3257,7 @@ public class PlayerHitDebuff {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("쑥을 먹는 곰" + ChatColor.YELLOW + " [Lv.654]")) {
 			int num = rnd.nextInt(8);
 			if (num == 0) {
-				player.setVelocity(new Vector(0, 3, 0));
+				player.setVelocity(new Vector(0, 2, 0));
 				player.damage(3300);
 			}
 		}
@@ -3332,12 +3334,23 @@ public class PlayerHitDebuff {
 		}
 	}
 	
+	// 반란을 두려워하는 귀족
 	public void mob77(Player player, Entity mob) {
-
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("반란을 두려워하는 귀족" + ChatColor.YELLOW + " [Lv.678]")) {
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 1, true, false, false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 200, 2, true, false, false));
+		}
 	}
 	
+	// 족장의 벗
 	public void mob78(Player player, Entity mob) {
-
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("족장의 벗" + ChatColor.YELLOW + " [Lv.685]")) {
+			int num = rnd.nextInt(12);
+			if (num == 0) {
+				player.setVelocity(new Vector(0, 2, 0));
+				player.damage(4000);
+			}
+		}
 	}
 	
 	public void mob79(Player player, Entity mob) {

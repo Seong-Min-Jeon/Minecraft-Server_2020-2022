@@ -8180,40 +8180,116 @@ public class MobLoot {
 		}
 	}
 	
+	// 무리에서 쫒겨난 궁수
 	public void mob328(Player player) {
-
+		int num = rnd.nextInt(15) + 15;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 3800000);
 	}
 	
+	// 무리에서 쫒겨난 전사
 	public void mob329(Player player) {
-
+		int num = rnd.nextInt(15) + 15;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 3830000);
 	}
 	
+	// 무리에서 쫒겨난 마법사
 	public void mob330(Player player) {
-
+		int num = rnd.nextInt(15) + 15;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 3840000);
 	}
 	
+	// 무리에서 쫒겨난 정예병사
 	public void mob331(Player player) {
-
+		int num = rnd.nextInt(15) + 15;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 3880000);
 	}
 	
+	// 반란을 두려워하는 귀족
 	public void mob332(Player player) {
-
+		int num = rnd.nextInt(15) + 15;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 3890000);
 	}
 	
+	// 귀족을 지키는 호위무사
 	public void mob333(Player player) {
-
+		int num = rnd.nextInt(15) + 15;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 3930000);
 	}
 	
+	// 족장을 지키는 것
 	public void mob334(Player player) {
-
+		int num = rnd.nextInt(15) + 15;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 3945000);
+		
+		int tmp2 = rnd.nextInt(40);
+		if(tmp2 == 0) {
+			Location loc = player.getLocation().add(0, 1, 0);
+			loc.getWorld().spawnEntity(loc, EntityType.HUSK);
+		}
 	}
 	
+	// 족장의 벗
 	public void mob335(Player player) {
-
+		int num = rnd.nextInt(15) + 15;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 3980000);
+		
+		int tmp2 = rnd.nextInt(40);
+		if(tmp2 == 0) {
+			Location loc = player.getLocation().add(0, 1, 0);
+			loc.getWorld().spawnEntity(loc, EntityType.HUSK);
+		}
 	}
 	
+	// 족장 <바람을 가르는 늑대>
 	public void mob336(Player player) {
-
+		es.giveExp(player, 5500000);
+		
+		ItemStack var1 = new ItemStack(Material.GOLD_INGOT, 10);
+		ItemMeta var1Im = var1.getItemMeta();
+		var1Im.setDisplayName(ChatColor.AQUA + "쉽게 녹지 않는 금");
+		var1.setItemMeta(var1Im);
+		player.getInventory().addItem(var1);
+		sendMessage(player, ChatColor.AQUA + "쉽게 녹지 않는 금" + ChatColor.WHITE + " 10개를 획득했다.");
 	}
 	
 	public void mob337(Player player) {

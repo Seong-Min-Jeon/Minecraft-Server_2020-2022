@@ -107,6 +107,7 @@ public class QuestScroll {
 				mq47(player, itemArg, world);
 				mq48(player, itemArg, world);
 				mq49(player, itemArg, world);
+				mq50(player, itemArg, world);
 			} else {
 				itemArg.remove();
 				player.getInventory().addItem(itemArg.getItemStack());
@@ -862,6 +863,21 @@ public class QuestScroll {
 					+ "디아스: 특히 티페라리라는 대도시와 근접!%디아스: 하지만 그곳은 매우 위험한..!%디아스: 일단 티페라리로 가면 알게 될 것.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq49(player, 0);
+		}	
+	}
+	
+	public void mq50(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "메인퀘스트 50장")) {
+			//데히트라 소환 -> 삭제
+			msg.msg(player, "데히트라: 여어.%데히트라: 시간이.. 별로 남지 않았군.%데히트라: §e세계의 비밀§f..%데히트라: 그것을 네놈이 깨닫기에는 무리가 있는 듯하구나.%"
+					+ "데히트라: 너는 너무 많은 살육을 저질렀어.%데히트라: 너는 실패한 존재다.%데히트라: 더이상 볼 필요가 없겠군.%데히트라: 네비. 이제 돌아오거라.%"
+					+ "네비: 바이바이. " + player.getDisplayName() + ".%네비: 마침 귀찮던 참이었어.%네비: 전 세대의 녀석들보다 너무 멍청한거 있지?%"
+					+ "데히트라: 하하. 멍청하다니.%데히트라: 이 녀석이 아무리 모자라다고 해도 나와 같은 존재가 아니냐.%데히트라: 내가 멍청하다는거냐?%"
+					+ "네비: 하하핫. 농담도 참.%데히트라: 아무튼 수고했다.%데히트라: 남은 시간이 길지는 않지만 조언을 하나 해주지.%"
+					+ "데히트라: §e세계의 문§f 안쪽에는 §e시공을 넘는 길§f이 있다.%데히트라: 그곳에서 널 기다리마.%데히트라: 네 녀석이 날 죽인다면 이 굴레는 끝이 날게야.%"
+					+ "데히트라: 그럼 넌 §e자유§f의 몸이 되는거지.");
+			QuestBoard qb = new QuestBoard();
+			qb.mq50(player, 0);
 		}	
 	}
 	

@@ -1431,6 +1431,42 @@ public class MobDeath {
 				if (name.equalsIgnoreCase("포보르라고 불리는 포보르" + ChatColor.YELLOW + " [Lv.690]")) {
 					mobloot.mob327(lootPlayer);
 				}
+				// 무리에서 쫒겨난 궁수
+				if (name.equalsIgnoreCase("무리에서 쫒겨난 궁수" + ChatColor.YELLOW + " [Lv.670]")) {
+					mobloot.mob328(lootPlayer);
+				}
+				// 무리에서 쫒겨난 전사
+				if (name.equalsIgnoreCase("무리에서 쫒겨난 전사" + ChatColor.YELLOW + " [Lv.673]")) {
+					mobloot.mob329(lootPlayer);
+				}
+				// 무리에서 쫒겨난 마법사
+				if (name.equalsIgnoreCase("무리에서 쫒겨난 마법사" + ChatColor.YELLOW + " [Lv.674]")) {
+					mobloot.mob330(lootPlayer);
+				}
+				// 무리에서 쫒겨난 정예병사
+				if (name.equalsIgnoreCase("무리에서 쫒겨난 정예병사" + ChatColor.YELLOW + " [Lv.677]")) {
+					mobloot.mob331(lootPlayer);
+				}
+				// 반란을 두려워하는 귀족
+				if (name.equalsIgnoreCase("반란을 두려워하는 귀족" + ChatColor.YELLOW + " [Lv.678]")) {
+					mobloot.mob332(lootPlayer);
+				}
+				// 귀족을 지키는 호위무사
+				if (name.equalsIgnoreCase("귀족을 지키는 호위무사" + ChatColor.YELLOW + " [Lv.681]")) {
+					mobloot.mob333(lootPlayer);
+				}
+				// 족장을 지키는 것
+				if (name.equalsIgnoreCase("족장을 지키는 것" + ChatColor.YELLOW + " [Lv.682]")) {
+					mobloot.mob334(lootPlayer);
+				}
+				// 족장의 벗
+				if (name.equalsIgnoreCase("족장의 벗" + ChatColor.YELLOW + " [Lv.685]")) {
+					mobloot.mob335(lootPlayer);
+				}
+				// 족장 <바람을 가르는 늑대>
+				if (name.equalsIgnoreCase("족장 <바람을 가르는 늑대>" + ChatColor.YELLOW + " [Lv.690]")) {
+					mobloot.mob336(lootPlayer);
+				}
 			} catch (Exception e) {
 
 			}

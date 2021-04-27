@@ -556,8 +556,20 @@ public class MobThread implements Listener{
 							} else if(loc.getX() <= 1299 && loc.getY() <= 120 && loc.getZ() <= -1227 
 									&& loc.getX() >= 960 && loc.getY() >= 30 && loc.getZ() >= -1307) {
 								tiperariField4(player, loc);
+							} else if(loc.getX() <= 1299 && loc.getY() <= 60 && loc.getZ() <= -1308 
+									&& loc.getX() >= 1023 && loc.getY() >= 30 && loc.getZ() >= -1444) {
+								badlands1(player, loc);
+							} else if(loc.getX() <= 1299 && loc.getY() <= 60 && loc.getZ() <= -1446 
+									&& loc.getX() >= 1073 && loc.getY() >= 30 && loc.getZ() >= -1541) {
+								badlands2(player, loc);
+							} else if(loc.getX() <= 1299 && loc.getY() <= 120 && loc.getZ() <= -1409 
+									&& loc.getX() >= 1198 && loc.getY() >= 61 && loc.getZ() >= -1518) {
+								badlands3(player, loc);
+							} else if(loc.getX() <= 1299 && loc.getY() <= 120 && loc.getZ() <= -1519 
+									&& loc.getX() >= 1165 && loc.getY() >= 61 && loc.getZ() >= -1699) {
+								badlands4(player, loc);
 							}
-							
+
 						}
 					} 
 					
@@ -3144,6 +3156,68 @@ public class MobThread implements Listener{
 			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
 		} else if (num == 1) {
 			loc.getWorld().spawnEntity(loc, EntityType.ZOMBIE);
+		} 
+	}
+	
+	public void badlands1(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 1299 && loc.getY() <= 60 && loc.getZ() <= -1308 
+				&& loc.getX() >= 1023 && loc.getY() >= 30 && loc.getZ() >= -1444)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.HUSK);
+		} 
+	}
+	
+	public void badlands2(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 1299 && loc.getY() <= 60 && loc.getZ() <= -1446 
+				&& loc.getX() >= 1073 && loc.getY() >= 30 && loc.getZ() >= -1541)) {
+			return;
+		}
+		
+		if (num == 0) {
+			CustomSkeleton2 cs = new CustomSkeleton2(loc);
+			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
+			world.addEntity(cs);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
+		} 
+	}
+	
+	public void badlands3(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 1299 && loc.getY() <= 120 && loc.getZ() <= -1409 
+				&& loc.getX() >= 1198 && loc.getY() >= 61 && loc.getZ() >= -1518)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.HUSK);
+		} 
+	}
+	
+	public void badlands4(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 1299 && loc.getY() <= 120 && loc.getZ() <= -1519 
+				&& loc.getX() >= 1165 && loc.getY() >= 61 && loc.getZ() >= -1699)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.RAVAGER);
 		} 
 	}
 	

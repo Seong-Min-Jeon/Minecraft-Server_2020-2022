@@ -83,7 +83,7 @@ public class SpawnMob {
 				&& mob218(entity, loc) && mob219(entity, loc) && mob220(entity, loc) && mob221(entity, loc) && mob222(entity, loc) && mob223(entity, loc)
 				&& mob224(entity, loc) && mob225(entity, loc) && mob226(entity, loc) && mob227(entity, loc) && mob228(entity, loc) && mob229(entity, loc)
 				&& antimob1(entity, loc) && antimob2(entity, loc) && antimob3(entity, loc) && antimob4(entity, loc) && antimob5(entity, loc)
-				&& antimob6(entity, loc) && antimob7(entity, loc) && antimob8(entity, loc)) {
+				&& antimob6(entity, loc) && antimob7(entity, loc) && antimob8(entity, loc) && antimob9(entity, loc)) {
 			return true;
 		}
 		return false;
@@ -276,6 +276,33 @@ public class SpawnMob {
 			} else if (entity.getType() == (EntityType) EntityType.SILVERFISH) {
 				return false;
 			} else if (entity.getType() == (EntityType) EntityType.RAVAGER) {
+				return false;
+			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM
+					|| entity.getType() == (EntityType) EntityType.SALMON
+					|| entity.getType() == (EntityType) EntityType.ITEM_FRAME
+					|| entity.getType() == (EntityType) EntityType.DROPPED_ITEM
+					|| entity.getType() == (EntityType) EntityType.ARMOR_STAND
+					|| entity.getType() == (EntityType) EntityType.VILLAGER
+					|| entity.getType() == (EntityType) EntityType.SKELETON_HORSE
+					|| entity.getType() == (EntityType) EntityType.PIG
+					|| entity.getType() == (EntityType) EntityType.MUSHROOM_COW) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	public boolean antimob9(LivingEntity entity, Location loc) {
+		// 약지 지형 넘어가는 오두막 마을  1029 255 -1333  1053 0 -1362
+		if (loc.getX() <= 1053 && loc.getY() <= 255 && loc.getZ() <= -1333 
+				&& loc.getX() >= 1029 && loc.getY() >= 0 && loc.getZ() >= -1362) {
+			if (entity.getType() == (EntityType) EntityType.SKELETON) {
+				return false;
+			} else if (entity.getType() == (EntityType) EntityType.HUSK) {
+				return false;
+			} else if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
 				return false;
 			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM
 					|| entity.getType() == (EntityType) EntityType.SALMON
@@ -12602,8 +12629,8 @@ public class SpawnMob {
 	
 	public boolean mob198(LivingEntity entity, Location loc) {
 		// 약지 지형4 1165 120 -1519  1299 61 -1699
-		if (loc.getX() <= 1299 && loc.getY() <= 120 && loc.getZ() <= -1699 
-				&& loc.getX() >= 1165 && loc.getY() >= 61 && loc.getZ() >= -1519) {
+		if (loc.getX() <= 1299 && loc.getY() <= 120 && loc.getZ() <= -1519 
+				&& loc.getX() >= 1165 && loc.getY() >= 61 && loc.getZ() >= -1699) {
 			Location chestLoc = new Location(entity.getWorld(), -1838, 92, 3051);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
@@ -12644,7 +12671,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.HUSK) {
-				entity.setCustomName(ChatColor.GRAY + "족장 <바람을 가르는 늑대>" + ChatColor.YELLOW + " [Lv.700]");
+				entity.setCustomName(ChatColor.GRAY + "족장 <바람을 가르는 늑대>" + ChatColor.YELLOW + " [Lv.690]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(3200000);
 				entity.setHealth(3200000);

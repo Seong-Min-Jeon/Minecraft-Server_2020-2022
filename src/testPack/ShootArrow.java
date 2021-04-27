@@ -33,7 +33,7 @@ public class ShootArrow {
 				&& arrow9(arrow, mob, loc) && arrow10(arrow, mob, loc) && arrow11(arrow, mob, loc) && arrow12(arrow, mob, loc)
 				&& arrow13(arrow, mob, loc) && arrow14(arrow, mob, loc) && arrow15(arrow, mob, loc) && arrow16(arrow, mob, loc)
 				&& arrow17(arrow, mob, loc) && arrow18(arrow, mob, loc) && arrow19(arrow, mob, loc) && arrow20(arrow, mob, loc)
-				&& arrow21(arrow, mob, loc) && arrow22(arrow, mob, loc)) {
+				&& arrow21(arrow, mob, loc) && arrow22(arrow, mob, loc) && arrow23(arrow, mob, loc)) {
 			SpectralArrow sarrow = (SpectralArrow) arrow.getWorld().spawnEntity(loc, EntityType.SPECTRAL_ARROW);
 			sarrow.setVelocity(arrow.getVelocity());
 		}
@@ -342,6 +342,32 @@ public class ShootArrow {
 				arrow.removePassenger(arrow.getPassenger());
 			}
 			Item item = arrow.getWorld().dropItem(loc, new ItemStack(Material.SNOWBALL));
+			item.setPickupDelay(10000000);
+			arrow.addPassenger(item);
+			return false;
+		}
+		return true;
+	}
+	
+	public boolean arrow23(Arrow arrow, Entity mob, Location loc) {
+		if(mob.getCustomName().substring(2).equalsIgnoreCase("무리에서 쫒겨난 마법사" + ChatColor.YELLOW + " [Lv.674]")) {
+			if (arrow.getPassenger() != null) {
+				arrow.removePassenger(arrow.getPassenger());
+			}
+			Item item = arrow.getWorld().dropItem(loc, new ItemStack(Material.HEART_OF_THE_SEA));
+			item.setPickupDelay(10000000);
+			arrow.addPassenger(item);
+			return false;
+		}
+		return true;
+	}
+	
+	public boolean arrow24(Arrow arrow, Entity mob, Location loc) {
+		if(mob.getCustomName().substring(2).equalsIgnoreCase("반란을 두려워하는 귀족" + ChatColor.YELLOW + " [Lv.678]")) {
+			if (arrow.getPassenger() != null) {
+				arrow.removePassenger(arrow.getPassenger());
+			}
+			Item item = arrow.getWorld().dropItem(loc, new ItemStack(Material.FIRE_CHARGE));
 			item.setPickupDelay(10000000);
 			arrow.addPassenger(item);
 			return false;

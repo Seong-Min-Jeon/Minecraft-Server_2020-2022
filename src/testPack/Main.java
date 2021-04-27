@@ -8082,10 +8082,25 @@ public class Main extends JavaPlugin implements Listener{
 	    		}
 	    		//취소 이벤드
 	    		try {
-	    			if(event.getAction() == Action.RIGHT_CLICK_BLOCK) {
-	        			if(player.getInventory().getItemInMainHand().getType()==Material.BAMBOO) {
+	    			if(event.getAction() == Action.RIGHT_CLICK_BLOCK || event.getAction() == Action.RIGHT_CLICK_AIR) {
+	        			if(player.getInventory().getItemInMainHand().getType()==Material.SNOWBALL) {
+	        				try {
+	        					if(player.isOp() && (player.getGameMode() == GameMode.CREATIVE || player.getGameMode() == GameMode.SPECTATOR)) {
+	        						if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "Do you wanna build a snowman? (range 10)")) {
+		        						new SnowStack(player.getTargetBlockExact(50), 10);
+		        					} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "마법봉")) {
+		        						if(player.isSneaking()) {
+		        							new ParticleEffect(player).newEffect2();
+		        						} else {
+		        							new ParticleEffect(player).newEffect4();
+		        						}
+		        					}
+	        					}
+	        				} catch(Exception e2) {
+	        					
+	        				}
 	        				event.setCancelled(true);
-	        			}	        			
+	        			}       			
 	        		}
 	    		} catch(Exception e1) {
 	    			
@@ -8593,14 +8608,14 @@ public class Main extends JavaPlugin implements Listener{
 		if(event.getWhoClicked() instanceof Player) {
 			Player player = (Player) event.getWhoClicked();
 			if(event.getClick() == ClickType.MIDDLE) {
-				if(player.getGameMode() == GameMode.CREATIVE) {
-					if(player.isOp() == true) {
-						event.getCurrentItem().setAmount(1);
-					} else {
-						event.setCancelled(true);
-						return;
-					}
-				}
+//				if(player.getGameMode() == GameMode.CREATIVE) {
+//					if(player.isOp() == true) {
+//						event.getCurrentItem().setAmount(1);
+//					} else {
+//						event.setCancelled(true);
+//						return;
+//					}
+//				}
 			}
 		}
 		
