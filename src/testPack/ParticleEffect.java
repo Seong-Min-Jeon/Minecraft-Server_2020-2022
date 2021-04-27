@@ -1,6 +1,7 @@
 package testPack;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 import org.bukkit.Bukkit;
@@ -11,9 +12,12 @@ import org.bukkit.Material;
 import org.bukkit.Particle;
 import org.bukkit.Sound;
 import org.bukkit.World;
+import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Arrow;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
+import org.bukkit.entity.LivingEntity;
+import org.bukkit.entity.Mob;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.SpectralArrow;
 import org.bukkit.scheduler.BukkitRunnable;
@@ -156,12 +160,14 @@ public class ParticleEffect {
 		
 		new BukkitRunnable() {
 			int time = 0;
+			
+			World world = player.getWorld(); 
+			Location e1, e3;
 	        
 			@Override
 			public void run() {
 				
 				Location normal = player.getEyeLocation();
-				World world = player.getWorld(); 
 				
 				double arrowAngle1 = 0;
 		        double totalAngle1 = normal.getYaw() + arrowAngle1;
@@ -173,8 +179,6 @@ public class ParticleEffect {
 		        double dirX3 = Math.cos(Math.toRadians(totalAngle3));
 		        double dirZ3 = Math.sin(Math.toRadians(totalAngle3));
 				
-				Location e1, e3;
-
 				e1 = normal.clone().add(dirX1, 0, dirZ1);
 				world.spawnParticle(Particle.END_ROD, e1, 0);
 
@@ -194,7 +198,7 @@ public class ParticleEffect {
 	// 본 체스트
 	public void newEffect4() {
 		
-		Location normal = player.getEyeLocation();
+		
 		World world = player.getWorld(); 
         
         Particle.DustOptions dustOptions1 = new Particle.DustOptions(Color.fromRGB(160, 160, 160), 1);
@@ -203,10 +207,12 @@ public class ParticleEffect {
 		new BukkitRunnable() {
 			int time = 0;
 			
+			Location e1, e3;
+			
 			@Override
 			public void run() {
 				
-				Location e1, e3;
+				Location normal = player.getEyeLocation();
 				
 				if(time == 0) {
 					for(int i = 0 ; i < 25 ; i++) {
@@ -470,6 +476,359 @@ public class ParticleEffect {
 				}
 
 				if(time >= 60) {
+					this.cancel();
+				}
+				
+				time++;
+			}
+		}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
+		
+	}
+	
+	// 뼈감옥
+	public void newEffect5() {
+		
+		Location normal = player.getLocation();
+		World world = player.getWorld(); 
+        
+		//디버프 컬러
+        Particle.DustOptions dustOptions1 = new Particle.DustOptions(Color.fromRGB(150, 20, 150), 1);
+        Particle.DustOptions dustOptions2 = new Particle.DustOptions(Color.fromRGB(200, 100, 200), 1);
+        Particle.DustOptions dustOptions3 = new Particle.DustOptions(Color.fromRGB(50, 0, 50), 1);
+        
+		new BukkitRunnable() {
+			int time = 0;
+			int size = 0;
+			
+		    Location e1, e2, e3;
+
+			@Override
+			public void run() {
+				
+				if(time % 1 == 0) {
+					double var = 0;
+					
+					for(int i = 0 ; i < 32 ; i++) {
+						if(size % 2 == 0) {
+							e2 = normal.clone().add(Math.cos(var)*size, 0.5, Math.sin(var)*size);
+						} else {
+							e2 = normal.clone().add(Math.cos(var)*size, 0, Math.sin(var)*size);
+						}
+						player.getWorld().spawnParticle(Particle.REDSTONE, e2, 2, dustOptions2);
+						
+						var += Math.PI / 16;
+					}
+					
+					if(size == 4) {
+						size = -1;
+					}
+					size++;
+				}
+				
+				if(time % 3 == 0) {
+					double var = 0;
+					
+					for(int i = 0 ; i < 32 ; i++) {
+						e1 = normal.clone().add(Math.cos(var)*5, 0, Math.sin(var)*5);
+						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 2, dustOptions1);
+						
+						if(i % 4 == 0) {
+							e3 = e1.clone().add(0,5,0);
+							player.getWorld().spawnParticle(Particle.REDSTONE, e3, 2, dustOptions3);
+							e3 = e1.clone().add(0,4.5,0);
+							player.getWorld().spawnParticle(Particle.REDSTONE, e3, 2, dustOptions3);
+							e3 = e1.clone().add(0,4,0);
+							player.getWorld().spawnParticle(Particle.REDSTONE, e3, 2, dustOptions3);
+							e3 = e1.clone().add(0,3.5,0);
+							player.getWorld().spawnParticle(Particle.REDSTONE, e3, 2, dustOptions3);
+							e3 = e1.clone().add(0,3,0);
+							player.getWorld().spawnParticle(Particle.REDSTONE, e3, 2, dustOptions3);
+							e3 = e1.clone().add(0,2.5,0);
+							player.getWorld().spawnParticle(Particle.REDSTONE, e3, 2, dustOptions3);
+							e3 = e1.clone().add(0,2,0);
+							player.getWorld().spawnParticle(Particle.REDSTONE, e3, 2, dustOptions3);
+							e3 = e1.clone().add(0,1.5,0);
+							player.getWorld().spawnParticle(Particle.REDSTONE, e3, 2, dustOptions3);
+							e3 = e1.clone().add(0,1,0);
+							player.getWorld().spawnParticle(Particle.REDSTONE, e3, 2, dustOptions3);
+							e3 = e1.clone().add(0,0.5,0);
+							player.getWorld().spawnParticle(Particle.REDSTONE, e3, 2, dustOptions3);
+						}
+						
+						var += Math.PI / 16;
+					}
+				}
+
+				if(time >= 20) {
+					this.cancel();
+				}
+				
+				time++;
+			}
+		}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
+		
+	}
+	
+	// 차지 어택
+	public void newEffect6() {
+		
+		World world = player.getWorld(); 
+        
+		new BukkitRunnable() {
+			int time = 0;
+
+			@Override
+			public void run() {
+				
+				Location normal = player.getLocation();
+				
+				if(time == 0) {
+					ArmorStand tmpEnt = (ArmorStand) world.spawnEntity(normal, EntityType.ARMOR_STAND);
+					tmpEnt.setVisible(false);
+					tmpEnt.setSmall(true);
+					
+					new BukkitRunnable() {
+						@Override
+						public void run() {
+							tmpEnt.remove();
+							this.cancel();
+						}
+					}.runTaskTimer(Main.getPlugin(Main.class), 0, 3);
+					
+					List<Entity> entitylist = tmpEnt.getNearbyEntities(3, 3, 3);				
+					for (Entity nearEntity : entitylist) {
+						if (nearEntity instanceof Mob) {
+							LivingEntity ent = (LivingEntity) nearEntity;
+							ent.damage(player.getLevel()*8);
+						}
+					}	
+					
+					world.playSound(player.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 0.5f, 0.5f);
+					player.getWorld().spawnParticle(Particle.EXPLOSION_NORMAL, normal, 1);
+					player.getWorld().spawnParticle(Particle.FLAME, normal, 2);
+				}
+				
+				if(time % 10 == 0) {
+					ArmorStand tmpEnt = (ArmorStand) world.spawnEntity(normal, EntityType.ARMOR_STAND);
+					tmpEnt.setVisible(false);
+					tmpEnt.setSmall(true);
+					
+					new BukkitRunnable() {
+						@Override
+						public void run() {
+							tmpEnt.remove();
+							this.cancel();
+						}
+					}.runTaskTimer(Main.getPlugin(Main.class), 0, 3);
+					
+					List<Entity> entitylist = tmpEnt.getNearbyEntities(3, 3, 3);				
+					for (Entity nearEntity : entitylist) {
+						if (nearEntity instanceof Mob) {
+							LivingEntity ent = (LivingEntity) nearEntity;
+							ent.damage(player.getLevel()*8);
+						}
+					}		
+					
+					world.playSound(player.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 0.5f, 0.5f);
+					player.getWorld().spawnParticle(Particle.EXPLOSION_NORMAL, normal, 1);
+					player.getWorld().spawnParticle(Particle.FLAME, normal, 2);
+				}
+
+				if(time >= 20) {
+					ArmorStand tmpEnt = (ArmorStand) world.spawnEntity(normal, EntityType.ARMOR_STAND);
+					tmpEnt.setVisible(false);
+					tmpEnt.setSmall(true);
+					
+					new BukkitRunnable() {
+						@Override
+						public void run() {
+							tmpEnt.remove();
+							this.cancel();
+						}
+					}.runTaskTimer(Main.getPlugin(Main.class), 0, 3);
+					
+					List<Entity> entitylist = tmpEnt.getNearbyEntities(3, 3, 3);				
+					for (Entity nearEntity : entitylist) {
+						if (nearEntity instanceof Mob) {
+							LivingEntity ent = (LivingEntity) nearEntity;
+							ent.damage(player.getLevel()*8);
+						}
+					}		
+					
+					world.playSound(player.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 0.5f, 0.5f);
+					player.getWorld().spawnParticle(Particle.EXPLOSION_NORMAL, normal, 1);
+					player.getWorld().spawnParticle(Particle.FLAME, normal, 2);
+					this.cancel();
+				}
+				
+				time++;
+			}
+		}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
+	}
+	
+	// 전투의 의지
+	public void newEffect7() {
+		
+		Location normal = player.getLocation();
+		World world = player.getWorld(); 
+        
+        Particle.DustOptions dustOptions1 = new Particle.DustOptions(Color.fromRGB(200, 150, 50), 1);
+        Particle.DustOptions dustOptions2 = new Particle.DustOptions(Color.fromRGB(250, 100, 100), 1);
+        Particle.DustOptions dustOptions3 = new Particle.DustOptions(Color.fromRGB(250, 230, 100), 1);
+        
+		new BukkitRunnable() {
+			int time = 0;
+			int size = 0;
+			
+		    Location e1, e2, e3, e4;
+
+			@Override
+			public void run() {
+				
+				if(time % 1 == 0) {
+					double var = 0;
+					
+					for(int i = 0 ; i < 32 ; i++) {
+						if(size % 2 == 0) {
+							e4 = normal.clone().add(Math.cos(var)*size, 0.5, Math.sin(var)*size);
+						} else {
+							e4 = normal.clone().add(Math.cos(var)*size, 0, Math.sin(var)*size);
+						}
+						player.getWorld().spawnParticle(Particle.REDSTONE, e4, 2, dustOptions3);
+						
+						var += Math.PI / 16;
+					}
+					
+					if(size == 9) {
+						size = -1;
+					}
+					size++;
+				}
+				
+				if(time % 4 == 0) {
+					double arrowAngle1 = 90;
+					double totalAngle1 = normal.getYaw() + arrowAngle1;
+					double dirX1 = Math.cos(Math.toRadians(totalAngle1));
+					double dirZ1 = Math.sin(Math.toRadians(totalAngle1));
+					
+					for(int j = 0 ; j < 50 ; j++) {
+						e1 = normal.clone().add(dirX1*0, 8-(j*0.1), dirZ1*0);
+						world.spawnParticle(Particle.REDSTONE, e1, 10, dustOptions2);
+					}
+					
+					double arrowAngle2 = 0;
+					double totalAngle2 = normal.getYaw() + arrowAngle2;
+					double dirX2 = Math.cos(Math.toRadians(totalAngle2));
+					double dirZ2 = Math.sin(Math.toRadians(totalAngle2));
+					
+					for(int j = 0 ; j < 15 ; j++) {
+						e2 = normal.clone().add(dirX2*0.2, 8-(j*0.3), dirZ2*0.2);
+						world.spawnParticle(Particle.REDSTONE, e2, 2, dustOptions2);
+					}
+					
+					for(int j = 0 ; j < 2 ; j++) {
+						e2 = normal.clone().add(dirX2*0.4, 7-(j*0.3), dirZ2*0.4);
+						world.spawnParticle(Particle.REDSTONE, e2, 2, dustOptions2);
+					}
+					
+					for(int j = 0 ; j < 2 ; j++) {
+						e2 = normal.clone().add(dirX2*0.6, 7-(j*0.3), dirZ2*0.6);
+						world.spawnParticle(Particle.REDSTONE, e2, 2, dustOptions2);
+					}
+					
+					for(int j = 0 ; j < 2 ; j++) {
+						e2 = normal.clone().add(dirX2*0.8, 7-(j*0.3), dirZ2*0.8);
+						world.spawnParticle(Particle.REDSTONE, e2, 2, dustOptions2);
+					}
+					
+					double arrowAngle3 = 180;
+					double totalAngle3 = normal.getYaw() + arrowAngle3;
+					double dirX3 = Math.cos(Math.toRadians(totalAngle3));
+					double dirZ3 = Math.sin(Math.toRadians(totalAngle3));
+					
+					for(int j = 0 ; j < 15 ; j++) {
+						e3 = normal.clone().add(dirX3*0.2, 8-(j*0.3), dirZ3*0.2);
+						world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions2);
+					}
+					
+					for(int j = 0 ; j < 2 ; j++) {
+						e3 = normal.clone().add(dirX3*0.4, 7-(j*0.3), dirZ3*0.4);
+						world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions2);
+					}
+					
+					for(int j = 0 ; j < 2 ; j++) {
+						e3 = normal.clone().add(dirX3*0.6, 7-(j*0.3), dirZ3*0.6);
+						world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions2);
+					}
+					
+					for(int j = 0 ; j < 2 ; j++) {
+						e3 = normal.clone().add(dirX3*0.8, 7-(j*0.3), dirZ3*0.8);
+						world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions2);
+					}
+				}
+				
+				if(time % 3 == 0) {
+					double var = 0;
+					
+					for(int i = 0 ; i < 32 ; i++) {
+						e1 = normal.clone().add(Math.cos(var)*10, 0, Math.sin(var)*10);
+						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 2, dustOptions1);
+						
+						var += Math.PI / 16;
+					}
+				}
+
+				if(time >= 20) {
+					this.cancel();
+				}
+				
+				time++;
+			}
+		}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
+	}
+	
+	// 보스 기믹1
+	public void newEffect100() {
+		
+		Location normal = player.getLocation();
+		World world = player.getWorld(); 
+        
+        Particle.DustOptions dustOptions1 = new Particle.DustOptions(Color.fromRGB(150, 20, 150), 1);
+        Particle.DustOptions dustOptions2 = new Particle.DustOptions(Color.fromRGB(200, 80, 200), 1);
+        
+		new BukkitRunnable() {
+			int time = 0;
+			int size = 0;
+			
+		    Location e1, e2;
+
+			@Override
+			public void run() {
+				
+				if(time % 1 == 0) {
+					double var = 0;
+					
+					for(int i = 0 ; i < 32 ; i++) {
+						e2 = normal.clone().add(Math.cos(var)*size, size*0.1, Math.sin(var)*size);
+						player.getWorld().spawnParticle(Particle.REDSTONE, e2, 2, dustOptions1);
+						
+						var += Math.PI / 16;
+					}
+					size++;
+				}
+				
+				if(time % 3 == 0) {
+					double var = 0;
+					
+					for(int i = 0 ; i < 32 ; i++) {
+						e1 = normal.clone().add(Math.cos(var)*5, 0, Math.sin(var)*5);
+						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 2, dustOptions1);
+						
+						var += Math.PI / 16;
+					}
+				}
+
+				if(time >= 20) {
 					this.cancel();
 				}
 				
