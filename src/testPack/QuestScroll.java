@@ -3,12 +3,16 @@ package testPack;
 import java.util.ArrayList;
 
 import org.bukkit.ChatColor;
+import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.scheduler.BukkitRunnable;
+
+import net.minecraft.server.v1_16_R3.PacketPlayOutPlayerInfo;
 
 public class QuestScroll {
 	
@@ -106,6 +110,7 @@ public class QuestScroll {
 				mq46(player, itemArg, world);
 				mq47(player, itemArg, world);
 				mq48(player, itemArg, world);
+				mq48_18(player, itemArg, world);
 				mq49(player, itemArg, world);
 				mq50(player, itemArg, world);
 			} else {
@@ -854,8 +859,16 @@ public class QuestScroll {
 		}	
 	}
 	
-	public void mq49(Player player, Item itemArg, World world) {	
+	public void mq48_18(Player player, Item itemArg, World world) {	
 		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "메인퀘스트 49장")) {
+			msg.msg(player, "리로이: 지금이 가장 중요한 시간!%리로이: 당신은 신전에 갈 수 이제 있다.%리로이: 가버려라 용사!");
+			QuestBoard qb = new QuestBoard();
+			qb.mq48_18(player, 0);
+		}	
+	}
+	
+	public void mq49(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "메인퀘스트 50장")) {
 			msg.msg(player, "네비: 아.. 저번에 만났던 디아스라는 사람 기억나?%네비: 그 사람이 계속 연락을 하는데 어쩔 수가 없네.%네비: 통화 연결 해줘도 괜찮지?%"
 					+ "디아스: 여어 오랜만이에요우!%디아스: 리로이에게 들었다 소식.%디아스: 그에 대한 일은 미안하다 고맙다.%디아스: 리로이와는 다르도록 프레젠트준다.%"
 					+ "디아스: 내가 이 바다는 다 안다.%디아스: 가고 싶은 곳 말해라.%디아스: 경치 좋은 섬, 무서운 섬, 악마들이 사는 섬 모두 안다.%"
@@ -867,7 +880,7 @@ public class QuestScroll {
 	}
 	
 	public void mq50(Player player, Item itemArg, World world) {	
-		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "메인퀘스트 50장")) {
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "메인퀘스트 51장")) {
 			//데히트라 소환 -> 삭제
 			msg.msg(player, "데히트라: 여어.%데히트라: 시간이.. 별로 남지 않았군.%데히트라: §e세계의 비밀§f..%데히트라: 그것을 네놈이 깨닫기에는 무리가 있는 듯하구나.%"
 					+ "데히트라: 너는 너무 많은 살육을 저질렀어.%데히트라: 너는 실패한 존재다.%데히트라: 더이상 볼 필요가 없겠군.%데히트라: 네비. 이제 돌아오거라.%"
@@ -876,8 +889,27 @@ public class QuestScroll {
 					+ "네비: 하하핫. 농담도 참.%데히트라: 아무튼 수고했다.%데히트라: 남은 시간이 길지는 않지만 조언을 하나 해주지.%"
 					+ "데히트라: §e세계의 문§f 안쪽에는 §e시공을 넘는 길§f이 있다.%데히트라: 그곳에서 널 기다리마.%데히트라: 네 녀석이 날 죽인다면 이 굴레는 끝이 날게야.%"
 					+ "데히트라: 그럼 넌 §e자유§f의 몸이 되는거지.");
+			
+			Location loc = player.getLocation();
+			loc.setYaw(270);
+			loc.setPitch(0);
+			player.teleport(loc);
+			
+			new BukkitRunnable() {
+				@Override
+				public void run() {
+					QuestBoard cb = new QuestBoard();
+					if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===찾아온 불청객===")) {
+						int qNum = cb.getNum(player);
+						cb.mq50(player, qNum + 1);
+					}
+				}
+			}.runTaskLater(Main.getPlugin(Main.class), 1250);
+			
 			QuestBoard qb = new QuestBoard();
 			qb.mq50(player, 0);
+			
+			new NPCManager(player);
 		}	
 	}
 	

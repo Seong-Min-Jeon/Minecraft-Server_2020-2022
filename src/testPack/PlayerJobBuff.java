@@ -22,7 +22,7 @@ public class PlayerJobBuff {
 		}
 		// 광전사
 		if (player.getInventory().contains(Material.CYAN_DYE)) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 20, 0,true,false,false));
+//			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 20, 0,true,false,false));
 		}
 		// 데빌
 		if (player.getInventory().contains(Material.GRAY_DYE)) {

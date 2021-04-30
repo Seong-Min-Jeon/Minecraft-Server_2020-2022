@@ -1128,11 +1128,11 @@ public class Skill {
 								zombie.setTarget(golem);
 							}
 							if (nearEntity instanceof Drowned) {
-								WitherSkeleton zombie = (WitherSkeleton) nearEntity;
+								Drowned zombie = (Drowned) nearEntity;
 								zombie.setTarget(golem);
 							}
 							if (nearEntity instanceof Husk) {
-								WitherSkeleton zombie = (WitherSkeleton) nearEntity;
+								Husk zombie = (Husk) nearEntity;
 								zombie.setTarget(golem);
 							}
 						}
@@ -1236,7 +1236,8 @@ public class Skill {
 						itemIm.setDisplayName(ChatColor.BLUE + "마나");
 						item.setItemMeta(itemIm);
 						player.getInventory().setItem(8, item);
-
+						
+						new ParticleEffect(player).newEffect8();
 						player.sendMessage(ChatColor.GREEN + "[스킬]텔레포트가 발동됩니다.");
 
 						Vector vec = player.getEyeLocation().getDirection().multiply(2.5f);
@@ -1267,16 +1268,9 @@ public class Skill {
 					PotionRatio pr = new PotionRatio();
 					pr.calculation(player, player.getLevel() * 3);
 					Location loc = player.getLocation();
-					// ===============================================================
-					ParticleData pd = new ParticleData(player.getUniqueId());
-					if (pd.hasID()) {
-						pd.endTask();
-						pd.removeID();
-					}
-					ParticleEffect pe = new ParticleEffect(player);
-					pe.startE5();
-					// ================================================================
+
 					world.playSound(loc, Sound.ENTITY_ENDER_DRAGON_FLAP, 1.0f, 1.0f);
+					new ParticleEffect(player).newEffect9();
 					player.sendMessage(ChatColor.GREEN + "[스킬]넬의 사랑이 발동됩니다.");
 					player.sendMessage(ChatColor.GREEN + "자신과 주변 아군의 체력이 회복됩니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 3 + ChatColor.RED + "]");
 				} else {
@@ -1300,6 +1294,7 @@ public class Skill {
 						}
 					}
 					player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 0, true, false, false));
+					new ParticleEffect(player).newEffect10();
 					player.sendMessage(ChatColor.GREEN + "[스킬]딘의 화염이 발동됩니다.");
 					player.sendMessage(ChatColor.GREEN + "10초간 추가 체력이 부여됩니다.");												
 				} else {
@@ -1315,7 +1310,9 @@ public class Skill {
 						ItemMeta itemIm = item.getItemMeta();
 						itemIm.setDisplayName(ChatColor.BLUE + "마나");
 						item.setItemMeta(itemIm);
-						player.getInventory().setItem(8, item);								
+						player.getInventory().setItem(8, item);
+						
+						new ParticleEffect(player).newEffect11();
 						player.sendMessage(ChatColor.GREEN + "[스킬]펠의 바람이 발동됩니다.");	
 						world.playSound(player.getLocation(), Sound.ENTITY_BLAZE_AMBIENT, 1.0f, 1.0f);
 						Vector vec = new Vector(0, 1, 0);
@@ -1360,6 +1357,7 @@ public class Skill {
 						item.setItemMeta(itemIm);
 						player.getInventory().setItem(8, item);
 
+						new ParticleEffect(player).newEffect12();
 						player.sendMessage(ChatColor.GREEN + "[스킬]열귀각이 발동됩니다.");
 						player.setHealth(player.getHealth() / 2);
 
@@ -1385,11 +1383,10 @@ public class Skill {
 							if (nearEntity instanceof LivingEntity) {
 								LivingEntity nearMob = (LivingEntity) nearEntity;
 								nearMob.damage(player.getLevel() + damNum*3);
+								new ParticleEffect(player,nearMob).newEffect13();
 							}
 						}
 					}
-					world.playSound(player.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 1.0f, 1.5f);
-					world.spawnParticle(Particle.EXPLOSION_LARGE, player.getLocation(), 0);
 					player.sendMessage(ChatColor.GREEN + "[스킬]마인권이 발동됩니다.");
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
@@ -1404,6 +1401,7 @@ public class Skill {
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
 					player.setNoDamageTicks(20);
+					new ParticleEffect(player).newEffect14();
 					player.sendMessage(ChatColor.GREEN + "[스킬]염옥악이 발동됩니다.");
 					player.sendMessage(ChatColor.GREEN + "1초간 무적이 됩니다.");												
 				} else {
@@ -1419,9 +1417,9 @@ public class Skill {
 						ItemMeta itemIm = item.getItemMeta();
 						itemIm.setDisplayName(ChatColor.BLUE + "마나");
 						item.setItemMeta(itemIm);
-						player.getInventory().setItem(8, item);								
+						player.getInventory().setItem(8, item);			
+						new ParticleEffect(player).newEffect15();
 						player.sendMessage(ChatColor.GREEN + "[스킬]뇌신장이 발동됩니다.");
-						world.playSound(player.getLocation(), Sound.ITEM_TRIDENT_THUNDER, 1.0f, 0.5f);
 						
 						Vector vec = new Vector(0, 1, 0);
 						player.setVelocity(vec.multiply(1.2f));						
@@ -1821,11 +1819,11 @@ public class Skill {
 												zombie.setTarget(golem);
 											}
 											if (nearEntity instanceof Drowned) {
-												WitherSkeleton zombie = (WitherSkeleton) nearEntity;
+												Drowned zombie = (Drowned) nearEntity;
 												zombie.setTarget(golem);
 											}
 											if (nearEntity instanceof Husk) {
-												WitherSkeleton zombie = (WitherSkeleton) nearEntity;
+												Husk zombie = (Husk) nearEntity;
 												zombie.setTarget(golem);
 											}
 										}

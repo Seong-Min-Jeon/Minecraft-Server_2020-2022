@@ -671,6 +671,15 @@ public class InteractVillager {
 				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===티페라리의 영웅9===")) {
 					int qNum = cb.getNum(player);
 					cb.mq49_9(player, qNum+1);	
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===비밀을 찾아서1===")) {
+					int qNum = cb.getNum(player);
+					cb.mq50_1(player, qNum+1);	
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===비밀을 찾아서8===")) {
+					int qNum = cb.getNum(player);
+					cb.mq50_8(player, qNum+1);	
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===비밀을 찾아서10===")) {
+					int qNum = cb.getNum(player);
+					cb.mq50_10(player, qNum+1);	
 				} else {
 					player.sendMessage("마가이: 마가도 형님은 잘 계실까나.");
 				}

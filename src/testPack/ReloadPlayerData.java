@@ -57,6 +57,9 @@ public class ReloadPlayerData {
     				String[] ary3 = level.split("/");
     				player.setLevel(Integer.parseInt(ary3[0]));
     				player.setExp(Float.parseFloat(ary3[1]));
+    				if(player.getLevel() == 0) {
+    					player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 0.5f);
+    				}
     				String[] ary2 = health.split("/");
     				player.setHealth(Double.parseDouble(ary2[0]));
     				player.setFoodLevel(Integer.parseInt(ary2[1]));
@@ -679,6 +682,36 @@ public class ReloadPlayerData {
 					} else if (quest.equals("mq49_9")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq49_9(player, Integer.parseInt(num));
+					} else if (quest.equals("mq50")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq50(player, Integer.parseInt(num));
+					} else if (quest.equals("mq50_1")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq50_1(player, Integer.parseInt(num));
+					} else if (quest.equals("mq50_2")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq50_2(player, Integer.parseInt(num));
+					} else if (quest.equals("mq50_3")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq50_3(player, Integer.parseInt(num));
+					} else if (quest.equals("mq50_4")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq50_4(player, Integer.parseInt(num));
+					} else if (quest.equals("mq50_5")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq50_5(player, Integer.parseInt(num));
+					} else if (quest.equals("mq50_6")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq50_6(player, Integer.parseInt(num));
+					} else if (quest.equals("mq50_7")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq50_7(player, Integer.parseInt(num));
+					} else if (quest.equals("mq50_8")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq50_8(player, Integer.parseInt(num));
+					} else if (quest.equals("mq50_9")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq50_9(player, Integer.parseInt(num));
 					}
 					
 					bufReader.close();

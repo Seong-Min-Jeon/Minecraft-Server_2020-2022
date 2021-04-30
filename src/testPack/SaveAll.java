@@ -1122,6 +1122,46 @@ public class SaveAll {
 						int number = qb.getNum(player);
 						fw.write("mq49_9\n");
 						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===찾아온 불청객===")) {
+						int number = qb.getNum(player);
+						fw.write("mq50\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===비밀을 찾아서1===")) {
+						int number = qb.getNum(player);
+						fw.write("mq50_1\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===비밀을 찾아서2===")) {
+						int number = qb.getNum(player);
+						fw.write("mq50_2\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===비밀을 찾아서3===")) {
+						int number = qb.getNum(player);
+						fw.write("mq50_3\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===비밀을 찾아서4===")) {
+						int number = qb.getNum(player);
+						fw.write("mq50_4\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===비밀을 찾아서5===")) {
+						int number = qb.getNum(player);
+						fw.write("mq50_5\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===비밀을 찾아서66===")) {
+						int number = qb.getNum(player);
+						fw.write("mq50_6\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===비밀을 찾아서7===")) {
+						int number = qb.getNum(player);
+						fw.write("mq50_7\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===비밀을 찾아서8===")) {
+						int number = qb.getNum(player);
+						fw.write("mq50_8\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===비밀을 찾아서9===")) {
+						int number = qb.getNum(player);
+						fw.write("mq50_9\n");
+						fw.write(Integer.toString(number));
 					}
 					fw.close();
 					bufReader.close();

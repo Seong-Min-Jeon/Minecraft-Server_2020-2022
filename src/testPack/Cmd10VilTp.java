@@ -54,6 +54,7 @@ public class Cmd10VilTp implements CommandExecutor {
 			Location kekktas = new Location(world,-741,56,-894); 
 			Location hardDun = new Location(world,3686,190,3863); 
 			Location tiperari = new Location(world,738,107,-982,270,0);
+			Location lidia = new Location(world,1031,52,-1351,270,0);
 			
 			if(player.isOp() == false) {
 				return false;
@@ -62,7 +63,7 @@ public class Cmd10VilTp implements CommandExecutor {
 				if(args.length == 0) {
 					player.sendMessage(ChatColor.WHITE + "1: 워그닐/2: 포르간/3: 티르/4: 시드광산/5: 미푀르유/6: 카이만/7: 오스/"
 							+ "8: 콘노/9: 프휘 드 메흐/10: 시타사이디/11: 칼스/12: 크레드라트/13: 베아그/14: 마법탑/15: 롱게/16: 하마베/17: 사막정찰캠프/"
-							+ "18: 사막마을/19: 캑터스/20: 하드던전/21: 티페라리");
+							+ "18: 사막마을/19: 캑터스/20: 하드던전/21: 티페라리/22: 리디아 평원 오두막");
 					return true;
 				}
 				try { 
@@ -134,6 +135,9 @@ public class Cmd10VilTp implements CommandExecutor {
 					}
 					if(args[0].equalsIgnoreCase("21")) {
 						player.teleport(tiperari);
+					}
+					if(args[0].equalsIgnoreCase("22")) {
+						player.teleport(lidia);
 					}
 				} catch(Exception e) {
 					player.sendMessage(ChatColor.RED + "잘못된 입력입니다만?");

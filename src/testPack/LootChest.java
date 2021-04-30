@@ -3046,7 +3046,7 @@ public class LootChest {
 		}
 		
 		idx = rnd.nextInt(3) + 3;
-		ItemStack metalware = new ItemStack(Material.SMOOTH_QUARTZ_STAIRS, idx);
+		ItemStack metalware = new ItemStack(Material.BREWING_STAND, idx);
 		ItemMeta metalwareIm = metalware.getItemMeta();
 		metalwareIm.setDisplayName(ChatColor.LIGHT_PURPLE + "세공 도구 부품");
 		ArrayList<String> metalwareLore = new ArrayList();

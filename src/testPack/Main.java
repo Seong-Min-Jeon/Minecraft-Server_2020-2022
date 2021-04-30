@@ -327,7 +327,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("woolring")) { 
 			
 		} else {
-			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/830042481507696690/aile_texture_pack_25.zip");
+			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/837242652712763452/aile_texture_pack_26.zip");
 		}
 		
 		//Message
@@ -2925,6 +2925,8 @@ public class Main extends JavaPlugin implements Listener{
 			Location kekktas = new Location(world,-741,56,-894);
 			Location hardLobby = new Location(world,3686,190,3861);
 			Location tiperari = new Location(world,738,107,-982,270,0);
+			Location lidia = new Location(world,1031,52,-1351,270,0);
+			
 			
 			//캐릭터 선택창 3668 47 3671 3660 39 3680
 			if(loc.getX() <= 3668 && loc.getZ() <= 3680 &&
@@ -3073,6 +3075,7 @@ public class Main extends JavaPlugin implements Listener{
 			int length18 = (int)(Math.pow(loc.getX()-samak.getX(), 2) + Math.pow(loc.getY()-samak.getY(), 2) + Math.pow(loc.getZ()-samak.getZ(), 2));
 			int length19 = (int)(Math.pow(loc.getX()-samakVil.getX(), 2) + Math.pow(loc.getY()-samakVil.getY(), 2) + Math.pow(loc.getZ()-samakVil.getZ(), 2));
 			int length20 = (int)(Math.pow(loc.getX()-tiperari.getX(), 2) + Math.pow(loc.getY()-tiperari.getY(), 2) + Math.pow(loc.getZ()-tiperari.getZ(), 2));
+			int length21 = (int)(Math.pow(loc.getX()-lidia.getX(), 2) + Math.pow(loc.getY()-lidia.getY(), 2) + Math.pow(loc.getZ()-lidia.getZ(), 2));
 			ArrayList<Integer> ary = new ArrayList<>();
 			ary.add(length1);
 			ary.add(length2);
@@ -3094,6 +3097,7 @@ public class Main extends JavaPlugin implements Listener{
 			ary.add(length18);
 			ary.add(length19);
 			ary.add(length20);
+			ary.add(length21);
 			Collections.sort(ary);
 			if(ary.get(0) == length1) {
 				event.setRespawnLocation(wargunil);
@@ -3143,6 +3147,14 @@ public class Main extends JavaPlugin implements Listener{
 				}
 			} else if(ary.get(0) == length20) {
 				if(player.getLevel() > 620) {
+					event.setRespawnLocation(tiperari);
+				} else {
+					event.setRespawnLocation(hamabe);
+				}
+			} else if(ary.get(0) == length21) {
+				if(player.getLevel() > 660) {
+					event.setRespawnLocation(lidia);
+				} else if(player.getLevel() > 620) {
 					event.setRespawnLocation(tiperari);
 				} else {
 					event.setRespawnLocation(hamabe);
@@ -4083,6 +4095,10 @@ public class Main extends JavaPlugin implements Listener{
 			event.setCancelled(true);
 		}
 		if(event.getItemDrop().getItemStack().getType() == Material.GRANITE_STAIRS) {
+			player.sendMessage(ChatColor.RED + "드랍 불가 아이템입니다.");
+			event.setCancelled(true);
+		}
+		if(event.getItemDrop().getItemStack().getType() == Material.POLISHED_BLACKSTONE) {
 			player.sendMessage(ChatColor.RED + "드랍 불가 아이템입니다.");
 			event.setCancelled(true);
 		}
@@ -5904,12 +5920,12 @@ public class Main extends JavaPlugin implements Listener{
 								damage = 1.5 - (1.5 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
 							} else if(inv.contains(Material.YELLOW_DYE) || inv.contains(Material.LIGHT_BLUE_DYE) || inv.contains(Material.MAGENTA_DYE)
 									|| inv.contains(Material.ORANGE_DYE) || inv.contains(Material.CLAY_BALL)) {
-								damage = 1.5 - (1.5 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+								damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
 							} else if(inv.contains(Material.GRAY_DYE) || inv.contains(Material.PINK_DYE) || inv.contains(Material.LIME_DYE)) {
-								damage = 1.5 - (1.5 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+								damage = 3 - (3 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
 							} else if(inv.contains(Material.BLUE_DYE) || inv.contains(Material.BROWN_DYE) || inv.contains(Material.BLACK_DYE)
 									|| inv.contains(Material.INK_SAC) || inv.contains(Material.GLOWSTONE_DUST)) {
-								damage = 1.5 - (1.5 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+								damage = 5 - (5 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
 							} else {
 								damage = 1.5 - (1.5 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
 							}
@@ -7337,6 +7353,21 @@ public class Main extends JavaPlugin implements Listener{
 	        if (e.equals (EquipmentSlot.HAND)) {
 	        	//퀘스트 클리어 이벤트
 	    		Player player = event.getPlayer();
+	    		if(event.getAction() == Action.RIGHT_CLICK_BLOCK || event.getAction() == Action.RIGHT_CLICK_AIR) {
+	    			if(player.getInventory().getItemInMainHand().getType() == Material.WRITTEN_BOOK) {
+	    				try {
+	    					if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "티페라리 왕가의 비밀")) {
+	    						QuestBoard cb = new QuestBoard();
+	    						if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===비밀을 찾아서2===")) {
+	    							int qNum = cb.getNum(player);
+	    							cb.mq50_2(player, qNum+1);	
+	    						}
+	    					}
+	    				} catch(Exception e2) {
+	    					
+	    				}
+	    			}
+	    		}
 	    		if(event.getAction() == Action.RIGHT_CLICK_BLOCK) {
 	    			Block block = event.getClickedBlock();
 	    			int i = 0;
@@ -8090,9 +8121,9 @@ public class Main extends JavaPlugin implements Listener{
 		        						new SnowStack(player.getTargetBlockExact(50), 10);
 		        					} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "마법봉")) {
 		        						if(player.isSneaking()) {
-		        							new ParticleEffect(player).newEffect2();
-		        						} else {
 		        							new ParticleEffect(player).newEffect7();
+		        						} else {
+		        							new ParticleEffect(player).newEffect16();
 		        						}
 		        					}
 	        					}
@@ -9007,9 +9038,13 @@ public class Main extends JavaPlugin implements Listener{
 		        		return;
 		        	}
 		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "상자 열기")) {
-		        		Inventory inv = event.getInventory();
-		        		MysteryChestOpen mco = new MysteryChestOpen();
-		        		mco.make(player, inv);
+		        		try {
+		        			Inventory inv = event.getInventory();
+			        		MysteryChestOpen mco = new MysteryChestOpen();
+			        		mco.make(player, inv);
+		        		} catch(Exception e) {
+		        			
+		        		}
 		        		event.setCancelled(true);
 		        		return;
 		        	}
@@ -9582,7 +9617,77 @@ public class Main extends JavaPlugin implements Listener{
 			} catch(Exception e) {
 				System.out.println(ChatColor.DARK_PURPLE + "콘솔 이벤트 오류");
 			}
+		} else if(event.getCommand().split(" ")[0].equals("muyaho")) {
+			try {
+				String[] ary = event.getCommand().split(" ");
+				if(ary.length == 3) {
+					Player player = Bukkit.getPlayer(ary[1]);
+					String rank = ary[2];
+					if(ary[2].equals("7")) {
+						try {
+							Location chestLoc = new Location(player.getWorld(), -1843, 92, 3043);
+							Block block = chestLoc.getBlock();
+							Chest chest = (Chest) block.getState();
+							ItemStack weapon = chest.getInventory().getItem(4).clone();
+							ItemMeta im = weapon.getItemMeta();
+							im.setDisplayName(ChatColor.DARK_PURPLE + "무야호");
+							ArrayList<String> var1Lore = new ArrayList();
+							var1Lore.add(ChatColor.GRAY + "레벨 범위: ??");
+							var1Lore.add(ChatColor.GRAY + " ");
+							var1Lore.add(ChatColor.GRAY + "힝 속았지?");
+							im.setLore(var1Lore);
+							weapon.setItemMeta(im);
+							player.getInventory().addItem(weapon);
+							player.sendMessage(ChatColor.DARK_PURPLE + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
+						} catch(Exception e) {
+							
+						}
+					} else if(ary[2].equals("6")) {
+						try {
+							Location chestLoc = new Location(player.getWorld(), -1843, 92, 3043);
+							Block block = chestLoc.getBlock();
+							Chest chest = (Chest) block.getState();
+							ItemStack weapon = chest.getInventory().getItem(3).clone();
+							ItemMeta im = weapon.getItemMeta();
+							im.setDisplayName(ChatColor.DARK_RED + "무야호");
+							ArrayList<String> var1Lore = new ArrayList();
+							var1Lore.add(ChatColor.GRAY + "레벨 범위: ??");
+							var1Lore.add(ChatColor.GRAY + " ");
+							var1Lore.add(ChatColor.GRAY + "힝 속았지?");
+							im.setLore(var1Lore);
+							weapon.setItemMeta(im);
+							player.getInventory().addItem(weapon);
+							player.sendMessage(ChatColor.DARK_RED + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
+						} catch(Exception e) {
+							
+						}
+					} else if(ary[2].equals("5")) {
+						try {
+							Location chestLoc = new Location(player.getWorld(), -1843, 92, 3043);
+							Block block = chestLoc.getBlock();
+							Chest chest = (Chest) block.getState();
+							ItemStack weapon = chest.getInventory().getItem(2).clone();
+							ItemMeta im = weapon.getItemMeta();
+							im.setDisplayName(ChatColor.AQUA + "무야호");
+							ArrayList<String> var1Lore = new ArrayList();
+							var1Lore.add(ChatColor.GRAY + "레벨 범위: ??");
+							var1Lore.add(ChatColor.GRAY + " ");
+							var1Lore.add(ChatColor.GRAY + "힝 속았지?");
+							im.setLore(var1Lore);
+							weapon.setItemMeta(im);
+							player.getInventory().addItem(weapon);
+							player.sendMessage(ChatColor.AQUA + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
+						} catch(Exception e) {
+							
+						}
+					}
+					
+				}
+			} catch(Exception e) {
+				System.out.println(ChatColor.DARK_PURPLE + "콘솔 이벤트 오류");
+			}
 		}
+		
 	}
 	
 	@EventHandler

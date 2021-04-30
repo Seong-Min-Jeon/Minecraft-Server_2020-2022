@@ -7898,6 +7898,12 @@ public class MobLoot {
 			player.getInventory().addItem(var2);
 			sendMessage(player, ChatColor.AQUA + "심연의 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		}
+		
+		QuestBoard cb = new QuestBoard();
+		if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===비밀을 찾아서3===")) {
+			int qNum = cb.getNum(player);
+			cb.mq50_3(player, qNum+1);	
+		}
 	}
 	
 	// 귀여움의 조종자
@@ -7933,6 +7939,9 @@ public class MobLoot {
 		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===주문은 토끼입니까?===")) {
 			int qNum = cb.getNum(player);
 			cb.q34(player, qNum + 1);
+		} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===비밀을 찾아서4===")) {
+			int qNum = cb.getNum(player);
+			cb.mq50_4(player, qNum+1);	
 		}
 	}
 	
@@ -7964,6 +7973,12 @@ public class MobLoot {
 			player.getInventory().addItem(var2);
 			sendMessage(player, ChatColor.AQUA + "심연의 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
 		}
+		
+		QuestBoard cb = new QuestBoard();
+		if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===비밀을 찾아서5===")) {
+			int qNum = cb.getNum(player);
+			cb.mq50_5(player, qNum+1);	
+		}
 	}
 	
 	// 포션의 조종자
@@ -7993,6 +8008,12 @@ public class MobLoot {
 		} else if(tmp == 1) {
 			player.getInventory().addItem(var2);
 			sendMessage(player, ChatColor.AQUA + "심연의 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+		}
+		
+		QuestBoard cb = new QuestBoard();
+		if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===비밀을 찾아서6===")) {
+			int qNum = cb.getNum(player);
+			cb.mq50_6(player, qNum+1);	
 		}
 	}
 	
@@ -8087,6 +8108,9 @@ public class MobLoot {
 		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===흐콰===")) {
 			int qNum = cb.getNum(player);
 			cb.q35(player, qNum + 1);
+		} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===비밀을 찾아서7===")) {
+			int qNum = cb.getNum(player);
+			cb.mq50_7(player, qNum+1);	
 		}
 	}
 
@@ -8261,6 +8285,12 @@ public class MobLoot {
 			Location loc = player.getLocation().add(0, 1, 0);
 			loc.getWorld().spawnEntity(loc, EntityType.HUSK);
 		}
+		
+		QuestBoard cb = new QuestBoard();
+		if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===비밀을 찾아서9===")) {
+			int qNum = cb.getNum(player);
+			cb.mq50_9(player, qNum+1);	
+		}
 	}
 	
 	// 족장의 벗
@@ -8277,6 +8307,12 @@ public class MobLoot {
 		if(tmp2 == 0) {
 			Location loc = player.getLocation().add(0, 1, 0);
 			loc.getWorld().spawnEntity(loc, EntityType.HUSK);
+		}
+		
+		QuestBoard cb = new QuestBoard();
+		if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===비밀을 찾아서9===")) {
+			int qNum = cb.getNum(player);
+			cb.mq50_9(player, qNum+1);	
 		}
 	}
 	

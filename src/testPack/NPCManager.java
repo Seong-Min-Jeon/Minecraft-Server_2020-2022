@@ -205,6 +205,30 @@ public class NPCManager {
 			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===빨간모자 이야기2===")) {
 				addNPCPacket(player, npc8());
 	 		}
+			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===찾아온 불청객===")) {
+				Location loc = player.getLocation().clone().add(1,0,0);
+				loc.setYaw(90);
+				loc.setPitch(0);
+				
+				GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "데히트라");
+				EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
+				npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
+				String[] name = getSkin("SkyQC");
+				if(name == null) {
+					System.out.println("데히트라 확인 불가");
+				} else {
+					gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
+				}
+				
+				addNPCPacket(player, npc);
+				
+				new BukkitRunnable() {
+					@Override
+					public void run() {
+						removeNPCPacket(player, npc);
+					}
+				}.runTaskLater(Main.getPlugin(Main.class), 1250);
+	 		}
 		} catch(Exception e) {
 			
 		}
