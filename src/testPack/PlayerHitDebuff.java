@@ -1441,7 +1441,166 @@ public class PlayerHitDebuff {
 
 	// 6층의 지배자
 	public void mob13(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("6층의 지배자" + ChatColor.YELLOW + " [Lv.??]")) {
+			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
+				int num = rnd.nextInt(18);
+				if (num == 0) {
+					new ParticleEffect(player, mob).newEffect102();
+					((Skeleton) mob).setTarget(player);
+				} else if (num == 1) {
+					Arrow arrow = ((Skeleton) mob).launchProjectile(Arrow.class);
+					arrow.setShooter((LivingEntity) mob);
+					arrow.setVelocity(((Skeleton) mob).getEyeLocation().getDirection().multiply(3.0f));
+					
+					new ParticleEffect(player, arrow).newEffect101();
+					((Skeleton) mob).setTarget(player);
+				} else if (num == 2) {
+					
+					player.sendMessage(ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
+					sendMessage(player, ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
+					
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true, false, false));
+					
+					Location loc = mob.getLocation();
+					
+					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
+						int time = 0;
+						ThreadData td = new ThreadData(player.getUniqueId());
+
+						@Override
+						public void run() {
+							
+							if (!td.hasID()) {
+								td.setID(taskID);
+							}
+							
+							if (time % 20 == 0) {
+								for(int x = -15 ; x < 16 ; x++) {
+									for(int y = -1 ; y < 0 ; y++) {
+										for(int z = -15 ; z < 16 ; z++) {
+											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
+											player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
+										}
+									}
+								}
+							}
+							
+							if (time >= 40) {
+								player.sendMessage(ChatColor.RED + "지배자가 심판VI을 사용하였습니다.");
+								sendMessage(player, ChatColor.RED + "지배자가 심판VI을 사용하였습니다.");
+								// ===============================================================
+								ParticleData pd = new ParticleData(player.getUniqueId());
+								if (pd.hasID()) {
+									pd.endTask();
+									pd.removeID();
+								}
+								ParticleEffect pe = new ParticleEffect(player, mob);
+								pe.startE33();
+								// ================================================================
+								List<Entity> nearEntity = mob.getNearbyEntities(15, 20, 15);
+								for (Entity nearPlayer : nearEntity) {
+									if (nearPlayer instanceof Player) {
+										Location loc2 = nearPlayer.getLocation();
+										if (loc2.getX() <= 90 && loc2.getY() <= 141 && loc2.getZ() <= -5 && 
+												loc2.getX() >= 54 && loc2.getY() >= 129 && loc2.getZ() >= -41) {
+											((Player) nearPlayer).damage(12000);
+										}
+									}
+								}
+								
+								td.endTask();
+								td.removeID();
+							}
+							
+							time++;
+						}
+					}, 0, 1);
+					
+				}
+			} else {
+				int num = rnd.nextInt(18);
+				if (num == 0) {
+					// ===============================================================
+					ParticleData pd = new ParticleData(player.getUniqueId());
+					if (pd.hasID()) {
+						pd.endTask();
+						pd.removeID();
+					}
+					ParticleEffect pe = new ParticleEffect(player, mob);
+					pe.startE32();
+					// ================================================================
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 200000, true, false, false));
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, 100, 0, true, false, false));
+					player.sendMessage(ChatColor.RED + "탑의 저주로 지배자가 강화됩니다.");
+					sendMessage(player, ChatColor.RED + "탑의 저주로 지배자가 강화됩니다.");
+					((Skeleton) mob).setTarget(player);
+				} else if (num == 1) {
+					
+					player.sendMessage(ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
+					sendMessage(player, ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
+					
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true, false, false));
+					
+					Location loc = mob.getLocation();
+					
+					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+						int time = 0;
+						ThreadData td = new ThreadData(player.getUniqueId());
+
+						@Override
+						public void run() {
+							
+							if (!td.hasID()) {
+								td.setID(taskID);
+							}
+							
+							if (time % 20 == 0) {
+								for(int x = -15 ; x < 16 ; x++) {
+									for(int y = -1 ; y < 0 ; y++) {
+										for(int z = -15 ; z < 16 ; z++) {
+											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
+											player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
+										}
+									}
+								}
+							}
+							
+							if (time >= 40) {
+								player.sendMessage(ChatColor.RED + "지배자가 심판VI을 사용하였습니다.");
+								sendMessage(player, ChatColor.RED + "지배자가 심판VI을 사용하였습니다.");
+								// ===============================================================
+								ParticleData pd = new ParticleData(player.getUniqueId());
+								if (pd.hasID()) {
+									pd.endTask();
+									pd.removeID();
+								}
+								ParticleEffect pe = new ParticleEffect(player, mob);
+								pe.startE33();
+								// ================================================================
+								List<Entity> nearEntity = mob.getNearbyEntities(15, 20, 15);
+								for (Entity nearPlayer : nearEntity) {
+									if (nearPlayer instanceof Player) {
+										Location loc2 = nearPlayer.getLocation();
+										if (loc2.getX() <= 90 && loc2.getY() <= 141 && loc2.getZ() <= -5 && 
+												loc2.getX() >= 54 && loc2.getY() >= 129 && loc2.getZ() >= -41) {
+											((Player) nearPlayer).damage(12000);
+										}
+									}
+								}
+								
+								td.endTask();
+								td.removeID();
+							}
+							
+							time++;
+						}
+					}, 0, 1);
+					
+				}
+			}
+		}
 	}
 
 	// 7층의 지배자

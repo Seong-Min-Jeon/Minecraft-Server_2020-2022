@@ -1466,6 +1466,7 @@ public class Skill {
 
 						int num = rnd.nextInt(10);
 						Location loc = player.getLocation();
+						new ParticleEffect(player).newEffect16();
 						player.sendMessage(ChatColor.GREEN + "[스킬]도박사의 판이 발동됩니다.");
 						// ===============================================================
 						ParticleData pd2 = new ParticleData(player.getUniqueId());
@@ -1546,6 +1547,7 @@ public class Skill {
 					player.getInventory().setItem(8, item);
 					int num = rnd.nextInt(38);
 					Location loc = player.getLocation();
+					new ParticleEffect(player).newEffect17();
 					player.sendMessage(ChatColor.GREEN + "[스킬]도박사의 판이 발동됩니다.");
 					// ===============================================================
 					ParticleData pd2 = new ParticleData(player.getUniqueId());
@@ -1709,6 +1711,7 @@ public class Skill {
 					player.getInventory().setItem(8, item);
 					int num = rnd.nextInt(4);
 					Location loc = player.getLocation();
+					new ParticleEffect(player).newEffect18();
 					player.sendMessage(ChatColor.GREEN + "[스킬]도박사의 판이 발동됩니다.");
 					// ===============================================================
 					ParticleData pd2 = new ParticleData(player.getUniqueId());
@@ -1739,11 +1742,10 @@ public class Skill {
 											if (nearEntity instanceof LivingEntity) {
 												LivingEntity nearMob = (LivingEntity) nearEntity;
 												nearMob.damage(player.getLevel()*3);
+												new ParticleEffect(player, nearMob).newEffect13();
 											}
 										}
 									}
-									world.playSound(player.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 1.0f, 1.5f);
-									world.spawnParticle(Particle.EXPLOSION_LARGE, player.getLocation(), 0);
 									player.sendMessage(ChatColor.GREEN + "[스킬]마인권이 발동됩니다.");
 								} else if (num == 1) {
 									List<Entity> entitylist = player.getNearbyEntities(10, 5, 10);
@@ -1758,16 +1760,8 @@ public class Skill {
 									PotionRatio pr = new PotionRatio();
 									pr.calculation(player, player.getLevel() * 2);
 									Location loc = player.getLocation();
-									// ===============================================================
-									ParticleData pd = new ParticleData(player.getUniqueId());
-									if (pd.hasID()) {
-										pd.endTask();
-										pd.removeID();
-									}
-									ParticleEffect pe = new ParticleEffect(player);
-									pe.startE5();
-									// ================================================================
 									world.playSound(loc, Sound.ENTITY_ENDER_DRAGON_FLAP, 1.0f, 1.0f);
+									new ParticleEffect(player).newEffect9();
 									player.sendMessage(ChatColor.GREEN + "[스킬]넬의 사랑이 발동됩니다.");
 									player.sendMessage(ChatColor.GREEN + "자신과 주변 아군의 체력이 회복됩니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 2 + ChatColor.RED + "]");
 								} else if (num == 2) {
@@ -1832,15 +1826,7 @@ public class Skill {
 								} else if (num == 3) {
 									int num = player.getLevel();
 									Location loc = player.getLocation();
-									world.playEffect(loc, Effect.MOBSPAWNER_FLAMES, 1);
-									world.playEffect(loc.add(1, 0, 0), Effect.MOBSPAWNER_FLAMES, 1);
-									world.playEffect(loc.add(1, 0, 1), Effect.MOBSPAWNER_FLAMES, 1);
-									world.playEffect(loc.add(-1, 0, 0), Effect.MOBSPAWNER_FLAMES, 1);
-									world.playEffect(loc.add(-1, 0, 1), Effect.MOBSPAWNER_FLAMES, 1);
-									world.playEffect(loc.add(1, 0, -1), Effect.MOBSPAWNER_FLAMES, 1);
-									world.playEffect(loc.add(0, 0, -1), Effect.MOBSPAWNER_FLAMES, 1);
-									world.playEffect(loc.add(0, 0, 1), Effect.MOBSPAWNER_FLAMES, 1);
-									world.playEffect(loc.add(-1, 0, -1), Effect.MOBSPAWNER_FLAMES, 1);
+									new ParticleEffect(player).newEffect4();
 									player.sendMessage(ChatColor.GREEN + "[스킬]본 체스트가 발동됩니다.");
 									if (num < 15) {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 0,true,false,false));
@@ -1857,15 +1843,6 @@ public class Skill {
 									} else {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 2,true,false,false));
 									}
-									// ===============================================================
-									ParticleData pd = new ParticleData(player.getUniqueId());
-									if (pd.hasID()) {
-										pd.endTask();
-										pd.removeID();
-									}
-									ParticleEffect pe = new ParticleEffect(player);
-									pe.startE1();
-									// ================================================================
 									world.playSound(loc, Sound.ENTITY_BLAZE_DEATH, 1.0f, 1.0f);
 								} else {
 									player.sendMessage(ChatColor.RED + "스킬 사용에 실패하였습니다.");
@@ -1895,6 +1872,7 @@ public class Skill {
 						player.getInventory().setItem(8, item);								
 						int num = rnd.nextInt(2);
 						Location loc = player.getLocation();
+						new ParticleEffect(player).newEffect19();
 						player.sendMessage(ChatColor.GREEN + "[스킬]도박사의 판이 발동됩니다.");
 						// ===============================================================
 						ParticleData pd2 = new ParticleData(player.getUniqueId());

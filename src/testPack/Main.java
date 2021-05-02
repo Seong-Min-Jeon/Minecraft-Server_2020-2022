@@ -3579,6 +3579,10 @@ public class Main extends JavaPlugin implements Listener{
 				player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 1200, 4,true,false,false));
 				player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 5,true,false,false));
 			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "원주민 전통식 구이")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 1200, 2,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 3,true,false,false));
+			}
 			
 		} catch(Exception e) {
 			
@@ -8123,7 +8127,7 @@ public class Main extends JavaPlugin implements Listener{
 		        						if(player.isSneaking()) {
 		        							new ParticleEffect(player).newEffect7();
 		        						} else {
-		        							new ParticleEffect(player).newEffect16();
+		        							new ParticleEffect(player).newEffect19();
 		        						}
 		        					}
 	        					}

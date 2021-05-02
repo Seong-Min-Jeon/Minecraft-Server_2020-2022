@@ -3434,32 +3434,32 @@ public class ParticleEffect {
 				Location e1, e2, e3, e4, e5, e6, e7, e8, e9;
 				
 				if(time == 1 || time == 11 || time == 21) {
-					for(int i = 0 ; i < 10 ; i++) {
-						e1 = normal.clone().add(dirX1 * (2-(0.2*i)), 1.5, dirZ1 * (2-(0.2*i)));
+					for(int i = 0 ; i < 5 ; i++) {
+						e1 = normal.clone().add(dirX1 * (1-(0.2*i)), 1.5, dirZ1 * (1-(0.2*i)));
 						world.spawnParticle(Particle.REDSTONE, e1, 2, dustOptions);
 
-						e2 = normal.clone().add(dirX2 * (2-(0.2*i)), 1.4, dirZ2 * (2-(0.2*i)));
+						e2 = normal.clone().add(dirX2 * (1-(0.2*i)), 1.4, dirZ2 * (1-(0.2*i)));
 						world.spawnParticle(Particle.REDSTONE, e2, 2, dustOptions);
 
-						e3 = normal.clone().add(dirX3 * (2-(0.2*i)), 0.5, dirZ3 * (2-(0.2*i)));
+						e3 = normal.clone().add(dirX3 * (1-(0.2*i)), 0.5, dirZ3 * (1-(0.2*i)));
 						world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions);
 						
-						e4 = normal.clone().add(dirX4 * (2-(0.2*i)), 0.3, dirZ4 * (2-(0.2*i)));
+						e4 = normal.clone().add(dirX4 * (1-(0.2*i)), 0.3, dirZ4 * (1-(0.2*i)));
 						world.spawnParticle(Particle.REDSTONE, e4, 2, dustOptions);
 						
-						e5 = normal.clone().add(dirX5 * (2-(0.2*i)), 1.1, dirZ5 * (2-(0.2*i)));
+						e5 = normal.clone().add(dirX5 * (1-(0.2*i)), 1.1, dirZ5 * (1-(0.2*i)));
 						world.spawnParticle(Particle.REDSTONE, e5, 2, dustOptions);
 						
-						e6 = normal.clone().add(dirX6 * (2-(0.2*i)), 1.4, dirZ6 * (2-(0.2*i)));
+						e6 = normal.clone().add(dirX6 * (1-(0.2*i)), 1.4, dirZ6 * (1-(0.2*i)));
 						world.spawnParticle(Particle.REDSTONE, e6, 2, dustOptions);
 						
-						e7 = normal.clone().add(dirX7 * (2-(0.2*i)), 1.3, dirZ7 * (2-(0.2*i)));
+						e7 = normal.clone().add(dirX7 * (1-(0.2*i)), 1.3, dirZ7 * (1-(0.2*i)));
 						world.spawnParticle(Particle.REDSTONE, e7, 2, dustOptions);
 						
-						e8 = normal.clone().add(dirX8 * (2-(0.2*i)), 0.9, dirZ8 * (2-(0.2*i)));
+						e8 = normal.clone().add(dirX8 * (1-(0.2*i)), 0.9, dirZ8 * (1-(0.2*i)));
 						world.spawnParticle(Particle.REDSTONE, e8, 2, dustOptions);
 						
-						e9 = normal.clone().add(dirX9 * (2-(0.2*i)), 1, dirZ9 * (2-(0.2*i)));
+						e9 = normal.clone().add(dirX9 * (1-(0.2*i)), 1, dirZ9 * (1-(0.2*i)));
 						world.spawnParticle(Particle.REDSTONE, e9, 2, dustOptions);
 					}
 				}
@@ -3734,16 +3734,18 @@ public class ParticleEffect {
 		Particle.DustOptions dustOptions1 = new Particle.DustOptions(Color.fromRGB(100, 180, 250), 1);
 		Particle.DustOptions dustOptions2 = new Particle.DustOptions(Color.fromRGB(70, 150, 220), 1);
 		Particle.DustOptions dustOptions3 = new Particle.DustOptions(Color.fromRGB(255, 255, 255), 1);
+		Particle.DustOptions dustOptions4 = new Particle.DustOptions(Color.fromRGB(205, 205, 205), 1);
+		Particle.DustOptions dustOptions5 = new Particle.DustOptions(Color.fromRGB(30, 120, 190), 1);
 		
 		new BukkitRunnable() {
 			int time = 0;
 			
-		    Location e1, e2, e3;
+		    Location e2, e3;
 
 			@Override
 			public void run() {
 				
-				if(time % 4 == 0 && time < 20) {
+				if(time % 6 == 0 && time < 20) {
 					double arrowAngle1 = 90;
 					double totalAngle1 = normal.getYaw() + arrowAngle1;
 					double dirX1 = Math.cos(Math.toRadians(totalAngle1));
@@ -3754,6 +3756,39 @@ public class ParticleEffect {
 					
 					e2 = normal.clone().add(dirX1*0, 2.2, dirZ1*0);
 					world.spawnParticle(Particle.REDSTONE, e2, 2, dustOptions2);
+					
+					e2 = normal.clone().add(dirX1*0, 2.1, dirZ1*0);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX1*0, 1, dirZ1*0);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX1*0, 1.9, dirZ1*0);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX1*0, 1.8, dirZ1*0);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX1*0, 1.7, dirZ1*0);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX1*0, 1.6, dirZ1*0);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX1*0, 1.5, dirZ1*0);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX1*0, 1.4, dirZ1*0);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX1*0, 1.3, dirZ1*0);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX1*0, 1.2, dirZ1*0);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX1*0, 1.1, dirZ1*0);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
 					
 					double arrowAngle2 = 0;
 					double totalAngle2 = normal.getYaw() + arrowAngle2;
@@ -3789,6 +3824,159 @@ public class ParticleEffect {
 					
 					e2 = normal.clone().add(dirX2*0.4, 2, dirZ2*0.4);
 					world.spawnParticle(Particle.REDSTONE, e2, 2, dustOptions1);
+					
+					e2 = normal.clone().add(dirX2*1.6, 1.3, dirZ2*1.6);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*1.4, 1.3, dirZ2*1.4);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*1.4, 1.2, dirZ2*1.4);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*1.6, 1.4, dirZ2*1.6);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*1.4, 1.4, dirZ2*1.4);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*1.4, 1.3, dirZ2*1.4);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*1.3, 1.6, dirZ2*1.3);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*1.1, 1.6, dirZ2*1.1);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*1.1, 1.5, dirZ2*1.1);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*1.3, 1.4, dirZ2*1.3);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*1.1, 1.4, dirZ2*1.1);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*1.1, 1.3, dirZ2*1.1);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*1.3, 1.2, dirZ2*1.3);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*1.1, 1.2, dirZ2*1.1);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*1.1, 1.1, dirZ2*1.1);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*1, 1.7, dirZ2*1);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*0.8, 1.7, dirZ2*0.8);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*0.8, 1.6, dirZ2*0.8);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*1, 1.5, dirZ2*1);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*0.8, 1.5, dirZ2*0.8);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*0.8, 1.4, dirZ2*0.8);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*1, 1.3, dirZ2*1);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*0.8, 1.3, dirZ2*0.8);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*0.8, 1.2, dirZ2*0.8);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*1, 1.2, dirZ2*1);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*0.8, 1.2, dirZ2*0.8);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*0.6, 1.9, dirZ2*0.6);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*0.4, 1.9, dirZ2*0.4);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*0.4, 1.8, dirZ2*0.4);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*0.6, 1.7, dirZ2*0.6);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*0.4, 1.7, dirZ2*0.4);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*0.4, 1.6, dirZ2*0.4);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*0.6, 1.6, dirZ2*0.6);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*0.4, 1.6, dirZ2*0.4);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*0.4, 1.5, dirZ2*0.4);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*0.6, 1.4, dirZ2*0.6);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*0.4, 1.4, dirZ2*0.4);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*0.4, 1.3, dirZ2*0.4);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*0.6, 1.2, dirZ2*0.6);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*0.4, 1.2, dirZ2*0.4);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*0.4, 1.1, dirZ2*0.4);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*0.2, 2, dirZ2*0.2);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*0.2, 1.9, dirZ2*0.2);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*0.2, 1.8, dirZ2*0.2);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*0.2, 1.7, dirZ2*0.2);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*0.2, 1.6, dirZ2*0.2);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*0.2, 1.5, dirZ2*0.2);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*0.2, 1.4, dirZ2*0.2);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*0.2, 1.3, dirZ2*0.2);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*0.2, 1.2, dirZ2*0.2);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
+					
+					e2 = normal.clone().add(dirX2*0.2, 1.1, dirZ2*0.2);
+					world.spawnParticle(Particle.REDSTONE, e2, 1, dustOptions5);
 					
 					double arrowAngle3 = 180;
 					double totalAngle3 = normal.getYaw() + arrowAngle3;
@@ -3902,6 +4090,262 @@ public class ParticleEffect {
 					
 					e3 = normal.clone().add(dirX3*2.2, 2.3, dirZ3*2.2);
 					world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions3);
+					
+					e3 = normal.clone().add(dirX3*3.3, 2.6, dirZ3*3.3);
+					world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions3);
+					
+					e3 = normal.clone().add(dirX3*3.2, 2.5, dirZ3*3.2);
+					world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions3);
+					
+					e3 = normal.clone().add(dirX3*3.1, 2.4, dirZ3*3.1);
+					world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions3);
+					
+					e3 = normal.clone().add(dirX3*3, 2.3, dirZ3*3);
+					world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions3);
+					
+					e3 = normal.clone().add(dirX3*2.8, 2.2, dirZ3*2.8);
+					world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions3);
+					
+					e3 = normal.clone().add(dirX3*2.6, 2.1, dirZ3*2.6);
+					world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions3);
+					
+					e3 = normal.clone().add(dirX3*2.4, 2, dirZ3*2.4);
+					world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions3);
+					
+					e3 = normal.clone().add(dirX3*2.3, 1.95, dirZ3*2.3);
+					world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions3);
+					
+					e3 = normal.clone().add(dirX3*2, 2.1, dirZ3*2);
+					world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions4);
+					
+					e3 = normal.clone().add(dirX3*2, 2.3, dirZ3*2);
+					world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions4);
+					
+					e3 = normal.clone().add(dirX3*2.2, 2.4, dirZ3*2.2);
+					world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions4);
+					
+					e3 = normal.clone().add(dirX3*2.2, 2.2, dirZ3*2.2);
+					world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions4);
+					
+					e3 = normal.clone().add(dirX3*1.7, 2.1, dirZ3*1.7);
+					world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions4);
+					
+					e3 = normal.clone().add(dirX3*1.7, 2.3, dirZ3*1.7);
+					world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions4);
+					
+					e3 = normal.clone().add(dirX3*1.5, 2.4, dirZ3*1.5);
+					world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions4);
+					
+					e3 = normal.clone().add(dirX3*1.5, 2.2, dirZ3*1.5);
+					world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions4);
+					
+					e3 = normal.clone().add(dirX3*1.9, 2.6, dirZ3*1.9);
+					world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions4);
+					
+					e3 = normal.clone().add(dirX3*1.8, 2.6, dirZ3*1.8);
+					world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions4);
+					
+					e3 = normal.clone().add(dirX3*1.2, 2.1, dirZ3*1.2);
+					world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions4);
+					
+					e3 = normal.clone().add(dirX3*1.4, 2.2, dirZ3*1.4);
+					world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions4);
+					
+					e3 = normal.clone().add(dirX3*1.2, 2.3, dirZ3*1.2);
+					world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions4);
+					
+					e3 = normal.clone().add(dirX3*1.1, 2.3, dirZ3*1.1);
+					world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions4);
+					
+					e3 = normal.clone().add(dirX3*1.3, 2.3, dirZ3*1.3);
+					world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions4);
+					
+					e3 = normal.clone().add(dirX3*1.7, 1.9, dirZ3*1.7);
+					world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions4);
+					
+					e3 = normal.clone().add(dirX3*1.8, 2, dirZ3*1.8);
+					world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions4);
+					
+					e3 = normal.clone().add(dirX3*1.9, 2, dirZ3*1.9);
+					world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions4);
+					
+					e3 = normal.clone().add(dirX3*2.1, 2.8, dirZ3*2.1);
+					world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions4);
+					
+					e3 = normal.clone().add(dirX3*2.2, 2.9, dirZ3*2.2);
+					world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions4);
+					
+					e3 = normal.clone().add(dirX3*2.2, 2.9, dirZ3*2.2);
+					world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions4);
+					
+					e3 = normal.clone().add(dirX3*0.2, 2, dirZ3*0.2);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+
+					e3 = normal.clone().add(dirX3*0.2, 1.9, dirZ3*0.2);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*0.2, 1.8, dirZ3*0.2);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*0.2, 1.7, dirZ3*0.2);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*0.2, 1.6, dirZ3*0.2);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*0.2, 1.5, dirZ3*0.2);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*0.2, 1.4, dirZ3*0.2);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*0.2, 1.3, dirZ3*0.2);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*0.2, 1.2, dirZ3*0.2);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*0.2, 1.1, dirZ3*0.2);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*0.4, 2, dirZ3*0.4);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*0.6, 2, dirZ3*0.6);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*0.6, 1.9, dirZ3*0.6);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*0.4, 1.8, dirZ3*0.4);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*0.6, 1.8, dirZ3*0.6);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*0.6, 1.7, dirZ3*0.6);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*0.4, 1.6, dirZ3*0.4);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*0.6, 1.6, dirZ3*0.6);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*0.6, 1.5, dirZ3*0.6);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*0.4, 1.4, dirZ3*0.4);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*0.6, 1.4, dirZ3*0.6);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*0.6, 1.3, dirZ3*0.6);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*0.4, 1.2, dirZ3*0.4);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*0.6, 1.2, dirZ3*0.6);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*0.6, 1.1, dirZ3*0.6);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*0.6, 2.1, dirZ3*0.6);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*0.6, 2.2, dirZ3*0.6);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*0.6, 2.3, dirZ3*0.6);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*0.6, 2.4, dirZ3*0.6);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*0.8, 2, dirZ3*0.8);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*1, 2, dirZ3*1);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*1, 1.9, dirZ3*1);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*0.8, 1.8, dirZ3*0.8);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*1, 1.8, dirZ3*1);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*1, 1.7, dirZ3*1);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*0.8, 1.6, dirZ3*0.8);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*1, 1.6, dirZ3*1);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*1, 1.5, dirZ3*1);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*0.8, 1.4, dirZ3*0.8);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*1, 1.4, dirZ3*1);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*1, 1.3, dirZ3*1);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*0.8, 1.2, dirZ3*0.8);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*1, 1.2, dirZ3*1);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*1, 1.1, dirZ3*1);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*1.2, 1.8, dirZ3*1.2);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*1.4, 1.7, dirZ3*1.4);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*1.4, 1.7, dirZ3*1.4);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*1.2, 1.6, dirZ3*1.2);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*1.4, 1.5, dirZ3*1.4);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*1.4, 1.5, dirZ3*1.4);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*1.2, 1.4, dirZ3*1.2);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*1.4, 1.3, dirZ3*1.4);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*1.4, 1.3, dirZ3*1.4);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*1.2, 1.2, dirZ3*1.2);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*1.4, 1.1, dirZ3*1.4);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
+					e3 = normal.clone().add(dirX3*1.4, 1.1, dirZ3*1.4);
+					world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions5);
+					
 				}
 
 				if(time >= 30) {
@@ -3913,6 +4357,225 @@ public class ParticleEffect {
 		}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
 	}
 	
+	// 도박사의 판 2
+	public void newEffect17() {
+		
+		Location normal = player.getEyeLocation();
+		World world = player.getWorld(); 
+        
+		Particle.DustOptions dustOptions1 = new Particle.DustOptions(Color.fromRGB(250, 250, 120), 1);
+		
+		new BukkitRunnable() {
+			int time = 0;
+			
+		    Location e1, e2, e3;
+
+			@Override
+			public void run() {
+				
+				if(time % 4 == 0 && time < 20) {
+					double arrowAngle1 = 90;
+					double totalAngle1 = normal.getYaw() + arrowAngle1;
+					double dirX1 = Math.cos(Math.toRadians(totalAngle1));
+					double dirZ1 = Math.sin(Math.toRadians(totalAngle1));
+					
+					for(int i = 0 ; i < 15 ; i++) {
+						e1 = normal.clone().add(dirX1*0, 3-(i*0.1), dirZ1*0);
+						world.spawnParticle(Particle.REDSTONE, e1, 2, dustOptions1);
+					}
+					
+					double arrowAngle2 = 0;
+					double totalAngle2 = normal.getYaw() + arrowAngle2;
+					double dirX2 = Math.cos(Math.toRadians(totalAngle2));
+					double dirZ2 = Math.sin(Math.toRadians(totalAngle2));
+					
+					for(int i = 0 ; i < 9 ; i++) {
+						e2 = normal.clone().add(dirX2*0.2, 2.7-(i*0.1), dirZ2*0.2);
+						world.spawnParticle(Particle.REDSTONE, e2, 2, dustOptions1);
+					}
+					
+					for(int i = 0 ; i < 5 ; i++) {
+						e2 = normal.clone().add(dirX2*0.4, 2.5-(i*0.1), dirZ2*0.4);
+						world.spawnParticle(Particle.REDSTONE, e2, 2, dustOptions1);
+					}
+					
+					for(int i = 0 ; i < 3 ; i++) {
+						e2 = normal.clone().add(dirX2*0.6, 2.4-(i*0.1), dirZ2*0.6);
+						world.spawnParticle(Particle.REDSTONE, e2, 2, dustOptions1);
+					}
+					
+					for(int i = 0 ; i < 1 ; i++) {
+						e2 = normal.clone().add(dirX2*0.8, 2.3-(i*0.1), dirZ2*0.8);
+						world.spawnParticle(Particle.REDSTONE, e2, 2, dustOptions1);
+					}
+					
+					double arrowAngle3 = 180;
+					double totalAngle3 = normal.getYaw() + arrowAngle3;
+					double dirX3 = Math.cos(Math.toRadians(totalAngle3));
+					double dirZ3 = Math.sin(Math.toRadians(totalAngle3));
+					
+					for(int i = 0 ; i < 9 ; i++) {
+						e3 = normal.clone().add(dirX3*0.2, 2.7-(i*0.1), dirZ3*0.2);
+						world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions1);
+					}
+					
+					for(int i = 0 ; i < 5 ; i++) {
+						e3 = normal.clone().add(dirX3*0.4, 2.5-(i*0.1), dirZ3*0.4);
+						world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions1);
+					}
+					
+					for(int i = 0 ; i < 3 ; i++) {
+						e3 = normal.clone().add(dirX3*0.6, 2.4-(i*0.1), dirZ3*0.6);
+						world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions1);
+					}
+
+					for(int i = 0 ; i < 1 ; i++) {
+						e3 = normal.clone().add(dirX3*0.8, 2.3-(i*0.1), dirZ3*0.8);
+						world.spawnParticle(Particle.REDSTONE, e3, 1, dustOptions1);
+					}
+					
+				}
+
+				if(time >= 30) {
+					this.cancel();
+				}
+				
+				time++;
+			}
+		}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
+	}
+	
+	// 도박사의 판 3
+	public void newEffect18() {
+		
+		Location normal = player.getEyeLocation();
+		World world = player.getWorld(); 
+        
+		Particle.DustOptions dustOptions1 = new Particle.DustOptions(Color.fromRGB(120, 250, 250), 1);
+		
+		new BukkitRunnable() {
+			int time = 0;
+			
+		    Location e1, e2, e3;
+
+			@Override
+			public void run() {
+				
+				if(time % 4 == 0 && time < 20) {
+					double arrowAngle1 = 90;
+					double totalAngle1 = normal.getYaw() + arrowAngle1;
+					double dirX1 = Math.cos(Math.toRadians(totalAngle1));
+					double dirZ1 = Math.sin(Math.toRadians(totalAngle1));
+					
+					for(int i = 0 ; i < 2 ; i++) {
+						e1 = normal.clone().add(dirX1*0, 4-(i*0.1), dirZ1*0);
+						world.spawnParticle(Particle.REDSTONE, e1, 2, dustOptions1);
+					}
+					
+					for(int i = 0 ; i < 6 ; i++) {
+						e1 = normal.clone().add(dirX1*0, 2.4-(i*0.1), dirZ1*0);
+						world.spawnParticle(Particle.REDSTONE, e1, 2, dustOptions1);
+					}
+					
+					for(int i = 0 ; i < 3 ; i++) {
+						e1 = normal.clone().add(dirX1*0, 1.2, dirZ1*0);
+						world.spawnParticle(Particle.REDSTONE, e1, 10, dustOptions1);
+					}
+					
+					double arrowAngle3 = 180;
+					double totalAngle3 = normal.getYaw() + arrowAngle3;
+					double dirX3 = Math.cos(Math.toRadians(totalAngle3));
+					double dirZ3 = Math.sin(Math.toRadians(totalAngle3));
+					
+					for(int i = 0 ; i < 2 ; i++) {
+						e3 = normal.clone().add(dirX3*0.1, 4-(i*0.1), dirZ3*0.1);
+						world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions1);
+					}
+					
+					for(int i = 0 ; i < 2 ; i++) {
+						e3 = normal.clone().add(dirX3*0.2, 3.95-(i*0.1), dirZ3*0.2);
+						world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions1);
+					}
+					
+					for(int i = 0 ; i < 2 ; i++) {
+						e3 = normal.clone().add(dirX3*0.4, 3.8-(i*0.1), dirZ3*0.4);
+						world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions1);
+					}
+					
+					for(int i = 0 ; i < 2 ; i++) {
+						e3 = normal.clone().add(dirX3*0.6, 3.6-(i*0.1), dirZ3*0.6);
+						world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions1);
+					}
+					
+					for(int i = 0 ; i < 2 ; i++) {
+						e3 = normal.clone().add(dirX3*0.8, 3.3-(i*0.1), dirZ3*0.8);
+						world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions1);
+					}
+					
+					for(int i = 0 ; i < 2 ; i++) {
+						e3 = normal.clone().add(dirX3*0.6, 2.9-(i*0.1), dirZ3*0.6);
+						world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions1);
+					}
+					
+					for(int i = 0 ; i < 2 ; i++) {
+						e3 = normal.clone().add(dirX3*0.4, 2.6-(i*0.1), dirZ3*0.4);
+						world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions1);
+					}
+					
+					for(int i = 0 ; i < 2 ; i++) {
+						e3 = normal.clone().add(dirX3*0.2, 2.4-(i*0.1), dirZ3*0.2);
+						world.spawnParticle(Particle.REDSTONE, e3, 2, dustOptions1);
+					}
+					
+				}
+
+				if(time >= 30) {
+					this.cancel();
+				}
+				
+				time++;
+			}
+		}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
+	}
+	
+	// 도박사의 판 4
+	public void newEffect19() {
+		
+		Location normal = player.getEyeLocation().add(0, 2, 0);
+		World world = player.getWorld(); 
+        
+		Particle.DustOptions dustOptions1 = new Particle.DustOptions(Color.fromRGB(100, 200, 255), 1);
+		
+		new BukkitRunnable() {
+			int time = 0;
+			
+		    Location e1;
+
+			@Override
+			public void run() {
+				
+				if(time % 5 == 0 && time < 20) {
+					double r = 1;
+					for (double pi = 0; pi <= Math.PI; pi += Math.PI / 10) {
+						double y = r * Math.cos(pi) + 1.5;
+						for (double theta = 0; theta <= 2 * Math.PI; theta += Math.PI / 20) {
+							double x = r * Math.cos(theta) * Math.sin(pi);
+							double z = r * Math.sin(theta) * Math.sin(pi);
+
+							e1 = normal.clone().add(x, y, z);
+							world.spawnParticle(Particle.REDSTONE, e1, 1, dustOptions1);
+						}
+					}
+				}
+
+				if(time >= 30) {
+					this.cancel();
+				}
+				
+				time++;
+			}
+		}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
+	}
 	
 	// 보스 기믹1
 	public void newEffect100() {
@@ -3965,9 +4628,96 @@ public class ParticleEffect {
 		
 	}
 	
+	// 보스 기믹2 - 탑 6층
+	public void newEffect101() {
+		
+		Location normal = ent.getLocation();
+		World world = ent.getWorld(); 
+        
+		Particle.DustOptions dustOptions1 = new Particle.DustOptions(Color.fromRGB(100, 200, 255), 1);
+		
+		new BukkitRunnable() {
+			int time = 0; 
+			
+		    Location e1;
+
+			@Override
+			public void run() {
+				
+				if(time % 5 == 0) {
+					double r = 3;
+					for (double pi = 0; pi <= Math.PI; pi += Math.PI / 5) {
+						double y = r * Math.cos(pi) + 1.5;
+						for (double theta = 0; theta <= 2 * Math.PI; theta += Math.PI / 10) {
+							double x = r * Math.cos(theta) * Math.sin(pi);
+							double z = r * Math.sin(theta) * Math.sin(pi);
+
+							e1 = normal.clone().add(x, y, z);
+							world.spawnParticle(Particle.REDSTONE, e1, 1, dustOptions1);
+						}
+					}
+					
+					List<Entity> nearPlayer = ent.getNearbyEntities(3, 3, 3);
+					for(Entity p : nearPlayer) {
+						if(p instanceof Player) {
+							((Player) p).damage(10000);
+						}
+					}
+				}
+
+				if(time >= 40) {
+					this.cancel();
+				}
+				
+				time++;
+			}
+		}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
+	}
 	
-	
-	
+	// 보스 기믹3 - 탑 6층
+	public void newEffect102() {
+		World world = ent.getWorld(); 
+		Location loc = ent.getLocation();
+		
+		new BukkitRunnable() {
+			int time = 0;
+			int size = 0;
+
+			@Override
+			public void run() {
+				
+				if(time % 4 == 0) {
+					size++;
+					double r = size;
+					for (double pi = 0; pi <= Math.PI; pi += Math.PI / 5) {
+						double y = r * Math.cos(pi) + 1.5;
+						for (double theta = 0; theta <= 2 * Math.PI; theta += Math.PI / 10) {
+							double x = r * Math.cos(theta) * Math.sin(pi);
+							double z = r * Math.sin(theta) * Math.sin(pi);
+
+							loc.clone().add(x, y, z);
+							world.spawnParticle(Particle.FLAME, loc, 0);
+						}
+					}
+					
+					List<Entity> nearPlayer = ent.getNearbyEntities(size, size, size);
+					for(Entity p : nearPlayer) {
+						if(p instanceof Player) {
+							((Player) p).damage(6000);
+							((Player) p).setFireTicks(200);
+						}
+					}
+				}
+				
+				if(time >= 20) {
+					this.cancel();
+				}
+				
+				time++;
+			}
+		}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
+		
+	}
 	
 	
 	
