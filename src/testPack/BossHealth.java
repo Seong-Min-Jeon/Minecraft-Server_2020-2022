@@ -34,6 +34,13 @@ public class BossHealth {
 	private static BossBar bar23 = Bukkit.createBossBar(ChatColor.DARK_RED + "공양을 받는 돼지", BarColor.RED, BarStyle.SOLID);
 	private static BossBar bar24 = Bukkit.createBossBar(ChatColor.DARK_RED + "아빠 상어", BarColor.RED, BarStyle.SOLID);
 	private static BossBar bar25 = Bukkit.createBossBar(ChatColor.DARK_RED + "해왕신 포세이돈", BarColor.RED, BarStyle.SOLID);
+	private static BossBar bar26 = Bukkit.createBossBar(ChatColor.DARK_RED + "6층의 지배자", BarColor.RED, BarStyle.SOLID);
+	private static BossBar bar27 = Bukkit.createBossBar(ChatColor.DARK_RED + "7층의 지배자", BarColor.RED, BarStyle.SOLID);
+	private static BossBar bar28 = Bukkit.createBossBar(ChatColor.DARK_RED + "8층의 지배자", BarColor.RED, BarStyle.SOLID);
+	private static BossBar bar29 = Bukkit.createBossBar(ChatColor.DARK_RED + "9층의 지배자", BarColor.RED, BarStyle.SOLID);
+	private static BossBar bar30 = Bukkit.createBossBar(ChatColor.DARK_RED + "10층의 지배자", BarColor.RED, BarStyle.SOLID);
+	private static BossBar bar31 = Bukkit.createBossBar(ChatColor.DARK_RED + "11층의 지배자", BarColor.RED, BarStyle.SOLID);
+	private static BossBar bar32 = Bukkit.createBossBar(ChatColor.DARK_RED + "12층의 지배자", BarColor.RED, BarStyle.SOLID);
 	
 	public BossBar getBar1() {
 		return bar1;
@@ -135,6 +142,34 @@ public class BossHealth {
 		return bar25;
 	}
 	
+	public BossBar getBar26() {
+		return bar26;
+	}
+	
+	public BossBar getBar27() {
+		return bar27;
+	}
+	
+	public BossBar getBar28() {
+		return bar28;
+	}
+	
+	public BossBar getBar29() {
+		return bar29;
+	}
+	
+	public BossBar getBar30() {
+		return bar30;
+	}
+	
+	public BossBar getBar31() {
+		return bar31;
+	}
+	
+	public BossBar getBar32() {
+		return bar32;
+	}
+	
 	public void removePlayer(Player player) {
 		if(bar1.getPlayers().contains(player)) { 
 			bar1.removePlayer(player);
@@ -184,11 +219,24 @@ public class BossHealth {
 			bar24.removePlayer(player);
 		} else if(bar25.getPlayers().contains(player)) { 
 			bar25.removePlayer(player);
+		} else if(bar26.getPlayers().contains(player)) { 
+			bar26.removePlayer(player);
+		} else if(bar27.getPlayers().contains(player)) { 
+			bar27.removePlayer(player);
+		} else if(bar28.getPlayers().contains(player)) { 
+			bar28.removePlayer(player);
+		} else if(bar29.getPlayers().contains(player)) { 
+			bar29.removePlayer(player);
+		} else if(bar30.getPlayers().contains(player)) { 
+			bar30.removePlayer(player);
+		} else if(bar31.getPlayers().contains(player)) { 
+			bar31.removePlayer(player);
+		} else if(bar32.getPlayers().contains(player)) { 
+			bar32.removePlayer(player);
 		}
 		if(bar10.getPlayers().contains(player)) { 
 			bar10.removePlayer(player);
 		}
 	}
-	
 	
 }

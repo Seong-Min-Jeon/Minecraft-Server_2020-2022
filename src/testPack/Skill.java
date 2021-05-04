@@ -48,6 +48,7 @@ import org.bukkit.potion.PotionData;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.potion.PotionType;
+import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.EulerAngle;
 import org.bukkit.util.Vector;
 
@@ -2704,6 +2705,7 @@ public class Skill {
 						item.setItemMeta(itemIm);
 						player.getInventory().setItem(8, item);
 
+						new ParticleEffect(player).newEffect20();
 						player.sendMessage(ChatColor.GREEN + "[스킬]반역의 날개가 발동됩니다.");
 						player.sendMessage(ChatColor.GREEN + "1분간 아군에게 신속이 부여됩니다.");
 						
@@ -2718,7 +2720,6 @@ public class Skill {
 
 						Vector vec = player.getEyeLocation().getDirection().multiply(2.5f);
 						player.setVelocity(vec);
-						world.playSound(player.getLocation(), Sound.ENTITY_BLAZE_AMBIENT, 1.0f, 1.8f);
 					}
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
@@ -2732,28 +2733,18 @@ public class Skill {
 					itemIm.setDisplayName(ChatColor.BLUE + "마나");
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
-					player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 40, 100));
-					List<Entity> entitylist = player.getNearbyEntities(5, 5, 5);
-					for (Entity nearEntity : entitylist) {
-						if (nearEntity.getType() != EntityType.PLAYER) {
-							if (nearEntity instanceof LivingEntity) {
-								LivingEntity nearMob = (LivingEntity) nearEntity;
-								nearMob.damage(player.getLevel()*10 + damNum*8);
-							}
+					
+					new BukkitRunnable() {
+						@Override
+						public void run() {
+							Vector vec = player.getEyeLocation().getDirection().multiply(1.3f);
+							player.setVelocity(vec);
+							this.cancel();
 						}
-					}
-					// ===============================================================
-					ParticleData pd = new ParticleData(player.getUniqueId());
-					if (pd.hasID()) {
-						pd.endTask();
-						pd.removeID();
-					}
-					ParticleEffect pe = new ParticleEffect(player);
-					pe.startE14();
-					// ================================================================
-					world.playSound(player.getLocation(), Sound.ENTITY_LIGHTNING_BOLT_THUNDER, 1.0f, 1.0f);
+					}.runTaskTimer(Main.getPlugin(Main.class), 0, 8);
+					
+					new ParticleEffect(player, damNum).newEffect21();
 					player.sendMessage(ChatColor.GREEN + "[스킬]발도가 발동됩니다.");
-					player.sendMessage(ChatColor.GREEN + "눈앞의 적이 사라집니다.");
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
 					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
@@ -2766,20 +2757,10 @@ public class Skill {
 					itemIm.setDisplayName(ChatColor.BLUE + "마나");
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
-					Location loc = player.getLocation();
 					player.setHealth((int) (player.getHealth() / 2));
 					int num = player.getLevel();
 					player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, num * 3));
-					// ===============================================================
-					ParticleData pd = new ParticleData(player.getUniqueId());
-					if (pd.hasID()) {
-						pd.endTask();
-						pd.removeID();
-					}
-					ParticleEffect pe = new ParticleEffect(player);
-					pe.startE15();
-					// ================================================================
-					world.playSound(loc, Sound.BLOCK_CAMPFIRE_CRACKLE, 1.0f, 1.0f);
+					new ParticleEffect(player, damNum).newEffect22();
 					player.sendMessage(ChatColor.GREEN + "[스킬]나이트메어가 발동됩니다.");
 					player.sendMessage(ChatColor.GREEN + "능력치가 대폭 상승합니다.");
 				} else {

@@ -6720,6 +6720,104 @@ public class Main extends JavaPlugin implements Listener{
 						new BossHealth().getBar25().setProgress((boss.getHealth()-event.getFinalDamage()) / 15000000.0);
 					}
 				}
+				// 6층의 지배자
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("6층의 지배자" + ChatColor.YELLOW + " [Lv.??]")) {
+
+					LivingEntity boss = (LivingEntity) mob;
+					
+					if(boss.getHealth() - event.getFinalDamage() <= 0) {
+						for(Player p : new BossHealth().getBar26().getPlayers()) {
+							new BossHealth().getBar26().setProgress(0);
+							new BossHealth().getBar26().removePlayer(p);
+						}
+					} else {
+						new BossHealth().getBar26().setProgress((boss.getHealth()-event.getFinalDamage()) / 3800000.0);
+					}
+				}
+				// 7층의 지배자
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("7층의 지배자" + ChatColor.YELLOW + " [Lv.??]")) {
+
+					LivingEntity boss = (LivingEntity) mob;
+					
+					if(boss.getHealth() - event.getFinalDamage() <= 0) {
+						for(Player p : new BossHealth().getBar27().getPlayers()) {
+							new BossHealth().getBar27().setProgress(0);
+							new BossHealth().getBar27().removePlayer(p);
+						}
+					} else {
+						new BossHealth().getBar27().setProgress((boss.getHealth()-event.getFinalDamage()) / 3800000.0);
+					}
+				}
+				// 8층의 지배자
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("8층의 지배자" + ChatColor.YELLOW + " [Lv.??]")) {
+
+					LivingEntity boss = (LivingEntity) mob;
+					
+					if(boss.getHealth() - event.getFinalDamage() <= 0) {
+						for(Player p : new BossHealth().getBar28().getPlayers()) {
+							new BossHealth().getBar28().setProgress(0);
+							new BossHealth().getBar28().removePlayer(p);
+						}
+					} else {
+						new BossHealth().getBar28().setProgress((boss.getHealth()-event.getFinalDamage()) / 3800000.0);
+					}
+				}
+				// 9층의 지배자
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("9층의 지배자" + ChatColor.YELLOW + " [Lv.??]")) {
+
+					LivingEntity boss = (LivingEntity) mob;
+					
+					if(boss.getHealth() - event.getFinalDamage() <= 0) {
+						for(Player p : new BossHealth().getBar29().getPlayers()) {
+							new BossHealth().getBar29().setProgress(0);
+							new BossHealth().getBar29().removePlayer(p);
+						}
+					} else {
+						new BossHealth().getBar29().setProgress((boss.getHealth()-event.getFinalDamage()) / 3800000.0);
+					}
+				}
+				// 10층의 지배자
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("10층의 지배자" + ChatColor.YELLOW + " [Lv.??]")) {
+
+					LivingEntity boss = (LivingEntity) mob;
+					
+					if(boss.getHealth() - event.getFinalDamage() <= 0) {
+						for(Player p : new BossHealth().getBar30().getPlayers()) {
+							new BossHealth().getBar30().setProgress(0);
+							new BossHealth().getBar30().removePlayer(p);
+						}
+					} else {
+						new BossHealth().getBar30().setProgress((boss.getHealth()-event.getFinalDamage()) / 3800000.0);
+					}
+				}
+				// 11층의 지배자
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("11층의 지배자" + ChatColor.YELLOW + " [Lv.??]")) {
+
+					LivingEntity boss = (LivingEntity) mob;
+					
+					if(boss.getHealth() - event.getFinalDamage() <= 0) {
+						for(Player p : new BossHealth().getBar31().getPlayers()) {
+							new BossHealth().getBar31().setProgress(0);
+							new BossHealth().getBar31().removePlayer(p);
+						}
+					} else {
+						new BossHealth().getBar31().setProgress((boss.getHealth()-event.getFinalDamage()) / 3800000.0);
+					}
+				}
+				// 12층의 지배자
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("12층의 지배자" + ChatColor.YELLOW + " [Lv.??]")) {
+
+					LivingEntity boss = (LivingEntity) mob;
+					
+					if(boss.getHealth() - event.getFinalDamage() <= 0) {
+						for(Player p : new BossHealth().getBar32().getPlayers()) {
+							new BossHealth().getBar32().setProgress(0);
+							new BossHealth().getBar32().removePlayer(p);
+						}
+					} else {
+						new BossHealth().getBar32().setProgress((boss.getHealth()-event.getFinalDamage()) / 3800000.0);
+					}
+				}
 			}
 		} catch(Exception e) {
 			
@@ -8125,9 +8223,9 @@ public class Main extends JavaPlugin implements Listener{
 		        						new SnowStack(player.getTargetBlockExact(50), 10);
 		        					} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "마법봉")) {
 		        						if(player.isSneaking()) {
-		        							new ParticleEffect(player).newEffect7();
+		        							new ParticleEffect(player).newEffect20();
 		        						} else {
-		        							new ParticleEffect(player).newEffect19();
+		        							new ParticleEffect(player).newEffect21();
 		        						}
 		        					}
 	        					}

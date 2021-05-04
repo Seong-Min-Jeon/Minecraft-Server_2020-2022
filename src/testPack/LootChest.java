@@ -126,12 +126,11 @@ public class LootChest {
 					tower5(player);
 				}				
 			}
-//			if(block.getX()==3713 && block.getY()==17 && block.getZ()==3156) {
-//				if(removeKey(player, "죽음의 탑 6층 보상 열쇠")) {
-//					tower1(player);
-			// 텅빈심장
-//				}				
-//			}
+			if(block.getX()==69 && block.getY()==240 && block.getZ()==-20) {
+				if(removeKey(player, "죽음의 탑 6층 보상 열쇠")) {
+					tower6(player);
+				}				
+			}
 //			if(block.getX()==3713 && block.getY()==17 && block.getZ()==3156) {
 //				if(removeKey(player, "죽음의 탑 7층 보상 열쇠")) {
 //					tower1(player);
@@ -623,7 +622,7 @@ public class LootChest {
 		var6Im.setDisplayName(ChatColor.LIGHT_PURPLE + "사랑의 묘약");
 		ArrayList<String> var6Lore = new ArrayList();
 		var6Lore.add(ChatColor.GRAY + "눈 밑에 바르면 보이는 사람과 사랑에 빠지게 된다고 한다.");
-		var6Lore.add(ChatColor.GRAY + "사용 시 자신보다 레벨이 낮은 파티원에게 이동할 수도 있다.");
+		var6Lore.add(ChatColor.GRAY + "사용 시 자신 레벨 이하의 파티원에게 이동할 수도 있다.");
 		var6Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var6Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var6Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1878,6 +1877,39 @@ public class LootChest {
 		if(num5==0) {
 			idx = rnd.nextInt(9);
 			inv.setItem(idx, var5);
+		}
+		player.openInventory(inv);	
+	}
+	
+	public void tower6(Player player) {
+		Inventory inv = Bukkit.createInventory(player, 9, "Dungeon Reward");
+		int idx;
+		int num1 = rnd.nextInt(44); // 초월템
+		int num2 = 2;
+		
+		ItemStack var1 = new ItemStack(Material.CHARCOAL);
+		ItemMeta var1Im = var1.getItemMeta();
+		var1Im.setDisplayName(ChatColor.AQUA + "운명의 돌");
+		ArrayList<String> var1Lore = new ArrayList();
+		var1Lore.add(ChatColor.GRAY + "죽음의 탑 6층에서 발견한 보물");
+		var1Lore.add(ChatColor.GRAY + "탑의 조율자, 탑의 강탈자 아이템들을");
+		var1Lore.add(ChatColor.GRAY + "초월시킬 수 있을 것 같다.");
+		var1Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		var1Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		var1Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var1Im.setUnbreakable(true);
+		var1Im.setLore(var1Lore);
+		var1.setItemMeta(var1Im);
+		
+		ItemStack emerald = new ItemStack(Material.RABBIT_HIDE, num2);
+		ItemMeta im = emerald.getItemMeta();
+		im.setDisplayName(ChatColor.AQUA + "에메랄드 결정");
+		emerald.setItemMeta(im);
+		inv.setItem(0, emerald);
+		
+		if(num1==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, var1);
 		}
 		player.openInventory(inv);	
 	}

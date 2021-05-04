@@ -523,6 +523,29 @@ public class WeaponBuff {
 							}
 						}
 						
+						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "운명을 따르는 헬멧")) {
+							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "운명을 따르는 갑옷")) {
+								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "운명을 따르는 각반")) {
+									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "운명을 따르는 신발")) {
+										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 12000,true,false,false));
+										player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0,true,false,false));
+									}
+								}
+							}
+						}
+						
+						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "운명을 바꾸는 헬멧")) {
+							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "운명을 바꾸는 갑옷")) {
+								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "운명을 바꾸는 각반")) {
+									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "운명을 바꾸는 신발")) {
+										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 5000,true,false,false));
+										player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0,true,false,false));
+										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 100, 3,true,false,false));
+									}
+								}
+							}
+						}
+						
 					}
 				}
 			}

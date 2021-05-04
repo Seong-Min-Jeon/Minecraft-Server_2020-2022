@@ -114,7 +114,7 @@ public class MainQuest {
 		} else if(lvl == 625) {
 			main50(player);
 		} else if(lvl == 650) {
-//			main51(player);
+			main51(player);
 		} else if(lvl == 680) {
 			
 		} else if(lvl == 690) {

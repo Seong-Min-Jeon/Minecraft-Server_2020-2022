@@ -36,6 +36,7 @@ public class Transcendence {
 		t14(player, is1, is2, inv);
 		t15(player, is1, is2, inv);
 		t16(player, is1, is2, inv);
+		t17(player, is1, is2, inv);
 	}
 	
 	public void t1(Player player, ItemStack is1, ItemStack is2, Inventory inv) {
@@ -789,6 +790,210 @@ public class Transcendence {
 					player.sendMessage(ChatColor.WHITE + "장비 초월에 실패하였습니다.");
 					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 				}
+			}
+		}
+	}
+	
+	public void t17(Player player, ItemStack is1, ItemStack is2, Inventory inv) {
+		if(is2.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "운명의 돌")) {
+			if(is1.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "탑의 조율자 검")) {
+				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
+				ItemStack weapon = new ItemStack(Material.BEDROCK);
+				ItemMeta weaponIm = weapon.getItemMeta();
+				weaponIm.setLocalizedName("3000,0,0,1000,1000,1000,0,0,0,2000,550");
+				weaponIm.setDisplayName(ChatColor.AQUA + "운명을 따르는 검");
+				ArrayList<String> weaponLore = new ArrayList();
+				weaponLore.add(ChatColor.GRAY + "레벨 제한: 550");
+				weaponLore.add(ChatColor.GRAY + " ");
+				weaponLore.add(ChatColor.GRAY + "탑의 조율자 검이 진정한 모습을 찾았다.");
+				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+				weaponIm.setUnbreakable(true);
+				weaponIm.setLore(weaponLore);
+				weapon.setItemMeta(weaponIm);
+				inv.setItem(0, weapon);
+				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 조율자 헬멧")) {
+				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
+				ItemStack weapon = new ItemStack(Material.GOLDEN_HELMET);
+				ItemMeta weaponIm = weapon.getItemMeta();
+				weaponIm.setLocalizedName("1500,1000,1000,1000,0,2000,0,0,0,0,550");
+				weaponIm.setDisplayName(ChatColor.GREEN + "운명을 따르는 헬멧");
+				ArrayList<String> weaponLore = new ArrayList();
+				weaponLore.add(ChatColor.GRAY + "레벨 제한: 550");
+				weaponLore.add(ChatColor.GRAY + " ");
+				weaponLore.add(ChatColor.GRAY + "탑의 조율자 헬멧이 진정한 모습을 찾았다.");
+				weaponLore.add(ChatColor.GRAY + "(세트 아이템)");
+				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+				weaponIm.setUnbreakable(true);
+				weaponIm.setLore(weaponLore);
+				weapon.setItemMeta(weaponIm);
+				inv.setItem(0, weapon);
+				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 조율자 갑옷")) {
+				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
+				ItemStack weapon = new ItemStack(Material.GOLDEN_CHESTPLATE);
+				ItemMeta weaponIm = weapon.getItemMeta();
+				weaponIm.setLocalizedName("1500,1000,1000,1000,0,2000,0,0,0,0,550");
+				weaponIm.setDisplayName(ChatColor.GREEN + "운명을 따르는 갑옷");
+				ArrayList<String> weaponLore = new ArrayList();
+				weaponLore.add(ChatColor.GRAY + "레벨 제한: 550");
+				weaponLore.add(ChatColor.GRAY + " ");
+				weaponLore.add(ChatColor.GRAY + "탑의 조율자 갑옷이 진정한 모습을 찾았다.");
+				weaponLore.add(ChatColor.GRAY + "(세트 아이템)");
+				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+				weaponIm.setUnbreakable(true);
+				weaponIm.setLore(weaponLore);
+				weapon.setItemMeta(weaponIm);
+				inv.setItem(0, weapon);
+				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 조율자 각반")) {
+				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
+				ItemStack weapon = new ItemStack(Material.GOLDEN_LEGGINGS);
+				ItemMeta weaponIm = weapon.getItemMeta();
+				weaponIm.setLocalizedName("1500,1000,1000,1000,0,2000,0,0,0,0,550");
+				weaponIm.setDisplayName(ChatColor.GREEN + "운명을 따르는 각반");
+				ArrayList<String> weaponLore = new ArrayList();
+				weaponLore.add(ChatColor.GRAY + "레벨 제한: 550");
+				weaponLore.add(ChatColor.GRAY + " ");
+				weaponLore.add(ChatColor.GRAY + "탑의 조율자 각반이 진정한 모습을 찾았다.");
+				weaponLore.add(ChatColor.GRAY + "(세트 아이템)");
+				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+				weaponIm.setUnbreakable(true);
+				weaponIm.setLore(weaponLore);
+				weapon.setItemMeta(weaponIm);
+				inv.setItem(0, weapon);
+				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 조율자 신발")) {
+				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
+				ItemStack weapon = new ItemStack(Material.GOLDEN_BOOTS);
+				ItemMeta weaponIm = weapon.getItemMeta();
+				weaponIm.setLocalizedName("1500,1000,1000,1000,0,2000,0,0,0,0,550");
+				weaponIm.setDisplayName(ChatColor.GREEN + "운명을 따르는 신발");
+				ArrayList<String> weaponLore = new ArrayList();
+				weaponLore.add(ChatColor.GRAY + "레벨 제한: 550");
+				weaponLore.add(ChatColor.GRAY + " ");
+				weaponLore.add(ChatColor.GRAY + "탑의 조율자 신발이 진정한 모습을 찾았다.");
+				weaponLore.add(ChatColor.GRAY + "(세트 아이템)");
+				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+				weaponIm.setUnbreakable(true);
+				weaponIm.setLore(weaponLore);
+				weapon.setItemMeta(weaponIm);
+				inv.setItem(0, weapon);
+				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "탑의 강탈자 창")) {
+				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
+				ItemStack weapon = new ItemStack(Material.JUNGLE_SLAB);
+				ItemMeta weaponIm = weapon.getItemMeta();
+				weaponIm.setLocalizedName("3000,1000,1000,1000,1000,0,0,0,0,0,550");
+				weaponIm.setDisplayName(ChatColor.AQUA + "운명을 바꾸는 창");
+				ArrayList<String> weaponLore = new ArrayList();
+				weaponLore.add(ChatColor.GRAY + "레벨 제한: 550");
+				weaponLore.add(ChatColor.GRAY + " ");
+				weaponLore.add(ChatColor.GRAY + "탑의 강탈자 창이 진정한 모습을 찾았다.");
+				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+				weaponIm.setUnbreakable(true);
+				weaponIm.setLore(weaponLore);
+				weapon.setItemMeta(weaponIm);
+				inv.setItem(0, weapon);
+				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 강탈자 헬멧")) {
+				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
+				ItemStack weapon = new ItemStack(Material.GOLDEN_HELMET);
+				ItemMeta weaponIm = weapon.getItemMeta();
+				weaponIm.setLocalizedName("0,0,0,0,4000,0,0,0,0,0,550");
+				weaponIm.setDisplayName(ChatColor.GREEN + "운명을 바꾸는 헬멧");
+				ArrayList<String> weaponLore = new ArrayList();
+				weaponLore.add(ChatColor.GRAY + "레벨 제한: 550");
+				weaponLore.add(ChatColor.GRAY + " ");
+				weaponLore.add(ChatColor.GRAY + "탑의 강탈자 헬멧이 진정한 모습을 찾았다.");
+				weaponLore.add(ChatColor.GRAY + "(세트 아이템)");
+				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+				weaponIm.setUnbreakable(true);
+				weaponIm.setLore(weaponLore);
+				weapon.setItemMeta(weaponIm);
+				inv.setItem(0, weapon);
+				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 강탈자 갑옷")) {
+				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
+				ItemStack weapon = new ItemStack(Material.GOLDEN_CHESTPLATE);
+				ItemMeta weaponIm = weapon.getItemMeta();
+				weaponIm.setLocalizedName("0,0,0,0,4000,0,0,0,0,0,550");
+				weaponIm.setDisplayName(ChatColor.GREEN + "운명을 바꾸는 갑옷");
+				ArrayList<String> weaponLore = new ArrayList();
+				weaponLore.add(ChatColor.GRAY + "레벨 제한: 550");
+				weaponLore.add(ChatColor.GRAY + " ");
+				weaponLore.add(ChatColor.GRAY + "탑의 강탈자 갑옷이 진정한 모습을 찾았다.");
+				weaponLore.add(ChatColor.GRAY + "(세트 아이템)");
+				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+				weaponIm.setUnbreakable(true);
+				weaponIm.setLore(weaponLore);
+				weapon.setItemMeta(weaponIm);
+				inv.setItem(0, weapon);
+				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 강탈자 각반")) {
+				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
+				ItemStack weapon = new ItemStack(Material.GOLDEN_LEGGINGS);
+				ItemMeta weaponIm = weapon.getItemMeta();
+				weaponIm.setLocalizedName("0,0,0,0,4000,0,0,0,0,0,550");
+				weaponIm.setDisplayName(ChatColor.GREEN + "운명을 바꾸는 각반");
+				ArrayList<String> weaponLore = new ArrayList();
+				weaponLore.add(ChatColor.GRAY + "레벨 제한: 550");
+				weaponLore.add(ChatColor.GRAY + " ");
+				weaponLore.add(ChatColor.GRAY + "탑의 강탈자 각반이 진정한 모습을 찾았다.");
+				weaponLore.add(ChatColor.GRAY + "(세트 아이템)");
+				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+				weaponIm.setUnbreakable(true);
+				weaponIm.setLore(weaponLore);
+				weapon.setItemMeta(weaponIm);
+				inv.setItem(0, weapon);
+				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+			} else if(is1.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 강탈자 신발")) {
+				inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
+				ItemStack weapon = new ItemStack(Material.GOLDEN_BOOTS);
+				ItemMeta weaponIm = weapon.getItemMeta();
+				weaponIm.setLocalizedName("0,0,0,0,4000,0,0,0,0,0,550");
+				weaponIm.setDisplayName(ChatColor.GREEN + "운명을 바꾸는 신발");
+				ArrayList<String> weaponLore = new ArrayList();
+				weaponLore.add(ChatColor.GRAY + "레벨 제한: 550");
+				weaponLore.add(ChatColor.GRAY + " ");
+				weaponLore.add(ChatColor.GRAY + "탑의 강탈자 신발이 진정한 모습을 찾았다.");
+				weaponLore.add(ChatColor.GRAY + "(세트 아이템)");
+				weaponIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+				weaponIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+				weaponIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+				weaponIm.setUnbreakable(true);
+				weaponIm.setLore(weaponLore);
+				weapon.setItemMeta(weaponIm);
+				inv.setItem(0, weapon);
+				player.sendMessage(ChatColor.GREEN + "장비 초월에 성공하였습니다.");
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			}
 		}
 	}

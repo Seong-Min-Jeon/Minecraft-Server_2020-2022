@@ -4918,7 +4918,7 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 50000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "마가이: 최근에 들어온 이야기가 있어 잠시 불렀네.%마가이: 약지 지형에 살던 부족들의 상태가 이상하다는 소문이 들어왔네.%"
+			msg.msg(player, "마가이: 최근에 들어온 이야기가 있어 잠시 불렀네.%마가이: 원시의 땅에 살던 부족들의 상태가 이상하다는 소문이 들어왔네.%"
 					+ "마가이: 부족장이 쿠데타를 일으켜 지금 영토를 점령 중이라는군.%마가이: 그렇다고 해서 기존의 족장 '바람을 가르는 늑대'도 정상인 것 같지는 않아.%"
 					+ "마가이: 크리스가 물려받은 사안의 힘이 이런 식으로 발현이 된건지 어쩐지는 잘 모르겠지만.%마가이: 지금 위험한 상태임은 틀림이 없네.%"
 					+ "마가이: 바람을 가르는 늑대와 한번 만나보시게나.%마가이: 만약 그가 제정신이 아니라면..%마가이: 처분은 그대에게 맡기지.");
