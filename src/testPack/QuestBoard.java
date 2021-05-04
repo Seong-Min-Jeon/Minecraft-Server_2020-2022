@@ -4906,7 +4906,7 @@ public class QuestBoard {
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
 		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===비밀을 찾아서7===");
 		score.setScore(2);
-		Score score2 = obj.getScore("포보르화 고블린 50마리 사냥");
+		Score score2 = obj.getScore("포보르화 모험가 50마리 사냥");
 		score2.setScore(1);
 		Score score3 = obj.getScore("(" + num + "/50)");
 		score3.setScore(0);
@@ -4957,7 +4957,7 @@ public class QuestBoard {
 		score.setScore(3);
 		Score score2 = obj.getScore("바람을 가르는 늑대와 대화");
 		score2.setScore(2);
-		Score score3 = obj.getScore("위치: 726,90,-966");
+		Score score3 = obj.getScore("위치: 1236,93,-1668");
 		score3.setScore(1);
 		Score score4 = obj.getScore("(" + num + "/1)");
 		score4.setScore(0);

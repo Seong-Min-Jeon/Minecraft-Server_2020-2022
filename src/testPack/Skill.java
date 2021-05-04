@@ -2737,7 +2737,7 @@ public class Skill {
 					new BukkitRunnable() {
 						@Override
 						public void run() {
-							Vector vec = player.getEyeLocation().getDirection().multiply(1.3f);
+							Vector vec = player.getEyeLocation().getDirection().multiply(2.0f);
 							player.setVelocity(vec);
 							this.cancel();
 						}

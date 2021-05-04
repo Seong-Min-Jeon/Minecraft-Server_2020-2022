@@ -8700,6 +8700,10 @@ public class Main extends JavaPlugin implements Listener{
 					return;
 				}
 			}
+			// 라마 못타
+			if(event.getRightClicked().getType() == EntityType.LLAMA) {
+				event.setCancelled(true);
+			}
 			// 빌리저 대화
 			if(event.getRightClicked().getType() == EntityType.VILLAGER || event.getRightClicked().getType() == EntityType.ARMOR_STAND) {
 				InteractVillager iv = new InteractVillager();

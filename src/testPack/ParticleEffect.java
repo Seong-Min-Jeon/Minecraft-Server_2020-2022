@@ -4708,7 +4708,6 @@ public class ParticleEffect {
 	// 반역의 날개
 	public void newEffect20() {
 		
-		Location normal = player.getEyeLocation();
 		World world = player.getWorld(); 
 		
 		world.playSound(player.getLocation(), Sound.ENTITY_ENDER_DRAGON_FLAP, 1.0f, 1.8f);
@@ -4718,12 +4717,14 @@ public class ParticleEffect {
 		new BukkitRunnable() {
 			int time = 0;
 			
-		    Location e1, e2;
+		    Location e1;
 
 			@Override
 			public void run() {
 				
-				if(time % 10 == 0) {
+				Location normal = player.getEyeLocation();
+				
+				if(time % 3 == 0) {
 					
 					double arrowAngle1 = -80;
 					double totalAngle1 = normal.getYaw() + arrowAngle1;
@@ -5148,10 +5149,10 @@ public class ParticleEffect {
 				}
 				
 				if(time > 10) {
-					world.spawnParticle(Particle.REDSTONE, player.getLocation(), 2, dustOptions2);
-					world.spawnParticle(Particle.REDSTONE, player.getLocation(), 2, dustOptions3);
-					world.spawnParticle(Particle.WATER_DROP, player.getLocation(), 2);
-					world.spawnParticle(Particle.WATER_SPLASH, player.getLocation(), 2);
+					world.spawnParticle(Particle.REDSTONE, player.getEyeLocation(), 2, dustOptions2);
+					world.spawnParticle(Particle.REDSTONE, player.getEyeLocation(), 2, dustOptions3);
+					world.spawnParticle(Particle.WATER_DROP, player.getEyeLocation(), 2);
+					world.spawnParticle(Particle.WATER_SPLASH, player.getEyeLocation(), 2);
 				}
 				
 				if(time == 10) {
