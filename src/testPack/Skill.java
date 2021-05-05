@@ -2735,13 +2735,19 @@ public class Skill {
 					player.getInventory().setItem(8, item);
 					
 					new BukkitRunnable() {
+						
+						int time = 0;
 						@Override
 						public void run() {
-							Vector vec = player.getEyeLocation().getDirection().multiply(2.0f);
-							player.setVelocity(vec);
-							this.cancel();
+							time++;
+							
+							if(time > 10) {
+								Vector vec = player.getEyeLocation().getDirection().multiply(2.0f);
+								player.setVelocity(vec);
+								this.cancel();
+							}
 						}
-					}.runTaskTimer(Main.getPlugin(Main.class), 0, 8);
+					}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
 					
 					new ParticleEffect(player, damNum).newEffect21();
 					player.sendMessage(ChatColor.GREEN + "[스킬]발도가 발동됩니다.");
@@ -2857,6 +2863,7 @@ public class Skill {
 						item.setItemMeta(itemIm);
 						player.getInventory().setItem(8, item);
 
+						new ParticleEffect(player).newEffect23();
 						player.sendMessage(ChatColor.GREEN + "[스킬]엘·카나프가 발동됩니다.");
 
 						Vector vec = player.getEyeLocation().getDirection().multiply(2.0f);
@@ -2881,16 +2888,9 @@ public class Skill {
 					} else {
 						player.setHealth(player.getHealth() + 10);
 					}
-					// ===============================================================
-					ParticleData pd = new ParticleData(player.getUniqueId());
-					if (pd.hasID()) {
-						pd.endTask();
-						pd.removeID();
-					}
-					ParticleEffect pe = new ParticleEffect(player);
-					pe.startE17();
-					// ================================================================
-					world.playSound(loc, Sound.ENTITY_BLAZE_BURN, 1.0f, 0.6f); 	
+					
+					new ParticleEffect(player).newEffect24();
+					world.playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 2.0f); 	
 					player.sendMessage(ChatColor.GREEN + "[스킬]엘·페게츠가 발동됩니다.");
 					player.sendMessage(ChatColor.GREEN + "자신의 체력이 회복됩니다." + ChatColor.RED + " [+" + ChatColor.RED + "50%" + ChatColor.RED + "]");
 				} else {

@@ -5266,7 +5266,110 @@ public class ParticleEffect {
 		
 	}
 	
+	// 엘 카나프
+	public void newEffect23() {
+		
+		World world = player.getWorld(); 
+        
+        Particle.DustOptions dustOptions1 = new Particle.DustOptions(Color.fromRGB(50, 50, 50), 1);
+        Particle.DustOptions dustOptions2 = new Particle.DustOptions(Color.fromRGB(100, 100, 100), 1);
+        
+		new BukkitRunnable() {
+			int time = 0;
+			double var = 0;
+			Location loc, first, second;
+
+			@Override
+			public void run() {
+				
+				var += Math.PI / 16;
+
+				loc = player.getLocation();
+				first = loc.clone().add(Math.cos(var), Math.sin(var) + 1, Math.sin(var));
+				second = loc.clone().add(Math.cos(var + Math.PI), Math.sin(var) + 1, Math.sin(var + Math.PI));
+
+				world.spawnParticle(Particle.REDSTONE, first, 3, dustOptions1);
+				world.spawnParticle(Particle.REDSTONE, second, 3, dustOptions1);
+				world.spawnParticle(Particle.REDSTONE, first, 3, dustOptions2);
+				world.spawnParticle(Particle.REDSTONE, second, 3, dustOptions2);
+
+				if(time >= 30) {
+					this.cancel();
+				}
+				
+				time++;
+			}
+		}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
+	}
 	
+	// 엘 페게츠
+	public void newEffect24() {
+		
+		Location normal = player.getLocation(); 
+		World world = player.getWorld(); 
+        
+        Particle.DustOptions dustOptions1 = new Particle.DustOptions(Color.fromRGB(80, 160, 80), 1);
+        Particle.DustOptions dustOptions2 = new Particle.DustOptions(Color.fromRGB(100, 200, 100), 1);
+        
+		new BukkitRunnable() {
+			int time = 0;
+			Location e1;
+
+			@Override
+			public void run() {
+
+				if(time % 4 == 0) {
+					double var = 0;
+					
+					for(int i = 0 ; i < 32 ; i++) {
+						e1 = normal.clone().add(Math.cos(var)*1, 0, Math.sin(var)*1);
+						world.spawnParticle(Particle.REDSTONE, e1, 2, dustOptions1);
+						
+						var += Math.PI / 16;
+					}
+				}
+				
+				if(time % 4 == 0) {
+					double var = 0;
+					
+					for(int i = 0 ; i < 32 ; i++) {
+						e1 = normal.clone().add(Math.cos(var)*1, (Math.cos(var)*0.5)+1, Math.sin(var)*1);
+						world.spawnParticle(Particle.REDSTONE, e1, 2, dustOptions2);
+						
+						var += Math.PI / 16;
+					}
+				}
+				
+				if(time % 4 == 0) {
+					double var = 0;
+					
+					for(int i = 0 ; i < 32 ; i++) {
+						e1 = normal.clone().add(Math.cos(var)*1, (Math.sin(var)*0.6)+1, Math.sin(var)*1);
+						world.spawnParticle(Particle.REDSTONE, e1, 2, dustOptions2);
+						
+						var += Math.PI / 16;
+					}
+				}
+				
+				if(time % 4 == 0) {
+					double var = 0;
+					
+					for(int i = 0 ; i < 32 ; i++) {
+						e1 = normal.clone().add(Math.cos(var)*-1, (Math.sin(var)*0.6)+1, Math.sin(var)*-1);
+						world.spawnParticle(Particle.REDSTONE, e1, 2, dustOptions2);
+						
+						var += Math.PI / 16;
+					}
+				}
+				
+				if(time >= 10) {
+					this.cancel();
+				}
+				
+				time++;
+			}
+		}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
+	}
 	
 	
 	
