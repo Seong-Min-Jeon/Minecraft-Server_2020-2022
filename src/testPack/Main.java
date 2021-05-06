@@ -8225,7 +8225,7 @@ public class Main extends JavaPlugin implements Listener{
 		        						if(player.isSneaking()) {
 		        							new ParticleEffect(player).newEffect20();
 		        						} else {
-		        							new ParticleEffect(player).newEffect24();
+		        							new ParticleEffect(player).newEffect26();
 		        						}
 		        					}
 	        					}

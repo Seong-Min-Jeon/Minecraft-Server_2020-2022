@@ -2727,30 +2727,33 @@ public class Skill {
 				}
 			} else if(key.equals("RRL")) {
 				if(i>=8) {
-					player.getInventory().remove(Material.HEART_OF_THE_SEA);
-					ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 8);
-					ItemMeta itemIm = item.getItemMeta();
-					itemIm.setDisplayName(ChatColor.BLUE + "마나");
-					item.setItemMeta(itemIm);
-					player.getInventory().setItem(8, item);
-					
-					new BukkitRunnable() {
+					if ((player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) || (player.getLocation().getBlock().getType() != Material.AIR)
+							|| (player.getLocation().add(0,-2,0).getBlock().getType() != Material.AIR)) {		
+						player.getInventory().remove(Material.HEART_OF_THE_SEA);
+						ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 8);
+						ItemMeta itemIm = item.getItemMeta();
+						itemIm.setDisplayName(ChatColor.BLUE + "마나");
+						item.setItemMeta(itemIm);
+						player.getInventory().setItem(8, item);
 						
-						int time = 0;
-						@Override
-						public void run() {
-							time++;
+						new BukkitRunnable() {
 							
-							if(time > 10) {
-								Vector vec = player.getEyeLocation().getDirection().multiply(2.0f);
-								player.setVelocity(vec);
-								this.cancel();
+							int time = 0;
+							@Override
+							public void run() {
+								time++;
+								
+								if(time > 10) {
+									Vector vec = player.getEyeLocation().getDirection().multiply(2.0f);
+									player.setVelocity(vec);
+									this.cancel();
+								}
 							}
-						}
-					}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
-					
-					new ParticleEffect(player, damNum).newEffect21();
-					player.sendMessage(ChatColor.GREEN + "[스킬]발도가 발동됩니다.");
+						}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
+						
+						new ParticleEffect(player, damNum).newEffect21();
+						player.sendMessage(ChatColor.GREEN + "[스킬]발도가 발동됩니다.");
+					}
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
 					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
@@ -2899,29 +2902,32 @@ public class Skill {
 				}
 			} else if(key.equals("RLL")) {
 				if(i>=10) {
-					player.getInventory().remove(Material.HEART_OF_THE_SEA);
-					ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 10);
-					ItemMeta itemIm = item.getItemMeta();
-					itemIm.setDisplayName(ChatColor.BLUE + "마나");
-					item.setItemMeta(itemIm);
-					player.getInventory().setItem(8, item);
-					
-					player.sendMessage(ChatColor.GREEN + "[스킬]엘·초펠이 발동됩니다.");
-					world.playSound(player.getLocation(), Sound.ITEM_TRIDENT_THUNDER, 1.0f, 1.5f);
-					
-					Vector vec = player.getEyeLocation().getDirection().multiply(3.0f);
-					vec.add(new Vector(0, 1, 0));
-					player.setVelocity(vec);						
-					List<Entity> entitylist = player.getNearbyEntities(6, 6, 6);				
-					for (Entity nearEntity : entitylist) {
-						if (nearEntity instanceof Mob) {
-							LivingEntity ent = (LivingEntity) nearEntity;
-							if(ent instanceof Monster) {
-								ent.setVelocity(new Vector(0, 1, 0));
+					if ((player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) || (player.getLocation().getBlock().getType() != Material.AIR)
+							|| (player.getLocation().add(0,-2,0).getBlock().getType() != Material.AIR)) {	
+						player.getInventory().remove(Material.HEART_OF_THE_SEA);
+						ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 10);
+						ItemMeta itemIm = item.getItemMeta();
+						itemIm.setDisplayName(ChatColor.BLUE + "마나");
+						item.setItemMeta(itemIm);
+						player.getInventory().setItem(8, item);
+						
+						new ParticleEffect(player).newEffect25();
+						player.sendMessage(ChatColor.GREEN + "[스킬]엘·초펠이 발동됩니다.");
+						
+						Vector vec = player.getEyeLocation().getDirection().multiply(3.0f);
+						vec.setY(0);
+						player.setVelocity(vec);						
+						List<Entity> entitylist = player.getNearbyEntities(6, 6, 6);				
+						for (Entity nearEntity : entitylist) {
+							if (nearEntity instanceof Mob) {
+								LivingEntity ent = (LivingEntity) nearEntity;
+								if(ent instanceof Monster) {
+									ent.setVelocity(new Vector(0, 1, 0));
+								}
+								ent.damage(player.getLevel()*5 + damNum * 10);
 							}
-							ent.damage(player.getLevel()*5 + damNum * 10);
-						}
-					}	
+						}	
+					}
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
 					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
@@ -2934,20 +2940,30 @@ public class Skill {
 					itemIm.setDisplayName(ChatColor.BLUE + "마나");
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
-					player.sendMessage(ChatColor.GREEN + "[스킬]엘·예브른이 발동됩니다.");
-					world.playSound(player.getLocation(), Sound.ITEM_TRIDENT_THUNDER, 1.0f, 0.3f);
 					
-					Vector vec = new Vector(0, 1, 0);
-					List<Entity> entitylist = player.getNearbyEntities(5, 5, 5);				
-					for (Entity nearEntity : entitylist) {
-						if (nearEntity instanceof Mob) {
-							LivingEntity ent = (LivingEntity) nearEntity;
-							if(ent instanceof Monster) {
-								ent.setVelocity(vec);
+					new ParticleEffect(player).newEffect26();
+					player.sendMessage(ChatColor.GREEN + "[스킬]엘·예브른이 발동됩니다.");
+					world.playSound(player.getLocation(), Sound.ITEM_TRIDENT_THUNDER, 2.0f, 0.3f);
+					
+					new BukkitRunnable() {
+						
+						int time = 0;
+						@Override
+						public void run() {
+							time++;
+							
+							if(time > 20) {
+								List<Entity> entitylist = player.getNearbyEntities(5, 5, 5);				
+								for (Entity nearEntity : entitylist) {
+									if (nearEntity instanceof Mob) {
+										LivingEntity ent = (LivingEntity) nearEntity;
+										ent.damage(player.getLevel()*20);
+									}
+								}	
+								this.cancel();
 							}
-							ent.damage(player.getLevel()*10 + damNum * 5);
 						}
-					}	
+					}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
 					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);

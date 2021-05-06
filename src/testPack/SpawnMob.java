@@ -12910,7 +12910,7 @@ public class SpawnMob {
 					ItemStack chestplateItem = new ItemStack(Material.GOLDEN_CHESTPLATE);
 					chestplate.setChestplate(chestplateItem);
 					EntityEquipment leggings = entity.getEquipment();
-					ItemStack leggingsItem = new ItemStack(Material.GOLDEN_LEGGINGS);
+					ItemStack leggingsItem = new ItemStack(Material.NETHERITE_LEGGINGS);
 					leggings.setLeggings(leggingsItem);
 					EntityEquipment boots = entity.getEquipment();
 					ItemStack bootsItem = new ItemStack(Material.GOLDEN_BOOTS);

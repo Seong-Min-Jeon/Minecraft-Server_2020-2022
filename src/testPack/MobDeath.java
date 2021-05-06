@@ -1467,6 +1467,78 @@ public class MobDeath {
 				if (name.equalsIgnoreCase("족장 <바람을 가르는 늑대>" + ChatColor.YELLOW + " [Lv.690]")) {
 					mobloot.mob336(lootPlayer);
 				}
+				// 야생 곰
+				if (name.equalsIgnoreCase("야생 곰" + ChatColor.YELLOW + " [Lv.684]")) {
+					mobloot.mob337(lootPlayer);
+				}
+				// 야생 토끼
+				if (name.equalsIgnoreCase("야생 토끼" + ChatColor.YELLOW + " [Lv.687]")) {
+					mobloot.mob338(lootPlayer);
+				}
+				// 변이된 원시의 땅 보초병
+				if (name.equalsIgnoreCase("변이된 원시의 땅 보초병" + ChatColor.YELLOW + " [Lv.688]")) {
+					mobloot.mob339(lootPlayer);
+				}
+				// 변이된 원시의 땅 보초병
+				if (name.equalsIgnoreCase("변이된 원시의 땅 보초병" + ChatColor.YELLOW + " [Lv.690]")) {
+					mobloot.mob340(lootPlayer);
+				}
+				// 변이된 원시의 땅 상급병
+				if (name.equalsIgnoreCase("변이된 원시의 땅 상급병" + ChatColor.YELLOW + " [Lv.691]")) {
+					mobloot.mob341(lootPlayer);
+				}
+				// 변이된 원시의 땅 정예병
+				if (name.equalsIgnoreCase("변이된 원시의 땅 정예병" + ChatColor.YELLOW + " [Lv.693]")) {
+					mobloot.mob342(lootPlayer);
+				}
+				// 변이된 원시의 땅 귀족
+				if (name.equalsIgnoreCase("변이된 원시의 땅 귀족" + ChatColor.YELLOW + " [Lv.685]")) {
+					mobloot.mob343(lootPlayer);
+				}
+				// 변이의 근원
+				if (name.equalsIgnoreCase("변이의 근원" + ChatColor.YELLOW + " [Lv.689]")) {
+					mobloot.mob344(lootPlayer);
+				}
+				// 귀족의 벗
+				if (name.equalsIgnoreCase("귀족의 벗" + ChatColor.YELLOW + " [Lv.695]")) {
+					mobloot.mob345(lootPlayer);
+				}
+				// 미지의 땅을 지키는 것
+				if (name.equalsIgnoreCase("미지의 땅을 지키는 것" + ChatColor.YELLOW + " [Lv.695]")) {
+					mobloot.mob346(lootPlayer);
+				}
+				// 미지의 땅을 지키는 것
+				if (name.equalsIgnoreCase("미지의 땅을 지키는 것족" + ChatColor.YELLOW + " [Lv.699]")) {
+					mobloot.mob347(lootPlayer);
+				}
+				// 변이된 첨예발톱
+				if (name.equalsIgnoreCase("변이된 첨예발톱" + ChatColor.YELLOW + " [Lv.694]")) {
+					mobloot.mob348(lootPlayer);
+				}
+				// 최면을 거는 포보르
+				if (name.equalsIgnoreCase("최면을 거는 포보르" + ChatColor.YELLOW + " [Lv.697]")) {
+					mobloot.mob349(lootPlayer);
+				}
+				// 족장 <붉은 날개>
+				if (name.equalsIgnoreCase("족장 <붉은 날개>" + ChatColor.YELLOW + " [Lv.700]")) {
+					mobloot.mob350(lootPlayer);
+				}
+				// 원시 벌레
+				if (name.equalsIgnoreCase("원시 벌레" + ChatColor.YELLOW + " [Lv.700]")) {
+					mobloot.mob351(lootPlayer);
+				}
+				// 원시 거미
+				if (name.equalsIgnoreCase("원시 거미" + ChatColor.YELLOW + " [Lv.700]")) {
+					mobloot.mob352(lootPlayer);
+				}
+				// 원시 불꽃
+				if (name.equalsIgnoreCase("원시 불꽃" + ChatColor.YELLOW + " [Lv.700]")) {
+					mobloot.mob353(lootPlayer);
+				}
+				// 원시 생물
+				if (name.equalsIgnoreCase("원시 생물" + ChatColor.YELLOW + " [Lv.700]")) {
+					mobloot.mob354(lootPlayer);
+				}
 			} catch (Exception e) {
 
 			}
