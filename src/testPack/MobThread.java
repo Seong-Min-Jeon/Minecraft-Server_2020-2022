@@ -568,6 +568,30 @@ public class MobThread implements Listener{
 							} else if(loc.getX() <= 1299 && loc.getY() <= 120 && loc.getZ() <= -1519 
 									&& loc.getX() >= 1165 && loc.getY() >= 61 && loc.getZ() >= -1699) {
 								badlands4(player, loc);
+							} else if(loc.getX() <= 987 && loc.getY() <= 255 && loc.getZ() <= -1330 
+									&& loc.getX() >= 835 && loc.getY() >= 0 && loc.getZ() >= -1446) {
+								badlands5(player, loc);
+							} else if(loc.getX() <= 1027 && loc.getY() <= 70 && loc.getZ() <= -1461 
+									&& loc.getX() >= 917 && loc.getY() >= 48 && loc.getZ() >= -1704) {
+								badlands6(player, loc);
+							} else if(loc.getX() <= 1020 && loc.getY() <= 90 && loc.getZ() <= -1474 
+									&& loc.getX() >= 739 && loc.getY() >= 71 && loc.getZ() >= -1699) {
+								badlands7(player, loc);
+							} else if(loc.getX() <= 915 && loc.getY() <= 70 && loc.getZ() <= -1556 
+									&& loc.getX() >= 751 && loc.getY() >= 48 && loc.getZ() >= -1699) {
+								badlands8(player, loc);
+							} else if(loc.getX() <= 834 && loc.getY() <= 255 && loc.getZ() <= -1330 
+									&& loc.getX() >= 743 && loc.getY() >= 0 && loc.getZ() >= -1538) {
+								badlands9(player, loc);
+							} else if(loc.getX() <= 1149 && loc.getY() <= 255 && loc.getZ() <= -1509 
+									&& loc.getX() >= 936 && loc.getY() >= 91 && loc.getZ() >= -1699) {
+								badlands10(player, loc);
+							} else if(loc.getX() <= 1034 && loc.getY() <= 47 && loc.getZ() <= -1517 
+									&& loc.getX() >= 941 && loc.getY() >= 0 && loc.getZ() >= -1608) {
+								badlandsCave1(player, loc);
+							} else if(loc.getX() <= 939 && loc.getY() <= 37 && loc.getZ() <= -1552 
+									&& loc.getX() >= 844 && loc.getY() >= 0 && loc.getZ() >= -1623) {
+								badlandsCave2(player, loc);
 							}
 
 						}
@@ -3218,6 +3242,120 @@ public class MobThread implements Listener{
 			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
 		} else if (num == 1) {
 			loc.getWorld().spawnEntity(loc, EntityType.RAVAGER);
+		} 
+	}
+	
+	public void badlands5(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 987 && loc.getY() <= 255 && loc.getZ() <= -1330 
+				&& loc.getX() >= 835 && loc.getY() >= 0 && loc.getZ() >= -1446)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.RABBIT);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.RAVAGER);
+		} 
+	}
+	
+	public void badlands6(Player player, Location loc) {
+		loc = location(loc);
+		if (!(loc.getX() <= 1027 && loc.getY() <= 70 && loc.getZ() <= -1461 
+				&& loc.getX() >= 917 && loc.getY() >= 48 && loc.getZ() >= -1704)) {
+			return;
+		}
+		
+		loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
+	}
+	
+	public void badlands7(Player player, Location loc) {
+		loc = location(loc);
+		if (!(loc.getX() <= 1020 && loc.getY() <= 90 && loc.getZ() <= -1474 
+				&& loc.getX() >= 739 && loc.getY() >= 71 && loc.getZ() >= -1699)) {
+			return;
+		}
+		
+		loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
+	}
+	
+	public void badlands8(Player player, Location loc) {
+		int num = rnd.nextInt(3);
+		loc = location(loc);
+		if (!(loc.getX() <= 915 && loc.getY() <= 70 && loc.getZ() <= -1556 
+				&& loc.getX() >= 751 && loc.getY() >= 48 && loc.getZ() >= -1699)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.BLAZE);
+		}  else if (num == 2) {
+			CustomOcelot cs = new CustomOcelot(loc);
+			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
+			world.addEntity(cs);
+		}
+	}
+	
+	public void badlands9(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 834 && loc.getY() <= 255 && loc.getZ() <= -1330 
+				&& loc.getX() >= 743 && loc.getY() >= 0 && loc.getZ() >= -1538)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.VINDICATOR);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.EVOKER);
+		} 
+	}
+	
+	public void badlands10(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 1149 && loc.getY() <= 255 && loc.getZ() <= -1509 
+				&& loc.getX() >= 936 && loc.getY() >= 91 && loc.getZ() >= -1699)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.SLIME);
+		} 
+	}
+	
+	public void badlandsCave1(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 1034 && loc.getY() <= 47 && loc.getZ() <= -1517 
+				&& loc.getX() >= 941 && loc.getY() >= 0 && loc.getZ() >= -1608)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.SILVERFISH);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.CAVE_SPIDER);
+		} 
+	}
+	
+	public void badlandsCave2(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 939 && loc.getY() <= 37 && loc.getZ() <= -1552 
+				&& loc.getX() >= 844 && loc.getY() >= 0 && loc.getZ() >= -1623)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.BLAZE);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.MAGMA_CUBE);
 		} 
 	}
 	

@@ -2984,21 +2984,18 @@ public class Skill {
 				}
 			}
 			if(key.equals("RRR")) {
-				if(i>=2) {
-					if ((player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) || (player.getLocation().getBlock().getType() != Material.AIR)
-							|| (player.getLocation().add(0,-2,0).getBlock().getType() != Material.AIR)) {						
-						player.getInventory().remove(Material.HEART_OF_THE_SEA);
-						ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 2);
-						ItemMeta itemIm = item.getItemMeta();
-						itemIm.setDisplayName(ChatColor.BLUE + "마나");
-						item.setItemMeta(itemIm);
-						player.getInventory().setItem(8, item);
+				if (i >= 2) {
+					player.getInventory().remove(Material.HEART_OF_THE_SEA);
+					ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 2);
+					ItemMeta itemIm = item.getItemMeta();
+					itemIm.setDisplayName(ChatColor.BLUE + "마나");
+					item.setItemMeta(itemIm);
+					player.getInventory().setItem(8, item);
 
-						player.sendMessage(ChatColor.GREEN + "[스킬]행군이 발동됩니다.");
+					new ParticleEffect(player).newEffect27();
+					player.sendMessage(ChatColor.GREEN + "[스킬]행군이 발동됩니다.");
 
-						player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 2));
-						world.playSound(player.getLocation(), Sound.UI_TOAST_IN, 1.0f, 0.5f);
-					}
+					player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 2));
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
 					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
@@ -3076,17 +3073,9 @@ public class Skill {
 					}
 					PotionRatio pr = new PotionRatio();
 					pr.calculation(player, player.getLevel() * 4);
-					Location loc = player.getLocation();
-					// ===============================================================
-					ParticleData pd = new ParticleData(player.getUniqueId());
-					if (pd.hasID()) {
-						pd.endTask();
-						pd.removeID();
-					}
-					ParticleEffect pe = new ParticleEffect(player);
-					pe.startE19();
-					// ================================================================
+					
 					world.playSound(player.getLocation(), Sound.ENTITY_PLAYER_ATTACK_SWEEP, 1.5f, 0.5f);
+					new ParticleEffect(player).newEffect28();
 					player.sendMessage(ChatColor.GREEN + "[스킬]구급법이 발동됩니다.");
 					player.sendMessage(ChatColor.GREEN + "자신과 주변 아군의 체력이 회복됩니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 4 + ChatColor.RED + "]");
 				} else {
@@ -3112,12 +3101,26 @@ public class Skill {
 							nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 10초간 추가 체력이 부여됩니다.");
 						}
 					}
+					
+					Vector vec = player.getEyeLocation().add(0,1,0).getDirection().multiply(1.5f);
+					List<Entity> moblist = player.getNearbyEntities(3, 3, 3);				
+					for (Entity nearEntity : moblist) {
+						if (nearEntity instanceof Mob) {
+							LivingEntity ent = (LivingEntity) nearEntity;
+							if(ent instanceof Monster) {
+								ent.setVelocity(vec);
+							}
+						}
+					}
+					
 					player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0, true, false, false));
 					player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 1, true, false, false));
+					new ParticleEffect(player).newEffect29();
 					player.sendMessage(ChatColor.GREEN + "[스킬]각개전투가 발동됩니다.");
 					player.sendMessage(ChatColor.GREEN + "10초간 아군에게 저항이 부여됩니다.");
 					player.sendMessage(ChatColor.GREEN + "10초간 아군에게 추가 체력이 부여됩니다.");
 					world.playSound(loc, Sound.BLOCK_CHAIN_BREAK, 2.0f, 0.5f);		
+					world.playSound(player.getLocation(), Sound.ENTITY_WITHER_BREAK_BLOCK, 1.0f, 1.0f);
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
 					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);

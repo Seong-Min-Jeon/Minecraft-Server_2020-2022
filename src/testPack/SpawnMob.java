@@ -12866,13 +12866,10 @@ public class SpawnMob {
 					entity.setMaxHealth(822000);
 					entity.setHealth(822000);
 					EntityEquipment weapon = entity.getEquipment();
-					ItemStack weaponItem = new ItemStack(Material.BOW);
-					ItemMeta im = weaponItem.getItemMeta();
-					im.setLocalizedName("3600");
-					weaponItem.setItemMeta(im);
+					ItemStack weaponItem = new ItemStack(Material.GREEN_CARPET);
 					weapon.setItemInMainHand(weaponItem);
 					EntityEquipment mobBow = entity.getEquipment();
-					ItemStack mobBowItem = new ItemStack(Material.MUSIC_DISC_13);
+					ItemStack mobBowItem = new ItemStack(Material.GREEN_CARPET);
 					mobBow.setItemInOffHand(mobBowItem);
 					EntityEquipment head = entity.getEquipment();
 					ItemStack headItem = chest.getInventory().getItem(3);
@@ -13206,8 +13203,8 @@ public class SpawnMob {
 	
 	public boolean mob206(LivingEntity entity, Location loc) {
 		// 원시의 땅 동굴2 939 37 -1552  844 0 -1623
-		if (loc.getX() <= 1034 && loc.getY() <= 47 && loc.getZ() <= -1517 
-				&& loc.getX() >= 941 && loc.getY() >= 0 && loc.getZ() >= -1608) {
+		if (loc.getX() <= 939 && loc.getY() <= 37 && loc.getZ() <= -1552 
+				&& loc.getX() >= 844 && loc.getY() >= 0 && loc.getZ() >= -1623) {
 			Location chestLoc = new Location(entity.getWorld(), -1838, 92, 3051);
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();

@@ -34,7 +34,7 @@ public class ShootArrow {
 				&& arrow13(arrow, mob, loc) && arrow14(arrow, mob, loc) && arrow15(arrow, mob, loc) && arrow16(arrow, mob, loc)
 				&& arrow17(arrow, mob, loc) && arrow18(arrow, mob, loc) && arrow19(arrow, mob, loc) && arrow20(arrow, mob, loc)
 				&& arrow21(arrow, mob, loc) && arrow22(arrow, mob, loc) && arrow23(arrow, mob, loc) && arrow24(arrow, mob, loc)
-				&& arrow25(arrow, mob, loc)) {
+				&& arrow25(arrow, mob, loc) && arrow26(arrow, mob, loc) && arrow27(arrow, mob, loc)) {
 			SpectralArrow sarrow = (SpectralArrow) arrow.getWorld().spawnEntity(loc, EntityType.SPECTRAL_ARROW);
 			sarrow.setVelocity(arrow.getVelocity());
 		}
@@ -382,6 +382,32 @@ public class ShootArrow {
 				arrow.removePassenger(arrow.getPassenger());
 			}
 			Item item = arrow.getWorld().dropItem(loc, new ItemStack(Material.HEART_OF_THE_SEA));
+			item.setPickupDelay(10000000);
+			arrow.addPassenger(item);
+			return false;
+		}
+		return true;
+	}
+	
+	public boolean arrow26(Arrow arrow, Entity mob, Location loc) {
+		if(mob.getCustomName().substring(2).equalsIgnoreCase("변이된 원시의 땅 정예병" + ChatColor.YELLOW + " [Lv.693]")) {
+			if (arrow.getPassenger() != null) {
+				arrow.removePassenger(arrow.getPassenger());
+			}
+			Item item = arrow.getWorld().dropItem(loc, new ItemStack(Material.ENDER_EYE));
+			item.setPickupDelay(10000000);
+			arrow.addPassenger(item);
+			return false;
+		}
+		return true;
+	}
+	
+	public boolean arrow27(Arrow arrow, Entity mob, Location loc) {
+		if(mob.getCustomName().substring(2).equalsIgnoreCase("변이된 원시의 땅 귀족" + ChatColor.YELLOW + " [Lv.685]")) {
+			if (arrow.getPassenger() != null) {
+				arrow.removePassenger(arrow.getPassenger());
+			}
+			Item item = arrow.getWorld().dropItem(loc, new ItemStack(Material.BREWING_STAND));
 			item.setPickupDelay(10000000);
 			arrow.addPassenger(item);
 			return false;

@@ -126,6 +126,19 @@ public class PlayerHitDebuff {
 		mob76(player, mob);
 		mob77(player, mob);
 		mob78(player, mob);
+		mob79(player, mob);
+		mob80(player, mob);
+		mob81(player, mob);
+		mob82(player, mob);
+		mob83(player, mob);
+		mob84(player, mob);
+		mob85(player, mob);
+		mob86(player, mob);
+		mob87(player, mob);
+		mob88(player, mob);
+		mob89(player, mob);
+		mob90(player, mob);
+		mob91(player, mob);
 	}
 
 	// 시련의 형상
@@ -3512,11 +3525,140 @@ public class PlayerHitDebuff {
 		}
 	}
 	
+	// 야생 곰
 	public void mob79(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("야생 곰" + ChatColor.YELLOW + " [Lv.684]")) {
+			int num = rnd.nextInt(12);
+			if (num == 0) {
+				player.setVelocity(player.getVelocity().multiply(-1.5).add(new Vector(0,1,0)));
+				player.damage(4500);
+			}
+		}
+	}
+	
+	// 야생 토끼
+	public void mob80(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("야생 토끼" + ChatColor.YELLOW + " [Lv.687]")) {
+			player.removePotionEffect(PotionEffectType.ABSORPTION);
+			player.removePotionEffect(PotionEffectType.DAMAGE_RESISTANCE);
+			player.damage(2500);
+		}
+	}
+	
+	// 변이된 원시의 땅 보초병
+	public void mob81(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("변이된 원시의 땅 보초병" + ChatColor.YELLOW + " [Lv.688]")) {
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 3, true, false, false));
+		}
+	}
+	
+	// 변이된 원시의 땅 보초병
+	public void mob82(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("변이된 원시의 땅 보초병" + ChatColor.YELLOW + " [Lv.690]")) {
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 3, true, false, false));
+		}
+	}
+	
+	// 변이된 원시의 땅 상급병
+	public void mob83(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("변이된 원시의 땅 상급병" + ChatColor.YELLOW + " [Lv.691]")) {
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 3, true, false, false));
+		}
+	}
+	
+	// 변이된 원시의 땅 정예병
+	public void mob84(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("변이된 원시의 땅 정예병" + ChatColor.YELLOW + " [Lv.693]")) {
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 3, true, false, false));
+		}
+	}
+	
+	// 변이의 근원
+	public void mob85(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("변이의 근원" + ChatColor.YELLOW + " [Lv.689]")) {
+			player.setFireTicks(200);
+		}
+	}
+	
+	// 미지의 땅을 지키는 것
+	public void mob86(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("미지의 땅을 지키는 것" + ChatColor.YELLOW + " [Lv.695]")) {
+			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 200, 3, true, false, false));
+		}
+	}
+	
+	// 변이된 첨예발톱
+	public void mob87(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("변이된 첨예발톱" + ChatColor.YELLOW + " [Lv.694]")) {
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 4, true, false, false));
+		}
+	}
+	
+	// 최면을 거는 포보르
+	public void mob88(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("최면을 거는 포보르" + ChatColor.YELLOW + " [Lv.697]")) {
+			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 200, 3, true, false, false));
+		}
+	}
+	
+	// 원시 벌레
+	public void mob89(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("원시 벌레" + ChatColor.YELLOW + " [Lv.700]")) {
+			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 200, 4, true, false, false));
+		}
+	}
+	
+	// 원시 거미
+	public void mob90(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("원시 거미" + ChatColor.YELLOW + " [Lv.700]")) {
+			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 200, 4, true, false, false));
+		}
+	}
+	
+	// 원시 생물
+	public void mob91(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("원시 생물" + ChatColor.YELLOW + " [Lv.700]")) {
+			int num = rnd.nextInt(8);
+			if (num == 0) {
+				mob.getWorld().createExplosion(mob.getLocation(), 10, false, false);
+				player.damage(1000);
+			}
+		}
+	}
+	
+	public void mob92(Player player, Entity mob) {
 
 	}
 	
-	public void mob80(Player player, Entity mob) {
+	public void mob93(Player player, Entity mob) {
+
+	}
+	
+	public void mob94(Player player, Entity mob) {
+
+	}
+	
+	public void mob95(Player player, Entity mob) {
+
+	}
+	
+	public void mob96(Player player, Entity mob) {
+
+	}
+	
+	public void mob97(Player player, Entity mob) {
+
+	}
+	
+	public void mob98(Player player, Entity mob) {
+
+	}
+	
+	public void mob99(Player player, Entity mob) {
+
+	}
+	
+	public void mob100(Player player, Entity mob) {
 
 	}
 
