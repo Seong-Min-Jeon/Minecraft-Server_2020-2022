@@ -59,6 +59,11 @@ public class QuestScroll {
 				q33(player, itemArg, world);
 				q34(player, itemArg, world);
 				q35(player, itemArg, world);
+				q36(player, itemArg, world);
+				q37(player, itemArg, world);
+				q38(player, itemArg, world);
+				q39(player, itemArg, world);
+				q40(player, itemArg, world);
 				eq1(player, itemArg, world);
 				eq2(player, itemArg, world);
 				eq3(player, itemArg, world);
@@ -413,6 +418,49 @@ public class QuestScroll {
 					+ "§7하지만 걔는 부족했다.%§7어쨌든 더 강한 힘을 찾았다.%§7하지만 늙어서 약해졌따.");
 			QuestBoard qb = new QuestBoard();
 			qb.q35(player, 0);
+		}	
+	}
+	
+	public void q36(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "퀘스트: 의적")) {
+			msg.msg(player, "§7원시의 땅에 살던 귀족들은 매우 악독했다고 한다.%§7원시의 땅에 검은 흐름이 퍼져 변이의 힘으로 가득찼을 때%§7일부 귀족들은 부족원들을 버리고 도망쳤다고 한다.%"
+					+ "§7귀족이 밖으로 나온 것은 기회이다.%§7그들이 새로운 지역에 적응하기 전에 그들의 지갑을 털어버리자.");
+			QuestBoard qb = new QuestBoard();
+			qb.q36(player, 0);
+		}	
+	}
+	
+	public void q37(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "퀘스트: 족장을 지키는 자")) {
+			msg.msg(player, "§7원시의 땅에 남아 새로운 족장을 추앙하는 자들을 처리하자.%§7비록 보초병의 신분일지라도 변이의 힘을 받아 강해졌을 것이다.%§7최대한의 준비를 하고 접근하자.");
+			QuestBoard qb = new QuestBoard();
+			qb.q37(player, 0);
+		}	
+	}
+	
+	public void q38(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "퀘스트: 원인 해결")) {
+			msg.msg(player, "§7원시의 땅에 검은 흐름을 뿜어내는 근원을 발견하였다.%§7그들은 귀족들과 함께 부유한 삶을 영위하고 있다고 한다.%§7변이의 근원과 그의 힘을 받은 귀족들은 불 공격을 한다고 하니 대비하고 찾아가자.");
+			QuestBoard qb = new QuestBoard();
+			qb.q38(player, 0);
+		}	
+	}
+	
+	public void q39(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "퀘스트: 길을 지키는 자")) {
+			msg.msg(player, "§7알 수 없는 이유로 칼라아릿 지역의 일부가 설원으로 변했다고 한다.%§7그리고 그 미지의 땅은 원시의 땅과 연결되어 있다고 하는데..%§7그 통로를 가로막은 존재가 있으니 미지의 땅을 탐사하기 어려워졌다.%"
+					+ "§7미지의 땅을 지키는 것을 처리해 이후 탐사를 원할하게 만들자.");
+			QuestBoard qb = new QuestBoard();
+			qb.q39(player, 0);
+		}	
+	}
+	
+	public void q40(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "퀘스트: 싸우는 자")) {
+			msg.msg(player, "§7족장 <바람을 가르는 늑대>는 변이의 힘에 잠식된 족장 <붉은 날개>의 쿠데타로 원시의 땅 변방으로 쫒겨나게 되었다.%§7사정은 불쌍하지만 족장 <바람을 가르는 늑대>도 현재 제정신은 아닌 것 같다.%"
+					+ "§7지금이야말로 족장 <바람을 가르는 늑대>를 처리하기에 가장 알맞은 타이밍이다.");
+			QuestBoard qb = new QuestBoard();
+			qb.q40(player, 0);
 		}	
 	}
 	

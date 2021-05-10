@@ -937,6 +937,165 @@ public class QuestBoard {
 		player.setScoreboard(board);
 	}
 	
+	public void q36(Player player, int num) {
+		//상점
+		if(num>=50) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			ItemStack item = new ItemStack(Material.RABBIT_HIDE, 64);
+			ItemMeta im = item.getItemMeta();
+			im.setDisplayName(ChatColor.AQUA + "에메랄드 결정");
+			item.setItemMeta(im);
+			player.getInventory().addItem(item);
+			player.sendMessage(ChatColor.AQUA + "에메랄드 결정" + ChatColor.WHITE + " 64개를 획득했다.");
+			es.giveExp(player, 8800000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.LIGHT_PURPLE + "S급 퀘스트");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===의적===");
+		score.setScore(2);
+		Score score2 = obj.getScore("반란을 두려워하는 귀족 50마리 사냥");
+		score2.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/50)");
+		score4.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void q37(Player player, int num) {
+		//상점
+		if(num>=100) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			Location chestLoc = new Location(player.getWorld(), -1833, 92, 3036);
+			Block block = chestLoc.getBlock();
+			Chest chest = (Chest) block.getState();
+			ItemStack weapon = chest.getInventory().getItem(23);
+			player.getInventory().addItem(weapon);
+			player.sendMessage(ChatColor.YELLOW + "병사의 낡은 증표" + ChatColor.WHITE + "를 획득했다.");
+			es.giveExp(player, 9500000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.YELLOW + "A급 퀘스트");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===족장을 지키는 자===");
+		score.setScore(2);
+		Score score2 = obj.getScore("변이된 원시의 땅 보초병 100마리 사냥");
+		score2.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/100)");
+		score4.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void q38(Player player, int num) {
+		//상점
+		if(num>=200) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			ItemStack var1 = new ItemStack(Material.GOLD_INGOT, 64);
+			ItemMeta var1Im = var1.getItemMeta();
+			var1Im.setDisplayName(ChatColor.AQUA + "쉽게 녹지 않는 금");
+			var1.setItemMeta(var1Im);
+			player.getInventory().addItem(var1);
+			player.sendMessage(ChatColor.AQUA + "쉽게 녹지 않는 금" + ChatColor.WHITE + " 64개를 획득했다.");
+			es.giveExp(player, 12000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.AQUA + "SS급 퀘스트");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===원인 해결===");
+		score.setScore(2);
+		Score score2 = obj.getScore("변이의 근원 200마리 사냥");
+		score2.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/200)");
+		score4.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void q39(Player player, int num) {
+		//상점
+		if(num>=100) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			ItemStack item = new ItemStack(Material.RABBIT_FOOT, 2);
+			ItemMeta im = item.getItemMeta();
+			im.setDisplayName(ChatColor.DARK_RED + "에메랄드 결정+");
+			item.setItemMeta(im);
+			player.getInventory().addItem(item);
+			player.sendMessage(ChatColor.DARK_RED + "에메랄드 결정+" + ChatColor.WHITE + " 2개를 획득했다.");
+			es.giveExp(player, 10000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.LIGHT_PURPLE + "S급 퀘스트");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===길을 지키는 자===");
+		score.setScore(2);
+		Score score2 = obj.getScore("미지의 땅을 지키는 것 100마리 사냥");
+		score2.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/100)");
+		score4.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void q40(Player player, int num) {
+		//상점
+		if(num>=3) {
+			player.setScoreboard(Bukkit.getScoreboardManager().getNewScoreboard());
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "§7족장 <바람을 가르는 늑대>는 생각보다 강하지 않았다.%§7이 녀석이 이 정도 수준이면 족장 <붉은 날개>의 수준도 그리 높지 않을 것 같다.%"
+					+ "§7족장 <붉은 날개>가 변이의 힘으로 더욱 강해지기 전에 미리 손을 봐주자.");
+			QuestBoard qb = new QuestBoard();
+			qb.q40_1(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.DARK_RED + "SSS급 퀘스트");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===싸우는 자1===");
+		score.setScore(2);
+		Score score2 = obj.getScore("족장 <바람을 가르는 늑대> 3마리 사냥");
+		score2.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/3)");
+		score4.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void q40_1(Player player, int num) {
+		//상점
+		if(num>=3) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			Location chestLoc = new Location(player.getWorld(), -1833, 92, 3036);
+			Block block = chestLoc.getBlock();
+			Chest chest = (Chest) block.getState();
+			ItemStack weapon = chest.getInventory().getItem(22);
+			player.getInventory().addItem(weapon);
+			player.sendMessage(ChatColor.DARK_RED + "고대의 잔해 유물" + ChatColor.WHITE + "을 획득했다.");
+			es.giveExp(player, 12000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.DARK_RED + "SSS급 퀘스트");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===싸우는 자2===");
+		score.setScore(2);
+		Score score2 = obj.getScore("족장 <붉은 날개> 3마리 사냥");
+		score2.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/3)");
+		score4.setScore(0);
+		player.setScoreboard(board);
+	}
+	
 	public void eq1(Player player, int num) {
 		// mq23 보상
 		if (num >= 1) {
@@ -4781,11 +4940,11 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 50000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "마가이: 그래 그것이 티페라리의 끔직한 과거란다.%마가이: 끔찍한 과거를 겪은 왕자 크리스는 포보르 왕의 힘을 이어받아 더이상 인간의 모습이 아니게 되었다고 하는구나.%"
+			msg.msg(player, "마가이: 그래 그것이 티페라리의 끔직한 과거란다.%마가이: 끔찍한 과거를 겪은 §e왕자 크리스§f는 포보르 왕의 힘을 이어받아 더이상 인간의 모습이 아니게 되었다고 하는구나.%"
 					+ "마가이: 크리스는 티페라리를 떠나 칼라아릿의 저 먼 땅에 있는 사막으로 갔다지.%마가이: 그리고 그곳에서 그의 조상..%"
-					+ "마가이: 그래. 발로르의 힘을 이용해 아주 매서운 바람이 부는 설원을 만들어 그곳에 잠들었지.%마가이: 하지만 포보르들이 이렇게 날뛰는 지금.%"
+					+ "마가이: 그래. 발로르의 힘을 이용해 아주 §e매서운 바람이 부는 설원§f을 만들어 그곳에 잠들었지.%마가이: 하지만 포보르들이 이렇게 날뛰는 지금.%"
 					+ "마가이: 아마도 그가 기나긴 잠에서 깨어난 듯하네.%마가이: 부디.. 그분을 막아주게나.%마가이: 하지만... 너의 힘으로는 아직 무리일 것이야.%"
-					+ "마가이: 티페라리의 앞의 리디아 평원에는 여러 종의 몬스터들이 있다네.%마가이: 수련을 위해 조금만 노력해주게나.%마가이: 화염의 조종자부터 시작하도록 하지.");
+					+ "마가이: 티페라리의 앞의 리디아 평원에는 여러 종의 몬스터들이 있다네.%마가이: 수련을 위해 조금만 노력해주게나.%마가이: §e화염의 조종자§f부터 시작하도록 하지.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq50_3(player, 0);
 			return;
@@ -4918,10 +5077,10 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 50000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "마가이: 최근에 들어온 이야기가 있어 잠시 불렀네.%마가이: 원시의 땅에 살던 부족들의 상태가 이상하다는 소문이 들어왔네.%"
-					+ "마가이: 부족장이 쿠데타를 일으켜 지금 영토를 점령 중이라는군.%마가이: 그렇다고 해서 기존의 족장 '바람을 가르는 늑대'도 정상인 것 같지는 않아.%"
+			msg.msg(player, "마가이: 최근에 들어온 이야기가 있어 잠시 불렀네.%마가이: §e원시의 땅§f에 살던 부족들의 상태가 이상하다는 소문이 들어왔네.%"
+					+ "마가이: 부족장이 쿠데타를 일으켜 지금 영토를 점령 중이라는군.%마가이: 그렇다고 해서 기존의 §e족장 <바람을 가르는 늑대>§f도 정상인 것 같지는 않아.%"
 					+ "마가이: 크리스가 물려받은 사안의 힘이 이런 식으로 발현이 된건지 어쩐지는 잘 모르겠지만.%마가이: 지금 위험한 상태임은 틀림이 없네.%"
-					+ "마가이: 바람을 가르는 늑대와 한번 만나보시게나.%마가이: 만약 그가 제정신이 아니라면..%마가이: 처분은 그대에게 맡기지.");
+					+ "마가이: §e바람을 가르는 늑대§f와 한번 만나보시게나.%마가이: 만약 그가 제정신이 아니라면..%마가이: 처분은 그대에게 맡기지.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq50_9(player, 0);
 			return;
@@ -4944,7 +5103,7 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 50000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "마가이: 이런.. 족장도 이미 당한것인가..!%마가이: 어서 돌아오게.%자네가 상대할 존재가 아니야!");
+			msg.msg(player, "마가이: 이런.. 족장도 이미 당한것인가..!%마가이: 어서 돌아오게.%마가이: 자네가 상대할 존재가 아니야!");
 			QuestBoard qb = new QuestBoard();
 			qb.mq50_10(player, 0);
 			return;

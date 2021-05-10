@@ -502,6 +502,30 @@ public class SaveAll {
 						int number = qb.getNum(player);
 						fw.write("q35\n");
 						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===의적===")) {
+						int number = qb.getNum(player);
+						fw.write("q36\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===족장을 지키는 자===")) {
+						int number = qb.getNum(player);
+						fw.write("q37\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===원인 해결===")) {
+						int number = qb.getNum(player);
+						fw.write("q38\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===길을 지키는 자===")) {
+						int number = qb.getNum(player);
+						fw.write("q39\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===싸우는 자1===")) {
+						int number = qb.getNum(player);
+						fw.write("q40\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===싸우는 자2===")) {
+						int number = qb.getNum(player);
+						fw.write("q40_1\n");
+						fw.write(Integer.toString(number));
 					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===설원의 가희1===")) {
 						int number = qb.getNum(player);
 						fw.write("eq1\n");

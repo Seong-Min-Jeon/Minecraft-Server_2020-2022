@@ -1455,85 +1455,82 @@ public class Skill {
 				}
 			}
 			if(key.equals("RRR")) {
-				if(i>=3) {
-					if ((player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) || (player.getLocation().getBlock().getType() != Material.AIR)
-							|| (player.getLocation().add(0,-2,0).getBlock().getType() != Material.AIR)) {						
-						player.getInventory().remove(Material.HEART_OF_THE_SEA);
-						ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 3);
-						ItemMeta itemIm = item.getItemMeta();
-						itemIm.setDisplayName(ChatColor.BLUE + "마나");
-						item.setItemMeta(itemIm);
-						player.getInventory().setItem(8, item);
+				if (i >= 3) {
+					player.getInventory().remove(Material.HEART_OF_THE_SEA);
+					ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 3);
+					ItemMeta itemIm = item.getItemMeta();
+					itemIm.setDisplayName(ChatColor.BLUE + "마나");
+					item.setItemMeta(itemIm);
+					player.getInventory().setItem(8, item);
 
-						int num = rnd.nextInt(10);
-						Location loc = player.getLocation();
-						new ParticleEffect(player).newEffect16();
-						player.sendMessage(ChatColor.GREEN + "[스킬]도박사의 판이 발동됩니다.");
-						// ===============================================================
-						ParticleData pd2 = new ParticleData(player.getUniqueId());
-						if (pd2.hasID()) {
-							pd2.endTask();
-							pd2.removeID();
-						}
-						ParticleEffect pe2 = new ParticleEffect(player);
-						pe2.startE7();
-						// ================================================================
-						world.playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
-						Thread t = new Thread(player.getUniqueId());
-						sleep = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+					int num = rnd.nextInt(10);
+					Location loc = player.getLocation();
+					new ParticleEffect(player).newEffect16();
+					player.sendMessage(ChatColor.GREEN + "[스킬]도박사의 판이 발동됩니다.");
+					// ===============================================================
+					ParticleData pd2 = new ParticleData(player.getUniqueId());
+					if (pd2.hasID()) {
+						pd2.endTask();
+						pd2.removeID();
+					}
+					ParticleEffect pe2 = new ParticleEffect(player);
+					pe2.startE7();
+					// ================================================================
+					world.playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
+					Thread t = new Thread(player.getUniqueId());
+					sleep = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
-							int time = 0;
+						int time = 0;
 
-							@Override
-							public void run() {
-								if (!t.hasID()) {
-									t.setID(sleep);
-								}
-
-								if (time >= 20) {
-									if (num == 0) {
-										player.sendMessage(ChatColor.RED + "슬로우가 발동됩니다.");
-										player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 600, 1));
-									} else if (num == 1) {
-										player.sendMessage(ChatColor.RED + "슬로우가 발동됩니다.");
-										player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 600, 2));
-									} else if (num == 2) {
-										player.sendMessage(ChatColor.RED + "슬로우가 발동됩니다.");
-										player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 600, 3));
-									} else if (num == 3) {
-										player.sendMessage(ChatColor.RED + "슬로우가 발동됩니다.");
-										player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 600, 4));
-									} else if (num == 4) {
-										player.sendMessage(ChatColor.RED + "슬로우가 발동됩니다.");
-										player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 600, 5));
-									} else if (num == 5) {
-										player.sendMessage(ChatColor.GREEN + "신속이 발동됩니다.");
-										player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 0));
-									} else if (num == 6) {
-										player.sendMessage(ChatColor.GREEN + "신속이 발동됩니다.");
-										player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 1));
-									} else if (num == 7) {
-										player.sendMessage(ChatColor.GREEN + "신속이 발동됩니다.");
-										player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 2));
-									} else if (num == 8) {
-										player.sendMessage(ChatColor.GREEN + "신속이 발동됩니다.");
-										player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 3));
-									} else if (num == 9) {
-										player.sendMessage(ChatColor.GREEN + "신속이 발동됩니다.");
-										player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 4));
-									} else {
-										player.sendMessage(ChatColor.RED + "스킬 사용에 실패하였습니다.");
-										world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
-									}
-									world.playEffect(loc, Effect.POTION_BREAK, 0);
-									t.endTask();
-									t.removeID();
-								}
-								time++;
+						@Override
+						public void run() {
+							if (!t.hasID()) {
+								t.setID(sleep);
 							}
 
-						}, 0, 1);
-					}
+							if (time >= 20) {
+								if (num == 0) {
+									player.sendMessage(ChatColor.RED + "슬로우가 발동됩니다.");
+									player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 600, 1));
+								} else if (num == 1) {
+									player.sendMessage(ChatColor.RED + "슬로우가 발동됩니다.");
+									player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 600, 2));
+								} else if (num == 2) {
+									player.sendMessage(ChatColor.RED + "슬로우가 발동됩니다.");
+									player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 600, 3));
+								} else if (num == 3) {
+									player.sendMessage(ChatColor.RED + "슬로우가 발동됩니다.");
+									player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 600, 4));
+								} else if (num == 4) {
+									player.sendMessage(ChatColor.RED + "슬로우가 발동됩니다.");
+									player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 600, 5));
+								} else if (num == 5) {
+									player.sendMessage(ChatColor.GREEN + "신속이 발동됩니다.");
+									player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 0));
+								} else if (num == 6) {
+									player.sendMessage(ChatColor.GREEN + "신속이 발동됩니다.");
+									player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 1));
+								} else if (num == 7) {
+									player.sendMessage(ChatColor.GREEN + "신속이 발동됩니다.");
+									player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 2));
+								} else if (num == 8) {
+									player.sendMessage(ChatColor.GREEN + "신속이 발동됩니다.");
+									player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 3));
+								} else if (num == 9) {
+									player.sendMessage(ChatColor.GREEN + "신속이 발동됩니다.");
+									player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 4));
+								} else {
+									player.sendMessage(ChatColor.RED + "스킬 사용에 실패하였습니다.");
+									world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
+								}
+								world.playEffect(loc, Effect.POTION_BREAK, 0);
+								t.endTask();
+								t.removeID();
+							}
+							time++;
+						}
+
+					}, 0, 1);
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
 					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);

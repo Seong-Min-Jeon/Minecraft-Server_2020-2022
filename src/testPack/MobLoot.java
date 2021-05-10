@@ -8257,6 +8257,12 @@ public class MobLoot {
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 3890000);
+		
+		QuestBoard cb = new QuestBoard();
+		if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===의적===")) {
+			int qNum = cb.getNum(player);
+			cb.q36(player, qNum+1);	
+		}
 	}
 	
 	// 귀족을 지키는 호위무사
@@ -8326,6 +8332,12 @@ public class MobLoot {
 		var1.setItemMeta(var1Im);
 		player.getInventory().addItem(var1);
 		sendMessage(player, ChatColor.AQUA + "쉽게 녹지 않는 금" + ChatColor.WHITE + " 10개를 획득했다.");
+		
+		QuestBoard cb = new QuestBoard();
+		if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===싸우는 자1===")) {
+			int qNum = cb.getNum(player);
+			cb.q40(player, qNum+1);	
+		}
 	}
 	
 	// 야생 곰
@@ -8386,6 +8398,12 @@ public class MobLoot {
 			player.getInventory().addItem(var3);
 			sendMessage(player, ChatColor.AQUA + "심연의 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		}
+		
+		QuestBoard cb = new QuestBoard();
+		if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===족장을 지키는 자===")) {
+			int qNum = cb.getNum(player);
+			cb.q37(player, qNum+1);	
+		}
 	}
 
 	// 변이된 원시의 땅 보초병
@@ -8423,6 +8441,12 @@ public class MobLoot {
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
 			sendMessage(player, ChatColor.AQUA + "심연의 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+		}
+		
+		QuestBoard cb = new QuestBoard();
+		if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===족장을 지키는 자===")) {
+			int qNum = cb.getNum(player);
+			cb.q37(player, qNum+1);	
 		}
 	}
 	
@@ -8576,6 +8600,12 @@ public class MobLoot {
 			player.getInventory().addItem(var3);
 			sendMessage(player, ChatColor.AQUA + "심연의 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		}
+		
+		QuestBoard cb = new QuestBoard();
+		if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===원인 해결===")) {
+			int qNum = cb.getNum(player);
+			cb.q38(player, qNum+1);	
+		}
 	}
 	
 	// 귀족의 벗
@@ -8598,6 +8628,12 @@ public class MobLoot {
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 4120000);
+		
+		QuestBoard cb = new QuestBoard();
+		if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===길을 지키는 자===")) {
+			int qNum = cb.getNum(player);
+			cb.q39(player, qNum+1);	
+		}
 	}
 	
 	// 미지의 땅을 지키는 것
@@ -8609,6 +8645,12 @@ public class MobLoot {
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 4160000);
+		
+		QuestBoard cb = new QuestBoard();
+		if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===길을 지키는 자===")) {
+			int qNum = cb.getNum(player);
+			cb.q39(player, qNum+1);	
+		}
 	}
 	
 	// 변이된 첨예발톱
@@ -8693,6 +8735,12 @@ public class MobLoot {
 		var1.setItemMeta(var1Im);
 		player.getInventory().addItem(var1);
 		sendMessage(player, ChatColor.AQUA + "다이아몬드" + ChatColor.WHITE + " 10개를 획득했다.");
+		
+		QuestBoard cb = new QuestBoard();
+		if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===싸우는 자2===")) {
+			int qNum = cb.getNum(player);
+			cb.q40_1(player, qNum+1);	
+		}
 	}
 	
 	// 원시 벌레

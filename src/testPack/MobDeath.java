@@ -1508,7 +1508,7 @@ public class MobDeath {
 					mobloot.mob346(lootPlayer);
 				}
 				// 미지의 땅을 지키는 것
-				if (name.equalsIgnoreCase("미지의 땅을 지키는 것족" + ChatColor.YELLOW + " [Lv.699]")) {
+				if (name.equalsIgnoreCase("미지의 땅을 지키는 것" + ChatColor.YELLOW + " [Lv.699]")) {
 					mobloot.mob347(lootPlayer);
 				}
 				// 변이된 첨예발톱
