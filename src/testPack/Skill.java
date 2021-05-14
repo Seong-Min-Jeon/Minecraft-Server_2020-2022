@@ -942,6 +942,7 @@ public class Skill {
 					Location loc = player.getLocation();
 					new ParticleEffect(player).newEffect4();
 					player.sendMessage(ChatColor.GREEN + "[스킬]본 체스트가 발동됩니다.");
+					player.removePotionEffect(PotionEffectType.ABSORPTION);
 					if (num < 15) {
 						player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 0,true,false,false));
 					} else if (num < 30) {
@@ -1290,11 +1291,13 @@ public class Skill {
 					for (Entity nearEntity : entitylist) {
 						if (nearEntity.getType() == EntityType.PLAYER) {
 							Player nearPlayer = (Player) nearEntity;
-							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 2, true, false, false));
+							nearPlayer.removePotionEffect(PotionEffectType.ABSORPTION);
+							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 1, true, false, false));
 							nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 10초간 추가 체력이 부여됩니다.");
 						}
 					}
-					player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 0, true, false, false));
+					player.removePotionEffect(PotionEffectType.ABSORPTION);
+					player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 1, true, false, false));
 					new ParticleEffect(player).newEffect10();
 					player.sendMessage(ChatColor.GREEN + "[스킬]딘의 화염이 발동됩니다.");
 					player.sendMessage(ChatColor.GREEN + "10초간 추가 체력이 부여됩니다.");												
@@ -1826,6 +1829,7 @@ public class Skill {
 									Location loc = player.getLocation();
 									new ParticleEffect(player).newEffect4();
 									player.sendMessage(ChatColor.GREEN + "[스킬]본 체스트가 발동됩니다.");
+									player.removePotionEffect(PotionEffectType.ABSORPTION);
 									if (num < 15) {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 0,true,false,false));
 									} else if (num < 30) {
@@ -1963,8 +1967,8 @@ public class Skill {
 						item.setItemMeta(itemIm);
 						player.getInventory().setItem(8, item);
 
+						new ParticleEffect(player).newEffect30();
 						player.sendMessage(ChatColor.GREEN + "[스킬]비공이 발동됩니다.");	
-						world.playSound(player.getLocation(), Sound.ENTITY_BLAZE_AMBIENT, 1.0f, 1.0f);
 						Vector vec = new Vector(0, 1, 0);
 						player.setVelocity(vec.multiply(2.0f));
 					}
@@ -2020,17 +2024,10 @@ public class Skill {
 							}
 						}
 					}
+					
+					new ParticleEffect(player).newEffect31();
 					player.sendMessage(ChatColor.GREEN + "[스킬]데빌 블레스터가 발동됩니다.");
-					world.playSound(player.getLocation(), Sound.BLOCK_PORTAL_TRIGGER, 1.0f, 1.0f);
-					// ===============================================================
-					ParticleData pd = new ParticleData(player.getUniqueId());
-					if (pd.hasID()) {
-						pd.endTask();
-						pd.removeID();
-					}
-					ParticleEffect pe = new ParticleEffect(player);
-					pe.startE10();
-					// ================================================================
+					world.playSound(player.getLocation(), Sound.BLOCK_PORTAL_TRIGGER, 0.5f, 1.0f);
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
 					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
@@ -2648,6 +2645,7 @@ public class Skill {
 					for (Entity nearEntity : entitylist) {
 						if (nearEntity.getType() == EntityType.PLAYER) {
 							Player nearPlayer = (Player) nearEntity;
+							nearPlayer.removePotionEffect(PotionEffectType.ABSORPTION);
 							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0, true, false, false));
 							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 2, true, false, false));
 							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 200, 2, true, false, false));
@@ -2656,6 +2654,7 @@ public class Skill {
 							nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 10초간 신속이 부여됩니다.");
 						}
 					}
+					player.removePotionEffect(PotionEffectType.ABSORPTION);
 					player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0, true, false, false));
 					player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 2, true, false, false));
 					player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 200, 2, true, false, false));
@@ -3092,6 +3091,7 @@ public class Skill {
 					for (Entity nearEntity : entitylist) {
 						if (nearEntity.getType() == EntityType.PLAYER) {
 							Player nearPlayer = (Player) nearEntity;
+							nearPlayer.removePotionEffect(PotionEffectType.ABSORPTION);
 							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0, true, false, false));
 							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 1, true, false, false));
 							nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 10초간 저항이 부여됩니다.");
@@ -3110,6 +3110,7 @@ public class Skill {
 						}
 					}
 					
+					player.removePotionEffect(PotionEffectType.ABSORPTION);
 					player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0, true, false, false));
 					player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 1, true, false, false));
 					new ParticleEffect(player).newEffect29();
@@ -3149,12 +3150,14 @@ public class Skill {
 						player.getInventory().setItem(8, item);
 
 						if(map.get(player.getDisplayName()) == 1) {
+							new ParticleEffect(player).newEffect33();
 							player.sendMessage(ChatColor.GREEN + "[스킬]영혼 걸음이 발동됩니다.");
 							Vector vec = player.getEyeLocation().getDirection().multiply(1.2f);
 							player.setVelocity(vec);
 							world.playSound(player.getLocation(), Sound.ITEM_CHORUS_FRUIT_TELEPORT, 1.0f, 1.0f);
 						} else {
-							player.sendMessage(ChatColor.GREEN + "[스킬]사신의 걸음이 발동됩니다.");
+							new ParticleEffect(player).newEffect32();
+							player.sendMessage(ChatColor.GREEN + "[스킬]사신 걸음이 발동됩니다.");
 							Vector vec = player.getEyeLocation().getDirection().multiply(1.7f);
 							player.setVelocity(vec);
 							world.playSound(player.getLocation(), Sound.ENTITY_SHULKER_TELEPORT, 1.0f, 1.8f);
@@ -3183,7 +3186,8 @@ public class Skill {
 								}
 							}
 						}
-						world.playSound(player.getLocation(), Sound.AMBIENT_CAVE, 3.0f, 1.5f);
+						world.playSound(player.getLocation(), Sound.ENTITY_WITHER_SHOOT, 1.0f, 1.5f);
+						new ParticleEffect(player).newEffect37();
 						player.sendMessage(ChatColor.GREEN + "[스킬]영혼 흡착이 발동됩니다.");
 						player.sendMessage(ChatColor.GREEN + "10초간 주변 적들이 약화됩니다.");
 					} else {
@@ -3208,15 +3212,7 @@ public class Skill {
 							player.sendMessage(ChatColor.GREEN + "[스킬]지옥불이 발동됩니다.");
 							player.sendMessage(ChatColor.RED + "대상이 없습니다.");
 						} else {
-							// ===============================================================
-							ParticleData pd = new ParticleData(player.getUniqueId());
-							if (pd.hasID()) {
-								pd.endTask();
-								pd.removeID();
-							}
-							ParticleEffect pe = new ParticleEffect(player);
-							pe.startE21();
-							// ================================================================
+							new ParticleEffect(player).newEffect36();
 							world.playSound(player.getLocation(), Sound.ENTITY_CAT_HISS, 1.0f, 1.0f);
 							player.sendMessage(ChatColor.GREEN + "[스킬]지옥불이 발동됩니다.");
 							player.sendMessage(ChatColor.GREEN + "주변의 몬스터들이 불타게 됩니다.");
@@ -3243,14 +3239,15 @@ public class Skill {
 								if (nearEntity instanceof LivingEntity) {
 									LivingEntity nearMob = (LivingEntity) nearEntity;
 									nearMob.damage(player.getLevel() * 20);
+									new ParticleEffect(player, nearMob).newEffect34();
 								}
 							}
 						}
-						world.playSound(player.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 1.0f, 1.5f);
-						world.spawnParticle(Particle.EXPLOSION_LARGE, player.getLocation(), 0);
 						player.sendMessage(ChatColor.GREEN + "[스킬]카르마가 발동됩니다.");
 					} else {
+						player.removePotionEffect(PotionEffectType.ABSORPTION);
 						player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 400, 2, true, false, false));
+						new ParticleEffect(player).newEffect35();
 						player.sendMessage(ChatColor.GREEN + "[스킬]칼라수트라가 발동됩니다.");
 						world.playSound(player.getLocation(), Sound.ENTITY_BLAZE_DEATH, 1.0f, 1.0f);
 					}
@@ -4141,6 +4138,7 @@ public class Skill {
 							PotionRatio pr = new PotionRatio();
 							pr.calculation(nearPlayer, player.getLevel() * 10);
 							nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 회복되었습니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 10 + ChatColor.RED + "]");
+							nearPlayer.removePotionEffect(PotionEffectType.ABSORPTION);
 							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 1, true, false, false));
 							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 3, true, false, false));
 							nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 10초간 저항이 부여됩니다.");
@@ -4149,6 +4147,7 @@ public class Skill {
 					}
 					PotionRatio pr = new PotionRatio();
 					pr.calculation(player, player.getLevel() * 10);
+					player.removePotionEffect(PotionEffectType.ABSORPTION);
 					player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 1, true, false, false));
 					player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 3, true, false, false));
 					player.sendMessage(ChatColor.GREEN + "[스킬]대대장의 격려가 발동됩니다.");

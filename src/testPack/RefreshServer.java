@@ -317,6 +317,14 @@ public class RefreshServer {
 								allPlayer.sendMessage(ChatColor.RED + "추워서 몸이 얼어붙는 것 같다.");
 							}
 							
+							if(allPlayer.isInWater()) {
+								allPlayer.removePotionEffect(PotionEffectType.SLOW);
+								allPlayer.removePotionEffect(PotionEffectType.HARM);
+								allPlayer.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 600, 4,true,false,false));
+								allPlayer.addPotionEffect(new PotionEffect(PotionEffectType.HARM, 600, 8,true,false,false));
+								allPlayer.sendMessage(ChatColor.RED + "극심한 추위로 몸이 얼고 있다.");
+							}
+							
 						} else if(loc.getBlock().getBiome() == Biome.DESERT_HILLS || loc.getBlock().getBiome() == Biome.CRIMSON_FOREST) {
 							
 							boolean wear = false;
