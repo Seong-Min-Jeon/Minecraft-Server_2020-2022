@@ -897,7 +897,7 @@ public class ReloadPlayerData {
 			ItemStack memento = new ItemStack(Material.INK_SAC);
 			ItemMeta mementoIm = memento.getItemMeta();
 			mementoIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-			mementoIm.setDisplayName(ChatColor.GOLD + "대대장의 증표");
+			mementoIm.setDisplayName(ChatColor.GOLD + "조커의 증표");
 			mementoIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			mementoIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			memento.setItemMeta(mementoIm);

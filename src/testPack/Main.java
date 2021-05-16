@@ -1793,6 +1793,47 @@ public class Main extends JavaPlugin implements Listener{
 						    allPlayer.sendMessage(player.getDisplayName() + "님이 도박사 1000레벨을 달성했습니다!");
 						}	
 					}
+					if(player.getLevel()==900 && event.getOldLevel() == 800) {
+						if(player.getInventory().contains(Material.MAGENTA_DYE)) {
+							// 생성 가능 캐릭터 파일
+	    					try {
+	    						File dataFolder = getDataFolder();
+	    			            if(!dataFolder.exists()) {
+	    			                dataFolder.mkdir();
+	    			            } else {
+	    			            	File dir = new File(getDataFolder() + "/" + player.getUniqueId().toString());
+	    			            	if(!dir.exists()) {
+	    			            		try{
+	    			            		    dir.mkdir(); 
+	    			            		} catch(Exception e2) {
+	    			            		    e2.getStackTrace();
+	    			            		}
+	    							}
+	    							File file = new File(dir, "available_character.dat");
+	    							try {
+	    								FileReader filereader = new FileReader(file);
+	    			    				BufferedReader bufReader = new BufferedReader(filereader);
+	    			    				String[] num = bufReader.readLine().split(" ");
+	    			    				num[16] = "1";
+	    			    				String str = "";
+	    			    				for(int j = 0 ; j < 17 ; j++) {
+	    			    					str += num[j] + " ";
+	    			    				}
+	    			    				str += num[17];
+										BufferedWriter fw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), "UTF-8"));
+						                fw.write(str);
+						                fw.close();
+						                bufReader.close();
+									} catch (IOException e2) {
+										e2.printStackTrace();
+									}
+	    						}
+	    					} catch (Exception e2) {
+	    						
+	    					}
+	    					player.sendMessage("[System] 조커 캐릭터를 생성할 수 있게 되었습니다.");
+						}
+					}
 				}
 				//데빌
 				if(player.getInventory().contains(Material.GRAY_DYE)) {
@@ -2099,47 +2140,6 @@ public class Main extends JavaPlugin implements Listener{
 						    allPlayer.sendMessage(player.getDisplayName() + "님이 군인 1000레벨을 달성했습니다!");
 						}	
 					}
-					if(player.getLevel()==900 && event.getOldLevel() == 800) {
-						if(player.getInventory().contains(Material.MAGENTA_DYE)) {
-							// 생성 가능 캐릭터 파일
-	    					try {
-	    						File dataFolder = getDataFolder();
-	    			            if(!dataFolder.exists()) {
-	    			                dataFolder.mkdir();
-	    			            } else {
-	    			            	File dir = new File(getDataFolder() + "/" + player.getUniqueId().toString());
-	    			            	if(!dir.exists()) {
-	    			            		try{
-	    			            		    dir.mkdir(); 
-	    			            		} catch(Exception e2) {
-	    			            		    e2.getStackTrace();
-	    			            		}
-	    							}
-	    							File file = new File(dir, "available_character.dat");
-	    							try {
-	    								FileReader filereader = new FileReader(file);
-	    			    				BufferedReader bufReader = new BufferedReader(filereader);
-	    			    				String[] num = bufReader.readLine().split(" ");
-	    			    				num[16] = "1";
-	    			    				String str = "";
-	    			    				for(int j = 0 ; j < 17 ; j++) {
-	    			    					str += num[j] + " ";
-	    			    				}
-	    			    				str += num[17];
-										BufferedWriter fw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), "UTF-8"));
-						                fw.write(str);
-						                fw.close();
-						                bufReader.close();
-									} catch (IOException e2) {
-										e2.printStackTrace();
-									}
-	    						}
-	    					} catch (Exception e2) {
-	    						
-	    					}
-	    					player.sendMessage("[System] 대대장 캐릭터를 생성할 수 있게 되었습니다.");
-						}
-					}
 				}
 				//그림 리퍼
 				if(player.getInventory().contains(Material.ORANGE_DYE)) {
@@ -2345,54 +2345,54 @@ public class Main extends JavaPlugin implements Listener{
 						}	
 					}
 				}
-				//대대장
+				//조커
 				if(player.getInventory().contains(Material.INK_SAC)) {
 					int lvl = player.getLevel();
 					player.setHealth(20);
-					player.sendMessage(ChatColor.GREEN + "레벨 업 (대대장 Lv" + player.getLevel() + ")");
+					player.sendMessage(ChatColor.GREEN + "레벨 업 (조커 Lv" + player.getLevel() + ")");
 					player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
 					player.sendMessage(ChatColor.WHITE + "최대체력 +40");
 					player.sendMessage(ChatColor.WHITE + "총 체력: " + (20 + lvl*40));
 					player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
 					if(player.getLevel()==100) {
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-						    allPlayer.sendMessage(player.getDisplayName() + "님이 대대장 직책으로 100레벨을 달성했습니다!");
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 조커 직책으로 100레벨을 달성했습니다!");
 						}	
 					} else if(player.getLevel()==200) {
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-						    allPlayer.sendMessage(player.getDisplayName() + "님이 대대장 직책으로 200레벨을 달성했습니다!");
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 조커 직책으로 200레벨을 달성했습니다!");
 						}	
 					} else if(player.getLevel()==300) {
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-						    allPlayer.sendMessage(player.getDisplayName() + "님이 대대장 직책으로 300레벨을 달성했습니다!");
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 조커 직책으로 300레벨을 달성했습니다!");
 						}	
 					} else if(player.getLevel()==400) {
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-						    allPlayer.sendMessage(player.getDisplayName() + "님이 대대장 직책으로 400레벨을 달성했습니다!");
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 조커 직책으로 400레벨을 달성했습니다!");
 						}	
 					} else if(player.getLevel()==500) {
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-						    allPlayer.sendMessage(player.getDisplayName() + "님이 대대장 직책으로 500레벨을 달성했습니다!");
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 조커 직책으로 500레벨을 달성했습니다!");
 						}	
 					} else if(player.getLevel()==600) {
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-						    allPlayer.sendMessage(player.getDisplayName() + "님이 대대장 직책으로 600레벨을 달성했습니다!");
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 조커 직책으로 600레벨을 달성했습니다!");
 						}	
 					} else if(player.getLevel()==700 && event.getOldLevel() == 699) {
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-						    allPlayer.sendMessage(player.getDisplayName() + "님이 대대장 직책으로 700레벨을 달성했습니다!");
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 조커 직책으로 700레벨을 달성했습니다!");
 						}	
 					} else if(player.getLevel()==800 && event.getOldLevel() == 700) {
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-						    allPlayer.sendMessage(player.getDisplayName() + "님이 대대장 직책으로 800레벨을 달성했습니다!");
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 조커 직책으로 800레벨을 달성했습니다!");
 						}	
 					} else if(player.getLevel()==900 && event.getOldLevel() == 800) {
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-						    allPlayer.sendMessage(player.getDisplayName() + "님이 대대장 직책으로 900레벨을 달성했습니다!");
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 조커 직책으로 900레벨을 달성했습니다!");
 						}	
 					} else if(player.getLevel()==1000 && event.getOldLevel() == 900) {
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-						    allPlayer.sendMessage(player.getDisplayName() + "님이 대대장 직책으로 1000레벨을 달성했습니다!");
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 조커 직책으로 1000레벨을 달성했습니다!");
 						}	
 					}
 				}
@@ -2703,11 +2703,11 @@ public class Main extends JavaPlugin implements Listener{
 				player.sendMessage(ChatColor.WHITE + "총 체력: " + (20 + lvl*80));
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
 			}
-			//대대장
+			//조커
 			if(player.getInventory().contains(Material.INK_SAC)) {
 				int lvl = player.getLevel();
 				player.setHealth(20);
-				player.sendMessage(ChatColor.GREEN + "레벨 업 (대대장 Lv" + player.getLevel() + ")");
+				player.sendMessage(ChatColor.GREEN + "레벨 업 (조커 Lv" + player.getLevel() + ")");
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
 				player.sendMessage(ChatColor.WHITE + "최대체력 +40");
 				player.sendMessage(ChatColor.WHITE + "총 체력: " + (20 + lvl*40));
@@ -3995,7 +3995,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "용기사의 증표")) {
 			event.setCancelled(true);
 		}
-		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "대대장의 증표")) {
+		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "조커의 증표")) {
 			event.setCancelled(true);
 		}
 		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "파워레인저의 증표")) {
@@ -5364,7 +5364,7 @@ public class Main extends JavaPlugin implements Listener{
 				if (player.getInventory().contains(Material.BLACK_DYE)) {
 					event.setDamage(event.getDamage() + ((num*num)/6) + num);
 				}
-				// 대대장
+				// 조커
 				if (player.getInventory().contains(Material.INK_SAC)) {
 					event.setDamage(event.getDamage() + ((num*num)/8) + num);
 				}
@@ -9045,7 +9045,7 @@ public class Main extends JavaPlugin implements Listener{
 		            return;
 		        }
 		        if(clicked != null && clicked.getType() == Material.INK_SAC) {
-		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "대대장")) {
+		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "조커")) {
 		            	player.closeInventory();
 		            	new ReloadPlayerData(player, "commander", getDataFolder());
 		        	}
@@ -9220,7 +9220,7 @@ public class Main extends JavaPlugin implements Listener{
 		        		new AddCharacter(player, "paladin", getDataFolder());
 		        	} else if(clicked.getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "용기사의 별")) {
 		        		new AddCharacter(player, "dragonKnight", getDataFolder());
-		        	} else if(clicked.getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "대대장의 별")) {
+		        	} else if(clicked.getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "조커의 별")) {
 		        		new AddCharacter(player, "commander", getDataFolder());
 		        	} else if(clicked.getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "파워레인저의 별")) {
 		        		new AddCharacter(player, "powerRanger", getDataFolder());

@@ -74,7 +74,7 @@ public class PlayerJobBuff {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1,true,false,false));
 			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, Integer.MAX_VALUE, 0,true,false,false));
 		}
-		// 대대장
+		// 조커
 		if (player.getInventory().contains(Material.INK_SAC)) {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, Integer.MAX_VALUE, 0,true,false,false));
 			player.addPotionEffect(new PotionEffect(PotionEffectType.WATER_BREATHING, Integer.MAX_VALUE, 1,true,false,false));

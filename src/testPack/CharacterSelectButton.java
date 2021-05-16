@@ -225,7 +225,7 @@ public class CharacterSelectButton{
 				job = new ItemStack(Material.INK_SAC);
 				ItemMeta jobIm = job.getItemMeta();
 				jobIm.addEnchant(Enchantment.BINDING_CURSE, 32700, true);
-				jobIm.setDisplayName(ChatColor.GOLD + "대대장");
+				jobIm.setDisplayName(ChatColor.GOLD + "조커");
 				jobIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				jobIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				job.setItemMeta(jobIm);

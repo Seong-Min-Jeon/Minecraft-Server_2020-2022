@@ -83,10 +83,10 @@ public class PlayerStat {
 			player.sendMessage(ChatColor.GREEN + "최대 체력: " + (20 + lvl*80) + " 현재 체력: " + (int)(player.getHealth()*((20 + lvl*80)/20.0)) + 
 					" 레벨: " + player.getLevel() + "(" + (int)(player.getExp()*1000)/10.0 + "%)" + " 직업: 용기사");
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "대대장의 증표")) {
+		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "조커의 증표")) {
 			player.getWorld().playSound(player.getLocation(), Sound.UI_BUTTON_CLICK, 0.6f, 1.0f);
 			player.sendMessage(ChatColor.GREEN + "최대 체력: " + (20 + lvl*40) + " 현재 체력: " + (int)(player.getHealth()*((20 + lvl*40)/20.0)) + 
-					" 레벨: " + player.getLevel() + "(" + (int)(player.getExp()*1000)/10.0 + "%)" + " 직책: 대대장");
+					" 레벨: " + player.getLevel() + "(" + (int)(player.getExp()*1000)/10.0 + "%)" + " 특성: 조커");
 		}
 		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "아처의 증표")) {
 			player.getWorld().playSound(player.getLocation(), Sound.UI_BUTTON_CLICK, 0.6f, 1.0f);

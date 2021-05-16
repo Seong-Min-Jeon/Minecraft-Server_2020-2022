@@ -28,9 +28,8 @@ public class NewCharacter {
 		ItemMeta star1Im = star1.getItemMeta();
 		star1Im.setDisplayName(ChatColor.YELLOW + "본 파이터의 별");
 		ArrayList<String> star1Lore = new ArrayList();
-		star1Lore.add(ChatColor.WHITE + "뼈를 이용한 전투를 할 수 있다.");
+		star1Lore.add(ChatColor.WHITE + "뼈를 이용한 다채로운 전투를 즐길 수 있다.");
 		star1Lore.add(ChatColor.WHITE + "(뼈 이외의 근접무기로 공격을 할 수 없다.)");
-		star1Lore.add(ChatColor.WHITE + "체력" + ChatColor.RED + "♡♡♡♡♡");
 		star1Im.setLore(star1Lore);
 		star1.setItemMeta(star1Im);
 		
@@ -38,8 +37,7 @@ public class NewCharacter {
 		ItemMeta star2Im = star2.getItemMeta();
 		star2Im.setDisplayName(ChatColor.YELLOW + "기사의 별");
 		ArrayList<String> star2Lore = new ArrayList();
-		star2Lore.add(ChatColor.WHITE + "아군을 소환하며 싸우는 다채로운 직업이다.");
-		star2Lore.add(ChatColor.WHITE + "체력" + ChatColor.RED + "♡♡♡");
+		star2Lore.add(ChatColor.WHITE + "소환물을 소환해 싸워나갈 수 있다.");
 		star2Im.setLore(star2Lore);
 		star2.setItemMeta(star2Im);
 		
@@ -47,8 +45,7 @@ public class NewCharacter {
 		ItemMeta star3Im = star3.getItemMeta();
 		star3Im.setDisplayName(ChatColor.YELLOW + "프리스트의 별");
 		ArrayList<String> star3Lore = new ArrayList();
-		star3Lore.add(ChatColor.WHITE + "회복 기술을 사용하며 싸울 수 있는 직업이다.");
-		star3Lore.add(ChatColor.WHITE + "체력" + ChatColor.RED + "♡♡♡♡");
+		star3Lore.add(ChatColor.WHITE + "회복 기술을 사용하여 자신과 아군을 지킬 수 있다.");
 		star3Im.setLore(star3Lore);
 		star3.setItemMeta(star3Im);
 		
@@ -56,8 +53,7 @@ public class NewCharacter {
 		ItemMeta star4Im = star4.getItemMeta();
 		star4Im.setDisplayName(ChatColor.YELLOW + "광전사의 별");
 		ArrayList<String> star4Lore = new ArrayList();
-		star4Lore.add(ChatColor.WHITE + "체력은 낮지만 성장할수록 공격력이 크게 오른다.");
-		star4Lore.add(ChatColor.WHITE + "체력" + ChatColor.RED + "♡");
+		star4Lore.add(ChatColor.WHITE + "강한 공격력으로 적을 찍어내릴 수 있다.");
 		star4Im.setLore(star4Lore);
 		star4.setItemMeta(star4Im);
 		
@@ -66,7 +62,6 @@ public class NewCharacter {
 		star5Im.setDisplayName(ChatColor.YELLOW + "도박사의 별");
 		ArrayList<String> star5Lore = new ArrayList();
 		star5Lore.add(ChatColor.WHITE + "운에 승패를 거는 직업이다.");
-		star5Lore.add(ChatColor.WHITE + "체력" + ChatColor.RED + "♡♡♡♡♡");
 		star5Im.setLore(star5Lore);
 		star5.setItemMeta(star5Im);
 		
@@ -74,7 +69,7 @@ public class NewCharacter {
 		ItemMeta star6Im = star6.getItemMeta();
 		star6Im.setDisplayName(ChatColor.LIGHT_PURPLE + "그림자 무사의 별");
 		ArrayList<String> star6Lore = new ArrayList();
-		star6Lore.add(ChatColor.WHITE + "빠른 움직임으로 적을 공격할 수 있다.");
+		star6Lore.add(ChatColor.WHITE + "스피디한 플레이를 즐길 수 있다.");
 		star6Im.setLore(star6Lore);
 		star6.setItemMeta(star6Im);
 		
@@ -90,7 +85,7 @@ public class NewCharacter {
 		ItemMeta star8Im = star8.getItemMeta();
 		star8Im.setDisplayName(ChatColor.LIGHT_PURPLE + "군인의 별");
 		ArrayList<String> star8Lore = new ArrayList();
-		star8Lore.add(ChatColor.WHITE + "끈기있게 채광을 할 수 있는 직업이다.");
+		star8Lore.add(ChatColor.WHITE + "남녀노소 즐길 수 있는 우직한 전사가 된다.");
 		star8Lore.add(ChatColor.WHITE + "(곡괭이 이외의 근접무기로 공격을 할 수 없다.)");
 		star8Im.setLore(star8Lore);
 		star8.setItemMeta(star8Im);
@@ -108,7 +103,7 @@ public class NewCharacter {
 		ItemMeta star10Im = star10.getItemMeta();
 		star10Im.setDisplayName(ChatColor.LIGHT_PURPLE + "아처의 별");
 		ArrayList<String> star10Lore = new ArrayList();
-		star10Lore.add(ChatColor.WHITE + "활에 특화된 직업이다.");
+		star10Lore.add(ChatColor.WHITE + "근거리 전투와 다른 색다른 전투를 할 수 있다.");
 		star10Im.setLore(star10Lore);
 		star10.setItemMeta(star10Im);
 		
@@ -116,7 +111,7 @@ public class NewCharacter {
 		ItemMeta star11Im = star11.getItemMeta();
 		star11Im.setDisplayName(ChatColor.AQUA + "데빌의 별");
 		ArrayList<String> star11Lore = new ArrayList();
-		star11Lore.add(ChatColor.WHITE + "데빌의 힘을 얻을 수 있다.");
+		star11Lore.add(ChatColor.WHITE + "데빌의 사악한 힘을 얻을 수 있다.");
 		star11Im.setLore(star11Lore);
 		star11.setItemMeta(star11Im);
 		
@@ -124,7 +119,7 @@ public class NewCharacter {
 		ItemMeta star12Im = star12.getItemMeta();
 		star12Im.setDisplayName(ChatColor.AQUA + "엔젤의 별");
 		ArrayList<String> star12Lore = new ArrayList();
-		star12Lore.add(ChatColor.WHITE + "엔젤의 힘을 얻을 수 있다.");
+		star12Lore.add(ChatColor.WHITE + "엔젤의 힘으로 자신과 아군을 보호할 수 있다.");
 		star12Im.setLore(star12Lore);
 		star12.setItemMeta(star12Im);
 		
@@ -162,9 +157,9 @@ public class NewCharacter {
 		
 		ItemStack star17 = new ItemStack(Material.NETHER_STAR);
 		ItemMeta star17Im = star17.getItemMeta();
-		star17Im.setDisplayName(ChatColor.DARK_RED + "대대장의 별");
+		star17Im.setDisplayName(ChatColor.DARK_RED + "조커의 별");
 		ArrayList<String> star17Lore = new ArrayList();
-		star17Lore.add(ChatColor.WHITE + "군대를 이끄는 최고의 전사가 될 수 있다.");
+		star17Lore.add(ChatColor.WHITE + "총을 사용하는 무자비한 광란의 삶을 즐길 수 있다.");
 		star17Im.setLore(star17Lore);
 		star17.setItemMeta(star17Im);
 		
@@ -172,7 +167,7 @@ public class NewCharacter {
 		ItemMeta star18Im = star18.getItemMeta();
 		star18Im.setDisplayName(ChatColor.DARK_RED + "파워레인저의 별");
 		ArrayList<String> star18Lore = new ArrayList();
-		star18Lore.add(ChatColor.WHITE + "더욱 강력한 활을 사용할 수 있다.");
+		star18Lore.add(ChatColor.WHITE + "더욱 화려하게 활을 사용할 수 있다.");
 		star18Im.setLore(star18Lore);
 		star18.setItemMeta(star18Im);
 		
