@@ -2106,8 +2106,8 @@ public class Skill {
 						item.setItemMeta(itemIm);
 						player.getInventory().setItem(8, item);
 
+						new ParticleEffect(player).newEffect38();
 						player.sendMessage(ChatColor.GREEN + "[스킬]천사의 날개가 발동됩니다.");
-						world.playSound(player.getLocation(), Sound.ENTITY_BLAZE_AMBIENT, 1.0f, 2.0f);
 						Vector vec = new Vector(0, 1, 0);
 						player.setVelocity(vec.multiply(2.0f));
 					}
@@ -2145,6 +2145,8 @@ public class Skill {
 					golem.setRemoveWhenFarAway(true);
 					golem.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, golemLv * 4));
 					go.put(golem.getUniqueId(), player);
+					
+					new ParticleEffect(player).newEffect39();
 					player.sendMessage(ChatColor.GREEN + "[스킬]천사의 기사단이 발동됩니다.");
 					player.sendMessage(ChatColor.GREEN + "기사단이 소환됩니다. 레벨: " + player.getLevel());
 					List<Entity> entlist = player.getNearbyEntities(10, 10, 10);
@@ -2174,15 +2176,6 @@ public class Skill {
 					}
 					world.playEffect(loc, Effect.SMOKE, 0);
 					world.playSound(loc, Sound.ENTITY_ENDER_DRAGON_GROWL, 1.0f, 1.0f);
-					// ===============================================================
-					ParticleData pd = new ParticleData(player.getUniqueId());
-					if (pd.hasID()) {
-						pd.endTask();
-						pd.removeID();
-					}
-					ParticleEffect pe = new ParticleEffect(player);
-					pe.startE11();
-					// ================================================================
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
 					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
@@ -2307,20 +2300,11 @@ public class Skill {
 					}
 					PotionRatio pr = new PotionRatio();
 					pr.calculation(player, player.getLevel() * 7);
-					Location loc = player.getLocation();
-					world.playEffect(loc, Effect.DRAGON_BREATH, 0);
+
+					new ParticleEffect(player).newEffect40();
 					player.sendMessage(ChatColor.GREEN + "[스킬]천사의 축복이 발동됩니다.");
 					player.sendMessage(ChatColor.GREEN + "자신과 주변 아군의 체력이 회복됩니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 7 + ChatColor.RED + "]");
 					world.playSound(player.getLocation(), Sound.ENTITY_PHANTOM_FLAP, 1.0f, 1.0f);
-					// ===============================================================
-					ParticleData pd = new ParticleData(player.getUniqueId());
-					if (pd.hasID()) {
-						pd.endTask();
-						pd.removeID();
-					}
-					ParticleEffect pe = new ParticleEffect(player);
-					pe.startE12();
-					// ===============================================================
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
 					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
