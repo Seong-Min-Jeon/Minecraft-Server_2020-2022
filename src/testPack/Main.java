@@ -593,6 +593,86 @@ public class Main extends JavaPlugin implements Listener{
 //		if(player.getDisplayName().equalsIgnoreCase("WoolRing") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
 		
 		
+//		ItemStack helmet = new ItemStack(Material.DIAMOND_HELMET);
+//		ItemMeta helmetIm = helmet.getItemMeta();
+//		helmetIm.setLocalizedName("6000,2500,2500,2500,2000,4500,0,0,0,0,700");
+//		helmetIm.setDisplayName(ChatColor.GREEN + "세계수의 축복이 담긴 헬멧");
+//		ArrayList<String> helmetLore = new ArrayList();
+//		helmetLore.add(ChatColor.GRAY + "레벨 제한: 700");
+//		helmetLore.add(ChatColor.GRAY + " ");
+//		helmetLore.add(ChatColor.GRAY + "세계의 문에 자란 나뭇잎을 소재로 만든 헬멧");
+//		helmetLore.add(ChatColor.GRAY + " ");
+//		helmetLore.add(ChatColor.BLUE + "-독 데미지 20% 경감(세트 효과)");
+//		helmetLore.add(ChatColor.BLUE + "-위더 데미지 20% 경감(세트 효과)");
+//		helmetIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		helmetIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		helmetIm.addItemFlags(ItemFlag.HIDE_DYE);
+//		helmetIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		helmetIm.setUnbreakable(true);
+//		helmetIm.setLore(helmetLore);
+//		helmet.setItemMeta(helmetIm);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(helmet);}
+//
+//		ItemStack chestplate = new ItemStack(Material.DIAMOND_CHESTPLATE);
+//		ItemMeta chestplateIm = chestplate.getItemMeta();
+//		chestplateIm.setLocalizedName("6000,2500,2500,2500,2000,4500,0,0,0,0,700");
+//		chestplateIm.setDisplayName(ChatColor.GREEN + "세계수의 축복이 담긴 갑옷");
+//		ArrayList<String> chestplateLore = new ArrayList();
+//		chestplateLore.add(ChatColor.GRAY + "레벨 제한: 700");
+//		chestplateLore.add(ChatColor.GRAY + " ");
+//		chestplateLore.add(ChatColor.GRAY + "세계의 문에 자란 나뭇잎을 소재로 만든 갑옷");
+//		chestplateLore.add(ChatColor.GRAY + " ");
+//		chestplateLore.add(ChatColor.BLUE + "-독 데미지 20% 경감(세트 효과)");
+//		chestplateLore.add(ChatColor.BLUE + "-위더 데미지 20% 경감(세트 효과)");
+//		chestplateIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		chestplateIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		chestplateIm.addItemFlags(ItemFlag.HIDE_DYE);
+//		chestplateIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		chestplateIm.setUnbreakable(true);
+//		chestplateIm.setLore(chestplateLore);
+//		chestplate.setItemMeta(chestplateIm);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(chestplate);}
+//
+//		ItemStack leggings = new ItemStack(Material.DIAMOND_LEGGINGS);
+//		ItemMeta leggingsIm = leggings.getItemMeta();
+//		leggingsIm.setLocalizedName("6000,2500,2500,2500,2000,4500,0,0,0,0,700");
+//		leggingsIm.setDisplayName(ChatColor.GREEN + "세계수의 축복이 담긴 각반");
+//		ArrayList<String> leggingsLore = new ArrayList();
+//		leggingsLore.add(ChatColor.GRAY + "레벨 제한: 700");
+//		leggingsLore.add(ChatColor.GRAY + " ");
+//		leggingsLore.add(ChatColor.GRAY + "세계의 문에 자란 나뭇잎을 소재로 만든 각반");
+//		leggingsLore.add(ChatColor.GRAY + " ");
+//		leggingsLore.add(ChatColor.BLUE + "-독 데미지 20% 경감(세트 효과)");
+//		leggingsLore.add(ChatColor.BLUE + "-위더 데미지 20% 경감(세트 효과)");
+//		leggingsIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		leggingsIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		leggingsIm.addItemFlags(ItemFlag.HIDE_DYE);
+//		leggingsIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		leggingsIm.setUnbreakable(true);
+//		leggingsIm.setLore(leggingsLore);
+//		leggings.setItemMeta(leggingsIm);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(leggings);}
+//
+//		ItemStack boots = new ItemStack(Material.DIAMOND_BOOTS);
+//		ItemMeta bootsIm = boots.getItemMeta();
+//		bootsIm.setLocalizedName("6000,2500,2500,2500,2000,4500,0,0,0,0,700");
+//		bootsIm.setDisplayName(ChatColor.GREEN + "세계수의 축복이 담긴 신발");
+//		ArrayList<String> bootsLore = new ArrayList();
+//		bootsLore.add(ChatColor.GRAY + "레벨 제한: 700");
+//		bootsLore.add(ChatColor.GRAY + " ");
+//		bootsLore.add(ChatColor.GRAY + "세계의 문에 자란 나뭇잎을 소재로 만든 신발");
+//		bootsLore.add(ChatColor.GRAY + " ");
+//		bootsLore.add(ChatColor.BLUE + "-독 데미지 20% 경감(세트 효과)");
+//		bootsLore.add(ChatColor.BLUE + "-위더 데미지 20% 경감(세트 효과)");
+//		bootsIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		bootsIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		bootsIm.addItemFlags(ItemFlag.HIDE_DYE);
+//		bootsIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		bootsIm.setUnbreakable(true);
+//		bootsIm.setLore(bootsLore);
+//		boots.setItemMeta(bootsIm);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(boots);}
+//		
 //		ItemStack var1 = new ItemStack(Material.POLISHED_DIORITE_STAIRS);
 //		ItemMeta var1Im = var1.getItemMeta();
 //		var1Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,550");
@@ -5999,6 +6079,7 @@ public class Main extends JavaPlugin implements Listener{
 								int num = 0;
 								num += new SpecialEffect().a10150(player);
 								num += new SpecialEffect().a26(player);
+								num += new SpecialEffect().s9(player);
 
 								if (num > 100) {
 									num = 100;
@@ -6039,6 +6120,7 @@ public class Main extends JavaPlugin implements Listener{
 								int num = 0;
 								num += new SpecialEffect().a10160(player);
 								num += new SpecialEffect().a25(player);
+								num += new SpecialEffect().s10(player);
 
 								if (num > 100) {
 									num = 100;

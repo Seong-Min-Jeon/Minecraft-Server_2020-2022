@@ -2622,6 +2622,39 @@ public class SpecialEffect {
 		return 0;
 	}
 	
+	public int s9(Player player) {
+		try {
+			if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "세계수의 축복이 담긴 헬멧")) {
+				if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "세계수의 축복이 담긴 갑옷")) {
+					if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "세계수의 축복이 담긴 각반")) {
+						if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "세계수의 축복이 담긴 신발")) {
+							return 20;
+						}
+					}
+				}
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+	public int s10(Player player) {
+		try {
+			if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "세계수의 축복이 담긴 헬멧")) {
+				if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "세계수의 축복이 담긴 갑옷")) {
+					if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "세계수의 축복이 담긴 각반")) {
+						if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "세계수의 축복이 담긴 신발")) {
+							return 20;
+						}
+					}
+				}
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
 	
 	
 }
