@@ -60,14 +60,6 @@ public class ExtraSkill {
 				}
 			}
 			
-			// 소아온+ 2
-			if (item1.getType() == Material.SPRUCE_PLANKS && item2.getType() == Material.OAK_PLANKS) {
-				if (item1.getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "다크 리펄서+")
-						&& item2.getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "일루시데이터+")) {
-					bool = true;
-					skill4(player, i, item1, item2);
-				}
-			}
 		} catch(Exception e) {
 			
 		}
@@ -86,22 +78,11 @@ public class ExtraSkill {
 				itemIm.setDisplayName(ChatColor.BLUE + "마나");
 				item.setItemMeta(itemIm);
 				player.getInventory().setItem(8, item);
-				Location loc = player.getLocation();
 				
-				Vector vec = player.getEyeLocation().add(0,2,0).getDirection().multiply(2.0f);
-				player.setVelocity(vec);						
-				double num1 = player.getLocation().getDirection().getX();
-				double num2 = player.getLocation().getDirection().getY() + 1;
-				double num3 = player.getLocation().getDirection().getZ();
-				Location mobLoc = loc.add(num1, num2, num3);						
-				List<Entity> entitylist = player.getNearbyEntities(3, 3, 3);				
-				for (Entity nearEntity : entitylist) {
-					if (nearEntity instanceof Mob) {
-						LivingEntity ent = (LivingEntity) nearEntity;
-						ent.setVelocity(vec);
-						ent.damage(player.getLevel()*20);
-					}
-				}
+				Vector vec = player.getEyeLocation().add(0,1,0).getDirection().multiply(2.0f);
+				player.setVelocity(vec);				
+				
+				new ParticleEffect(player).newEffect10000();
 				player.sendMessage(ChatColor.GREEN + "[스킬]더블 서큘러를 발동합니다.");
 				player.getWorld().playSound(player.getLocation(), Sound.ENTITY_LIGHTNING_BOLT_IMPACT, 1.0f, 1.0f);
 				player.getWorld().playSound(player.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
@@ -160,23 +141,9 @@ public class ExtraSkill {
 				itemIm.setDisplayName(ChatColor.BLUE + "마나");
 				item.setItemMeta(itemIm);
 				player.getInventory().setItem(8, item);
-				Location loc = player.getLocation();
-				
-				Vector vec = player.getEyeLocation().add(0,2,0).getDirection().multiply(2.0f);
-				player.setVelocity(vec);						
-				double num1 = player.getLocation().getDirection().getX();
-				double num2 = player.getLocation().getDirection().getY() + 1;
-				double num3 = player.getLocation().getDirection().getZ();
-				Location mobLoc = loc.add(num1, num2, num3);						
-				List<Entity> entitylist = player.getNearbyEntities(4, 4, 4);				
-				for (Entity nearEntity : entitylist) {
-					if (nearEntity instanceof Mob) {
-						LivingEntity ent = (LivingEntity) nearEntity;
-						ent.setVelocity(vec);
-						ent.damage(player.getLevel()*60);
-					}
-				}
-				player.sendMessage(ChatColor.GREEN + "[스킬]더블 서큘러<진>를 발동합니다.");
+
+				new ParticleEffect(player).newEffect10001();
+				player.sendMessage(ChatColor.GREEN + "[스킬]샤인 서큘러를 발동합니다.");
 				player.getWorld().playSound(player.getLocation(), Sound.ENTITY_LIGHTNING_BOLT_IMPACT, 1.0f, 1.0f);
 				player.getWorld().playSound(player.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
 			}
@@ -187,40 +154,4 @@ public class ExtraSkill {
 		}
 	}
 	
-	public void skill4(Player player, int i, ItemStack item1, ItemStack item2) {
-		if (i >= 3) {
-			if ((player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) || (player.getLocation().getBlock().getType() != Material.AIR)
-					|| (player.getLocation().add(0,-2,0).getBlock().getType() != Material.AIR)) {
-				player.getInventory().remove(Material.HEART_OF_THE_SEA);
-				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 3);
-				ItemMeta itemIm = item.getItemMeta();
-				itemIm.setDisplayName(ChatColor.BLUE + "마나");
-				item.setItemMeta(itemIm);
-				player.getInventory().setItem(8, item);
-				Location loc = player.getLocation();
-				
-				Vector vec = player.getEyeLocation().add(0,2,0).getDirection().multiply(2.0f);
-				player.setVelocity(vec);						
-				double num1 = player.getLocation().getDirection().getX();
-				double num2 = player.getLocation().getDirection().getY() + 1;
-				double num3 = player.getLocation().getDirection().getZ();
-				Location mobLoc = loc.add(num1, num2, num3);						
-				List<Entity> entitylist = player.getNearbyEntities(4, 4, 4);				
-				for (Entity nearEntity : entitylist) {
-					if (nearEntity instanceof Mob) {
-						LivingEntity ent = (LivingEntity) nearEntity;
-						ent.setVelocity(vec);
-						ent.damage(player.getLevel()*60);
-					}
-				}
-				player.sendMessage(ChatColor.GREEN + "[스킬]더블 서큘러<리버스>를 발동합니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.ENTITY_LIGHTNING_BOLT_IMPACT, 1.0f, 1.0f);
-				player.getWorld().playSound(player.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
-			}
-		} else {
-			player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
-			player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
-			return;
-		}
-	}
 }

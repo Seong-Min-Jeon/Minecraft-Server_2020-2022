@@ -973,7 +973,7 @@ public class QuestBoard {
 			Chest chest = (Chest) block.getState();
 			ItemStack weapon = chest.getInventory().getItem(23);
 			player.getInventory().addItem(weapon);
-			player.sendMessage(ChatColor.YELLOW + "병사의 낡은 증표" + ChatColor.WHITE + "를 획득했다.");
+			player.sendMessage(ChatColor.YELLOW + "병사의 낡은 코어" + ChatColor.WHITE + "를 획득했다.");
 			es.giveExp(player, 9500000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			return;

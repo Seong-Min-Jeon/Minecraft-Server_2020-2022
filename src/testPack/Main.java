@@ -193,11 +193,11 @@ import java.util.Random;
 public class Main extends JavaPlugin implements Listener{
 	
 	// gamerule doMobLoot false
-	// gamerule doMobSpawning false 
+	// gamerule doMobSpawning false
 	// gamerule keepInventory true
 	// gamerule doImmediateRespawn true
 	// gamerule doLimitedCrafting true
-	// gamerule mobGriefing false	
+	// gamerule mobGriefing false
 	// gamerule doWeatherCycle false
 	// Damage_ALL, Damage_Undead, Damage_Arthropods, Impaling, Sweeping, Protection_Environment, Protection_Fire, Protection_Explosion, Protection_Projectile, Thorns, Level
 	
@@ -8248,7 +8248,7 @@ public class Main extends JavaPlugin implements Listener{
 		        						if(player.isSneaking()) {
 		        							new ParticleEffect(player).newEffect20();
 		        						} else {
-		        							new ParticleEffect(player).newEffect40();
+		        							new ParticleEffect(player).newEffect10001();
 		        						}
 		        					}
 	        					}
