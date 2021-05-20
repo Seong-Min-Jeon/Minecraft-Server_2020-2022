@@ -2335,6 +2335,7 @@ public class Skill {
 						item.setItemMeta(itemIm);
 						player.getInventory().setItem(8, item);
 
+						new ParticleEffect(player).newEffect41();
 						player.sendMessage(ChatColor.GREEN + "[스킬]신비의 대행이 발동됩니다.");
 
 						Vector vec = player.getEyeLocation().getDirection().multiply(2.0f);
@@ -2501,6 +2502,7 @@ public class Skill {
 										} else {
 											player.setHealth(player.getHealth() + 5);
 										}
+										new ParticleEffect(player).newEffect42();
 										player.sendMessage(ChatColor.GREEN + "신의 경고가 발동됩니다.");
 										player.sendMessage(ChatColor.GREEN + "정신이 번쩍 듭니다.");
 										world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);									
@@ -2513,11 +2515,11 @@ public class Skill {
 												if (nearEntity instanceof LivingEntity) {
 													LivingEntity nearMob = (LivingEntity) nearEntity;
 													nearMob.damage(player.getLevel() * 40);
+													new ParticleEffect(player, nearMob).newEffect43();
 												}
 											}
 										}
 										player.sendMessage(ChatColor.GREEN + "신의 통고가 발동됩니다.");
-										world.playEffect(loc, Effect.END_GATEWAY_SPAWN, 0);							
 									}
 								} else if (num == 2) {
 									if (time > 40) {
@@ -2530,13 +2532,11 @@ public class Skill {
 												}
 											}
 										}		
+										new ParticleEffect(player).newEffect44();
 										player.sendMessage(ChatColor.GREEN + "신의 심판이 발동됩니다.");
-										world.playEffect(loc, Effect.END_GATEWAY_SPAWN, 0);	
 									}
 								} else if (num == 3) {
 									if (time > 40) {
-										player.addPotionEffect(
-												new PotionEffect(PotionEffectType.BLINDNESS, 40, Integer.MAX_VALUE));
 										List<Entity> entitylist = player.getNearbyEntities(10, 5, 10);
 										for (Entity nearEntity : entitylist) {
 											if (nearEntity.getType() != EntityType.PLAYER) {
@@ -2546,11 +2546,12 @@ public class Skill {
 												}
 											}
 										}		
+										new ParticleEffect(player).newEffect45();
 										player.sendMessage(ChatColor.GREEN + "신의 강림이 발동됩니다.");
-										world.playEffect(loc, Effect.END_GATEWAY_SPAWN, 0);									
 									}
 								} else if (num == 4) {
 									if (time > 40) {
+										new ParticleEffect(player).newEffect46();
 										player.sendMessage(ChatColor.GREEN + "신의 축복이 발동됩니다.");
 										player.sendMessage(ChatColor.GREEN + "7초간 무적이 됩니다.");
 										player.setNoDamageTicks(140);
@@ -2558,7 +2559,9 @@ public class Skill {
 									}
 								} else if (num == 5) {
 									if (time > 40) {
+										new ParticleEffect(player).newEffect47();
 										int num2 = rnd.nextInt(216);
+										world.playSound(player.getLocation(), Sound.ENTITY_WITCH_CELEBRATE, 1.0f, 1.0f);
 										if (num2 < 215) {
 											try {
 												player.getInventory().remove(Material.HEART_OF_THE_SEA);
