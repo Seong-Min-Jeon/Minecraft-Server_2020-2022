@@ -8328,9 +8328,9 @@ public class Main extends JavaPlugin implements Listener{
 		        						new SnowStack(player.getTargetBlockExact(50), 10);
 		        					} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "마법봉")) {
 		        						if(player.isSneaking()) {
-		        							new ParticleEffect(player).newEffect20();
+		        							new ParticleEffect(player).newSound3();
 		        						} else {
-		        							new ParticleEffect(player).newSound2();
+		        							new ParticleEffect(player).newSound4();
 		        						}
 		        					}
 	        					}

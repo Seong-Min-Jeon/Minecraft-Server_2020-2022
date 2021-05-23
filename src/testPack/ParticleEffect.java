@@ -10371,8 +10371,6 @@ public class ParticleEffect {
 	// 라일락
 	public void newSound1() {
 		
-		World world = player.getWorld();
-		
 		new BukkitRunnable() {
 			int time = 0;
 
@@ -10382,75 +10380,75 @@ public class ParticleEffect {
 				Location normal = player.getLocation();
 				
 				if(time == 0) {
-					world.playSound(normal, Sound.BLOCK_NOTE_BLOCK_GUITAR, 4.0f, 1.89f);
+					player.playSound(normal, Sound.BLOCK_NOTE_BLOCK_PLING, 4.0f, 1.89f);
 				}
 				
 				if(time == 4) {
-					world.playSound(normal, Sound.BLOCK_NOTE_BLOCK_GUITAR, 4.0f, 2.12f);
+					player.playSound(normal, Sound.BLOCK_NOTE_BLOCK_PLING, 4.0f, 2.12f);
 				}
 				
 				if(time == 8) {
-					world.playSound(normal, Sound.BLOCK_NOTE_BLOCK_GUITAR, 4.0f, 2.12f);
+					player.playSound(normal, Sound.BLOCK_NOTE_BLOCK_PLING, 4.0f, 2.12f);
 				}
 				
 				if(time == 12) {
-					world.playSound(normal, Sound.BLOCK_NOTE_BLOCK_GUITAR, 4.0f, 2.12f);
+					player.playSound(normal, Sound.BLOCK_NOTE_BLOCK_PLING, 4.0f, 2.12f);
 				}
 				
 				if(time == 20) {
-					world.playSound(normal, Sound.BLOCK_NOTE_BLOCK_GUITAR, 4.0f, 2.12f);
+					player.playSound(normal, Sound.BLOCK_NOTE_BLOCK_PLING, 4.0f, 2.12f);
 				}
 				
 				if(time == 24) {
-					world.playSound(normal, Sound.BLOCK_NOTE_BLOCK_GUITAR, 4.0f, 1.89f);
+					player.playSound(normal, Sound.BLOCK_NOTE_BLOCK_PLING, 4.0f, 1.89f);
 				}
 				
 				if(time == 28) {
-					world.playSound(normal, Sound.BLOCK_NOTE_BLOCK_GUITAR, 4.0f, 1.59f);
+					player.playSound(normal, Sound.BLOCK_NOTE_BLOCK_PLING, 4.0f, 1.59f);
 				}
 				
 				if(time == 36) {
-					world.playSound(normal, Sound.BLOCK_NOTE_BLOCK_GUITAR, 4.0f, 2.12f);
+					player.playSound(normal, Sound.BLOCK_NOTE_BLOCK_PLING, 4.0f, 2.12f);
 				}
 				
 				if(time == 48) {
-					world.playSound(normal, Sound.BLOCK_NOTE_BLOCK_GUITAR, 4.0f, 2.12f);
+					player.playSound(normal, Sound.BLOCK_NOTE_BLOCK_PLING, 4.0f, 2.12f);
 				}
 				
 				if(time == 50) {
-					world.playSound(normal, Sound.BLOCK_NOTE_BLOCK_GUITAR, 4.0f, 1.89f);
+					player.playSound(normal, Sound.BLOCK_NOTE_BLOCK_PLING, 4.0f, 1.89f);
 				}
 				
 				if(time == 54) {
-					world.playSound(normal, Sound.BLOCK_NOTE_BLOCK_GUITAR, 4.0f, 2.12f);
+					player.playSound(normal, Sound.BLOCK_NOTE_BLOCK_PLING, 4.0f, 2.12f);
 				}
 				
 				if(time == 58) {
-					world.playSound(normal, Sound.BLOCK_NOTE_BLOCK_GUITAR, 4.0f, 2.12f);
+					player.playSound(normal, Sound.BLOCK_NOTE_BLOCK_PLING, 4.0f, 2.12f);
 				}
 				
 				if(time == 62) {
-					world.playSound(normal, Sound.BLOCK_NOTE_BLOCK_GUITAR, 4.0f, 2.12f);
+					player.playSound(normal, Sound.BLOCK_NOTE_BLOCK_PLING, 4.0f, 2.12f);
 				}
 				
 				if(time == 70) {
-					world.playSound(normal, Sound.BLOCK_NOTE_BLOCK_GUITAR, 4.0f, 2.12f);
+					player.playSound(normal, Sound.BLOCK_NOTE_BLOCK_PLING, 4.0f, 2.12f);
 				}
 				
 				if(time == 74) {
-					world.playSound(normal, Sound.BLOCK_NOTE_BLOCK_GUITAR, 4.0f, 1.89f);
+					player.playSound(normal, Sound.BLOCK_NOTE_BLOCK_PLING, 4.0f, 1.89f);
 				}
 				
 				if(time == 78) {
-					world.playSound(normal, Sound.BLOCK_NOTE_BLOCK_GUITAR, 4.0f, 1.59f);
+					player.playSound(normal, Sound.BLOCK_NOTE_BLOCK_PLING, 4.0f, 1.59f);
 				}
 				
 				if(time == 86) {
-					world.playSound(normal, Sound.BLOCK_NOTE_BLOCK_GUITAR, 4.0f, 2.12f);
+					player.playSound(normal, Sound.BLOCK_NOTE_BLOCK_PLING, 4.0f, 2.12f);
 				}
 				
 				if(time == 98) {
-					world.playSound(normal, Sound.BLOCK_NOTE_BLOCK_GUITAR, 4.0f, 2.12f);
+					player.playSound(normal, Sound.BLOCK_NOTE_BLOCK_PLING, 4.0f, 2.12f);
 				}
 				
 				if(time >= 100) {
@@ -10465,8 +10463,6 @@ public class ParticleEffect {
 	// unravel
 	public void newSound2() {
 		
-		World world = player.getWorld();
-		
 		new BukkitRunnable() {
 			int time = 0;
 
@@ -10476,55 +10472,55 @@ public class ParticleEffect {
 				Location normal = player.getLocation();
 				
 				if(time == 0) {
-					world.playSound(normal, Sound.BLOCK_NOTE_BLOCK_GUITAR, 4.0f, 2.82f);
+					player.playSound(normal, Sound.BLOCK_NOTE_BLOCK_PLING, 4.0f, 2.82f);
 				}
 				
 				if(time == 4) {
-					world.playSound(normal, Sound.BLOCK_NOTE_BLOCK_GUITAR, 4.0f, 3.17f);
+					player.playSound(normal, Sound.BLOCK_NOTE_BLOCK_PLING, 4.0f, 3.17f);
 				}
 				
 				if(time == 12) {
-					world.playSound(normal, Sound.BLOCK_NOTE_BLOCK_GUITAR, 4.0f, 2.82f);
+					player.playSound(normal, Sound.BLOCK_NOTE_BLOCK_PLING, 4.0f, 2.82f);
 				}
 				
 				if(time == 20) {
-					world.playSound(normal, Sound.BLOCK_NOTE_BLOCK_GUITAR, 4.0f, 2.67f);
+					player.playSound(normal, Sound.BLOCK_NOTE_BLOCK_PLING, 4.0f, 2.67f);
 				}
 				
 				if(time == 24) {
-					world.playSound(normal, Sound.BLOCK_NOTE_BLOCK_GUITAR, 4.0f, 2.38f);
+					player.playSound(normal, Sound.BLOCK_NOTE_BLOCK_PLING, 4.0f, 2.38f);
 				}
 				
 				if(time == 32) {
-					world.playSound(normal, Sound.BLOCK_NOTE_BLOCK_GUITAR, 4.0f, 3.17f);
+					player.playSound(normal, Sound.BLOCK_NOTE_BLOCK_PLING, 4.0f, 3.17f);
 				}
 				
 				if(time == 40) {
-					world.playSound(normal, Sound.BLOCK_NOTE_BLOCK_GUITAR, 4.0f, 2.82f);
+					player.playSound(normal, Sound.BLOCK_NOTE_BLOCK_PLING, 4.0f, 2.82f);
 				}
 				
 				if(time == 48) {
-					world.playSound(normal, Sound.BLOCK_NOTE_BLOCK_GUITAR, 4.0f, 2.67f);
+					player.playSound(normal, Sound.BLOCK_NOTE_BLOCK_PLING, 4.0f, 2.67f);
 				}
 				
 				if(time == 56) {
-					world.playSound(normal, Sound.BLOCK_NOTE_BLOCK_GUITAR, 4.0f, 2.38f);
+					player.playSound(normal, Sound.BLOCK_NOTE_BLOCK_PLING, 4.0f, 2.38f);
 				}
 				
 				if(time == 68) {
-					world.playSound(normal, Sound.BLOCK_NOTE_BLOCK_GUITAR, 4.0f, 2.12f);
+					player.playSound(normal, Sound.BLOCK_NOTE_BLOCK_PLING, 4.0f, 2.12f);
 				}
 				
 				if(time == 80) {
-					world.playSound(normal, Sound.BLOCK_NOTE_BLOCK_GUITAR, 4.0f, 1.89f);
+					player.playSound(normal, Sound.BLOCK_NOTE_BLOCK_PLING, 4.0f, 1.89f);
 				}
 				
 				if(time == 92) {
-					world.playSound(normal, Sound.BLOCK_NOTE_BLOCK_GUITAR, 4.0f, 2.12f);
+					player.playSound(normal, Sound.BLOCK_NOTE_BLOCK_PLING, 4.0f, 2.12f);
 				}
 				
 				if(time == 96) {
-					world.playSound(normal, Sound.BLOCK_NOTE_BLOCK_GUITAR, 4.0f, 1.78f);
+					player.playSound(normal, Sound.BLOCK_NOTE_BLOCK_PLING, 4.0f, 1.78f);
 				}
 				
 				if(time >= 100) {
@@ -10536,6 +10532,97 @@ public class ParticleEffect {
 		}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
 	}
 	
+	// 좀비1
+	public void newSound3() {
+		
+		new BukkitRunnable() {
+			int time = 0;
+
+			@Override
+			public void run() {
+				
+				Location normal = player.getLocation();
+				
+				if (time == 0) {
+					player.playSound(normal, Sound.ENTITY_ZOMBIE_HURT, 1.5f, 1.3f);
+				} else if (time == 5) {
+					player.playSound(normal, Sound.ENTITY_ZOMBIE_HURT, 1.5f, 1.2f);
+				} else if (time == 10) {
+					player.playSound(normal, Sound.ENTITY_ZOMBIE_HURT, 1.5f, 1.1f);
+				} else if (time == 15) {
+					player.playSound(normal, Sound.ENTITY_ZOMBIE_HURT, 1.5f, 1.2f);
+				} else if (time == 25) {
+					player.playSound(normal, Sound.ENTITY_ZOMBIE_HURT, 1.5f, 1.1f);
+				} else if (time == 35) {
+					player.playSound(normal, Sound.ENTITY_ZOMBIE_HURT, 1.5f, 1.2f);
+				} else if (time == 45) {
+					player.playSound(normal, Sound.ENTITY_ZOMBIE_HURT, 1.5f, 1.1f);
+				} else if (time == 50) {
+					player.playSound(normal, Sound.ENTITY_ZOMBIE_HURT, 1.5f, 1.2f);
+				} else if (time == 60) {
+					player.playSound(normal, Sound.ENTITY_ZOMBIE_HURT, 1.5f, 1.3f);
+				} else if (time == 65) {
+					player.playSound(normal, Sound.ENTITY_ZOMBIE_HURT, 1.5f, 0.9f);
+				} else if (time == 70) {
+					player.playSound(normal, Sound.ENTITY_ZOMBIE_HURT, 1.5f, 0.8f);
+				} else if (time == 75) {
+					player.playSound(normal, Sound.ENTITY_ZOMBIE_HURT, 1.5f, 0.9f);
+				}
+				
+				if(time >= 100) {
+					this.cancel();
+				}
+				
+				time++;
+			}
+		}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
+	}
+	
+	// 좀비2
+	public void newSound4() {
+		
+		new BukkitRunnable() {
+			int time = 0;
+
+			@Override
+			public void run() {
+				
+				Location normal = player.getLocation();
+				
+				if (time == 0) {
+					player.playSound(normal, Sound.ENTITY_ZOMBIE_HURT, 1.5f, 1.0f);
+				} else if (time == 9) {
+					player.playSound(normal, Sound.ENTITY_ZOMBIE_HURT, 1.5f, 1.4f);
+				} else if (time == 18) {
+					player.playSound(normal, Sound.ENTITY_ZOMBIE_HURT, 1.5f, 0.9f);
+				} else if (time == 24) {
+					player.playSound(normal, Sound.ENTITY_ZOMBIE_HURT, 1.5f, 1.0f);
+				} else if (time == 27) {
+					player.playSound(normal, Sound.ENTITY_ZOMBIE_HURT, 1.5f, 1.4f);
+				} else if (time == 36) {
+					player.playSound(normal, Sound.ENTITY_ZOMBIE_HURT, 1.5f, 1.1f);
+				} else if (time == 42) {
+					player.playSound(normal, Sound.ENTITY_ZOMBIE_HURT, 1.5f, 1.0f);
+				} else if (time == 45) {
+					player.playSound(normal, Sound.ENTITY_ZOMBIE_HURT, 1.5f, 1.1f);
+				} else if (time == 51) {
+					player.playSound(normal, Sound.ENTITY_ZOMBIE_HURT, 1.5f, 1.2f);
+				} else if (time == 54) {
+					player.playSound(normal, Sound.ENTITY_ZOMBIE_HURT, 1.5f, 1.1f);
+				} else if (time == 60) {
+					player.playSound(normal, Sound.ENTITY_ZOMBIE_HURT, 1.5f, 1.0f);
+				} else if (time == 63) {
+					player.playSound(normal, Sound.ENTITY_ZOMBIE_HURT, 1.5f, 0.8f);
+				}
+				
+				if(time >= 100) {
+					this.cancel();
+				}
+				
+				time++;
+			}
+		}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
+	}
 	
 	
 	

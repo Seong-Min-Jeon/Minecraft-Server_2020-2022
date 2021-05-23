@@ -2639,9 +2639,15 @@ public class Skill {
 					player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 200, 2, true, false, false));
 					
 					new ParticleEffect(player).newEffect48();
-					int music = rnd.nextInt(1);
+					int music = rnd.nextInt(4);
 					if(music == 0) {
 						new ParticleEffect(player).newSound1();
+					} else if(music == 1) {
+						new ParticleEffect(player).newSound2();
+					} else if(music == 2) {
+						new ParticleEffect(player).newSound3();
+					} else if(music == 3) {
+						new ParticleEffect(player).newSound4();
 					}
 					player.sendMessage(ChatColor.GREEN + "[스킬]신들의 풍악이 발동됩니다.");
 					player.sendMessage(ChatColor.GREEN + "10초간 아군에게 저항이 부여됩니다.");
