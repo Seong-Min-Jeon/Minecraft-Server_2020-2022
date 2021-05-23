@@ -86,6 +86,13 @@ public class Cmd16class implements CommandExecutor {
 				
 			}, 0, 1);
 			
+			// 보스바 관련
+			try {
+				new BossHealth().removePlayer(player);
+			} catch (Exception e) {
+
+			}
+			
 			// Off in Dungeon
 			new OffInDungeon(player);
 			

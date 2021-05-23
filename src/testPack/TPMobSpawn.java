@@ -783,6 +783,9 @@ public class TPMobSpawn {
 					if (loc2.getX() <= 90 && loc2.getY() <= 169 && loc2.getZ() <= -5 && 
 							loc2.getX() >= 54 && loc2.getY() >= 157 && loc2.getZ() >= -41) {
 						num++;
+						if(new BossHealth().getBar27().getProgress() != 0) {
+							new BossHealth().getBar27().addPlayer(player);
+						}
 						return;
 					}
 				}
@@ -799,6 +802,8 @@ public class TPMobSpawn {
 				}
 			}
 			loc.getWorld().spawnEntity(new Location(player.getWorld(), 72, 157, -22), EntityType.SKELETON);
+			new BossHealth().getBar27().setProgress(1.0);
+			new BossHealth().getBar27().addPlayer(player);
 			return;
 		}
 		

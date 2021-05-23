@@ -5450,27 +5450,30 @@ public class SpawnMob {
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "2층의 지배자" + ChatColor.YELLOW + " [Lv.??]");
+				entity.setCustomName(ChatColor.GRAY + "7층의 지배자" + ChatColor.YELLOW + " [Lv.??]");
 				entity.setCustomNameVisible(true);
-				entity.setMaxHealth(600000);
-				entity.setHealth(600000);
+				entity.setMaxHealth(5500000);
+				entity.setHealth(5500000);
 				EntityEquipment weapon = entity.getEquipment();
-				ItemStack weaponItem = new ItemStack(Material.GREEN_CARPET);
+				ItemStack weaponItem = new ItemStack(Material.LAPIS_BLOCK);
 				weapon.setItemInMainHand(weaponItem);
 				EntityEquipment head = entity.getEquipment();
-				ItemStack headItem = chest.getInventory().getItem(1);
+				ItemStack headItem = chest.getInventory().getItem(6);
 				head.setHelmet(headItem);
 				EntityEquipment chestplate = entity.getEquipment();
-				ItemStack chestplateItem = new ItemStack(Material.IRON_CHESTPLATE);
+				ItemStack chestplateItem = new ItemStack(Material.NETHERITE_CHESTPLATE);
 				chestplate.setChestplate(chestplateItem);
 				EntityEquipment leggings = entity.getEquipment();
-				ItemStack leggingsItem = new ItemStack(Material.IRON_LEGGINGS);
+				ItemStack leggingsItem = new ItemStack(Material.LEATHER_LEGGINGS);
+				LeatherArmorMeta leggingsmeta = (LeatherArmorMeta) leggingsItem.getItemMeta();
+				leggingsmeta.setColor(Color.fromRGB(0, 0, 0));
+				leggingsItem.setItemMeta(leggingsmeta);
 				leggings.setLeggings(leggingsItem);
 				EntityEquipment boots = entity.getEquipment();
-				ItemStack bootsItem = new ItemStack(Material.IRON_BOOTS);
+				ItemStack bootsItem = new ItemStack(Material.NETHERITE_BOOTS);
 				boots.setBoots(bootsItem);
-				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 400));
-				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 2));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 3000));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM
 					|| entity.getType() == (EntityType) EntityType.SALMON

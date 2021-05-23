@@ -2619,15 +2619,7 @@ public class Skill {
 					itemIm.setDisplayName(ChatColor.BLUE + "마나");
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
-					// ===============================================================
-					ParticleData pd = new ParticleData(player.getUniqueId());
-					if (pd.hasID()) {
-						pd.endTask();
-						pd.removeID();
-					}
-					ParticleEffect pe = new ParticleEffect(player);
-					pe.startE18();
-					// ================================================================		
+
 					List<Entity> entitylist = player.getNearbyEntities(10, 5, 10);
 					for (Entity nearEntity : entitylist) {
 						if (nearEntity.getType() == EntityType.PLAYER) {
@@ -2645,6 +2637,12 @@ public class Skill {
 					player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0, true, false, false));
 					player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 2, true, false, false));
 					player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 200, 2, true, false, false));
+					
+					new ParticleEffect(player).newEffect48();
+					int music = rnd.nextInt(1);
+					if(music == 0) {
+						new ParticleEffect(player).newSound1();
+					}
 					player.sendMessage(ChatColor.GREEN + "[스킬]신들의 풍악이 발동됩니다.");
 					player.sendMessage(ChatColor.GREEN + "10초간 아군에게 저항이 부여됩니다.");
 					player.sendMessage(ChatColor.GREEN + "10초간 아군에게 추가 체력이 부여됩니다.");

@@ -13,6 +13,7 @@ import org.bukkit.Material;
 import org.bukkit.Particle;
 import org.bukkit.Sound;
 import org.bukkit.SoundCategory;
+import org.bukkit.World;
 import org.bukkit.Particle.DustOptions;
 import org.bukkit.block.Block;
 import org.bukkit.block.Chest;
@@ -37,6 +38,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
+import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.EulerAngle;
 import org.bukkit.util.Vector;
 
@@ -1346,12 +1348,16 @@ public class PlayerHitDebuff {
 								ParticleEffect pe = new ParticleEffect(player, mob);
 								pe.startE30();
 								// ================================================================
-								List<Entity> nearPlayer = mob.getNearbyEntities(8, 30, 8);
+								List<Entity> nearPlayer = mob.getNearbyEntities(8, 15, 8);
 								for(Entity p : nearPlayer) {
 									if(p instanceof Player) {
-										p.getWorld().playSound(p.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 1.5f, 1.0f);
-										p.getWorld().spawnParticle(Particle.EXPLOSION_LARGE, p.getLocation(), 2);
-										((Player) p).damage(99999999);
+										Location loc2 = p.getLocation();
+										if (loc2.getX() <= 90 && loc2.getY() <= 141 && loc2.getZ() <= -5 && 
+												loc2.getX() >= 54 && loc2.getY() >= 129 && loc2.getZ() >= -41) {
+											p.getWorld().playSound(p.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 1.5f, 1.0f);
+											p.getWorld().spawnParticle(Particle.EXPLOSION_LARGE, p.getLocation(), 2);
+											((Player) p).damage(99999999);
+										}
 									}
 								}
 								
@@ -1515,8 +1521,8 @@ public class PlayerHitDebuff {
 								for (Entity nearPlayer : nearEntity) {
 									if (nearPlayer instanceof Player) {
 										Location loc2 = nearPlayer.getLocation();
-										if (loc2.getX() <= 90 && loc2.getY() <= 141 && loc2.getZ() <= -5 && 
-												loc2.getX() >= 54 && loc2.getY() >= 129 && loc2.getZ() >= -41) {
+										if (loc2.getX() <= 90 && loc2.getY() <= 156 && loc2.getZ() <= -5 && 
+												loc2.getX() >= 54 && loc2.getY() >= 142 && loc2.getZ() >= -41) {
 											((Player) nearPlayer).damage(12000);
 										}
 									}
@@ -1596,8 +1602,8 @@ public class PlayerHitDebuff {
 								for (Entity nearPlayer : nearEntity) {
 									if (nearPlayer instanceof Player) {
 										Location loc2 = nearPlayer.getLocation();
-										if (loc2.getX() <= 90 && loc2.getY() <= 141 && loc2.getZ() <= -5 && 
-												loc2.getX() >= 54 && loc2.getY() >= 129 && loc2.getZ() >= -41) {
+										if (loc2.getX() <= 90 && loc2.getY() <= 156 && loc2.getZ() <= -5 && 
+												loc2.getX() >= 54 && loc2.getY() >= 142 && loc2.getZ() >= -41) {
 											((Player) nearPlayer).damage(12000);
 										}
 									}
@@ -1618,7 +1624,306 @@ public class PlayerHitDebuff {
 
 	// 7층의 지배자
 	public void mob14(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("7층의 지배자" + ChatColor.YELLOW + " [Lv.??]")) {
+			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
+				int num = rnd.nextInt(18);
+				if (num == 0) {
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 140, 200, true, false, false));
+					
+					new ParticleEffect(player, mob).newEffect103();
+					((Skeleton) mob).setTarget(player);
+				} else if (num == 1) {
+					player.sendMessage(ChatColor.RED + "지배자가 자폭을 준비 중입니다.");
+					sendMessage(player, ChatColor.RED + "지배자가 자폭을 준비 중입니다.");
+					
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true, false, false));
+					
+					Location loc = mob.getLocation();
+					
+					List<Entity> nearEntity = mob.getNearbyEntities(30, 15, 30);
+					for (Entity nearPlayer : nearEntity) {
+						if (nearPlayer instanceof Player) {
+							Location loc2 = nearPlayer.getLocation();
+							if (loc2.getX() <= 90 && loc2.getY() <= 169 && loc2.getZ() <= -5 && 
+									loc2.getX() >= 54 && loc2.getY() >= 157 && loc2.getZ() >= -41) {
+								nearPlayer.teleport(mob);
+							}
+						}
+					}
+					
+					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
+						int time = 0;
+						ThreadData td = new ThreadData(player.getUniqueId());
+
+						@Override
+						public void run() {
+							
+							if (!td.hasID()) {
+								td.setID(taskID);
+							}
+							
+							if (time % 20 == 0) {
+								for(int x = -5 ; x < 5 ; x++) {
+									for(int y = -1 ; y < 0 ; y++) {
+										for(int z = -5 ; z < 5 ; z++) {
+											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
+											player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
+										}
+									}
+								}
+							}
+							
+							if (time >= 60) {
+								player.sendMessage(ChatColor.RED + "지배자가 폭파합니다.");
+								sendMessage(player, ChatColor.RED + "지배자가 폭파합니다.");
+								
+								World world = mob.getWorld();
+								Location loc = mob.getLocation();
+								world.spawnParticle(Particle.FLAME, loc, 5);
+								world.playSound(mob.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 1.0f, 1.5f);
+								
+								List<Entity> nearEntity = mob.getNearbyEntities(5, 5, 5);
+								for (Entity nearPlayer : nearEntity) {
+									if (nearPlayer instanceof Player) {
+										Location loc2 = nearPlayer.getLocation();
+										if (loc2.getX() <= 90 && loc2.getY() <= 169 && loc2.getZ() <= -5 && 
+												loc2.getX() >= 54 && loc2.getY() >= 157 && loc2.getZ() >= -41) {
+											((Player) nearPlayer).damage(99999999);
+										}
+									}
+								}
+								
+								((LivingEntity) mob).damage(500000);
+								
+								td.endTask();
+								td.removeID();
+							}
+							
+							time++;
+						}
+					}, 0, 1);
+
+				} else if (num == 2) {
+					
+					player.sendMessage(ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
+					sendMessage(player, ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
+					
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 60, 200, true, false, false));
+					
+					Location loc = mob.getLocation();
+					
+					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+						int time = 0;
+						ThreadData td = new ThreadData(player.getUniqueId());
+
+						@Override
+						public void run() {
+							
+							if (!td.hasID()) {
+								td.setID(taskID);
+							}
+							
+							if (time % 20 == 0) {
+								for(int x = -10 ; x < 10 ; x++) {
+									for(int y = -1 ; y < 0 ; y++) {
+										for(int z = -10 ; z < 10 ; z++) {
+											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
+											player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
+										}
+									}
+								}
+							}
+							
+							if (time >= 60) {
+								player.sendMessage(ChatColor.RED + "지배자가 절망I을 사용하였습니다.");
+								sendMessage(player, ChatColor.RED + "지배자가 절망I을 사용하였습니다.");
+								
+								World world = mob.getWorld();
+								Location loc = mob.getLocation();
+								world.spawnParticle(Particle.SOUL, loc, 100);
+								world.spawnParticle(Particle.SOUL_FIRE_FLAME, loc, 50);
+								world.playSound(mob.getLocation(), Sound.ENTITY_GHAST_HURT, 1.0f, 2.0f);
+								
+								List<Entity> nearEntity = mob.getNearbyEntities(10, 15, 10);
+								for (Entity nearPlayer : nearEntity) {
+									if (nearPlayer instanceof Player) {
+										Location loc2 = nearPlayer.getLocation();
+										if (loc2.getX() <= 90 && loc2.getY() <= 169 && loc2.getZ() <= -5 && 
+												loc2.getX() >= 54 && loc2.getY() >= 157 && loc2.getZ() >= -41) {
+											((Player) nearPlayer).damage(99999999);
+										}
+									}
+								}
+								
+								td.endTask();
+								td.removeID();
+							}
+							
+							time++;
+						}
+					}, 0, 1);
+					
+				}
+			} else {
+				int num = rnd.nextInt(72);
+				if (num <= 3) {
+					
+					ArrayList<Player> ary = new ArrayList<>();
+					List<Entity> nearEntity = mob.getNearbyEntities(30, 15, 30);
+					for (Entity nearPlayer : nearEntity) {
+						if (nearPlayer instanceof Player) {
+							Location loc2 = nearPlayer.getLocation();
+							if (loc2.getX() <= 90 && loc2.getY() <= 169 && loc2.getZ() <= -5 && 
+									loc2.getX() >= 54 && loc2.getY() >= 157 && loc2.getZ() >= -41) {
+								ary.add((Player) nearPlayer);
+							}
+						}
+					}
+					
+					if(num == 0) {
+						new BukkitRunnable() {
+							int time = 0;
+
+							@Override
+							public void run() {
+
+								for(Player p : ary) {
+									p.setVelocity(new Vector(10,0,0));
+								}
+
+								if (time >= 200) {
+									this.cancel();
+								}
+
+								time++;
+							}
+						}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
+					} else if(num == 1) {
+						new BukkitRunnable() {
+							int time = 0;
+
+							@Override
+							public void run() {
+
+								for(Player p : ary) {
+									p.setVelocity(new Vector(-10,0,0));
+								}
+
+								if (time >= 200) {
+									this.cancel();
+								}
+
+								time++;
+							}
+						}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
+					} else if(num == 2) {
+						new BukkitRunnable() {
+							int time = 0;
+
+							@Override
+							public void run() {
+
+								for(Player p : ary) {
+									p.setVelocity(new Vector(0,0,10));
+								}
+
+								if (time >= 200) {
+									this.cancel();
+								}
+
+								time++;
+							}
+						}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
+					} else {
+						new BukkitRunnable() {
+							int time = 0;
+
+							@Override
+							public void run() {
+
+								for(Player p : ary) {
+									p.setVelocity(new Vector(0,0,-10));
+								}
+
+								if (time >= 200) {
+									this.cancel();
+								}
+
+								time++;
+							}
+						}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
+					}
+					
+					
+					player.sendMessage(ChatColor.RED + "지배자가 탑의 법칙을 변경합니다.");
+					sendMessage(player, ChatColor.RED + "지배자가 탑의 법칙을 변경합니다.");
+					((Skeleton) mob).setTarget(player);
+				} else if (num <= 8) {
+					
+					player.sendMessage(ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
+					sendMessage(player, ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
+					
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 60, 200, true, false, false));
+					
+					Location loc = mob.getLocation();
+					
+					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+						int time = 0;
+						ThreadData td = new ThreadData(player.getUniqueId());
+
+						@Override
+						public void run() {
+							
+							if (!td.hasID()) {
+								td.setID(taskID);
+							}
+							
+							if (time % 20 == 0) {
+								for(int x = -10 ; x < 10 ; x++) {
+									for(int y = -1 ; y < 0 ; y++) {
+										for(int z = -10 ; z < 10 ; z++) {
+											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
+											player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
+										}
+									}
+								}
+							}
+							
+							if (time >= 60) {
+								player.sendMessage(ChatColor.RED + "지배자가 절망I을 사용하였습니다.");
+								sendMessage(player, ChatColor.RED + "지배자가 절망I을 사용하였습니다.");
+								
+								World world = mob.getWorld();
+								Location loc = mob.getLocation();
+								world.spawnParticle(Particle.SOUL, loc, 100);
+								world.spawnParticle(Particle.SOUL_FIRE_FLAME, loc, 50);
+								world.playSound(mob.getLocation(), Sound.ENTITY_GHAST_HURT, 1.0f, 2.0f);
+								
+								List<Entity> nearEntity = mob.getNearbyEntities(10, 15, 10);
+								for (Entity nearPlayer : nearEntity) {
+									if (nearPlayer instanceof Player) {
+										Location loc2 = nearPlayer.getLocation();
+										if (loc2.getX() <= 90 && loc2.getY() <= 169 && loc2.getZ() <= -5 && 
+												loc2.getX() >= 54 && loc2.getY() >= 157 && loc2.getZ() >= -41) {
+											((Player) nearPlayer).damage(99999999);
+										}
+									}
+								}
+								
+								td.endTask();
+								td.removeID();
+							}
+							
+							time++;
+						}
+					}, 0, 1);
+					
+				}
+			}
+		}
 	}
 
 	// 8층의 지배자

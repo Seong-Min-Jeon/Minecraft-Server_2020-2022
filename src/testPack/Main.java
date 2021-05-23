@@ -328,7 +328,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("woolring")) { 
 			
 		} else {
-			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/840203693622165515/aile_texture_pack_27.zip");
+			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/845241629144514560/aile_texture_pack_28.zip");
 		}
 		
 		//Message
@@ -8330,7 +8330,7 @@ public class Main extends JavaPlugin implements Listener{
 		        						if(player.isSneaking()) {
 		        							new ParticleEffect(player).newEffect20();
 		        						} else {
-		        							new ParticleEffect(player).newEffect47();
+		        							new ParticleEffect(player).newSound2();
 		        						}
 		        					}
 	        					}
