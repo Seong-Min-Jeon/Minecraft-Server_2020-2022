@@ -1186,6 +1186,42 @@ public class SaveAll {
 						int number = qb.getNum(player);
 						fw.write("mq50_9\n");
 						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===변이된 원시의 땅1===")) {
+						int number = qb.getNum(player);
+						fw.write("mq51\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===변이된 원시의 땅2===")) {
+						int number = qb.getNum(player);
+						fw.write("mq51_1\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===변이된 원시의 땅3===")) {
+						int number = qb.getNum(player);
+						fw.write("mq51_2\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===변이된 원시의 땅4===")) {
+						int number = qb.getNum(player);
+						fw.write("mq51_3\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===변이된 원시의 땅5===")) {
+						int number = qb.getNum(player);
+						fw.write("mq51_4\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===변이된 원시의 땅6===")) {
+						int number = qb.getNum(player);
+						fw.write("mq51_5\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===변이된 원시의 땅7===")) {
+						int number = qb.getNum(player);
+						fw.write("mq51_6\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===변이된 원시의 땅8===")) {
+						int number = qb.getNum(player);
+						fw.write("mq51_7\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===변이된 원시의 땅9===")) {
+						int number = qb.getNum(player);
+						fw.write("mq51_8\n");
+						fw.write(Integer.toString(number));
 					}
 					fw.close();
 					bufReader.close();

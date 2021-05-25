@@ -118,6 +118,7 @@ public class QuestScroll {
 				mq48_18(player, itemArg, world);
 				mq49(player, itemArg, world);
 				mq50(player, itemArg, world);
+				mq51(player, itemArg, world);
 			} else {
 				itemArg.remove();
 				player.getInventory().addItem(itemArg.getItemStack());
@@ -958,6 +959,13 @@ public class QuestScroll {
 			qb.mq50(player, 0);
 			
 			new NPCManager(player);
+		}	
+	}
+	
+	public void mq51(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "메인퀘스트 52장")) {
+			QuestBoard qb = new QuestBoard();
+			qb.mq51(player, 0);
 		}	
 	}
 	

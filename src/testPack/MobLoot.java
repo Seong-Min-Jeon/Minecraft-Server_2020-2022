@@ -19,6 +19,7 @@ import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Ghast;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Skeleton;
+import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -8403,6 +8404,9 @@ public class MobLoot {
 		if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===족장을 지키는 자===")) {
 			int qNum = cb.getNum(player);
 			cb.q37(player, qNum+1);	
+		} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===변이된 원시의 땅2===")) {
+			int qNum = cb.getNum(player);
+			cb.mq51_1(player, qNum+1);	
 		}
 	}
 
@@ -8447,6 +8451,9 @@ public class MobLoot {
 		if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===족장을 지키는 자===")) {
 			int qNum = cb.getNum(player);
 			cb.q37(player, qNum+1);	
+		} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===변이된 원시의 땅2===")) {
+			int qNum = cb.getNum(player);
+			cb.mq51_1(player, qNum+1);	
 		}
 	}
 	
@@ -8486,6 +8493,12 @@ public class MobLoot {
 			player.getInventory().addItem(var3);
 			sendMessage(player, ChatColor.AQUA + "심연의 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
 		}
+		
+		QuestBoard cb = new QuestBoard();
+		if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===변이된 원시의 땅3===")) {
+			int qNum = cb.getNum(player);
+			cb.mq51_2(player, qNum+1);	
+		}
 	}
 	
 	// 변이된 원시의 땅 정예병
@@ -8523,6 +8536,12 @@ public class MobLoot {
 		} else if(tmp == 2) {
 			player.getInventory().addItem(var3);
 			sendMessage(player, ChatColor.AQUA + "심연의 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+		}
+		
+		QuestBoard cb = new QuestBoard();
+		if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===변이된 원시의 땅4===")) {
+			int qNum = cb.getNum(player);
+			cb.mq51_3(player, qNum+1);	
 		}
 	}
 	
@@ -8695,6 +8714,12 @@ public class MobLoot {
 			Location loc = player.getLocation().add(0, 1, 0);
 			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
 		}
+		
+		QuestBoard cb = new QuestBoard();
+		if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===변이된 원시의 땅6===")) {
+			int qNum = cb.getNum(player);
+			cb.mq51_5(player, qNum+1);	
+		}
 	}
 	
 	// 최면을 거는 포보르
@@ -8740,6 +8765,18 @@ public class MobLoot {
 		if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===싸우는 자2===")) {
 			int qNum = cb.getNum(player);
 			cb.q40_1(player, qNum+1);	
+		} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===변이된 원시의 땅8===")) {
+			int i = 0;
+			Inventory inv = player.getInventory();
+			for (int j = 0 ; j < 36 ; j++) {
+				if(inv.getItem(j) == null) {
+					i++;
+				}
+			}
+			if(i != 0) {
+				int qNum = cb.getNum(player);
+				cb.mq51_7(player, qNum+1);	
+			}
 		}
 	}
 	

@@ -5145,6 +5145,223 @@ public class QuestBoard {
 		player.setScoreboard(board);
 	}
 	
+	public void mq51(Player player, int num) {
+		if(num>=1) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 50000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "마가이: 돌아왔구만.%마가이: 자네에게서 느껴지는 이 기운..%마가이: 원시의 땅에서의 수련을 마칠 때가 왔군.%"
+					+ "마가이: 이제 크리스 왕자를 막기 위해 떠나도 될 것 같다.%마가이: 드넓은 설원에서 크리스 왕자의 위치를 확실히 알 수는 없었어.%"
+					+ "마가이: 하지만 힌트 정도는 얻었지.%마가이: 크리스 왕자가 설원을 만들고 포보르의 세력들을 늘려갈 때..%"
+					+ "마가이: 원시의 땅 일부가 검은 흐름의 힘으로 변이되었다네.%마가이: 그 검은 흐름은 필히 크리스 왕자의 것.%"
+					+ "마가이: §e변이된 원시의 땅§f을 수색하다 보면 그의 흔적을 찾을 수 있을 것이네.");
+			QuestBoard qb = new QuestBoard();
+			qb.mq51_1(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 52장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===변이된 원시의 땅1===");
+		score.setScore(2);
+		Score score2 = obj.getScore("마가이와 대화");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/1)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq51_1(Player player, int num) {
+		if(num>=50) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 50000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			QuestBoard qb = new QuestBoard();
+			qb.mq51_2(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 52장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===변이된 원시의 땅2===");
+		score.setScore(2);
+		Score score2 = obj.getScore("변이된 원시의 땅 보초병 50마리 사냥");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/50)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq51_2(Player player, int num) {
+		if(num>=50) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 50000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			QuestBoard qb = new QuestBoard();
+			qb.mq51_3(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 52장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===변이된 원시의 땅3===");
+		score.setScore(2);
+		Score score2 = obj.getScore("변이된 원시의 땅 상급병 50마리 사냥");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/50)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq51_3(Player player, int num) {
+		if(num>=50) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 50000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			QuestBoard qb = new QuestBoard();
+			qb.mq51_4(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 52장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===변이된 원시의 땅4===");
+		score.setScore(2);
+		Score score2 = obj.getScore("변이된 원시의 땅 정예병 50마리 사냥");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/50)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq51_4(Player player, int num) {
+		if(num>=1) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 50000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "§7계속 사냥을 하였지만 아무 정보도 얻을 수 없었다고 말한다.%마가이: 흐음.. 꽤나 강한 녀석까지 상대한 것 같은데 정보가 없었다라.%"
+					+ "마가이: 최후의 수단을 택해야겠군.%마가이: 그 땅의 §e고지대§f로 가면 족장을 지키던 §e첨예발톱§f들이 있을게다.%마가이: 족장과 가장 가까운 위치에 있던 자이니%"
+					+ "마가이: 정보를 얻을 수 있을게야.%마가이: 혹여 그들을 상대하던 중 족장이 나타난다면 도망가는 것을 권장하네.%"
+					+ "마가이: 힘으로 족장 <바람을 가르는 늑대>를 밀어낸 자이니 분명 강할걸세.");
+			QuestBoard qb = new QuestBoard();
+			qb.mq51_5(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 52장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===변이된 원시의 땅5===");
+		score.setScore(2);
+		Score score2 = obj.getScore("마가이와 대화");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/1)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq51_5(Player player, int num) {
+		if(num>=50) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 50000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			QuestBoard qb = new QuestBoard();
+			qb.mq51_6(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 52장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===변이된 원시의 땅6===");
+		score.setScore(2);
+		Score score2 = obj.getScore("변이된 첨예발톱 50마리 사냥");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/50)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq51_6(Player player, int num) {
+		if(num>=1) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 50000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "§7역시나 아무 정보도 얻을 수 없었다고 말한다.%마가이: 최후의 수단으로도 어쩔 수 없었다니.%"
+					+ "마가이: 이 방법만은 쓰지 않으려 했건만.%마가이: §e족장 <붉은 날개>§f에게 직접 가보도록 하지.%마가이: 붉은 날개는 첨예발톱들과 함께 있을걸세.%"
+					+ "마가이: 상황이 이렇게 돼서 미안하구만.%마가이: 꼭 살아서 돌아오시게.");
+			QuestBoard qb = new QuestBoard();
+			qb.mq51_7(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 52장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===변이된 원시의 땅7===");
+		score.setScore(2);
+		Score score2 = obj.getScore("마가이와 대화");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/1)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq51_7(Player player, int num) {
+		if(num>=1) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 50000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			Location chestLoc = new Location(player.getWorld(), -1833, 92, 3036);
+			Block block = chestLoc.getBlock();
+			Chest chest = (Chest) block.getState();
+			ItemStack weapon = chest.getInventory().getItem(24);
+			player.getInventory().addItem(weapon);
+			msg.msg(player, "§7쓰러져가는 붉은 날개에게서 책을 한권 얻었다.%§7마가이에게 돌아가자.");
+			QuestBoard qb = new QuestBoard();
+			qb.mq51_8(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 52장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===변이된 원시의 땅8===");
+		score.setScore(2);
+		Score score2 = obj.getScore("붉은 날개 사냥");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/1)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq51_8(Player player, int num) {
+		if(num>=1) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 50000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "마가이: 그렇군. 자네는 이 책을 읽어보았나?%마가이: 내용이 충격적이군.%"
+					+ "마가이: 결국 크리스 왕자는 폭주를 멈추지 못했던 것인가.%마가이: 크리스 왕자를 막아준다면 그 대가로 세계의 문을 여는 것도 무리는 아닐 터%"
+					+ "마가이: 조금만.. 조금만 기다려주시게.%마가이: 자네가 설원으로 떠나기 전 도움이 될 아이템을 준비해 주겠네.");
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 52장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===변이된 원시의 땅9===");
+		score.setScore(2);
+		Score score2 = obj.getScore("마가이와 대화");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/1)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
 	
 	public int getNum(Player player) {
 		try {

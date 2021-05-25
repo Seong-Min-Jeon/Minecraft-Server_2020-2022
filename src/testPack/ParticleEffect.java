@@ -10626,6 +10626,7 @@ public class ParticleEffect {
 	
 	
 	
+	
 	// 보스 기믹1
 	public void newEffect100() {
 		
@@ -11280,7 +11281,374 @@ public class ParticleEffect {
 		}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
 	}
 	
-	
+	// 일루시데이터3
+	public void newEffect10002() {
+
+		World world = player.getWorld(); 
+		
+		world.playSound(player.getLocation(), Sound.ENTITY_ENDER_DRAGON_FLAP, 1.0f, 3.0f);
+        
+		Particle.DustOptions dustOptions1 = new Particle.DustOptions(Color.fromRGB(250, 60, 60), 1);
+		Particle.DustOptions dustOptions2 = new Particle.DustOptions(Color.fromRGB(80, 250, 200), 1);
+		
+		new BukkitRunnable() {
+			int time = 0;
+			
+		    Location e1;
+
+			@Override
+			public void run() {
+				
+				Location loc = player.getLocation();
+				
+				if(time == 2) {
+					
+					double rot = Math.toRadians(loc.getYaw());
+					double var = Math.PI;
+					
+					for(int i = 0 ; i < 8 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot), 0.5+(i*0.1), Math.sin(var+rot));
+						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var -= Math.PI / 8;
+					}	
+					
+					world.playSound(player.getLocation(), Sound.ENTITY_PLAYER_ATTACK_SWEEP, 1.0f, 2.0f);
+					
+					List<Entity> entitylist = player.getNearbyEntities(4, 4, 4);				
+					for (Entity nearEntity : entitylist) {
+						if (nearEntity instanceof Mob) {
+							LivingEntity ent = (LivingEntity) nearEntity;
+							ent.damage(player.getLevel()*30);
+						}
+					}
+				}
+				
+				if(time == 5) {
+					
+					double rot = Math.toRadians(loc.getYaw());
+					double var = 0;
+					
+					for(int i = 0 ; i < 8 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot), 0.5+(i*0.1), Math.sin(var+rot));
+						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						
+						var += Math.PI / 8;
+					}	
+					
+					world.playSound(player.getLocation(), Sound.ENTITY_PLAYER_ATTACK_SWEEP, 1.0f, 2.0f);
+				}
+				
+				if(time == 8) {
+					
+					double rot = Math.toRadians(loc.getYaw());
+					double var = Math.PI;
+					
+					for(int i = 0 ; i < 8 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot), 1-(i*0.04), Math.sin(var+rot));
+						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var -= Math.PI / 8;
+					}	
+					
+					world.playSound(player.getLocation(), Sound.ENTITY_PLAYER_ATTACK_SWEEP, 1.0f, 2.0f);
+					
+					List<Entity> entitylist = player.getNearbyEntities(4, 4, 4);				
+					for (Entity nearEntity : entitylist) {
+						if (nearEntity instanceof Mob) {
+							LivingEntity ent = (LivingEntity) nearEntity;
+							ent.damage(player.getLevel()*30);
+						}
+					}
+				}
+				
+				if(time == 11) {
+					
+					double rot = Math.toRadians(loc.getYaw());
+					double var = 0;
+					
+					for(int i = 0 ; i < 8 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot), 1-(i*0.04), Math.sin(var+rot));
+						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						
+						var += Math.PI / 8;
+					}	
+					
+					world.playSound(player.getLocation(), Sound.ENTITY_PLAYER_ATTACK_SWEEP, 1.0f, 2.0f);
+				}
+				
+				if(time == 14) {
+					
+					double rot = Math.toRadians(loc.getYaw());
+					double var = Math.PI;
+					
+					for(int i = 0 ; i < 8 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot), 1.5-(i*0.07), Math.sin(var+rot));
+						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var -= Math.PI / 8;
+					}	
+					
+					world.playSound(player.getLocation(), Sound.ENTITY_PLAYER_ATTACK_SWEEP, 1.0f, 2.0f);
+					
+					List<Entity> entitylist = player.getNearbyEntities(4, 4, 4);				
+					for (Entity nearEntity : entitylist) {
+						if (nearEntity instanceof Mob) {
+							LivingEntity ent = (LivingEntity) nearEntity;
+							ent.damage(player.getLevel()*30);
+						}
+					}
+				}
+				
+				if(time == 17) {
+					
+					double rot = Math.toRadians(loc.getYaw());
+					double var = 0;
+					
+					for(int i = 0 ; i < 8 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot), 1.5-(i*0.07), Math.sin(var+rot));
+						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						
+						var += Math.PI / 8;
+					}	
+					
+					world.playSound(player.getLocation(), Sound.ENTITY_PLAYER_ATTACK_SWEEP, 1.0f, 2.0f);
+				}
+				
+				if(time == 20) {
+					
+					double rot = Math.toRadians(loc.getYaw());
+					double var = Math.PI;
+					
+					for(int i = 0 ; i < 8 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot), 1.3-(i*0.1), Math.sin(var+rot));
+						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var -= Math.PI / 8;
+					}	
+					
+					world.playSound(player.getLocation(), Sound.ENTITY_PLAYER_ATTACK_SWEEP, 1.0f, 2.0f);
+					
+					List<Entity> entitylist = player.getNearbyEntities(4, 4, 4);				
+					for (Entity nearEntity : entitylist) {
+						if (nearEntity instanceof Mob) {
+							LivingEntity ent = (LivingEntity) nearEntity;
+							ent.damage(player.getLevel()*30);
+						}
+					}
+				}
+				
+				if(time == 21) {
+					
+					double rot = Math.toRadians(loc.getYaw());
+					double var = 0;
+					
+					for(int i = 0 ; i < 8 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot), 1.3-(i*0.1), Math.sin(var+rot));
+						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						
+						var += Math.PI / 8;
+					}	
+					
+					world.playSound(player.getLocation(), Sound.ENTITY_PLAYER_ATTACK_SWEEP, 1.0f, 2.0f);
+				}
+				
+				if(time == 25) {
+					
+					double rot = Math.toRadians(loc.getYaw());
+					double var = Math.PI;
+					
+					for(int i = 0 ; i < 8 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot), 1-(i*0.05), Math.sin(var+rot));
+						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var -= Math.PI / 8;
+					}	
+					
+					world.playSound(player.getLocation(), Sound.ENTITY_PLAYER_ATTACK_SWEEP, 1.0f, 2.0f);
+					
+					List<Entity> entitylist = player.getNearbyEntities(4, 4, 4);				
+					for (Entity nearEntity : entitylist) {
+						if (nearEntity instanceof Mob) {
+							LivingEntity ent = (LivingEntity) nearEntity;
+							ent.damage(player.getLevel()*30);
+						}
+					}
+				}
+				
+				if(time == 26) {
+					
+					double rot = Math.toRadians(loc.getYaw());
+					double var = 0;
+					
+					for(int i = 0 ; i < 8 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot), 1-(i*0.05), Math.sin(var+rot));
+						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						
+						var += Math.PI / 8;
+					}	
+					
+					world.playSound(player.getLocation(), Sound.ENTITY_PLAYER_ATTACK_SWEEP, 1.0f, 2.0f);
+				}
+				
+				if(time == 30) {
+					
+					double rot = Math.toRadians(loc.getYaw());
+					double var = Math.PI;
+					
+					for(int i = 0 ; i < 8 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot), 0.5+(i*0.1), Math.sin(var+rot));
+						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						
+						var -= Math.PI / 8;
+					}	
+					
+					world.playSound(player.getLocation(), Sound.ENTITY_PLAYER_ATTACK_SWEEP, 1.0f, 2.0f);
+					
+					List<Entity> entitylist = player.getNearbyEntities(4, 4, 4);				
+					for (Entity nearEntity : entitylist) {
+						if (nearEntity instanceof Mob) {
+							LivingEntity ent = (LivingEntity) nearEntity;
+							ent.damage(player.getLevel()*30);
+						}
+					}
+				}
+				
+				if(time == 31) {
+					
+					double rot = Math.toRadians(loc.getYaw());
+					double var = 0;
+					
+					for(int i = 0 ; i < 8 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot), 0.5+(i*0.1), Math.sin(var+rot));
+						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 8;
+					}	
+					
+					world.playSound(player.getLocation(), Sound.ENTITY_PLAYER_ATTACK_SWEEP, 1.0f, 2.0f);
+				}
+				
+				if(time == 35) {
+					
+					double rot = Math.toRadians(loc.getYaw());
+					double var = Math.PI;
+					
+					for(int i = 0 ; i < 6 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot), 2-(i*0.2), Math.sin(var+rot));
+						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						
+						var -= Math.PI / 8;
+					}	
+					
+					world.playSound(player.getLocation(), Sound.ENTITY_PLAYER_ATTACK_SWEEP, 1.0f, 2.0f);
+					
+					List<Entity> entitylist = player.getNearbyEntities(4, 4, 4);				
+					for (Entity nearEntity : entitylist) {
+						if (nearEntity instanceof Mob) {
+							LivingEntity ent = (LivingEntity) nearEntity;
+							ent.damage(player.getLevel()*30);
+						}
+					}
+				}
+				
+				if(time == 36) {
+					
+					double rot = Math.toRadians(loc.getYaw());
+					double var = 0;
+					
+					for(int i = 0 ; i < 6 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot), 2-(i*0.2), Math.sin(var+rot));
+						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 8;
+					}	
+					
+					world.playSound(player.getLocation(), Sound.ENTITY_PLAYER_ATTACK_SWEEP, 1.0f, 2.0f);
+				}
+				
+				if(time == 39) {
+					
+					double rot = Math.toRadians(loc.getYaw());
+					double var = Math.PI;
+					
+					for(int i = 0 ; i < 8 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot), 1.5-(i*0.1), Math.sin(var+rot));
+						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						
+						var -= Math.PI / 8;
+					}	
+					
+					world.playSound(player.getLocation(), Sound.ENTITY_PLAYER_ATTACK_SWEEP, 1.0f, 2.0f);
+					
+					List<Entity> entitylist = player.getNearbyEntities(4, 4, 4);				
+					for (Entity nearEntity : entitylist) {
+						if (nearEntity instanceof Mob) {
+							LivingEntity ent = (LivingEntity) nearEntity;
+							ent.damage(player.getLevel()*30);
+						}
+					}
+				}
+				
+				if(time == 42) {
+					
+					double rot = Math.toRadians(loc.getYaw());
+					double var = 0;
+					
+					for(int i = 0 ; i < 8 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot), 1.5-(i*0.1), Math.sin(var+rot));
+						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 8;
+					}	
+					
+					world.playSound(player.getLocation(), Sound.ENTITY_PLAYER_ATTACK_SWEEP, 1.0f, 2.0f);
+				}
+				
+				if(time == 50) {
+					
+					double rot = Math.toRadians(loc.getYaw());
+					double var = Math.PI;
+					
+					for(int i = 0 ; i < 16 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*2, 1.5-(i*0.05), Math.sin(var+rot)*2);
+						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var -= Math.PI / 16;
+					}	
+					
+					world.playSound(player.getLocation(), Sound.ENTITY_PLAYER_ATTACK_SWEEP, 1.0f, 2.0f);
+					
+					var = Math.PI;
+					
+					for(int i = 0 ; i < 16 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*2, 1.7-(i*0.05), Math.sin(var+rot)*2);
+						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						
+						var -= Math.PI / 16;
+					}	
+					
+					world.playSound(player.getLocation(), Sound.ENTITY_PLAYER_ATTACK_SWEEP, 1.0f, 2.0f);
+					
+					world.playSound(player.getLocation(), Sound.ENTITY_LIGHTNING_BOLT_THUNDER, 1.0f, 2.0f);
+					
+					List<Entity> entitylist = player.getNearbyEntities(5, 5, 5);				
+					for (Entity nearEntity : entitylist) {
+						if (nearEntity instanceof Mob) {
+							LivingEntity ent = (LivingEntity) nearEntity;
+							ent.damage(player.getLevel()*150);
+						}
+					}
+				}
+				
+				if(time >= 60) {
+					this.cancel();
+				}
+				
+				time++;
+			}
+		}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
+	}
 	
 	
 	

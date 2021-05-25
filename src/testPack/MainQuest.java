@@ -116,9 +116,7 @@ public class MainQuest {
 		} else if(lvl == 650) {
 			main51(player);
 		} else if(lvl == 680) {
-			
-		} else if(lvl == 690) {
-			
+			main52(player);
 		} else if(lvl == 700) {
 			
 		} else if(lvl == 800) {
@@ -971,6 +969,27 @@ public class MainQuest {
 		scrollLore.add(ChatColor.RED + "1. 해당 퀘스트 스크롤을 사용하면 칼라아릿의");
 		scrollLore.add(ChatColor.RED + "메인 퀘스트(중)를 순서대로 진행할 수 있습니다.");
 		scrollLore.add(ChatColor.RED + "2. 다음 메인 퀘스트 스크롤은 680레벨에 받을 수 있습니다.");
+		scrollIm.setLore(scrollLore);
+		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		scrollIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		scrollIm.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
+		scrollIm.setUnbreakable(true);
+		scroll.setItemMeta(scrollIm);		
+		player.getInventory().addItem(scroll);
+	}
+	
+	public void main52(Player player) {
+		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
+		ItemMeta scrollIm = scroll.getItemMeta();
+		scrollIm.setDisplayName(ChatColor.GOLD + "메인퀘스트 52장");
+		ArrayList<String> scrollLore = new ArrayList();
+		scrollLore.add(ChatColor.GRAY + "'변이된 원시의 땅' 퀘스트를 진행할 수 있다.");
+		scrollLore.add(ChatColor.GRAY + " ");
+		scrollLore.add(ChatColor.RED + "※주의 사항※");
+		scrollLore.add(ChatColor.RED + "1. 해당 퀘스트 스크롤을 사용하면 칼라아릿의");
+		scrollLore.add(ChatColor.RED + "메인 퀘스트(하)를 순서대로 진행할 수 있습니다.");
+		scrollLore.add(ChatColor.RED + "2. 다음 메인 퀘스트 스크롤은 700레벨에 받을 수 있습니다.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);

@@ -730,6 +730,33 @@ public class ReloadPlayerData {
 					} else if (quest.equals("mq50_9")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq50_9(player, Integer.parseInt(num));
+					} else if (quest.equals("mq51")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq51(player, Integer.parseInt(num));
+					} else if (quest.equals("mq51_1")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq51_1(player, Integer.parseInt(num));
+					} else if (quest.equals("mq51_2")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq51_2(player, Integer.parseInt(num));
+					} else if (quest.equals("mq51_3")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq51_3(player, Integer.parseInt(num));
+					} else if (quest.equals("mq51_4")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq51_4(player, Integer.parseInt(num));
+					} else if (quest.equals("mq51_5")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq51_5(player, Integer.parseInt(num));
+					} else if (quest.equals("mq51_6")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq51_6(player, Integer.parseInt(num));
+					} else if (quest.equals("mq51_7")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq51_7(player, Integer.parseInt(num));
+					} else if (quest.equals("mq51_8")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq51_8(player, Integer.parseInt(num));
 					}
 					
 					bufReader.close();

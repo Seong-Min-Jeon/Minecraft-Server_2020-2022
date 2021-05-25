@@ -680,6 +680,18 @@ public class InteractVillager {
 				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===비밀을 찾아서10===")) {
 					int qNum = cb.getNum(player);
 					cb.mq50_10(player, qNum+1);	
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===변이된 원시의 땅1===")) {
+					int qNum = cb.getNum(player);
+					cb.mq51(player, qNum+1);	
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===변이된 원시의 땅5===")) {
+					int qNum = cb.getNum(player);
+					cb.mq51_4(player, qNum+1);	
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===변이된 원시의 땅7===")) {
+					int qNum = cb.getNum(player);
+					cb.mq51_6(player, qNum+1);	
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===변이된 원시의 땅9===")) {
+					int qNum = cb.getNum(player);
+					cb.mq51_8(player, qNum+1);	
 				} else {
 					player.sendMessage("마가이: 마가도 형님은 잘 계실까나.");
 				}
