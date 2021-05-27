@@ -60,6 +60,15 @@ public class ExtraSkill {
 				}
 			}
 			
+			// 소아온+ 2
+			if (item1.getType() == Material.OAK_PLANKS && item2.getType() == Material.SPRUCE_PLANKS) {
+				if (item1.getItemMeta().getDisplayName().equals(ChatColor.DARK_PURPLE + "<진>일루시데이터")
+						&& item2.getItemMeta().getDisplayName().equals(ChatColor.DARK_PURPLE + "<진>다크 리펄서")) {
+					bool = true;
+					skill4(player, i, item1, item2);
+				}
+			}
+
 		} catch(Exception e) {
 			
 		}
@@ -144,9 +153,25 @@ public class ExtraSkill {
 
 				new ParticleEffect(player).newEffect10001();
 				player.sendMessage(ChatColor.GREEN + "[스킬]샤인 서큘러를 발동합니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.ENTITY_LIGHTNING_BOLT_IMPACT, 1.0f, 1.0f);
-				player.getWorld().playSound(player.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
 			}
+		} else {
+			player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
+			player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);
+			return;
+		}
+	}
+	
+	public void skill4(Player player, int i, ItemStack item1, ItemStack item2) {
+		if (i >= 5) {
+			player.getInventory().remove(Material.HEART_OF_THE_SEA);
+			ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 5);
+			ItemMeta itemIm = item.getItemMeta();
+			itemIm.setDisplayName(ChatColor.BLUE + "마나");
+			item.setItemMeta(itemIm);
+			player.getInventory().setItem(8, item);
+
+			new ParticleEffect(player).newEffect10002();
+			player.sendMessage(ChatColor.GREEN + "[스킬]스타버스트 스트림을 발동합니다.");
 		} else {
 			player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
 			player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 1.0f);

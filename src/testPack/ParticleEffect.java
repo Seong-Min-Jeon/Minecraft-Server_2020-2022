@@ -6479,7 +6479,7 @@ public class ParticleEffect {
 		Location loc = player.getLocation();
 		World world = player.getWorld(); 
 		
-		world.playSound(player.getLocation(), Sound.ENTITY_ENDER_DRAGON_FLAP, 1.0f, 1.8f);
+		world.playSound(loc, Sound.ENTITY_ENDER_DRAGON_FLAP, 1.0f, 1.8f);
         
 		Particle.DustOptions dustOptions1 = new Particle.DustOptions(Color.fromRGB(0, 0, 0), 1);
 		
@@ -7339,7 +7339,7 @@ public class ParticleEffect {
 		Location loc = player.getLocation();
 		World world = player.getWorld(); 
 		
-		world.playSound(player.getLocation(), Sound.ENTITY_ENDER_DRAGON_FLAP, 1.0f, 1.8f);
+		world.playSound(loc, Sound.ENTITY_ENDER_DRAGON_FLAP, 1.0f, 1.8f);
         
 		Particle.DustOptions dustOptions1 = new Particle.DustOptions(Color.fromRGB(255, 255, 255), 1);
 		
@@ -9998,7 +9998,7 @@ public class ParticleEffect {
 						} else {
 							e1 = normal.clone().add(Math.cos(var)*size, 0, Math.sin(var)*size);
 						}
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
 						
 						var += Math.PI / 16;
 					}
@@ -10014,7 +10014,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 32 ; i++) {
 						e1 = normal.clone().add(Math.cos(var)*10, 0, Math.sin(var)*10);
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 2, dustOptions1);
+						world.spawnParticle(Particle.REDSTONE, e1, 2, dustOptions1);
 						
 						var += Math.PI / 16;
 					}
@@ -10354,9 +10354,810 @@ public class ParticleEffect {
 		}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
 	}
 
+	// 블링크
+	public void newEffect49() {
+		
+		World world = player.getWorld(); 
+        
+        Particle.DustOptions r = new Particle.DustOptions(Color.fromRGB(255, 50, 50), 1);
+        Particle.DustOptions w = new Particle.DustOptions(Color.fromRGB(255, 255, 255), 1);
+        
+		new BukkitRunnable() {
+			int time = 0;
+			
+		    Location e1;
+
+			@Override
+			public void run() {
+				
+				Location normal = player.getLocation();
+				
+				if(time % 3 == 0) {
+					double var = 0;
+					
+					for(int i = 0 ; i < 8 ; i++) {
+						e1 = normal.clone().add(Math.cos(var)*0.5, 0, Math.sin(var)*0.5);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, r);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, w);
+						
+						var += Math.PI / 4;
+					}
+				}
+				
+				if(time % 2 == 0) {
+					double arrowAngle1 = 90;
+					double totalAngle1 = normal.getYaw() + arrowAngle1;
+					double dirX1 = Math.cos(Math.toRadians(totalAngle1));
+					double dirZ1 = Math.sin(Math.toRadians(totalAngle1));
+					
+					for(int j = 0 ; j < 5 ; j++) {
+						e1 = normal.clone().add(dirX1*0, 1-(j*0.2), dirZ1*0);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, r);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, w);
+					}
+					
+					double arrowAngle2 = 0;
+					double totalAngle2 = normal.getYaw() + arrowAngle2;
+					double dirX2 = Math.cos(Math.toRadians(totalAngle2));
+					double dirZ2 = Math.sin(Math.toRadians(totalAngle2));
+					
+					for(int j = 0 ; j < 3 ; j++) {
+						e1 = normal.clone().add(dirX2*0, 0.8-(j*0.2), dirZ2*0);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, r);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, w);
+					}
+					
+					double arrowAngle3 = 180;
+					double totalAngle3 = normal.getYaw() + arrowAngle3;
+					double dirX3 = Math.cos(Math.toRadians(totalAngle3));
+					double dirZ3 = Math.sin(Math.toRadians(totalAngle3));
+					
+					for(int j = 0 ; j < 3 ; j++) {
+						e1 = normal.clone().add(dirX3*0, 0.8-(j*0.2), dirZ3*0);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, r);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, w);
+					}
+					
+					double arrowAngle4 = 60;
+					double totalAngle4 = normal.getYaw() + arrowAngle4;
+					double dirX4 = Math.cos(Math.toRadians(totalAngle4));
+					double dirZ4 = Math.sin(Math.toRadians(totalAngle4));
+					
+					for(int j = 0 ; j < 2 ; j++) {
+						e1 = normal.clone().add(dirX4*0, 0.6-(j*0.2), dirZ4*0);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, r);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, w);
+					}
+					
+				}
+				
+				if(time >= 20) {
+					this.cancel();
+				}
+				
+				time++;
+			}
+		}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
+	}
 	
+	// 루인 오브 노바
+	public void newEffect50(int damNum) {
+
+		Location loc = player.getLocation();
+		World world = player.getWorld(); 
+		
+		world.playSound(loc, Sound.BLOCK_PORTAL_TRAVEL, 1.0f, 3.0f);
+        
+		Particle.DustOptions dustOptions1 = new Particle.DustOptions(Color.fromRGB(200, 200, 200), 1);
+		Particle.DustOptions dustOptions2 = new Particle.DustOptions(Color.fromRGB(200, 200, 50), 1);
+		
+		new BukkitRunnable() {
+			int time = 0;
+			
+		    Location e1;
+
+			@Override
+			public void run() {
+				
+				world.playSound(loc, Sound.ENTITY_SILVERFISH_HURT, 0.6f, 1.0f);
+				
+				if(time == 0) {
+					double rot = Math.toRadians(loc.getYaw());
+					double var = 0;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}	
+				}
+				
+				if(time == 2) {
+					double rot = Math.toRadians(loc.getYaw());
+					double var = 0;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}	
+					
+					var = Math.PI / 4;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}
+				}
+				
+				if(time == 4) {
+					double rot = Math.toRadians(loc.getYaw());
+					double var = 0;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}	
+					
+					var = Math.PI / 4;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}
+
+					var = Math.PI / 2;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}
+				}
+				
+				if(time == 6) {
+					double rot = Math.toRadians(loc.getYaw());
+					double var = 0;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}	
+					
+					var = Math.PI / 4;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}
+
+					var = Math.PI / 2;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}
+
+					var = 3 * Math.PI / 4;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}
+				}
+				
+				if(time == 8) {
+					double rot = Math.toRadians(loc.getYaw());
+					double var = 0;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}	
+					
+					var = Math.PI / 4;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}
+
+					var = Math.PI / 2;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}
+
+					var = 3 * Math.PI / 4;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}
+					
+					var = Math.PI;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}	
+				}
+				
+				if(time == 10) {
+					double rot = Math.toRadians(loc.getYaw());
+					double var = 0;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}	
+					
+					var = Math.PI / 4;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}
+
+					var = Math.PI / 2;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}
+
+					var = 3 * Math.PI / 4;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}
+					
+					var = Math.PI;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}	
+					
+					var = Math.PI + Math.PI / 4;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}	
+				}
+				
+				if(time == 12) {
+					double rot = Math.toRadians(loc.getYaw());
+					double var = 0;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}	
+					
+					var = Math.PI / 4;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}
+
+					var = Math.PI / 2;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}
+
+					var = 3 * Math.PI / 4;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}
+					
+					var = Math.PI;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}	
+
+					var = Math.PI + Math.PI / 4;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}	
+
+					var = Math.PI + Math.PI / 2;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}	
+				}
+				
+				if(time == 14) {
+					double rot = Math.toRadians(loc.getYaw());
+					double var = 0;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}	
+					
+					var = Math.PI / 4;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}
+
+					var = Math.PI / 2;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}
+
+					var = 3 * Math.PI / 4;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}
+					
+					var = Math.PI;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}	
+
+					var = Math.PI + Math.PI / 4;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}	
+
+					var = Math.PI + Math.PI / 2;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}	
+					
+					var = Math.PI + 3 * Math.PI / 4;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}	
+				}
+				
+				if(time == 16 || time == 20 || time == 24) {
+					double rot = Math.toRadians(loc.getYaw());
+					double var = 0;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}	
+					
+					var = Math.PI / 4;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}
+
+					var = Math.PI / 2;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}
+
+					var = 3 * Math.PI / 4;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}
+					
+					var = Math.PI;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}	
+
+					var = Math.PI + Math.PI / 4;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}	
+
+					var = Math.PI + Math.PI / 2;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}	
+					
+					var = Math.PI + 3 * Math.PI / 4;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}	
+
+					var = 2 * Math.PI;
+					
+					for(int i = 0 ; i < 10 ; i++) {
+						e1 = loc.clone().add(Math.cos(var+rot)*(0.8*i), 0.2, Math.sin(var+rot)*(0.8*i));
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						
+						var += Math.PI / 16;
+					}
+				}
+				
+				if(time == 20) {
+					double var = 0;
+					
+					for(int i = 0 ; i < 64 ; i++) {
+						e1 = loc.clone().add(Math.cos(var)*8, 0.2, Math.sin(var)*8);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						
+						var += Math.PI / 32;
+					}	
+					
+					world.playSound(loc, Sound.ENTITY_BLAZE_DEATH, 1.0f, 0.5f);
+					world.playSound(loc, Sound.ENTITY_GENERIC_EXPLODE, 1.0f, 1.0f);
+				}
+				
+				if(time == 21) {
+					double var = 0;
+					
+					for(int i = 0 ; i < 64 ; i++) {
+						e1 = loc.clone().add(Math.cos(var)*8, 0.2, Math.sin(var)*8);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						
+						var += Math.PI / 32;
+					}	
+					
+					for(int i = 0 ; i < 64 ; i++) {
+						e1 = loc.clone().add(Math.cos(var)*6.5, 1.4, Math.sin(var)*6.5);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						
+						var += Math.PI / 32;
+					}
+					
+					for(int i = 0 ; i < 64 ; i++) {
+						e1 = loc.clone().add(Math.cos(var)*5.5, 2.6, Math.sin(var)*5.5);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						
+						var += Math.PI / 32;
+					}
+					
+					world.playSound(loc, Sound.ENTITY_GENERIC_EXPLODE, 1.0f, 1.0f);
+				}
+				
+				if(time == 22) {
+					double var = 0;
+					
+					for(int i = 0 ; i < 64 ; i++) {
+						e1 = loc.clone().add(Math.cos(var)*8, 0.2, Math.sin(var)*8);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						
+						var += Math.PI / 32;
+					}	
+					
+					for(int i = 0 ; i < 64 ; i++) {
+						e1 = loc.clone().add(Math.cos(var)*6.5, 1.4, Math.sin(var)*6.5);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						
+						var += Math.PI / 32;
+					}
+					
+					for(int i = 0 ; i < 64 ; i++) {
+						e1 = loc.clone().add(Math.cos(var)*5.5, 2.6, Math.sin(var)*5.5);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						
+						var += Math.PI / 32;
+					}
+					
+					for(int i = 0 ; i < 64 ; i++) {
+						e1 = loc.clone().add(Math.cos(var)*4.7, 4, Math.sin(var)*4.7);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						
+						var += Math.PI / 32;
+					}
+					
+					for(int i = 0 ; i < 64 ; i++) {
+						e1 = loc.clone().add(Math.cos(var)*4, 5.2, Math.sin(var)*4);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						
+						var += Math.PI / 32;
+					}
+					
+					world.playSound(loc, Sound.ENTITY_GENERIC_EXPLODE, 1.0f, 1.0f);
+				}
+				
+				if(time == 23) {
+					double var = 0;
+					
+					for(int i = 0 ; i < 64 ; i++) {
+						e1 = loc.clone().add(Math.cos(var)*5.5, 2.6, Math.sin(var)*5.5);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						
+						var += Math.PI / 32;
+					}
+					
+					for(int i = 0 ; i < 64 ; i++) {
+						e1 = loc.clone().add(Math.cos(var)*4.7, 4, Math.sin(var)*4.7);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						
+						var += Math.PI / 32;
+					}
+					
+					for(int i = 0 ; i < 64 ; i++) {
+						e1 = loc.clone().add(Math.cos(var)*4, 5.2, Math.sin(var)*4);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						
+						var += Math.PI / 32;
+					}
+					
+					for(int i = 0 ; i < 64 ; i++) {
+						e1 = loc.clone().add(Math.cos(var)*3.4, 6.4, Math.sin(var)*3.4);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						
+						var += Math.PI / 32;
+					}
+					
+					for(int i = 0 ; i < 64 ; i++) {
+						e1 = loc.clone().add(Math.cos(var)*2.9, 7.6, Math.sin(var)*2.9);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						
+						var += Math.PI / 32;
+					}
+					
+					world.playSound(loc, Sound.ENTITY_GENERIC_EXPLODE, 1.0f, 1.0f);
+					
+					List<Entity> entitylist = player.getNearbyEntities(8, 8, 8);				
+					for (Entity nearEntity : entitylist) {
+						if (nearEntity instanceof Mob) {
+							LivingEntity ent = (LivingEntity) nearEntity;
+							ent.damage(player.getLevel()*300 + damNum*10);
+						}
+					}
+				}
+				
+				if(time == 24) {
+					double var = 0;
+					
+					for(int i = 0 ; i < 64 ; i++) {
+						e1 = loc.clone().add(Math.cos(var)*4, 5.2, Math.sin(var)*4);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						
+						var += Math.PI / 32;
+					}
+					
+					for(int i = 0 ; i < 64 ; i++) {
+						e1 = loc.clone().add(Math.cos(var)*3.4, 6.4, Math.sin(var)*3.4);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						
+						var += Math.PI / 32;
+					}
+					
+					for(int i = 0 ; i < 64 ; i++) {
+						e1 = loc.clone().add(Math.cos(var)*2.9, 7.6, Math.sin(var)*2.9);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						
+						var += Math.PI / 32;
+					}
+					
+					for(int i = 0 ; i < 64 ; i++) {
+						e1 = loc.clone().add(Math.cos(var)*2.5, 8.8, Math.sin(var)*2.5);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						
+						var += Math.PI / 32;
+					}
+					
+					for(int i = 0 ; i < 64 ; i++) {
+						e1 = loc.clone().add(Math.cos(var)*2.2, 10.0, Math.sin(var)*2.2);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						
+						var += Math.PI / 32;
+					}
+
+					world.playSound(loc, Sound.ENTITY_GENERIC_EXPLODE, 1.0f, 1.0f);
+				}
+				
+				if(time == 25) {
+					double var = 0;
+					
+					for(int i = 0 ; i < 64 ; i++) {
+						e1 = loc.clone().add(Math.cos(var)*2.9, 7.6, Math.sin(var)*2.9);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						
+						var += Math.PI / 32;
+					}
+					
+					for(int i = 0 ; i < 64 ; i++) {
+						e1 = loc.clone().add(Math.cos(var)*2.5, 8.8, Math.sin(var)*2.5);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						
+						var += Math.PI / 32;
+					}
+					
+					for(int i = 0 ; i < 64 ; i++) {
+						e1 = loc.clone().add(Math.cos(var)*2.2, 10.0, Math.sin(var)*2.2);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						
+						var += Math.PI / 32;
+					}
+					
+					for(int i = 0 ; i < 64 ; i++) {
+						e1 = loc.clone().add(Math.cos(var)*2, 11.2, Math.sin(var)*2);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						
+						var += Math.PI / 32;
+					}
+					
+					for(int i = 0 ; i < 64 ; i++) {
+						e1 = loc.clone().add(Math.cos(var)*1.9, 12.4, Math.sin(var)*1.9);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						
+						var += Math.PI / 32;
+					}
+					
+					world.playSound(loc, Sound.ENTITY_GENERIC_EXPLODE, 1.0f, 1.0f);
+				}
+
+
+				if(time >= 25) {
+					this.cancel();
+				}
+				
+				time++;
+			}
+		}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
+	}
 	
-	
+	// 어나더 디비니티
+	public void newEffect51() {
+		
+		World world = player.getWorld(); 
+		Location normal = ent.getLocation();
+		
+		Particle.DustOptions dustOptions1 = new Particle.DustOptions(Color.fromRGB(0, 0, 0), 1);
+        
+		new BukkitRunnable() {
+			int time = 0;
+			Location e1;
+			double r = 0.3;
+
+			@Override
+			public void run() {
+				
+				if(time % 5 == 0 && time < 20) {
+					world.playSound(normal, Sound.BLOCK_GLASS_BREAK, 1.0f, 1.0f);
+					
+					for (double pi = 0; pi <= Math.PI; pi += Math.PI / 5) {
+						double y = r * Math.cos(pi) + 1.5;
+						for (double theta = 0; theta <= 2 * Math.PI; theta += Math.PI / 10) {
+							double x = r * Math.cos(theta) * Math.sin(pi);
+							double z = r * Math.sin(theta) * Math.sin(pi);
+
+							e1 = normal.clone().add(x, y, z);
+							world.spawnParticle(Particle.REDSTONE, e1, 1, dustOptions1);
+						}
+					}
+					
+					r += 0.3;
+				}
+				
+				if(time >= 20) {
+					world.playSound(player.getLocation(), Sound.ENTITY_LIGHTNING_BOLT_THUNDER, 0.5f, 1.0f);
+					this.cancel();
+				}
+
+				time++;
+			}
+		}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
+	}
 	
 	
 	
@@ -10901,7 +11702,7 @@ public class ParticleEffect {
 					player.getWorld().spawnParticle(Particle.REDSTONE, first, 10, dustOptions2);
 				}
 				
-				if(time == 0 && time == 20 && time == 40) {
+				if(time == 0 || time == 20 || time == 40) {
 					List<Entity> entitylist = player.getNearbyEntities(3, 3, 3);				
 					for (Entity nearEntity : entitylist) {
 						if (nearEntity instanceof Mob) {
@@ -10947,7 +11748,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 8 ; i++) {
 						e1 = loc.clone().add(Math.cos(var+rot), 1.5-(i*0.05), Math.sin(var+rot));
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
 						
 						var += Math.PI / 8;
 					}	
@@ -10956,7 +11757,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 8 ; i++) {
 						e1 = loc.clone().add(Math.cos(var+rot), 1.3-(i*0.05), Math.sin(var+rot));
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
 						
 						var += Math.PI / 8;
 					}
@@ -10978,7 +11779,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 8 ; i++) {
 						e1 = loc.clone().add(Math.cos(var+rot), 1.4-(i*0.05), Math.sin(var+rot));
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
 						
 						var += Math.PI / 8;
 					}	
@@ -10987,7 +11788,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 8 ; i++) {
 						e1 = loc.clone().add(Math.cos(var+rot), 1.2-(i*0.05), Math.sin(var+rot));
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
 						
 						var += Math.PI / 8;
 					}
@@ -11001,7 +11802,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 8 ; i++) {
 						e1 = loc.clone().add(Math.cos(var+rot), 1.3-(i*0.05), Math.sin(var+rot));
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
 						
 						var += Math.PI / 8;
 					}	
@@ -11010,7 +11811,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 8 ; i++) {
 						e1 = loc.clone().add(Math.cos(var+rot), 1.1-(i*0.05), Math.sin(var+rot));
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
 						
 						var += Math.PI / 8;
 					}
@@ -11024,7 +11825,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 8 ; i++) {
 						e1 = loc.clone().add(Math.cos(var+rot), 1.5-(i*0.05), Math.sin(var+rot));
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
 						
 						var -= Math.PI / 8;
 					}	
@@ -11033,7 +11834,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 8 ; i++) {
 						e1 = loc.clone().add(Math.cos(var+rot), 1.3-(i*0.05), Math.sin(var+rot));
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
 						
 						var -= Math.PI / 8;
 					}
@@ -11055,7 +11856,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 8 ; i++) {
 						e1 = loc.clone().add(Math.cos(var+rot), 1.4-(i*0.05), Math.sin(var+rot));
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
 						
 						var -= Math.PI / 8;
 					}	
@@ -11064,7 +11865,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 8 ; i++) {
 						e1 = loc.clone().add(Math.cos(var+rot), 1.2-(i*0.05), Math.sin(var+rot));
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
 						
 						var -= Math.PI / 8;
 					}
@@ -11078,7 +11879,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 8 ; i++) {
 						e1 = loc.clone().add(Math.cos(var+rot), 1.3-(i*0.05), Math.sin(var+rot));
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
 						
 						var -= Math.PI / 8;
 					}	
@@ -11087,7 +11888,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 8 ; i++) {
 						e1 = loc.clone().add(Math.cos(var+rot), 1.1-(i*0.05), Math.sin(var+rot));
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
 						
 						var -= Math.PI / 8;
 					}
@@ -11102,7 +11903,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 8 ; i++) {
 						e1 = loc.clone().add(Math.cos(var+rot), 1.3-(i*0.1), Math.sin(var+rot));
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
 						
 						var -= Math.PI / 8;
 					}	
@@ -11125,7 +11926,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 8 ; i++) {
 						e1 = loc.clone().add(Math.cos(var+rot), 1.3-(i*0.1), Math.sin(var+rot));
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
 						
 						var += Math.PI / 8;
 					}	
@@ -11140,7 +11941,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 8 ; i++) {
 						e1 = loc.clone().add(Math.cos(var+rot), 1-(i*0.05), Math.sin(var+rot));
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
 						
 						var -= Math.PI / 8;
 					}	
@@ -11163,7 +11964,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 8 ; i++) {
 						e1 = loc.clone().add(Math.cos(var+rot), 1-(i*0.05), Math.sin(var+rot));
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
 						
 						var += Math.PI / 8;
 					}	
@@ -11178,7 +11979,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 8 ; i++) {
 						e1 = loc.clone().add(Math.cos(var+rot), 0.5+(i*0.1), Math.sin(var+rot));
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
 						
 						var -= Math.PI / 8;
 					}	
@@ -11201,7 +12002,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 8 ; i++) {
 						e1 = loc.clone().add(Math.cos(var+rot), 0.5+(i*0.1), Math.sin(var+rot));
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
 						
 						var += Math.PI / 8;
 					}	
@@ -11216,7 +12017,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 6 ; i++) {
 						e1 = loc.clone().add(Math.cos(var+rot), 2-(i*0.2), Math.sin(var+rot));
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
 						
 						var -= Math.PI / 8;
 					}	
@@ -11231,7 +12032,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 6 ; i++) {
 						e1 = loc.clone().add(Math.cos(var+rot), 2-(i*0.2), Math.sin(var+rot));
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
 						
 						var += Math.PI / 8;
 					}	
@@ -11308,7 +12109,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 8 ; i++) {
 						e1 = loc.clone().add(Math.cos(var+rot), 0.5+(i*0.1), Math.sin(var+rot));
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
 						
 						var -= Math.PI / 8;
 					}	
@@ -11331,7 +12132,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 8 ; i++) {
 						e1 = loc.clone().add(Math.cos(var+rot), 0.5+(i*0.1), Math.sin(var+rot));
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
 						
 						var += Math.PI / 8;
 					}	
@@ -11346,7 +12147,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 8 ; i++) {
 						e1 = loc.clone().add(Math.cos(var+rot), 1-(i*0.04), Math.sin(var+rot));
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
 						
 						var -= Math.PI / 8;
 					}	
@@ -11369,7 +12170,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 8 ; i++) {
 						e1 = loc.clone().add(Math.cos(var+rot), 1-(i*0.04), Math.sin(var+rot));
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
 						
 						var += Math.PI / 8;
 					}	
@@ -11384,7 +12185,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 8 ; i++) {
 						e1 = loc.clone().add(Math.cos(var+rot), 1.5-(i*0.07), Math.sin(var+rot));
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
 						
 						var -= Math.PI / 8;
 					}	
@@ -11407,7 +12208,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 8 ; i++) {
 						e1 = loc.clone().add(Math.cos(var+rot), 1.5-(i*0.07), Math.sin(var+rot));
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
 						
 						var += Math.PI / 8;
 					}	
@@ -11422,7 +12223,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 8 ; i++) {
 						e1 = loc.clone().add(Math.cos(var+rot), 1.3-(i*0.1), Math.sin(var+rot));
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
 						
 						var -= Math.PI / 8;
 					}	
@@ -11445,7 +12246,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 8 ; i++) {
 						e1 = loc.clone().add(Math.cos(var+rot), 1.3-(i*0.1), Math.sin(var+rot));
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
 						
 						var += Math.PI / 8;
 					}	
@@ -11460,7 +12261,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 8 ; i++) {
 						e1 = loc.clone().add(Math.cos(var+rot), 1-(i*0.05), Math.sin(var+rot));
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
 						
 						var -= Math.PI / 8;
 					}	
@@ -11483,7 +12284,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 8 ; i++) {
 						e1 = loc.clone().add(Math.cos(var+rot), 1-(i*0.05), Math.sin(var+rot));
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
 						
 						var += Math.PI / 8;
 					}	
@@ -11498,7 +12299,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 8 ; i++) {
 						e1 = loc.clone().add(Math.cos(var+rot), 0.5+(i*0.1), Math.sin(var+rot));
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
 						
 						var -= Math.PI / 8;
 					}	
@@ -11521,7 +12322,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 8 ; i++) {
 						e1 = loc.clone().add(Math.cos(var+rot), 0.5+(i*0.1), Math.sin(var+rot));
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
 						
 						var += Math.PI / 8;
 					}	
@@ -11536,7 +12337,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 6 ; i++) {
 						e1 = loc.clone().add(Math.cos(var+rot), 2-(i*0.2), Math.sin(var+rot));
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
 						
 						var -= Math.PI / 8;
 					}	
@@ -11559,7 +12360,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 6 ; i++) {
 						e1 = loc.clone().add(Math.cos(var+rot), 2-(i*0.2), Math.sin(var+rot));
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
 						
 						var += Math.PI / 8;
 					}	
@@ -11574,7 +12375,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 8 ; i++) {
 						e1 = loc.clone().add(Math.cos(var+rot), 1.5-(i*0.1), Math.sin(var+rot));
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
 						
 						var -= Math.PI / 8;
 					}	
@@ -11597,7 +12398,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 8 ; i++) {
 						e1 = loc.clone().add(Math.cos(var+rot), 1.5-(i*0.1), Math.sin(var+rot));
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
 						
 						var += Math.PI / 8;
 					}	
@@ -11612,7 +12413,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 16 ; i++) {
 						e1 = loc.clone().add(Math.cos(var+rot)*2, 1.5-(i*0.05), Math.sin(var+rot)*2);
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions1);
 						
 						var -= Math.PI / 16;
 					}	
@@ -11623,7 +12424,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 16 ; i++) {
 						e1 = loc.clone().add(Math.cos(var+rot)*2, 1.7-(i*0.05), Math.sin(var+rot)*2);
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
+						world.spawnParticle(Particle.REDSTONE, e1, 0, dustOptions2);
 						
 						var -= Math.PI / 16;
 					}	
@@ -11649,6 +12450,10 @@ public class ParticleEffect {
 			}
 		}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
 	}
+	
+	
+	
+	
 	
 	
 	

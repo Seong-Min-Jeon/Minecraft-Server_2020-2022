@@ -591,8 +591,45 @@ public class Main extends JavaPlugin implements Listener{
 		master.setItemMeta(masterIm);
 		if(player.getDisplayName().equalsIgnoreCase("yumehama") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
 //		if(player.getDisplayName().equalsIgnoreCase("WoolRing") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
+
 		
 		
+		
+		
+//		ItemStack var8 = new ItemStack(Material.MUSIC_DISC_BLOCKS);
+//		ItemMeta var8Im = var8.getItemMeta();
+//		var8Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,450");
+//		var8Im.setDisplayName(ChatColor.LIGHT_PURPLE + "세컨드 윙");
+//		ArrayList<String> var8Lore = new ArrayList();
+//		var8Lore.add(ChatColor.GRAY + "레벨 제한: 450");
+//		var8Lore.add(ChatColor.GRAY + " ");
+//		var8Lore.add(ChatColor.GRAY + "마법의 힘으로 하늘을 날 수 있는 스태프");
+//		var8Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var8Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var8Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var8Im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
+//		var8Im.setUnbreakable(true);
+//		var8Im.setLore(var8Lore);
+//		var8.setItemMeta(var8Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var8);}
+//		
+//		ItemStack var9 = new ItemStack(Material.MUSIC_DISC_MALL);
+//		ItemMeta var9Im = var9.getItemMeta();
+//		var9Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,560");
+//		var9Im.setDisplayName(ChatColor.AQUA + "문 스태프");
+//		ArrayList<String> var9Lore = new ArrayList();
+//		var9Lore.add(ChatColor.GRAY + "레벨 제한: 560");
+//		var9Lore.add(ChatColor.GRAY + " ");
+//		var9Lore.add(ChatColor.GRAY + "달의 파편을 이용해 만든 스태프");
+//		var9Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var9Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var9Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var9Im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
+//		var9Im.setUnbreakable(true);
+//		var9Im.setLore(var9Lore);
+//		var9.setItemMeta(var9Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var9);}
+//		
 //		ItemStack helmet = new ItemStack(Material.DIAMOND_HELMET);
 //		ItemMeta helmetIm = helmet.getItemMeta();
 //		helmetIm.setLocalizedName("6000,2500,2500,2500,2000,4500,0,0,0,0,700");
@@ -4920,8 +4957,29 @@ public class Main extends JavaPlugin implements Listener{
 					}
 					isOk = false;
 				}
-				if(isOk == false) 
-					event.setDamage(9999999);
+				if(isOk == false) {
+					ir.damage(999999);
+				}
+			}
+			if(event.getDamager() instanceof IronGolem) {
+				IronGolem ir = (IronGolem) event.getDamager();
+				GolemOwner go = new GolemOwner();
+				Entity player = (Entity)(go.returnPlayer(ir.getUniqueId()));
+				boolean isOk = true;
+				List<Entity> entitylist = ir.getNearbyEntities(12, 8, 12);
+				for (Entity nearEntity : entitylist) {
+					if(nearEntity == player) {
+						isOk = true;
+						break;
+					}
+					isOk = false;
+				}
+				if(isOk == false) {
+					ir.damage(999999);
+				}
+				
+				ir.damage(ir.getMaxHealth() / 100.0);
+				
 			}
 		} catch(Exception e) {
 			
@@ -8321,16 +8379,16 @@ public class Main extends JavaPlugin implements Listener{
 	    		//취소 이벤드
 	    		try {
 	    			if(event.getAction() == Action.RIGHT_CLICK_BLOCK || event.getAction() == Action.RIGHT_CLICK_AIR) {
-	        			if(player.getInventory().getItemInMainHand().getType()==Material.SNOWBALL) {
+	        			if(player.getInventory().getItemInMainHand().getType() == Material.SNOWBALL) {
 	        				try {
 	        					if(player.isOp() && (player.getGameMode() == GameMode.CREATIVE || player.getGameMode() == GameMode.SPECTATOR)) {
 	        						if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "Do you wanna build a snowman? (range 10)")) {
 		        						new SnowStack(player.getTargetBlockExact(50), 10);
 		        					} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "마법봉")) {
 		        						if(player.isSneaking()) {
-		        							new ParticleEffect(player).newSound3();
+		        							new ParticleEffect(player).newEffect49();
 		        						} else {
-		        							new ParticleEffect(player).newEffect10002();
+		        							new ParticleEffect(player).newEffect51();
 		        						}
 		        					}
 	        					}
@@ -8338,7 +8396,46 @@ public class Main extends JavaPlugin implements Listener{
 	        					
 	        				}
 	        				event.setCancelled(true);
-	        			}       			
+	        			} else if(player.getInventory().getItemInMainHand().getType() == Material.LINGERING_POTION) {
+	        				event.setCancelled(true);
+	        				player.getInventory().getItemInMainHand().setAmount(player.getInventory().getItemInMainHand().getAmount()-1);
+	        				try {
+	        					System.out.println(player.getDisplayName() + "이/가 " + player.getInventory().getItemInMainHand().getItemMeta().getDisplayName() 
+	        							+ ChatColor.WHITE + "을/를 섭취하였다.");
+	        				} catch(Exception e1) {
+	        					
+	        				}
+	        				
+	        				world.playSound(player.getLocation(), Sound.ENTITY_SPLASH_POTION_BREAK, 1.0f, 1.0f);
+	        				
+	        				if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "힐링 폭탄")) {
+	        					PotionRatio pr = new PotionRatio();
+	        					pr.calculation(player, 3000.0);
+	        				}
+	        				if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "마나 폭탄")) {
+	        					for(int tmp = 0 ; tmp < 3 ; tmp++) {
+	    							ItemStack mana = new ItemStack(Material.HEART_OF_THE_SEA);
+	    							ItemMeta manaIm = mana.getItemMeta();
+	    							manaIm.setDisplayName(ChatColor.BLUE + "마나");
+	    							mana.setItemMeta(manaIm);
+	    							if (player.getInventory().contains(Material.HEART_OF_THE_SEA)) {
+	    								int i = 0;
+	    								for (ItemStack is : player.getInventory().getContents()) {
+	    									if (is == null)
+	    										continue;
+	    									if (is.getType() == Material.HEART_OF_THE_SEA) {
+	    										i = i + is.getAmount();
+	    									}
+	    								}
+	    								if (i < 20)
+	    									player.getInventory().addItem(mana);
+	    							} else {
+	    								player.getInventory().setItem(8, mana);
+	    							}
+	    						}
+	        				}
+	        				
+	        			}
 	        		}
 	    		} catch(Exception e1) {
 	    			

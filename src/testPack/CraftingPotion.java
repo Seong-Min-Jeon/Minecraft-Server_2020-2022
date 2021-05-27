@@ -49,6 +49,28 @@ public class CraftingPotion {
 							green += 50;
 							blue += 50;
 						}
+					} else if(item.getType() == Material.LINGERING_POTION) {
+						try {
+							PotionMeta p = (PotionMeta) item.getItemMeta();
+							red += p.getColor().getRed();
+							green += p.getColor().getGreen();
+							blue += p.getColor().getBlue();
+						} catch(Exception e) {
+							red += 255;
+							green += 50;
+							blue += 50;
+						}
+					} else if(item.getType() == Material.SPLASH_POTION) {
+						try {
+							PotionMeta p = (PotionMeta) item.getItemMeta();
+							red += p.getColor().getRed();
+							green += p.getColor().getGreen();
+							blue += p.getColor().getBlue();
+						} catch(Exception e) {
+							red += 255;
+							green += 50;
+							blue += 50;
+						}
 					} else {
 						red -= 30;
 						green -= 30;

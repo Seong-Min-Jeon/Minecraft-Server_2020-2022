@@ -1083,20 +1083,22 @@ public class Skill {
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
 					Location loc = player.getLocation();
+					
+					List<Entity> entityl = player.getNearbyEntities(12, 8, 12);
+					for(Entity ent : entityl) {
+						if(ent instanceof IronGolem) {
+							ent.remove();
+						}
+					}
+					
 					IronGolem golem = (IronGolem) world.spawnEntity(loc, EntityType.IRON_GOLEM);
 					golem.setCustomName(ChatColor.GRAY + "팬텀 나이트" + ChatColor.YELLOW + " [Lv." + player.getLevel() + "]");
 					golem.setCustomNameVisible(true);
 					((LivingEntity) golem).setMaxHealth((20 + player.getLevel() * 5));
 					((LivingEntity) golem).setHealth((20 + player.getLevel() * 5));
-					if (player.getLevel() >= 40) {
+					if (player.getLevel() >= 10) {
 						int num = (player.getLevel() / 10);
-						golem.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, num - 4));
-					} else if ((player.getLevel() / 10) == 2) {
-						golem.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, Integer.MAX_VALUE, 0));
-					} else if ((player.getLevel() / 10) == 1) {
-						golem.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, Integer.MAX_VALUE, 1));
-					} else if ((player.getLevel() / 10) == 0) {
-						golem.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, Integer.MAX_VALUE, 2));
+						golem.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, num - 1));
 					}
 					golem.setPlayerCreated(true);
 					golem.setRemoveWhenFarAway(true);
@@ -1767,20 +1769,22 @@ public class Skill {
 									player.sendMessage(ChatColor.GREEN + "자신과 주변 아군의 체력이 회복됩니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 2 + ChatColor.RED + "]");
 								} else if (num == 2) {
 									Location loc = player.getLocation();
+									
+									List<Entity> entityl = player.getNearbyEntities(12, 8, 12);
+									for(Entity ent : entityl) {
+										if(ent instanceof IronGolem) {
+											ent.remove();
+										}
+									}
+									
 									IronGolem golem = (IronGolem) world.spawnEntity(loc, EntityType.IRON_GOLEM);
 									golem.setCustomName(ChatColor.GRAY + "팬텀 나이트" + ChatColor.YELLOW + " [Lv." + player.getLevel() + "]");
 									golem.setCustomNameVisible(true);
 									((LivingEntity) golem).setMaxHealth((20 + player.getLevel() * 5));
 									((LivingEntity) golem).setHealth((20 + player.getLevel() * 5));
-									if (player.getLevel() >= 40) {
+									if (player.getLevel() >= 10) {
 										int num = (player.getLevel() / 10);
-										golem.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, num - 4));
-									} else if ((player.getLevel() / 10) == 2) {
-										golem.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, Integer.MAX_VALUE, 0));
-									} else if ((player.getLevel() / 10) == 1) {
-										golem.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, Integer.MAX_VALUE, 1));
-									} else if ((player.getLevel() / 10) == 0) {
-										golem.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, Integer.MAX_VALUE, 2));
+										golem.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, num - 1));
 									}
 									golem.setPlayerCreated(true);
 									golem.setRemoveWhenFarAway(true);
@@ -2123,57 +2127,75 @@ public class Skill {
 					itemIm.setDisplayName(ChatColor.BLUE + "마나");
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
-					Location loc = player.getLocation();					
-					for (int _ = 0; _ < 2; _++) {
-						IronGolem golem = (IronGolem) world.spawnEntity(loc, EntityType.IRON_GOLEM);
-						golem.setCustomName(
-								ChatColor.GRAY + "기사단원" + ChatColor.YELLOW + " [Lv." + player.getLevel() + "]");
-						golem.setCustomNameVisible(true);
-						((LivingEntity) golem).setMaxHealth((20 + player.getLevel() * 30) / 2);
-						((LivingEntity) golem).setHealth((20 + player.getLevel() * 30) / 2);
-						int golemLv = (player.getLevel() / 2);
-						golem.setRemoveWhenFarAway(true);
-						golem.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, golemLv * 3));						
-						go.put(golem.getUniqueId(), player);
-					}
-					IronGolem golem = (IronGolem) world.spawnEntity(loc, EntityType.IRON_GOLEM);
-					golem.setCustomName(ChatColor.GRAY + "기사단장" + ChatColor.YELLOW + " [Lv." + player.getLevel() + "]");
-					golem.setCustomNameVisible(true);
-					((LivingEntity) golem).setMaxHealth((20 + player.getLevel() * 30));
-					((LivingEntity) golem).setHealth((20 + player.getLevel() * 30));
-					int golemLv = player.getLevel();
-					golem.setRemoveWhenFarAway(true);
-					golem.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, golemLv * 4));
-					go.put(golem.getUniqueId(), player);
+					Location loc = player.getLocation();	
 					
-					new ParticleEffect(player).newEffect39();
-					player.sendMessage(ChatColor.GREEN + "[스킬]천사의 기사단이 발동됩니다.");
-					player.sendMessage(ChatColor.GREEN + "기사단이 소환됩니다. 레벨: " + player.getLevel());
-					List<Entity> entlist = player.getNearbyEntities(10, 10, 10);
-					for (Entity nearEntity : entlist) {
-						if (nearEntity instanceof Mob && (nearEntity.getType() != EntityType.IRON_GOLEM)) {
-							if (nearEntity instanceof Zombie) {
-								Zombie zombie = (Zombie) nearEntity;
-								zombie.setTarget(golem);
-							}
-							if (nearEntity instanceof Skeleton) {
-								Skeleton zombie = (Skeleton) nearEntity;
-								zombie.setTarget(golem);
-							}
-							if (nearEntity instanceof WitherSkeleton) {
-								WitherSkeleton zombie = (WitherSkeleton) nearEntity;
-								zombie.setTarget(golem);
-							}
-							if (nearEntity instanceof Drowned) {
-								Drowned zombie = (Drowned) nearEntity;
-								zombie.setTarget(golem);
-							}
-							if (nearEntity instanceof Husk) {
-								Husk zombie = (Husk) nearEntity;
-								zombie.setTarget(golem);
-							}
+					List<Entity> entitylist = player.getNearbyEntities(12, 8, 12);
+					for(Entity ent : entitylist) {
+						if(ent instanceof IronGolem) {
+							ent.remove();
 						}
 					}
+					
+					new BukkitRunnable() {
+
+						@Override
+						public void run() {
+
+							for (int _ = 0; _ < 2; _++) {
+								IronGolem golem = (IronGolem) world.spawnEntity(loc, EntityType.IRON_GOLEM);
+								golem.setCustomName(
+										ChatColor.GRAY + "기사단원" + ChatColor.YELLOW + " [Lv." + player.getLevel() + "]");
+								golem.setCustomNameVisible(true);
+								((LivingEntity) golem).setMaxHealth((int)(Math.pow(player.getLevel(), 3) / 3000) + (20 + player.getLevel() * 30) / 2);
+								((LivingEntity) golem).setHealth((int)(Math.pow(player.getLevel(), 3) / 3000) + (20 + player.getLevel() * 30) / 2);
+								int golemLv = (player.getLevel() / 2);
+								golem.setRemoveWhenFarAway(true);
+								golem.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, (int)(Math.pow(golemLv, 2) / 65)));						
+								go.put(golem.getUniqueId(), player);
+							}
+							IronGolem golem = (IronGolem) world.spawnEntity(loc, EntityType.IRON_GOLEM);
+							golem.setCustomName(ChatColor.GRAY + "기사단장" + ChatColor.YELLOW + " [Lv." + player.getLevel() + "]");
+							golem.setCustomNameVisible(true);
+							((LivingEntity) golem).setMaxHealth((int)(Math.pow(player.getLevel(), 3) / 2000) + (20 + player.getLevel() * 30) / 2);
+							((LivingEntity) golem).setHealth((int)(Math.pow(player.getLevel(), 3) / 2000) + (20 + player.getLevel() * 30) / 2);
+							int golemLv = player.getLevel();
+							golem.setRemoveWhenFarAway(true);
+							golem.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, (int)(Math.pow(golemLv, 2) / 50)));
+							go.put(golem.getUniqueId(), player);
+							
+							new ParticleEffect(player).newEffect39();
+							player.sendMessage(ChatColor.GREEN + "[스킬]천사의 기사단이 발동됩니다.");
+							player.sendMessage(ChatColor.GREEN + "기사단이 소환됩니다. 레벨: " + player.getLevel());
+							List<Entity> entlist = player.getNearbyEntities(10, 10, 10);
+							for (Entity nearEntity : entlist) {
+								if (nearEntity instanceof Mob && (nearEntity.getType() != EntityType.IRON_GOLEM)) {
+									if (nearEntity instanceof Zombie) {
+										Zombie zombie = (Zombie) nearEntity;
+										zombie.setTarget(golem);
+									}
+									if (nearEntity instanceof Skeleton) {
+										Skeleton zombie = (Skeleton) nearEntity;
+										zombie.setTarget(golem);
+									}
+									if (nearEntity instanceof WitherSkeleton) {
+										WitherSkeleton zombie = (WitherSkeleton) nearEntity;
+										zombie.setTarget(golem);
+									}
+									if (nearEntity instanceof Drowned) {
+										Drowned zombie = (Drowned) nearEntity;
+										zombie.setTarget(golem);
+									}
+									if (nearEntity instanceof Husk) {
+										Husk zombie = (Husk) nearEntity;
+										zombie.setTarget(golem);
+									}
+								}
+							}
+							this.cancel();
+
+						}
+					}.runTaskTimer(Main.getPlugin(Main.class), 0, 2);
+					
 					world.playEffect(loc, Effect.SMOKE, 0);
 					world.playSound(loc, Sound.ENTITY_ENDER_DRAGON_GROWL, 1.0f, 1.0f);
 				} else {
@@ -3336,6 +3358,7 @@ public class Skill {
 						item.setItemMeta(itemIm);
 						player.getInventory().setItem(8, item);
 
+						new ParticleEffect(player).newEffect49();
 						player.sendMessage(ChatColor.GREEN + "[스킬]블링크가 발동됩니다.");
 
 						Vector vec = player.getEyeLocation().getDirection().multiply(3.0f);
@@ -3355,50 +3378,8 @@ public class Skill {
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
 					
+					new ParticleEffect(player).newEffect50(damNum);
 					player.sendMessage(ChatColor.GREEN + "[스킬]루인 오브 노바가 발동됩니다.");
-					player.addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, 40, 2));
-					
-					Thread t = new Thread(player.getUniqueId());
-					sleep = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
-						
-						int time = 0;
-						
-						@Override
-						public void run() {
-							if (!t.hasID()) {
-								t.setID(sleep);
-							}
-							
-							if(time >= 20) {
-								// ===============================================================
-								ParticleData pd = new ParticleData(player.getUniqueId());
-								if (pd.hasID()) {
-									pd.endTask();
-									pd.removeID();
-								}
-								ParticleEffect pe = new ParticleEffect(player);
-								pe.startE23();
-								// ================================================================
-								List<Entity> entitylist = player.getNearbyEntities(8, 8, 8);
-								for (Entity nearEntity : entitylist) {
-									if (nearEntity.getType() != EntityType.PLAYER) {
-										if (nearEntity instanceof LivingEntity) {
-											LivingEntity nearMob = (LivingEntity) nearEntity;
-											nearMob.damage(player.getLevel()*100);
-											world.spawnParticle(Particle.LAVA, nearMob.getLocation(), 10);
-											world.playSound(nearMob.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 1.0f, 1.0f);
-										}
-									}
-								}
-								t.endTask();
-								t.removeID();								
-							}
-							
-							time++;							
-						}						
-						
-					}, 0, 1);
-					
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
 					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
@@ -3463,19 +3444,18 @@ public class Skill {
 					player.getInventory().setItem(8, item);			
 					
 					player.sendMessage(ChatColor.GREEN + "[스킬]어나더 디비니티가 발동됩니다.");
-					world.playSound(player.getLocation(), Sound.WEATHER_RAIN_ABOVE, 3.0f, 0.05f);
 					
 					List<Entity> entity = player.getNearbyEntities(20, 5, 20);
 					for(Entity e : entity) {
 						if(e instanceof Mob) {
 							LivingEntity mob = (LivingEntity) e; 
-							mob.damage(player.getLevel()*10 + damNum*70);
-							mob.setVelocity(new Vector(0,0.4,0));
-							world.spawnParticle(Particle.DRAGON_BREATH, mob.getLocation().add(0,1,0), 0);
+							mob.damage(player.getLevel()*10 + damNum*20);
+							if(mob instanceof Monster) {
+								mob.setVelocity(new Vector(0,0.4,0));
+							}
+							new ParticleEffect(player, mob).newEffect51();
 						}
 					}
-					world.spawnParticle(Particle.CRIT_MAGIC, player.getLocation().add(0,1,0), 0);
-					world.playSound(player.getLocation(), Sound.ENTITY_DRAGON_FIREBALL_EXPLODE, 1.0f, 1.0f);
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
 					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);

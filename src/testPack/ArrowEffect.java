@@ -59,7 +59,7 @@ public class ArrowEffect {
 				} else if(im.getDisplayName().equals(ChatColor.YELLOW + "질풍의 지팡이")) {
 					if(player.getLevel() >= 300) {
 						if(checkMana(player, 1)) {
-							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BEACON_ACTIVATE, 0.4f, 8.0f);
+							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BEACON_ACTIVATE, 1.0f, 8.0f);
 							player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 1, true, false, false));
 							player.sendMessage(ChatColor.GREEN + "신속이 부여됩니다.");
 							removeMana(player, 1);
@@ -68,7 +68,7 @@ public class ArrowEffect {
 				} else if(im.getDisplayName().equals(ChatColor.LIGHT_PURPLE + "고목나무 지팡이")) {
 					if(player.getLevel() >= 300) {
 						if(checkMana(player, 2)) {
-							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BEACON_ACTIVATE, 0.4f, 8.0f);
+							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BEACON_ACTIVATE, 1.0f, 8.0f);
 							if(player.getHealth() >= 18) {
 								player.setHealth(20);
 							} else {
@@ -101,7 +101,7 @@ public class ArrowEffect {
 						if(checkMana(player, 3)) {
 							if ((player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) || (player.getLocation().getBlock().getType() != Material.AIR)
 									|| (player.getLocation().add(0,-2,0).getBlock().getType() != Material.AIR)) {		
-								player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BEACON_ACTIVATE, 0.4f, 8.0f);
+								player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BEACON_ACTIVATE, 1.0f, 8.0f);
 								player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 1, true, false, false));
 								Vector vec = player.getEyeLocation().getDirection().multiply(2.5f);
 								player.setVelocity(vec);
@@ -123,7 +123,7 @@ public class ArrowEffect {
 				} else if(im.getDisplayName().equals(ChatColor.AQUA + "길잡이 지팡이")) {
 					if(player.getLevel() >= 500) {
 						if(checkMana(player, 3)) {
-							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BEACON_ACTIVATE, 0.4f, 8.0f);
+							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BEACON_ACTIVATE, 1.0f, 8.0f);
 							if(player.getHealth() >= 16) {
 								player.setHealth(20);
 							} else {
@@ -136,7 +136,7 @@ public class ArrowEffect {
 				} else if(im.getDisplayName().equals(ChatColor.LIGHT_PURPLE + "슬라임볼 스태프")) {
 					if(player.getLevel() >= 560) {
 						if(checkMana(player, 4)) {
-							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BEACON_ACTIVATE, 0.4f, 8.0f);
+							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BEACON_ACTIVATE, 1.0f, 8.0f);
 							player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 600, 2, true, false, false));
 							removeMana(player, 4);
 						}
@@ -149,6 +149,49 @@ public class ArrowEffect {
 								removeMana(player, 10);
 							}
 						}
+					} 
+				} else if(im.getDisplayName().equals(ChatColor.LIGHT_PURPLE + "세컨드 윙")) {
+					if(player.getLevel() >= 450) {
+						if(checkMana(player, 4)) {
+							if ((player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) || (player.getLocation().getBlock().getType() != Material.AIR)
+									|| (player.getLocation().add(0,-2,0).getBlock().getType() != Material.AIR)) {		
+								player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BEACON_ACTIVATE, 1.0f, 8.0f);
+								Vector vec = player.getEyeLocation().getDirection().multiply(1.5f);
+								player.setVelocity(vec);
+								removeMana(player, 4);
+							}
+						}
+					} 
+				} else if(im.getDisplayName().equals(ChatColor.AQUA + "문 스태프")) {
+					if(player.getLevel() >= 560) {
+						if(player.getHealth() - 10 < 0) {
+							player.setHealth(0);
+						} else {
+							player.setHealth(player.getHealth() - 10);
+						}
+						
+						for(int tmp = 0 ; tmp < 5 ; tmp++) {
+							ItemStack mana = new ItemStack(Material.HEART_OF_THE_SEA);
+							ItemMeta manaIm = mana.getItemMeta();
+							manaIm.setDisplayName(ChatColor.BLUE + "마나");
+							mana.setItemMeta(manaIm);
+							if (player.getInventory().contains(Material.HEART_OF_THE_SEA)) {
+								int i = 0;
+								for (ItemStack is : player.getInventory().getContents()) {
+									if (is == null)
+										continue;
+									if (is.getType() == Material.HEART_OF_THE_SEA) {
+										i = i + is.getAmount();
+									}
+								}
+								if (i < 20)
+									player.getInventory().addItem(mana);
+							} else {
+								player.getInventory().setItem(8, mana);
+							}
+						}
+						
+						player.sendMessage(ChatColor.GREEN + "체력을 소모해 마나가 회복되었습니다.");
 					} 
 				}
 				if(bool) {
