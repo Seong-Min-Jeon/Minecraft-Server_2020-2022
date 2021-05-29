@@ -3495,6 +3495,7 @@ public class Skill {
 						item.setItemMeta(itemIm);
 						player.getInventory().setItem(8, item);
 
+						new ParticleEffect(player).newEffect52();
 						player.sendMessage(ChatColor.GREEN + "[스킬]스피릿 오브 오더가 발동됩니다.");
 
 						Vector vec = player.getEyeLocation().getDirection().multiply(2.4f);
@@ -3526,20 +3527,10 @@ public class Skill {
 					}
 					PotionRatio pr = new PotionRatio();
 					pr.calculation(player, player.getLevel() * 15);
-					Location loc = player.getLocation();
-					world.playEffect(loc, Effect.DRAGON_BREATH, 0);
+
+					new ParticleEffect(player).newEffect53();
 					player.sendMessage(ChatColor.GREEN + "[스킬]아이 오브 오더가 발동됩니다.");
 					player.sendMessage(ChatColor.GREEN + "자신과 주변 아군의 체력이 회복됩니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 15 + ChatColor.RED + "]");
-					world.playSound(player.getLocation(), Sound.ENTITY_PHANTOM_FLAP, 1.0f, 1.0f);
-					// ===============================================================
-					ParticleData pd = new ParticleData(player.getUniqueId());
-					if (pd.hasID()) {
-						pd.endTask();
-						pd.removeID();
-					}
-					ParticleEffect pe = new ParticleEffect(player);
-					pe.startE0_5();
-					// ===============================================================
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
 					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
@@ -3572,63 +3563,63 @@ public class Skill {
 					Location loc2;
 					FallingBlock fb;
 					loc2 = loc.clone().add(new Vector(3, 0, 0));
-					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, Material.SAND, (byte) 0);
+					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, loc2.clone().add(0,-1,0).getBlock().getType(), (byte) 0);
 					fb.setVelocity(new Vector(0, 0.5, 0));
 					fb.setDropItem(false);
 					
 					loc2 = loc.clone().add(new Vector(2, 0, 1));
-					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, Material.SAND, (byte) 0);
+					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, loc2.clone().add(0,-1,0).getBlock().getType(), (byte) 0);
 					fb.setVelocity(new Vector(0, 0.5, 0));
 					fb.setDropItem(false);
 					
 					loc2 = loc.clone().add(new Vector(1, 0, 2));
-					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, Material.SAND, (byte) 0);
+					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, loc2.clone().add(0,-1,0).getBlock().getType(), (byte) 0);
 					fb.setVelocity(new Vector(0, 0.5, 0));
 					fb.setDropItem(false);
 					fb.setPersistent(false);
 					
 					loc2 = loc.clone().add(new Vector(0, 0, 3));
-					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, Material.SAND, (byte) 0);
+					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, loc2.clone().add(0,-1,0).getBlock().getType(), (byte) 0);
 					fb.setVelocity(new Vector(0, 0.5, 0));
 					fb.setDropItem(false);
 					
 					loc2 = loc.clone().add(new Vector(-3, 0, 0));
-					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, Material.SAND, (byte) 0);
+					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, loc2.clone().add(0,-1,0).getBlock().getType(), (byte) 0);
 					fb.setVelocity(new Vector(0, 0.5, 0));
 					fb.setDropItem(false);
 					
 					loc2 = loc.clone().add(new Vector(-2, 0, 1));
-					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, Material.SAND, (byte) 0);
+					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, loc2.clone().add(0,-1,0).getBlock().getType(), (byte) 0);
 					fb.setVelocity(new Vector(0, 0.5, 0));
 					fb.setDropItem(false);
 					
 					loc2 = loc.clone().add(new Vector(-1, 0, 2));
-					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, Material.SAND, (byte) 0);
+					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, loc2.clone().add(0,-1,0).getBlock().getType(), (byte) 0);
 					fb.setVelocity(new Vector(0, 0.5, 0));
 					fb.setDropItem(false);
 					
 					loc2 = loc.clone().add(new Vector(-2, 0, -1));
-					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, Material.SAND, (byte) 0);
+					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, loc2.clone().add(0,-1,0).getBlock().getType(), (byte) 0);
 					fb.setVelocity(new Vector(0, 0.5, 0));
 					fb.setDropItem(false);
 					
 					loc2 = loc.clone().add(new Vector(-1, 0, -2));
-					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, Material.SAND, (byte) 0);
+					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, loc2.clone().add(0,-1,0).getBlock().getType(), (byte) 0);
 					fb.setVelocity(new Vector(0, 0.5, 0));
 					fb.setDropItem(false);
 					
 					loc2 = loc.clone().add(new Vector(0, 0, -3));
-					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, Material.SAND, (byte) 0);
+					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, loc2.clone().add(0,-1,0).getBlock().getType(), (byte) 0);
 					fb.setVelocity(new Vector(0, 0.5, 0));
 					fb.setDropItem(false);
 					
 					loc2 = loc.clone().add(new Vector(1, 0, -2));
-					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, Material.SAND, (byte) 0);
+					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, loc2.clone().add(0,-1,0).getBlock().getType(), (byte) 0);
 					fb.setVelocity(new Vector(0, 0.5, 0));
 					fb.setDropItem(false);
 					
 					loc2 = loc.clone().add(new Vector(2, 0, -1));
-					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, Material.SAND, (byte) 0);
+					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, loc2.clone().add(0,-1,0).getBlock().getType(), (byte) 0);
 					fb.setVelocity(new Vector(0, 0.5, 0));
 					fb.setDropItem(false);
 					
@@ -3935,7 +3926,7 @@ public class Skill {
 	
 	public void skill16(Player player, String key) {
 		World world = player.getWorld();
-		if (!(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "대대장의 증표"))) {
+		if (!(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "조커의 증표"))) {
 			int i = 0;
 			for (ItemStack is : player.getInventory().getContents()) {
 				if (is == null)

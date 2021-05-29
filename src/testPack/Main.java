@@ -328,7 +328,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("woolring")) { 
 			
 		} else {
-			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/845241629144514560/aile_texture_pack_28.zip");
+			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/847782934169780234/aile_texture_pack_29.zip");
 		}
 		
 		//Message
@@ -593,9 +593,101 @@ public class Main extends JavaPlugin implements Listener{
 //		if(player.getDisplayName().equalsIgnoreCase("WoolRing") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
 
 		
-		
-		
-		
+//		ItemStack var2 = new ItemStack(Material.MOSSY_STONE_BRICK_STAIRS);
+//		ItemMeta var2Im = var2.getItemMeta();
+//		var2Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,560");
+//		var2Im.setDisplayName(ChatColor.AQUA + "진액의 코어");
+//		ArrayList<String> var2Lore = new ArrayList();
+//		var2Lore.add(ChatColor.GRAY + "레벨 제한: 560");
+//		var2Lore.add(ChatColor.GRAY + " ");
+//		var2Lore.add(ChatColor.GRAY + "와우를 구성하고 있는 진액의 코어");
+//		var2Lore.add(ChatColor.GRAY + "악취가 심해서 독에 걸린지도 모를 것 같다.");
+//		var2Lore.add(ChatColor.GRAY + " ");
+//		var2Lore.add(ChatColor.BLUE + "-독 데미지 60% 경감");
+//		var2Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var2Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var2Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var2Im.setUnbreakable(true);
+//		var2Im.setLore(var2Lore);
+//		var2.setItemMeta(var2Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var2);}
+//		
+//		ItemStack var3 = new ItemStack(Material.DIAMOND_AXE);
+//		ItemMeta var3Im = var3.getItemMeta();
+//		var3Im.setCustomModelData(10007);
+//		var3Im.setLocalizedName("5000,0,0,0,0,0,0,0,0,0,600");
+//		var3Im.setDisplayName(ChatColor.LIGHT_PURPLE + "끈적한 공격의 보주");
+//		ArrayList<String> var3Lore = new ArrayList();
+//		var3Lore.add(ChatColor.GRAY + "레벨 제한: 600");
+//		var3Lore.add(ChatColor.GRAY + " ");
+//		var3Lore.add(ChatColor.GRAY + "슬라임의 위장에서 오랜 시간 숙성된 보주");
+//		var3Lore.add(ChatColor.GRAY + " ");
+//		var3Lore.add(ChatColor.BLUE + "-공격력: 5000");
+//		var3Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var3Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var3Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var3Im.setUnbreakable(true);
+//		var3Im.setLore(var3Lore);
+//		var3.setItemMeta(var3Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var3);}
+//		
+//		ItemStack var4 = new ItemStack(Material.DIAMOND_AXE);
+//		ItemMeta var4Im = var4.getItemMeta();
+//		var4Im.setCustomModelData(10008);
+//		var4Im.setLocalizedName("0,4000,0,0,0,0,0,0,0,0,600");
+//		var4Im.setDisplayName(ChatColor.LIGHT_PURPLE + "끈적한 공격의 보주");
+//		ArrayList<String> var4Lore = new ArrayList();
+//		var4Lore.add(ChatColor.GRAY + "레벨 제한: 600");
+//		var4Lore.add(ChatColor.GRAY + " ");
+//		var4Lore.add(ChatColor.GRAY + "슬라임의 위장에서 오랜 시간 숙성된 보주");
+//		var4Lore.add(ChatColor.GRAY + " ");
+//		var4Lore.add(ChatColor.BLUE + "-추가 데미지(인간형): 4000");
+//		var4Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var4Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var4Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var4Im.setUnbreakable(true);
+//		var4Im.setLore(var4Lore);
+//		var4.setItemMeta(var4Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var4);}
+//		
+//		ItemStack var5 = new ItemStack(Material.DIAMOND_AXE);
+//		ItemMeta var5Im = var5.getItemMeta();
+//		var5Im.setCustomModelData(10009);
+//		var5Im.setLocalizedName("0,0,4000,0,0,0,0,0,0,0,600");
+//		var5Im.setDisplayName(ChatColor.LIGHT_PURPLE + "끈적한 공격의 보주");
+//		ArrayList<String> var5Lore = new ArrayList();
+//		var5Lore.add(ChatColor.GRAY + "레벨 제한: 600");
+//		var5Lore.add(ChatColor.GRAY + " ");
+//		var5Lore.add(ChatColor.GRAY + "슬라임의 위장에서 오랜 시간 숙성된 보주");
+//		var5Lore.add(ChatColor.GRAY + " ");
+//		var5Lore.add(ChatColor.BLUE + "-추가 데미지(동물형): 4000");
+//		var5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var5Im.setUnbreakable(true);
+//		var5Im.setLore(var5Lore);
+//		var5.setItemMeta(var5Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var5);}
+//		
+//		ItemStack var6 = new ItemStack(Material.DIAMOND_AXE);
+//		ItemMeta var6Im = var6.getItemMeta();
+//		var6Im.setCustomModelData(10010);
+//		var6Im.setLocalizedName("0,0,0,4000,0,0,0,0,0,0,600");
+//		var6Im.setDisplayName(ChatColor.LIGHT_PURPLE + "끈적한 공격의 보주");
+//		ArrayList<String> var6Lore = new ArrayList();
+//		var6Lore.add(ChatColor.GRAY + "레벨 제한: 600");
+//		var6Lore.add(ChatColor.GRAY + " ");
+//		var6Lore.add(ChatColor.GRAY + "슬라임의 위장에서 오랜 시간 숙성된 보주");
+//		var6Lore.add(ChatColor.GRAY + " ");
+//		var6Lore.add(ChatColor.BLUE + "-추가 데미지(기타): 4000");
+//		var6Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var6Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var6Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var6Im.setUnbreakable(true);
+//		var6Im.setLore(var6Lore);
+//		var6.setItemMeta(var6Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var6);}
+//		
 //		ItemStack var8 = new ItemStack(Material.MUSIC_DISC_BLOCKS);
 //		ItemMeta var8Im = var8.getItemMeta();
 //		var8Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,450");
@@ -6138,6 +6230,7 @@ public class Main extends JavaPlugin implements Listener{
 								num += new SpecialEffect().a10150(player);
 								num += new SpecialEffect().a26(player);
 								num += new SpecialEffect().s9(player);
+								num += new SpecialEffect().a27(player);
 
 								if (num > 100) {
 									num = 100;
@@ -8388,7 +8481,7 @@ public class Main extends JavaPlugin implements Listener{
 		        						if(player.isSneaking()) {
 		        							new ParticleEffect(player).newEffect49();
 		        						} else {
-		        							new ParticleEffect(player).newEffect51();
+		        							new ParticleEffect(player).newEffect53();
 		        						}
 		        					}
 	        					}

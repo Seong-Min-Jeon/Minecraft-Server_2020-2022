@@ -299,6 +299,17 @@ public class SpecialEffect {
 		}
 		return 0;
 	}
+	
+	public int a27(Player player) {
+		try {
+			if(player.getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "진액의 코어")) {
+				return 60;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
 
 	
 	// 전투 경험치 증가
