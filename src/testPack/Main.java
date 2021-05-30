@@ -337,7 +337,7 @@ public class Main extends JavaPlugin implements Listener{
 		} else if(player.getDisplayName().equalsIgnoreCase("WoolRing")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.GREEN + "'도트랑 도트가 제일 좋아' 울링.");
 		} else if(player.getDisplayName().equalsIgnoreCase("_nanoboost_")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.RED + "'Lucille, Give me strength. Punishment!' 나노부스트.");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.RED + "'과실에서 모기를 잡은' 나노부스트.");
 		} else if(player.getDisplayName().equalsIgnoreCase("why9196")) {
 			event.setJoinMessage("확률이 뭐죠? " + ChatColor.BLUE + "'0.0068% 돌파한' 와이.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Akilae3102")) {
