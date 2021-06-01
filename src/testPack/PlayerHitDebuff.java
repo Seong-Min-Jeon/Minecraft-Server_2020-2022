@@ -3225,7 +3225,9 @@ public class PlayerHitDebuff {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("중급 파괴수" + ChatColor.YELLOW + " [Lv.554]")) {
 			int num = rnd.nextInt(8);
 			if (num == 0) {
-				player.setVelocity(new Vector(0, 2, 0));
+				if(!player.isSneaking()) {
+					player.setVelocity(new Vector(0, 1, 0));
+				}
 				player.damage(2000);
 			}
 		}
@@ -3734,7 +3736,9 @@ public class PlayerHitDebuff {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("쑥을 먹는 곰" + ChatColor.YELLOW + " [Lv.654]")) {
 			int num = rnd.nextInt(8);
 			if (num == 0) {
-				player.setVelocity(new Vector(0, 2, 0));
+				if(!player.isSneaking()) {
+					player.setVelocity(new Vector(0, 1, 0));
+				}
 				player.damage(3300);
 			}
 		}
@@ -3824,7 +3828,9 @@ public class PlayerHitDebuff {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("족장의 벗" + ChatColor.YELLOW + " [Lv.685]")) {
 			int num = rnd.nextInt(12);
 			if (num == 0) {
-				player.setVelocity(new Vector(0, 2, 0));
+				if(!player.isSneaking()) {
+					player.setVelocity(new Vector(0, 1, 0));
+				}
 				player.damage(4000);
 			}
 		}
@@ -3835,7 +3841,9 @@ public class PlayerHitDebuff {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("야생 곰" + ChatColor.YELLOW + " [Lv.684]")) {
 			int num = rnd.nextInt(12);
 			if (num == 0) {
-				player.setVelocity(player.getVelocity().multiply(-1.5).add(new Vector(0,1,0)));
+				if(!player.isSneaking()) {
+					player.setVelocity(player.getVelocity().multiply(-1.5).add(new Vector(0,1,0)));
+				}
 				player.damage(4500);
 			}
 		}

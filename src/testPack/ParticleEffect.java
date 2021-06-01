@@ -168,6 +168,64 @@ public class ParticleEffect {
 		}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
 	}
 	
+	// 토템
+	public void newEffect0() {
+		
+		Location normal = ent.getLocation();
+		World world = ent.getWorld(); 
+        
+        Particle.DustOptions dustOptions1 = new Particle.DustOptions(Color.fromRGB(50, 230, 50), 1);
+        Particle.DustOptions dustOptions2 = new Particle.DustOptions(Color.fromRGB(100, 255, 100), 1);
+        
+		new BukkitRunnable() {
+			int time = 0;
+			int size = 0;
+			
+		    Location e1, e4;
+
+			@Override
+			public void run() {
+				
+				if(time % 1 == 0) {
+					double var = 0;
+					
+					for(int i = 0 ; i < 32 ; i++) {
+						if(size % 2 == 0) {
+							e4 = normal.clone().add(Math.cos(var)*size, 0.5, Math.sin(var)*size);
+						} else {
+							e4 = normal.clone().add(Math.cos(var)*size, 0, Math.sin(var)*size);
+						}
+						world.spawnParticle(Particle.REDSTONE, e4, 2, dustOptions2);
+						
+						var += Math.PI / 16;
+					}
+					
+					if(size == 9) {
+						size = -1;
+					}
+					size++;
+				}
+				
+				if(time % 3 == 0) {
+					double var = 0;
+					
+					for(int i = 0 ; i < 32 ; i++) {
+						e1 = normal.clone().add(Math.cos(var)*10, 0, Math.sin(var)*10);
+						world.spawnParticle(Particle.REDSTONE, e1, 2, dustOptions1);
+						
+						var += Math.PI / 16;
+					}
+				}
+
+				if(time >= 150) {
+					this.cancel();
+				}
+				
+				time++;
+			}
+		}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
+	}
+	
 	public void newEffect1() {
 		Location normal = player.getEyeLocation();
 		World world = player.getWorld(); 
@@ -976,7 +1034,7 @@ public class ParticleEffect {
 						} else {
 							e4 = normal.clone().add(Math.cos(var)*size, 0, Math.sin(var)*size);
 						}
-						player.getWorld().spawnParticle(Particle.REDSTONE, e4, 2, dustOptions2);
+						world.spawnParticle(Particle.REDSTONE, e4, 2, dustOptions2);
 						
 						var += Math.PI / 16;
 					}
@@ -1074,7 +1132,7 @@ public class ParticleEffect {
 					
 					for(int i = 0 ; i < 32 ; i++) {
 						e1 = normal.clone().add(Math.cos(var)*10, 0, Math.sin(var)*10);
-						player.getWorld().spawnParticle(Particle.REDSTONE, e1, 2, dustOptions1);
+						world.spawnParticle(Particle.REDSTONE, e1, 2, dustOptions1);
 						
 						var += Math.PI / 16;
 					}
@@ -11616,6 +11674,117 @@ public class ParticleEffect {
 			}
 		}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
 	}
+	
+	// 돌격
+	public void newEffect54() {
+
+		Location normal = player.getLocation();
+		World world = player.getWorld(); 
+        
+        Particle.DustOptions dustOptions1 = new Particle.DustOptions(Color.fromRGB(255, 0, 0), 1);
+        Particle.DustOptions dustOptions2 = new Particle.DustOptions(Color.fromRGB(0, 0, 0), 1);
+        
+        world.playSound(normal, Sound.ENTITY_GENERIC_EXPLODE, 0.7f, 5.0f);
+        
+		new BukkitRunnable() {
+			int time = 0;
+			
+		    Location e1;
+
+			@Override
+			public void run() {
+				
+				Location loc = player.getLocation();
+				
+				double arrowAngle1 = 90;
+				double totalAngle1 = loc.getYaw() + arrowAngle1;
+				double dirX1 = Math.cos(Math.toRadians(totalAngle1));
+				double dirZ1 = Math.sin(Math.toRadians(totalAngle1));
+				
+				e1 = loc.clone().add(dirX1*(-2+time*0.1), 5-(time*0.2), dirZ1*(-2+time*0.1));
+				world.spawnParticle(Particle.REDSTONE, e1, 100, dustOptions1);
+				world.spawnParticle(Particle.REDSTONE, e1, 100, dustOptions2);
+
+				if(time >= 20) {
+					this.cancel();
+				}
+				
+				time++;
+			}
+		}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
+	}
+	
+	// 헬파이어
+	public void newEffect55(int damNum) {
+
+		Location normal = player.getEyeLocation();
+		World world = player.getWorld();
+
+		new BukkitRunnable() {
+			int time = 0;
+			double var = 0;
+
+			Location e1, e2;
+			
+			double rot = normal.getYaw();
+			double dirX = Math.cos(Math.toRadians(rot));
+			double dirZ = Math.sin(Math.toRadians(rot));
+
+			@Override
+			public void run() {
+
+				double arrowAngle1 = 90;
+				double totalAngle1 = normal.getYaw() + arrowAngle1;
+				double dirX1 = Math.cos(Math.toRadians(totalAngle1));
+				double dirZ1 = Math.sin(Math.toRadians(totalAngle1));
+
+				e1 = normal.clone().add(dirX1*(0.5+(0.3*time)), 0.4, dirZ1*(0.5+(0.3*time)));
+				
+				for(int i = 0 ; i < 8 ; i++) {
+					e2 = e1.clone().add(Math.cos(var)*(0.5+0.07*time)*dirX, Math.sin(var)*(0.5+0.07*time), Math.cos(var)*(0.5+0.07*time)*dirZ);
+					world.spawnParticle(Particle.FLAME, e2, 0);
+					
+					var += Math.PI / 8;
+				}
+				
+				if(time % 10 == 0) {
+					e1 = normal.clone().add(dirX1*(0.5+(0.3*time)), 0.4, dirZ1*(0.5+(0.3*time)));
+					
+					ArmorStand tmpEnt = (ArmorStand) world.spawnEntity(e1, EntityType.ARMOR_STAND);
+					tmpEnt.setVisible(false);
+					tmpEnt.setSmall(true);
+					
+					new BukkitRunnable() {
+						@Override
+						public void run() {
+							tmpEnt.remove();
+							this.cancel();
+						}
+					}.runTaskTimer(Main.getPlugin(Main.class), 0, 3);
+					
+					List<Entity> entitylist = tmpEnt.getNearbyEntities(5, 5, 5);				
+					for (Entity nearEntity : entitylist) {
+						if (nearEntity instanceof Mob) {
+							LivingEntity ent = (LivingEntity) nearEntity;
+							ent.damage(player.getLevel()*50 + damNum*10);
+						}
+					}	
+					
+					world.playSound(e1, Sound.ENTITY_FIREWORK_ROCKET_TWINKLE, 1.0f, 0.2f);
+					world.playSound(e1, Sound.ENTITY_GENERIC_EXPLODE, 0.7f, 0.8f);
+					world.spawnParticle(Particle.EXPLOSION_LARGE, e1, 0);
+				}
+
+				if(time >= 30) {
+					this.cancel();
+				}
+
+				time++;
+			}
+		}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
+	}
+	
+	
 	
 	
 	

@@ -2403,6 +2403,8 @@ public class Skill {
 								totem.setHelmet(new ItemStack(Material.RED_NETHER_BRICK_STAIRS));
 								totem.setRemoveWhenFarAway(true);
 								proTotem.remove();
+
+								new ParticleEffect(player, totem).newEffect0();
 								
 								List<Entity> entitylist = totem.getNearbyEntities(8, 5, 8);
 								for(Entity nearEntity : entitylist) {
@@ -3814,6 +3816,8 @@ public class Skill {
 								totem.setHelmet(new ItemStack(Material.DIORITE_STAIRS));
 								totem.setRemoveWhenFarAway(true);
 								proTotem.remove();
+								
+								new ParticleEffect(player, totem).newEffect0();
 								
 								List<Entity> entitylist = totem.getNearbyEntities(8, 5, 8);
 								for(Entity nearEntity : entitylist) {

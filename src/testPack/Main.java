@@ -8481,7 +8481,7 @@ public class Main extends JavaPlugin implements Listener{
 		        						if(player.isSneaking()) {
 		        							new ParticleEffect(player).newEffect49();
 		        						} else {
-		        							new ParticleEffect(player).newEffect53();
+		        							new ParticleEffect(player).newEffect55(10000);
 		        						}
 		        					}
 	        					}
@@ -8528,6 +8528,8 @@ public class Main extends JavaPlugin implements Listener{
 	    						}
 	        				}
 	        				
+	        			} else if(player.getInventory().getItemInMainHand().getType() == Material.ENDER_EYE) {
+	        				event.setCancelled(true);
 	        			}
 	        		}
 	    		} catch(Exception e1) {
