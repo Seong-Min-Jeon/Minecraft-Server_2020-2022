@@ -3103,16 +3103,21 @@ public class Main extends JavaPlugin implements Listener{
 	public void reSpawn(PlayerRespawnEvent event) {
 		try {
 			Player player = (Player) event.getPlayer();
+			Location loc = player.getLocation();
 			
 			try {				
-				if(!(new Colosseum().colosseum(player))) {
-					player.setExp(0);
+				if(!(new Colosseum().colosseum(player)) && !(loc.getX() <= 138 && loc.getY() <= 100 && loc.getZ() <= 1965 
+						&& loc.getX() >= 118 && loc.getY() >= 50 && loc.getZ() >= 1945)) {
+					if(player.getLevel() >= 700) {
+						player.setExp(player.getExp() / 2);
+					} else {
+						player.setExp(0);
+					}
 				}
 			} catch(Exception e10) {
 
 			}
 			
-			Location loc = player.getLocation();
 			Location wargunil = new Location(world,-1844,70,3012);
 			Location forgan = new Location(world,-1573,53,2458);
 			Location tiru = new Location(world, -672, 46, 1942);

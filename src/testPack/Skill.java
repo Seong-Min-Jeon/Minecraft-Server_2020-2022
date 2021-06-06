@@ -3719,8 +3719,8 @@ public class Skill {
 						item.setItemMeta(itemIm);
 						player.getInventory().setItem(8, item);
 
+						new ParticleEffect(player).newEffect54();
 						player.sendMessage(ChatColor.GREEN + "[스킬]돌격이 발동됩니다.");
-						world.playSound(player.getLocation(), Sound.BLOCK_ENDER_CHEST_CLOSE, 1.0f, 1.0f);
 						
 						Vector vec = player.getEyeLocation().add(0,2,0).getDirection().multiply(2.3f);
 						player.setVelocity(vec);						
@@ -3747,36 +3747,9 @@ public class Skill {
 					itemIm.setDisplayName(ChatColor.BLUE + "마나");
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
-					
+
+					new ParticleEffect(player).newEffect55(damNum);
 					player.sendMessage(ChatColor.GREEN + "[스킬]헬파이어가 발동됩니다.");	
-					world.playSound(player.getLocation(), Sound.ENTITY_DRAGON_FIREBALL_EXPLODE, 1.0f, 1.0f);
-					// ===============================================================
-					ParticleData pd = new ParticleData(player.getUniqueId());
-					if (pd.hasID()) {
-						pd.endTask();
-						pd.removeID();
-					}
-					ParticleEffect pe = new ParticleEffect(player);
-					pe.startE26();
-					// ================================================================
-					List<Entity> entitylist = player.getNearbyEntities(10, 4, 10);
-					for (Entity nearEntity : entitylist) {
-						if (nearEntity.getType() != EntityType.PLAYER) {
-							if (nearEntity instanceof LivingEntity) {
-								if ((nearEntity.getType() != EntityType.PLAYER) && (nearEntity.getType() != EntityType.PIG) && (nearEntity.getType() != EntityType.COW)
-										&& (nearEntity.getType() != EntityType.CHICKEN) && (nearEntity.getType() != EntityType.SHEEP) && (nearEntity.getType() != EntityType.VILLAGER)
-										&& (nearEntity.getType() != EntityType.HORSE) && (nearEntity.getType() != EntityType.SKELETON_HORSE) && (nearEntity.getType() != EntityType.ZOMBIE_HORSE)
-										&& (nearEntity.getType() != EntityType.WOLF) && (nearEntity.getType() != EntityType.CAT) && (nearEntity.getType() != EntityType.DONKEY)
-										&& (nearEntity.getType() != EntityType.ARMOR_STAND)) {
-									if (nearEntity instanceof LivingEntity) {
-										LivingEntity nearMob = (LivingEntity) nearEntity;
-										nearMob.setFireTicks(200);
-										nearMob.damage(player.getLevel()*150 + damNum*70);		
-									}
-								}
-							}
-						}
-					}
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
 					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
@@ -3876,6 +3849,7 @@ public class Skill {
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
 					player.sendMessage(ChatColor.GREEN + "[스킬]드래곤의 강림이 발동됩니다.");
+					world.playEffect(player.getLocation(), Effect.DRAGON_BREATH, 1.0f);
 					world.playSound(player.getLocation(), Sound.ENTITY_ENDER_DRAGON_AMBIENT, 3.0f, 1.0f);
 					world.playSound(player.getLocation(), Sound.ENTITY_ENDER_DRAGON_GROWL, 1.0f, 1.0f);
 
@@ -3948,7 +3922,7 @@ public class Skill {
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
 					
-					player.sendMessage(ChatColor.GREEN + "[스킬]터렛 설치가 발동됩니다.");
+					player.sendMessage(ChatColor.GREEN + "[스킬]'이거나 먹어라'가 발동됩니다.");
 					world.playSound(player.getLocation(), Sound.ENTITY_PLAYER_ATTACK_SWEEP, 1.5f, 1.0f);
 					
 					ArmorStand proTotem = (ArmorStand) player.getWorld().spawnEntity(player.getLocation(), EntityType.ARMOR_STAND);
@@ -4024,7 +3998,7 @@ public class Skill {
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
 					
-					player.sendMessage(ChatColor.GREEN + "[스킬]수류탄 투척이 발동됩니다.");
+					player.sendMessage(ChatColor.GREEN + "[스킬]'자 선물이야'가 발동됩니다.");
 					
 					Arrow arrow = player.launchProjectile(Arrow.class);
 					arrow.setShooter(player);
@@ -4078,7 +4052,7 @@ public class Skill {
 						itemIm.setDisplayName(ChatColor.BLUE + "마나");
 						item.setItemMeta(itemIm);
 						player.getInventory().setItem(8, item);
-						player.sendMessage(ChatColor.GREEN + "[스킬]긴급 탈출이 발동됩니다.");
+						player.sendMessage(ChatColor.GREEN + "[스킬]'씨 유 넥스트 타임'이 발동됩니다.");
 						world.playSound(player.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 1.0f, 1.0f);
 						Vector vec = player.getEyeLocation().getDirection().multiply(-4.0f);
 						player.setVelocity(vec);
@@ -4116,7 +4090,7 @@ public class Skill {
 					player.removePotionEffect(PotionEffectType.ABSORPTION);
 					player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 1, true, false, false));
 					player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 3, true, false, false));
-					player.sendMessage(ChatColor.GREEN + "[스킬]대대장의 격려가 발동됩니다.");
+					player.sendMessage(ChatColor.GREEN + "[스킬]'웃어라'가 발동됩니다.");
 					player.sendMessage(ChatColor.GREEN + "자신과 주변 아군의 체력이 회복됩니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 10 + ChatColor.RED + "]");
 					player.sendMessage(ChatColor.GREEN + "10초간 아군에게 저항이 부여됩니다.");
 					player.sendMessage(ChatColor.GREEN + "10초간 아군에게 추가 체력이 부여됩니다.");

@@ -919,7 +919,7 @@ public class QuestBoard {
 			var5im.setDisplayName(ChatColor.AQUA + "심연의 포보르의 심장");
 			var5.setItemMeta(var5im);
 			player.getInventory().addItem(var5);
-			player.sendMessage(ChatColor.AQUA + "심연의 포보르의 심장" + ChatColor.WHITE + "10개를 획득했다.");
+			player.sendMessage(ChatColor.AQUA + "심연의 포보르의 심장" + ChatColor.WHITE + " 10개를 획득했다.");
 			es.giveExp(player, 8500000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			return;

@@ -546,10 +546,10 @@ public class WeaponBuff {
 							}
 						}
 						
-						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "세계수의 축복이 담긴 헬멧")) {
-							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "세계수의 축복이 담긴 갑옷")) {
-								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "세계수의 축복이 담긴 각반")) {
-									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "세계수의 축복이 담긴 신발")) {
+						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 척살자 헬멧")) {
+							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 척살자 갑옷")) {
+								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 척살자 각반")) {
+									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 척살자 신발")) {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 8000,true,false,false));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0,true,false,false));
 									}
@@ -557,10 +557,10 @@ public class WeaponBuff {
 							}
 						}
 						
-						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 척살자 헬멧")) {
-							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 척살자 갑옷")) {
-								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 척살자 각반")) {
-									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 척살자 신발")) {
+						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "세계수의 축복이 담긴 헬멧")) {
+							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "세계수의 축복이 담긴 갑옷")) {
+								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "세계수의 축복이 담긴 각반")) {
+									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "세계수의 축복이 담긴 신발")) {
 										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 15000,true,false,false));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 1,true,false,false));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 1,true,false,false));

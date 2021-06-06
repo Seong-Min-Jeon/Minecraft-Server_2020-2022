@@ -48,23 +48,23 @@ public class CraftingItem {
 					if(tmp.equals("§7")) {
 						rank[idx] = 0;
 					} else if(tmp.equals("§f")) {
-						rank[idx] = 3;
+						rank[idx] = 1;
 					} else if(tmp.equals("§e")) {
-						rank[idx] = 9;
+						rank[idx] = 2;
 					} else if(tmp.equals("§d")) {
-						rank[idx] = 27;
-					} else if(tmp.equals("§b")) {
-						rank[idx] = 81;
-					} else if(tmp.equals("§4")) {
-						rank[idx] = 243;
-					} else if(tmp.equals("§5")) {
-						rank[idx] = 729;
-					} else if(tmp.equals("§a")) {
-						rank[idx] = 15;
-					} else if(tmp.equals("§3")) {
-						rank[idx] = 51;
-					} else if(tmp.equals("§6")) {
 						rank[idx] = 3;
+					} else if(tmp.equals("§b")) {
+						rank[idx] = 4;
+					} else if(tmp.equals("§4")) {
+						rank[idx] = 5;
+					} else if(tmp.equals("§5")) {
+						rank[idx] = 6;
+					} else if(tmp.equals("§a")) {
+						rank[idx] = 2;
+					} else if(tmp.equals("§3")) {
+						rank[idx] = -3;
+					} else if(tmp.equals("§6")) {
+						rank[idx] = 2;
 					} else {
 						rank[idx] = 1;
 					}
@@ -371,10 +371,6 @@ public class CraftingItem {
 				}
 			}
 			
-			for(int i : rank) {
-				totalStat += i / 3;
-			}
-			
 			for(int i : damAll) {
 				totalStat += i / 2;
 			}
@@ -414,6 +410,16 @@ public class CraftingItem {
 			for(int i : thorns) {
 				totalStat += i / 2;
 			}
+			
+			int avg = 0;
+			for(int i : rank) {
+				avg += i;
+			}
+			avg /= var;
+			if(avg < 1) {
+				avg = 1;
+			}
+			totalStat *= (avg/3.0);
 			
 			Random rnd = new Random();
 			

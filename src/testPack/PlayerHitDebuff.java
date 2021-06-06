@@ -3402,7 +3402,9 @@ public class PlayerHitDebuff {
 				int num = rnd.nextInt(10);
 				if (num == 0) {
 					((Zoglin) mob).setTarget(player);
-					player.setVelocity(new Vector(0, 3, 0));
+					if(!player.isSneaking()) {
+						player.setVelocity(new Vector(0, 1, 0));
+					}
 					player.damage(10000);
 					player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_PIG_HURT, 3.0f, 1.0f);
 				}
