@@ -3849,7 +3849,7 @@ public class Skill {
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
 					player.sendMessage(ChatColor.GREEN + "[스킬]드래곤의 강림이 발동됩니다.");
-					world.playEffect(player.getLocation(), Effect.DRAGON_BREATH, 1.0f);
+					world.playEffect(player.getLocation(), Effect.DRAGON_BREATH, 1);
 					world.playSound(player.getLocation(), Sound.ENTITY_ENDER_DRAGON_AMBIENT, 3.0f, 1.0f);
 					world.playSound(player.getLocation(), Sound.ENTITY_ENDER_DRAGON_GROWL, 1.0f, 1.0f);
 
