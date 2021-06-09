@@ -3549,7 +3549,6 @@ public class Skill {
 					player.sendMessage(ChatColor.GREEN + "[스킬]파워 오브 오더가 발동됩니다.");
 					world.playSound(player.getLocation(), Sound.ITEM_TRIDENT_THUNDER, 1.0f, 0.5f);
 					
-					Vector vec = player.getEyeLocation().getDirection().multiply(3.0f);
 					List<Entity> entitylist = player.getNearbyEntities(6, 4, 6);				
 					for (Entity nearEntity : entitylist) {
 						if (nearEntity instanceof Mob) {
@@ -3561,69 +3560,71 @@ public class Skill {
 						}
 					}	
 					
-					Location loc = player.getLocation();
-					Location loc2;
-					FallingBlock fb;
-					loc2 = loc.clone().add(new Vector(3, 0, 0));
-					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, loc2.clone().add(0,-1,0).getBlock().getType(), (byte) 0);
-					fb.setVelocity(new Vector(0, 0.5, 0));
-					fb.setDropItem(false);
-					
-					loc2 = loc.clone().add(new Vector(2, 0, 1));
-					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, loc2.clone().add(0,-1,0).getBlock().getType(), (byte) 0);
-					fb.setVelocity(new Vector(0, 0.5, 0));
-					fb.setDropItem(false);
-					
-					loc2 = loc.clone().add(new Vector(1, 0, 2));
-					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, loc2.clone().add(0,-1,0).getBlock().getType(), (byte) 0);
-					fb.setVelocity(new Vector(0, 0.5, 0));
-					fb.setDropItem(false);
-					fb.setPersistent(false);
-					
-					loc2 = loc.clone().add(new Vector(0, 0, 3));
-					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, loc2.clone().add(0,-1,0).getBlock().getType(), (byte) 0);
-					fb.setVelocity(new Vector(0, 0.5, 0));
-					fb.setDropItem(false);
-					
-					loc2 = loc.clone().add(new Vector(-3, 0, 0));
-					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, loc2.clone().add(0,-1,0).getBlock().getType(), (byte) 0);
-					fb.setVelocity(new Vector(0, 0.5, 0));
-					fb.setDropItem(false);
-					
-					loc2 = loc.clone().add(new Vector(-2, 0, 1));
-					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, loc2.clone().add(0,-1,0).getBlock().getType(), (byte) 0);
-					fb.setVelocity(new Vector(0, 0.5, 0));
-					fb.setDropItem(false);
-					
-					loc2 = loc.clone().add(new Vector(-1, 0, 2));
-					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, loc2.clone().add(0,-1,0).getBlock().getType(), (byte) 0);
-					fb.setVelocity(new Vector(0, 0.5, 0));
-					fb.setDropItem(false);
-					
-					loc2 = loc.clone().add(new Vector(-2, 0, -1));
-					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, loc2.clone().add(0,-1,0).getBlock().getType(), (byte) 0);
-					fb.setVelocity(new Vector(0, 0.5, 0));
-					fb.setDropItem(false);
-					
-					loc2 = loc.clone().add(new Vector(-1, 0, -2));
-					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, loc2.clone().add(0,-1,0).getBlock().getType(), (byte) 0);
-					fb.setVelocity(new Vector(0, 0.5, 0));
-					fb.setDropItem(false);
-					
-					loc2 = loc.clone().add(new Vector(0, 0, -3));
-					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, loc2.clone().add(0,-1,0).getBlock().getType(), (byte) 0);
-					fb.setVelocity(new Vector(0, 0.5, 0));
-					fb.setDropItem(false);
-					
-					loc2 = loc.clone().add(new Vector(1, 0, -2));
-					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, loc2.clone().add(0,-1,0).getBlock().getType(), (byte) 0);
-					fb.setVelocity(new Vector(0, 0.5, 0));
-					fb.setDropItem(false);
-					
-					loc2 = loc.clone().add(new Vector(2, 0, -1));
-					fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, loc2.clone().add(0,-1,0).getBlock().getType(), (byte) 0);
-					fb.setVelocity(new Vector(0, 0.5, 0));
-					fb.setDropItem(false);
+					if(!player.isInWater()) {
+						Location loc = player.getLocation();
+						Location loc2;
+						FallingBlock fb;
+						loc2 = loc.clone().add(new Vector(3, 0, 0));
+						fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, loc2.clone().add(0,-1,0).getBlock().getType(), (byte) 0);
+						fb.setVelocity(new Vector(0, 0.5, 0));
+						fb.setDropItem(false);
+						
+						loc2 = loc.clone().add(new Vector(2, 0, 1));
+						fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, loc2.clone().add(0,-1,0).getBlock().getType(), (byte) 0);
+						fb.setVelocity(new Vector(0, 0.5, 0));
+						fb.setDropItem(false);
+						
+						loc2 = loc.clone().add(new Vector(1, 0, 2));
+						fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, loc2.clone().add(0,-1,0).getBlock().getType(), (byte) 0);
+						fb.setVelocity(new Vector(0, 0.5, 0));
+						fb.setDropItem(false);
+						fb.setPersistent(false);
+						
+						loc2 = loc.clone().add(new Vector(0, 0, 3));
+						fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, loc2.clone().add(0,-1,0).getBlock().getType(), (byte) 0);
+						fb.setVelocity(new Vector(0, 0.5, 0));
+						fb.setDropItem(false);
+						
+						loc2 = loc.clone().add(new Vector(-3, 0, 0));
+						fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, loc2.clone().add(0,-1,0).getBlock().getType(), (byte) 0);
+						fb.setVelocity(new Vector(0, 0.5, 0));
+						fb.setDropItem(false);
+						
+						loc2 = loc.clone().add(new Vector(-2, 0, 1));
+						fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, loc2.clone().add(0,-1,0).getBlock().getType(), (byte) 0);
+						fb.setVelocity(new Vector(0, 0.5, 0));
+						fb.setDropItem(false);
+						
+						loc2 = loc.clone().add(new Vector(-1, 0, 2));
+						fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, loc2.clone().add(0,-1,0).getBlock().getType(), (byte) 0);
+						fb.setVelocity(new Vector(0, 0.5, 0));
+						fb.setDropItem(false);
+						
+						loc2 = loc.clone().add(new Vector(-2, 0, -1));
+						fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, loc2.clone().add(0,-1,0).getBlock().getType(), (byte) 0);
+						fb.setVelocity(new Vector(0, 0.5, 0));
+						fb.setDropItem(false);
+						
+						loc2 = loc.clone().add(new Vector(-1, 0, -2));
+						fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, loc2.clone().add(0,-1,0).getBlock().getType(), (byte) 0);
+						fb.setVelocity(new Vector(0, 0.5, 0));
+						fb.setDropItem(false);
+						
+						loc2 = loc.clone().add(new Vector(0, 0, -3));
+						fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, loc2.clone().add(0,-1,0).getBlock().getType(), (byte) 0);
+						fb.setVelocity(new Vector(0, 0.5, 0));
+						fb.setDropItem(false);
+						
+						loc2 = loc.clone().add(new Vector(1, 0, -2));
+						fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, loc2.clone().add(0,-1,0).getBlock().getType(), (byte) 0);
+						fb.setVelocity(new Vector(0, 0.5, 0));
+						fb.setDropItem(false);
+						
+						loc2 = loc.clone().add(new Vector(2, 0, -1));
+						fb = (FallingBlock) player.getWorld().spawnFallingBlock(loc2, loc2.clone().add(0,-1,0).getBlock().getType(), (byte) 0);
+						fb.setVelocity(new Vector(0, 0.5, 0));
+						fb.setDropItem(false);
+					}
 					
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");

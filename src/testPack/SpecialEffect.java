@@ -25,7 +25,7 @@ public class SpecialEffect {
 		return 0;
 	}
 	
-	public int a2(Player player, int thorns) {
+	public double a2(Player player, double thorns) {
 		try {
 			if(player.getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "무지개 반사")) {
 				return thorns;
@@ -36,7 +36,7 @@ public class SpecialEffect {
 		return 0;
 	}
 	
-	public int a3(Player player, int thorns) {
+	public double a3(Player player, double thorns) {
 		try {
 			if(player.getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "무한 반사")) {
 				return thorns * 2;
@@ -47,7 +47,7 @@ public class SpecialEffect {
 		return 0;
 	}
 	
-	public int a4(Player player, int thorns) {
+	public double a4(Player player, double thorns) {
 		try {
 			if(player.getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "미라클 반사")) {
 				return thorns * 3;
@@ -58,7 +58,7 @@ public class SpecialEffect {
 		return 0;
 	}
 	
-	public int a5(Player player, int thorns) {
+	public double a5(Player player, double thorns) {
 		try {
 			if(player.getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "블랙홀 반사")) {
 				return thorns * 4;
@@ -69,7 +69,7 @@ public class SpecialEffect {
 		return 0;
 	}
 	
-	public int a6(Player player, int thorns) {
+	public double a6(Player player, double thorns) {
 		try {
 			if(player.getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_PURPLE + "우주 반사")) {
 				return thorns * 5;
@@ -525,7 +525,7 @@ public class SpecialEffect {
 	}
 	
 	// 반격 데미지
-	public int a10030(Player player, int thorns) {
+	public double a10030(Player player, double thorns) {
 		ItemStack item = player.getInventory().getItemInOffHand();
 		int max = 0;
 		if(item.getType() == Material.DIAMOND_AXE) {

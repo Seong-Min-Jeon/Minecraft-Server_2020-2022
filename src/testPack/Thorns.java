@@ -7,9 +7,9 @@ import org.bukkit.inventory.ItemStack;
 
 public class Thorns {
 	
-	private int thorns = 0;
+	private double thorns = 0;
 
-	public int thorns(Player player, Entity entity) {
+	public double thorns(Player player, Entity entity) {
 //		if(player.getInventory().getItemInMainHand() != null) {
 //			
 //		}
@@ -78,6 +78,8 @@ public class Thorns {
 		} catch(Exception e) {
 			
 		}
+		
+		thorns = thorns * Math.pow(player.getLevel(), 1.2) / 5000;
 		
 		thorns += new SpecialEffect().a10030(player, thorns);
 		thorns += new SpecialEffect().a2(player, thorns);
