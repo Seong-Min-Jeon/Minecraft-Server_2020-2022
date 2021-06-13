@@ -8816,6 +8816,13 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.isOp() == false) {
 			event.setCancelled(true);
 		}
+		
+		Location loc = player.getLocation();
+		if (loc.getX() <= 3785 && loc.getY() <= 28 && loc.getZ() <= 3746 && 
+				loc.getX() >= 3725 && loc.getY() >= 0 && loc.getZ() >= 3700) {
+			event.setCancelled(true);
+		}
+			
 	}
 	
 	@EventHandler
