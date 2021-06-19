@@ -278,6 +278,136 @@ public class Cmd13Chest implements CommandExecutor {
 							player.sendMessage(ChatColor.RED + "Not available chest");
 							return true;
 						}
+					} else if(args[0].equalsIgnoreCase("21")) {
+						if(userAL.containsKey(player.getUniqueId().toString())) {
+							if(userAL.get(player.getUniqueId().toString()) < 21) {
+								player.sendMessage(ChatColor.RED + "Not available chest");
+								return true;
+							}
+							player.sendMessage(ChatColor.GREEN + "You can open chest 21");
+							putSelectAL(uuid, 21);
+							return true;
+						} else {
+							player.sendMessage(ChatColor.RED + "Not available chest");
+							return true;
+						}
+					} else if(args[0].equalsIgnoreCase("22")) {
+						if(userAL.containsKey(player.getUniqueId().toString())) {
+							if(userAL.get(player.getUniqueId().toString()) < 22) {
+								player.sendMessage(ChatColor.RED + "Not available chest");
+								return true;
+							}
+							player.sendMessage(ChatColor.GREEN + "You can open chest 22");
+							putSelectAL(uuid, 22);
+							return true;
+						} else {
+							player.sendMessage(ChatColor.RED + "Not available chest");
+							return true;
+						}
+					} else if(args[0].equalsIgnoreCase("23")) {
+						if(userAL.containsKey(player.getUniqueId().toString())) {
+							if(userAL.get(player.getUniqueId().toString()) < 23) {
+								player.sendMessage(ChatColor.RED + "Not available chest");
+								return true;
+							}
+							player.sendMessage(ChatColor.GREEN + "You can open chest 23");
+							putSelectAL(uuid, 23);
+							return true;
+						} else {
+							player.sendMessage(ChatColor.RED + "Not available chest");
+							return true;
+						}
+					} else if(args[0].equalsIgnoreCase("24")) {
+						if(userAL.containsKey(player.getUniqueId().toString())) {
+							if(userAL.get(player.getUniqueId().toString()) < 24) {
+								player.sendMessage(ChatColor.RED + "Not available chest");
+								return true;
+							}
+							player.sendMessage(ChatColor.GREEN + "You can open chest 24");
+							putSelectAL(uuid, 24);
+							return true;
+						} else {
+							player.sendMessage(ChatColor.RED + "Not available chest");
+							return true;
+						}
+					} else if(args[0].equalsIgnoreCase("25")) {
+						if(userAL.containsKey(player.getUniqueId().toString())) {
+							if(userAL.get(player.getUniqueId().toString()) < 25) {
+								player.sendMessage(ChatColor.RED + "Not available chest");
+								return true;
+							}
+							player.sendMessage(ChatColor.GREEN + "You can open chest 25");
+							putSelectAL(uuid, 25);
+							return true;
+						} else {
+							player.sendMessage(ChatColor.RED + "Not available chest");
+							return true;
+						}
+					} else if(args[0].equalsIgnoreCase("26")) {
+						if(userAL.containsKey(player.getUniqueId().toString())) {
+							if(userAL.get(player.getUniqueId().toString()) < 26) {
+								player.sendMessage(ChatColor.RED + "Not available chest");
+								return true;
+							}
+							player.sendMessage(ChatColor.GREEN + "You can open chest 26");
+							putSelectAL(uuid, 26);
+							return true;
+						} else {
+							player.sendMessage(ChatColor.RED + "Not available chest");
+							return true;
+						}
+					} else if(args[0].equalsIgnoreCase("27")) {
+						if(userAL.containsKey(player.getUniqueId().toString())) {
+							if(userAL.get(player.getUniqueId().toString()) < 27) {
+								player.sendMessage(ChatColor.RED + "Not available chest");
+								return true;
+							}
+							player.sendMessage(ChatColor.GREEN + "You can open chest 27");
+							putSelectAL(uuid, 27);
+							return true;
+						} else {
+							player.sendMessage(ChatColor.RED + "Not available chest");
+							return true;
+						}
+					} else if(args[0].equalsIgnoreCase("28")) {
+						if(userAL.containsKey(player.getUniqueId().toString())) {
+							if(userAL.get(player.getUniqueId().toString()) < 28) {
+								player.sendMessage(ChatColor.RED + "Not available chest");
+								return true;
+							}
+							player.sendMessage(ChatColor.GREEN + "You can open chest 28");
+							putSelectAL(uuid, 28);
+							return true;
+						} else {
+							player.sendMessage(ChatColor.RED + "Not available chest");
+							return true;
+						}
+					} else if(args[0].equalsIgnoreCase("29")) {
+						if(userAL.containsKey(player.getUniqueId().toString())) {
+							if(userAL.get(player.getUniqueId().toString()) < 29) {
+								player.sendMessage(ChatColor.RED + "Not available chest");
+								return true;
+							}
+							player.sendMessage(ChatColor.GREEN + "You can open chest 29");
+							putSelectAL(uuid, 29);
+							return true;
+						} else {
+							player.sendMessage(ChatColor.RED + "Not available chest");
+							return true;
+						}
+					} else if(args[0].equalsIgnoreCase("30")) {
+						if(userAL.containsKey(player.getUniqueId().toString())) {
+							if(userAL.get(player.getUniqueId().toString()) < 30) {
+								player.sendMessage(ChatColor.RED + "Not available chest");
+								return true;
+							}
+							player.sendMessage(ChatColor.GREEN + "You can open chest 30");
+							putSelectAL(uuid, 30);
+							return true;
+						} else {
+							player.sendMessage(ChatColor.RED + "Not available chest");
+							return true;
+						}
 					} else {
 						player.sendMessage(ChatColor.RED + "Wrong Input!");
 						return true;

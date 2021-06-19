@@ -204,9 +204,6 @@ public class Main extends JavaPlugin implements Listener{
 	Random rnd = new Random();
 	World world;
 	
-	int eventNum1 = 0;
-	int eventNum2 = 0;
-
 	Cmd12EmeraldToggle et = new Cmd12EmeraldToggle();
  
 	private int taskID;
@@ -4105,31 +4102,6 @@ public class Main extends JavaPlugin implements Listener{
 						return;
 					}
 				}
-			}
-		} catch(Exception e) {
-			
-		}
-		
-		try {
-			if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "1등 선물상자")) {
-				int num = rnd.nextInt(500-eventNum1);
-				if(num == 0) {
-					event.getItemDrop().remove();
-					for(Player all : Bukkit.getOnlinePlayers()) {
-						all.sendMessage(ChatColor.GOLD + "" + event.getPlayer() + "님이 당첨되셨습니다. 축하합니다.");
-					}
-				}
-				eventNum1++;
-			}
-			if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "2등 선물상자")) {
-				int num = rnd.nextInt(500-eventNum2);
-				if(num == 0) {
-					event.getItemDrop().remove();
-					for(Player all : Bukkit.getOnlinePlayers()) {
-						all.sendMessage(ChatColor.GOLD + "" + event.getPlayer() + "님이 당첨되셨습니다. 축하합니다.");
-					}
-				}
-				eventNum2++;
 			}
 		} catch(Exception e) {
 			
@@ -9255,7 +9227,7 @@ public class Main extends JavaPlugin implements Listener{
 			}
 			// 강화템 거래불가
 			try {
-				Inventory tradeUI = event.getClickedInventory();
+				Inventory tradeUI = event.getInventory();
 				
 				if(tradeUI.getItem(4).getType() == Material.CHAIN && tradeUI.getItem(13).getType() == Material.CHAIN) {
 					try {
@@ -9272,21 +9244,21 @@ public class Main extends JavaPlugin implements Listener{
 						
 					}
 					
-//					if(event.isShiftClick()) {
-//						try {
-//							for(String str : event.getCurrentItem().getItemMeta().getLore()) {
-//								try {
-//									if(str.substring(0, 5).equals("§8내구도")) {
-//										event.setCancelled(true);
-//									}
-//								} catch(Exception e1) {
-//									
-//								}
-//							}
-//						} catch(Exception e) {
-//							
-//						}
-//					}
+					if(event.isShiftClick()) {
+						try {
+							for(String str : event.getCurrentItem().getItemMeta().getLore()) {
+								try {
+									if(str.substring(0, 5).equals("§8내구도")) {
+										event.setCancelled(true);
+									}
+								} catch(Exception e1) {
+									
+								}
+							}
+						} catch(Exception e) {
+							
+						}
+					}
 				}
 				
 			} catch(Exception e) {

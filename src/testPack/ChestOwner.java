@@ -129,6 +129,20 @@ public class ChestOwner {
 				return;
 			}
 			closeInv(chestLoc.getBlock(), inv);
+		} else if(num == 10) {
+			Location chestLoc = new Location(player.getWorld(), 3782, 19, 3745);
+			if(inv == null) {
+				openInv(player, chestLoc.getBlock());
+				return;
+			}
+			closeInv(chestLoc.getBlock(), inv);
+		} else if(num == 11) {
+			Location chestLoc = new Location(player.getWorld(), 3782, 21, 3745);
+			if(inv == null) {
+				openInv(player, chestLoc.getBlock());
+				return;
+			}
+			closeInv(chestLoc.getBlock(), inv);
 		}
 		
 	}
@@ -169,6 +183,27 @@ public class ChestOwner {
 				return;
 			}
 			closeInv(chestLoc.getBlock(), inv);
+		} else if(num == 7) {
+			Location chestLoc = new Location(player.getWorld(), 3780, 13, 3745);
+			if(inv == null) {
+				openInv(player, chestLoc.getBlock());
+				return;
+			}
+			closeInv(chestLoc.getBlock(), inv);
+		} else if(num == 8) {
+			Location chestLoc = new Location(player.getWorld(), 3780, 15, 3745);
+			if(inv == null) {
+				openInv(player, chestLoc.getBlock());
+				return;
+			}
+			closeInv(chestLoc.getBlock(), inv);
+		} else if(num == 9) {
+			Location chestLoc = new Location(player.getWorld(), 3780, 17, 3745);
+			if(inv == null) {
+				openInv(player, chestLoc.getBlock());
+				return;
+			}
+			closeInv(chestLoc.getBlock(), inv);
 		}
 		
 	}
@@ -197,6 +232,13 @@ public class ChestOwner {
 			closeInv(chestLoc.getBlock(), inv);
 		} else if(num == 5) {
 			Location chestLoc = new Location(player.getWorld(), 3778, 9, 3745);
+			if(inv == null) {
+				openInv(player, chestLoc.getBlock());
+				return;
+			}
+			closeInv(chestLoc.getBlock(), inv);
+		} else if(num == 6) {
+			Location chestLoc = new Location(player.getWorld(), 3778, 11, 3745);
 			if(inv == null) {
 				openInv(player, chestLoc.getBlock());
 				return;
