@@ -203,6 +203,9 @@ public class Main extends JavaPlugin implements Listener{
 	
 	Random rnd = new Random();
 	World world;
+	
+	int eventNum1 = 0;
+	int eventNum2 = 0;
 
 	Cmd12EmeraldToggle et = new Cmd12EmeraldToggle();
  
@@ -337,11 +340,11 @@ public class Main extends JavaPlugin implements Listener{
 		} else if(player.getDisplayName().equalsIgnoreCase("WoolRing")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.GREEN + "'도트랑 도트가 제일 좋아' 울링.");
 		} else if(player.getDisplayName().equalsIgnoreCase("_nanoboost_")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.RED + "'과실에서 모기를 잡은' 나노부스트.");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.RED + "'대행자 버프를 받은 (하지만 감마가 준제인)' 나노부스트.");
 		} else if(player.getDisplayName().equalsIgnoreCase("why9196")) {
 			event.setJoinMessage("확률이 뭐죠? " + ChatColor.BLUE + "'0.0068% 돌파한' 와이.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Akilae3102")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.AQUA + "'하와와 무야호 멈춰!' 아킬레.");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.AQUA + "'금제가 뭐죠?' 아킬레.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Espina_ID")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.BOLD + "'그저 군인' 에스피나.");
 		} else if(player.getDisplayName().equalsIgnoreCase("KangOSung")) {
@@ -4107,6 +4110,31 @@ public class Main extends JavaPlugin implements Listener{
 			
 		}
 		
+		try {
+			if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "1등 선물상자")) {
+				int num = rnd.nextInt(500-eventNum1);
+				if(num == 0) {
+					event.getItemDrop().remove();
+					for(Player all : Bukkit.getOnlinePlayers()) {
+						all.sendMessage(ChatColor.GOLD + "" + event.getPlayer() + "님이 당첨되셨습니다. 축하합니다.");
+					}
+				}
+				eventNum1++;
+			}
+			if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "2등 선물상자")) {
+				int num = rnd.nextInt(500-eventNum2);
+				if(num == 0) {
+					event.getItemDrop().remove();
+					for(Player all : Bukkit.getOnlinePlayers()) {
+						all.sendMessage(ChatColor.GOLD + "" + event.getPlayer() + "님이 당첨되셨습니다. 축하합니다.");
+					}
+				}
+				eventNum2++;
+			}
+		} catch(Exception e) {
+			
+		}
+		
 		TPScroll tp = new TPScroll();
 		VilTPScroll vilTP = new VilTPScroll();
 		INNTicket ticket = new INNTicket();
@@ -4390,6 +4418,25 @@ public class Main extends JavaPlugin implements Listener{
 		if(event.getItemDrop().getItemStack().getType() == Material.FIRE_CORAL_BLOCK) {
 			player.sendMessage(ChatColor.RED + "드랍 불가 아이템입니다.");
 			event.setCancelled(true);
+		}
+		if(event.getItemDrop().getItemStack().getType() == Material.ENDER_EYE) {
+			player.sendMessage(ChatColor.RED + "드랍 불가 아이템입니다.");
+			event.setCancelled(true);
+		}
+		
+		try {
+			for(String str : event.getItemDrop().getItemStack().getItemMeta().getLore()) {
+				try {
+					if(str.substring(0, 5).equals("§8내구도")) {
+						player.sendMessage(ChatColor.RED + "드랍 불가 아이템입니다.");
+						event.setCancelled(true);
+					}
+				} catch(Exception e1) {
+					
+				}
+			}
+		} catch(Exception e) {
+			
 		}
 		
 	}
@@ -9206,6 +9253,45 @@ public class Main extends JavaPlugin implements Listener{
 			} catch(Exception e) {
 				
 			}
+			// 강화템 거래불가
+			try {
+				Inventory tradeUI = event.getClickedInventory();
+				
+				if(tradeUI.getItem(4).getType() == Material.CHAIN && tradeUI.getItem(13).getType() == Material.CHAIN) {
+					try {
+						for(String str : event.getCurrentItem().getItemMeta().getLore()) {
+							try {
+								if(str.substring(0, 5).equals("§8내구도")) {
+									event.setCancelled(true);
+								}
+							} catch(Exception e1) {
+								
+							}
+						}
+					} catch(Exception e) {
+						
+					}
+					
+//					if(event.isShiftClick()) {
+//						try {
+//							for(String str : event.getCurrentItem().getItemMeta().getLore()) {
+//								try {
+//									if(str.substring(0, 5).equals("§8내구도")) {
+//										event.setCancelled(true);
+//									}
+//								} catch(Exception e1) {
+//									
+//								}
+//							}
+//						} catch(Exception e) {
+//							
+//						}
+//					}
+				}
+				
+			} catch(Exception e) {
+				
+			}
 			// 못건드리는 템
 			try {
 				ItemStack clicked = event.getCurrentItem();
@@ -9569,11 +9655,11 @@ public class Main extends JavaPlugin implements Listener{
 		} else if (player.getDisplayName().equalsIgnoreCase("WoolRing")) {
 			event.setQuitMessage(ChatColor.GREEN + "'노란 머리가 젤다죠?' 울링" + ChatColor.WHITE + "님이 아뇨 뚱인데요?");
 		} else if (player.getDisplayName().equalsIgnoreCase("_nanoboost_")) {
-			event.setQuitMessage(ChatColor.RED + "거 뭐 루실같은거 없어?");
+			event.setQuitMessage(ChatColor.RED + "드라그마 덱은 어디에 있는가");
 		} else if(player.getDisplayName().equalsIgnoreCase("why9196")) {
 			event.setQuitMessage(ChatColor.BLUE + "??????????!?????");
 		} else if(player.getDisplayName().equalsIgnoreCase("Akilae3102")) {
-			event.setQuitMessage(ChatColor.AQUA + "'철권 그마는 가벼운' 아킬레가 세상을 떠났습니다.");
+			event.setQuitMessage(ChatColor.AQUA + "'녹단은 가벼운' 아킬레가 세상을 떠났습니다.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Espina_ID")) {
 			event.setQuitMessage(ChatColor.BOLD + "'탈영병' 에스피나의 시간이 얼마 남지 않았습니다.");
 		} else if(player.getDisplayName().equalsIgnoreCase("KangOSung")) {

@@ -997,6 +997,228 @@ public class CraftingPotion {
 						}
 						resultStat -= tmp;
 					}
+				} else {
+					if(blue > 200) {
+						int tmp = rnd.nextInt(resultStat);
+						stat[3] = tmp / 500;
+						if(stat[3] > 5) {
+							stat[3] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[4] = tmp / 500;
+						if(stat[4] > 3) {
+							stat[4] = 3;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[0] = tmp / 2;
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[1] = tmp / 1000;
+						if(stat[1] > 5) {
+							stat[1] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[2] = tmp / 2;
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[5] = tmp / 1000;
+						if(stat[5] > 4) {
+							stat[5] = 4;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[6] = tmp / 300;
+						if(stat[6] > 5) {
+							stat[6] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[7] = tmp / 500;
+						if(stat[7] > 50) {
+							stat[7] = 50;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[8] = tmp / 500;
+						if(stat[8] > 50) {
+							stat[8] = 50;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[9] = tmp / 700;
+						if(stat[9] > 1) {
+							stat[9] = 1;
+						}
+						resultStat -= tmp;
+					} else if(blue > 100) {
+						int tmp = rnd.nextInt(resultStat);
+						stat[3] = tmp / 1000;
+						if(stat[3] > 5) {
+							stat[3] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[4] = tmp / 1000;
+						if(stat[4] > 3) {
+							stat[4] = 3;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[0] = tmp / 4;
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[1] = tmp / 1000;
+						if(stat[1] > 5) {
+							stat[1] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[2] = tmp / 2;
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[5] = tmp / 1000;
+						if(stat[5] > 4) {
+							stat[5] = 4;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[6] = tmp / 300;
+						if(stat[6] > 5) {
+							stat[6] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[7] = tmp / 500;
+						if(stat[7] > 50) {
+							stat[7] = 50;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[8] = tmp / 500;
+						if(stat[8] > 50) {
+							stat[8] = 50;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[9] = tmp / 700;
+						if(stat[9] > 1) {
+							stat[9] = 1;
+						}
+						resultStat -= tmp;
+					} else if(blue > 50) {
+						int tmp = rnd.nextInt(resultStat);
+						stat[3] = tmp / 1500;
+						if(stat[3] > 5) {
+							stat[3] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[4] = tmp / 1500;
+						if(stat[4] > 3) {
+							stat[4] = 3;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[0] = tmp / 5;
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[1] = tmp / 1000;
+						if(stat[1] > 5) {
+							stat[1] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[2] = tmp / 2;
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[5] = tmp / 1000;
+						if(stat[5] > 4) {
+							stat[5] = 4;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[6] = tmp / 300;
+						if(stat[6] > 5) {
+							stat[6] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[7] = tmp / 500;
+						if(stat[7] > 50) {
+							stat[7] = 50;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[8] = tmp / 500;
+						if(stat[8] > 50) {
+							stat[8] = 50;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[9] = tmp / 700;
+						if(stat[9] > 1) {
+							stat[9] = 1;
+						}
+						resultStat -= tmp;
+					} else {
+						int tmp = rnd.nextInt(resultStat);
+						stat[6] = tmp / 300;
+						if(stat[6] > 5) {
+							stat[6] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[7] = tmp / 500;
+						if(stat[7] > 50) {
+							stat[7] = 50;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[8] = tmp / 500;
+						if(stat[8] > 50) {
+							stat[8] = 50;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[9] = tmp / 700;
+						if(stat[9] > 1) {
+							stat[9] = 1;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[3] = tmp / 1000;
+						if(stat[3] > 5) {
+							stat[3] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[4] = tmp / 1000;
+						if(stat[4] > 3) {
+							stat[4] = 3;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[0] = tmp / 4;
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[1] = tmp / 1000;
+						if(stat[1] > 5) {
+							stat[1] = 5;
+						}
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[2] = tmp / 2;
+						resultStat -= tmp;
+						tmp = rnd.nextInt(resultStat);
+						stat[5] = tmp / 1000;
+						if(stat[5] > 4) {
+							stat[5] = 4;
+						}
+						resultStat -= tmp;
+					}
 				}
 			}
 			
