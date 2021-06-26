@@ -10,8 +10,10 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.Particle;
 import org.bukkit.craftbukkit.v1_16_R3.CraftServer;
 import org.bukkit.craftbukkit.v1_16_R3.CraftWorld;
+import org.bukkit.craftbukkit.v1_16_R3.entity.CraftLivingEntity;
 import org.bukkit.craftbukkit.v1_16_R3.entity.CraftPlayer;
 import org.bukkit.craftbukkit.v1_16_R3.inventory.CraftItemStack;
 import org.bukkit.entity.Creeper;
@@ -190,8 +192,9 @@ public class NPCManager {
 	
 	public void allTime(Player player) {
 		try {
-			addNPCPacket(player, npc9());
-			addEquipPacket(player, npc9().getId(), Material.GOLDEN_HELMET, Material.GOLDEN_CHESTPLATE, Material.GOLDEN_LEGGINGS
+			EntityPlayer npc9 = npc9();
+			addNPCPacket(player, npc9);
+			addEquipPacket(player, npc9, Material.GOLDEN_HELMET, Material.GOLDEN_CHESTPLATE, Material.GOLDEN_LEGGINGS
 					, Material.GOLDEN_BOOTS, Material.OAK_SLAB, Material.AIR);
 		} catch(Exception e) {
 			
@@ -325,16 +328,15 @@ public class NPCManager {
 		// connection.sendPacket(new PacketPlayOutPlayerInfo(PacketPlayOutPlayerInfo.EnumPlayerInfoAction.REMOVE_PLAYER, npc));
 	}
 	
-	public void addEquipPacket(Player player, int id, Material head, Material chest, Material legs, Material feet, Material main, Material off) {
-		final List<Pair<EnumItemSlot, net.minecraft.server.v1_16_R3.ItemStack>> equipmentList = new ArrayList<>();
-		equipmentList.add(new Pair<>(EnumItemSlot.HEAD, CraftItemStack.asNMSCopy(new org.bukkit.inventory.ItemStack(head))));
-		equipmentList.add(new Pair<>(EnumItemSlot.CHEST, CraftItemStack.asNMSCopy(new org.bukkit.inventory.ItemStack(chest))));
-		equipmentList.add(new Pair<>(EnumItemSlot.LEGS, CraftItemStack.asNMSCopy(new org.bukkit.inventory.ItemStack(legs))));
-		equipmentList.add(new Pair<>(EnumItemSlot.FEET, CraftItemStack.asNMSCopy(new org.bukkit.inventory.ItemStack(feet))));
-		equipmentList.add(new Pair<>(EnumItemSlot.MAINHAND, CraftItemStack.asNMSCopy(new org.bukkit.inventory.ItemStack(main))));
-		equipmentList.add(new Pair<>(EnumItemSlot.OFFHAND, CraftItemStack.asNMSCopy(new org.bukkit.inventory.ItemStack(off))));
-		final PacketPlayOutEntityEquipment entityEquipment = new PacketPlayOutEntityEquipment(id, equipmentList);
-		
+	public void addEquipPacket(Player player, EntityPlayer npc, Material head, Material chest, Material legs, Material feet, Material main, Material off) {
+		List<Pair<EnumItemSlot, net.minecraft.server.v1_16_R3.ItemStack>> equipmentList = new ArrayList<>();
+		equipmentList.add(new Pair<>(EnumItemSlot.HEAD, CraftItemStack.asNMSCopy(new ItemStack(head))));
+		equipmentList.add(new Pair<>(EnumItemSlot.CHEST, CraftItemStack.asNMSCopy(new ItemStack(chest))));
+		equipmentList.add(new Pair<>(EnumItemSlot.LEGS, CraftItemStack.asNMSCopy(new ItemStack(legs))));
+		equipmentList.add(new Pair<>(EnumItemSlot.FEET, CraftItemStack.asNMSCopy(new ItemStack(feet))));
+		equipmentList.add(new Pair<>(EnumItemSlot.MAINHAND, CraftItemStack.asNMSCopy(new ItemStack(main))));
+		equipmentList.add(new Pair<>(EnumItemSlot.OFFHAND, CraftItemStack.asNMSCopy(new ItemStack(off))));
+		PacketPlayOutEntityEquipment entityEquipment = new PacketPlayOutEntityEquipment(npc.getId(), equipmentList);
 		PlayerConnection connection = ((CraftPlayer) player).getHandle().playerConnection;
 		connection.sendPacket(entityEquipment);
 	}
