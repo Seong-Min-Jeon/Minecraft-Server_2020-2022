@@ -2,28 +2,36 @@ package testPack;
 
 import java.io.InputStreamReader;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.craftbukkit.v1_16_R3.CraftServer;
 import org.bukkit.craftbukkit.v1_16_R3.CraftWorld;
 import org.bukkit.craftbukkit.v1_16_R3.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_16_R3.inventory.CraftItemStack;
 import org.bukkit.entity.Creeper;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.SkeletonHorse;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.mojang.authlib.GameProfile;
 import com.mojang.authlib.properties.Property;
+import com.mojang.datafixers.util.Pair;
 
 import net.minecraft.server.v1_16_R3.EntityPlayer;
+import net.minecraft.server.v1_16_R3.EnumItemSlot;
 import net.minecraft.server.v1_16_R3.MinecraftServer;
 import net.minecraft.server.v1_16_R3.PacketPlayOutEntityDestroy;
+import net.minecraft.server.v1_16_R3.PacketPlayOutEntityEquipment;
 import net.minecraft.server.v1_16_R3.PacketPlayOutEntityHeadRotation;
 import net.minecraft.server.v1_16_R3.PacketPlayOutNamedEntitySpawn;
 import net.minecraft.server.v1_16_R3.PacketPlayOutPlayerInfo;
@@ -39,6 +47,10 @@ public class NPCManager {
 	
 	public NPCManager(Player player) {
 		questNPC(player);
+	}
+	
+	public NPCManager(Player player, int num) {
+		allTime(player);
 	}
 	
 	public EntityPlayer npc1() {
@@ -161,6 +173,31 @@ public class NPCManager {
 		return npc;
 	}
 	
+	public EntityPlayer npc9() {
+		Location loc = new Location(Bukkit.getWorld("world"), 973.5, 64, 41.5, 0, 0);
+		
+		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "에일을 구원한 영웅");
+		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
+		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
+		String[] name = getSkin("why9196");
+		if(name == null) {
+			System.out.println("와이 확인 불가");
+		} else {
+			gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
+		}
+		return npc;
+	}
+	
+	public void allTime(Player player) {
+		try {
+			addNPCPacket(player, npc9());
+			addEquipPacket(player, npc9().getId(), Material.GOLDEN_HELMET, Material.GOLDEN_CHESTPLATE, Material.GOLDEN_LEGGINGS
+					, Material.GOLDEN_BOOTS, Material.OAK_SLAB, Material.AIR);
+		} catch(Exception e) {
+			
+		}
+	}
+	
 	public void questNPC(Player player) {
 		try {
 			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===설원의 가희2===")) {
@@ -266,10 +303,17 @@ public class NPCManager {
 	}
 	
 	public void addNPCPacket(Player player, EntityPlayer npc) {
+		
 		PlayerConnection connection = ((CraftPlayer) player).getHandle().playerConnection;
-		connection.sendPacket(new PacketPlayOutPlayerInfo(PacketPlayOutPlayerInfo.EnumPlayerInfoAction.ADD_PLAYER, npc));
-		connection.sendPacket(new PacketPlayOutNamedEntitySpawn(npc));
-		connection.sendPacket(new PacketPlayOutEntityHeadRotation(npc, (byte) (npc.yaw * 256 / 360)));
+		
+		new BukkitRunnable() {
+			@Override
+			public void run() {
+				connection.sendPacket(new PacketPlayOutPlayerInfo(PacketPlayOutPlayerInfo.EnumPlayerInfoAction.ADD_PLAYER, npc));
+				connection.sendPacket(new PacketPlayOutNamedEntitySpawn(npc));
+				connection.sendPacket(new PacketPlayOutEntityHeadRotation(npc, (byte) (npc.yaw * 256 / 360)));
+			}
+		}.runTaskLater(Main.getPlugin(Main.class), 2);
 
 		new BukkitRunnable() {
 			@Override
@@ -279,6 +323,20 @@ public class NPCManager {
 		}.runTaskLater(Main.getPlugin(Main.class), 20);
 
 		// connection.sendPacket(new PacketPlayOutPlayerInfo(PacketPlayOutPlayerInfo.EnumPlayerInfoAction.REMOVE_PLAYER, npc));
+	}
+	
+	public void addEquipPacket(Player player, int id, Material head, Material chest, Material legs, Material feet, Material main, Material off) {
+		final List<Pair<EnumItemSlot, net.minecraft.server.v1_16_R3.ItemStack>> equipmentList = new ArrayList<>();
+		equipmentList.add(new Pair<>(EnumItemSlot.HEAD, CraftItemStack.asNMSCopy(new org.bukkit.inventory.ItemStack(head))));
+		equipmentList.add(new Pair<>(EnumItemSlot.CHEST, CraftItemStack.asNMSCopy(new org.bukkit.inventory.ItemStack(chest))));
+		equipmentList.add(new Pair<>(EnumItemSlot.LEGS, CraftItemStack.asNMSCopy(new org.bukkit.inventory.ItemStack(legs))));
+		equipmentList.add(new Pair<>(EnumItemSlot.FEET, CraftItemStack.asNMSCopy(new org.bukkit.inventory.ItemStack(feet))));
+		equipmentList.add(new Pair<>(EnumItemSlot.MAINHAND, CraftItemStack.asNMSCopy(new org.bukkit.inventory.ItemStack(main))));
+		equipmentList.add(new Pair<>(EnumItemSlot.OFFHAND, CraftItemStack.asNMSCopy(new org.bukkit.inventory.ItemStack(off))));
+		final PacketPlayOutEntityEquipment entityEquipment = new PacketPlayOutEntityEquipment(id, equipmentList);
+		
+		PlayerConnection connection = ((CraftPlayer) player).getHandle().playerConnection;
+		connection.sendPacket(entityEquipment);
 	}
 	
 	public void removeNPCPacket(Player player, EntityPlayer npc) {

@@ -328,7 +328,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("woolring")) { 
 			
 		} else {
-			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/847782934169780234/aile_texture_pack_29.zip");
+			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/857854520817745990/aile_texture_pack_30.zip");
 		}
 		
 		//Message
@@ -576,6 +576,9 @@ public class Main extends JavaPlugin implements Listener{
 		
 		//Mob Spawning Field	
 		this.getServer().getPluginManager().registerEvents(new MobThread(player), this);
+		
+		// npc 생성
+		new NPCManager(player, 0);
 			
 		ItemStack master = new ItemStack(Material.DIAMOND_SWORD);
 		ItemMeta masterIm = master.getItemMeta();

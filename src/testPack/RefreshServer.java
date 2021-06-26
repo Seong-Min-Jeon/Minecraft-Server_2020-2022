@@ -340,7 +340,7 @@ public class RefreshServer {
 						    }
 							
 							if(wear == false) {
-								allPlayer.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 600, 10000,true,false,false));
+								allPlayer.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 600, 100000,true,false,false));
 								allPlayer.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 600, 0,true,false,false));
 								allPlayer.sendMessage(ChatColor.RED + "열사병으로 쓰러질 것 같다.");
 							}
