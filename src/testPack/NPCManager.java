@@ -30,8 +30,10 @@ import com.mojang.authlib.properties.Property;
 import com.mojang.datafixers.util.Pair;
 
 import net.minecraft.server.v1_16_R3.EntityPlayer;
+import net.minecraft.server.v1_16_R3.EntityPose;
 import net.minecraft.server.v1_16_R3.EnumItemSlot;
 import net.minecraft.server.v1_16_R3.MinecraftServer;
+import net.minecraft.server.v1_16_R3.PacketPlayOutAnimation;
 import net.minecraft.server.v1_16_R3.PacketPlayOutEntityDestroy;
 import net.minecraft.server.v1_16_R3.PacketPlayOutEntityEquipment;
 import net.minecraft.server.v1_16_R3.PacketPlayOutEntityHeadRotation;
@@ -193,7 +195,6 @@ public class NPCManager {
 	public void allTime(Player player) {
 		try {
 			EntityPlayer npc9 = npc9();
-			addNPCPacket(player, npc9);
 			addEquipPacket(player, npc9, Material.GOLDEN_HELMET, Material.GOLDEN_CHESTPLATE, Material.GOLDEN_LEGGINGS
 					, Material.GOLDEN_BOOTS, Material.OAK_SLAB, Material.AIR);
 		} catch(Exception e) {
@@ -317,7 +318,7 @@ public class NPCManager {
 				connection.sendPacket(new PacketPlayOutEntityHeadRotation(npc, (byte) (npc.yaw * 256 / 360)));
 			}
 		}.runTaskLater(Main.getPlugin(Main.class), 2);
-
+		
 		new BukkitRunnable() {
 			@Override
 			public void run() {
@@ -329,16 +330,76 @@ public class NPCManager {
 	}
 	
 	public void addEquipPacket(Player player, EntityPlayer npc, Material head, Material chest, Material legs, Material feet, Material main, Material off) {
-		List<Pair<EnumItemSlot, net.minecraft.server.v1_16_R3.ItemStack>> equipmentList = new ArrayList<>();
-		equipmentList.add(new Pair<>(EnumItemSlot.HEAD, CraftItemStack.asNMSCopy(new ItemStack(head))));
-		equipmentList.add(new Pair<>(EnumItemSlot.CHEST, CraftItemStack.asNMSCopy(new ItemStack(chest))));
-		equipmentList.add(new Pair<>(EnumItemSlot.LEGS, CraftItemStack.asNMSCopy(new ItemStack(legs))));
-		equipmentList.add(new Pair<>(EnumItemSlot.FEET, CraftItemStack.asNMSCopy(new ItemStack(feet))));
-		equipmentList.add(new Pair<>(EnumItemSlot.MAINHAND, CraftItemStack.asNMSCopy(new ItemStack(main))));
-		equipmentList.add(new Pair<>(EnumItemSlot.OFFHAND, CraftItemStack.asNMSCopy(new ItemStack(off))));
-		PacketPlayOutEntityEquipment entityEquipment = new PacketPlayOutEntityEquipment(npc.getId(), equipmentList);
 		PlayerConnection connection = ((CraftPlayer) player).getHandle().playerConnection;
-		connection.sendPacket(entityEquipment);
+		
+		new BukkitRunnable() {
+			@Override
+			public void run() {
+				connection.sendPacket(new PacketPlayOutPlayerInfo(PacketPlayOutPlayerInfo.EnumPlayerInfoAction.ADD_PLAYER, npc));
+				connection.sendPacket(new PacketPlayOutNamedEntitySpawn(npc));
+				connection.sendPacket(new PacketPlayOutEntityHeadRotation(npc, (byte) (npc.yaw * 256 / 360)));
+			}
+		}.runTaskLater(Main.getPlugin(Main.class), 2);
+		
+		new BukkitRunnable() {
+			@Override
+			public void run() {
+				connection.sendPacket(new PacketPlayOutPlayerInfo(PacketPlayOutPlayerInfo.EnumPlayerInfoAction.ADD_PLAYER, npc));
+				connection.sendPacket(new PacketPlayOutNamedEntitySpawn(npc));
+				connection.sendPacket(new PacketPlayOutEntityHeadRotation(npc, (byte) (npc.yaw * 256 / 360)));
+			}
+		}.runTaskLater(Main.getPlugin(Main.class), 4);
+		
+		new BukkitRunnable() {
+			@Override
+			public void run() {
+				List<Pair<EnumItemSlot, net.minecraft.server.v1_16_R3.ItemStack>> equipmentList = new ArrayList<>();
+				equipmentList.add(new Pair<>(EnumItemSlot.HEAD, CraftItemStack.asNMSCopy(new ItemStack(head))));
+				equipmentList.add(new Pair<>(EnumItemSlot.CHEST, CraftItemStack.asNMSCopy(new ItemStack(chest))));
+				equipmentList.add(new Pair<>(EnumItemSlot.LEGS, CraftItemStack.asNMSCopy(new ItemStack(legs))));
+				equipmentList.add(new Pair<>(EnumItemSlot.FEET, CraftItemStack.asNMSCopy(new ItemStack(feet))));
+				equipmentList.add(new Pair<>(EnumItemSlot.MAINHAND, CraftItemStack.asNMSCopy(new ItemStack(main))));
+				equipmentList.add(new Pair<>(EnumItemSlot.OFFHAND, CraftItemStack.asNMSCopy(new ItemStack(off))));
+				PacketPlayOutEntityEquipment entityEquipment = new PacketPlayOutEntityEquipment(npc.getId(), equipmentList);
+				PlayerConnection connection = ((CraftPlayer) player).getHandle().playerConnection;
+				connection.sendPacket(entityEquipment);
+			}
+		}.runTaskLater(Main.getPlugin(Main.class), 6);
+		
+		new BukkitRunnable() {
+			int time = 0;
+			
+			@Override
+			public void run() {
+				if(time % 10 == 0) {
+					// main arm swing
+					connection.sendPacket(new PacketPlayOutAnimation(npc, 0));
+				} else if(time % 103 == 0) {
+					// take damage
+					connection.sendPacket(new PacketPlayOutAnimation(npc, 1));
+				} else if(time % 127 == 0) {
+					// leave bed
+					connection.sendPacket(new PacketPlayOutAnimation(npc, 2));
+				} else if(time % 159 == 0) {
+					// off arm swing
+					connection.sendPacket(new PacketPlayOutAnimation(npc, 3));
+				} else if(time % 207 == 0) {
+					// crit
+					connection.sendPacket(new PacketPlayOutAnimation(npc, 4));
+				} else if(time % 251 == 0) {
+					// magic crit
+					connection.sendPacket(new PacketPlayOutAnimation(npc, 5));
+				}
+				time++;
+			}
+		}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
+
+		new BukkitRunnable() {
+			@Override
+			public void run() {
+				connection.sendPacket(new PacketPlayOutPlayerInfo(PacketPlayOutPlayerInfo.EnumPlayerInfoAction.REMOVE_PLAYER, npc));
+			}
+		}.runTaskLater(Main.getPlugin(Main.class), 20);
 	}
 	
 	public void removeNPCPacket(Player player, EntityPlayer npc) {
