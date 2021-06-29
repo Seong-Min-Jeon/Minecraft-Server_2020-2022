@@ -178,7 +178,7 @@ public class NPCManager {
 	}
 	
 	public EntityPlayer npc9() {
-		Location loc = new Location(Bukkit.getWorld("world"), 973.5, 64, 41.5, 0, 0);
+		Location loc = new Location(Bukkit.getWorld("world"), 973.5, 64, 42.5, 0, 0);
 		
 		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "에일을 구원한 영웅");
 		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
@@ -195,8 +195,8 @@ public class NPCManager {
 	public void allTime(Player player) {
 		try {
 			EntityPlayer npc9 = npc9();
-			addEquipPacket(player, npc9, Material.GOLDEN_HELMET, Material.GOLDEN_CHESTPLATE, Material.GOLDEN_LEGGINGS
-					, Material.GOLDEN_BOOTS, Material.OAK_SLAB, Material.AIR);
+			addEquipPacket(player, npc9, Material.NETHERITE_HELMET, Material.NETHERITE_CHESTPLATE, Material.NETHERITE_LEGGINGS
+					, Material.NETHERITE_BOOTS, Material.JUNGLE_LOG, Material.AIR);
 		} catch(Exception e) {
 			
 		}
@@ -353,6 +353,96 @@ public class NPCManager {
 		new BukkitRunnable() {
 			@Override
 			public void run() {
+				connection.sendPacket(new PacketPlayOutPlayerInfo(PacketPlayOutPlayerInfo.EnumPlayerInfoAction.ADD_PLAYER, npc));
+				connection.sendPacket(new PacketPlayOutNamedEntitySpawn(npc));
+				connection.sendPacket(new PacketPlayOutEntityHeadRotation(npc, (byte) (npc.yaw * 256 / 360)));
+			}
+		}.runTaskLater(Main.getPlugin(Main.class), 6);
+		
+		new BukkitRunnable() {
+			@Override
+			public void run() {
+				connection.sendPacket(new PacketPlayOutPlayerInfo(PacketPlayOutPlayerInfo.EnumPlayerInfoAction.ADD_PLAYER, npc));
+				connection.sendPacket(new PacketPlayOutNamedEntitySpawn(npc));
+				connection.sendPacket(new PacketPlayOutEntityHeadRotation(npc, (byte) (npc.yaw * 256 / 360)));
+			}
+		}.runTaskLater(Main.getPlugin(Main.class), 8);
+		
+		new BukkitRunnable() {
+			@Override
+			public void run() {
+				connection.sendPacket(new PacketPlayOutPlayerInfo(PacketPlayOutPlayerInfo.EnumPlayerInfoAction.ADD_PLAYER, npc));
+				connection.sendPacket(new PacketPlayOutNamedEntitySpawn(npc));
+				connection.sendPacket(new PacketPlayOutEntityHeadRotation(npc, (byte) (npc.yaw * 256 / 360)));
+			}
+		}.runTaskLater(Main.getPlugin(Main.class), 10);
+		
+		new BukkitRunnable() {
+			@Override
+			public void run() {
+				connection.sendPacket(new PacketPlayOutPlayerInfo(PacketPlayOutPlayerInfo.EnumPlayerInfoAction.ADD_PLAYER, npc));
+				connection.sendPacket(new PacketPlayOutNamedEntitySpawn(npc));
+				connection.sendPacket(new PacketPlayOutEntityHeadRotation(npc, (byte) (npc.yaw * 256 / 360)));
+			}
+		}.runTaskLater(Main.getPlugin(Main.class), 20);
+		
+		new BukkitRunnable() {
+			@Override
+			public void run() {
+				connection.sendPacket(new PacketPlayOutPlayerInfo(PacketPlayOutPlayerInfo.EnumPlayerInfoAction.ADD_PLAYER, npc));
+				connection.sendPacket(new PacketPlayOutNamedEntitySpawn(npc));
+				connection.sendPacket(new PacketPlayOutEntityHeadRotation(npc, (byte) (npc.yaw * 256 / 360)));
+			}
+		}.runTaskLater(Main.getPlugin(Main.class), 30);
+		
+		new BukkitRunnable() {
+			@Override
+			public void run() {
+				connection.sendPacket(new PacketPlayOutPlayerInfo(PacketPlayOutPlayerInfo.EnumPlayerInfoAction.ADD_PLAYER, npc));
+				connection.sendPacket(new PacketPlayOutNamedEntitySpawn(npc));
+				connection.sendPacket(new PacketPlayOutEntityHeadRotation(npc, (byte) (npc.yaw * 256 / 360)));
+			}
+		}.runTaskLater(Main.getPlugin(Main.class), 40);
+		
+		new BukkitRunnable() {
+			@Override
+			public void run() {
+				connection.sendPacket(new PacketPlayOutPlayerInfo(PacketPlayOutPlayerInfo.EnumPlayerInfoAction.ADD_PLAYER, npc));
+				connection.sendPacket(new PacketPlayOutNamedEntitySpawn(npc));
+				connection.sendPacket(new PacketPlayOutEntityHeadRotation(npc, (byte) (npc.yaw * 256 / 360)));
+			}
+		}.runTaskLater(Main.getPlugin(Main.class), 50);
+		
+		new BukkitRunnable() {
+			@Override
+			public void run() {
+				connection.sendPacket(new PacketPlayOutPlayerInfo(PacketPlayOutPlayerInfo.EnumPlayerInfoAction.ADD_PLAYER, npc));
+				connection.sendPacket(new PacketPlayOutNamedEntitySpawn(npc));
+				connection.sendPacket(new PacketPlayOutEntityHeadRotation(npc, (byte) (npc.yaw * 256 / 360)));
+			}
+		}.runTaskLater(Main.getPlugin(Main.class), 60);
+		
+		new BukkitRunnable() {
+			@Override
+			public void run() {
+				connection.sendPacket(new PacketPlayOutPlayerInfo(PacketPlayOutPlayerInfo.EnumPlayerInfoAction.ADD_PLAYER, npc));
+				connection.sendPacket(new PacketPlayOutNamedEntitySpawn(npc));
+				connection.sendPacket(new PacketPlayOutEntityHeadRotation(npc, (byte) (npc.yaw * 256 / 360)));
+			}
+		}.runTaskLater(Main.getPlugin(Main.class), 70);
+		
+		new BukkitRunnable() {
+			@Override
+			public void run() {
+				connection.sendPacket(new PacketPlayOutPlayerInfo(PacketPlayOutPlayerInfo.EnumPlayerInfoAction.ADD_PLAYER, npc));
+				connection.sendPacket(new PacketPlayOutNamedEntitySpawn(npc));
+				connection.sendPacket(new PacketPlayOutEntityHeadRotation(npc, (byte) (npc.yaw * 256 / 360)));
+			}
+		}.runTaskLater(Main.getPlugin(Main.class), 80);
+		
+		new BukkitRunnable() {
+			@Override
+			public void run() {
 				List<Pair<EnumItemSlot, net.minecraft.server.v1_16_R3.ItemStack>> equipmentList = new ArrayList<>();
 				equipmentList.add(new Pair<>(EnumItemSlot.HEAD, CraftItemStack.asNMSCopy(new ItemStack(head))));
 				equipmentList.add(new Pair<>(EnumItemSlot.CHEST, CraftItemStack.asNMSCopy(new ItemStack(chest))));
@@ -364,7 +454,7 @@ public class NPCManager {
 				PlayerConnection connection = ((CraftPlayer) player).getHandle().playerConnection;
 				connection.sendPacket(entityEquipment);
 			}
-		}.runTaskLater(Main.getPlugin(Main.class), 6);
+		}.runTaskLater(Main.getPlugin(Main.class), 12);
 		
 		new BukkitRunnable() {
 			int time = 0;
@@ -399,7 +489,7 @@ public class NPCManager {
 			public void run() {
 				connection.sendPacket(new PacketPlayOutPlayerInfo(PacketPlayOutPlayerInfo.EnumPlayerInfoAction.REMOVE_PLAYER, npc));
 			}
-		}.runTaskLater(Main.getPlugin(Main.class), 20);
+		}.runTaskLater(Main.getPlugin(Main.class), 22);
 	}
 	
 	public void removeNPCPacket(Player player, EntityPlayer npc) {
