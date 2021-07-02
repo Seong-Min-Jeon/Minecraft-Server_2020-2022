@@ -82,6 +82,9 @@ public class MobDeath {
 					lootPlayer.sendMessage(ChatColor.RED + "몬스터와의 수준 차이로 아무것도 얻을 수 없습니다.");
 					return;
 				}
+				if(dist <= 20 || dist >= -20) {
+					new PitySystem().addStack(lootPlayer);
+				}
 			} catch (Exception e) {
 
 			}
@@ -1631,6 +1634,51 @@ public class MobDeath {
 							sendMessage(lootPlayer, ChatColor.DARK_GREEN + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
 							System.out.println(lootPlayer.getDisplayName() + "가 " + ChatColor.DARK_GREEN + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
 						}
+					}
+				}
+			} catch(Exception e) {
+				
+			}
+			
+//================================================================================================================================
+			try {
+				
+				PitySystem ps = new PitySystem();
+				String result = ps.reach(lootPlayer);
+
+				Location chestLoc = new Location(lootPlayer.getWorld(), -1843, 92, 3043);
+				
+				if(result.equals("unique")) {
+					Block block = chestLoc.getBlock();
+					Chest chest = (Chest) block.getState();
+					ItemStack weapon = chest.getInventory().getItem(1).clone();
+					ItemStack item = setStat(1, weapon, lootPlayer.getLevel());
+					lootPlayer.getInventory().addItem(item);
+					sendMessage(lootPlayer, ChatColor.LIGHT_PURPLE + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
+				} else if(result.equals("unique")) {
+					Block block = chestLoc.getBlock();
+					Chest chest = (Chest) block.getState();
+					ItemStack weapon = chest.getInventory().getItem(2).clone();
+					ItemStack item = setStat(2, weapon, lootPlayer.getLevel());
+					lootPlayer.getInventory().addItem(item);
+					sendMessage(lootPlayer, ChatColor.AQUA + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
+				} else if(result.equals("unique")) {
+					Block block = chestLoc.getBlock();
+					Chest chest = (Chest) block.getState();
+					ItemStack weapon = chest.getInventory().getItem(3).clone();
+					ItemStack item = setStat(3, weapon, lootPlayer.getLevel());
+					lootPlayer.getInventory().addItem(item);
+					sendMessage(lootPlayer, ChatColor.DARK_RED + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
+					System.out.println(lootPlayer.getDisplayName() + "가 " + ChatColor.DARK_RED + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
+				} else if(result.equals("acc")) {
+					if(lootPlayer.getLevel() >= 700) {
+						Block block = chestLoc.getBlock();
+						Chest chest = (Chest) block.getState();
+						ItemStack weapon = chest.getInventory().getItem(5).clone();
+						ItemStack item = setStat(5, weapon, lootPlayer.getLevel());
+						lootPlayer.getInventory().addItem(item);
+						sendMessage(lootPlayer, ChatColor.DARK_GREEN + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
+						System.out.println(lootPlayer.getDisplayName() + "가 " + ChatColor.DARK_GREEN + "의문의 상자" + ChatColor.WHITE + "를 획득했다.");
 					}
 				}
 			} catch(Exception e) {

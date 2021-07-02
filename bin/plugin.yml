@@ -62,4 +62,7 @@ commands:
   LoveWood:
    description: I love Wood
    usage: /LoveWood
+  Trade:
+   description: trade system
+   usage: /trade
 api-version: 1.16

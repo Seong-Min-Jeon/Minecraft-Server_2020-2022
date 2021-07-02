@@ -454,7 +454,7 @@ public class NPCManager {
 				PlayerConnection connection = ((CraftPlayer) player).getHandle().playerConnection;
 				connection.sendPacket(entityEquipment);
 			}
-		}.runTaskLater(Main.getPlugin(Main.class), 12);
+		}.runTaskLater(Main.getPlugin(Main.class), 90);
 		
 		new BukkitRunnable() {
 			int time = 0;
@@ -489,7 +489,7 @@ public class NPCManager {
 			public void run() {
 				connection.sendPacket(new PacketPlayOutPlayerInfo(PacketPlayOutPlayerInfo.EnumPlayerInfoAction.REMOVE_PLAYER, npc));
 			}
-		}.runTaskLater(Main.getPlugin(Main.class), 22);
+		}.runTaskLater(Main.getPlugin(Main.class), 100);
 	}
 	
 	public void removeNPCPacket(Player player, EntityPlayer npc) {

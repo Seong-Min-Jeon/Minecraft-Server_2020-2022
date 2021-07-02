@@ -235,6 +235,7 @@ public class Main extends JavaPlugin implements Listener{
 		getCommand("itemtoggle").setExecutor(new Cmd18ItemToggle());
 		getCommand("k").setExecutor(new Cmd19Kick());
 		getCommand("LoveWood").setExecutor(new Cmd20LoveWood());
+		getCommand("trade").setExecutor(new Cmd21Trade());
 		
 		new Cmd16class().setFolder(getDataFolder());
 		
@@ -8504,6 +8505,24 @@ public class Main extends JavaPlugin implements Listener{
 	        					if(player.isOp() && (player.getGameMode() == GameMode.CREATIVE || player.getGameMode() == GameMode.SPECTATOR)) {
 	        						if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "Do you wanna build a snowman? (range 10)")) {
 		        						new SnowStack(player.getTargetBlockExact(50), 10);
+		        					} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "Do you wanna build a snowman? (range 9)")) {
+		        						new SnowStack(player.getTargetBlockExact(50), 9);
+		        					} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "Do you wanna build a snowman? (range 8)")) {
+		        						new SnowStack(player.getTargetBlockExact(50), 8);
+		        					} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "Do you wanna build a snowman? (range 7)")) {
+		        						new SnowStack(player.getTargetBlockExact(50), 7);
+		        					} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "Do you wanna build a snowman? (range 6)")) {
+		        						new SnowStack(player.getTargetBlockExact(50), 6);
+		        					} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "Do you wanna build a snowman? (range 5)")) {
+		        						new SnowStack(player.getTargetBlockExact(50), 5);
+		        					} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "Do you wanna build a snowman? (range 4)")) {
+		        						new SnowStack(player.getTargetBlockExact(50), 4);
+		        					} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "Do you wanna build a snowman? (range 3)")) {
+		        						new SnowStack(player.getTargetBlockExact(50), 3);
+		        					} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "Do you wanna build a snowman? (range 2)")) {
+		        						new SnowStack(player.getTargetBlockExact(50), 2);
+		        					} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "Do you wanna build a snowman? (range 1)")) {
+		        						new SnowStack(player.getTargetBlockExact(50), 1);
 		        					} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "마법봉")) {
 		        						if(player.isSneaking()) {
 		        							new ParticleEffect(player).newEffect49();
@@ -9087,6 +9106,47 @@ public class Main extends JavaPlugin implements Listener{
 			}
 		}
 		
+		try {
+			// 거래창
+			Inventory inv = event.getClickedInventory();
+			Player player = (Player) event.getWhoClicked();
+			if(inv.getItem(17).getType() == Material.RED_CONCRETE) {
+				if(inv.getItem(18).getType() == Material.WHITE_STAINED_GLASS_PANE) {
+					if(inv.getItem(19).getType() == Material.WHITE_STAINED_GLASS_PANE) {
+						if(inv.getItem(20).getType() == Material.WHITE_STAINED_GLASS_PANE) {
+							HashMap<Player, Player> map = new Cmd21Trade().getMap();
+							if(map.containsKey(player)) {
+								if(event.getSlot() >= 0 && event.getSlot() < 17) {
+									event.setCancelled(true);
+									ItemStack item = event.getCurrentItem();
+									System.out.println(item);
+									item.setType(Material.AIR);
+									player.getInventory().addItem(item);
+									// 소리
+								}
+							} else {
+								if(map.containsValue(player)) {
+									if(event.getSlot() >= 27 && event.getSlot() < 44) {
+										event.setCancelled(true);
+										ItemStack item = event.getCurrentItem();
+										System.out.println(item);
+										item.setType(Material.AIR);
+										player.getInventory().addItem(item);
+										// 소리
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			System.out.println(event.getClickedInventory());
+			System.out.println(event.getInventory());
+			 
+		} catch(Exception e) {
+			
+		}
+		
 		if(event.getClick() != ClickType.MIDDLE) {
 			// 핫키 제한
 			try {
@@ -9238,6 +9298,7 @@ public class Main extends JavaPlugin implements Listener{
 							try {
 								if(str.substring(0, 5).equals("§8내구도")) {
 									event.setCancelled(true);
+									return;
 								}
 							} catch(Exception e1) {
 								
@@ -9253,9 +9314,10 @@ public class Main extends JavaPlugin implements Listener{
 								try {
 									if(str.substring(0, 5).equals("§8내구도")) {
 										event.setCancelled(true);
+										return;
 									}
 								} catch(Exception e1) {
-									
+										
 								}
 							}
 						} catch(Exception e) {
@@ -9649,6 +9711,8 @@ public class Main extends JavaPlugin implements Listener{
 			event.setQuitMessage("야생의 누군가가 도망쳐버렸다.");
 		}
 		
+		// pity system
+		new PitySystem().removePlayer(player);
 		// Off in Dungeon
 		new OffInDungeon(player);
 		// Refresh Server

@@ -93,6 +93,9 @@ public class Cmd16class implements CommandExecutor {
 
 			}
 			
+			// pity system
+			new PitySystem().removePlayer(player);
+			
 			// Off in Dungeon
 			new OffInDungeon(player);
 			
