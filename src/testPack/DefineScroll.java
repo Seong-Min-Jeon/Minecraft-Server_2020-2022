@@ -149,6 +149,7 @@ public class DefineScroll {
 						item.setItemMeta(im);					
 					}
 				}
+				player.updateInventory();
 			} else {
 				player.sendMessage(ChatColor.RED + "오른손에 장비를 들고 사용해주세요.");
 				player.getInventory().addItem(itemArg.getItemStack());

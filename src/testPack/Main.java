@@ -4118,6 +4118,7 @@ public class Main extends JavaPlugin implements Listener{
 		ReinforcementScroll reinScroll = new ReinforcementScroll();
 		MetalwareToolScroll metalwareScroll = new MetalwareToolScroll();
 		DefineScroll define = new DefineScroll();
+		DefineAllScroll defineAll = new DefineAllScroll();
 		QuestScroll qs = new QuestScroll();
 		AnotherScroll as = new AnotherScroll();
 		ItemDestroyScroll ids = new ItemDestroyScroll();
@@ -4141,6 +4142,8 @@ public class Main extends JavaPlugin implements Listener{
 			metalwareScroll.openInv(player, itemArg);
 			//감정
 			define.effect(player, itemArg);
+			//전체감정
+			defineAll.effect(player, itemArg);
 			//퀘스트 스크롤
 			qs.quest(player, itemArg);
 			//기타 스크롤
@@ -9110,7 +9113,7 @@ public class Main extends JavaPlugin implements Listener{
 			// 거래창
 			Inventory inv = event.getClickedInventory();
 			Player player = (Player) event.getWhoClicked();
-			if(inv.getItem(17).getType() == Material.RED_CONCRETE) {
+			if(inv.getItem(17).getType() == Material.RED_CONCRETE) { //빈칸이면 에러남
 				if(inv.getItem(18).getType() == Material.WHITE_STAINED_GLASS_PANE) {
 					if(inv.getItem(19).getType() == Material.WHITE_STAINED_GLASS_PANE) {
 						if(inv.getItem(20).getType() == Material.WHITE_STAINED_GLASS_PANE) {
@@ -9140,8 +9143,8 @@ public class Main extends JavaPlugin implements Listener{
 					}
 				}
 			}
-			System.out.println(event.getClickedInventory());
-			System.out.println(event.getInventory());
+			System.out.println(event.getClickedInventory()); //말그대로
+			System.out.println(event.getInventory()); //거래창
 			 
 		} catch(Exception e) {
 			
