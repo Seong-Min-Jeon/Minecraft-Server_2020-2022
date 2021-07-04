@@ -236,6 +236,7 @@ public class Main extends JavaPlugin implements Listener{
 		getCommand("k").setExecutor(new Cmd19Kick());
 		getCommand("LoveWood").setExecutor(new Cmd20LoveWood());
 		getCommand("trade").setExecutor(new Cmd21Trade());
+		getCommand("mysterychest").setExecutor(new Cmd22MysteryChest());
 		
 		new Cmd16class().setFolder(getDataFolder());
 		
@@ -329,7 +330,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("woolring")) { 
 			
 		} else {
-			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/857854520817745990/aile_texture_pack_30.zip");
+			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/860833575489110026/aile_texture_pack_31.zip");
 		}
 		
 		//Message
@@ -9143,8 +9144,8 @@ public class Main extends JavaPlugin implements Listener{
 					}
 				}
 			}
-			System.out.println(event.getClickedInventory()); //말그대로
-			System.out.println(event.getInventory()); //거래창
+//			System.out.println(event.getClickedInventory()); //말그대로
+//			System.out.println(event.getInventory()); //거래창
 			 
 		} catch(Exception e) {
 			

@@ -65,4 +65,7 @@ commands:
   Trade:
    description: trade system
    usage: /trade
+  MysteryChest:
+   description: MysteryChest counter check
+   usage: /MysteryChest
 api-version: 1.16

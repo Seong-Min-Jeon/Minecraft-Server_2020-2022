@@ -53,10 +53,16 @@ public class PitySystem {
 	}
 	
 	public String reach(Player player) {
-		if(unique.containsKey(player)) {
-			if(unique.get(player) >= 100) {
-				unique.put(player, 0);
-				return "unique";
+		if(hero.containsKey(player)) {
+			if(hero.get(player) >= 1000) {
+				hero.put(player, 0);
+				return "hero";
+			}
+		}
+		if(acc.containsKey(player)) {
+			if(acc.get(player) >= 800) {
+				acc.put(player, 0);
+				return "acc";
 			}
 		}
 		if(legendary.containsKey(player)) {
@@ -65,18 +71,44 @@ public class PitySystem {
 				return "legendary";
 			}
 		}
-		if(hero.containsKey(player)) {
-			if(hero.get(player) >= 2000) {
-				hero.put(player, 0);
-				return "hero";
-			}
-		}
-		if(acc.containsKey(player)) {
-			if(acc.get(player) >= 1000) {
-				acc.put(player, 0);
-				return "acc";
+		if(unique.containsKey(player)) {
+			if(unique.get(player) >= 100) {
+				unique.put(player, 0);
+				return "unique";
 			}
 		}
 		return "";
+	}
+	
+	public int getUnique(Player player) {
+		if(unique.containsKey(player)) {
+			return unique.get(player);
+		} else {
+			return 0;			
+		}
+	}
+	
+	public int getLegendary(Player player) {
+		if(legendary.containsKey(player)) {
+			return legendary.get(player);
+		} else {
+			return 0;
+		}
+	}
+	
+	public int getHero(Player player) {
+		if(hero.containsKey(player)) {
+			return hero.get(player);
+		} else {
+			return 0;
+		}
+	}
+	
+	public int getAcc(Player player) {
+		if(acc.containsKey(player)) {
+			return acc.get(player);
+		} else {
+			return 0;
+		}
 	}
 }
