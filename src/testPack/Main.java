@@ -9114,38 +9114,139 @@ public class Main extends JavaPlugin implements Listener{
 			// 거래창
 			Inventory inv = event.getClickedInventory();
 			Player player = (Player) event.getWhoClicked();
-			if(inv.getItem(17).getType() == Material.RED_CONCRETE) { //빈칸이면 에러남
-				if(inv.getItem(18).getType() == Material.WHITE_STAINED_GLASS_PANE) {
-					if(inv.getItem(19).getType() == Material.WHITE_STAINED_GLASS_PANE) {
-						if(inv.getItem(20).getType() == Material.WHITE_STAINED_GLASS_PANE) {
-							HashMap<Player, Player> map = new Cmd21Trade().getMap();
-							if(map.containsKey(player)) {
-								if(event.getSlot() >= 0 && event.getSlot() < 17) {
-									event.setCancelled(true);
-									ItemStack item = event.getCurrentItem();
-									System.out.println(item);
-									item.setType(Material.AIR);
-									player.getInventory().addItem(item);
-									// 소리
-								}
-							} else {
-								if(map.containsValue(player)) {
-									if(event.getSlot() >= 27 && event.getSlot() < 44) {
-										event.setCancelled(true);
-										ItemStack item = event.getCurrentItem();
-										System.out.println(item);
-										item.setType(Material.AIR);
-										player.getInventory().addItem(item);
-										// 소리
+			try {
+				if(inv.getSize() == 45) {
+					if(inv.getItem(17).getType() == Material.RED_CONCRETE) { 
+						if(inv.getItem(18).getType() == Material.WHITE_STAINED_GLASS_PANE) {
+							if(inv.getItem(19).getType() == Material.WHITE_STAINED_GLASS_PANE) {
+								if(inv.getItem(20).getType() == Material.WHITE_STAINED_GLASS_PANE) {
+									HashMap<Player, Player> map = new Cmd21Trade().getMap();
+									if(map.containsKey(player)) {
+										if(event.getSlot() >= 0 && event.getSlot() < 17) {
+											event.setCancelled(true);
+											ItemStack item = event.getCurrentItem();
+											System.out.println(item);
+											item.setType(Material.AIR);
+											player.getInventory().addItem(item);
+											player.playSound(player.getLocation(), Sound.BLOCK_WOODEN_TRAPDOOR_OPEN, 1.0f, 0.5f);
+											map.get(player).playSound(player.getLocation(), Sound.BLOCK_WOODEN_TRAPDOOR_OPEN, 1.0f, 0.5f);
+										} else {
+											event.setCancelled(true);
+										}
+									} else {
+										if(map.containsValue(player)) {
+											if(event.getSlot() >= 27 && event.getSlot() < 44) {
+												event.setCancelled(true);
+												ItemStack item = event.getCurrentItem();
+												System.out.println(item);
+												item.setType(Material.AIR);
+												player.getInventory().addItem(item);
+												player.playSound(player.getLocation(), Sound.BLOCK_WOODEN_TRAPDOOR_OPEN, 1.0f, 0.5f);
+												map.get(player).playSound(player.getLocation(), Sound.BLOCK_WOODEN_TRAPDOOR_OPEN, 1.0f, 0.5f);
+											}
+										} else {
+											event.setCancelled(true);
+										}
 									}
 								}
 							}
 						}
 					}
 				}
+			} catch(Exception e) {
+				
 			}
-//			System.out.println(event.getClickedInventory()); //말그대로
-//			System.out.println(event.getInventory()); //거래창
+		} catch(Exception e) {
+			
+		}
+		
+		try {
+			// 거래창
+			Inventory inv = event.getInventory();
+			Inventory pInv = event.getClickedInventory();
+			Player player = (Player) event.getWhoClicked();
+			ItemStack item = null;
+			ArrayList<Integer> ary = new ArrayList<>();
+			
+			try {
+				if(inv != pInv) {
+					if(inv.getSize() == 45) {
+						if(inv.getItem(17).getType() == Material.RED_CONCRETE) { 
+							if(inv.getItem(18).getType() == Material.WHITE_STAINED_GLASS_PANE) {
+								if(inv.getItem(19).getType() == Material.WHITE_STAINED_GLASS_PANE) {
+									if(inv.getItem(20).getType() == Material.WHITE_STAINED_GLASS_PANE) {
+										event.setCancelled(true);
+										HashMap<Player, Player> map = new Cmd21Trade().getMap();
+										if(map.containsKey(player)) {
+											int idx = 0;
+											for(ItemStack i : inv.getContents()) {
+												if(i == null) {
+													ary.add(idx);
+												}
+												idx++;
+											}
+											
+											if(ary.size() == 0) {
+												// 거래창 꽉참
+												event.setCancelled(true);
+											} else {
+												for(int cnt : ary) {
+													if(cnt >= 0 && cnt < 17) {
+														item = event.getCurrentItem();
+														System.out.println(item);
+														item.setType(Material.AIR);
+														
+														// 거래창에 올려둠
+														inv.setItem(cnt, item);
+														
+														player.playSound(player.getLocation(), Sound.BLOCK_WOODEN_TRAPDOOR_OPEN, 1.0f, 0.5f);
+														map.get(player).playSound(player.getLocation(), Sound.BLOCK_WOODEN_TRAPDOOR_OPEN, 1.0f, 0.5f);
+													} else {
+														event.setCancelled(true);
+													}
+												}
+											}
+										} else {
+											if(map.containsValue(player)) {
+												int idx = 0;
+												for(ItemStack i : inv.getContents()) {
+													if(i == null) {
+														ary.add(idx);
+													}
+													idx++;
+												}
+												
+												if(ary.size() == 0) {
+													// 거래창 꽉참
+													event.setCancelled(true);
+												} else {
+													for(int cnt : ary) {
+														if(cnt >= 27 && cnt < 44) {
+															item = event.getCurrentItem();
+															System.out.println(item);
+															item.setType(Material.AIR);
+															
+															// 거래창에 올려둠
+															inv.setItem(cnt, item);
+															
+															player.playSound(player.getLocation(), Sound.BLOCK_WOODEN_TRAPDOOR_OPEN, 1.0f, 0.5f);
+															map.get(player).playSound(player.getLocation(), Sound.BLOCK_WOODEN_TRAPDOOR_OPEN, 1.0f, 0.5f);
+														} else {
+															event.setCancelled(true);
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			} catch(Exception e) {
+				
+			}
 			 
 		} catch(Exception e) {
 			

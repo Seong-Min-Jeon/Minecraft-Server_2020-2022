@@ -16,6 +16,7 @@ import org.bukkit.Particle;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemFlag;
@@ -46,11 +47,27 @@ public class Cmd21Trade implements CommandExecutor {
 						try {
 							player = Bukkit.getPlayer(args[1]);
 							player2 = Bukkit.getPlayer(args[2]);
-							if(limitTime.containsKey(player)) {
-								if(limitTime.get(player)) {
-									agree(player, player2);
+							
+							boolean dist = false;
+							for(Entity ent : player.getNearbyEntities(20, 20, 20)) {
+								if(ent == player2) {
+									dist = true;
 								}
 							}
+							
+							if(dist) {
+								if(limitTime.containsKey(player)) {
+									if(limitTime.get(player)) {
+										agree(player, player2);
+									} else {
+										player2.sendMessage(ChatColor.RED + "기한이 만료되어 거래를 받을 수 없습니다.");
+									}
+								}
+							} else {
+								player.sendMessage(ChatColor.RED + "상대방과의 거리가 멀어 거래가 취소됩니다.");
+								player2.sendMessage(ChatColor.RED + "상대방과의 거리가 멀어 거래가 취소됩니다.");
+							}
+							
 						} catch(Exception e) {
 							
 						}
@@ -64,14 +81,33 @@ public class Cmd21Trade implements CommandExecutor {
 							break;
 						}
 					}
-					if(isOk == true && player!=player2) {				
-						player.sendMessage(ChatColor.GREEN + "Send trade to " + player2.getDisplayName() + ".");
-						limitTime.put(player, true);
-						trade(player, player2);
-					} else {
-						player.sendMessage(ChatColor.RED + "뭘 기대하신겁니까 휴먼.");
-						return true;
+					
+					if(player2 == null) {
+						player.sendMessage(ChatColor.RED + "Undefined Player!");
+						return false;
 					}
+					
+					boolean dist = false;
+					for(Entity ent : player.getNearbyEntities(20, 20, 20)) {
+						if(ent == player2) {
+							dist = true;
+						}
+					}
+					
+					if(dist) {
+						if(isOk == true && player!=player2) {				
+							player.sendMessage(ChatColor.GREEN + "Send trade to " + player2.getDisplayName() + ".");
+							limitTime.put(player, true);
+							trade(player, player2);
+						} else {
+							player.sendMessage(ChatColor.RED + "뭘 기대하신겁니까 휴먼.");
+							return true;
+						}
+					} else {
+						player.sendMessage(ChatColor.RED + "상대방과의 거리가 멀어 거래가 취소됩니다.");
+						player2.sendMessage(ChatColor.RED + "상대방과의 거리가 멀어 거래가 취소됩니다.");
+					}
+					
 				} catch(Exception e) {
 					
 				}
@@ -106,6 +142,7 @@ public class Cmd21Trade implements CommandExecutor {
 
 					if (time >= 200) {
 						limitTime.put(player, false);
+						player.sendMessage(ChatColor.RED + "기한이 만료되어 거래가 취소되었습니다.");
 						this.cancel();
 					}
 
