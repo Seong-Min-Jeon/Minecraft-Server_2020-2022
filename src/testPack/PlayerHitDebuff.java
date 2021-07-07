@@ -159,7 +159,7 @@ public class PlayerHitDebuff {
 					pe.startE28();
 					// ================================================================
 					player.damage(player.getHealth()/2);
-					player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,100,1,true,false,false));
+					player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,100,1,true,true));
 					player.getWorld().playSound(mob.getLocation(), Sound.BLOCK_PORTAL_TRIGGER, 1.0f, 1.0f);
 					player.sendMessage(ChatColor.RED + "시련의 저주가 걸립니다.");
 				}
@@ -187,8 +187,8 @@ public class PlayerHitDebuff {
 			}
 			if(num == 4) {
 				LivingEntity ent = (LivingEntity) mob;
-				ent.addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, 60, 1,true,false,false));
-				ent.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 60, 140,true,false,false));
+				ent.addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, 60, 1,true,true));
+				ent.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 60, 140,true,true));
 				CustomWither cw = new CustomWither(ent.getLocation());
 				WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
 				world.addEntity(cw);
@@ -233,8 +233,8 @@ public class PlayerHitDebuff {
 				for(int i = 0 ; i < 10 ; i++) {
 					player.getWorld().spawnParticle(Particle.ASH, mob.getLocation(), 10);
 				}
-				player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,200,1,true,false,false));
-				player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS,40,50,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,200,1,true,true));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS,40,50,true,true));
 				player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ENDER_DRAGON_FLAP, 1.0f, 1.0f);
 				player.sendMessage(ChatColor.RED + "케흘렌의 저주로 몸이 얼어붙습니다.");
 				((WitherSkeleton) mob).setTarget(player);
@@ -278,9 +278,9 @@ public class PlayerHitDebuff {
 				int num = rnd.nextInt(10);
 				if(num == 0) {
 					player.teleport(mob.getLocation());
-					player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,100,100,true,false,false));
-					player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,100,200,true,false,false));
-					player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION,100,200,true,false,false));
+					player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,100,100,true,true));
+					player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,100,200,true,true));
+					player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION,100,200,true,true));
 					player.getWorld().playSound(mob.getLocation(), Sound.BLOCK_CHAIN_HIT, 1.0f, 1.0f);
 					player.sendMessage(ChatColor.RED + "발로르가 당신을 끌어당겼습니다.");
 					((Zombie) mob).setTarget(player);
@@ -292,7 +292,7 @@ public class PlayerHitDebuff {
 					player.sendMessage(ChatColor.RED + "발로르가 헬파이어를 시전합니다.");
 					sendMessage(player, ChatColor.RED + "발로르가 헬파이어를 시전합니다.");
 					
-					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true, false, false));
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true,true));
 					
 					Location loc = mob.getLocation();
 					
@@ -353,9 +353,9 @@ public class PlayerHitDebuff {
 			} else {
 				int num = rnd.nextInt(13);
 				if(num == 0) {
-					player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,100,100,true,false,false));
-					player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,100,200,true,false,false));
-					player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS,50,200,true,false,false));
+					player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,100,100,true,true));
+					player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,100,200,true,true));
+					player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS,50,200,true,true));
 					player.sendMessage(ChatColor.RED + "발로르의 힘으로 석화되었습니다.");
 					((Zombie) mob).setTarget(player);
 				}
@@ -369,8 +369,8 @@ public class PlayerHitDebuff {
 			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
 				int num = rnd.nextInt(10);
 				if (num == 0) {
-					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, 100, 0, true, false, false));
-					player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 100, 0, true, false, false));
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, 100, 0, true,true));
+					player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 100, 0, true,true));
 					((LivingEntity) mob).setHealth(((LivingEntity) mob).getHealth() + 3000);
 					player.getWorld().playSound(mob.getLocation(), Sound.AMBIENT_CAVE, 1.0f, 1.0f);
 					player.sendMessage(ChatColor.RED + "아덴이 회복을 하기 위해 도망갑니다.");
@@ -468,9 +468,9 @@ public class PlayerHitDebuff {
 				int num = rnd.nextInt(12);
 				if (num == 0) {
 					player.teleport(mob.getLocation());
-					player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 100, 100, true, false, false));
-					player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 100, 200, true, false, false));
-					player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 100, 200, true, false, false));
+					player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 100, 100, true,true));
+					player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 100, 200, true,true));
+					player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 100, 200, true,true));
 					player.setVelocity(player.getEyeLocation().getDirection().multiply(-10.0f));
 					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_NETHERRACK_STEP, 3.0f, 1.0f);
 					player.sendMessage(ChatColor.RED + "지배자가 당신을 밀어냅니다.");
@@ -503,7 +503,7 @@ public class PlayerHitDebuff {
 					player.sendMessage(ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
 					sendMessage(player, ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
 					
-					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true, false, false));
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true,true));
 					
 					Location loc = mob.getLocation();
 
@@ -576,8 +576,8 @@ public class PlayerHitDebuff {
 					ParticleEffect pe = new ParticleEffect(player, mob);
 					pe.startE32();
 					// ================================================================
-					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 2000, true, false, false));
-					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, 100, 0, true, false, false));
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 2000, true,true));
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, 100, 0, true,true));
 					player.sendMessage(ChatColor.RED + "탑의 저주로 지배자가 강화됩니다.");
 					sendMessage(player, ChatColor.RED + "탑의 저주로 지배자가 강화됩니다.");
 					((Skeleton) mob).setTarget(player);
@@ -593,8 +593,8 @@ public class PlayerHitDebuff {
 				int num = rnd.nextInt(12);
 				if (num == 0) {
 					player.teleport(mob.getLocation());
-					player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 100, 200, true, false, false));
-					player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 100, 200, true, false, false));
+					player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 100, 200, true,true));
+					player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 100, 200, true,true));
 					player.sendMessage(ChatColor.RED + "환각에 걸렸습니다.");
 					((Skeleton) mob).setTarget(player);
 				}
@@ -603,7 +603,7 @@ public class PlayerHitDebuff {
 					player.sendMessage(ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
 					sendMessage(player, ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
 					
-					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true, false, false));
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true,true));
 					
 					Location loc = mob.getLocation();
 					
@@ -676,8 +676,8 @@ public class PlayerHitDebuff {
 					ParticleEffect pe = new ParticleEffect(player, mob);
 					pe.startE32();
 					// ================================================================
-					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 10000, true, false, false));
-					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, 100, 0, true, false, false));
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 10000, true,true));
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, 100, 0, true,true));
 					player.sendMessage(ChatColor.RED + "탑의 저주로 지배자가 강화됩니다.");
 					sendMessage(player, ChatColor.RED + "탑의 저주로 지배자가 강화됩니다.");
 					((Skeleton) mob).setTarget(player);
@@ -706,7 +706,7 @@ public class PlayerHitDebuff {
 					player.sendMessage(ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
 					sendMessage(player, ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
 					
-					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true, false, false));
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true,true));
 					
 					Location loc = mob.getLocation();
 					
@@ -779,8 +779,8 @@ public class PlayerHitDebuff {
 					ParticleEffect pe = new ParticleEffect(player, mob);
 					pe.startE32();
 					// ================================================================
-					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 50000, true, false, false));
-					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, 100, 0, true, false, false));
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 50000, true,true));
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, 100, 0, true,true));
 					mob.teleport(player.getLocation().add(0,1,0));
 					player.sendMessage(ChatColor.RED + "탑의 저주로 지배자가 강화됩니다.");
 					sendMessage(player, ChatColor.RED + "탑의 저주로 지배자가 강화됩니다.");
@@ -829,10 +829,10 @@ public class PlayerHitDebuff {
 						for (Entity nearEntity : entitylist) {
 							if (nearEntity.getType() != EntityType.PLAYER) {
 								Player nearPlayer = (Player) nearEntity;
-								nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0, true, false, false));
+								nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0, true,true));
 							}
 						}
-						player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0, true, false, false));
+						player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0, true,true));
 						player.sendMessage(ChatColor.RED + "지배자의 전투의 의지가 발동됩니다.");
 						sendMessage(player, ChatColor.RED + "지배자의 전투의 의지가 발동됩니다.");
 						player.sendMessage(ChatColor.RED + "10초간 지배자에게 저항이 부여됩니다.");
@@ -915,7 +915,7 @@ public class PlayerHitDebuff {
 							player.getWorld().spawnParticle(Particle.CLOUD, mob.getLocation(), 0);
 						}
 						ent.setHealth(ent.getHealth() + 500000);
-						ent.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 1, true, false, false));
+						ent.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 1, true,true));
 						player.sendMessage(ChatColor.RED + "지배자의 천사의 축복이 발동됩니다.");
 						sendMessage(player, ChatColor.RED + "지배자의 천사의 축복이 발동됩니다.");
 						player.sendMessage(ChatColor.RED + "지배자가 회복하며 저항이 부여됩니다.");
@@ -1104,7 +1104,7 @@ public class PlayerHitDebuff {
 							player.getWorld().spawnParticle(Particle.CLOUD, mob.getLocation(), 0);
 						}
 						ent.setHealth(ent.getHealth() + 1000000);
-						ent.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 2, true, false, false));
+						ent.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 2, true,true));
 						player.sendMessage(ChatColor.RED + "지배자의 아이 오브 오더가 발동됩니다.");
 						sendMessage(player, ChatColor.RED + "지배자의 아이 오브 오더가 발동됩니다.");
 						player.sendMessage(ChatColor.RED + "지배자가 회복하며 저항이 부여됩니다.");
@@ -1182,7 +1182,7 @@ public class PlayerHitDebuff {
 					player.sendMessage(ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
 					sendMessage(player, ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
 					
-					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true, false, false));
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true,true));
 					
 					Location loc = mob.getLocation();
 					
@@ -1262,8 +1262,8 @@ public class PlayerHitDebuff {
 					ParticleEffect pe = new ParticleEffect(player, mob);
 					pe.startE32();
 					// ================================================================
-					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 80000, true, false, false));
-					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, 100, 0, true, false, false));
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 80000, true,true));
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, 100, 0, true,true));
 					mob.teleport(player.getLocation().add(0,1,0));
 					player.sendMessage(ChatColor.RED + "탑의 저주로 지배자가 강화됩니다.");
 					sendMessage(player, ChatColor.RED + "탑의 저주로 지배자가 강화됩니다.");
@@ -1286,7 +1286,7 @@ public class PlayerHitDebuff {
 			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
 				int num = rnd.nextInt(24);
 				if (num == 0) {
-					player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 100, 200, true, false, false));
+					player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 100, 200, true,true));
 					player.getWorld().playSound(player.getLocation(), Sound.AMBIENT_CAVE, 3.0f, 1.0f);
 					player.sendMessage(ChatColor.RED + "지배자가 마법사를 소환합니다.");
 					sendMessage(player, ChatColor.RED + "지배자가 마법사를 소환합니다.");
@@ -1295,7 +1295,7 @@ public class PlayerHitDebuff {
 					player.getWorld().spawnEntity(mob.getLocation(), EntityType.WITHER_SKELETON);
 					((Skeleton) mob).setTarget(player);
 				} else if (num == 1) {
-					player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 100, 200, true, false, false));
+					player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 100, 200, true,true));
 					player.getWorld().playSound(player.getLocation(), Sound.AMBIENT_CAVE, 3.0f, 1.0f);
 					player.sendMessage(ChatColor.RED + "거미가 증식합니다.");
 					sendMessage(player, ChatColor.RED + "거미가 증식합니다.");
@@ -1309,7 +1309,7 @@ public class PlayerHitDebuff {
 					player.sendMessage(ChatColor.RED + "지배자가 대규모 마법을 시전합니다.");
 					sendMessage(player, ChatColor.RED + "지배자가 대규모 마법을 시전합니다.");
 					
-					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true, false, false));
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true,true));
 					
 					Location loc = mob.getLocation();
 					
@@ -1375,7 +1375,7 @@ public class PlayerHitDebuff {
 					player.sendMessage(ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
 					sendMessage(player, ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
 					
-					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true, false, false));
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true,true));
 					
 					Location loc = mob.getLocation();
 					
@@ -1448,8 +1448,8 @@ public class PlayerHitDebuff {
 					ParticleEffect pe = new ParticleEffect(player, mob);
 					pe.startE32();
 					// ================================================================
-					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 150000, true, false, false));
-					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, 100, 0, true, false, false));
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 150000, true,true));
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, 100, 0, true,true));
 					player.sendMessage(ChatColor.RED + "탑의 저주로 지배자가 강화됩니다.");
 					sendMessage(player, ChatColor.RED + "탑의 저주로 지배자가 강화됩니다.");
 					((Skeleton) mob).setTarget(player);
@@ -1478,7 +1478,7 @@ public class PlayerHitDebuff {
 					player.sendMessage(ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
 					sendMessage(player, ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
 					
-					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true, false, false));
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true,true));
 					
 					Location loc = mob.getLocation();
 					
@@ -1549,8 +1549,8 @@ public class PlayerHitDebuff {
 					ParticleEffect pe = new ParticleEffect(player, mob);
 					pe.startE32();
 					// ================================================================
-					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 200000, true, false, false));
-					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, 100, 0, true, false, false));
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 200000, true,true));
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, 100, 0, true,true));
 					player.sendMessage(ChatColor.RED + "탑의 저주로 지배자가 강화됩니다.");
 					sendMessage(player, ChatColor.RED + "탑의 저주로 지배자가 강화됩니다.");
 					((Skeleton) mob).setTarget(player);
@@ -1559,7 +1559,7 @@ public class PlayerHitDebuff {
 					player.sendMessage(ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
 					sendMessage(player, ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
 					
-					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true, false, false));
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true,true));
 					
 					Location loc = mob.getLocation();
 					
@@ -1628,7 +1628,7 @@ public class PlayerHitDebuff {
 			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
 				int num = rnd.nextInt(18);
 				if (num == 0) {
-					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 140, 200, true, false, false));
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 140, 200, true,true));
 					
 					new ParticleEffect(player, mob).newEffect103();
 					((Skeleton) mob).setTarget(player);
@@ -1636,7 +1636,7 @@ public class PlayerHitDebuff {
 					player.sendMessage(ChatColor.RED + "지배자가 자폭을 준비 중입니다.");
 					sendMessage(player, ChatColor.RED + "지배자가 자폭을 준비 중입니다.");
 					
-					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true, false, false));
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true,true));
 					
 					Location loc = mob.getLocation();
 					
@@ -1709,7 +1709,7 @@ public class PlayerHitDebuff {
 					player.sendMessage(ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
 					sendMessage(player, ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
 					
-					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 60, 200, true, false, false));
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 60, 200, true,true));
 					
 					Location loc = mob.getLocation();
 					
@@ -1865,7 +1865,7 @@ public class PlayerHitDebuff {
 					player.sendMessage(ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
 					sendMessage(player, ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
 					
-					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 60, 200, true, false, false));
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 60, 200, true,true));
 					
 					Location loc = mob.getLocation();
 					
@@ -1954,7 +1954,7 @@ public class PlayerHitDebuff {
 	// 약쟁이
 	public void mob20(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("약쟁이" + ChatColor.YELLOW + " [Lv.299]")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 0, true, false, false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 0, true,true));
 		}
 	}
 
@@ -1966,7 +1966,7 @@ public class PlayerHitDebuff {
 			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
 				int num = rnd.nextInt(10);
 				if (num == 0) {
-					player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 100, 200, true, false, false));
+					player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 100, 200, true,true));
 					player.getWorld().playSound(player.getLocation(), Sound.AMBIENT_CAVE, 3.0f, 1.0f);
 					player.sendMessage(ChatColor.RED + "어둠의 기운이 덮칩니다.");
 					sendMessage(player, ChatColor.RED + "어둠의 기운이 덮칩니다.");
@@ -1982,7 +1982,7 @@ public class PlayerHitDebuff {
 					player.sendMessage(ChatColor.RED + "멸망의 주문이 들려옵니다.");
 					sendMessage(player, ChatColor.RED + "멸망의 주문이 들려옵니다.");
 					
-					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 210, 200, true, false, false));
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 210, 200, true,true));
 					
 					Location loc = mob.getLocation();
 					
@@ -2220,7 +2220,7 @@ public class PlayerHitDebuff {
 
 					}, 0, 1);
 				} else if (num == 1) {
-					player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 200, 200, true, false, false));
+					player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 200, 200, true,true));
 					player.sendMessage(ChatColor.RED + "아라크네가 당신을 속박합니다.");
 					((CaveSpider) mob).setTarget(player);
 				}
@@ -2232,7 +2232,7 @@ public class PlayerHitDebuff {
 	// 사막 전갈
 	public void mob23(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("사막 전갈" + ChatColor.YELLOW + " [Lv.465]")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 200, 0, true, false, false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 200, 0, true,true));
 		}
 	}
 
@@ -2430,8 +2430,8 @@ public class PlayerHitDebuff {
 								for(Entity nearEntity : entitylist) {
 									if (nearEntity instanceof Player) {
 										nearEntity.sendMessage(ChatColor.RED + "잠영참이 발동됩니다.");
-										((Player) nearEntity).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 20, 200, true, false, false));
-										((Player) nearEntity).addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 20, 200, true, false, false));
+										((Player) nearEntity).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 20, 200, true,true));
+										((Player) nearEntity).addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 20, 200, true,true));
 										ArmorStand as = (ArmorStand) player.getWorld().spawnEntity(nearEntity.getLocation().add(0, 5, 0), EntityType.ARMOR_STAND);
 										as.setVisible(false);
 										as.setArms(true);
@@ -2481,7 +2481,7 @@ public class PlayerHitDebuff {
 
 			int num = rnd.nextInt(15);
 			if (num == 0) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, 120, 0, true, false, false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, 120, 0, true,true));
 				player.sendMessage(ChatColor.RED + "암석 거인이 당신을 잡아듭니다.");
 				taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -2620,10 +2620,10 @@ public class PlayerHitDebuff {
 						if(ent instanceof Player) {
 							Player nearPlayer = (Player) ent;
 							nearPlayer.teleport(mob.getLocation());
-							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,100,100,true,false,false));
-							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,100,200,true,false,false));
-							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION,100,200,true,false,false));
-							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS,100,10000,true,false,false));
+							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,100,100,true,true));
+							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,100,200,true,true));
+							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION,100,200,true,true));
+							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS,100,10000,true,true));
 							nearPlayer.getWorld().playSound(mob.getLocation(), Sound.BLOCK_CHAIN_HIT, 1.0f, 1.0f);
 							nearPlayer.sendMessage(ChatColor.RED + "그물에 걸렸습니다.");
 						}
@@ -2643,10 +2643,10 @@ public class PlayerHitDebuff {
 						if(ent instanceof Player) {
 							Player nearPlayer = (Player) ent;
 							nearPlayer.teleport(mob.getLocation());
-							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,100,100,true,false,false));
-							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,100,200,true,false,false));
-							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION,100,200,true,false,false));
-							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS,100,10000,true,false,false));
+							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,100,100,true,true));
+							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,100,200,true,true));
+							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION,100,200,true,true));
+							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS,100,10000,true,true));
 							nearPlayer.getWorld().playSound(mob.getLocation(), Sound.BLOCK_CHAIN_HIT, 1.0f, 1.0f);
 							nearPlayer.sendMessage(ChatColor.RED + "그물에 걸렸습니다.");
 						}
@@ -2668,7 +2668,7 @@ public class PlayerHitDebuff {
 				if (num <= 2) {
 					player.getWorld().playSound(mob.getLocation(), Sound.ITEM_SHIELD_BLOCK, 2.0f, 1.0f);
 					player.setVelocity(player.getEyeLocation().getDirection().multiply(-10.0f));
-					player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 150, 0, true, false, false));
+					player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 150, 0, true,true));
 					if(player.getHealth() - 10 > 0) {
 						player.setHealth(player.getHealth() - 10);
 					} else {
@@ -2707,7 +2707,7 @@ public class PlayerHitDebuff {
 			int num = rnd.nextInt(8);
 			if (num == 0) {
 
-				player.addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, 100, 0, true, false, false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, 100, 0, true,true));
 				
 				taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -2983,7 +2983,7 @@ public class PlayerHitDebuff {
 					}, 0, 1);
 					player.sendMessage(ChatColor.RED + "전장의 서곡이 울려퍼집니다.");
 					sendMessage(player, ChatColor.RED + "전장의 서곡이 울려퍼집니다.");
-					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 150, 200, true, false, false));
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 150, 200, true,true));
 					((Skeleton) mob).setTarget(player);
 				}
 			}
@@ -3002,7 +3002,7 @@ public class PlayerHitDebuff {
 	// 빛의 궁수 석상
 	public void mob31(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("빛의 궁수 석상" + ChatColor.YELLOW + " [Lv.471]")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 1, true, false, false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 1, true,true));
 		}
 	}
 
@@ -3124,7 +3124,7 @@ public class PlayerHitDebuff {
 				player.sendMessage(ChatColor.RED + "미아즈마가 땅울림을 시전합니다.");
 				sendMessage(player, ChatColor.RED + "미아즈마가 땅울림을 시전합니다.");
 				
-				((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true, false, false));
+				((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true,true));
 				
 				Location loc = mob.getLocation();
 				
@@ -3200,15 +3200,15 @@ public class PlayerHitDebuff {
 	// 포자를 날리는 검은 버섯
 	public void mob46(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("포자를 날리는 검은 버섯" + ChatColor.YELLOW + " [Lv.542]")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 100, 0, true, false, false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 100, 0, true,true));
 		}
 	}
 	
 	// 유혹하는 나무
 	public void mob47(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("유혹하는 나무" + ChatColor.YELLOW + " [Lv.544]")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 100, 0, true, false, false));
-			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 100, 50, true, false, false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 100, 0, true,true));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 100, 50, true,true));
 			player.damage(500);
 		}
 	}
@@ -3216,7 +3216,7 @@ public class PlayerHitDebuff {
 	// 재앙을 날리는 검은 버섯
 	public void mob48(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("재앙을 날리는 검은 버섯" + ChatColor.YELLOW + " [Lv.550]")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 100, 0, true, false, false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 100, 0, true,true));
 		}
 	}
 	
@@ -3236,7 +3236,7 @@ public class PlayerHitDebuff {
 	// 독극 슬라임
 	public void mob50(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("독극 슬라임" + ChatColor.YELLOW + " [Lv.566]")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 200, 3, true, false, false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 200, 3, true,true));
 		}
 	}
 	
@@ -3415,7 +3415,7 @@ public class PlayerHitDebuff {
 	// 어린 복어 병사
 	public void mob55(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("어린 복어 병사" + ChatColor.YELLOW + " [Lv.700]")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 100, 0, true, false, false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 100, 0, true,true));
 		}
 	}
 	
@@ -3429,7 +3429,7 @@ public class PlayerHitDebuff {
 				if(num < 2) {
 					((WitherSkeleton) mob).setTarget(player);
 					player.sendMessage(ChatColor.RED + "아빠 상어의 썩은 토사물에 맞았습니다.");
-					player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 100, 4,true,false,false));
+					player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 100, 4,true,true));
 					player.setFireTicks(200);
 				} else if(num == 2) {
 					((WitherSkeleton) mob).setTarget(player);
@@ -3438,7 +3438,7 @@ public class PlayerHitDebuff {
 					player.sendMessage(ChatColor.RED + "아빠 상어가 불꽃 스크류를 시전합니다.");
 					sendMessage(player, ChatColor.RED + "아빠 상어가 불꽃 스크류를 시전합니다.");
 					
-					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true, false, false));
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true,true));
 					
 					Location loc = mob.getLocation();
 					
@@ -3500,7 +3500,7 @@ public class PlayerHitDebuff {
 				if(num < 2) {
 					((WitherSkeleton) mob).setTarget(player);
 					player.sendMessage(ChatColor.RED + "아빠 상어의 토사물에 맞았습니다.");
-					player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 100, 4,true,false,false));
+					player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 100, 4,true,true));
 				} else if(num == 2) {
 					((WitherSkeleton) mob).setTarget(player);
 					mob.teleport(player);
@@ -3508,7 +3508,7 @@ public class PlayerHitDebuff {
 					player.sendMessage(ChatColor.RED + "아빠 상어가 스크류를 시전합니다.");
 					sendMessage(player, ChatColor.RED + "아빠 상어가 스크류를 시전합니다.");
 					
-					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true, false, false));
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true,true));
 					
 					Location loc = mob.getLocation();
 					
@@ -3628,10 +3628,10 @@ public class PlayerHitDebuff {
 						if(ent instanceof Player) {
 							Player nearPlayer = (Player) ent;
 							nearPlayer.teleport(mob.getLocation());
-							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,100,100,true,false,false));
-							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,100,200,true,false,false));
-							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION,100,200,true,false,false));
-							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS,100,10000,true,false,false));
+							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,100,100,true,true));
+							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,100,200,true,true));
+							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION,100,200,true,true));
+							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS,100,10000,true,true));
 							nearPlayer.getWorld().playSound(mob.getLocation(), Sound.BLOCK_GLASS_BREAK, 1.0f, 1.0f);
 							nearPlayer.sendMessage(ChatColor.RED + "포세이돈이 자신의 영역에 침범한 자들을 고통에 몰아넣습니다.");
 						}
@@ -3643,7 +3643,7 @@ public class PlayerHitDebuff {
 					((Skeleton) mob).setTarget(player);
 					player.getWorld().playSound(mob.getLocation(), Sound.ITEM_SHIELD_BLOCK, 2.0f, 1.0f);
 					player.setVelocity(player.getEyeLocation().getDirection().multiply(-10.0f));
-					player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 150, 0, true, false, false));
+					player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 150, 0, true,true));
 					if(player.getHealth() - 10 > 0) {
 						player.setHealth(player.getHealth() - 10);
 					} else {
@@ -3651,7 +3651,7 @@ public class PlayerHitDebuff {
 					}
 				} else if(num == 1) {
 					((Skeleton) mob).setTarget(player);
-					player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 100, 200, true, false, false));
+					player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 100, 200, true,true));
 					player.getWorld().playSound(player.getLocation(), Sound.AMBIENT_CAVE, 3.0f, 1.0f);
 					player.sendMessage(ChatColor.RED + "우리 부모님의 원수를 갚겠어.");
 					sendMessage(player, ChatColor.RED + "우리 부모님의 원수를 갚겠어.");
@@ -3671,21 +3671,21 @@ public class PlayerHitDebuff {
 	// 아기 상어
 	public void mob58(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("아기 상어" + ChatColor.YELLOW + " [Lv.1]")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 100, 2, true, false, false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 100, 2, true,true));
 		}
 	}
 	
 	// 검은 흐름에 잠식된 주민
 	public void mob59(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("검은 흐름에 잠식된 주민" + ChatColor.YELLOW + " [Lv.625]")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 2, true, false, false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 2, true,true));
 		}
 	}
 	
 	// 검은 흐름에 잠식된 주민
 	public void mob60(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("검은 흐름에 잠식된 주민" + ChatColor.YELLOW + " [Lv.629]")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 2, true, false, false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 2, true,true));
 		}
 	}
 	
@@ -3694,7 +3694,7 @@ public class PlayerHitDebuff {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("페라리교의 신도" + ChatColor.YELLOW + " [Lv.635]")) {
 			int num = rnd.nextInt(5);
 			if (num == 0) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 200, 3, true, false, false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 200, 3, true,true));
 			}
 		}
 	}
@@ -3704,7 +3704,7 @@ public class PlayerHitDebuff {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("페라리교의 상위 신도" + ChatColor.YELLOW + " [Lv.639]")) {
 			int num = rnd.nextInt(5);
 			if (num == 0) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 2, true, false, false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 2, true,true));
 			}
 		}
 	}
@@ -3714,7 +3714,7 @@ public class PlayerHitDebuff {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("페라리교의 교주" + ChatColor.YELLOW + " [Lv.650]")) {
 			int num = rnd.nextInt(5);
 			if (num == 0) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 120, 2, true, false, false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 120, 2, true,true));
 			}
 		}
 	}
@@ -3722,14 +3722,14 @@ public class PlayerHitDebuff {
 	// 어푸
 	public void mob64(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("어푸" + ChatColor.YELLOW + " [Lv.645]")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 200, 3, true, false, false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 200, 3, true,true));
 		}
 	}
 	
 	// 아푸
 	public void mob65(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("아푸" + ChatColor.YELLOW + " [Lv.649]")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 200, 3, true, false, false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 200, 3, true,true));
 		}
 	}
 	
@@ -3749,7 +3749,7 @@ public class PlayerHitDebuff {
 	// 위더 스켈레톤
 	public void mob67(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("위더 스켈레톤" + ChatColor.YELLOW + " [Lv.659]")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 2, true, false, false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 2, true,true));
 		}
 	}
 	
@@ -3763,7 +3763,7 @@ public class PlayerHitDebuff {
 	// 귀여움의 조종자
 	public void mob69(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("귀여움의 조종자" + ChatColor.YELLOW + " [Lv.664]")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 200, 100, true, false, false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 200, 100, true,true));
 			player.damage(3000);
 		}
 	}
@@ -3771,57 +3771,57 @@ public class PlayerHitDebuff {
 	// 대지의 조종자
 	public void mob70(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("대지의 조종자" + ChatColor.YELLOW + " [Lv.665]")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 2, true, false, false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 2, true,true));
 		}
 	}
 	
 	// 포보르의 체액
 	public void mob71(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("포보르의 체액" + ChatColor.YELLOW + " [Lv.670]")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 3, true, false, false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 3, true,true));
 		}
 	}
 	
 	// 포보르화 고블린
 	public void mob72(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("포보르화 고블린" + ChatColor.YELLOW + " [Lv.674]")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 3, true, false, false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 3, true,true));
 		}
 	}
 	
 	// 포보르화 모험가
 	public void mob73(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("포보르화 모험가" + ChatColor.YELLOW + " [Lv.675]")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 3, true, false, false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 3, true,true));
 		}
 	}
 	
 	// 포보르화 오크
 	public void mob74(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("포보르화 오크" + ChatColor.YELLOW + " [Lv.679]")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 3, true, false, false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 3, true,true));
 		}
 	}
 	
 	// 포보르라고 불리는 포보르
 	public void mob75(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("포보르라고 불리는 포보르" + ChatColor.YELLOW + " [Lv.690]")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 3, true, false, false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 3, true,true));
 		}
 	}
 	
 	// 인어
 	public void mob76(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("인어" + ChatColor.YELLOW + " [Lv.640]")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 1, true, false, false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 1, true,true));
 		}
 	}
 	
 	// 반란을 두려워하는 귀족
 	public void mob77(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("반란을 두려워하는 귀족" + ChatColor.YELLOW + " [Lv.678]")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 1, true, false, false));
-			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 200, 2, true, false, false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 1, true,true));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 200, 2, true,true));
 		}
 	}
 	
@@ -3863,28 +3863,28 @@ public class PlayerHitDebuff {
 	// 변이된 원시의 땅 보초병
 	public void mob81(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("변이된 원시의 땅 보초병" + ChatColor.YELLOW + " [Lv.688]")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 3, true, false, false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 3, true,true));
 		}
 	}
 	
 	// 변이된 원시의 땅 보초병
 	public void mob82(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("변이된 원시의 땅 보초병" + ChatColor.YELLOW + " [Lv.690]")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 3, true, false, false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 3, true,true));
 		}
 	}
 	
 	// 변이된 원시의 땅 상급병
 	public void mob83(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("변이된 원시의 땅 상급병" + ChatColor.YELLOW + " [Lv.691]")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 3, true, false, false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 3, true,true));
 		}
 	}
 	
 	// 변이된 원시의 땅 정예병
 	public void mob84(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("변이된 원시의 땅 정예병" + ChatColor.YELLOW + " [Lv.693]")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 3, true, false, false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 3, true,true));
 		}
 	}
 	
@@ -3898,35 +3898,35 @@ public class PlayerHitDebuff {
 	// 미지의 땅을 지키는 것
 	public void mob86(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("미지의 땅을 지키는 것" + ChatColor.YELLOW + " [Lv.695]")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 200, 3, true, false, false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 200, 3, true,true));
 		}
 	}
 	
 	// 변이된 첨예발톱
 	public void mob87(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("변이된 첨예발톱" + ChatColor.YELLOW + " [Lv.694]")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 4, true, false, false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 4, true,true));
 		}
 	}
 	
 	// 최면을 거는 포보르
 	public void mob88(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("최면을 거는 포보르" + ChatColor.YELLOW + " [Lv.697]")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 200, 3, true, false, false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 200, 3, true,true));
 		}
 	}
 	
 	// 원시 벌레
 	public void mob89(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("원시 벌레" + ChatColor.YELLOW + " [Lv.700]")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 200, 4, true, false, false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 200, 4, true,true));
 		}
 	}
 	
 	// 원시 거미
 	public void mob90(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("원시 거미" + ChatColor.YELLOW + " [Lv.700]")) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 200, 4, true, false, false));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 200, 4, true,true));
 		}
 	}
 	

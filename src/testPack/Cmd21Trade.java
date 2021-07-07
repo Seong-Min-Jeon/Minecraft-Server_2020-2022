@@ -13,6 +13,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Particle;
+import org.bukkit.Sound;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -141,8 +142,10 @@ public class Cmd21Trade implements CommandExecutor {
 					}
 
 					if (time >= 200) {
-						limitTime.put(player, false);
-						player.sendMessage(ChatColor.RED + "기한이 만료되어 거래가 취소되었습니다.");
+						if(!tradeRel.containsKey(player)) {
+							limitTime.put(player, false);
+							player.sendMessage(ChatColor.RED + "기한이 만료되어 거래가 취소되었습니다.");
+						}
 						this.cancel();
 					}
 
@@ -156,8 +159,8 @@ public class Cmd21Trade implements CommandExecutor {
 	}
 	
 	public void agree(Player player, Player player2) {
-		player.sendMessage(ChatColor.GREEN + "Close the deal with" + player2.getDisplayName() + "!");
-		player2.sendMessage(ChatColor.GREEN + "Close the deal with" + player.getDisplayName() + "!");
+		player.sendMessage(ChatColor.GREEN + "Close the deal with " + player2.getDisplayName() + "!");
+		player2.sendMessage(ChatColor.GREEN + "Close the deal with " + player.getDisplayName() + "!");
 		
 		Inventory inv = Bukkit.createInventory(player, 45, "Trading table");
 		ItemStack ok = new ItemStack(Material.RED_CONCRETE);
@@ -166,7 +169,7 @@ public class Cmd21Trade implements CommandExecutor {
 		okIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		okIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		ok.setItemMeta(okIm);
-		ItemStack bar = new ItemStack(Material.WHITE_STAINED_GLASS_PANE);
+		ItemStack bar = new ItemStack(Material.LIGHT_GRAY_STAINED_GLASS_PANE);
 		ItemMeta barIm = bar.getItemMeta();
 		barIm.setDisplayName(ChatColor.RED + " ");
 		barIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
@@ -187,12 +190,14 @@ public class Cmd21Trade implements CommandExecutor {
 		player2.openInventory(inv);
 		
 		tradeRel.put(player, player2);
+		
+		player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 0.8f);
+		tradeRel.get(player).playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 0.8f);
 	}
 	
 	public HashMap<Player, Player> getMap() {
 		return tradeRel;
 	}
-	
 	
 	private Class<?> getNMSClass(String name) {
 		try {

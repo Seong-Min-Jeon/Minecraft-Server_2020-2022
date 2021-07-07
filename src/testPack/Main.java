@@ -3604,81 +3604,81 @@ public class Main extends JavaPlugin implements Listener{
 				player.setFireTicks(0);
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "바람의 포션 I")) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED,2400,0,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED,2400,0,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "바람의 포션 II")) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED,2400,1,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED,2400,1,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "강화된 바람의 포션 II")) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED,6000,1,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED,6000,1,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "바위의 포션 I")) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,1800,0,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,1800,0,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "바위의 포션 II")) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,1800,1,true,false,false));
-				player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,1800,0,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,1800,1,true,true));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,1800,0,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "바위의 포션 III")) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,1800,1,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,1800,1,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "강화된 바위의 포션 I")) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,3600,0,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,3600,0,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "강화된 바위의 포션 II")) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,3600,1,true,false,false));
-				player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,3600,0,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,3600,1,true,true));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,3600,0,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "강화된 바위의 포션 III")) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,3600,1,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,3600,1,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "근육의 포션 I")) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,1800,10,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,1800,10,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "근육의 포션 III")) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,1800,2000,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,1800,2000,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "근육의 포션 IV")) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,1800,8000,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,1800,8000,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "강화된 근육의 포션 I")) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,3600,10,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,3600,10,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "강화된 근육의 포션 II")) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,3600,500,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,3600,500,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "강화된 근육의 포션 IV")) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,3600,8000,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,3600,8000,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "도약의 포션 I")) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,1200,0,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,1200,0,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "코코넛 음료")) {
 				player.removePotionEffect(PotionEffectType.ABSORPTION);
-				player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 6, 0,true,false,false));
-				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 0,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 6, 0,true,true));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 100, 0,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "워그닐 특제 와인")) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION,1800,0,true,false,false));
-				player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,1800,2,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION,1800,0,true,true));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,1800,2,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "해골물")) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED,1200,2,true,false,false));
-				player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,1200,0,true,false,false));
-				player.addPotionEffect(new PotionEffect(PotionEffectType.POISON,1200,0,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED,1200,2,true,true));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,1200,0,true,true));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.POISON,1200,0,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "검은 인간의 피")) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER,600,0,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER,600,0,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "약재 우린 물")) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 600, 0,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 600, 0,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "거북이 우린 물")) {
 				player.removePotionEffect(PotionEffectType.ABSORPTION);
-				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 1,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 1,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "눈에 좋은 포션")) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, 1200, 0,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, 1200, 0,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "사랑의 묘약")) {
 				try {
@@ -3700,128 +3700,128 @@ public class Main extends JavaPlugin implements Listener{
 				}
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "축복의 포션")) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.HERO_OF_THE_VILLAGE, 6000, 0,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.HERO_OF_THE_VILLAGE, 6000, 0,true,true));
 			}
 			//음식
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "대구구이")) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 2, 0,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 2, 0,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "맛있는 치킨")) {
 				player.removePotionEffect(PotionEffectType.ABSORPTION);
-				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 50, 0,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 50, 0,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "구운 치킨")) {
 				player.removePotionEffect(PotionEffectType.ABSORPTION);
-				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 80, 0,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 80, 0,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "파티용 칠면조")) {
 				player.removePotionEffect(PotionEffectType.ABSORPTION);
-				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 80, 1,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 80, 1,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GRAY + "포르간식 돼지구이")) {
 				player.removePotionEffect(PotionEffectType.ABSORPTION);
-				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 140, 1,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 140, 1,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GRAY + "좋은 장비로 구운 닭고기")) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 2400, 1,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 2400, 1,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "미푀르유식 닭요리")) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 100, 1,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 100, 1,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GRAY + "조리한 돼지고기")) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 2400, 0,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 2400, 0,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "특제양념 돼지구이")) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 100, 0,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 100, 0,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "카이만식 양요리")) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 20, 10,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 20, 10,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "고급진 카이만식 양요리")) {
 				player.removePotionEffect(PotionEffectType.ABSORPTION);
-				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 1,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 1,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "훈제 연어")) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 30, 10,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 30, 10,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "코리아 김")) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, 100, 5,true,false,false));
-				player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 200, 2,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, 100, 5,true,true));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 200, 2,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "갓잡은 생선")) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 200, 0,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 200, 0,true,true));
 				player.sendMessage(ChatColor.RED + "물고기에 기생충이 있었던 것 같다.");
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "바다 위에서 구운 생선구이")) {
 				player.removePotionEffect(PotionEffectType.ABSORPTION);
-				player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 200, 0,true,false,false));
-				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 1,true,false,false));
-				player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 1,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 200, 0,true,true));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 1,true,true));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 1,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "강한 불에 익힌 스테이크")) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 100, 0,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 100, 0,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "수비드 스테이크")) {
 				player.removePotionEffect(PotionEffectType.ABSORPTION);
-				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 600, 0,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 600, 0,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "베아그 돼지 요리")) {
 				player.removePotionEffect(PotionEffectType.ABSORPTION);
-				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 150, 1,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 150, 1,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "베아그식 특제 돼지 구이")) {
 				player.removePotionEffect(PotionEffectType.ABSORPTION);
-				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 300, 1,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 300, 1,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "이것이 스테이크")) {
 				player.removePotionEffect(PotionEffectType.ABSORPTION);
-				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 600, 1,true,false,false));
-				player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 1,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 600, 1,true,true));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 1,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "티본 스테이크")) {
 				player.removePotionEffect(PotionEffectType.ABSORPTION);
-				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 300, 2,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 300, 2,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "하마베산 생선구이")) {
 				player.removePotionEffect(PotionEffectType.ABSORPTION);
-				player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 1200, 1,true,false,false));
-				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 600, 1,true,false,false));
-				player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 20, 10,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 1200, 1,true,true));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 600, 1,true,true));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 20, 10,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "하마베산 생선찜")) {
 				player.removePotionEffect(PotionEffectType.ABSORPTION);
-				player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 1200, 0,true,false,false));
-				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 600, 1,true,false,false));
-				player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 20, 10,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 1200, 0,true,true));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 600, 1,true,true));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 20, 10,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "허니 콤보")) {
 				player.removePotionEffect(PotionEffectType.ABSORPTION);
-				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 1200, 2,true,false,false));
-				player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 20, 10,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 1200, 2,true,true));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 20, 10,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "레드 콤보")) {
 				player.removePotionEffect(PotionEffectType.ABSORPTION);
-				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 1200, 3,true,false,false));
-				player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 1200, 1,true,false,false));
-				player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 20, 10,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 1200, 3,true,true));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 1200, 1,true,true));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 20, 10,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "유목민족의 양요리")) {
 				player.removePotionEffect(PotionEffectType.ABSORPTION);
-				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 1200, 3,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 1200, 3,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "징기스탄")) {
 				player.removePotionEffect(PotionEffectType.ABSORPTION);
-				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 1200, 3,true,false,false));
-				player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 300, 4,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 1200, 3,true,true));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 300, 4,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "탐욕의 사과")) {
-				player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 1200, 4,true,false,false));
-				player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 5,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 1200, 4,true,true));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 5,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "원주민 전통식 구이")) {
 				player.removePotionEffect(PotionEffectType.ABSORPTION);
-				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 1200, 2,true,false,false));
-				player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 3,true,false,false));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 1200, 2,true,true));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 3,true,true));
 			}
 		} catch(Exception e) {
 			
@@ -3882,31 +3882,31 @@ public class Main extends JavaPlugin implements Listener{
 						int dur = Integer.parseInt(buffList[10]);
 						if(Integer.parseInt(buffList[1]) >= 0) {
 							player.removePotionEffect(PotionEffectType.ABSORPTION);
-							player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION,dur,Integer.parseInt(buffList[1]),true,false,false));
+							player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION,dur,Integer.parseInt(buffList[1]),true,true));
 						}
 						if(Integer.parseInt(buffList[2]) >= 0) {
-							player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,dur,Integer.parseInt(buffList[2]),true,false,false));
+							player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,dur,Integer.parseInt(buffList[2]),true,true));
 						}
 						if(Integer.parseInt(buffList[3]) >= 0) {
-							player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED,dur,Integer.parseInt(buffList[3]),true,false,false));
+							player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED,dur,Integer.parseInt(buffList[3]),true,true));
 						}
 						if(Integer.parseInt(buffList[4]) >= 0) {
-							player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,dur,Integer.parseInt(buffList[4]),true,false,false));
+							player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,dur,Integer.parseInt(buffList[4]),true,true));
 						}
 						if(Integer.parseInt(buffList[5]) >= 0) {
-							player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,dur,Integer.parseInt(buffList[5]),true,false,false));
+							player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,dur,Integer.parseInt(buffList[5]),true,true));
 						}
 						if(Integer.parseInt(buffList[6]) >= 0) {
-							player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,dur,Integer.parseInt(buffList[6]),true,false,false));
+							player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,dur,Integer.parseInt(buffList[6]),true,true));
 						}
 						if(Integer.parseInt(buffList[7]) >= 0) {
-							player.addPotionEffect(new PotionEffect(PotionEffectType.POISON,dur,Integer.parseInt(buffList[7]),true,false,false));
+							player.addPotionEffect(new PotionEffect(PotionEffectType.POISON,dur,Integer.parseInt(buffList[7]),true,true));
 						}
 						if(Integer.parseInt(buffList[8]) >= 0) {
-							player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER,dur,Integer.parseInt(buffList[8]),true,false,false));
+							player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER,dur,Integer.parseInt(buffList[8]),true,true));
 						}
 						if(Integer.parseInt(buffList[9]) >= 0) {
-							player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION,dur,Integer.parseInt(buffList[9]),true,false,false));
+							player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION,dur,Integer.parseInt(buffList[9]),true,true));
 						}
 					} else {
 						try {
@@ -3926,31 +3926,31 @@ public class Main extends JavaPlugin implements Listener{
 											int dur = Integer.parseInt(buffList[10]);
 											if(Integer.parseInt(buffList[1]) >= 0) {
 												pp.removePotionEffect(PotionEffectType.ABSORPTION);
-												pp.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION,dur,Integer.parseInt(buffList[1]),true,false,false));
+												pp.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION,dur,Integer.parseInt(buffList[1]),true,true));
 											}
 											if(Integer.parseInt(buffList[2]) >= 0) {
-												pp.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,dur,Integer.parseInt(buffList[2]),true,false,false));
+												pp.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,dur,Integer.parseInt(buffList[2]),true,true));
 											}
 											if(Integer.parseInt(buffList[3]) >= 0) {
-												pp.addPotionEffect(new PotionEffect(PotionEffectType.SPEED,dur,Integer.parseInt(buffList[3]),true,false,false));
+												pp.addPotionEffect(new PotionEffect(PotionEffectType.SPEED,dur,Integer.parseInt(buffList[3]),true,true));
 											}
 											if(Integer.parseInt(buffList[4]) >= 0) {
-												pp.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,dur,Integer.parseInt(buffList[4]),true,false,false));
+												pp.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,dur,Integer.parseInt(buffList[4]),true,true));
 											}
 											if(Integer.parseInt(buffList[5]) >= 0) {
-												pp.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,dur,Integer.parseInt(buffList[5]),true,false,false));
+												pp.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,dur,Integer.parseInt(buffList[5]),true,true));
 											}
 											if(Integer.parseInt(buffList[6]) >= 0) {
-												pp.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,dur,Integer.parseInt(buffList[6]),true,false,false));
+												pp.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,dur,Integer.parseInt(buffList[6]),true,true));
 											}
 											if(Integer.parseInt(buffList[7]) >= 0) {
-												pp.addPotionEffect(new PotionEffect(PotionEffectType.POISON,dur,Integer.parseInt(buffList[7]),true,false,false));
+												pp.addPotionEffect(new PotionEffect(PotionEffectType.POISON,dur,Integer.parseInt(buffList[7]),true,true));
 											}
 											if(Integer.parseInt(buffList[8]) >= 0) {
-												pp.addPotionEffect(new PotionEffect(PotionEffectType.WITHER,dur,Integer.parseInt(buffList[8]),true,false,false));
+												pp.addPotionEffect(new PotionEffect(PotionEffectType.WITHER,dur,Integer.parseInt(buffList[8]),true,true));
 											}
 											if(Integer.parseInt(buffList[9]) >= 0) {
-												pp.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION,dur,Integer.parseInt(buffList[9]),true,false,false));
+												pp.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION,dur,Integer.parseInt(buffList[9]),true,true));
 											}
 											pp.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님이 음식을 공유합니다. " + ChatColor.AQUA 
 															+ "[음식 이름: " + player.getInventory().getItemInHand().getItemMeta().getDisplayName() + ChatColor.AQUA + "]");
@@ -3966,31 +3966,31 @@ public class Main extends JavaPlugin implements Listener{
 								int dur = Integer.parseInt(buffList[10]);
 								if(Integer.parseInt(buffList[1]) >= 0) {
 									player.removePotionEffect(PotionEffectType.ABSORPTION);
-									player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION,dur,Integer.parseInt(buffList[1]),true,false,false));
+									player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION,dur,Integer.parseInt(buffList[1]),true,true));
 								}
 								if(Integer.parseInt(buffList[2]) >= 0) {
-									player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,dur,Integer.parseInt(buffList[2]),true,false,false));
+									player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,dur,Integer.parseInt(buffList[2]),true,true));
 								}
 								if(Integer.parseInt(buffList[3]) >= 0) {
-									player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED,dur,Integer.parseInt(buffList[3]),true,false,false));
+									player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED,dur,Integer.parseInt(buffList[3]),true,true));
 								}
 								if(Integer.parseInt(buffList[4]) >= 0) {
-									player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,dur,Integer.parseInt(buffList[4]),true,false,false));
+									player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,dur,Integer.parseInt(buffList[4]),true,true));
 								}
 								if(Integer.parseInt(buffList[5]) >= 0) {
-									player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,dur,Integer.parseInt(buffList[5]),true,false,false));
+									player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,dur,Integer.parseInt(buffList[5]),true,true));
 								}
 								if(Integer.parseInt(buffList[6]) >= 0) {
-									player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,dur,Integer.parseInt(buffList[6]),true,false,false));
+									player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,dur,Integer.parseInt(buffList[6]),true,true));
 								}
 								if(Integer.parseInt(buffList[7]) >= 0) {
-									player.addPotionEffect(new PotionEffect(PotionEffectType.POISON,dur,Integer.parseInt(buffList[7]),true,false,false));
+									player.addPotionEffect(new PotionEffect(PotionEffectType.POISON,dur,Integer.parseInt(buffList[7]),true,true));
 								}
 								if(Integer.parseInt(buffList[8]) >= 0) {
-									player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER,dur,Integer.parseInt(buffList[8]),true,false,false));
+									player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER,dur,Integer.parseInt(buffList[8]),true,true));
 								}
 								if(Integer.parseInt(buffList[9]) >= 0) {
-									player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION,dur,Integer.parseInt(buffList[9]),true,false,false));
+									player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION,dur,Integer.parseInt(buffList[9]),true,true));
 								}
 								player.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님이 음식을 공유합니다. " + ChatColor.AQUA 
 										+ "[음식 이름: " + player.getInventory().getItemInHand().getItemMeta().getDisplayName() + ChatColor.AQUA + "]");
@@ -9116,38 +9116,287 @@ public class Main extends JavaPlugin implements Listener{
 			Player player = (Player) event.getWhoClicked();
 			try {
 				if(inv.getSize() == 45) {
-					if(inv.getItem(17).getType() == Material.RED_CONCRETE) { 
-						if(inv.getItem(18).getType() == Material.WHITE_STAINED_GLASS_PANE) {
-							if(inv.getItem(19).getType() == Material.WHITE_STAINED_GLASS_PANE) {
-								if(inv.getItem(20).getType() == Material.WHITE_STAINED_GLASS_PANE) {
+					if(inv.getItem(17).getType() == Material.RED_CONCRETE || inv.getItem(17).getType() == Material.GREEN_CONCRETE) { 
+						if(inv.getItem(18).getType() == Material.LIGHT_GRAY_STAINED_GLASS_PANE) {
+							if(inv.getItem(19).getType() == Material.LIGHT_GRAY_STAINED_GLASS_PANE) {
+								if(inv.getItem(20).getType() == Material.LIGHT_GRAY_STAINED_GLASS_PANE) {
 									HashMap<Player, Player> map = new Cmd21Trade().getMap();
-									if(map.containsKey(player)) {
-										if(event.getSlot() >= 0 && event.getSlot() < 17) {
-											event.setCancelled(true);
-											ItemStack item = event.getCurrentItem();
-											System.out.println(item);
-											item.setType(Material.AIR);
-											player.getInventory().addItem(item);
-											player.playSound(player.getLocation(), Sound.BLOCK_WOODEN_TRAPDOOR_OPEN, 1.0f, 0.5f);
-											map.get(player).playSound(player.getLocation(), Sound.BLOCK_WOODEN_TRAPDOOR_OPEN, 1.0f, 0.5f);
-										} else {
-											event.setCancelled(true);
-										}
-									} else {
-										if(map.containsValue(player)) {
-											if(event.getSlot() >= 27 && event.getSlot() < 44) {
+									
+									try {
+										if(map.containsKey(player)) {
+											if(event.getSlot() >= 0 && event.getSlot() < 17) {
 												event.setCancelled(true);
 												ItemStack item = event.getCurrentItem();
-												System.out.println(item);
-												item.setType(Material.AIR);
+												inv.clear(event.getSlot());
 												player.getInventory().addItem(item);
-												player.playSound(player.getLocation(), Sound.BLOCK_WOODEN_TRAPDOOR_OPEN, 1.0f, 0.5f);
-												map.get(player).playSound(player.getLocation(), Sound.BLOCK_WOODEN_TRAPDOOR_OPEN, 1.0f, 0.5f);
+												player.playSound(player.getLocation(), Sound.BLOCK_IRON_TRAPDOOR_OPEN, 3.0f, 0.5f);
+												map.get(player).playSound(player.getLocation(), Sound.BLOCK_IRON_TRAPDOOR_OPEN, 3.0f, 0.5f);
+												
+												// 거래 완료 -> 거래 수락
+												try {
+													inv.getItem(17).setType(Material.RED_CONCRETE);
+												} catch(Exception e) {
+													
+												}
+												try {
+													inv.getItem(44).setType(Material.RED_CONCRETE);
+												} catch(Exception e) {
+													
+												}
+												
+												player.updateInventory();
+												map.get(player).updateInventory();
+											} else {
+												event.setCancelled(true);
 											}
 										} else {
-											event.setCancelled(true);
+											if(map.containsValue(player)) {
+												if(event.getSlot() >= 27 && event.getSlot() < 44) {
+													event.setCancelled(true);
+													ItemStack item = event.getCurrentItem();
+													inv.clear(event.getSlot());
+													player.getInventory().addItem(item);
+													player.playSound(player.getLocation(), Sound.BLOCK_IRON_TRAPDOOR_OPEN, 3.0f, 0.5f);
+													for(Player p : map.keySet()) {
+														if(map.get(p) == player) {
+															p.playSound(player.getLocation(), Sound.BLOCK_IRON_TRAPDOOR_OPEN, 3.0f, 0.5f);
+														}
+													}
+													
+													// 거래 완료 -> 거래 수락
+													try {
+														inv.getItem(17).setType(Material.RED_CONCRETE);
+													} catch(Exception e) {
+														
+													}
+													try {
+														inv.getItem(44).setType(Material.RED_CONCRETE);
+													} catch(Exception e) {
+														
+													}
+													
+													player.updateInventory();
+													for(Player p : map.keySet()) {
+														if(map.get(p) == player) {
+															p.updateInventory();
+															break;
+														}
+													}
+												} else {
+													event.setCancelled(true);
+												}
+											} else {
+												event.setCancelled(true);
+											}
 										}
+									} catch(Exception e1) {
+										
 									}
+									
+									try {
+										if(map.containsKey(player)) {
+											if(event.getSlot() == 17 && event.getCurrentItem().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "거래 수락") && event.getCurrentItem().getType() == Material.RED_CONCRETE) {
+												event.getCurrentItem().setType(Material.GREEN_CONCRETE);
+												player.playSound(player.getLocation(), Sound.BLOCK_IRON_TRAPDOOR_OPEN, 3.0f, 0.5f);
+												map.get(player).playSound(player.getLocation(), Sound.BLOCK_IRON_TRAPDOOR_OPEN, 3.0f, 0.5f);
+												player.updateInventory();
+												map.get(player).updateInventory();
+											}
+										}
+										if(map.containsValue(player)) {
+											if(event.getSlot() == 44 && event.getCurrentItem().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "거래 수락") && event.getCurrentItem().getType() == Material.RED_CONCRETE) {
+												event.getCurrentItem().setType(Material.GREEN_CONCRETE);
+												player.playSound(player.getLocation(), Sound.BLOCK_IRON_TRAPDOOR_OPEN, 3.0f, 0.5f);
+												for(Player p : map.keySet()) {
+													if(map.get(p) == player) {
+														p.playSound(player.getLocation(), Sound.BLOCK_IRON_TRAPDOOR_OPEN, 3.0f, 0.5f);
+														p.updateInventory();
+														break;
+													}
+												}
+												player.updateInventory();
+											}
+										}
+										
+										if(map.containsKey(player)) {
+											if(event.getSlot() == 17 && event.getCurrentItem().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "거래 수락") && event.getCurrentItem().getType() == Material.GREEN_CONCRETE) {
+												if(inv.getItem(44).getType() == Material.GREEN_CONCRETE) {
+													// 거래 완료
+													Player player2 = map.get(player);
+													
+													if(true) {
+														int i = 0;
+														Inventory p2Inv = player2.getInventory();
+														for (int j = 0 ; j < 36 ; j++) {
+															if(p2Inv.getItem(j) == null) {
+																i++;
+															}
+														}
+														
+														int k = 17;
+														for (int l = 0 ; l < 17 ; l++) {
+															if(inv.getItem(l) == null) {
+																k--;
+															}
+														}
+														
+														if(i >= k) {
+															for(int cnt = 0 ; cnt < 17 ; cnt++) {
+																if(inv.getItem(cnt) != null) {
+																	p2Inv.addItem(inv.getItem(cnt));
+																}
+																inv.setItem(cnt, inv.getItem(18));
+															}
+														} else {
+															player.sendMessage("인벤토리의 빈자리가 부족합니다.");
+															event.setCancelled(true);
+														}
+													}
+													
+													if(true) {
+														int i = 0;
+														Inventory pInv = player.getInventory();
+														for (int j = 0 ; j < 36 ; j++) {
+															if(pInv.getItem(j) == null) {
+																i++;
+															}
+														}
+														
+														int k = 17;
+														for (int l = 27 ; l < 44 ; l++) {
+															if(inv.getItem(l) == null) {
+																k--;
+															}
+														}
+														
+														if(i >= k) {
+															for(int cnt = 27 ; cnt < 44 ; cnt++) {
+																if(inv.getItem(cnt) != null) {
+																	pInv.addItem(inv.getItem(cnt));
+																}
+																inv.setItem(cnt, inv.getItem(18));
+															}
+														} else {
+															player.sendMessage("인벤토리의 빈자리가 부족합니다.");
+															event.setCancelled(true);
+														}
+													}
+													
+													player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 3.0f);
+													map.get(player).playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 3.0f);
+													player.updateInventory();
+													map.get(player).updateInventory();
+													player.closeInventory();
+													new BukkitRunnable() {
+														
+														Player p = map.get(player);
+														
+														@Override
+														public void run() {
+															p.closeInventory();
+															this.cancel();
+														}
+													}.runTaskLater(Main.getPlugin(Main.class), 1);
+													
+													map.remove(player);
+												}
+											}
+										}
+										if(map.containsValue(player)) {
+											if(event.getSlot() == 44 && event.getCurrentItem().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "거래 수락") && event.getCurrentItem().getType() == Material.GREEN_CONCRETE) {
+												if(inv.getItem(17).getType() == Material.GREEN_CONCRETE) {
+													// 거래 완료
+													Player player2 = null;
+													for(Player p : map.keySet()) {
+														if(map.get(p) == player) {
+															player2 = p;
+															break;
+														}
+													}
+													
+													if(player2 != null) {
+														int i = 0;
+														Inventory p2Inv = player2.getInventory();
+														for (int j = 0 ; j < 36 ; j++) {
+															if(p2Inv.getItem(j) == null) {
+																i++;
+															}
+														}
+														
+														int k = 17;
+														for (int l = 27 ; l < 44 ; l++) {
+															if(inv.getItem(l) == null) {
+																k--;
+															}
+														}
+														
+														if(i >= k) {
+															for(int cnt = 27 ; cnt < 44 ; cnt++) {
+																if(inv.getItem(cnt) != null) {
+																	p2Inv.addItem(inv.getItem(cnt));
+																}
+																inv.setItem(cnt, inv.getItem(18));
+															}
+														} else {
+															player.sendMessage("인벤토리의 빈자리가 부족합니다.");
+															event.setCancelled(true);
+														}
+													}
+													
+													if(player2 != null) {
+														int i = 0;
+														Inventory pInv = player.getInventory();
+														for (int j = 0 ; j < 36 ; j++) {
+															if(pInv.getItem(j) == null) {
+																i++;
+															}
+														}
+														
+														int k = 17;
+														for (int l = 0 ; l < 17 ; l++) {
+															if(inv.getItem(l) == null) {
+																k--;
+															}
+														}
+														
+														if(i >= k) {
+															for(int cnt = 0 ; cnt < 17 ; cnt++) {
+																if(inv.getItem(cnt) != null) {
+																	pInv.addItem(inv.getItem(cnt));
+																}
+																inv.setItem(cnt, inv.getItem(18));
+															}
+														} else {
+															player.sendMessage("인벤토리의 빈자리가 부족합니다.");
+															event.setCancelled(true);
+														}
+													}
+													
+													player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 3.0f);
+													for(Player p : map.keySet()) {
+														if(map.get(p) == player) {
+															p.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 3.0f);
+															p.updateInventory();
+															new BukkitRunnable() {
+																@Override
+																public void run() {
+																	p.closeInventory();
+																	this.cancel();
+																}
+															}.runTaskLater(Main.getPlugin(Main.class), 1);
+															map.remove(p);
+															break;
+														}
+													}
+													player.updateInventory();
+													player.closeInventory();
+												}
+											}
+										}
+									} catch(Exception e1) {
+										
+									}
+									
 								}
 							}
 						}
@@ -9171,43 +9420,33 @@ public class Main extends JavaPlugin implements Listener{
 			try {
 				if(inv != pInv) {
 					if(inv.getSize() == 45) {
-						if(inv.getItem(17).getType() == Material.RED_CONCRETE) { 
-							if(inv.getItem(18).getType() == Material.WHITE_STAINED_GLASS_PANE) {
-								if(inv.getItem(19).getType() == Material.WHITE_STAINED_GLASS_PANE) {
-									if(inv.getItem(20).getType() == Material.WHITE_STAINED_GLASS_PANE) {
+						if(inv.getItem(17).getType() == Material.RED_CONCRETE || inv.getItem(17).getType() == Material.GREEN_CONCRETE) { 
+							if(inv.getItem(18).getType() == Material.LIGHT_GRAY_STAINED_GLASS_PANE) {
+								if(inv.getItem(19).getType() == Material.LIGHT_GRAY_STAINED_GLASS_PANE) {
+									if(inv.getItem(20).getType() == Material.LIGHT_GRAY_STAINED_GLASS_PANE) {
 										event.setCancelled(true);
-										HashMap<Player, Player> map = new Cmd21Trade().getMap();
-										if(map.containsKey(player)) {
-											int idx = 0;
-											for(ItemStack i : inv.getContents()) {
-												if(i == null) {
-													ary.add(idx);
-												}
-												idx++;
-											}
-											
-											if(ary.size() == 0) {
-												// 거래창 꽉참
-												event.setCancelled(true);
-											} else {
-												for(int cnt : ary) {
-													if(cnt >= 0 && cnt < 17) {
-														item = event.getCurrentItem();
-														System.out.println(item);
-														item.setType(Material.AIR);
-														
-														// 거래창에 올려둠
-														inv.setItem(cnt, item);
-														
-														player.playSound(player.getLocation(), Sound.BLOCK_WOODEN_TRAPDOOR_OPEN, 1.0f, 0.5f);
-														map.get(player).playSound(player.getLocation(), Sound.BLOCK_WOODEN_TRAPDOOR_OPEN, 1.0f, 0.5f);
-													} else {
-														event.setCancelled(true);
-													}
-												}
-											}
+										
+										item = event.getCurrentItem();
+										
+										if(item.getType() == Material.AIR || item.getType() == Material.GLOBE_BANNER_PATTERN || item.getType() == Material.MOSSY_COBBLESTONE_WALL
+												|| item.getType() == Material.WOODEN_HOE || item.getType() == Material.STONE_HOE || item.getType() == Material.IRON_HOE
+												|| item.getType() == Material.GOLDEN_HOE || item.getType() == Material.DIAMOND_HOE || item.getType() == Material.NETHERITE_HOE
+												|| item.getType() == Material.WOODEN_PICKAXE || item.getType() == Material.STONE_PICKAXE || item.getType() == Material.IRON_PICKAXE
+												|| item.getType() == Material.GOLDEN_PICKAXE || item.getType() == Material.DIAMOND_PICKAXE || item.getType() == Material.NETHERITE_PICKAXE
+												|| item.getType() == Material.WOODEN_SHOVEL || item.getType() == Material.STONE_SHOVEL || item.getType() == Material.IRON_SHOVEL
+												|| item.getType() == Material.GOLDEN_SHOVEL || item.getType() == Material.DIAMOND_SHOVEL || item.getType() == Material.NETHERITE_SHOVEL
+												|| item.getType() == Material.NETHER_STAR || item.getType() == Material.POLISHED_GRANITE_STAIRS || item.getType() == Material.SMOOTH_RED_SANDSTONE_STAIRS
+												|| item.getType() == Material.MOSSY_STONE_BRICK_STAIRS || item.getType() == Material.POLISHED_DIORITE_STAIRS || item.getType() == Material.MOSSY_COBBLESTONE_STAIRS
+												|| item.getType() == Material.END_STONE_BRICK_STAIRS || item.getType() == Material.SMOOTH_SANDSTONE_STAIRS || item.getType() == Material.SMOOTH_QUARTZ_STAIRS
+												|| item.getType() == Material.GRANITE_STAIRS || item.getType() == Material.SADDLE || item.getType() == Material.DEAD_BRAIN_CORAL_BLOCK
+												|| item.getType() == Material.DEAD_BUBBLE_CORAL_BLOCK || item.getType() == Material.DEAD_FIRE_CORAL_BLOCK || item.getType() == Material.DEAD_HORN_CORAL_BLOCK
+												|| item.getType() == Material.DEAD_TUBE_CORAL_BLOCK || item.getType() == Material.BRAIN_CORAL_BLOCK || item.getType() == Material.HORN_CORAL_BLOCK
+												|| item.getType() == Material.TUBE_CORAL_BLOCK || item.getType() == Material.BUBBLE_CORAL_BLOCK || item.getType() == Material.FIRE_CORAL_BLOCK
+												|| item.getType() == Material.ENDER_EYE) {
+											event.setCancelled(true);
 										} else {
-											if(map.containsValue(player)) {
+											HashMap<Player, Player> map = new Cmd21Trade().getMap();
+											if(map.containsKey(player)) {
 												int idx = 0;
 												for(ItemStack i : inv.getContents()) {
 													if(i == null) {
@@ -9221,18 +9460,87 @@ public class Main extends JavaPlugin implements Listener{
 													event.setCancelled(true);
 												} else {
 													for(int cnt : ary) {
-														if(cnt >= 27 && cnt < 44) {
-															item = event.getCurrentItem();
-															System.out.println(item);
-															item.setType(Material.AIR);
-															
-															// 거래창에 올려둠
-															inv.setItem(cnt, item);
-															
-															player.playSound(player.getLocation(), Sound.BLOCK_WOODEN_TRAPDOOR_OPEN, 1.0f, 0.5f);
-															map.get(player).playSound(player.getLocation(), Sound.BLOCK_WOODEN_TRAPDOOR_OPEN, 1.0f, 0.5f);
+														if(cnt >= 0 && cnt < 17) {
+															if(item != null) {
+																pInv.clear(event.getSlot());
+																
+																// 거래창에 올려둠
+																inv.setItem(cnt, item);
+																
+																player.playSound(player.getLocation(), Sound.BLOCK_IRON_TRAPDOOR_OPEN, 3.0f, 0.5f);
+																map.get(player).playSound(player.getLocation(), Sound.BLOCK_IRON_TRAPDOOR_OPEN, 3.0f, 0.5f);
+																
+																// 거래 완료 -> 거래 수락
+																try {
+																	inv.getItem(17).setType(Material.RED_CONCRETE);
+																} catch(Exception e) {
+																	
+																}
+																try {
+																	inv.getItem(44).setType(Material.RED_CONCRETE);
+																} catch(Exception e) {
+																	
+																}
+
+																player.updateInventory();
+																map.get(player).updateInventory();
+															}
 														} else {
 															event.setCancelled(true);
+														}
+													}
+												}
+											} else {
+												if(map.containsValue(player)) {
+													int idx = 0;
+													for(ItemStack i : inv.getContents()) {
+														if(i == null) {
+															ary.add(idx);
+														}
+														idx++;
+													}
+													
+													if(ary.size() == 0) {
+														// 거래창 꽉참
+														event.setCancelled(true);
+													} else {
+														for(int cnt : ary) {
+															if(cnt >= 27 && cnt < 44) {
+																if(item != null) {
+																	pInv.clear(event.getSlot());
+																	
+																	// 거래창에 올려둠
+																	inv.setItem(cnt, item);
+																	
+																	player.playSound(player.getLocation(), Sound.BLOCK_IRON_TRAPDOOR_OPEN, 3.0f, 0.5f);
+																	for(Player p : map.keySet()) {
+																		if(map.get(p) == player) {
+																			p.playSound(player.getLocation(), Sound.BLOCK_IRON_TRAPDOOR_OPEN, 3.0f, 0.5f);
+																		}
+																	}
+																	
+																	// 거래 완료 -> 거래 수락
+																	try {
+																		inv.getItem(17).setType(Material.RED_CONCRETE);
+																	} catch(Exception e) {
+																		
+																	}
+																	try {
+																		inv.getItem(44).setType(Material.RED_CONCRETE);
+																	} catch(Exception e) {
+																		
+																	}
+																	
+																	player.updateInventory();
+																	for(Player p : map.keySet()) {
+																		if(map.get(p) == player) {
+																			p.updateInventory();
+																		}
+																	}
+																}
+															} else {
+																event.setCancelled(true);
+															}
 														}
 													}
 												}
@@ -9637,6 +9945,26 @@ public class Main extends JavaPlugin implements Listener{
 		        if(clicked != null && clicked.getType() == Material.SKELETON_SKULL) {
 		            event.setCancelled(true);
 		            return;
+		        }
+		        if(clicked != null && clicked.getType() == Material.RED_CONCRETE) {
+		        	try {
+		        		if(clicked.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "거래 수락")) {
+		        			event.setCancelled(true);
+					    	return;
+		        		}
+		        	} catch(Exception e) {
+		        		
+		        	}
+		        }
+		        if(clicked != null && clicked.getType() == Material.GREEN_CONCRETE) {
+		        	try {
+		        		if(clicked.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "거래 수락")) {
+		        			event.setCancelled(true);
+					    	return;
+		        		}
+		        	} catch(Exception e) {
+		        		
+		        	}
 		        }
 		        if(clicked != null && clicked.getType() == Material.SLIME_BALL) {
 		        	if(clicked.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "강화하기")) {
@@ -10603,6 +10931,128 @@ public class Main extends JavaPlugin implements Listener{
 				}
 			} catch(Exception e) {
 				
+			}
+			
+			// 거래
+			try {
+				if(inv.getSize() == 45) {
+					if(inv.getItem(17).getType() == Material.RED_CONCRETE || inv.getItem(17).getType() == Material.GREEN_CONCRETE) { 
+						if(inv.getItem(18).getType() == Material.LIGHT_GRAY_STAINED_GLASS_PANE) {
+							if(inv.getItem(19).getType() == Material.LIGHT_GRAY_STAINED_GLASS_PANE) {
+								if(inv.getItem(20).getType() == Material.LIGHT_GRAY_STAINED_GLASS_PANE) {
+									HashMap<Player, Player> map = new Cmd21Trade().getMap();
+									
+									try {
+										if(map.containsKey(player)) {
+											int i = 0;
+											Inventory pInv = player.getInventory();
+											for (int j = 0 ; j < 36 ; j++) {
+												if(pInv.getItem(j) == null) {
+													i++;
+												}
+											}
+											
+											int k = 17;
+											for (int l = 0 ; l < 17 ; l++) {
+												if(inv.getItem(l) == null) {
+													k--;
+												}
+											}
+											
+											if(i >= k) {
+												for(int cnt = 0 ; cnt < 17 ; cnt++) {
+													if(inv.getItem(cnt) != null) {
+														pInv.addItem(inv.getItem(cnt));
+														inv.remove(inv.getItem(cnt));
+													}
+												}
+											} else {
+												player.sendMessage("인벤토리의 빈자리가 부족합니다.");
+											}
+											
+											for (int l = 0 ; l < 17 ; l++) {
+												inv.setItem(l, inv.getItem(20));
+											}
+											
+											player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.8f, 2.0f);
+											map.get(player).playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.8f, 2.0f);
+											player.updateInventory();
+											map.get(player).updateInventory();
+
+											map.remove(player);
+										} else {
+											if(map.containsValue(player)) {
+												int i = 0;
+												Inventory pInv = player.getInventory();
+												for (int j = 0 ; j < 36 ; j++) {
+													if(pInv.getItem(j) == null) {
+														i++;
+													}
+												}
+												
+												int k = 17;
+												for (int l = 27 ; l < 44 ; l++) {
+													if(inv.getItem(l) == null) {
+														k--;
+													}
+												}
+												
+												if(i >= k) {
+													for(int cnt = 27 ; cnt < 44 ; cnt++) {
+														if(inv.getItem(cnt) != null) {
+															pInv.addItem(inv.getItem(cnt));
+														}
+													}
+												} else {
+													player.sendMessage("인벤토리의 빈자리가 부족합니다.");
+												}
+												
+												for (int l = 27 ; l < 44 ; l++) {
+													inv.setItem(l, inv.getItem(20));
+												}
+												
+												player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.8f, 2.0f);
+												for(Player p : map.keySet()) {
+													if(map.get(p) == player) {
+														p.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.8f, 2.0f);
+														p.updateInventory();
+														map.remove(p);
+														break;
+													}
+												}
+												player.updateInventory();
+												
+											} else {
+												// 한쪽이 끊은 경우
+												Inventory pInv = player.getInventory();
+												for(int cnt = 27 ; cnt < 44 ; cnt++) {
+													if(inv.getItem(cnt) != null && inv.getItem(cnt).getType() != Material.LIGHT_GRAY_STAINED_GLASS_PANE) {
+														pInv.addItem(inv.getItem(cnt));
+														inv.remove(inv.getItem(cnt));
+													}
+												}
+												for(int cnt = 0 ; cnt < 17 ; cnt++) {
+													if(inv.getItem(cnt) != null && inv.getItem(cnt).getType() != Material.LIGHT_GRAY_STAINED_GLASS_PANE) {
+														pInv.addItem(inv.getItem(cnt));
+														inv.remove(inv.getItem(cnt));
+													}
+												}
+												
+												player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.8f, 2.0f);
+												map.get(player).playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.8f, 2.0f);
+											}
+										}
+									} catch(Exception e1) {
+										
+									}
+									
+								}
+							}
+						}
+					}
+				}
+			} catch (Exception e) {
+
 			}
 			
 			try {

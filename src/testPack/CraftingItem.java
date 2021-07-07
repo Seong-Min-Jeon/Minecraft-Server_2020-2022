@@ -38,6 +38,8 @@ public class CraftingItem {
 			
 			int idx = 0;
 			
+			double jewel = 1;
+			
 			for(int i : ary) {
 				ItemStack item = inv.getItem(i);
 				try {type[idx] = item.getType().toString();} catch(Exception e) {}
@@ -369,6 +371,48 @@ public class CraftingItem {
 				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "심연의 포보르의 뿔")) {
 					totalStat += amount[i] * 27;
 				}
+				
+				// 보석 보너스
+				if(name[i].equalsIgnoreCase(ChatColor.GRAY + "빛바랜 보석")) {
+					if(jewel < 1.05) {
+						jewel = 1.05;
+					}
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "부서진 수호자의 보석")) {
+					if(jewel < 1.1) {
+						jewel = 1.1;
+					}
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "고대의 자수정 보석")) {
+					if(jewel < 1.15) {
+						jewel = 1.15;
+					}
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "불길한 운명의 보석")) {
+					if(jewel < 1.25) {
+						jewel = 1.25;
+					}
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "망가진 마법사의 보석")) {
+					if(jewel < 1.4) {
+						jewel = 1.4;
+					}
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "영롱한 여명의 보석")) {
+					if(jewel < 1.9) {
+						jewel = 1.9;
+					}
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.DARK_PURPLE + "태양석")) {
+					if(jewel < 3.5) {
+						jewel = 3.5;
+					}
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.DARK_PURPLE + "만월석")) {
+					if(jewel < 3.5) {
+						jewel = 3.5;
+					}
+				}
 			}
 			
 			for(int i : damAll) {
@@ -477,6 +521,9 @@ public class CraftingItem {
 			int[] stat = {0,0,0,0,0,0,0,0,0,0,0};
 			
 			stat[10] = (int)(Math.pow((Math.log(resultStat)),3));
+			
+			// 보석 보너스
+			resultStat *= jewel;
 			
 			int equipType = rnd.nextInt(6);
 			

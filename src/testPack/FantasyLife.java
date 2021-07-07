@@ -1,5 +1,6 @@
 package testPack;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 import org.bukkit.ChatColor;
@@ -8,6 +9,7 @@ import org.bukkit.Material;
 import org.bukkit.Sound;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.scheduler.BukkitRunnable;
@@ -289,6 +291,7 @@ public class FantasyLife {
 							sendMessage(player, ChatColor.GRAY + "흠집이 생긴 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
+					giveJewel(player, 1, 0);
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "평범한 곡괭이")) {
 					int num1 = rnd.nextInt(10);
 					if (num1 <= 2) {
@@ -321,6 +324,7 @@ public class FantasyLife {
 							sendMessage(player, ChatColor.GRAY + "흠집이 생긴 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
+					giveJewel(player, 2, 0);
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "수제 곡괭이")) {
 					int num1 = rnd.nextInt(10);
 					if (num1 <= 2) {
@@ -353,6 +357,7 @@ public class FantasyLife {
 							sendMessage(player, ChatColor.WHITE + "석탄 광석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
+					giveJewel(player, 3, 0);
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "유명한 대장장이의 곡괭이")) {
 					int num1 = rnd.nextInt(10);
 					if (num1 <= 2) {
@@ -385,6 +390,7 @@ public class FantasyLife {
 							sendMessage(player, ChatColor.YELLOW + "깨끗한 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
+					giveJewel(player, 4, 0);
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "마스터 대장장이의 곡괭이")) {
 					int num1 = rnd.nextInt(10);
 					if (num1 <= 2) {
@@ -417,6 +423,7 @@ public class FantasyLife {
 							sendMessage(player, ChatColor.LIGHT_PURPLE + "순수도가 높은 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
+					giveJewel(player, 5, 0);
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "신의 곡괭이")) {
 					int num1 = rnd.nextInt(100);
 					if (num1 <= 20) {
@@ -449,6 +456,7 @@ public class FantasyLife {
 							sendMessage(player, ChatColor.AQUA + "절대적인 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
+					giveJewel(player, 6, 0);
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
 						.equals(ChatColor.DARK_PURPLE + "게브네의 곡괭이")) {
 					int num1 = rnd.nextInt(70);
@@ -482,6 +490,7 @@ public class FantasyLife {
 							sendMessage(player, ChatColor.AQUA + "절대적인 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
+					giveJewel(player, 7, 0);
 				} else {
 					player.sendMessage("곡괭이로 캘 수 있을 것 같다.");
 				}
@@ -532,6 +541,7 @@ public class FantasyLife {
 							sendMessage(player, ChatColor.WHITE + "상태가 좋지 않은 철광석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
+					giveJewel(player, 2, 1);
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
 						.equals(ChatColor.YELLOW + "수제 곡괭이")) {
 					int num1 = rnd.nextInt(10);
@@ -565,6 +575,7 @@ public class FantasyLife {
 							sendMessage(player, ChatColor.WHITE + "상태가 좋지 않은 철광석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
+					giveJewel(player, 3, 1);
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
 						.equals(ChatColor.LIGHT_PURPLE + "유명한 대장장이의 곡괭이")) {
 					int num1 = rnd.nextInt(10);
@@ -598,6 +609,7 @@ public class FantasyLife {
 							sendMessage(player, ChatColor.YELLOW + "철광석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
+					giveJewel(player, 4, 1);
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
 						.equals(ChatColor.AQUA + "마스터 대장장이의 곡괭이")) {
 					int num1 = rnd.nextInt(10);
@@ -631,6 +643,7 @@ public class FantasyLife {
 							sendMessage(player, ChatColor.LIGHT_PURPLE + "빛이나는 철광석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
+					giveJewel(player, 5, 1);
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
 						.equals(ChatColor.DARK_RED + "신의 곡괭이")) {
 					int num1 = rnd.nextInt(100);
@@ -664,6 +677,7 @@ public class FantasyLife {
 							sendMessage(player, ChatColor.AQUA + "순백의 철광석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
+					giveJewel(player, 6, 1);
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
 						.equals(ChatColor.DARK_PURPLE + "게브네의 곡괭이")) {
 					int num1 = rnd.nextInt(70);
@@ -697,6 +711,7 @@ public class FantasyLife {
 							sendMessage(player, ChatColor.AQUA + "순백의 철광석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
+					giveJewel(player, 7, 1);
 				} else {
 					player.sendMessage("곡괭이로 캘 수 있을 것 같다.");
 				}
@@ -750,6 +765,7 @@ public class FantasyLife {
 							sendMessage(player, ChatColor.YELLOW + "가치가 떨어진 금광석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
+					giveJewel(player, 3, 2);
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
 						.equals(ChatColor.LIGHT_PURPLE + "유명한 대장장이의 곡괭이")) {
 					int num1 = rnd.nextInt(10);
@@ -783,6 +799,7 @@ public class FantasyLife {
 							sendMessage(player, ChatColor.YELLOW + "가치가 떨어진 금광석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
+					giveJewel(player, 4, 2);
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
 						.equals(ChatColor.AQUA + "마스터 대장장이의 곡괭이")) {
 					int num1 = rnd.nextInt(10);
@@ -816,6 +833,7 @@ public class FantasyLife {
 							sendMessage(player, ChatColor.LIGHT_PURPLE + "금광석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
+					giveJewel(player, 5, 2);
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
 						.equals(ChatColor.DARK_RED + "신의 곡괭이")) {
 					int num1 = rnd.nextInt(100);
@@ -849,6 +867,7 @@ public class FantasyLife {
 							sendMessage(player, ChatColor.AQUA + "쉽게 녹지 않는 금광석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
+					giveJewel(player, 6, 2);
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
 						.equals(ChatColor.DARK_PURPLE + "게브네의 곡괭이")) {
 					int num1 = rnd.nextInt(70);
@@ -882,6 +901,7 @@ public class FantasyLife {
 							sendMessage(player, ChatColor.AQUA + "쉽게 녹지 않는 금광석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
+					giveJewel(player, 7, 2);
 				} else {
 					player.sendMessage("곡괭이로 캘 수 있을 것 같다.");
 				}
@@ -938,6 +958,7 @@ public class FantasyLife {
 							sendMessage(player, ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
+					giveJewel(player, 4, 3);
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
 						.equals(ChatColor.AQUA + "마스터 대장장이의 곡괭이")) {
 					int num1 = rnd.nextInt(10);
@@ -971,6 +992,7 @@ public class FantasyLife {
 							sendMessage(player, ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
+					giveJewel(player, 5, 3);
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
 						.equals(ChatColor.DARK_RED + "신의 곡괭이")) {
 					int num1 = rnd.nextInt(100);
@@ -1022,6 +1044,7 @@ public class FantasyLife {
 							sendMessage(player, ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
+					giveJewel(player, 6, 3);
 				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
 						.equals(ChatColor.DARK_PURPLE + "게브네의 곡괭이")) {
 					int num1 = rnd.nextInt(70);
@@ -1073,6 +1096,7 @@ public class FantasyLife {
 							sendMessage(player, ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
 						}
 					}
+					giveJewel(player, 7, 3);
 				} else {
 					player.sendMessage("곡괭이로 캘 수 있을 것 같다.");
 				}
@@ -1405,6 +1429,541 @@ public class FantasyLife {
 			}
 		}
 		return true;
+	}
+	
+	public void giveJewel(Player player, int rank, int type) {
+		int p = 1000000;
+		if(type == 0) {
+			p = rnd.nextInt(1000000);
+		} else if(type == 1) {
+			p = rnd.nextInt(800000);
+		} else if(type == 2) {
+			p = rnd.nextInt(600000);
+		} else if(type == 3) {
+			p = rnd.nextInt(500000);
+		}
+		
+		if(rank == 1) {
+			if(p < 1000) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.GRAY + "빛바랜 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "오랜 세월 잠식되어 있던 영혼이 담긴 보석");
+				var1Lore.add(ChatColor.GRAY + "아쉽게도 강자의 영혼은 아닌듯 하다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.GRAY + "빛바랜 보석" + ChatColor.WHITE + "을 획득했다.");
+			} else if(p < 1500) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.WHITE + "부서진 수호자의 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "변질된 수호자의 영혼이 담긴 보석");
+				var1Lore.add(ChatColor.GRAY + "부서져버려 힘이 흩어져 버렸다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.WHITE + "부서진 수호자의 보석" + ChatColor.WHITE + "을 획득했다.");
+			} else if(p < 1750) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.YELLOW + "고대의 자수정 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "고대의 영혼이 자수정 안에 잠든 보석");
+				var1Lore.add(ChatColor.GRAY + "꽤나 쓸만한 영혼이 담겨있다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.YELLOW + "고대의 자수정 보석" + ChatColor.WHITE + "을 획득했다.");
+			} else if(p < 1800) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "불길한 운명의 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "상급 포보르의 영혼이 담긴 보석");
+				var1Lore.add(ChatColor.GRAY + "집어드는 것만으로도 소름이 끼친다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.LIGHT_PURPLE + "불길한 운명의 보석" + ChatColor.WHITE + "을 획득했다.");
+			} else if(p < 1820) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.AQUA + "망가진 마법사의 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "마나를 쓰는 포보르의 영혼이 담긴 보석");
+				var1Lore.add(ChatColor.GRAY + "기분 나쁜 검은 마나가 느껴진다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.AQUA + "망가진 마법사의 보석" + ChatColor.WHITE + "을 획득했다.");
+			} else if(p < 1821) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.DARK_RED + "영롱한 여명의 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "포보르 왕의 영혼이 담긴 보석");
+				var1Lore.add(ChatColor.GRAY + "그가 가지고 있던 힘을 보여주듯이 매우 아름답다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.DARK_RED + "영롱한 여명의 보석" + ChatColor.WHITE + "을 획득했다.");
+			}
+		} else if(rank == 2) {
+			if(p < 500) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.GRAY + "빛바랜 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "오랜 세월 잠식되어 있던 영혼이 담긴 보석");
+				var1Lore.add(ChatColor.GRAY + "아쉽게도 강자의 영혼은 아닌듯 하다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.GRAY + "빛바랜 보석" + ChatColor.WHITE + "을 획득했다.");
+			} else if(p < 1300) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.WHITE + "부서진 수호자의 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "변질된 수호자의 영혼이 담긴 보석");
+				var1Lore.add(ChatColor.GRAY + "부서져버려 힘이 흩어져 버렸다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.WHITE + "부서진 수호자의 보석" + ChatColor.WHITE + "을 획득했다.");
+			} else if(p < 1750) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.YELLOW + "고대의 자수정 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "고대의 영혼이 자수정 안에 잠든 보석");
+				var1Lore.add(ChatColor.GRAY + "꽤나 쓸만한 영혼이 담겨있다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.YELLOW + "고대의 자수정 보석" + ChatColor.WHITE + "을 획득했다.");
+			} else if(p < 1830) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "불길한 운명의 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "상급 포보르의 영혼이 담긴 보석");
+				var1Lore.add(ChatColor.GRAY + "집어드는 것만으로도 소름이 끼친다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.LIGHT_PURPLE + "불길한 운명의 보석" + ChatColor.WHITE + "을 획득했다.");
+			} else if(p < 1870) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.AQUA + "망가진 마법사의 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "마나를 쓰는 포보르의 영혼이 담긴 보석");
+				var1Lore.add(ChatColor.GRAY + "기분 나쁜 검은 마나가 느껴진다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.AQUA + "망가진 마법사의 보석" + ChatColor.WHITE + "을 획득했다.");
+			} else if(p < 1875) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.DARK_RED + "영롱한 여명의 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "포보르 왕의 영혼이 담긴 보석");
+				var1Lore.add(ChatColor.GRAY + "그가 가지고 있던 힘을 보여주듯이 매우 아름답다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.DARK_RED + "영롱한 여명의 보석" + ChatColor.WHITE + "을 획득했다.");
+			}
+		} else if(rank == 3) {
+			if(p < 500) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.GRAY + "빛바랜 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "오랜 세월 잠식되어 있던 영혼이 담긴 보석");
+				var1Lore.add(ChatColor.GRAY + "아쉽게도 강자의 영혼은 아닌듯 하다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.GRAY + "빛바랜 보석" + ChatColor.WHITE + "을 획득했다.");
+			} else if(p < 1400) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.WHITE + "부서진 수호자의 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "변질된 수호자의 영혼이 담긴 보석");
+				var1Lore.add(ChatColor.GRAY + "부서져버려 힘이 흩어져 버렸다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.WHITE + "부서진 수호자의 보석" + ChatColor.WHITE + "을 획득했다.");
+			} else if(p < 1800) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.YELLOW + "고대의 자수정 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "고대의 영혼이 자수정 안에 잠든 보석");
+				var1Lore.add(ChatColor.GRAY + "꽤나 쓸만한 영혼이 담겨있다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.YELLOW + "고대의 자수정 보석" + ChatColor.WHITE + "을 획득했다.");
+			} else if(p < 1900) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "불길한 운명의 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "상급 포보르의 영혼이 담긴 보석");
+				var1Lore.add(ChatColor.GRAY + "집어드는 것만으로도 소름이 끼친다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.LIGHT_PURPLE + "불길한 운명의 보석" + ChatColor.WHITE + "을 획득했다.");
+			} else if(p < 1950) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.AQUA + "망가진 마법사의 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "마나를 쓰는 포보르의 영혼이 담긴 보석");
+				var1Lore.add(ChatColor.GRAY + "기분 나쁜 검은 마나가 느껴진다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.AQUA + "망가진 마법사의 보석" + ChatColor.WHITE + "을 획득했다.");
+			} else if(p < 1958) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.DARK_RED + "영롱한 여명의 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "포보르 왕의 영혼이 담긴 보석");
+				var1Lore.add(ChatColor.GRAY + "그가 가지고 있던 힘을 보여주듯이 매우 아름답다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.DARK_RED + "영롱한 여명의 보석" + ChatColor.WHITE + "을 획득했다.");
+			}
+		} else if(rank == 4) {
+			if(p < 500) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.GRAY + "빛바랜 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "오랜 세월 잠식되어 있던 영혼이 담긴 보석");
+				var1Lore.add(ChatColor.GRAY + "아쉽게도 강자의 영혼은 아닌듯 하다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.GRAY + "빛바랜 보석" + ChatColor.WHITE + "을 획득했다.");
+			} else if(p < 1500) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.WHITE + "부서진 수호자의 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "변질된 수호자의 영혼이 담긴 보석");
+				var1Lore.add(ChatColor.GRAY + "부서져버려 힘이 흩어져 버렸다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.WHITE + "부서진 수호자의 보석" + ChatColor.WHITE + "을 획득했다.");
+			} else if(p < 2000) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.YELLOW + "고대의 자수정 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "고대의 영혼이 자수정 안에 잠든 보석");
+				var1Lore.add(ChatColor.GRAY + "꽤나 쓸만한 영혼이 담겨있다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.YELLOW + "고대의 자수정 보석" + ChatColor.WHITE + "을 획득했다.");
+			} else if(p < 2150) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "불길한 운명의 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "상급 포보르의 영혼이 담긴 보석");
+				var1Lore.add(ChatColor.GRAY + "집어드는 것만으로도 소름이 끼친다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.LIGHT_PURPLE + "불길한 운명의 보석" + ChatColor.WHITE + "을 획득했다.");
+			} else if(p < 2280) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.AQUA + "망가진 마법사의 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "마나를 쓰는 포보르의 영혼이 담긴 보석");
+				var1Lore.add(ChatColor.GRAY + "기분 나쁜 검은 마나가 느껴진다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.AQUA + "망가진 마법사의 보석" + ChatColor.WHITE + "을 획득했다.");
+			} else if(p < 2290) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.DARK_RED + "영롱한 여명의 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "포보르 왕의 영혼이 담긴 보석");
+				var1Lore.add(ChatColor.GRAY + "그가 가지고 있던 힘을 보여주듯이 매우 아름답다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.DARK_RED + "영롱한 여명의 보석" + ChatColor.WHITE + "을 획득했다.");
+			}
+		} else if(rank == 5) {
+			if(p < 600) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.GRAY + "빛바랜 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "오랜 세월 잠식되어 있던 영혼이 담긴 보석");
+				var1Lore.add(ChatColor.GRAY + "아쉽게도 강자의 영혼은 아닌듯 하다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.GRAY + "빛바랜 보석" + ChatColor.WHITE + "을 획득했다.");
+			} else if(p < 1600) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.WHITE + "부서진 수호자의 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "변질된 수호자의 영혼이 담긴 보석");
+				var1Lore.add(ChatColor.GRAY + "부서져버려 힘이 흩어져 버렸다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.WHITE + "부서진 수호자의 보석" + ChatColor.WHITE + "을 획득했다.");
+			} else if(p < 2150) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.YELLOW + "고대의 자수정 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "고대의 영혼이 자수정 안에 잠든 보석");
+				var1Lore.add(ChatColor.GRAY + "꽤나 쓸만한 영혼이 담겨있다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.YELLOW + "고대의 자수정 보석" + ChatColor.WHITE + "을 획득했다.");
+			} else if(p < 2350) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "불길한 운명의 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "상급 포보르의 영혼이 담긴 보석");
+				var1Lore.add(ChatColor.GRAY + "집어드는 것만으로도 소름이 끼친다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.LIGHT_PURPLE + "불길한 운명의 보석" + ChatColor.WHITE + "을 획득했다.");
+			} else if(p < 2550) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.AQUA + "망가진 마법사의 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "마나를 쓰는 포보르의 영혼이 담긴 보석");
+				var1Lore.add(ChatColor.GRAY + "기분 나쁜 검은 마나가 느껴진다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.AQUA + "망가진 마법사의 보석" + ChatColor.WHITE + "을 획득했다.");
+			} else if(p < 2580) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.DARK_RED + "영롱한 여명의 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "포보르 왕의 영혼이 담긴 보석");
+				var1Lore.add(ChatColor.GRAY + "그가 가지고 있던 힘을 보여주듯이 매우 아름답다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.DARK_RED + "영롱한 여명의 보석" + ChatColor.WHITE + "을 획득했다.");
+			}
+		} else if(rank == 6) {
+			if(p < 600) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.GRAY + "빛바랜 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "오랜 세월 잠식되어 있던 영혼이 담긴 보석");
+				var1Lore.add(ChatColor.GRAY + "아쉽게도 강자의 영혼은 아닌듯 하다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.GRAY + "빛바랜 보석" + ChatColor.WHITE + "을 획득했다.");
+			} else if(p < 1600) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.WHITE + "부서진 수호자의 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "변질된 수호자의 영혼이 담긴 보석");
+				var1Lore.add(ChatColor.GRAY + "부서져버려 힘이 흩어져 버렸다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.WHITE + "부서진 수호자의 보석" + ChatColor.WHITE + "을 획득했다.");
+			} else if(p < 2300) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.YELLOW + "고대의 자수정 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "고대의 영혼이 자수정 안에 잠든 보석");
+				var1Lore.add(ChatColor.GRAY + "꽤나 쓸만한 영혼이 담겨있다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.YELLOW + "고대의 자수정 보석" + ChatColor.WHITE + "을 획득했다.");
+			} else if(p < 2600) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "불길한 운명의 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "상급 포보르의 영혼이 담긴 보석");
+				var1Lore.add(ChatColor.GRAY + "집어드는 것만으로도 소름이 끼친다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.LIGHT_PURPLE + "불길한 운명의 보석" + ChatColor.WHITE + "을 획득했다.");
+			} else if(p < 2800) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.AQUA + "망가진 마법사의 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "마나를 쓰는 포보르의 영혼이 담긴 보석");
+				var1Lore.add(ChatColor.GRAY + "기분 나쁜 검은 마나가 느껴진다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.AQUA + "망가진 마법사의 보석" + ChatColor.WHITE + "을 획득했다.");
+			} else if(p < 2900) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.DARK_RED + "영롱한 여명의 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "포보르 왕의 영혼이 담긴 보석");
+				var1Lore.add(ChatColor.GRAY + "그가 가지고 있던 힘을 보여주듯이 매우 아름답다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.DARK_RED + "영롱한 여명의 보석" + ChatColor.WHITE + "을 획득했다.");
+			} else if(p < 2901) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.DARK_PURPLE + "태양석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "태양을 창조한 신이 남긴 보석");
+				var1Lore.add(ChatColor.GRAY + "이 작은 돌에 태양의 힘이 응집되어 있다고 한다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.DARK_PURPLE + "태양석" + ChatColor.WHITE + "을 획득했다.");
+			} else if(p < 2902) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.DARK_PURPLE + "만월석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "달을 창조한 신이 남긴 보석");
+				var1Lore.add(ChatColor.GRAY + "이 작은 돌에 달의 힘이 응집되어 있다고 한다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.DARK_PURPLE + "만월석" + ChatColor.WHITE + "을 획득했다.");
+			}
+		} else if(rank == 7) {
+			if(p < 800) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.GRAY + "빛바랜 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "오랜 세월 잠식되어 있던 영혼이 담긴 보석");
+				var1Lore.add(ChatColor.GRAY + "아쉽게도 강자의 영혼은 아닌듯 하다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.GRAY + "빛바랜 보석" + ChatColor.WHITE + "을 획득했다.");
+			} else if(p < 2000) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.WHITE + "부서진 수호자의 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "변질된 수호자의 영혼이 담긴 보석");
+				var1Lore.add(ChatColor.GRAY + "부서져버려 힘이 흩어져 버렸다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.WHITE + "부서진 수호자의 보석" + ChatColor.WHITE + "을 획득했다.");
+			} else if(p < 2600) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.YELLOW + "고대의 자수정 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "고대의 영혼이 자수정 안에 잠든 보석");
+				var1Lore.add(ChatColor.GRAY + "꽤나 쓸만한 영혼이 담겨있다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.YELLOW + "고대의 자수정 보석" + ChatColor.WHITE + "을 획득했다.");
+			} else if(p < 3100) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "불길한 운명의 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "상급 포보르의 영혼이 담긴 보석");
+				var1Lore.add(ChatColor.GRAY + "집어드는 것만으로도 소름이 끼친다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.LIGHT_PURPLE + "불길한 운명의 보석" + ChatColor.WHITE + "을 획득했다.");
+			} else if(p < 3500) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.AQUA + "망가진 마법사의 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "마나를 쓰는 포보르의 영혼이 담긴 보석");
+				var1Lore.add(ChatColor.GRAY + "기분 나쁜 검은 마나가 느껴진다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.AQUA + "망가진 마법사의 보석" + ChatColor.WHITE + "을 획득했다.");
+			} else if(p < 3800) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.DARK_RED + "영롱한 여명의 보석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "포보르 왕의 영혼이 담긴 보석");
+				var1Lore.add(ChatColor.GRAY + "그가 가지고 있던 힘을 보여주듯이 매우 아름답다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.DARK_RED + "영롱한 여명의 보석" + ChatColor.WHITE + "을 획득했다.");
+			} else if(p < 3810) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.DARK_PURPLE + "태양석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "태양을 창조한 신이 남긴 보석");
+				var1Lore.add(ChatColor.GRAY + "이 작은 돌에 태양의 힘이 응집되어 있다고 한다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.DARK_PURPLE + "태양석" + ChatColor.WHITE + "을 획득했다.");
+			} else if(p < 3820) {
+				ItemStack var1 = new ItemStack(Material.BLACKSTONE_STAIRS);
+				ItemMeta var1Im = var1.getItemMeta();
+				var1Im.setDisplayName(ChatColor.DARK_PURPLE + "만월석");
+				ArrayList<String> var1Lore = new ArrayList();
+				var1Lore.add(ChatColor.GRAY + "달을 창조한 신이 남긴 보석");
+				var1Lore.add(ChatColor.GRAY + "이 작은 돌에 달의 힘이 응집되어 있다고 한다.");
+				var1Im.setLore(var1Lore);
+				var1.setItemMeta(var1Im);
+				player.getInventory().addItem(var1);
+				sendMessage(player, ChatColor.DARK_PURPLE + "만월석" + ChatColor.WHITE + "을 획득했다.");
+			}
+		}
 	}
 	
 	public void reload(Material mat, Location loc) {
