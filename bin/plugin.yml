@@ -68,4 +68,7 @@ commands:
   MysteryChest:
    description: MysteryChest counter check
    usage: /MysteryChest
+  CraftName:
+   description: rename to crafting item
+   usage: /CraftName
 api-version: 1.16

@@ -487,9 +487,12 @@ public class CraftingItem {
 			
 			if(doubleUpChance == 0) {
 				player.sendMessage("제작 대성공!");
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.ENTITY_LIGHTNING_BOLT_THUNDER, 0.3f, 1.5f);
 			} else {
 				player.sendMessage("제작 성공!");
 				resultStat /= 2;
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			}
 			
 			//성공 시 절반이 되는 것에 의해 0이하가 되는 오류가 발생시 교정
@@ -657,7 +660,7 @@ public class CraftingItem {
 				System.out.println(player.getDisplayName() + "이/가 무기" + "(" + localName + ")" + ChatColor.WHITE + "을/를 제작하였다.");
 			}
 			
-			inv.setItem(25, makeItem(player, equipType, stat, localName));
+			inv.setItem(25, makeItem(player, equipType, stat, localName, ((int)(lvl)) ));
 			
 		} catch(Exception e) {
 			player.sendMessage("제작 결과 아무것도 얻지 못했습니다.");
@@ -692,7 +695,7 @@ public class CraftingItem {
 		inv.remove(inv.getItem(40));
 	}
 	
-	public ItemStack makeItem(Player player, int equipType, int[] stat, String localName) {
+	public ItemStack makeItem(Player player, int equipType, int[] stat, String localName, int lvl) {
 		if(equipType == 0 && stat[10] < 100) {
 			ItemStack equip = new ItemStack(Material.LEATHER_HELMET);
 			ItemMeta equipIm = equip.getItemMeta();
@@ -701,7 +704,7 @@ public class CraftingItem {
 			ArrayList<String> equipLore = new ArrayList();
 			equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -717,7 +720,7 @@ public class CraftingItem {
 			ArrayList<String> equipLore = new ArrayList();
 			equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -733,7 +736,7 @@ public class CraftingItem {
 			ArrayList<String> equipLore = new ArrayList();
 			equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -749,7 +752,7 @@ public class CraftingItem {
 			ArrayList<String> equipLore = new ArrayList();
 			equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -765,7 +768,7 @@ public class CraftingItem {
 			ArrayList<String> equipLore = new ArrayList();
 			equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -781,7 +784,7 @@ public class CraftingItem {
 			ArrayList<String> equipLore = new ArrayList();
 			equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -797,7 +800,7 @@ public class CraftingItem {
 			ArrayList<String> equipLore = new ArrayList();
 			equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -813,7 +816,7 @@ public class CraftingItem {
 			ArrayList<String> equipLore = new ArrayList();
 			equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -829,7 +832,7 @@ public class CraftingItem {
 			ArrayList<String> equipLore = new ArrayList();
 			equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -845,7 +848,7 @@ public class CraftingItem {
 			ArrayList<String> equipLore = new ArrayList();
 			equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -861,7 +864,7 @@ public class CraftingItem {
 			ArrayList<String> equipLore = new ArrayList();
 			equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -877,7 +880,7 @@ public class CraftingItem {
 			ArrayList<String> equipLore = new ArrayList();
 			equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -893,7 +896,7 @@ public class CraftingItem {
 			ArrayList<String> equipLore = new ArrayList();
 			equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -909,7 +912,7 @@ public class CraftingItem {
 			ArrayList<String> equipLore = new ArrayList();
 			equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -925,7 +928,7 @@ public class CraftingItem {
 			ArrayList<String> equipLore = new ArrayList();
 			equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -941,7 +944,7 @@ public class CraftingItem {
 			ArrayList<String> equipLore = new ArrayList();
 			equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -957,7 +960,7 @@ public class CraftingItem {
 			ArrayList<String> equipLore = new ArrayList();
 			equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -973,7 +976,7 @@ public class CraftingItem {
 			ArrayList<String> equipLore = new ArrayList();
 			equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -989,7 +992,7 @@ public class CraftingItem {
 			ArrayList<String> equipLore = new ArrayList();
 			equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1005,7 +1008,7 @@ public class CraftingItem {
 			ArrayList<String> equipLore = new ArrayList();
 			equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1021,7 +1024,7 @@ public class CraftingItem {
 			ArrayList<String> equipLore = new ArrayList();
 			equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1037,7 +1040,7 @@ public class CraftingItem {
 			ArrayList<String> equipLore = new ArrayList();
 			equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1053,7 +1056,7 @@ public class CraftingItem {
 			ArrayList<String> equipLore = new ArrayList();
 			equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1069,7 +1072,7 @@ public class CraftingItem {
 			ArrayList<String> equipLore = new ArrayList();
 			equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 			equipLore.add(ChatColor.GRAY + " ");
-			equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+			equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 			equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1089,7 +1092,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1105,7 +1108,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1121,7 +1124,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1137,7 +1140,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1153,7 +1156,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1169,7 +1172,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1185,7 +1188,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1201,7 +1204,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1217,7 +1220,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1233,7 +1236,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1249,7 +1252,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1265,7 +1268,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1281,7 +1284,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1297,7 +1300,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1313,7 +1316,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1329,7 +1332,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1345,7 +1348,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1361,7 +1364,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1377,7 +1380,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1393,7 +1396,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1409,7 +1412,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1425,7 +1428,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1441,7 +1444,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1457,7 +1460,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1473,7 +1476,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1489,7 +1492,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1505,7 +1508,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1521,7 +1524,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1537,7 +1540,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1553,7 +1556,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1569,7 +1572,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1585,7 +1588,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1601,7 +1604,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1617,7 +1620,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1633,7 +1636,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1649,7 +1652,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1665,7 +1668,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1681,7 +1684,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1697,7 +1700,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1713,7 +1716,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1729,7 +1732,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1745,7 +1748,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1761,7 +1764,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1777,7 +1780,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1793,7 +1796,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1809,7 +1812,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1825,7 +1828,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1841,7 +1844,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1857,7 +1860,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1873,7 +1876,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -1889,7 +1892,7 @@ public class CraftingItem {
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + stat[10]);
 				equipLore.add(ChatColor.GRAY + " ");
-				equipLore.add(ChatColor.GRAY + "제작자: " + player.getDisplayName());
+				equipLore.add(ChatColor.GRAY + "" + lvl + "레벨 대장장이 " + player.getDisplayName() + "의 작품");
 				equipIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 				equipIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 				equipIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);

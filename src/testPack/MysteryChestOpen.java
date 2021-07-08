@@ -2830,7 +2830,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.OAK_LEAVES);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 검");
+				equipIm.setDisplayName(grade + name + " 직검");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -2846,7 +2846,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.SPRUCE_LEAVES);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 검");
+				equipIm.setDisplayName(grade + name + " 대검");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -2862,7 +2862,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.BIRCH_LEAVES);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 검");
+				equipIm.setDisplayName(grade + name + " 나뭇가지");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -2878,7 +2878,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.JUNGLE_LEAVES);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 검");
+				equipIm.setDisplayName(grade + name + " 푸르른 검");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -2894,7 +2894,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.ACACIA_LEAVES);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 검");
+				equipIm.setDisplayName(grade + name + " 선장검");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -2910,7 +2910,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.DARK_OAK_LEAVES);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 검");
+				equipIm.setDisplayName(grade + name + " 드래곤소드");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -2926,7 +2926,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.STONE_STAIRS);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 무기");
+				equipIm.setDisplayName(grade + name + " 직검");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -2942,7 +2942,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.COBBLESTONE_WALL);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 검");
+				equipIm.setDisplayName(grade + name + " 냉기검");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -2958,7 +2958,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.BROWN_CARPET);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 검");
+				equipIm.setDisplayName(grade + name + " 골든 슬레이어");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -2974,7 +2974,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.GREEN_CARPET);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 도끼");
+				equipIm.setDisplayName(grade + name + " 룬도끼");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -2990,7 +2990,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.BLACK_CARPET);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 도끼");
+				equipIm.setDisplayName(grade + name + " 서리도끼");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3006,7 +3006,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.STONE);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 검");
+				equipIm.setDisplayName(grade + name + " 어둠검");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3022,7 +3022,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.BIRCH_PLANKS);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 검");
+				equipIm.setDisplayName(grade + name + " 레이피어");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3038,7 +3038,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.JUNGLE_PLANKS);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 검");
+				equipIm.setDisplayName(grade + name + " 악마검");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3054,7 +3054,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.ACACIA_PLANKS);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 검");
+				equipIm.setDisplayName(grade + name + " 불꽃검");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3070,7 +3070,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.DARK_OAK_PLANKS);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 검");
+				equipIm.setDisplayName(grade + name + " 세검");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3086,7 +3086,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.BEDROCK);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 검");
+				equipIm.setDisplayName(grade + name + " 쌍날창");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3102,7 +3102,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.SPRUCE_LOG);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 검");
+				equipIm.setDisplayName(grade + name + " 부러진 직검");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3118,7 +3118,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.BIRCH_LOG);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 검");
+				equipIm.setDisplayName(grade + name + " 룬검");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3134,7 +3134,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.JUNGLE_LOG);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 검");
+				equipIm.setDisplayName(grade + name + " 드래곤 투스");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3150,7 +3150,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.ACACIA_LOG);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 검");
+				equipIm.setDisplayName(grade + name + " 번개검");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3166,7 +3166,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.DARK_OAK_LOG);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 검");
+				equipIm.setDisplayName(grade + name + " 페러렐 스워드");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3182,7 +3182,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.SANDSTONE);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 망치");
+				equipIm.setDisplayName(grade + name + " 슬라임 망치");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3198,7 +3198,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.CHISELED_SANDSTONE);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 무기");
+				equipIm.setDisplayName(grade + name + " 아이스 헤머");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3214,7 +3214,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.CUT_SANDSTONE);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 무기");
+				equipIm.setDisplayName(grade + name + " 로켓 헤머");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3230,7 +3230,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.LAPIS_BLOCK);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 무기");
+				equipIm.setDisplayName(grade + name + " 고대 망치");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3246,7 +3246,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.MAGENTA_WOOL);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 도끼");
+				equipIm.setDisplayName(grade + name + " 오크 도끼");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3262,7 +3262,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.LIME_WOOL);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 도끼");
+				equipIm.setDisplayName(grade + name + " 트롤 도끼");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3278,7 +3278,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.GRAY_WOOL);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 무기");
+				equipIm.setDisplayName(grade + name + " 골든 헤머");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3294,7 +3294,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.LIGHT_GRAY_WOOL);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 무기");
+				equipIm.setDisplayName(grade + name + " 직검");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3310,7 +3310,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.CYAN_WOOL);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 검");
+				equipIm.setDisplayName(grade + name + " 얼음검");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3326,7 +3326,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.PURPLE_WOOL);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 검");
+				equipIm.setDisplayName(grade + name + " 직검");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3342,7 +3342,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.OAK_SLAB);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 창");
+				equipIm.setDisplayName(grade + name + " 드래곤 슬레이어");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3358,7 +3358,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.SPRUCE_SLAB);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 창");
+				equipIm.setDisplayName(grade + name + " 디바인 스피어");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3374,7 +3374,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.BIRCH_SLAB);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 창");
+				equipIm.setDisplayName(grade + name + " 홀리 스피어");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3390,7 +3390,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.JUNGLE_SLAB);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 창");
+				equipIm.setDisplayName(grade + name + " 피닉스 스피어");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3406,7 +3406,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.ACACIA_SLAB);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 창");
+				equipIm.setDisplayName(grade + name + " 삼지창");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3422,7 +3422,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.DARK_OAK_SLAB);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 창");
+				equipIm.setDisplayName(grade + name + " 마그마 스피어");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3438,7 +3438,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.STONE_SLAB);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 무기");
+				equipIm.setDisplayName(grade + name + " 너클");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3454,7 +3454,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.COBBLESTONE_SLAB);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 무기");
+				equipIm.setDisplayName(grade + name + " 동양검");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3470,7 +3470,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.STONE_BRICK_SLAB);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 무기");
+				equipIm.setDisplayName(grade + name + " 직검");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3486,7 +3486,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.NETHER_BRICK_SLAB);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 무기");
+				equipIm.setDisplayName(grade + name + " 직검");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3502,7 +3502,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.QUARTZ_SLAB);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 무기");
+				equipIm.setDisplayName(grade + name + " 직검");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3518,7 +3518,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.RED_SANDSTONE);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 무기");
+				equipIm.setDisplayName(grade + name + " 직검");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3534,7 +3534,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.RED_SANDSTONE_SLAB);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 무기");
+				equipIm.setDisplayName(grade + name + " 직검");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3550,7 +3550,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.SMOOTH_RED_SANDSTONE);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 무기");
+				equipIm.setDisplayName(grade + name + " 직검");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3566,7 +3566,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.OBSIDIAN);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 무기");
+				equipIm.setDisplayName(grade + name + " 직검");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3582,7 +3582,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.SMOOTH_SANDSTONE);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 무기");
+				equipIm.setDisplayName(grade + name + " 직검");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3598,7 +3598,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.CHISELED_RED_SANDSTONE);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 무기");
+				equipIm.setDisplayName(grade + name + " 직검");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3614,7 +3614,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.CUT_RED_SANDSTONE);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 무기");
+				equipIm.setDisplayName(grade + name + " 직검");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3630,7 +3630,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.RED_SANDSTONE_STAIRS);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 무기");
+				equipIm.setDisplayName(grade + name + " 직검");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");

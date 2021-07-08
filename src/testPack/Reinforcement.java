@@ -48,7 +48,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "추가 데미지(인간형)의 강화 수치가 1만큼 상승하였습니다.");
 				} 
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[2]);
 				if (lvl == 1000000) {
@@ -62,7 +62,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "추가 데미지(동물형)의 강화 수치가 1만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
@@ -76,7 +76,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 1만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<=20) {
 				int num2 = rnd.nextInt(3);
 				if(num2 == 0) {
@@ -86,10 +86,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "추가 데미지(인간형)의 강화 수치가 1만큼 감소하였습니다.");                        							
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f); 						                   					
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f); 						                   					
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[2]);
@@ -98,10 +98,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "추가 데미지(동물형)의 강화 수치가 1만큼 감소하였습니다.");                        							
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);    						                   					
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);    						                   					
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 2) {
 					int lvl = Integer.parseInt(ary[9]);
@@ -110,15 +110,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "반격의 강화 수치가 1만큼 감소하였습니다.");                        							
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);       						                   					
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);       						                   					
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		} 
 		//석탄 2
@@ -137,7 +137,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "추가 데미지(인간형)의 강화 수치가 3만큼 상승하였습니다.");
 				} 		
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[2]);
 				if (lvl == 1000000) {
@@ -151,7 +151,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "추가 데미지(동물형)의 강화 수치가 3만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
@@ -165,7 +165,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 3만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<=20) {
 				int num2 = rnd.nextInt(3);
 				if(num2 == 0) {
@@ -175,10 +175,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "추가 데미지(인간형)의 강화 수치가 1만큼 감소하였습니다.");                        							
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f); 						                   					
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f); 						                   					
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[2]);
@@ -187,10 +187,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "추가 데미지(동물형)의 강화 수치가 1만큼 감소하였습니다.");                        							
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);    						                   					
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);    						                   					
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 2) {
 					int lvl = Integer.parseInt(ary[9]);
@@ -199,15 +199,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "반격의 강화 수치가 1만큼 감소하였습니다.");                        							
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);       						                   					
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);       						                   					
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		}  
 		//석탄 3
@@ -226,7 +226,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "추가 데미지(인간형)의 강화 수치가 5만큼 상승하였습니다.");
 				} 		
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[2]);
 				if (lvl == 1000000) {
@@ -240,7 +240,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "추가 데미지(동물형)의 강화 수치가 5만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
@@ -254,7 +254,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 5만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<=20) {
 				int num2 = rnd.nextInt(3);
 				if(num2 == 0) {
@@ -269,10 +269,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "추가 데미지(인간형)의 강화 수치가 3만큼 감소하였습니다.");                        							
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f); 						                   					
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f); 						                   					
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[2]);
@@ -286,10 +286,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "추가 데미지(동물형)의 강화 수치가 3만큼 감소하였습니다.");                        							
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);    						                   					
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);    						                   					
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 2) {
 					int lvl = Integer.parseInt(ary[9]);
@@ -303,15 +303,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "반격의 강화 수치가 3만큼 감소하였습니다.");                        							
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);       						                   					
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);       						                   					
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		}
 		//석탄 4
@@ -330,7 +330,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "추가 데미지(인간형)의 강화 수치가 9만큼 상승하였습니다.");
 				} 			
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[2]);
 				if (lvl == 1000000) {
@@ -344,7 +344,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "추가 데미지(동물형)의 강화 수치가 9만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
@@ -358,7 +358,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 9만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<=20) {
 				int num2 = rnd.nextInt(3);
 				if(num2 == 0) {
@@ -373,10 +373,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "추가 데미지(인간형)의 강화 수치가 5만큼 감소하였습니다.");                        							
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f); 						                   					
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f); 						                   					
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[2]);
@@ -390,10 +390,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "추가 데미지(동물형)의 강화 수치가 5만큼 감소하였습니다.");                        							
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);    						                   					
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);    						                   					
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 2) {
 					int lvl = Integer.parseInt(ary[9]);
@@ -407,15 +407,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "반격의 강화 수치가 5만큼 감소하였습니다.");                        							
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);       						                   					
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);       						                   					
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		}
 		//석탄 5
@@ -434,7 +434,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "추가 데미지(인간형)의 강화 수치가 40만큼 상승하였습니다.");
 				} 		
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[2]);
 				if (lvl == 1000000) {
@@ -448,7 +448,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "추가 데미지(동물형)의 강화 수치가 40만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
@@ -462,7 +462,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 40만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<=20) {
 				int num2 = rnd.nextInt(3);
 				if(num2 == 0) {
@@ -477,10 +477,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "추가 데미지(인간형)의 강화 수치가 30만큼 감소하였습니다.");                        							
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f); 						                   					
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f); 						                   					
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[2]);
@@ -494,10 +494,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "추가 데미지(동물형)의 강화 수치가 30만큼 감소하였습니다.");                        							
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);    						                   					
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);    						                   					
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 2) {
 					int lvl = Integer.parseInt(ary[9]);
@@ -511,15 +511,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "반격의 강화 수치가 30만큼 감소하였습니다.");                        							
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);       						                   					
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);       						                   					
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		}  
 		//석탄 6
@@ -538,7 +538,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "추가 데미지(인간형)의 강화 수치가 80만큼 상승하였습니다.");
 				} 		
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[2]);
 				if (lvl == 1000000) {
@@ -552,7 +552,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "추가 데미지(동물형)의 강화 수치가 80만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
@@ -566,7 +566,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 80만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<=20) {
 				int num2 = rnd.nextInt(3);
 				if(num2 == 0) {
@@ -581,10 +581,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "추가 데미지(인간형)의 강화 수치가 40만큼 감소하였습니다.");                        							
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f); 						                   					
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f); 						                   					
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[2]);
@@ -598,10 +598,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "추가 데미지(동물형)의 강화 수치가 40만큼 감소하였습니다.");                        							
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);    						                   					
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);    						                   					
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 2) {
 					int lvl = Integer.parseInt(ary[9]);
@@ -615,15 +615,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "반격의 강화 수치가 40만큼 감소하였습니다.");                        							
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);       						                   					
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);       						                   					
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		}
 		return item;
@@ -654,7 +654,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "공격력의 강화 수치가 3만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
@@ -668,7 +668,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 3만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<=15) {
 				int num2 = rnd.nextInt(2);
 				if(num2 == 0) {
@@ -678,10 +678,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "공격력의 강화 수치가 1만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[9]);
@@ -690,15 +690,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "반격의 강화 수치가 1만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		} 
 		//철 2
@@ -717,7 +717,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "공격력의 강화 수치가 5만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
@@ -731,7 +731,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 5만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<=15) {
 				int num2 = rnd.nextInt(2);
 				if(num2 == 0) {
@@ -746,10 +746,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "공격력의 강화 수치가 3만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[9]);
@@ -763,15 +763,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "반격의 강화 수치가 3만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		}  
 		//철 3
@@ -790,7 +790,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "공격력의 강화 수치가 9만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
@@ -804,7 +804,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 9만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<=15) {
 				int num2 = rnd.nextInt(2);
 				if(num2 == 0) {
@@ -819,10 +819,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "공격력의 강화 수치가 5만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[9]);
@@ -836,15 +836,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "반격의 강화 수치가 5만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		}  
 		//철 4
@@ -863,7 +863,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "공격력의 강화 수치가 40만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
@@ -877,7 +877,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 40만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<=15) {
 				int num2 = rnd.nextInt(2);
 				if(num2 == 0) {
@@ -892,10 +892,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "공격력의 강화 수치가 30만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[9]);
@@ -909,15 +909,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "반격의 강화 수치가 30만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		}                      			
 		//철 5
@@ -936,7 +936,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "공격력의 강화 수치가 80만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
@@ -950,7 +950,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 80만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<=15) {
 				int num2 = rnd.nextInt(2);
 				if(num2 == 0) {
@@ -965,10 +965,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "공격력의 강화 수치가 40만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[9]);
@@ -982,15 +982,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "반격의 강화 수치가 40만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		}
 		return item;
@@ -1021,7 +1021,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "공격력의 강화 수치가 5만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[3]);
 				if (lvl == 1000000) {
@@ -1035,7 +1035,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "추가 데미지(기타)의 강화 수치가 5만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[4]);
 				if (lvl == 1000000) {
@@ -1049,7 +1049,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "스플레시의 강화 수치가 5만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<=20) {
 				int num2 = rnd.nextInt(3);
 				if(num2 == 0) {
@@ -1064,10 +1064,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "공격력의 강화 수치가 3만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[3]);
@@ -1081,10 +1081,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "추가 데미지(기타)의 강화 수치가 3만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 2) {
 					int lvl = Integer.parseInt(ary[4]);
@@ -1098,15 +1098,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "스플레시의 강화 수치가 3만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		}  
 		//금 2
@@ -1125,7 +1125,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "공격력의 강화 수치가 9만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[3]);
 				if (lvl == 1000000) {
@@ -1139,7 +1139,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "추가 데미지(기타)의 강화 수치가 9만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[4]);
 				if (lvl == 1000000) {
@@ -1153,7 +1153,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "스플레시의 강화 수치가 9만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<=20) {
 				int num2 = rnd.nextInt(3);
 				if(num2 == 0) {
@@ -1168,10 +1168,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "공격력의 강화 수치가 5만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[3]);
@@ -1185,10 +1185,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "추가 데미지(기타)의 강화 수치가 5만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 2) {
 					int lvl = Integer.parseInt(ary[4]);
@@ -1202,15 +1202,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "스플레시의 강화 수치가 5만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		}  
 		//금 3
@@ -1229,7 +1229,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "공격력의 강화 수치가 40만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[3]);
 				if (lvl == 1000000) {
@@ -1243,7 +1243,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "추가 데미지(기타)의 강화 수치가 40만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[4]);
 				if (lvl == 1000000) {
@@ -1257,7 +1257,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "스플레시의 강화 수치가 40만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<=20) {
 				int num2 = rnd.nextInt(3);
 				if(num2 == 0) {
@@ -1272,10 +1272,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "공격력의 강화 수치가 30만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[3]);
@@ -1289,10 +1289,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "추가 데미지(기타)의 강화 수치가 30만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 2) {
 					int lvl = Integer.parseInt(ary[4]);
@@ -1306,15 +1306,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "스플레시의 강화 수치가 30만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		}   			
 		//금 4
@@ -1333,7 +1333,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "공격력의 강화 수치가 80만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[3]);
 				if (lvl == 1000000) {
@@ -1347,7 +1347,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "추가 데미지(기타)의 강화 수치가 80만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[4]);
 				if (lvl == 1000000) {
@@ -1361,7 +1361,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "스플레시의 강화 수치가 80만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<=20) {
 				int num2 = rnd.nextInt(3);
 				if(num2 == 0) {
@@ -1376,10 +1376,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "공격력의 강화 수치가 40만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[3]);
@@ -1393,10 +1393,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "추가 데미지(기타)의 강화 수치가 40만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 2) {
 					int lvl = Integer.parseInt(ary[4]);
@@ -1410,15 +1410,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "스플레시의 강화 수치가 40만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		}
 		return item;
@@ -1449,7 +1449,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "공격력의 강화 수치가 9만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[1]);
 				if (lvl == 1000000) {
@@ -1463,7 +1463,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "추가 데미지(인간형)의 강화 수치가 9만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[2]);
 				if (lvl == 1000000) {
@@ -1477,7 +1477,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "추가 데미지(동물형)의 강화 수치가 9만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<20) {
 				int lvl = Integer.parseInt(ary[3]);
 				if (lvl == 1000000) {
@@ -1491,7 +1491,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "추가 데미지(기타)의 강화 수치가 9만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[4]);
 				if (lvl == 1000000) {
@@ -1505,7 +1505,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "스플레시의 강화 수치가 9만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<30) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
@@ -1533,10 +1533,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "공격력의 강화 수치가 5만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[1]);
@@ -1550,10 +1550,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "추가 데미지(인간형)의 강화 수치가 5만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 2) {
 					int lvl = Integer.parseInt(ary[2]);
@@ -1567,10 +1567,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "추가 데미지(동물형)의 강화 수치가 5만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 3) {
 					int lvl = Integer.parseInt(ary[3]);
@@ -1584,10 +1584,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "추가 데미지(기타)의 강화 수치가 5만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 4) {
 					int lvl = Integer.parseInt(ary[4]);
@@ -1601,10 +1601,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "스플레시의 강화 수치가 5만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 5) {
 					int lvl = Integer.parseInt(ary[9]);
@@ -1618,15 +1618,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "반격의 강화 수치가 5만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		}  
 		//다야 2
@@ -1645,7 +1645,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "공격력의 강화 수치가 40만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[1]);
 				if (lvl == 1000000) {
@@ -1659,7 +1659,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "추가 데미지(인간형)의 강화 수치가 40만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[2]);
 				if (lvl == 1000000) {
@@ -1673,7 +1673,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "추가 데미지(동물형)의 강화 수치가 40만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<20) {
 				int lvl = Integer.parseInt(ary[3]);
 				if (lvl == 1000000) {
@@ -1687,7 +1687,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "추가 데미지(기타)의 강화 수치가 40만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[4]);
 				if (lvl == 1000000) {
@@ -1701,7 +1701,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "스플레시의 강화 수치가 40만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<30) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
@@ -1715,7 +1715,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 40만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<=35) {
 				int num2 = rnd.nextInt(6);
 				if(num2 == 0) {
@@ -1730,10 +1730,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "공격력의 강화 수치가 30만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[1]);
@@ -1747,10 +1747,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "추가 데미지(인간형)의 강화 수치가 30만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 2) {
 					int lvl = Integer.parseInt(ary[2]);
@@ -1764,10 +1764,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "추가 데미지(동물형)의 강화 수치가 30만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 3) {
 					int lvl = Integer.parseInt(ary[3]);
@@ -1781,10 +1781,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "추가 데미지(기타)의 강화 수치가 30만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 4) {
 					int lvl = Integer.parseInt(ary[4]);
@@ -1798,10 +1798,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "스플레시의 강화 수치가 30만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 5) {
 					int lvl = Integer.parseInt(ary[9]);
@@ -1815,15 +1815,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "반격의 강화 수치가 30만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		}  
 		//다야 3
@@ -1842,7 +1842,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "공격력의 강화 수치가 80만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[1]);
 				if (lvl == 1000000) {
@@ -1856,7 +1856,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "추가 데미지(인간형)의 강화 수치가 80만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[2]);
 				if (lvl == 1000000) {
@@ -1870,7 +1870,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "추가 데미지(동물형)의 강화 수치가 80만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<20) {
 				int lvl = Integer.parseInt(ary[3]);
 				if (lvl == 1000000) {
@@ -1884,7 +1884,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "추가 데미지(기타)의 강화 수치가 80만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[4]);
 				if (lvl == 1000000) {
@@ -1898,7 +1898,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "스플레시의 강화 수치가 80만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<30) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
@@ -1912,7 +1912,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 80만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<=35) {
 				int num2 = rnd.nextInt(6);
 				if(num2 == 0) {
@@ -1927,10 +1927,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "공격력의 강화 수치가 40만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[1]);
@@ -1944,10 +1944,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "추가 데미지(인간형)의 강화 수치가 40만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 2) {
 					int lvl = Integer.parseInt(ary[2]);
@@ -1961,10 +1961,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "추가 데미지(동물형)의 강화 수치가 40만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 3) {
 					int lvl = Integer.parseInt(ary[3]);
@@ -1978,10 +1978,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "추가 데미지(기타)의 강화 수치가 40만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 4) {
 					int lvl = Integer.parseInt(ary[4]);
@@ -1995,10 +1995,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "스플레시의 강화 수치가 40만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 5) {
 					int lvl = Integer.parseInt(ary[9]);
@@ -2012,15 +2012,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "반격의 강화 수치가 40만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		}   			
 		//다야 4
@@ -2039,7 +2039,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "공격력의 강화 수치가 300만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[1]);
 				if (lvl == 1000000) {
@@ -2053,7 +2053,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "추가 데미지(인간형)의 강화 수치가 300만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[2]);
 				if (lvl == 1000000) {
@@ -2067,7 +2067,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "추가 데미지(동물형)의 강화 수치가 300만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<20) {
 				int lvl = Integer.parseInt(ary[3]);
 				if (lvl == 1000000) {
@@ -2081,7 +2081,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "추가 데미지(기타)의 강화 수치가 300만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[4]);
 				if (lvl == 1000000) {
@@ -2095,7 +2095,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "스플레시의 강화 수치가 300만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<30) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
@@ -2109,7 +2109,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 300만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<=35) {
 				int num2 = rnd.nextInt(6);
 				if(num2 == 0) {
@@ -2124,10 +2124,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "공격력의 강화 수치가 200만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[1]);
@@ -2141,10 +2141,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "추가 데미지(인간형)의 강화 수치가 200만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 2) {
 					int lvl = Integer.parseInt(ary[2]);
@@ -2158,10 +2158,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "추가 데미지(동물형)의 강화 수치가 200만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 3) {
 					int lvl = Integer.parseInt(ary[3]);
@@ -2175,10 +2175,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "추가 데미지(기타)의 강화 수치가 200만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 4) {
 					int lvl = Integer.parseInt(ary[4]);
@@ -2192,10 +2192,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "스플레시의 강화 수치가 200만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 5) {
 					int lvl = Integer.parseInt(ary[9]);
@@ -2209,15 +2209,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "반격의 강화 수치가 200만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		}
 		//다야 5
@@ -2236,7 +2236,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "공격력의 강화 수치가 777만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[1]);
 				if (lvl == 1000000) {
@@ -2250,7 +2250,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "추가 데미지(인간형)의 강화 수치가 777만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[2]);
 				if (lvl == 1000000) {
@@ -2264,7 +2264,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "추가 데미지(동물형)의 강화 수치가 777만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<20) {
 				int lvl = Integer.parseInt(ary[3]);
 				if (lvl == 1000000) {
@@ -2278,7 +2278,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "추가 데미지(기타)의 강화 수치가 777만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[4]);
 				if (lvl == 1000000) {
@@ -2292,7 +2292,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "스플레시의 강화 수치가 777만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<30) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
@@ -2306,7 +2306,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 777만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<=35) {
 				int num2 = rnd.nextInt(6);
 				if(num2 == 0) {
@@ -2321,10 +2321,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "공격력의 강화 수치가 7만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[1]);
@@ -2338,10 +2338,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "추가 데미지(인간형)의 강화 수치가 7만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 2) {
 					int lvl = Integer.parseInt(ary[2]);
@@ -2355,10 +2355,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "추가 데미지(동물형)의 강화 수치가 7만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 3) {
 					int lvl = Integer.parseInt(ary[3]);
@@ -2372,10 +2372,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "추가 데미지(기타)의 강화 수치가 7만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 4) {
 					int lvl = Integer.parseInt(ary[4]);
@@ -2389,10 +2389,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "스플레시의 강화 수치가 7만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 5) {
 					int lvl = Integer.parseInt(ary[9]);
@@ -2406,15 +2406,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "반격의 강화 수치가 7만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		}
 		return item;
@@ -2445,7 +2445,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "방어력의 강화 수치가 1만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[6]);
 				if (lvl == 30000) {
@@ -2459,7 +2459,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(화염)의 강화 수치가 1만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[7]);
 				if (lvl == 30000) {
@@ -2473,7 +2473,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(폭발)의 강화 수치가 1만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<20) {
 				int lvl = Integer.parseInt(ary[8]);
 				if (lvl == 30000) {
@@ -2487,7 +2487,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(발사체)의 강화 수치가 1만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
@@ -2501,7 +2501,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 1만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<=30) {
 				int num2 = rnd.nextInt(5);
 				if(num2 == 0) {
@@ -2516,10 +2516,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "방어력의 강화 수치가 1만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[6]);
@@ -2533,10 +2533,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(화염)의 강화 수치가 1만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 2) {
 					int lvl = Integer.parseInt(ary[7]);
@@ -2550,10 +2550,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(폭발)의 강화 수치가 1만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 3) {
 					int lvl = Integer.parseInt(ary[8]);
@@ -2567,10 +2567,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(발사체)의 강화 수치가 1만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 4) {
 					int lvl = Integer.parseInt(ary[9]);
@@ -2584,15 +2584,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "반격의 강화 수치가 1만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		} 
 		//석탄 2
@@ -2611,7 +2611,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "방어력의 강화 수치가 3만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[6]);
 				if (lvl == 30000) {
@@ -2625,7 +2625,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(화염)의 강화 수치가 3만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[7]);
 				if (lvl == 30000) {
@@ -2639,7 +2639,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(폭발)의 강화 수치가 3만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<20) {
 				int lvl = Integer.parseInt(ary[8]);
 				if (lvl == 30000) {
@@ -2653,7 +2653,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(발사체)의 강화 수치가 3만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
@@ -2667,7 +2667,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 3만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<=30) {
 				int num2 = rnd.nextInt(5);
 				if(num2 == 0) {
@@ -2682,10 +2682,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "방어력의 강화 수치가 1만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[6]);
@@ -2699,10 +2699,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(화염)의 강화 수치가 1만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 2) {
 					int lvl = Integer.parseInt(ary[7]);
@@ -2716,10 +2716,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(폭발)의 강화 수치가 1만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 3) {
 					int lvl = Integer.parseInt(ary[8]);
@@ -2733,10 +2733,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(발사체)의 강화 수치가 1만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 4) {
 					int lvl = Integer.parseInt(ary[9]);
@@ -2750,15 +2750,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "반격의 강화 수치가 1만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		}  
 		//석탄 3
@@ -2777,7 +2777,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "방어력의 강화 수치가 5만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[6]);
 				if (lvl == 30000) {
@@ -2791,7 +2791,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(화염)의 강화 수치가 5만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[7]);
 				if (lvl == 30000) {
@@ -2805,7 +2805,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(폭발)의 강화 수치가 5만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<20) {
 				int lvl = Integer.parseInt(ary[8]);
 				if (lvl == 30000) {
@@ -2819,7 +2819,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(발사체)의 강화 수치가 5만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
@@ -2833,7 +2833,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 5만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<=30) {
 				int num2 = rnd.nextInt(5);
 				if(num2 == 0) {
@@ -2848,10 +2848,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "방어력의 강화 수치가 3만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[6]);
@@ -2865,10 +2865,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(화염)의 강화 수치가 3만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 2) {
 					int lvl = Integer.parseInt(ary[7]);
@@ -2882,10 +2882,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(폭발)의 강화 수치가 3만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 3) {
 					int lvl = Integer.parseInt(ary[8]);
@@ -2899,10 +2899,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(발사체)의 강화 수치가 3만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 4) {
 					int lvl = Integer.parseInt(ary[9]);
@@ -2916,15 +2916,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "반격의 강화 수치가 3만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		}  
 		//석탄 4
@@ -2943,7 +2943,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "방어력의 강화 수치가 9만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[6]);
 				if (lvl == 30000) {
@@ -2957,7 +2957,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(화염)의 강화 수치가 9만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[7]);
 				if (lvl == 30000) {
@@ -2971,7 +2971,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(폭발)의 강화 수치가 9만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<20) {
 				int lvl = Integer.parseInt(ary[8]);
 				if (lvl == 30000) {
@@ -2985,7 +2985,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(발사체)의 강화 수치가 9만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
@@ -2999,7 +2999,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 9만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<=30) {
 				int num2 = rnd.nextInt(5);
 				if(num2 == 0) {
@@ -3014,10 +3014,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "방어력의 강화 수치가 5만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[6]);
@@ -3031,10 +3031,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(화염)의 강화 수치가 5만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 2) {
 					int lvl = Integer.parseInt(ary[7]);
@@ -3048,10 +3048,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(폭발)의 강화 수치가 5만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 3) {
 					int lvl = Integer.parseInt(ary[8]);
@@ -3065,10 +3065,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(발사체)의 강화 수치가 5만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 4) {
 					int lvl = Integer.parseInt(ary[9]);
@@ -3082,15 +3082,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "반격의 강화 수치가 5만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		}  
 		//석탄 5
@@ -3109,7 +3109,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "방어력의 강화 수치가 40만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[6]);
 				if (lvl == 30000) {
@@ -3123,7 +3123,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(화염)의 강화 수치가 40만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[7]);
 				if (lvl == 30000) {
@@ -3137,7 +3137,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(폭발)의 강화 수치가 40만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<20) {
 				int lvl = Integer.parseInt(ary[8]);
 				if (lvl == 30000) {
@@ -3151,7 +3151,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(발사체)의 강화 수치가 40만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
@@ -3165,7 +3165,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 40만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<=30) {
 				int num2 = rnd.nextInt(5);
 				if(num2 == 0) {
@@ -3180,10 +3180,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "방어력의 강화 수치가 30만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[6]);
@@ -3197,10 +3197,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(화염)의 강화 수치가 30만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 2) {
 					int lvl = Integer.parseInt(ary[7]);
@@ -3214,10 +3214,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(폭발)의 강화 수치가 30만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 3) {
 					int lvl = Integer.parseInt(ary[8]);
@@ -3231,10 +3231,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(발사체)의 강화 수치가 30만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 4) {
 					int lvl = Integer.parseInt(ary[9]);
@@ -3248,15 +3248,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "반격의 강화 수치가 30만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		}  
 		//석탄 6
@@ -3275,7 +3275,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "방어력의 강화 수치가 80만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[6]);
 				if (lvl == 30000) {
@@ -3289,7 +3289,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(화염)의 강화 수치가 80만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[7]);
 				if (lvl == 30000) {
@@ -3303,7 +3303,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(폭발)의 강화 수치가 80만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<20) {
 				int lvl = Integer.parseInt(ary[8]);
 				if (lvl == 30000) {
@@ -3317,7 +3317,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(발사체)의 강화 수치가 80만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
@@ -3331,7 +3331,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 80만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<=30) {
 				int num2 = rnd.nextInt(5);
 				if(num2 == 0) {
@@ -3346,10 +3346,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "방어력의 강화 수치가 40만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[6]);
@@ -3363,10 +3363,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(화염)의 강화 수치가 40만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 2) {
 					int lvl = Integer.parseInt(ary[7]);
@@ -3380,10 +3380,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(폭발)의 강화 수치가 40만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 3) {
 					int lvl = Integer.parseInt(ary[8]);
@@ -3397,10 +3397,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(발사체)의 강화 수치가 40만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 4) {
 					int lvl = Integer.parseInt(ary[9]);
@@ -3414,15 +3414,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "반격의 강화 수치가 40만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		} 
 		return item;
@@ -3453,7 +3453,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "방어력의 강화 수치가 3만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[6]);
 				if (lvl == 30000) {
@@ -3467,7 +3467,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(화염)의 강화 수치가 3만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[7]);
 				if (lvl == 30000) {
@@ -3481,7 +3481,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(폭발)의 강화 수치가 3만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<20) {
 				int lvl = Integer.parseInt(ary[8]);
 				if (lvl == 30000) {
@@ -3495,7 +3495,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(발사체)의 강화 수치가 3만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
@@ -3509,7 +3509,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 3만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<=30) {
 				int num2 = rnd.nextInt(5);
 				if(num2 == 0) {
@@ -3524,10 +3524,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "방어력의 강화 수치가 1만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[6]);
@@ -3541,10 +3541,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(화염)의 강화 수치가 1만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 2) {
 					int lvl = Integer.parseInt(ary[7]);
@@ -3558,10 +3558,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(폭발)의 강화 수치가 1만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 3) {
 					int lvl = Integer.parseInt(ary[8]);
@@ -3575,10 +3575,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(발사체)의 강화 수치가 1만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 4) {
 					int lvl = Integer.parseInt(ary[9]);
@@ -3592,15 +3592,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "반격의 강화 수치가 1만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		} 
 		//철 2
@@ -3619,7 +3619,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "방어력의 강화 수치가 5만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[6]);
 				if (lvl == 30000) {
@@ -3633,7 +3633,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(화염)의 강화 수치가 5만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[7]);
 				if (lvl == 30000) {
@@ -3647,7 +3647,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(폭발)의 강화 수치가 5만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<20) {
 				int lvl = Integer.parseInt(ary[8]);
 				if (lvl == 30000) {
@@ -3661,7 +3661,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(발사체)의 강화 수치가 5만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
@@ -3675,7 +3675,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 5만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<=30) {
 				int num2 = rnd.nextInt(5);
 				if(num2 == 0) {
@@ -3690,10 +3690,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "방어력의 강화 수치가 3만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[6]);
@@ -3707,10 +3707,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(화염)의 강화 수치가 3만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 2) {
 					int lvl = Integer.parseInt(ary[7]);
@@ -3724,10 +3724,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(폭발)의 강화 수치가 3만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 3) {
 					int lvl = Integer.parseInt(ary[8]);
@@ -3741,10 +3741,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(발사체)의 강화 수치가 3만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 4) {
 					int lvl = Integer.parseInt(ary[9]);
@@ -3758,15 +3758,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "반격의 강화 수치가 3만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		}  
 		//철 3
@@ -3785,7 +3785,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "방어력의 강화 수치가 9만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[6]);
 				if (lvl == 30000) {
@@ -3799,7 +3799,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(화염)의 강화 수치가 9만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[7]);
 				if (lvl == 30000) {
@@ -3813,7 +3813,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(폭발)의 강화 수치가 9만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<20) {
 				int lvl = Integer.parseInt(ary[8]);
 				if (lvl == 30000) {
@@ -3827,7 +3827,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(발사체)의 강화 수치가 9만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
@@ -3841,7 +3841,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 9만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<=30) {
 				int num2 = rnd.nextInt(5);
 				if(num2 == 0) {
@@ -3856,10 +3856,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "방어력의 강화 수치가 5만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[6]);
@@ -3873,10 +3873,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(화염)의 강화 수치가 5만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 2) {
 					int lvl = Integer.parseInt(ary[7]);
@@ -3890,10 +3890,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(폭발)의 강화 수치가 5만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 3) {
 					int lvl = Integer.parseInt(ary[8]);
@@ -3907,10 +3907,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(발사체)의 강화 수치가 5만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 4) {
 					int lvl = Integer.parseInt(ary[9]);
@@ -3924,15 +3924,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "반격의 강화 수치가 5만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		}  
 		//철 4
@@ -3951,7 +3951,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "방어력의 강화 수치가 40만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[6]);
 				if (lvl == 30000) {
@@ -3965,7 +3965,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(화염)의 강화 수치가 40만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[7]);
 				if (lvl == 30000) {
@@ -3979,7 +3979,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(폭발)의 강화 수치가 40만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<20) {
 				int lvl = Integer.parseInt(ary[8]);
 				if (lvl == 30000) {
@@ -3993,7 +3993,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(발사체)의 강화 수치가 40만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
@@ -4007,7 +4007,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 40만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<=30) {
 				int num2 = rnd.nextInt(5);
 				if(num2 == 0) {
@@ -4022,10 +4022,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "방어력의 강화 수치가 30만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[6]);
@@ -4039,10 +4039,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(화염)의 강화 수치가 30만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 2) {
 					int lvl = Integer.parseInt(ary[7]);
@@ -4056,10 +4056,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(폭발)의 강화 수치가 30만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 3) {
 					int lvl = Integer.parseInt(ary[8]);
@@ -4073,10 +4073,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(발사체)의 강화 수치가 30만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 4) {
 					int lvl = Integer.parseInt(ary[9]);
@@ -4090,15 +4090,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "반격의 강화 수치가 30만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		}                      			
 		//철 5
@@ -4117,7 +4117,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "방어력의 강화 수치가 80만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[6]);
 				if (lvl == 30000) {
@@ -4131,7 +4131,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(화염)의 강화 수치가 80만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[7]);
 				if (lvl == 30000) {
@@ -4145,7 +4145,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(폭발)의 강화 수치가 80만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<20) {
 				int lvl = Integer.parseInt(ary[8]);
 				if (lvl == 30000) {
@@ -4159,7 +4159,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(발사체)의 강화 수치가 80만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
@@ -4173,7 +4173,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 80만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<=30) {
 				int num2 = rnd.nextInt(5);
 				if(num2 == 0) {
@@ -4188,10 +4188,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "방어력의 강화 수치가 40만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[6]);
@@ -4205,10 +4205,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(화염)의 강화 수치가 40만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 2) {
 					int lvl = Integer.parseInt(ary[7]);
@@ -4222,10 +4222,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(폭발)의 강화 수치가 40만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 3) {
 					int lvl = Integer.parseInt(ary[8]);
@@ -4239,10 +4239,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(발사체)의 강화 수치가 40만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 4) {
 					int lvl = Integer.parseInt(ary[9]);
@@ -4256,15 +4256,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "반격의 강화 수치가 40만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		} 
 		return item;
@@ -4295,7 +4295,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "방어력의 강화 수치가 5만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[6]);
 				if (lvl == 30000) {
@@ -4309,7 +4309,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(화염)의 강화 수치가 5만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[7]);
 				if (lvl == 30000) {
@@ -4323,7 +4323,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(폭발)의 강화 수치가 5만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<20) {
 				int lvl = Integer.parseInt(ary[8]);
 				if (lvl == 30000) {
@@ -4337,7 +4337,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(발사체)의 강화 수치가 5만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
@@ -4351,7 +4351,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 5만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<=30) {
 				int num2 = rnd.nextInt(5);
 				if(num2 == 0) {
@@ -4366,10 +4366,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "방어력의 강화 수치가 3만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[6]);
@@ -4383,10 +4383,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(화염)의 강화 수치가 3만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 2) {
 					int lvl = Integer.parseInt(ary[7]);
@@ -4400,10 +4400,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(폭발)의 강화 수치가 3만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 3) {
 					int lvl = Integer.parseInt(ary[8]);
@@ -4417,10 +4417,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(발사체)의 강화 수치가 3만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 4) {
 					int lvl = Integer.parseInt(ary[9]);
@@ -4434,15 +4434,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "반격의 강화 수치가 3만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		}  
 		//금 2
@@ -4461,7 +4461,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "방어력의 강화 수치가 9만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[6]);
 				if (lvl == 30000) {
@@ -4475,7 +4475,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(화염)의 강화 수치가 9만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[7]);
 				if (lvl == 30000) {
@@ -4489,7 +4489,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(폭발)의 강화 수치가 9만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<20) {
 				int lvl = Integer.parseInt(ary[8]);
 				if (lvl == 30000) {
@@ -4503,7 +4503,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(발사체)의 강화 수치가 9만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
@@ -4517,7 +4517,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 9만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<=30) {
 				int num2 = rnd.nextInt(5);
 				if(num2 == 0) {
@@ -4532,10 +4532,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "방어력의 강화 수치가 5만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[6]);
@@ -4549,10 +4549,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(화염)의 강화 수치가 5만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 2) {
 					int lvl = Integer.parseInt(ary[7]);
@@ -4566,10 +4566,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(폭발)의 강화 수치가 5만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 3) {
 					int lvl = Integer.parseInt(ary[8]);
@@ -4583,10 +4583,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(발사체)의 강화 수치가 5만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 4) {
 					int lvl = Integer.parseInt(ary[9]);
@@ -4600,15 +4600,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "반격의 강화 수치가 5만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		}  
 		//금 3
@@ -4627,7 +4627,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "방어력의 강화 수치가 40만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[6]);
 				if (lvl == 30000) {
@@ -4641,7 +4641,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(화염)의 강화 수치가 40만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[7]);
 				if (lvl == 30000) {
@@ -4655,7 +4655,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(폭발)의 강화 수치가 40만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<20) {
 				int lvl = Integer.parseInt(ary[8]);
 				if (lvl == 30000) {
@@ -4669,7 +4669,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(발사체)의 강화 수치가 40만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
@@ -4683,7 +4683,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 40만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<=30) {
 				int num2 = rnd.nextInt(5);
 				if(num2 == 0) {
@@ -4698,10 +4698,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "방어력의 강화 수치가 30만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[6]);
@@ -4715,10 +4715,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(화염)의 강화 수치가 30만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 2) {
 					int lvl = Integer.parseInt(ary[7]);
@@ -4732,10 +4732,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(폭발)의 강화 수치가 30만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 3) {
 					int lvl = Integer.parseInt(ary[8]);
@@ -4749,10 +4749,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(발사체)의 강화 수치가 30만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 4) {
 					int lvl = Integer.parseInt(ary[9]);
@@ -4766,15 +4766,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "반격의 강화 수치가 30만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		}   			
 		//금 4
@@ -4793,7 +4793,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "방어력의 강화 수치가 80만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[6]);
 				if (lvl == 30000) {
@@ -4807,7 +4807,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(화염)의 강화 수치가 80만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[7]);
 				if (lvl == 30000) {
@@ -4821,7 +4821,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(폭발)의 강화 수치가 80만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<20) {
 				int lvl = Integer.parseInt(ary[8]);
 				if (lvl == 30000) {
@@ -4835,7 +4835,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(발사체)의 강화 수치가 80만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
@@ -4849,7 +4849,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 80만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<=30) {
 				int num2 = rnd.nextInt(5);
 				if(num2 == 0) {
@@ -4864,10 +4864,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "방어력의 강화 수치가 40만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[6]);
@@ -4881,10 +4881,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(화염)의 강화 수치가 40만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 2) {
 					int lvl = Integer.parseInt(ary[7]);
@@ -4898,10 +4898,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(폭발)의 강화 수치가 40만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 3) {
 					int lvl = Integer.parseInt(ary[8]);
@@ -4915,10 +4915,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(발사체)의 강화 수치가 40만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 4) {
 					int lvl = Integer.parseInt(ary[9]);
@@ -4932,15 +4932,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "반격의 강화 수치가 40만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		} 
 		return item;
@@ -4971,7 +4971,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "방어력의 강화 수치가 9만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[6]);
 				if (lvl == 30000) {
@@ -4985,7 +4985,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(화염)의 강화 수치가 9만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[7]);
 				if (lvl == 30000) {
@@ -4999,7 +4999,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(폭발)의 강화 수치가 9만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<20) {
 				int lvl = Integer.parseInt(ary[8]);
 				if (lvl == 30000) {
@@ -5013,7 +5013,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(발사체)의 강화 수치가 9만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
@@ -5027,7 +5027,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 9만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<=30) {
 				int num2 = rnd.nextInt(5);
 				if(num2 == 0) {
@@ -5042,10 +5042,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "방어력의 강화 수치가 5만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[6]);
@@ -5059,10 +5059,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(화염)의 강화 수치가 5만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 2) {
 					int lvl = Integer.parseInt(ary[7]);
@@ -5076,10 +5076,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(폭발)의 강화 수치가 5만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 3) {
 					int lvl = Integer.parseInt(ary[8]);
@@ -5093,10 +5093,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(발사체)의 강화 수치가 5만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 4) {
 					int lvl = Integer.parseInt(ary[9]);
@@ -5110,15 +5110,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "반격의 강화 수치가 5만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		}  
 		//다야 2
@@ -5137,7 +5137,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "방어력의 강화 수치가 40만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[6]);
 				if (lvl == 30000) {
@@ -5151,7 +5151,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(화염)의 강화 수치가 40만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[7]);
 				if (lvl == 30000) {
@@ -5165,7 +5165,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(폭발)의 강화 수치가 40만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<20) {
 				int lvl = Integer.parseInt(ary[8]);
 				if (lvl == 30000) {
@@ -5179,7 +5179,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(발사체)의 강화 수치가 40만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
@@ -5193,7 +5193,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 40만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<=30) {
 				int num2 = rnd.nextInt(5);
 				if(num2 == 0) {
@@ -5208,10 +5208,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "방어력의 강화 수치가 30만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[6]);
@@ -5225,10 +5225,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(화염)의 강화 수치가 30만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 2) {
 					int lvl = Integer.parseInt(ary[7]);
@@ -5242,10 +5242,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(폭발)의 강화 수치가 30만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 3) {
 					int lvl = Integer.parseInt(ary[8]);
@@ -5259,10 +5259,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(발사체)의 강화 수치가 30만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 4) {
 					int lvl = Integer.parseInt(ary[9]);
@@ -5276,15 +5276,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "반격의 강화 수치가 30만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		}  
 		//다야 3
@@ -5303,7 +5303,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "방어력의 강화 수치가 80만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[6]);
 				if (lvl == 30000) {
@@ -5317,7 +5317,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(화염)의 강화 수치가 80만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[7]);
 				if (lvl == 30000) {
@@ -5331,7 +5331,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(폭발)의 강화 수치가 80만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<20) {
 				int lvl = Integer.parseInt(ary[8]);
 				if (lvl == 30000) {
@@ -5345,7 +5345,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(발사체)의 강화 수치가 80만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
@@ -5359,7 +5359,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 80만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<=30) {
 				int num2 = rnd.nextInt(5);
 				if(num2 == 0) {
@@ -5374,10 +5374,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "방어력의 강화 수치가 40만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[6]);
@@ -5391,10 +5391,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(화염)의 강화 수치가 40만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 2) {
 					int lvl = Integer.parseInt(ary[7]);
@@ -5408,10 +5408,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(폭발)의 강화 수치가 40만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 3) {
 					int lvl = Integer.parseInt(ary[8]);
@@ -5425,10 +5425,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(발사체)의 강화 수치가 40만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 4) {
 					int lvl = Integer.parseInt(ary[9]);
@@ -5442,15 +5442,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "반격의 강화 수치가 40만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		}
 		//다야 4
@@ -5469,7 +5469,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "방어력의 강화 수치가 300만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[6]);
 				if (lvl == 30000) {
@@ -5483,7 +5483,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(화염)의 강화 수치가 300만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[7]);
 				if (lvl == 30000) {
@@ -5497,7 +5497,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(폭발)의 강화 수치가 300만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<20) {
 				int lvl = Integer.parseInt(ary[8]);
 				if (lvl == 30000) {
@@ -5511,7 +5511,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(발사체)의 강화 수치가 300만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
@@ -5525,7 +5525,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 300만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<=30) {
 				int num2 = rnd.nextInt(5);
 				if(num2 == 0) {
@@ -5540,10 +5540,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "방어력의 강화 수치가 200만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[6]);
@@ -5557,10 +5557,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(화염)의 강화 수치가 200만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 2) {
 					int lvl = Integer.parseInt(ary[7]);
@@ -5574,10 +5574,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(폭발)의 강화 수치가 200만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 3) {
 					int lvl = Integer.parseInt(ary[8]);
@@ -5591,10 +5591,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(발사체)의 강화 수치가 200만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 4) {
 					int lvl = Integer.parseInt(ary[9]);
@@ -5608,15 +5608,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "반격의 강화 수치가 200만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		}
 		//다야 5
@@ -5635,7 +5635,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "방어력의 강화 수치가 777만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<10) {
 				int lvl = Integer.parseInt(ary[6]);
 				if (lvl == 30000) {
@@ -5649,7 +5649,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(화염)의 강화 수치가 777만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<15) {
 				int lvl = Integer.parseInt(ary[7]);
 				if (lvl == 30000) {
@@ -5663,7 +5663,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(폭발)의 강화 수치가 777만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<20) {
 				int lvl = Integer.parseInt(ary[8]);
 				if (lvl == 30000) {
@@ -5677,7 +5677,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "보호(발사체)의 강화 수치가 777만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<25) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
@@ -5691,7 +5691,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 777만큼 상승하였습니다.");
 				}
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else if(num<=30) {
 				int num2 = rnd.nextInt(5);
 				if(num2 == 0) {
@@ -5706,10 +5706,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "방어력의 강화 수치가 7만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 1) {
 					int lvl = Integer.parseInt(ary[6]);
@@ -5723,10 +5723,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(화염)의 강화 수치가 7만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 2) {
 					int lvl = Integer.parseInt(ary[7]);
@@ -5740,10 +5740,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(폭발)의 강화 수치가 7만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 3) {
 					int lvl = Integer.parseInt(ary[8]);
@@ -5757,10 +5757,10 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "보호(발사체)의 강화 수치가 7만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				} else if(num2 == 4) {
 					int lvl = Integer.parseInt(ary[9]);
@@ -5774,15 +5774,15 @@ public class Reinforcement {
 						item.setLocalizedName(result);
 						player.sendMessage(ChatColor.WHITE + "강화에 대실패하였습니다.");
 						player.sendMessage(ChatColor.WHITE + "반격의 강화 수치가 7만큼 감소하였습니다.");
-						player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					} else {
 						player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-    					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+    					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 					}
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "강화에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		} 
 		return item;
@@ -5858,10 +5858,10 @@ public class Reinforcement {
 			if(num<5000) {
 				item.setLocalizedName("2");				
 				player.sendMessage(ChatColor.GREEN + "첫번째 개방에 성공하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else {
 				player.sendMessage(ChatColor.WHITE + "개방에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}			
 		} 		
 		return item;
@@ -5874,10 +5874,10 @@ public class Reinforcement {
 			if(num<3333) {
 				item.setLocalizedName("10");				
 				player.sendMessage(ChatColor.GREEN + "두번째 개방에 성공하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else {
 				player.sendMessage(ChatColor.WHITE + "개방에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		}  
 		return item;
@@ -5890,10 +5890,10 @@ public class Reinforcement {
 			if(num<1000) {
 				item.setLocalizedName("50");
 				player.sendMessage(ChatColor.GREEN + "세번째 개방에 성공하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else {
 				player.sendMessage(ChatColor.WHITE + "개방에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		}  
 		return item;
@@ -5906,10 +5906,10 @@ public class Reinforcement {
 			if(num<100) {
 				item.setLocalizedName("300");
 				player.sendMessage(ChatColor.GREEN + "네번째 개방에 성공하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else {
 				player.sendMessage(ChatColor.WHITE + "개방에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		}  
 		return item;
@@ -5922,10 +5922,10 @@ public class Reinforcement {
 			if(num<30) {
 				item.setLocalizedName("1000");
 				player.sendMessage(ChatColor.GREEN + "다섯번째 개방에 성공하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			} else {
 				player.sendMessage(ChatColor.WHITE + "개방에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		}  
 		return item;
@@ -5948,11 +5948,11 @@ public class Reinforcement {
 				} else if (lvl+100 >= 1000000) {
 					item.setLocalizedName("1000000");
 					player.sendMessage(ChatColor.GREEN + "축하합니다. 개방이 한계에 도달했습니다.");
-					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 				} else if (lvl >= 1000) {
 					item.setLocalizedName(Integer.toString(lvl+100));
 					player.sendMessage(ChatColor.GREEN + "개방에 성공 하였습니다.");
-					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 				} 
 			} else if(num<13) {
 				int lvl = Integer.parseInt(item.getLocalizedName());
@@ -5960,14 +5960,14 @@ public class Reinforcement {
 					item.setLocalizedName(Integer.toString(lvl-50));
 					player.sendMessage(ChatColor.WHITE + "개방에 대실패하였습니다.");
 					player.sendMessage(ChatColor.WHITE + "개방 수치가 하락하였습니다.");
-					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 				} else {
 					player.sendMessage(ChatColor.WHITE + "개방에 실패하였습니다.");
-					player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 				}
 			} else {
 				player.sendMessage(ChatColor.WHITE + "개방에 실패하였습니다.");
-				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.2f, 2.0f);
 			}
 		} 
 		return item;

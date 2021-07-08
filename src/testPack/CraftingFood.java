@@ -324,9 +324,12 @@ public class CraftingFood {
 			
 			if(doubleUpChance == 0) {
 				player.sendMessage("제작 대성공!");
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
+				player.playSound(player.getLocation(), Sound.ENTITY_LIGHTNING_BOLT_THUNDER, 0.3f, 1.5f);
 			} else {
 				player.sendMessage("제작 성공!");
 				resultStat /= 2;
+				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
 			}
 			
 			//성공 시 절반이 되는 것에 의해 0이하가 되는 오류가 발생시 교정

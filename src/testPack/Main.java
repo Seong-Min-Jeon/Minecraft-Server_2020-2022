@@ -237,6 +237,7 @@ public class Main extends JavaPlugin implements Listener{
 		getCommand("LoveWood").setExecutor(new Cmd20LoveWood());
 		getCommand("trade").setExecutor(new Cmd21Trade());
 		getCommand("mysterychest").setExecutor(new Cmd22MysteryChest());
+		getCommand("craftname").setExecutor(new Cmd23CraftName());
 		
 		new Cmd16class().setFolder(getDataFolder());
 		
@@ -9278,47 +9279,6 @@ public class Main extends JavaPlugin implements Listener{
 			} catch(Exception e) {
 				
 			}
-			// 강화템 거래불가
-			try {
-				Inventory tradeUI = event.getInventory();
-				
-				if(tradeUI.getItem(4).getType() == Material.CHAIN && tradeUI.getItem(13).getType() == Material.CHAIN) {
-					try {
-						for(String str : event.getCurrentItem().getItemMeta().getLore()) {
-							try {
-								if(str.substring(0, 5).equals("§8내구도")) {
-									event.setCancelled(true);
-									return;
-								}
-							} catch(Exception e1) {
-								
-							}
-						}
-					} catch(Exception e) {
-						
-					}
-					
-					if(event.isShiftClick()) {
-						try {
-							for(String str : event.getCurrentItem().getItemMeta().getLore()) {
-								try {
-									if(str.substring(0, 5).equals("§8내구도")) {
-										event.setCancelled(true);
-										return;
-									}
-								} catch(Exception e1) {
-										
-								}
-							}
-						} catch(Exception e) {
-							
-						}
-					}
-				}
-				
-			} catch(Exception e) {
-				
-			}
 			// 못건드리는 템
 			try {
 				ItemStack clicked = event.getCurrentItem();
@@ -10568,11 +10528,11 @@ public class Main extends JavaPlugin implements Listener{
 	
 	@EventHandler
 	public void chatEvent(AsyncPlayerChatEvent event) {
-		Player player = event.getPlayer();
-		String msg = event.getMessage();
-		if(new RenameCraftingItem().renameCraftingItem(player, msg) == false) {
-			event.setCancelled(true);
-		}
+//		Player player = event.getPlayer();
+//		String msg = event.getMessage();
+//		if(new RenameCraftingItem().renameCraftingItem(player, msg) == false) {
+//			event.setCancelled(true);
+//		}
 	}
 	
 	@EventHandler
