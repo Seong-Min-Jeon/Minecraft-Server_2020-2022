@@ -8491,7 +8491,7 @@ public class SpawnMob {
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "암석 전사" + ChatColor.YELLOW + " [Lv.463]");
+				entity.setCustomName(ChatColor.GRAY + "암석 전사" + ChatColor.YELLOW + " [Lv.440]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(165000);
 				entity.setHealth(165000);
@@ -8525,7 +8525,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "암석 전사" + ChatColor.YELLOW + " [Lv.465]");
+				entity.setCustomName(ChatColor.GRAY + "암석 전사" + ChatColor.YELLOW + " [Lv.445]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(170000);
 				entity.setHealth(170000);
@@ -8562,7 +8562,7 @@ public class SpawnMob {
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.WITHER_SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "암석 전사" + ChatColor.YELLOW + " [Lv.470]");
+				entity.setCustomName(ChatColor.GRAY + "암석 전사" + ChatColor.YELLOW + " [Lv.450]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(175000);
 				entity.setHealth(175000);
@@ -8621,7 +8621,7 @@ public class SpawnMob {
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "스톤 가디언" + ChatColor.YELLOW + " [Lv.475]");
+				entity.setCustomName(ChatColor.GRAY + "스톤 가디언" + ChatColor.YELLOW + " [Lv.450]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(500000);
 				entity.setHealth(500000);
@@ -8692,7 +8692,7 @@ public class SpawnMob {
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.SKELETON) {
-				entity.setCustomName(ChatColor.GRAY + "암석 거인의 파편" + ChatColor.YELLOW + " [Lv.480]");
+				entity.setCustomName(ChatColor.GRAY + "암석 거인의 파편" + ChatColor.YELLOW + " [Lv.455]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(185000);
 				entity.setHealth(185000);

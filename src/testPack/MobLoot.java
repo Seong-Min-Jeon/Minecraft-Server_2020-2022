@@ -5101,32 +5101,32 @@ public class MobLoot {
 	
 	// 암석 전사
 	public void mob205(Player player) {
-		es.giveExp(player, 1750000);
+		es.giveExp(player, 1600000);
 	}
 	
 	// 암석 전사
 	public void mob206(Player player) {
-		es.giveExp(player, 1780000);
+		es.giveExp(player, 1620000);
 	}
 	
 	// 암석 전사
 	public void mob207(Player player) {
-		es.giveExp(player, 1800000);
+		es.giveExp(player, 1640000);
 	}
 	
 	// 스톤 가디언
 	public void mob208(Player player) {
-		es.giveExp(player, 2000000);
+		es.giveExp(player, 1800000);
 	}
 	
 	// 석상 파수꾼
 	public void mob209(Player player) {
-		es.giveExp(player, 6700000);
+		es.giveExp(player, 5000000);
 	}
 	
 	// 암석 거인의 파편
 	public void mob210(Entity mob, Player player) {
-		es.giveExp(player, 1850000);
+		es.giveExp(player, 1650000);
 		
 		int tmp2 = rnd.nextInt(4);
 		if(tmp2 == 0) {

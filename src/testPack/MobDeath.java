@@ -938,19 +938,19 @@ public class MobDeath {
 					mobloot.mob204(lootPlayer);
 				}
 				// 암석 전사
-				if (name.equalsIgnoreCase("암석 전사" + ChatColor.YELLOW + " [Lv.463]")) {
+				if (name.equalsIgnoreCase("암석 전사" + ChatColor.YELLOW + " [Lv.440]")) {
 					mobloot.mob205(lootPlayer);
 				}
 				// 암석 전사
-				if (name.equalsIgnoreCase("암석 전사" + ChatColor.YELLOW + " [Lv.465]")) {
+				if (name.equalsIgnoreCase("암석 전사" + ChatColor.YELLOW + " [Lv.445]")) {
 					mobloot.mob206(lootPlayer);
 				}
 				// 암석 전사
-				if (name.equalsIgnoreCase("암석 전사" + ChatColor.YELLOW + " [Lv.470]")) {
+				if (name.equalsIgnoreCase("암석 전사" + ChatColor.YELLOW + " [Lv.450]")) {
 					mobloot.mob207(lootPlayer);
 				}
 				// 스톤 가디언
-				if (name.equalsIgnoreCase("스톤 가디언" + ChatColor.YELLOW + " [Lv.475]")) {
+				if (name.equalsIgnoreCase("스톤 가디언" + ChatColor.YELLOW + " [Lv.450]")) {
 					mobloot.mob208(lootPlayer);
 				}
 				// 석상 파수꾼
@@ -958,7 +958,7 @@ public class MobDeath {
 					mobloot.mob209(lootPlayer);
 				}
 				// 암석 거인의 파편
-				if (name.equalsIgnoreCase("암석 거인의 파편" + ChatColor.YELLOW + " [Lv.480]")) {
+				if (name.equalsIgnoreCase("암석 거인의 파편" + ChatColor.YELLOW + " [Lv.455]")) {
 					mobloot.mob210(mob, lootPlayer);
 				}
 				// 유황 골렘
