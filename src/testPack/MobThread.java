@@ -592,6 +592,15 @@ public class MobThread implements Listener{
 							} else if(loc.getX() <= 939 && loc.getY() <= 37 && loc.getZ() <= -1552 
 									&& loc.getX() >= 844 && loc.getY() >= 0 && loc.getZ() >= -1623) {
 								badlandsCave2(player, loc);
+							} else if(loc.getX() <= 3645 && loc.getY() <= 111 && loc.getZ() <= 4148 
+									&& loc.getX() >= 3596 && loc.getY() >= 85 && loc.getZ() >= 4098) {
+								hardForestRoom21(player, loc);
+							} else if(loc.getX() <= 3769 && loc.getY() <= 160 && loc.getZ() <= 4133 
+									&& loc.getX() >= 3665 && loc.getY() >= 125 && loc.getZ() >= 4073) {
+								hardForestRoom22(player, loc);
+							} else if(loc.getX() <= 3645 && loc.getY() <= 155 && loc.getZ() <= 4148 
+									&& loc.getX() >= 3596 && loc.getY() >= 135 && loc.getZ() >= 4098) {
+								hardForestRoom23(player, loc);
 							}
 
 						}
@@ -3356,6 +3365,51 @@ public class MobThread implements Listener{
 			loc.getWorld().spawnEntity(loc, EntityType.BLAZE);
 		} else if (num == 1) {
 			loc.getWorld().spawnEntity(loc, EntityType.MAGMA_CUBE);
+		} 
+	}
+	
+	public void hardForestRoom21(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 3645 && loc.getY() <= 111 && loc.getZ() <= 4148 
+				&& loc.getX() >= 3596 && loc.getY() >= 85 && loc.getZ() >= 4098)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.SILVERFISH);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.SILVERFISH);
+		} 
+	}
+	
+	public void hardForestRoom22(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 3769 && loc.getY() <= 160 && loc.getZ() <= 4133 
+				&& loc.getX() >= 3665 && loc.getY() >= 125 && loc.getZ() >= 4073)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		} 
+	}
+	
+	public void hardForestRoom23(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 3645 && loc.getY() <= 155 && loc.getZ() <= 4148 
+				&& loc.getX() >= 3596 && loc.getY() >= 135 && loc.getZ() >= 4098)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.RAVAGER);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.RAVAGER);
 		} 
 	}
 	

@@ -13247,30 +13247,397 @@ public class SpawnMob {
 	}
 	
 	public boolean mob207(LivingEntity entity, Location loc) {
+		// 하드숲 1번방 1번룸
+		if (loc.getX() <= 3793 && loc.getY() <= 90 && loc.getZ() <= 4102 
+				&& loc.getX() >= 3777 && loc.getY() >= 65 && loc.getZ() >= 4082) {
+			Location chestLoc = new Location(entity.getWorld(), -1838, 92, 3051);
+			Block block = chestLoc.getBlock();
+			Chest chest = (Chest) block.getState();
+			if (entity.getType() == (EntityType) EntityType.SKELETON) {
+				if(loc.getX() == 3782 && loc.getY() == 78 && loc.getZ() == 4090) {
+					entity.setCustomName(ChatColor.GRAY + "숲의 감시자" + ChatColor.YELLOW + " [Lv.700]");
+					entity.setCustomNameVisible(true);
+					entity.setMaxHealth(930000);
+					entity.setHealth(930000);
+					EntityEquipment weapon = entity.getEquipment();
+					ItemStack weaponItem = new ItemStack(Material.JUNGLE_LEAVES);
+					weapon.setItemInMainHand(weaponItem);
+					EntityEquipment head = entity.getEquipment();
+					ItemStack headItem = chest.getInventory().getItem(8);
+					head.setHelmet(headItem);
+					EntityEquipment chestplate = entity.getEquipment();
+					ItemStack chestplateItem = new ItemStack(Material.LEATHER_CHESTPLATE);
+					chestplate.setChestplate(chestplateItem);
+					EntityEquipment leggings = entity.getEquipment();
+					ItemStack leggingsItem = new ItemStack(Material.LEATHER_LEGGINGS);
+					leggings.setLeggings(leggingsItem);
+					EntityEquipment boots = entity.getEquipment();
+					ItemStack bootsItem = new ItemStack(Material.LEATHER_BOOTS);
+					boots.setBoots(bootsItem);
+					entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 3750));
+					entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
+					return true;
+				} else {
+					entity.setCustomName(ChatColor.GRAY + "숲의 감시자" + ChatColor.YELLOW + " [Lv.700]");
+					entity.setCustomNameVisible(true);
+					entity.setMaxHealth(930000);
+					entity.setHealth(930000);
+					EntityEquipment weapon = entity.getEquipment();
+					ItemStack weaponItem = new ItemStack(Material.BOW);
+					ItemMeta im = weaponItem.getItemMeta();
+					im.setLocalizedName("3750");
+					weaponItem.setItemMeta(im);
+					weapon.setItemInMainHand(weaponItem);
+					EntityEquipment mobBow = entity.getEquipment();
+					ItemStack mobBowItem = new ItemStack(Material.DEAD_TUBE_CORAL_BLOCK);
+					mobBow.setItemInOffHand(mobBowItem);
+					EntityEquipment head = entity.getEquipment();
+					ItemStack headItem = chest.getInventory().getItem(8);
+					head.setHelmet(headItem);
+					EntityEquipment chestplate = entity.getEquipment();
+					ItemStack chestplateItem = new ItemStack(Material.LEATHER_CHESTPLATE);
+					chestplate.setChestplate(chestplateItem);
+					EntityEquipment leggings = entity.getEquipment();
+					ItemStack leggingsItem = new ItemStack(Material.LEATHER_LEGGINGS);
+					leggings.setLeggings(leggingsItem);
+					EntityEquipment boots = entity.getEquipment();
+					ItemStack bootsItem = new ItemStack(Material.LEATHER_BOOTS);
+					boots.setBoots(bootsItem);
+					entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 3750));
+					entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
+					return true;
+				}
+			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM
+					|| entity.getType() == (EntityType) EntityType.SALMON
+					|| entity.getType() == (EntityType) EntityType.ITEM_FRAME
+					|| entity.getType() == (EntityType) EntityType.DROPPED_ITEM
+					|| entity.getType() == (EntityType) EntityType.ARMOR_STAND
+					|| entity.getType() == (EntityType) EntityType.VILLAGER
+					|| entity.getType() == (EntityType) EntityType.SKELETON_HORSE) {
+				return true;
+			} else {
+				return false;
+			}
+		}
 		return true;
 	}
 	
 	public boolean mob208(LivingEntity entity, Location loc) {
+		// 하드숲 1번방 2번룸
+		if (loc.getX() <= 3763 && loc.getY() <= 100 && loc.getZ() <= 4128 
+				&& loc.getX() >= 3744 && loc.getY() >= 80 && loc.getZ() >= 4109) {
+			Location chestLoc = new Location(entity.getWorld(), -1838, 92, 3051);
+			Block block = chestLoc.getBlock();
+			Chest chest = (Chest) block.getState();
+			if (entity.getType() == (EntityType) EntityType.SKELETON) {
+				if(loc.getX() == 3750 && loc.getY() == 87 && loc.getZ() == 4123) {
+					entity.setCustomName(ChatColor.GRAY + "숲의 감시자" + ChatColor.YELLOW + " [Lv.700]");
+					entity.setCustomNameVisible(true);
+					entity.setMaxHealth(940000);
+					entity.setHealth(940000);
+					EntityEquipment weapon = entity.getEquipment();
+					ItemStack weaponItem = new ItemStack(Material.JUNGLE_LEAVES);
+					weapon.setItemInMainHand(weaponItem);
+					EntityEquipment head = entity.getEquipment();
+					ItemStack headItem = chest.getInventory().getItem(8);
+					head.setHelmet(headItem);
+					EntityEquipment chestplate = entity.getEquipment();
+					ItemStack chestplateItem = new ItemStack(Material.IRON_CHESTPLATE);
+					chestplate.setChestplate(chestplateItem);
+					EntityEquipment leggings = entity.getEquipment();
+					ItemStack leggingsItem = new ItemStack(Material.IRON_LEGGINGS);
+					leggings.setLeggings(leggingsItem);
+					EntityEquipment boots = entity.getEquipment();
+					ItemStack bootsItem = new ItemStack(Material.IRON_BOOTS);
+					boots.setBoots(bootsItem);
+					entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 3800));
+					entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
+					return true;
+				} else {
+					entity.setCustomName(ChatColor.GRAY + "숲의 감시자" + ChatColor.YELLOW + " [Lv.700]");
+					entity.setCustomNameVisible(true);
+					entity.setMaxHealth(940000);
+					entity.setHealth(940000);
+					EntityEquipment weapon = entity.getEquipment();
+					ItemStack weaponItem = new ItemStack(Material.BOW);
+					ItemMeta im = weaponItem.getItemMeta();
+					im.setLocalizedName("3800");
+					weaponItem.setItemMeta(im);
+					weapon.setItemInMainHand(weaponItem);
+					EntityEquipment mobBow = entity.getEquipment();
+					ItemStack mobBowItem = new ItemStack(Material.DEAD_TUBE_CORAL_BLOCK);
+					mobBow.setItemInOffHand(mobBowItem);
+					EntityEquipment head = entity.getEquipment();
+					ItemStack headItem = chest.getInventory().getItem(8);
+					head.setHelmet(headItem);
+					EntityEquipment chestplate = entity.getEquipment();
+					ItemStack chestplateItem = new ItemStack(Material.IRON_CHESTPLATE);
+					chestplate.setChestplate(chestplateItem);
+					EntityEquipment leggings = entity.getEquipment();
+					ItemStack leggingsItem = new ItemStack(Material.IRON_LEGGINGS);
+					leggings.setLeggings(leggingsItem);
+					EntityEquipment boots = entity.getEquipment();
+					ItemStack bootsItem = new ItemStack(Material.IRON_BOOTS);
+					boots.setBoots(bootsItem);
+					entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 3800));
+					entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
+					return true;
+				}
+			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM
+					|| entity.getType() == (EntityType) EntityType.SALMON
+					|| entity.getType() == (EntityType) EntityType.ITEM_FRAME
+					|| entity.getType() == (EntityType) EntityType.DROPPED_ITEM
+					|| entity.getType() == (EntityType) EntityType.ARMOR_STAND
+					|| entity.getType() == (EntityType) EntityType.VILLAGER
+					|| entity.getType() == (EntityType) EntityType.SKELETON_HORSE) {
+				return true;
+			} else {
+				return false;
+			}
+		}
 		return true;
 	}
 	
 	public boolean mob209(LivingEntity entity, Location loc) {
+		// 하드숲 1번방 3번룸
+		if (loc.getX() <= 3726 && loc.getY() <= 100 && loc.getZ() <= 4110 
+				&& loc.getX() >= 3709 && loc.getY() >= 85 && loc.getZ() >= 4092) {
+			Location chestLoc = new Location(entity.getWorld(), -1838, 92, 3051);
+			Block block = chestLoc.getBlock();
+			Chest chest = (Chest) block.getState();
+			if (entity.getType() == (EntityType) EntityType.SKELETON) {
+				entity.setCustomName(ChatColor.GRAY + "숲의 감시자" + ChatColor.YELLOW + " [Lv.700]");
+				entity.setCustomNameVisible(true);
+				entity.setMaxHealth(950000);
+				entity.setHealth(950000);
+				EntityEquipment weapon = entity.getEquipment();
+				ItemStack weaponItem = new ItemStack(Material.JUNGLE_LEAVES);
+				weapon.setItemInMainHand(weaponItem);
+				EntityEquipment head = entity.getEquipment();
+				ItemStack headItem = chest.getInventory().getItem(8);
+				head.setHelmet(headItem);
+				EntityEquipment chestplate = entity.getEquipment();
+				ItemStack chestplateItem = new ItemStack(Material.GOLDEN_CHESTPLATE);
+				chestplate.setChestplate(chestplateItem);
+				EntityEquipment leggings = entity.getEquipment();
+				ItemStack leggingsItem = new ItemStack(Material.GOLDEN_LEGGINGS);
+				leggings.setLeggings(leggingsItem);
+				EntityEquipment boots = entity.getEquipment();
+				ItemStack bootsItem = new ItemStack(Material.GOLDEN_BOOTS);
+				boots.setBoots(bootsItem);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 3850));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
+				return true;
+			} else if (entity.getType() == (EntityType) EntityType.SLIME) {
+				entity.setCustomName(ChatColor.GRAY + "숲의 젤리" + ChatColor.YELLOW + " [Lv.700]");
+				entity.setCustomNameVisible(true);
+				entity.setMaxHealth(960000);
+				entity.setHealth(960000);
+				Slime magma = (Slime) entity;
+				magma.setSize(3);
+				entity.setMaxHealth(960000);
+				entity.setHealth(960000);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 3900));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
+				return true;
+			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM
+					|| entity.getType() == (EntityType) EntityType.SALMON
+					|| entity.getType() == (EntityType) EntityType.ITEM_FRAME
+					|| entity.getType() == (EntityType) EntityType.DROPPED_ITEM
+					|| entity.getType() == (EntityType) EntityType.ARMOR_STAND
+					|| entity.getType() == (EntityType) EntityType.VILLAGER
+					|| entity.getType() == (EntityType) EntityType.SKELETON_HORSE) {
+				return true;
+			} else {
+				return false;
+			}
+		}
 		return true;
 	}
 	
 	public boolean mob210(LivingEntity entity, Location loc) {
+		// 하드숲 1번방 4번룸
+		if (loc.getX() <= 3697 && loc.getY() <= 105 && loc.getZ() <= 4131 
+				&& loc.getX() >= 3681 && loc.getY() >= 90 && loc.getZ() >= 4115) {
+			Location chestLoc = new Location(entity.getWorld(), -1838, 92, 3051);
+			Block block = chestLoc.getBlock();
+			Chest chest = (Chest) block.getState();
+			if (entity.getType() == (EntityType) EntityType.SKELETON) {
+				entity.setCustomName(ChatColor.GRAY + "숲의 감시자" + ChatColor.YELLOW + " [Lv.700]");
+				entity.setCustomNameVisible(true);
+				entity.setMaxHealth(970000);
+				entity.setHealth(970000);
+				EntityEquipment weapon = entity.getEquipment();
+				ItemStack weaponItem = new ItemStack(Material.JUNGLE_LEAVES);
+				weapon.setItemInMainHand(weaponItem);
+				EntityEquipment head = entity.getEquipment();
+				ItemStack headItem = chest.getInventory().getItem(8);
+				head.setHelmet(headItem);
+				EntityEquipment chestplate = entity.getEquipment();
+				ItemStack chestplateItem = new ItemStack(Material.DIAMOND_CHESTPLATE);
+				chestplate.setChestplate(chestplateItem);
+				EntityEquipment leggings = entity.getEquipment();
+				ItemStack leggingsItem = new ItemStack(Material.DIAMOND_LEGGINGS);
+				leggings.setLeggings(leggingsItem);
+				EntityEquipment boots = entity.getEquipment();
+				ItemStack bootsItem = new ItemStack(Material.DIAMOND_BOOTS);
+				boots.setBoots(bootsItem);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 3950));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
+				return true;
+			} else if (entity.getType() == (EntityType) EntityType.SILVERFISH) {
+				entity.setCustomName(ChatColor.GRAY + "숲의 고름" + ChatColor.YELLOW + " [Lv.700]");
+				entity.setCustomNameVisible(true);
+				entity.setMaxHealth(980000);
+				entity.setHealth(980000);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 4000));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
+				return true;
+			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM
+					|| entity.getType() == (EntityType) EntityType.SALMON
+					|| entity.getType() == (EntityType) EntityType.ITEM_FRAME
+					|| entity.getType() == (EntityType) EntityType.DROPPED_ITEM
+					|| entity.getType() == (EntityType) EntityType.ARMOR_STAND
+					|| entity.getType() == (EntityType) EntityType.VILLAGER
+					|| entity.getType() == (EntityType) EntityType.SKELETON_HORSE) {
+				return true;
+			} else {
+				return false;
+			}
+		}
 		return true;
 	}
 	
 	public boolean mob211(LivingEntity entity, Location loc) {
+		// 하드숲 2번방 1층
+		if (loc.getX() <= 3645 && loc.getY() <= 111 && loc.getZ() <= 4148 
+				&& loc.getX() >= 3596 && loc.getY() >= 85 && loc.getZ() >= 4098) {
+			Location chestLoc = new Location(entity.getWorld(), -1838, 92, 3051);
+			Block block = chestLoc.getBlock();
+			Chest chest = (Chest) block.getState();
+			if (entity.getType() == (EntityType) EntityType.SILVERFISH) {
+				entity.setCustomName(ChatColor.GRAY + "숲의 고름" + ChatColor.YELLOW + " [Lv.700]");
+				entity.setCustomNameVisible(true);
+				entity.setMaxHealth(980000);
+				entity.setHealth(980000);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 4000));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
+				return true;
+			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM
+					|| entity.getType() == (EntityType) EntityType.SALMON
+					|| entity.getType() == (EntityType) EntityType.ITEM_FRAME
+					|| entity.getType() == (EntityType) EntityType.DROPPED_ITEM
+					|| entity.getType() == (EntityType) EntityType.ARMOR_STAND
+					|| entity.getType() == (EntityType) EntityType.VILLAGER
+					|| entity.getType() == (EntityType) EntityType.SKELETON_HORSE) {
+				return true;
+			} else {
+				return false;
+			}
+		}
 		return true;
 	}
 	
 	public boolean mob212(LivingEntity entity, Location loc) {
+		// 하드숲 2번방 2층
+		if (loc.getX() <= 3769 && loc.getY() <= 160 && loc.getZ() <= 4133 
+				&& loc.getX() >= 3665 && loc.getY() >= 125 && loc.getZ() >= 4073) {
+			Location chestLoc = new Location(entity.getWorld(), -1838, 92, 3051);
+			Block block = chestLoc.getBlock();
+			Chest chest = (Chest) block.getState();
+			if (entity.getType() == (EntityType) EntityType.SKELETON) {
+				if(rnd.nextInt(2) == 0) {
+					entity.setCustomName(ChatColor.GRAY + "숲의 감시자" + ChatColor.YELLOW + " [Lv.700]");
+					entity.setCustomNameVisible(true);
+					entity.setMaxHealth(990000);
+					entity.setHealth(990000);
+					EntityEquipment weapon = entity.getEquipment();
+					ItemStack weaponItem = new ItemStack(Material.JUNGLE_LEAVES);
+					weapon.setItemInMainHand(weaponItem);
+					EntityEquipment head = entity.getEquipment();
+					ItemStack headItem = chest.getInventory().getItem(8);
+					head.setHelmet(headItem);
+					EntityEquipment chestplate = entity.getEquipment();
+					ItemStack chestplateItem = new ItemStack(Material.NETHERITE_CHESTPLATE);
+					chestplate.setChestplate(chestplateItem);
+					EntityEquipment leggings = entity.getEquipment();
+					ItemStack leggingsItem = new ItemStack(Material.NETHERITE_LEGGINGS);
+					leggings.setLeggings(leggingsItem);
+					EntityEquipment boots = entity.getEquipment();
+					ItemStack bootsItem = new ItemStack(Material.NETHERITE_BOOTS);
+					boots.setBoots(bootsItem);
+					entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 4050));
+					entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
+					return true;
+				} else {
+					entity.setCustomName(ChatColor.GRAY + "숲의 감시자" + ChatColor.YELLOW + " [Lv.700]");
+					entity.setCustomNameVisible(true);
+					entity.setMaxHealth(990000);
+					entity.setHealth(990000);
+					EntityEquipment weapon = entity.getEquipment();
+					ItemStack weaponItem = new ItemStack(Material.BOW);
+					ItemMeta im = weaponItem.getItemMeta();
+					im.setLocalizedName("4050");
+					weaponItem.setItemMeta(im);
+					weapon.setItemInMainHand(weaponItem);
+					EntityEquipment mobBow = entity.getEquipment();
+					ItemStack mobBowItem = new ItemStack(Material.DEAD_TUBE_CORAL_BLOCK);
+					mobBow.setItemInOffHand(mobBowItem);
+					EntityEquipment head = entity.getEquipment();
+					ItemStack headItem = chest.getInventory().getItem(8);
+					head.setHelmet(headItem);
+					EntityEquipment chestplate = entity.getEquipment();
+					ItemStack chestplateItem = new ItemStack(Material.NETHERITE_CHESTPLATE);
+					chestplate.setChestplate(chestplateItem);
+					EntityEquipment leggings = entity.getEquipment();
+					ItemStack leggingsItem = new ItemStack(Material.NETHERITE_LEGGINGS);
+					leggings.setLeggings(leggingsItem);
+					EntityEquipment boots = entity.getEquipment();
+					ItemStack bootsItem = new ItemStack(Material.NETHERITE_BOOTS);
+					boots.setBoots(bootsItem);
+					entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 4050));
+					entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
+					return true;
+				}
+			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM
+					|| entity.getType() == (EntityType) EntityType.SALMON
+					|| entity.getType() == (EntityType) EntityType.ITEM_FRAME
+					|| entity.getType() == (EntityType) EntityType.DROPPED_ITEM
+					|| entity.getType() == (EntityType) EntityType.ARMOR_STAND
+					|| entity.getType() == (EntityType) EntityType.VILLAGER
+					|| entity.getType() == (EntityType) EntityType.SKELETON_HORSE) {
+				return true;
+			} else {
+				return false;
+			}
+		}
 		return true;
 	}
 	
 	public boolean mob213(LivingEntity entity, Location loc) {
+		// 하드숲 2번방 3층
+		if (loc.getX() <= 3645 && loc.getY() <= 155 && loc.getZ() <= 4148 
+				&& loc.getX() >= 3596 && loc.getY() >= 135 && loc.getZ() >= 4098) {
+			if (entity.getType() == (EntityType) EntityType.RAVAGER) {
+				entity.setCustomName(ChatColor.GRAY + "숲의 거목" + ChatColor.YELLOW + " [Lv.700]");
+				entity.setCustomNameVisible(true);
+				entity.setMaxHealth(1000000);
+				entity.setHealth(1000000);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 4100));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
+				return true;
+			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM
+					|| entity.getType() == (EntityType) EntityType.SALMON
+					|| entity.getType() == (EntityType) EntityType.ITEM_FRAME
+					|| entity.getType() == (EntityType) EntityType.DROPPED_ITEM
+					|| entity.getType() == (EntityType) EntityType.ARMOR_STAND
+					|| entity.getType() == (EntityType) EntityType.VILLAGER
+					|| entity.getType() == (EntityType) EntityType.SKELETON_HORSE) {
+				return true;
+			} else {
+				return false;
+			}
+		}
 		return true;
 	}
 	

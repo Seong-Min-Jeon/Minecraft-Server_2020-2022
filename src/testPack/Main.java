@@ -8137,6 +8137,20 @@ public class Main extends JavaPlugin implements Listener{
 	    				}
 	    				event.setCancelled(true);
 	    			}
+	    			if(block.getType()==Material.WHITE_GLAZED_TERRACOTTA && block.getX() <= 3760 && block.getZ() <= 4123
+	    					&& block.getX() >= 3758 && block.getZ() >= 4121) {
+	    				ItemStack master = new ItemStack(Material.TRIPWIRE_HOOK);
+	    				ItemMeta masterIm = master.getItemMeta();
+	    				masterIm.setDisplayName(ChatColor.YELLOW + "숲의 탑 열쇠");
+	    				master.setItemMeta(masterIm);
+	    				
+	    				if(!player.getInventory().contains(master)) {
+	    					player.getInventory().addItem(master);
+	    					player.sendMessage(ChatColor.WHITE + "열쇠를 획득했다.");
+	    				}
+	    				
+	    				event.setCancelled(true);
+	    			}
 	    			if(block.getType()==Material.STONE_BUTTON && block.getX()==3664 && block.getZ()==3674) {
 	    				new CharacterSelectButton(player, getDataFolder());
 	    			}

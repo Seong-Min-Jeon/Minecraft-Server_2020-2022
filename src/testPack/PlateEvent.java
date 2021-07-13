@@ -43,6 +43,7 @@ public class PlateEvent {
 		beiag1(player, block, world);
 		beiag2(player, block, world);
 		beiag3(player, block, world);
+		hardForest(player, block, world);
 	}
 	
 	// 암석 거인
@@ -675,6 +676,43 @@ public class PlateEvent {
 			if (block.getX() == 72 && block.getZ() == -312) {
 				new DamageCal().HashPut(player, 3);
 				player.sendMessage(ChatColor.GREEN + "기타 몬스터를 공격하는 것과 같은 환경이 되었습니다.");
+			}
+		}
+	}
+	
+	// 하드 숲던전
+	public void hardForest(Player player, Block block, World world) {
+		if (block.getType() == Material.SPRUCE_PRESSURE_PLATE) {
+			if ((block.getX() == 3604 && block.getZ() == 4123) || (block.getX() == 3603 && block.getZ() == 4123)
+					|| (block.getX() == 3602 && block.getZ() == 4123)) {
+				for (ItemStack is : player.getInventory().getContents()) {
+					if(is == null) continue;
+					if(is.getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "숲의 탑 열쇠")) {
+		    			is.setAmount(0);
+		    			taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+							int time = 0;
+							ThreadData td = new ThreadData(player.getUniqueId());
+
+							@Override
+							public void run() {
+								if (!td.hasID()) {
+									td.setID(taskID);
+								}
+
+								if (time >= 10) {
+									player.teleport(new Location(player.getWorld(), 3603.5, 116, 4127.5));
+									td.endTask();
+									td.removeID();
+								}
+
+								time++;
+							}
+
+						}, 0, 1);
+		    			return;
+					}
+				}
 			}
 		}
 	}

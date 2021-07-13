@@ -47,6 +47,7 @@ public class TPMobSpawn {
 		samak(player, loc);
 		skelig(player, loc);
 		hardSea(player, loc);
+		hardForest(player, loc);
 		
 	}
 
@@ -1575,4 +1576,149 @@ public class TPMobSpawn {
 		
 	}
 
+	public void hardForest(Player player, Location loc) {
+		// 1번 방 1번 룸
+		if (loc.getX() == 3788.51 && loc.getY() == 77 && loc.getZ() == 4096.47) {
+			player.teleport(new Location(player.getWorld(), 3788.5, 77, 4096.5));
+			int num = 0;
+			List<Entity> entitylist = player.getNearbyEntities(20, 30, 20);
+			for (Entity nearEntity : entitylist) {
+				if (nearEntity.getType() == EntityType.PLAYER) {
+					Player nearPlayer = (Player) nearEntity;
+					Location loc2 = nearPlayer.getLocation();
+					if (loc2.getX() <= 3793 && loc2.getY() <= 90 && loc2.getZ() <= 4102 
+							&& loc2.getX() >= 3777 && loc2.getY() >= 65 && loc2.getZ() >= 4082) {
+						num++;
+						return;
+					}
+				}
+			}
+			if (num == 0) {
+				for (Entity nearEntity : entitylist) {
+					if (nearEntity instanceof Mob) {
+						Location loc2 = nearEntity.getLocation();
+						if (loc2.getX() <= 3793 && loc2.getY() <= 90 && loc2.getZ() <= 4102 
+								&& loc2.getX() >= 3777 && loc2.getY() >= 65 && loc2.getZ() >= 4082) {
+							nearEntity.remove();
+						}
+					}
+				}
+			}
+			
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3782, 78, 4090), EntityType.SKELETON);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3782, 78, 4096), EntityType.SKELETON);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3788, 78, 4090), EntityType.SKELETON);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3785, 78, 4093), EntityType.SKELETON);
+			return;
+		}
+		
+		// 1번 방 2번 룸
+		if (loc.getX() == 3788.51 && loc.getY() == 77 && loc.getZ() == 4096.47) {
+			player.teleport(new Location(player.getWorld(), 3788.5, 77, 4096.5));
+			int num = 0;
+			List<Entity> entitylist = player.getNearbyEntities(20, 30, 20);
+			for (Entity nearEntity : entitylist) {
+				if (nearEntity.getType() == EntityType.PLAYER) {
+					Player nearPlayer = (Player) nearEntity;
+					Location loc2 = nearPlayer.getLocation();
+					if (loc2.getX() <= 3763 && loc2.getY() <= 100 && loc2.getZ() <= 4128 
+							&& loc2.getX() >= 3744 && loc2.getY() >= 80 && loc2.getZ() >= 4109) {
+						num++;
+						return;
+					}
+				}
+			}
+			if (num == 0) {
+				for (Entity nearEntity : entitylist) {
+					if (nearEntity instanceof Mob) {
+						Location loc2 = nearEntity.getLocation();
+						if (loc2.getX() <= 3763 && loc2.getY() <= 100 && loc2.getZ() <= 4128 
+								&& loc2.getX() >= 3744 && loc2.getY() >= 80 && loc2.getZ() >= 4109) {
+							nearEntity.remove();
+						}
+					}
+				}
+			}
+			
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3750, 87, 4123), EntityType.SKELETON);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3758, 87, 4123), EntityType.SKELETON);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3758, 87, 4115), EntityType.SKELETON);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3750, 87, 4115), EntityType.SKELETON);
+			return;
+		}
+		
+		// 1번 방 3번 룸
+		if (loc.getX() == 3788.51 && loc.getY() == 77 && loc.getZ() == 4096.47) {
+			player.teleport(new Location(player.getWorld(), 3788.5, 77, 4096.5));
+			int num = 0;
+			List<Entity> entitylist = player.getNearbyEntities(20, 30, 20);
+			for (Entity nearEntity : entitylist) {
+				if (nearEntity.getType() == EntityType.PLAYER) {
+					Player nearPlayer = (Player) nearEntity;
+					Location loc2 = nearPlayer.getLocation();
+					if (loc2.getX() <= 3726 && loc2.getY() <= 100 && loc2.getZ() <= 4110 
+							&& loc2.getX() >= 3709 && loc2.getY() >= 85 && loc2.getZ() >= 4092) {
+						num++;
+						return;
+					}
+				}
+			}
+			if (num == 0) {
+				for (Entity nearEntity : entitylist) {
+					if (nearEntity instanceof Mob) {
+						Location loc2 = nearEntity.getLocation();
+						if (loc2.getX() <= 3726 && loc2.getY() <= 100 && loc2.getZ() <= 4110 
+								&& loc2.getX() >= 3709 && loc2.getY() >= 85 && loc2.getZ() >= 4092) {
+							nearEntity.remove();
+						}
+					}
+				}
+			}
+
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3711, 93, 4104), EntityType.SLIME);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3716, 93, 4100), EntityType.SLIME);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3717, 93, 4109), EntityType.SLIME);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3722, 93, 4101), EntityType.SLIME);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3710, 93, 4102), EntityType.SKELETON);
+			return;
+		}
+		
+		// 1번 방 4번 룸
+		if (loc.getX() == 3692.79 && loc.getY() == 97 && loc.getZ() == 4117.89) {
+			player.teleport(new Location(player.getWorld(), 3692.8, 97, 4117.9));
+			int num = 0;
+			List<Entity> entitylist = player.getNearbyEntities(20, 30, 20);
+			for (Entity nearEntity : entitylist) {
+				if (nearEntity.getType() == EntityType.PLAYER) {
+					Player nearPlayer = (Player) nearEntity;
+					Location loc2 = nearPlayer.getLocation();
+					if (loc2.getX() <= 3697 && loc2.getY() <= 105 && loc2.getZ() <= 4131 
+							&& loc2.getX() >= 3681 && loc2.getY() >= 90 && loc2.getZ() >= 4115) {
+						num++;
+						return;
+					}
+				}
+			}
+			if (num == 0) {
+				for (Entity nearEntity : entitylist) {
+					if (nearEntity instanceof Mob) {
+						Location loc2 = nearEntity.getLocation();
+						if (loc2.getX() <= 3697 && loc2.getY() <= 105 && loc2.getZ() <= 4131 
+								&& loc2.getX() >= 3681 && loc2.getY() >= 90 && loc2.getZ() >= 4115) {
+							nearEntity.remove();
+						}
+					}
+				}
+			}
+
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3690, 98, 4120), EntityType.SILVERFISH);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3687, 98, 4118), EntityType.SILVERFISH);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3692, 98, 4123), EntityType.SILVERFISH);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3695, 98, 4121), EntityType.SILVERFISH);
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3689, 98, 4123), EntityType.SKELETON);
+			return;
+		}
+
+	}
+	
 }

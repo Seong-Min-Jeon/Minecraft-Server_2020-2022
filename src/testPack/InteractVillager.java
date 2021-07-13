@@ -46,7 +46,7 @@ public class InteractVillager {
 		}
 		
 		return vil0() || vil1() || vil2() || vil3() || vil4() || vil5() || vil6() || vil7() || vil8() || vil9() || vil10() || vil11() || vil12() || vil13() || vil14()
-				|| vil15() || vil16() || vil17() || vil18() || vil19() || vil20() || vil21() || vil22() || vil23() || vil24() || vil25();
+				|| vil15() || vil16() || vil17() || vil18() || vil19() || vil20() || vil21() || vil22() || vil23() || vil24() || vil25() || vil26();
 	}
 	
 	public boolean vil0() {
@@ -703,4 +703,33 @@ public class InteractVillager {
 		return false;
 	}
 	
+	public boolean vil26() {
+		//하드 숲 3816 81 4079
+		if(loc.getX() <= 3817 && loc.getZ() <= 4080
+				&& loc.getX() >= 3815 && loc.getZ() >= 4078) {
+			Inventory inv = player.getInventory();
+			boolean bool = false;
+			for(ItemStack item : inv.getContents()) {
+				if (item == null) {
+					continue;
+				}
+				if(bool == false) {
+					if(item.getType() == Material.FLOWER_BANNER_PATTERN) {
+						if (item.getItemMeta().getDisplayName().substring(2).equals("숲의 신전 통행증")) {
+							item.setAmount(item.getAmount()-1);
+							player.sendMessage("던전 키퍼: 살아서 돌아오시게나.");
+							player.teleport(new Location(player.getWorld(), 3804.5, 77, 4107, 90, 0));
+							player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 50, 0,true,false,false));
+							bool = true;
+						}
+					}
+				}
+			}
+			if(bool == false) {
+				player.sendMessage("던전 키퍼: 통행증이 없으면 결계 안으로 들어갈 수 없다네.");
+			}
+			return true;
+		}
+		return false;
+	}
 }

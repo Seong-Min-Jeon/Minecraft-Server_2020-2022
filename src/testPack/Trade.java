@@ -323,9 +323,36 @@ public class Trade {
 											|| item.getType() == Material.DEAD_BUBBLE_CORAL_BLOCK || item.getType() == Material.DEAD_FIRE_CORAL_BLOCK || item.getType() == Material.DEAD_HORN_CORAL_BLOCK
 											|| item.getType() == Material.DEAD_TUBE_CORAL_BLOCK || item.getType() == Material.BRAIN_CORAL_BLOCK || item.getType() == Material.HORN_CORAL_BLOCK
 											|| item.getType() == Material.TUBE_CORAL_BLOCK || item.getType() == Material.BUBBLE_CORAL_BLOCK || item.getType() == Material.FIRE_CORAL_BLOCK
-											|| item.getType() == Material.ENDER_EYE) {
+											|| item.getType() == Material.ENDER_EYE || item.getType() == Material.HEART_OF_THE_SEA 
+											
+											|| item.getType() == Material.RED_DYE || item.getType() == Material.GREEN_DYE || item.getType() == Material.LAPIS_LAZULI
+											|| item.getType() == Material.CYAN_DYE || item.getType() == Material.LIGHT_GRAY_DYE || item.getType() == Material.GRAY_DYE
+											|| item.getType() == Material.PINK_DYE || item.getType() == Material.LIME_DYE || item.getType() == Material.YELLOW_DYE
+											|| item.getType() == Material.LIGHT_BLUE_DYE || item.getType() == Material.MAGENTA_DYE || item.getType() == Material.ORANGE_DYE
+											|| item.getType() == Material.BLUE_DYE || item.getType() == Material.BROWN_DYE || item.getType() == Material.BLACK_DYE
+											|| item.getType() == Material.INK_SAC || item.getType() == Material.CLAY_BALL || item.getType() == Material.GLOWSTONE_DUST) {
 										return true;
 									} else {
+										
+										boolean rein = true;
+										try {
+											for(String str : item.getItemMeta().getLore()) {
+												try {
+													if(str.substring(0, 5).equals("§8내구도")) {
+														rein = false;
+													}
+												} catch(Exception e1) {
+													
+												}
+											}
+										} catch(Exception e) {
+											
+										}
+										
+										if(!rein) {
+											return true;
+										}
+										
 										HashMap<Player, Player> map = new Cmd21Trade().getMap();
 										if(map.containsKey(player)) {
 											int idx = 0;

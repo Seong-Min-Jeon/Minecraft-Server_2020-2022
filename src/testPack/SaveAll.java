@@ -24,6 +24,12 @@ public class SaveAll {
 
 	public SaveAll(Player player, File folder) {
 		World world = player.getWorld();
+		
+		ItemStack mo = player.getInventory().getItem(7);
+		if(!mo.hasItemMeta()) {
+			return;
+		}
+		
 		// 캐릭터 가방 저장
 		try {
 			File dataFolder = folder;
