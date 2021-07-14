@@ -6113,7 +6113,6 @@ public class Main extends JavaPlugin implements Listener{
 				} else if(event.getEntity() instanceof IronGolem) {
 					event.setDamage(999999999);
 				} else {
-					
 					LivingEntity monster = (LivingEntity) event.getEntity();
 					monster.removePotionEffect(PotionEffectType.HARM);
 					monster.removePotionEffect(PotionEffectType.HEAL);
@@ -9156,6 +9155,164 @@ public class Main extends JavaPlugin implements Listener{
 			// 핫키 제한
 			try {
 				if(event.getHotbarButton() != -1) {
+					if(event.getCurrentItem() == null) {
+						Player player = (Player) event.getWhoClicked();
+						Cmd13Chest cc = new Cmd13Chest();
+						if(cc.isPlayerInSelectAL(player.getUniqueId().toString())) {
+				    		int num = cc.getChestNum(player.getUniqueId().toString());
+				    		if(num != 1) {
+				    			if(event.getHotbarButton() == 1) {
+				    				if(num-1 < 2) {
+				    					player.sendMessage("Not available chest");
+				    				} else {
+				    					if(cc.getUserALContains(player.getUniqueId().toString())) {
+											if(cc.getUserAL(player.getUniqueId().toString()) < num-1) {
+												player.sendMessage(ChatColor.RED + "Not available chest");
+												return;
+											}
+											cc.putSelectAL(player.getUniqueId().toString(), num-1);
+											
+											new BukkitRunnable() {
+												int time = 0;
+
+												@Override
+												public void run() {
+
+													if (time == 0) {
+														new ChestOwner(player, num, event.getInventory());
+													}
+													
+													if (time == 2) {
+														player.closeInventory();
+													}
+
+													if (time >= 5) {
+														new ChestOwner(player, num-1, null);
+														this.cancel();
+													}
+
+													time++;
+												}
+											}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
+											
+										} else {
+											player.sendMessage(ChatColor.RED + "Not available chest");
+											return;
+										}
+				    				}
+				    			} else if(event.getHotbarButton() == 2) {
+				    				if(cc.getUserALContains(player.getUniqueId().toString())) {
+										if(cc.getUserAL(player.getUniqueId().toString()) < num+1) {
+											player.sendMessage(ChatColor.RED + "Not available chest");
+											return;
+										}
+										cc.putSelectAL(player.getUniqueId().toString(), num+1);
+										
+										new BukkitRunnable() {
+											int time = 0;
+
+											@Override
+											public void run() {
+
+												if (time == 0) {
+													new ChestOwner(player, num, event.getInventory());
+												}
+
+												if (time == 2) {
+													player.closeInventory();
+												}
+												
+												if (time >= 5) {
+													new ChestOwner(player, num+1, null);
+													this.cancel();
+												}
+
+												time++;
+											}
+										}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
+										
+									} else {
+										player.sendMessage(ChatColor.RED + "Not available chest");
+										return;
+									}
+				    			} else if(event.getHotbarButton() == 3) {
+				    				if(num-5 < 2) {
+				    					player.sendMessage("이동할 수 없는 상자입니다.");
+				    				} else {
+				    					if(cc.getUserALContains(player.getUniqueId().toString())) {
+											if(cc.getUserAL(player.getUniqueId().toString()) < num-5) {
+												player.sendMessage(ChatColor.RED + "Not available chest");
+												return;
+											}
+											cc.putSelectAL(player.getUniqueId().toString(), num-5);
+											
+											new BukkitRunnable() {
+												int time = 0;
+
+												@Override
+												public void run() {
+
+													if (time == 0) {
+														new ChestOwner(player, num, event.getInventory());
+													}
+													
+													if (time == 2) {
+														player.closeInventory();
+													}
+
+													if (time >= 5) {
+														new ChestOwner(player, num-5, null);
+														this.cancel();
+													}
+
+													time++;
+												}
+											}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
+											
+										} else {
+											player.sendMessage(ChatColor.RED + "Not available chest");
+											return;
+										}
+				    				}
+				    			} else if(event.getHotbarButton() == 4) {
+				    				if(cc.getUserALContains(player.getUniqueId().toString())) {
+										if(cc.getUserAL(player.getUniqueId().toString()) < num+5) {
+											player.sendMessage(ChatColor.RED + "Not available chest");
+											return;
+										}
+										cc.putSelectAL(player.getUniqueId().toString(), num+5);
+										
+										new BukkitRunnable() {
+											int time = 0;
+
+											@Override
+											public void run() {
+
+												if (time == 0) {
+													new ChestOwner(player, num, event.getInventory());
+												}
+
+												if (time == 2) {
+													player.closeInventory();
+												}
+												
+												if (time >= 5) {
+													new ChestOwner(player, num+5, null);
+													this.cancel();
+												}
+
+												time++;
+											}
+										}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
+										
+									} else {
+										player.sendMessage(ChatColor.RED + "Not available chest");
+										return;
+									}
+				    			}
+				    		}
+				    	}
+					}
 					event.setCancelled(true);
 					return;
 				}
@@ -10345,6 +10502,7 @@ public class Main extends JavaPlugin implements Listener{
 				if(inv.getSize() == 27 && !player.isOp()) {
 					if(inv.getItem(26) == null) {
 						Cmd13Chest cc = new Cmd13Chest();
+						new SaveAll(player, getDataFolder());
 				    	if(cc.isPlayerInSelectAL(player.getUniqueId().toString())) {
 				    		int num = cc.getChestNum(player.getUniqueId().toString());
 				    		if(num != 1) {
@@ -10355,6 +10513,7 @@ public class Main extends JavaPlugin implements Listener{
 					} else {
 						if(inv.getItem(26).getType() != Material.SHULKER_SHELL) {
 							Cmd13Chest cc = new Cmd13Chest();
+							new SaveAll(player, getDataFolder());
 					    	if(cc.isPlayerInSelectAL(player.getUniqueId().toString())) {
 					    		int num = cc.getChestNum(player.getUniqueId().toString());
 					    		if(num != 1) {

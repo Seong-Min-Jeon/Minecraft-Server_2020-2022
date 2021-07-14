@@ -8824,20 +8824,24 @@ public class MobLoot {
 		es.giveExp(player, 4350000);
 	}
 	
+	// 숲의 감시자
 	public void mob355(Player player) {
-
+		es.giveExp(player, 4580000);
 	}
 	
+	// 숲의 젤리
 	public void mob356(Player player) {
-
+		es.giveExp(player, 4590000);
 	}
 	
+	// 숲의 고름
 	public void mob357(Player player) {
-
+		es.giveExp(player, 4600000);
 	}
 	
+	// 숲의 거목
 	public void mob358(Player player) {
-
+		es.giveExp(player, 4610000);
 	}
 	
 	public void mob359(Player player) {

@@ -715,7 +715,7 @@ public class InteractVillager {
 				}
 				if(bool == false) {
 					if(item.getType() == Material.FLOWER_BANNER_PATTERN) {
-						if (item.getItemMeta().getDisplayName().substring(2).equals("숲의 신전 통행증")) {
+						if (item.getItemMeta().getDisplayName().substring(2).equals("숲의 유적 통행증")) {
 							item.setAmount(item.getAmount()-1);
 							player.sendMessage("던전 키퍼: 살아서 돌아오시게나.");
 							player.teleport(new Location(player.getWorld(), 3804.5, 77, 4107, 90, 0));

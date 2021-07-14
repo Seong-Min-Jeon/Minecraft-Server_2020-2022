@@ -1126,8 +1126,8 @@ public class PlayerHitDebuff {
 							}
 						}	
 					} else if(mat == Material.INK_SAC) {
-						player.sendMessage(ChatColor.RED + "지배자의 수류탄 투척이 발동됩니다.");
-						sendMessage(player, ChatColor.RED + "지배자의 수류탄 투척이 발동됩니다.");
+						player.sendMessage(ChatColor.RED + "지배자의 '자 선물이야'가 발동됩니다.");
+						sendMessage(player, ChatColor.RED + "지배자의 '자 선물이야'가 발동됩니다.");
 						ent.getWorld().playSound(ent.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 0.8f, 6.0f);
 						List<Entity> entitylist = ent.getNearbyEntities(10, 15, 10);
 						for (Entity nearEntity : entitylist) {
@@ -2477,7 +2477,7 @@ public class PlayerHitDebuff {
 
 	// 암석 거인의 파편
 	public void mob25(Player player, Entity mob) {
-		if (mob.getCustomName().substring(2).equalsIgnoreCase("암석 거인의 파편" + ChatColor.YELLOW + " [Lv.480]")) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("암석 거인의 파편" + ChatColor.YELLOW + " [Lv.455]")) {
 
 			int num = rnd.nextInt(15);
 			if (num == 0) {
@@ -3941,8 +3941,16 @@ public class PlayerHitDebuff {
 		}
 	}
 	
+	// 숲의 감시자
 	public void mob92(Player player, Entity mob) {
-
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("숲의 감시자" + ChatColor.YELLOW + " [Lv.700]")) {
+			int num = rnd.nextInt(10);
+			if (num == 0) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 3, true,true));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 200, 0, true,true));
+				player.damage(1500);
+			}
+		}
 	}
 	
 	public void mob93(Player player, Entity mob) {

@@ -1613,8 +1613,8 @@ public class TPMobSpawn {
 		}
 		
 		// 1번 방 2번 룸
-		if (loc.getX() == 3788.51 && loc.getY() == 77 && loc.getZ() == 4096.47) {
-			player.teleport(new Location(player.getWorld(), 3788.5, 77, 4096.5));
+		if (loc.getX() == 3754.55 && loc.getY() == 86 && loc.getZ() == 4111.19) {
+			player.teleport(new Location(player.getWorld(), 3754.5, 86, 4111.2));
 			int num = 0;
 			List<Entity> entitylist = player.getNearbyEntities(20, 30, 20);
 			for (Entity nearEntity : entitylist) {
@@ -1648,8 +1648,8 @@ public class TPMobSpawn {
 		}
 		
 		// 1번 방 3번 룸
-		if (loc.getX() == 3788.51 && loc.getY() == 77 && loc.getZ() == 4096.47) {
-			player.teleport(new Location(player.getWorld(), 3788.5, 77, 4096.5));
+		if (loc.getX() == 3723.44 && loc.getY() == 92 && loc.getZ() == 4105.67) {
+			player.teleport(new Location(player.getWorld(), 3723.4, 92, 4105.7));
 			int num = 0;
 			List<Entity> entitylist = player.getNearbyEntities(20, 30, 20);
 			for (Entity nearEntity : entitylist) {

@@ -421,10 +421,21 @@ public class Cmd13Chest implements CommandExecutor {
 		return true;
 	}
 
+	public boolean getUserALContains(String str) {
+		if(userAL.containsKey(str)) {
+			return true;
+		}
+		return false;
+	}
+	
+	public int getUserAL(String str) {
+		return userAL.get(str);
+	}
+	
 	public void putData(String uuid, Integer num) {
 		userAL.put(uuid, num);
 	}
-	
+
 	public void putSelectAL(String uuid, Integer num) {
 		if(selectAL.containsKey(uuid)) {
 			selectAL.remove(uuid);

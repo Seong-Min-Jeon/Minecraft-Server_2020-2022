@@ -1542,6 +1542,22 @@ public class MobDeath {
 				if (name.equalsIgnoreCase("원시 생물" + ChatColor.YELLOW + " [Lv.700]")) {
 					mobloot.mob354(lootPlayer);
 				}
+				// 숲의 감시자
+				if (name.equalsIgnoreCase("숲의 감시자" + ChatColor.YELLOW + " [Lv.700]")) {
+					mobloot.mob355(lootPlayer);
+				}
+				// 숲의 젤리
+				if (name.equalsIgnoreCase("숲의 젤리" + ChatColor.YELLOW + " [Lv.700]")) {
+					mobloot.mob356(lootPlayer);
+				}
+				// 숲의 고름
+				if (name.equalsIgnoreCase("숲의 고름" + ChatColor.YELLOW + " [Lv.700]")) {
+					mobloot.mob357(lootPlayer);
+				}
+				// 숲의 거목
+				if (name.equalsIgnoreCase("숲의 거목" + ChatColor.YELLOW + " [Lv.700]")) {
+					mobloot.mob358(lootPlayer);
+				}
 			} catch (Exception e) {
 
 			}
