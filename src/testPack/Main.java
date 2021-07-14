@@ -9155,22 +9155,28 @@ public class Main extends JavaPlugin implements Listener{
 			// 핫키 제한
 			try {
 				if(event.getHotbarButton() != -1) {
-					if(event.getCurrentItem() == null) {
+					ItemStack item = event.getCurrentItem();
+					if(item.getType() == Material.RED_DYE || item.getType() == Material.GREEN_DYE || item.getType() == Material.LAPIS_LAZULI
+							|| item.getType() == Material.CYAN_DYE || item.getType() == Material.LIGHT_GRAY_DYE || item.getType() == Material.GRAY_DYE
+							|| item.getType() == Material.PINK_DYE || item.getType() == Material.LIME_DYE || item.getType() == Material.YELLOW_DYE
+							|| item.getType() == Material.LIGHT_BLUE_DYE || item.getType() == Material.MAGENTA_DYE || item.getType() == Material.ORANGE_DYE
+							|| item.getType() == Material.BLUE_DYE || item.getType() == Material.BROWN_DYE || item.getType() == Material.BLACK_DYE
+							|| item.getType() == Material.INK_SAC || item.getType() == Material.CLAY_BALL || item.getType() == Material.GLOWSTONE_DUST) {
+						event.setCancelled(true);
 						Player player = (Player) event.getWhoClicked();
 						Cmd13Chest cc = new Cmd13Chest();
 						if(cc.isPlayerInSelectAL(player.getUniqueId().toString())) {
 				    		int num = cc.getChestNum(player.getUniqueId().toString());
 				    		if(num != 1) {
-				    			if(event.getHotbarButton() == 1) {
+				    			if(event.getHotbarButton() == 0) {
 				    				if(num-1 < 2) {
 				    					player.sendMessage("Not available chest");
 				    				} else {
 				    					if(cc.getUserALContains(player.getUniqueId().toString())) {
 											if(cc.getUserAL(player.getUniqueId().toString()) < num-1) {
-												player.sendMessage(ChatColor.RED + "Not available chest");
+												player.sendMessage("Not available chest");
 												return;
 											}
-											cc.putSelectAL(player.getUniqueId().toString(), num-1);
 											
 											new BukkitRunnable() {
 												int time = 0;
@@ -9179,14 +9185,11 @@ public class Main extends JavaPlugin implements Listener{
 												public void run() {
 
 													if (time == 0) {
-														new ChestOwner(player, num, event.getInventory());
-													}
-													
-													if (time == 2) {
 														player.closeInventory();
 													}
 
 													if (time >= 5) {
+														cc.putSelectAL(player.getUniqueId().toString(), num-1);
 														new ChestOwner(player, num-1, null);
 														this.cancel();
 													}
@@ -9196,17 +9199,16 @@ public class Main extends JavaPlugin implements Listener{
 											}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
 											
 										} else {
-											player.sendMessage(ChatColor.RED + "Not available chest");
+											player.sendMessage("Not available chest");
 											return;
 										}
 				    				}
-				    			} else if(event.getHotbarButton() == 2) {
+				    			} else if(event.getHotbarButton() == 1) {
 				    				if(cc.getUserALContains(player.getUniqueId().toString())) {
 										if(cc.getUserAL(player.getUniqueId().toString()) < num+1) {
-											player.sendMessage(ChatColor.RED + "Not available chest");
+											player.sendMessage("Not available chest");
 											return;
 										}
-										cc.putSelectAL(player.getUniqueId().toString(), num+1);
 										
 										new BukkitRunnable() {
 											int time = 0;
@@ -9215,14 +9217,11 @@ public class Main extends JavaPlugin implements Listener{
 											public void run() {
 
 												if (time == 0) {
-													new ChestOwner(player, num, event.getInventory());
-												}
-
-												if (time == 2) {
 													player.closeInventory();
 												}
 												
 												if (time >= 5) {
+													cc.putSelectAL(player.getUniqueId().toString(), num+1);
 													new ChestOwner(player, num+1, null);
 													this.cancel();
 												}
@@ -9232,19 +9231,18 @@ public class Main extends JavaPlugin implements Listener{
 										}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
 										
 									} else {
-										player.sendMessage(ChatColor.RED + "Not available chest");
+										player.sendMessage("Not available chest");
 										return;
 									}
-				    			} else if(event.getHotbarButton() == 3) {
+				    			} else if(event.getHotbarButton() == 2) {
 				    				if(num-5 < 2) {
 				    					player.sendMessage("이동할 수 없는 상자입니다.");
 				    				} else {
 				    					if(cc.getUserALContains(player.getUniqueId().toString())) {
 											if(cc.getUserAL(player.getUniqueId().toString()) < num-5) {
-												player.sendMessage(ChatColor.RED + "Not available chest");
+												player.sendMessage("Not available chest");
 												return;
 											}
-											cc.putSelectAL(player.getUniqueId().toString(), num-5);
 											
 											new BukkitRunnable() {
 												int time = 0;
@@ -9253,14 +9251,11 @@ public class Main extends JavaPlugin implements Listener{
 												public void run() {
 
 													if (time == 0) {
-														new ChestOwner(player, num, event.getInventory());
-													}
-													
-													if (time == 2) {
 														player.closeInventory();
 													}
 
 													if (time >= 5) {
+														cc.putSelectAL(player.getUniqueId().toString(), num-5);
 														new ChestOwner(player, num-5, null);
 														this.cancel();
 													}
@@ -9270,17 +9265,16 @@ public class Main extends JavaPlugin implements Listener{
 											}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
 											
 										} else {
-											player.sendMessage(ChatColor.RED + "Not available chest");
+											player.sendMessage("Not available chest");
 											return;
 										}
 				    				}
-				    			} else if(event.getHotbarButton() == 4) {
+				    			} else if(event.getHotbarButton() == 3) {
 				    				if(cc.getUserALContains(player.getUniqueId().toString())) {
 										if(cc.getUserAL(player.getUniqueId().toString()) < num+5) {
-											player.sendMessage(ChatColor.RED + "Not available chest");
+											player.sendMessage("Not available chest");
 											return;
 										}
-										cc.putSelectAL(player.getUniqueId().toString(), num+5);
 										
 										new BukkitRunnable() {
 											int time = 0;
@@ -9289,14 +9283,11 @@ public class Main extends JavaPlugin implements Listener{
 											public void run() {
 
 												if (time == 0) {
-													new ChestOwner(player, num, event.getInventory());
-												}
-
-												if (time == 2) {
 													player.closeInventory();
 												}
 												
 												if (time >= 5) {
+													cc.putSelectAL(player.getUniqueId().toString(), num+5);
 													new ChestOwner(player, num+5, null);
 													this.cancel();
 												}
@@ -9306,7 +9297,7 @@ public class Main extends JavaPlugin implements Listener{
 										}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
 										
 									} else {
-										player.sendMessage(ChatColor.RED + "Not available chest");
+										player.sendMessage("Not available chest");
 										return;
 									}
 				    			}
