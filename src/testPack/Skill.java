@@ -2620,6 +2620,7 @@ public class Skill {
 												player.getInventory().addItem(weapon1);
 												player.sendMessage(ChatColor.GREEN + "신에게 아이템을 받았습니다.");
 												world.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 1.0f);
+												System.out.println(player.getDisplayName() + "님이 신에게 아이템을 받았습니다.");
 											}
 										}									
 									}

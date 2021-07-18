@@ -1558,6 +1558,14 @@ public class MobDeath {
 				if (name.equalsIgnoreCase("숲의 거목" + ChatColor.YELLOW + " [Lv.700]")) {
 					mobloot.mob358(lootPlayer);
 				}
+				// 숲의 정령
+				if (name.equalsIgnoreCase("숲의 정령" + ChatColor.YELLOW + " [Lv.700]")) {
+					mobloot.mob359(lootPlayer);
+				}
+				// 숲의 심판자
+				if (name.equalsIgnoreCase("숲의 심판자" + ChatColor.YELLOW + " [Lv.??]")) {
+					mobloot.mob360(lootPlayer);
+				}
 			} catch (Exception e) {
 
 			}

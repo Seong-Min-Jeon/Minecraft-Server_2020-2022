@@ -141,6 +141,8 @@ public class PlayerHitDebuff {
 		mob89(player, mob);
 		mob90(player, mob);
 		mob91(player, mob);
+		mob92(player, mob);
+		mob93(player, mob);
 	}
 
 	// 시련의 형상
@@ -2479,7 +2481,7 @@ public class PlayerHitDebuff {
 	public void mob25(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("암석 거인의 파편" + ChatColor.YELLOW + " [Lv.455]")) {
 
-			int num = rnd.nextInt(15);
+			int num = rnd.nextInt(20);
 			if (num == 0) {
 				player.addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, 120, 0, true,true));
 				player.sendMessage(ChatColor.RED + "암석 거인이 당신을 잡아듭니다.");
@@ -3425,7 +3427,7 @@ public class PlayerHitDebuff {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("아빠 상어" + ChatColor.YELLOW + " [Lv.??]")) {
 			
 			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
-				int num = rnd.nextInt(15);
+				int num = rnd.nextInt(25);
 				if(num < 2) {
 					((WitherSkeleton) mob).setTarget(player);
 					player.sendMessage(ChatColor.RED + "아빠 상어의 썩은 토사물에 맞았습니다.");
@@ -3575,7 +3577,7 @@ public class PlayerHitDebuff {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("해왕신 포세이돈" + ChatColor.YELLOW + " [Lv.??]")) {
 			
 			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
-				int num = rnd.nextInt(10);
+				int num = rnd.nextInt(18);
 				if (num == 0) {
 					((Skeleton) mob).setTarget(player);
 					mob.getWorld().playSound(mob.getLocation(), Sound.ITEM_TRIDENT_THROW, 8.0f, 1.0f);
@@ -3601,7 +3603,7 @@ public class PlayerHitDebuff {
 							}
 
 							if (time % 5 == 0) {
-								List<Entity> entitylist = totem.getNearbyEntities(4, 3, 4);
+								List<Entity> entitylist = totem.getNearbyEntities(3, 2, 3);
 								for (Entity nearEntity : entitylist) {
 									if (nearEntity instanceof Player) {
 										Player player = (Player) nearEntity;
@@ -3638,7 +3640,7 @@ public class PlayerHitDebuff {
 					}
 				}
 			} else {
-				int num = rnd.nextInt(10);
+				int num = rnd.nextInt(18);
 				if (num == 0) {
 					((Skeleton) mob).setTarget(player);
 					player.getWorld().playSound(mob.getLocation(), Sound.ITEM_SHIELD_BLOCK, 2.0f, 1.0f);
@@ -3953,8 +3955,141 @@ public class PlayerHitDebuff {
 		}
 	}
 	
+	// 숲의 심판자
 	public void mob93(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("숲의 심판자" + ChatColor.YELLOW + " [Lv.??]")) {
+			
+			if(mob.getType() == EntityType.SKELETON) {
+				if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
+					mob.getWorld().playSound(mob.getLocation(), Sound.ENTITY_WITCH_AMBIENT, 2.0f, 2.0f);
+					player.sendMessage(ChatColor.RED + "심판자가 시커먼 무언가에게 삼켜졌다.");
+					sendMessage(player, ChatColor.RED + "심판자가 시커먼 무언가에게 삼켜졌다.");
+					List<Entity> nearPlayer = mob.getNearbyEntities(2, 2, 2);
+					for (Entity p : nearPlayer) {
+						if (p instanceof Player) {
+							((Player) p).addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 60, 0, true, true));
+						}
+					}
+					mob.getWorld().spawnEntity(new Location(player.getWorld(), 3737.5, 91, 4170.5), EntityType.RAVAGER);
+					mob.remove();
+				} else {
+					int num = rnd.nextInt(15);
+					if (num < 1) {
+						((Skeleton) mob).setTarget(player);
+						player.sendMessage(ChatColor.RED + "숲의 독극물이 흘러들어옵니다.");
+						player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 100, 4, true, true));
+					} else if (num == 1) {
+						((Skeleton) mob).setTarget(player);
 
+						player.sendMessage(ChatColor.RED + "심판자가 목을 풉니다.");
+						sendMessage(player, ChatColor.RED + "심판자가 목을 풉니다.");
+
+						((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true, true));
+
+						Location loc = mob.getLocation();
+
+						taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+							int time = 0;
+							ThreadData td = new ThreadData(player.getUniqueId());
+
+							@Override
+							public void run() {
+
+								if (!td.hasID()) {
+									td.setID(taskID);
+								}
+
+								if (time % 20 == 0) {
+									for (int x = -2; x < 3; x++) {
+										for (int y = -1; y < 0; y++) {
+											for (int z = -2; z < 3; z++) {
+												Location loc2 = loc.clone().add(new Vector(x, y + 1.2, z));
+												player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
+											}
+										}
+									}
+								}
+
+								if (time >= 20) {
+									player.sendMessage(ChatColor.RED + "강렬한 외침이 들려옵니다.");
+									sendMessage(player, ChatColor.RED + "강렬한 외침이 들려옵니다.");
+									List<Entity> nearPlayer = mob.getNearbyEntities(3, 10, 3);
+									for (Entity p : nearPlayer) {
+										if (p instanceof Player) {
+											((Player) p).damage(1000000);
+										}
+									}
+
+									td.endTask();
+									td.removeID();
+								}
+
+								time++;
+							}
+
+						}, 0, 1);
+					}
+				}
+			} else {
+				if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
+					int num = rnd.nextInt(30);
+					if (num < 2) {
+						if(!player.isSneaking()) {
+							player.setVelocity(player.getVelocity().multiply(-1.5).add(new Vector(0,1,0)));
+						}
+						player.damage(5000);
+					} else if (num == 2) {
+						player.sendMessage(ChatColor.RED + "심판자가 큰 숨을 들이마십니다.");
+						sendMessage(player, ChatColor.RED + "심판자가 큰 숨을 들이마십니다.");
+
+						taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+							int time = 0;
+							ThreadData td = new ThreadData(player.getUniqueId());
+
+							@Override
+							public void run() {
+
+								if(!td.hasID()) {
+									td.setID(taskID);
+								}
+
+								mob.setVelocity(mob.getLocation().getDirection().multiply(2.0f));
+								
+								if(time % 5 == 0 && time > 20) {
+									List<Entity> nearPlayer = mob.getNearbyEntities(2, 2, 2);
+									for (Entity p : nearPlayer) {
+										if (p instanceof Player) {
+											((Player) p).damage(8000);
+										}
+									}
+								}
+								
+								if(time == 50) {
+									td.endTask();
+									td.removeID();
+								}
+
+								time++;
+
+							}
+
+						}, 0, 1);
+					}
+				} else {
+					int num = rnd.nextInt(15);
+					if (num == 0) {
+						if(!player.isSneaking()) {
+							player.setVelocity(player.getVelocity().multiply(-1.5).add(new Vector(0,1,0)));
+						}
+						player.damage(5000);
+					}
+				}
+			}
+
+			
+		}
 	}
 	
 	public void mob94(Player player, Entity mob) {

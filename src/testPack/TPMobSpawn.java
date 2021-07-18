@@ -1718,6 +1718,44 @@ public class TPMobSpawn {
 			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3689, 98, 4123), EntityType.SKELETON);
 			return;
 		}
+		
+		// 중간보스
+		if (loc.getX() == 3748.26 && loc.getY() == 90.0 && loc.getZ() == 4170.51) {
+			player.teleport(new Location(player.getWorld(), 3748.5, 90, 4170.5));
+			int num = 0;
+			List<Entity> entitylist = player.getNearbyEntities(40, 30, 40);
+			for (Entity nearEntity : entitylist) {
+				if (nearEntity.getType() == EntityType.PLAYER) {
+					Player nearPlayer = (Player) nearEntity;
+					Location loc2 = nearPlayer.getLocation();
+					if (loc2.getX() <= 3751 && loc2.getY() <= 105 && loc2.getZ() <= 4184 
+							&& loc2.getX() >= 3727 && loc2.getY() >= 85 && loc2.getZ() >= 4156) {
+						num++;
+						if(new BossHealth().getBar33().getProgress() != 0) {
+							new BossHealth().getBar33().addPlayer(player);
+						}
+						return;
+					}
+				}
+			}
+			if (num == 0) {
+				for (Entity nearEntity : entitylist) {
+					if (nearEntity instanceof Mob) {
+						Location loc2 = nearEntity.getLocation();
+						if (loc2.getX() <= 3751 && loc2.getY() <= 105 && loc2.getZ() <= 4184 
+								&& loc2.getX() >= 3727 && loc2.getY() >= 85 && loc2.getZ() >= 4156) {
+							nearEntity.remove();
+						}
+					}
+				}
+			}
+			
+			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3737.5, 91, 4170.5), EntityType.SKELETON);
+			
+			new BossHealth().getBar33().setProgress(1.0);
+			new BossHealth().getBar33().addPlayer(player);
+			return;
+		}
 
 	}
 	

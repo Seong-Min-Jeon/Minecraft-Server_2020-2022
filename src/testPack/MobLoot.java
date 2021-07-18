@@ -5122,6 +5122,29 @@ public class MobLoot {
 	// 석상 파수꾼
 	public void mob209(Player player) {
 		es.giveExp(player, 5000000);
+		
+		List<Entity> entitylist = player.getNearbyEntities(50, 30, 50);
+		for (Entity nearEntity : entitylist) {
+			if (nearEntity.getType() == EntityType.PLAYER) {
+				Player nearPlayer = (Player) nearEntity;
+				Location loc = nearPlayer.getLocation();
+				if (loc.getX() <= 3824 && loc.getY() <= 52 && loc.getZ() <= 2896 
+						&& loc.getX() >= 3707 && loc.getY() >= 16 && loc.getZ() >= 2834) {
+					
+					try {
+						QuestBoard cb = new QuestBoard();
+						if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===고대의 암석 협곡===")) {
+							int qNum = cb.getNum(player);
+							cb.mq45_10(player, qNum + 1);
+						}
+					} catch(Exception e) {
+						
+					}
+					
+				}
+			}
+		}
+		
 	}
 	
 	// 암석 거인의 파편
@@ -8844,12 +8867,14 @@ public class MobLoot {
 		es.giveExp(player, 4610000);
 	}
 	
+	// 숲의 정령
 	public void mob359(Player player) {
-
+		es.giveExp(player, 4500000);
 	}
 	
+	// 숲의 심판자
 	public void mob360(Player player) {
-
+		es.giveExp(player, 8000000);
 	}
 	
 	public void mob361(Player player) {

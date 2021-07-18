@@ -180,12 +180,6 @@ public class LootChest {
 			if(block.getX()==3658 && block.getY()==100 && block.getZ()==2868) {
 				if(removeKey(player, "고대의 암석 협곡 보상 열쇠")) {
 					dungeon9(player);
-					
-					QuestBoard cb = new QuestBoard();
-					if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===고대의 암석 협곡===")) {
-						int qNum = cb.getNum(player);
-						cb.mq45_10(player, qNum + 1);
-					}
 				}				
 			}
 			if(block.getX()==118 && block.getY()==64 && block.getZ()==1958) {

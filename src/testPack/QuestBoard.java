@@ -3161,7 +3161,7 @@ public class QuestBoard {
 			es.giveExp(player, 18000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			msg.msg(player, "사막 정찰병: 이번에는 지혜를 증명할 차례다.%사막 정찰병: 이번 시련은 매우 어려울 것이나 이것이 마지막 시련이다.%"
-					+ "사막 정찰병: 이면에 잠든 §e암석 거인§f을 처리하는 일이다.%사막 정찰병: 혼자가면 위험할 수도 있으니 부디 동료와 함께 가길 바란다.");
+					+ "사막 정찰병: 이면에 잠든 §e암석 거인§f을 조사하는 일이다.%사막 정찰병: 혼자가면 위험할 수도 있으니 부디 동료와 함께 가길 바란다.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq45_10(player, 0);
 			return;
@@ -3184,6 +3184,8 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 18000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "사막 정찰병: 오케이. 거기까지만 해도 충분하네.%사막 정찰병: 지금 마법탑에서 들려온 소식에 따르면%"
+					+ "사막 정찰병: 그곳에서 감지되는 포보르의 마나가 비정상적이라고 하는군.%사막 정찰병: 암석 거인이 깨어날 수도 있을걸세.%사막 정찰병: 부디 스크롤을 사용해서 안전히 마을로 돌아오게나.%");
 			QuestBoard qb = new QuestBoard();
 			qb.mq45_11(player, 0);
 			return;
@@ -3208,7 +3210,7 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 18000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
-			msg.msg(player, "사막 정찰병: 이 정도 실력이면 제대로 사막을 탐사해도 되겠군.%사막 정찰병: 사막에는 편히 쉴 수 있는 곳이 거의 없을꺼다.%"
+			msg.msg(player, "사막 정찰병: 암석 거인은 아깝지만 이 정도 실력이면 제대로 사막을 탐사해도 되겠군.%사막 정찰병: 사막에는 편히 쉴 수 있는 곳이 거의 없을거다.%"
 					+ "사막 정찰병: §e철 채석장§f으로 가거라.%사막 정찰병: 거기가 사막의 §e유일한 마을§f이다.%사막 정찰병: 그 마을에 가면 §e성물§f에 대한 정보를 얻을 수 있을거다.%"
 					+ "사막 정찰병: 이 정보가 내 보상이다.");
 			QuestBoard qb = new QuestBoard();

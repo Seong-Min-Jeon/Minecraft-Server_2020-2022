@@ -601,6 +601,9 @@ public class MobThread implements Listener{
 							} else if(loc.getX() <= 3645 && loc.getY() <= 155 && loc.getZ() <= 4148 
 									&& loc.getX() >= 3596 && loc.getY() >= 135 && loc.getZ() >= 4098) {
 								hardForestRoom23(player, loc);
+							} else if(loc.getX() <= 3751 && loc.getY() <= 105 && loc.getZ() <= 4184 
+									&& loc.getX() >= 3727 && loc.getY() >= 85 && loc.getZ() >= 4156) {
+								hardForestMidBoss(player, loc);
 							}
 
 						}
@@ -3410,6 +3413,21 @@ public class MobThread implements Listener{
 			loc.getWorld().spawnEntity(loc, EntityType.RAVAGER);
 		} else if (num == 1) {
 			loc.getWorld().spawnEntity(loc, EntityType.RAVAGER);
+		} 
+	}
+	
+	public void hardForestMidBoss(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 3751 && loc.getY() <= 105 && loc.getZ() <= 4184 
+				&& loc.getX() >= 3727 && loc.getY() >= 85 && loc.getZ() >= 4156)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.VEX);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.VEX);
 		} 
 	}
 	

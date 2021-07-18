@@ -194,7 +194,7 @@ public class Main extends JavaPlugin implements Listener{
 	
 	// gamerule doMobLoot false
 	// gamerule doMobSpawning false
-	// gamerule keepInventory true
+	// gamerule keepInventory trues
 	// gamerule doImmediateRespawn true
 	// gamerule doLimitedCrafting true
 	// gamerule mobGriefing false
@@ -331,7 +331,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("woolring")) { 
 			
 		} else {
-			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/862592774356336690/aile_texture_pack_32.zip");
+			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/865553225713188894/aile_texture_pack_33.zip");
 		}
 		
 		//Message
@@ -7033,7 +7033,7 @@ public class Main extends JavaPlugin implements Listener{
 							new BossHealth().getBar27().removePlayer(p);
 						}
 					} else {
-						new BossHealth().getBar27().setProgress((boss.getHealth()-event.getFinalDamage()) / 3800000.0);
+						new BossHealth().getBar27().setProgress((boss.getHealth()-event.getFinalDamage()) / 5500000.0);
 					}
 				}
 				// 8층의 지배자
@@ -7104,6 +7104,19 @@ public class Main extends JavaPlugin implements Listener{
 						}
 					} else {
 						new BossHealth().getBar32().setProgress((boss.getHealth()-event.getFinalDamage()) / 3800000.0);
+					}
+				}
+				// 숲의 심판자
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("숲의 심판자" + ChatColor.YELLOW + " [Lv.??]")) {
+					LivingEntity boss = (LivingEntity) mob;
+					
+					if(boss.getHealth() - event.getFinalDamage() <= 0) {
+						for(Player p : new BossHealth().getBar33().getPlayers()) {
+							new BossHealth().getBar33().setProgress(0);
+							new BossHealth().getBar33().removePlayer(p);
+						}
+					} else {
+						new BossHealth().getBar33().setProgress((boss.getHealth()-event.getFinalDamage()) / 4000000.0);
 					}
 				}
 			}
