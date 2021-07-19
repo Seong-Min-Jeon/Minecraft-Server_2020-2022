@@ -293,6 +293,7 @@ public class PlayerHitDebuff {
 					
 					player.sendMessage(ChatColor.RED + "발로르가 헬파이어를 시전합니다.");
 					sendMessage(player, ChatColor.RED + "발로르가 헬파이어를 시전합니다.");
+					player.getWorld().playSound(mob.getLocation(), Sound.BLOCK_GRASS_BREAK, 5.0f, 2.0f);
 					
 					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true,true));
 					
@@ -504,6 +505,7 @@ public class PlayerHitDebuff {
 					
 					player.sendMessage(ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
 					sendMessage(player, ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
+					player.getWorld().playSound(mob.getLocation(), Sound.BLOCK_GRASS_BREAK, 5.0f, 2.0f);
 					
 					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true,true));
 					
@@ -604,6 +606,7 @@ public class PlayerHitDebuff {
 					
 					player.sendMessage(ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
 					sendMessage(player, ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
+					player.getWorld().playSound(mob.getLocation(), Sound.BLOCK_GRASS_BREAK, 5.0f, 2.0f);
 					
 					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true,true));
 					
@@ -707,6 +710,7 @@ public class PlayerHitDebuff {
 					
 					player.sendMessage(ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
 					sendMessage(player, ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
+					player.getWorld().playSound(mob.getLocation(), Sound.BLOCK_GRASS_BREAK, 5.0f, 2.0f);
 					
 					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true,true));
 					
@@ -1183,6 +1187,7 @@ public class PlayerHitDebuff {
 				if (num == 1) {
 					player.sendMessage(ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
 					sendMessage(player, ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
+					player.getWorld().playSound(mob.getLocation(), Sound.BLOCK_GRASS_BREAK, 5.0f, 2.0f);
 					
 					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true,true));
 					
@@ -1310,6 +1315,7 @@ public class PlayerHitDebuff {
 					
 					player.sendMessage(ChatColor.RED + "지배자가 대규모 마법을 시전합니다.");
 					sendMessage(player, ChatColor.RED + "지배자가 대규모 마법을 시전합니다.");
+					player.getWorld().playSound(mob.getLocation(), Sound.BLOCK_GRASS_BREAK, 5.0f, 2.0f);
 					
 					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true,true));
 					
@@ -1376,6 +1382,7 @@ public class PlayerHitDebuff {
 					
 					player.sendMessage(ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
 					sendMessage(player, ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
+					player.getWorld().playSound(mob.getLocation(), Sound.BLOCK_GRASS_BREAK, 5.0f, 2.0f);
 					
 					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true,true));
 					
@@ -1479,6 +1486,7 @@ public class PlayerHitDebuff {
 					
 					player.sendMessage(ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
 					sendMessage(player, ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
+					player.getWorld().playSound(mob.getLocation(), Sound.BLOCK_GRASS_BREAK, 5.0f, 2.0f);
 					
 					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true,true));
 					
@@ -1560,6 +1568,7 @@ public class PlayerHitDebuff {
 					
 					player.sendMessage(ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
 					sendMessage(player, ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
+					player.getWorld().playSound(mob.getLocation(), Sound.BLOCK_GRASS_BREAK, 5.0f, 2.0f);
 					
 					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true,true));
 					
@@ -1637,6 +1646,7 @@ public class PlayerHitDebuff {
 				} else if (num == 1) {
 					player.sendMessage(ChatColor.RED + "지배자가 자폭을 준비 중입니다.");
 					sendMessage(player, ChatColor.RED + "지배자가 자폭을 준비 중입니다.");
+					player.getWorld().playSound(mob.getLocation(), Sound.BLOCK_GRASS_BREAK, 5.0f, 2.0f);
 					
 					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true,true));
 					
@@ -1710,6 +1720,7 @@ public class PlayerHitDebuff {
 					
 					player.sendMessage(ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
 					sendMessage(player, ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
+					player.getWorld().playSound(mob.getLocation(), Sound.BLOCK_GRASS_BREAK, 5.0f, 2.0f);
 					
 					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 60, 200, true,true));
 					
@@ -1866,6 +1877,7 @@ public class PlayerHitDebuff {
 					
 					player.sendMessage(ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
 					sendMessage(player, ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
+					player.getWorld().playSound(mob.getLocation(), Sound.BLOCK_GRASS_BREAK, 5.0f, 2.0f);
 					
 					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 60, 200, true,true));
 					
@@ -1983,6 +1995,7 @@ public class PlayerHitDebuff {
 					
 					player.sendMessage(ChatColor.RED + "멸망의 주문이 들려옵니다.");
 					sendMessage(player, ChatColor.RED + "멸망의 주문이 들려옵니다.");
+					player.getWorld().playSound(mob.getLocation(), Sound.BLOCK_GRASS_BREAK, 5.0f, 2.0f);
 					
 					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 210, 200, true,true));
 					
@@ -2985,6 +2998,8 @@ public class PlayerHitDebuff {
 					}, 0, 1);
 					player.sendMessage(ChatColor.RED + "전장의 서곡이 울려퍼집니다.");
 					sendMessage(player, ChatColor.RED + "전장의 서곡이 울려퍼집니다.");
+					player.getWorld().playSound(mob.getLocation(), Sound.BLOCK_GRASS_BREAK, 5.0f, 2.0f);
+					
 					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 150, 200, true,true));
 					((Skeleton) mob).setTarget(player);
 				}
@@ -3439,6 +3454,7 @@ public class PlayerHitDebuff {
 					
 					player.sendMessage(ChatColor.RED + "아빠 상어가 불꽃 스크류를 시전합니다.");
 					sendMessage(player, ChatColor.RED + "아빠 상어가 불꽃 스크류를 시전합니다.");
+					player.getWorld().playSound(mob.getLocation(), Sound.BLOCK_GRASS_BREAK, 5.0f, 2.0f);
 					
 					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true,true));
 					
@@ -3509,6 +3525,7 @@ public class PlayerHitDebuff {
 					
 					player.sendMessage(ChatColor.RED + "아빠 상어가 스크류를 시전합니다.");
 					sendMessage(player, ChatColor.RED + "아빠 상어가 스크류를 시전합니다.");
+					player.getWorld().playSound(mob.getLocation(), Sound.BLOCK_GRASS_BREAK, 5.0f, 2.0f);
 					
 					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true,true));
 					
@@ -3983,6 +4000,7 @@ public class PlayerHitDebuff {
 
 						player.sendMessage(ChatColor.RED + "심판자가 목을 풉니다.");
 						sendMessage(player, ChatColor.RED + "심판자가 목을 풉니다.");
+						player.getWorld().playSound(mob.getLocation(), Sound.BLOCK_GRASS_BREAK, 5.0f, 2.0f);
 
 						((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true, true));
 
@@ -4012,6 +4030,8 @@ public class PlayerHitDebuff {
 								}
 
 								if (time >= 20) {
+									mob.getWorld().playSound(mob.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 1.0f, 0.1f);
+									mob.getWorld().spawnParticle(Particle.EXPLOSION_LARGE, mob.getLocation(), 0);
 									player.sendMessage(ChatColor.RED + "강렬한 외침이 들려옵니다.");
 									sendMessage(player, ChatColor.RED + "강렬한 외침이 들려옵니다.");
 									List<Entity> nearPlayer = mob.getNearbyEntities(3, 10, 3);

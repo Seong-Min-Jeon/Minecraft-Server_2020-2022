@@ -1,11 +1,14 @@
 package testPack;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Random;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.Particle;
 import org.bukkit.Sound;
 import org.bukkit.block.Block;
 import org.bukkit.block.Chest;
@@ -28,6 +31,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
+import org.bukkit.scheduler.BukkitRunnable;
 
 import net.minecraft.server.v1_16_R3.WorldServer;
 
@@ -1721,6 +1725,8 @@ public class TPMobSpawn {
 		
 		// 중간보스
 		if (loc.getX() == 3748.26 && loc.getY() == 90.0 && loc.getZ() == 4170.51) {
+			player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "나는 검게 꿈틀거리는 자.");
+			
 			player.teleport(new Location(player.getWorld(), 3748.5, 90, 4170.5));
 			int num = 0;
 			List<Entity> entitylist = player.getNearbyEntities(40, 30, 40);
@@ -1756,7 +1762,196 @@ public class TPMobSpawn {
 			new BossHealth().getBar33().addPlayer(player);
 			return;
 		}
+		
+		// 보스
+		if (loc.getX() == 3677.45 && loc.getY() == 188.0 && loc.getZ() == 4179.4) {
+			player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "나의 시험을 이길 수 있을까?");
+			
+			player.teleport(new Location(player.getWorld(), 3677.5, 188, 4179.5));
+			int num = 0;
+			List<Entity> entitylist = player.getNearbyEntities(40, 50, 40);
+			for (Entity nearEntity : entitylist) {
+				if (nearEntity.getType() == EntityType.PLAYER) {
+					Player nearPlayer = (Player) nearEntity;
+					Location loc2 = nearPlayer.getLocation();
+					if (loc2.getX() <= 3699 && loc2.getY() <= 230 && loc2.getZ() <= 4217 
+							&& loc2.getX() >= 3657 && loc2.getY() >= 180 && loc2.getZ() >= 4172) {
+						num++;
+						if(new BossHealth().getBar34().getProgress() != 0) {
+							new BossHealth().getBar34().addPlayer(player);
+						}
+						return;
+					}
+				}
+			}
+			if (num == 0) {
+				for (Entity nearEntity : entitylist) {
+					if (nearEntity instanceof Mob) {
+						Location loc2 = nearEntity.getLocation();
+						if (loc2.getX() <= 3699 && loc2.getY() <= 230 && loc2.getZ() <= 4217 
+								&& loc2.getX() >= 3657 && loc2.getY() >= 180 && loc2.getZ() >= 4172) {
+							nearEntity.remove();
+						}
+					}
+				}
+			}
+			
+			Skeleton skel = (Skeleton) loc.getWorld().spawnEntity(new Location(player.getWorld(), 3677.5, 211.5, 4193.5), EntityType.SKELETON);
+			
+			HashMap<String, Integer> question = new HashMap<>();
+			HashMap<String, String> choice = new HashMap<>();
+			
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "당신이 태어난 마을의 이름은?", 0);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "당신이 태어난 마을의 이름은?", ChatColor.RED + "1. 워그닐" + ChatColor.GRAY + " 2. 포르간" + ChatColor.YELLOW + " 3. 위그닐" + ChatColor.AQUA + " 4. 티르");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "[근하신년]의 뜻은 정열적이고 활력있는 새해를 맞이한다는 뜻이다.", 1);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "[근하신년]의 뜻은 정열적이고 활력있는 새해를 맞이한다는 뜻이다.", ChatColor.RED + "1. 맞다." + ChatColor.GRAY + " 2. 아니다.");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "[송구영신]은 묵은 해를 보내고 새해를 맞이한다는 뜻이다.", 0);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "[송구영신]은 묵은 해를 보내고 새해를 맞이한다는 뜻이다.", ChatColor.RED + "1. 맞다." + ChatColor.GRAY + " 2. 아니다.");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "포르간 촌장의 취미는 무엇인가?", 2);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "포르간 촌장의 취미는 무엇인가?", ChatColor.RED + "1. 골프" + ChatColor.GRAY + " 2. 수영" + ChatColor.YELLOW + " 3. 낚시" + ChatColor.AQUA + " 4. 전투");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "스켈레톤이 가장 좋아하는 음식은 무엇인가?", 0);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "스켈레톤이 가장 좋아하는 음식은 무엇인가?", ChatColor.RED + "1. 김치" + ChatColor.GRAY + " 2. 민트초코" + ChatColor.YELLOW + " 3. 파인애플 피자" + ChatColor.AQUA + " 4. 고수");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "아란모어 섬을 지키는 여신은 누구인가?", 2);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "아란모어 섬을 지키는 여신은 누구인가?", ChatColor.RED + "1. 데히트라" + ChatColor.GRAY + " 2. 마가이" + ChatColor.YELLOW + " 3. 스카디" + ChatColor.AQUA + " 4. 네반");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "티르의 등대는 몇층짜리 건축물인가?", 2);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "티르의 등대는 몇층짜리 건축물인가?", ChatColor.RED + "1. 3층" + ChatColor.GRAY + " 2. 4층" + ChatColor.YELLOW + " 3. 5층" + ChatColor.AQUA + " 4. 6층");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "시드 광산에 존재하는 던전의 이름은 무엇인가?", 2);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "시드 광산에 존재하는 던전의 이름은 무엇인가?", ChatColor.RED + "1. 요정 왕국" + ChatColor.GRAY + " 2. 광란의 요정 왕국" + ChatColor.YELLOW + " 3. 타락한 요정 왕국" + ChatColor.AQUA + " 4. 광요의 요정 왕국");
+			
+			new BukkitRunnable() {
+				int time = 0;
+				int cntP = 0;
+				int cnt = 0;
+				String qu;
+				
+				Skeleton sk = skel;
 
+				@Override
+				public void run() {
+
+					if (time % 400 == 60) {
+						qu = randomKey(question);
+						// 끝나는 조건
+						try {
+							for(Entity ent : sk.getNearbyEntities(30, 30, 30)) {
+								if(ent instanceof Player) {
+									cntP++;
+								}
+							}
+							if(cntP == 0) {
+								this.cancel();
+							} else {
+								cntP = 0;
+							}
+							
+							if(sk.isDead()) {
+								this.cancel();
+							}
+						} catch(Exception e) {
+							
+						}
+						
+						// 문제 보여주기
+						try {
+							for(Entity all : sk.getNearbyEntities(30, 30, 30)) {
+								if(all instanceof Player) {
+									if(!sk.isDead()) {
+										all.sendMessage(qu);
+										all.sendMessage(choice.get(qu));
+									}
+								}
+							}
+						} catch(Exception e) {
+							
+						}
+					}
+					
+					if (time % 400 == 310) {
+						// 답 맞추기
+						int answer = question.get(qu);
+						
+						int currentCnt = cnt;
+						
+						if(answer == 0) {
+							for(Entity all : sk.getNearbyEntities(30, 30, 30)) {
+								if(all instanceof Player) {
+									if(all.getLocation().add(0,-1,0).getBlock().getType() != Material.RED_WOOL) {
+										cnt++;
+									} else {
+										player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 0.1f);
+										sk.damage(50000000);
+									}
+								}
+							}
+						} else if(answer == 1) {
+							for(Entity all : sk.getNearbyEntities(30, 30, 30)) {
+								if(all instanceof Player) {
+									if(all.getLocation().add(0,-1,0).getBlock().getType() != Material.LIGHT_GRAY_WOOL) {
+										cnt++;
+									} else {
+										player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 0.1f);
+										sk.damage(50000000);
+									}
+								}
+							}
+						} else if(answer == 2) {
+							for(Entity all : sk.getNearbyEntities(30, 30, 30)) {
+								if(all instanceof Player) {
+									if(all.getLocation().add(0,-1,0).getBlock().getType() != Material.YELLOW_WOOL) {
+										cnt++;
+									} else {
+										player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 0.1f);
+										sk.damage(50000000);
+									}
+								}
+							}
+						} else if(answer == 3) {
+							for(Entity all : sk.getNearbyEntities(30, 30, 30)) {
+								if(all instanceof Player) {
+									if(all.getLocation().add(0,-1,0).getBlock().getType() != Material.BLUE_WOOL) {
+										cnt++;
+									} else {
+										player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 0.1f);
+										sk.damage(50000000);
+									}
+								}
+							}
+						} else {
+							
+						}
+						
+						if(cnt != currentCnt) {
+							for(Entity all : sk.getNearbyEntities(30, 30, 30)) {
+								if(all instanceof Player) {
+									Player p = (Player) all;
+									if(p.getHealth() - (cnt+1) < 0) {
+										p.setHealth(0);
+										p.sendMessage(ChatColor.BOLD + "" + ChatColor.RED + "틀린 사람이 존재합니다.");
+									} else {
+										p.setHealth(player.getHealth() - (cnt+1));
+										p.sendMessage(ChatColor.BOLD + "" + ChatColor.RED + "틀린 사람이 존재합니다.");
+									}
+								}
+							}
+						}
+						
+					}
+
+					time++;
+				}
+			}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
+			
+			new BossHealth().getBar34().setProgress(1.0);
+			new BossHealth().getBar34().addPlayer(player);
+			return;
+		}
+
+	}
+	
+	public String randomKey(HashMap<String, Integer> map) {
+		List<String> keysAsArray = new ArrayList<String>(map.keySet());
+		Random rnd = new Random();
+		return keysAsArray.get(rnd.nextInt(keysAsArray.size()));
 	}
 	
 }

@@ -13702,6 +13702,58 @@ public class SpawnMob {
 	}
 	
 	public boolean mob215(LivingEntity entity, Location loc) {
+		// 하드숲 보스
+		if (loc.getX() <= 3699 && loc.getY() <= 230 && loc.getZ() <= 4217 
+				&& loc.getX() >= 3657 && loc.getY() >= 180 && loc.getZ() >= 4172) {
+			Location chestLoc = new Location(entity.getWorld(), -1838, 92, 3051);
+			Block block = chestLoc.getBlock();
+			Chest chest = (Chest) block.getState();
+			if (entity.getType() == (EntityType) EntityType.SKELETON) {
+				entity.setCustomName(ChatColor.GRAY + "유적의 주인?" + ChatColor.YELLOW + " [Lv.10000]");
+				entity.setCustomNameVisible(true);
+				entity.setMaxHealth(100000000);
+				entity.setHealth(100000000);
+				EntityEquipment weapon = entity.getEquipment();
+				ItemStack weaponItem = new ItemStack(Material.AIR);
+				weapon.setItemInMainHand(weaponItem);
+				EntityEquipment head = entity.getEquipment();
+				ItemStack headItem = new ItemStack(Material.NETHERITE_HELMET);
+				head.setHelmet(headItem);
+				EntityEquipment chestplate = entity.getEquipment();
+				ItemStack chestplateItem = new ItemStack(Material.NETHERITE_CHESTPLATE);
+				chestplate.setChestplate(chestplateItem);
+				EntityEquipment leggings = entity.getEquipment();
+				ItemStack leggingsItem = new ItemStack(Material.NETHERITE_LEGGINGS);
+				leggings.setLeggings(leggingsItem);
+				EntityEquipment boots = entity.getEquipment();
+				ItemStack bootsItem = new ItemStack(Material.NETHERITE_BOOTS);
+				boots.setBoots(bootsItem);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 7000));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 0));
+				return true;
+			} else if (entity.getType() == (EntityType) EntityType.SLIME) {
+				entity.setCustomName(ChatColor.GRAY + "주인의 알" + ChatColor.YELLOW + " [Lv.1]");
+				entity.setCustomNameVisible(true);
+				entity.setMaxHealth(500000);
+				entity.setHealth(500000);
+				Slime magma = (Slime) entity;
+				magma.setSize(2);
+				entity.setMaxHealth(500000);
+				entity.setHealth(500000);
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 3000));
+				return true;
+			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM
+					|| entity.getType() == (EntityType) EntityType.SALMON
+					|| entity.getType() == (EntityType) EntityType.ITEM_FRAME
+					|| entity.getType() == (EntityType) EntityType.DROPPED_ITEM
+					|| entity.getType() == (EntityType) EntityType.ARMOR_STAND
+					|| entity.getType() == (EntityType) EntityType.VILLAGER
+					|| entity.getType() == (EntityType) EntityType.SKELETON_HORSE) {
+				return true;
+			} else {
+				return false;
+			}
+		}
 		return true;
 	}
 	

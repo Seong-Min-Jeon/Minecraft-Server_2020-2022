@@ -88,16 +88,22 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.BlockBurnEvent;
+import org.bukkit.event.block.BlockCanBuildEvent;
+import org.bukkit.event.block.BlockCookEvent;
 import org.bukkit.event.block.BlockDamageEvent;
 import org.bukkit.event.block.BlockDispenseEvent;
+import org.bukkit.event.block.BlockEvent;
 import org.bukkit.event.block.BlockFadeEvent;
 import org.bukkit.event.block.BlockFromToEvent;
 import org.bukkit.event.block.BlockIgniteEvent;
 import org.bukkit.event.block.BlockIgniteEvent.IgniteCause;
+import org.bukkit.event.block.BlockMultiPlaceEvent;
 import org.bukkit.event.block.BlockPhysicsEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
+import org.bukkit.event.block.EntityBlockFormEvent;
 import org.bukkit.event.block.FluidLevelChangeEvent;
 import org.bukkit.event.block.LeavesDecayEvent;
+import org.bukkit.event.block.MoistureChangeEvent;
 import org.bukkit.event.entity.CreatureSpawnEvent;
 import org.bukkit.event.entity.CreeperPowerEvent;
 import org.bukkit.event.entity.EntityBreedEvent;
@@ -352,9 +358,9 @@ public class Main extends JavaPlugin implements Listener{
 		} else if(player.getDisplayName().equalsIgnoreCase("Illusion__")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.GOLD + "일류 건축가 릴륨.");
 		} else if(player.getDisplayName().equalsIgnoreCase("JunletTridner")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.GOLD + "달걀은 아직인가요? JUN.");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.GOLD + "데빌의 힘을 보여드립니다. Jun");
 		} else if(player.getDisplayName().equalsIgnoreCase("SARASHINA_RUKA")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.YELLOW + "그저 월브레이커");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.YELLOW + "보석.. 보석은 어디에 있는가?");
 		} else {
 			event.setJoinMessage("야생의 누군가가 등장했다.");
 		}
@@ -7119,6 +7125,19 @@ public class Main extends JavaPlugin implements Listener{
 						new BossHealth().getBar33().setProgress((boss.getHealth()-event.getFinalDamage()) / 4000000.0);
 					}
 				}
+				// 유적의 주인?
+				if (mob.getCustomName().substring(2).equalsIgnoreCase("유적의 주인?" + ChatColor.YELLOW + " [Lv.10000]")) {
+					LivingEntity boss = (LivingEntity) mob;
+					
+					if(boss.getHealth() - event.getFinalDamage() <= 0) {
+						for(Player p : new BossHealth().getBar34().getPlayers()) {
+							new BossHealth().getBar34().setProgress(0);
+							new BossHealth().getBar34().removePlayer(p);
+						}
+					} else {
+						new BossHealth().getBar34().setProgress((boss.getHealth()-event.getFinalDamage()) / 100000000.0);
+					}
+				}
 			}
 		} catch(Exception e) {
 			
@@ -8630,6 +8649,9 @@ public class Main extends JavaPlugin implements Listener{
 			if(event.getAction()==Action.PHYSICAL && event.getClickedBlock().getType() == Material.FARMLAND) {
 				event.setCancelled(true);
 			}
+			if(event.getAction()==Action.PHYSICAL) {
+				event.setCancelled(true);
+			}
 		} catch(Exception e) {
 					
 		}
@@ -8943,6 +8965,27 @@ public class Main extends JavaPlugin implements Listener{
 							nearplayer.getInventory().addItem(rewardKey);
 							nearplayer.teleport(new Location(world, 3470.5, 52, 3740));
 							nearplayer.sendMessage("유적 어딘가로 이동했다.");
+						}
+					}
+				}
+			}
+			if(event.getEntity().getCustomName().substring(2).split("§")[0].equalsIgnoreCase("유적의 주인?")) {
+				
+				ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
+				ItemMeta rewardKeyIm = rewardKey.getItemMeta();
+				rewardKeyIm.setDisplayName(ChatColor.YELLOW + "숲의 유적 하드 보상 열쇠");
+				rewardKey.setItemMeta(rewardKeyIm);
+				
+				List<Entity> entitylist = event.getEntity().getNearbyEntities(30, 30, 30);
+				for (Entity nearEntity : entitylist) {
+					if (nearEntity.getType() == EntityType.PLAYER) {
+						Player nearplayer = (Player) nearEntity;
+						Location loc = nearplayer.getLocation();
+						if (loc.getX() <= 3699 && loc.getY() <= 230 && loc.getZ() <= 4217 
+								&& loc.getX() >= 3657 && loc.getY() >= 180 && loc.getZ() >= 4172) {
+							nearplayer.getInventory().addItem(rewardKey);
+							nearplayer.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "크윽.. 나의 시험을 통과하다니..");
+							nearplayer.sendMessage(ChatColor.YELLOW + "숲의 유적 하드 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
 						}
 					}
 				}
@@ -9816,6 +9859,11 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getGameMode()==GameMode.SURVIVAL || player.isOp() == false) {
 			event.setCancelled(true);
 		}
+		if(player.getGameMode()==GameMode.CREATIVE && player.isOp()) {
+			if(!event.canBuild()) {
+				event.setBuild(true);
+			}
+		}
 	}
 	
 	@EventHandler
@@ -9841,7 +9889,7 @@ public class Main extends JavaPlugin implements Listener{
 		} else if(player.getDisplayName().equalsIgnoreCase("why9196")) {
 			event.setQuitMessage(ChatColor.BLUE + "??????????!?????");
 		} else if(player.getDisplayName().equalsIgnoreCase("Akilae3102")) {
-			event.setQuitMessage(ChatColor.AQUA + "'녹단은 가벼운' 아킬레가 세상을 떠났습니다.");
+			event.setQuitMessage(ChatColor.AQUA + "'노랑단은 가벼운' 아킬레가 세상을 떠났습니다.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Espina_ID")) {
 			event.setQuitMessage(ChatColor.BOLD + "'탈영병' 에스피나의 시간이 얼마 남지 않았습니다.");
 		} else if(player.getDisplayName().equalsIgnoreCase("KangOSung")) {
@@ -9851,7 +9899,7 @@ public class Main extends JavaPlugin implements Listener{
 		} else if(player.getDisplayName().equalsIgnoreCase("JunletTridner")) {
 			event.setQuitMessage(ChatColor.GOLD + "세계 최고의 운을 가진 그 분이 세상을 떠났습니다.");
 		} else if(player.getDisplayName().equalsIgnoreCase("SARASHINA_RUKA")) {
-			event.setQuitMessage(ChatColor.YELLOW + "그림리퍼그림리퍼그림리퍼그림리퍼그림리퍼그림리퍼");
+			event.setQuitMessage(ChatColor.YELLOW + "오늘도 하루종일 광질을 했습니다.");
 		} else {
 			event.setQuitMessage("야생의 누군가가 도망쳐버렸다.");
 		}
@@ -10041,15 +10089,12 @@ public class Main extends JavaPlugin implements Listener{
 	
 	@EventHandler
 	public void blockPhysicsEvent(BlockPhysicsEvent event) {
-		if(event.getBlock().getType() == Material.SUNFLOWER) {
-//			Location loc = event.getBlock().getLocation().add(0,-1,0);
-//			loc.getBlock().setType(Material.SANDSTONE);
-		}
+		event.setCancelled(true);
 	}
 	
 	@EventHandler
 	public void waterPassEvent(BlockFromToEvent event) {
-		
+		event.setCancelled(true);
 	}
 	
 	@EventHandler
@@ -10138,12 +10183,12 @@ public class Main extends JavaPlugin implements Listener{
 	
 	@EventHandler
 	public void onBlockChange(EntityChangeBlockEvent event) {
-		if(event.getBlock().getType() != Material.REDSTONE_ORE && event.getBlock().getType() != Material.REDSTONE && event.getBlock().getType() != Material.REDSTONE_WIRE
-				 && event.getBlock().getType() != Material.REDSTONE_BLOCK && event.getBlock().getType() != Material.REDSTONE_LAMP && event.getBlock().getType() != Material.REDSTONE_TORCH
-				 && event.getBlock().getType() != Material.REDSTONE_WALL_TORCH && event.getBlock().getType() != Material.REPEATER && event.getBlock().getType() != Material.COMPARATOR) {
-			event.setCancelled(true);
-			event.getBlock().setType(Material.AIR);
-		}
+//		if(event.getBlock().getType() != Material.REDSTONE_ORE && event.getBlock().getType() != Material.REDSTONE && event.getBlock().getType() != Material.REDSTONE_WIRE
+//				 && event.getBlock().getType() != Material.REDSTONE_BLOCK && event.getBlock().getType() != Material.REDSTONE_LAMP && event.getBlock().getType() != Material.REDSTONE_TORCH
+//				 && event.getBlock().getType() != Material.REDSTONE_WALL_TORCH && event.getBlock().getType() != Material.REPEATER && event.getBlock().getType() != Material.COMPARATOR) {
+//			event.setCancelled(true);
+//			event.getBlock().setType(Material.AIR);
+//		}
 	}
 	
 	@EventHandler
@@ -10488,7 +10533,7 @@ public class Main extends JavaPlugin implements Listener{
 	}
 	
 	@EventHandler
-	public void EntityUnbreak(HangingBreakByEntityEvent event) {
+	public void entityUnbreak(HangingBreakByEntityEvent event) {
 		if(event.getRemover() instanceof Player) {
 			Player player = (Player) event.getRemover();
 			if(player.getGameMode() == GameMode.ADVENTURE) {
@@ -10498,7 +10543,29 @@ public class Main extends JavaPlugin implements Listener{
 	}
 	
 	@EventHandler
-	public void InvenClose(InventoryCloseEvent event) {
+	public void buildEvent(BlockCanBuildEvent event) {
+		if(!event.isBuildable()) {
+			event.setBuildable(true);
+		}
+	}
+	
+	@EventHandler
+	public void moistureChangeEvent(MoistureChangeEvent event) {
+		event.setCancelled(true);
+	}
+	
+	@EventHandler
+	public void leavesDecayEvent(LeavesDecayEvent event) {
+		event.setCancelled(true);
+	}
+	
+	@EventHandler
+	public void entityBlockFormEvent(EntityBlockFormEvent event) {
+		event.setCancelled(true);
+	}
+	
+	@EventHandler
+	public void invenClose(InventoryCloseEvent event) {
 		try {
 			if(event.getInventory().getType() == InventoryType.CHEST) {
 				Player player = (Player) event.getPlayer();
