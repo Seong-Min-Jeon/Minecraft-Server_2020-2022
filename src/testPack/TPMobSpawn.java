@@ -284,7 +284,6 @@ public class TPMobSpawn {
 			return;
 		}
 		
-		
 		// 카루 던전 중간보스
 		if (loc.getX() == 3808.5 && loc.getY() == 69.5 && loc.getZ() == 3215.5) {
 			player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "네 놈에게 나락을 보여주도록 하지.");
@@ -1817,6 +1816,66 @@ public class TPMobSpawn {
 			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "티르의 등대는 몇층짜리 건축물인가?", ChatColor.RED + "1. 3층" + ChatColor.GRAY + " 2. 4층" + ChatColor.YELLOW + " 3. 5층" + ChatColor.AQUA + " 4. 6층");
 			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "시드 광산에 존재하는 던전의 이름은 무엇인가?", 2);
 			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "시드 광산에 존재하는 던전의 이름은 무엇인가?", ChatColor.RED + "1. 요정 왕국" + ChatColor.GRAY + " 2. 광란의 요정 왕국" + ChatColor.YELLOW + " 3. 타락한 요정 왕국" + ChatColor.AQUA + " 4. 광요의 요정 왕국");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "희귀한 무기는 무슨 색의 이름을 가졌는가?", 2);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "희귀한 무기는 무슨 색의 이름을 가졌는가?", ChatColor.RED + "1. 흰색" + ChatColor.GRAY + " 2. 노란색" + ChatColor.YELLOW + " 3. 밝은 보라색" + ChatColor.AQUA + " 4. 짙은 보라색");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "미푀르유에서 판매하는 포션의 이름으로 틀린 것은?", 3);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "미푀르유에서 판매하는 포션의 이름으로 틀린 것은?", ChatColor.RED + "1. 검은 인간의 피" + ChatColor.GRAY + " 2. 거북이 우린 물" + ChatColor.YELLOW + " 3. 약재 우린 물" + ChatColor.AQUA + " 4. 회복 포션 IV");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "미푀르유에서 판매하는 헬멧의 이름으로 옳은 것은?", 2);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "미푀르유에서 판매하는 헬멧의 이름으로 옳은 것은?", ChatColor.RED + "1. 가메시엘" + ChatColor.GRAY + " 2. 지즈키엘" + ChatColor.YELLOW + " 3. 쿠모구스" + ChatColor.AQUA + " 4. 라디안");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "광이 나는 낫의 이름 색은?", 2);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "광이 나는 낫의 이름 색은?", ChatColor.RED + "1. 회색" + ChatColor.GRAY + " 2. 흰색" + ChatColor.YELLOW + " 3. 노란색" + ChatColor.AQUA + " 4. 밝은 보라색");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "카이만에서 비싸게 취급하는 것은?", 2);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "카이만에서 비싸게 취급하는 것은?", ChatColor.RED + "1. 강화 주문서" + ChatColor.GRAY + " 2. 장비 감정서" + ChatColor.YELLOW + " 3. 포션" + ChatColor.AQUA + " 4. 워프 스크롤");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "오스에서 배를 타고 갈 수 있는 섬의 이름은?", 1);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "오스에서 배를 타고 갈 수 있는 섬의 이름은?", ChatColor.RED + "1. 라히무호나" + ChatColor.GRAY + " 2. 아란모어" + ChatColor.YELLOW + " 3. 에일" + ChatColor.AQUA + " 4. 아렌델");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "아란모어에서 판매하는 누군가의 방한 갑옷의 방어력은?", 1);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "아란모어에서 판매하는 누군가의 방한 갑옷의 방어력은?", ChatColor.RED + "1. 63" + ChatColor.GRAY + " 2. 153" + ChatColor.YELLOW + " 3. 225" + ChatColor.AQUA + " 4. 227");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "아란모어에서 판매하는 방한 헬멧의 방어력은?", 0);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "아란모어에서 판매하는 방한 헬멧의 방어력은?", ChatColor.RED + "1. 0" + ChatColor.GRAY + " 2. 50" + ChatColor.YELLOW + " 3. 150" + ChatColor.AQUA + " 4. 200");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "네비와 처음 만나는 것은 메인 퀘스트 몇장인가?", 3);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "네비와 처음 만나는 것은 메인 퀘스트 몇장인가?", ChatColor.RED + "1. 24장" + ChatColor.GRAY + " 2. 25장" + ChatColor.YELLOW + " 3. 26장" + ChatColor.AQUA + " 4. 27장");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "칼스에서 판매하는 검의 이름은?", 0);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "칼스에서 판매하는 검의 이름은?", ChatColor.RED + "1. 우두마두육도" + ChatColor.GRAY + " 2. 헤븐즈도어" + ChatColor.YELLOW + " 3. 공참각" + ChatColor.AQUA + " 4. 백로");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "죽음의 탑이 보이는 마을의 이름은?", 0);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "죽음의 탑이 보이는 마을의 이름은?", ChatColor.RED + "1. 크레드라트" + ChatColor.GRAY + " 2. 칼스" + ChatColor.YELLOW + " 3. 하마베" + ChatColor.AQUA + " 4. 포르간");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "베아그에서 사육 중인 동물은?", 1);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "베아그에서 사육 중인 동물은?", ChatColor.RED + "1. 닭" + ChatColor.GRAY + " 2. 돼지" + ChatColor.YELLOW + " 3. 소" + ChatColor.AQUA + " 4. 양");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "마법탑의 주인은?", 1);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "마법탑의 주인은?", ChatColor.RED + "1. 니세리나" + ChatColor.GRAY + " 2. 카타리나" + ChatColor.YELLOW + " 3. 줄리엣" + ChatColor.AQUA + " 4. 로미오");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "롱게에서 사육 중인 동물은?", 2);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "롱게에서 사육 중인 동물은?", ChatColor.RED + "1. 닭" + ChatColor.GRAY + " 2. 돼지" + ChatColor.YELLOW + " 3. 소" + ChatColor.AQUA + " 4. 양");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "롱게의 꼬마가 가지고 놀던 장난감은 누가 부쉈는가?", 0);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "롱게의 꼬마가 가지고 놀던 장난감은 누가 부쉈는가?", ChatColor.RED + "1. 떠도는 망령" + ChatColor.GRAY + " 2. 에밀" + ChatColor.YELLOW + " 3. 파스칼" + ChatColor.AQUA + " 4. 마법소녀");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "롱게의 꼬마는 누구 때문에 잠을 자지 못했는가?", 1);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "롱게의 꼬마가 누구 때문에 잠을 자지 못했는가?", ChatColor.RED + "1. 떠도는 망령" + ChatColor.GRAY + " 2. 에밀" + ChatColor.YELLOW + " 3. 파스칼" + ChatColor.AQUA + " 4. 마법소녀");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "하마베에 있는 줄리엣의 고향은 어디인가?", 0);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "하마베에 있는 줄리엣의 고향은 어디인가?", ChatColor.RED + "1. 라파누이" + ChatColor.GRAY + " 2. 라히무호나" + ChatColor.YELLOW + " 3. 시오카나" + ChatColor.AQUA + " 4. 티페라리");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "하마베의 말 상인은 어떤 말을 팔고 있는가?", 1);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "하마베의 말 상인은 어떤 말을 팔고 있는가?", ChatColor.RED + "1. 검갈마" + ChatColor.GRAY + " 2. 황갈마" + ChatColor.YELLOW + " 3. 회갈마" + ChatColor.AQUA + " 4. 갈색마");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "하마베에서 배를 타고 갈 수 없는 섬은?", 3);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "하마베에서 배를 타고 갈 수 없는 섬은?", ChatColor.RED + "1. 라파누이" + ChatColor.GRAY + " 2. 라히무호나" + ChatColor.YELLOW + " 3. 시오카나" + ChatColor.AQUA + " 4. 스켈리그");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "사막 정찰캠프에서 판매하는 아이템은?", 0);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "사막 정찰캠프에서 판매하는 아이템은?", ChatColor.RED + "1. 카이만식 양고기" + ChatColor.GRAY + " 2. 근육의 포션 II" + ChatColor.YELLOW + " 3. 힐링 포션 XIII" + ChatColor.AQUA + " 4. 성수");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "C급 검투사의 이름은?", 0);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "C급 검투사의 이름은?", ChatColor.RED + "1. 레티아리우스" + ChatColor.GRAY + " 2. 갈리" + ChatColor.YELLOW + " 3. 디마카에루스" + ChatColor.AQUA + " 4. 프라에그나리");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "B급 검투사의 이름은?", 0);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "B급 검투사의 이름은?", ChatColor.RED + "1. 갈리" + ChatColor.GRAY + " 2. 디마카에루스" + ChatColor.YELLOW + " 3. 레티아리우스" + ChatColor.AQUA + " 4. 프라에그나리");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "A급 검투사의 이름은?", 1);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "A급 검투사의 이름은?", ChatColor.RED + "1. 갈리" + ChatColor.GRAY + " 2. 디마카에루스" + ChatColor.YELLOW + " 3. 레티아리우스" + ChatColor.AQUA + " 4. 프라에그나리");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "S급 검투사의 이름은?", 2);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "S급 검투사의 이름은?", ChatColor.RED + "1. 갈리" + ChatColor.GRAY + " 2. 디마카에루스" + ChatColor.YELLOW + " 3. 프라에그나리" + ChatColor.AQUA + " 4. 레티아리우스");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "캑터스에서 판매하는 머스타드는 무슨 부위 아이템인가?", 1);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "캑터스에서 판매하는 머스타드는 무슨 부위 아이템인가?", ChatColor.RED + "1. 헬멧" + ChatColor.GRAY + " 2. 갑옷" + ChatColor.YELLOW + " 3. 각반" + ChatColor.AQUA + " 4. 신발");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "추가 데미지(인간형) 수치를 올려주는 보주는 무슨 색인가?", 3);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "추가 데미지(인간형) 수치를 올려주는 보주는 무슨 색인가?", ChatColor.RED + "1. 파란색" + ChatColor.GRAY + " 2. 보라색" + ChatColor.YELLOW + " 3. 초록색" + ChatColor.AQUA + " 4. 빨간색");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "티페라리 마지막 왕자의 이름은?", 3);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "티페라리 마지막 왕자의 이름은?", ChatColor.RED + "1. 에반" + ChatColor.GRAY + " 2. 루디" + ChatColor.YELLOW + " 3. 델론즈" + ChatColor.AQUA + " 4. 크리스");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "리디아 평원으로 쫒겨난 족장의 이름은?", 1);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "리디아 평원으로 쫒겨난 족장의 이름은?", ChatColor.RED + "1. 리디아" + ChatColor.GRAY + " 2. 바람을 가르는 늑대" + ChatColor.YELLOW + " 3. 붉은 날개" + ChatColor.AQUA + " 4. 검은 날개");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "변이된 원시의 땅을 지키는 족장의 이름은?", 2);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "변이된 원시의 땅을 지키는 족장의 이름은?", ChatColor.RED + "1. 리디아" + ChatColor.GRAY + " 2. 바람을 가르는 늑대" + ChatColor.YELLOW + " 3. 붉은 날개" + ChatColor.AQUA + " 4. 검은 날개");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "붉은 날개를 지키는 정예병사의 이름은?", 2);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "붉은 날개를 지키는 정예병사의 이름은?", ChatColor.RED + "1. 포보르 정예병" + ChatColor.GRAY + " 2. 변이된 원시의 땅 정예벙" + ChatColor.YELLOW + " 3. 옛 것" + ChatColor.AQUA + " 4. 변이된 첨예발톱");
 			
 			new BukkitRunnable() {
 				int time = 0;
@@ -1879,7 +1938,7 @@ public class TPMobSpawn {
 										cnt++;
 									} else {
 										player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 0.1f);
-										sk.damage(50000000);
+										sk.damage(5000000);
 									}
 								}
 							}
@@ -1890,7 +1949,7 @@ public class TPMobSpawn {
 										cnt++;
 									} else {
 										player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 0.1f);
-										sk.damage(50000000);
+										sk.damage(5000000);
 									}
 								}
 							}
@@ -1901,7 +1960,7 @@ public class TPMobSpawn {
 										cnt++;
 									} else {
 										player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 0.1f);
-										sk.damage(50000000);
+										sk.damage(5000000);
 									}
 								}
 							}
@@ -1912,7 +1971,7 @@ public class TPMobSpawn {
 										cnt++;
 									} else {
 										player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 0.1f);
-										sk.damage(50000000);
+										sk.damage(5000000);
 									}
 								}
 							}
