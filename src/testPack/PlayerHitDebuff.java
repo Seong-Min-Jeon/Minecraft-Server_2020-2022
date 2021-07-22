@@ -695,7 +695,7 @@ public class PlayerHitDebuff {
 	public void mob10(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("3층의 지배자" + ChatColor.YELLOW + " [Lv.??]")) {
 			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
-				int num = rnd.nextInt(12);
+				int num = rnd.nextInt(15);
 				if (num == 0) {
 					player.sendMessage(ChatColor.RED + "지배자가 분신을 소환합니다.");
 					sendMessage(player, ChatColor.RED + "지배자가 분신을 소환합니다.");
@@ -800,7 +800,7 @@ public class PlayerHitDebuff {
 	public void mob11(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("4층의 지배자" + ChatColor.YELLOW + " [Lv.??]")) {
 			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
-				int num = rnd.nextInt(12);
+				int num = rnd.nextInt(18);
 				if (num == 0) {
 					LivingEntity ent = (LivingEntity) mob;
 					EntityEquipment weapon = ent.getEquipment();
@@ -1183,8 +1183,7 @@ public class PlayerHitDebuff {
 						player.sendMessage(ChatColor.RED + "지배자가 약탈을 시전합니다.");
 						sendMessage(player, ChatColor.RED + "지배자가 약탈을 시전합니다.");
 					}
-				}
-				if (num == 1) {
+				} else if (num == 1) {
 					player.sendMessage(ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
 					sendMessage(player, ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
 					player.getWorld().playSound(mob.getLocation(), Sound.BLOCK_GRASS_BREAK, 5.0f, 2.0f);
@@ -1291,7 +1290,7 @@ public class PlayerHitDebuff {
 	public void mob12(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("5층의 지배자" + ChatColor.YELLOW + " [Lv.??]")) {
 			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
-				int num = rnd.nextInt(24);
+				int num = rnd.nextInt(25);
 				if (num == 0) {
 					player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 100, 200, true,true));
 					player.getWorld().playSound(player.getLocation(), Sound.AMBIENT_CAVE, 3.0f, 1.0f);
@@ -1446,7 +1445,7 @@ public class PlayerHitDebuff {
 					
 				}
 			} else {
-				int num = rnd.nextInt(18);
+				int num = rnd.nextInt(15);
 				if (num == 0) {
 					// ===============================================================
 					ParticleData pd = new ParticleData(player.getUniqueId());
@@ -1471,7 +1470,7 @@ public class PlayerHitDebuff {
 	public void mob13(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("6층의 지배자" + ChatColor.YELLOW + " [Lv.??]")) {
 			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
-				int num = rnd.nextInt(18);
+				int num = rnd.nextInt(20);
 				if (num == 0) {
 					new ParticleEffect(player, mob).newEffect102();
 					((Skeleton) mob).setTarget(player);
@@ -1978,7 +1977,7 @@ public class PlayerHitDebuff {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("코낭그" + ChatColor.YELLOW + " [Lv.??]")) {
 			
 			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
-				int num = rnd.nextInt(10);
+				int num = rnd.nextInt(15);
 				if (num == 0) {
 					player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 100, 200, true,true));
 					player.getWorld().playSound(player.getLocation(), Sound.AMBIENT_CAVE, 3.0f, 1.0f);
@@ -2083,7 +2082,7 @@ public class PlayerHitDebuff {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("아라크네" + ChatColor.YELLOW + " [Lv.??]")) {
 			
 			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
-				int num = rnd.nextInt(12);
+				int num = rnd.nextInt(15);
 				if (num == 0) {
 					player.getWorld().playSound(player.getLocation(), Sound.AMBIENT_CAVE, 2.0f, 3.0f);
 					player.sendMessage(ChatColor.RED + "아라크네가 알까기를 시전했습니다.");
@@ -2177,7 +2176,7 @@ public class PlayerHitDebuff {
 					}, 0, 1);
 				}
 			} else {
-				int num = rnd.nextInt(13);
+				int num = rnd.nextInt(15);
 				if (num == 0) {
 					Location loc = mob.getLocation();
 					int r = 20;
@@ -2343,7 +2342,7 @@ public class PlayerHitDebuff {
 				ItemStack mobBowItem = new ItemStack(Material.MUSIC_DISC_CHIRP);
 				mobBow.setItemInOffHand(mobBowItem);
 				
-				int num = rnd.nextInt(8);
+				int num = rnd.nextInt(10);
 				if (num == 0) {
 					mob.setVelocity(((Skeleton) mob).getEyeLocation().getDirection().add(new Vector(0, 2, 0)));
 					((Skeleton) mob).setTarget(player);
@@ -2393,7 +2392,7 @@ public class PlayerHitDebuff {
 				ItemStack mobBowItem = new ItemStack(Material.AIR);
 				mobBow.setItemInOffHand(mobBowItem);
 				
-				int num = rnd.nextInt(15);
+				int num = rnd.nextInt(18);
 				if (num == 0) {
 					mob.setVelocity(((Skeleton) mob).getEyeLocation().getDirection().add(new Vector(0, 2, 0)));
 					((Skeleton) mob).setTarget(player);
@@ -2494,7 +2493,7 @@ public class PlayerHitDebuff {
 	public void mob25(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("암석 거인의 파편" + ChatColor.YELLOW + " [Lv.455]")) {
 
-			int num = rnd.nextInt(20);
+			int num = rnd.nextInt(23);
 			if (num == 0) {
 				player.addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, 120, 0, true,true));
 				player.sendMessage(ChatColor.RED + "암석 거인이 당신을 잡아듭니다.");
@@ -3125,7 +3124,7 @@ public class PlayerHitDebuff {
 	// 미아즈마
 	public void mob43(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("미아즈마" + ChatColor.YELLOW + " [Lv.??]")) {
-			int num = rnd.nextInt(15);
+			int num = rnd.nextInt(18);
 			if(num == 0) {
 				player.sendMessage(ChatColor.RED + "미아즈마가 곰을 부릅니다.");
 				sendMessage(player, ChatColor.RED + "미아즈마가 곰을 부릅니다.");
@@ -3263,16 +3262,16 @@ public class PlayerHitDebuff {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("와우" + ChatColor.YELLOW + " [Lv.??]")) {
 			
 			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
-				int num = rnd.nextInt(15);
+				int num = rnd.nextInt(20);
 				if (num < 2) {
 					((Slime) mob).setTarget(player);
 					player.setVelocity(player.getEyeLocation().getDirection().multiply(-1.6f));
 					player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_SLIME_HURT, 3.0f, 1.0f);
-				} else if(num < 5) {
+				} else if(num < 4) {
 					((Slime) mob).setTarget(player);
 					player.getWorld().spawnEntity(mob.getLocation(), EntityType.SLIME);
 					player.getWorld().spawnEntity(mob.getLocation(), EntityType.SLIME);
-				} else if(num == 5) {
+				} else if(num == 4) {
 					((Slime) mob).setTarget(player);
 					player.sendMessage(ChatColor.RED + "와우가 불꽃비를 내립니다.");
 					sendMessage(player, ChatColor.RED + "와우가 불꽃비를 내립니다.");
@@ -3334,15 +3333,15 @@ public class PlayerHitDebuff {
 					}, 0, 1);
 				}
 			} else {
-				int num = rnd.nextInt(15);
+				int num = rnd.nextInt(20);
 				if (num < 2) {
 					((Slime) mob).setTarget(player);
 					player.setVelocity(player.getEyeLocation().getDirection().multiply(-1.6f));
 					player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_SLIME_HURT, 3.0f, 1.0f);
-				} else if(num < 5) {
+				} else if(num < 4) {
 					((Slime) mob).setTarget(player);
 					player.getWorld().spawnEntity(mob.getLocation(), EntityType.SLIME);
-				} else if(num == 5) {
+				} else if(num == 4) {
 					((Slime) mob).setTarget(player);
 					player.sendMessage(ChatColor.RED + "몸 속에 슬라임의 점액이 흘러옵니다.");
 					
@@ -3401,7 +3400,7 @@ public class PlayerHitDebuff {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("공양을 받는 돼지" + ChatColor.YELLOW + " [Lv.??]")) {
 			
 			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
-				int num = rnd.nextInt(13);
+				int num = rnd.nextInt(15);
 				if (num == 0) {
 					((Zoglin) mob).setTarget(player);
 					player.setVelocity(new Vector(0, 2, 0));
@@ -3442,7 +3441,7 @@ public class PlayerHitDebuff {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("아빠 상어" + ChatColor.YELLOW + " [Lv.??]")) {
 			
 			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
-				int num = rnd.nextInt(25);
+				int num = rnd.nextInt(20);
 				if(num < 2) {
 					((WitherSkeleton) mob).setTarget(player);
 					player.sendMessage(ChatColor.RED + "아빠 상어의 썩은 토사물에 맞았습니다.");
@@ -3514,7 +3513,7 @@ public class PlayerHitDebuff {
 					}, 0, 1);
 				}
 			} else {
-				int num = rnd.nextInt(15);
+				int num = rnd.nextInt(20);
 				if(num < 2) {
 					((WitherSkeleton) mob).setTarget(player);
 					player.sendMessage(ChatColor.RED + "아빠 상어의 토사물에 맞았습니다.");

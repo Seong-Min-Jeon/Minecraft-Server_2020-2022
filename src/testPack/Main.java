@@ -8649,9 +8649,6 @@ public class Main extends JavaPlugin implements Listener{
 			if(event.getAction()==Action.PHYSICAL && event.getClickedBlock().getType() == Material.FARMLAND) {
 				event.setCancelled(true);
 			}
-			if(event.getAction()==Action.PHYSICAL) {
-				event.setCancelled(true);
-			}
 		} catch(Exception e) {
 					
 		}
@@ -8897,9 +8894,10 @@ public class Main extends JavaPlugin implements Listener{
 			event.setCancelled(true);
 		}
 		if(event.getBlock().getType() == Material.COMMAND_BLOCK) {
-			if(!player.getDisplayName().equals("yumehama")) {
-				event.setCancelled(true);
-			}			
+//			if(!player.getDisplayName().equals("yumehama")) {
+//				event.setCancelled(true);
+//			}			
+			event.setCancelled(true);
 		}
 		if(event.getBlock().getType() == Material.REPEATING_COMMAND_BLOCK) {
 			event.setCancelled(true);
@@ -10089,7 +10087,21 @@ public class Main extends JavaPlugin implements Listener{
 	
 	@EventHandler
 	public void blockPhysicsEvent(BlockPhysicsEvent event) {
-		event.setCancelled(true);
+		Material mat = event.getBlock().getType();
+		if(mat == Material.ACACIA_BUTTON || mat == Material.BIRCH_BUTTON || mat == Material.CRIMSON_BUTTON || mat == Material.DARK_OAK_BUTTON
+				|| mat == Material.JUNGLE_BUTTON || mat == Material.OAK_BUTTON || mat == Material.POLISHED_BLACKSTONE_BUTTON || mat == Material.SPRUCE_BUTTON
+				|| mat == Material.STONE_BUTTON || mat == Material.WARPED_BUTTON || mat == Material.ACACIA_PRESSURE_PLATE || mat == Material.BIRCH_PRESSURE_PLATE
+				|| mat == Material.CRIMSON_PRESSURE_PLATE || mat == Material.DARK_OAK_PRESSURE_PLATE || mat == Material.HEAVY_WEIGHTED_PRESSURE_PLATE || mat == Material.JUNGLE_PRESSURE_PLATE
+				|| mat == Material.LIGHT_WEIGHTED_PRESSURE_PLATE || mat == Material.OAK_PRESSURE_PLATE || mat == Material.POLISHED_BLACKSTONE_PRESSURE_PLATE || mat == Material.SPRUCE_PRESSURE_PLATE
+				|| mat == Material.STONE_PRESSURE_PLATE || mat == Material.WARPED_PRESSURE_PLATE || mat == Material.ACACIA_DOOR || mat == Material.BIRCH_DOOR
+				|| mat == Material.CRIMSON_DOOR || mat == Material.DARK_OAK_DOOR || mat == Material.IRON_DOOR || mat == Material.JUNGLE_DOOR
+				|| mat == Material.OAK_DOOR || mat == Material.SPRUCE_DOOR || mat == Material.WARPED_DOOR || mat == Material.REPEATER
+				|| mat == Material.TRIPWIRE_HOOK || mat == Material.TRIPWIRE || mat == Material.STRING || mat == Material.REDSTONE
+				|| mat == Material.REDSTONE_WIRE|| mat == Material.COMMAND_BLOCK || mat == Material.CHAIN_COMMAND_BLOCK || mat == Material.REPEATING_COMMAND_BLOCK) {
+			event.setCancelled(false);
+		} else {
+			event.setCancelled(true);
+		}
 	}
 	
 	@EventHandler

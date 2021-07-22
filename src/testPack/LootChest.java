@@ -2955,12 +2955,12 @@ public class LootChest {
 		int num6 = rnd.nextInt(50);		// 스태프
 		int num7 = rnd.nextInt(100); 	// 반지
 		int num8 = rnd.nextInt(20);		// 상자1
-		int num9 = rnd.nextInt(70);		// 상자2
-		int num10 = rnd.nextInt(200);	// 상자3 
-		int num11 = rnd.nextInt(20);	// 피 64개
-		int num12 = rnd.nextInt(40);	// 쓸개 64개
-		int num13 = rnd.nextInt(80);	// 살점 64개
-		int num14 = rnd.nextInt(160);	// 간 64개
+		int num9 = rnd.nextInt(50);		// 상자2
+		int num10 = rnd.nextInt(100);	// 상자3 
+		int num11 = rnd.nextInt(10);	// 피 64개
+		int num12 = rnd.nextInt(20);	// 쓸개 64개
+		int num13 = rnd.nextInt(40);	// 살점 64개
+		int num14 = rnd.nextInt(80);	// 간 64개
 		int numEme = rnd.nextInt(10) + 5;
 		int tokenPercent = rnd.nextInt(10);
 		
@@ -3233,16 +3233,23 @@ public class LootChest {
 			im.setDisplayName(ChatColor.DARK_RED + "의문의 상자");
 		} else if(num == 4) {
 			im.setDisplayName(ChatColor.DARK_PURPLE + "의문의 상자");
+		} else if(num == 5) {
+			im.setDisplayName(ChatColor.DARK_GREEN + "의문의 상자");
 		}
 		
 		int minLvl = ((int)(lvl/10)) * 10;
 		int maxLvl = minLvl + 10;
 		
 		ArrayList<String> lore = new ArrayList();
-		lore.add(ChatColor.GRAY + "레벨 범위: " + ChatColor.WHITE + minLvl + "-" + maxLvl);
-		lore.add(ChatColor.GRAY + " ");
-		lore.add(ChatColor.GRAY + "신비한 힘으로 굳게 닫힌 상자");
-		lore.add(ChatColor.GRAY + "요정의 테이블에서 열 수 있을 것 같다.");
+		if(num == 5) {
+			lore.add(ChatColor.GRAY + "신비한 힘으로 굳게 닫힌 상자");
+			lore.add(ChatColor.GRAY + "요정의 테이블에서 열 수 있을 것 같다.");
+		} else {
+			lore.add(ChatColor.GRAY + "레벨 범위: " + ChatColor.WHITE + minLvl + "-" + maxLvl);
+			lore.add(ChatColor.GRAY + " ");
+			lore.add(ChatColor.GRAY + "신비한 힘으로 굳게 닫힌 상자");
+			lore.add(ChatColor.GRAY + "요정의 테이블에서 열 수 있을 것 같다.");
+		}
 		im.setLore(lore);
 		
 		im.addItemFlags(ItemFlag.HIDE_ENCHANTS);

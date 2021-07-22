@@ -1802,10 +1802,6 @@ public class TPMobSpawn {
 			
 			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "당신이 태어난 마을의 이름은?", 0);
 			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "당신이 태어난 마을의 이름은?", ChatColor.RED + "1. 워그닐" + ChatColor.GRAY + " 2. 포르간" + ChatColor.YELLOW + " 3. 위그닐" + ChatColor.AQUA + " 4. 티르");
-			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "[근하신년]의 뜻은 정열적이고 활력있는 새해를 맞이한다는 뜻이다.", 1);
-			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "[근하신년]의 뜻은 정열적이고 활력있는 새해를 맞이한다는 뜻이다.", ChatColor.RED + "1. 맞다." + ChatColor.GRAY + " 2. 아니다.");
-			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "[송구영신]은 묵은 해를 보내고 새해를 맞이한다는 뜻이다.", 0);
-			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "[송구영신]은 묵은 해를 보내고 새해를 맞이한다는 뜻이다.", ChatColor.RED + "1. 맞다." + ChatColor.GRAY + " 2. 아니다.");
 			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "포르간 촌장의 취미는 무엇인가?", 2);
 			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "포르간 촌장의 취미는 무엇인가?", ChatColor.RED + "1. 골프" + ChatColor.GRAY + " 2. 수영" + ChatColor.YELLOW + " 3. 낚시" + ChatColor.AQUA + " 4. 전투");
 			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "스켈레톤이 가장 좋아하는 음식은 무엇인가?", 0);
@@ -1874,8 +1870,46 @@ public class TPMobSpawn {
 			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "리디아 평원으로 쫒겨난 족장의 이름은?", ChatColor.RED + "1. 리디아" + ChatColor.GRAY + " 2. 바람을 가르는 늑대" + ChatColor.YELLOW + " 3. 붉은 날개" + ChatColor.AQUA + " 4. 검은 날개");
 			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "변이된 원시의 땅을 지키는 족장의 이름은?", 2);
 			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "변이된 원시의 땅을 지키는 족장의 이름은?", ChatColor.RED + "1. 리디아" + ChatColor.GRAY + " 2. 바람을 가르는 늑대" + ChatColor.YELLOW + " 3. 붉은 날개" + ChatColor.AQUA + " 4. 검은 날개");
-			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "붉은 날개를 지키는 정예병사의 이름은?", 2);
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "붉은 날개를 지키는 정예병사의 이름은?", 3);
 			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "붉은 날개를 지키는 정예병사의 이름은?", ChatColor.RED + "1. 포보르 정예병" + ChatColor.GRAY + " 2. 변이된 원시의 땅 정예벙" + ChatColor.YELLOW + " 3. 옛 것" + ChatColor.AQUA + " 4. 변이된 첨예발톱");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "바다 면과 대기면의 온도 차가 큰 곳에서 나타나는 현상으로 실제로는 없지만 있는 것처럼 보이는 현상은 무엇인가?", 0);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "바다 면과 대기면의 온도 차가 큰 곳에서 나타나는 현상으로 실제로는 없지만 있는 것처럼 보이는 현상은 무엇인가?", ChatColor.RED + "1. 신기루" + ChatColor.GRAY + " 2. 아지랑이" + ChatColor.YELLOW + " 3. 호라이즌 현상" + ChatColor.AQUA + " 4. 에크모 현상");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "2018 자카르타 팔렘방 아시안 게임에서 첫 종목으로 채택된 무술은 무엇인가?", 1);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "2018 자카르타 팔렘방 아시안 게임에서 첫 종목으로 채택된 무술은 무엇인가?", ChatColor.RED + "1. 카포에라" + ChatColor.GRAY + " 2. 주짓수" + ChatColor.YELLOW + " 3. 무에타이" + ChatColor.AQUA + " 4. 가라데");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "고대 이집트에서는 왕을 뭐라고 불렀는가?", 3);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "고대 이집트에서는 왕을 뭐라고 불렀는가?", ChatColor.RED + "1. 아템" + ChatColor.GRAY + " 2. 유희" + ChatColor.YELLOW + " 3. 차르" + ChatColor.AQUA + " 4. 파라오");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "'윷'은 어떤 가축을 뜻하는가?", 0);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "'윷'은 어떤 가축을 뜻하는가?", ChatColor.RED + "1. 소" + ChatColor.GRAY + " 2. 개" + ChatColor.YELLOW + " 3. 말" + ChatColor.AQUA + " 4. 양");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "한 쪽이 양보하지 않는 한, 둘 다 파국으로 치닫게 되는 상황을 가리키는 용어는 무엇인가?", 2);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "한 쪽이 양보하지 않는 한, 둘 다 파국으로 치닫게 되는 상황을 가리키는 용어는 무엇인가?", ChatColor.RED + "1. 윈윈게임" + ChatColor.GRAY + " 2. 제로섬게임" + ChatColor.YELLOW + " 3. 치킨게임" + ChatColor.AQUA + " 4. 파이게임");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "'애니메이션'이란, '이것'을 뜻하는 라틴어 '아니마'에서 유래되었다. '이것'은 무엇인가?", 2);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "'애니메이션'이란, '이것'을 뜻하는 라틴어 '아니마'에서 유래되었다. '이것'은 무엇인가?", ChatColor.RED + "1. 어린이" + ChatColor.GRAY + " 2. 웃음" + ChatColor.YELLOW + " 3. 영혼" + ChatColor.AQUA + " 4. 동작");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "운칠기삼은 '운'이 7할, '기'가 3할을 차지한다는 뜻이다. '기'는 무엇을 의미하는가?", 1);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "운칠기삼은 '운'이 7할, '기'가 3할을 차지한다는 뜻이다. '기'는 무엇을 의미하는가?", ChatColor.RED + "1. 기운" + ChatColor.GRAY + " 2. 능력" + ChatColor.YELLOW + " 3. 응원" + ChatColor.AQUA + " 4. 노력");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "뉴스나 기사에서 특별히 알리는 소식을 '특보'라고 하는데, 그렇다면 기쁜 기별이나 소식은 뭐라고 하는가?", 0);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "뉴스나 기사에서 특별히 알리는 소식을 '특보'라고 하는데, 그렇다면 기쁜 기별이나 소식은 뭐라고 하는가?", ChatColor.RED + "1. 낭보" + ChatColor.GRAY + " 2. 비보" + ChatColor.YELLOW + " 3. 오보" + ChatColor.AQUA + " 4. 바보");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "독일 뮌헨에서 열리는 민속축제인 '옥토버페스트'는 무슨 축제인가?", 0);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "독일 뮌헨에서 열리는 민속축제인 '옥토버페스트'는 무슨 축제인가?", ChatColor.RED + "1. 맥주" + ChatColor.GRAY + " 2. 소세지" + ChatColor.YELLOW + " 3. 치즈" + ChatColor.AQUA + " 4. 토마토");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "이사, 결혼 등 큰 행사가 있는 날에 '손 없는 날'을 잡는다고 하는데, 여기서 손은 무엇을 뜻하는 말인가?", 1);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "이사, 결혼 등 큰 행사가 있는 날에 '손 없는 날'을 잡는다고 하는데, 여기서 손은 무엇을 뜻하는 말인가?", ChatColor.RED + "1. 바람" + ChatColor.GRAY + " 2. 귀신" + ChatColor.YELLOW + " 3. 나쁜 일" + ChatColor.AQUA + " 4. 바쁜 일");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "다음 중 시계의 시침과 분침이 이루는 내각의 크기가 가장 작은 시각은 언제인가?", 3);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "다음 중 시계의 시침과 분침이 이루는 내각의 크기가 가장 작은 시각은 언제인가?", ChatColor.RED + "1. 2시 30분" + ChatColor.GRAY + " 2. 4시" + ChatColor.YELLOW + " 3. 5시 50분" + ChatColor.AQUA + " 4. 1시 20분");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "낯선 곳에서 길을 잃거나 갑작스러운 사고로 119에 구조를 요청할 때 자신의 위치를 알릴 수 있는 기준이 되는 것은 무엇인가?", 1);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "낯선 곳에서 길을 잃거나 갑작스러운 사고로 119에 구조를 요청할 때 자신의 위치를 알릴 수 있는 기준이 되는 것은 무엇인가?", ChatColor.RED + "1. 신호등" + ChatColor.GRAY + " 2. 전봇대" + ChatColor.YELLOW + " 3. 맨홀" + ChatColor.AQUA + " 4. 구름");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "1992년, 세계 최초로 전송된 문자 메시지의 내용은 무엇인가?", 3);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "1992년, 세계 최초로 전송된 문자 메시지의 내용은 무엇인가?", ChatColor.RED + "1. Hello" + ChatColor.GRAY + " 2. Hello World" + ChatColor.YELLOW + " 3. I love you" + ChatColor.AQUA + " 4. Merry Christmas");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "사물의 바탕이나 중심이 되는 중요한 것을 뜻하는 말 '근간'은 뿌리와 무엇을 의미하는가?", 0);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "사물의 바탕이나 중심이 되는 중요한 것을 뜻하는 말 '근간'은 뿌리와 무엇을 의미하는가?", ChatColor.RED + "1. 줄기" + ChatColor.GRAY + " 2. 잎사귀" + ChatColor.YELLOW + " 3. 열매" + ChatColor.AQUA + " 4. 꽃");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "고진감래, 감탄고토, 천신만고, 이 사자성어와 관계 깊은 감각은 무엇인가?", 1);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "고진감래, 감탄고토, 천신만고, 이 사자성어와 관계 깊은 감각은 무엇인가?", ChatColor.RED + "1. 시각" + ChatColor.GRAY + " 2. 미각" + ChatColor.YELLOW + " 3. 후각" + ChatColor.AQUA + " 4. 청각");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "표준국어대사전에 등록되어 있지 않은 감탄사는 무엇인가?", 2);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "표준국어대사전에 등록되어 있지 않은 감탄사는 무엇인가?", ChatColor.RED + "1. 얄라차" + ChatColor.GRAY + " 2. 에키" + ChatColor.YELLOW + " 3. 읏차" + ChatColor.AQUA + " 4. 어일싸");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "다음 중 바이러스로 감염되는 질병이 아닌 것은 무엇인가?", 1);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "다음 중 바이러스로 감염되는 질병이 아닌 것은 무엇인가?", ChatColor.RED + "1. 감기" + ChatColor.GRAY + " 2. 결핵" + ChatColor.YELLOW + " 3. A형 간염" + ChatColor.AQUA + " 4. 홍역");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "2020년 기준 경매 낙찰가가 가장 높은 작품은?", 1);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "2020년 기준 경매 낙찰가가 가장 높은 작품은?", ChatColor.RED + "1. 이중섭 <소>" + ChatColor.GRAY + " 2. 김환기 <Universe 5-IV-71 #200>" + ChatColor.YELLOW + " 3. 김환기 <고요 5-IV-73 #310>" + ChatColor.AQUA + " 4. 김환기 <3-II-72 #220>");
+			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "연약하지만 묵묵히 반짝일 하나", 3);
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "연약하지만 묵묵히 반짝일 하나", ChatColor.RED + "1. 별" + ChatColor.GRAY + " 2. 꽃" + ChatColor.YELLOW + " 3. 생명" + ChatColor.AQUA + " 4. 마음");
 			
 			new BukkitRunnable() {
 				int time = 0;
