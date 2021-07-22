@@ -569,6 +569,16 @@ public class WeaponBuff {
 							}
 						}
 						
+						if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "척척박사의 헬멧")) {
+							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "척척박사의 갑옷")) {
+								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "척척박사의 각반")) {
+									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "척척박사의 신발")) {
+										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 100, 6,true,true));
+									}
+								}
+							}
+						}
+						
 					}
 				}
 			}

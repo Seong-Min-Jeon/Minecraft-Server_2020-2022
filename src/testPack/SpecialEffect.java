@@ -2333,6 +2333,28 @@ public class SpecialEffect {
 		return 0;
 	}
 	
+	public int w9(Player player) {
+		try {
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "버려진 양털")) {
+				return 15;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+	public double w10(Player player) {
+		try {
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "미치광이 박사의 골든 해머")) {
+				return 1;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
 	public int h1(Player player) {
@@ -2488,6 +2510,50 @@ public class SpecialEffect {
 		try {
 			if(player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "럭키한 클로에의 신발")) {
 				return 10;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+	public int b5(Player player) {
+		try {
+			if(player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "잭팟")) {
+				return 30;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+	public int b6(Player player) {
+		try {
+			if(player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "잭팟")) {
+				return 5;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+	public int b7(Player player) {
+		try {
+			if(player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "잭팟")) {
+				return 8;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+	public int b8(Player player) {
+		try {
+			if(player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "잭팟")) {
+				return 8;
 			}
 		} catch(Exception e) {
 			

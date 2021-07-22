@@ -1596,6 +1596,7 @@ public class MobDeath {
 					mul += new SpecialEffect().l3(lootPlayer);
 					mul += new SpecialEffect().b4(lootPlayer);
 					mul += new SpecialEffect().a18(lootPlayer);
+					mul += new SpecialEffect().b5(lootPlayer);
 					//===========================================================================
 					
 					int tmp = 1000000 + (100000*Math.abs(dist));

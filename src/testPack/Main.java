@@ -5709,6 +5709,7 @@ public class Main extends JavaPlugin implements Listener{
 				addHealthPercent += new SpecialEffect().s5(player);
 				addHealthPercent += new SpecialEffect().w2(player);
 				addHealthPercent += new SpecialEffect().w5(player);
+				addHealthPercent += new SpecialEffect().w10(player);
 				
 				if(addHealthPercent > 0) {
 					int addHealth = (int) (event.getDamage() * addHealthPercent / 100); 
@@ -5746,6 +5747,7 @@ public class Main extends JavaPlugin implements Listener{
 				percent10 += new SpecialEffect().a11(player);
 				percent10 += new SpecialEffect().b3(player);
 				percent10 += new SpecialEffect().a21(player);
+				percent10 += new SpecialEffect().b7(player);
 				
 				if(rnd.nextInt(100) < percent10) {
 					if(player.getHealth() >= 18) {
@@ -5802,6 +5804,7 @@ public class Main extends JavaPlugin implements Listener{
 				addHealthPercent += new SpecialEffect().s5(player);
 				addHealthPercent += new SpecialEffect().w2(player);
 				addHealthPercent += new SpecialEffect().w5(player);
+				addHealthPercent += new SpecialEffect().w10(player);
 				
 				if(addHealthPercent > 0) {
 					int addHealth = (int) (event.getDamage() * addHealthPercent / 100); 
@@ -5834,6 +5837,7 @@ public class Main extends JavaPlugin implements Listener{
 				int percent10 = 0;
 				percent10 += new SpecialEffect().a10100(player);
 				percent10 += new SpecialEffect().a22(player);
+				percent10 += new SpecialEffect().b8(player);
 				
 				if(rnd.nextInt(100) < percent10) {
 					if(player.getHealth() >= 18) {
@@ -5890,6 +5894,7 @@ public class Main extends JavaPlugin implements Listener{
 				addHealthPercent += new SpecialEffect().s5(player);
 				addHealthPercent += new SpecialEffect().w2(player);
 				addHealthPercent += new SpecialEffect().w5(player);
+				addHealthPercent += new SpecialEffect().w10(player);
 				
 				if(addHealthPercent > 0) {
 					int addHealth = (int) (event.getDamage() * addHealthPercent / 100); 
@@ -5922,6 +5927,7 @@ public class Main extends JavaPlugin implements Listener{
 				int percent10 = 0;
 				percent10 += new SpecialEffect().a10100(player);
 				percent10 += new SpecialEffect().a22(player);
+				percent10 += new SpecialEffect().b8(player);
 				
 				if(rnd.nextInt(100) < percent10) {
 					if(player.getHealth() >= 18) {
@@ -6091,6 +6097,8 @@ public class Main extends JavaPlugin implements Listener{
 				num += new SpecialEffect().s6(player);
 				num += new SpecialEffect().s8(player);
 				num += new SpecialEffect().w4(player);
+				num += new SpecialEffect().w9(player);
+				num += new SpecialEffect().b6(player);
 				
 				if(num > 70) {
 					num = 70;

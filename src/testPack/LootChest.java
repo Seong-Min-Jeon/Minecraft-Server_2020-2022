@@ -212,6 +212,11 @@ public class LootChest {
 					dungeon15(player);
 				}				
 			}
+			if(block.getX()==3826 && block.getY()==83 && block.getZ()==4121) {
+				if(removeKey(player, "숲의 유적 하드 보상 열쇠")) {
+					dungeon16(player);
+				}				
+			}
 			
 		}
 	}
@@ -3076,6 +3081,271 @@ public class LootChest {
 		var7Lore.add(ChatColor.GRAY + " ");
 		var7Lore.add(ChatColor.BLUE + "-전투 경험치 10% 증가");
 		var7Lore.add(ChatColor.BLUE + "-근접 공격 시 10% 확률로 10% 회복");
+		var7Lore.add(ChatColor.BLUE + "-원거리 공격 시 8% 확률로 10% 회복");
+		var7Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		var7Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		var7Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var7Im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
+		var7Im.setUnbreakable(true);
+		var7Im.setLore(var7Lore);
+		var7.setItemMeta(var7Im);
+		
+		Location chestLoc = new Location(player.getWorld(), -1843, 92, 3043);
+		Block block = chestLoc.getBlock();
+		Chest chest = (Chest) block.getState();
+		ItemStack var8Pro = chest.getInventory().getItem(1).clone();
+		ItemStack var8 = setStat(1, var8Pro, 700);
+		
+		ItemStack var9Pro = chest.getInventory().getItem(2).clone();
+		ItemStack var9 = setStat(2, var9Pro, 700);
+		
+		ItemStack var10Pro = chest.getInventory().getItem(3).clone();
+		ItemStack var10 = setStat(3, var10Pro, 700);
+		
+		ItemStack var11 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS, 64);
+		ItemMeta var11Im = var11.getItemMeta();
+		var11Im.setDisplayName(ChatColor.AQUA + "심연의 포보르의 피");
+		var11.setItemMeta(var11Im);
+		
+		ItemStack var12 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS, 64);
+		ItemMeta var12Im = var12.getItemMeta();
+		var12Im.setDisplayName(ChatColor.AQUA + "심연의 포보르의 쓸개");
+		var12.setItemMeta(var12Im);
+		
+		ItemStack var13 = new ItemStack(Material.CRACKED_POLISHED_BLACKSTONE_BRICKS, 64);
+		ItemMeta var13Im = var13.getItemMeta();
+		var13Im.setDisplayName(ChatColor.AQUA + "심연의 포보르의 살점");
+		var13.setItemMeta(var13Im);
+		
+		ItemStack var14 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_SLAB, 64);
+		ItemMeta var14Im = var14.getItemMeta();
+		var14Im.setDisplayName(ChatColor.AQUA + "심연의 포보르의 간");
+		var14.setItemMeta(var14Im);
+		
+		ItemStack token = new ItemStack(Material.PRISMARINE_SHARD);
+		ItemMeta tokenIm = token.getItemMeta();
+		tokenIm.setDisplayName(ChatColor.LIGHT_PURPLE + "바다의 파편");
+		token.setItemMeta(tokenIm);
+		
+		ItemStack emerald = new ItemStack(Material.RABBIT_HIDE, numEme);
+		ItemMeta im = emerald.getItemMeta();
+		im.setDisplayName(ChatColor.AQUA + "에메랄드 결정");
+		emerald.setItemMeta(im);
+		inv.setItem(0, emerald);
+		
+		if(num1==0) {
+			idx = rnd.nextInt(8);
+			inv.setItem(idx, var1);
+		}
+		if(num2==0) {
+			idx = rnd.nextInt(8);
+			inv.setItem(idx, var2);
+		}
+		if(num3==0) {
+			idx = rnd.nextInt(8);
+			inv.setItem(idx, var3);
+		}
+		if(num4==0) {
+			idx = rnd.nextInt(8);
+			inv.setItem(idx, var4);
+		}
+		if(num5==0) {
+			idx = rnd.nextInt(8);
+			inv.setItem(idx, var5);
+		}
+		if(num6==0) {
+			idx = rnd.nextInt(8);
+			inv.setItem(idx, var6);
+		}
+		if(num7==0) {
+			idx = rnd.nextInt(8);
+			inv.setItem(idx, var7);
+		}
+		if(num8==0) {
+			idx = rnd.nextInt(8);
+			inv.setItem(idx, var8);
+		}
+		if(num9==0) {
+			idx = rnd.nextInt(8);
+			inv.setItem(idx, var9);
+		}
+		if(num10==0) {
+			idx = rnd.nextInt(8);
+			inv.setItem(idx, var10);
+		}
+		if(num11==0) {
+			idx = rnd.nextInt(8);
+			inv.setItem(idx, var11);
+		}
+		if(num12==0) {
+			idx = rnd.nextInt(8);
+			inv.setItem(idx, var12);
+		}
+		if(num13==0) {
+			idx = rnd.nextInt(8);
+			inv.setItem(idx, var13);
+		}
+		if(num14==0) {
+			idx = rnd.nextInt(8);
+			inv.setItem(idx, var14);
+		}
+		if(tokenPercent==0) {
+			idx = rnd.nextInt(8);
+			inv.setItem(idx, token);
+		}
+		
+		idx = rnd.nextInt(3) + 3;
+		ItemStack metalware = new ItemStack(Material.BREWING_STAND, idx);
+		ItemMeta metalwareIm = metalware.getItemMeta();
+		metalwareIm.setDisplayName(ChatColor.LIGHT_PURPLE + "세공 도구 부품");
+		ArrayList<String> metalwareLore = new ArrayList();
+		metalwareLore.add(ChatColor.GRAY + "순도 높은 검은 흐름이 느껴지는 부품");
+		metalwareLore.add(ChatColor.GRAY + "장인의 손길을 거친다면 검은 흐름의");
+		metalwareLore.add(ChatColor.GRAY + "마력을 이용한 세공 도구를 만들 수 있다.");
+		metalwareIm.setLore(metalwareLore);
+		metalware.setItemMeta(metalwareIm);
+		inv.setItem(8, metalware);
+		
+		player.openInventory(inv);	
+	}
+	
+	public void dungeon16(Player player) {
+		Inventory inv = Bukkit.createInventory(player, 9, "Dungeon Reward");
+		int idx;
+		int num1 = rnd.nextInt(100); 	// 무기
+		int num2 = rnd.nextInt(20); 	// 세트
+		int num3 = rnd.nextInt(20);	 	// 세트
+		int num4 = rnd.nextInt(20); 	// 세트
+		int num5 = rnd.nextInt(20);		// 세트
+		int num6 = rnd.nextInt(1000);	// 영웅 무기
+		int num7 = rnd.nextInt(700); 	// 영웅 신발
+		int num8 = rnd.nextInt(20);		// 상자1
+		int num9 = rnd.nextInt(50);		// 상자2
+		int num10 = rnd.nextInt(100);	// 상자3 
+		int num11 = rnd.nextInt(10);	// 피 64개
+		int num12 = rnd.nextInt(20);	// 쓸개 64개
+		int num13 = rnd.nextInt(40);	// 살점 64개
+		int num14 = rnd.nextInt(80);	// 간 64개
+		int numEme = rnd.nextInt(10) + 5;
+		int tokenPercent = rnd.nextInt(10);
+		
+		ItemStack var1 = new ItemStack(Material.STONE_BRICK_SLAB);
+		ItemMeta var1Im = var1.getItemMeta();
+		var1Im.setLocalizedName("0,4000,4000,4000,2000,8000,0,0,0,0,700");
+		var1Im.setDisplayName(ChatColor.AQUA + "버려진 양털");
+		ArrayList<String> var1Lore = new ArrayList();
+		var1Lore.add(ChatColor.GRAY + "레벨 제한: 700");
+		var1Lore.add(ChatColor.GRAY + " ");
+		var1Lore.add(ChatColor.GRAY + "스피드와 공격, 방어를 모두 갖춘 자의 클로");
+		var1Lore.add(ChatColor.BLUE + " ");
+		var1Lore.add(ChatColor.BLUE + "-회피 확률 15% 증가");
+		var1Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		var1Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		var1Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var1Im.setUnbreakable(true);
+		var1Im.setLore(var1Lore);
+		var1.setItemMeta(var1Im);
+		
+		ItemStack var2 = new ItemStack(Material.DIAMOND_HELMET);
+		ItemMeta var2Im = var2.getItemMeta();
+		var2Im.setLocalizedName("1415,926,5358,979,3238,4626,4338,2795,0,2884,700");
+		var2Im.setDisplayName(ChatColor.GREEN + "척척박사의 헬멧");
+		ArrayList<String> var2Lore = new ArrayList();
+		var2Lore.add(ChatColor.GRAY + "레벨 제한: 700");
+		var2Lore.add(ChatColor.GRAY + " ");
+		var2Lore.add(ChatColor.GRAY + "입기만 해도 똑똑하게 보이는 갑옷");
+		var2Lore.add(ChatColor.GRAY + "박사라고 해서 몸이 약한 건 아닌 듯하다.");
+		var2Lore.add(ChatColor.GRAY + "(세트 아이템)");
+		var2Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		var2Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		var2Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var2Im.setUnbreakable(true);
+		var2Im.setLore(var2Lore);
+		var2.setItemMeta(var2Im);
+		
+		ItemStack var3 = new ItemStack(Material.DIAMOND_CHESTPLATE);
+		ItemMeta var3Im = var3.getItemMeta();
+		var3Im.setLocalizedName("1415,926,5358,979,3238,4626,4338,2795,0,2884,700");
+		var3Im.setDisplayName(ChatColor.GREEN + "척척박사의 갑옷");
+		ArrayList<String> var3Lore = new ArrayList();
+		var3Lore.add(ChatColor.GRAY + "레벨 제한: 700");
+		var3Lore.add(ChatColor.GRAY + " ");
+		var3Lore.add(ChatColor.GRAY + "입기만 해도 똑똑하게 보이는 갑옷");
+		var3Lore.add(ChatColor.GRAY + "박사라고 해서 몸이 약한 건 아닌 듯하다.");
+		var3Lore.add(ChatColor.GRAY + "(세트 아이템)");
+		var3Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		var3Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		var3Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var3Im.setUnbreakable(true);
+		var3Im.setLore(var3Lore);
+		var3.setItemMeta(var3Im);
+		
+		ItemStack var4 = new ItemStack(Material.DIAMOND_LEGGINGS);
+		ItemMeta var4Im = var4.getItemMeta();
+		var4Im.setLocalizedName("1415,926,5358,979,3238,4626,4338,2795,0,2884,700");
+		var4Im.setDisplayName(ChatColor.GREEN + "척척박사의 각반");
+		ArrayList<String> var4Lore = new ArrayList();
+		var4Lore.add(ChatColor.GRAY + "레벨 제한: 700");
+		var4Lore.add(ChatColor.GRAY + " ");
+		var4Lore.add(ChatColor.GRAY + "입기만 해도 똑똑하게 보이는 각반");
+		var4Lore.add(ChatColor.GRAY + "박사라고 해서 몸이 약한 건 아닌 듯하다.");
+		var4Lore.add(ChatColor.GRAY + "(세트 아이템)");
+		var4Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		var4Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		var4Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var4Im.setUnbreakable(true);
+		var4Im.setLore(var4Lore);
+		var4.setItemMeta(var4Im);
+		
+		ItemStack var5 = new ItemStack(Material.DIAMOND_BOOTS);
+		ItemMeta var5Im = var5.getItemMeta();
+		var5Im.setLocalizedName("1415,926,5358,979,3238,4626,4338,2795,0,2884,700");
+		var5Im.setDisplayName(ChatColor.GREEN + "척척박사의 신발");
+		ArrayList<String> var5Lore = new ArrayList();
+		var5Lore.add(ChatColor.GRAY + "레벨 제한: 700");
+		var5Lore.add(ChatColor.GRAY + " ");
+		var5Lore.add(ChatColor.GRAY + "입기만 해도 똑똑하게 보이는 신발");
+		var5Lore.add(ChatColor.GRAY + "박사라고 해서 몸이 약한 건 아닌 듯하다.");
+		var5Lore.add(ChatColor.GRAY + "(세트 아이템)");
+		var5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		var5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		var5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var5Im.setUnbreakable(true);
+		var5Im.setLore(var5Lore);
+		var5.setItemMeta(var5Im);
+		
+		ItemStack var6 = new ItemStack(Material.GRAY_WOOL);
+		ItemMeta var6Im = var6.getItemMeta();
+		var6Im.setLocalizedName("7777,0,0,0,0,7777,0,0,0,0,700");
+		var6Im.setDisplayName(ChatColor.DARK_RED + "미치광이 박사의 골든 해머");
+		ArrayList<String> var6Lore = new ArrayList();
+		var6Lore.add(ChatColor.GRAY + "레벨 제한: 700");
+		var6Lore.add(ChatColor.GRAY + " ");
+		var6Lore.add(ChatColor.GRAY + "보기만 해도 무거워 보이는 망치");
+		var6Lore.add(ChatColor.GRAY + "미치광이 박사가 평생을 연구해온 결과로");
+		var6Lore.add(ChatColor.GRAY + "최강의 금속, 최강의 디자인을 가지게 되었다.");
+		var6Lore.add(ChatColor.BLUE + " ");
+		var6Lore.add(ChatColor.BLUE + "-흡혈 1%");
+		var6Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		var6Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		var6Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var6Im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
+		var6Im.setUnbreakable(true);
+		var6Im.setLore(var6Lore);
+		var6.setItemMeta(var6Im);
+		
+		ItemStack var7 = new ItemStack(Material.DIAMOND_BOOTS);
+		ItemMeta var7Im = var7.getItemMeta();
+		var7Im.setLocalizedName("777,777,777,777,777,777,777,777,777,777,700");
+		var7Im.setDisplayName(ChatColor.DARK_RED + "잭팟");
+		ArrayList<String> var7Lore = new ArrayList();
+		var7Lore.add(ChatColor.GRAY + "레벨 제한: 700");
+		var7Lore.add(ChatColor.GRAY + " ");
+		var7Lore.add(ChatColor.GRAY + "진심으로 기도하면 온 우주가 도울 것이다.");
+		var7Lore.add(ChatColor.GRAY + " ");
+		var7Lore.add(ChatColor.BLUE + "-의문의 상자 발견 확률 30% 증가");
+		var7Lore.add(ChatColor.BLUE + "-회피 확률 5% 증가");
+		var7Lore.add(ChatColor.BLUE + "-근접 공격 시 8% 확률로 10% 회복");
 		var7Lore.add(ChatColor.BLUE + "-원거리 공격 시 8% 확률로 10% 회복");
 		var7Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var7Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
