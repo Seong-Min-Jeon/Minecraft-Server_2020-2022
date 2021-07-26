@@ -3221,12 +3221,6 @@ public class Main extends JavaPlugin implements Listener{
 				event.setRespawnLocation(new Location(player.getWorld(), 128, 64, 1955, 90, 0));
 				return;
 			}
-			// 피르볼그 제사장
-			if (loc.getX() <= 3703 && loc.getY() <= 120 && loc.getZ() <= 2758 
-					&& loc.getX() >= 3679 && loc.getY() >= 99 && loc.getZ() >= 2732) {
-				event.setRespawnLocation(samak);
-				return;
-			}
 			// 하마베 배 1792 95 2997  1768 40 2942
 			if (loc.getX() <= 1792 && loc.getY() <= 95 && loc.getZ() <= 2997 
 					&& loc.getX() >= 1768 && loc.getY() >= 40 && loc.getZ() >= 2942) {
@@ -3255,6 +3249,12 @@ public class Main extends JavaPlugin implements Listener{
 			if (loc.getX() <= -1440 && loc.getY() <= 35 && loc.getZ() <= 2005 
 					&& loc.getX() >= -1479 && loc.getY() >= 0 && loc.getZ() >= 1972) {
 				event.setRespawnLocation(new Location(player.getWorld(), -1465, 10, 1980));
+				return;
+			}
+			// 피르볼그 제사장
+			if (loc.getX() <= 3703 && loc.getY() <= 120 && loc.getZ() <= 2758 
+					&& loc.getX() >= 3679 && loc.getY() >= 99 && loc.getZ() >= 2732) {
+				event.setRespawnLocation(samak);
 				return;
 			}
 			// 시오카나 385 255 -669  648 0 -438
@@ -8632,6 +8632,8 @@ public class Main extends JavaPlugin implements Listener{
 	    						}
 	        				}
 	        				
+	        			} else if(player.getInventory().getItemInMainHand().getType() == Material.BLACK_SHULKER_BOX) {
+	        				new ItemBomb(player, player.getInventory().getItemInMainHand());
 	        			} else if(player.getInventory().getItemInMainHand().getType() == Material.ENDER_EYE) {
 	        				event.setCancelled(true);
 	        			}

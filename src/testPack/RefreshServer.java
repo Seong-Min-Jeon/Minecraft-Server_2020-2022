@@ -62,7 +62,21 @@ public class RefreshServer {
 									mob.remove();
 								} 
 								if(mob.getHealth() + (mob.getMaxHealth() / 200.0) <= mob.getMaxHealth()) {
-									mob.setHealth(mob.getHealth() + (mob.getMaxHealth() / 200.0));
+									if(mob.getPotionEffect(PotionEffectType.HERO_OF_THE_VILLAGE) == null) {
+										mob.setHealth(mob.getHealth() + (mob.getMaxHealth() / 200.0));
+									} else if(mob.getPotionEffect(PotionEffectType.HERO_OF_THE_VILLAGE).getAmplifier() == 0) {
+										mob.setHealth(mob.getHealth() + (mob.getMaxHealth() / 250.0));
+									} else if(mob.getPotionEffect(PotionEffectType.HERO_OF_THE_VILLAGE).getAmplifier() == 1) {
+										mob.setHealth(mob.getHealth() + (mob.getMaxHealth() / 300.0));
+									} else if(mob.getPotionEffect(PotionEffectType.HERO_OF_THE_VILLAGE).getAmplifier() == 2) {
+										mob.setHealth(mob.getHealth() + (mob.getMaxHealth() / 350.0));
+									} else if(mob.getPotionEffect(PotionEffectType.HERO_OF_THE_VILLAGE).getAmplifier() == 3) {
+										mob.setHealth(mob.getHealth() + (mob.getMaxHealth() / 400.0));
+									} else if(mob.getPotionEffect(PotionEffectType.HERO_OF_THE_VILLAGE).getAmplifier() >= 4) {
+										mob.setHealth(mob.getHealth() + (mob.getMaxHealth() / 450.0));
+									} else {
+										mob.setHealth(mob.getHealth() + (mob.getMaxHealth() / 200.0));
+									}
 								}
 								continue;
 							}

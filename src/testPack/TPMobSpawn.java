@@ -1843,7 +1843,7 @@ public class TPMobSpawn {
 			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "롱게의 꼬마가 가지고 놀던 장난감은 누가 부쉈는가?", 0);
 			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "롱게의 꼬마가 가지고 놀던 장난감은 누가 부쉈는가?", ChatColor.RED + "1. 떠도는 망령" + ChatColor.GRAY + " 2. 에밀" + ChatColor.YELLOW + " 3. 파스칼" + ChatColor.AQUA + " 4. 마법소녀");
 			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "롱게의 꼬마는 누구 때문에 잠을 자지 못했는가?", 1);
-			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "롱게의 꼬마가 누구 때문에 잠을 자지 못했는가?", ChatColor.RED + "1. 떠도는 망령" + ChatColor.GRAY + " 2. 에밀" + ChatColor.YELLOW + " 3. 파스칼" + ChatColor.AQUA + " 4. 마법소녀");
+			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "롱게의 꼬마는 누구 때문에 잠을 자지 못했는가?", ChatColor.RED + "1. 떠도는 망령" + ChatColor.GRAY + " 2. 에밀" + ChatColor.YELLOW + " 3. 파스칼" + ChatColor.AQUA + " 4. 마법소녀");
 			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "하마베에 있는 줄리엣의 고향은 어디인가?", 0);
 			choice.put(ChatColor.WHITE + "" + ChatColor.BOLD + "하마베에 있는 줄리엣의 고향은 어디인가?", ChatColor.RED + "1. 라파누이" + ChatColor.GRAY + " 2. 라히무호나" + ChatColor.YELLOW + " 3. 시오카나" + ChatColor.AQUA + " 4. 티페라리");
 			question.put(ChatColor.WHITE + "" + ChatColor.BOLD + "하마베의 말 상인은 어떤 말을 팔고 있는가?", 1);
@@ -1968,7 +1968,7 @@ public class TPMobSpawn {
 						if(answer == 0) {
 							for(Entity all : sk.getNearbyEntities(30, 30, 30)) {
 								if(all instanceof Player) {
-									if(all.getLocation().add(0,-1,0).getBlock().getType() != Material.RED_WOOL) {
+									if(all.getLocation().add(0,-1,0).getBlock().getType() != Material.RED_WOOL || all.getLocation().add(0,-2,0).getBlock().getType() != Material.RED_WOOL) {
 										cnt++;
 									} else {
 										player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 0.1f);
@@ -1979,7 +1979,7 @@ public class TPMobSpawn {
 						} else if(answer == 1) {
 							for(Entity all : sk.getNearbyEntities(30, 30, 30)) {
 								if(all instanceof Player) {
-									if(all.getLocation().add(0,-1,0).getBlock().getType() != Material.LIGHT_GRAY_WOOL) {
+									if(all.getLocation().add(0,-1,0).getBlock().getType() != Material.LIGHT_GRAY_WOOL || all.getLocation().add(0,-2,0).getBlock().getType() != Material.LIGHT_GRAY_WOOL) {
 										cnt++;
 									} else {
 										player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 0.1f);
@@ -1990,7 +1990,7 @@ public class TPMobSpawn {
 						} else if(answer == 2) {
 							for(Entity all : sk.getNearbyEntities(30, 30, 30)) {
 								if(all instanceof Player) {
-									if(all.getLocation().add(0,-1,0).getBlock().getType() != Material.YELLOW_WOOL) {
+									if(all.getLocation().add(0,-1,0).getBlock().getType() != Material.YELLOW_WOOL || all.getLocation().add(0,-2,0).getBlock().getType() != Material.YELLOW_WOOL) {
 										cnt++;
 									} else {
 										player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 0.1f);
@@ -2001,7 +2001,7 @@ public class TPMobSpawn {
 						} else if(answer == 3) {
 							for(Entity all : sk.getNearbyEntities(30, 30, 30)) {
 								if(all instanceof Player) {
-									if(all.getLocation().add(0,-1,0).getBlock().getType() != Material.BLUE_WOOL) {
+									if(all.getLocation().add(0,-1,0).getBlock().getType() != Material.BLUE_WOOL || all.getLocation().add(0,-2,0).getBlock().getType() != Material.BLUE_WOOL) {
 										cnt++;
 									} else {
 										player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 0.1f);
@@ -2013,16 +2013,21 @@ public class TPMobSpawn {
 							
 						}
 						
+						if(cnt > currentCnt) {
+							cnt = currentCnt + 1;
+						}
 						if(cnt != currentCnt) {
 							for(Entity all : sk.getNearbyEntities(30, 30, 30)) {
 								if(all instanceof Player) {
 									Player p = (Player) all;
-									if(p.getHealth() - (cnt+1) < 0) {
+									if(p.getHealth() - (3*cnt+1) < 0) {
 										p.setHealth(0);
 										p.sendMessage(ChatColor.BOLD + "" + ChatColor.RED + "틀린 사람이 존재합니다.");
+										p.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 0.1f);
 									} else {
 										p.setHealth(player.getHealth() - (cnt+1));
 										p.sendMessage(ChatColor.BOLD + "" + ChatColor.RED + "틀린 사람이 존재합니다.");
+										p.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0f, 0.1f);
 									}
 								}
 							}

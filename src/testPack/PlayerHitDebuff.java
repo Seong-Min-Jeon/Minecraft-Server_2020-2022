@@ -210,13 +210,13 @@ public class PlayerHitDebuff {
 					player.getWorld().spawnParticle(Particle.CLOUD, mob.getLocation(), 0);
 				}
 				LivingEntity ent = (LivingEntity) mob;
-				ent.setHealth(ent.getHealth() + 5000);
+				healSkill(ent, 5000);
 				List<Entity> nearMob = ent.getNearbyEntities(10, 3, 10);
 				for(Entity mob2 : nearMob) {
 					if(mob2 instanceof Skeleton) {
 						LivingEntity ent2 = (LivingEntity) mob2;
 						if(ent2.getHealth() > 1000) {
-							ent2.setHealth(ent2.getHealth() + 5000);
+							healSkill(ent2, 5000);
 						}
 					}
 				}
@@ -374,7 +374,7 @@ public class PlayerHitDebuff {
 				if (num == 0) {
 					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, 100, 0, true,true));
 					player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 100, 0, true,true));
-					((LivingEntity) mob).setHealth(((LivingEntity) mob).getHealth() + 3000);
+					healSkill(((LivingEntity) mob), 5000);
 					player.getWorld().playSound(mob.getLocation(), Sound.AMBIENT_CAVE, 1.0f, 1.0f);
 					player.sendMessage(ChatColor.RED + "아덴이 회복을 하기 위해 도망갑니다.");
 					sendMessage(player, ChatColor.RED + "아덴이 회복을 하기 위해 도망갑니다.");
@@ -442,7 +442,7 @@ public class PlayerHitDebuff {
 			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
 				int num = rnd.nextInt(10);
 				if (num == 0) {
-					((LivingEntity) mob).setHealth(((LivingEntity) mob).getHealth() + 8000);
+					healSkill(((LivingEntity) mob), 8000);
 					player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_GENERIC_EAT, 1.0f, 1.0f);
 					player.sendMessage(ChatColor.RED + "특급 요리사가 음식을 먹고 회복합니다.");
 					sendMessage(player, ChatColor.RED + "특급 요리사가 음식을 먹고 회복합니다.");
@@ -848,7 +848,7 @@ public class PlayerHitDebuff {
 						for(int i = 0 ; i < 10 ; i++) {
 							player.getWorld().spawnParticle(Particle.CLOUD, mob.getLocation(), 0);
 						}
-						ent.setHealth(ent.getHealth() + 50000);
+						healSkill(ent, 5000);
 						player.sendMessage(ChatColor.RED + "지배자의 넬의 사랑이 발동됩니다.");
 						sendMessage(player, ChatColor.RED + "지배자의 넬의 사랑이 발동됩니다.");
 						player.sendMessage(ChatColor.RED + "지배자가 회복합니다.");
@@ -920,7 +920,7 @@ public class PlayerHitDebuff {
 						for(int i = 0 ; i < 10 ; i++) {
 							player.getWorld().spawnParticle(Particle.CLOUD, mob.getLocation(), 0);
 						}
-						ent.setHealth(ent.getHealth() + 500000);
+						healSkill(ent, 500000);
 						ent.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 1, true,true));
 						player.sendMessage(ChatColor.RED + "지배자의 천사의 축복이 발동됩니다.");
 						sendMessage(player, ChatColor.RED + "지배자의 천사의 축복이 발동됩니다.");
@@ -1109,7 +1109,7 @@ public class PlayerHitDebuff {
 						for(int i = 0 ; i < 10 ; i++) {
 							player.getWorld().spawnParticle(Particle.CLOUD, mob.getLocation(), 0);
 						}
-						ent.setHealth(ent.getHealth() + 1000000);
+						healSkill(ent, 1000000);
 						ent.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 2, true,true));
 						player.sendMessage(ChatColor.RED + "지배자의 아이 오브 오더가 발동됩니다.");
 						sendMessage(player, ChatColor.RED + "지배자의 아이 오브 오더가 발동됩니다.");
@@ -2378,7 +2378,7 @@ public class PlayerHitDebuff {
 						player.getWorld().spawnParticle(Particle.NOTE, mob.getLocation().add(0, 0.5, 0), 1);
 					}
 					LivingEntity ent = (LivingEntity) mob;
-					ent.setHealth(ent.getHealth() + 50000);
+					healSkill(ent, 100000);
 					player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ENDER_DRAGON_FLAP, 1.0f, 1.0f);
 					player.sendMessage(ChatColor.RED + "석상 파수꾼이 치유의 노래를 부릅니다.");
 					sendMessage(player, ChatColor.RED + "석상 파수꾼이 치유의 노래를 부릅니다.");
@@ -2689,7 +2689,7 @@ public class PlayerHitDebuff {
 						player.setHealth(0);
 					}
 				} else if (num == 3) {
-					((LivingEntity) mob).setHealth(((LivingEntity) mob).getHealth() + 5);
+					healSkill(((LivingEntity) mob), 5);
 					player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_GENERIC_EAT, 1.0f, 1.0f);
 					player.sendMessage(ChatColor.RED + "갈리가 피의 함성에 희열을 느낍니다.");
 					sendMessage(player, ChatColor.RED + "갈리가 피의 함성에 희열을 느낍니다.");
@@ -2703,7 +2703,7 @@ public class PlayerHitDebuff {
 					((Skeleton) mob).setTarget(player);
 					player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 3.0f, 1.0f);
 				} else if(num == 4) {
-					((LivingEntity) mob).setHealth(((LivingEntity) mob).getHealth() + 3);
+					healSkill(((LivingEntity) mob), 3);
 					player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_GENERIC_EAT, 1.0f, 1.0f);
 					player.sendMessage(ChatColor.RED + "갈리가 피의 함성에 희열을 느낍니다.");
 					sendMessage(player, ChatColor.RED + "갈리가 피의 함성에 희열을 느낍니다.");
@@ -2866,7 +2866,7 @@ public class PlayerHitDebuff {
 						}
 
 					}, 0, 1);
-					((LivingEntity) mob).setHealth(((LivingEntity) mob).getHealth() + 10);
+					healSkill(((LivingEntity) mob), 10);
 					player.sendMessage(ChatColor.RED + "드래곤의 광주가 울려퍼집니다.");
 					sendMessage(player, ChatColor.RED + "드래곤의 광주가 울려퍼집니다.");
 					((Skeleton) mob).setTarget(player);
@@ -4139,6 +4139,27 @@ public class PlayerHitDebuff {
 
 	}
 
+	public void healSkill(LivingEntity mob, double num) {
+		if(mob.getPotionEffect(PotionEffectType.HERO_OF_THE_VILLAGE) == null) {
+			mob.setHealth(mob.getHealth() + num);
+			return;
+		}
+		
+		if(mob.getPotionEffect(PotionEffectType.HERO_OF_THE_VILLAGE).getAmplifier() == 0) {
+			num = num * 5 / 6.0;
+		} else if(mob.getPotionEffect(PotionEffectType.HERO_OF_THE_VILLAGE).getAmplifier() == 1) {
+			num = num * 4 / 6.0;
+		} else if(mob.getPotionEffect(PotionEffectType.HERO_OF_THE_VILLAGE).getAmplifier() == 2) {
+			num = num * 3 / 6.0;
+		} else if(mob.getPotionEffect(PotionEffectType.HERO_OF_THE_VILLAGE).getAmplifier() == 3) {
+			num = num * 2 / 6.0;
+		} else if(mob.getPotionEffect(PotionEffectType.HERO_OF_THE_VILLAGE).getAmplifier() >= 4) {
+			num = num * 1 / 6.0;
+		}
+		
+		mob.setHealth(mob.getHealth() + num);
+	}
+	
 	public void sendMessage(Player player, String msg) {
 		List<Entity> entitylist = player.getNearbyEntities(30, 10, 30);
 		for (Entity nearEntity : entitylist) {
