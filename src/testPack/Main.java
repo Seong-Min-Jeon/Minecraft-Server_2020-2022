@@ -8632,7 +8632,7 @@ public class Main extends JavaPlugin implements Listener{
 	    						}
 	        				}
 	        				
-	        			} else if(player.getInventory().getItemInMainHand().getType() == Material.BLACK_SHULKER_BOX) {
+	        			} else if(player.getInventory().getItemInMainHand().getType() == Material.BLACK_GLAZED_TERRACOTTA) {
 	        				new ItemBomb(player, player.getInventory().getItemInMainHand());
 	        			} else if(player.getInventory().getItemInMainHand().getType() == Material.ENDER_EYE) {
 	        				event.setCancelled(true);

@@ -30,13 +30,15 @@ public class ItemBomb {
 		
 		try {
 			if(item.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "OMEGA 765")) {
+				item.setAmount(item.getAmount()-1);
+				
 				Arrow arrow = player.launchProjectile(Arrow.class);
 				arrow.setShooter(player);
 				arrow.setVelocity(player.getLocation().getDirection().multiply(1.0f));		
 				world.spawnParticle(Particle.ASH, arrow.getLocation(), 2);
 				world.playSound(player.getLocation(), Sound.ENTITY_PLAYER_ATTACK_SWEEP, 1.5f, 1.0f);
 				
-				Item dItem = arrow.getWorld().dropItem(arrow.getLocation(), new ItemStack(Material.BLACK_SHULKER_BOX));
+				Item dItem = arrow.getWorld().dropItem(arrow.getLocation(), new ItemStack(Material.BLACK_GLAZED_TERRACOTTA));
 				dItem.setPickupDelay(10000000);
 				arrow.addPassenger(dItem);
 				
