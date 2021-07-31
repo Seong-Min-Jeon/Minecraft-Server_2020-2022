@@ -1608,6 +1608,7 @@ public class QuestBoard {
 			ItemMeta item5Im = item5.getItemMeta();
 			item5Im.setLocalizedName("30,10,0,0,0,10,0,0,0,10,50");
 			item5Im.setDisplayName(ChatColor.LIGHT_PURPLE + "용사의 검");
+			item5Im.setCustomModelData(0);
 			ArrayList<String> item5Lore = new ArrayList();
 			item5Lore.add(ChatColor.GRAY + "레벨 제한: 50");
 			item5Lore.add(ChatColor.GRAY + " ");

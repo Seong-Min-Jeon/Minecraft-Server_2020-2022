@@ -48,6 +48,9 @@ public class PlayerHitDebuff {
 	
 	Random rnd = new Random();
 	private int taskID;
+	
+	static boolean pat1 = false;
+	static boolean pat2 = false;
 
 	public void playerHitDebuff(Player player, Entity mob) {
 		mob1(player, mob);
@@ -2870,6 +2873,58 @@ public class PlayerHitDebuff {
 					player.sendMessage(ChatColor.RED + "드래곤의 광주가 울려퍼집니다.");
 					sendMessage(player, ChatColor.RED + "드래곤의 광주가 울려퍼집니다.");
 					((Skeleton) mob).setTarget(player);
+				} else if (num <= 6 && !pat2) {
+					pat2 = true;
+					
+					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+						int time = 0;
+						ThreadData td = new ThreadData(player.getUniqueId());
+
+						@Override
+						public void run() {
+							if (!td.hasID()) {
+								td.setID(taskID);
+							}
+
+							if (time == 0) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 25.0f, 0.8f);
+							} else if (time == 10) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 25.0f, 1.0f);
+							} else if (time == 20) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 25.0f, 1.2f);
+							} else if (time == 30) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 25.0f, 1.4f);
+							} else if (time == 40) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 25.0f, 1.6f);
+							} else if (time == 50) {
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 10.0f, 0.8f);
+								for(Entity ent : mob.getNearbyEntities(20, 10, 20)) {
+									if(ent instanceof Player) {
+										Player p = (Player) ent;
+										if(!p.isOnGround()) {
+											p.setHealth(0);
+										}
+									}
+								}
+							}
+
+							if (time >= 60) {
+								pat2 = false;
+								
+								td.endTask();
+								td.removeID();
+							}
+
+							time++;
+						}
+
+					}, 0, 1);
+					player.sendMessage(ChatColor.RED + "프라에그나리의 리듬 세상이 펼쳐집니다.");
+					sendMessage(player, ChatColor.RED + "프라에그나리의 리듬 세상이 펼쳐집니다.");
+					player.sendMessage(ChatColor.RED + "5번 신호가 울린 후 점프를 해야합니다.");
+					sendMessage(player, ChatColor.RED + "5번 신호가 울린 후 점프를 해야합니다.");
+					((Skeleton) mob).setTarget(player);
 				}
 			} else {
 				int num = rnd.nextInt(12);
@@ -2928,7 +2983,9 @@ public class PlayerHitDebuff {
 					player.getWorld().spawnEntity(mob.getLocation(), EntityType.SILVERFISH);
 					player.getWorld().spawnEntity(mob.getLocation(), EntityType.SILVERFISH);
 					player.getWorld().spawnEntity(mob.getLocation(), EntityType.SILVERFISH);
-				} else if(num == 1) {
+				} else if(num == 1 && !pat1) {
+					pat1 = true;
+					
 					Location loc = mob.getLocation();
 					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -2986,6 +3043,8 @@ public class PlayerHitDebuff {
 							}
 							
 							if (time >= 140) {
+								pat1 = false;
+								
 								td.endTask();
 								td.removeID();
 							}
@@ -3010,7 +3069,10 @@ public class PlayerHitDebuff {
 	public void mob30(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("쌍창 전사 석상" + ChatColor.YELLOW + " [Lv.468]")) {
 			if(rnd.nextInt(20) == 0) {
-				player.teleport(mob.getLocation().add(0,1,0));
+				Location loc = mob.getLocation();
+				if(loc.clone().add(0,1,0).getBlock().getType() == Material.AIR) {
+					player.teleport(loc);
+				}
 			}
 		}
 	}
@@ -3026,7 +3088,10 @@ public class PlayerHitDebuff {
 	public void mob32(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("쌍검 전사 석상" + ChatColor.YELLOW + " [Lv.474]")) {
 			if(rnd.nextInt(20) == 0) {
-				player.teleport(mob.getLocation().add(0,1,0));
+				Location loc = mob.getLocation();
+				if(loc.clone().add(0,1,0).getBlock().getType() == Material.AIR) {
+					player.teleport(loc);
+				}
 			}
 		}
 	}
@@ -3035,7 +3100,10 @@ public class PlayerHitDebuff {
 	public void mob33(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("루 라바다의 석상" + ChatColor.YELLOW + " [Lv.475]")) {
 			if(rnd.nextInt(20) == 0) {
-				player.teleport(mob.getLocation().add(0,1,0));
+				Location loc = mob.getLocation();
+				if(loc.clone().add(0,1,0).getBlock().getType() == Material.AIR) {
+					player.teleport(loc);
+				}
 			}
 		}
 	}
@@ -3044,7 +3112,10 @@ public class PlayerHitDebuff {
 	public void mob34(Player player, Entity mob) {
 		if (mob.getCustomName().substring(2).equalsIgnoreCase("누아다의 석상" + ChatColor.YELLOW + " [Lv.479]")) {
 			if(rnd.nextInt(20) == 0) {
-				player.teleport(mob.getLocation().add(0,1,0));
+				Location loc = mob.getLocation();
+				if(loc.clone().add(0,1,0).getBlock().getType() == Material.AIR) {
+					player.teleport(loc);
+				}
 			}
 		}
 	}

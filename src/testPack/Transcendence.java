@@ -72,6 +72,7 @@ public class Transcendence {
 				ItemMeta weaponIm = weapon.getItemMeta();
 				weaponIm.setLocalizedName("100,40,0,0,0,30,0,10,10,70,100");
 				weaponIm.setDisplayName(ChatColor.LIGHT_PURPLE + "달의 힘이 깃든 검");
+				weaponIm.setCustomModelData(2);
 				ArrayList<String> weaponLore = new ArrayList();
 				weaponLore.add(ChatColor.GRAY + "레벨 제한: 100");
 				weaponLore.add(ChatColor.GRAY + " ");
@@ -97,6 +98,7 @@ public class Transcendence {
 				ItemMeta weaponIm = weapon.getItemMeta();
 				weaponIm.setLocalizedName("100,0,40,0,0,30,10,0,10,70,100");
 				weaponIm.setDisplayName(ChatColor.LIGHT_PURPLE + "태양의 힘이 깃든 검");
+				weaponIm.setCustomModelData(1);
 				ArrayList<String> weaponLore = new ArrayList();
 				weaponLore.add(ChatColor.GRAY + "레벨 제한: 100");
 				weaponLore.add(ChatColor.GRAY + " ");
@@ -122,6 +124,7 @@ public class Transcendence {
 				ItemMeta weaponIm = weapon.getItemMeta();
 				weaponIm.setLocalizedName("200,100,100,100,0,0,0,0,0,100,240");
 				weaponIm.setDisplayName(ChatColor.LIGHT_PURPLE + "달의 힘이 깃든 검+");
+				weaponIm.setCustomModelData(4);
 				ArrayList<String> weaponLore = new ArrayList();
 				weaponLore.add(ChatColor.GRAY + "레벨 제한: 240");
 				weaponLore.add(ChatColor.GRAY + " ");
@@ -148,6 +151,7 @@ public class Transcendence {
 				ItemMeta weaponIm = weapon.getItemMeta();
 				weaponIm.setLocalizedName("150,0,0,0,0,100,100,100,100,100,240");
 				weaponIm.setDisplayName(ChatColor.LIGHT_PURPLE + "태양의 힘이 깃든 검+");
+				weaponIm.setCustomModelData(3);
 				ArrayList<String> weaponLore = new ArrayList();
 				weaponLore.add(ChatColor.GRAY + "레벨 제한: 240");
 				weaponLore.add(ChatColor.GRAY + " ");
@@ -200,6 +204,7 @@ public class Transcendence {
 				ItemMeta weaponIm = weapon.getItemMeta();
 				weaponIm.setLocalizedName("300,100,100,100,100,100,100,100,100,100,250");
 				weaponIm.setDisplayName(ChatColor.GREEN + "황혼의 용사 검");
+				weaponIm.setCustomModelData(9);
 				ArrayList<String> weaponLore = new ArrayList();
 				weaponLore.add(ChatColor.GRAY + "레벨 제한: 250");
 				weaponLore.add(ChatColor.GRAY + " ");
@@ -620,6 +625,7 @@ public class Transcendence {
 				ItemMeta weaponIm = weapon.getItemMeta();
 				weaponIm.setLocalizedName("2000,0,0,0,1000,800,800,800,800,800,500");
 				weaponIm.setDisplayName(ChatColor.AQUA + "검은 달");
+				weaponIm.setCustomModelData(6);
 				ArrayList<String> weaponLore = new ArrayList();
 				weaponLore.add(ChatColor.GRAY + "레벨 제한: 500");
 				weaponLore.add(ChatColor.GRAY + " ");
@@ -646,6 +652,7 @@ public class Transcendence {
 				ItemMeta weaponIm = weapon.getItemMeta();
 				weaponIm.setLocalizedName("3000,0,0,0,0,1500,0,0,0,1500,500");
 				weaponIm.setDisplayName(ChatColor.AQUA + "검은 태양");
+				weaponIm.setCustomModelData(5);
 				ArrayList<String> weaponLore = new ArrayList();
 				weaponLore.add(ChatColor.GRAY + "레벨 제한: 500");
 				weaponLore.add(ChatColor.GRAY + " ");
@@ -672,6 +679,7 @@ public class Transcendence {
 				ItemMeta weaponIm = weapon.getItemMeta();
 				weaponIm.setLocalizedName("3000,500,500,500,1000,3000,1000,1000,1000,2000,600");
 				weaponIm.setDisplayName(ChatColor.AQUA + "검은 달+");
+				weaponIm.setCustomModelData(8);
 				ArrayList<String> weaponLore = new ArrayList();
 				weaponLore.add(ChatColor.GRAY + "레벨 제한: 600");
 				weaponLore.add(ChatColor.GRAY + " ");
@@ -701,6 +709,7 @@ public class Transcendence {
 				ItemMeta weaponIm = weapon.getItemMeta();
 				weaponIm.setLocalizedName("5000,1500,1500,1500,1500,2000,0,0,0,1000,600");
 				weaponIm.setDisplayName(ChatColor.AQUA + "검은 태양+");
+				weaponIm.setCustomModelData(7);
 				ArrayList<String> weaponLore = new ArrayList();
 				weaponLore.add(ChatColor.GRAY + "레벨 제한: 600");
 				weaponLore.add(ChatColor.GRAY + " ");

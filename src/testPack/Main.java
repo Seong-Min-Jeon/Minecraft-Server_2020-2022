@@ -202,7 +202,7 @@ public class Main extends JavaPlugin implements Listener{
 	// gamerule doMobSpawning false
 	// gamerule keepInventory trues
 	// gamerule doImmediateRespawn true
-	// gamerule doLimitedCrafting true
+	// gamerule doLimitedCrafting trueq
 	// gamerule mobGriefing false
 	// gamerule doWeatherCycle false
 	// Damage_ALL, Damage_Undead, Damage_Arthropods, Impaling, Sweeping, Protection_Environment, Protection_Fire, Protection_Explosion, Protection_Projectile, Thorns, Level
@@ -337,7 +337,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("woolring")) { 
 			
 		} else {
-			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/865553225713188894/aile_texture_pack_33.zip");
+			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/870549488924774431/aile_texture_pack_35.zip");
 		}
 		
 		//Message
@@ -346,11 +346,11 @@ public class Main extends JavaPlugin implements Listener{
 		} else if(player.getDisplayName().equalsIgnoreCase("WoolRing")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.GREEN + "'도트랑 도트가 제일 좋아' 울링.");
 		} else if(player.getDisplayName().equalsIgnoreCase("_nanoboost_")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.RED + "'대행자 버프를 받은 (하지만 감마가 준제인)' 나노부스트.");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.RED + "해병대 따위 일주일만에 졸업한 나노부스트.");
 		} else if(player.getDisplayName().equalsIgnoreCase("why9196")) {
 			event.setJoinMessage("확률이 뭐죠? " + ChatColor.BLUE + "'0.0068% 돌파한' 와이.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Akilae3102")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.AQUA + "'금제가 뭐죠?' 아킬레.");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.AQUA + "어쩌다 서버 1위를 유지하고 있는 아킬레.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Espina_ID")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.BOLD + "'그저 군인' 에스피나.");
 		} else if(player.getDisplayName().equalsIgnoreCase("KangOSung")) {
@@ -358,7 +358,7 @@ public class Main extends JavaPlugin implements Listener{
 		} else if(player.getDisplayName().equalsIgnoreCase("Illusion__")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.GOLD + "일류 건축가 릴륨.");
 		} else if(player.getDisplayName().equalsIgnoreCase("JunletTridner")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.GOLD + "데빌의 힘을 보여드립니다. Jun");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.GOLD + "SS급 검투사 Jun");
 		} else if(player.getDisplayName().equalsIgnoreCase("SARASHINA_RUKA")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.YELLOW + "보석.. 보석은 어디에 있는가?");
 		} else {
@@ -3239,6 +3239,12 @@ public class Main extends JavaPlugin implements Listener{
 				event.setRespawnLocation(hamabe);
 				return;
 			}
+			// 피르볼그 제사장
+			if (loc.getX() <= 3703 && loc.getY() <= 130 && loc.getZ() <= 2758 
+					&& loc.getX() >= 3679 && loc.getY() >= 99 && loc.getZ() >= 2732) {
+				event.setRespawnLocation(samak);
+				return;
+			}
 			// 슬라임 던전 3829 87 2797  3632 10 2468
 			if (loc.getX() <= 3829 && loc.getY() <= 160 && loc.getZ() <= 2797 
 					&& loc.getX() >= 3632 && loc.getY() >= 10 && loc.getZ() >= 2468) {
@@ -3249,12 +3255,6 @@ public class Main extends JavaPlugin implements Listener{
 			if (loc.getX() <= -1440 && loc.getY() <= 35 && loc.getZ() <= 2005 
 					&& loc.getX() >= -1479 && loc.getY() >= 0 && loc.getZ() >= 1972) {
 				event.setRespawnLocation(new Location(player.getWorld(), -1465, 10, 1980));
-				return;
-			}
-			// 피르볼그 제사장
-			if (loc.getX() <= 3703 && loc.getY() <= 120 && loc.getZ() <= 2758 
-					&& loc.getX() >= 3679 && loc.getY() >= 99 && loc.getZ() >= 2732) {
-				event.setRespawnLocation(samak);
 				return;
 			}
 			// 시오카나 385 255 -669  648 0 -438
@@ -9893,11 +9893,11 @@ public class Main extends JavaPlugin implements Listener{
 		} else if (player.getDisplayName().equalsIgnoreCase("WoolRing")) {
 			event.setQuitMessage(ChatColor.GREEN + "'노란 머리가 젤다죠?' 울링" + ChatColor.WHITE + "님이 아뇨 뚱인데요?");
 		} else if (player.getDisplayName().equalsIgnoreCase("_nanoboost_")) {
-			event.setQuitMessage(ChatColor.RED + "7월 26일 해병대 훈련소 들어갑니다.");
+			event.setQuitMessage(ChatColor.RED + "거 뭐 필살기 같은거 없어?");
 		} else if(player.getDisplayName().equalsIgnoreCase("why9196")) {
 			event.setQuitMessage(ChatColor.BLUE + "??????????!?????");
 		} else if(player.getDisplayName().equalsIgnoreCase("Akilae3102")) {
-			event.setQuitMessage(ChatColor.AQUA + "'노랑단은 가벼운' 아킬레가 세상을 떠났습니다.");
+			event.setQuitMessage(ChatColor.AQUA + "아킬레가 세상을 떠났습니다.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Espina_ID")) {
 			event.setQuitMessage(ChatColor.BOLD + "'탈영병' 에스피나의 시간이 얼마 남지 않았습니다.");
 		} else if(player.getDisplayName().equalsIgnoreCase("KangOSung")) {
@@ -9905,7 +9905,7 @@ public class Main extends JavaPlugin implements Listener{
 		} else if(player.getDisplayName().equalsIgnoreCase("Illusion__")) {
 			event.setQuitMessage(ChatColor.BOLD + "훗, 오늘도 할 일을 끝내버렸군.");
 		} else if(player.getDisplayName().equalsIgnoreCase("JunletTridner")) {
-			event.setQuitMessage(ChatColor.GOLD + "세계 최고의 운을 가진 그 분이 세상을 떠났습니다.");
+			event.setQuitMessage(ChatColor.GOLD + "오늘도 그에겐 S급 검투사는 흑우입니다.");
 		} else if(player.getDisplayName().equalsIgnoreCase("SARASHINA_RUKA")) {
 			event.setQuitMessage(ChatColor.YELLOW + "오늘도 하루종일 광질을 했습니다.");
 		} else {
@@ -10107,7 +10107,19 @@ public class Main extends JavaPlugin implements Listener{
 				|| mat == Material.CRIMSON_DOOR || mat == Material.DARK_OAK_DOOR || mat == Material.IRON_DOOR || mat == Material.JUNGLE_DOOR
 				|| mat == Material.OAK_DOOR || mat == Material.SPRUCE_DOOR || mat == Material.WARPED_DOOR || mat == Material.REPEATER
 				|| mat == Material.TRIPWIRE_HOOK || mat == Material.TRIPWIRE || mat == Material.STRING || mat == Material.REDSTONE
-				|| mat == Material.REDSTONE_WIRE|| mat == Material.COMMAND_BLOCK || mat == Material.CHAIN_COMMAND_BLOCK || mat == Material.REPEATING_COMMAND_BLOCK) {
+				|| mat == Material.REDSTONE_WIRE || mat == Material.COMMAND_BLOCK || mat == Material.CHAIN_COMMAND_BLOCK || mat == Material.REPEATING_COMMAND_BLOCK
+				|| mat == Material.ACACIA_STAIRS || mat == Material.ANDESITE_STAIRS || mat == Material.BIRCH_STAIRS || mat == Material.BLACKSTONE_STAIRS
+				|| mat == Material.BRICK_STAIRS || mat == Material.COBBLESTONE_STAIRS || mat == Material.CRIMSON_STAIRS || mat == Material.DARK_OAK_STAIRS
+				|| mat == Material.DARK_PRISMARINE_STAIRS || mat == Material.DIORITE_STAIRS || mat == Material.END_STONE_BRICK_STAIRS || mat == Material.GRANITE_STAIRS
+				|| mat == Material.JUNGLE_STAIRS || mat == Material.MOSSY_COBBLESTONE_STAIRS || mat == Material.MOSSY_STONE_BRICK_STAIRS || mat == Material.NETHER_BRICK_STAIRS
+				|| mat == Material.OAK_STAIRS || mat == Material.POLISHED_ANDESITE_STAIRS || mat == Material.POLISHED_BLACKSTONE_BRICK_STAIRS || mat == Material.POLISHED_BLACKSTONE_STAIRS
+				|| mat == Material.POLISHED_DIORITE_STAIRS || mat == Material.POLISHED_GRANITE_STAIRS || mat == Material.PRISMARINE_BRICK_STAIRS || mat == Material.PRISMARINE_STAIRS
+				|| mat == Material.PURPUR_STAIRS || mat == Material.QUARTZ_STAIRS || mat == Material.RED_NETHER_BRICK_STAIRS || mat == Material.RED_SANDSTONE_STAIRS
+				|| mat == Material.SANDSTONE_STAIRS || mat == Material.SMOOTH_QUARTZ_STAIRS || mat == Material.SMOOTH_RED_SANDSTONE_STAIRS || mat == Material.SMOOTH_SANDSTONE_STAIRS
+				|| mat == Material.SPRUCE_STAIRS || mat == Material.STONE_BRICK_STAIRS || mat == Material.STONE_STAIRS || mat == Material.WARPED_STAIRS
+				|| mat == Material.ACACIA_FENCE || mat == Material.BIRCH_FENCE || mat == Material.CRIMSON_FENCE || mat == Material.DARK_OAK_FENCE
+				|| mat == Material.JUNGLE_FENCE || mat == Material.NETHER_BRICK_FENCE || mat == Material.OAK_FENCE || mat == Material.SPRUCE_FENCE
+				|| mat == Material.WARPED_FENCE) {
 			event.setCancelled(false);
 		} else {
 			event.setCancelled(true);
