@@ -2888,15 +2888,15 @@ public class PlayerHitDebuff {
 							}
 
 							if (time == 0) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 25.0f, 0.8f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 40.0f, 0.4f);
 							} else if (time == 10) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 25.0f, 1.0f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 40.0f, 0.4f);
 							} else if (time == 20) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 25.0f, 1.2f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 40.0f, 0.4f);
 							} else if (time == 30) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 25.0f, 1.4f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 40.0f, 0.4f);
 							} else if (time == 40) {
-								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_ZOMBIE_HURT, 25.0f, 1.6f);
+								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 40.0f, 0.8f);
 							} else if (time == 50) {
 								player.getWorld().playSound(mob.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 10.0f, 0.8f);
 								for(Entity ent : mob.getNearbyEntities(20, 10, 20)) {

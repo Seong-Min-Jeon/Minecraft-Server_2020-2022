@@ -352,6 +352,8 @@ public class BossTicket {
 								}
 								player.getWorld().spawnEntity(new Location(player.getWorld(), 4118, 84, 2456), EntityType.SKELETON);
 								
+								new PlayerHitDebuff().pat1 = false;
+								new PlayerHitDebuff().pat2 = false;
 								new BossHealth().getBar17().setProgress(1.0);
 								new BossHealth().getBar17().addPlayer(player);
 								td.endTask();

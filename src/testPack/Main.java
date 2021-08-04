@@ -200,9 +200,9 @@ public class Main extends JavaPlugin implements Listener{
 	
 	// gamerule doMobLoot false
 	// gamerule doMobSpawning false
-	// gamerule keepInventory trues
+	// gamerule keepInventory true
 	// gamerule doImmediateRespawn true
-	// gamerule doLimitedCrafting trueq
+	// gamerule doLimitedCrafting true
 	// gamerule mobGriefing false
 	// gamerule doWeatherCycle false
 	// Damage_ALL, Damage_Undead, Damage_Arthropods, Impaling, Sweeping, Protection_Environment, Protection_Fire, Protection_Explosion, Protection_Projectile, Thorns, Level
@@ -358,7 +358,7 @@ public class Main extends JavaPlugin implements Listener{
 		} else if(player.getDisplayName().equalsIgnoreCase("Illusion__")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.GOLD + "일류 건축가 릴륨.");
 		} else if(player.getDisplayName().equalsIgnoreCase("JunletTridner")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.GOLD + "SS급 검투사 Jun");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.GOLD + "투기장의 지배자 Jun");
 		} else if(player.getDisplayName().equalsIgnoreCase("SARASHINA_RUKA")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.YELLOW + "보석.. 보석은 어디에 있는가?");
 		} else {
@@ -3396,6 +3396,13 @@ public class Main extends JavaPlugin implements Listener{
 	@EventHandler
 	public void die(PlayerDeathEvent event) {
 		event.setDeathMessage(null);
+		// 보스바 관련
+		try {
+			Player player = (Player) event.getEntity();
+			System.out.println(ChatColor.RED + "" + player.getDisplayName() + " 사망");
+		} catch (Exception e) {
+
+		}
 		// 퀘스트 관련
 		try {
 			Player player = (Player) event.getEntity();
