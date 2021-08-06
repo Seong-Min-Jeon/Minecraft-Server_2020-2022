@@ -553,7 +553,7 @@ public class PlayerHitDebuff {
 								for (Entity nearPlayer : nearEntity) {
 									if (nearPlayer instanceof Player) {
 										Location loc2 = nearPlayer.getLocation();
-										if (loc2.getX() <= 90 && loc2.getY() <= 87 && loc2.getZ() <= -5 && 
+										if (loc2.getX() <= 90 && loc2.getY() <= 87 && loc2.getZ() <= -3 && 
 												loc2.getX() >= 54 && loc2.getY() >= 75 && loc2.getZ() >= -41) {
 											((Player) nearPlayer).damage(300);
 										}
@@ -654,7 +654,7 @@ public class PlayerHitDebuff {
 								for (Entity nearPlayer : nearEntity) {
 									if (nearPlayer instanceof Player) {
 										Location loc2 = nearPlayer.getLocation();
-										if (loc2.getX() <= 90 && loc2.getY() <= 100 && loc2.getZ() <= -5 && 
+										if (loc2.getX() <= 90 && loc2.getY() <= 100 && loc2.getZ() <= -3 && 
 												loc2.getX() >= 54 && loc2.getY() >= 88 && loc2.getZ() >= -41) {
 											((Player) nearPlayer).damage(500);
 										}
@@ -758,7 +758,7 @@ public class PlayerHitDebuff {
 								for (Entity nearPlayer : nearEntity) {
 									if (nearPlayer instanceof Player) {
 										Location loc2 = nearPlayer.getLocation();
-										if (loc2.getX() <= 90 && loc2.getY() <= 115 && loc2.getZ() <= -5 && 
+										if (loc2.getX() <= 90 && loc2.getY() <= 115 && loc2.getZ() <= -3 && 
 												loc2.getX() >= 54 && loc2.getY() >= 101 && loc2.getZ() >= -41) {
 											((Player) nearPlayer).damage(4000);
 										}
@@ -1234,7 +1234,7 @@ public class PlayerHitDebuff {
 								for (Entity nearPlayer : nearEntity) {
 									if (nearPlayer instanceof Player) {
 										Location loc2 = nearPlayer.getLocation();
-										if (loc2.getX() <= 90 && loc2.getY() <= 128 && loc2.getZ() <= -5 && 
+										if (loc2.getX() <= 90 && loc2.getY() <= 128 && loc2.getZ() <= -3 && 
 												loc2.getX() >= 54 && loc2.getY() >= 116 && loc2.getZ() >= -41) {
 											((Player) nearPlayer).damage(5000);
 										}
@@ -1362,7 +1362,7 @@ public class PlayerHitDebuff {
 								for(Entity p : nearPlayer) {
 									if(p instanceof Player) {
 										Location loc2 = p.getLocation();
-										if (loc2.getX() <= 90 && loc2.getY() <= 141 && loc2.getZ() <= -5 && 
+										if (loc2.getX() <= 90 && loc2.getY() <= 141 && loc2.getZ() <= -3 && 
 												loc2.getX() >= 54 && loc2.getY() >= 129 && loc2.getZ() >= -41) {
 											p.getWorld().playSound(p.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 1.5f, 1.0f);
 											p.getWorld().spawnParticle(Particle.EXPLOSION_LARGE, p.getLocation(), 2);
@@ -1429,7 +1429,7 @@ public class PlayerHitDebuff {
 								for (Entity nearPlayer : nearEntity) {
 									if (nearPlayer instanceof Player) {
 										Location loc2 = nearPlayer.getLocation();
-										if (loc2.getX() <= 90 && loc2.getY() <= 141 && loc2.getZ() <= -5 && 
+										if (loc2.getX() <= 90 && loc2.getY() <= 141 && loc2.getZ() <= -3 && 
 												loc2.getX() >= 54 && loc2.getY() >= 129 && loc2.getZ() >= -41) {
 											((Player) nearPlayer).damage(7000);
 										}
@@ -1533,7 +1533,7 @@ public class PlayerHitDebuff {
 								for (Entity nearPlayer : nearEntity) {
 									if (nearPlayer instanceof Player) {
 										Location loc2 = nearPlayer.getLocation();
-										if (loc2.getX() <= 90 && loc2.getY() <= 156 && loc2.getZ() <= -5 && 
+										if (loc2.getX() <= 90 && loc2.getY() <= 156 && loc2.getZ() <= -3 && 
 												loc2.getX() >= 54 && loc2.getY() >= 142 && loc2.getZ() >= -41) {
 											((Player) nearPlayer).damage(12000);
 										}
@@ -1615,7 +1615,7 @@ public class PlayerHitDebuff {
 								for (Entity nearPlayer : nearEntity) {
 									if (nearPlayer instanceof Player) {
 										Location loc2 = nearPlayer.getLocation();
-										if (loc2.getX() <= 90 && loc2.getY() <= 156 && loc2.getZ() <= -5 && 
+										if (loc2.getX() <= 90 && loc2.getY() <= 156 && loc2.getZ() <= -3 && 
 												loc2.getX() >= 54 && loc2.getY() >= 142 && loc2.getZ() >= -41) {
 											((Player) nearPlayer).damage(12000);
 										}
@@ -1658,7 +1658,7 @@ public class PlayerHitDebuff {
 					for (Entity nearPlayer : nearEntity) {
 						if (nearPlayer instanceof Player) {
 							Location loc2 = nearPlayer.getLocation();
-							if (loc2.getX() <= 90 && loc2.getY() <= 169 && loc2.getZ() <= -5 && 
+							if (loc2.getX() <= 90 && loc2.getY() <= 169 && loc2.getZ() <= -3 && 
 									loc2.getX() >= 54 && loc2.getY() >= 157 && loc2.getZ() >= -41) {
 								nearPlayer.teleport(mob);
 							}
@@ -1701,8 +1701,8 @@ public class PlayerHitDebuff {
 								for (Entity nearPlayer : nearEntity) {
 									if (nearPlayer instanceof Player) {
 										Location loc2 = nearPlayer.getLocation();
-										if (loc2.getX() <= 90 && loc2.getY() <= 169 && loc2.getZ() <= -5 && 
-												loc2.getX() >= 54 && loc2.getY() >= 157 && loc2.getZ() >= -41) {
+										if (loc2.getX() <= 90 && loc2.getY() <= 169 && loc2.getZ() <= -3 && 
+												loc2.getX() >= 54 && loc2.getY() >= 156 && loc2.getZ() >= -41) {
 											((Player) nearPlayer).damage(99999999);
 										}
 									}
@@ -1765,7 +1765,7 @@ public class PlayerHitDebuff {
 								for (Entity nearPlayer : nearEntity) {
 									if (nearPlayer instanceof Player) {
 										Location loc2 = nearPlayer.getLocation();
-										if (loc2.getX() <= 90 && loc2.getY() <= 169 && loc2.getZ() <= -5 && 
+										if (loc2.getX() <= 90 && loc2.getY() <= 169 && loc2.getZ() <= -3 && 
 												loc2.getX() >= 54 && loc2.getY() >= 157 && loc2.getZ() >= -41) {
 											((Player) nearPlayer).damage(99999999);
 										}
@@ -1790,7 +1790,7 @@ public class PlayerHitDebuff {
 					for (Entity nearPlayer : nearEntity) {
 						if (nearPlayer instanceof Player) {
 							Location loc2 = nearPlayer.getLocation();
-							if (loc2.getX() <= 90 && loc2.getY() <= 169 && loc2.getZ() <= -5 && 
+							if (loc2.getX() <= 90 && loc2.getY() <= 169 && loc2.getZ() <= -3 && 
 									loc2.getX() >= 54 && loc2.getY() >= 157 && loc2.getZ() >= -41) {
 								ary.add((Player) nearPlayer);
 							}
@@ -1922,7 +1922,7 @@ public class PlayerHitDebuff {
 								for (Entity nearPlayer : nearEntity) {
 									if (nearPlayer instanceof Player) {
 										Location loc2 = nearPlayer.getLocation();
-										if (loc2.getX() <= 90 && loc2.getY() <= 169 && loc2.getZ() <= -5 && 
+										if (loc2.getX() <= 90 && loc2.getY() <= 169 && loc2.getZ() <= -3 && 
 												loc2.getX() >= 54 && loc2.getY() >= 157 && loc2.getZ() >= -41) {
 											((Player) nearPlayer).damage(99999999);
 										}

@@ -208,6 +208,51 @@ public class NPCManager {
 		return npc;
 	}
 	
+	public EntityPlayer npc11() {
+		Location loc = new Location(Bukkit.getWorld("world"), 150.5, 71, 1902.5, 0, 0);
+		
+		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "구경꾼");
+		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
+		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
+		String[] name = getSkin("SARASHINA_RUKA");
+		if(name == null) {
+			System.out.println("레나랑 확인 불가");
+		} else {
+			gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
+		}
+		return npc;
+	}
+	
+	public EntityPlayer npc12() {
+		Location loc = new Location(Bukkit.getWorld("world"), 149.5, 71, 1902.5, 0, 0);
+		
+		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "구경꾼");
+		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
+		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
+		String[] name = getSkin("Cute_Camel");
+		if(name == null) {
+			System.out.println("레나랑 동생 확인 불가");
+		} else {
+			gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
+		}
+		return npc;
+	}
+	
+	public EntityPlayer npc13() {
+		Location loc = new Location(Bukkit.getWorld("world"), 155.5, 71, 1904.5, 0, 0);
+		
+		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "구경꾼");
+		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
+		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
+		String[] name = getSkin("Joojak");
+		if(name == null) {
+			System.out.println("주작 확인 불가");
+		} else {
+			gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
+		}
+		return npc;
+	}
+	
 	public void allTime(Player player) {
 		try {
 			EntityPlayer npc9 = npc9();
@@ -216,6 +261,15 @@ public class NPCManager {
 			EntityPlayer npc10 = npc10();
 			addEquipPacket2(player, npc10, Material.GOLDEN_HELMET, Material.GOLDEN_CHESTPLATE, Material.GOLDEN_LEGGINGS
 					, Material.GOLDEN_BOOTS, Material.SPRUCE_PLANKS, Material.AIR);
+			EntityPlayer npc11 = npc11();
+			addEquipPacket2(player, npc11, Material.SKELETON_SKULL, Material.GOLDEN_CHESTPLATE, Material.GOLDEN_LEGGINGS
+					, Material.GOLDEN_BOOTS, Material.GOLDEN_HOE, Material.AIR);
+			EntityPlayer npc12 = npc12();
+			addEquipPacket2(player, npc12, Material.SKELETON_SKULL, Material.CHAINMAIL_CHESTPLATE, Material.CHAINMAIL_LEGGINGS
+					, Material.CHAINMAIL_BOOTS, Material.IRON_HOE, Material.AIR);
+			EntityPlayer npc13 = npc13();
+			addEquipPacket2(player, npc13, Material.AIR, Material.AIR, Material.AIR
+					, Material.AIR, Material.AIR, Material.AIR);
 		} catch(Exception e) {
 			
 		}

@@ -562,7 +562,7 @@ public class TPMobSpawn {
 					Player nearPlayer = (Player) nearEntity;
 					Location loc2 = nearPlayer.getLocation();
 					// 54 75 -5  90 86 -41
-					if (loc2.getX() <= 90 && loc2.getY() <= 87 && loc2.getZ() <= -5 && 
+					if (loc2.getX() <= 90 && loc2.getY() <= 87 && loc2.getZ() <= -3 &&  
 							loc2.getX() >= 54 && loc2.getY() >= 75 && loc2.getZ() >= -41) {
 						num++;
 						if(new BossHealth().getBar2().getProgress() != 0) {
@@ -577,7 +577,7 @@ public class TPMobSpawn {
 					if (nearEntity instanceof Mob) {
 						Location loc2 = nearEntity.getLocation();
 						// 54 75 -5  90 86 -41
-						if (loc2.getX() <= 90 && loc2.getY() <= 87 && loc2.getZ() <= -5 && 
+						if (loc2.getX() <= 90 && loc2.getY() <= 87 && loc2.getZ() <= -3 &&  
 								loc2.getX() >= 54 && loc2.getY() >= 75 && loc2.getZ() >= -41) {
 							nearEntity.remove();
 						}
@@ -600,7 +600,7 @@ public class TPMobSpawn {
 				if (nearEntity.getType() == EntityType.PLAYER) {
 					Player nearPlayer = (Player) nearEntity;
 					Location loc2 = nearPlayer.getLocation();
-					if (loc2.getX() <= 90 && loc2.getY() <= 100 && loc2.getZ() <= -5 && 
+					if (loc2.getX() <= 90 && loc2.getY() <= 100 && loc2.getZ() <= -3 &&  
 							loc2.getX() >= 54 && loc2.getY() >= 88 && loc2.getZ() >= -41) {
 						num++;
 						if(new BossHealth().getBar3().getProgress() != 0) {
@@ -614,7 +614,7 @@ public class TPMobSpawn {
 				for (Entity nearEntity : entitylist) {
 					if (nearEntity instanceof Mob) {
 						Location loc2 = nearEntity.getLocation();
-						if (loc2.getX() <= 90 && loc2.getY() <= 100 && loc2.getZ() <= -5 && 
+						if (loc2.getX() <= 90 && loc2.getY() <= 100 && loc2.getZ() <= -3 &&  
 								loc2.getX() >= 54 && loc2.getY() >= 88 && loc2.getZ() >= -41) {
 							nearEntity.remove();
 						}
@@ -637,7 +637,7 @@ public class TPMobSpawn {
 				if (nearEntity.getType() == EntityType.PLAYER) {
 					Player nearPlayer = (Player) nearEntity;
 					Location loc2 = nearPlayer.getLocation();
-					if (loc2.getX() <= 90 && loc2.getY() <= 115 && loc2.getZ() <= -5 && 
+					if (loc2.getX() <= 90 && loc2.getY() <= 115 && loc2.getZ() <= -3 &&  
 							loc2.getX() >= 54 && loc2.getY() >= 101 && loc2.getZ() >= -41) {
 						num++;
 						if(new BossHealth().getBar4().getProgress() != 0) {
@@ -651,7 +651,7 @@ public class TPMobSpawn {
 				for (Entity nearEntity : entitylist) {
 					if (nearEntity instanceof Mob) {
 						Location loc2 = nearEntity.getLocation();
-						if (loc2.getX() <= 90 && loc2.getY() <= 115 && loc2.getZ() <= -5 && 
+						if (loc2.getX() <= 90 && loc2.getY() <= 115 && loc2.getZ() <= -3 &&  
 								loc2.getX() >= 54 && loc2.getY() >= 101 && loc2.getZ() >= -41) {
 							nearEntity.remove();
 						}
@@ -674,7 +674,7 @@ public class TPMobSpawn {
 				if (nearEntity.getType() == EntityType.PLAYER) {
 					Player nearPlayer = (Player) nearEntity;
 					Location loc2 = nearPlayer.getLocation();
-					if (loc2.getX() <= 90 && loc2.getY() <= 128 && loc2.getZ() <= -5 && 
+					if (loc2.getX() <= 90 && loc2.getY() <= 128 && loc2.getZ() <= -3 &&  
 							loc2.getX() >= 54 && loc2.getY() >= 116 && loc2.getZ() >= -41) {
 						num++;
 						if(new BossHealth().getBar18().getProgress() != 0) {
@@ -688,7 +688,7 @@ public class TPMobSpawn {
 				for (Entity nearEntity : entitylist) {
 					if (nearEntity instanceof Mob) {
 						Location loc2 = nearEntity.getLocation();
-						if (loc2.getX() <= 90 && loc2.getY() <= 128 && loc2.getZ() <= -5 && 
+						if (loc2.getX() <= 90 && loc2.getY() <= 128 && loc2.getZ() <= -3 &&  
 								loc2.getX() >= 54 && loc2.getY() >= 116 && loc2.getZ() >= -41) {
 							nearEntity.remove();
 						}
@@ -711,7 +711,7 @@ public class TPMobSpawn {
 				if (nearEntity.getType() == EntityType.PLAYER) {
 					Player nearPlayer = (Player) nearEntity;
 					Location loc2 = nearPlayer.getLocation();
-					if (loc2.getX() <= 90 && loc2.getY() <= 141 && loc2.getZ() <= -5 && 
+					if (loc2.getX() <= 90 && loc2.getY() <= 141 && loc2.getZ() <= -3 &&  
 							loc2.getX() >= 54 && loc2.getY() >= 129 && loc2.getZ() >= -41) {
 						num++;
 						if(new BossHealth().getBar19().getProgress() != 0) {
@@ -725,7 +725,7 @@ public class TPMobSpawn {
 				for (Entity nearEntity : entitylist) {
 					if (nearEntity instanceof Mob) {
 						Location loc2 = nearEntity.getLocation();
-						if (loc2.getX() <= 90 && loc2.getY() <= 141 && loc2.getZ() <= -5 && 
+						if (loc2.getX() <= 90 && loc2.getY() <= 141 && loc2.getZ() <= -3 &&  
 								loc2.getX() >= 54 && loc2.getY() >= 129 && loc2.getZ() >= -41) {
 							nearEntity.remove();
 						}
@@ -748,7 +748,7 @@ public class TPMobSpawn {
 				if (nearEntity.getType() == EntityType.PLAYER) {
 					Player nearPlayer = (Player) nearEntity;
 					Location loc2 = nearPlayer.getLocation();
-					if (loc2.getX() <= 90 && loc2.getY() <= 156 && loc2.getZ() <= -5 && 
+					if (loc2.getX() <= 90 && loc2.getY() <= 156 && loc2.getZ() <= -3 &&  
 							loc2.getX() >= 54 && loc2.getY() >= 142 && loc2.getZ() >= -41) {
 						num++;
 						if(new BossHealth().getBar26().getProgress() != 0) {
@@ -762,7 +762,7 @@ public class TPMobSpawn {
 				for (Entity nearEntity : entitylist) {
 					if (nearEntity instanceof Mob) {
 						Location loc2 = nearEntity.getLocation();
-						if (loc2.getX() <= 90 && loc2.getY() <= 156 && loc2.getZ() <= -5 && 
+						if (loc2.getX() <= 90 && loc2.getY() <= 156 && loc2.getZ() <= -3 &&  
 								loc2.getX() >= 54 && loc2.getY() >= 142 && loc2.getZ() >= -41) {
 							nearEntity.remove();
 						}
@@ -784,7 +784,7 @@ public class TPMobSpawn {
 				if (nearEntity.getType() == EntityType.PLAYER) {
 					Player nearPlayer = (Player) nearEntity;
 					Location loc2 = nearPlayer.getLocation();
-					if (loc2.getX() <= 90 && loc2.getY() <= 169 && loc2.getZ() <= -5 && 
+					if (loc2.getX() <= 90 && loc2.getY() <= 169 && loc2.getZ() <= -3 &&  
 							loc2.getX() >= 54 && loc2.getY() >= 157 && loc2.getZ() >= -41) {
 						num++;
 						if(new BossHealth().getBar27().getProgress() != 0) {
@@ -798,7 +798,7 @@ public class TPMobSpawn {
 				for (Entity nearEntity : entitylist) {
 					if (nearEntity instanceof Mob) {
 						Location loc2 = nearEntity.getLocation();
-						if (loc2.getX() <= 90 && loc2.getY() <= 169 && loc2.getZ() <= -5 && 
+						if (loc2.getX() <= 90 && loc2.getY() <= 169 && loc2.getZ() <= -3 &&  
 								loc2.getX() >= 54 && loc2.getY() >= 157 && loc2.getZ() >= -41) {
 							nearEntity.remove();
 						}
@@ -820,7 +820,7 @@ public class TPMobSpawn {
 				if (nearEntity.getType() == EntityType.PLAYER) {
 					Player nearPlayer = (Player) nearEntity;
 					Location loc2 = nearPlayer.getLocation();
-					if (loc2.getX() <= 90 && loc2.getY() <= 182 && loc2.getZ() <= -5 && 
+					if (loc2.getX() <= 90 && loc2.getY() <= 182 && loc2.getZ() <= -3 &&  
 							loc2.getX() >= 54 && loc2.getY() >= 170 && loc2.getZ() >= -41) {
 						num++;
 						return;
@@ -831,7 +831,7 @@ public class TPMobSpawn {
 				for (Entity nearEntity : entitylist) {
 					if (nearEntity instanceof Mob) {
 						Location loc2 = nearEntity.getLocation();
-						if (loc2.getX() <= 90 && loc2.getY() <= 182 && loc2.getZ() <= -5 && 
+						if (loc2.getX() <= 90 && loc2.getY() <= 182 && loc2.getZ() <= -3 &&  
 								loc2.getX() >= 54 && loc2.getY() >= 170 && loc2.getZ() >= -41) {
 							nearEntity.remove();
 						}
@@ -851,7 +851,7 @@ public class TPMobSpawn {
 				if (nearEntity.getType() == EntityType.PLAYER) {
 					Player nearPlayer = (Player) nearEntity;
 					Location loc2 = nearPlayer.getLocation();
-					if (loc2.getX() <= 90 && loc2.getY() <= 197 && loc2.getZ() <= -5 && 
+					if (loc2.getX() <= 90 && loc2.getY() <= 197 && loc2.getZ() <= -3 &&  
 							loc2.getX() >= 54 && loc2.getY() >= 183 && loc2.getZ() >= -41) {
 						num++;
 						return;
@@ -862,7 +862,7 @@ public class TPMobSpawn {
 				for (Entity nearEntity : entitylist) {
 					if (nearEntity instanceof Mob) {
 						Location loc2 = nearEntity.getLocation();
-						if (loc2.getX() <= 90 && loc2.getY() <= 197 && loc2.getZ() <= -5 && 
+						if (loc2.getX() <= 90 && loc2.getY() <= 197 && loc2.getZ() <= -3 &&  
 								loc2.getX() >= 54 && loc2.getY() >= 183 && loc2.getZ() >= -41) {
 							nearEntity.remove();
 						}
@@ -882,7 +882,7 @@ public class TPMobSpawn {
 				if (nearEntity.getType() == EntityType.PLAYER) {
 					Player nearPlayer = (Player) nearEntity;
 					Location loc2 = nearPlayer.getLocation();
-					if (loc2.getX() <= 90 && loc2.getY() <= 210 && loc2.getZ() <= -5 && 
+					if (loc2.getX() <= 90 && loc2.getY() <= 210 && loc2.getZ() <= -3 &&  
 							loc2.getX() >= 54 && loc2.getY() >= 198 && loc2.getZ() >= -41) {
 						num++;
 						return;
@@ -893,7 +893,7 @@ public class TPMobSpawn {
 				for (Entity nearEntity : entitylist) {
 					if (nearEntity instanceof Mob) {
 						Location loc2 = nearEntity.getLocation();
-						if (loc2.getX() <= 90 && loc2.getY() <= 210 && loc2.getZ() <= -5 && 
+						if (loc2.getX() <= 90 && loc2.getY() <= 210 && loc2.getZ() <= -3 &&  
 								loc2.getX() >= 54 && loc2.getY() >= 198 && loc2.getZ() >= -41) {
 							nearEntity.remove();
 						}
@@ -913,7 +913,7 @@ public class TPMobSpawn {
 				if (nearEntity.getType() == EntityType.PLAYER) {
 					Player nearPlayer = (Player) nearEntity;
 					Location loc2 = nearPlayer.getLocation();
-					if (loc2.getX() <= 90 && loc2.getY() <= 223 && loc2.getZ() <= -5 && 
+					if (loc2.getX() <= 90 && loc2.getY() <= 223 && loc2.getZ() <= -3 &&  
 							loc2.getX() >= 54 && loc2.getY() >= 211 && loc2.getZ() >= -41) {
 						num++;
 						return;
@@ -924,7 +924,7 @@ public class TPMobSpawn {
 				for (Entity nearEntity : entitylist) {
 					if (nearEntity instanceof Mob) {
 						Location loc2 = nearEntity.getLocation();
-						if (loc2.getX() <= 90 && loc2.getY() <= 223 && loc2.getZ() <= -5 && 
+						if (loc2.getX() <= 90 && loc2.getY() <= 223 && loc2.getZ() <= -3 &&  
 								loc2.getX() >= 54 && loc2.getY() >= 211 && loc2.getZ() >= -41) {
 							nearEntity.remove();
 						}
@@ -944,7 +944,7 @@ public class TPMobSpawn {
 				if (nearEntity.getType() == EntityType.PLAYER) {
 					Player nearPlayer = (Player) nearEntity;
 					Location loc2 = nearPlayer.getLocation();
-					if (loc2.getX() <= 90 && loc2.getY() <= 238 && loc2.getZ() <= -5 && 
+					if (loc2.getX() <= 90 && loc2.getY() <= 238 && loc2.getZ() <= -3 &&  
 							loc2.getX() >= 54 && loc2.getY() >= 224 && loc2.getZ() >= -41) {
 						num++;
 						return;
@@ -955,7 +955,7 @@ public class TPMobSpawn {
 				for (Entity nearEntity : entitylist) {
 					if (nearEntity instanceof Mob) {
 						Location loc2 = nearEntity.getLocation();
-						if (loc2.getX() <= 90 && loc2.getY() <= 238 && loc2.getZ() <= -5 && 
+						if (loc2.getX() <= 90 && loc2.getY() <= 238 && loc2.getZ() <= -3 &&  
 								loc2.getX() >= 54 && loc2.getY() >= 224 && loc2.getZ() >= -41) {
 							nearEntity.remove();
 						}
