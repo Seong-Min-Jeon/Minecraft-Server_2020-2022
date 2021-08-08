@@ -5,15 +5,10 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
-import java.text.NumberFormat.Style;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Date;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 
@@ -23,25 +18,16 @@ import org.bukkit.Effect;
 import org.bukkit.GameMode;
 import org.bukkit.Location;
 import org.bukkit.Material;
-import org.bukkit.NamespacedKey;
 import org.bukkit.Particle;
 import org.bukkit.Sound;
 import org.bukkit.World;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.block.Block;
 import org.bukkit.block.Chest;
-import org.bukkit.boss.BarColor;
-import org.bukkit.boss.BarStyle;
-import org.bukkit.boss.BossBar;
-import org.bukkit.craftbukkit.v1_16_R3.entity.CraftItemFrame;
-import org.bukkit.craftbukkit.v1_16_R3.entity.CraftPainting;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Arrow;
-import org.bukkit.entity.Boat;
 import org.bukkit.entity.CaveSpider;
-import org.bukkit.entity.Chicken;
-import org.bukkit.entity.Cow;
 import org.bukkit.entity.Creeper;
 import org.bukkit.entity.Drowned;
 import org.bukkit.entity.Egg;
@@ -51,14 +37,11 @@ import org.bukkit.entity.Enderman;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.EvokerFangs;
-import org.bukkit.entity.FallingBlock;
 import org.bukkit.entity.Fireball;
 import org.bukkit.entity.Guardian;
 import org.bukkit.entity.Horse;
-import org.bukkit.entity.HumanEntity;
 import org.bukkit.entity.IronGolem;
 import org.bukkit.entity.Item;
-import org.bukkit.entity.ItemFrame;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Llama;
 import org.bukkit.entity.LlamaSpit;
@@ -66,49 +49,32 @@ import org.bukkit.entity.Mob;
 import org.bukkit.entity.Ocelot;
 import org.bukkit.entity.Panda;
 import org.bukkit.entity.Phantom;
-import org.bukkit.entity.Pig;
-import org.bukkit.entity.Piglin;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.PolarBear;
 import org.bukkit.entity.Rabbit;
-import org.bukkit.entity.Ravager;
-import org.bukkit.entity.Sheep;
 import org.bukkit.entity.Skeleton;
 import org.bukkit.entity.SmallFireball;
-import org.bukkit.entity.Snowball;
 import org.bukkit.entity.SpectralArrow;
 import org.bukkit.entity.Spider;
-import org.bukkit.entity.Villager;
-import org.bukkit.entity.Wolf;
 import org.bukkit.entity.Zoglin;
-import org.bukkit.entity.Zombie;
-import org.bukkit.event.Event.Result;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.BlockBurnEvent;
 import org.bukkit.event.block.BlockCanBuildEvent;
-import org.bukkit.event.block.BlockCookEvent;
-import org.bukkit.event.block.BlockDamageEvent;
-import org.bukkit.event.block.BlockDispenseEvent;
-import org.bukkit.event.block.BlockEvent;
 import org.bukkit.event.block.BlockFadeEvent;
 import org.bukkit.event.block.BlockFromToEvent;
 import org.bukkit.event.block.BlockIgniteEvent;
 import org.bukkit.event.block.BlockIgniteEvent.IgniteCause;
-import org.bukkit.event.block.BlockMultiPlaceEvent;
 import org.bukkit.event.block.BlockPhysicsEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.block.EntityBlockFormEvent;
-import org.bukkit.event.block.FluidLevelChangeEvent;
 import org.bukkit.event.block.LeavesDecayEvent;
 import org.bukkit.event.block.MoistureChangeEvent;
 import org.bukkit.event.entity.CreatureSpawnEvent;
-import org.bukkit.event.entity.CreeperPowerEvent;
 import org.bukkit.event.entity.EntityBreedEvent;
 import org.bukkit.event.entity.EntityChangeBlockEvent;
-import org.bukkit.event.entity.EntityDamageByBlockEvent;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.EntityDamageEvent.DamageCause;
@@ -119,7 +85,6 @@ import org.bukkit.event.entity.EntityRegainHealthEvent.RegainReason;
 import org.bukkit.event.entity.EntityShootBowEvent;
 import org.bukkit.event.entity.EntityTransformEvent;
 import org.bukkit.event.entity.ExplosionPrimeEvent;
-import org.bukkit.event.entity.LingeringPotionSplashEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.entity.ProjectileHitEvent;
 import org.bukkit.event.entity.ProjectileLaunchEvent;
@@ -134,13 +99,12 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.event.inventory.InventoryOpenEvent;
 import org.bukkit.event.inventory.InventoryType;
-import org.bukkit.event.inventory.PrepareItemCraftEvent;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
+import org.bukkit.event.player.PlayerAdvancementDoneEvent;
 import org.bukkit.event.player.PlayerAnimationEvent;
 import org.bukkit.event.player.PlayerAnimationType;
 import org.bukkit.event.player.PlayerArmorStandManipulateEvent;
 import org.bukkit.event.player.PlayerChangedWorldEvent;
-import org.bukkit.event.player.PlayerChatEvent;
 import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.event.player.PlayerFishEvent;
 import org.bukkit.event.player.PlayerInteractAtEntityEvent;
@@ -149,35 +113,20 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerItemConsumeEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerLevelChangeEvent;
-import org.bukkit.event.player.PlayerMoveEvent;
-import org.bukkit.event.player.PlayerPickupArrowEvent;
-import org.bukkit.event.player.PlayerPickupItemEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.event.player.PlayerRespawnEvent;
 import org.bukkit.event.player.PlayerSwapHandItemsEvent;
 import org.bukkit.event.player.PlayerTeleportEvent;
-import org.bukkit.event.player.PlayerTeleportEvent.TeleportCause;
-import org.bukkit.event.server.MapInitializeEvent;
 import org.bukkit.event.server.ServerCommandEvent;
-import org.bukkit.event.vehicle.VehicleCollisionEvent;
 import org.bukkit.event.vehicle.VehicleExitEvent;
-import org.bukkit.event.world.ChunkLoadEvent;
-import org.bukkit.event.world.WorldEvent;
 import org.bukkit.inventory.EntityEquipment;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.Inventory;
-import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.Recipe;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.inventory.meta.MapMeta;
 import org.bukkit.inventory.meta.SkullMeta;
-import org.bukkit.map.MapView;
-import org.bukkit.map.MapView.Scale;
-import org.bukkit.material.MaterialData;
-import org.bukkit.permissions.Permission;
-import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -187,11 +136,8 @@ import org.bukkit.scoreboard.ScoreboardManager;
 import org.bukkit.scoreboard.Team;
 import org.bukkit.util.Vector;
 
-import net.minecraft.server.v1_16_R3.ChatHexColor;
 import net.minecraft.server.v1_16_R3.IChatBaseComponent.ChatSerializer;
-import net.minecraft.server.v1_16_R3.PacketPlayOutPlayerInfo;
 import net.minecraft.server.v1_16_R3.PacketPlayOutTitle;
-import net.minecraft.server.v1_16_R3.WorldGenDecoratorNetherGlowstone;
 import net.minecraft.server.v1_16_R3.PacketPlayOutTitle.EnumTitleAction;
 
 import java.util.Random;
@@ -250,7 +196,6 @@ public class Main extends JavaPlugin implements Listener{
 		new RefreshServer();
 //		new NPCHitBox();
 		
-		
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		board = manager.getNewScoreboard();
 		
@@ -264,7 +209,6 @@ public class Main extends JavaPlugin implements Listener{
 		blue.setPrefix(ChatColor.DARK_AQUA + "");
 		red.setSuffix(ChatColor.DARK_RED + "");
 		blue.setSuffix(ChatColor.DARK_AQUA + "");
-		
 		
 		//chest
 		try {
@@ -317,7 +261,7 @@ public class Main extends JavaPlugin implements Listener{
 	
 	@EventHandler
 	public void onPlayerJoin(PlayerJoinEvent event) {
-		Player player = event.getPlayer(); 
+		Player player = event.getPlayer();
 		
 		// 접속가능한 플레이어
 		try {
@@ -337,7 +281,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("woolring")) { 
 			
 		} else {
-			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/870549488924774431/aile_texture_pack_35.zip");
+			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/873092220012593162/aile_texture_pack_36.zip");
 		}
 		
 		//Message
@@ -588,7 +532,8 @@ public class Main extends JavaPlugin implements Listener{
 		
 		// npc 생성
 		new NPCManager(player, 0);
-			
+		
+		// 장비
 		ItemStack master = new ItemStack(Material.DIAMOND_SWORD);
 		ItemMeta masterIm = master.getItemMeta();
 		masterIm.setLocalizedName("1000000,1000000,1000000,1000000,0,30000,30000,30000,30000,1000000,0");
@@ -10850,6 +10795,12 @@ public class Main extends JavaPlugin implements Listener{
 //			player.getInventory().addItem(item);
 //			player.sendMessage("꽝을 낚았다.");
 //		}
+	}
+	
+	@EventHandler
+	public void advancementEvent(PlayerAdvancementDoneEvent event) {
+		Player player = event.getPlayer();
+		player.playSound(player.getLocation(), Sound.UI_TOAST_CHALLENGE_COMPLETE, 1.0f, 1.0f);
 	}
 	
 	private Class<?> getNMSClass(String name) {

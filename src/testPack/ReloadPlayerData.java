@@ -53,7 +53,7 @@ public class ReloadPlayerData {
     				String health = bufReader.readLine();
     				String level = bufReader.readLine();
     				String[] ary1 = loc.split("/");
-    				player.teleport(new Location(player.getWorld(), Integer.parseInt(ary1[0]), Integer.parseInt(ary1[1]), Integer.parseInt(ary1[2])));
+    				player.teleport(new Location(player.getWorld(), Integer.parseInt(ary1[0]) + 0.5, Integer.parseInt(ary1[1]) + 0.2, Integer.parseInt(ary1[2]) + 0.5));
     				String[] ary3 = level.split("/");
     				player.setLevel(Integer.parseInt(ary3[0]));
     				player.setExp(Float.parseFloat(ary3[1]));

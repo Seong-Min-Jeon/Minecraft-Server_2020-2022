@@ -3470,7 +3470,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.STONE_BRICK_SLAB);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 직검");
+				equipIm.setDisplayName(grade + name + " 클로");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
@@ -3566,7 +3566,7 @@ public class MysteryChestOpen {
 				ItemStack equip = new ItemStack(Material.OBSIDIAN);
 				ItemMeta equipIm = equip.getItemMeta();
 				equipIm.setLocalizedName(localName);
-				equipIm.setDisplayName(grade + name + " 직검");
+				equipIm.setDisplayName(grade + name + " 메이스");
 				ArrayList<String> equipLore = new ArrayList();
 				equipLore.add(ChatColor.GRAY + "레벨 제한: " + lvl);
 				equipLore.add(ChatColor.GRAY + " ");
