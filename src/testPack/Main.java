@@ -6,7 +6,9 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
@@ -136,9 +138,14 @@ import org.bukkit.scoreboard.ScoreboardManager;
 import org.bukkit.scoreboard.Team;
 import org.bukkit.util.Vector;
 
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import com.nametagedit.plugin.NametagEdit;
+
 import net.minecraft.server.v1_16_R3.IChatBaseComponent.ChatSerializer;
 import net.minecraft.server.v1_16_R3.PacketPlayOutTitle;
 import net.minecraft.server.v1_16_R3.PacketPlayOutTitle.EnumTitleAction;
+import xyz.haoshoku.nick.api.NickAPI;
 
 import java.util.Random;
 
@@ -532,6 +539,12 @@ public class Main extends JavaPlugin implements Listener{
 		
 		// npc 생성
 		new NPCManager(player, 0);
+		
+		// 이름 테스트
+//		NametagEdit.getApi().setPrefix(player, "[테스트] " + ChatColor.WHITE);
+//		String[] name = getSkin("why9196");
+//		NickAPI.setSkin(player, name[0], name[1]);
+//		NickAPI.refreshPlayer(player);
 		
 		// 장비
 		ItemStack master = new ItemStack(Material.DIAMOND_SWORD);
@@ -10800,7 +10813,39 @@ public class Main extends JavaPlugin implements Listener{
 	@EventHandler
 	public void advancementEvent(PlayerAdvancementDoneEvent event) {
 		Player player = event.getPlayer();
-		player.playSound(player.getLocation(), Sound.UI_TOAST_CHALLENGE_COMPLETE, 1.0f, 1.0f);
+		String key = event.getAdvancement().getKey().getKey();
+		if(key.equals("cavelimit") || key.equals("dun1") || key.equals("dun2") || key.equals("dun3")
+				 || key.equals("dun3_1") || key.equals("dun4") || key.equals("dun5") || key.equals("forgan")
+				 || key.equals("hero_sword") || key.equals("lighthouse") || key.equals("miyu") || key.equals("pirate")
+				 || key.equals("q1") || key.equals("root") || key.equals("seedcave") || key.equals("tiru")
+				 || key.equals("tutorial_zone") || key.equals("wargunil")) {
+			player.playSound(player.getLocation(), Sound.UI_TOAST_CHALLENGE_COMPLETE, 1.0f, 1.0f);
+		}
+	}
+	
+	private String[] getSkin(String name) {
+		try {
+			URL url = new URL("https://api.mojang.com/users/profiles/minecraft/" + name);
+			InputStreamReader reader = new InputStreamReader(url.openStream());
+			String uuid = new JsonParser().parse(reader).getAsJsonObject().get("id").getAsString();
+			
+			URL url2 = new URL("https://sessionserver.mojang.com/session/minecraft/profile/" + uuid + "?unsigned=false");
+			InputStreamReader reader2 = new InputStreamReader(url2.openStream());
+			JsonObject property = new JsonParser().parse(reader2).getAsJsonObject().get("properties")
+					.getAsJsonArray().get(0).getAsJsonObject();
+			String texture = property.get("value").getAsString();
+			String signature = property.get("signature").getAsString();
+			return new String[] {texture, signature};
+		} catch(Exception e) {
+//			EntityPlayer p = ((CraftPlayer) player).getHandle();
+//			GameProfile profile = p.getProfile();
+//			Property property = profile.getProperties().get("texture").iterator().next();
+//			String texture = property.getValue();
+//			String signature = property.getSignature();
+//			return new String[] {texture, signature};
+			return null;
+		}
+		
 	}
 	
 	private Class<?> getNMSClass(String name) {
