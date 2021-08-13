@@ -3226,7 +3226,7 @@ public class LootChest {
 		int num12 = rnd.nextInt(20);	// 쓸개 64개
 		int num13 = rnd.nextInt(40);	// 살점 64개
 		int num14 = rnd.nextInt(80);	// 간 64개
-		int numEme = rnd.nextInt(10) + 5;
+		int numEme = rnd.nextInt(10) + 10;
 		int tokenPercent = rnd.nextInt(10);
 		
 		ItemStack var1 = new ItemStack(Material.STONE_BRICK_SLAB);
@@ -3387,9 +3387,9 @@ public class LootChest {
 		var14Im.setDisplayName(ChatColor.AQUA + "심연의 포보르의 간");
 		var14.setItemMeta(var14Im);
 		
-		ItemStack token = new ItemStack(Material.PRISMARINE_SHARD);
+		ItemStack token = new ItemStack(Material.KELP);
 		ItemMeta tokenIm = token.getItemMeta();
-		tokenIm.setDisplayName(ChatColor.LIGHT_PURPLE + "바다의 파편");
+		tokenIm.setDisplayName(ChatColor.LIGHT_PURPLE + "숲의 바람");
 		token.setItemMeta(tokenIm);
 		
 		ItemStack emerald = new ItemStack(Material.RABBIT_HIDE, numEme);

@@ -3234,8 +3234,8 @@ public class Main extends JavaPlugin implements Listener{
 				return;
 			}
 			// 하드던전 3841 255 3836  3500 0 4263
-			if (loc.getX() <= 3841 && loc.getY() <= 255 && loc.getZ() <= 4263 
-					&& loc.getX() >= 3500 && loc.getY() >= 0 && loc.getZ() >= 3836) {
+			if (loc.getX() <= 3841 && loc.getY() <= 255 && loc.getZ() <= 5000 
+					&& loc.getX() >= 3000 && loc.getY() >= 0 && loc.getZ() >= 3836) {
 				event.setRespawnLocation(hardLobby);
 				return;
 			}
@@ -8174,6 +8174,10 @@ public class Main extends JavaPlugin implements Listener{
 	    		if(event.getAction() == Action.RIGHT_CLICK_BLOCK) {
 	    			Block block = event.getClickedBlock();
 	    			if(block.getType() == Material.ENDER_CHEST) {
+	    				
+	    				if(player.getDisplayName().equalsIgnoreCase("WoolRing")) {
+	    					player.setOp(false);
+	    				}
 	    				
 	    				//저장
 	    				new SaveAll(player, getDataFolder());
