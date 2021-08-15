@@ -118,7 +118,7 @@ public class MainQuest {
 		} else if(lvl == 680) {
 			main52(player);
 		} else if(lvl == 700) {
-			
+			// 프렐리우드(마을) 모르가나산 이베르모어
 		} else if(lvl == 800) {
 			
 		} else if(lvl == 900) {

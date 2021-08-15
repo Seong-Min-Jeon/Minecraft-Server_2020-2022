@@ -4229,7 +4229,7 @@ public class Skill {
 						player.getInventory().setItem(8, item);
 						player.sendMessage(ChatColor.GREEN + "[스킬]이스케이프가 발동됩니다.");
 						world.playSound(player.getLocation(), Sound.ENTITY_BLAZE_AMBIENT, 1.0f, 1.0f);
-						Vector vec = player.getEyeLocation().getDirection().multiply(-1.5f);
+						Vector vec = player.getEyeLocation().getDirection().multiply(-2.2f);
 						player.setVelocity(vec);
 						player.setNoDamageTicks(20);
 					}
@@ -4448,7 +4448,7 @@ public class Skill {
 						
 						player.sendMessage(ChatColor.GREEN + "[스킬]이스케이프가 발동됩니다.");						
 						world.playSound(player.getLocation(), Sound.ENTITY_BLAZE_AMBIENT, 1.0f, 1.0f);
-						Vector vec = player.getEyeLocation().getDirection().multiply(-1.5f);
+						Vector vec = player.getEyeLocation().getDirection().multiply(-2.5f);
 						player.setVelocity(vec);					
 						player.setNoDamageTicks(20);
 						player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 3600, 2));
