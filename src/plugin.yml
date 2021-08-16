@@ -71,4 +71,7 @@ commands:
   CraftName:
    description: rename to crafting item
    usage: /CraftName
+  setSkin:
+   description: set player skin
+   usage: /setSkin
 api-version: 1.16

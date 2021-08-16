@@ -131,8 +131,8 @@ public class OffInDungeon {
 			return;
 		}
 		// 하드 던전 3841 255 3836  3500 0 4263
-		if (loc.getX() <= 3841 && loc.getY() <= 255 && loc.getZ() <= 4263 
-				&& loc.getX() >= 3500 && loc.getY() >= 0 && loc.getZ() >= 3836) {
+		if (loc.getX() <= 3841 && loc.getY() <= 255 && loc.getZ() <= 5000 
+				&& loc.getX() >= 3000 && loc.getY() >= 0 && loc.getZ() >= 3836) {
 			player.teleport(new Location(player.getWorld(), 3686, 190, 3861));
 			return;
 		}
