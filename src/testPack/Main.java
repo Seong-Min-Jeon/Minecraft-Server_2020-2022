@@ -85,6 +85,7 @@ import org.bukkit.event.entity.EntityExplodeEvent;
 import org.bukkit.event.entity.EntityRegainHealthEvent;
 import org.bukkit.event.entity.EntityRegainHealthEvent.RegainReason;
 import org.bukkit.event.entity.EntityShootBowEvent;
+import org.bukkit.event.entity.EntityTargetLivingEntityEvent;
 import org.bukkit.event.entity.EntityTransformEvent;
 import org.bukkit.event.entity.ExplosionPrimeEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
@@ -3112,7 +3113,7 @@ public class Main extends JavaPlugin implements Listener{
 			Location hardLobby = new Location(world,3686,190,3861);
 			Location tiperari = new Location(world,738,107,-982,270,0);
 			Location lidia = new Location(world,1031,52,-1351,270,0);
-			
+			Location furelioud = new Location(world,614,56,-1559,0,0);
 			
 			//캐릭터 선택창 3668 47 3671 3660 39 3680
 			if(loc.getX() <= 3668 && loc.getZ() <= 3680 &&
@@ -3262,6 +3263,7 @@ public class Main extends JavaPlugin implements Listener{
 			int length19 = (int)(Math.pow(loc.getX()-samakVil.getX(), 2) + Math.pow(loc.getY()-samakVil.getY(), 2) + Math.pow(loc.getZ()-samakVil.getZ(), 2));
 			int length20 = (int)(Math.pow(loc.getX()-tiperari.getX(), 2) + Math.pow(loc.getY()-tiperari.getY(), 2) + Math.pow(loc.getZ()-tiperari.getZ(), 2));
 			int length21 = (int)(Math.pow(loc.getX()-lidia.getX(), 2) + Math.pow(loc.getY()-lidia.getY(), 2) + Math.pow(loc.getZ()-lidia.getZ(), 2));
+			int length22 = (int)(Math.pow(loc.getX()-furelioud.getX(), 2) + Math.pow(loc.getY()-furelioud.getY(), 2) + Math.pow(loc.getZ()-furelioud.getZ(), 2));
 			ArrayList<Integer> ary = new ArrayList<>();
 			ary.add(length1);
 			ary.add(length2);
@@ -3284,6 +3286,7 @@ public class Main extends JavaPlugin implements Listener{
 			ary.add(length19);
 			ary.add(length20);
 			ary.add(length21);
+			ary.add(length22);
 			Collections.sort(ary);
 			if(ary.get(0) == length1) {
 				event.setRespawnLocation(wargunil);
@@ -3345,7 +3348,15 @@ public class Main extends JavaPlugin implements Listener{
 				} else {
 					event.setRespawnLocation(hamabe);
 				}
-			}		
+			} else if(ary.get(0) == length22) {
+				if(player.getLevel() > 700) {
+					event.setRespawnLocation(furelioud);
+				} else if(player.getLevel() > 660) {
+					event.setRespawnLocation(lidia);
+				} else {
+					event.setRespawnLocation(hamabe);
+				}
+			}			
 			player.setNoDamageTicks(200);
 		} catch(Exception e11) {
 
@@ -10780,6 +10791,15 @@ public class Main extends JavaPlugin implements Listener{
 		Player player = event.getPlayer();
 		Location loc = event.getTo();
 		new TPMobSpawn(player, loc);
+	}
+	
+	@EventHandler
+	public void targetChangeEvent(EntityTargetLivingEntityEvent event) {
+		if(event.getEntity() instanceof Zoglin) {
+			if(!(event.getTarget() instanceof Player)) {
+				event.setCancelled(true);
+			}
+		}
 	}
 	
 	@EventHandler

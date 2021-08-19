@@ -8805,46 +8805,22 @@ public class MobLoot {
 	
 	// 원시 벌레
 	public void mob351(Player player) {
-		int num = rnd.nextInt(15) + 15;
-		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
-		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
-		item.setItemMeta(im);
-		player.getInventory().addItem(item);
-		es.giveExp(player, 4200000);
+		es.giveExp(player, 4600000);
 	}
 	
 	// 원시 거미
 	public void mob352(Player player) {
-		int num = rnd.nextInt(15) + 15;
-		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
-		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
-		item.setItemMeta(im);
-		player.getInventory().addItem(item);
-		es.giveExp(player, 4250000);
+		es.giveExp(player, 4650000);
 	}
 	
 	// 원시 불꽃
 	public void mob353(Player player) {
-		int num = rnd.nextInt(15) + 15;
-		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
-		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
-		item.setItemMeta(im);
-		player.getInventory().addItem(item);
-		es.giveExp(player, 4300000);
+		es.giveExp(player, 4700000);
 	}
 	
 	// 원시 생물
 	public void mob354(Player player) {
-		int num = rnd.nextInt(15) + 15;
-		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
-		ItemMeta im = item.getItemMeta();
-		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
-		item.setItemMeta(im);
-		player.getInventory().addItem(item);
-		es.giveExp(player, 4350000);
+		es.giveExp(player, 4750000);
 	}
 	
 	// 숲의 감시자
@@ -8877,43 +8853,339 @@ public class MobLoot {
 		es.giveExp(player, 8000000);
 	}
 	
+	// 얼어붙은 나무
 	public void mob361(Player player) {
-
+		int num = rnd.nextInt(16) + 16;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 4200000);
 	}
 	
+	// 상급 파괴수
 	public void mob362(Player player) {
-
+		int num = rnd.nextInt(16) + 16;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 4230000);
 	}
 	
+	// 얼어붙은 시체
 	public void mob363(Player player) {
-
+		int num = rnd.nextInt(16) + 16;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 4260000);
+		
+		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
+		ItemMeta var1im = var1.getItemMeta();
+		var1im.setDisplayName(ChatColor.AQUA + "심연의 포보르의 피");
+		var1.setItemMeta(var1im);
+		
+		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
+		ItemMeta var2im = var2.getItemMeta();
+		var2im.setDisplayName(ChatColor.AQUA + "심연의 포보르의 쓸개");
+		var2.setItemMeta(var2im);
+		
+		ItemStack var3 = new ItemStack(Material.CRACKED_POLISHED_BLACKSTONE_BRICKS);
+		ItemMeta var3im = var3.getItemMeta();
+		var3im.setDisplayName(ChatColor.AQUA + "심연의 포보르의 살점");
+		var3.setItemMeta(var3im);
+		
+		ItemStack var4 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_SLAB);
+		ItemMeta var4im = var4.getItemMeta();
+		var4im.setDisplayName(ChatColor.AQUA + "심연의 포보르의 간");
+		var4.setItemMeta(var4im);
+		
+		int tmp = rnd.nextInt(13);
+		if(tmp == 0) {
+			player.getInventory().addItem(var1);
+			sendMessage(player, ChatColor.AQUA + "심연의 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+		} else if(tmp == 1) {
+			player.getInventory().addItem(var2);
+			sendMessage(player, ChatColor.AQUA + "심연의 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+		} else if(tmp == 2) {
+			player.getInventory().addItem(var3);
+			sendMessage(player, ChatColor.AQUA + "심연의 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+		} else if(tmp == 3) {
+			player.getInventory().addItem(var4);
+			sendMessage(player, ChatColor.AQUA + "심연의 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+		}
 	}
 	
+	// 성스러운 거미
 	public void mob364(Player player) {
-
+		int num = rnd.nextInt(16) + 17;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 4290000);
 	}
 	
+	// 성스러운 불꽃
 	public void mob365(Player player) {
-
+		int num = rnd.nextInt(16) + 17;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 4320000);
 	}
 	
+	// 떠돌이 나비
 	public void mob366(Player player) {
-
+		int num = rnd.nextInt(17) + 17;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 4350000);
+		
+		int tmp2 = rnd.nextInt(40);
+		if(tmp2 == 0) {
+			Location loc = player.getLocation().add(0, 1, 0);
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		}
 	}
 	
+	// 동상에 걸린 돼지
 	public void mob367(Player player) {
-
+		int num = rnd.nextInt(17) + 17;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 4380000);
+		
+		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
+		ItemMeta var1im = var1.getItemMeta();
+		var1im.setDisplayName(ChatColor.AQUA + "심연의 포보르의 피");
+		var1.setItemMeta(var1im);
+		
+		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
+		ItemMeta var2im = var2.getItemMeta();
+		var2im.setDisplayName(ChatColor.AQUA + "심연의 포보르의 쓸개");
+		var2.setItemMeta(var2im);
+		
+		ItemStack var3 = new ItemStack(Material.CRACKED_POLISHED_BLACKSTONE_BRICKS);
+		ItemMeta var3im = var3.getItemMeta();
+		var3im.setDisplayName(ChatColor.AQUA + "심연의 포보르의 살점");
+		var3.setItemMeta(var3im);
+		
+		ItemStack var4 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_SLAB);
+		ItemMeta var4im = var4.getItemMeta();
+		var4im.setDisplayName(ChatColor.AQUA + "심연의 포보르의 간");
+		var4.setItemMeta(var4im);
+		
+		ItemStack var5 = new ItemStack(Material.CHISELED_POLISHED_BLACKSTONE);
+		ItemMeta var5im = var5.getItemMeta();
+		var5im.setDisplayName(ChatColor.AQUA + "심연의 포보르의 심장");
+		var5.setItemMeta(var5im);
+		
+		int tmp = rnd.nextInt(15);
+		if(tmp == 0) {
+			player.getInventory().addItem(var1);
+			sendMessage(player, ChatColor.AQUA + "심연의 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+		} else if(tmp == 1) {
+			player.getInventory().addItem(var2);
+			sendMessage(player, ChatColor.AQUA + "심연의 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+		} else if(tmp == 2) {
+			player.getInventory().addItem(var3);
+			sendMessage(player, ChatColor.AQUA + "심연의 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+		} else if(tmp == 3) {
+			player.getInventory().addItem(var4);
+			sendMessage(player, ChatColor.AQUA + "심연의 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+		} else if(tmp == 4) {
+			player.getInventory().addItem(var5);
+			sendMessage(player, ChatColor.AQUA + "심연의 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+		}
+		
+		int tmp2 = rnd.nextInt(40);
+		if(tmp2 == 0) {
+			Location loc = player.getLocation().add(0, 1, 0);
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		}
 	}
 	
+	// 설원 거미
 	public void mob368(Player player) {
-
+		int num = rnd.nextInt(17) + 17;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 4410000);
+		
+		int tmp2 = rnd.nextInt(40);
+		if(tmp2 == 0) {
+			Location loc = player.getLocation().add(0, 1, 0);
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		}
 	}
 	
+	// 어둠을 구원한 영웅 스켈레톤
 	public void mob369(Player player) {
+		int num = rnd.nextInt(17) + 17;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 8000000);
+		
+		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
+		ItemMeta var1im = var1.getItemMeta();
+		var1im.setDisplayName(ChatColor.AQUA + "심연의 포보르의 피");
+		var1.setItemMeta(var1im);
+		
+		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
+		ItemMeta var2im = var2.getItemMeta();
+		var2im.setDisplayName(ChatColor.AQUA + "심연의 포보르의 쓸개");
+		var2.setItemMeta(var2im);
+		
+		ItemStack var3 = new ItemStack(Material.CRACKED_POLISHED_BLACKSTONE_BRICKS);
+		ItemMeta var3im = var3.getItemMeta();
+		var3im.setDisplayName(ChatColor.AQUA + "심연의 포보르의 살점");
+		var3.setItemMeta(var3im);
+		
+		ItemStack var4 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_SLAB);
+		ItemMeta var4im = var4.getItemMeta();
+		var4im.setDisplayName(ChatColor.AQUA + "심연의 포보르의 간");
+		var4.setItemMeta(var4im);
+		
+		ItemStack var5 = new ItemStack(Material.CHISELED_POLISHED_BLACKSTONE);
+		ItemMeta var5im = var5.getItemMeta();
+		var5im.setDisplayName(ChatColor.AQUA + "심연의 포보르의 심장");
+		var5.setItemMeta(var5im);
+		
+		int tmp = rnd.nextInt(5);
+		if(tmp == 0) {
+			player.getInventory().addItem(var1);
+			sendMessage(player, ChatColor.AQUA + "심연의 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+		} else if(tmp == 1) {
+			player.getInventory().addItem(var2);
+			sendMessage(player, ChatColor.AQUA + "심연의 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+		} else if(tmp == 2) {
+			player.getInventory().addItem(var3);
+			sendMessage(player, ChatColor.AQUA + "심연의 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+		} else if(tmp == 3) {
+			player.getInventory().addItem(var4);
+			sendMessage(player, ChatColor.AQUA + "심연의 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+		} else if(tmp == 4) {
+			player.getInventory().addItem(var5);
+			sendMessage(player, ChatColor.AQUA + "심연의 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
+		}
+	}
+	
+	// 인간 사냥꾼
+	public void mob370(Player player) {
+		int num = rnd.nextInt(17) + 17;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 4450000);
+	}
+	
+	// 웨곤
+	public void mob371(Player player) {
+		int num = rnd.nextInt(17) + 17;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 4500000);
+	}
+	
+	public void mob372(Player player) {
 
 	}
 	
-	public void mob370(Player player) {
+	public void mob373(Player player) {
+
+	}
+	
+	public void mob374(Player player) {
+
+	}
+	
+	public void mob375(Player player) {
+
+	}
+	
+	public void mob376(Player player) {
+
+	}
+	
+	public void mob377(Player player) {
+
+	}
+	
+	public void mob378(Player player) {
+
+	}
+	
+	public void mob379(Player player) {
+
+	}
+	
+	public void mob380(Player player) {
+
+	}
+	
+	public void mob381(Player player) {
+
+	}
+	
+	public void mob382(Player player) {
+
+	}
+	
+	public void mob383(Player player) {
+
+	}
+	
+	public void mob384(Player player) {
+
+	}
+	
+	public void mob385(Player player) {
+
+	}
+	
+	public void mob386(Player player) {
+
+	}
+	
+	public void mob387(Player player) {
+
+	}
+	
+	public void mob388(Player player) {
+
+	}
+	
+	public void mob389(Player player) {
+
+	}
+	
+	public void mob390(Player player) {
 
 	}
 	

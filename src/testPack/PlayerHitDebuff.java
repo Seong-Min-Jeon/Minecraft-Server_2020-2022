@@ -4182,31 +4182,199 @@ public class PlayerHitDebuff {
 		}
 	}
 	
+	// 얼어붙은 나무
 	public void mob94(Player player, Entity mob) {
-
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("얼어붙은 나무" + ChatColor.YELLOW + " [Lv.700]")) {
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 100, 3, true,true));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 100, 1999, true,true));
+			player.damage(1000);
+		}
 	}
 	
+	// 상급 파괴수
 	public void mob95(Player player, Entity mob) {
-
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("상급 파괴수" + ChatColor.YELLOW + " [Lv.700]")) {
+			int num = rnd.nextInt(12);
+			if (num == 0) {
+				if(!player.isSneaking()) {
+					player.setVelocity(player.getLocation().getDirection().multiply(-1.8));
+				}
+				player.damage(5000);
+			}
+		}
 	}
 	
+	// 성스러운 거미
 	public void mob96(Player player, Entity mob) {
-
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("성스러운 거미" + ChatColor.YELLOW + " [Lv.700]")) {
+			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 100, 4, true,true));
+			player.damage(1000);
+		}
 	}
 	
+	// 성스러운 불꽃
 	public void mob97(Player player, Entity mob) {
-
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("성스러운 불꽃" + ChatColor.YELLOW + " [Lv.700]")) {
+			player.setFireTicks(200);
+			player.damage(1000);
+		}
 	}
 	
+	// 떠돌이 나비
 	public void mob98(Player player, Entity mob) {
-
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("떠돌이 나비" + ChatColor.YELLOW + " [Lv.700]")) {
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 100, 2, true,true));
+			player.damage(1200);
+		}
 	}
 	
+	// 동상에 걸린 돼지
 	public void mob99(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("동상에 걸린 돼지" + ChatColor.YELLOW + " [Lv.700]")) {
+			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 100, 3, true,true));
+			player.damage(1200);
+		}
+	}
+	
+	// 설원 거미
+	public void mob100(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("설원 거미" + ChatColor.YELLOW + " [Lv.700]")) {
+			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 100, 3, true,true));
+			player.damage(1200);
+		}
+	}
+		
+	// 어둠을 구원한 영웅 스켈레톤
+	public void mob101(Player player, Entity mob) {
+		if(mob.getCustomName().substring(2).equalsIgnoreCase("어둠을 구원한 영웅 스켈레톤" + ChatColor.YELLOW + " [Lv.700]")) {
+			if(((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
+				int num = rnd.nextInt(10);
+				if(num == 0) {
+					player.teleport(mob.getLocation());
+					player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,100,100,true,true));
+					player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,100,200,true,true));
+					player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION,100,200,true,true));
+					player.getWorld().playSound(mob.getLocation(), Sound.BLOCK_CHAIN_HIT, 1.0f, 1.0f);
+					player.sendMessage(ChatColor.RED + "스켈레톤이 당신을 끌어당겼습니다.");
+					((Skeleton) mob).setTarget(player);
+				} 
+				if(num == 1) {
+					
+					mob.teleport(player);
+					
+					player.sendMessage(ChatColor.RED + "스켈레톤이 데스파이어를 시전합니다.");
+					sendMessage(player, ChatColor.RED + "스켈레톤이 데스파이어를 시전합니다.");
+					player.getWorld().playSound(mob.getLocation(), Sound.BLOCK_GRASS_BREAK, 5.0f, 2.0f);
+					
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 200, true,true));
+					
+					Location loc = mob.getLocation();
+					
+					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+						int time = 0;
+						ThreadData td = new ThreadData(player.getUniqueId());
+
+						@Override
+						public void run() {
+							
+							if (!td.hasID()) {
+								td.setID(taskID);
+							}
+							
+							if (time % 20 == 0) {
+								for(int x = -4 ; x < 5 ; x++) {
+									for(int y = -1 ; y < 0 ; y++) {
+										for(int z = -4 ; z < 5 ; z++) {
+											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
+											player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
+										}
+									}
+								}
+							}
+							
+							if (time >= 40) {
+								player.sendMessage(ChatColor.RED + "스켈레톤이 데스파이어를 사용하였습니다.");
+								sendMessage(player, ChatColor.RED + "스켈레톤이 데스파이어를 사용하였습니다.");
+								// ===============================================================
+								ParticleData pd = new ParticleData(player.getUniqueId());
+								if (pd.hasID()) {
+									pd.endTask();
+									pd.removeID();
+								}
+								ParticleEffect pe = new ParticleEffect(player, mob);
+								pe.startE30();
+								// ================================================================
+								List<Entity> nearPlayer = mob.getNearbyEntities(4, 30, 4);
+								for(Entity p : nearPlayer) {
+									if(p instanceof Player) {
+										((Player) p).damage(10000);
+										p.setFireTicks(200);
+									}
+								}
+								
+								td.endTask();
+								td.removeID();
+							}
+							
+							time++;
+
+						}
+
+					}, 0, 1);
+					
+				}
+			} else {
+				int num = rnd.nextInt(13);
+				if(num == 0) {
+					player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,100,100,true,true));
+					player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,100,200,true,true));
+					player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS,50,200,true,true));
+					player.sendMessage(ChatColor.RED + "스켈레톤의 힘으로 석화되었습니다.");
+					((Skeleton) mob).setTarget(player);
+				}
+			}
+		}
+	}
+	
+	// 웨곤
+	public void mob102(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("웨곤" + ChatColor.YELLOW + " [Lv.700]")) {
+			player.removePotionEffect(PotionEffectType.ABSORPTION);
+			player.removePotionEffect(PotionEffectType.DAMAGE_RESISTANCE);
+			player.damage(3000);
+		}
+	}
+	
+	public void mob103(Player player, Entity mob) {
 
 	}
 	
-	public void mob100(Player player, Entity mob) {
+	public void mob104(Player player, Entity mob) {
+
+	}
+	
+	public void mob105(Player player, Entity mob) {
+
+	}
+	
+	public void mob106(Player player, Entity mob) {
+
+	}
+	
+	public void mob107(Player player, Entity mob) {
+
+	}
+
+	public void mob108(Player player, Entity mob) {
+
+	}
+	
+	public void mob109(Player player, Entity mob) {
+
+	}
+	
+	public void mob110(Player player, Entity mob) {
 
 	}
 

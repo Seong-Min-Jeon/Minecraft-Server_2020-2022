@@ -1566,6 +1566,51 @@ public class MobDeath {
 				if (name.equalsIgnoreCase("숲의 심판자" + ChatColor.YELLOW + " [Lv.??]")) {
 					mobloot.mob360(lootPlayer);
 				}
+				// 얼어붙은 나무
+				if (name.equalsIgnoreCase("얼어붙은 나무" + ChatColor.YELLOW + " [Lv.700]")) {
+					mobloot.mob361(lootPlayer);
+				}
+				// 상급 파괴수
+				if (name.equalsIgnoreCase("상급 파괴수" + ChatColor.YELLOW + " [Lv.700]")) {
+					mobloot.mob362(lootPlayer);
+				}
+				// 얼어붙은 시체
+				if (name.equalsIgnoreCase("얼어붙은 시체" + ChatColor.YELLOW + " [Lv.700]")) {
+					mobloot.mob363(lootPlayer);
+				}
+				// 성스러운 거미
+				if (name.equalsIgnoreCase("성스러운 거미" + ChatColor.YELLOW + " [Lv.700]")) {
+					mobloot.mob364(lootPlayer);
+				}
+				// 성스러운 불꽃
+				if (name.equalsIgnoreCase("성스러운 불꽃" + ChatColor.YELLOW + " [Lv.700]")) {
+					mobloot.mob365(lootPlayer);
+				}
+				// 떠돌이 나비
+				if (name.equalsIgnoreCase("떠돌이 나비" + ChatColor.YELLOW + " [Lv.700]")) {
+					mobloot.mob366(lootPlayer);
+				}
+				// 동상에 걸린 돼지
+				if (name.equalsIgnoreCase("동상에 걸린 돼지" + ChatColor.YELLOW + " [Lv.700]")) {
+					mobloot.mob367(lootPlayer);
+				}
+				// 설원 거미
+				if (name.equalsIgnoreCase("설원 거미" + ChatColor.YELLOW + " [Lv.700]")) {
+					mobloot.mob368(lootPlayer);
+				}
+				// 어둠을 구원한 영웅 스켈레톤
+				if (name.equalsIgnoreCase("어둠을 구원한 영웅 스켈레톤" + ChatColor.YELLOW + " [Lv.700]")) {
+					mobloot.mob369(lootPlayer);
+				}
+				// 인간 사냥꾼
+				if (name.equalsIgnoreCase("인간 사냥꾼" + ChatColor.YELLOW + " [Lv.700]")) {
+					mobloot.mob370(lootPlayer);
+				}
+				// 웨곤
+				if (name.equalsIgnoreCase("웨곤" + ChatColor.YELLOW + " [Lv.700]")) {
+					mobloot.mob371(lootPlayer);
+				}
+				
 			} catch (Exception e) {
 
 			}

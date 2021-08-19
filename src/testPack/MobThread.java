@@ -607,6 +607,21 @@ public class MobThread implements Listener{
 							} else if(loc.getX() <= 3699 && loc.getY() <= 230 && loc.getZ() <= 4217 
 									&& loc.getX() >= 3657 && loc.getY() >= 180 && loc.getZ() >= 4172) {
 								hardForestBoss(player, loc);
+							} else if(loc.getX() <= 707 && loc.getY() <= 125 && loc.getZ() <= -1324 
+									&& loc.getX() >= 555 && loc.getY() >= 50 && loc.getZ() >= -1700) {
+								iberumoa1(player, loc);
+							} else if(loc.getX() <= 566 && loc.getY() <= 36 && loc.getZ() <= -1611 
+									&& loc.getX() >= 518 && loc.getY() >= 1 && loc.getZ() >= -1684) {
+								iberumoa2(player, loc);
+							} else if(loc.getX() <= 554 && loc.getY() <= 156 && loc.getZ() <= -1206 
+									&& loc.getX() >= 406 && loc.getY() >= 47 && loc.getZ() >= -1697) {
+								iberumoa3(player, loc);
+							} else if(loc.getX() <= 410 && loc.getY() <= 46 && loc.getZ() <= -1177 
+									&& loc.getX() >= 346 && loc.getY() >= 5 && loc.getZ() >= -1699) {
+								iberumoa4(player, loc);
+							} else if(loc.getX() <= 454 && loc.getY() <= 40 && loc.getZ() <= -1574 
+									&& loc.getX() >= 411 && loc.getY() >= 5 && loc.getZ() >= -1682) {
+								iberumoa5(player, loc);
 							}
 
 						}
@@ -3447,6 +3462,75 @@ public class MobThread implements Listener{
 		} else if (num == 1) {
 			loc.getWorld().spawnEntity(loc, EntityType.SLIME);
 		} 
+	}
+	
+	public void iberumoa1(Player player, Location loc) {
+		int num = rnd.nextInt(3);
+		loc = location(loc);
+		if (!(loc.getX() <= 707 && loc.getY() <= 125 && loc.getZ() <= -1324 
+				&& loc.getX() >= 555 && loc.getY() >= 50 && loc.getZ() >= -1700)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.RAVAGER);
+		} else if (num == 2) {
+			loc.getWorld().spawnEntity(loc, EntityType.STRAY);
+		} 
+	}
+	
+	public void iberumoa2(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= 566 && loc.getY() <= 36 && loc.getZ() <= -1611 
+				&& loc.getX() >= 518 && loc.getY() >= 1 && loc.getZ() >= -1684)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.CAVE_SPIDER);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.BLAZE);
+		} 
+	}
+	
+	public void iberumoa3(Player player, Location loc) {
+		int num = rnd.nextInt(3);
+		loc = location(loc);
+		if (!(loc.getX() <= 554 && loc.getY() <= 156 && loc.getZ() <= -1206 
+				&& loc.getX() >= 406 && loc.getY() >= 47 && loc.getZ() >= -1697)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.POLAR_BEAR);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.ZOGLIN);
+		} else if (num == 2) {
+			loc.getWorld().spawnEntity(loc, EntityType.SPIDER);
+		} 
+	}
+	
+	public void iberumoa4(Player player, Location loc) {
+		loc = location(loc);
+		if (!(loc.getX() <= 410 && loc.getY() <= 46 && loc.getZ() <= -1177 
+				&& loc.getX() >= 346 && loc.getY() >= 5 && loc.getZ() >= -1699)) {
+			return;
+		}
+		
+		loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+	}
+	
+	public void iberumoa5(Player player, Location loc) {
+		loc = location(loc);
+		if (!(loc.getX() <= 454 && loc.getY() <= 40 && loc.getZ() <= -1574 
+				&& loc.getX() >= 411 && loc.getY() >= 5 && loc.getZ() >= -1682)) {
+			return;
+		}
+		
+		loc.getWorld().spawnEntity(loc, EntityType.RABBIT);
 	}
 	
 	public Location location(Location loc) {
