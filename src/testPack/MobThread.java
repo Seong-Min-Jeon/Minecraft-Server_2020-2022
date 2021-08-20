@@ -3477,7 +3477,9 @@ public class MobThread implements Listener{
 		} else if (num == 1) {
 			loc.getWorld().spawnEntity(loc, EntityType.RAVAGER);
 		} else if (num == 2) {
-			loc.getWorld().spawnEntity(loc, EntityType.STRAY);
+			if (player.getWorld().getTime() >= 13000 && player.getWorld().getTime() <= 23000) {
+				loc.getWorld().spawnEntity(loc, EntityType.STRAY);
+			}
 		} 
 	}
 	

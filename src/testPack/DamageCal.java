@@ -139,7 +139,7 @@ public class DamageCal {
 				|| entity.getType() == EntityType.ENDERMITE || entity.getType() == EntityType.LLAMA || entity.getType() == EntityType.POLAR_BEAR
 				 || entity.getType() == EntityType.GUARDIAN || entity.getType() == EntityType.ELDER_GUARDIAN || entity.getType() == EntityType.RAVAGER
 				 || entity.getType() == EntityType.PHANTOM || entity.getType() == EntityType.OCELOT || entity.getType() == EntityType.RABBIT
-				 || entity.getType() == EntityType.PANDA) {
+				 || entity.getType() == EntityType.PANDA || entity.getType() == EntityType.ZOGLIN) {
 			return (int)(damAll*2 + damAr*5);
 		} else if(entity.getType() == EntityType.SLIME || entity.getType() == EntityType.MAGMA_CUBE || entity.getType() == EntityType.GHAST
 				|| entity.getType() == EntityType.WITHER || entity.getType() == EntityType.CREEPER || entity.getType() == EntityType.IRON_GOLEM

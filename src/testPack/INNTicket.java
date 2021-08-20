@@ -25,6 +25,7 @@ public class INNTicket {
 		longue(player, itemArg, world);
 		hamabe(player, itemArg, world);
 		kekktas(player, itemArg, world);
+		furelioud(player, itemArg, world);
 	}
 
 	public void wargunil(Player player, Item itemArg, World world) {	
@@ -215,6 +216,20 @@ public class INNTicket {
 			if (player.getLocation().getX() <= -750 && player.getLocation().getY() <= 85 && player.getLocation().getZ() <= -885 && 
 					player.getLocation().getX() >= -769 && player.getLocation().getY() >= 50 && player.getLocation().getZ() >= -907) {
 				Location loc = new Location(world,-756,64,-893);
+				player.teleport(loc);
+				itemArg.remove();
+				player.getWorld().playSound(loc, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);
+				player.setHealth(player.getMaxHealth());
+			}
+		}	
+	}
+	
+	public void furelioud(Player player, Item itemArg, World world) {	
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "프렐리우드 숙박 티켓")) {
+			//프렐리우드 614 63 -1578  602 55 -1589
+			if (player.getLocation().getX() <= 614 && player.getLocation().getY() <= 63 && player.getLocation().getZ() <= -1578 && 
+					player.getLocation().getX() >= 602 && player.getLocation().getY() >= 55 && player.getLocation().getZ() >= -1589) {
+				Location loc = new Location(world,611,57,-1583);
 				player.teleport(loc);
 				itemArg.remove();
 				player.getWorld().playSound(loc, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);

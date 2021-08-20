@@ -296,7 +296,7 @@ public class WeaponBuff {
 							if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 도전자 갑옷")) {
 								if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 도전자 각반")) {
 									if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "탑의 도전자 신발")) {
-										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 100, 3,true,true));
+										player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 100, 2,true,true));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 200,true,true));
 										player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 200, 0,true,true));
 									}

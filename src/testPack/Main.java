@@ -290,7 +290,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("woolring")) { 
 			
 		} else {
-			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/873092220012593162/aile_texture_pack_36.zip");
+			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/878129748398710884/aile_texture_pack_37.zip");
 		}
 		
 		//Message
@@ -565,6 +565,145 @@ public class Main extends JavaPlugin implements Listener{
 //		if(player.getDisplayName().equalsIgnoreCase("WoolRing") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
 
 		
+//		ItemStack var1 = new ItemStack(Material.CYAN_WOOL);
+//		ItemMeta var1Im = var1.getItemMeta();
+//		var1Im.setLocalizedName("7000,0,0,0,5000,0,7000,0,0,0,700");
+//		var1Im.setDisplayName(ChatColor.GREEN + "크리스탈 아이스 헬멧");
+//		ArrayList<String> var1Lore = new ArrayList();
+//		var1Lore.add(ChatColor.GRAY + "레벨 제한: 700");
+//		var1Lore.add(ChatColor.GRAY + " ");
+//		var1Lore.add(ChatColor.GRAY + "크리스탈 아이스로 만들어진 대검");
+//		var1Lore.add(ChatColor.GRAY + "강력한 공격력과 화염 보호가 특징이다.");
+//		var1Lore.add(ChatColor.GRAY + "(세트 아이템)");
+//		var1Lore.add(ChatColor.GRAY + " ");
+//		var1Lore.add(ChatColor.BLUE + "-흡혈 1%(세트 효과)");
+//		var1Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var1Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var1Im.addItemFlags(ItemFlag.HIDE_DYE);
+//		var1Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var1Im.setUnbreakable(true);
+//		var1Im.setLore(var1Lore);
+//		var1.setItemMeta(var1Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var1);}
+//		
+//		ItemStack var2 = new ItemStack(Material.OAK_SLAB);
+//		ItemMeta var2Im = var2.getItemMeta();
+//		var2Im.setLocalizedName("8000,3000,3000,0,0,0,0,0,0,0,700");
+//		var2Im.setDisplayName(ChatColor.LIGHT_PURPLE + "빙룡의 소뢰창");
+//		ArrayList<String> var2Lore = new ArrayList();
+//		var2Lore.add(ChatColor.GRAY + "레벨 제한: 700");
+//		var2Lore.add(ChatColor.GRAY + " ");
+//		var2Lore.add(ChatColor.GRAY + "이베르모어에 서식하는 드래곤인 카오스 드래곤의");
+//		var2Lore.add(ChatColor.GRAY + "발톱과 비늘로 만들어진 강력한 창");
+//		var2Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var2Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var2Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var2Im.setUnbreakable(true);
+//		var2Im.setLore(var2Lore);
+//		var2.setItemMeta(var2Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var2);}
+//		
+//		ItemStack var3 = new ItemStack(Material.MUSIC_DISC_MELLOHI);
+//		ItemMeta var3Im = var3.getItemMeta();
+//		var3Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,700");
+//		var3Im.setDisplayName(ChatColor.AQUA + "옵시디언의 눈물");
+//		ArrayList<String> var3Lore = new ArrayList();
+//		var3Lore.add(ChatColor.GRAY + "레벨 제한: 700");
+//		var3Lore.add(ChatColor.GRAY + " ");
+//		var3Lore.add(ChatColor.GRAY + "신성한 옵시디언으로 만들어진 스태프");
+//		var3Lore.add(ChatColor.GRAY + "세계수의 물로 정화해 마력을 담았다.");
+//		var3Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var3Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var3Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var3Im.setUnbreakable(true);
+//		var3Im.setLore(var3Lore);
+//		var3.setItemMeta(var3Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var3);}
+//		
+//		ItemStack helmet = new ItemStack(Material.DIAMOND_HELMET);
+//		ItemMeta helmetIm = helmet.getItemMeta();
+//		helmetIm.setLocalizedName("4000,2000,2000,2000,2000,2000,7000,0,0,0,700");
+//		helmetIm.setDisplayName(ChatColor.GREEN + "크리스탈 아이스 헬멧");
+//		ArrayList<String> helmetLore = new ArrayList();
+//		helmetLore.add(ChatColor.GRAY + "레벨 제한: 700");
+//		helmetLore.add(ChatColor.GRAY + " ");
+//		helmetLore.add(ChatColor.GRAY + "방한 헬멧보다도 뛰어난 성능을 자랑하는 헬멧");
+//		helmetLore.add(ChatColor.GRAY + "아무리 성능이 좋아도 얼음물에 들어가면 춥다고 한다.");
+//		helmetLore.add(ChatColor.GRAY + "(세트 아이템)");
+//		helmetLore.add(ChatColor.GRAY + " ");
+//		helmetLore.add(ChatColor.BLUE + "-흡혈 1%(세트 효과)");
+//		helmetIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		helmetIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		helmetIm.addItemFlags(ItemFlag.HIDE_DYE);
+//		helmetIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		helmetIm.setUnbreakable(true);
+//		helmetIm.setLore(helmetLore);
+//		helmet.setItemMeta(helmetIm);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(helmet);}
+//
+//		ItemStack chestplate = new ItemStack(Material.DIAMOND_CHESTPLATE);
+//		ItemMeta chestplateIm = chestplate.getItemMeta();
+//		chestplateIm.setLocalizedName("4000,2000,2000,2000,2000,2000,7000,0,0,0,700");
+//		chestplateIm.setDisplayName(ChatColor.GREEN + "크리스탈 아이스 갑옷");
+//		ArrayList<String> chestplateLore = new ArrayList();
+//		chestplateLore.add(ChatColor.GRAY + "레벨 제한: 700");
+//		chestplateLore.add(ChatColor.GRAY + " ");
+//		chestplateLore.add(ChatColor.GRAY + "방한 갑옷보다도 뛰어난 성능을 자랑하는 갑옷");
+//		chestplateLore.add(ChatColor.GRAY + "아무리 성능이 좋아도 얼음물에 들어가면 춥다고 한다.");
+//		chestplateLore.add(ChatColor.GRAY + "(세트 아이템)");
+//		chestplateLore.add(ChatColor.GRAY + " ");
+//		chestplateLore.add(ChatColor.BLUE + "-흡혈 1%(세트 효과)");
+//		chestplateIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		chestplateIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		chestplateIm.addItemFlags(ItemFlag.HIDE_DYE);
+//		chestplateIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		chestplateIm.setUnbreakable(true);
+//		chestplateIm.setLore(chestplateLore);
+//		chestplate.setItemMeta(chestplateIm);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(chestplate);}
+//
+//		ItemStack leggings = new ItemStack(Material.DIAMOND_LEGGINGS);
+//		ItemMeta leggingsIm = leggings.getItemMeta();
+//		leggingsIm.setLocalizedName("4000,2000,2000,2000,2000,2000,7000,0,0,0,700");
+//		leggingsIm.setDisplayName(ChatColor.GREEN + "크리스탈 아이스 각반");
+//		ArrayList<String> leggingsLore = new ArrayList();
+//		leggingsLore.add(ChatColor.GRAY + "레벨 제한: 700");
+//		leggingsLore.add(ChatColor.GRAY + " ");
+//		leggingsLore.add(ChatColor.GRAY + "방한 각반보다도 뛰어난 성능을 자랑하는 각반");
+//		leggingsLore.add(ChatColor.GRAY + "아무리 성능이 좋아도 얼음물에 들어가면 춥다고 한다.");
+//		leggingsLore.add(ChatColor.GRAY + "(세트 아이템)");
+//		leggingsLore.add(ChatColor.GRAY + " ");
+//		leggingsLore.add(ChatColor.BLUE + "-흡혈 1%(세트 효과)");
+//		leggingsIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		leggingsIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		leggingsIm.addItemFlags(ItemFlag.HIDE_DYE);
+//		leggingsIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		leggingsIm.setUnbreakable(true);
+//		leggingsIm.setLore(leggingsLore);
+//		leggings.setItemMeta(leggingsIm);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(leggings);}
+//
+//		ItemStack boots = new ItemStack(Material.DIAMOND_BOOTS);
+//		ItemMeta bootsIm = boots.getItemMeta();
+//		bootsIm.setLocalizedName("4000,2000,2000,2000,2000,2000,7000,0,0,0,700");
+//		bootsIm.setDisplayName(ChatColor.GREEN + "크리스탈 아이스 신발");
+//		ArrayList<String> bootsLore = new ArrayList();
+//		bootsLore.add(ChatColor.GRAY + "레벨 제한: 700");
+//		bootsLore.add(ChatColor.GRAY + " ");
+//		bootsLore.add(ChatColor.GRAY + "방한 신발보다도 뛰어난 성능을 자랑하는 신발");
+//		bootsLore.add(ChatColor.GRAY + "아무리 성능이 좋아도 얼음물에 들어가면 춥다고 한다.");
+//		bootsLore.add(ChatColor.GRAY + "(세트 아이템)");
+//		bootsLore.add(ChatColor.GRAY + " ");
+//		bootsLore.add(ChatColor.BLUE + "-흡혈 1%(세트 효과)");
+//		bootsIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		bootsIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		bootsIm.addItemFlags(ItemFlag.HIDE_DYE);
+//		bootsIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		bootsIm.setUnbreakable(true);
+//		bootsIm.setLore(bootsLore);
+//		boots.setItemMeta(bootsIm);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(boots);}
+//		
 //		ItemStack var2 = new ItemStack(Material.MOSSY_STONE_BRICK_STAIRS);
 //		ItemMeta var2Im = var2.getItemMeta();
 //		var2Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,560");
@@ -3578,6 +3717,13 @@ public class Main extends JavaPlugin implements Listener{
 				PotionRatio pr = new PotionRatio();
 				pr.calculation(player, 4000.0);
 			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "농축 힐링 포션 I")) {
+				if(player.getHealth() >= 15) {
+					player.setHealth(20);
+				} else {
+					player.setHealth(player.getHealth() + 5);
+				}
+			}
 			//특이 포션
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "엘릭서")) {
 				for(PotionEffect effect : player.getActivePotionEffects ()){
@@ -3595,6 +3741,9 @@ public class Main extends JavaPlugin implements Listener{
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "강화된 바람의 포션 II")) {
 				player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED,6000,1,true,true));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "강화된 바람의 포션 III")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED,6000,2,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "바위의 포션 I")) {
 				player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,1800,0,true,true));
@@ -3616,6 +3765,10 @@ public class Main extends JavaPlugin implements Listener{
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "강화된 바위의 포션 III")) {
 				player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,3600,1,true,true));
 			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "강화된 바위의 포션 IV")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,3600,2,true,true));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,3600,1,true,true));
+			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "근육의 포션 I")) {
 				player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,1800,10,true,true));
 			}
@@ -3633,6 +3786,9 @@ public class Main extends JavaPlugin implements Listener{
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "강화된 근육의 포션 IV")) {
 				player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,3600,8000,true,true));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "강화된 근육의 포션 V")) {
+				player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,3600,15000,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "도약의 포션 I")) {
 				player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,1200,0,true,true));
@@ -3660,6 +3816,10 @@ public class Main extends JavaPlugin implements Listener{
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "거북이 우린 물")) {
 				player.removePotionEffect(PotionEffectType.ABSORPTION);
 				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 1,true,true));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "파괴수 뿔 농축액")) {
+				player.removePotionEffect(PotionEffectType.ABSORPTION);
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 5,true,true));
 			}
 			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "눈에 좋은 포션")) {
 				player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, 1200, 0,true,true));
@@ -3806,6 +3966,12 @@ public class Main extends JavaPlugin implements Listener{
 				player.removePotionEffect(PotionEffectType.ABSORPTION);
 				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 1200, 2,true,true));
 				player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 200, 3,true,true));
+			}
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "절명 콤보")) {
+				player.removePotionEffect(PotionEffectType.ABSORPTION);
+				player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 1200, 4,true,true));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 100, 5,true,true));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,1200,8000,true,true));
 			}
 		} catch(Exception e) {
 			
@@ -5687,6 +5853,7 @@ public class Main extends JavaPlugin implements Listener{
 				addHealthPercent += new SpecialEffect().w2(player);
 				addHealthPercent += new SpecialEffect().w5(player);
 				addHealthPercent += new SpecialEffect().w10(player);
+				addHealthPercent += new SpecialEffect().s11(player);
 				
 				if(addHealthPercent > 0) {
 					int addHealth = (int) (event.getDamage() * addHealthPercent / 100); 
@@ -5782,6 +5949,7 @@ public class Main extends JavaPlugin implements Listener{
 				addHealthPercent += new SpecialEffect().w2(player);
 				addHealthPercent += new SpecialEffect().w5(player);
 				addHealthPercent += new SpecialEffect().w10(player);
+				addHealthPercent += new SpecialEffect().s11(player);
 				
 				if(addHealthPercent > 0) {
 					int addHealth = (int) (event.getDamage() * addHealthPercent / 100); 
@@ -5872,6 +6040,7 @@ public class Main extends JavaPlugin implements Listener{
 				addHealthPercent += new SpecialEffect().w2(player);
 				addHealthPercent += new SpecialEffect().w5(player);
 				addHealthPercent += new SpecialEffect().w10(player);
+				addHealthPercent += new SpecialEffect().s11(player);
 				
 				if(addHealthPercent > 0) {
 					int addHealth = (int) (event.getDamage() * addHealthPercent / 100); 
@@ -8903,6 +9072,9 @@ public class Main extends JavaPlugin implements Listener{
 		Location loc = player.getLocation();
 		if (loc.getX() <= 3785 && loc.getY() <= 28 && loc.getZ() <= 3746 && 
 				loc.getX() >= 3725 && loc.getY() >= 0 && loc.getZ() >= 3700) {
+			event.setCancelled(true);
+		} else if (loc.getX() <= -1819 && loc.getY() <= 101 && loc.getZ() <= 3061 && 
+				loc.getX() >= -1854 && loc.getY() >= 84 && loc.getZ() >= 3031) {
 			event.setCancelled(true);
 		}
 			

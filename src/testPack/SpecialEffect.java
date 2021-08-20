@@ -2733,5 +2733,24 @@ public class SpecialEffect {
 		return 0;
 	}
 	
+	public double s11(Player player) {
+		try {
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "크리스탈 아이스 스워드")) {
+				if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "크리스탈 아이스 헬멧")) {
+					if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "크리스탈 아이스 갑옷")) {
+						if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "크리스탈 아이스 각반")) {
+							if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "크리스탈 아이스 신발")) {
+								return 1;
+							}
+						}
+					}
+				}
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
 	
 }

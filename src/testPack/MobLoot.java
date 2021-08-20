@@ -8873,6 +8873,12 @@ public class MobLoot {
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 4230000);
+		
+		QuestBoard cb = new QuestBoard();
+		if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===고대 생물, 파괴수===")) {
+			int qNum = cb.getNum(player);
+			cb.q41(player, qNum+1);	
+		}
 	}
 	
 	// 얼어붙은 시체
@@ -9100,6 +9106,47 @@ public class MobLoot {
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 4450000);
+		
+		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
+		ItemMeta var1im = var1.getItemMeta();
+		var1im.setDisplayName(ChatColor.AQUA + "심연의 포보르의 피");
+		var1.setItemMeta(var1im);
+		
+		ItemStack var2 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_STAIRS);
+		ItemMeta var2im = var2.getItemMeta();
+		var2im.setDisplayName(ChatColor.AQUA + "심연의 포보르의 쓸개");
+		var2.setItemMeta(var2im);
+		
+		ItemStack var3 = new ItemStack(Material.CRACKED_POLISHED_BLACKSTONE_BRICKS);
+		ItemMeta var3im = var3.getItemMeta();
+		var3im.setDisplayName(ChatColor.AQUA + "심연의 포보르의 살점");
+		var3.setItemMeta(var3im);
+		
+		ItemStack var4 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICK_SLAB);
+		ItemMeta var4im = var4.getItemMeta();
+		var4im.setDisplayName(ChatColor.AQUA + "심연의 포보르의 간");
+		var4.setItemMeta(var4im);
+		
+		int tmp = rnd.nextInt(13);
+		if(tmp == 0) {
+			player.getInventory().addItem(var1);
+			sendMessage(player, ChatColor.AQUA + "심연의 포보르의 피" + ChatColor.WHITE + "를 획득했다.");
+		} else if(tmp == 1) {
+			player.getInventory().addItem(var2);
+			sendMessage(player, ChatColor.AQUA + "심연의 포보르의 쓸개" + ChatColor.WHITE + "를 획득했다.");
+		} else if(tmp == 2) {
+			player.getInventory().addItem(var3);
+			sendMessage(player, ChatColor.AQUA + "심연의 포보르의 살점" + ChatColor.WHITE + "을 획득했다.");
+		} else if(tmp == 3) {
+			player.getInventory().addItem(var4);
+			sendMessage(player, ChatColor.AQUA + "심연의 포보르의 간" + ChatColor.WHITE + "을 획득했다.");
+		}
+		
+		QuestBoard cb = new QuestBoard();
+		if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===레드 플레이어===")) {
+			int qNum = cb.getNum(player);
+			cb.q42(player, qNum+1);	
+		}
 	}
 	
 	// 웨곤

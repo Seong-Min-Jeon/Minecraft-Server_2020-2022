@@ -1096,6 +1096,60 @@ public class QuestBoard {
 		player.setScoreboard(board);
 	}
 	
+	public void q41(Player player, int num) {
+		//상점
+		if(num>=60) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			Location chestLoc = new Location(player.getWorld(), -1833, 92, 3036);
+			Block block = chestLoc.getBlock();
+			Chest chest = (Chest) block.getState();
+			ItemStack weapon = chest.getInventory().getItem(25);
+			player.getInventory().addItem(weapon);
+			player.sendMessage(ChatColor.AQUA + "상급 파괴수의 알" + ChatColor.WHITE + "을 획득했다.");
+			es.giveExp(player, 11000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.AQUA + "SS급 퀘스트");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===고대 생물, 파괴수===");
+		score.setScore(2);
+		Score score2 = obj.getScore("상급 파괴수 60마리 사냥");
+		score2.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/60)");
+		score4.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void q42(Player player, int num) {
+		//상점
+		if(num>=200) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			Location chestLoc = new Location(player.getWorld(), -1833, 92, 3036);
+			Block block = chestLoc.getBlock();
+			Chest chest = (Chest) block.getState();
+			ItemStack weapon = chest.getInventory().getItem(26);
+			player.getInventory().addItem(weapon);
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "현상금" + ChatColor.WHITE + "을 획득했다.");
+			es.giveExp(player, 14000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.LIGHT_PURPLE + "S급 퀘스트");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);		
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===레드 플레이어===");
+		score.setScore(2);
+		Score score2 = obj.getScore("인간 사냥꾼 200마리 사냥");
+		score2.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/200)");
+		score4.setScore(0);
+		player.setScoreboard(board);
+	}
+	
 	public void eq1(Player player, int num) {
 		// mq23 보상
 		if (num >= 1) {

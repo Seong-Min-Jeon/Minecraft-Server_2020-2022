@@ -293,6 +293,15 @@ public class RefreshServer {
 													}
 												}
 											}
+											if (allPlayer.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "크리스탈 아이스 헬멧")) {
+												if (allPlayer.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "크리스탈 아이스 갑옷")) {
+													if (allPlayer.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "크리스탈 아이스 각반")) {
+														if (allPlayer.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "크리스탈 아이스 신발")) {
+															wear = true;
+														}
+													}
+												}
+											}
 											
 										}
 									}

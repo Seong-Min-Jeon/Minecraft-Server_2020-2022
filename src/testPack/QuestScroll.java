@@ -64,6 +64,8 @@ public class QuestScroll {
 				q38(player, itemArg, world);
 				q39(player, itemArg, world);
 				q40(player, itemArg, world);
+				q41(player, itemArg, world);
+				q42(player, itemArg, world);
 				eq1(player, itemArg, world);
 				eq2(player, itemArg, world);
 				eq3(player, itemArg, world);
@@ -462,6 +464,24 @@ public class QuestScroll {
 					+ "§7지금이야말로 족장 <바람을 가르는 늑대>를 처리하기에 가장 알맞은 타이밍이다.");
 			QuestBoard qb = new QuestBoard();
 			qb.q40(player, 0);
+		}	
+	}
+	
+	public void q41(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "퀘스트: 고대 생물, 파괴수")) {
+			msg.msg(player, "§7에일 땅을 비롯한 전 세계에서 가장 오랫동안 대를 이어온 종족은 파괴수이다.%§7파괴수는 소수의 작은 섬이 아닌 이상 어느 대륙에나 존재하며 인간을 위협해왔다.%"
+					+ "§7먹이사슬 최상위에 위치한 상급 파괴수에게 누가 더 위인지 보여주자.");
+			QuestBoard qb = new QuestBoard();
+			qb.q41(player, 0);
+		}	
+	}
+	
+	public void q42(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "퀘스트: 고대 생물, 파괴수")) {
+			msg.msg(player, "§7포보르 입장에서 우리는 악마 그 이상의 존재이다.%§7인간들 중에서도 악마 사냥꾼이라고 불리는 자들이 있었으니,%"
+					+ "§7포보르들 중에서도 인간 사냥꾼이라고 불리는 자들이 있었다.");
+			QuestBoard qb = new QuestBoard();
+			qb.q42(player, 0);
 		}	
 	}
 	
