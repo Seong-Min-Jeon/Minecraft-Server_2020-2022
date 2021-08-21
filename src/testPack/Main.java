@@ -313,7 +313,7 @@ public class Main extends JavaPlugin implements Listener{
 		} else if(player.getDisplayName().equalsIgnoreCase("JunletTridner")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.GOLD + "투기장의 지배자 Jun");
 		} else if(player.getDisplayName().equalsIgnoreCase("SARASHINA_RUKA")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.YELLOW + "보석.. 보석은 어디에 있는가?");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.YELLOW + "제사장.. 제사장은 또 죽어있는가?");
 		} else {
 			event.setJoinMessage("야생의 누군가가 등장했다.");
 		}
@@ -10060,7 +10060,7 @@ public class Main extends JavaPlugin implements Listener{
 		} else if(player.getDisplayName().equalsIgnoreCase("JunletTridner")) {
 			event.setQuitMessage(ChatColor.GOLD + "오늘도 그에겐 S급 검투사는 흑우입니다.");
 		} else if(player.getDisplayName().equalsIgnoreCase("SARASHINA_RUKA")) {
-			event.setQuitMessage(ChatColor.YELLOW + "오늘도 하루종일 광질을 했습니다.");
+			event.setQuitMessage(ChatColor.YELLOW + "장비를 정지합니다. 어서 긴급 탈출 스크롤을 써야 돼. 안되잖아? 어, 탈..탈출이 안 돼. 탈출할 수가 없어. 안 돼! 으아아아아아악~ ");
 		} else {
 			event.setQuitMessage("야생의 누군가가 도망쳐버렸다.");
 		}
