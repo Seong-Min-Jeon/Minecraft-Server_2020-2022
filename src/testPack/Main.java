@@ -4461,6 +4461,10 @@ public class Main extends JavaPlugin implements Listener{
 			player.sendMessage(ChatColor.RED + "드랍 불가 아이템입니다.");
 			event.setCancelled(true);
 		}
+		if(event.getItemDrop().getItemStack().getType() == Material.MOSSY_COBBLESTONE_WALL) {
+			player.sendMessage(ChatColor.RED + "드랍 불가 아이템입니다.");
+			event.setCancelled(true);
+		}
 		if(event.getItemDrop().getItemStack().getType() == Material.POLISHED_GRANITE_STAIRS) {
 			player.sendMessage(ChatColor.RED + "드랍 불가 아이템입니다.");
 			event.setCancelled(true);
