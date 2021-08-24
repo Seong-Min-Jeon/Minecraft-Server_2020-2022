@@ -5420,6 +5420,172 @@ public class QuestBoard {
 		player.setScoreboard(board);
 	}
 	
+	public void mq52(Player player, int num) {
+		if(num>=1) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 50000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "마가이: 변이된 원시의 땅 넘어에는 §e이베르모어§f라는 설원 지역이 있네.%마가이: 그곳에는 §e프렐리우드§f라는 작은 마을이 있어.%마가이: 프렐리우드의 주민들은 평생을 마을에 갇혀있을만큼 마을 주변이 위험하다네.%"
+					+ "마가이: 도망치는 주민들은 모두 살해당하고, 마을로 들어가려는 모험가도 모두 죽는다네.%마가이: 자네라면 분명 마을까지 들어갈 수 있을게야.%마가이: 그곳에서 새로운 여행을 시작하게.%"
+					+ "마가이: 좋은 소식을 주자면, 거기는 전투 요원이 굉장히 고위 직급이라 전투에 자신이 있다면 돈 걱정은 없을걸세.");
+			QuestBoard qb = new QuestBoard();
+			qb.mq52_1(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 53장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===이베르모어1===");
+		score.setScore(2);
+		Score score2 = obj.getScore("마가이와 대화");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/1)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq52_1(Player player, int num) {
+		if(num>=1) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 50000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "볼드: 모험가인가?%볼드: 이거이거 드문 일이군.%볼드: 여기까지 그냥 오진 않을 터, 노리는게 뭔가.%"
+					+ "§7돈.. 아니 세계의 문을 여는 방법이라고 답했다.%볼드: 이전에 온 모험가도 같은 말을 했지.%볼드: 그 녀석은 미친놈이었어.%"
+					+ "볼드: 내가 알려줄 수 없다하니 이미 알고 있다며 세계의 문을 열러 떠났지.%볼드: 향하는 방향을 봤을 때 그는 진짜로 진실을 알고 있던 것이야.%볼드: 어차피 알려진 진실.%"
+					+ "볼드: 더 이상 숨길 것이 없지.%볼드: 세계의 문은 열 수 있는 문이 아니다.%볼드: 세계의 문은 그저 추상적인 존재.%"
+					+ "볼드: 굳이 설명하자면 §e세계수의 내부§f라고 볼 수 있지.%볼드: 세계수는 무릇 포보르의 힘을 억제하기 위한 존재.%볼드: 세계수의 내부에는 봉인된 강력한 포보르들의 마나가 잠들어 있을거다.%"
+					+ "볼드: 자 여기, 세계수의 내부로 이동할 수 있는 방법이다.%볼드: 부디 그 미친놈이 이상한 행동을 한다면 막아주길 바란다.");
+			QuestBoard qb = new QuestBoard();
+			qb.mq52_2(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 53장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===이베르모어2===");
+		score.setScore(3);
+		Score score2 = obj.getScore("프렐리우드의 주민과 대화");
+		score2.setScore(2);
+		Score score3 = obj.getScore("위치: 606,55,-1558");
+		score3.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/1)");
+		score4.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq52_2(Player player, int num) {
+		if(num>=1) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 50000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "볼드: 그 나무는 세계수의 가지로 만든 나무다.%볼드: 그것이 세계수의 안으로 들어갈 수 있는 열쇠임은 틀림이 없네.%"
+					+ "볼드: 하지만 내가 아는건 여기서 끝이라네..%볼드: 주변에 아는 고위 마법사가 있다면 그쪽으로 가보게.");
+			QuestBoard qb = new QuestBoard();
+			qb.mq52_3(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 53장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===이베르모어3===");
+		score.setScore(3);
+		Score score2 = obj.getScore("이상한 씨앗 획득");
+		score2.setScore(2);
+		Score score3 = obj.getScore("위치: 593,15,-1592");
+		score3.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/1)");
+		score4.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq52_3(Player player, int num) {
+		if(num==1) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 50000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "카타리나: 어머 그 마나는 무엇인가요?%카타리나: 매우 강력하고도 성스러운 힘이군요.%§7획득한 씨앗을 보여주며 세계수의 씨앗 같다고 전했다.%"
+					+ "카타리나: 세계수.. 확실히 어렸을 때 배운 적은 있습니다.%§7이것으로 세계수의 내부로 들어갈 수 있을지 묻는다.%카타리나: 글쎄요. 제가 아는 힘에서는 불가능합니다.%"
+					+ "카타리나: 씨앗이 나무로 들어가게 해주는 매개체가 된다는건 말이 안되는 것 같습니다.%카타리나: 제 생각에는 세계수를 관리하는 사람이 방법을 알고 있을 것 같아요.");
+			QuestBoard qb = new QuestBoard();
+			qb.mq52_4(player, 0);
+			return;
+		} else if(num==2) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 50000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "니세리나: 네 녀석의 마나와는 다른 힘이 느껴지는구나.%니세리나: 이 몸이 처음보는 매우 요상한 힘이구나.%§7획득한 씨앗을 보여주며 세계수의 씨앗 같다고 전했다.%"
+					+ "니세리나: 세계수.. 확실히 어렸을 때 마스터했었지.%§7이것으로 세계수의 내부로 들어갈 수 있을지 묻는다.%니세리나: ...불가능하다!%"
+					+ "니세리나: 상식적으로 씨앗만 가지고 나무 안으로 들어갈 수가 있겠느냐?%니세리나: 차라리 세계수 주변에 있는 사람을 찾아가보는게 훨 낫겠구만.%니세리나: 볼 일이 끝났으면 빨리 나가거라.");
+			QuestBoard qb = new QuestBoard();
+			qb.mq52_4(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 53장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===세계의 문1===");
+		score.setScore(2);
+		Score score2 = obj.getScore("카타리나 또는 니세리나와 대화");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/1)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq52_4(Player player, int num) {
+		if(num>=1) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 50000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "마가이: 다시 돌아왔구나!%마가이: 무언가 성과는 있었는가?%§7세계수의 씨앗을 구한 것 같다고 전했다.%"
+					+ "마가이: 세계수의 씨앗..%마가이: 그래. 그것으로 세계의 문을 열고자 하는구나.%§7가능한 것인지 물었다.%"
+					+ "마가이: 가능하다.%마가이: 세계수를 관리하던 신관이 있었다.%마가이: 그에게 가면 세계수의 씨앗을 마법의 스크롤로 변환할 수 있을거다.");
+			QuestBoard qb = new QuestBoard();
+			qb.mq52_5(player, 0);
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 53장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===세계의 문2===");
+		score.setScore(2);
+		Score score2 = obj.getScore("마가이와 대화");
+		score2.setScore(1);
+		Score score3 = obj.getScore("(" + num + "/1)");
+		score3.setScore(0);
+		player.setScoreboard(board);
+	}
+	
+	public void mq52_5(Player player, int num) {
+		if(num>=1) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			es.giveExp(player, 50000000);
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "데히트라: 결국에 여기까지 왔구나.%데히트라: 이곳은 세계의 문.%데히트라: 세계수의 안쪽이지.%"
+					+ "데히트라: 이곳은 시공간의 영향을 받지 않는 세계에 유일한 공간이다.%데히트라: 어느 곳은 과거로, 어느 곳은 미래로 연결되어 있지.%데히트라: 그 말은 과거의 포보르나 미래의 포보르나 여기서 조우할 수 있다는 말이다.%"
+					+ "데히트라: 그들과 협력해 봉인된 포보르들의 힘을 해방할 수도 있다.%데히트라: 봉인된 그들을 다시 죽여 더욱 깊은 심연 속으로 보낼 수도 있다.%데히트라: 선택은 자유다.%"
+					+ "데히트라: 네 녀석이 강해지면 다시 찾아오도록 하지.");
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 53장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===세계의 문3===");
+		score.setScore(3);
+		Score score2 = obj.getScore("세계수의 내부로 이동");
+		score2.setScore(2);
+		Score score3 = obj.getScore("위치: 716,110,-991");
+		score3.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/1)");
+		score4.setScore(0);
+		player.setScoreboard(board);
+	}
 	
 	public int getNum(Player player) {
 		try {

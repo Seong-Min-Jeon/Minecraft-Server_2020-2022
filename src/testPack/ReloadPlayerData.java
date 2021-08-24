@@ -763,6 +763,24 @@ public class ReloadPlayerData {
 					} else if (quest.equals("mq51_8")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq51_8(player, Integer.parseInt(num));
+					} else if (quest.equals("mq52")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq52(player, Integer.parseInt(num));
+					} else if (quest.equals("mq52_1")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq52_1(player, Integer.parseInt(num));
+					} else if (quest.equals("mq52_2")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq52_2(player, Integer.parseInt(num));
+					} else if (quest.equals("mq52_3")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq52_3(player, Integer.parseInt(num));
+					} else if (quest.equals("mq52_4")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq52_4(player, Integer.parseInt(num));
+					} else if (quest.equals("mq52_5")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq52_5(player, Integer.parseInt(num));
 					}
 					
 					bufReader.close();

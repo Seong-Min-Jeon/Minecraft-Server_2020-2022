@@ -121,6 +121,7 @@ public class QuestScroll {
 				mq49(player, itemArg, world);
 				mq50(player, itemArg, world);
 				mq51(player, itemArg, world);
+				mq52(player, itemArg, world);
 			} else {
 				itemArg.remove();
 				player.getInventory().addItem(itemArg.getItemStack());
@@ -971,6 +972,7 @@ public class QuestScroll {
 					if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===찾아온 불청객===")) {
 						int qNum = cb.getNum(player);
 						cb.mq50(player, qNum + 1);
+						this.cancel();
 					}
 				}
 			}.runTaskLater(Main.getPlugin(Main.class), 1250);
@@ -986,6 +988,15 @@ public class QuestScroll {
 		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "메인퀘스트 52장")) {
 			QuestBoard qb = new QuestBoard();
 			qb.mq51(player, 0);
+		}	
+	}
+	
+	public void mq52(Player player, Item itemArg, World world) {	
+		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "메인퀘스트 53장")) {
+			msg.msg(player, "§7어딘가에서 편지가 날라왔다.%마가이: 자네는 충분히 강해졌구만.%마가이: 그 정도 힘이면 세계의 문을 열 수 있겠어.%"
+					+ "마가이: 일단 나를 찾아오게.%마가이: 자세한 얘기는 만나서 하지.");
+			QuestBoard qb = new QuestBoard();
+			qb.mq52(player, 0);
 		}	
 	}
 	

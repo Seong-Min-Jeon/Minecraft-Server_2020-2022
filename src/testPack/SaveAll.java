@@ -1243,6 +1243,30 @@ public class SaveAll {
 						int number = qb.getNum(player);
 						fw.write("mq51_8\n");
 						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===이베르모어1===")) {
+						int number = qb.getNum(player);
+						fw.write("mq52\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===이베르모어2===")) {
+						int number = qb.getNum(player);
+						fw.write("mq52_1\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===이베르모어3===")) {
+						int number = qb.getNum(player);
+						fw.write("mq52_2\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===세계의 문1===")) {
+						int number = qb.getNum(player);
+						fw.write("mq52_3\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===세계의 문2===")) {
+						int number = qb.getNum(player);
+						fw.write("mq52_4\n");
+						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===세계의 문3===")) {
+						int number = qb.getNum(player);
+						fw.write("mq52_5\n");
+						fw.write(Integer.toString(number));
 					}
 					fw.close();
 					bufReader.close();
