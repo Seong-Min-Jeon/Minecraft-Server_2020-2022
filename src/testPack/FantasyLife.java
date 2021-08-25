@@ -8,6 +8,7 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Sound;
 import org.bukkit.block.Block;
+import org.bukkit.block.Chest;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
@@ -255,6 +256,30 @@ public class FantasyLife {
 					player.sendMessage("낫을 이용해 채집할 수 있을 것 같다.");
 				}
 				player.getWorld().playSound(loc, Sound.BLOCK_GRASS_BREAK, 0.3f, 1.0f);
+				
+				if(loc.getX() <= 612 && loc.getZ() <= -1572
+						&& loc.getX() >= 574 && loc.getZ() >= -1615) {
+					if(rnd.nextInt(100) == 0) {
+						Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+						Block wheat = chestLoc.getBlock();
+						Chest chest = (Chest) wheat.getState();
+						ItemStack weapon = chest.getInventory().getItem(1);
+						player.getInventory().addItem(weapon);
+						player.sendMessage(ChatColor.AQUA + "이상한 씨앗" + ChatColor.WHITE + "을 획득했다.");
+						
+						try {
+							QuestBoard cb = new QuestBoard();
+							if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===이베르모어3===")) {
+								int qNum = cb.getNum(player);
+								cb.mq52_2(player, qNum + 1);
+							}
+						} catch(Exception e) {
+							
+						}
+						
+					}
+				}
+				
 				return false;
 			} else {
 				player.sendMessage("맨손으로 채집을 하시다니 제정신이십니까? 낫을 들고 하십쇼.");

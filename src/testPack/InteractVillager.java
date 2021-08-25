@@ -46,7 +46,7 @@ public class InteractVillager {
 		}
 		
 		return vil0() || vil1() || vil2() || vil3() || vil4() || vil5() || vil6() || vil7() || vil8() || vil9() || vil10() || vil11() || vil12() || vil13() || vil14()
-				|| vil15() || vil16() || vil17() || vil18() || vil19() || vil20() || vil21() || vil22() || vil23() || vil24() || vil25() || vil26();
+				|| vil15() || vil16() || vil17() || vil18() || vil19() || vil20() || vil21() || vil22() || vil23() || vil24() || vil25() || vil26() || vil27();
 	}
 	
 	public boolean vil0() {
@@ -327,6 +327,9 @@ public class InteractVillager {
 				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===흐름의 봉인을 위해===")) {
 					int qNum = cb.getNum(player);
 					cb.mq41_1(player, qNum+1);	
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===세계의 문1===")) {
+					int qNum = cb.getNum(player);
+					cb.mq52_3(player, qNum+1);	
 				} else {
 					player.sendMessage("카타리나: 여기는 마법탑입니다. 마나의 가호가 있기를.");
 				}
@@ -517,6 +520,9 @@ public class InteractVillager {
 				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===대사막20===")) {
 					int qNum = cb.getNum(player);
 					cb.mq45_36(player, qNum+1);	
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===세계의 문1===")) {
+					int qNum = cb.getNum(player);
+					cb.mq52_3(player, qNum+2);	
 				} else {
 					player.sendMessage("니세리나: 뭐가 궁금한게냐.");
 				}
@@ -692,6 +698,12 @@ public class InteractVillager {
 				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===변이된 원시의 땅9===")) {
 					int qNum = cb.getNum(player);
 					cb.mq51_8(player, qNum+1);	
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===이베르모어1===")) {
+					int qNum = cb.getNum(player);
+					cb.mq52(player, qNum+1);	
+				} else if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===세계의 문2===")) {
+					int qNum = cb.getNum(player);
+					cb.mq52_4(player, qNum+1);	
 				} else {
 					player.sendMessage("마가이: 마가도 형님은 잘 계실까나.");
 				}
@@ -727,6 +739,26 @@ public class InteractVillager {
 			}
 			if(bool == false) {
 				player.sendMessage("던전 키퍼: 통행증이 없으면 결계 안으로 들어갈 수 없다네.");
+			}
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean vil27() {
+		// 볼드 606 -1558
+		if(loc.getX() <= 607 && loc.getZ() <= -1557
+				&& loc.getX() >= 605 && loc.getZ() >= -1559) {
+			QuestBoard cb = new QuestBoard();
+			try {
+				if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===이베르모어2===")) {
+					int qNum = cb.getNum(player);
+					cb.mq52_1(player, qNum+1);	
+				} else {
+					player.sendMessage("볼드: 이런 날씨에는 군고구마를 먹어야하는뎅..");
+				}
+			} catch(Exception e) {
+				player.sendMessage("볼드: 이런 날씨에는 군고구마를 먹어야하는뎅..");
 			}
 			return true;
 		}

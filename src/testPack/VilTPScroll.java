@@ -33,6 +33,7 @@ public class VilTPScroll {
 		tiperari(player, itemArg);
 		lidia(player, itemArg);
 		furelioud(player, itemArg);
+		hardDun2(player, itemArg);
 	}
 
 	public void wargunil(Player player, Item itemArg) {
@@ -1127,6 +1128,73 @@ public class VilTPScroll {
 					new BossHealth().removePlayer(player);
 				} catch (Exception e) {
 
+				}
+			} else {
+				player.sendMessage(ChatColor.RED + "워프에 필요한 마나가 부족합니다.");
+				player.getWorld().playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
+			}
+		}
+	}
+	
+	public void hardDun2(Player player, Item itemArg) {
+		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "이상한 스크롤")) {
+			World world = player.getWorld();
+			// 하드던전
+			int i = 0;
+			for (ItemStack is : player.getInventory().getContents()) {
+				if (is == null)
+					continue;
+				if (is.getType() == Material.HEART_OF_THE_SEA) {
+					i = i + is.getAmount();
+				}
+			}
+			if (i == 1) {
+				player.getInventory().remove(Material.HEART_OF_THE_SEA);
+				Location loc = new Location(world,3686,190,3863);
+				player.teleport(loc);
+				itemArg.remove();
+				player.getWorld().playSound(loc, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
+				if (!player.getInventory().contains(Material.HEART_OF_THE_SEA)) {
+					ItemStack item = new ItemStack(Material.MAGMA_CREAM);
+					ItemMeta itemIm = item.getItemMeta();
+					itemIm.setDisplayName(ChatColor.RED + "마나없음");
+					item.setItemMeta(itemIm);
+					player.getInventory().setItem(8, item);
+				}
+				// 보스바 관련
+				try {
+					new BossHealth().removePlayer(player);
+				} catch (Exception e) {
+
+				}
+				
+				QuestBoard cb = new QuestBoard();
+				if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===세계의 문3===")) {
+					int qNum = cb.getNum(player);
+					cb.mq52_5(player, qNum + 1);
+				}
+			} else if (i > 1) {
+				player.getInventory().remove(Material.HEART_OF_THE_SEA);
+				ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, i - 5);
+				ItemMeta itemIm = item.getItemMeta();
+				itemIm.setDisplayName(ChatColor.BLUE + "마나");
+				item.setItemMeta(itemIm);
+				player.getInventory().setItem(8, item);
+				Location loc = new Location(world,3686,190,3863);
+				player.teleport(loc);
+				itemArg.remove();
+				player.getWorld().playSound(loc, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
+				// 보스바 관련
+				try {
+					new BossHealth().removePlayer(player);
+				} catch (Exception e) {
+
+				}
+				
+				QuestBoard cb = new QuestBoard();
+				if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===세계의 문3===")) {
+					int qNum = cb.getNum(player);
+					cb.mq52_5(player, qNum + 1);
 				}
 			} else {
 				player.sendMessage(ChatColor.RED + "워프에 필요한 마나가 부족합니다.");

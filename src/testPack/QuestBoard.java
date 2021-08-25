@@ -17,6 +17,8 @@ import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.BookMeta;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 import org.bukkit.scoreboard.DisplaySlot;
 import org.bukkit.scoreboard.Objective;
 import org.bukkit.scoreboard.Score;
@@ -5566,6 +5568,8 @@ public class QuestBoard {
 			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
 			es.giveExp(player, 50000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,300,200,true,true));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,300,200,true,true));
 			msg.msg(player, "데히트라: 결국에 여기까지 왔구나.%데히트라: 이곳은 세계의 문.%데히트라: 세계수의 안쪽이지.%"
 					+ "데히트라: 이곳은 시공간의 영향을 받지 않는 세계에 유일한 공간이다.%데히트라: 어느 곳은 과거로, 어느 곳은 미래로 연결되어 있지.%데히트라: 그 말은 과거의 포보르나 미래의 포보르나 여기서 조우할 수 있다는 말이다.%"
 					+ "데히트라: 그들과 협력해 봉인된 포보르들의 힘을 해방할 수도 있다.%데히트라: 봉인된 그들을 다시 죽여 더욱 깊은 심연 속으로 보낼 수도 있다.%데히트라: 선택은 자유다.%"

@@ -314,6 +314,10 @@ public class Main extends JavaPlugin implements Listener{
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.GOLD + "투기장의 지배자 Jun");
 		} else if(player.getDisplayName().equalsIgnoreCase("SARASHINA_RUKA")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.YELLOW + "제사장.. 제사장은 또 죽어있는가?");
+		} else if(player.getDisplayName().equalsIgnoreCase("B1ath")) {
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.AQUA + "'시공의 숭배자' Blath");
+		} else if(player.getDisplayName().equalsIgnoreCase("Nam_Da")) {
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.AQUA + "'시공의 지배자' 남다");
 		} else {
 			event.setJoinMessage("야생의 누군가가 등장했다.");
 		}
@@ -10064,7 +10068,11 @@ public class Main extends JavaPlugin implements Listener{
 		} else if(player.getDisplayName().equalsIgnoreCase("JunletTridner")) {
 			event.setQuitMessage(ChatColor.GOLD + "오늘도 그에겐 S급 검투사는 흑우입니다.");
 		} else if(player.getDisplayName().equalsIgnoreCase("SARASHINA_RUKA")) {
-			event.setQuitMessage(ChatColor.YELLOW + "장비를 정지합니다. 어서 긴급 탈출 스크롤을 써야 돼. 안되잖아? 어, 탈..탈출이 안 돼. 탈출할 수가 없어. 안 돼! 으아아아아아악~ ");
+			event.setQuitMessage(ChatColor.YELLOW + "장비를 정지합니다. 어서 긴급 탈출 스크롤을 써야 돼. 안되잖아? 어, 탈..탈출이 안 돼. 탈출할 수가 없어. 안 돼! 으아아아아아악~");
+		} else if(player.getDisplayName().equalsIgnoreCase("B1ath")) {
+			event.setQuitMessage(ChatColor.AQUA + "에일에서는 모습을 감췄지만 시공을 숭배하러 떠났을 수도 있습니다.");
+		} else if(player.getDisplayName().equalsIgnoreCase("Nam_Da")) {
+			event.setQuitMessage(ChatColor.AQUA + "누군가 시공의 폭풍 속으로 빨려들어갔습니다.");
 		} else {
 			event.setQuitMessage("야생의 누군가가 도망쳐버렸다.");
 		}
