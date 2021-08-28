@@ -96,6 +96,12 @@ public class ReloadPlayerData {
             	} catch(Exception e) {
             		
             	}
+            	// 계승자 리로드
+            	try {
+            		setInheritance(player, job, folder);
+            	} catch(Exception e) {
+            		
+            	}
             	// 퀘스트 리로드
             	try {
             		File file = new File(dir, job + "_Qdata.dat");
@@ -975,6 +981,73 @@ public class ReloadPlayerData {
 			fantasyLifeLevel(player, memento, fLevel);
 			player.getInventory().setItem(7, memento);
 		}
+	}
+	
+	public void setInheritance(Player player, String job, File folder) {
+		int idx = -1;
+		if(job.equals("boneFighter")) {
+			idx = 0;
+		} else if(job.equals("knight")) {
+			idx = 1;
+		} else if(job.equals("priest")) {
+			idx = 2;
+		} else if(job.equals("berserker1")) {
+			idx = 3;
+		} else if(job.equals("gambler")) {
+			idx = 4;
+		} else if(job.equals("devil")) {
+			idx = 10;
+		} else if(job.equals("angel")) {
+			idx = 11;
+		} else if(job.equals("agent")) {
+			idx = 12;
+		} else if(job.equals("shadowKnight")) {
+			idx = 5;
+		} else if(job.equals("berserker2")) {
+			idx = 6;
+		} else if(job.equals("soldier")) {
+			idx = 7;
+		} else if(job.equals("grimReaper")) {
+			idx = 8;
+		} else if(job.equals("akuma")) {
+			idx = 13;
+		} else if(job.equals("paladin")) {
+			idx = 14;
+		} else if(job.equals("dragonKnight")) {
+			idx = 15;
+		} else if(job.equals("commander")) {
+			idx = 16;
+		} else if(job.equals("archer")) {
+			idx = 9;
+		} else if(job.equals("powerRanger")) {
+			idx = 17;
+		}
+		
+		File dataFolder = folder;
+        if(!dataFolder.exists()) {
+            dataFolder.mkdir();
+        } else {
+        	File dir = new File(dataFolder + "/" + player.getUniqueId().toString());
+        	if(!dir.exists()) {
+        		try{
+        		    dir.mkdir(); 
+        		} catch(Exception e2) {
+        		    e2.getStackTrace();
+        		}
+			}
+			File file = new File(dir, "inheritance.dat");
+			try {
+				FileReader filereader = new FileReader(file);
+				BufferedReader bufReader = new BufferedReader(filereader);
+				String[] num = bufReader.readLine().split(" ");
+				int inheritance = Integer.parseInt(num[idx]);
+				new Inheritance().changeInheritance(player, inheritance, null);
+                bufReader.close();
+			} catch (IOException e2) {
+				e2.printStackTrace();
+			}
+		}
+		
 	}
 	
 	public void fantasyLifeLevel(Player player, ItemStack item, String level) {

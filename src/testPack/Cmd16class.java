@@ -99,6 +99,9 @@ public class Cmd16class implements CommandExecutor {
 			// Off in Dungeon
 			new OffInDungeon(player);
 			
+			// 계승자 초기화
+			new Inheritance().changeInheritance(player, 0, null);
+			
 			//저장
 			new SaveAll(player, folder);
 			

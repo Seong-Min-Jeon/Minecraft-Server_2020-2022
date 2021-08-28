@@ -29,12 +29,6 @@ public class OffInDungeon {
 			player.teleport(new Location(player.getWorld(), -2050, 64, 2455));
 			return;
 		}
-		//광산 3481 31 3837 3603 5 3976
-		if(loc.getX() <= 3603 && loc.getY() <= 31 && loc.getZ() <= 3976 
-				&& loc.getX() >= 3481 && loc.getY() >= 5 && loc.getZ() >= 3837) {
-			player.teleport(new Location(player.getWorld(), -1154, 24, 1558));
-			return;
-		}
 		//타락한 요정 왕국 3643 255 3591  3823 0 3287
 		if(loc.getX() <= 3823 && loc.getY() <= 255 && loc.getZ() <= 3591 
 				&& loc.getX() >= 3643 && loc.getY() >= 0 && loc.getZ() >= 3287) {
@@ -136,6 +130,13 @@ public class OffInDungeon {
 			player.teleport(new Location(player.getWorld(), 3686, 190, 3861));
 			return;
 		}
+		// 광산 3481 31 3837 3603 5 3976
+		if (loc.getX() <= 3603 && loc.getY() <= 31 && loc.getZ() <= 3976 
+				&& loc.getX() >= 3481 && loc.getY() >= 5 && loc.getZ() >= 3837) {
+			player.teleport(new Location(player.getWorld(), -1154, 24, 1558));
+			return;
+		}
+
 	}
 
 	public void removeMana(Player player) {

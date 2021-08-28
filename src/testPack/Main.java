@@ -201,6 +201,7 @@ public class Main extends JavaPlugin implements Listener{
 		getCommand("setSkin").setExecutor(new Cmd24setSkin());
 		
 		new Cmd16class().setFolder(getDataFolder());
+		new Inheritance().setFolder(getDataFolder());
 		
 		new RefreshServer();
 //		new NPCHitBox();
@@ -471,6 +472,36 @@ public class Main extends JavaPlugin implements Listener{
 						file.createNewFile();
 						BufferedWriter fw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), "UTF-8"));
 		                fw.write("1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0");
+		                fw.close();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
+			}
+		} catch (Exception e) {
+			
+		}
+		
+		// 계승자 파일
+		try {
+			File dataFolder = getDataFolder();
+            if(!dataFolder.exists()) {
+                dataFolder.mkdir();
+            } else {
+            	File dir = new File(getDataFolder() + "/" + player.getUniqueId().toString());
+            	if(!dir.exists()) {
+            		try{
+            		    dir.mkdir(); 
+            		} catch(Exception e) {
+            		    e.getStackTrace();
+            		}
+				}
+				File file = new File(dir, "inheritance.dat");
+				if (!file.exists()) {
+					try {
+						file.createNewFile();
+						BufferedWriter fw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), "UTF-8"));
+		                fw.write("0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0");
 		                fw.close();
 					} catch (IOException e) {
 						e.printStackTrace();
@@ -3282,12 +3313,6 @@ public class Main extends JavaPlugin implements Listener{
 				event.setRespawnLocation(forgan);
 				return;
 			}
-			//광산 3481 31 3837 3603 5 3976
-			if(loc.getX() <= 3603 && loc.getY() <= 31 && loc.getZ() <= 3976 
-					&& loc.getX() >= 3481 && loc.getY() >= 5 && loc.getZ() >= 3837) {
-				event.setRespawnLocation(seedMine);
-				return;
-			}
 			//타락한 요정 왕국 3658 255 3591  3823 0 3287
 			if(loc.getX() <= 3823 && loc.getY() <= 255 && loc.getZ() <= 3591 
 					&& loc.getX() >= 3658 && loc.getY() >= 0 && loc.getZ() >= 3287) {
@@ -3382,6 +3407,12 @@ public class Main extends JavaPlugin implements Listener{
 			if (loc.getX() <= 3841 && loc.getY() <= 255 && loc.getZ() <= 5000 
 					&& loc.getX() >= 3000 && loc.getY() >= 0 && loc.getZ() >= 3836) {
 				event.setRespawnLocation(hardLobby);
+				return;
+			}
+			//광산 3481 31 3837 3603 5 3976
+			if(loc.getX() <= 3603 && loc.getY() <= 31 && loc.getZ() <= 3976 
+					&& loc.getX() >= 3481 && loc.getY() >= 5 && loc.getZ() >= 3837) {
+				event.setRespawnLocation(seedMine);
 				return;
 			}
 
@@ -4281,6 +4312,7 @@ public class Main extends JavaPlugin implements Listener{
 		CraftingPotionScroll cps = new CraftingPotionScroll();
 		CraftingFoodScroll cfs = new CraftingFoodScroll();
 		RerollScroll rs = new RerollScroll();
+		Inheritance inheritance = new Inheritance();
 		
 		try {
 			//마을 스크롤
@@ -4313,6 +4345,8 @@ public class Main extends JavaPlugin implements Listener{
 			cfs.openInv(player, itemArg);
 			//리롤 스크롤
 			rs.openInv(player, itemArg);
+			//계승자 스크롤
+			inheritance.useScroll(player, itemArg);
 			//캐릭터 삭제 스크롤
 			new RemoveCharacter(player, itemArg, getDataFolder());
 		} catch(Exception e) {
@@ -4588,6 +4622,203 @@ public class Main extends JavaPlugin implements Listener{
 		} catch(Exception e) {
 			
 		}
+		
+		try {
+			if(event.getDamager() instanceof Player) {
+				try {
+					Player player = (Player) event.getDamager();
+					int lvl = player.getLevel();
+					ItemStack item;
+					ItemMeta im;
+					String[] ary;
+					try {
+						item = player.getInventory().getBoots();
+						im = item.getItemMeta();
+						ary = im.getLocalizedName().split(",");
+						if(Integer.parseInt(ary[10]) > lvl) {
+//							player.getInventory().addItem(item);
+							try {
+								System.out.println(player.getDisplayName() + "이/가 " + item.getItemMeta().getDisplayName() 
+										+ "(" + item.getItemMeta().getLocalizedName() + ")" + ChatColor.WHITE + "을/를 소멸 시켰다.");
+							} catch(Exception e) {
+								
+							}
+							player.getInventory().setBoots(null);
+						}
+					} catch(Exception e) {
+						
+					}
+					try {
+						item = player.getInventory().getLeggings();
+						im = item.getItemMeta();
+						ary = im.getLocalizedName().split(",");
+						if(Integer.parseInt(ary[10]) > lvl) {
+//							player.getInventory().addItem(item);
+							try {
+								System.out.println(player.getDisplayName() + "이/가 " + item.getItemMeta().getDisplayName() 
+										+ "(" + item.getItemMeta().getLocalizedName() + ")" + ChatColor.WHITE + "을/를 소멸 시켰다.");
+							} catch(Exception e) {
+								
+							}
+							player.getInventory().setLeggings(null);
+						}
+					} catch(Exception e) {
+						
+					}
+					try {
+						item = player.getInventory().getChestplate();
+						im = item.getItemMeta();
+						ary = im.getLocalizedName().split(",");
+						if(Integer.parseInt(ary[10]) > lvl) {
+//							player.getInventory().addItem(item);
+							try {
+								System.out.println(player.getDisplayName() + "이/가 " + item.getItemMeta().getDisplayName() 
+										+ "(" + item.getItemMeta().getLocalizedName() + ")" + ChatColor.WHITE + "을/를 소멸 시켰다.");
+							} catch(Exception e) {
+								
+							}
+							player.getInventory().setChestplate(null);
+						}
+					} catch(Exception e) {
+						
+					}
+					try {
+						item = player.getInventory().getHelmet();
+						im = item.getItemMeta();
+						ary = im.getLocalizedName().split(",");
+						if(Integer.parseInt(ary[10]) > lvl) {
+//							player.getInventory().addItem(item);
+							try {
+								System.out.println(player.getDisplayName() + "이/가 " + item.getItemMeta().getDisplayName() 
+										+ "(" + item.getItemMeta().getLocalizedName() + ")" + ChatColor.WHITE + "을/를 소멸 시켰다.");
+							} catch(Exception e) {
+								
+							}
+							player.getInventory().setHelmet(null);
+						}
+					} catch(Exception e) {
+						
+					}
+					try {
+						item = player.getInventory().getItemInOffHand();
+						im = item.getItemMeta();
+						ary = im.getLocalizedName().split(",");
+						if(Integer.parseInt(ary[10]) > lvl) {
+//							player.getInventory().addItem(item);
+							try {
+								System.out.println(player.getDisplayName() + "이/가 " + item.getItemMeta().getDisplayName() 
+										+ "(" + item.getItemMeta().getLocalizedName() + ")" + ChatColor.WHITE + "을/를 소멸 시켰다.");
+							} catch(Exception e) {
+								
+							}
+							player.getInventory().setItemInOffHand(null);
+						}
+					} catch(Exception e) {
+						
+					}
+				} catch(Exception e) {
+					
+				}
+			} else if(event.getEntity() instanceof Player) {
+				try {
+					Player player = (Player) event.getEntity();
+					int lvl = player.getLevel();
+					ItemStack item;
+					ItemMeta im;
+					String[] ary;
+					try {
+						item = player.getInventory().getBoots();
+						im = item.getItemMeta();
+						ary = im.getLocalizedName().split(",");
+						if(Integer.parseInt(ary[10]) > lvl) {
+//							player.getInventory().addItem(item);
+							try {
+								System.out.println(player.getDisplayName() + "이/가 " + item.getItemMeta().getDisplayName() 
+										+ "(" + item.getItemMeta().getLocalizedName() + ")" + ChatColor.WHITE + "을/를 소멸 시켰다.");
+							} catch(Exception e) {
+								
+							}
+							player.getInventory().setBoots(null);
+						}
+					} catch(Exception e) {
+						
+					}
+					try {
+						item = player.getInventory().getLeggings();
+						im = item.getItemMeta();
+						ary = im.getLocalizedName().split(",");
+						if(Integer.parseInt(ary[10]) > lvl) {
+//							player.getInventory().addItem(item);
+							try {
+								System.out.println(player.getDisplayName() + "이/가 " + item.getItemMeta().getDisplayName() 
+										+ "(" + item.getItemMeta().getLocalizedName() + ")" + ChatColor.WHITE + "을/를 소멸 시켰다.");
+							} catch(Exception e) {
+								
+							}
+							player.getInventory().setLeggings(null);
+						}
+					} catch(Exception e) {
+						
+					}
+					try {
+						item = player.getInventory().getChestplate();
+						im = item.getItemMeta();
+						ary = im.getLocalizedName().split(",");
+						if(Integer.parseInt(ary[10]) > lvl) {
+//							player.getInventory().addItem(item);
+							try {
+								System.out.println(player.getDisplayName() + "이/가 " + item.getItemMeta().getDisplayName() 
+										+ "(" + item.getItemMeta().getLocalizedName() + ")" + ChatColor.WHITE + "을/를 소멸 시켰다.");
+							} catch(Exception e) {
+								
+							}
+							player.getInventory().setChestplate(null);
+						}
+					} catch(Exception e) {
+						
+					}
+					try {
+						item = player.getInventory().getHelmet();
+						im = item.getItemMeta();
+						ary = im.getLocalizedName().split(",");
+						if(Integer.parseInt(ary[10]) > lvl) {
+//							player.getInventory().addItem(item);
+							try {
+								System.out.println(player.getDisplayName() + "이/가 " + item.getItemMeta().getDisplayName() 
+										+ "(" + item.getItemMeta().getLocalizedName() + ")" + ChatColor.WHITE + "을/를 소멸 시켰다.");
+							} catch(Exception e) {
+								
+							}
+							player.getInventory().setHelmet(null);
+						}
+					} catch(Exception e) {
+						
+					}
+					try {
+						item = player.getInventory().getItemInOffHand();
+						im = item.getItemMeta();
+						ary = im.getLocalizedName().split(",");
+						if(Integer.parseInt(ary[10]) > lvl) {
+//							player.getInventory().addItem(item);
+							try {
+								System.out.println(player.getDisplayName() + "이/가 " + item.getItemMeta().getDisplayName() 
+										+ "(" + item.getItemMeta().getLocalizedName() + ")" + ChatColor.WHITE + "을/를 소멸 시켰다.");
+							} catch(Exception e) {
+								
+							}
+							player.getInventory().setItemInOffHand(null);
+						}
+					} catch(Exception e) {
+						
+					}
+				} catch(Exception e) {
+					
+				}
+			}
+		} catch(Exception e) {
+			
+		}
+		
 		try {
 			if(event.getDamager() instanceof Player) {
 				Player player = (Player) event.getDamager();
@@ -10081,6 +10312,8 @@ public class Main extends JavaPlugin implements Listener{
 		new PitySystem().removePlayer(player);
 		// Off in Dungeon
 		new OffInDungeon(player);
+		// 계승자 초기화
+		new Inheritance().changeInheritance(player, 0, null);
 		// Refresh Server
 		int num = 0;
 		for (Player allPlayer : Bukkit.getOnlinePlayers()) {

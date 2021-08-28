@@ -2398,15 +2398,19 @@ public class MysteryChestOpen {
 			stat[4] = 1000000;
 		}
 		if(stat[5] > 30000) {
+			total += stat[5] - 30000;
 			stat[5] = 30000;
 		}
 		if(stat[6] > 30000) {
+			total += stat[6] - 30000;
 			stat[6] = 30000;
 		}
 		if(stat[7] > 30000) {
+			total += stat[7] - 30000;
 			stat[7] = 30000;
 		}
 		if(stat[8] > 30000) {
+			total += stat[8] - 30000;
 			stat[8] = 30000;
 		}
 		if(stat[9] > 1000000) {
@@ -2415,6 +2419,8 @@ public class MysteryChestOpen {
 		if(stat[10] > 1000) {
 			stat[10] = 1000;
 		}
+		
+		stat[9] += total;
 		
 		String localName = Integer.toString(stat[0]) + "," + stat[1] + "," + stat[2] + "," + stat[3] + "," + stat[4] + "," + stat[5] + "," + stat[6] + "," + stat[7] + "," + stat[8] + "," + stat[9] + "," + stat[10];
 

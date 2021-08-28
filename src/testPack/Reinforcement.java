@@ -1506,7 +1506,7 @@ public class Reinforcement {
 					player.sendMessage(ChatColor.GREEN + "스플레시의 강화 수치가 9만큼 상승하였습니다.");
 				}
 				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
-			} else if(num<30) {
+			} else if(num<28) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
@@ -1519,7 +1519,7 @@ public class Reinforcement {
 					item.setLocalizedName(result);
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 9만큼 상승하였습니다.");
 				}
-			} else if(num<=35) {
+			} else if(num<=32) {
 				int num2 = rnd.nextInt(6);
 				if(num2 == 0) {
 					int lvl = Integer.parseInt(ary[0]);
@@ -1702,7 +1702,7 @@ public class Reinforcement {
 					player.sendMessage(ChatColor.GREEN + "스플레시의 강화 수치가 40만큼 상승하였습니다.");
 				}
 				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
-			} else if(num<30) {
+			} else if(num<28) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
@@ -1716,7 +1716,7 @@ public class Reinforcement {
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 40만큼 상승하였습니다.");
 				}
 				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
-			} else if(num<=35) {
+			} else if(num<=32) {
 				int num2 = rnd.nextInt(6);
 				if(num2 == 0) {
 					int lvl = Integer.parseInt(ary[0]);
@@ -1899,7 +1899,7 @@ public class Reinforcement {
 					player.sendMessage(ChatColor.GREEN + "스플레시의 강화 수치가 80만큼 상승하였습니다.");
 				}
 				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
-			} else if(num<30) {
+			} else if(num<28) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
@@ -1913,7 +1913,7 @@ public class Reinforcement {
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 80만큼 상승하였습니다.");
 				}
 				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
-			} else if(num<=35) {
+			} else if(num<=32) {
 				int num2 = rnd.nextInt(6);
 				if(num2 == 0) {
 					int lvl = Integer.parseInt(ary[0]);
@@ -2096,7 +2096,7 @@ public class Reinforcement {
 					player.sendMessage(ChatColor.GREEN + "스플레시의 강화 수치가 300만큼 상승하였습니다.");
 				}
 				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
-			} else if(num<30) {
+			} else if(num<28) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
@@ -2110,7 +2110,7 @@ public class Reinforcement {
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 300만큼 상승하였습니다.");
 				}
 				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
-			} else if(num<=35) {
+			} else if(num<=32) {
 				int num2 = rnd.nextInt(6);
 				if(num2 == 0) {
 					int lvl = Integer.parseInt(ary[0]);
@@ -2293,7 +2293,7 @@ public class Reinforcement {
 					player.sendMessage(ChatColor.GREEN + "스플레시의 강화 수치가 777만큼 상승하였습니다.");
 				}
 				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
-			} else if(num<30) {
+			} else if(num<28) {
 				int lvl = Integer.parseInt(ary[9]);
 				if (lvl == 1000000) {
 					player.sendMessage(ChatColor.WHITE + "반격의 강화는 이미 한계입니다.");
@@ -2307,7 +2307,7 @@ public class Reinforcement {
 					player.sendMessage(ChatColor.GREEN + "반격의 강화 수치가 777만큼 상승하였습니다.");
 				}
 				player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 0.3f, 2.0f);
-			} else if(num<=35) {
+			} else if(num<=32) {
 				int num2 = rnd.nextInt(6);
 				if(num2 == 0) {
 					int lvl = Integer.parseInt(ary[0]);

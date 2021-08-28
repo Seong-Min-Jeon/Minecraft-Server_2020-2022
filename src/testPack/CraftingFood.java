@@ -300,6 +300,96 @@ public class CraftingFood {
 				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "심연의 포보르의 뿔")) {
 					totalStat += amount[i] * 270;
 				}
+				if(name[i].equalsIgnoreCase(ChatColor.GRAY + "미숙하게 채집된 돼지고기")) {
+					totalStat += amount[i] * 10;
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "적당한 크기의 돼지고기")) {
+					totalStat += amount[i] * 20;
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "맛있어 보이는 돼지고기")) {
+					totalStat += amount[i] * 40;
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "좋은 육질의 돼지고기")) {
+					totalStat += amount[i] * 70;
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "신선도가 뛰어난 돼지고기")) {
+					totalStat += amount[i] * 110;
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "신이 탐하는 돼지고기")) {
+					totalStat += amount[i] * 160;
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.GRAY + "캐넌 등급의 소고기")) {
+					totalStat += amount[i] * 10;
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "유틸리티 등급의 소고기")) {
+					totalStat += amount[i] * 20;
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "스텐다드 등급의 소고기")) {
+					totalStat += amount[i] * 40;
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "셀렉트 등급의 소고기")) {
+					totalStat += amount[i] * 70;
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "프라임 등급의 소고기")) {
+					totalStat += amount[i] * 110;
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "신이 즐겨먹는 소고기")) {
+					totalStat += amount[i] * 160;
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.GRAY + "2등급 닭고기")) {
+					totalStat += amount[i] * 10;
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "1등급 닭고기")) {
+					totalStat += amount[i] * 20;
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "1+등급 닭고기")) {
+					totalStat += amount[i] * 40;
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "닭의 품질을 넘어선 닭고기")) {
+					totalStat += amount[i] * 70;
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "닭의 품질을 초월한 닭고기")) {
+					totalStat += amount[i] * 110;
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "신이 튀겨먹는 닭고기")) {
+					totalStat += amount[i] * 160;
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.GRAY + "베타램 등급의 양고기")) {
+					totalStat += amount[i] * 10;
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "램(Lamb) 등급의 양고기")) {
+					totalStat += amount[i] * 20;
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "호겟 등급의 양고기")) {
+					totalStat += amount[i] * 40;
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "머튼 등급의 양고기")) {
+					totalStat += amount[i] * 70;
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "램(Ram) 등급의 양고기")) {
+					totalStat += amount[i] * 110;
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "신이 인정한 양고기")) {
+					totalStat += amount[i] * 160;
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.GRAY + "상처가 많은 밀")) {
+					totalStat += amount[i] * 10;
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.WHITE + "밀")) {
+					totalStat += amount[i] * 20;
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.YELLOW + "좋은 식재료가 될 밀")) {
+					totalStat += amount[i] * 40;
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "정교한 힘으로 잘린 밀")) {
+					totalStat += amount[i] * 70;
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "윤기가 나는 밀")) {
+					totalStat += amount[i] * 110;
+				}
+				if(name[i].equalsIgnoreCase(ChatColor.DARK_RED + "신이 먹는다고 알려진 밀")) {
+					totalStat += amount[i] * 160;
+				}
 			}
 			
 			Random rnd = new Random();
