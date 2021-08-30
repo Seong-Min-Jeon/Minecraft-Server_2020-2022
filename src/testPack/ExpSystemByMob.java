@@ -51,6 +51,18 @@ public class ExpSystemByMob {
 		percent += new SpecialEffect().a19(player);
 		percent += new SpecialEffect().a20(player);
 		percent += new SpecialEffect().w7(player);
+		
+		Inheritance inheritance = new Inheritance();
+		if(inheritance.getInheritance(player) == 11) {
+			percent += 5;
+		} else if(inheritance.getInheritance(player) == 12) {
+			percent += 10;
+		} else if(inheritance.getInheritance(player) == 13) {
+			percent += 15;
+		} else if(inheritance.getInheritance(player) == 14) {
+			percent += 20;
+		}
+		
 		exp += exp * percent / 100;
 		
 		if(exp <= 0) {
@@ -131,6 +143,18 @@ public class ExpSystemByMob {
 		percent += new SpecialEffect().a19(player);
 		percent += new SpecialEffect().a20(player);
 		percent += new SpecialEffect().w7(player);
+		
+		Inheritance inheritance = new Inheritance();
+		if(inheritance.getInheritance(player) == 11) {
+			percent += 5;
+		} else if(inheritance.getInheritance(player) == 12) {
+			percent += 10;
+		} else if(inheritance.getInheritance(player) == 13) {
+			percent += 15;
+		} else if(inheritance.getInheritance(player) == 14) {
+			percent += 20;
+		}
+		
 		exp += exp * percent / 100;
 		
 		if(exp <= 0) {

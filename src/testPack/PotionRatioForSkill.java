@@ -4,21 +4,11 @@ import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 
-public class PotionRatio {
-	
+public class PotionRatioForSkill {
+
 	public double calculation(Player player, double heal) {
 		Inventory inv = player.getInventory();
 		int lvl = player.getLevel();
-		
-		Inheritance inheritance = new Inheritance();
-		if(inheritance.getInheritance(player) == 1) {
-			heal *= 1.2;
-		} else if(inheritance.getInheritance(player) == 2) {
-			heal *= 1.5;
-		} else if(inheritance.getInheritance(player) == 3) {
-			heal *= 2;
-		}
-		
 		if(inv.contains(Material.RED_DYE)) {
 			heal = ((int)(heal / ((20+lvl*8)/20.0)*10000))/10000.0;
 		} else if(inv.contains(Material.GREEN_DYE)) {

@@ -29,12 +29,16 @@ public class MobLoot {
 
 	Random rnd = new Random();
 
-	private final int multyEme = 1;
+	private int multyEme = 1;
 	ExpSystemByMob es = new ExpSystemByMob();
 	Cmd18ItemToggle it = new Cmd18ItemToggle();
 
 	// 1:10 10:100 20:1000 30:4000 40:10000 50:21000 100:200000 200:1840000
 	// 400:16660000 700:97600000 1000:300000000
+	
+	public MobLoot(Player player) {
+		multyEme = 1;
+	}
 
 	// 메세지
 	public void sendMessage(Player player, String msg) {

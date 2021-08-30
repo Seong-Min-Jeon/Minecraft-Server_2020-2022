@@ -270,211 +270,211 @@ public class Inheritance {
 			itemArg.remove();
 			saveFile(player);
 		}
-		// 이름색 변경 가능
+ 
 		if(map.get(player) == 0) {
 			NametagEdit.getApi().setPrefix(player, null);
 		} else if(map.get(player) == 1) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + ChatColor.YELLOW + "" + ChatColor.BOLD + "[약쟁이]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + ChatColor.YELLOW + "" + ChatColor.BOLD + "[약쟁이] " + ChatColor.WHITE);
 		} else if(map.get(player) == 2) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[마녀]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[마녀] " + ChatColor.WHITE);
 		} else if(map.get(player) == 3) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[술꾼]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[술꾼] " + ChatColor.WHITE);
 		} else if(map.get(player) == 4) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[미꾸라지]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[미꾸라지] " + ChatColor.WHITE);
 		} else if(map.get(player) == 5) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[연기]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[연기] " + ChatColor.WHITE);
 		} else if(map.get(player) == 6) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[기쁨]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[기쁨] " + ChatColor.WHITE);
 		} else if(map.get(player) == 7) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[행운]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[행운] " + ChatColor.WHITE);
 		} else if(map.get(player) == 8) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[일꾼]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[일꾼] " + ChatColor.WHITE);
 		} else if(map.get(player) == 9) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[럭키]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[럭키] " + ChatColor.WHITE);
 		} else if(map.get(player) == 10) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[기적]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[기적] " + ChatColor.WHITE);
 		} else if(map.get(player) == 11) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[씨앗]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[씨앗] " + ChatColor.WHITE);
 		} else if(map.get(player) == 12) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[떡잎]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[떡잎] " + ChatColor.WHITE);
 		} else if(map.get(player) == 13) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[풀잎]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[풀잎] " + ChatColor.WHITE);
 		} else if(map.get(player) == 14) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[거목]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[거목] " + ChatColor.WHITE);
 		} else if(map.get(player) == 15) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[모기]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[모기] " + ChatColor.WHITE);
 		} else if(map.get(player) == 16) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[흡혈귀]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[흡혈귀] " + ChatColor.WHITE);
 		} else if(map.get(player) == 17) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[불]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[불] " + ChatColor.WHITE);
 		} else if(map.get(player) == 18) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[화염]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[화염] " + ChatColor.WHITE);
 		} else if(map.get(player) == 19) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[용암]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[용암] " + ChatColor.WHITE);
 		} else if(map.get(player) == 20) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[파동]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[파동] " + ChatColor.WHITE);
 		} else if(map.get(player) == 21) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[TNTZ]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[TNTZ] " + ChatColor.WHITE);
 		} else if(map.get(player) == 22) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[크리퍼]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[크리퍼] " + ChatColor.WHITE);
 		} else if(map.get(player) == 23) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[검]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[검] " + ChatColor.WHITE);
 		} else if(map.get(player) == 24) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[초보 전사]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[초보 전사] " + ChatColor.WHITE);
 		} else if(map.get(player) == 25) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[용병 전사]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[용병 전사] " + ChatColor.WHITE);
 		} else if(map.get(player) == 26) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[상급 전사]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[상급 전사] " + ChatColor.WHITE);
 		} else if(map.get(player) == 27) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[일류 전사]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[일류 전사] " + ChatColor.WHITE);
 		} else if(map.get(player) == 28) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[대 전사]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[대 전사] " + ChatColor.WHITE);
 		} else if(map.get(player) == 29) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[마스터 전사]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[마스터 전사] " + ChatColor.WHITE);
 		} else if(map.get(player) == 30) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[그랜드마스터 전사]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_RED + "" + ChatColor.BOLD + "[그랜드마스터 전사] " + ChatColor.WHITE);
 		} else if(map.get(player) == 31) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[투왕]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_RED + "" + ChatColor.BOLD + "[투왕] " + ChatColor.WHITE);
 		} else if(map.get(player) == 32) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[아레스]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "[아레스] " + ChatColor.WHITE);
 		} else if(map.get(player) == 33) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[초보 헌터]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[초보 헌터] " + ChatColor.WHITE);
 		} else if(map.get(player) == 34) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[용병 헌터]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[용병 헌터] " + ChatColor.WHITE);
 		} else if(map.get(player) == 35) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[상급 헌터]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[상급 헌터] " + ChatColor.WHITE);
 		} else if(map.get(player) == 36) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[일류 헌터]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[일류 헌터] " + ChatColor.WHITE);
 		} else if(map.get(player) == 37) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[대 헌터]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[대 헌터] " + ChatColor.WHITE);
 		} else if(map.get(player) == 38) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[마스터 헌터]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[마스터 헌터] " + ChatColor.WHITE);
 		} else if(map.get(player) == 39) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[그랜드마스터 헌터]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_RED + "" + ChatColor.BOLD + "[그랜드마스터 헌터] " + ChatColor.WHITE);
 		} else if(map.get(player) == 40) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[패왕]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_RED + "" + ChatColor.BOLD + "[패왕] " + ChatColor.WHITE);
 		} else if(map.get(player) == 41) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[아르테미스]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "[아르테미스] " + ChatColor.WHITE);
 		} else if(map.get(player) == 42) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[무덤]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[무덤] " + ChatColor.WHITE);
 		} else if(map.get(player) == 43) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[원시]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[원시] " + ChatColor.WHITE);
 		} else if(map.get(player) == 44) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[멧돼지]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[멧돼지] " + ChatColor.WHITE);
 		} else if(map.get(player) == 45) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[철]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[철] " + ChatColor.WHITE);
 		} else if(map.get(player) == 46) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[원자력]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[원자력] " + ChatColor.WHITE);
 		} else if(map.get(player) == 47) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[넬]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[넬] " + ChatColor.WHITE);
 		} else if(map.get(player) == 48) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[딘]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[딘] " + ChatColor.WHITE);
 		} else if(map.get(player) == 49) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[야수]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[야수] " + ChatColor.WHITE);
 		} else if(map.get(player) == 50) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[마수]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[마수] " + ChatColor.WHITE);
 		} else if(map.get(player) == 51) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[도박사]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[도박사] " + ChatColor.WHITE);
 		} else if(map.get(player) == 52) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[어부]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_RED + "" + ChatColor.BOLD + "[어부] " + ChatColor.WHITE);
 		} else if(map.get(player) == 53) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[화신]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[화신] " + ChatColor.WHITE);
 		} else if(map.get(player) == 54) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[대천사장]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[대천사장] " + ChatColor.WHITE);
 		} else if(map.get(player) == 55) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[날개]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_RED + "" + ChatColor.BOLD + "[날개] " + ChatColor.WHITE);
 		} else if(map.get(player) == 56) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[주사위]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[주사위] " + ChatColor.WHITE);
 		} else if(map.get(player) == 57) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[흥]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_RED + "" + ChatColor.BOLD + "[흥] " + ChatColor.WHITE);
 		} else if(map.get(player) == 58) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[까마귀]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[까마귀] " + ChatColor.WHITE);
 		} else if(map.get(player) == 59) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[그림자]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[그림자] " + ChatColor.WHITE);
 		} else if(map.get(player) == 60) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[호흡]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[호흡] " + ChatColor.WHITE);
 		} else if(map.get(player) == 61) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[투창]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[투창] " + ChatColor.WHITE);
 		} else if(map.get(player) == 62) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[포식]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[포식] " + ChatColor.WHITE);
 		} else if(map.get(player) == 63) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[파편]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[파편] " + ChatColor.WHITE);
 		} else if(map.get(player) == 64) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[붕대]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[붕대] " + ChatColor.WHITE);
 		} else if(map.get(player) == 65) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[푸른 영혼]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[푸른 영혼] " + ChatColor.WHITE);
 		} else if(map.get(player) == 66) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[붉은 영혼]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[붉은 영혼] " + ChatColor.WHITE);
 		} else if(map.get(player) == 67) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[영혼]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[영혼] " + ChatColor.WHITE);
 		} else if(map.get(player) == 68) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[속사]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[속사] " + ChatColor.WHITE);
 		} else if(map.get(player) == 69) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[집중]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[집중] " + ChatColor.WHITE);
 		} else if(map.get(player) == 70) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[거미 눈]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[거미 눈] " + ChatColor.WHITE);
 		} else if(map.get(player) == 71) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[거미 이빨]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[거미 이빨] " + ChatColor.WHITE);
 		} else if(map.get(player) == 72) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[거미 갑주]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[거미 갑주] " + ChatColor.WHITE);
 		} else if(map.get(player) == 73) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[산성]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[산성] " + ChatColor.WHITE);
 		} else if(map.get(player) == 74) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[독]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[독] " + ChatColor.WHITE);
 		} else if(map.get(player) == 75) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[포보르 피]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[포보르 피] " + ChatColor.WHITE);
 		} else if(map.get(player) == 76) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[포보르 쓸개]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[포보르 쓸개] " + ChatColor.WHITE);
 		} else if(map.get(player) == 77) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[포보르 살점]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[포보르 살점] " + ChatColor.WHITE);
 		} else if(map.get(player) == 78) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[포보르 간]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[포보르 간] " + ChatColor.WHITE);
 		} else if(map.get(player) == 79) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[위더]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[위더] " + ChatColor.WHITE);
 		} else if(map.get(player) == 80) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[광부]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[광부] " + ChatColor.WHITE);
 		} else if(map.get(player) == 81) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[농부]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[농부] " + ChatColor.WHITE);
 		} else if(map.get(player) == 82) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[도살자]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[도살자] " + ChatColor.WHITE);
 		} else if(map.get(player) == 83) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[상급 대장장이]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[상급 대장장이] " + ChatColor.WHITE);
 		} else if(map.get(player) == 84) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[마스터 대장장이]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[마스터 대장장이] " + ChatColor.WHITE);
 		} else if(map.get(player) == 85) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[그랜드마스터 대장장이]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_RED + "" + ChatColor.BOLD + "[그랜드마스터 대장장이] " + ChatColor.WHITE);
 		} else if(map.get(player) == 86) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[상급 약사]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[상급 약사] " + ChatColor.WHITE);
 		} else if(map.get(player) == 87) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[마스터 약사]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[마스터 약사] " + ChatColor.WHITE);
 		} else if(map.get(player) == 88) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[그랜드마스터 약사]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_RED + "" + ChatColor.BOLD + "[그랜드마스터 약사] " + ChatColor.WHITE);
 		} else if(map.get(player) == 89) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[상급 요리사]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[상급 요리사] " + ChatColor.WHITE);
 		} else if(map.get(player) == 90) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[마스터 요리사]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[마스터 요리사] " + ChatColor.WHITE);
 		} else if(map.get(player) == 91) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[그랜드마스터 요리사]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_RED + "" + ChatColor.BOLD + "[그랜드마스터 요리사] " + ChatColor.WHITE);
 		} else if(map.get(player) == 92) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[고블린]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[고블린] " + ChatColor.WHITE);
 		} else if(map.get(player) == 93) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[상인 고블린]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[상인 고블린] " + ChatColor.WHITE);
 		} else if(map.get(player) == 94) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[거상 고블린]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[거상 고블린] " + ChatColor.WHITE);
 		} else if(map.get(player) == 95) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[갑부 고블린]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[갑부 고블린] " + ChatColor.WHITE);
 		} else if(map.get(player) == 96) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[탐욕]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_RED + "" + ChatColor.BOLD + "[탐욕] " + ChatColor.WHITE);
 		} else if(map.get(player) == 97) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[유혹]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[유혹] " + ChatColor.WHITE);
 		} else if(map.get(player) == 98) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[매혹]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[매혹] " + ChatColor.WHITE);
 		} else if(map.get(player) == 99) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[고혹]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_RED + "" + ChatColor.BOLD + "[고혹] " + ChatColor.WHITE);
 		} else if(map.get(player) == 100) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[태양]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "[태양] " + ChatColor.WHITE);
 		} else if(map.get(player) == 101) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[달]" + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "[달] " + ChatColor.WHITE);
 		}
 	}
 	

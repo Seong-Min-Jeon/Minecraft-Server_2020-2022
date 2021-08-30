@@ -165,6 +165,7 @@ public class Main extends JavaPlugin implements Listener{
 	World world;
 	
 	Cmd12EmeraldToggle et = new Cmd12EmeraldToggle();
+	Inheritance inheritance = new Inheritance();
  
 	private int taskID;
 	Scoreboard board;
@@ -5497,6 +5498,15 @@ public class Main extends JavaPlugin implements Listener{
 		} catch(Exception e) {
 			
 		}
+		//SpectralArrow
+		try {
+			if(event.getDamager() instanceof SpectralArrow) {
+				event.setCancelled(true);
+				return;
+			}
+		} catch(Exception e) {
+			
+		}
 		//Arrow
 		try {
 			if(event.getDamager() instanceof Arrow) {
@@ -5510,6 +5520,7 @@ public class Main extends JavaPlugin implements Listener{
 						if(!(event.getEntity() instanceof IronGolem)) {
 							((Mob) event.getEntity()).setTarget(player);
 						}
+						event.setCancelled(true);
 					}
 				}
 				if(event.getEntity() instanceof Player) {
@@ -5663,6 +5674,9 @@ public class Main extends JavaPlugin implements Listener{
 					if(arrow.getDamage() == 0.05) {
 						skillMul = 2000;
 					}
+					if(arrow.getDamage() == 0.12) {
+						skillMul = 20 + (player.getLevel() / 10.0);
+					}
 					double damage = (lvl * jobMul * skillMul * weaponMul) + enchMul;
 					try {
 						if (player.getInventory().getItemInMainHand().getType() == Material.BONE) {
@@ -5697,6 +5711,7 @@ public class Main extends JavaPlugin implements Listener{
 						if(!(event.getEntity() instanceof IronGolem)) {
 							((Mob) event.getEntity()).setTarget(player);
 						}
+						event.setCancelled(true);
 					}
 				}
 				if(event.getEntity() instanceof Player) {
@@ -6084,6 +6099,12 @@ public class Main extends JavaPlugin implements Listener{
 				addHealthPercent += new SpecialEffect().w10(player);
 				addHealthPercent += new SpecialEffect().s11(player);
 				
+				if(inheritance.getInheritance(player) == 15) {
+					addHealthPercent += 0.5;
+				} else if(inheritance.getInheritance(player) == 16) {
+					addHealthPercent += 1;
+				}
+				
 				if(addHealthPercent > 0) {
 					int addHealth = (int) (event.getDamage() * addHealthPercent / 100); 
 
@@ -6130,6 +6151,31 @@ public class Main extends JavaPlugin implements Listener{
 					}
 				}
 				//===========================================================================
+				int increase = 0;
+				if(inheritance.getInheritance(player) == 23) {
+					increase += 5;
+				} else if(inheritance.getInheritance(player) == 24) {
+					increase += 10;
+				} else if(inheritance.getInheritance(player) == 25) {
+					increase += 15;
+				} else if(inheritance.getInheritance(player) == 26) {
+					increase += 20;
+				} else if(inheritance.getInheritance(player) == 27) {
+					increase += 25;
+				} else if(inheritance.getInheritance(player) == 28) {
+					increase += 30;
+				} else if(inheritance.getInheritance(player) == 29) {
+					increase += 35;
+				} else if(inheritance.getInheritance(player) == 30) {
+					increase += 40;
+				} else if(inheritance.getInheritance(player) == 31) {
+					increase += 45;
+				} else if(inheritance.getInheritance(player) == 32) {
+					increase += 50;
+				}
+				
+				event.setDamage(event.getDamage() * (100 + increase) / 100);
+				
 				PlayerHitDebuff debuff = new PlayerHitDebuff();
 				debuff.playerHitDebuff(player, entity);
 			}
@@ -6180,6 +6226,12 @@ public class Main extends JavaPlugin implements Listener{
 				addHealthPercent += new SpecialEffect().w10(player);
 				addHealthPercent += new SpecialEffect().s11(player);
 				
+				if(inheritance.getInheritance(player) == 15) {
+					addHealthPercent += 0.5;
+				} else if(inheritance.getInheritance(player) == 16) {
+					addHealthPercent += 1;
+				}
+				
 				if(addHealthPercent > 0) {
 					int addHealth = (int) (event.getDamage() * addHealthPercent / 100); 
 
@@ -6221,6 +6273,29 @@ public class Main extends JavaPlugin implements Listener{
 					}
 				}
 				//===========================================================================
+				int increase = 0;
+				if(inheritance.getInheritance(player) == 33) {
+					increase += 10;
+				} else if(inheritance.getInheritance(player) == 34) {
+					increase += 15;
+				} else if(inheritance.getInheritance(player) == 35) {
+					increase += 20;
+				} else if(inheritance.getInheritance(player) == 36) {
+					increase += 25;
+				} else if(inheritance.getInheritance(player) == 37) {
+					increase += 30;
+				} else if(inheritance.getInheritance(player) == 38) {
+					increase += 35;
+				} else if(inheritance.getInheritance(player) == 39) {
+					increase += 40;
+				} else if(inheritance.getInheritance(player) == 40) {
+					increase += 45;
+				} else if(inheritance.getInheritance(player) == 41) {
+					increase += 50;
+				}
+				
+				event.setDamage(event.getDamage() * (100 + increase) / 100);
+				
 				PlayerHitDebuff debuff = new PlayerHitDebuff();
 				debuff.playerHitDebuff(player, entity);
 			}
@@ -6271,6 +6346,12 @@ public class Main extends JavaPlugin implements Listener{
 				addHealthPercent += new SpecialEffect().w10(player);
 				addHealthPercent += new SpecialEffect().s11(player);
 				
+				if(inheritance.getInheritance(player) == 15) {
+					addHealthPercent += 0.5;
+				} else if(inheritance.getInheritance(player) == 16) {
+					addHealthPercent += 1;
+				}
+				
 				if(addHealthPercent > 0) {
 					int addHealth = (int) (event.getDamage() * addHealthPercent / 100); 
 
@@ -6312,6 +6393,29 @@ public class Main extends JavaPlugin implements Listener{
 					}
 				}
 				//===========================================================================
+				int increase = 0;
+				if(inheritance.getInheritance(player) == 33) {
+					increase += 10;
+				} else if(inheritance.getInheritance(player) == 34) {
+					increase += 15;
+				} else if(inheritance.getInheritance(player) == 35) {
+					increase += 20;
+				} else if(inheritance.getInheritance(player) == 36) {
+					increase += 25;
+				} else if(inheritance.getInheritance(player) == 37) {
+					increase += 30;
+				} else if(inheritance.getInheritance(player) == 38) {
+					increase += 35;
+				} else if(inheritance.getInheritance(player) == 39) {
+					increase += 40;
+				} else if(inheritance.getInheritance(player) == 40) {
+					increase += 45;
+				} else if(inheritance.getInheritance(player) == 41) {
+					increase += 50;
+				}
+				
+				event.setDamage(event.getDamage() * (100 + increase) / 100);
+				
 				PlayerHitDebuff debuff = new PlayerHitDebuff();
 				debuff.playerHitDebuff(player, entity);
 			}
@@ -6488,6 +6592,13 @@ public class Main extends JavaPlugin implements Listener{
 				if(num > 70) {
 					num = 70;
 				}
+				
+				if(inheritance.getInheritance(player) == 4) {
+					num += 5;
+				} else if(inheritance.getInheritance(player) == 5) {
+					num += 10;
+				}
+				
 				if(rnd.nextInt(100) < num) {
 					event.setCancelled(true);
 					return;
@@ -6617,9 +6728,22 @@ public class Main extends JavaPlugin implements Listener{
 							} else {
 								damage = 1.5 - (1.5 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
 							}
+							
+							int reduce = 0;
+							if(inheritance.getInheritance(player) == 17) {
+								reduce += 10;
+							} else if(inheritance.getInheritance(player) == 18) {
+								reduce += 20;
+							} else if(inheritance.getInheritance(player) == 19) {
+								reduce += 30;
+							}
+							
+							damage = damage * (100-reduce) / 100;
+							
 							if(damage < 0.001) {
 								damage = 0.001;
 							}
+							
 							event.setDamage(damage);
 						}
 					}
@@ -6808,6 +6932,18 @@ public class Main extends JavaPlugin implements Listener{
 							} else {
 								damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
 							}
+							
+							int reduce = 0;
+							if(inheritance.getInheritance(player) == 20) {
+								reduce += 10;
+							} else if(inheritance.getInheritance(player) == 21) {
+								reduce += 20;
+							} else if(inheritance.getInheritance(player) == 22) {
+								reduce += 30;
+							}
+							
+							damage = damage * (100-reduce) / 100;
+							
 							if(damage < 0.001) {
 								damage = 0.001;
 							}
@@ -6904,6 +7040,18 @@ public class Main extends JavaPlugin implements Listener{
 							} else {
 								damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
 							}
+							
+							int reduce = 0;
+							if(inheritance.getInheritance(player) == 20) {
+								reduce += 10;
+							} else if(inheritance.getInheritance(player) == 21) {
+								reduce += 20;
+							} else if(inheritance.getInheritance(player) == 22) {
+								reduce += 30;
+							}
+							
+							damage = damage * (100-reduce) / 100;
+							
 							if(damage < 0.001) {
 								damage = 0.001;
 							}
@@ -10452,6 +10600,12 @@ public class Main extends JavaPlugin implements Listener{
 					if(ent.getType() == EntityType.DROPPED_ITEM) {
 						ent.remove();
 					}
+					if(ent.getType() == EntityType.FIREBALL) {
+						ent.remove();
+					}
+					if(ent.getType() == EntityType.SMALL_FIREBALL) {
+						ent.remove();
+					}
 				} catch(Exception e) {
 					
 				}
@@ -10616,8 +10770,27 @@ public class Main extends JavaPlugin implements Listener{
 	
 	@EventHandler
 	public void throwEvent(ProjectileLaunchEvent event) {
-		if(event.getEntity() instanceof Egg || event.getEntity() instanceof EnderPearl) {
+		Entity entity = event.getEntity();
+		if(entity instanceof Egg || entity instanceof EnderPearl) {
 			event.setCancelled(true);
+		}
+		
+		try {
+			if(entity.getType() == EntityType.FIREBALL || entity.getType() == EntityType.SMALL_FIREBALL) {
+				new BukkitRunnable() {
+					int time = 0;
+					@Override
+					public void run() {
+						time++;
+						if (time >= 40) {
+							entity.remove();
+							this.cancel();
+						}
+					}
+				}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
+			}
+		} catch(Exception e) {
+			
 		}
 	}
 	

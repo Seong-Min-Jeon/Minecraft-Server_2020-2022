@@ -244,6 +244,12 @@ public class RefreshServer {
 								if(ent.getType() == EntityType.DROPPED_ITEM) {
 									ent.remove();
 								}
+								if(ent.getType() == EntityType.FIREBALL) {
+									ent.remove();
+								}
+								if(ent.getType() == EntityType.SMALL_FIREBALL) {
+									ent.remove();
+								}
 							} catch(Exception e) {
 								
 							}

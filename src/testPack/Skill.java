@@ -61,6 +61,7 @@ public class Skill {
 	private static HashMap<String, Integer> map = new HashMap<>();
 	
 	GolemOwner go = new GolemOwner();
+	Inheritance inheritance = new Inheritance();
 
 	public void effect(Player player, String key) {
 		
@@ -956,7 +957,11 @@ public class Skill {
 					} else if (num < 90) {
 						player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 1,true,true));
 					} else {
-						player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 2,true,true));
+						if(inheritance.getInheritance(player) == 42) {
+							player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 4,true,true));
+						} else {
+							player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 2,true,true));
+						}
 					}
 					world.playSound(loc, Sound.ENTITY_BLAZE_DEATH, 1.0f, 1.0f);
 					
@@ -1020,7 +1025,11 @@ public class Skill {
 							} else if(time%5 == 0) {
 								Arrow arrow = player.launchProjectile(Arrow.class);
 								arrow.setShooter(player);
-								arrow.setDamage(0.02);
+								if(inheritance.getInheritance(player) == 42) {
+									arrow.setDamage(0.02);
+								} else {
+									arrow.setDamage(0.12);
+								}
 								arrow.setVelocity(player.getLocation().getDirection().multiply(1.8f));		
 								world.playSound(player.getLocation(), Sound.ENTITY_ARROW_SHOOT, 1.0f, 0.2f);
 								
@@ -1264,12 +1273,12 @@ public class Skill {
 					for (Entity nearEntity : entitylist) {
 						if (nearEntity.getType() == EntityType.PLAYER) {
 							Player nearPlayer = (Player) nearEntity;
-							PotionRatio pr = new PotionRatio();
+							PotionRatioForSkill pr = new PotionRatioForSkill();
 							pr.calculation(nearPlayer, player.getLevel() * 3);
 							nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 회복되었습니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 3 + ChatColor.RED + "]");
 						}
 					}
-					PotionRatio pr = new PotionRatio();
+					PotionRatioForSkill pr = new PotionRatioForSkill();
 					pr.calculation(player, player.getLevel() * 3);
 					Location loc = player.getLocation();
 
@@ -1755,12 +1764,12 @@ public class Skill {
 									for (Entity nearEntity : entitylist) {
 										if (nearEntity.getType() == EntityType.PLAYER) {
 											Player nearPlayer = (Player) nearEntity;
-											PotionRatio pr = new PotionRatio();
+											PotionRatioForSkill pr = new PotionRatioForSkill();
 											pr.calculation(nearPlayer, player.getLevel() * 2);
 											nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 회복되었습니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 2 + ChatColor.RED + "]");
 										}
 									}
-									PotionRatio pr = new PotionRatio();
+									PotionRatioForSkill pr = new PotionRatioForSkill();
 									pr.calculation(player, player.getLevel() * 2);
 									Location loc = player.getLocation();
 									world.playSound(loc, Sound.ENTITY_ENDER_DRAGON_FLAP, 1.0f, 1.0f);
@@ -2313,14 +2322,14 @@ public class Skill {
 					for (Entity nearEntity : entitylist) {
 						if (nearEntity.getType() == EntityType.PLAYER) {
 							Player nearPlayer = (Player) nearEntity;
-							PotionRatio pr = new PotionRatio();
+							PotionRatioForSkill pr = new PotionRatioForSkill();
 							pr.calculation(nearPlayer, player.getLevel() * 7);
 							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 1, true,true));
 							nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 회복되었습니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 7 + ChatColor.RED + "]");
 							nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 10초 동안 방어력이 상승합니다.");
 						}
 					}
-					PotionRatio pr = new PotionRatio();
+					PotionRatioForSkill pr = new PotionRatioForSkill();
 					pr.calculation(player, player.getLevel() * 7);
 
 					new ParticleEffect(player).newEffect40();
@@ -2410,7 +2419,7 @@ public class Skill {
 								for(Entity nearEntity : entitylist) {
 									if(nearEntity instanceof Player) {
 										Player nearPlayer = (Player) nearEntity;
-										PotionRatio pr = new PotionRatio();
+										PotionRatioForSkill pr = new PotionRatioForSkill();
 										pr.calculation(nearPlayer, player.getLevel() * 3);
 										nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님의 토템으로 아군의 체력이 회복됩니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 3 + ChatColor.RED + "]");
 									}
@@ -2428,7 +2437,7 @@ public class Skill {
 								for(Entity nearEntity : entitylist) {
 									if(nearEntity instanceof Player) {
 										Player nearPlayer = (Player) nearEntity;
-										PotionRatio pr = new PotionRatio();
+										PotionRatioForSkill pr = new PotionRatioForSkill();
 										pr.calculation(nearPlayer, player.getLevel() * 2);
 										nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님의 토템으로 아군의 체력이 회복됩니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 2 + ChatColor.RED + "]");
 									}
@@ -3078,12 +3087,12 @@ public class Skill {
 					for (Entity nearEntity : entitylist) {
 						if (nearEntity.getType() == EntityType.PLAYER) {
 							Player nearPlayer = (Player) nearEntity;
-							PotionRatio pr = new PotionRatio();
+							PotionRatioForSkill pr = new PotionRatioForSkill();
 							pr.calculation(nearPlayer, player.getLevel() * 4);
 							nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 회복되었습니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 4 + ChatColor.RED + "]");
 						}
 					}
-					PotionRatio pr = new PotionRatio();
+					PotionRatioForSkill pr = new PotionRatioForSkill();
 					pr.calculation(player, player.getLevel() * 4);
 					
 					world.playSound(player.getLocation(), Sound.ENTITY_PLAYER_ATTACK_SWEEP, 1.5f, 0.5f);
@@ -3521,14 +3530,14 @@ public class Skill {
 					for (Entity nearEntity : entitylist) {
 						if (nearEntity.getType() == EntityType.PLAYER) {
 							Player nearPlayer = (Player) nearEntity;
-							PotionRatio pr = new PotionRatio();
+							PotionRatioForSkill pr = new PotionRatioForSkill();
 							pr.calculation(nearPlayer, player.getLevel() * 15);
 							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 300, 2, true,true));
 							nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 회복되었습니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 15 + ChatColor.RED + "]");
 							nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 15초 동안 방어력이 상승합니다.");
 						}
 					}
-					PotionRatio pr = new PotionRatio();
+					PotionRatioForSkill pr = new PotionRatioForSkill();
 					pr.calculation(player, player.getLevel() * 15);
 
 					new ParticleEffect(player).newEffect53();
@@ -3798,7 +3807,7 @@ public class Skill {
 								for(Entity nearEntity : entitylist) {
 									if(nearEntity instanceof Player) {
 										Player nearPlayer = (Player) nearEntity;
-										PotionRatio pr = new PotionRatio();
+										PotionRatioForSkill pr = new PotionRatioForSkill();
 										pr.calculation(nearPlayer, player.getLevel() * 4);
 										nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님의 토템으로 아군의 체력이 회복됩니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 4 + ChatColor.RED + "]");
 									}
@@ -3816,7 +3825,7 @@ public class Skill {
 								for(Entity nearEntity : entitylist) {
 									if(nearEntity instanceof Player) {
 										Player nearPlayer = (Player) nearEntity;
-										PotionRatio pr = new PotionRatio();
+										PotionRatioForSkill pr = new PotionRatioForSkill();
 										pr.calculation(nearPlayer, player.getLevel() * 3);
 										nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님의 토템으로 아군의 체력이 회복됩니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 3 + ChatColor.RED + "]");
 									} else if(nearEntity instanceof Mob) {
@@ -4077,7 +4086,7 @@ public class Skill {
 					for (Entity nearEntity : entitylist) {
 						if (nearEntity.getType() == EntityType.PLAYER) {
 							Player nearPlayer = (Player) nearEntity;
-							PotionRatio pr = new PotionRatio();
+							PotionRatioForSkill pr = new PotionRatioForSkill();
 							pr.calculation(nearPlayer, player.getLevel() * 10);
 							nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 회복되었습니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 10 + ChatColor.RED + "]");
 							nearPlayer.removePotionEffect(PotionEffectType.ABSORPTION);
@@ -4087,7 +4096,7 @@ public class Skill {
 							nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 10초간 추가 체력이 부여됩니다.");
 						}
 					}
-					PotionRatio pr = new PotionRatio();
+					PotionRatioForSkill pr = new PotionRatioForSkill();
 					pr.calculation(player, player.getLevel() * 10);
 					player.removePotionEffect(PotionEffectType.ABSORPTION);
 					player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 1, true,true));

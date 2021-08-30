@@ -55,7 +55,6 @@ public class MobDeath {
 	}
 
 	public void death(Entity mob, double damage) {
-		MobLoot mobloot = new MobLoot();
 		Player lootPlayer;
 		if (this.player == null) {
 			if(((Mob) mob).getTarget() instanceof Player) {
@@ -70,6 +69,8 @@ public class MobDeath {
 		} else {
 			lootPlayer = this.player;
 		}
+		
+		MobLoot mobloot = new MobLoot(lootPlayer);
 		
 		if (((LivingEntity) mob).getHealth() - damage <= 0) {
 			// 레벨 안맞으면 캔슬
@@ -1642,6 +1643,19 @@ public class MobDeath {
 					mul += new SpecialEffect().b4(lootPlayer);
 					mul += new SpecialEffect().a18(lootPlayer);
 					mul += new SpecialEffect().b5(lootPlayer);
+					
+					Inheritance inheritance = new Inheritance();
+					if(inheritance.getInheritance(lootPlayer) == 6) {
+						mul += 10;
+					} else if(inheritance.getInheritance(lootPlayer) == 7) {
+						mul += 20;
+					} else if(inheritance.getInheritance(lootPlayer) == 8) {
+						mul += 30;
+					} else if(inheritance.getInheritance(lootPlayer) == 9) {
+						mul += 40;
+					} else if(inheritance.getInheritance(lootPlayer) == 10) {
+						mul += 50;
+					}
 					//===========================================================================
 					
 					int tmp = 1000000 + (100000*Math.abs(dist));
