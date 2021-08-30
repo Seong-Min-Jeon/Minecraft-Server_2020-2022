@@ -6023,16 +6023,6 @@ public class Main extends JavaPlugin implements Listener{
 		} catch(Exception e) {
 			
 		}
-		//Sweeping Damage
-		try {
-			if (event.getDamager() instanceof Player) {
-				Player player = (Player) event.getDamager();
-				SweepingCal sc = new SweepingCal();
-				sc.sweeping(player, event.getDamage(), event.getEntity());
-			}
-		} catch (Exception e) {
-
-		}
 		// hit from mob
 		try {
 			if (event.getDamager() instanceof Entity) {
@@ -6324,6 +6314,16 @@ public class Main extends JavaPlugin implements Listener{
 				//===========================================================================
 				PlayerHitDebuff debuff = new PlayerHitDebuff();
 				debuff.playerHitDebuff(player, entity);
+			}
+		} catch (Exception e) {
+
+		}
+		// Sweeping Damage
+		try {
+			if (event.getDamager() instanceof Player) {
+				Player player = (Player) event.getDamager();
+				SweepingCal sc = new SweepingCal();
+				sc.sweeping(player, event.getDamage(), event.getEntity());
 			}
 		} catch (Exception e) {
 
