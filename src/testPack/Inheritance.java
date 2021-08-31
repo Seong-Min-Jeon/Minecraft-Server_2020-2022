@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Random;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -46,6 +47,7 @@ public class Inheritance {
 	
 	private static HashMap<Player, Integer> map = new HashMap<>();
 	static File folder = null;
+	Random rnd = new Random();
 	
 	public void setFolder(File f) {
 		folder = f;
@@ -257,9 +259,51 @@ public class Inheritance {
 		}
 		
 		if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "계승 반환 스크롤")) {
-			boolean ret = returnInheritance(player);
-			if(ret) {
+			boolean ok = false;
+			if(getInheritance(player) != 0) {
 				itemArg.setAmount(itemArg.getAmount()-1);
+				if(getInheritance(player) == 1 || getInheritance(player) == 2 || getInheritance(player) == 4 || getInheritance(player) == 6
+						 || getInheritance(player) == 7 || getInheritance(player) == 11 || getInheritance(player) == 12 || getInheritance(player) == 17
+						 || getInheritance(player) == 18 || getInheritance(player) == 19 || getInheritance(player) == 20 || getInheritance(player) == 21
+						 || getInheritance(player) == 22 || getInheritance(player) == 23 || getInheritance(player) == 24 || getInheritance(player) == 33
+						 || getInheritance(player) == 51 || getInheritance(player) == 70 || getInheritance(player) == 71 || getInheritance(player) == 75
+						 || getInheritance(player) == 76) {
+					if(rnd.nextInt(5) == 0) {
+						ok = true;
+					}
+				} else if(getInheritance(player) == 3 || getInheritance(player) == 5 || getInheritance(player) == 8 || getInheritance(player) == 9
+						 || getInheritance(player) == 13 || getInheritance(player) == 14 || getInheritance(player) == 15 || getInheritance(player) == 25
+						 || getInheritance(player) == 26 || getInheritance(player) == 27 || getInheritance(player) == 34 || getInheritance(player) == 35
+						 || getInheritance(player) == 36 || getInheritance(player) == 42 || getInheritance(player) == 44 || getInheritance(player) == 45
+						 || getInheritance(player) == 47 || getInheritance(player) == 48 || getInheritance(player) == 49 || getInheritance(player) == 50
+						 || getInheritance(player) == 53 || getInheritance(player) == 54 || getInheritance(player) == 59 || getInheritance(player) == 60
+						 || getInheritance(player) == 61 || getInheritance(player) == 62 || getInheritance(player) == 64 || getInheritance(player) == 65
+						 || getInheritance(player) == 66 || getInheritance(player) == 72 || getInheritance(player) == 73 || getInheritance(player) == 77
+						 || getInheritance(player) == 78 || getInheritance(player) == 83 || getInheritance(player) == 86 || getInheritance(player) == 89
+						 || getInheritance(player) == 92 || getInheritance(player) == 93) {
+					if(rnd.nextInt(10) == 0) {
+						ok = true;
+					}
+				} else if(getInheritance(player) == 30 || getInheritance(player) == 31 || getInheritance(player) == 39 || getInheritance(player) == 40
+						 || getInheritance(player) == 52 || getInheritance(player) == 55 || getInheritance(player) == 57 || getInheritance(player) == 85
+						 || getInheritance(player) == 88 || getInheritance(player) == 91 || getInheritance(player) == 96 || getInheritance(player) == 99) {
+					if(rnd.nextInt(20) == 0) {
+						ok = true;
+					}
+				} else if(getInheritance(player) == 32 || getInheritance(player) == 41 || getInheritance(player) == 100 || getInheritance(player) == 101) {
+					if(rnd.nextInt(50) == 0) {
+						ok = true;
+					}
+				}
+			}
+			
+			if(ok) {
+				boolean ret = returnInheritance(player);
+				if(!ret) {
+					player.sendMessage(ChatColor.RED + "현재 계승 중인 힘이 없습니다.");
+				}
+			} else {
+				player.sendMessage(ChatColor.RED + "계승 반환에 실패하였습니다.");
 			}
 		}
 	}

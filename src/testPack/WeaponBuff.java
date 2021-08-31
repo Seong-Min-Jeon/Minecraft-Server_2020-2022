@@ -151,6 +151,23 @@ public class WeaponBuff {
 			
 		}
 		
+		try {
+			Inheritance inheritance = new Inheritance();
+			if (inheritance.getInheritance(player) == 100) {
+				if(player.getWorld().getTime() >= 13000 && player.getWorld().getTime() <= 23000) {
+					player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 100, 2,true,true));
+					player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 100, player.getLevel()*20,true,true));
+				}
+			} else if (inheritance.getInheritance(player) == 101) {
+				if(player.getWorld().getTime() < 13000 || player.getWorld().getTime() > 23000) {
+					player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 100, 2,true,true));
+					player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 100, player.getLevel()*20,true,true));
+				}
+			}
+		} catch(Exception e) {
+			
+		}
+		
 		//set
 		if (player.getInventory().getHelmet() != null) {
 			if (player.getInventory().getChestplate() != null) {

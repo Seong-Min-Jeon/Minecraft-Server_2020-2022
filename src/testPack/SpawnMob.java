@@ -10354,7 +10354,7 @@ public class SpawnMob {
 				entity.setMaxHealth(404000);
 				entity.setHealth(404000);
 				Slime slime = (Slime) entity;
-				slime.setSize(2);
+				slime.setSize(3);
 				entity.setMaxHealth(404000);
 				entity.setHealth(404000);
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 1525));
@@ -10395,6 +10395,7 @@ public class SpawnMob {
 				} else {
 					entity.setCustomName(ChatColor.GRAY + "우와" + ChatColor.YELLOW + " [Lv.1]");
 					entity.setCustomNameVisible(true);
+					entity.setRemoveWhenFarAway(false);
 					entity.setMaxHealth(40000);
 					entity.setHealth(40000);
 					Slime slime = (Slime) entity;

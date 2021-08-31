@@ -140,7 +140,6 @@ public class AnotherScroll {
 	public void reflectRemove(Player player, ItemStack itemArg, World world) {	
 		try {
 			if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "말랑말랑 스크롤")) {
-				itemArg.setAmount(itemArg.getAmount()-1);
 				ItemStack item = player.getInventory().getItemInOffHand();
 				if(item.getType()!=Material.AIR) {
 					if(item.getType()==Material.WOODEN_SWORD || item.getType()==Material.STONE_SWORD || item.getType()==Material.IRON_SWORD || item.getType()==Material.GOLDEN_SWORD ||
@@ -171,6 +170,8 @@ public class AnotherScroll {
 							item.getType() == Material.CUT_RED_SANDSTONE || item.getType() == Material.RED_SANDSTONE_STAIRS || item.getType() == Material.STONE_STAIRS ||
 							item.getType()==Material.NETHERITE_HELMET || item.getType()==Material.NETHERITE_CHESTPLATE || item.getType()==Material.NETHERITE_LEGGINGS || 
 							item.getType()==Material.NETHERITE_BOOTS) {
+						itemArg.setAmount(itemArg.getAmount()-1);
+						
 						ItemMeta im = item.getItemMeta();
 						String[] ary = im.getLocalizedName().split(",");
 						try {
@@ -264,7 +265,6 @@ public class AnotherScroll {
 	public void sweepingRemove(Player player, ItemStack itemArg, World world) {	
 		try {
 			if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "광역화 제어 스크롤")) {
-				itemArg.setAmount(itemArg.getAmount()-1);
 				ItemStack item = player.getInventory().getItemInOffHand();
 				if(item.getType()!=Material.AIR) {
 					if(item.getType()==Material.WOODEN_SWORD || item.getType()==Material.STONE_SWORD || item.getType()==Material.IRON_SWORD || item.getType()==Material.GOLDEN_SWORD ||
@@ -295,6 +295,8 @@ public class AnotherScroll {
 							item.getType() == Material.CUT_RED_SANDSTONE || item.getType() == Material.RED_SANDSTONE_STAIRS || item.getType() == Material.STONE_STAIRS ||
 							item.getType()==Material.NETHERITE_HELMET || item.getType()==Material.NETHERITE_CHESTPLATE || item.getType()==Material.NETHERITE_LEGGINGS || 
 							item.getType()==Material.NETHERITE_BOOTS) {
+						itemArg.setAmount(itemArg.getAmount()-1);
+						
 						ItemMeta im = item.getItemMeta();
 						String[] ary = im.getLocalizedName().split(",");
 						try {

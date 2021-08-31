@@ -298,6 +298,16 @@ public class CraftingPotion {
 			im.setLore(lore);
 			item.setItemMeta(im);
 			player.getInventory().setItem(7, item);
+			
+			// 계승자 보너스
+			Inheritance inheritance = new Inheritance();
+			if (inheritance.getInheritance(player) == 86) {
+				resultStat *= 1.2;
+			} else if (inheritance.getInheritance(player) == 87) {
+				resultStat *= 1.4;
+			} else if (inheritance.getInheritance(player) == 88) {
+				resultStat *= 1.6;
+			}
 
 			// 포션 색, 성능 결정
 			// 회복, 흡수, 힘, 속도 증가, 점프 증가, 저항, 속도 감소, 독, 위더, 멀미, 기간

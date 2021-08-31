@@ -2731,7 +2731,7 @@ public class Skill {
 							} else {
 								nearPlayer.removePotionEffect(PotionEffectType.ABSORPTION);
 								nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0, true,true));
-								nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 4, true,true));
+								nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 2, true,true));
 								nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 200, 2, true,true));
 							}
 							nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 10초간 저항이 부여됩니다.");

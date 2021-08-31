@@ -37,7 +37,26 @@ public class MobLoot {
 	// 400:16660000 700:97600000 1000:300000000
 	
 	public MobLoot(Player player) {
-		multyEme = 1;
+		int num = 0;
+		Inheritance inheritance = new Inheritance();
+		if(inheritance.getInheritance(player) == 92) {
+			num = 10;
+		} else if(inheritance.getInheritance(player) == 93) {
+			num = 20;
+		} else if(inheritance.getInheritance(player) == 94) {
+			num = 30;
+		} else if(inheritance.getInheritance(player) == 95) {
+			num = 40;
+		} else if(inheritance.getInheritance(player) == 96) {
+			num = 50;
+		}
+		
+		if(rnd.nextInt(100) < num) {
+			System.out.println("Emerald 2x");
+			multyEme = 2;
+		} else {
+			multyEme = 1;
+		}
 	}
 
 	// 메세지

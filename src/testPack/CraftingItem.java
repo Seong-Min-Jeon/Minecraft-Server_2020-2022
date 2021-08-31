@@ -535,6 +535,15 @@ public class CraftingItem {
 			
 			// 보석 보너스
 			resultStat *= jewel;
+			// 계승자 보너스
+			Inheritance inheritance = new Inheritance();
+			if(inheritance.getInheritance(player) == 83) {
+				resultStat *= 1.2;
+			} else if(inheritance.getInheritance(player) == 84) {
+				resultStat *= 1.4;
+			} else if(inheritance.getInheritance(player) == 85) {
+				resultStat *= 1.6;
+			}
 			
 			int equipType = rnd.nextInt(6);
 			

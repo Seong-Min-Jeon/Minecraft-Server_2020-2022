@@ -3379,9 +3379,11 @@ public class PlayerHitDebuff {
 								List<Entity> nearSlime = mob.getNearbyEntities(30, 10, 30);
 								for(Entity ent : nearSlime) {
 									if(ent instanceof Slime) {
-										num++;
-										ent.getWorld().spawnEntity(ent.getLocation(), EntityType.MAGMA_CUBE);
-										((Slime) ent).setHealth(0);
+										if(((Slime) ent).getSize() == 2) {
+											num++;
+											ent.getWorld().spawnEntity(ent.getLocation(), EntityType.MAGMA_CUBE);
+											((Slime) ent).setHealth(0);
+										}
 									}
 								}
 								if(num > 0) {
