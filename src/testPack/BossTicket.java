@@ -14,12 +14,13 @@ import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Item;
 import org.bukkit.entity.Mob;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
 
 public class BossTicket {
 	
 	private int taskID;
 	
-	public void summon(Player player, Item itemArg) {
+	public void summon(Player player, ItemStack itemArg) {
 		World world = player.getWorld();
 		bossSkelE(player, itemArg, world);
 		colosseumC(player, itemArg, world);
@@ -29,34 +30,34 @@ public class BossTicket {
 		animalKing(player, itemArg, world);
 	}
 
-	public void bossSkelE(Player player, Item itemArg, World world) {
+	public void bossSkelE(Player player, ItemStack itemArg, World world) {
 		//보스 스켈이 3686 39 3730  3712 47 3672
-		if (itemArg.getItemStack().getItemMeta().getDisplayName()
+		if (itemArg.getItemMeta().getDisplayName()
 				.equalsIgnoreCase(ChatColor.YELLOW + "보스 스켈이 소환 스크롤")) {
 			if (player.getLocation().getX() <= 3712 && player.getLocation().getY() <= 47
 					&& player.getLocation().getZ() <= 3730 && player.getLocation().getX() >= 3686
 					&& player.getLocation().getY() >= 39 && player.getLocation().getZ() >= 3672) {
 				Location loc = new Location(world, 3707, 44, 3712);
 				world.spawnEntity(loc, EntityType.SKELETON);
-				itemArg.remove();
-				itemArg.getLocation().getWorld().playEffect(loc, Effect.SMOKE, 5);
-				itemArg.getLocation().getWorld().playEffect(loc, Effect.SMOKE, 100);
-				itemArg.getLocation().getWorld().playEffect(loc, Effect.SMOKE, 5);
+				itemArg.setAmount(itemArg.getAmount()-1);
+				player.getWorld().playEffect(loc, Effect.SMOKE, 5);
+				player.getWorld().playEffect(loc, Effect.SMOKE, 100);
+				player.getWorld().playEffect(loc, Effect.SMOKE, 5);
 				player.getWorld().playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 1.0f, 1.0f);
 			} else {
-				itemArg.remove();
+				itemArg.setAmount(itemArg.getAmount()-1);
 			}
 		}
 	}
 	
-	public void colosseumC(Player player, Item itemArg, World world) {
+	public void colosseumC(Player player, ItemStack itemArg, World world) {
 		// 콜로세움C 
 		if (player.getLocation().getX() <= 136 && player.getLocation().getZ() <= 1963 
 				&& player.getLocation().getX() >= 121 && player.getLocation().getZ() >= 1948) {
 			if(player.getLevel() < 400) {
 				player.sendMessage(ChatColor.RED + "아직 시련의 힘을 버틸 수 없을 것 같다.");
 			} else {
-				if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GRAY + "C급 투기장 스크롤")) {
+				if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GRAY + "C급 투기장 스크롤")) {
 					
 					try {
 						QuestBoard cb = new QuestBoard();
@@ -69,7 +70,7 @@ public class BossTicket {
 					}
 					
 					player.sendMessage(ChatColor.WHITE + "[System] 투기장에서는 모든 데미지가 고정됩니다. 또한 투기장의 보스 몬스터는 특정 방법으로 입는 데미지가 0입니다.");
-					itemArg.remove();
+					itemArg.setAmount(itemArg.getAmount()-1);
 					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
 						int time = 0;
@@ -137,16 +138,16 @@ public class BossTicket {
 		}
 	}
 	
-	public void colosseumB(Player player, Item itemArg, World world) {
+	public void colosseumB(Player player, ItemStack itemArg, World world) {
 		// 콜로세움B
 		if (player.getLocation().getX() <= 136 && player.getLocation().getZ() <= 1963 
 				&& player.getLocation().getX() >= 121 && player.getLocation().getZ() >= 1948) {
 			if(player.getLevel() < 400) {
 				player.sendMessage(ChatColor.RED + "아직 시련의 힘을 버틸 수 없을 것 같다.");
 			} else {
-				if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "B급 투기장 스크롤")) {
+				if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "B급 투기장 스크롤")) {
 					player.sendMessage(ChatColor.WHITE + "[System] 투기장에서는 모든 데미지가 고정됩니다. 또한 투기장의 보스 몬스터는 특정 방법으로 입는 데미지가 0입니다.");
-					itemArg.remove();
+					itemArg.setAmount(itemArg.getAmount()-1);
 					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
 						int time = 0;
@@ -214,16 +215,16 @@ public class BossTicket {
 		}
 	}
 	
-	public void colosseumA(Player player, Item itemArg, World world) {
+	public void colosseumA(Player player, ItemStack itemArg, World world) {
 		// 콜로세움A
 		if (player.getLocation().getX() <= 136 && player.getLocation().getZ() <= 1963 
 				&& player.getLocation().getX() >= 121 && player.getLocation().getZ() >= 1948) {
 			if(player.getLevel() < 400) {
 				player.sendMessage(ChatColor.RED + "아직 시련의 힘을 버틸 수 없을 것 같다.");
 			} else {
-				if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "A급 투기장 스크롤")) {
+				if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "A급 투기장 스크롤")) {
 					player.sendMessage(ChatColor.WHITE + "[System] 투기장에서는 모든 데미지가 고정됩니다. 또한 투기장의 보스 몬스터는 특정 방법으로 입는 데미지가 0입니다.");
-					itemArg.remove();
+					itemArg.setAmount(itemArg.getAmount()-1);
 					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
 						int time = 0;
@@ -291,16 +292,16 @@ public class BossTicket {
 		}
 	}
 	
-	public void colosseumS(Player player, Item itemArg, World world) {
+	public void colosseumS(Player player, ItemStack itemArg, World world) {
 		// 콜로세움S
 		if (player.getLocation().getX() <= 136 && player.getLocation().getZ() <= 1963 
 				&& player.getLocation().getX() >= 121 && player.getLocation().getZ() >= 1948) {
 			if(player.getLevel() < 400) {
 				player.sendMessage(ChatColor.RED + "아직 시련의 힘을 버틸 수 없을 것 같다.");
 			} else {
-				if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤")) {
+				if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "S급 투기장 스크롤")) {
 					player.sendMessage(ChatColor.WHITE + "[System] 투기장에서는 모든 데미지가 고정됩니다. 또한 투기장의 보스 몬스터는 특정 방법으로 입는 데미지가 0입니다.");
-					itemArg.remove();
+					itemArg.setAmount(itemArg.getAmount()-1);
 					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
 						int time = 0;
@@ -370,11 +371,11 @@ public class BossTicket {
 		}
 	}
 
-	public void animalKing(Player player, Item itemArg, World world) {
+	public void animalKing(Player player, ItemStack itemArg, World world) {
 		// 피르볼그 제사장
-		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "긴급 탈출 스크롤")) {
+		if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "긴급 탈출 스크롤")) {
 			if(player.getLevel() >= 490) {
-				itemArg.remove();
+				itemArg.setAmount(itemArg.getAmount()-1);
 				taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
 					int time = 0;

@@ -1107,6 +1107,9 @@ public class Skill {
 					((LivingEntity) golem).setHealth((20 + player.getLevel() * 5));
 					if (player.getLevel() >= 10) {
 						int num = (player.getLevel() / 10);
+						if(inheritance.getInheritance(player) == 45) {
+							num = (player.getLevel() / 5);
+						}
 						golem.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, num - 1));
 					}
 					golem.setPlayerCreated(true);
@@ -1211,7 +1214,11 @@ public class Skill {
 							if (nearEntity.getType() != EntityType.PLAYER) {
 								if (nearEntity instanceof LivingEntity) {
 									LivingEntity nearMob = (LivingEntity) nearEntity;
-									nearMob.damage(player.getLevel() * num);
+									if(inheritance.getInheritance(player) == 46) {
+										nearMob.damage(player.getLevel() * 5);
+									} else {
+										nearMob.damage(player.getLevel() * num);
+									}
 								}
 							}
 						}
@@ -1274,18 +1281,29 @@ public class Skill {
 						if (nearEntity.getType() == EntityType.PLAYER) {
 							Player nearPlayer = (Player) nearEntity;
 							PotionRatioForSkill pr = new PotionRatioForSkill();
-							pr.calculation(nearPlayer, player.getLevel() * 3);
-							nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 회복되었습니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 3 + ChatColor.RED + "]");
+							if(inheritance.getInheritance(player) == 47) {
+								pr.calculation(nearPlayer, player.getLevel() * 4);
+								nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 회복되었습니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 4 + ChatColor.RED + "]");
+							} else {
+								pr.calculation(nearPlayer, player.getLevel() * 3);
+								nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 회복되었습니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 3 + ChatColor.RED + "]");
+							}
 						}
 					}
 					PotionRatioForSkill pr = new PotionRatioForSkill();
-					pr.calculation(player, player.getLevel() * 3);
+					if(inheritance.getInheritance(player) == 47) {
+						pr.calculation(player, player.getLevel() * 4);
+						player.sendMessage(ChatColor.GREEN + "자신과 주변 아군의 체력이 회복됩니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 4 + ChatColor.RED + "]");
+					} else {
+						pr.calculation(player, player.getLevel() * 3);
+						player.sendMessage(ChatColor.GREEN + "자신과 주변 아군의 체력이 회복됩니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 3 + ChatColor.RED + "]");
+					}
+					
 					Location loc = player.getLocation();
 
 					world.playSound(loc, Sound.ENTITY_ENDER_DRAGON_FLAP, 1.0f, 1.0f);
 					new ParticleEffect(player).newEffect9();
 					player.sendMessage(ChatColor.GREEN + "[스킬]넬의 사랑이 발동됩니다.");
-					player.sendMessage(ChatColor.GREEN + "자신과 주변 아군의 체력이 회복됩니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 3 + ChatColor.RED + "]");
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
 					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
@@ -1302,13 +1320,23 @@ public class Skill {
 					for (Entity nearEntity : entitylist) {
 						if (nearEntity.getType() == EntityType.PLAYER) {
 							Player nearPlayer = (Player) nearEntity;
-							nearPlayer.removePotionEffect(PotionEffectType.ABSORPTION);
-							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 1, true,true));
+							if(inheritance.getInheritance(player) == 48) {
+								nearPlayer.removePotionEffect(PotionEffectType.ABSORPTION);
+								nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 3, true,true));
+							} else {
+								nearPlayer.removePotionEffect(PotionEffectType.ABSORPTION);
+								nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 1, true,true));
+							}
 							nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 10초간 추가 체력이 부여됩니다.");
 						}
 					}
-					player.removePotionEffect(PotionEffectType.ABSORPTION);
-					player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 1, true,true));
+					if(inheritance.getInheritance(player) == 48) {
+						player.removePotionEffect(PotionEffectType.ABSORPTION);
+						player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 3, true,true));
+					} else {
+						player.removePotionEffect(PotionEffectType.ABSORPTION);
+						player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 1, true,true));
+					}
 					new ParticleEffect(player).newEffect10();
 					player.sendMessage(ChatColor.GREEN + "[스킬]딘의 화염이 발동됩니다.");
 					player.sendMessage(ChatColor.GREEN + "10초간 추가 체력이 부여됩니다.");												
@@ -1374,7 +1402,11 @@ public class Skill {
 
 						new ParticleEffect(player).newEffect12();
 						player.sendMessage(ChatColor.GREEN + "[스킬]열귀각이 발동됩니다.");
-						player.setHealth(player.getHealth() / 2);
+						if(inheritance.getInheritance(player) == 49) {
+							player.setHealth(player.getHealth() / 1.2);
+						} else {
+							player.setHealth(player.getHealth() / 2);
+						}
 
 						Vector vec = player.getEyeLocation().getDirection().multiply(1.5f);
 						player.setVelocity(vec);
@@ -1397,7 +1429,11 @@ public class Skill {
 						if (nearEntity.getType() != EntityType.PLAYER) {
 							if (nearEntity instanceof LivingEntity) {
 								LivingEntity nearMob = (LivingEntity) nearEntity;
-								nearMob.damage(player.getLevel() + damNum*3);
+								if(inheritance.getInheritance(player) == 50) {
+									nearMob.damage(player.getLevel() + damNum*4.5);
+								} else {
+									nearMob.damage(player.getLevel() + damNum*3);
+								}
 								new ParticleEffect(player,nearMob).newEffect13();
 							}
 						}
@@ -1999,7 +2035,11 @@ public class Skill {
 					player.getInventory().setItem(8, item);
 					Location loc = player.getLocation();
 					Salmon salmon = (Salmon) world.spawnEntity(loc, EntityType.SALMON);
-					salmon.setCustomName(ChatColor.GRAY + "연어 인형" + ChatColor.YELLOW + " [Lv." + player.getLevel() + "]");
+					if(inheritance.getInheritance(player) == 52) {
+						salmon.setCustomName(ChatColor.GRAY + "연어 인형+" + ChatColor.YELLOW + " [Lv." + player.getLevel() + "]");
+					} else {
+						salmon.setCustomName(ChatColor.GRAY + "연어 인형" + ChatColor.YELLOW + " [Lv." + player.getLevel() + "]");
+					}
 					salmon.setCustomNameVisible(true);
 					((LivingEntity) salmon).setMaxHealth(5);
 					((LivingEntity) salmon).setHealth(5);
@@ -2079,7 +2119,11 @@ public class Skill {
 							} else if(time%2 == 0) {
 								Arrow arrow = player.launchProjectile(Arrow.class);
 								arrow.setShooter(player);
-								arrow.setDamage(0.03);
+								if(inheritance.getInheritance(player) == 53) {
+									arrow.setDamage(0.13);
+								} else {
+									arrow.setDamage(0.03);
+								}
 								arrow.setVelocity(player.getLocation().getDirection().multiply(10.0f));		
 							}
 							
@@ -2169,7 +2213,11 @@ public class Skill {
 							((LivingEntity) golem).setHealth((int)(Math.pow(player.getLevel(), 3) / 2000) + (20 + player.getLevel() * 30) / 2);
 							int golemLv = player.getLevel();
 							golem.setRemoveWhenFarAway(true);
-							golem.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, (int)(Math.pow(golemLv, 2) / 50)));
+							if(inheritance.getInheritance(player) == 54) {
+								golem.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, (int)(Math.pow(golemLv, 2) / 20)));
+							} else {
+								golem.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, (int)(Math.pow(golemLv, 2) / 50)));
+							}
 							go.put(golem.getUniqueId(), player);
 							
 							new ParticleEffect(player).newEffect39();
@@ -2323,18 +2371,30 @@ public class Skill {
 						if (nearEntity.getType() == EntityType.PLAYER) {
 							Player nearPlayer = (Player) nearEntity;
 							PotionRatioForSkill pr = new PotionRatioForSkill();
-							pr.calculation(nearPlayer, player.getLevel() * 7);
-							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 1, true,true));
-							nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 회복되었습니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 7 + ChatColor.RED + "]");
+							if(inheritance.getInheritance(player) == 55) {
+								pr.calculation(nearPlayer, player.getLevel() * 10);
+								nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 1, true,true));
+								nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 회복되었습니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 10 + ChatColor.RED + "]");
+							} else {
+								pr.calculation(nearPlayer, player.getLevel() * 7);
+								nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 1, true,true));
+								nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 회복되었습니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 7 + ChatColor.RED + "]");
+							}
 							nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 10초 동안 방어력이 상승합니다.");
 						}
 					}
 					PotionRatioForSkill pr = new PotionRatioForSkill();
-					pr.calculation(player, player.getLevel() * 7);
-
+					
+					if(inheritance.getInheritance(player) == 55) {
+						pr.calculation(player, player.getLevel() * 10);
+						player.sendMessage(ChatColor.GREEN + "자신과 주변 아군의 체력이 회복됩니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 10 + ChatColor.RED + "]");
+					} else {
+						pr.calculation(player, player.getLevel() * 7);
+						player.sendMessage(ChatColor.GREEN + "자신과 주변 아군의 체력이 회복됩니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 7 + ChatColor.RED + "]");
+					}
+					
 					new ParticleEffect(player).newEffect40();
 					player.sendMessage(ChatColor.GREEN + "[스킬]천사의 축복이 발동됩니다.");
-					player.sendMessage(ChatColor.GREEN + "자신과 주변 아군의 체력이 회복됩니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 7 + ChatColor.RED + "]");
 					world.playSound(player.getLocation(), Sound.ENTITY_PHANTOM_FLAP, 1.0f, 1.0f);
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
@@ -2438,8 +2498,13 @@ public class Skill {
 									if(nearEntity instanceof Player) {
 										Player nearPlayer = (Player) nearEntity;
 										PotionRatioForSkill pr = new PotionRatioForSkill();
-										pr.calculation(nearPlayer, player.getLevel() * 2);
-										nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님의 토템으로 아군의 체력이 회복됩니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 2 + ChatColor.RED + "]");
+										if(inheritance.getInheritance(player) == 56) {
+											pr.calculation(nearPlayer, player.getLevel() * 3);
+											nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님의 토템으로 아군의 체력이 회복됩니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 3 + ChatColor.RED + "]");
+										} else {
+											pr.calculation(nearPlayer, player.getLevel() * 2);
+											nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님의 토템으로 아군의 체력이 회복됩니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 2 + ChatColor.RED + "]");
+										}
 									}
 								}
 							}
@@ -2658,19 +2723,33 @@ public class Skill {
 					for (Entity nearEntity : entitylist) {
 						if (nearEntity.getType() == EntityType.PLAYER) {
 							Player nearPlayer = (Player) nearEntity;
-							nearPlayer.removePotionEffect(PotionEffectType.ABSORPTION);
-							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0, true,true));
-							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 2, true,true));
-							nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 200, 2, true,true));
+							if(inheritance.getInheritance(player) == 57) {
+								nearPlayer.removePotionEffect(PotionEffectType.ABSORPTION);
+								nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0, true,true));
+								nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 4, true,true));
+								nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 200, 2, true,true));
+							} else {
+								nearPlayer.removePotionEffect(PotionEffectType.ABSORPTION);
+								nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0, true,true));
+								nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 4, true,true));
+								nearPlayer.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 200, 2, true,true));
+							}
 							nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 10초간 저항이 부여됩니다.");
 							nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 10초간 추가 체력이 부여됩니다.");
 							nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 10초간 신속이 부여됩니다.");
 						}
 					}
-					player.removePotionEffect(PotionEffectType.ABSORPTION);
-					player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0, true,true));
-					player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 2, true,true));
-					player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 200, 2, true,true));
+					if(inheritance.getInheritance(player) == 57) {
+						player.removePotionEffect(PotionEffectType.ABSORPTION);
+						player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0, true,true));
+						player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 4, true,true));
+						player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 200, 2, true,true));
+					} else {
+						player.removePotionEffect(PotionEffectType.ABSORPTION);
+						player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 0, true,true));
+						player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 200, 2, true,true));
+						player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 200, 2, true,true));
+					}
 					
 					new ParticleEffect(player).newEffect48();
 					int music = rnd.nextInt(4);
@@ -2787,7 +2866,11 @@ public class Skill {
 					itemIm.setDisplayName(ChatColor.BLUE + "마나");
 					item.setItemMeta(itemIm);
 					player.getInventory().setItem(8, item);
-					player.setHealth((int) (player.getHealth() / 2));
+					if(inheritance.getInheritance(player) == 59) {
+						player.setHealth((int) (player.getHealth() / 1.2));
+					} else {
+						player.setHealth((int) (player.getHealth() / 2));
+					}
 					int num = player.getLevel();
 					player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, num * 3));
 					new ParticleEffect(player, damNum).newEffect22();
@@ -2835,7 +2918,11 @@ public class Skill {
 									if (nearEntity.getType() != EntityType.PLAYER) {
 										if (nearEntity instanceof LivingEntity) {
 											LivingEntity nearMob = (LivingEntity) nearEntity;
-											nearMob.damage(player.getLevel() * 25);
+											if(inheritance.getInheritance(player) == 60) {
+												nearMob.damage(player.getLevel() * (25 + (player.getLevel() / 100.0)));
+											} else {
+												nearMob.damage(player.getLevel() * 25);
+											}
 										}
 									}
 								}
@@ -2938,16 +3025,29 @@ public class Skill {
 						Vector vec = player.getEyeLocation().getDirection().multiply(3.0f);
 						vec.setY(0);
 						player.setVelocity(vec);						
-						List<Entity> entitylist = player.getNearbyEntities(6, 6, 6);				
-						for (Entity nearEntity : entitylist) {
-							if (nearEntity instanceof Mob) {
-								LivingEntity ent = (LivingEntity) nearEntity;
-								if(ent instanceof Monster) {
-									ent.setVelocity(new Vector(0, 1, 0));
+						if(inheritance.getInheritance(player) == 61) {
+							List<Entity> entitylist = player.getNearbyEntities(8, 8, 8);				
+							for (Entity nearEntity : entitylist) {
+								if (nearEntity instanceof Mob) {
+									LivingEntity ent = (LivingEntity) nearEntity;
+									if(ent instanceof Monster) {
+										ent.setVelocity(new Vector(0, 1, 0));
+									}
+									ent.damage(player.getLevel()*5 + damNum * 10);
 								}
-								ent.damage(player.getLevel()*5 + damNum * 10);
-							}
-						}	
+							}	
+						} else {
+							List<Entity> entitylist = player.getNearbyEntities(6, 6, 6);				
+							for (Entity nearEntity : entitylist) {
+								if (nearEntity instanceof Mob) {
+									LivingEntity ent = (LivingEntity) nearEntity;
+									if(ent instanceof Monster) {
+										ent.setVelocity(new Vector(0, 1, 0));
+									}
+									ent.damage(player.getLevel()*5 + damNum * 10);
+								}
+							}	
+						}
 					}
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
@@ -2978,7 +3078,11 @@ public class Skill {
 								for (Entity nearEntity : entitylist) {
 									if (nearEntity instanceof Mob) {
 										LivingEntity ent = (LivingEntity) nearEntity;
-										ent.damage(player.getLevel()*20);
+										if(inheritance.getInheritance(player) == 62) {
+											ent.damage(player.getLevel()*30);
+										} else {
+											ent.damage(player.getLevel()*20);
+										}
 									}
 								}	
 								this.cancel();
@@ -3052,12 +3156,24 @@ public class Skill {
 							}
 						
 							if(arrow.isDead()) {	
-								List<Entity> entitylist = arrow.getNearbyEntities(5, 5, 5);
-								for (Entity nearEntity : entitylist) {
-									if (nearEntity.getType() != EntityType.PLAYER) {
-										if (nearEntity instanceof LivingEntity) {
-											LivingEntity nearMob = (LivingEntity) nearEntity;
-											nearMob.damage(player.getLevel() * 15);
+								if(inheritance.getInheritance(player) == 63) {
+									List<Entity> entitylist = arrow.getNearbyEntities(7, 7, 7);
+									for (Entity nearEntity : entitylist) {
+										if (nearEntity.getType() != EntityType.PLAYER) {
+											if (nearEntity instanceof LivingEntity) {
+												LivingEntity nearMob = (LivingEntity) nearEntity;
+												nearMob.damage(player.getLevel() * 15);
+											}
+										}
+									}
+								} else {
+									List<Entity> entitylist = arrow.getNearbyEntities(5, 5, 5);
+									for (Entity nearEntity : entitylist) {
+										if (nearEntity.getType() != EntityType.PLAYER) {
+											if (nearEntity instanceof LivingEntity) {
+												LivingEntity nearMob = (LivingEntity) nearEntity;
+												nearMob.damage(player.getLevel() * 15);
+											}
 										}
 									}
 								}
@@ -3088,17 +3204,27 @@ public class Skill {
 						if (nearEntity.getType() == EntityType.PLAYER) {
 							Player nearPlayer = (Player) nearEntity;
 							PotionRatioForSkill pr = new PotionRatioForSkill();
-							pr.calculation(nearPlayer, player.getLevel() * 4);
-							nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 회복되었습니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 4 + ChatColor.RED + "]");
+							if(inheritance.getInheritance(player) == 64) {
+								pr.calculation(nearPlayer, player.getLevel() * 5.5);
+								nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 회복되었습니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 5.5 + ChatColor.RED + "]");
+							} else {
+								pr.calculation(nearPlayer, player.getLevel() * 4);
+								nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님에 의해 회복되었습니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 4 + ChatColor.RED + "]");
+							}
 						}
 					}
 					PotionRatioForSkill pr = new PotionRatioForSkill();
-					pr.calculation(player, player.getLevel() * 4);
+					if(inheritance.getInheritance(player) == 64) {
+						pr.calculation(player, player.getLevel() * 5.5);
+						player.sendMessage(ChatColor.GREEN + "자신과 주변 아군의 체력이 회복됩니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 5.5 + ChatColor.RED + "]");
+					} else {
+						pr.calculation(player, player.getLevel() * 4);
+						player.sendMessage(ChatColor.GREEN + "자신과 주변 아군의 체력이 회복됩니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 4 + ChatColor.RED + "]");
+					}
 					
 					world.playSound(player.getLocation(), Sound.ENTITY_PLAYER_ATTACK_SWEEP, 1.5f, 0.5f);
 					new ParticleEffect(player).newEffect28();
 					player.sendMessage(ChatColor.GREEN + "[스킬]구급법이 발동됩니다.");
-					player.sendMessage(ChatColor.GREEN + "자신과 주변 아군의 체력이 회복됩니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 4 + ChatColor.RED + "]");
 				} else {
 					player.sendMessage(ChatColor.RED + "마나가 부족합니다.");
 					world.playSound(player.getLocation(), Sound.BLOCK_ANVIL_LAND, 0.3f, 1.0f);
@@ -3207,7 +3333,11 @@ public class Skill {
 							if (nearEntity.getType() != EntityType.PLAYER) {
 								if (nearEntity instanceof LivingEntity) {
 									LivingEntity nearMob = (LivingEntity) nearEntity;
-									nearMob.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 600, player.getLevel()/10,true,true));
+									if(inheritance.getInheritance(player) == 65) {
+										nearMob.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 600, player.getLevel()/10,true,true));
+									} else {
+										nearMob.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 600, player.getLevel()/5,true,true));
+									}
 								}
 							}
 						}
@@ -3263,15 +3393,24 @@ public class Skill {
 							if (nearEntity.getType() != EntityType.PLAYER) {
 								if (nearEntity instanceof LivingEntity) {
 									LivingEntity nearMob = (LivingEntity) nearEntity;
-									nearMob.damage(player.getLevel() * 20);
+									if(inheritance.getInheritance(player) == 67) {
+										nearMob.damage(player.getLevel() * 30);
+									} else {
+										nearMob.damage(player.getLevel() * 20);
+									}
 									new ParticleEffect(player, nearMob).newEffect34();
 								}
 							}
 						}
 						player.sendMessage(ChatColor.GREEN + "[스킬]카르마가 발동됩니다.");
 					} else {
-						player.removePotionEffect(PotionEffectType.ABSORPTION);
-						player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 400, 2, true,true));
+						if(inheritance.getInheritance(player) == 66) {
+							player.removePotionEffect(PotionEffectType.ABSORPTION);
+							player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 400, 2, true,true));
+						} else {
+							player.removePotionEffect(PotionEffectType.ABSORPTION);
+							player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 400, 4, true,true));
+						}
 						new ParticleEffect(player).newEffect35();
 						player.sendMessage(ChatColor.GREEN + "[스킬]칼라수트라가 발동됩니다.");
 						world.playSound(player.getLocation(), Sound.ENTITY_BLAZE_DEATH, 1.0f, 1.0f);
@@ -4153,7 +4292,11 @@ public class Skill {
 							} else if(time%2 == 0) {
 								Arrow arrow = player.launchProjectile(Arrow.class);
 								arrow.setShooter(player);
-								arrow.setDamage(0.01);
+								if(inheritance.getInheritance(player) == 68) {
+									arrow.setDamage(0.11);
+								} else {
+									arrow.setDamage(0.01);
+								}
 								arrow.setVelocity(player.getEyeLocation().getDirection().multiply(3.0f));		
 								world.spawnParticle(Particle.FLAME, arrow.getLocation(), 5);
 								world.playSound(player.getLocation(), Sound.ENTITY_ARROW_SHOOT, 1.0f, 1.0f);
@@ -4201,12 +4344,24 @@ public class Skill {
 							}
 						
 							if(arrow.isDead()) {	
-								List<Entity> entitylist = arrow.getNearbyEntities(4, 4, 4);
-								for (Entity nearEntity : entitylist) {
-									if (nearEntity.getType() != EntityType.PLAYER) {
-										if (nearEntity instanceof LivingEntity) {
-											LivingEntity nearMob = (LivingEntity) nearEntity;
-											nearMob.damage(player.getLevel()*20);
+								if(inheritance.getInheritance(player) == 69) {
+									List<Entity> entitylist = arrow.getNearbyEntities(6, 6, 6);
+									for (Entity nearEntity : entitylist) {
+										if (nearEntity.getType() != EntityType.PLAYER) {
+											if (nearEntity instanceof LivingEntity) {
+												LivingEntity nearMob = (LivingEntity) nearEntity;
+												nearMob.damage(player.getLevel()*20);
+											}
+										}
+									}
+								} else {
+									List<Entity> entitylist = arrow.getNearbyEntities(4, 4, 4);
+									for (Entity nearEntity : entitylist) {
+										if (nearEntity.getType() != EntityType.PLAYER) {
+											if (nearEntity instanceof LivingEntity) {
+												LivingEntity nearMob = (LivingEntity) nearEntity;
+												nearMob.damage(player.getLevel()*20);
+											}
 										}
 									}
 								}

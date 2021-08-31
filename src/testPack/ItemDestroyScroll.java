@@ -14,9 +14,9 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 public class ItemDestroyScroll {
 
-	public void openInv(Player player, Item itemArg) {
-		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "아이템 파기 스크롤")) {
-			itemArg.remove();
+	public void openInv(Player player, ItemStack itemArg) {
+		if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "아이템 파기 스크롤")) {
+			itemArg.setAmount(itemArg.getAmount()-1);
 			Inventory inv = Bukkit.createInventory(player, 54, "Item Destroy Table");
 			ItemStack no = new ItemStack(Material.SHULKER_SHELL);
 			ItemMeta noIm = no.getItemMeta();

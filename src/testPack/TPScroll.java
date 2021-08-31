@@ -13,13 +13,14 @@ import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Item;
 import org.bukkit.entity.Mob;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
 
 public class TPScroll {
 	
 	private int taskID;
 	private Message msg = new Message();
 	
-	public void teleport(Player player, Item itemArg) {
+	public void teleport(Player player, ItemStack itemArg) {
 		World world = player.getWorld();
 		ticket0(player, itemArg, world);
 		ticket1(player, itemArg, world);
@@ -40,13 +41,13 @@ public class TPScroll {
 		ticket16(player, itemArg, world);
 	}
 	
-	public void ticket0(Player player, Item itemArg, World world) {
+	public void ticket0(Player player, ItemStack itemArg, World world) {
 		// 튜토 4041 255 3851  3966 0 3818
 		Location loc = player.getLocation();
 		if (loc.getX() <= 4041 && loc.getY() <= 255 && loc.getZ() <= 3851 && 
 				loc.getX() >= 3966 && loc.getY() >= 0 && loc.getZ() >= 3818) {
-			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "마을 스크롤")) {
-				itemArg.remove();				
+			if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "마을 스크롤")) {
+				itemArg.setAmount(itemArg.getAmount()-1);				
 				Location loc2 = new Location(world, 4006, 167, 3853);
 				player.teleport(loc2);
 				player.getWorld().playSound(loc2, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
@@ -54,13 +55,13 @@ public class TPScroll {
 		}
 	}
 	
-	public void ticket1(Player player, Item itemArg, World world) {
+	public void ticket1(Player player, ItemStack itemArg, World world) {
 		// 워그닐->대륙  -1936 51 3013  -1941 57 3002
 		Location loc = player.getLocation();
 		if (loc.getX() <= -1936 && loc.getY() <= 57 && loc.getZ() <= 3013 && 
 				loc.getX() >= -1941 && loc.getY() >= 51 && loc.getZ() >= 3002) {
-			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "대륙행 티켓")) {
-				itemArg.remove();				
+			if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "대륙행 티켓")) {
+				itemArg.setAmount(itemArg.getAmount()-1);				
 				Location loc3 = new Location(world, -1880, 52, 2714);
 				List<Entity> list = player.getNearbyEntities(10, 10, 10);
 				for(Entity e : list) {
@@ -79,13 +80,13 @@ public class TPScroll {
 		}
 	}
 	
-	public void ticket2(Player player, Item itemArg, World world) {
+	public void ticket2(Player player, ItemStack itemArg, World world) {
 		// 대륙->워그닐  -1882 49 2707  -1879 57 2719
 		Location loc = player.getLocation();
 		if (loc.getX() <= -1879 && loc.getY() <= 57 && loc.getZ() <= 2719 && 
 				loc.getX() >= -1882 && loc.getY() >= 49 && loc.getZ() >= 2707) {
-			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "워그닐행 티켓")) {
-				itemArg.remove();				
+			if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "워그닐행 티켓")) {
+				itemArg.setAmount(itemArg.getAmount()-1);				
 				Location loc3 = new Location(world, -1938, 53, 3007);
 				List<Entity> list = player.getNearbyEntities(10, 10, 10);
 				for(Entity e : list) {
@@ -103,13 +104,13 @@ public class TPScroll {
 		}
 	}
 	
-	public void ticket3(Player player, Item itemArg, World world) {
+	public void ticket3(Player player, ItemStack itemArg, World world) {
 		// 오스->아란모어 -1379 91 903  -1388 48 871
 		Location loc = player.getLocation();
 		if (loc.getX() <= -1379 && loc.getY() <= 91 && loc.getZ() <= 903 && 
 				loc.getX() >= -1388 && loc.getY() >= 48 && loc.getZ() >= 871) {
-			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "아란모어행 티켓")) {
-				itemArg.remove();				
+			if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "아란모어행 티켓")) {
+				itemArg.setAmount(itemArg.getAmount()-1);				
 				Location loc3 = new Location(world, -1927, 53, 451);
 				List<Entity> list = player.getNearbyEntities(10, 10, 10);
 				for(Entity e : list) {
@@ -128,13 +129,13 @@ public class TPScroll {
 		}
 	}
 	
-	public void ticket4(Player player, Item itemArg, World world) {
+	public void ticket4(Player player, ItemStack itemArg, World world) {
 		// 아란모어->오스  -1939 91 449  -1908 48 438
 		Location loc = player.getLocation();
 		if (loc.getX() <= -1908 && loc.getY() <= 91 && loc.getZ() <= 449 && 
 				loc.getX() >= -1939 && loc.getY() >= 48 && loc.getZ() >= 438) {
-			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "오스행 티켓")) {
-				itemArg.remove();				
+			if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "오스행 티켓")) {
+				itemArg.setAmount(itemArg.getAmount()-1);				
 				Location loc3 = new Location(world, -1377, 53, 889);
 				List<Entity> list = player.getNearbyEntities(10, 10, 10);
 				for(Entity e : list) {
@@ -152,15 +153,15 @@ public class TPScroll {
 		}
 	}
 	
-	public void ticket5(Player player, Item itemArg, World world) {
+	public void ticket5(Player player, ItemStack itemArg, World world) {
 		// 아란모어 숨겨진 장소 -2318 203 630  -2345 255 664
 		Location loc = player.getLocation();
 		if (loc.getX() <= -2318 && loc.getY() <= 255 && loc.getZ() <= 664 && 
 				loc.getX() >= -2345 && loc.getY() >= 203 && loc.getZ() >= 630) {
-			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "성스러운 통행증")) {
+			if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "성스러운 통행증")) {
 				QuestBoard cb = new QuestBoard();
 				if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===설원의 보물2===")) {
-					itemArg.remove();				
+					itemArg.setAmount(itemArg.getAmount()-1);				
 					Location loc3 = new Location(world, -1994, 88, 139);
 					player.teleport(loc3);
 					player.getWorld().playSound(loc3, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
@@ -171,11 +172,11 @@ public class TPScroll {
 		}
 	}
 	
-	public void ticket6(Player player, Item itemArg, World world) {
+	public void ticket6(Player player, ItemStack itemArg, World world) {
 		// 미궁
-		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "미궁 워프 스크롤")) {
+		if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "미궁 워프 스크롤")) {
 			if(player.getLevel() >= 340) {
-				itemArg.remove();	
+				itemArg.setAmount(itemArg.getAmount()-1);	
 				Location loc = new Location(world, 96.5, 54, 695.5, 180, 0);
 				player.teleport(loc);
 				player.getWorld().playSound(loc, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
@@ -192,13 +193,13 @@ public class TPScroll {
 		}
 	}
 	
-	public void ticket7(Player player, Item itemArg, World world) {
+	public void ticket7(Player player, ItemStack itemArg, World world) {
 		// 하마베->라파누이  952 95 -40  938 45 -82
 		Location loc = player.getLocation();
 		if (loc.getX() <= 952 && loc.getY() <= 95 && loc.getZ() <= -40 && 
 				loc.getX() >= 938 && loc.getY() >= 45 && loc.getZ() >= -82) {
-			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "라파누이행 티켓")) {
-				itemArg.remove();				
+			if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "라파누이행 티켓")) {
+				itemArg.setAmount(itemArg.getAmount()-1);				
 				Location loc3 = new Location(world, 1779, 54, 2970, 270, 0);
 				taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -241,13 +242,13 @@ public class TPScroll {
 		}
 	}
 	
-	public void ticket8(Player player, Item itemArg, World world) {
+	public void ticket8(Player player, ItemStack itemArg, World world) {
 		// 라파누이->하마베  1756 40 2122  1750 70 2100
 		Location loc = player.getLocation();
 		if (loc.getX() <= 1756 && loc.getY() <= 70 && loc.getZ() <= 2122 && 
 				loc.getX() >= 1750 && loc.getY() >= 40 && loc.getZ() >= 2100) {
-			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "하마베행 티켓 (라파누이)")) {
-				itemArg.remove();				
+			if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "하마베행 티켓 (라파누이)")) {
+				itemArg.setAmount(itemArg.getAmount()-1);				
 				Location loc3 = new Location(world, 1779, 54, 2970, 270, 0);
 				taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -290,13 +291,13 @@ public class TPScroll {
 		}
 	}
 	
-	public void ticket9(Player player, Item itemArg, World world) {
+	public void ticket9(Player player, ItemStack itemArg, World world) {
 		// 하마베->라히무호나  952 95 -40  938 45 -82
 		Location loc = player.getLocation();
 		if (loc.getX() <= 952 && loc.getY() <= 95 && loc.getZ() <= -40 && 
 				loc.getX() >= 938 && loc.getY() >= 45 && loc.getZ() >= -82) {
-			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "라히무호나행 티켓")) {
-				itemArg.remove();				
+			if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "라히무호나행 티켓")) {
+				itemArg.setAmount(itemArg.getAmount()-1);				
 				Location loc3 = new Location(world, 1779, 54, 2970, 270, 0);
 				taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -339,13 +340,13 @@ public class TPScroll {
 		}
 	}
 	
-	public void ticket10(Player player, Item itemArg, World world) {
+	public void ticket10(Player player, ItemStack itemArg, World world) {
 		// 라히무호나->하마베 -2027 40 1425  -2013 80 1460
 		Location loc = player.getLocation();
 		if (loc.getX() <= -2013 && loc.getY() <= 80 && loc.getZ() <= 1460 && 
 				loc.getX() >= -2027 && loc.getY() >= 40 && loc.getZ() >= 1425) {
-			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "하마베행 티켓 (라히무호나)")) {
-				itemArg.remove();				
+			if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "하마베행 티켓 (라히무호나)")) {
+				itemArg.setAmount(itemArg.getAmount()-1);				
 				Location loc3 = new Location(world, 1779, 54, 2970, 270, 0);
 				taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -388,13 +389,13 @@ public class TPScroll {
 		}
 	}
 	
-	public void ticket11(Player player, Item itemArg, World world) {
+	public void ticket11(Player player, ItemStack itemArg, World world) {
 		// 시오카나->스켈리그 525 66 -541  534 45 -520
 		Location loc = player.getLocation();
 		if (loc.getX() <= 534 && loc.getY() <= 66 && loc.getZ() <= -520 && 
 				loc.getX() >= 525 && loc.getY() >= 45 && loc.getZ() >= -541) {
-			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "스켈리그행 티켓")) {
-				itemArg.remove();				
+			if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "스켈리그행 티켓")) {
+				itemArg.setAmount(itemArg.getAmount()-1);				
 				Location loc3 = new Location(world, 1779, 54, 2970, 270, 0);
 				taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -437,13 +438,13 @@ public class TPScroll {
 		}
 	}
 	
-	public void ticket12(Player player, Item itemArg, World world) {
+	public void ticket12(Player player, ItemStack itemArg, World world) {
 		// 시오카나->하마베 525 66 -541  534 45 -520
 		Location loc = player.getLocation();
 		if (loc.getX() <= 534 && loc.getY() <= 66 && loc.getZ() <= -520 && 
 				loc.getX() >= 525 && loc.getY() >= 45 && loc.getZ() >= -541) {
-			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "하마베행 티켓 (시오카나)")) {
-				itemArg.remove();				
+			if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "하마베행 티켓 (시오카나)")) {
+				itemArg.setAmount(itemArg.getAmount()-1);				
 				Location loc3 = new Location(world, 1779, 54, 2970, 270, 0);
 				taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -486,13 +487,13 @@ public class TPScroll {
 		}
 	}
 	
-	public void ticket13(Player player, Item itemArg, World world) {
+	public void ticket13(Player player, ItemStack itemArg, World world) {
 		// 하마베->시오카나  952 95 -40  938 45 -82
 		Location loc = player.getLocation();
 		if (loc.getX() <= 952 && loc.getY() <= 95 && loc.getZ() <= -40 && 
 				loc.getX() >= 938 && loc.getY() >= 45 && loc.getZ() >= -82) {
-			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "시오카나행 티켓 (하마베)")) {
-				itemArg.remove();				
+			if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "시오카나행 티켓 (하마베)")) {
+				itemArg.setAmount(itemArg.getAmount()-1);				
 				Location loc3 = new Location(world, 1779, 54, 2970, 270, 0);
 				taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -535,13 +536,13 @@ public class TPScroll {
 		}
 	}
 	
-	public void ticket14(Player player, Item itemArg, World world) {
+	public void ticket14(Player player, ItemStack itemArg, World world) {
 		// 스켈리그->시오카나  -828 95 -742  -884 45 -699
 		Location loc = player.getLocation();
 		if (loc.getX() <= -828 && loc.getY() <= 95 && loc.getZ() <= -699 && 
 				loc.getX() >= -884 && loc.getY() >= 45 && loc.getZ() >= -742) {
-			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "시오카나행 티켓 (스켈리그)")) {
-				itemArg.remove();				
+			if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "시오카나행 티켓 (스켈리그)")) {
+				itemArg.setAmount(itemArg.getAmount()-1);				
 				Location loc3 = new Location(world, 1779, 54, 2970, 270, 0);
 				taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
@@ -584,13 +585,13 @@ public class TPScroll {
 		}
 	}
 	
-	public void ticket15(Player player, Item itemArg, World world) {
+	public void ticket15(Player player, ItemStack itemArg, World world) {
 		// 하마베->시오카나  952 95 -40  938 45 -82
 		Location loc = player.getLocation();
 		if (loc.getX() <= 952 && loc.getY() <= 95 && loc.getZ() <= -40 && 
 				loc.getX() >= 938 && loc.getY() >= 45 && loc.getZ() >= -82) {
-			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "티페라리행 티켓")) {
-				itemArg.remove();				
+			if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "티페라리행 티켓")) {
+				itemArg.setAmount(itemArg.getAmount()-1);				
 				
 				QuestBoard cb = new QuestBoard();
 				if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===신대륙 칼라아릿===")) {
@@ -640,13 +641,13 @@ public class TPScroll {
 		}
 	}
 	
-	public void ticket16(Player player, Item itemArg, World world) {
+	public void ticket16(Player player, ItemStack itemArg, World world) {
 		// 티페라리->하마베  741 114 -780  827 45 -731
 		Location loc = player.getLocation();
 		if (loc.getX() <= 827 && loc.getY() <= 114 && loc.getZ() <= -731 && 
 				loc.getX() >= 741 && loc.getY() >= 45 && loc.getZ() >= -780) {
-			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "하마베행 티켓 (티페라리)")) {
-				itemArg.remove();				
+			if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "하마베행 티켓 (티페라리)")) {
+				itemArg.setAmount(itemArg.getAmount()-1);				
 				Location loc3 = new Location(world, 1779, 54, 2970, 270, 0);
 				taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 

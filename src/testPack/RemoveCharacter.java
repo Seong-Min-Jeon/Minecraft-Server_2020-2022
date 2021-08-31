@@ -21,8 +21,8 @@ import org.bukkit.inventory.ItemStack;
 
 public class RemoveCharacter {
 
-	public RemoveCharacter(Player player, Item itemArg, File folder) {
-		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "캐릭터 삭제 스크롤")) {
+	public RemoveCharacter(Player player, ItemStack itemArg, File folder) {
+		if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "캐릭터 삭제 스크롤")) {
 			World world = player.getWorld();
 			player.kickPlayer(ChatColor.BOLD + "해당 캐릭터가 삭제되었습니다.");
 			// 캐릭터 창고 비우기
@@ -212,7 +212,7 @@ public class RemoveCharacter {
 			} catch(Exception e) {
 				
 			}
-			itemArg.remove();
+			itemArg.setAmount(itemArg.getAmount()-1);
 		}
 	}
 	

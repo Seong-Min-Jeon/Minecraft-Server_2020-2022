@@ -19,10 +19,10 @@ public class RerollScroll {
 	
 	Random rnd = new Random();
 
-	public void openInv(Player player, Item itemArg) {
-		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "스탯 재분배 스크롤")) {
+	public void openInv(Player player, ItemStack itemArg) {
+		if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "스탯 재분배 스크롤")) {
 			
-			ItemStack item = player.getInventory().getItemInMainHand();
+			ItemStack item = player.getInventory().getItemInOffHand();
 			
 			if(item.getType()!=Material.AIR) {
 				if(item.getType()==Material.WOODEN_SWORD || item.getType()==Material.STONE_SWORD || item.getType()==Material.IRON_SWORD || item.getType()==Material.GOLDEN_SWORD ||
@@ -59,7 +59,7 @@ public class RerollScroll {
 						return;
 					} 
 					
-					itemArg.remove();
+					itemArg.setAmount(itemArg.getAmount()-1);
 					
 					if(item.getItemMeta().getLore()!=null) {
 						ItemMeta im = item.getItemMeta();
@@ -522,7 +522,7 @@ public class RerollScroll {
 					return;
 				}
 			}
-		} else if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "스탯 재분배 스크롤+")) {
+		} else if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "스탯 재분배 스크롤+")) {
 			
 			ItemStack item = player.getInventory().getItemInMainHand();
 			
@@ -561,7 +561,7 @@ public class RerollScroll {
 						return;
 					} 
 					
-					itemArg.remove();
+					itemArg.setAmount(itemArg.getAmount()-1);
 					
 					if(item.getItemMeta().getLore()!=null) {
 						ItemMeta im = item.getItemMeta();

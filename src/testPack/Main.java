@@ -292,7 +292,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("woolring")) { 
 			
 		} else {
-			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/878129748398710884/aile_texture_pack_37.zip");
+			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/882164525758042122/aile_texture_pack_39.zip");
 		}
 		
 		//Message
@@ -4286,70 +4286,53 @@ public class Main extends JavaPlugin implements Listener{
 		}
 		
 		try {
-			if(itemArg.getItemStack().hasItemMeta()) {
-				if(itemArg.getItemStack().getItemMeta().hasCustomModelData()) {
-					if(itemArg.getItemStack().getItemMeta().getCustomModelData() == 1) {
+			ItemStack item = itemArg.getItemStack();
+			if((item.getType() == Material.WOODEN_SWORD || item.getType() == Material.STONE_SWORD || item.getType() == Material.IRON_SWORD
+							|| item.getType() == Material.GOLDEN_SWORD || item.getType() == Material.DIAMOND_SWORD || item.getType() == Material.NETHERITE_SWORD
+							|| item.getType() == Material.OAK_LEAVES || item.getType() == Material.SPRUCE_LEAVES || item.getType() == Material.BIRCH_LEAVES
+							|| item.getType() == Material.JUNGLE_LEAVES || item.getType() == Material.ACACIA_LEAVES || item.getType() == Material.DARK_OAK_LEAVES
+							|| item.getType() == Material.COBBLESTONE_WALL || item.getType() == Material.BROWN_CARPET
+							|| item.getType() == Material.GREEN_CARPET || item.getType() == Material.BLACK_CARPET || item.getType() == Material.STONE
+							|| item.getType() == Material.OAK_PLANKS || item.getType() == Material.SPRUCE_PLANKS || item.getType() == Material.BIRCH_PLANKS
+							|| item.getType() == Material.JUNGLE_PLANKS || item.getType() == Material.ACACIA_PLANKS || item.getType() == Material.DARK_OAK_PLANKS
+							|| item.getType() == Material.BEDROCK || item.getType() == Material.SPRUCE_LOG || item.getType() == Material.BIRCH_LOG
+							|| item.getType() == Material.JUNGLE_LOG || item.getType() == Material.ACACIA_LOG || item.getType() == Material.DARK_OAK_LOG
+							|| item.getType() == Material.SANDSTONE || item.getType() == Material.CHISELED_SANDSTONE || item.getType() == Material.CUT_SANDSTONE
+							|| item.getType() == Material.LAPIS_BLOCK || item.getType() == Material.MAGENTA_WOOL || item.getType() == Material.LIME_WOOL
+							|| item.getType() == Material.GRAY_WOOL || item.getType() == Material.LIGHT_GRAY_WOOL || item.getType() == Material.CYAN_WOOL
+							|| item.getType() == Material.PURPLE_WOOL || item.getType() == Material.OAK_SLAB || item.getType() == Material.SPRUCE_SLAB
+							|| item.getType() == Material.BIRCH_SLAB || item.getType() == Material.JUNGLE_SLAB || item.getType() == Material.ACACIA_SLAB
+							|| item.getType() == Material.DARK_OAK_SLAB || item.getType() == Material.STONE_SLAB || item.getType() == Material.COBBLESTONE_SLAB 
+							|| item.getType() == Material.STONE_BRICK_SLAB || item.getType() == Material.NETHER_BRICK_SLAB || item.getType() == Material.QUARTZ_SLAB
+							|| item.getType() == Material.RED_SANDSTONE || item.getType() == Material.RED_SANDSTONE_SLAB || item.getType() == Material.SMOOTH_RED_SANDSTONE
+							|| item.getType() == Material.OBSIDIAN || item.getType() == Material.SMOOTH_SANDSTONE || item.getType() == Material.CHISELED_RED_SANDSTONE
+							|| item.getType() == Material.CUT_RED_SANDSTONE || item.getType() == Material.RED_SANDSTONE_STAIRS || item.getType() == Material.STONE_STAIRS
+							
+							|| item.getType() == Material.MUSIC_DISC_11 || item.getType() == Material.MUSIC_DISC_13 || item.getType() == Material.MUSIC_DISC_BLOCKS 
+							|| item.getType() == Material.MUSIC_DISC_CAT || item.getType() == Material.MUSIC_DISC_CHIRP || item.getType() == Material.MUSIC_DISC_FAR 
+							|| item.getType() == Material.MUSIC_DISC_MALL || item.getType() == Material.MUSIC_DISC_MELLOHI || item.getType() == Material.MUSIC_DISC_PIGSTEP 
+							|| item.getType() == Material.MUSIC_DISC_STAL || item.getType() == Material.MUSIC_DISC_STRAD || item.getType() == Material.MUSIC_DISC_WAIT 
+							|| item.getType() == Material.MUSIC_DISC_WARD
+							
+							|| item.getType() == Material.LEATHER_HELMET || item.getType() == Material.LEATHER_CHESTPLATE || item.getType() == Material.LEATHER_LEGGINGS 
+							|| item.getType() == Material.LEATHER_BOOTS || item.getType() == Material.CHAINMAIL_HELMET || item.getType() == Material.CHAINMAIL_CHESTPLATE 
+							|| item.getType() == Material.CHAINMAIL_LEGGINGS || item.getType() == Material.CHAINMAIL_BOOTS || item.getType() == Material.IRON_HELMET 
+							|| item.getType() == Material.IRON_CHESTPLATE || item.getType() == Material.IRON_LEGGINGS || item.getType() == Material.IRON_BOOTS 
+							|| item.getType() == Material.GOLDEN_HELMET || item.getType() == Material.GOLDEN_CHESTPLATE || item.getType() == Material.GOLDEN_LEGGINGS 
+							|| item.getType() == Material.GOLDEN_BOOTS || item.getType() == Material.DIAMOND_HELMET || item.getType() == Material.DIAMOND_CHESTPLATE 
+							|| item.getType() == Material.DIAMOND_LEGGINGS || item.getType() == Material.DIAMOND_BOOTS || item.getType() == Material.NETHERITE_HELMET
+							|| item.getType() == Material.NETHERITE_CHESTPLATE || item.getType() == Material.NETHERITE_LEGGINGS || item.getType() == Material.NETHERITE_BOOTS
+							
+							|| item.getType() == Material.POLISHED_GRANITE_STAIRS || item.getType() == Material.SMOOTH_RED_SANDSTONE_STAIRS || item.getType() == Material.MOSSY_STONE_BRICK_STAIRS 
+							|| item.getType() == Material.POLISHED_DIORITE_STAIRS || item.getType() == Material.MOSSY_COBBLESTONE_STAIRS || item.getType() == Material.END_STONE_BRICK_STAIRS 
+							|| item.getType() == Material.SMOOTH_SANDSTONE_STAIRS || item.getType() == Material.SMOOTH_QUARTZ_STAIRS || item.getType() == Material.GRANITE_STAIRS)) {
+				if(item.hasItemMeta()) {
+					if(item.getItemMeta().getItemFlags().contains(ItemFlag.HIDE_DESTROYS)) {
 						event.setCancelled(true);
 						return;
 					}
 				}
 			}
-		} catch(Exception e) {
-			
-		}
-		
-		TPScroll tp = new TPScroll();
-		VilTPScroll vilTP = new VilTPScroll();
-		INNTicket ticket = new INNTicket();
-		BossTicket boss = new BossTicket();
-		ReinforcementScroll reinScroll = new ReinforcementScroll();
-		MetalwareToolScroll metalwareScroll = new MetalwareToolScroll();
-		DefineScroll define = new DefineScroll();
-		DefineAllScroll defineAll = new DefineAllScroll();
-		QuestScroll qs = new QuestScroll();
-		AnotherScroll as = new AnotherScroll();
-		ItemDestroyScroll ids = new ItemDestroyScroll();
-		CraftingScroll cs = new CraftingScroll();
-		CraftingPotionScroll cps = new CraftingPotionScroll();
-		CraftingFoodScroll cfs = new CraftingFoodScroll();
-		RerollScroll rs = new RerollScroll();
-		Inheritance inheritance = new Inheritance();
-		
-		try {
-			//마을 스크롤
-			vilTP.vilTP(player, itemArg);
-			//숙박티켓
-			ticket.sleep(player, itemArg);
-			//이동
-			tp.teleport(player, itemArg);
-			//보스소환
-			boss.summon(player, itemArg);
-			//강화
-			reinScroll.openInv(player, itemArg);
-			//세공
-			metalwareScroll.openInv(player, itemArg);
-			//감정
-			define.effect(player, itemArg);
-			//전체감정
-			defineAll.effect(player, itemArg);
-			//퀘스트 스크롤
-			qs.quest(player, itemArg);
-			//기타 스크롤
-			as.effect(player, itemArg);
-			//아이템 파기 스크롤
-			ids.openInv(player, itemArg);
-			//장비 제작 스크롤
-			cs.openInv(player, itemArg);
-			//포션 제작 스크롤
-			cps.openInv(player, itemArg);
-			//음식 제작 스크롤
-			cfs.openInv(player, itemArg);
-			//리롤 스크롤
-			rs.openInv(player, itemArg);
-			//계승자 스크롤
-			inheritance.useScroll(player, itemArg);
-			//캐릭터 삭제 스크롤
-			new RemoveCharacter(player, itemArg, getDataFolder());
 		} catch(Exception e) {
 			
 		}
@@ -4497,6 +4480,10 @@ public class Main extends JavaPlugin implements Listener{
 			event.setCancelled(true);
 		}
 		if(event.getItemDrop().getItemStack().getType() == Material.PLAYER_HEAD) {
+			player.sendMessage(ChatColor.RED + "드랍 불가 아이템입니다.");
+			event.setCancelled(true);
+		}
+		if(event.getItemDrop().getItemStack().getType() == Material.GLOBE_BANNER_PATTERN) {
 			player.sendMessage(ChatColor.RED + "드랍 불가 아이템입니다.");
 			event.setCancelled(true);
 		}
@@ -5674,8 +5661,14 @@ public class Main extends JavaPlugin implements Listener{
 					if(arrow.getDamage() == 0.05) {
 						skillMul = 2000;
 					}
+					if(arrow.getDamage() == 0.11) {
+						skillMul = 2 + (player.getLevel() / 50.0);
+					}
 					if(arrow.getDamage() == 0.12) {
 						skillMul = 20 + (player.getLevel() / 10.0);
+					}
+					if(arrow.getDamage() == 0.13) {
+						skillMul = 300 + (player.getLevel() / 2.0);
 					}
 					double damage = (lvl * jobMul * skillMul * weaponMul) + enchMul;
 					try {
@@ -7825,276 +7818,7 @@ public class Main extends JavaPlugin implements Listener{
 					ItemMeta im = player.getInventory().getItemInMainHand().getItemMeta();
 					Material type = player.getInventory().getItemInMainHand().getType();
 					if (type == Material.SADDLE) {
-						if(player.getVehicle() == null) {
-							HorseOwner ho = new HorseOwner();
-							if(ho.already(player)) {
-								try {
-									ho.returnHorse(player).remove();
-								} catch(Exception e2) {
-									
-								}
-								ho.remove(player);
-							}
-							if(im.getDisplayName().equals(ChatColor.GRAY + "갈색마")) {
-								player.getWorld().playSound(player.getLocation(), Sound.ENTITY_HORSE_GALLOP, 0.5f, 1.0f);
-								player.getWorld().playSound(player.getLocation(), Sound.ENTITY_HORSE_AMBIENT, 8.0f, 1.0f);
-								Horse horse = (Horse) player.getWorld().spawnEntity(player.getLocation(), EntityType.HORSE);
-								horse.setCustomName(ChatColor.GRAY + "" + player.getDisplayName() + "'s horse");
-								horse.setCustomNameVisible(true);
-								horse.setBreed(false);
-								horse.setMaxHealth(1);
-								horse.setNoDamageTicks(Integer.MAX_VALUE);
-								horse.setAdult();
-								horse.setTamed(true);
-								horse.setOwner(player);
-								horse.setRemoveWhenFarAway(true);
-								horse.getInventory().setSaddle(new ItemStack(Material.SADDLE));
-								ItemStack bar = new ItemStack(Material.WHITE_STAINED_GLASS_PANE);
-								ItemMeta barIm = bar.getItemMeta();
-								barIm.setDisplayName(ChatColor.RED + " ");
-								barIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-								barIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-								bar.setItemMeta(barIm);
-								horse.getInventory().setArmor(bar);
-								int num = rnd.nextInt(100);
-								if(num < 60) {
-									horse.setStyle(Horse.Style.NONE);
-								} else if(num < 80) {
-									horse.setStyle(Horse.Style.WHITE);
-								} else if(num < 90) {
-									horse.setStyle(Horse.Style.WHITEFIELD);
-								} else if(num < 99) {
-									horse.setStyle(Horse.Style.WHITE_DOTS);
-								} else if(num < 100) {
-									horse.setStyle(Horse.Style.BLACK_DOTS);
-								}
-								horse.setColor(Horse.Color.BROWN);
-								horse.getAttribute(Attribute.GENERIC_MOVEMENT_SPEED).setBaseValue(0.2);
-								ho.put(player, horse);
-							}
-							if(im.getDisplayName().equals(ChatColor.WHITE + "검갈마")) {
-								player.getWorld().playSound(player.getLocation(), Sound.ENTITY_HORSE_GALLOP, 0.5f, 1.0f);
-								player.getWorld().playSound(player.getLocation(), Sound.ENTITY_HORSE_AMBIENT, 8.0f, 1.0f);
-								Horse horse = (Horse) player.getWorld().spawnEntity(player.getLocation(), EntityType.HORSE);
-								horse.setCustomName(ChatColor.GRAY + "" + player.getDisplayName() + "'s horse");
-								horse.setCustomNameVisible(true);
-								horse.setBreed(false);
-								horse.setMaxHealth(1);
-								horse.setNoDamageTicks(Integer.MAX_VALUE);
-								horse.setAdult();
-								horse.setTamed(true);
-								horse.setOwner(player);
-								horse.setRemoveWhenFarAway(true);
-								horse.getInventory().setSaddle(new ItemStack(Material.SADDLE));
-								ItemStack bar = new ItemStack(Material.WHITE_STAINED_GLASS_PANE);
-								ItemMeta barIm = bar.getItemMeta();
-								barIm.setDisplayName(ChatColor.RED + " ");
-								barIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-								barIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-								bar.setItemMeta(barIm);
-								horse.getInventory().setArmor(bar);
-								int num = rnd.nextInt(100);
-								if(num < 60) {
-									horse.setStyle(Horse.Style.NONE);
-								} else if(num < 80) {
-									horse.setStyle(Horse.Style.WHITE);
-								} else if(num < 90) {
-									horse.setStyle(Horse.Style.WHITEFIELD);
-								} else if(num < 99) {
-									horse.setStyle(Horse.Style.WHITE_DOTS);
-								} else if(num < 100) {
-									horse.setStyle(Horse.Style.BLACK_DOTS);
-								}
-								horse.setColor(Horse.Color.DARK_BROWN);
-								horse.getAttribute(Attribute.GENERIC_MOVEMENT_SPEED).setBaseValue(0.23);
-								ho.put(player, horse);
-							}
-							if(im.getDisplayName().equals(ChatColor.YELLOW + "황갈마")) {
-								player.getWorld().playSound(player.getLocation(), Sound.ENTITY_HORSE_GALLOP, 0.5f, 1.0f);
-								player.getWorld().playSound(player.getLocation(), Sound.ENTITY_HORSE_AMBIENT, 8.0f, 1.0f);
-								Horse horse = (Horse) player.getWorld().spawnEntity(player.getLocation(), EntityType.HORSE);
-								horse.setCustomName(ChatColor.GRAY + "" + player.getDisplayName() + "'s horse");
-								horse.setCustomNameVisible(true);
-								horse.setBreed(false);
-								horse.setMaxHealth(1);
-								horse.setNoDamageTicks(Integer.MAX_VALUE);
-								horse.setAdult();
-								horse.setTamed(true);
-								horse.setOwner(player);
-								horse.setRemoveWhenFarAway(true);
-								horse.getInventory().setSaddle(new ItemStack(Material.SADDLE));
-								ItemStack bar = new ItemStack(Material.WHITE_STAINED_GLASS_PANE);
-								ItemMeta barIm = bar.getItemMeta();
-								barIm.setDisplayName(ChatColor.RED + " ");
-								barIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-								barIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-								bar.setItemMeta(barIm);
-								horse.getInventory().setArmor(bar);
-								int num = rnd.nextInt(100);
-								if(num < 60) {
-									horse.setStyle(Horse.Style.NONE);
-								} else if(num < 80) {
-									horse.setStyle(Horse.Style.WHITE);
-								} else if(num < 90) {
-									horse.setStyle(Horse.Style.WHITEFIELD);
-								} else if(num < 99) {
-									horse.setStyle(Horse.Style.WHITE_DOTS);
-								} else if(num < 100) {
-									horse.setStyle(Horse.Style.BLACK_DOTS);
-								}
-								horse.setColor(Horse.Color.CREAMY);
-								horse.getAttribute(Attribute.GENERIC_MOVEMENT_SPEED).setBaseValue(0.26);
-								ho.put(player, horse);
-							}
-							if(im.getDisplayName().equals(ChatColor.LIGHT_PURPLE + "회색마")) {
-								player.getWorld().playSound(player.getLocation(), Sound.ENTITY_HORSE_GALLOP, 0.5f, 1.0f);
-								player.getWorld().playSound(player.getLocation(), Sound.ENTITY_HORSE_AMBIENT, 8.0f, 1.0f);
-								Horse horse = (Horse) player.getWorld().spawnEntity(player.getLocation(), EntityType.HORSE);
-								horse.setCustomName(ChatColor.GRAY + "" + player.getDisplayName() + "'s horse");
-								horse.setCustomNameVisible(true);
-								horse.setBreed(false);
-								horse.setMaxHealth(1);
-								horse.setNoDamageTicks(Integer.MAX_VALUE);
-								horse.setAdult();
-								horse.setTamed(true);
-								horse.setOwner(player);
-								horse.setRemoveWhenFarAway(true);
-								horse.getInventory().setSaddle(new ItemStack(Material.SADDLE));
-								ItemStack bar = new ItemStack(Material.WHITE_STAINED_GLASS_PANE);
-								ItemMeta barIm = bar.getItemMeta();
-								barIm.setDisplayName(ChatColor.RED + " ");
-								barIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-								barIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-								bar.setItemMeta(barIm);
-								horse.getInventory().setArmor(bar);
-								int num = rnd.nextInt(100);
-								if(num < 60) {
-									horse.setStyle(Horse.Style.NONE);
-								} else if(num < 80) {
-									horse.setStyle(Horse.Style.WHITE);
-								} else if(num < 90) {
-									horse.setStyle(Horse.Style.WHITEFIELD);
-								} else if(num < 99) {
-									horse.setStyle(Horse.Style.WHITE_DOTS);
-								} else if(num < 100) {
-									horse.setStyle(Horse.Style.BLACK_DOTS);
-								}
-								horse.setColor(Horse.Color.GRAY);
-								horse.getAttribute(Attribute.GENERIC_MOVEMENT_SPEED).setBaseValue(0.29);
-								ho.put(player, horse);
-							}
-							if(im.getDisplayName().equals(ChatColor.AQUA + "황금갈기마")) {
-								player.getWorld().playSound(player.getLocation(), Sound.ENTITY_HORSE_GALLOP, 0.5f, 1.0f);
-								player.getWorld().playSound(player.getLocation(), Sound.ENTITY_HORSE_AMBIENT, 8.0f, 1.0f);
-								Horse horse = (Horse) player.getWorld().spawnEntity(player.getLocation(), EntityType.HORSE);
-								horse.setCustomName(ChatColor.GRAY + "" + player.getDisplayName() + "'s horse");
-								horse.setCustomNameVisible(true);
-								horse.setBreed(false);
-								horse.setMaxHealth(1);
-								horse.setNoDamageTicks(Integer.MAX_VALUE);
-								horse.setAdult();
-								horse.setTamed(true);
-								horse.setOwner(player);
-								horse.setRemoveWhenFarAway(true);
-								horse.getInventory().setSaddle(new ItemStack(Material.SADDLE));
-								ItemStack bar = new ItemStack(Material.WHITE_STAINED_GLASS_PANE);
-								ItemMeta barIm = bar.getItemMeta();
-								barIm.setDisplayName(ChatColor.RED + " ");
-								barIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-								barIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-								bar.setItemMeta(barIm);
-								horse.getInventory().setArmor(bar);
-								int num = rnd.nextInt(100);
-								if(num < 60) {
-									horse.setStyle(Horse.Style.NONE);
-								} else if(num < 80) {
-									horse.setStyle(Horse.Style.WHITE);
-								} else if(num < 90) {
-									horse.setStyle(Horse.Style.WHITEFIELD);
-								} else if(num < 99) {
-									horse.setStyle(Horse.Style.WHITE_DOTS);
-								} else if(num < 100) {
-									horse.setStyle(Horse.Style.BLACK_DOTS);
-								}
-								horse.setColor(Horse.Color.CHESTNUT);
-								horse.getAttribute(Attribute.GENERIC_MOVEMENT_SPEED).setBaseValue(0.32);
-								ho.put(player, horse);
-							}
-							if(im.getDisplayName().equals(ChatColor.DARK_RED + "흑마")) {
-								player.getWorld().playSound(player.getLocation(), Sound.ENTITY_HORSE_GALLOP, 0.5f, 1.0f);
-								player.getWorld().playSound(player.getLocation(), Sound.ENTITY_HORSE_AMBIENT, 8.0f, 1.0f);
-								Horse horse = (Horse) player.getWorld().spawnEntity(player.getLocation(), EntityType.HORSE);
-								horse.setCustomName(ChatColor.GRAY + "" + player.getDisplayName() + "'s horse");
-								horse.setCustomNameVisible(true);
-								horse.setBreed(false);
-								horse.setMaxHealth(1);
-								horse.setNoDamageTicks(Integer.MAX_VALUE);
-								horse.setAdult();
-								horse.setTamed(true);
-								horse.setOwner(player);
-								horse.setRemoveWhenFarAway(true);
-								horse.getInventory().setSaddle(new ItemStack(Material.SADDLE));
-								ItemStack bar = new ItemStack(Material.WHITE_STAINED_GLASS_PANE);
-								ItemMeta barIm = bar.getItemMeta();
-								barIm.setDisplayName(ChatColor.RED + " ");
-								barIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-								barIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-								bar.setItemMeta(barIm);
-								horse.getInventory().setArmor(bar);
-								int num = rnd.nextInt(100);
-								if(num < 60) {
-									horse.setStyle(Horse.Style.NONE);
-								} else if(num < 80) {
-									horse.setStyle(Horse.Style.WHITE);
-								} else if(num < 90) {
-									horse.setStyle(Horse.Style.WHITEFIELD);
-								} else if(num < 99) {
-									horse.setStyle(Horse.Style.WHITE_DOTS);
-								} else if(num < 100) {
-									horse.setStyle(Horse.Style.BLACK_DOTS);
-								}
-								horse.setColor(Horse.Color.BLACK);
-								horse.getAttribute(Attribute.GENERIC_MOVEMENT_SPEED).setBaseValue(0.35);
-								ho.put(player, horse);
-							}
-							if(im.getDisplayName().equals(ChatColor.DARK_PURPLE + "백마")) {
-								player.getWorld().playSound(player.getLocation(), Sound.ENTITY_HORSE_GALLOP, 0.5f, 1.0f);
-								player.getWorld().playSound(player.getLocation(), Sound.ENTITY_HORSE_AMBIENT, 8.0f, 1.0f);
-								Horse horse = (Horse) player.getWorld().spawnEntity(player.getLocation(), EntityType.HORSE);
-								horse.setCustomName(ChatColor.GRAY + "" + player.getDisplayName() + "'s horse");
-								horse.setCustomNameVisible(true);
-								horse.setBreed(false);
-								horse.setMaxHealth(1);
-								horse.setNoDamageTicks(Integer.MAX_VALUE);
-								horse.setAdult();
-								horse.setTamed(true);
-								horse.setOwner(player);
-								horse.setRemoveWhenFarAway(true);
-								horse.getInventory().setSaddle(new ItemStack(Material.SADDLE));
-								ItemStack bar = new ItemStack(Material.WHITE_STAINED_GLASS_PANE);
-								ItemMeta barIm = bar.getItemMeta();
-								barIm.setDisplayName(ChatColor.RED + " ");
-								barIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-								barIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-								bar.setItemMeta(barIm);
-								horse.getInventory().setArmor(bar);
-								int num = rnd.nextInt(100);
-								if(num < 60) {
-									horse.setStyle(Horse.Style.NONE);
-								} else if(num < 80) {
-									horse.setStyle(Horse.Style.WHITE);
-								} else if(num < 90) {
-									horse.setStyle(Horse.Style.WHITEFIELD);
-								} else if(num < 99) {
-									horse.setStyle(Horse.Style.WHITE_DOTS);
-								} else if(num < 100) {
-									horse.setStyle(Horse.Style.BLACK_DOTS);
-								}
-								horse.setColor(Horse.Color.WHITE);
-								horse.getAttribute(Attribute.GENERIC_MOVEMENT_SPEED).setBaseValue(0.38);
-								ho.put(player, horse);
-							}
-						}
+						new HorseEvent(player, im);
 						event.setCancelled(true);
 						return;
 					}
@@ -8102,6 +7826,24 @@ public class Main extends JavaPlugin implements Listener{
 			}
 		} catch (Exception e) {
 
+		}
+		// 스크롤 사용
+		try {
+			EquipmentSlot e = event.getHand();
+			if (e.equals(EquipmentSlot.HAND)) {
+				Player player = event.getPlayer();
+				if ((event.getAction() == Action.RIGHT_CLICK_BLOCK || event.getAction() == Action.RIGHT_CLICK_AIR)) {
+					ItemStack item = player.getInventory().getItemInMainHand();
+					Material type = item.getType();
+					if((type == Material.CREEPER_BANNER_PATTERN) || (type == Material.FLOWER_BANNER_PATTERN) || (type == Material.GLOBE_BANNER_PATTERN)
+							|| (type == Material.MOJANG_BANNER_PATTERN) || (type == Material.PIGLIN_BANNER_PATTERN) || (type == Material.SKULL_BANNER_PATTERN)
+							|| (type == Material.PAINTING) || (type == Material.ACACIA_DOOR) || (type == Material.PAPER)  || (type == Material.IRON_HELMET)) {
+						new ScrollUseEvent(player, item, getDataFolder());
+					}
+				}
+			}
+		} catch(Exception e) {
+			
 		}
 		// 장비 착용
 		try {
@@ -9482,6 +9224,21 @@ public class Main extends JavaPlugin implements Listener{
 				    if (nearEntity.getType() != EntityType.PLAYER) { 
 				    	LivingEntity entity = (LivingEntity) nearEntity;
 				    	entity.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 40, 200, true, false, false));
+				    	entity.damage(num * 50);
+				    }        
+				}   
+			}
+			if(event.getEntity().getCustomName().substring(2).split("§")[0].equalsIgnoreCase("연어 인형+")) {
+				String name = event.getEntity().getCustomName().substring(15);
+				String numStr = name.split("]")[0];
+				int num = Integer.parseInt(numStr);
+				Location loc = event.getEntity().getLocation();
+				event.getEntity().getWorld().createExplosion(loc, 0, false, false);
+				List <Entity> entitylist = event.getEntity().getNearbyEntities (8, 5, 8); 
+				for (Entity nearEntity : entitylist) { 
+				    if (nearEntity.getType() != EntityType.PLAYER) { 
+				    	LivingEntity entity = (LivingEntity) nearEntity;
+				    	entity.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 80, 200, true, false, false));
 				    	entity.damage(num * 50);
 				    }        
 				}   
@@ -11111,9 +10868,9 @@ public class Main extends JavaPlugin implements Listener{
 						|| item1.getType() == Material.GOLDEN_HELMET || item1.getType() == Material.GOLDEN_CHESTPLATE || item1.getType() == Material.GOLDEN_LEGGINGS 
 						|| item1.getType() == Material.GOLDEN_BOOTS || item1.getType() == Material.DIAMOND_HELMET || item1.getType() == Material.DIAMOND_CHESTPLATE 
 						|| item1.getType() == Material.DIAMOND_LEGGINGS || item1.getType() == Material.DIAMOND_BOOTS || item1.getType() == Material.NETHERITE_HELMET 
-						|| item1.getType() == Material.NETHERITE_CHESTPLATE || item1.getType() == Material.NETHERITE_LEGGINGS || item1.getType() == Material.NETHERITE_BOOTS)
+						|| item1.getType() == Material.NETHERITE_CHESTPLATE || item1.getType() == Material.NETHERITE_LEGGINGS || item1.getType() == Material.NETHERITE_BOOTS
 						|| item1.getType() == Material.RABBIT_STEW || item1.getType() == Material.BEETROOT_SOUP || item1.getType() == Material.MUSHROOM_STEW
-						|| item1.getType() == Material.SUSPICIOUS_STEW || item1.getType() == Material.POTION || item1.getType() == Material.HONEY_BOTTLE) {
+						|| item1.getType() == Material.SUSPICIOUS_STEW || item1.getType() == Material.POTION || item1.getType() == Material.HONEY_BOTTLE)) {
 					LimitLevel la = new LimitLevel();
 					if(la.limit(player, item1) == false) {
 						player.sendMessage(ChatColor.RED + "아직 이 무기를 다루기에는 내 힘이 부족하다.");
@@ -11394,11 +11151,72 @@ public class Main extends JavaPlugin implements Listener{
 	
 	@EventHandler
 	public void chatEvent(AsyncPlayerChatEvent event) {
-//		Player player = event.getPlayer();
-//		String msg = event.getMessage();
-//		if(new RenameCraftingItem().renameCraftingItem(player, msg) == false) {
-//			event.setCancelled(true);
-//		}
+		Player player = event.getPlayer();
+		
+		String color = "§f§l";
+		String cl = "X";
+		if (player.getInventory().contains(Material.RED_DYE)) {
+			cl = "㨀";
+			color = "§e";
+		} else if (player.getInventory().contains(Material.GREEN_DYE)) {
+			cl = "㨁";
+			color = "§e";
+		} else if (player.getInventory().contains(Material.LAPIS_LAZULI)) {
+			cl = "㨂";
+			color = "§e";
+		} else if (player.getInventory().contains(Material.CYAN_DYE)) {
+			cl = "㨃";
+			color = "§e";
+		} else if (player.getInventory().contains(Material.LIGHT_GRAY_DYE)) {
+			cl = "㨄";
+			color = "§e";
+		} else if (player.getInventory().contains(Material.GRAY_DYE)) {
+			cl = "㨊";
+			color = "§b";
+		} else if (player.getInventory().contains(Material.PINK_DYE)) {
+			cl = "㨋";
+			color = "§b";
+		} else if (player.getInventory().contains(Material.LIME_DYE)) {
+			cl = "㨌";
+			color = "§b";
+		} else if (player.getInventory().contains(Material.YELLOW_DYE)) {
+			cl = "㨅";
+			color = "§d";
+		} else if (player.getInventory().contains(Material.LIGHT_BLUE_DYE)) {
+			cl = "㨆";
+			color = "§d";
+		} else if (player.getInventory().contains(Material.MAGENTA_DYE)) {
+			cl = "㨇";
+			color = "§d";
+		} else if (player.getInventory().contains(Material.ORANGE_DYE)) {
+			cl = "㨈";
+			color = "§d";
+		} else if (player.getInventory().contains(Material.BLUE_DYE)) {
+			cl = "㨎";
+			color = "§4";
+		} else if (player.getInventory().contains(Material.BROWN_DYE)) {
+			cl = "㨏";
+			color = "§4";
+		} else if (player.getInventory().contains(Material.BLACK_DYE)) {
+			cl = "㨐";
+			color = "§4";
+		} else if (player.getInventory().contains(Material.INK_SAC)) {
+			cl = "㨑";
+			color = "§4";
+		} else if (player.getInventory().contains(Material.CLAY_BALL)) {
+			cl = "㨉";
+			color = "§d";
+		} else if (player.getInventory().contains(Material.GLOWSTONE_DUST)) {
+			cl = "㨍";
+			color = "§4";
+		}
+		
+		for(Player p : Bukkit.getOnlinePlayers()) {
+			p.sendMessage(color + "[" + "§l" + cl + color + " Lv." + player.getLevel() + "] " + ChatColor.WHITE + player.getDisplayName()+ ": " + event.getMessage());
+		}
+		
+		event.setCancelled(true);
+		
 	}
 	
 	@EventHandler

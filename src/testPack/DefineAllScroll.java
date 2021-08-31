@@ -14,10 +14,10 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 public class DefineAllScroll {
 
-	public void effect(Player player, Item itemArg) {
+	public void effect(Player player, ItemStack itemArg) {
 		
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "전체 장비 감정서")) {
-			itemArg.remove();
+		if(itemArg.getItemMeta().getDisplayName().equals(ChatColor.WHITE + "장비 감정서")) {
+			itemArg.setAmount(itemArg.getAmount()-1);
 			for (ItemStack item : player.getInventory().getContents()) {
 				if(item == null) continue;
 				try {

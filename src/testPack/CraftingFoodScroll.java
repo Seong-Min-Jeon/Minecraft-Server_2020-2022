@@ -14,9 +14,9 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 public class CraftingFoodScroll {
 
-	public void openInv(Player player, Item itemArg) {
-		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "음식 제작 스크롤")) {
-			itemArg.remove();
+	public void openInv(Player player, ItemStack itemArg) {
+		if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "음식 제작 스크롤")) {
+			itemArg.setAmount(itemArg.getAmount()-1);
 			Inventory inv = Bukkit.createInventory(player, 27, "Crafting table");
 			ItemStack ok = new ItemStack(Material.SLIME_BALL);
 			ItemMeta okIm = ok.getItemMeta();

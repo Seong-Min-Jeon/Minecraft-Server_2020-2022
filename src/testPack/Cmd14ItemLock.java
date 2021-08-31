@@ -6,6 +6,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
@@ -60,21 +61,13 @@ public class Cmd14ItemLock implements CommandExecutor {
 							|| item.getType() == Material.SMOOTH_SANDSTONE_STAIRS || item.getType() == Material.SMOOTH_QUARTZ_STAIRS || item.getType() == Material.GRANITE_STAIRS)) {
 						if(item.hasItemMeta()) {
 							ItemMeta im = item.getItemMeta();
-							if(im.hasCustomModelData()) {
-								if(im.getCustomModelData() == 0) {
-									im.setCustomModelData(1);
-									item.setItemMeta(im);
-									player.sendMessage(ChatColor.GREEN + "Lock Complete!");
-									return true;
-								}
-								if(im.getCustomModelData() == 1) {
-									im.setCustomModelData(0);
-									item.setItemMeta(im);
-									player.sendMessage(ChatColor.GREEN + "Unlock Complete!");
-									return true;
-								}
-							} else {
-								im.setCustomModelData(1);
+							if(im.getItemFlags().contains(ItemFlag.HIDE_DESTROYS)) {
+								im = setLock(im);
+								item.setItemMeta(im);
+								player.sendMessage(ChatColor.GREEN + "Unlock Complete!");
+								return true;
+							} else if(!im.getItemFlags().contains(ItemFlag.HIDE_DESTROYS)) {
+								im = setLock(im);
 								item.setItemMeta(im);
 								player.sendMessage(ChatColor.GREEN + "Lock Complete!");
 								return true;
@@ -98,5 +91,14 @@ public class Cmd14ItemLock implements CommandExecutor {
 		return true;
 	}
 
-
+	public ItemMeta setLock(ItemMeta im) {
+		if(im.getItemFlags().contains(ItemFlag.HIDE_DESTROYS)) {
+			im.removeItemFlags(ItemFlag.HIDE_DESTROYS);
+		} else {
+			im.addItemFlags(ItemFlag.HIDE_DESTROYS);
+		}
+		
+		return im;
+	}
+	
 }

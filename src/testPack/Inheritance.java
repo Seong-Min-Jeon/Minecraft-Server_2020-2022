@@ -51,430 +51,430 @@ public class Inheritance {
 		folder = f;
 	}
 	
-	public void useScroll(Player player, Item itemArg) {
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "약쟁이의 계승자 스크롤")) {
+	public void useScroll(Player player, ItemStack itemArg) {
+		if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "약쟁이의 계승자 스크롤")) {
 			changeInheritance(player, 1, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "마녀의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "마녀의 계승자 스크롤")) {
 			changeInheritance(player, 2, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "술꾼의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "술꾼의 계승자 스크롤")) {
 			changeInheritance(player, 3, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "미꾸라지의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "미꾸라지의 계승자 스크롤")) {
 			changeInheritance(player, 4, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "연기의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "연기의 계승자 스크롤")) {
 			changeInheritance(player, 5, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "기쁨의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "기쁨의 계승자 스크롤")) {
 			changeInheritance(player, 6, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "행운의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "행운의 계승자 스크롤")) {
 			changeInheritance(player, 7, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "일꾼의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "일꾼의 계승자 스크롤")) {
 			changeInheritance(player, 8, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "럭키의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "럭키의 계승자 스크롤")) {
 			changeInheritance(player, 9, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "기적의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "기적의 계승자 스크롤")) {
 			changeInheritance(player, 10, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "씨앗의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "씨앗의 계승자 스크롤")) {
 			changeInheritance(player, 11, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "떡잎의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "떡잎의 계승자 스크롤")) {
 			changeInheritance(player, 12, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "풀잎의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "풀잎의 계승자 스크롤")) {
 			changeInheritance(player, 13, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "거목의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "거목의 계승자 스크롤")) {
 			changeInheritance(player, 14, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "모기의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "모기의 계승자 스크롤")) {
 			changeInheritance(player, 15, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "흡혈귀의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "흡혈귀의 계승자 스크롤")) {
 			changeInheritance(player, 16, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "불의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "불의 계승자 스크롤")) {
 			changeInheritance(player, 17, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "화염의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "화염의 계승자 스크롤")) {
 			changeInheritance(player, 18, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "용암의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "용암의 계승자 스크롤")) {
 			changeInheritance(player, 19, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "파동의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "파동의 계승자 스크롤")) {
 			changeInheritance(player, 20, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "TNTZ의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "TNTZ의 계승자 스크롤")) {
 			changeInheritance(player, 21, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "크리퍼의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "크리퍼의 계승자 스크롤")) {
 			changeInheritance(player, 22, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "검의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "검의 계승자 스크롤")) {
 			changeInheritance(player, 23, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "초보 전사의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "초보 전사의 계승자 스크롤")) {
 			changeInheritance(player, 24, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "용병 전사의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "용병 전사의 계승자 스크롤")) {
 			changeInheritance(player, 25, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "상급 전사의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "상급 전사의 계승자 스크롤")) {
 			changeInheritance(player, 26, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "일류 전사의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "일류 전사의 계승자 스크롤")) {
 			changeInheritance(player, 27, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "대 전사의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "대 전사의 계승자 스크롤")) {
 			changeInheritance(player, 28, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "마스터 전사의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "마스터 전사의 계승자 스크롤")) {
 			changeInheritance(player, 29, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "그랜드마스터 전사의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "챌린저 전사의 계승자 스크롤")) {
 			changeInheritance(player, 30, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "투왕의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "투왕의 계승자 스크롤")) {
 			changeInheritance(player, 31, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_PURPLE + "아레스의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_PURPLE + "아레스의 계승자 스크롤")) {
 			changeInheritance(player, 32, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "초보 헌터의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "초보 헌터의 계승자 스크롤")) {
 			changeInheritance(player, 33, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "용병 헌터의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "용병 헌터의 계승자 스크롤")) {
 			changeInheritance(player, 34, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "상급 헌터의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "상급 헌터의 계승자 스크롤")) {
 			changeInheritance(player, 35, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "일류 헌터의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "일류 헌터의 계승자 스크롤")) {
 			changeInheritance(player, 36, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "대 헌터의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "대 헌터의 계승자 스크롤")) {
 			changeInheritance(player, 37, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "마스터 헌터의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "마스터 헌터의 계승자 스크롤")) {
 			changeInheritance(player, 38, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "그랜드마스터 헌터의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "챌린저 헌터의 계승자 스크롤")) {
 			changeInheritance(player, 39, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "패왕의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "패왕의 계승자 스크롤")) {
 			changeInheritance(player, 40, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_PURPLE + "아르테미스의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_PURPLE + "아르테미스의 계승자 스크롤")) {
 			changeInheritance(player, 41, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "무덤의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "무덤의 계승자 스크롤")) {
 			changeInheritance(player, 42, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "원시의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "원시의 계승자 스크롤")) {
 			changeInheritance(player, 43, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "멧돼지의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "멧돼지의 계승자 스크롤")) {
 			changeInheritance(player, 44, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "철의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "철의 계승자 스크롤")) {
 			changeInheritance(player, 45, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "원자력의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "원자력의 계승자 스크롤")) {
 			changeInheritance(player, 46, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "넬의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "넬의 계승자 스크롤")) {
 			changeInheritance(player, 47, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "딘의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "딘의 계승자 스크롤")) {
 			changeInheritance(player, 48, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "야수의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "야수의 계승자 스크롤")) {
 			changeInheritance(player, 49, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "마수의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "마수의 계승자 스크롤")) {
 			changeInheritance(player, 50, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "도박사의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "도박사의 계승자 스크롤")) {
 			changeInheritance(player, 51, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "어부의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "어부의 계승자 스크롤")) {
 			changeInheritance(player, 52, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "화신의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "화신의 계승자 스크롤")) {
 			changeInheritance(player, 53, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "대천사장의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "대천사장의 계승자 스크롤")) {
 			changeInheritance(player, 54, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "날개의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "날개의 계승자 스크롤")) {
 			changeInheritance(player, 55, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "주사위의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "주사위의 계승자 스크롤")) {
 			changeInheritance(player, 56, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "흥의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "흥의 계승자 스크롤")) {
 			changeInheritance(player, 57, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "까마귀의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "까마귀의 계승자 스크롤")) {
 			changeInheritance(player, 58, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "그림자의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "그림자의 계승자 스크롤")) {
 			changeInheritance(player, 59, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "호흡의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "호흡의 계승자 스크롤")) {
 			changeInheritance(player, 60, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "투창의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "투창의 계승자 스크롤")) {
 			changeInheritance(player, 61, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "포식의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "포식의 계승자 스크롤")) {
 			changeInheritance(player, 62, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "파편의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "파편의 계승자 스크롤")) {
 			changeInheritance(player, 63, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "붕대의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "붕대의 계승자 스크롤")) {
 			changeInheritance(player, 64, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "푸른 영혼의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "푸른 영혼의 계승자 스크롤")) {
 			changeInheritance(player, 65, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "붉은 영혼의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "붉은 영혼의 계승자 스크롤")) {
 			changeInheritance(player, 66, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "영혼의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "영혼의 계승자 스크롤")) {
 			changeInheritance(player, 67, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "속사의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "속사의 계승자 스크롤")) {
 			changeInheritance(player, 68, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "집중의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "집중의 계승자 스크롤")) {
 			changeInheritance(player, 69, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "거미 눈의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "거미 눈의 계승자 스크롤")) {
 			changeInheritance(player, 70, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "거미 이빨의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "거미 이빨의 계승자 스크롤")) {
 			changeInheritance(player, 71, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "거미 갑주의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "거미 갑주의 계승자 스크롤")) {
 			changeInheritance(player, 72, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "산성의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "산성의 계승자 스크롤")) {
 			changeInheritance(player, 73, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "독의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "독의 계승자 스크롤")) {
 			changeInheritance(player, 74, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "포보르 피의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "포보르 피의 계승자 스크롤")) {
 			changeInheritance(player, 75, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "포보르 쓸개의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "포보르 쓸개의 계승자 스크롤")) {
 			changeInheritance(player, 76, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "포보르 살점의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "포보르 살점의 계승자 스크롤")) {
 			changeInheritance(player, 77, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "포보르 간의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "포보르 간의 계승자 스크롤")) {
 			changeInheritance(player, 78, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "위더의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "위더의 계승자 스크롤")) {
 			changeInheritance(player, 79, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "광부의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "광부의 계승자 스크롤")) {
 			changeInheritance(player, 80, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "농부의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "농부의 계승자 스크롤")) {
 			changeInheritance(player, 81, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "도살자의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "도살자의 계승자 스크롤")) {
 			changeInheritance(player, 82, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "상급 대장장이의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "상급 대장장이의 계승자 스크롤")) {
 			changeInheritance(player, 83, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "마스터 대장장이의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "일류 대장장이의 계승자 스크롤")) {
 			changeInheritance(player, 84, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "그랜드마스터 대장장이의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "신의 대장장이의 계승자 스크롤")) {
 			changeInheritance(player, 85, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "상급 약사의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "상급 약사의 계승자 스크롤")) {
 			changeInheritance(player, 86, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "마스터 약사의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "일류 약사의 계승자 스크롤")) {
 			changeInheritance(player, 87, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "그랜드마스터 약사의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "신의 약사의 계승자 스크롤")) {
 			changeInheritance(player, 88, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "상급 요리사의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "상급 요리사의 계승자 스크롤")) {
 			changeInheritance(player, 89, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "마스터 요리사의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "일류 요리사의 계승자 스크롤")) {
 			changeInheritance(player, 90, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "그랜드마스터 요리사의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "신의 요리사의 계승자 스크롤")) {
 			changeInheritance(player, 91, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "고블린의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "고블린의 계승자 스크롤")) {
 			changeInheritance(player, 92, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "상인 고블린의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "상인 고블린의 계승자 스크롤")) {
 			changeInheritance(player, 93, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "거상 고블린의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "거상 고블린의 계승자 스크롤")) {
 			changeInheritance(player, 94, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "갑부 고블린의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "갑부 고블린의 계승자 스크롤")) {
 			changeInheritance(player, 95, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "탐욕의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "탐욕의 계승자 스크롤")) {
 			changeInheritance(player, 96, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "유혹의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "유혹의 계승자 스크롤")) {
 			changeInheritance(player, 97, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "매혹의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "매혹의 계승자 스크롤")) {
 			changeInheritance(player, 98, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "고혹의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "고혹의 계승자 스크롤")) {
 			changeInheritance(player, 99, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_PURPLE + "태양의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_PURPLE + "태양의 계승자 스크롤")) {
 			changeInheritance(player, 100, itemArg);
-		} else if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_PURPLE + "달의 계승자 스크롤")) {
+		} else if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_PURPLE + "달의 계승자 스크롤")) {
 			changeInheritance(player, 101, itemArg);
 		}
 		
-		if(itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "계승 반환 스크롤")) {
+		if(itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_RED + "계승 반환 스크롤")) {
 			boolean ret = returnInheritance(player);
 			if(ret) {
-				itemArg.remove();
+				itemArg.setAmount(itemArg.getAmount()-1);
 			}
 		}
 	}
 	
-	public void changeInheritance(Player player, int num, Item itemArg) {
+	public void changeInheritance(Player player, int num, ItemStack itemArg) {
 		map.put(player, num);
 		if(itemArg != null) {
-			itemArg.remove();
+			itemArg.setAmount(itemArg.getAmount()-1);
 			saveFile(player);
 		}
  
 		if(map.get(player) == 0) {
 			NametagEdit.getApi().setPrefix(player, null);
 		} else if(map.get(player) == 1) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + ChatColor.YELLOW + "" + ChatColor.BOLD + "[약쟁이] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[약쟁이] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 2) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[마녀] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[마녀] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 3) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[술꾼] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[술꾼] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 4) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[미꾸라지] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[미꾸라지] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 5) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[연기] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[연기] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 6) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[기쁨] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[기쁨] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 7) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[행운] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[행운] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 8) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[일꾼] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[일꾼] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 9) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[럭키] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[럭키] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 10) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[기적] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[기적] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 11) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[씨앗] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[씨앗] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 12) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[떡잎] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[떡잎] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 13) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[풀잎] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[풀잎] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 14) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[거목] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[거목] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 15) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[모기] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[모기] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 16) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[흡혈귀] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[흡혈귀] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 17) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[불] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[불] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 18) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[화염] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[화염] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 19) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[용암] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[용암] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 20) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[파동] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[파동] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 21) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[TNTZ] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[TNTZ] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 22) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[크리퍼] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[크리퍼] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 23) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[검] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[검] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 24) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[초보 전사] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[초보 전사] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 25) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[용병 전사] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[용병 전사] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 26) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[상급 전사] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[상급 전사] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 27) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[일류 전사] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[일류 전사] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 28) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[대 전사] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[대 전사] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 29) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[마스터 전사] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[마스터 전사] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 30) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_RED + "" + ChatColor.BOLD + "[그랜드마스터 전사] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_RED + "" + ChatColor.BOLD + "[챌린저 전사] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 31) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_RED + "" + ChatColor.BOLD + "[투왕] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_RED + "" + ChatColor.BOLD + "[투왕] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 32) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "[아레스] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "[아레스] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 33) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[초보 헌터] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[초보 헌터] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 34) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[용병 헌터] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[용병 헌터] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 35) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[상급 헌터] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[상급 헌터] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 36) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[일류 헌터] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[일류 헌터] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 37) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[대 헌터] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[대 헌터] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 38) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[마스터 헌터] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[마스터 헌터] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 39) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_RED + "" + ChatColor.BOLD + "[그랜드마스터 헌터] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_RED + "" + ChatColor.BOLD + "[챌린저 헌터] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 40) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_RED + "" + ChatColor.BOLD + "[패왕] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_RED + "" + ChatColor.BOLD + "[패왕] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 41) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "[아르테미스] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "[아르테미스] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 42) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[무덤] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[무덤] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 43) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[원시] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[원시] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 44) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[멧돼지] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[멧돼지] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 45) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[철] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[철] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 46) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[원자력] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[원자력] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 47) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[넬] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[넬] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 48) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[딘] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[딘] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 49) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[야수] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[야수] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 50) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[마수] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[마수] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 51) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[도박사] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[도박사] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 52) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_RED + "" + ChatColor.BOLD + "[어부] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_RED + "" + ChatColor.BOLD + "[어부] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 53) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[화신] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[화신] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 54) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[대천사장] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[대천사장] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 55) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_RED + "" + ChatColor.BOLD + "[날개] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_RED + "" + ChatColor.BOLD + "[날개] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 56) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[주사위] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[주사위] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 57) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_RED + "" + ChatColor.BOLD + "[흥] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_RED + "" + ChatColor.BOLD + "[흥] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 58) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[까마귀] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[까마귀] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 59) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[그림자] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[그림자] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 60) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[호흡] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[호흡] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 61) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[투창] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[투창] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 62) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[포식] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[포식] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 63) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[파편] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[파편] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 64) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[붕대] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[붕대] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 65) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[푸른 영혼] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[푸른 영혼] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 66) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[붉은 영혼] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[붉은 영혼] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 67) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[영혼] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[영혼] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 68) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[속사] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[속사] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 69) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[집중] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[집중] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 70) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[거미 눈] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[거미 눈] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 71) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[거미 이빨] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[거미 이빨] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 72) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[거미 갑주] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[거미 갑주] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 73) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[산성] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[산성] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 74) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[독] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[독] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 75) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[포보르 피] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[포보르 피] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 76) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[포보르 쓸개] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.YELLOW + "" + ChatColor.BOLD + "[포보르 쓸개] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 77) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[포보르 살점] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[포보르 살점] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 78) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[포보르 간] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[포보르 간] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 79) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[위더] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[위더] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 80) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[광부] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[광부] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 81) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[농부] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[농부] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 82) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[도살자] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[도살자] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 83) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[상급 대장장이] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[상급 대장장이] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 84) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[마스터 대장장이] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[일류 대장장이] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 85) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_RED + "" + ChatColor.BOLD + "[그랜드마스터 대장장이] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_RED + "" + ChatColor.BOLD + "[신의 대장장이] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 86) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[상급 약사] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[상급 약사] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 87) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[마스터 약사] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[일류 약사] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 88) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_RED + "" + ChatColor.BOLD + "[그랜드마스터 약사] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_RED + "" + ChatColor.BOLD + "[신의 약사] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 89) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[상급 요리사] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[상급 요리사] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 90) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[마스터 요리사] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[일류 요리사] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 91) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_RED + "" + ChatColor.BOLD + "[그랜드마스터 요리사] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_RED + "" + ChatColor.BOLD + "[신의 요리사] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 92) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[고블린] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[고블린] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 93) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[상인 고블린] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "[상인 고블린] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 94) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[거상 고블린] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[거상 고블린] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 95) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[갑부 고블린] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[갑부 고블린] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 96) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_RED + "" + ChatColor.BOLD + "[탐욕] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_RED + "" + ChatColor.BOLD + "[탐욕] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 97) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[유혹] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[유혹] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 98) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[매혹] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.AQUA + "" + ChatColor.BOLD + "[매혹] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 99) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_RED + "" + ChatColor.BOLD + "[고혹] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_RED + "" + ChatColor.BOLD + "[고혹] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 100) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "[태양] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "[태양] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		} else if(map.get(player) == 101) {
-			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "[달] " + ChatColor.WHITE);
+			NametagEdit.getApi().setPrefix(player, ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "[달] " + ChatColor.RESET + "" + ChatColor.WHITE);
 		}
 	}
 	
@@ -483,207 +483,207 @@ public class Inheritance {
 		if(num == 0) {
 			return false;
 		} else if(num == 1) {
-			s1();
+			player.getInventory().addItem(s1());
 		} else if(num == 2) {
-			s2();
+			player.getInventory().addItem(s2());
 		} else if(num == 3) {
-			s3();
+			player.getInventory().addItem(s3());
 		} else if(num == 4) {
-			s4();
+			player.getInventory().addItem(s4());
 		} else if(num == 5) {
-			s5();
+			player.getInventory().addItem(s5());
 		} else if(num == 6) {
-			s6();
+			player.getInventory().addItem(s6());
 		} else if(num == 7) {
-			s7();
+			player.getInventory().addItem(s7());
 		} else if(num == 8) {
-			s8();
+			player.getInventory().addItem(s8());
 		} else if(num == 9) {
-			s9();
+			player.getInventory().addItem(s9());
 		} else if(num == 10) {
-			s10();
+			player.getInventory().addItem(s10());
 		} else if(num == 11) {
-			s11();
+			player.getInventory().addItem(s11());
 		} else if(num == 12) {
-			s12();
+			player.getInventory().addItem(s12());
 		} else if(num == 13) {
-			s13();
+			player.getInventory().addItem(s13());
 		} else if(num == 14) {
-			s14();
+			player.getInventory().addItem(s14());
 		} else if(num == 15) {
-			s15();
+			player.getInventory().addItem(s15());
 		} else if(num == 16) {
-			s16();
+			player.getInventory().addItem(s16());
 		} else if(num == 17) {
-			s17();
+			player.getInventory().addItem(s17());
 		} else if(num == 18) {
-			s18();
+			player.getInventory().addItem(s18());
 		} else if(num == 19) {
-			s19();
+			player.getInventory().addItem(s19());
 		} else if(num == 20) {
-			s20();
+			player.getInventory().addItem(s20());
 		} else if(num == 21) {
-			s21();
+			player.getInventory().addItem(s21());
 		} else if(num == 22) {
-			s22();
+			player.getInventory().addItem(s22());
 		} else if(num == 23) {
-			s23();
+			player.getInventory().addItem(s23());
 		} else if(num == 24) {
-			s24();
+			player.getInventory().addItem(s24());
 		} else if(num == 25) {
-			s25();
+			player.getInventory().addItem(s25());
 		} else if(num == 26) {
-			s26();
+			player.getInventory().addItem(s26());
 		} else if(num == 27) {
-			s27();
+			player.getInventory().addItem(s27());
 		} else if(num == 28) {
-			s28();
+			player.getInventory().addItem(s28());
 		} else if(num == 29) {
-			s29();
+			player.getInventory().addItem(s29());
 		} else if(num == 30) {
-			s30();
+			player.getInventory().addItem(s30());
 		} else if(num == 31) {
-			s31();
+			player.getInventory().addItem(s31());
 		} else if(num == 32) {
-			s32();
+			player.getInventory().addItem(s32());
 		} else if(num == 33) {
-			s33();
+			player.getInventory().addItem(s33());
 		} else if(num == 34) {
-			s34();
+			player.getInventory().addItem(s34());
 		} else if(num == 35) {
-			s35();
+			player.getInventory().addItem(s35());
 		} else if(num == 36) {
-			s36();
+			player.getInventory().addItem(s36());
 		} else if(num == 37) {
-			s37();
+			player.getInventory().addItem(s37());
 		} else if(num == 38) {
-			s38();
+			player.getInventory().addItem(s38());
 		} else if(num == 39) {
-			s39();
+			player.getInventory().addItem(s39());
 		} else if(num == 40) {
-			s40();
+			player.getInventory().addItem(s40());
 		} else if(num == 41) {
-			s41();
+			player.getInventory().addItem(s41());
 		} else if(num == 42) {
-			s42();
+			player.getInventory().addItem(s42());
 		} else if(num == 43) {
-			s43();
+			player.getInventory().addItem(s43());
 		} else if(num == 44) {
-			s44();
+			player.getInventory().addItem(s44());
 		} else if(num == 45) {
-			s45();
+			player.getInventory().addItem(s45());
 		} else if(num == 46) {
-			s46();
+			player.getInventory().addItem(s46());
 		} else if(num == 47) {
-			s47();
+			player.getInventory().addItem(s47());
 		} else if(num == 48) {
-			s48();
+			player.getInventory().addItem(s48());
 		} else if(num == 49) {
-			s49();
+			player.getInventory().addItem(s49());
 		} else if(num == 50) {
-			s50();
+			player.getInventory().addItem(s50());
 		} else if(num == 51) {
-			s51();
+			player.getInventory().addItem(s51());
 		} else if(num == 52) {
-			s52();
+			player.getInventory().addItem(s52());
 		} else if(num == 53) {
-			s53();
+			player.getInventory().addItem(s53());
 		} else if(num == 54) {
-			s54();
+			player.getInventory().addItem(s54());
 		} else if(num == 55) {
-			s55();
+			player.getInventory().addItem(s55());
 		} else if(num == 56) {
-			s56();
+			player.getInventory().addItem(s56());
 		} else if(num == 57) {
-			s57();
+			player.getInventory().addItem(s57());
 		} else if(num == 58) {
-			s58();
+			player.getInventory().addItem(s58());
 		} else if(num == 59) {
-			s59();
+			player.getInventory().addItem(s59());
 		} else if(num == 60) {
-			s60();
+			player.getInventory().addItem(s60());
 		} else if(num == 61) {
-			s61();
+			player.getInventory().addItem(s61());
 		} else if(num == 62) {
-			s62();
+			player.getInventory().addItem(s62());
 		} else if(num == 63) {
-			s63();
+			player.getInventory().addItem(s63());
 		} else if(num == 64) {
-			s64();
+			player.getInventory().addItem(s64());
 		} else if(num == 65) {
-			s65();
+			player.getInventory().addItem(s65());
 		} else if(num == 66) {
-			s66();
+			player.getInventory().addItem(s66());
 		} else if(num == 67) {
-			s67();
+			player.getInventory().addItem(s67());
 		} else if(num == 68) {
-			s68();
+			player.getInventory().addItem(s68());
 		} else if(num == 69) {
-			s69();
+			player.getInventory().addItem(s69());
 		} else if(num == 70) {
-			s70();
+			player.getInventory().addItem(s70());
 		} else if(num == 71) {
-			s71();
+			player.getInventory().addItem(s71());
 		} else if(num == 72) {
-			s72();
+			player.getInventory().addItem(s72());
 		} else if(num == 73) {
-			s73();
+			player.getInventory().addItem(s73());
 		} else if(num == 74) {
-			s74();
+			player.getInventory().addItem(s74());
 		} else if(num == 75) {
-			s75();
+			player.getInventory().addItem(s75());
 		} else if(num == 76) {
-			s76();
+			player.getInventory().addItem(s76());
 		} else if(num == 77) {
-			s77();
+			player.getInventory().addItem(s77());
 		} else if(num == 78) {
-			s78();
+			player.getInventory().addItem(s78());
 		} else if(num == 79) {
-			s79();
+			player.getInventory().addItem(s79());
 		} else if(num == 80) {
-			s80();
+			player.getInventory().addItem(s80());
 		} else if(num == 81) {
-			s81();
+			player.getInventory().addItem(s81());
 		} else if(num == 82) {
-			s82();
+			player.getInventory().addItem(s82());
 		} else if(num == 83) {
-			s83();
+			player.getInventory().addItem(s83());
 		} else if(num == 84) {
-			s84();
+			player.getInventory().addItem(s84());
 		} else if(num == 85) {
-			s85();
+			player.getInventory().addItem(s85());
 		} else if(num == 86) {
-			s86();
+			player.getInventory().addItem(s86());
 		} else if(num == 87) {
-			s87();
+			player.getInventory().addItem(s87());
 		} else if(num == 88) {
-			s88();
+			player.getInventory().addItem(s88());
 		} else if(num == 89) {
-			s89();
+			player.getInventory().addItem(s89());
 		} else if(num == 90) {
-			s90();
+			player.getInventory().addItem(s90());
 		} else if(num == 91) {
-			s91();
+			player.getInventory().addItem(s91());
 		} else if(num == 92) {
-			s92();
+			player.getInventory().addItem(s92());
 		} else if(num == 93) {
-			s93();
+			player.getInventory().addItem(s93());
 		} else if(num == 94) {
-			s94();
+			player.getInventory().addItem(s94());
 		} else if(num == 95) {
-			s95();
+			player.getInventory().addItem(s95());
 		} else if(num == 96) {
-			s96();
+			player.getInventory().addItem(s96());
 		} else if(num == 97) {
-			s97();
+			player.getInventory().addItem(s97());
 		} else if(num == 98) {
-			s98();
+			player.getInventory().addItem(s98());
 		} else if(num == 99) {
-			s99();
+			player.getInventory().addItem(s99());
 		} else if(num == 100) {
-			s100();
+			player.getInventory().addItem(s100());
 		} else if(num == 101) {
-			s101();
+			player.getInventory().addItem(s101());
 		}
 		
 		changeInheritance(player, 0, null);
@@ -1378,9 +1378,9 @@ public class Inheritance {
     public ItemStack s30() {
     	ItemStack scroll = new ItemStack(Material.SKULL_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.DARK_RED + "그랜드마스터 전사의 계승자 스크롤");
+		scrollIm.setDisplayName(ChatColor.DARK_RED + "챌린저 전사의 계승자 스크롤");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "그랜드마스터 전사의 힘을 계승받을 수 있는 스크롤");
+		scrollLore.add(ChatColor.GRAY + "챌린저 전사의 힘을 계승받을 수 있는 스크롤");
 		scrollLore.add(ChatColor.GRAY + "사용하면 기존에 계승받던 힘이 사라지니 주의하자.");
 		scrollLore.add(ChatColor.GRAY + " ");
 		scrollLore.add(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "•───계승의 힘───•");
@@ -1558,9 +1558,9 @@ public class Inheritance {
     public ItemStack s39() {
     	ItemStack scroll = new ItemStack(Material.SKULL_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.DARK_RED + "그랜드마스터 헌터의 계승자 스크롤");
+		scrollIm.setDisplayName(ChatColor.DARK_RED + "챌린저 헌터의 계승자 스크롤");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "그랜드마스터 헌터의 힘을 계승받을 수 있는 스크롤");
+		scrollLore.add(ChatColor.GRAY + "챌린저 헌터의 힘을 계승받을 수 있는 스크롤");
 		scrollLore.add(ChatColor.GRAY + "사용하면 기존에 계승받던 힘이 사라지니 주의하자.");
 		scrollLore.add(ChatColor.GRAY + " ");
 		scrollLore.add(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "•───계승의 힘───•");
@@ -2460,9 +2460,9 @@ public class Inheritance {
     public ItemStack s84() {
     	ItemStack scroll = new ItemStack(Material.SKULL_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.AQUA + "마스터 대장장이의 계승자 스크롤");
+		scrollIm.setDisplayName(ChatColor.AQUA + "일류 대장장이의 계승자 스크롤");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "마스터 대장장이의 힘을 계승받을 수 있는 스크롤");
+		scrollLore.add(ChatColor.GRAY + "일류 대장장이의 힘을 계승받을 수 있는 스크롤");
 		scrollLore.add(ChatColor.GRAY + "사용하면 기존에 계승받던 힘이 사라지니 주의하자.");
 		scrollLore.add(ChatColor.GRAY + " ");
 		scrollLore.add(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "•───계승의 힘───•");
@@ -2480,9 +2480,9 @@ public class Inheritance {
     public ItemStack s85() {
     	ItemStack scroll = new ItemStack(Material.SKULL_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.DARK_RED + "그랜드마스터 대장장이의 계승자 스크롤");
+		scrollIm.setDisplayName(ChatColor.DARK_RED + "신의 대장장이의 계승자 스크롤");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "그랜드마스터 대장장이의 힘을 계승받을 수 있는 스크롤");
+		scrollLore.add(ChatColor.GRAY + "신의 대장장이의 힘을 계승받을 수 있는 스크롤");
 		scrollLore.add(ChatColor.GRAY + "사용하면 기존에 계승받던 힘이 사라지니 주의하자.");
 		scrollLore.add(ChatColor.GRAY + " ");
 		scrollLore.add(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "•───계승의 힘───•");
@@ -2520,9 +2520,9 @@ public class Inheritance {
     public ItemStack s87() {
     	ItemStack scroll = new ItemStack(Material.SKULL_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.AQUA + "마스터 약사의 계승자 스크롤");
+		scrollIm.setDisplayName(ChatColor.AQUA + "일류 약사의 계승자 스크롤");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "마스터 약사의 힘을 계승받을 수 있는 스크롤");
+		scrollLore.add(ChatColor.GRAY + "일류 약사의 힘을 계승받을 수 있는 스크롤");
 		scrollLore.add(ChatColor.GRAY + "사용하면 기존에 계승받던 힘이 사라지니 주의하자.");
 		scrollLore.add(ChatColor.GRAY + " ");
 		scrollLore.add(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "•───계승의 힘───•");
@@ -2540,9 +2540,9 @@ public class Inheritance {
     public ItemStack s88() {
     	ItemStack scroll = new ItemStack(Material.SKULL_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.DARK_RED + "그랜드마스터 약사의 계승자 스크롤");
+		scrollIm.setDisplayName(ChatColor.DARK_RED + "신의 약사의 계승자 스크롤");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "그랜드마스터 약사의 힘을 계승받을 수 있는 스크롤");
+		scrollLore.add(ChatColor.GRAY + "신의 약사의 힘을 계승받을 수 있는 스크롤");
 		scrollLore.add(ChatColor.GRAY + "사용하면 기존에 계승받던 힘이 사라지니 주의하자.");
 		scrollLore.add(ChatColor.GRAY + " ");
 		scrollLore.add(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "•───계승의 힘───•");
@@ -2580,9 +2580,9 @@ public class Inheritance {
     public ItemStack s90() {
     	ItemStack scroll = new ItemStack(Material.SKULL_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.AQUA + "마스터 요리사의 계승자 스크롤");
+		scrollIm.setDisplayName(ChatColor.AQUA + "일류 요리사의 계승자 스크롤");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "마스터 요리사의 힘을 계승받을 수 있는 스크롤");
+		scrollLore.add(ChatColor.GRAY + "일류 요리사의 힘을 계승받을 수 있는 스크롤");
 		scrollLore.add(ChatColor.GRAY + "사용하면 기존에 계승받던 힘이 사라지니 주의하자.");
 		scrollLore.add(ChatColor.GRAY + " ");
 		scrollLore.add(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "•───계승의 힘───•");
@@ -2600,9 +2600,9 @@ public class Inheritance {
     public ItemStack s91() {
     	ItemStack scroll = new ItemStack(Material.SKULL_BANNER_PATTERN);
 		ItemMeta scrollIm = scroll.getItemMeta();
-		scrollIm.setDisplayName(ChatColor.DARK_RED + "그랜드마스터 요리사의 계승자 스크롤");
+		scrollIm.setDisplayName(ChatColor.DARK_RED + "신의 요리사의 계승자 스크롤");
 		ArrayList<String> scrollLore = new ArrayList();
-		scrollLore.add(ChatColor.GRAY + "그랜드마스터 요리사의 힘을 계승받을 수 있는 스크롤");
+		scrollLore.add(ChatColor.GRAY + "신의 요리사의 힘을 계승받을 수 있는 스크롤");
 		scrollLore.add(ChatColor.GRAY + "사용하면 기존에 계승받던 힘이 사라지니 주의하자.");
 		scrollLore.add(ChatColor.GRAY + " ");
 		scrollLore.add(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "•───계승의 힘───•");

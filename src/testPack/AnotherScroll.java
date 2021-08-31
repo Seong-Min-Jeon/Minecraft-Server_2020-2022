@@ -23,7 +23,7 @@ public class AnotherScroll {
 	
 	private int taskID;
 
-	public void effect(Player player, Item itemArg) {
+	public void effect(Player player, ItemStack itemArg) {
 		World world = player.getWorld();
 		questRemoveScroll(player, itemArg, world);
 		mapPaper(player, itemArg, world);
@@ -33,15 +33,15 @@ public class AnotherScroll {
 		sweepingRemove(player, itemArg, world);
 	}
 	
-	public void questRemoveScroll(Player player, Item itemArg, World world) {	
-		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "퀘스트 제거 스크롤")) {
+	public void questRemoveScroll(Player player, ItemStack itemArg, World world) {	
+		if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "퀘스트 제거 스크롤")) {
 			player.setScoreboard(Bukkit.getScoreboardManager().getNewScoreboard());
-			itemArg.remove();
+			itemArg.setAmount(itemArg.getAmount()-1);
 		}	
 	}
 	
-	public void mapPaper(Player player, Item itemArg, World world) {	
-		if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "지도용 종이")) {
+	public void mapPaper(Player player, ItemStack itemArg, World world) {	
+		if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "지도용 종이")) {
 			Location loc = player.getLocation();
 			if(loc.getX() > 3500 || loc.getZ() > 3500 || loc.getX() < -3500 || loc.getZ() < -3500) {
 				player.sendMessage(ChatColor.RED + "사용불가 지역입니다.");
@@ -63,16 +63,16 @@ public class AnotherScroll {
 			mm.setMapView(map);
 			item.setItemMeta(mm);
 			player.getInventory().addItem(item);
-			itemArg.remove();
+			itemArg.setAmount(itemArg.getAmount()-1);
 		}	
 	}
 	
-	public void levelUpScroll(Player player, Item itemArg, World world) {	
+	public void levelUpScroll(Player player, ItemStack itemArg, World world) {	
 		try {
-			if (itemArg.getItemStack().getItemMeta().getDisplayName().substring(0,9).equalsIgnoreCase(ChatColor.DARK_RED + "레벨업 스크롤")) {
-				itemArg.remove();
+			if (itemArg.getItemMeta().getDisplayName().substring(0,9).equalsIgnoreCase(ChatColor.DARK_RED + "레벨업 스크롤")) {
+				itemArg.setAmount(itemArg.getAmount()-1);
 				try {
-					String str = itemArg.getItemStack().getItemMeta().getDisplayName();
+					String str = itemArg.getItemMeta().getDisplayName();
 					int lvl = Integer.parseInt(str.split("\\.")[1].split("\\]")[0]);
 					player.setLevel(lvl);
 				} catch(Exception e) {
@@ -84,13 +84,13 @@ public class AnotherScroll {
 		}
 	}
 	
-	public void hellsGate(Player player, Item itemArg, World world) {	
+	public void hellsGate(Player player, ItemStack itemArg, World world) {	
 		// 하마베 탑  997 58 -4  1008 78 7
 		Location loc = player.getLocation();
 		if (loc.getX() <= 1008 && loc.getY() <= 78 && loc.getZ() <= 7 
 				&& loc.getX() >= 997 && loc.getY() >= 58 && loc.getZ() >= -4) {
-			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "헬즈게이트")) {
-				itemArg.remove();
+			if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.YELLOW + "헬즈게이트")) {
+				itemArg.setAmount(itemArg.getAmount()-1);
 				
 				world.getBlockAt(new Location(world, 1003, 67, 0)).setType(Material.AIR);
 				world.getBlockAt(new Location(world, 1002, 67, 0)).setType(Material.AIR);
@@ -137,11 +137,11 @@ public class AnotherScroll {
 		}
 	}
 	
-	public void reflectRemove(Player player, Item itemArg, World world) {	
+	public void reflectRemove(Player player, ItemStack itemArg, World world) {	
 		try {
-			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "말랑말랑 스크롤")) {
-				itemArg.remove();
-				ItemStack item = player.getInventory().getItemInMainHand();
+			if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "말랑말랑 스크롤")) {
+				itemArg.setAmount(itemArg.getAmount()-1);
+				ItemStack item = player.getInventory().getItemInOffHand();
 				if(item.getType()!=Material.AIR) {
 					if(item.getType()==Material.WOODEN_SWORD || item.getType()==Material.STONE_SWORD || item.getType()==Material.IRON_SWORD || item.getType()==Material.GOLDEN_SWORD ||
 	            			item.getType()==Material.DIAMOND_SWORD || item.getType()==Material.LEATHER_HELMET || item.getType()==Material.LEATHER_CHESTPLATE ||
@@ -261,11 +261,11 @@ public class AnotherScroll {
 		}
 	}
 	
-	public void sweepingRemove(Player player, Item itemArg, World world) {	
+	public void sweepingRemove(Player player, ItemStack itemArg, World world) {	
 		try {
-			if (itemArg.getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "광역화 제어 스크롤")) {
-				itemArg.remove();
-				ItemStack item = player.getInventory().getItemInMainHand();
+			if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "광역화 제어 스크롤")) {
+				itemArg.setAmount(itemArg.getAmount()-1);
+				ItemStack item = player.getInventory().getItemInOffHand();
 				if(item.getType()!=Material.AIR) {
 					if(item.getType()==Material.WOODEN_SWORD || item.getType()==Material.STONE_SWORD || item.getType()==Material.IRON_SWORD || item.getType()==Material.GOLDEN_SWORD ||
 	            			item.getType()==Material.DIAMOND_SWORD || item.getType()==Material.LEATHER_HELMET || item.getType()==Material.LEATHER_CHESTPLATE ||

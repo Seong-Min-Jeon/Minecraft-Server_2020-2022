@@ -20,8 +20,11 @@ import org.bukkit.entity.EntityType;
 import org.bukkit.entity.FallingBlock;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Mob;
+import org.bukkit.entity.Monster;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.SpectralArrow;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.Vector;
 
@@ -761,6 +764,7 @@ public class ParticleEffect {
 	public void newEffect6() {
 		
 		World world = player.getWorld(); 
+		Inheritance inheritance = new Inheritance();
         
 		new BukkitRunnable() {
 			int time = 0;
@@ -788,6 +792,12 @@ public class ParticleEffect {
 						if (nearEntity instanceof Mob) {
 							LivingEntity ent = (LivingEntity) nearEntity;
 							ent.damage(player.getLevel()*8);
+							
+							if(inheritance.getInheritance(player) == 44) {
+								if(ent instanceof Monster) {
+									ent.setVelocity(new Vector(0,1,0));
+								}
+							}
 						}
 					}	
 					
@@ -796,7 +806,7 @@ public class ParticleEffect {
 					player.getWorld().spawnParticle(Particle.FLAME, normal, 2);
 				}
 				
-				if(time % 10 == 0) {
+				if(time == 10) {
 					ArmorStand tmpEnt = (ArmorStand) world.spawnEntity(normal, EntityType.ARMOR_STAND);
 					tmpEnt.setVisible(false);
 					tmpEnt.setSmall(true);
@@ -814,6 +824,12 @@ public class ParticleEffect {
 						if (nearEntity instanceof Mob) {
 							LivingEntity ent = (LivingEntity) nearEntity;
 							ent.damage(player.getLevel()*8);
+							
+							if(inheritance.getInheritance(player) == 44) {
+								if(ent instanceof Monster) {
+									ent.setVelocity(new Vector(0,1,0));
+								}
+							}
 						}
 					}		
 					
@@ -840,6 +856,12 @@ public class ParticleEffect {
 						if (nearEntity instanceof Mob) {
 							LivingEntity ent = (LivingEntity) nearEntity;
 							ent.damage(player.getLevel()*8);
+							
+							if(inheritance.getInheritance(player) == 44) {
+								if(ent instanceof Monster) {
+									ent.setVelocity(new Vector(0,1,0));
+								}
+							}
 						}
 					}		
 					
@@ -5086,6 +5108,7 @@ public class ParticleEffect {
 
 		Location normal = player.getEyeLocation();
 		World world = player.getWorld();
+		Inheritance inheritance = new Inheritance();
 
 		world.playSound(player.getLocation(), Sound.ENTITY_PLAYER_SPLASH, 3.0f, 2.0f);
 
@@ -5252,13 +5275,23 @@ public class ParticleEffect {
 						}
 					}.runTaskTimer(Main.getPlugin(Main.class), 0, 3);
 					
-					List<Entity> entitylist = tmpEnt.getNearbyEntities(4, 4, 4);				
-					for (Entity nearEntity : entitylist) {
-						if (nearEntity instanceof Mob) {
-							LivingEntity ent = (LivingEntity) nearEntity;
-							ent.damage(player.getLevel()*6 + damNum*4);
+					if(inheritance.getInheritance(player) == 58) {
+						List<Entity> entitylist = tmpEnt.getNearbyEntities(6, 6, 6);				
+						for (Entity nearEntity : entitylist) {
+							if (nearEntity instanceof Mob) {
+								LivingEntity ent = (LivingEntity) nearEntity;
+								ent.damage(player.getLevel()*6 + damNum*4);
+							}
+						}	
+					} else {
+						List<Entity> entitylist = tmpEnt.getNearbyEntities(4, 4, 4);				
+						for (Entity nearEntity : entitylist) {
+							if (nearEntity instanceof Mob) {
+								LivingEntity ent = (LivingEntity) nearEntity;
+								ent.damage(player.getLevel()*6 + damNum*4);
+							}
 						}
-					}		
+					}
 					
 					this.cancel();
 				}
