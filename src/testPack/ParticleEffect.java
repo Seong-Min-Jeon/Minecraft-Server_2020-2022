@@ -12218,7 +12218,7 @@ public class ParticleEffect {
 							((Player) p).setFireTicks(200);
 						}
 					}
-					world.playSound(player.getLocation(), Sound.ENTITY_BLAZE_DEATH, 1.0f, 0.6f);
+					world.playSound(loc, Sound.ENTITY_BLAZE_DEATH, 1.0f, 0.6f);
 				}
 				
 				if(time >= 20) {
