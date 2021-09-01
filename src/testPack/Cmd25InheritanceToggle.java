@@ -10,11 +10,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-public class Cmd12EmeraldToggle implements CommandExecutor {
-	
-	//에메랄드
-	//경험치
-	//아이템
+public class Cmd25InheritanceToggle implements CommandExecutor {
 	
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
@@ -25,18 +21,18 @@ public class Cmd12EmeraldToggle implements CommandExecutor {
 				ItemStack item = player.getInventory().getItem(7);
 				ItemMeta im = item.getItemMeta();
 				ArrayList<String> lores = (ArrayList<String>) im.getLore(); 
-				String lore = lores.get(4);
-				if(cmd.getName().equalsIgnoreCase("EmeraldToggle")) {
+				String lore = lores.get(7);
+				if(cmd.getName().equalsIgnoreCase("InheritanceToggle")) {
 					if(lore.substring(0,2).equalsIgnoreCase("§a")) {
-						player.sendMessage(ChatColor.RED + "세계의 힘으로 에메랄드가 합쳐지지 않게 됩니다.");
-						lores.set(4, ChatColor.RED + "Emerald Toggle: Off");
+						player.sendMessage(ChatColor.RED + "당신과 계승의 힘 사이의 연결이 약해집니다.");
+						lores.set(7, ChatColor.RED + "Inheritance Toggle: Off");
 						im.setLore(lores);
 						item.setItemMeta(im);
 						player.getInventory().setItem(7, item);
 						return true;
 					} 
-					player.sendMessage(ChatColor.GREEN + "세계의 힘으로 에메랄드가 합쳐지게 됩니다.");
-					lores.set(4, ChatColor.GREEN + "Emerald Toggle: On");
+					player.sendMessage(ChatColor.GREEN + "당신과 계승의 힘 사이의 연결이 강해집니다.");
+					lores.set(7, ChatColor.GREEN + "Inheritance Toggle: On");
 					im.setLore(lores);
 					item.setItemMeta(im);
 					player.getInventory().setItem(7, item);
@@ -53,7 +49,7 @@ public class Cmd12EmeraldToggle implements CommandExecutor {
 		ItemStack item = player.getInventory().getItem(7);
 		ItemMeta im = item.getItemMeta();
 		ArrayList<String> lores = (ArrayList<String>) im.getLore(); 
-		String lore = lores.get(4);
+		String lore = lores.get(7);
 		if(lore.substring(0,2).equalsIgnoreCase("§a")) {
 			return true;
 		} 

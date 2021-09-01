@@ -24,14 +24,14 @@ public class Cmd18ItemToggle implements CommandExecutor {
 				String lore = lores.get(6);
 				if(cmd.getName().equalsIgnoreCase("ItemToggle")) {
 					if(lore.substring(0,2).equalsIgnoreCase("§a")) {
-						player.sendMessage(ChatColor.RED + "You can't be sent Getting Item Message! (When the Mob Loot and Gathering.)");
+						player.sendMessage(ChatColor.RED + "몬스터 사냥, 생활로 메세지를 받지 않게 됩니다.");
 						lores.set(6, ChatColor.RED + "Item Toggle: Off");
 						im.setLore(lores);
 						item.setItemMeta(im);
 						player.getInventory().setItem(7, item);
 						return true;
 					} 
-					player.sendMessage(ChatColor.GREEN + "You can be sent Getting Item Message! (When the Mob Loot and Gathering.)");
+					player.sendMessage(ChatColor.GREEN + "몬스터 사냥, 생활로 메세지를 받게 됩니다.");
 					lores.set(6, ChatColor.GREEN + "Item Toggle: On");
 					im.setLore(lores);
 					item.setItemMeta(im);

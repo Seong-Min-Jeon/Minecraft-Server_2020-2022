@@ -201,6 +201,7 @@ public class Main extends JavaPlugin implements Listener{
 		getCommand("mysterychest").setExecutor(new Cmd22MysteryChest());
 		getCommand("craftname").setExecutor(new Cmd23CraftName());
 		getCommand("setSkin").setExecutor(new Cmd24setSkin());
+		getCommand("InheritanceToggle").setExecutor(new Cmd25InheritanceToggle());
 		
 		new Cmd16class().setFolder(getDataFolder());
 		new Inheritance().setFolder(getDataFolder());
@@ -534,7 +535,7 @@ public class Main extends JavaPlugin implements Listener{
 						file.createNewFile();
 						BufferedWriter fw = new BufferedWriter(
 								new OutputStreamWriter(new FileOutputStream(file), "UTF-8"));
-						fw.write("1.00 1.00 1.00 1 1 1");
+						fw.write("1.00 1.00 1.00 1 1 1 1");
 						fw.close();
 					} catch (IOException e) {
 						e.printStackTrace();
@@ -9229,6 +9230,8 @@ public class Main extends JavaPlugin implements Listener{
 			event.setCancelled(true);
 		} else if (loc.getX() <= -1819 && loc.getY() <= 101 && loc.getZ() <= 3061 && 
 				loc.getX() >= -1854 && loc.getY() >= 84 && loc.getZ() >= 3031) {
+			event.setCancelled(true);
+		} else if (loc.getX() >= 10000) {
 			event.setCancelled(true);
 		}
 			

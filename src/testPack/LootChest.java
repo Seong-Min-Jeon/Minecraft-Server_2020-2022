@@ -231,9 +231,11 @@ public class LootChest {
 		int num5 = rnd.nextInt(30);	
 		int num6 = rnd.nextInt(20);	
 		int num7 = rnd.nextInt(30) + 10;
+		int scrollPercent1 = rnd.nextInt(10000);	
+		int scrollPercent2 = rnd.nextInt(10000);	
 		int tokenPercent = rnd.nextInt(10);	
 		
-		ItemStack var1 = new ItemStack(Material.OAK_LEAVES);
+		ItemStack var1 = new ItemStack(Material.ACACIA_PLANKS);
 		ItemMeta var1Im = var1.getItemMeta();
 		var1Im.setLocalizedName("7,0,0,0,0,0,0,0,0,0,15");
 		var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "섬광열권");
@@ -357,6 +359,14 @@ public class LootChest {
 			idx = rnd.nextInt(9);
 			inv.setItem(idx, scroll);
 		}
+		if(scrollPercent1<=100) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, new Inheritance().sSet1());
+		}
+		if(scrollPercent2<=1) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, new Inheritance().sSet2());
+		}
 		if(tokenPercent==0) {
 			idx = rnd.nextInt(9);
 			inv.setItem(idx, token);
@@ -375,6 +385,8 @@ public class LootChest {
 		int num5 = rnd.nextInt(30);	
 		int num6 = rnd.nextInt(15);	
 		int num7 = rnd.nextInt(30) + 34;
+		int scrollPercent1 = rnd.nextInt(10000);	
+		int scrollPercent2 = rnd.nextInt(10000);
 		int tokenPercent = rnd.nextInt(10);
 		
 		ItemStack var1 = new ItemStack(Material.GREEN_CARPET);
@@ -513,6 +525,14 @@ public class LootChest {
 			idx = rnd.nextInt(9);
 			inv.setItem(idx, scroll);
 		}
+		if(scrollPercent1<=150) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, new Inheritance().sSet1());
+		}
+		if(scrollPercent2<=2) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, new Inheritance().sSet2());
+		}
 		if(tokenPercent==0) {
 			idx = rnd.nextInt(9);
 			inv.setItem(idx, token);
@@ -535,6 +555,8 @@ public class LootChest {
 		int num9 = rnd.nextInt(20);	
 		int num10 = rnd.nextInt(100);	
 		int num11 = rnd.nextInt(30) + 20;
+		int scrollPercent1 = rnd.nextInt(10000);	
+		int scrollPercent2 = rnd.nextInt(10000);
 		int tokenPercent = rnd.nextInt(10);
 		
 		ItemStack var1 = new ItemStack(Material.STONE);
@@ -747,6 +769,14 @@ public class LootChest {
 			idx = rnd.nextInt(9);
 			inv.setItem(idx, var10);
 		}
+		if(scrollPercent1<=200) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, new Inheritance().sSet1());
+		}
+		if(scrollPercent2<=2) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, new Inheritance().sSet2());
+		}
 		if(tokenPercent==0) {
 			idx = rnd.nextInt(9);
 			inv.setItem(idx, token);
@@ -767,6 +797,8 @@ public class LootChest {
 		int num8 = rnd.nextInt(50);	// 부조화의 검
 		int num9 = rnd.nextInt(40);	// 얼음 활
 		int num10 = rnd.nextInt(2) + 1;
+		int scrollPercent1 = rnd.nextInt(10000);	
+		int scrollPercent2 = rnd.nextInt(10000);
 		int tokenPercent = rnd.nextInt(10);
 		
 		ItemStack var1 = new ItemStack(Material.CYAN_WOOL);
@@ -952,6 +984,14 @@ public class LootChest {
 			idx = rnd.nextInt(9);
 			inv.setItem(idx, var9);
 		}
+		if(scrollPercent1<=300) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, new Inheritance().sSet1());
+		}
+		if(scrollPercent2<=3) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, new Inheritance().sSet2());
+		}
 		if(tokenPercent==0) {
 			idx = rnd.nextInt(9);
 			inv.setItem(idx, token);
@@ -972,6 +1012,8 @@ public class LootChest {
 		int num8 = rnd.nextInt(20);	// 윤회
 		int num9 = rnd.nextInt(10);	// 회향
 		int num10 = rnd.nextInt(20) + 10;
+		int scrollPercent1 = rnd.nextInt(10000);	
+		int scrollPercent2 = rnd.nextInt(10000);
 		int tokenPercent = rnd.nextInt(10);
 		
 		ItemStack var1 = new ItemStack(Material.SPRUCE_LOG);
@@ -1160,6 +1202,14 @@ public class LootChest {
 			idx = rnd.nextInt(9);
 			inv.setItem(idx, var9);
 		}
+		if(scrollPercent1<=150) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, new Inheritance().sSet1());
+		}
+		if(scrollPercent2<=2) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, new Inheritance().sSet2());
+		}
 		if(tokenPercent==0) {
 			idx = rnd.nextInt(9);
 			inv.setItem(idx, token);
@@ -1180,6 +1230,8 @@ public class LootChest {
 		int num8 = rnd.nextInt(20);	// 타락한 윤회
 		int num9 = rnd.nextInt(20);	// 타락한 회향
 		int num10 = rnd.nextInt(2) + 3;
+		int scrollPercent1 = rnd.nextInt(10000);	
+		int scrollPercent2 = rnd.nextInt(10000);
 		int tokenPercent = rnd.nextInt(10);
 		
 		ItemStack var1 = new ItemStack(Material.SPRUCE_LOG);
@@ -1371,6 +1423,14 @@ public class LootChest {
 		if(tokenPercent==0) {
 			idx = rnd.nextInt(9);
 			inv.setItem(idx, token);
+		}
+		if(scrollPercent1<=200) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, new Inheritance().sSet1());
+		}
+		if(scrollPercent2<=2) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, new Inheritance().sSet2());
 		}
 		player.openInventory(inv);	
 	}
@@ -2044,6 +2104,8 @@ public class LootChest {
 		int num8 = rnd.nextInt(10);	// 광석3
 		int num9 = rnd.nextInt(10);	// 광석4
 		int num10 = rnd.nextInt(20) + 30;
+		int scrollPercent1 = rnd.nextInt(10000);	
+		int scrollPercent2 = rnd.nextInt(10000);
 		int tokenPercent = rnd.nextInt(10);
 		
 		ItemStack var1 = new ItemStack(Material.MUSIC_DISC_CAT);
@@ -2193,6 +2255,14 @@ public class LootChest {
 			idx = rnd.nextInt(9);
 			inv.setItem(idx, var9);
 		}
+		if(scrollPercent1<=400) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, new Inheritance().sSet1());
+		}
+		if(scrollPercent2<=10) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, new Inheritance().sSet2());
+		}
 		if(tokenPercent==0) {
 			idx = rnd.nextInt(9);
 			inv.setItem(idx, token);
@@ -2213,6 +2283,8 @@ public class LootChest {
 		int num8 = rnd.nextInt(20);	// 오드아이즈
 		int num9 = rnd.nextInt(10);	// 클리어윙
 		int num10 = rnd.nextInt(14) + 50;
+		int scrollPercent1 = rnd.nextInt(10000);	
+		int scrollPercent2 = rnd.nextInt(10000);
 		int tokenPercent = rnd.nextInt(10);
 		
 		ItemStack var1 = new ItemStack(Material.JUNGLE_PLANKS);
@@ -2406,6 +2478,14 @@ public class LootChest {
 			idx = rnd.nextInt(9);
 			inv.setItem(idx, token);
 		}
+		if(scrollPercent1<=500) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, new Inheritance().sSet1());
+		}
+		if(scrollPercent2<=20) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, new Inheritance().sSet2());
+		}
 		player.openInventory(inv);	
 	}
 	
@@ -2422,6 +2502,8 @@ public class LootChest {
 		int num8 = rnd.nextInt(200);	// 스태프 3
 		int num9 = rnd.nextInt(1000);	// 스태프 4
 		int num10 = rnd.nextInt(3) + 1;
+		int scrollPercent1 = rnd.nextInt(10000);	
+		int scrollPercent2 = rnd.nextInt(10000);
 		int tokenPercent = rnd.nextInt(10);
 		
 		ItemStack var1 = new ItemStack(Material.DARK_OAK_SLAB);
@@ -2615,6 +2697,14 @@ public class LootChest {
 			idx = rnd.nextInt(9);
 			inv.setItem(idx, var9);
 		}
+		if(scrollPercent1<=800) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, new Inheritance().sSet1());
+		}
+		if(scrollPercent2<=30) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, new Inheritance().sSet2());
+		}
 		if(tokenPercent==0) {
 			idx = rnd.nextInt(9);
 			inv.setItem(idx, token);
@@ -2700,6 +2790,8 @@ public class LootChest {
 		int num13 = rnd.nextInt(80);	// 살점 64개
 		int num14 = rnd.nextInt(160);	// 간 64개
 		int numEme = rnd.nextInt(3) + 5;
+		int scrollPercent1 = rnd.nextInt(10000);	
+		int scrollPercent2 = rnd.nextInt(10000);
 		int tokenPercent = rnd.nextInt(10);
 		
 		ItemStack var1 = new ItemStack(Material.SANDSTONE);
@@ -2942,6 +3034,14 @@ public class LootChest {
 			idx = rnd.nextInt(9);
 			inv.setItem(idx, var14);
 		}
+		if(scrollPercent1<=1000) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, new Inheritance().sSet1());
+		}
+		if(scrollPercent2<=50) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, new Inheritance().sSet2());
+		}
 		if(tokenPercent==0) {
 			idx = rnd.nextInt(9);
 			inv.setItem(idx, token);
@@ -2967,6 +3067,9 @@ public class LootChest {
 		int num13 = rnd.nextInt(40);	// 살점 64개
 		int num14 = rnd.nextInt(80);	// 간 64개
 		int numEme = rnd.nextInt(10) + 5;
+		int scrollPercent1 = rnd.nextInt(10000);	
+		int scrollPercent2 = rnd.nextInt(10000);
+		int scrollPercent3 = rnd.nextInt(10000);
 		int tokenPercent = rnd.nextInt(10);
 		
 		ItemStack var1 = new ItemStack(Material.DARK_OAK_PLANKS);
@@ -3189,6 +3292,18 @@ public class LootChest {
 			idx = rnd.nextInt(8);
 			inv.setItem(idx, var14);
 		}
+		if(scrollPercent1<=1500) {
+			idx = rnd.nextInt(8);
+			inv.setItem(idx, new Inheritance().sSet1());
+		}
+		if(scrollPercent2<=100) {
+			idx = rnd.nextInt(8);
+			inv.setItem(idx, new Inheritance().sSet2());
+		}
+		if(scrollPercent3<=10) {
+			idx = rnd.nextInt(8);
+			inv.setItem(idx, new Inheritance().sSet3());
+		}
 		if(tokenPercent==0) {
 			idx = rnd.nextInt(8);
 			inv.setItem(idx, token);
@@ -3227,6 +3342,9 @@ public class LootChest {
 		int num13 = rnd.nextInt(40);	// 살점 64개
 		int num14 = rnd.nextInt(80);	// 간 64개
 		int numEme = rnd.nextInt(10) + 10;
+		int scrollPercent1 = rnd.nextInt(10000);	
+		int scrollPercent2 = rnd.nextInt(10000);
+		int scrollPercent3 = rnd.nextInt(10000);
 		int tokenPercent = rnd.nextInt(10);
 		
 		ItemStack var1 = new ItemStack(Material.STONE_BRICK_SLAB);
@@ -3453,6 +3571,18 @@ public class LootChest {
 		if(num14==0) {
 			idx = rnd.nextInt(8);
 			inv.setItem(idx, var14);
+		}
+		if(scrollPercent1<=2000) {
+			idx = rnd.nextInt(8);
+			inv.setItem(idx, new Inheritance().sSet1());
+		}
+		if(scrollPercent2<=200) {
+			idx = rnd.nextInt(8);
+			inv.setItem(idx, new Inheritance().sSet2());
+		}
+		if(scrollPercent3<=20) {
+			idx = rnd.nextInt(8);
+			inv.setItem(idx, new Inheritance().sSet3());
 		}
 		if(tokenPercent==0) {
 			idx = rnd.nextInt(8);

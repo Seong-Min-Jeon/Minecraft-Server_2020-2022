@@ -52,7 +52,6 @@ public class MobLoot {
 		}
 		
 		if(rnd.nextInt(100) < num) {
-			System.out.println("Emerald 2x");
 			multyEme = 2;
 		} else {
 			multyEme = 1;

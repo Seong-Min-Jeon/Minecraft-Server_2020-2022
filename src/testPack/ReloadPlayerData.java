@@ -1073,6 +1073,11 @@ public class ReloadPlayerData {
 			} else {
 				lore.add(ChatColor.RED + "Item Toggle: Off");
 			}
+			if(lvl[6].equals("1")) {
+				lore.add(ChatColor.GREEN + "Inheritance Toggle: On");
+			} else {
+				lore.add(ChatColor.RED + "Inheritance Toggle: Off");
+			}
 		} catch(Exception e) {
 			
 		}

@@ -24,14 +24,14 @@ public class Cmd17ExpToggle implements CommandExecutor {
 				String lore = lores.get(5);
 				if(cmd.getName().equalsIgnoreCase("ExpToggle")) {
 					if(lore.substring(0,2).equalsIgnoreCase("§a")) {
-						player.sendMessage(ChatColor.RED + "You can't be sent Exp Message!");
+						player.sendMessage(ChatColor.RED + "경험치 획득 메세지를 받지 않게 됩니다.");
 						lores.set(5, ChatColor.RED + "Exp Toggle: Off");
 						im.setLore(lores);
 						item.setItemMeta(im);
 						player.getInventory().setItem(7, item);
 						return true;
 					} 
-					player.sendMessage(ChatColor.GREEN + "You can be sent Exp Message!");
+					player.sendMessage(ChatColor.GREEN + "경험치 획득 메세지를 받게 됩니다.");
 					lores.set(5, ChatColor.GREEN + "Exp Toggle: On");
 					im.setLore(lores);
 					item.setItemMeta(im);

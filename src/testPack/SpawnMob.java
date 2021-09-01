@@ -10226,6 +10226,7 @@ public class SpawnMob {
 			if (entity.getType() == (EntityType) EntityType.SLIME) {
 				entity.setCustomName(ChatColor.GRAY + "독극 슬라임" + ChatColor.YELLOW + " [Lv.566]");
 				entity.setCustomNameVisible(true);
+				entity.setRemoveWhenFarAway(false);
 				entity.setMaxHealth(380000);
 				entity.setHealth(380000);
 				Slime slime = (Slime) entity;
@@ -10307,6 +10308,7 @@ public class SpawnMob {
 			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
 				entity.setCustomName(ChatColor.GRAY + "슬라임에게 패배한 모험가" + ChatColor.YELLOW + " [Lv.573]");
 				entity.setCustomNameVisible(true);
+				entity.setRemoveWhenFarAway(false);
 				entity.setMaxHealth(396000);
 				entity.setHealth(396000);
 				Zombie z = (Zombie) entity;

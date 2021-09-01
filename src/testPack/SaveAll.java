@@ -287,6 +287,7 @@ public class SaveAll {
 						String lvl4 = "1";
 						String lvl5 = "1";
 						String lvl6 = "1";
+						String lvl7 = "1";
 						try {
 							if(!im.getLore().get(4).substring(0,2).equalsIgnoreCase("§a")) {
 								lvl4 = "0";
@@ -297,11 +298,14 @@ public class SaveAll {
 							if(!im.getLore().get(6).substring(0,2).equalsIgnoreCase("§a")) {
 								lvl6 = "0";
 							}
+							if(!im.getLore().get(6).substring(0,2).equalsIgnoreCase("§a")) {
+								lvl7 = "0";
+							}
 						} catch(Exception e) {
 							
 						}
 						
-						fw.write(lvl1.split(": ")[1] + " " + lvl2.split(": ")[1] + " " + lvl3.split(": ")[1] + " " + lvl4 + " " + lvl5 + " " + lvl6);
+						fw.write(lvl1.split(": ")[1] + " " + lvl2.split(": ")[1] + " " + lvl3.split(": ")[1] + " " + lvl4 + " " + lvl5 + " " + lvl6 + " " + lvl7);
 						fw.close();
 						bufReader.close();
 					}
