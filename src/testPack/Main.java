@@ -59,6 +59,7 @@ import org.bukkit.entity.Slime;
 import org.bukkit.entity.SmallFireball;
 import org.bukkit.entity.SpectralArrow;
 import org.bukkit.entity.Spider;
+import org.bukkit.entity.WitherSkeleton;
 import org.bukkit.entity.Zoglin;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -5681,7 +5682,7 @@ public class Main extends JavaPlugin implements Listener{
 						} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "암석 스태프")) {
 							damage = player.getLevel() * 200;
 						} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "대지의 스태프")) {
-							damage = player.getLevel() * 400;
+							damage = player.getLevel() * 350;
 						}
 					} catch(Exception e) {
 	
@@ -5923,7 +5924,10 @@ public class Main extends JavaPlugin implements Listener{
 					|| item.getType() == Material.GOLDEN_HELMET || item.getType() == Material.GOLDEN_CHESTPLATE || item.getType() == Material.GOLDEN_LEGGINGS 
 					|| item.getType() == Material.GOLDEN_BOOTS || item.getType() == Material.DIAMOND_HELMET || item.getType() == Material.DIAMOND_CHESTPLATE 
 					|| item.getType() == Material.DIAMOND_LEGGINGS || item.getType() == Material.DIAMOND_BOOTS || item.getType() == Material.NETHERITE_HELMET 
-					|| item.getType() == Material.NETHERITE_CHESTPLATE || item.getType() == Material.NETHERITE_LEGGINGS || item.getType() == Material.NETHERITE_BOOTS)) {
+					|| item.getType() == Material.NETHERITE_CHESTPLATE || item.getType() == Material.NETHERITE_LEGGINGS || item.getType() == Material.NETHERITE_BOOTS
+					
+					|| item.getType() == Material.RABBIT_STEW || item.getType() == Material.BEETROOT_SOUP || item.getType() == Material.MUSHROOM_STEW
+					|| item.getType() == Material.SUSPICIOUS_STEW || item.getType() == Material.POTION || item.getType() == Material.HONEY_BOTTLE)) {
 				LimitLevel la = new LimitLevel();
 				if(la.limit(player, item) == false) {
 					player.sendMessage(ChatColor.RED + "아직 이 무기를 다루기에는 내 힘이 부족하다.");
@@ -5949,7 +5953,10 @@ public class Main extends JavaPlugin implements Listener{
 					|| item.getType() == Material.DIAMOND_HELMET || item.getType() == Material.DIAMOND_CHESTPLATE
 					|| item.getType() == Material.DIAMOND_LEGGINGS || item.getType() == Material.DIAMOND_BOOTS
 					|| item.getType() == Material.NETHERITE_HELMET || item.getType() == Material.NETHERITE_CHESTPLATE
-					|| item.getType() == Material.NETHERITE_LEGGINGS || item.getType() == Material.NETHERITE_BOOTS)) {
+					|| item.getType() == Material.NETHERITE_LEGGINGS || item.getType() == Material.NETHERITE_BOOTS
+					
+					|| item.getType() == Material.RABBIT_STEW || item.getType() == Material.BEETROOT_SOUP || item.getType() == Material.MUSHROOM_STEW
+					|| item.getType() == Material.SUSPICIOUS_STEW || item.getType() == Material.POTION || item.getType() == Material.HONEY_BOTTLE)) {
 				LimitLevel la = new LimitLevel();
 				if (la.limit(player, item) == false) {
 					player.damage(event.getDamage());
@@ -11172,11 +11179,19 @@ public class Main extends JavaPlugin implements Listener{
 	public void targetChangeEvent(EntityTargetLivingEntityEvent event) {
 		try {
 			if(event.getEntity() instanceof Zoglin) {
-				if(!(event.getTarget() instanceof Player)) {
+				if(!(event.getTarget() instanceof Player) && !(event.getTarget() instanceof IronGolem)) {
 					event.setCancelled(true);
 				}
 			} else if(event.getEntity() instanceof Slime) {
-				if(!(event.getTarget() instanceof Player)) {
+				if(!(event.getTarget() instanceof Player) && !(event.getTarget() instanceof IronGolem)) {
+					event.setCancelled(true);
+				}
+			} else if(event.getEntity() instanceof Skeleton) {
+				if(!(event.getTarget() instanceof Player) && !(event.getTarget() instanceof IronGolem)) {
+					event.setCancelled(true);
+				}
+			} else if(event.getEntity() instanceof WitherSkeleton) {
+				if(!(event.getTarget() instanceof Player) && !(event.getTarget() instanceof IronGolem)) {
 					event.setCancelled(true);
 				}
 			}
@@ -11251,6 +11266,7 @@ public class Main extends JavaPlugin implements Listener{
 			p.sendMessage(color + "[" + "§l" + cl + color + " Lv." + player.getLevel() + "] " + ChatColor.WHITE + player.getDisplayName()+ ": " + event.getMessage());
 		}
 		
+		System.out.println(player.getDisplayName()+ ": " + event.getMessage());
 		event.setCancelled(true);
 		
 	}

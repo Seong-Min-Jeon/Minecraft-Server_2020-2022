@@ -1026,9 +1026,9 @@ public class Skill {
 								Arrow arrow = player.launchProjectile(Arrow.class);
 								arrow.setShooter(player);
 								if(inheritance.getInheritance(player) == 42) {
-									arrow.setDamage(0.02);
-								} else {
 									arrow.setDamage(0.12);
+								} else {
+									arrow.setDamage(0.02);
 								}
 								arrow.setVelocity(player.getLocation().getDirection().multiply(1.8f));		
 								world.playSound(player.getLocation(), Sound.ENTITY_ARROW_SHOOT, 1.0f, 0.2f);
@@ -3334,9 +3334,9 @@ public class Skill {
 								if (nearEntity instanceof LivingEntity) {
 									LivingEntity nearMob = (LivingEntity) nearEntity;
 									if(inheritance.getInheritance(player) == 65) {
-										nearMob.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 600, player.getLevel()/10,true,true));
-									} else {
 										nearMob.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 600, player.getLevel()/5,true,true));
+									} else {
+										nearMob.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 600, player.getLevel()/10,true,true));
 									}
 								}
 							}
@@ -3406,10 +3406,10 @@ public class Skill {
 					} else {
 						if(inheritance.getInheritance(player) == 66) {
 							player.removePotionEffect(PotionEffectType.ABSORPTION);
-							player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 400, 2, true,true));
+							player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 400, 4, true,true));
 						} else {
 							player.removePotionEffect(PotionEffectType.ABSORPTION);
-							player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 400, 4, true,true));
+							player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 400, 2, true,true));
 						}
 						new ParticleEffect(player).newEffect35();
 						player.sendMessage(ChatColor.GREEN + "[스킬]칼라수트라가 발동됩니다.");

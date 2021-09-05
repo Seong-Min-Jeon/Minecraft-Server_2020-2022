@@ -3391,10 +3391,10 @@ public class PlayerHitDebuff {
 										if(ent instanceof Player) {
 											Player p = (Player) ent;
 											p.sendMessage(ChatColor.RED + "주위의 슬라임이 불타오르며 강력한 데미지를 줍니다.");
-											if(p.getHealth() - num * 2 < 0) {
+											if(p.getHealth() - num * 3 < 0) {
 												p.setHealth(0);
 											} else {
-												p.setHealth(p.getHealth() - num * 2);
+												p.setHealth(p.getHealth() - num * 3);
 											}
 										}
 									}

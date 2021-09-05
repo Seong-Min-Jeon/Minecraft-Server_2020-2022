@@ -24,14 +24,14 @@ public class Cmd25InheritanceToggle implements CommandExecutor {
 				String lore = lores.get(7);
 				if(cmd.getName().equalsIgnoreCase("InheritanceToggle")) {
 					if(lore.substring(0,2).equalsIgnoreCase("§a")) {
-						player.sendMessage(ChatColor.RED + "당신과 계승의 힘 사이의 연결이 약해집니다.");
+						player.sendMessage(ChatColor.RED + "당신과 계승의 힘 사이의 연결이 약해집니다. (계승자 스크롤, 계승 반환 스크롤 사용 가능)");
 						lores.set(7, ChatColor.RED + "Inheritance Toggle: Off");
 						im.setLore(lores);
 						item.setItemMeta(im);
 						player.getInventory().setItem(7, item);
 						return true;
 					} 
-					player.sendMessage(ChatColor.GREEN + "당신과 계승의 힘 사이의 연결이 강해집니다.");
+					player.sendMessage(ChatColor.GREEN + "당신과 계승의 힘 사이의 연결이 강해집니다. (계승자 스크롤, 계승 반환 스크롤 사용 불가능)");
 					lores.set(7, ChatColor.GREEN + "Inheritance Toggle: On");
 					im.setLore(lores);
 					item.setItemMeta(im);

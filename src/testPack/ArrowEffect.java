@@ -90,7 +90,7 @@ public class ArrowEffect {
 				} else if(im.getDisplayName().equals(ChatColor.LIGHT_PURPLE + "대지의 스태프")) {
 					if(player.getLevel() >= 470) {
 						if(checkMana(player, 3)) {
-							bool = reload(player, 2000);
+							bool = reload(player, 2500);
 							if(bool) {
 								removeMana(player, 3);
 							}
@@ -137,6 +137,7 @@ public class ArrowEffect {
 					if(player.getLevel() >= 560) {
 						if(checkMana(player, 4)) {
 							player.getWorld().playSound(player.getLocation(), Sound.BLOCK_BEACON_ACTIVATE, 1.0f, 8.0f);
+							player.removePotionEffect(PotionEffectType.ABSORPTION);
 							player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 600, 2, true, false, false));
 							removeMana(player, 4);
 						}

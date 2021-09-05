@@ -338,7 +338,13 @@ public class Inheritance {
 			}
 			if(i != 0) {
 				itemArg.setAmount(itemArg.getAmount()-1);
-				scrollSet1(player);
+				new BukkitRunnable() {
+					@Override
+					public void run() {
+						scrollSet1(player);
+						this.cancel();
+					}
+				}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
 			}
 			
 		}
@@ -353,7 +359,13 @@ public class Inheritance {
 			}
 			if(i != 0) {
 				itemArg.setAmount(itemArg.getAmount()-1);
-				scrollSet2(player);
+				new BukkitRunnable() {
+					@Override
+					public void run() {
+						scrollSet2(player);
+						this.cancel();
+					}
+				}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
 			}
 		}
 		
@@ -367,7 +379,13 @@ public class Inheritance {
 			}
 			if(i != 0) {
 				itemArg.setAmount(itemArg.getAmount()-1);
-				scrollSet3(player);
+				new BukkitRunnable() {
+					@Override
+					public void run() {
+						scrollSet3(player);
+						this.cancel();
+					}
+				}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
 			}
 		}
 	}
