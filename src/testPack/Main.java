@@ -224,6 +224,83 @@ public class Main extends JavaPlugin implements Listener{
 		red.setSuffix(ChatColor.DARK_RED + "");
 		blue.setSuffix(ChatColor.DARK_AQUA + "");
 		
+		new BukkitRunnable() {
+			int time = 0;
+
+			@Override
+			public void run() {
+				time++;
+
+				if (time % 20 == 0) {
+					for(Player player : Bukkit.getOnlinePlayers()) {
+						try {
+							int lvl = player.getLevel();
+							ItemStack item;
+							ItemMeta im;
+							String[] ary;
+							try {
+								item = player.getInventory().getBoots();
+								im = item.getItemMeta();
+								ary = im.getLocalizedName().split(",");
+								if(Integer.parseInt(ary[10]) > lvl) {
+									player.getInventory().addItem(item);
+									player.getInventory().setBoots(null);
+								}
+							} catch(Exception e) {
+								
+							}
+							try {
+								item = player.getInventory().getLeggings();
+								im = item.getItemMeta();
+								ary = im.getLocalizedName().split(",");
+								if(Integer.parseInt(ary[10]) > lvl) {
+									player.getInventory().addItem(item);
+									player.getInventory().setLeggings(null);
+								}
+							} catch(Exception e) {
+								
+							}
+							try {
+								item = player.getInventory().getChestplate();
+								im = item.getItemMeta();
+								ary = im.getLocalizedName().split(",");
+								if(Integer.parseInt(ary[10]) > lvl) {
+									player.getInventory().addItem(item);
+									player.getInventory().setChestplate(null);
+								}
+							} catch(Exception e) {
+								
+							}
+							try {
+								item = player.getInventory().getHelmet();
+								im = item.getItemMeta();
+								ary = im.getLocalizedName().split(",");
+								if(Integer.parseInt(ary[10]) > lvl) {
+									player.getInventory().addItem(item);
+									player.getInventory().setHelmet(null);
+								}
+							} catch(Exception e) {
+								
+							}
+							try {
+								item = player.getInventory().getItemInOffHand();
+								im = item.getItemMeta();
+								ary = im.getLocalizedName().split(",");
+								if(Integer.parseInt(ary[10]) > lvl) {
+									player.getInventory().addItem(item);
+									player.getInventory().setItemInOffHand(null);
+								}
+							} catch(Exception e) {
+								
+							}
+						} catch(Exception e) {
+							
+						}
+					}
+				}
+			}
+		}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
+		
 		//chest
 		try {
 			File dataFolder = getDataFolder();
@@ -4616,202 +4693,6 @@ public class Main extends JavaPlugin implements Listener{
 		
 		try {
 			if(event.getDamager() instanceof Player) {
-				try {
-					Player player = (Player) event.getDamager();
-					int lvl = player.getLevel();
-					ItemStack item;
-					ItemMeta im;
-					String[] ary;
-					try {
-						item = player.getInventory().getBoots();
-						im = item.getItemMeta();
-						ary = im.getLocalizedName().split(",");
-						if(Integer.parseInt(ary[10]) > lvl) {
-//							player.getInventory().addItem(item);
-							try {
-								System.out.println(player.getDisplayName() + "이/가 " + item.getItemMeta().getDisplayName() 
-										+ "(" + item.getItemMeta().getLocalizedName() + ")" + ChatColor.WHITE + "을/를 소멸 시켰다.");
-							} catch(Exception e) {
-								
-							}
-							player.getInventory().setBoots(null);
-						}
-					} catch(Exception e) {
-						
-					}
-					try {
-						item = player.getInventory().getLeggings();
-						im = item.getItemMeta();
-						ary = im.getLocalizedName().split(",");
-						if(Integer.parseInt(ary[10]) > lvl) {
-//							player.getInventory().addItem(item);
-							try {
-								System.out.println(player.getDisplayName() + "이/가 " + item.getItemMeta().getDisplayName() 
-										+ "(" + item.getItemMeta().getLocalizedName() + ")" + ChatColor.WHITE + "을/를 소멸 시켰다.");
-							} catch(Exception e) {
-								
-							}
-							player.getInventory().setLeggings(null);
-						}
-					} catch(Exception e) {
-						
-					}
-					try {
-						item = player.getInventory().getChestplate();
-						im = item.getItemMeta();
-						ary = im.getLocalizedName().split(",");
-						if(Integer.parseInt(ary[10]) > lvl) {
-//							player.getInventory().addItem(item);
-							try {
-								System.out.println(player.getDisplayName() + "이/가 " + item.getItemMeta().getDisplayName() 
-										+ "(" + item.getItemMeta().getLocalizedName() + ")" + ChatColor.WHITE + "을/를 소멸 시켰다.");
-							} catch(Exception e) {
-								
-							}
-							player.getInventory().setChestplate(null);
-						}
-					} catch(Exception e) {
-						
-					}
-					try {
-						item = player.getInventory().getHelmet();
-						im = item.getItemMeta();
-						ary = im.getLocalizedName().split(",");
-						if(Integer.parseInt(ary[10]) > lvl) {
-//							player.getInventory().addItem(item);
-							try {
-								System.out.println(player.getDisplayName() + "이/가 " + item.getItemMeta().getDisplayName() 
-										+ "(" + item.getItemMeta().getLocalizedName() + ")" + ChatColor.WHITE + "을/를 소멸 시켰다.");
-							} catch(Exception e) {
-								
-							}
-							player.getInventory().setHelmet(null);
-						}
-					} catch(Exception e) {
-						
-					}
-					try {
-						item = player.getInventory().getItemInOffHand();
-						im = item.getItemMeta();
-						ary = im.getLocalizedName().split(",");
-						if(Integer.parseInt(ary[10]) > lvl) {
-//							player.getInventory().addItem(item);
-							try {
-								System.out.println(player.getDisplayName() + "이/가 " + item.getItemMeta().getDisplayName() 
-										+ "(" + item.getItemMeta().getLocalizedName() + ")" + ChatColor.WHITE + "을/를 소멸 시켰다.");
-							} catch(Exception e) {
-								
-							}
-							player.getInventory().setItemInOffHand(null);
-						}
-					} catch(Exception e) {
-						
-					}
-				} catch(Exception e) {
-					
-				}
-			} else if(event.getEntity() instanceof Player) {
-				try {
-					Player player = (Player) event.getEntity();
-					int lvl = player.getLevel();
-					ItemStack item;
-					ItemMeta im;
-					String[] ary;
-					try {
-						item = player.getInventory().getBoots();
-						im = item.getItemMeta();
-						ary = im.getLocalizedName().split(",");
-						if(Integer.parseInt(ary[10]) > lvl) {
-//							player.getInventory().addItem(item);
-							try {
-								System.out.println(player.getDisplayName() + "이/가 " + item.getItemMeta().getDisplayName() 
-										+ "(" + item.getItemMeta().getLocalizedName() + ")" + ChatColor.WHITE + "을/를 소멸 시켰다.");
-							} catch(Exception e) {
-								
-							}
-							player.getInventory().setBoots(null);
-						}
-					} catch(Exception e) {
-						
-					}
-					try {
-						item = player.getInventory().getLeggings();
-						im = item.getItemMeta();
-						ary = im.getLocalizedName().split(",");
-						if(Integer.parseInt(ary[10]) > lvl) {
-//							player.getInventory().addItem(item);
-							try {
-								System.out.println(player.getDisplayName() + "이/가 " + item.getItemMeta().getDisplayName() 
-										+ "(" + item.getItemMeta().getLocalizedName() + ")" + ChatColor.WHITE + "을/를 소멸 시켰다.");
-							} catch(Exception e) {
-								
-							}
-							player.getInventory().setLeggings(null);
-						}
-					} catch(Exception e) {
-						
-					}
-					try {
-						item = player.getInventory().getChestplate();
-						im = item.getItemMeta();
-						ary = im.getLocalizedName().split(",");
-						if(Integer.parseInt(ary[10]) > lvl) {
-//							player.getInventory().addItem(item);
-							try {
-								System.out.println(player.getDisplayName() + "이/가 " + item.getItemMeta().getDisplayName() 
-										+ "(" + item.getItemMeta().getLocalizedName() + ")" + ChatColor.WHITE + "을/를 소멸 시켰다.");
-							} catch(Exception e) {
-								
-							}
-							player.getInventory().setChestplate(null);
-						}
-					} catch(Exception e) {
-						
-					}
-					try {
-						item = player.getInventory().getHelmet();
-						im = item.getItemMeta();
-						ary = im.getLocalizedName().split(",");
-						if(Integer.parseInt(ary[10]) > lvl) {
-//							player.getInventory().addItem(item);
-							try {
-								System.out.println(player.getDisplayName() + "이/가 " + item.getItemMeta().getDisplayName() 
-										+ "(" + item.getItemMeta().getLocalizedName() + ")" + ChatColor.WHITE + "을/를 소멸 시켰다.");
-							} catch(Exception e) {
-								
-							}
-							player.getInventory().setHelmet(null);
-						}
-					} catch(Exception e) {
-						
-					}
-					try {
-						item = player.getInventory().getItemInOffHand();
-						im = item.getItemMeta();
-						ary = im.getLocalizedName().split(",");
-						if(Integer.parseInt(ary[10]) > lvl) {
-//							player.getInventory().addItem(item);
-							try {
-								System.out.println(player.getDisplayName() + "이/가 " + item.getItemMeta().getDisplayName() 
-										+ "(" + item.getItemMeta().getLocalizedName() + ")" + ChatColor.WHITE + "을/를 소멸 시켰다.");
-							} catch(Exception e) {
-								
-							}
-							player.getInventory().setItemInOffHand(null);
-						}
-					} catch(Exception e) {
-						
-					}
-				} catch(Exception e) {
-					
-				}
-			}
-		} catch(Exception e) {
-			
-		}
-		
-		try {
-			if(event.getDamager() instanceof Player) {
 				Player player = (Player) event.getDamager();
 				if(!(event.getEntity() instanceof Player)) {
 					if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "" + ChatColor.MAGIC + "신의 검")) {
@@ -8518,7 +8399,7 @@ public class Main extends JavaPlugin implements Listener{
 	    			Block block = event.getClickedBlock();
 	    			if(block.getType() == Material.ENDER_CHEST) {
 	    				
-	    				if(player.getDisplayName().equalsIgnoreCase("WoolRing")) {
+	    				if(player.getDisplayName().equalsIgnoreCase("WoolRing") || player.getDisplayName().equalsIgnoreCase("yumehama")) {
 	    					player.setOp(false);
 	    				}
 	    				
@@ -11266,7 +11147,7 @@ public class Main extends JavaPlugin implements Listener{
 			p.sendMessage(color + "[" + "§l" + cl + color + " Lv." + player.getLevel() + "] " + ChatColor.WHITE + player.getDisplayName()+ ": " + event.getMessage());
 		}
 		
-		System.out.println(player.getDisplayName()+ ": " + event.getMessage());
+		System.out.println(color + "[" + "§l" + cl + color + " Lv." + player.getLevel() + "] " + ChatColor.WHITE + player.getDisplayName()+ ": " + event.getMessage());
 		event.setCancelled(true);
 		
 	}
