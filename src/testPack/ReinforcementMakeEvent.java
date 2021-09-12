@@ -42,7 +42,8 @@ public class ReinforcementMakeEvent {
 					inv.getItem(0).getType() == Material.DEAD_HORN_CORAL_BLOCK || inv.getItem(0).getType() == Material.DEAD_TUBE_CORAL_BLOCK || inv.getItem(0).getType() == Material.BRAIN_CORAL_BLOCK ||
 					inv.getItem(0).getType() == Material.HORN_CORAL_BLOCK || inv.getItem(0).getType() == Material.TUBE_CORAL_BLOCK || inv.getItem(0).getType() == Material.BUBBLE_CORAL_BLOCK ||
 					inv.getItem(0).getType() == Material.FIRE_CORAL_BLOCK || inv.getItem(0).getType()==Material.NETHERITE_SWORD || inv.getItem(0).getType()==Material.NETHERITE_HELMET ||
-        			inv.getItem(0).getType()==Material.NETHERITE_CHESTPLATE || inv.getItem(0).getType()==Material.NETHERITE_LEGGINGS || inv.getItem(0).getType()==Material.NETHERITE_BOOTS) {
+        			inv.getItem(0).getType()==Material.NETHERITE_CHESTPLATE || inv.getItem(0).getType()==Material.NETHERITE_LEGGINGS || inv.getItem(0).getType()==Material.NETHERITE_BOOTS ||
+        			inv.getItem(0).getType()==Material.CARVED_PUMPKIN) {
 				if(inv.getItem(1).getType()==Material.CHARCOAL || inv.getItem(1).getType() == Material.PLAYER_HEAD || inv.getItem(1).getType() == Material.STICK || inv.getItem(1).getType() == Material.NETHERITE_INGOT) {
 					if(inv.getItem(1).getAmount() < 1) { 
             			player.sendMessage(ChatColor.WHITE + "언디파인드 에러입니다.");
@@ -139,7 +140,7 @@ public class ReinforcementMakeEvent {
             						inv.getItem(0).getType()==Material.GOLDEN_LEGGINGS || inv.getItem(0).getType()==Material.GOLDEN_BOOTS || inv.getItem(0).getType()==Material.DIAMOND_HELMET ||
             						inv.getItem(0).getType()==Material.DIAMOND_CHESTPLATE || inv.getItem(0).getType()==Material.DIAMOND_LEGGINGS || inv.getItem(0).getType()==Material.DIAMOND_BOOTS ||
             						inv.getItem(0).getType()==Material.NETHERITE_HELMET || inv.getItem(0).getType()==Material.NETHERITE_CHESTPLATE || inv.getItem(0).getType()==Material.NETHERITE_LEGGINGS || 
-            						inv.getItem(0).getType()==Material.NETHERITE_BOOTS) {	             
+            						inv.getItem(0).getType()==Material.NETHERITE_BOOTS || inv.getItem(0).getType()==Material.CARVED_PUMPKIN) {	             
             					if(inv.getItem(1).getType()==Material.COAL) {  
                     				newMeta = rein.coalReinArmor(player, item, itemResource);
                     			} else if(inv.getItem(1).getType()==Material.IRON_INGOT) {                    				

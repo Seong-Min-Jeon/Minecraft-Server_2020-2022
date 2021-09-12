@@ -1,19 +1,26 @@
 package testPack;
 
 import java.io.File;
+import java.util.ArrayList;
 
 import org.bukkit.Bukkit;
 import org.bukkit.craftbukkit.v1_16_R3.entity.CraftPlayer;
-import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.scheduler.BukkitRunnable;
 
 import net.minecraft.server.v1_16_R3.PacketPlayOutAnimation;
 import net.minecraft.server.v1_16_R3.PlayerConnection;
 
 public class ScrollUseEvent {
+	
+	static ArrayList<Player> lock = new ArrayList<>();
 
 	public ScrollUseEvent(Player player, ItemStack item, File folder) {
+		
+		if(lock.contains(player)) {
+			return;
+		}
 		
 		for(Player all : Bukkit.getOnlinePlayers()) {
 			PlayerConnection connection = ((CraftPlayer) all).getHandle().playerConnection;
@@ -72,6 +79,24 @@ public class ScrollUseEvent {
 		} catch(Exception e) {
 			
 		}
+		
+		lock.add(player);
+		
+		new BukkitRunnable() {
+			int time = 0;
+			@Override
+			public void run() {
+				time++;
+				if (time >= 20) {
+					try {
+						lock.remove(player);
+					} catch(Exception e) {
+						
+					}
+					this.cancel();
+				}
+			}
+		}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
+		
 	}
-	
 }

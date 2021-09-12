@@ -5574,7 +5574,7 @@ public class MobLoot {
 	
 	// 되살아난 피르볼그의 제사장
 	public void mob226(Player player) {
-		es.giveExp(player, 7777777);
+		es.giveExp(player, 5500000);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_STAIRS);
 		ItemMeta var1im = var1.getItemMeta();
@@ -5607,7 +5607,7 @@ public class MobLoot {
 	
 	// 중장갑 포보르
 	public void mob227(Player player) {
-		es.giveExp(player, 4000000);
+		es.giveExp(player, 3000000);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_STAIRS);
 		ItemMeta var1im = var1.getItemMeta();
@@ -5619,7 +5619,7 @@ public class MobLoot {
 	
 	// 포보르 사제
 	public void mob228(Player player) {
-		es.giveExp(player, 4000000);
+		es.giveExp(player, 3000000);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_STAIRS);
 		ItemMeta var1im = var1.getItemMeta();
@@ -6919,7 +6919,7 @@ public class MobLoot {
 		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
-		es.giveExp(player, 4500000);
+		es.giveExp(player, 4200000);
 		
 		QuestBoard cb = new QuestBoard();
 		if (cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===위 러브 팬더===")) {
@@ -7470,7 +7470,7 @@ public class MobLoot {
 		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
-		es.giveExp(player, 7000000);
+		es.giveExp(player, 6200000);
 		
 		ItemStack rewardKey = new ItemStack(Material.IRON_NUGGET);
 		ItemMeta rewardKeyIm = rewardKey.getItemMeta();

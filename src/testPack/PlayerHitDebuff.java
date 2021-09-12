@@ -3374,7 +3374,7 @@ public class PlayerHitDebuff {
 								td.setID(taskID);
 							}
 							
-							if (time == 200) {
+							if (time == 100) {
 								int num = 0;
 								List<Entity> nearSlime = mob.getNearbyEntities(30, 10, 30);
 								for(Entity ent : nearSlime) {
@@ -3403,7 +3403,7 @@ public class PlayerHitDebuff {
 								td.removeID();
 							}
 							
-							if(time > 200) {
+							if(time > 100) {
 								td.endTask();
 								td.removeID();
 							}

@@ -76,6 +76,7 @@ import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.block.EntityBlockFormEvent;
 import org.bukkit.event.block.LeavesDecayEvent;
 import org.bukkit.event.block.MoistureChangeEvent;
+import org.bukkit.event.block.SignChangeEvent;
 import org.bukkit.event.entity.CreatureSpawnEvent;
 import org.bukkit.event.entity.EntityBreedEvent;
 import org.bukkit.event.entity.EntityChangeBlockEvent;
@@ -141,6 +142,7 @@ import org.bukkit.scoreboard.ScoreboardManager;
 import org.bukkit.scoreboard.Team;
 import org.bukkit.util.Vector;
 
+import com.google.common.primitives.SignedBytes;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.nametagedit.plugin.NametagEdit;
@@ -4402,6 +4404,7 @@ public class Main extends JavaPlugin implements Listener{
 							|| item.getType() == Material.GOLDEN_BOOTS || item.getType() == Material.DIAMOND_HELMET || item.getType() == Material.DIAMOND_CHESTPLATE 
 							|| item.getType() == Material.DIAMOND_LEGGINGS || item.getType() == Material.DIAMOND_BOOTS || item.getType() == Material.NETHERITE_HELMET
 							|| item.getType() == Material.NETHERITE_CHESTPLATE || item.getType() == Material.NETHERITE_LEGGINGS || item.getType() == Material.NETHERITE_BOOTS
+							|| item.getType() == Material.CARVED_PUMPKIN
 							
 							|| item.getType() == Material.POLISHED_GRANITE_STAIRS || item.getType() == Material.SMOOTH_RED_SANDSTONE_STAIRS || item.getType() == Material.MOSSY_STONE_BRICK_STAIRS 
 							|| item.getType() == Material.POLISHED_DIORITE_STAIRS || item.getType() == Material.MOSSY_COBBLESTONE_STAIRS || item.getType() == Material.END_STONE_BRICK_STAIRS 
@@ -5806,6 +5809,7 @@ public class Main extends JavaPlugin implements Listener{
 					|| item.getType() == Material.GOLDEN_BOOTS || item.getType() == Material.DIAMOND_HELMET || item.getType() == Material.DIAMOND_CHESTPLATE 
 					|| item.getType() == Material.DIAMOND_LEGGINGS || item.getType() == Material.DIAMOND_BOOTS || item.getType() == Material.NETHERITE_HELMET 
 					|| item.getType() == Material.NETHERITE_CHESTPLATE || item.getType() == Material.NETHERITE_LEGGINGS || item.getType() == Material.NETHERITE_BOOTS
+					|| item.getType() == Material.CARVED_PUMPKIN
 					
 					|| item.getType() == Material.RABBIT_STEW || item.getType() == Material.BEETROOT_SOUP || item.getType() == Material.MUSHROOM_STEW
 					|| item.getType() == Material.SUSPICIOUS_STEW || item.getType() == Material.POTION || item.getType() == Material.HONEY_BOTTLE)) {
@@ -5835,6 +5839,7 @@ public class Main extends JavaPlugin implements Listener{
 					|| item.getType() == Material.DIAMOND_LEGGINGS || item.getType() == Material.DIAMOND_BOOTS
 					|| item.getType() == Material.NETHERITE_HELMET || item.getType() == Material.NETHERITE_CHESTPLATE
 					|| item.getType() == Material.NETHERITE_LEGGINGS || item.getType() == Material.NETHERITE_BOOTS
+					|| item.getType() == Material.CARVED_PUMPKIN
 					
 					|| item.getType() == Material.RABBIT_STEW || item.getType() == Material.BEETROOT_SOUP || item.getType() == Material.MUSHROOM_STEW
 					|| item.getType() == Material.SUSPICIOUS_STEW || item.getType() == Material.POTION || item.getType() == Material.HONEY_BOTTLE)) {
@@ -7775,7 +7780,7 @@ public class Main extends JavaPlugin implements Listener{
 							|| (type == Material.PLAYER_HEAD) || (type == Material.EGG) || (type == Material.RED_DYE) || (type == Material.GREEN_DYE) || (type == Material.CYAN_DYE) 
 							|| (type == Material.LIGHT_GRAY_DYE) || (type == Material.GRAY_DYE) || (type == Material.PINK_DYE) || (type == Material.LIME_DYE) 
 							|| (type == Material.YELLOW_DYE) || (type == Material.LIGHT_BLUE_DYE) || (type == Material.MAGENTA_DYE) || (type == Material.ORANGE_DYE) 
-							|| (type == Material.BLUE_DYE) || (type == Material.BROWN_DYE) || (type == Material.BLACK_DYE)) {
+							|| (type == Material.BLUE_DYE) || (type == Material.BROWN_DYE) || (type == Material.BLACK_DYE) || (type == Material.CARVED_PUMPKIN)) {
 						event.setCancelled(true);
 					}
 				}
@@ -8430,8 +8435,6 @@ public class Main extends JavaPlugin implements Listener{
 	        		Player player = event.getPlayer();
 		        	if(player.getInventory().getItemInMainHand().getType() == Material.ELYTRA) {
 		        		if (player.getLocation().add(0,-1,0).getBlock().getType() != Material.AIR) {												
-							player.sendMessage(ChatColor.GREEN + "[스킬]블링크가 발동됩니다.");
-
 							Vector vec = player.getEyeLocation().getDirection().multiply(3.0f);
 							player.setVelocity(vec);
 							world.playSound(player.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
@@ -10437,6 +10440,13 @@ public class Main extends JavaPlugin implements Listener{
 	}
 	
 	@EventHandler
+	public void signColor(SignChangeEvent event) {
+		if(!event.getPlayer().isOp()) {
+			event.setCancelled(true);
+		}
+	}
+	
+	@EventHandler
 	public void craftEvent(CraftItemEvent event) {
 		event.setCancelled(true);
 	}
@@ -10785,6 +10795,8 @@ public class Main extends JavaPlugin implements Listener{
 						|| item1.getType() == Material.GOLDEN_BOOTS || item1.getType() == Material.DIAMOND_HELMET || item1.getType() == Material.DIAMOND_CHESTPLATE 
 						|| item1.getType() == Material.DIAMOND_LEGGINGS || item1.getType() == Material.DIAMOND_BOOTS || item1.getType() == Material.NETHERITE_HELMET 
 						|| item1.getType() == Material.NETHERITE_CHESTPLATE || item1.getType() == Material.NETHERITE_LEGGINGS || item1.getType() == Material.NETHERITE_BOOTS
+						|| item1.getType() == Material.CARVED_PUMPKIN
+						
 						|| item1.getType() == Material.RABBIT_STEW || item1.getType() == Material.BEETROOT_SOUP || item1.getType() == Material.MUSHROOM_STEW
 						|| item1.getType() == Material.SUSPICIOUS_STEW || item1.getType() == Material.POTION || item1.getType() == Material.HONEY_BOTTLE)) {
 					LimitLevel la = new LimitLevel();

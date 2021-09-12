@@ -52,7 +52,7 @@ public class RerollScroll {
 						item.getType() == Material.OBSIDIAN || item.getType() == Material.SMOOTH_SANDSTONE || item.getType() == Material.CHISELED_RED_SANDSTONE ||
 						item.getType() == Material.CUT_RED_SANDSTONE || item.getType() == Material.RED_SANDSTONE_STAIRS || item.getType() == Material.STONE_STAIRS ||
 						item.getType()==Material.NETHERITE_HELMET || item.getType()==Material.NETHERITE_CHESTPLATE || item.getType()==Material.NETHERITE_LEGGINGS || 
-						item.getType()==Material.NETHERITE_BOOTS) {
+						item.getType()==Material.NETHERITE_BOOTS || item.getType()==Material.CARVED_PUMPKIN) {
 					
 					if(!durability(item)) {
 						player.sendMessage(ChatColor.RED + "내구도가 부족합니다.");
