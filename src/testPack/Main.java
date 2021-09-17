@@ -381,7 +381,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.DARK_RED + "'더 게임 종결자' 유메하마.");
 		} else if(player.getDisplayName().equalsIgnoreCase("WoolRing")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.GREEN + "'도트랑 도트가 제일 좋아' 울링.");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.GREEN + "'에일 최고의 대장장이' 울링.");
 		} else if(player.getDisplayName().equalsIgnoreCase("_nanoboost_")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.RED + "해병대 따위 일주일만에 졸업한 나노부스트.");
 		} else if(player.getDisplayName().equalsIgnoreCase("why9196")) {
@@ -10107,7 +10107,7 @@ public class Main extends JavaPlugin implements Listener{
 		if (player.getDisplayName().equalsIgnoreCase("yumehama")) {
 			event.setQuitMessage(ChatColor.DARK_RED + "'더 게임 종결자' 유메하마" + ChatColor.WHITE + "님이 로그아웃 하였습니다.");
 		} else if (player.getDisplayName().equalsIgnoreCase("WoolRing")) {
-			event.setQuitMessage(ChatColor.GREEN + "'노란 머리가 젤다죠?' 울링" + ChatColor.WHITE + "님이 아뇨 뚱인데요?");
+			event.setQuitMessage(ChatColor.GREEN + "'전자기학 마스터인가요?' 울링" + ChatColor.WHITE + "님이 아뇨 히오스인데요.");
 		} else if (player.getDisplayName().equalsIgnoreCase("_nanoboost_")) {
 			event.setQuitMessage(ChatColor.RED + "거 뭐 필살기 같은거 없어?");
 		} else if(player.getDisplayName().equalsIgnoreCase("why9196")) {
