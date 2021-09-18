@@ -9405,6 +9405,108 @@ public class Main extends JavaPlugin implements Listener{
 		}
 		
 		try {
+			if(event.getWhoClicked() instanceof Player) {
+				if(event.getInventory().getType() != InventoryType.CRAFTING && event.getInventory().getType() != InventoryType.CREATIVE && event.getInventory().getType() != InventoryType.MERCHANT) {
+					ItemStack item = event.getCurrentItem();
+					if((item.getType() == Material.WOODEN_SWORD || item.getType() == Material.STONE_SWORD || item.getType() == Material.IRON_SWORD
+							|| item.getType() == Material.GOLDEN_SWORD || item.getType() == Material.DIAMOND_SWORD || item.getType() == Material.NETHERITE_SWORD
+							|| item.getType() == Material.OAK_LEAVES || item.getType() == Material.SPRUCE_LEAVES || item.getType() == Material.BIRCH_LEAVES
+							|| item.getType() == Material.JUNGLE_LEAVES || item.getType() == Material.ACACIA_LEAVES || item.getType() == Material.DARK_OAK_LEAVES
+							|| item.getType() == Material.COBBLESTONE_WALL || item.getType() == Material.BROWN_CARPET
+							|| item.getType() == Material.GREEN_CARPET || item.getType() == Material.BLACK_CARPET || item.getType() == Material.STONE
+							|| item.getType() == Material.OAK_PLANKS || item.getType() == Material.SPRUCE_PLANKS || item.getType() == Material.BIRCH_PLANKS
+							|| item.getType() == Material.JUNGLE_PLANKS || item.getType() == Material.ACACIA_PLANKS || item.getType() == Material.DARK_OAK_PLANKS
+							|| item.getType() == Material.BEDROCK || item.getType() == Material.SPRUCE_LOG || item.getType() == Material.BIRCH_LOG
+							|| item.getType() == Material.JUNGLE_LOG || item.getType() == Material.ACACIA_LOG || item.getType() == Material.DARK_OAK_LOG
+							|| item.getType() == Material.SANDSTONE || item.getType() == Material.CHISELED_SANDSTONE || item.getType() == Material.CUT_SANDSTONE
+							|| item.getType() == Material.LAPIS_BLOCK || item.getType() == Material.MAGENTA_WOOL || item.getType() == Material.LIME_WOOL
+							|| item.getType() == Material.GRAY_WOOL || item.getType() == Material.LIGHT_GRAY_WOOL || item.getType() == Material.CYAN_WOOL
+							|| item.getType() == Material.PURPLE_WOOL || item.getType() == Material.OAK_SLAB || item.getType() == Material.SPRUCE_SLAB
+							|| item.getType() == Material.BIRCH_SLAB || item.getType() == Material.JUNGLE_SLAB || item.getType() == Material.ACACIA_SLAB
+							|| item.getType() == Material.DARK_OAK_SLAB || item.getType() == Material.STONE_SLAB || item.getType() == Material.COBBLESTONE_SLAB 
+							|| item.getType() == Material.STONE_BRICK_SLAB || item.getType() == Material.NETHER_BRICK_SLAB || item.getType() == Material.QUARTZ_SLAB
+							|| item.getType() == Material.RED_SANDSTONE || item.getType() == Material.RED_SANDSTONE_SLAB || item.getType() == Material.SMOOTH_RED_SANDSTONE
+							|| item.getType() == Material.OBSIDIAN || item.getType() == Material.SMOOTH_SANDSTONE || item.getType() == Material.CHISELED_RED_SANDSTONE
+							|| item.getType() == Material.CUT_RED_SANDSTONE || item.getType() == Material.RED_SANDSTONE_STAIRS || item.getType() == Material.STONE_STAIRS
+							
+							|| item.getType() == Material.MUSIC_DISC_11 || item.getType() == Material.MUSIC_DISC_13 || item.getType() == Material.MUSIC_DISC_BLOCKS 
+							|| item.getType() == Material.MUSIC_DISC_CAT || item.getType() == Material.MUSIC_DISC_CHIRP || item.getType() == Material.MUSIC_DISC_FAR 
+							|| item.getType() == Material.MUSIC_DISC_MALL || item.getType() == Material.MUSIC_DISC_MELLOHI || item.getType() == Material.MUSIC_DISC_PIGSTEP 
+							|| item.getType() == Material.MUSIC_DISC_STAL || item.getType() == Material.MUSIC_DISC_STRAD || item.getType() == Material.MUSIC_DISC_WAIT 
+							|| item.getType() == Material.MUSIC_DISC_WARD
+							
+							|| item.getType() == Material.LEATHER_HELMET || item.getType() == Material.LEATHER_CHESTPLATE || item.getType() == Material.LEATHER_LEGGINGS 
+							|| item.getType() == Material.LEATHER_BOOTS || item.getType() == Material.CHAINMAIL_HELMET || item.getType() == Material.CHAINMAIL_CHESTPLATE 
+							|| item.getType() == Material.CHAINMAIL_LEGGINGS || item.getType() == Material.CHAINMAIL_BOOTS || item.getType() == Material.IRON_HELMET 
+							|| item.getType() == Material.IRON_CHESTPLATE || item.getType() == Material.IRON_LEGGINGS || item.getType() == Material.IRON_BOOTS 
+							|| item.getType() == Material.GOLDEN_HELMET || item.getType() == Material.GOLDEN_CHESTPLATE || item.getType() == Material.GOLDEN_LEGGINGS 
+							|| item.getType() == Material.GOLDEN_BOOTS || item.getType() == Material.DIAMOND_HELMET || item.getType() == Material.DIAMOND_CHESTPLATE 
+							|| item.getType() == Material.DIAMOND_LEGGINGS || item.getType() == Material.DIAMOND_BOOTS || item.getType() == Material.NETHERITE_HELMET
+							|| item.getType() == Material.NETHERITE_CHESTPLATE || item.getType() == Material.NETHERITE_LEGGINGS || item.getType() == Material.NETHERITE_BOOTS
+							|| item.getType() == Material.CARVED_PUMPKIN
+							
+							|| item.getType() == Material.POLISHED_GRANITE_STAIRS || item.getType() == Material.SMOOTH_RED_SANDSTONE_STAIRS || item.getType() == Material.MOSSY_STONE_BRICK_STAIRS 
+							|| item.getType() == Material.POLISHED_DIORITE_STAIRS || item.getType() == Material.MOSSY_COBBLESTONE_STAIRS || item.getType() == Material.END_STONE_BRICK_STAIRS 
+							|| item.getType() == Material.SMOOTH_SANDSTONE_STAIRS || item.getType() == Material.SMOOTH_QUARTZ_STAIRS || item.getType() == Material.GRANITE_STAIRS)) {
+						if(item.getItemMeta().hasItemFlag(ItemFlag.HIDE_DESTROYS)) {
+							event.setCancelled(true);
+							return;
+						} 
+					}
+					
+					ItemStack item2 = event.getCursor();
+					if((item2.getType() == Material.WOODEN_SWORD || item2.getType() == Material.STONE_SWORD || item2.getType() == Material.IRON_SWORD
+							|| item2.getType() == Material.GOLDEN_SWORD || item2.getType() == Material.DIAMOND_SWORD || item2.getType() == Material.NETHERITE_SWORD
+							|| item2.getType() == Material.OAK_LEAVES || item2.getType() == Material.SPRUCE_LEAVES || item2.getType() == Material.BIRCH_LEAVES
+							|| item2.getType() == Material.JUNGLE_LEAVES || item2.getType() == Material.ACACIA_LEAVES || item2.getType() == Material.DARK_OAK_LEAVES
+							|| item2.getType() == Material.COBBLESTONE_WALL || item2.getType() == Material.BROWN_CARPET
+							|| item2.getType() == Material.GREEN_CARPET || item2.getType() == Material.BLACK_CARPET || item2.getType() == Material.STONE
+							|| item2.getType() == Material.OAK_PLANKS || item2.getType() == Material.SPRUCE_PLANKS || item2.getType() == Material.BIRCH_PLANKS
+							|| item2.getType() == Material.JUNGLE_PLANKS || item2.getType() == Material.ACACIA_PLANKS || item2.getType() == Material.DARK_OAK_PLANKS
+							|| item2.getType() == Material.BEDROCK || item2.getType() == Material.SPRUCE_LOG || item2.getType() == Material.BIRCH_LOG
+							|| item2.getType() == Material.JUNGLE_LOG || item2.getType() == Material.ACACIA_LOG || item2.getType() == Material.DARK_OAK_LOG
+							|| item2.getType() == Material.SANDSTONE || item2.getType() == Material.CHISELED_SANDSTONE || item2.getType() == Material.CUT_SANDSTONE
+							|| item2.getType() == Material.LAPIS_BLOCK || item2.getType() == Material.MAGENTA_WOOL || item2.getType() == Material.LIME_WOOL
+							|| item2.getType() == Material.GRAY_WOOL || item2.getType() == Material.LIGHT_GRAY_WOOL || item2.getType() == Material.CYAN_WOOL
+							|| item2.getType() == Material.PURPLE_WOOL || item2.getType() == Material.OAK_SLAB || item2.getType() == Material.SPRUCE_SLAB
+							|| item2.getType() == Material.BIRCH_SLAB || item2.getType() == Material.JUNGLE_SLAB || item2.getType() == Material.ACACIA_SLAB
+							|| item2.getType() == Material.DARK_OAK_SLAB || item2.getType() == Material.STONE_SLAB || item2.getType() == Material.COBBLESTONE_SLAB 
+							|| item2.getType() == Material.STONE_BRICK_SLAB || item2.getType() == Material.NETHER_BRICK_SLAB || item2.getType() == Material.QUARTZ_SLAB
+							|| item2.getType() == Material.RED_SANDSTONE || item2.getType() == Material.RED_SANDSTONE_SLAB || item2.getType() == Material.SMOOTH_RED_SANDSTONE
+							|| item2.getType() == Material.OBSIDIAN || item2.getType() == Material.SMOOTH_SANDSTONE || item2.getType() == Material.CHISELED_RED_SANDSTONE
+							|| item2.getType() == Material.CUT_RED_SANDSTONE || item2.getType() == Material.RED_SANDSTONE_STAIRS || item2.getType() == Material.STONE_STAIRS
+							
+							|| item2.getType() == Material.MUSIC_DISC_11 || item2.getType() == Material.MUSIC_DISC_13 || item2.getType() == Material.MUSIC_DISC_BLOCKS 
+							|| item2.getType() == Material.MUSIC_DISC_CAT || item2.getType() == Material.MUSIC_DISC_CHIRP || item2.getType() == Material.MUSIC_DISC_FAR 
+							|| item2.getType() == Material.MUSIC_DISC_MALL || item2.getType() == Material.MUSIC_DISC_MELLOHI || item2.getType() == Material.MUSIC_DISC_PIGSTEP 
+							|| item2.getType() == Material.MUSIC_DISC_STAL || item2.getType() == Material.MUSIC_DISC_STRAD || item2.getType() == Material.MUSIC_DISC_WAIT 
+							|| item2.getType() == Material.MUSIC_DISC_WARD
+							
+							|| item2.getType() == Material.LEATHER_HELMET || item2.getType() == Material.LEATHER_CHESTPLATE || item2.getType() == Material.LEATHER_LEGGINGS 
+							|| item2.getType() == Material.LEATHER_BOOTS || item2.getType() == Material.CHAINMAIL_HELMET || item2.getType() == Material.CHAINMAIL_CHESTPLATE 
+							|| item2.getType() == Material.CHAINMAIL_LEGGINGS || item2.getType() == Material.CHAINMAIL_BOOTS || item2.getType() == Material.IRON_HELMET 
+							|| item2.getType() == Material.IRON_CHESTPLATE || item2.getType() == Material.IRON_LEGGINGS || item2.getType() == Material.IRON_BOOTS 
+							|| item2.getType() == Material.GOLDEN_HELMET || item2.getType() == Material.GOLDEN_CHESTPLATE || item2.getType() == Material.GOLDEN_LEGGINGS 
+							|| item2.getType() == Material.GOLDEN_BOOTS || item2.getType() == Material.DIAMOND_HELMET || item2.getType() == Material.DIAMOND_CHESTPLATE 
+							|| item2.getType() == Material.DIAMOND_LEGGINGS || item2.getType() == Material.DIAMOND_BOOTS || item2.getType() == Material.NETHERITE_HELMET
+							|| item2.getType() == Material.NETHERITE_CHESTPLATE || item2.getType() == Material.NETHERITE_LEGGINGS || item2.getType() == Material.NETHERITE_BOOTS
+							|| item2.getType() == Material.CARVED_PUMPKIN
+							
+							|| item2.getType() == Material.POLISHED_GRANITE_STAIRS || item2.getType() == Material.SMOOTH_RED_SANDSTONE_STAIRS || item2.getType() == Material.MOSSY_STONE_BRICK_STAIRS 
+							|| item2.getType() == Material.POLISHED_DIORITE_STAIRS || item2.getType() == Material.MOSSY_COBBLESTONE_STAIRS || item2.getType() == Material.END_STONE_BRICK_STAIRS 
+							|| item2.getType() == Material.SMOOTH_SANDSTONE_STAIRS || item2.getType() == Material.SMOOTH_QUARTZ_STAIRS || item2.getType() == Material.GRANITE_STAIRS)) {
+						if(item2.getItemMeta().hasItemFlag(ItemFlag.HIDE_DESTROYS)) {
+							event.setCancelled(true);
+							return;
+						} 
+					}
+				}
+			}
+		} catch(Exception e) {
+			
+		}
+		
+		try {
 			// 거래창 클릭(거래)
 			Inventory inv = event.getClickedInventory();
 			Player player = (Player) event.getWhoClicked();
