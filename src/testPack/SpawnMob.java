@@ -11395,7 +11395,7 @@ public class SpawnMob {
 			Block block = chestLoc.getBlock();
 			Chest chest = (Chest) block.getState();
 			if (entity.getType() == (EntityType) EntityType.ZOMBIE) {
-				entity.setCustomName(ChatColor.GRAY + "썩은 공양물" + ChatColor.YELLOW + " [Lv.625]");
+				entity.setCustomName(ChatColor.GRAY + "썩은 공양물" + ChatColor.YELLOW + " [Lv.1]");
 				entity.setCustomNameVisible(true);
 				entity.setMaxHealth(1000000);
 				entity.setHealth(1000000);

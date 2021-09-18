@@ -279,6 +279,7 @@ public class LootChest {
 		var3Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var3Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var3Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var3Im.addItemFlags(ItemFlag.HIDE_DYE);
 		var3Im.setUnbreakable(true);
 		var3Im.setLore(var3Lore);
 		var3.setItemMeta(var3Im);
@@ -295,6 +296,7 @@ public class LootChest {
 		var4Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var4Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var4Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var4Im.addItemFlags(ItemFlag.HIDE_DYE);
 		var4Im.setUnbreakable(true);
 		var4Im.setLore(var4Lore);
 		var4.setItemMeta(var4Im);
@@ -419,6 +421,7 @@ public class LootChest {
 		var2Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var2Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var2Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var2Im.addItemFlags(ItemFlag.HIDE_DYE);
 		var2Im.setUnbreakable(true);
 		var2Im.setLore(var2Lore);
 		var2.setItemMeta(var2Im);
@@ -438,6 +441,7 @@ public class LootChest {
 		var3Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var3Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var3Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var3Im.addItemFlags(ItemFlag.HIDE_DYE);
 		var3Im.setUnbreakable(true);
 		var3Im.setLore(var3Lore);
 		var3.setItemMeta(var3Im);
@@ -457,6 +461,7 @@ public class LootChest {
 		var4Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var4Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var4Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var4Im.addItemFlags(ItemFlag.HIDE_DYE);
 		var4Im.setUnbreakable(true);
 		var4Im.setLore(var4Lore);
 		var4.setItemMeta(var4Im);
@@ -476,6 +481,7 @@ public class LootChest {
 		var5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var5Im.addItemFlags(ItemFlag.HIDE_DYE);
 		var5Im.setUnbreakable(true);
 		var5Im.setLore(var5Lore);
 		var5.setItemMeta(var5Im);
@@ -2825,6 +2831,7 @@ public class LootChest {
 		var2Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var2Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var2Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var2Im.addItemFlags(ItemFlag.HIDE_DYE);
 		var2Im.setUnbreakable(true);
 		var2Im.setLore(var2Lore);
 		var2.setItemMeta(var2Im);
@@ -2844,6 +2851,7 @@ public class LootChest {
 		var3Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var3Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var3Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var3Im.addItemFlags(ItemFlag.HIDE_DYE);
 		var3Im.setUnbreakable(true);
 		var3Im.setLore(var3Lore);
 		var3.setItemMeta(var3Im);
@@ -2863,6 +2871,7 @@ public class LootChest {
 		var4Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var4Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var4Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var4Im.addItemFlags(ItemFlag.HIDE_DYE);
 		var4Im.setUnbreakable(true);
 		var4Im.setLore(var4Lore);
 		var4.setItemMeta(var4Im);
@@ -2882,6 +2891,7 @@ public class LootChest {
 		var5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var5Im.addItemFlags(ItemFlag.HIDE_DYE);
 		var5Im.setUnbreakable(true);
 		var5Im.setLore(var5Lore);
 		var5.setItemMeta(var5Im);

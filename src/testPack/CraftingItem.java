@@ -353,7 +353,7 @@ public class CraftingItem {
 				if(name[i].equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "최상급 포보르의 뿔")) {
 					totalStat += amount[i] * 23;
 				}
-				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "심연의 포보르의 뿔")) {
+				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "심연의 포보르의 피")) {
 					totalStat += amount[i] * 19; 
 				}
 				if(name[i].equalsIgnoreCase(ChatColor.AQUA + "심연의 포보르의 쓸개")) {
