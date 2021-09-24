@@ -170,7 +170,7 @@ public class Main extends JavaPlugin implements Listener{
 	
 	Cmd12EmeraldToggle et = new Cmd12EmeraldToggle();
 	Inheritance inheritance = new Inheritance();
- 
+
 	private int taskID;
 	Scoreboard board;
 	Team red;
@@ -205,6 +205,7 @@ public class Main extends JavaPlugin implements Listener{
 		getCommand("craftname").setExecutor(new Cmd23CraftName());
 		getCommand("setSkin").setExecutor(new Cmd24setSkin());
 		getCommand("InheritanceToggle").setExecutor(new Cmd25InheritanceToggle());
+		getCommand("setLocalizedName").setExecutor(new Cmd26setLocalizedName());
 		
 		new Cmd16class().setFolder(getDataFolder());
 		new Inheritance().setFolder(getDataFolder());
@@ -383,7 +384,7 @@ public class Main extends JavaPlugin implements Listener{
 		} else if(player.getDisplayName().equalsIgnoreCase("WoolRing")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.GREEN + "'에일 최고의 대장장이' 울링.");
 		} else if(player.getDisplayName().equalsIgnoreCase("_nanoboost_")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.RED + "해병대 따위 일주일만에 졸업한 나노부스트.");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.RED + "정신병동에서 2주걸려 탈출 성공한 나노부스트.");
 		} else if(player.getDisplayName().equalsIgnoreCase("why9196")) {
 			event.setJoinMessage("확률이 뭐죠? " + ChatColor.BLUE + "'0.0068% 돌파한' 와이.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Akilae3102")) {
@@ -395,9 +396,9 @@ public class Main extends JavaPlugin implements Listener{
 		} else if(player.getDisplayName().equalsIgnoreCase("Illusion__")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.GOLD + "일류 건축가 릴륨.");
 		} else if(player.getDisplayName().equalsIgnoreCase("JunletTridner")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.GOLD + "투기장의 지배자 Jun");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.GOLD + "'리롤과 반격에 진심인' Jun");
 		} else if(player.getDisplayName().equalsIgnoreCase("SARASHINA_RUKA")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.YELLOW + "'와우 솔플러' 레나랑");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.YELLOW + "'스태프 마스터' 레나랑");
 		} else if(player.getDisplayName().equalsIgnoreCase("B1ath")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.AQUA + "'시공의 숭배자' Blath");
 		} else if(player.getDisplayName().equalsIgnoreCase("Nam_Da")) {
@@ -4331,7 +4332,7 @@ public class Main extends JavaPlugin implements Listener{
 			}
 			try {
 				if(entity.getType() == EntityType.ZOMBIE || entity.getType() == EntityType.SKELETON || entity.getType() == EntityType.WITHER_SKELETON
-						|| entity.getType() == EntityType.WITCH || entity.getType() == EntityType.VEX) {
+						|| entity.getType() == EntityType.WITCH || entity.getType() == EntityType.VEX || entity.getType() == EntityType.HUSK) {
 					if(entity.getCustomName() == null) {
 						entity.remove();
 					}
@@ -6601,38 +6602,42 @@ public class Main extends JavaPlugin implements Listener{
 
 							}
 							double damage = dr.calculation(player, event.getDamage());
-							Inventory inv = player.getInventory();
-							if(inv.contains(Material.RED_DYE) || inv.contains(Material.GREEN_DYE) || inv.contains(Material.LAPIS_LAZULI)
-									|| inv.contains(Material.CYAN_DYE) || inv.contains(Material.LIGHT_GRAY_DYE)) {
-								damage = 1.5 - (1.5 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
-							} else if(inv.contains(Material.YELLOW_DYE) || inv.contains(Material.LIGHT_BLUE_DYE) || inv.contains(Material.MAGENTA_DYE)
-									|| inv.contains(Material.ORANGE_DYE) || inv.contains(Material.CLAY_BALL)) {
-								damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
-							} else if(inv.contains(Material.GRAY_DYE) || inv.contains(Material.PINK_DYE) || inv.contains(Material.LIME_DYE)) {
-								damage = 3 - (3 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
-							} else if(inv.contains(Material.BLUE_DYE) || inv.contains(Material.BROWN_DYE) || inv.contains(Material.BLACK_DYE)
-									|| inv.contains(Material.INK_SAC) || inv.contains(Material.GLOWSTONE_DUST)) {
-								damage = 5 - (5 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+							if(resist >= 0) {
+								Inventory inv = player.getInventory();
+								if(inv.contains(Material.RED_DYE) || inv.contains(Material.GREEN_DYE) || inv.contains(Material.LAPIS_LAZULI)
+										|| inv.contains(Material.CYAN_DYE) || inv.contains(Material.LIGHT_GRAY_DYE)) {
+									damage = 1.5 - (1.5 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+								} else if(inv.contains(Material.YELLOW_DYE) || inv.contains(Material.LIGHT_BLUE_DYE) || inv.contains(Material.MAGENTA_DYE)
+										|| inv.contains(Material.ORANGE_DYE) || inv.contains(Material.CLAY_BALL)) {
+									damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+								} else if(inv.contains(Material.GRAY_DYE) || inv.contains(Material.PINK_DYE) || inv.contains(Material.LIME_DYE)) {
+									damage = 3 - (3 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+								} else if(inv.contains(Material.BLUE_DYE) || inv.contains(Material.BROWN_DYE) || inv.contains(Material.BLACK_DYE)
+										|| inv.contains(Material.INK_SAC) || inv.contains(Material.GLOWSTONE_DUST)) {
+									damage = 5 - (5 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+								} else {
+									damage = 1.5 - (1.5 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+								}
+								
+								int reduce = 0;
+								if(inheritance.getInheritance(player) == 17) {
+									reduce += 10;
+								} else if(inheritance.getInheritance(player) == 18) {
+									reduce += 20;
+								} else if(inheritance.getInheritance(player) == 19) {
+									reduce += 30;
+								}
+								
+								damage = damage * (100-reduce) / 100;
+								
+								if(damage < 0.001) {
+									damage = 0.001;
+								}
+								
+								event.setDamage(damage);
 							} else {
-								damage = 1.5 - (1.5 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+								event.setDamage(9999999);
 							}
-							
-							int reduce = 0;
-							if(inheritance.getInheritance(player) == 17) {
-								reduce += 10;
-							} else if(inheritance.getInheritance(player) == 18) {
-								reduce += 20;
-							} else if(inheritance.getInheritance(player) == 19) {
-								reduce += 30;
-							}
-							
-							damage = damage * (100-reduce) / 100;
-							
-							if(damage < 0.001) {
-								damage = 0.001;
-							}
-							
-							event.setDamage(damage);
 						}
 					}
 					if (event.getCause() == DamageCause.VOID) {
@@ -6829,38 +6834,42 @@ public class Main extends JavaPlugin implements Listener{
 
 							}
 							double damage = dr.calculation(player, event.getDamage());
-							Inventory inv = player.getInventory();
-							if(inv.contains(Material.RED_DYE) || inv.contains(Material.GREEN_DYE) || inv.contains(Material.LAPIS_LAZULI)
-									|| inv.contains(Material.CYAN_DYE) || inv.contains(Material.LIGHT_GRAY_DYE)) {
-								damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
-							} else if(inv.contains(Material.YELLOW_DYE) || inv.contains(Material.LIGHT_BLUE_DYE) || inv.contains(Material.MAGENTA_DYE)
-									|| inv.contains(Material.ORANGE_DYE) || inv.contains(Material.CLAY_BALL)) {
-								damage = 4 - (4 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
-							} else if(inv.contains(Material.GRAY_DYE) || inv.contains(Material.PINK_DYE) || inv.contains(Material.LIME_DYE)) {
-								damage = 6 - (6 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
-							} else if(inv.contains(Material.BLUE_DYE) || inv.contains(Material.BROWN_DYE) || inv.contains(Material.BLACK_DYE)
-									|| inv.contains(Material.INK_SAC) || inv.contains(Material.GLOWSTONE_DUST)) {
-								damage = 10 - (10 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+							if(resist >= 0) {
+								Inventory inv = player.getInventory();
+								if(inv.contains(Material.RED_DYE) || inv.contains(Material.GREEN_DYE) || inv.contains(Material.LAPIS_LAZULI)
+										|| inv.contains(Material.CYAN_DYE) || inv.contains(Material.LIGHT_GRAY_DYE)) {
+									damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+								} else if(inv.contains(Material.YELLOW_DYE) || inv.contains(Material.LIGHT_BLUE_DYE) || inv.contains(Material.MAGENTA_DYE)
+										|| inv.contains(Material.ORANGE_DYE) || inv.contains(Material.CLAY_BALL)) {
+									damage = 4 - (4 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+								} else if(inv.contains(Material.GRAY_DYE) || inv.contains(Material.PINK_DYE) || inv.contains(Material.LIME_DYE)) {
+									damage = 6 - (6 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+								} else if(inv.contains(Material.BLUE_DYE) || inv.contains(Material.BROWN_DYE) || inv.contains(Material.BLACK_DYE)
+										|| inv.contains(Material.INK_SAC) || inv.contains(Material.GLOWSTONE_DUST)) {
+									damage = 10 - (10 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+								} else {
+									damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+								}
+								
+								int reduce = 0;
+								if(inheritance.getInheritance(player) == 20) {
+									reduce += 10;
+								} else if(inheritance.getInheritance(player) == 21) {
+									reduce += 20;
+								} else if(inheritance.getInheritance(player) == 22) {
+									reduce += 30;
+								}
+								
+								damage = damage * (100-reduce) / 100;
+								
+								if(damage < 0.001) {
+									damage = 0.001;
+								}
+								event.setDamage(damage);
+								player.setFireTicks(160);
 							} else {
-								damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+								event.setDamage(9999999);
 							}
-							
-							int reduce = 0;
-							if(inheritance.getInheritance(player) == 20) {
-								reduce += 10;
-							} else if(inheritance.getInheritance(player) == 21) {
-								reduce += 20;
-							} else if(inheritance.getInheritance(player) == 22) {
-								reduce += 30;
-							}
-							
-							damage = damage * (100-reduce) / 100;
-							
-							if(damage < 0.001) {
-								damage = 0.001;
-							}
-							event.setDamage(damage);
-							player.setFireTicks(160);
 						}
 					}
 					if (event.getCause() == DamageCause.ENTITY_EXPLOSION) {
@@ -6937,38 +6946,42 @@ public class Main extends JavaPlugin implements Listener{
 
 							}
 							double damage = dr.calculation(player, event.getDamage());
-							Inventory inv = player.getInventory();
-							if(inv.contains(Material.RED_DYE) || inv.contains(Material.GREEN_DYE) || inv.contains(Material.LAPIS_LAZULI)
-									|| inv.contains(Material.CYAN_DYE) || inv.contains(Material.LIGHT_GRAY_DYE)) {
-								damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
-							} else if(inv.contains(Material.YELLOW_DYE) || inv.contains(Material.LIGHT_BLUE_DYE) || inv.contains(Material.MAGENTA_DYE)
-									|| inv.contains(Material.ORANGE_DYE) || inv.contains(Material.CLAY_BALL)) {
-								damage = 4 - (4 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
-							} else if(inv.contains(Material.GRAY_DYE) || inv.contains(Material.PINK_DYE) || inv.contains(Material.LIME_DYE)) {
-								damage = 6 - (6 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
-							} else if(inv.contains(Material.BLUE_DYE) || inv.contains(Material.BROWN_DYE) || inv.contains(Material.BLACK_DYE)
-									|| inv.contains(Material.INK_SAC) || inv.contains(Material.GLOWSTONE_DUST)) {
-								damage = 10 - (10 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+							if(resist >= 0) {
+								Inventory inv = player.getInventory();
+								if(inv.contains(Material.RED_DYE) || inv.contains(Material.GREEN_DYE) || inv.contains(Material.LAPIS_LAZULI)
+										|| inv.contains(Material.CYAN_DYE) || inv.contains(Material.LIGHT_GRAY_DYE)) {
+									damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+								} else if(inv.contains(Material.YELLOW_DYE) || inv.contains(Material.LIGHT_BLUE_DYE) || inv.contains(Material.MAGENTA_DYE)
+										|| inv.contains(Material.ORANGE_DYE) || inv.contains(Material.CLAY_BALL)) {
+									damage = 4 - (4 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+								} else if(inv.contains(Material.GRAY_DYE) || inv.contains(Material.PINK_DYE) || inv.contains(Material.LIME_DYE)) {
+									damage = 6 - (6 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+								} else if(inv.contains(Material.BLUE_DYE) || inv.contains(Material.BROWN_DYE) || inv.contains(Material.BLACK_DYE)
+										|| inv.contains(Material.INK_SAC) || inv.contains(Material.GLOWSTONE_DUST)) {
+									damage = 10 - (10 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+								} else {
+									damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+								}
+								
+								int reduce = 0;
+								if(inheritance.getInheritance(player) == 20) {
+									reduce += 10;
+								} else if(inheritance.getInheritance(player) == 21) {
+									reduce += 20;
+								} else if(inheritance.getInheritance(player) == 22) {
+									reduce += 30;
+								}
+								
+								damage = damage * (100-reduce) / 100;
+								
+								if(damage < 0.001) {
+									damage = 0.001;
+								}
+								event.setDamage(damage);
+								player.setFireTicks(160);
 							} else {
-								damage = 2 - (2 * ((42.6/Math.sqrt(2)) * Math.log10((resist*0.18+14.15) / (10*Math.sqrt(2)))) / 100);
+								event.setDamage(9999999);
 							}
-							
-							int reduce = 0;
-							if(inheritance.getInheritance(player) == 20) {
-								reduce += 10;
-							} else if(inheritance.getInheritance(player) == 21) {
-								reduce += 20;
-							} else if(inheritance.getInheritance(player) == 22) {
-								reduce += 30;
-							}
-							
-							damage = damage * (100-reduce) / 100;
-							
-							if(damage < 0.001) {
-								damage = 0.001;
-							}
-							event.setDamage(damage);
-							player.setFireTicks(160);
 						}
 					}
 					if(event.getCause() == DamageCause.MAGIC) {
@@ -7781,6 +7794,20 @@ public class Main extends JavaPlugin implements Listener{
 							|| (type == Material.LIGHT_GRAY_DYE) || (type == Material.GRAY_DYE) || (type == Material.PINK_DYE) || (type == Material.LIME_DYE) 
 							|| (type == Material.YELLOW_DYE) || (type == Material.LIGHT_BLUE_DYE) || (type == Material.MAGENTA_DYE) || (type == Material.ORANGE_DYE) 
 							|| (type == Material.BLUE_DYE) || (type == Material.BROWN_DYE) || (type == Material.BLACK_DYE) || (type == Material.CARVED_PUMPKIN)) {
+						event.setCancelled(true);
+					}
+					
+					Material type2 = player.getInventory().getItemInOffHand().getType();
+					if((type2 == Material.LEATHER_HELMET) || (type2 == Material.LEATHER_CHESTPLATE) || (type2 == Material.LEATHER_LEGGINGS) || (type2 == Material.LEATHER_BOOTS) 
+							|| (type2 == Material.CHAINMAIL_HELMET) || (type2 == Material.CHAINMAIL_CHESTPLATE) || (type2 == Material.CHAINMAIL_LEGGINGS) || (type2 == Material.CHAINMAIL_BOOTS)
+							|| (type2 == Material.IRON_HELMET) || (type2 == Material.IRON_CHESTPLATE) || (type2 == Material.IRON_LEGGINGS) || (type2 == Material.IRON_BOOTS)
+							|| (type2 == Material.GOLDEN_HELMET) || (type2 == Material.GOLDEN_CHESTPLATE) || (type2 == Material.GOLDEN_LEGGINGS) || (type2 == Material.GOLDEN_BOOTS)
+							|| (type2 == Material.DIAMOND_HELMET) || (type2 == Material.DIAMOND_CHESTPLATE) || (type2 == Material.DIAMOND_LEGGINGS) || (type2 == Material.DIAMOND_BOOTS)
+							|| (type2 == Material.NETHERITE_HELMET) || (type2 == Material.NETHERITE_CHESTPLATE) || (type2 == Material.NETHERITE_LEGGINGS) || (type2 == Material.NETHERITE_BOOTS)
+							|| (type2 == Material.PLAYER_HEAD) || (type2 == Material.EGG) || (type2 == Material.RED_DYE) || (type2 == Material.GREEN_DYE) || (type2 == Material.CYAN_DYE) 
+							|| (type2 == Material.LIGHT_GRAY_DYE) || (type2 == Material.GRAY_DYE) || (type2 == Material.PINK_DYE) || (type2 == Material.LIME_DYE) 
+							|| (type2 == Material.YELLOW_DYE) || (type2 == Material.LIGHT_BLUE_DYE) || (type2 == Material.MAGENTA_DYE) || (type2 == Material.ORANGE_DYE) 
+							|| (type2 == Material.BLUE_DYE) || (type2 == Material.BROWN_DYE) || (type2 == Material.BLACK_DYE) || (type2 == Material.CARVED_PUMPKIN)) {
 						event.setCancelled(true);
 					}
 				}
@@ -9414,14 +9441,14 @@ public class Main extends JavaPlugin implements Listener{
 				Inventory inv = event.getInventory();
 				if(inv.getType() != InventoryType.CRAFTING && inv.getType() != InventoryType.CREATIVE && inv.getType() != InventoryType.MERCHANT) {
 					
-					boolean rein = false;
+					boolean unlock = false;
 					
 					try {
 						if(inv.getSize() == 9) {
 							if(inv.getItem(7).getType() == Material.SLIME_BALL) {
 								if(inv.getItem(8).getType() == Material.SHULKER_SHELL) {
 									if(inv.getItem(2).getType() == Material.WHITE_STAINED_GLASS_PANE) {
-										rein = true;
+										unlock = true;
 									}
 								}
 							}
@@ -9430,7 +9457,34 @@ public class Main extends JavaPlugin implements Listener{
 						
 					}
 					
-					if(!rein) {
+					try {
+						if(inv.getSize() == 27) {
+							if(inv.getItem(25) == null || inv.getItem(25).getType() != Material.SLIME_BALL) {
+								if(inv.getItem(26) == null || inv.getItem(26).getType() != Material.SHULKER_SHELL) {
+									unlock = true;
+								}
+							}
+							if(inv.getItem(26) == null || inv.getItem(26).getType() != Material.SHULKER_SHELL) {
+								if(inv.getItem(25) == null || inv.getItem(25).getType() != Material.SLIME_BALL) {
+									unlock = true;
+								}
+							}
+						}
+					} catch(Exception e) {
+						
+					}
+					
+					try {
+						if(inv.getSize() == 27) {
+							if(inv.getItem(26).getType() == Material.SHULKER_SHELL) {
+								unlock = false;
+							}
+						}
+					} catch(Exception e) {
+						
+					}
+					
+					if(!unlock) {
 						ItemStack item = event.getCurrentItem();
 						if((item.getType() == Material.WOODEN_SWORD || item.getType() == Material.STONE_SWORD || item.getType() == Material.IRON_SWORD
 								|| item.getType() == Material.GOLDEN_SWORD || item.getType() == Material.DIAMOND_SWORD || item.getType() == Material.NETHERITE_SWORD
@@ -10234,9 +10288,9 @@ public class Main extends JavaPlugin implements Listener{
 		if (player.getDisplayName().equalsIgnoreCase("yumehama")) {
 			event.setQuitMessage(ChatColor.DARK_RED + "'더 게임 종결자' 유메하마" + ChatColor.WHITE + "님이 로그아웃 하였습니다.");
 		} else if (player.getDisplayName().equalsIgnoreCase("WoolRing")) {
-			event.setQuitMessage(ChatColor.GREEN + "'전자기학 마스터인가요?' 울링" + ChatColor.WHITE + "님이 아뇨 히오스인데요.");
+			event.setQuitMessage(ChatColor.GREEN + "'전자기학 마스터인가요?' 울링" + ChatColor.WHITE + "님이 아뇨 도트인데요.");
 		} else if (player.getDisplayName().equalsIgnoreCase("_nanoboost_")) {
-			event.setQuitMessage(ChatColor.RED + "거 뭐 필살기 같은거 없어?");
+			event.setQuitMessage(ChatColor.RED + "우리들 중에 미쳐 버린 사람이 나온다면 8할은 틀림 없이 그것 때문이에요.");
 		} else if(player.getDisplayName().equalsIgnoreCase("why9196")) {
 			event.setQuitMessage(ChatColor.BLUE + "??????????!?????");
 		} else if(player.getDisplayName().equalsIgnoreCase("Akilae3102")) {
@@ -10248,9 +10302,9 @@ public class Main extends JavaPlugin implements Listener{
 		} else if(player.getDisplayName().equalsIgnoreCase("Illusion__")) {
 			event.setQuitMessage(ChatColor.BOLD + "훗, 오늘도 할 일을 끝내버렸군.");
 		} else if(player.getDisplayName().equalsIgnoreCase("JunletTridner")) {
-			event.setQuitMessage(ChatColor.GOLD + "오늘도 그에겐 S급 검투사는 흑우입니다.");
+			event.setQuitMessage(ChatColor.GOLD + "리롤의 큰 꿈을 안고 오늘도 떠나갑니다.");
 		} else if(player.getDisplayName().equalsIgnoreCase("SARASHINA_RUKA")) {
-			event.setQuitMessage(ChatColor.YELLOW + "와이보다 와우를 먼저 깬 존재가 사라집니다.");
+			event.setQuitMessage(ChatColor.YELLOW + "와이보다 와우를 먼저 깬 그 그림리퍼가 사라집니다.");
 		} else if(player.getDisplayName().equalsIgnoreCase("B1ath")) {
 			event.setQuitMessage(ChatColor.AQUA + "에일에서는 모습을 감췄지만 시공을 숭배하러 떠났을 수도 있습니다.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Nam_Da")) {

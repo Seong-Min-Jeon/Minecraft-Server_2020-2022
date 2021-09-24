@@ -77,4 +77,7 @@ commands:
   InheritanceToggle:
    description: Inheritance Lock Toggle
    usage: /InheritanceToggle
+  setLocalizedName:
+   description: set Localized Name
+   usage: /setLocalizedName
 api-version: 1.16

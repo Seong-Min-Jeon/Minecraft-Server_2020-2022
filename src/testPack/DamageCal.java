@@ -134,34 +134,70 @@ public class DamageCal {
 				|| entity.getType() == EntityType.DROWNED || entity.getType() == EntityType.VEX || entity.getType() == EntityType.STRAY
 				|| entity.getType() == EntityType.HUSK || entity.getType() == EntityType.ZOMBIE_VILLAGER || entity.getType() == EntityType.ENDERMAN
 				|| entity.getType() == EntityType.EVOKER || entity.getType() == EntityType.VINDICATOR || entity.getType() == EntityType.WITCH) {
-			return (int)(damAll*2 + damUn*4);
+			int dam = (int)(damAll*2 + damUn*4);
+			if(dam <= 0) {
+				return 0;
+			}
+			return dam;
 		} else if(entity.getType() == EntityType.SPIDER || entity.getType() == EntityType.CAVE_SPIDER || entity.getType() == EntityType.SILVERFISH 
 				|| entity.getType() == EntityType.ENDERMITE || entity.getType() == EntityType.LLAMA || entity.getType() == EntityType.POLAR_BEAR
 				 || entity.getType() == EntityType.GUARDIAN || entity.getType() == EntityType.ELDER_GUARDIAN || entity.getType() == EntityType.RAVAGER
 				 || entity.getType() == EntityType.PHANTOM || entity.getType() == EntityType.OCELOT || entity.getType() == EntityType.RABBIT
 				 || entity.getType() == EntityType.PANDA || entity.getType() == EntityType.ZOGLIN) {
-			return (int)(damAll*2 + damAr*5);
+			int dam = (int)(damAll*2 + damAr*5);
+			if(dam <= 0) {
+				return 0;
+			}
+			return dam;
 		} else if(entity.getType() == EntityType.SLIME || entity.getType() == EntityType.MAGMA_CUBE || entity.getType() == EntityType.GHAST
 				|| entity.getType() == EntityType.WITHER || entity.getType() == EntityType.CREEPER || entity.getType() == EntityType.IRON_GOLEM
 				 || entity.getType() == EntityType.BLAZE) {
-			return (int)(damAll*2 + damIm*6);
+			int dam = (int)(damAll*2 + damIm*6);
+			if(dam <= 0) {
+				return 0;
+			}
+			return dam;
 		} else if(entity.getType() == EntityType.MUSHROOM_COW) {
 			if(beiagTester.containsKey(player)) {
 				int type = beiagTester.get(player);
 				if(type == 1) {
-					return (int)(damAll*2 + damUn*4);
+					int dam = (int)(damAll*2 + damUn*4);
+					if(dam <= 0) {
+						return 0;
+					}
+					return dam;
 				} else if(type == 2) {
-					return (int)(damAll*2 + damAr*5);
+					int dam = (int)(damAll*2 + damAr*5);
+					if(dam <= 0) {
+						return 0;
+					}
+					return dam;
 				} else if(type == 3) {
-					return (int)(damAll*2 + damIm*6);
+					int dam = (int)(damAll*2 + damIm*6);
+					if(dam <= 0) {
+						return 0;
+					}
+					return dam;
 				}
 			} else {
 				player.sendMessage(ChatColor.RED + "대련 상대가 선택되지 않았습니다.");
-				return (int)(damAll*2);
+				int dam = (int)(damAll*2);
+				if(dam <= 0) {
+					return 0;
+				}
+				return dam;
 			}
-			return (int)(damAll*2);
+			int dam = (int)(damAll*2);
+			if(dam <= 0) {
+				return 0;
+			}
+			return dam;
 		} else {
-			return (int)(damAll*2);
+			int dam = (int)(damAll*2);
+			if(dam <= 0) {
+				return 0;
+			}
+			return dam;
 		}
 	}
 
@@ -237,6 +273,10 @@ public class DamageCal {
 			
 		}
 
+		if(protect <= 0) {
+			return 9999999;
+		}
+		
 		damage = damage - (damage * ((42.6/Math.sqrt(2)) * Math.log10((protect*0.18+14.15) / (10*Math.sqrt(2)))) / 100.0);
 		return damage;
 		

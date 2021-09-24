@@ -81,6 +81,10 @@ public class Thorns {
 		
 		thorns = thorns * Math.pow(player.getLevel(), 1.2) / 5000;
 		
+		if(thorns <= 0) {
+			thorns = 0;
+		}
+		
 		thorns += new SpecialEffect().a10030(player, thorns);
 		thorns += new SpecialEffect().a2(player, thorns);
 		thorns += new SpecialEffect().a3(player, thorns);

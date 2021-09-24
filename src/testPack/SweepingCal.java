@@ -64,6 +64,11 @@ public class SweepingCal {
 				|| mainHand.getType() == Material.CUT_RED_SANDSTONE || mainHand.getType() == Material.RED_SANDSTONE_STAIRS || mainHand.getType() == Material.STONE_STAIRS) {
 			
 			sweep += Integer.parseInt(player.getInventory().getItemInMainHand().getItemMeta().getLocalizedName().split(",")[4]);
+			
+			if(sweep <= 0) {
+				sweep = 0;
+			}
+			
 			Location loc = player.getLocation();
 			double num1 = player.getLocation().getDirection().getX();
 			double num2 = player.getLocation().getDirection().getY() + 1;

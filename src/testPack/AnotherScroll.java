@@ -170,11 +170,17 @@ public class AnotherScroll {
 							item.getType() == Material.CUT_RED_SANDSTONE || item.getType() == Material.RED_SANDSTONE_STAIRS || item.getType() == Material.STONE_STAIRS ||
 							item.getType()==Material.NETHERITE_HELMET || item.getType()==Material.NETHERITE_CHESTPLATE || item.getType()==Material.NETHERITE_LEGGINGS || 
 							item.getType()==Material.NETHERITE_BOOTS || item.getType()==Material.CARVED_PUMPKIN) {
-						itemArg.setAmount(itemArg.getAmount()-1);
 						
 						ItemMeta im = item.getItemMeta();
 						String[] ary = im.getLocalizedName().split(",");
 						try {
+							if(Integer.parseInt(ary[9]) <= 0) {
+								player.sendMessage(ChatColor.RED + "반격 수치가 0이하인 경우에는 사용할 수 없을 것 같다.");
+								return;
+							}
+							
+							itemArg.setAmount(itemArg.getAmount()-1);
+							
 							String result = makeEnch(ary, "0", 9);
 							im.setLocalizedName(result);
 							item.setItemMeta(im);
@@ -295,11 +301,17 @@ public class AnotherScroll {
 							item.getType() == Material.CUT_RED_SANDSTONE || item.getType() == Material.RED_SANDSTONE_STAIRS || item.getType() == Material.STONE_STAIRS ||
 							item.getType()==Material.NETHERITE_HELMET || item.getType()==Material.NETHERITE_CHESTPLATE || item.getType()==Material.NETHERITE_LEGGINGS || 
 							item.getType()==Material.NETHERITE_BOOTS || item.getType()==Material.CARVED_PUMPKIN) {
-						itemArg.setAmount(itemArg.getAmount()-1);
 						
 						ItemMeta im = item.getItemMeta();
 						String[] ary = im.getLocalizedName().split(",");
 						try {
+							if(Integer.parseInt(ary[4]) <= 0) {
+								player.sendMessage(ChatColor.RED + "스플레시 수치가 0이하인 경우에는 사용할 수 없을 것 같다.");
+								return;
+							}
+							
+							itemArg.setAmount(itemArg.getAmount()-1);
+							
 							String result = makeEnch(ary, "0", 4);
 							im.setLocalizedName(result);
 							item.setItemMeta(im);

@@ -79,366 +79,370 @@ public class RerollScroll {
 						total += Integer.parseInt(ench[7]);
 						total += Integer.parseInt(ench[8]);
 						total += Integer.parseInt(ench[9]);
-
+						
 						int[] stat = {0,0,0,0,0,0,0,0,0,0,0};
-
-						Random rnd = new Random();
 						
-						int statNum = rnd.nextInt(10);
-						
-						if(statNum == 0) {
-							int tmp = rnd.nextInt(total);
-							stat[6] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[8] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[7] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[9] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[5] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[0] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[1] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[2] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[3] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[4] = tmp;
-							total -= tmp;
-						} else if(statNum == 1) {
-							int tmp = rnd.nextInt(total);
-							stat[8] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[7] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[6] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[9] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[4] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[2] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[1] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[3] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[5] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[0] = tmp;
-							total -= tmp;
-						} else if(statNum == 2) {
-							int tmp = rnd.nextInt(total);
-							stat[9] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[6] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[0] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[7] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[8] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[5] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[1] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[3] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[2] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[4] = tmp;
-							total -= tmp;
-						} else if(statNum == 3) {
-							int tmp = rnd.nextInt(total);
-							stat[6] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[4] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[5] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[9] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[8] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[7] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[1] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[3] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[2] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[0] = tmp;
-							total -= tmp;
-						} else if(statNum == 4) {
-							int tmp = rnd.nextInt(total);
-							stat[8] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[0] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[9] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[7] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[6] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[5] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[1] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[2] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[2] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[4] = tmp;
-							total -= tmp;
-						} else if(statNum == 5) {
-							int tmp = rnd.nextInt(total);
-							stat[8] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[5] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[9] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[7] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[6] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[0] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[1] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[2] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[2] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[4] = tmp;
-							total -= tmp;
-						} else if(statNum == 6) {
-							int tmp = rnd.nextInt(total);
-							stat[6] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[2] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[3] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[4] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[7] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[8] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[9] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[5] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[1] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[0] = tmp;
-							total -= tmp;
-						} else if(statNum == 7) {
-							int tmp = rnd.nextInt(total);
-							stat[7] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[6] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[4] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[5] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[8] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[9] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[0] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[1] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[2] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[3] = tmp;
-							total -= tmp;
-						} else if(statNum == 8) {
-							int tmp = rnd.nextInt(total);
-							stat[1] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[2] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[3] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[0] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[4] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[5] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[6] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[7] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[8] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[9] = tmp;
-							total -= tmp;
-						} else if(statNum == 9) {
-							int tmp = rnd.nextInt(total);
-							stat[3] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[6] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[5] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[0] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[1] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[2] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[4] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[7] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[8] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[9] = tmp;
-							total -= tmp;
+						if(total > 0) {
+							Random rnd = new Random();
+							
+							int statNum = rnd.nextInt(10);
+							
+							if(statNum == 0) {
+								int tmp = rnd.nextInt(total);
+								stat[6] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[8] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[7] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[9] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[5] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[0] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[1] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[2] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[3] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[4] = tmp;
+								total -= tmp;
+							} else if(statNum == 1) {
+								int tmp = rnd.nextInt(total);
+								stat[8] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[7] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[6] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[9] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[4] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[2] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[1] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[3] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[5] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[0] = tmp;
+								total -= tmp;
+							} else if(statNum == 2) {
+								int tmp = rnd.nextInt(total);
+								stat[9] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[6] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[0] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[7] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[8] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[5] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[1] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[3] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[2] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[4] = tmp;
+								total -= tmp;
+							} else if(statNum == 3) {
+								int tmp = rnd.nextInt(total);
+								stat[6] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[4] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[5] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[9] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[8] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[7] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[1] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[3] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[2] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[0] = tmp;
+								total -= tmp;
+							} else if(statNum == 4) {
+								int tmp = rnd.nextInt(total);
+								stat[8] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[0] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[9] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[7] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[6] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[5] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[1] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[2] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[2] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[4] = tmp;
+								total -= tmp;
+							} else if(statNum == 5) {
+								int tmp = rnd.nextInt(total);
+								stat[8] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[5] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[9] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[7] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[6] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[0] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[1] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[2] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[2] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[4] = tmp;
+								total -= tmp;
+							} else if(statNum == 6) {
+								int tmp = rnd.nextInt(total);
+								stat[6] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[2] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[3] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[4] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[7] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[8] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[9] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[5] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[1] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[0] = tmp;
+								total -= tmp;
+							} else if(statNum == 7) {
+								int tmp = rnd.nextInt(total);
+								stat[7] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[6] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[4] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[5] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[8] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[9] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[0] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[1] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[2] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[3] = tmp;
+								total -= tmp;
+							} else if(statNum == 8) {
+								int tmp = rnd.nextInt(total);
+								stat[1] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[2] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[3] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[0] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[4] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[5] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[6] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[7] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[8] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[9] = tmp;
+								total -= tmp;
+							} else if(statNum == 9) {
+								int tmp = rnd.nextInt(total);
+								stat[3] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[6] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[5] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[0] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[1] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[2] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[4] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[7] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[8] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[9] = tmp;
+								total -= tmp;
+							}
+							
+							stat[10] = Integer.parseInt(ench[10]);
+							
+							if(stat[0] > 1000000) {
+								stat[0] = 1000000;
+							}
+							if(stat[1] > 1000000) {
+								stat[1] = 1000000;
+							}
+							if(stat[2] > 1000000) {
+								stat[2] = 1000000;
+							}
+							if(stat[3] > 1000000) {
+								stat[3] = 1000000;
+							}
+							if(stat[4] > 1000000) {
+								stat[4] = 1000000;
+							}
+							if(stat[5] > 30000) {
+								total += stat[5] - 30000;
+								stat[5] = 30000;
+							}
+							if(stat[6] > 30000) {
+								total += stat[6] - 30000;
+								stat[6] = 30000;
+							}
+							if(stat[7] > 30000) {
+								total += stat[7] - 30000;
+								stat[7] = 30000;
+							}
+							if(stat[8] > 30000) {
+								total += stat[8] - 30000;
+								stat[8] = 30000;
+							}
+							if(stat[9] > 1000000) {
+								stat[9] = 1000000;
+							}
+							if(stat[10] > 1000) {
+								stat[10] = 1000;
+							}
+							
+							stat[9] += total;
+						} else {
+							stat[10] = Integer.parseInt(ench[10]);
 						}
-						
-						stat[10] = Integer.parseInt(ench[10]);
-						
-						if(stat[0] > 1000000) {
-							stat[0] = 1000000;
-						}
-						if(stat[1] > 1000000) {
-							stat[1] = 1000000;
-						}
-						if(stat[2] > 1000000) {
-							stat[2] = 1000000;
-						}
-						if(stat[3] > 1000000) {
-							stat[3] = 1000000;
-						}
-						if(stat[4] > 1000000) {
-							stat[4] = 1000000;
-						}
-						if(stat[5] > 30000) {
-							total += stat[5] - 30000;
-							stat[5] = 30000;
-						}
-						if(stat[6] > 30000) {
-							total += stat[6] - 30000;
-							stat[6] = 30000;
-						}
-						if(stat[7] > 30000) {
-							total += stat[7] - 30000;
-							stat[7] = 30000;
-						}
-						if(stat[8] > 30000) {
-							total += stat[8] - 30000;
-							stat[8] = 30000;
-						}
-						if(stat[9] > 1000000) {
-							stat[9] = 1000000;
-						}
-						if(stat[10] > 1000) {
-							stat[10] = 1000;
-						}
-						
-						stat[9] += total;
 						
 						String localName = Integer.toString(stat[0]) + "," + stat[1] + "," + stat[2] + "," + stat[3] + "," + stat[4] + "," + stat[5] + "," + stat[6] + "," + stat[7] + "," + stat[8] + "," + stat[9] + "," + stat[10];
 						
@@ -524,7 +528,7 @@ public class RerollScroll {
 			}
 		} else if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "스탯 재분배 스크롤+")) {
 			
-			ItemStack item = player.getInventory().getItemInMainHand();
+			ItemStack item = player.getInventory().getItemInOffHand();
 			
 			if(item.getType()!=Material.AIR) {
 				if(item.getType()==Material.WOODEN_SWORD || item.getType()==Material.STONE_SWORD || item.getType()==Material.IRON_SWORD || item.getType()==Material.GOLDEN_SWORD ||
@@ -584,366 +588,370 @@ public class RerollScroll {
 						
 						int mul = rnd.nextInt(6) + 5;
 						total = total * (100+mul) / 100;
-
+						
 						int[] stat = {0,0,0,0,0,0,0,0,0,0,0};
-
-						Random rnd = new Random();
 						
-						int statNum = rnd.nextInt(10);
-						
-						if(statNum == 0) {
-							int tmp = rnd.nextInt(total);
-							stat[6] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[8] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[7] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[9] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[5] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[0] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[1] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[2] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[3] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[4] = tmp;
-							total -= tmp;
-						} else if(statNum == 1) {
-							int tmp = rnd.nextInt(total);
-							stat[8] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[7] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[6] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[9] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[4] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[2] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[1] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[3] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[5] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[0] = tmp;
-							total -= tmp;
-						} else if(statNum == 2) {
-							int tmp = rnd.nextInt(total);
-							stat[9] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[6] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[0] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[7] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[8] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[5] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[1] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[3] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[2] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[4] = tmp;
-							total -= tmp;
-						} else if(statNum == 3) {
-							int tmp = rnd.nextInt(total);
-							stat[6] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[4] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[5] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[9] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[8] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[7] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[1] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[3] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[2] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[0] = tmp;
-							total -= tmp;
-						} else if(statNum == 4) {
-							int tmp = rnd.nextInt(total);
-							stat[8] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[0] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[9] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[7] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[6] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[5] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[1] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[2] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[2] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[4] = tmp;
-							total -= tmp;
-						} else if(statNum == 5) {
-							int tmp = rnd.nextInt(total);
-							stat[8] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[5] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[9] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[7] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[6] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[0] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[1] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[2] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[2] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[4] = tmp;
-							total -= tmp;
-						} else if(statNum == 6) {
-							int tmp = rnd.nextInt(total);
-							stat[6] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[2] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[3] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[4] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[7] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[8] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[9] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[5] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[1] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[0] = tmp;
-							total -= tmp;
-						} else if(statNum == 7) {
-							int tmp = rnd.nextInt(total);
-							stat[7] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[6] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[4] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[5] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[8] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[9] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[0] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[1] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[2] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[3] = tmp;
-							total -= tmp;
-						} else if(statNum == 8) {
-							int tmp = rnd.nextInt(total);
-							stat[1] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[2] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[3] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[0] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[4] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[5] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[6] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[7] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[8] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[9] = tmp;
-							total -= tmp;
-						} else if(statNum == 9) {
-							int tmp = rnd.nextInt(total);
-							stat[3] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[6] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[5] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[0] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[1] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[2] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[4] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[7] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[8] = tmp;
-							total -= tmp;
-							tmp = rnd.nextInt(total);
-							stat[9] = tmp;
-							total -= tmp;
+						if(total > 0) {
+							Random rnd = new Random();
+							
+							int statNum = rnd.nextInt(10);
+							
+							if(statNum == 0) {
+								int tmp = rnd.nextInt(total);
+								stat[6] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[8] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[7] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[9] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[5] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[0] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[1] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[2] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[3] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[4] = tmp;
+								total -= tmp;
+							} else if(statNum == 1) {
+								int tmp = rnd.nextInt(total);
+								stat[8] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[7] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[6] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[9] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[4] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[2] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[1] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[3] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[5] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[0] = tmp;
+								total -= tmp;
+							} else if(statNum == 2) {
+								int tmp = rnd.nextInt(total);
+								stat[9] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[6] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[0] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[7] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[8] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[5] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[1] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[3] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[2] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[4] = tmp;
+								total -= tmp;
+							} else if(statNum == 3) {
+								int tmp = rnd.nextInt(total);
+								stat[6] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[4] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[5] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[9] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[8] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[7] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[1] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[3] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[2] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[0] = tmp;
+								total -= tmp;
+							} else if(statNum == 4) {
+								int tmp = rnd.nextInt(total);
+								stat[8] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[0] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[9] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[7] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[6] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[5] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[1] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[2] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[2] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[4] = tmp;
+								total -= tmp;
+							} else if(statNum == 5) {
+								int tmp = rnd.nextInt(total);
+								stat[8] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[5] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[9] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[7] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[6] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[0] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[1] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[2] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[2] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[4] = tmp;
+								total -= tmp;
+							} else if(statNum == 6) {
+								int tmp = rnd.nextInt(total);
+								stat[6] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[2] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[3] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[4] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[7] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[8] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[9] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[5] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[1] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[0] = tmp;
+								total -= tmp;
+							} else if(statNum == 7) {
+								int tmp = rnd.nextInt(total);
+								stat[7] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[6] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[4] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[5] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[8] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[9] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[0] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[1] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[2] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[3] = tmp;
+								total -= tmp;
+							} else if(statNum == 8) {
+								int tmp = rnd.nextInt(total);
+								stat[1] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[2] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[3] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[0] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[4] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[5] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[6] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[7] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[8] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[9] = tmp;
+								total -= tmp;
+							} else if(statNum == 9) {
+								int tmp = rnd.nextInt(total);
+								stat[3] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[6] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[5] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[0] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[1] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[2] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[4] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[7] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[8] = tmp;
+								total -= tmp;
+								tmp = rnd.nextInt(total);
+								stat[9] = tmp;
+								total -= tmp;
+							}
+							
+							stat[10] = Integer.parseInt(ench[10]);
+							
+							if(stat[0] > 1000000) {
+								stat[0] = 1000000;
+							}
+							if(stat[1] > 1000000) {
+								stat[1] = 1000000;
+							}
+							if(stat[2] > 1000000) {
+								stat[2] = 1000000;
+							}
+							if(stat[3] > 1000000) {
+								stat[3] = 1000000;
+							}
+							if(stat[4] > 1000000) {
+								stat[4] = 1000000;
+							}
+							if(stat[5] > 30000) {
+								total += stat[5] - 30000;
+								stat[5] = 30000;
+							}
+							if(stat[6] > 30000) {
+								total += stat[6] - 30000;
+								stat[6] = 30000;
+							}
+							if(stat[7] > 30000) {
+								total += stat[7] - 30000;
+								stat[7] = 30000;
+							}
+							if(stat[8] > 30000) {
+								total += stat[8] - 30000;
+								stat[8] = 30000;
+							}
+							if(stat[9] > 1000000) {
+								stat[9] = 1000000;
+							}
+							if(stat[10] > 1000) {
+								stat[10] = 1000;
+							}
+							
+							stat[9] += total;
+						} else {
+							stat[10] = Integer.parseInt(ench[10]);
 						}
-						
-						stat[10] = Integer.parseInt(ench[10]);
-						
-						if(stat[0] > 1000000) {
-							stat[0] = 1000000;
-						}
-						if(stat[1] > 1000000) {
-							stat[1] = 1000000;
-						}
-						if(stat[2] > 1000000) {
-							stat[2] = 1000000;
-						}
-						if(stat[3] > 1000000) {
-							stat[3] = 1000000;
-						}
-						if(stat[4] > 1000000) {
-							stat[4] = 1000000;
-						}
-						if(stat[5] > 30000) {
-							total += stat[5] - 30000;
-							stat[5] = 30000;
-						}
-						if(stat[6] > 30000) {
-							total += stat[6] - 30000;
-							stat[6] = 30000;
-						}
-						if(stat[7] > 30000) {
-							total += stat[7] - 30000;
-							stat[7] = 30000;
-						}
-						if(stat[8] > 30000) {
-							total += stat[8] - 30000;
-							stat[8] = 30000;
-						}
-						if(stat[9] > 1000000) {
-							stat[9] = 1000000;
-						}
-						if(stat[10] > 1000) {
-							stat[10] = 1000;
-						}
-						
-						stat[9] += total;
 						
 						String localName = Integer.toString(stat[0]) + "," + stat[1] + "," + stat[2] + "," + stat[3] + "," + stat[4] + "," + stat[5] + "," + stat[6] + "," + stat[7] + "," + stat[8] + "," + stat[9] + "," + stat[10];
 						
