@@ -3624,7 +3624,27 @@ public class Main extends JavaPlugin implements Listener{
 	@EventHandler
 	public void die(PlayerDeathEvent event) {
 		event.setDeathMessage(null);
-		// 보스바 관련
+		
+		// 부활
+		try {
+			if (event.getEntity() instanceof Player) {
+				Player player = (Player) event.getEntity();
+				int num = 0;
+				num += new SpecialEffect().a10120(player);
+				num += new SpecialEffect().s7(player);
+				
+				if(rnd.nextInt(100) < num) {
+					player.setHealth(10);
+					player.sendMessage(ChatColor.GREEN + "죽음을 초월하여 되살아났다.");
+					return;
+				}
+			}
+		} catch(Exception e) {
+			
+		}
+		
+		
+		// 사망 메세지
 		try {
 			Player player = (Player) event.getEntity();
 			System.out.println(ChatColor.RED + "" + player.getDisplayName() + " 사망");
@@ -7609,27 +7629,6 @@ public class Main extends JavaPlugin implements Listener{
 			
 		}
 		
-		// 부활
-		try {
-			if (event.getEntity() instanceof Player) {
-				Player player = (Player) event.getEntity();
-				if(player.getHealth() <= event.getFinalDamage()) {
-					
-					int num = 0;
-					num += new SpecialEffect().a10120(player);
-					num += new SpecialEffect().s7(player);
-					
-					if(rnd.nextInt(100) < num) {
-						player.setHealth(10);
-						event.setDamage(0);
-					}
-					
-				}
-			}
-		} catch(Exception e) {
-			
-		}
-		
 		// 데미지 표기
 		try {
 			if(event.getEntity() instanceof Mob) {
@@ -8759,6 +8758,9 @@ public class Main extends JavaPlugin implements Listener{
 	    				event.setCancelled(true);
 	    			}
 	    			if(block.getType() == Material.POTTED_WITHER_ROSE && event.getPlayer().isOp() == false) {
+	    				event.setCancelled(true);
+	    			}
+	    			if(block.getType() == Material.CAKE && event.getPlayer().isOp() == false) {
 	    				event.setCancelled(true);
 	    			}
 	    			if(block.getType() == Material.ARMOR_STAND && event.getPlayer().isOp() == false) {
@@ -10304,7 +10306,7 @@ public class Main extends JavaPlugin implements Listener{
 		} else if(player.getDisplayName().equalsIgnoreCase("JunletTridner")) {
 			event.setQuitMessage(ChatColor.GOLD + "리롤의 큰 꿈을 안고 오늘도 떠나갑니다.");
 		} else if(player.getDisplayName().equalsIgnoreCase("SARASHINA_RUKA")) {
-			event.setQuitMessage(ChatColor.YELLOW + "와이보다 와우를 먼저 깬 그 그림리퍼가 사라집니다.");
+			event.setQuitMessage(ChatColor.YELLOW + "와이보다 와우를 먼저 깬 그 메이지가 사라집니다.");
 		} else if(player.getDisplayName().equalsIgnoreCase("B1ath")) {
 			event.setQuitMessage(ChatColor.AQUA + "에일에서는 모습을 감췄지만 시공을 숭배하러 떠났을 수도 있습니다.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Nam_Da")) {

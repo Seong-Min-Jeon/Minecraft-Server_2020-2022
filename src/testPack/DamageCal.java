@@ -273,7 +273,7 @@ public class DamageCal {
 			
 		}
 
-		if(protect <= 0) {
+		if(protect < 0) {
 			return 9999999;
 		}
 		
