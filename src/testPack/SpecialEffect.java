@@ -2486,6 +2486,17 @@ public class SpecialEffect {
 		return 0;
 	}
 	
+	public double h5(Player player) {
+		try {
+			if(player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "호박 귀신의 머리")) {
+				return 1;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
 	public int c1(Player player) {

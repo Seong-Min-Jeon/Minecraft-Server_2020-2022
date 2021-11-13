@@ -80,4 +80,7 @@ commands:
   setLocalizedName:
    description: set Localized Name
    usage: /setLocalizedName
+  velocity:
+   description: <target> <x> <y> <z>
+   usage: /velocity
 api-version: 1.16

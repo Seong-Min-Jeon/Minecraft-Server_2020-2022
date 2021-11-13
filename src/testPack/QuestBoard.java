@@ -894,7 +894,7 @@ public class QuestBoard {
 			Chest chest = (Chest) block.getState();
 			ItemStack weapon = chest.getInventory().getItem(21);
 			player.getInventory().addItem(weapon);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "토끼의 털뭉치" + ChatColor.WHITE + "를 획득했다.");
+			player.sendMessage(ChatColor.AQUA + "토끼의 털뭉치" + ChatColor.WHITE + "를 획득했다.");
 			es.giveExp(player, 10000000);
 			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
 			return;

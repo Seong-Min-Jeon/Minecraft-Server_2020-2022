@@ -206,6 +206,8 @@ public class Main extends JavaPlugin implements Listener{
 		getCommand("setSkin").setExecutor(new Cmd24setSkin());
 		getCommand("InheritanceToggle").setExecutor(new Cmd25InheritanceToggle());
 		getCommand("setLocalizedName").setExecutor(new Cmd26setLocalizedName());
+		getCommand("velocity").setExecutor(new Cmd27velocity());
+		getServer().dispatchCommand(getServer().getConsoleSender(), "velocity");
 		
 		new Cmd16class().setFolder(getDataFolder());
 		new Inheritance().setFolder(getDataFolder());
@@ -375,7 +377,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("woolring")) { 
 			
 		} else {
-			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/895984999147401236/aile_texture_pack_42.zip");
+			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/908696979486441482/aile_texture_pack_43.zip");
 		}
 		
 		//Message
@@ -684,10 +686,57 @@ public class Main extends JavaPlugin implements Listener{
 //		if(player.getDisplayName().equalsIgnoreCase("WoolRing") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
 
 		
+//		ItemStack var1 = new ItemStack(Material.CARVED_PUMPKIN);
+//		ItemMeta var1Im = var1.getItemMeta();
+//		var1Im.setLocalizedName("1031,1031,1031,1031,1031,1031,1031,1031,1031,1031,700");
+//		var1Im.setDisplayName(ChatColor.DARK_RED + "호박 귀신의 머리");
+//		ArrayList<String> var1Lore = new ArrayList();
+//		var1Lore.add(ChatColor.GRAY + "레벨 제한: 700");
+//		var1Lore.add(ChatColor.GRAY + " ");
+//		var1Lore.add(ChatColor.GRAY + "잭이라는 이름의 소년이 아끼던 헬멧");
+//		var1Lore.add(ChatColor.GRAY + "그 소년은 이것이 가진 신비로운 힘에 이끌려");
+//		var1Lore.add(ChatColor.GRAY + "호박 머리 속으로 자신의 머리를 집어 넣었다.");
+//		var1Lore.add(ChatColor.GRAY + "소년은 자의로 이 헬멧을 벗을 수 없다는 것을");
+//		var1Lore.add(ChatColor.GRAY + "깨닫게 되었지만 이미 늦은 상태였다.");
+//		var1Lore.add(ChatColor.GRAY + "소년의 머리에서 이 호박 머리가 분리되기 까지는");
+//		var1Lore.add(ChatColor.GRAY + "1428년 하고도 174일이 걸렸다.");
+//		var1Lore.add(ChatColor.GRAY + " ");
+//		var1Lore.add(ChatColor.BLUE + "-흡혈 1%");
+//		var1Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var1Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var1Im.addItemFlags(ItemFlag.HIDE_DYE);
+//		var1Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var1Im.setUnbreakable(true);
+//		var1Im.setLore(var1Lore);
+//		var1.setItemMeta(var1Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var1);}
+//		
+//		ItemStack var2 = new ItemStack(Material.CARVED_PUMPKIN);
+//		ItemMeta var2Im = var2.getItemMeta();
+//		var2Im.setLocalizedName("1031,1031,1031,1031,1031,1031,1031,1031,1031,1031,700");
+//		var2Im.setDisplayName(ChatColor.AQUA + "변장용 호박 머리");
+//		ArrayList<String> var2Lore = new ArrayList();
+//		var2Lore.add(ChatColor.GRAY + "레벨 제한: 700");
+//		var2Lore.add(ChatColor.GRAY + " ");
+//		var2Lore.add(ChatColor.GRAY + "잭이라는 이름의 소년이 아끼던 헬멧");
+//		var2Lore.add(ChatColor.GRAY + "2034년 10월 30일, 잭은 자신이 가장 아끼는");
+//		var2Lore.add(ChatColor.GRAY + "이 호박 머리를 자신의 침대 맞에 두고 잠에 들었다.");
+//		var2Lore.add(ChatColor.GRAY + "10월 31일 할로윈을 위한 변장용 호박이었다.");
+//		var2Lore.add(ChatColor.GRAY + "하지만 2034년 10월 31일 오전 10시, 그가");
+//		var2Lore.add(ChatColor.GRAY + "깨어난 시각에 침대 맞에 있던 호박 머리는");
+//		var2Lore.add(ChatColor.GRAY + "호박 귀신의 머리였다.");
+//		var2Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var2Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var2Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var2Im.setUnbreakable(true);
+//		var2Im.setLore(var2Lore);
+//		var2.setItemMeta(var2Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var2);}
+//		
 //		ItemStack var1 = new ItemStack(Material.CYAN_WOOL);
 //		ItemMeta var1Im = var1.getItemMeta();
 //		var1Im.setLocalizedName("7000,0,0,0,5000,0,7000,0,0,0,700");
-//		var1Im.setDisplayName(ChatColor.GREEN + "크리스탈 아이스 헬멧");
+//		var1Im.setDisplayName(ChatColor.GREEN + "크리스탈 아이스 스워드");
 //		ArrayList<String> var1Lore = new ArrayList();
 //		var1Lore.add(ChatColor.GRAY + "레벨 제한: 700");
 //		var1Lore.add(ChatColor.GRAY + " ");
@@ -6007,6 +6056,7 @@ public class Main extends JavaPlugin implements Listener{
 				addHealthPercent += new SpecialEffect().w5(player);
 				addHealthPercent += new SpecialEffect().w10(player);
 				addHealthPercent += new SpecialEffect().s11(player);
+				addHealthPercent += new SpecialEffect().h5(player);
 				
 				if(inheritance.getInheritance(player) == 15) {
 					addHealthPercent += 0.5;
@@ -6123,7 +6173,7 @@ public class Main extends JavaPlugin implements Listener{
 				}
 				//===========================================================================
 				// 흡혈
-				int addHealthPercent = 0;
+				double addHealthPercent = 0;
 				addHealthPercent += new SpecialEffect().a10040(player);
 				addHealthPercent += new SpecialEffect().c1(player);
 				addHealthPercent += new SpecialEffect().a13(player);
@@ -6134,6 +6184,7 @@ public class Main extends JavaPlugin implements Listener{
 				addHealthPercent += new SpecialEffect().w5(player);
 				addHealthPercent += new SpecialEffect().w10(player);
 				addHealthPercent += new SpecialEffect().s11(player);
+				addHealthPercent += new SpecialEffect().h5(player);
 				
 				if(inheritance.getInheritance(player) == 15) {
 					addHealthPercent += 0.5;
@@ -6243,7 +6294,7 @@ public class Main extends JavaPlugin implements Listener{
 				}
 				//===========================================================================
 				// 흡혈
-				int addHealthPercent = 0;
+				double addHealthPercent = 0;
 				addHealthPercent += new SpecialEffect().a10040(player);
 				addHealthPercent += new SpecialEffect().c1(player);
 				addHealthPercent += new SpecialEffect().a13(player);
@@ -6254,6 +6305,7 @@ public class Main extends JavaPlugin implements Listener{
 				addHealthPercent += new SpecialEffect().w5(player);
 				addHealthPercent += new SpecialEffect().w10(player);
 				addHealthPercent += new SpecialEffect().s11(player);
+				addHealthPercent += new SpecialEffect().h5(player);
 				
 				if(inheritance.getInheritance(player) == 15) {
 					addHealthPercent += 0.5;
@@ -7539,7 +7591,7 @@ public class Main extends JavaPlugin implements Listener{
 							new BossHealth().getBar28().removePlayer(p);
 						}
 					} else {
-						new BossHealth().getBar28().setProgress((boss.getHealth()-event.getFinalDamage()) / 3800000.0);
+						new BossHealth().getBar28().setProgress((boss.getHealth()-event.getFinalDamage()) / 7000000.0);
 					}
 				}
 				// 9층의 지배자

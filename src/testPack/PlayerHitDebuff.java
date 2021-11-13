@@ -1792,7 +1792,7 @@ public class PlayerHitDebuff {
 				}
 			} else {
 				int num = rnd.nextInt(72);
-				if (num <= 3) {
+				if (num <= 4) {
 					
 					ArrayList<Player> ary = new ArrayList<>();
 					List<Entity> nearEntity = mob.getNearbyEntities(30, 15, 30);
@@ -1817,7 +1817,7 @@ public class PlayerHitDebuff {
 									p.setVelocity(new Vector(10,0,0));
 								}
 
-								if (time >= 200) {
+								if (time >= 100) {
 									this.cancel();
 								}
 
@@ -1835,7 +1835,7 @@ public class PlayerHitDebuff {
 									p.setVelocity(new Vector(-10,0,0));
 								}
 
-								if (time >= 200) {
+								if (time >= 100) {
 									this.cancel();
 								}
 
@@ -1853,7 +1853,7 @@ public class PlayerHitDebuff {
 									p.setVelocity(new Vector(0,0,10));
 								}
 
-								if (time >= 200) {
+								if (time >= 100) {
 									this.cancel();
 								}
 
@@ -1871,7 +1871,7 @@ public class PlayerHitDebuff {
 									p.setVelocity(new Vector(0,0,-10));
 								}
 
-								if (time >= 200) {
+								if (time >= 100) {
 									this.cancel();
 								}
 
@@ -1884,7 +1884,7 @@ public class PlayerHitDebuff {
 					player.sendMessage(ChatColor.RED + "지배자가 탑의 법칙을 변경합니다.");
 					sendMessage(player, ChatColor.RED + "지배자가 탑의 법칙을 변경합니다.");
 					((Skeleton) mob).setTarget(player);
-				} else if (num <= 8) {
+				} else if (num <= 7) {
 					
 					player.sendMessage(ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
 					sendMessage(player, ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
@@ -3756,10 +3756,6 @@ public class PlayerHitDebuff {
 					player.sendMessage(ChatColor.RED + "우리 부모님의 원수를 갚겠어.");
 					sendMessage(player, ChatColor.RED + "우리 부모님의 원수를 갚겠어.");
 					
-					player.getWorld().spawnEntity(mob.getLocation(), EntityType.ZOMBIE);
-					player.getWorld().spawnEntity(mob.getLocation(), EntityType.ZOMBIE);
-					player.getWorld().spawnEntity(mob.getLocation(), EntityType.ZOMBIE);
-					player.getWorld().spawnEntity(mob.getLocation(), EntityType.ZOMBIE);
 					player.getWorld().spawnEntity(mob.getLocation(), EntityType.ZOMBIE);
 				}
 			}

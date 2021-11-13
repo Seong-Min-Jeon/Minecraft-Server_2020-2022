@@ -823,6 +823,9 @@ public class TPMobSpawn {
 					if (loc2.getX() <= 90 && loc2.getY() <= 182 && loc2.getZ() <= -3 &&  
 							loc2.getX() >= 54 && loc2.getY() >= 170 && loc2.getZ() >= -41) {
 						num++;
+						if(new BossHealth().getBar28().getProgress() != 0) {
+							new BossHealth().getBar28().addPlayer(player);
+						}
 						return;
 					}
 				}
@@ -839,6 +842,8 @@ public class TPMobSpawn {
 				}
 			}
 			loc.getWorld().spawnEntity(new Location(player.getWorld(), 72, 170, -22), EntityType.SKELETON);
+			new BossHealth().getBar28().setProgress(1.0);
+			new BossHealth().getBar28().addPlayer(player);
 			return;
 		}
 		
@@ -1968,7 +1973,7 @@ public class TPMobSpawn {
 						if(answer == 0) {
 							for(Entity all : sk.getNearbyEntities(30, 30, 30)) {
 								if(all instanceof Player) {
-									if(all.getLocation().add(0,-1,0).getBlock().getType() != Material.RED_WOOL || all.getLocation().add(0,-2,0).getBlock().getType() != Material.RED_WOOL) {
+									if(all.getLocation().add(0,-1,0).getBlock().getType() != Material.RED_WOOL && all.getLocation().add(0,-2,0).getBlock().getType() != Material.RED_WOOL) {
 										cnt++;
 									} else {
 										player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 0.1f);
@@ -1979,7 +1984,7 @@ public class TPMobSpawn {
 						} else if(answer == 1) {
 							for(Entity all : sk.getNearbyEntities(30, 30, 30)) {
 								if(all instanceof Player) {
-									if(all.getLocation().add(0,-1,0).getBlock().getType() != Material.LIGHT_GRAY_WOOL || all.getLocation().add(0,-2,0).getBlock().getType() != Material.LIGHT_GRAY_WOOL) {
+									if(all.getLocation().add(0,-1,0).getBlock().getType() != Material.LIGHT_GRAY_WOOL && all.getLocation().add(0,-2,0).getBlock().getType() != Material.LIGHT_GRAY_WOOL) {
 										cnt++;
 									} else {
 										player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 0.1f);
@@ -1990,7 +1995,7 @@ public class TPMobSpawn {
 						} else if(answer == 2) {
 							for(Entity all : sk.getNearbyEntities(30, 30, 30)) {
 								if(all instanceof Player) {
-									if(all.getLocation().add(0,-1,0).getBlock().getType() != Material.YELLOW_WOOL || all.getLocation().add(0,-2,0).getBlock().getType() != Material.YELLOW_WOOL) {
+									if(all.getLocation().add(0,-1,0).getBlock().getType() != Material.YELLOW_WOOL && all.getLocation().add(0,-2,0).getBlock().getType() != Material.YELLOW_WOOL) {
 										cnt++;
 									} else {
 										player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 0.1f);
@@ -2001,7 +2006,7 @@ public class TPMobSpawn {
 						} else if(answer == 3) {
 							for(Entity all : sk.getNearbyEntities(30, 30, 30)) {
 								if(all instanceof Player) {
-									if(all.getLocation().add(0,-1,0).getBlock().getType() != Material.BLUE_WOOL || all.getLocation().add(0,-2,0).getBlock().getType() != Material.BLUE_WOOL) {
+									if(all.getLocation().add(0,-1,0).getBlock().getType() != Material.BLUE_WOOL && all.getLocation().add(0,-2,0).getBlock().getType() != Material.BLUE_WOOL) {
 										cnt++;
 									} else {
 										player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 0.1f);
