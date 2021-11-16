@@ -5568,8 +5568,14 @@ public class SpawnMob {
 				bootsItemIm.addEnchant(Enchantment.DURABILITY, 0, true);
 				bootsItem.setItemMeta(bootsItemIm);
 				boots.setBoots(bootsItem);
-				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 4500));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 4800));
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 2));
+				return true;
+			} else if (entity.getType() == (EntityType) EntityType.CREEPER) {
+				entity.setCustomName(ChatColor.GRAY + "시간" + ChatColor.YELLOW + " [Lv.1]");
+				entity.setCustomNameVisible(true);
+				entity.setMaxHealth(100000);
+				entity.setHealth(100000);
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.IRON_GOLEM
 					|| entity.getType() == (EntityType) EntityType.SALMON

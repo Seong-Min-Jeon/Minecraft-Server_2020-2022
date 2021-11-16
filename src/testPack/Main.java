@@ -207,7 +207,6 @@ public class Main extends JavaPlugin implements Listener{
 		getCommand("InheritanceToggle").setExecutor(new Cmd25InheritanceToggle());
 		getCommand("setLocalizedName").setExecutor(new Cmd26setLocalizedName());
 		getCommand("velocity").setExecutor(new Cmd27velocity());
-		getServer().dispatchCommand(getServer().getConsoleSender(), "velocity");
 		
 		new Cmd16class().setFolder(getDataFolder());
 		new Inheritance().setFolder(getDataFolder());
@@ -386,7 +385,7 @@ public class Main extends JavaPlugin implements Listener{
 		} else if(player.getDisplayName().equalsIgnoreCase("WoolRing")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.GREEN + "'에일 최고의 대장장이' 울링.");
 		} else if(player.getDisplayName().equalsIgnoreCase("_nanoboost_")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.RED + "정신병동에서 2주걸려 탈출 성공한 나노부스트.");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.RED + "딱히 타이틀이 없는 나노부스트.");
 		} else if(player.getDisplayName().equalsIgnoreCase("why9196")) {
 			event.setJoinMessage("확률이 뭐죠? " + ChatColor.BLUE + "'0.0068% 돌파한' 와이.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Akilae3102")) {

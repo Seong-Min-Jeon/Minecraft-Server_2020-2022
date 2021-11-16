@@ -1611,6 +1611,10 @@ public class MobDeath {
 				if (name.equalsIgnoreCase("웨곤" + ChatColor.YELLOW + " [Lv.700]")) {
 					mobloot.mob371(lootPlayer);
 				}
+				// 시간
+				if (name.equalsIgnoreCase("시간" + ChatColor.YELLOW + " [Lv.1]")) {
+					mobloot.mob372(mob, lootPlayer);
+				}
 				
 			} catch (Exception e) {
 

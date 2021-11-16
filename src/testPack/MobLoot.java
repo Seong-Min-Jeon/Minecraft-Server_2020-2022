@@ -2692,10 +2692,10 @@ public class MobLoot {
 	public void mob119(Player player) {
 		ItemStack rewardKey = new ItemStack(Material.TRIPWIRE_HOOK);
 		ItemMeta rewardKeyIm = rewardKey.getItemMeta();
-		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "죽음의 탑 8층 보상 열쇠");
+		rewardKeyIm.setDisplayName(ChatColor.YELLOW + "부서진 8층 열쇠 조각");
 		rewardKey.setItemMeta(rewardKeyIm);
 		player.getInventory().addItem(rewardKey);
-		sendMessage(player, ChatColor.YELLOW + "죽음의 탑 8층 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
+		sendMessage(player, ChatColor.YELLOW + "부서진 8층 열쇠 조각" + ChatColor.WHITE + "를 획득했다.");
 		
 		List<Entity> entitylist = player.getNearbyEntities(50, 20, 50);
 		for (Entity nearEntity : entitylist) {
@@ -2705,7 +2705,7 @@ public class MobLoot {
 				if (loc.getX() <= 90 && loc.getY() <= 182 && loc.getZ() <= -5 && 
 						loc.getX() >= 54 && loc.getY() >= 170 && loc.getZ() >= -41) {
 					nearPlayer.getInventory().addItem(rewardKey);
-					sendMessage(nearPlayer, ChatColor.YELLOW + "죽음의 탑 8층 보상 열쇠" + ChatColor.WHITE + "를 획득했다.");
+					sendMessage(nearPlayer, ChatColor.YELLOW + "부서진 8층 열쇠 조각" + ChatColor.WHITE + "를 획득했다.");
 				}
 			}
 		}
@@ -9182,8 +9182,15 @@ public class MobLoot {
 		es.giveExp(player, 4500000);
 	}
 	
-	public void mob372(Player player) {
-
+	// 시간
+	public void mob372(Entity mob, Player player) {
+		if(rnd.nextInt(10) == 0) {
+			ItemStack var1 = new ItemStack(Material.BREWING_STAND);
+			ItemMeta var1Im = var1.getItemMeta();
+			var1Im.setDisplayName(ChatColor.YELLOW + "시간을 넘는 힘");
+			var1.setItemMeta(var1Im);
+			player.getWorld().dropItem(mob.getLocation(), var1);
+		}
 	}
 	
 	public void mob373(Player player) {

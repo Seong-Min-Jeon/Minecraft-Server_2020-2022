@@ -51,6 +51,8 @@ public class PlayerHitDebuff {
 	
 	static boolean pat1 = false;
 	static boolean pat2 = false;
+	static boolean pat3 = false;
+	static boolean pat4 = false;
 
 	public void playerHitDebuff(Player player, Entity mob) {
 		mob1(player, mob);
@@ -1776,7 +1778,7 @@ public class PlayerHitDebuff {
 										Location loc2 = nearPlayer.getLocation();
 										if (loc2.getX() <= 90 && loc2.getY() <= 169 && loc2.getZ() <= -3 && 
 												loc2.getX() >= 54 && loc2.getY() >= 157 && loc2.getZ() >= -41) {
-											((Player) nearPlayer).damage(99999999);
+											((Player) nearPlayer).damage(20000);
 										}
 									}
 								}
@@ -1792,7 +1794,8 @@ public class PlayerHitDebuff {
 				}
 			} else {
 				int num = rnd.nextInt(72);
-				if (num <= 4) {
+				if (num <= 4 && !pat3) {
+					pat3 = true;
 					
 					ArrayList<Player> ary = new ArrayList<>();
 					List<Entity> nearEntity = mob.getNearbyEntities(30, 15, 30);
@@ -1818,6 +1821,9 @@ public class PlayerHitDebuff {
 								}
 
 								if (time >= 100) {
+									pat3 = false;
+									player.sendMessage(ChatColor.RED + "탑의 법칙이 원래대로 돌아옵니다.");
+									sendMessage(player, ChatColor.RED + "탑의 법칙이 원래대로 돌아옵니다.");
 									this.cancel();
 								}
 
@@ -1836,6 +1842,9 @@ public class PlayerHitDebuff {
 								}
 
 								if (time >= 100) {
+									pat3 = false;
+									player.sendMessage(ChatColor.RED + "탑의 법칙이 원래대로 돌아옵니다.");
+									sendMessage(player, ChatColor.RED + "탑의 법칙이 원래대로 돌아옵니다.");
 									this.cancel();
 								}
 
@@ -1854,6 +1863,9 @@ public class PlayerHitDebuff {
 								}
 
 								if (time >= 100) {
+									pat3 = false;
+									player.sendMessage(ChatColor.RED + "탑의 법칙이 원래대로 돌아옵니다.");
+									sendMessage(player, ChatColor.RED + "탑의 법칙이 원래대로 돌아옵니다.");
 									this.cancel();
 								}
 
@@ -1872,6 +1884,9 @@ public class PlayerHitDebuff {
 								}
 
 								if (time >= 100) {
+									pat3 = false;
+									player.sendMessage(ChatColor.RED + "탑의 법칙이 원래대로 돌아옵니다.");
+									sendMessage(player, ChatColor.RED + "탑의 법칙이 원래대로 돌아옵니다.");
 									this.cancel();
 								}
 
@@ -1879,7 +1894,6 @@ public class PlayerHitDebuff {
 							}
 						}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
 					}
-					
 					
 					player.sendMessage(ChatColor.RED + "지배자가 탑의 법칙을 변경합니다.");
 					sendMessage(player, ChatColor.RED + "지배자가 탑의 법칙을 변경합니다.");
@@ -1933,7 +1947,7 @@ public class PlayerHitDebuff {
 										Location loc2 = nearPlayer.getLocation();
 										if (loc2.getX() <= 90 && loc2.getY() <= 169 && loc2.getZ() <= -3 && 
 												loc2.getX() >= 54 && loc2.getY() >= 157 && loc2.getZ() >= -41) {
-											((Player) nearPlayer).damage(99999999);
+											((Player) nearPlayer).damage(20000);
 										}
 									}
 								}
@@ -1953,7 +1967,188 @@ public class PlayerHitDebuff {
 
 	// 8층의 지배자
 	public void mob15(Player player, Entity mob) {
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("8층의 지배자" + ChatColor.YELLOW + " [Lv.??]")) {
+			if (((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
+				int num = rnd.nextInt(18);
+				if (num <= 1) {
+					player.getWorld().spawnEntity(mob.getLocation(), EntityType.CREEPER);
+					((Skeleton) mob).setTarget(player);
+				} else if (num == 2 && !pat4) {
+					pat4 = true;
+					
+					player.sendMessage(ChatColor.RED + "지배자가 탑의 법칙을 변경합니다.");
+					sendMessage(player, ChatColor.RED + "지배자가 탑의 법칙을 변경합니다.");
+					player.getWorld().playSound(mob.getLocation(), Sound.BLOCK_CHEST_LOCKED, 5.0f, 1.0f);
+					
+					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
 
+						int time = 0;
+						ThreadData td = new ThreadData(player.getUniqueId());
+
+						@Override
+						public void run() {
+							
+							if (!td.hasID()) {
+								td.setID(taskID);
+							}
+							
+							List<Entity> nearEntity = mob.getNearbyEntities(20, 15, 20);
+							for (Entity nearPlayer : nearEntity) {
+								if (nearPlayer instanceof Player) {
+									Location loc2 = nearPlayer.getLocation();
+									if (loc2.getX() <= 90 && loc2.getY() <= 182 && loc2.getZ() <= -3 && 
+											loc2.getX() >= 54 && loc2.getY() >= 170 && loc2.getZ() >= -41) {
+										Player p = (Player) nearPlayer;
+										if(p.getHealth() >= 4) {
+											p.setHealth(4);
+										}
+									}
+								}
+							}
+							
+							if (time >= 100) {
+								pat4 = false;
+								player.sendMessage(ChatColor.RED + "탑의 법칙이 원래대로 돌아옵니다.");
+								sendMessage(player, ChatColor.RED + "탑의 법칙이 원래대로 돌아옵니다.");
+								td.endTask();
+								td.removeID();
+							}
+							
+							time++;
+						}
+					}, 0, 1);
+					
+				} else if (num == 2) {
+					player.sendMessage(ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
+					sendMessage(player, ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
+					player.getWorld().playSound(mob.getLocation(), Sound.BLOCK_GRASS_BREAK, 5.0f, 2.0f);
+					
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 60, 200, true,true));
+					
+					Location loc = mob.getLocation();
+					
+					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+						int time = 0;
+						ThreadData td = new ThreadData(player.getUniqueId());
+
+						@Override
+						public void run() {
+							
+							if (!td.hasID()) {
+								td.setID(taskID);
+							}
+							
+							if (time % 20 == 0) {
+								for(int x = -10 ; x < 10 ; x++) {
+									for(int y = -1 ; y < 0 ; y++) {
+										for(int z = -10 ; z < 10 ; z++) {
+											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
+											player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
+										}
+									}
+								}
+							}
+							
+							if (time >= 60) {
+								player.sendMessage(ChatColor.RED + "지배자가 절망II을 사용하였습니다.");
+								sendMessage(player, ChatColor.RED + "지배자가 절망II을 사용하였습니다.");
+								
+								World world = mob.getWorld();
+								Location loc = mob.getLocation();
+								world.spawnParticle(Particle.SOUL, loc, 100);
+								world.spawnParticle(Particle.SOUL_FIRE_FLAME, loc, 50);
+								world.playSound(mob.getLocation(), Sound.ENTITY_GHAST_HURT, 1.0f, 2.0f);
+								
+								List<Entity> nearEntity = mob.getNearbyEntities(10, 15, 10);
+								for (Entity nearPlayer : nearEntity) {
+									if (nearPlayer instanceof Player) {
+										Location loc2 = nearPlayer.getLocation();
+										if (loc2.getX() <= 90 && loc2.getY() <= 182 && loc2.getZ() <= -3 && 
+												loc2.getX() >= 54 && loc2.getY() >= 170 && loc2.getZ() >= -41) {
+											((Player) nearPlayer).damage(25000);
+										}
+									}
+								}
+								
+								td.endTask();
+								td.removeID();
+							}
+							
+							time++;
+						}
+					}, 0, 1);
+					
+				}
+			} else {
+				int num = rnd.nextInt(72);
+				if (num <= 4) {
+					player.getWorld().spawnEntity(mob.getLocation(), EntityType.CREEPER);
+					((Skeleton) mob).setTarget(player);
+				} else if (num <= 7) {
+					player.sendMessage(ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
+					sendMessage(player, ChatColor.RED + "지배자가 주문을 외우기 시작했습니다.");
+					player.getWorld().playSound(mob.getLocation(), Sound.BLOCK_GRASS_BREAK, 5.0f, 2.0f);
+					
+					((LivingEntity) mob).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 60, 200, true,true));
+					
+					Location loc = mob.getLocation();
+					
+					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+						int time = 0;
+						ThreadData td = new ThreadData(player.getUniqueId());
+
+						@Override
+						public void run() {
+							
+							if (!td.hasID()) {
+								td.setID(taskID);
+							}
+							
+							if (time % 20 == 0) {
+								for(int x = -10 ; x < 10 ; x++) {
+									for(int y = -1 ; y < 0 ; y++) {
+										for(int z = -10 ; z < 10 ; z++) {
+											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
+											player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
+										}
+									}
+								}
+							}
+							
+							if (time >= 60) {
+								player.sendMessage(ChatColor.RED + "지배자가 절망II을 사용하였습니다.");
+								sendMessage(player, ChatColor.RED + "지배자가 절망II을 사용하였습니다.");
+								
+								World world = mob.getWorld();
+								Location loc = mob.getLocation();
+								world.spawnParticle(Particle.SOUL, loc, 100);
+								world.spawnParticle(Particle.SOUL_FIRE_FLAME, loc, 50);
+								world.playSound(mob.getLocation(), Sound.ENTITY_GHAST_HURT, 1.0f, 2.0f);
+								
+								List<Entity> nearEntity = mob.getNearbyEntities(10, 15, 10);
+								for (Entity nearPlayer : nearEntity) {
+									if (nearPlayer instanceof Player) {
+										Location loc2 = nearPlayer.getLocation();
+										if (loc2.getX() <= 90 && loc2.getY() <= 182 && loc2.getZ() <= -3 && 
+												loc2.getX() >= 54 && loc2.getY() >= 170 && loc2.getZ() >= -41) {
+											((Player) nearPlayer).damage(25000);
+										}
+									}
+								}
+								
+								td.endTask();
+								td.removeID();
+							}
+							
+							time++;
+						}
+					}, 0, 1);
+					
+				}
+			}
+		}
 	}
 
 	// 9층의 지배자
@@ -4250,7 +4445,7 @@ public class PlayerHitDebuff {
 			player.damage(1200);
 		}
 	}
-		
+	
 	// 어둠을 구원한 영웅 스켈레톤
 	public void mob101(Player player, Entity mob) {
 		if(mob.getCustomName().substring(2).equalsIgnoreCase("어둠을 구원한 영웅 스켈레톤" + ChatColor.YELLOW + " [Lv.700]")) {
