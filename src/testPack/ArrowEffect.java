@@ -203,7 +203,17 @@ public class ArrowEffect {
 							}
 						}
 					} 
+				} else if(im.getDisplayName().equals(ChatColor.AQUA + "탑의 학살자 스태프")) {
+					if(player.getLevel() >= 650) {
+						if(checkMana(player, 7)) {
+							bool = reload(player, 2000);
+							if(bool) {
+								removeMana(player, 7);
+							}
+						}
+					} 
 				}
+				
 				if(bool) {
 					
 					world = player.getWorld();
@@ -225,6 +235,8 @@ public class ArrowEffect {
 						staffE5(arrow);
 					} else if(im.getDisplayName().equals(ChatColor.AQUA + "옵시디언의 눈물")) {
 						staffE6(arrow);
+					} else if(im.getDisplayName().equals(ChatColor.AQUA + "탑의 학살자 스태프")) {
+						staffE7(arrow);
 					}
 					
 				}
@@ -885,6 +897,46 @@ public class ArrowEffect {
 					}
 					world.playSound(arrow.getLocation(), Sound.BLOCK_STONE_BREAK, 2.0f, 0.4f);
 					
+					td.endTask();
+					td.removeID();
+				}
+				
+				time++;
+				
+			}
+
+		}, 0, 1);
+	}
+	
+	public void staffE7(Arrow arrow) {
+		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+			
+			int time;
+			ThreadData td = new ThreadData(player.getUniqueId());
+
+			@Override
+			public void run() {
+				
+				if(!td.hasID()) {
+					td.setID(taskID);
+				}
+				
+				if(time == 4) {
+					arrow.setVelocity(new Vector(0, 0, 0));
+					arrow.setGravity(false);
+					List<Entity> entitylist = arrow.getNearbyEntities(6, 6, 6);
+					for (Entity nearEntity : entitylist) {
+						if (nearEntity.getType() != EntityType.PLAYER) {
+							if (nearEntity instanceof LivingEntity) {
+								LivingEntity nearMob = (LivingEntity) nearEntity;
+								nearMob.damage(player.getLevel()*200);
+							}
+						}
+					}
+					world.playSound(arrow.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 3.0f, 1.0f);
+					world.spawnParticle(Particle.EXPLOSION_LARGE, arrow.getLocation(), 0);
+					world.spawnParticle(Particle.FLAME, arrow.getLocation(), 10);
+
 					td.endTask();
 					td.removeID();
 				}

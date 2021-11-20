@@ -1895,8 +1895,8 @@ public class PlayerHitDebuff {
 						}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
 					}
 					
-					player.sendMessage(ChatColor.RED + "지배자가 탑의 법칙을 변경합니다.");
-					sendMessage(player, ChatColor.RED + "지배자가 탑의 법칙을 변경합니다.");
+					player.sendMessage(ChatColor.RED + "지배자가 탑의 법칙을 변경합니다. (중력)");
+					sendMessage(player, ChatColor.RED + "지배자가 탑의 법칙을 변경합니다. (중력)");
 					((Skeleton) mob).setTarget(player);
 				} else if (num <= 7) {
 					
@@ -1976,8 +1976,8 @@ public class PlayerHitDebuff {
 				} else if (num == 2 && !pat4) {
 					pat4 = true;
 					
-					player.sendMessage(ChatColor.RED + "지배자가 탑의 법칙을 변경합니다.");
-					sendMessage(player, ChatColor.RED + "지배자가 탑의 법칙을 변경합니다.");
+					player.sendMessage(ChatColor.RED + "지배자가 탑의 법칙을 변경합니다. (최대체력)");
+					sendMessage(player, ChatColor.RED + "지배자가 탑의 법칙을 변경합니다. (최대체력)");
 					player.getWorld().playSound(mob.getLocation(), Sound.BLOCK_CHEST_LOCKED, 5.0f, 1.0f);
 					
 					taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {

@@ -685,6 +685,7 @@ public class Main extends JavaPlugin implements Listener{
 //		if(player.getDisplayName().equalsIgnoreCase("WoolRing") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
 
 		
+		
 //		ItemStack var1 = new ItemStack(Material.CARVED_PUMPKIN);
 //		ItemMeta var1Im = var1.getItemMeta();
 //		var1Im.setLocalizedName("1031,1031,1031,1031,1031,1031,1031,1031,1031,1031,700");

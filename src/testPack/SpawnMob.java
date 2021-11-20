@@ -5535,7 +5535,7 @@ public class SpawnMob {
 				EntityEquipment weapon = entity.getEquipment();
 				ItemStack weaponItem = new ItemStack(Material.BOW);
 				ItemMeta im = weaponItem.getItemMeta();
-				im.setLocalizedName("4500");
+				im.setLocalizedName("6000");
 				weaponItem.setItemMeta(im);
 				weapon.setItemInMainHand(weaponItem);
 				EntityEquipment mobBow = entity.getEquipment();
@@ -5568,7 +5568,7 @@ public class SpawnMob {
 				bootsItemIm.addEnchant(Enchantment.DURABILITY, 0, true);
 				bootsItem.setItemMeta(bootsItemIm);
 				boots.setBoots(bootsItem);
-				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 4800));
+				entity.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 6000));
 				entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 2));
 				return true;
 			} else if (entity.getType() == (EntityType) EntityType.CREEPER) {

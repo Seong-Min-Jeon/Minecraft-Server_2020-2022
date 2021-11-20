@@ -136,11 +136,11 @@ public class LootChest {
 					tower7(player);
 				}				
 			}
-//			if(block.getX()==3713 && block.getY()==17 && block.getZ()==3156) {
-//				if(removeKey(player, "죽음의 탑 8층 보상 열쇠")) {
-//					tower1(player);
-//				}				
-//			}
+			if(block.getX()==69 && block.getY()==240 && block.getZ()==-25) {
+				if(removeKey(player, "죽음의 탑 8층 보상 열쇠")) {
+					tower8(player);
+				}				
+			}
 //			if(block.getX()==3713 && block.getY()==17 && block.getZ()==3156) {
 //				if(removeKey(player, "죽음의 탑 9층 보상 열쇠")) {
 //					tower1(player);
@@ -2006,7 +2006,7 @@ public class LootChest {
 		
 		ItemStack var2 = new ItemStack(Material.GOLDEN_HELMET);
 		ItemMeta var2Im = var2.getItemMeta();
-		var2Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,600");
+		var2Im.setLocalizedName("3000,0,0,0,0,0,0,0,0,0,600");
 		var2Im.setDisplayName(ChatColor.GREEN + "탑의 척살자 헬멧");
 		ArrayList<String> var2Lore = new ArrayList();
 		var2Lore.add(ChatColor.GRAY + "레벨 제한: 600");
@@ -2022,7 +2022,7 @@ public class LootChest {
 		
 		ItemStack var3 = new ItemStack(Material.GOLDEN_CHESTPLATE);
 		ItemMeta var3Im = var3.getItemMeta();
-		var3Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,600");
+		var3Im.setLocalizedName("3000,0,0,0,0,0,0,0,0,0,600");
 		var3Im.setDisplayName(ChatColor.GREEN + "탑의 척살자 갑옷");
 		ArrayList<String> var3Lore = new ArrayList();
 		var3Lore.add(ChatColor.GRAY + "레벨 제한: 600");
@@ -2038,7 +2038,7 @@ public class LootChest {
 		
 		ItemStack var4 = new ItemStack(Material.GOLDEN_LEGGINGS);
 		ItemMeta var4Im = var4.getItemMeta();
-		var4Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,600");
+		var4Im.setLocalizedName("3000,0,0,0,0,0,0,0,0,0,600");
 		var4Im.setDisplayName(ChatColor.GREEN + "탑의 척살자 각반");
 		ArrayList<String> var4Lore = new ArrayList();
 		var4Lore.add(ChatColor.GRAY + "레벨 제한: 600");
@@ -2054,12 +2054,131 @@ public class LootChest {
 		
 		ItemStack var5 = new ItemStack(Material.GOLDEN_BOOTS);
 		ItemMeta var5Im = var5.getItemMeta();
-		var5Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,600");
+		var5Im.setLocalizedName("3000,0,0,0,0,0,0,0,0,0,600");
 		var5Im.setDisplayName(ChatColor.GREEN + "탑의 척살자 신발");
 		ArrayList<String> var5Lore = new ArrayList();
 		var5Lore.add(ChatColor.GRAY + "레벨 제한: 600");
 		var5Lore.add(ChatColor.GRAY + " ");
 		var5Lore.add(ChatColor.GRAY + "죽음의 탑 7층에서 발견한 신발");
+		var5Lore.add(ChatColor.GRAY + "(세트 아이템)");
+		var5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		var5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		var5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var5Im.setUnbreakable(true);
+		var5Im.setLore(var5Lore);
+		var5.setItemMeta(var5Im);
+		
+		ItemStack emerald = new ItemStack(Material.RABBIT_HIDE, num6);
+		ItemMeta im = emerald.getItemMeta();
+		im.setDisplayName(ChatColor.AQUA + "에메랄드 결정");
+		emerald.setItemMeta(im);
+		inv.setItem(0, emerald);
+		
+		if(num1==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, var1);
+		}
+		if(num2==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, var2);
+		}
+		if(num3==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, var3);
+		}
+		if(num4==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, var4);
+		}
+		if(num5==0) {
+			idx = rnd.nextInt(9);
+			inv.setItem(idx, var5);
+		}
+		player.openInventory(inv);	
+	}
+	
+	public void tower8(Player player) {
+		Inventory inv = Bukkit.createInventory(player, 9, "Dungeon Reward");
+		int idx;
+		int num1 = rnd.nextInt(44); // 무기
+		int num2 = rnd.nextInt(44); // 세트
+		int num3 = rnd.nextInt(44); // 세트
+		int num4 = rnd.nextInt(44); // 세트
+		int num5 = rnd.nextInt(44);	// 세트
+		int num6 = 8;
+		
+		ItemStack var1 = new ItemStack(Material.MUSIC_DISC_MELLOHI);
+		ItemMeta var1Im = var1.getItemMeta();
+		var1Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,650");
+		var1Im.setDisplayName(ChatColor.AQUA + "탑의 학살자 스태프");
+		ArrayList<String> var1Lore = new ArrayList();
+		var1Lore.add(ChatColor.GRAY + "레벨 제한: 650");
+		var1Lore.add(ChatColor.GRAY + " ");
+		var1Lore.add(ChatColor.GRAY + "죽음의 탑 8층에서 발견한 스태프");
+		var1Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		var1Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		var1Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var1Im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
+		var1Im.setUnbreakable(true);
+		var1Im.setLore(var1Lore);
+		var1.setItemMeta(var1Im);
+		
+		ItemStack var2 = new ItemStack(Material.GOLDEN_HELMET);
+		ItemMeta var2Im = var2.getItemMeta();
+		var2Im.setLocalizedName("0,0,0,0,2000,4000,2000,2000,2000,0,650");
+		var2Im.setDisplayName(ChatColor.GREEN + "탑의 학살자 헬멧");
+		ArrayList<String> var2Lore = new ArrayList();
+		var2Lore.add(ChatColor.GRAY + "레벨 제한: 650");
+		var2Lore.add(ChatColor.GRAY + " ");
+		var2Lore.add(ChatColor.GRAY + "죽음의 탑 8층에서 발견한 헬멧");
+		var2Lore.add(ChatColor.GRAY + "(세트 아이템)");
+		var2Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		var2Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		var2Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var2Im.setUnbreakable(true);
+		var2Im.setLore(var2Lore);
+		var2.setItemMeta(var2Im);
+		
+		ItemStack var3 = new ItemStack(Material.GOLDEN_CHESTPLATE);
+		ItemMeta var3Im = var3.getItemMeta();
+		var3Im.setLocalizedName("0,0,0,0,2000,4000,2000,2000,2000,0,650");
+		var3Im.setDisplayName(ChatColor.GREEN + "탑의 학살자 갑옷");
+		ArrayList<String> var3Lore = new ArrayList();
+		var3Lore.add(ChatColor.GRAY + "레벨 제한: 650");
+		var3Lore.add(ChatColor.GRAY + " ");
+		var3Lore.add(ChatColor.GRAY + "죽음의 탑 8층에서 발견한 갑옷");
+		var3Lore.add(ChatColor.GRAY + "(세트 아이템)");
+		var3Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		var3Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		var3Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var3Im.setUnbreakable(true);
+		var3Im.setLore(var3Lore);
+		var3.setItemMeta(var3Im);
+		
+		ItemStack var4 = new ItemStack(Material.GOLDEN_LEGGINGS);
+		ItemMeta var4Im = var4.getItemMeta();
+		var4Im.setLocalizedName("0,0,0,0,2000,4000,2000,2000,2000,0,650");
+		var4Im.setDisplayName(ChatColor.GREEN + "탑의 학살자 각반");
+		ArrayList<String> var4Lore = new ArrayList();
+		var4Lore.add(ChatColor.GRAY + "레벨 제한: 650");
+		var4Lore.add(ChatColor.GRAY + " ");
+		var4Lore.add(ChatColor.GRAY + "죽음의 탑 8층에서 발견한 각반");
+		var4Lore.add(ChatColor.GRAY + "(세트 아이템)");
+		var4Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		var4Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		var4Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		var4Im.setUnbreakable(true);
+		var4Im.setLore(var4Lore);
+		var4.setItemMeta(var4Im);
+		
+		ItemStack var5 = new ItemStack(Material.GOLDEN_BOOTS);
+		ItemMeta var5Im = var5.getItemMeta();
+		var5Im.setLocalizedName("0,0,0,0,2000,4000,2000,2000,2000,0,650");
+		var5Im.setDisplayName(ChatColor.GREEN + "탑의 학살자 신발");
+		ArrayList<String> var5Lore = new ArrayList();
+		var5Lore.add(ChatColor.GRAY + "레벨 제한: 650");
+		var5Lore.add(ChatColor.GRAY + " ");
+		var5Lore.add(ChatColor.GRAY + "죽음의 탑 8층에서 발견한 신발");
 		var5Lore.add(ChatColor.GRAY + "(세트 아이템)");
 		var5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);

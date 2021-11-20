@@ -25,7 +25,7 @@ import org.bukkit.scoreboard.Objective;
 import org.bukkit.scoreboard.Team;
 import org.bukkit.util.Vector;
 
-public class Cmd27velocity implements CommandExecutor {
+public class Cmd1000execute implements CommandExecutor {
 	
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
@@ -37,35 +37,51 @@ public class Cmd27velocity implements CommandExecutor {
 				}
 			}
 			
-			String name = args[0];
-			String x = args[1];
-			String y = args[2];
-			String z = args[3];
-			double vx = Double.parseDouble(x);
-			double vy = Double.parseDouble(y);
-			double vz = Double.parseDouble(z);
+			int startIdx = 0;
+			String command = "";
 			
-			if(vx > 5) {
-				vx = 5.0;
-			}
-			if(vy > 5) {
-				vy = 5.0;
-			}
-			if(vz > 5) {
-				vz = 5.0;
-			}
-			
-			Entity[] target = null;
-			
-			target = getTargets(sender, name);
-			
-			try {
-				for(Entity ent : target) {
-					ent.setVelocity(new Vector(vx,vy,vz));
+			for(int idx = 0 ; idx < args.length ; idx++) {
+				if(args[idx].equalsIgnoreCase("run") && args[idx+1].equalsIgnoreCase("velocity")) {
+					startIdx = idx+1;
+					command = "velocity";
 				}
-			} catch(Exception e) {
+			}
+			
+			if(startIdx != 0) {
+				if(command.equalsIgnoreCase("velocity")) {
+					String name = args[startIdx+1];
+					String x = args[startIdx+2];
+					String y = args[startIdx+3];
+					String z = args[startIdx+4];
+					double vx = Double.parseDouble(x);
+					double vy = Double.parseDouble(y);
+					double vz = Double.parseDouble(z);
+					
+					if(vx > 5) {
+						vx = 5.0;
+					}
+					if(vy > 5) {
+						vy = 5.0;
+					}
+					if(vz > 5) {
+						vz = 5.0;
+					}
+					
+					Entity[] target = null;
+					
+					target = getTargets(sender, name);
+					
+					try {
+						for(Entity ent : target) {
+							ent.setVelocity(new Vector(vx,vy,vz));
+						}
+					} catch(Exception e) {
+						
+					}
+				}
 				
 			}
+			
 		} catch(Exception e) {
 			
 		}
