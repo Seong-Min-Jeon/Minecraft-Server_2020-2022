@@ -161,7 +161,7 @@ public class Main extends JavaPlugin implements Listener{
 	// gamerule keepInventory true
 	// gamerule doImmediateRespawn true
 	// gamerule doLimitedCrafting true
-	// gamerule mobGriefing false
+	// gamerule mobGriefing false 
 	// gamerule doWeatherCycle false
 	// Damage_ALL, Damage_Undead, Damage_Arthropods, Impaling, Sweeping, Protection_Environment, Protection_Fire, Protection_Explosion, Protection_Projectile, Thorns, Level
 	
@@ -207,6 +207,8 @@ public class Main extends JavaPlugin implements Listener{
 		getCommand("InheritanceToggle").setExecutor(new Cmd25InheritanceToggle());
 		getCommand("setLocalizedName").setExecutor(new Cmd26setLocalizedName());
 		getCommand("velocity").setExecutor(new Cmd27velocity());
+		getCommand("target").setExecutor(new Cmd28target());
+		getCommand("surface").setExecutor(new Cmd29surface());
 		
 		new Cmd16class().setFolder(getDataFolder());
 		new Inheritance().setFolder(getDataFolder());
@@ -8864,6 +8866,8 @@ public class Main extends JavaPlugin implements Listener{
 		        						} else {
 		        							new ParticleEffect(player).newEffect55(10000);
 		        						}
+		        					} else if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "표면 칠하기")) {
+		        						new Surface(player, player.getTargetBlockExact(30));
 		        					}
 	        					}
 	        				} catch(Exception e2) {

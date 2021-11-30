@@ -81,6 +81,12 @@ commands:
    description: set Localized Name
    usage: /setLocalizedName
   velocity:
-   description: <target> <x> <y> <z>
+   description: <entity> <x> <y> <z>
    usage: /velocity
+  target:
+   description: <entity(from)> <entity(to)>
+   usage: /target
+  surface:
+   description: <material>
+   usage: /surface
 api-version: 1.16

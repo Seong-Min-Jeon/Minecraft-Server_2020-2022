@@ -54,6 +54,15 @@ public class Cmd27velocity implements CommandExecutor {
 			if(vz > 5) {
 				vz = 5.0;
 			}
+			if(vx < -5) {
+				vx = -5.0;
+			}
+			if(vy < -5) {
+				vy = -5.0;
+			}
+			if(vz < -5) {
+				vz = -5.0;
+			}
 			
 			Entity[] target = null;
 			
@@ -197,10 +206,10 @@ public class Cmd27velocity implements CommandExecutor {
 					}
 					if (valid) {
 						entities.add(e);
-						System.out.println("entity: " + e);
-						for(int i = 0; i < entities.size(); i++) {
-					           System.out.println("list: " + entities.get(i));
-					    }
+//						System.out.println("entity: " + e);
+//						for(int i = 0; i < entities.size(); i++) {
+//					           System.out.println("list: " + entities.get(i));
+//					    }
 					}
 				}
 			}

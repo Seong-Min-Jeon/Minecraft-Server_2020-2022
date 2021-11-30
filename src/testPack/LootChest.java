@@ -1138,7 +1138,7 @@ public class LootChest {
 		ArrayList<String> var8Lore = new ArrayList();
 		var8Lore.add(ChatColor.GRAY + "레벨 제한: 110");
 		var8Lore.add(ChatColor.GRAY + " ");
-		var8Lore.add(ChatColor.GRAY + "김과장님 여기에 윤회 설명 적어주시면 됩니다.");
+		var8Lore.add(ChatColor.GRAY + "울링님 여기에 윤회 설명 적어주시면 됩니다.");
 		var8Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		var8Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		var8Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);

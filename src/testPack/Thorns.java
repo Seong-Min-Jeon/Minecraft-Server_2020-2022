@@ -8,6 +8,7 @@ import org.bukkit.inventory.ItemStack;
 public class Thorns {
 	
 	private double thorns = 0;
+	private double protect = 0;
 
 	public double thorns(Player player, Entity entity) {
 //		if(player.getInventory().getItemInMainHand() != null) {
@@ -40,6 +41,7 @@ public class Thorns {
 					if(la.limit(player, item) == true) {
 						String[] ench = player.getInventory().getItemInMainHand().getItemMeta().getLocalizedName().split(",");
 						thorns += Integer.parseInt(ench[9]);
+						protect += Integer.parseInt(ench[5]);
 					}
 				}
 			}
@@ -50,6 +52,7 @@ public class Thorns {
 			if (player.getInventory().getHelmet() != null) {
 				String[] ench = player.getInventory().getHelmet().getItemMeta().getLocalizedName().split(",");
 				thorns += Integer.parseInt(ench[9]);
+				protect += Integer.parseInt(ench[5]);
 			}
 		} catch(Exception e) {
 			
@@ -58,6 +61,7 @@ public class Thorns {
 			if (player.getInventory().getChestplate() != null) {
 				String[] ench = player.getInventory().getChestplate().getItemMeta().getLocalizedName().split(",");
 				thorns += Integer.parseInt(ench[9]);
+				protect += Integer.parseInt(ench[5]);
 			}
 		} catch(Exception e) {
 			
@@ -66,6 +70,7 @@ public class Thorns {
 			if (player.getInventory().getLeggings() != null) {
 				String[] ench = player.getInventory().getLeggings().getItemMeta().getLocalizedName().split(",");
 				thorns += Integer.parseInt(ench[9]);
+				protect += Integer.parseInt(ench[5]);
 			}
 		} catch(Exception e) {
 			
@@ -74,12 +79,13 @@ public class Thorns {
 			if (player.getInventory().getBoots() != null) {
 				String[] ench = player.getInventory().getBoots().getItemMeta().getLocalizedName().split(",");
 				thorns += Integer.parseInt(ench[9]);
+				protect += Integer.parseInt(ench[5]);
 			}
 		} catch(Exception e) {
 			
 		}
 		
-		thorns = thorns * Math.pow(player.getLevel(), 1.2) / 5000;
+//		thorns = thorns * Math.pow(player.getLevel(), 1.2) / 5000;
 		
 		if(thorns <= 0) {
 			thorns = 0;
@@ -91,6 +97,10 @@ public class Thorns {
 		thorns += new SpecialEffect().a4(player, thorns);
 		thorns += new SpecialEffect().a5(player, thorns);
 		thorns += new SpecialEffect().a6(player, thorns);
+		
+		if(thorns > protect*(player.getLevel()/100.0)) {
+			thorns = protect*(player.getLevel()/100.0);
+		}
 		
 		return thorns;
 	}

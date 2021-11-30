@@ -14,10 +14,13 @@ import org.bukkit.command.BlockCommandSender;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Creature;
 import org.bukkit.entity.Damageable;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.HumanEntity;
+import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
+import org.bukkit.entity.ShulkerBullet;
 import org.bukkit.entity.minecart.CommandMinecart;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -25,7 +28,7 @@ import org.bukkit.scoreboard.Objective;
 import org.bukkit.scoreboard.Team;
 import org.bukkit.util.Vector;
 
-public class Cmd1000execute implements CommandExecutor {
+public class Cmd28target implements CommandExecutor {
 	
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
@@ -37,51 +40,34 @@ public class Cmd1000execute implements CommandExecutor {
 				}
 			}
 			
-			int startIdx = 0;
-			String command = "";
+			String first = args[0];
+			String second = args[1];
 			
-			for(int idx = 0 ; idx < args.length ; idx++) {
-				if(args[idx].equalsIgnoreCase("run") && args[idx+1].equalsIgnoreCase("velocity")) {
-					startIdx = idx+1;
-					command = "velocity";
-				}
-			}
+			Entity[] mob = null;
+			Entity[] target = null;
 			
-			if(startIdx != 0) {
-				if(command.equalsIgnoreCase("velocity")) {
-					String name = args[startIdx+1];
-					String x = args[startIdx+2];
-					String y = args[startIdx+3];
-					String z = args[startIdx+4];
-					double vx = Double.parseDouble(x);
-					double vy = Double.parseDouble(y);
-					double vz = Double.parseDouble(z);
-					
-					if(vx > 5) {
-						vx = 5.0;
-					}
-					if(vy > 5) {
-						vy = 5.0;
-					}
-					if(vz > 5) {
-						vz = 5.0;
-					}
-					
-					Entity[] target = null;
-					
-					target = getTargets(sender, name);
-					
-					try {
-						for(Entity ent : target) {
-							ent.setVelocity(new Vector(vx,vy,vz));
+			mob = getTargets(sender, first);
+			target = getTargets(sender, second);
+			
+			try {
+				for(Entity ent : mob) {
+					if(ent instanceof Creature) {
+						int rnd = new Random().nextInt(target.length);
+						Entity tar = target[rnd];
+						if(tar instanceof LivingEntity) {
+							((Creature) ent).setTarget(((LivingEntity) tar));
 						}
-					} catch(Exception e) {
-						
+					} else if(ent instanceof ShulkerBullet) {
+						int rnd = new Random().nextInt(target.length);
+						Entity tar = target[rnd];
+						if(tar instanceof LivingEntity) {
+							((ShulkerBullet) ent).setTarget(((LivingEntity) tar));
+						}
 					}
 				}
+			} catch(Exception e) {
 				
 			}
-			
 		} catch(Exception e) {
 			
 		}
@@ -213,10 +199,10 @@ public class Cmd1000execute implements CommandExecutor {
 					}
 					if (valid) {
 						entities.add(e);
-						System.out.println("entity: " + e);
-						for(int i = 0; i < entities.size(); i++) {
-					           System.out.println("list: " + entities.get(i));
-					    }
+//						System.out.println("entity: " + e);
+//						for(int i = 0; i < entities.size(); i++) {
+//					           System.out.println("list: " + entities.get(i));
+//					    }
 					}
 				}
 			}
