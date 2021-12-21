@@ -89,4 +89,4 @@ commands:
   surface:
    description: <material>
    usage: /surface
-api-version: 1.16
+api-version: 1.18

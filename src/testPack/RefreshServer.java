@@ -259,7 +259,7 @@ public class RefreshServer {
 					// 날씨 데미지
 					for(Player allPlayer : Bukkit.getOnlinePlayers()) {
 						Location loc = allPlayer.getLocation();
-						if(loc.getBlock().getBiome() == Biome.BASALT_DELTAS || loc.getBlock().getBiome() == Biome.SNOWY_TUNDRA) {
+						if(loc.getBlock().getBiome() == Biome.BASALT_DELTAS || loc.getBlock().getBiome() == Biome.SNOWY_SLOPES) {
 							
 							if(allPlayer.getInventory().contains(Material.ORANGE_DYE)) {
 								continue;
@@ -354,7 +354,7 @@ public class RefreshServer {
 								allPlayer.sendMessage(ChatColor.RED + "극심한 추위로 몸이 얼고 있다.");
 							}
 							
-						} else if(loc.getBlock().getBiome() == Biome.DESERT_HILLS || loc.getBlock().getBiome() == Biome.CRIMSON_FOREST) {
+						} else if(loc.getBlock().getBiome() == Biome.DESERT || loc.getBlock().getBiome() == Biome.CRIMSON_FOREST) {
 							
 							boolean wear = false;
 							

@@ -330,7 +330,7 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -8 ; z < 9 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
+											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
 										}
 									}
 								}
@@ -542,7 +542,7 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -15 ; z < 16 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
+											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
 										}
 									}
 								}
@@ -643,7 +643,7 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -15 ; z < 16 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
+											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
 										}
 									}
 								}
@@ -747,7 +747,7 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -15 ; z < 16 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
+											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
 										}
 									}
 								}
@@ -1223,7 +1223,7 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -15 ; z < 16 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
+											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
 										}
 									}
 								}
@@ -1351,7 +1351,7 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -8 ; z < 9 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
+											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
 										}
 									}
 								}
@@ -1418,7 +1418,7 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -15 ; z < 16 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
+											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
 										}
 									}
 								}
@@ -1522,7 +1522,7 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -15 ; z < 16 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
+											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
 										}
 									}
 								}
@@ -1604,7 +1604,7 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -15 ; z < 16 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
+											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
 										}
 									}
 								}
@@ -1693,7 +1693,7 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -5 ; z < 5 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
+											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
 										}
 									}
 								}
@@ -1756,7 +1756,7 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -10 ; z < 10 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
+											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
 										}
 									}
 								}
@@ -1925,7 +1925,7 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -10 ; z < 10 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
+											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
 										}
 									}
 								}
@@ -2044,7 +2044,7 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -10 ; z < 10 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
+											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
 										}
 									}
 								}
@@ -2111,7 +2111,7 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -10 ; z < 10 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
+											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
 										}
 									}
 								}
@@ -2224,7 +2224,7 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -12 ; z < 13 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
+											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
 										}
 									}
 								}
@@ -3208,7 +3208,7 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -12 ; z < 13 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
+											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
 										}
 									}
 								}
@@ -3436,7 +3436,7 @@ public class PlayerHitDebuff {
 								for(int y = -1 ; y < 0 ; y++) {
 									for(int z = -8 ; z < 9 ; z++) {
 										Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-										player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
+										player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
 									}
 								}
 							}
@@ -3753,7 +3753,7 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -8 ; z < 9 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
+											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
 										}
 									}
 								}
@@ -3824,7 +3824,7 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -8 ; z < 9 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
+											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
 										}
 									}
 								}
@@ -4295,7 +4295,7 @@ public class PlayerHitDebuff {
 										for (int y = -1; y < 0; y++) {
 											for (int z = -2; z < 3; z++) {
 												Location loc2 = loc.clone().add(new Vector(x, y + 1.2, z));
-												player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
+												player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
 											}
 										}
 									}
@@ -4489,7 +4489,7 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -4 ; z < 5 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.BARRIER, loc2, 0);
+											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
 										}
 									}
 								}
