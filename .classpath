@@ -61,5 +61,9 @@
 	<classpathentry kind="lib" path="C:/Users/home/Downloads/META-INF/libraries/snakeyaml-1.30.jar"/>
 	<classpathentry kind="lib" path="C:/Users/home/Downloads/META-INF/libraries/spigot-api-1.18.1-R0.1-SNAPSHOT.jar"/>
 	<classpathentry kind="lib" path="C:/Users/home/Downloads/META-INF/libraries/sqlite-jdbc-3.36.0.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/home/Documents/서버 관련/1.18api/NickAPI-v6.3.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/home/Documents/서버 관련/1.18api/TitleAPI-1.8.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/home/Documents/서버 관련/1.18api/PlayerNPC.jar"/>
+	<classpathentry kind="lib" path="C:/Users/home/Documents/서버 관련/1.18api/NametagEdit.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

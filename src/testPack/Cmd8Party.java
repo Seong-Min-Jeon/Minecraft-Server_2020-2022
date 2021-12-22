@@ -2,10 +2,10 @@ package testPack;
 
 import java.util.ArrayList;
 
-import net.minecraft.server.v1_16_R3.ChatMessageType;
-import net.minecraft.server.v1_16_R3.IChatBaseComponent;
-import net.minecraft.server.v1_16_R3.IChatBaseComponent.ChatSerializer;
-import net.minecraft.server.v1_16_R3.PacketPlayOutChat;
+import net.md_5.bungee.api.chat.ClickEvent;
+import net.md_5.bungee.api.chat.ComponentBuilder;
+import net.md_5.bungee.api.chat.HoverEvent;
+import net.md_5.bungee.api.chat.TextComponent;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -116,28 +116,20 @@ public class Cmd8Party implements CommandExecutor {
 			playersParty.add(player);
 			party.add(playersParty);
 			try {
-				IChatBaseComponent comp = ChatSerializer.a("{\"text\":\"" + "\",\"extra\":[{\"text\":\"" + ChatColor.GREEN + ChatColor.UNDERLINE + "Click the message to join " + player.getDisplayName() + "'s party!"
-	                    + "\",\"clickEvent\": {\"action\":\"run_command\",\"value\":\"" + "/party agreePlayerParty " + player.getDisplayName() + " " + player2.getDisplayName()
-	                    +  "\",\"hoverEvent\": {\"action\":\"show_text\",\"value\":\"" + ""
-	                    + "\"}}}]}"); 
-				PacketPlayOutChat chat = new PacketPlayOutChat(comp, ChatMessageType.CHAT, player2.getUniqueId());
-				Object handle = player2.getClass().getMethod("getHandle").invoke(player2);
-		        Object playerConnection = handle.getClass().getField("playerConnection").get(handle);
-		        playerConnection.getClass().getMethod("sendPacket", getNMSClass("Packet")).invoke(playerConnection, chat);
+				TextComponent message = new TextComponent(ChatColor.GREEN + "Click the message to join " + player2.getDisplayName() + "'s party!");
+				message.setClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/party agreePlayerParty " + player.getDisplayName() + " " + player2.getDisplayName()));
+				message.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ComponentBuilder("누르는 것입니다!").create()));
+				player2.spigot().sendMessage(message);
 			} catch(Exception e) {
 				
 			}
 			return;
 		} else { 
 			try {
-				IChatBaseComponent comp = ChatSerializer.a("{\"text\":\"" + "\",\"extra\":[{\"text\":\"" + ChatColor.GREEN + "" + ChatColor.UNDERLINE + "Click the message to join " + player.getDisplayName() + "'s party!"
-	                    + "\",\"clickEvent\": {\"action\":\"run_command\",\"value\":\"" + "/party agreePlayerParty " + player.getDisplayName() + " " + player2.getDisplayName()
-	                    +  "\",\"hoverEvent\": {\"action\":\"show_text\",\"value\":\"" + ""
-	                    + "\"}}}]}"); 
-				PacketPlayOutChat chat = new PacketPlayOutChat(comp, ChatMessageType.CHAT, player2.getUniqueId());
-				Object handle = player2.getClass().getMethod("getHandle").invoke(player2);
-		        Object playerConnection = handle.getClass().getField("playerConnection").get(handle);
-		        playerConnection.getClass().getMethod("sendPacket", getNMSClass("Packet")).invoke(playerConnection, chat);
+				TextComponent message = new TextComponent(ChatColor.GREEN + "Click the message to join " + player2.getDisplayName() + "'s party!");
+				message.setClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/party agreePlayerParty " + player.getDisplayName() + " " + player2.getDisplayName()));
+				message.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ComponentBuilder("누르는 것입니다!").create()));
+				player2.spigot().sendMessage(message);
 			} catch(Exception e) {
 				
 			}

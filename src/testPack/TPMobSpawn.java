@@ -12,7 +12,6 @@ import org.bukkit.Particle;
 import org.bukkit.Sound;
 import org.bukkit.block.Block;
 import org.bukkit.block.Chest;
-import org.bukkit.craftbukkit.v1_16_R3.CraftWorld;
 import org.bukkit.entity.Blaze;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
@@ -32,8 +31,6 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.scheduler.BukkitRunnable;
-
-import net.minecraft.server.v1_16_R3.WorldServer;
 
 public class TPMobSpawn {
 
@@ -160,9 +157,7 @@ public class TPMobSpawn {
 					}
 				}
 			}
-			CustomWither cw = new CustomWither(new Location(player.getWorld(), 3745, 77, 3444));
-			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
-			world.addEntity(cw);
+			player.getWorld().spawnEntity(new Location(player.getWorld(), 3745, 77, 3444), EntityType.WITHER);
 			for (int i = 0; i < 5; i++) {
 				loc.getWorld().spawnEntity(new Location(player.getWorld(), 3740, 80, 3438), EntityType.PHANTOM);
 			}
@@ -400,29 +395,17 @@ public class TPMobSpawn {
 					}
 				}
 			}
-			CustomSkeleton cs1 = new CustomSkeleton(new Location(player.getWorld(), 3394, 16, 3823));
-			CustomSkeleton cs2 = new CustomSkeleton(new Location(player.getWorld(), 3394, 16, 3819));
-			CustomSkeleton cs3 = new CustomSkeleton(new Location(player.getWorld(), 3394, 16, 3815));
-			CustomSkeleton cs4 = new CustomSkeleton(new Location(player.getWorld(), 3420, 16, 3823));
-			CustomSkeleton cs5 = new CustomSkeleton(new Location(player.getWorld(), 3420, 16, 3819));
-			CustomSkeleton cs6 = new CustomSkeleton(new Location(player.getWorld(), 3420, 16, 3815));
-			CustomZombie cz1 = new CustomZombie(new Location(player.getWorld(), 3407, 13, 3807));
-			CustomZombie cz2 = new CustomZombie(new Location(player.getWorld(), 3407, 13, 3807));
-			CustomZombie cz3 = new CustomZombie(new Location(player.getWorld(), 3407, 13, 3807));
-			CustomZombie cz4 = new CustomZombie(new Location(player.getWorld(), 3407, 13, 3807));
-			CustomZombie cz5 = new CustomZombie(new Location(player.getWorld(), 3407, 13, 3807));
-			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
-			world.addEntity(cs1);
-			world.addEntity(cs2);
-			world.addEntity(cs3);
-			world.addEntity(cs4);
-			world.addEntity(cs5);
-			world.addEntity(cs6);
-			world.addEntity(cz1);
-			world.addEntity(cz2);
-			world.addEntity(cz3);
-			world.addEntity(cz4);
-			world.addEntity(cz5);
+			player.getWorld().spawnEntity(new Location(player.getWorld(), 3394, 16, 3823), EntityType.SKELETON);
+			player.getWorld().spawnEntity(new Location(player.getWorld(), 3394, 16, 3819), EntityType.SKELETON);
+			player.getWorld().spawnEntity(new Location(player.getWorld(), 3394, 16, 3815), EntityType.SKELETON);
+			player.getWorld().spawnEntity(new Location(player.getWorld(), 3420, 16, 3823), EntityType.SKELETON);
+			player.getWorld().spawnEntity(new Location(player.getWorld(), 3420, 16, 3819), EntityType.SKELETON);
+			player.getWorld().spawnEntity(new Location(player.getWorld(), 3420, 16, 3815), EntityType.SKELETON);
+			player.getWorld().spawnEntity(new Location(player.getWorld(), 3407, 13, 3807), EntityType.ZOMBIE);
+			player.getWorld().spawnEntity(new Location(player.getWorld(), 3407, 13, 3807), EntityType.ZOMBIE);
+			player.getWorld().spawnEntity(new Location(player.getWorld(), 3407, 13, 3807), EntityType.ZOMBIE);
+			player.getWorld().spawnEntity(new Location(player.getWorld(), 3407, 13, 3807), EntityType.ZOMBIE);
+			player.getWorld().spawnEntity(new Location(player.getWorld(), 3407, 13, 3807), EntityType.ZOMBIE);
 			return;
 		}
 		
@@ -455,16 +438,12 @@ public class TPMobSpawn {
 					}
 				}
 			}
-			CustomWitherSkeleton cw1 = new CustomWitherSkeleton(new Location(player.getWorld(), 3405, 13, 3753));
-			CustomSkeleton cs1 = new CustomSkeleton(new Location(player.getWorld(), 3400, 13, 3741));
-			CustomZombie cz1 = new CustomZombie(new Location(player.getWorld(), 3410, 13, 3741));
-			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
-			world.addEntity(cs1);
-			world.addEntity(cz1);
-			world.addEntity(cw1);
+			player.getWorld().spawnEntity(new Location(player.getWorld(), 3405, 13, 3753), EntityType.WITHER_SKELETON);
+			player.getWorld().spawnEntity(new Location(player.getWorld(), 3400, 13, 3741), EntityType.SKELETON);
+			player.getWorld().spawnEntity(new Location(player.getWorld(), 3410, 13, 3741), EntityType.ZOMBIE);
 			return;
 		}
-		
+
 		
 		// 보스
 		if (loc.getX() == 3317.46 && loc.getY() == 13 && loc.getZ() == 3725.51) {
@@ -1012,9 +991,7 @@ public class TPMobSpawn {
 				}
 			}
 			
-			CustomSkeleton2 cs = new CustomSkeleton2(new Location(player.getWorld(), 25, 54, 675));
-			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
-			world.addEntity(cs);
+			player.getWorld().spawnEntity(new Location(player.getWorld(), 25, 54, 675), EntityType.SKELETON);
 
 			new BossHealth().getBar1().setProgress(1.0);
 			new BossHealth().getBar1().addPlayer(player);
@@ -1301,9 +1278,7 @@ public class TPMobSpawn {
 				}
 			}
 			
-			CustomWither cw = new CustomWither(new Location(player.getWorld(), 3697, 89, 2376));
-			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
-			world.addEntity(cw);
+			player.getWorld().spawnEntity(new Location(player.getWorld(), 3697, 89, 2376), EntityType.WITHER);
 			
 			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3706, 88, 2355), EntityType.WITHER_SKELETON);
 			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3706, 88, 2355), EntityType.WITHER_SKELETON);
@@ -1482,15 +1457,11 @@ public class TPMobSpawn {
 			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3723, 70, 3866), EntityType.WITHER_SKELETON);
 			loc.getWorld().spawnEntity(new Location(player.getWorld(), 3720, 70, 3866), EntityType.WITHER_SKELETON);
 			
-			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
-			CustomSkeleton2 cs = new CustomSkeleton2(new Location(player.getWorld(), 3702, 70, 3869));
-			world.addEntity(cs);
-			CustomSkeleton2 cs2 = new CustomSkeleton2(new Location(player.getWorld(), 3702, 70, 3865));
-			world.addEntity(cs2);
-			CustomSkeleton2 cs3 = new CustomSkeleton2(new Location(player.getWorld(), 3700, 70, 3866));
-			world.addEntity(cs3);
-			CustomSkeleton2 cs4 = new CustomSkeleton2(new Location(player.getWorld(), 3700, 70, 3868));
-			world.addEntity(cs4);
+			
+			player.getWorld().spawnEntity(new Location(player.getWorld(), 3702, 70, 3869), EntityType.SKELETON);
+			player.getWorld().spawnEntity(new Location(player.getWorld(), 3702, 70, 3865), EntityType.SKELETON);
+			player.getWorld().spawnEntity(new Location(player.getWorld(), 3700, 70, 3866), EntityType.SKELETON);
+			player.getWorld().spawnEntity(new Location(player.getWorld(), 3700, 70, 3868), EntityType.SKELETON);
 			return;
 		}
 		

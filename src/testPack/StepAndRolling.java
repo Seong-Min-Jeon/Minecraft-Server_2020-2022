@@ -9,13 +9,10 @@ import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Sound;
-import org.bukkit.craftbukkit.v1_16_R3.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Pose;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.Vector;
-
-import net.minecraft.server.v1_16_R3.EntityPlayer;
 
 public class StepAndRolling {
 	

@@ -12,8 +12,6 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.scheduler.BukkitRunnable;
 
-import net.minecraft.server.v1_16_R3.PacketPlayOutPlayerInfo;
-
 public class QuestScroll {
 	
 	private Message msg = new Message();

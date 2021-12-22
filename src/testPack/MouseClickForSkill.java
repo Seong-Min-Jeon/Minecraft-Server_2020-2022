@@ -6,18 +6,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.Sound;
-import org.bukkit.craftbukkit.v1_16_R3.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 
-import net.minecraft.server.v1_16_R3.PacketPlayOutTitle;
-import net.minecraft.server.v1_16_R3.ChatMessageType;
-import net.minecraft.server.v1_16_R3.IChatBaseComponent;
-import net.minecraft.server.v1_16_R3.IChatBaseComponent.ChatSerializer;
-import net.minecraft.server.v1_16_R3.PacketPlayOutChat;
-import net.minecraft.server.v1_16_R3.PacketPlayOutTitle.EnumTitleAction;
+import net.md_5.bungee.api.ChatMessageType;
+import net.md_5.bungee.api.chat.ClickEvent;
+import net.md_5.bungee.api.chat.ComponentBuilder;
+import net.md_5.bungee.api.chat.HoverEvent;
+import net.md_5.bungee.api.chat.TextComponent;
 
 public class MouseClickForSkill {
 
@@ -35,7 +34,7 @@ public class MouseClickForSkill {
  		Integer time = Integer.parseInt(strTime);
  		timer.put(player, time);
  		String newKey = makeKey(player, key); 	
- 		push(player, newKey); 			
+ 		push(player, newKey); 		
 	}
 	
 	public void click(Player playerArg, String key, Integer timeArg) {
@@ -109,10 +108,8 @@ public class MouseClickForSkill {
 				char key3 = key.charAt(2);
 				message = "§a" + key1 + "§7 - " + "§a" + key2 + "§7 - " + "§a" + key3;
 			}
-			IChatBaseComponent chatComponent = IChatBaseComponent.ChatSerializer.a("{\"text\":\"" + message + "\"}");
-	        PacketPlayOutChat packet = new PacketPlayOutChat(chatComponent, ChatMessageType.GAME_INFO, player.getUniqueId());
-	        ((CraftPlayer) player).getHandle().playerConnection.sendPacket(packet);
-			
+			TextComponent tc = new TextComponent(message);
+			player.spigot().sendMessage(ChatMessageType.ACTION_BAR, tc);
 		} catch (Exception e) {
 
 		}

@@ -11,7 +11,6 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.Chest;
-import org.bukkit.craftbukkit.v1_16_R3.CraftWorld;
 import org.bukkit.entity.Blaze;
 import org.bukkit.entity.CaveSpider;
 import org.bukkit.entity.Enderman;
@@ -37,8 +36,6 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerItemConsumeEvent;
 import org.bukkit.inventory.EntityEquipment;
 import org.bukkit.inventory.ItemStack;
-
-import net.minecraft.server.v1_16_R3.WorldServer;
 
 public class MobThread implements Listener{
 
@@ -2089,9 +2086,7 @@ public class MobThread implements Listener{
 		if (num == 0) {
 			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
 		} else if (num == 1) {
-			CustomSkeleton2 cs = new CustomSkeleton2(loc);
-			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
-			world.addEntity(cs);
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
 		}
 	}
 	
@@ -2190,9 +2185,7 @@ public class MobThread implements Listener{
 		if (num == 0) {
 			loc.getWorld().spawnEntity(loc, EntityType.ZOMBIE);
 		} else if (num == 1) {
-			CustomSkeleton2 cs = new CustomSkeleton2(loc);
-			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
-			world.addEntity(cs);
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
 		}
 	}
 	
@@ -2250,13 +2243,9 @@ public class MobThread implements Listener{
 		}
 		
 		if (num == 0) {
-			CustomSkeleton2 cs = new CustomSkeleton2(loc);
-			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
-			world.addEntity(cs);
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
 		} else if (num == 1) {
-			CustomWitherSkeleton2 cs = new CustomWitherSkeleton2(loc);
-			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
-			world.addEntity(cs);
+			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
 		} else if (num == 2) {
 			loc.getWorld().spawnEntity(loc, EntityType.ZOMBIE);
 		}
@@ -2365,9 +2354,7 @@ public class MobThread implements Listener{
 		if (num == 0) {
 			loc.getWorld().spawnEntity(loc, EntityType.ZOMBIE);
 		} else if (num == 1) {
-			CustomSkeleton2 cs = new CustomSkeleton2(loc);
-			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
-			world.addEntity(cs);
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
 		}
 	}
 	
@@ -2785,9 +2772,7 @@ public class MobThread implements Listener{
 			return;
 		}
 		
-		CustomWitherSkeleton2 cs = new CustomWitherSkeleton2(loc);
-		WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
-		world.addEntity(cs);
+		loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
 	}
 	
 	public void slimeDungeon5(Player player, Location loc) {
@@ -2901,9 +2886,7 @@ public class MobThread implements Listener{
 		if (num == 0) {
 			loc.getWorld().spawnEntity(loc, EntityType.ZOMBIE);
 		} else if (num == 1) {
-			CustomPanda cs = new CustomPanda(loc);
-			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
-			world.addEntity(cs);
+			loc.getWorld().spawnEntity(loc, EntityType.PANDA);
 		} 
 	}
 	
@@ -3010,9 +2993,7 @@ public class MobThread implements Listener{
 		} else if (num == 1) {
 			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
 		} else if (num == 2) {
-			CustomOcelot cs = new CustomOcelot(loc);
-			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
-			world.addEntity(cs);
+			loc.getWorld().spawnEntity(loc, EntityType.OCELOT);
 		} 
 	}
 	
@@ -3145,9 +3126,7 @@ public class MobThread implements Listener{
 		}
 		
 		if (num == 0) {
-			CustomOcelot cs = new CustomOcelot(loc);
-			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
-			world.addEntity(cs);
+			loc.getWorld().spawnEntity(loc, EntityType.OCELOT);
 		} else if (num == 1) {
 			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
 		} 
@@ -3237,9 +3216,7 @@ public class MobThread implements Listener{
 		}
 		
 		if (num == 0) {
-			CustomSkeleton2 cs = new CustomSkeleton2(loc);
-			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
-			world.addEntity(cs);
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
 		} else if (num == 1) {
 			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
 		} 
@@ -3323,9 +3300,7 @@ public class MobThread implements Listener{
 		} else if (num == 1) {
 			loc.getWorld().spawnEntity(loc, EntityType.BLAZE);
 		}  else if (num == 2) {
-			CustomOcelot cs = new CustomOcelot(loc);
-			WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
-			world.addEntity(cs);
+			loc.getWorld().spawnEntity(loc, EntityType.OCELOT);
 		}
 	}
 	

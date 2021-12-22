@@ -59,6 +59,7 @@ import org.bukkit.entity.Slime;
 import org.bukkit.entity.SmallFireball;
 import org.bukkit.entity.SpectralArrow;
 import org.bukkit.entity.Spider;
+import org.bukkit.entity.Wither;
 import org.bukkit.entity.WitherSkeleton;
 import org.bukkit.entity.Zoglin;
 import org.bukkit.event.EventHandler;
@@ -142,15 +143,10 @@ import org.bukkit.scoreboard.ScoreboardManager;
 import org.bukkit.scoreboard.Team;
 import org.bukkit.util.Vector;
 
-import com.google.common.primitives.SignedBytes;
+import com.connorlinfoot.titleapi.TitleAPI;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.nametagedit.plugin.NametagEdit;
-
-import net.minecraft.server.v1_16_R3.IChatBaseComponent.ChatSerializer;
-import net.minecraft.server.v1_16_R3.PacketPlayOutTitle;
-import net.minecraft.server.v1_16_R3.PacketPlayOutTitle.EnumTitleAction;
-import xyz.haoshoku.nick.api.NickAPI;
 
 import java.util.Random;
 
@@ -359,7 +355,7 @@ public class Main extends JavaPlugin implements Listener{
 	@EventHandler
 	public void onPlayerJoin(PlayerJoinEvent event) {
 		Player player = event.getPlayer();
-		
+		new Inheritance().changeInheritance(player, 1, null);
 		// 접속가능한 플레이어
 		try {
 //			if (!(player.getDisplayName().equalsIgnoreCase("yumehama"))) {
@@ -3744,11 +3740,7 @@ public class Main extends JavaPlugin implements Listener{
 		}
 		try {
 			Player player = (Player)event.getEntity();
-			PacketPlayOutTitle title = new PacketPlayOutTitle(EnumTitleAction.TITLE, 
-					ChatSerializer.a("{\"text\":\"§CYOU DIED\"}"));
-			Object handle = player.getClass().getMethod("getHandle").invoke(player);
-	        Object playerConnection = handle.getClass().getField("playerConnection").get(handle);
-	        playerConnection.getClass().getMethod("sendPacket", getNMSClass("Packet")).invoke(playerConnection, title);
+			TitleAPI.sendTitle(player, 20, 60, 20, ChatColor.RED + "YOU DIED");
 		} catch(Exception e) {
 			
 		}
@@ -5196,6 +5188,47 @@ public class Main extends JavaPlugin implements Listener{
 						for (Entity nearEntity : entitylist) {
 							if (nearEntity instanceof Phantom) {
 								((Phantom) nearEntity).setTarget(player);
+							}
+						}
+					}
+				}
+			}
+		} catch (Exception e) {
+
+		}
+		// wither target
+		try {
+			if (event.getEntity() instanceof Wither) {
+				if (event.getDamager() instanceof Player) {
+					Player player = (Player) event.getDamager();
+					((Wither) event.getEntity()).setTarget(player);
+					List<Entity> entitylist = event.getEntity().getNearbyEntities(20, 20, 20);
+					for (Entity nearEntity : entitylist) {
+						if (nearEntity instanceof Wither) {
+							((Wither) nearEntity).setTarget(player);
+						}
+					}
+				} else if (event.getDamager() instanceof Arrow) {
+					Arrow proj = (Arrow) event.getDamager();
+					if (proj.getShooter() instanceof Player) {
+						Player player = (Player) proj.getShooter();
+						((Wither) event.getEntity()).setTarget(player);
+						List<Entity> entitylist = event.getEntity().getNearbyEntities(20, 20, 20);
+						for (Entity nearEntity : entitylist) {
+							if (nearEntity instanceof Wither) {
+								((Wither) nearEntity).setTarget(player);
+							}
+						}
+					}
+				} else if (event.getDamager() instanceof SmallFireball) {
+					SmallFireball proj = (SmallFireball) event.getDamager();
+					if (proj.getShooter() instanceof Player) {
+						Player player = (Player) proj.getShooter();
+						((Wither) event.getEntity()).setTarget(player);
+						List<Entity> entitylist = event.getEntity().getNearbyEntities(20, 20, 20);
+						for (Entity nearEntity : entitylist) {
+							if (nearEntity instanceof Wither) {
+								((Wither) nearEntity).setTarget(player);
 							}
 						}
 					}
@@ -6718,6 +6751,12 @@ public class Main extends JavaPlugin implements Listener{
 						if (event.getEntity() instanceof Player) {
 							Player player = (Player) event.getEntity();
 							event.setDamage(player.getMaxHealth());
+						}
+					}
+					if (event.getCause() == DamageCause.FREEZE) {
+						if (event.getEntity() instanceof Player) {
+							Player player = (Player) event.getEntity();
+							event.setDamage(player.getMaxHealth() / 4);
 						}
 					}
 					if (event.getCause() == DamageCause.DROWNING) {
@@ -10595,7 +10634,7 @@ public class Main extends JavaPlugin implements Listener{
 				|| mat == Material.GRANITE_WALL || mat == Material.MOSSY_COBBLESTONE_WALL || mat == Material.MOSSY_STONE_BRICK_WALL || mat == Material.NETHER_BRICK_WALL
 				|| mat == Material.POLISHED_BLACKSTONE_BRICK_WALL || mat == Material.POLISHED_BLACKSTONE_WALL || mat == Material.PRISMARINE_WALL || mat == Material.RED_NETHER_BRICK_WALL
 				|| mat == Material.RED_SANDSTONE_WALL || mat == Material.SANDSTONE_WALL || mat == Material.STONE_BRICK_WALL || mat == Material.IRON_BARS
-				|| mat == Material.OBSERVER) {
+				|| mat == Material.OBSERVER || mat == Material.BIG_DRIPLEAF || mat == Material.BIG_DRIPLEAF_STEM || mat == Material.SMALL_DRIPLEAF) {
 			event.setCancelled(false);
 		} else {
 			event.setCancelled(true);
@@ -10670,6 +10709,10 @@ public class Main extends JavaPlugin implements Listener{
 		} else if(event.getEntity().getType() == EntityType.HUSK) {
 			event.getEntity().remove();
 		} else if(event.getEntity().getType() == EntityType.PIGLIN) {
+			event.getEntity().remove();
+		} else if(event.getEntity().getType() == EntityType.SKELETON) {
+			event.getEntity().remove();
+		} else if(event.getEntity().getType() == EntityType.STRAY) {
 			event.getEntity().remove();
 		}
 	}

@@ -5,10 +5,6 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import net.minecraft.server.v1_16_R3.ChatMessageType;
-import net.minecraft.server.v1_16_R3.IChatBaseComponent;
-import net.minecraft.server.v1_16_R3.IChatBaseComponent.ChatSerializer;
-import net.minecraft.server.v1_16_R3.PacketPlayOutChat;
 import xyz.haoshoku.nick.api.NickAPI;
 
 import org.bukkit.Bukkit;

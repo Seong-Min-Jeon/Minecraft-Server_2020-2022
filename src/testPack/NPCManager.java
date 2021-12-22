@@ -11,11 +11,6 @@ import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Particle;
-import org.bukkit.craftbukkit.v1_16_R3.CraftServer;
-import org.bukkit.craftbukkit.v1_16_R3.CraftWorld;
-import org.bukkit.craftbukkit.v1_16_R3.entity.CraftLivingEntity;
-import org.bukkit.craftbukkit.v1_16_R3.entity.CraftPlayer;
-import org.bukkit.craftbukkit.v1_16_R3.inventory.CraftItemStack;
 import org.bukkit.entity.Creeper;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
@@ -29,25 +24,13 @@ import com.mojang.authlib.GameProfile;
 import com.mojang.authlib.properties.Property;
 import com.mojang.datafixers.util.Pair;
 
-import net.minecraft.server.v1_16_R3.EntityPlayer;
-import net.minecraft.server.v1_16_R3.EntityPose;
-import net.minecraft.server.v1_16_R3.EnumItemSlot;
-import net.minecraft.server.v1_16_R3.MinecraftServer;
-import net.minecraft.server.v1_16_R3.PacketPlayOutAnimation;
-import net.minecraft.server.v1_16_R3.PacketPlayOutEntityDestroy;
-import net.minecraft.server.v1_16_R3.PacketPlayOutEntityEquipment;
-import net.minecraft.server.v1_16_R3.PacketPlayOutEntityHeadRotation;
-import net.minecraft.server.v1_16_R3.PacketPlayOutMount;
-import net.minecraft.server.v1_16_R3.PacketPlayOutNamedEntitySpawn;
-import net.minecraft.server.v1_16_R3.PacketPlayOutPlayerInfo;
-import net.minecraft.server.v1_16_R3.PlayerConnection;
-import net.minecraft.server.v1_16_R3.PlayerInteractManager;
-import net.minecraft.server.v1_16_R3.WorldServer;
+import dev.sergiferry.playernpc.api.NPC;
+import dev.sergiferry.playernpc.api.NPCLib;
+import dev.sergiferry.playernpc.api.NPCSlot;
+import dev.sergiferry.playernpc.api.NPC.FollowLookType;
 
 public class NPCManager {
 
-	MinecraftServer server = ((CraftServer) Bukkit.getServer()).getServer();
-	WorldServer world = ((CraftWorld) Bukkit.getWorld("world")).getHandle();
 	QuestBoard qb = new QuestBoard();
 	
 	public NPCManager(Player player) {
@@ -58,218 +41,233 @@ public class NPCManager {
 		allTime(player);
 	}
 	
-	public EntityPlayer npc1() {
+	public NPC npc1(Player player) {
 		Location loc = new Location(Bukkit.getWorld("world"), -2503, 53, 531, 0, 0);
 		
-		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "의문의 소녀");
-		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
-		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
+		NPC npc = NPCLib.getInstance().generateNPC(player, "의문의 소녀", loc);
 		String[] name = getSkin("_Shirayuki");
-		if(name == null) {
-			System.out.println("의문의 소녀 확인 불가");
-		} else {
-			gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
-		}
+		npc.setSkin(name[0], name[1]);
+		npc.setCollidable(false);
+		npc.setFollowLookType(FollowLookType.PLAYER);
+		npc.setShowOnTabList(false);
+		npc.create();
+		npc.show();
+		
 		return npc;
 	}
 	
-	public EntityPlayer npc2() {
+	public NPC npc2(Player player) {
 		Location loc = new Location(Bukkit.getWorld("world"), -2453, 84, 751, 0, 0);
 		
-		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "기사");
-		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
-		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
+		NPC npc = NPCLib.getInstance().generateNPC(player, "기사", loc);
 		String[] name = getSkin("0GoblinSlayer0");
-		if(name == null) {
-			System.out.println("기사 확인 불가");
-		} else {
-			gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
-		}
+		npc.setSkin(name[0], name[1]);
+		npc.setCollidable(false);
+		npc.setFollowLookType(FollowLookType.PLAYER);
+		npc.setShowOnTabList(false);
+		npc.create();
+		npc.show();
+		
 		return npc;
 	}
 	
-	public EntityPlayer npc3() {
+	public NPC npc3(Player player) {
 		Location loc = new Location(Bukkit.getWorld("world"), -2433, 28, 796, 180, 0);
 		
-		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "의장");
-		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
-		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
+		NPC npc = NPCLib.getInstance().generateNPC(player, "의장", loc);
 		String[] name = getSkin("7Voo");
-		if(name == null) {
-			System.out.println("의장 확인 불가");
-		} else {
-			gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
-		}
+		npc.setSkin(name[0], name[1]);
+		npc.setCollidable(false);
+		npc.setFollowLookType(FollowLookType.PLAYER);
+		npc.setShowOnTabList(false);
+		npc.create();
+		npc.show();
+		
 		return npc;
 	}
 	
-	public EntityPlayer npc4() {
+	public NPC npc4(Player player) {
 		Location loc = new Location(Bukkit.getWorld("world"), 3728, 140, 3146, 270, 0);
 		
-		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "의문의 소녀");
-		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
-		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
+		NPC npc = NPCLib.getInstance().generateNPC(player, "의문의 소녀", loc);
 		String[] name = getSkin("_Shirayuki");
-		if(name == null) {
-			System.out.println("의문의 소녀 확인 불가");
-		} else {
-			gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
-		}
+		npc.setSkin(name[0], name[1]);
+		npc.setCollidable(false);
+		npc.setFollowLookType(FollowLookType.PLAYER);
+		npc.setShowOnTabList(false);
+		npc.create();
+		npc.show();
+		
 		return npc;
 	}
 	
-	public EntityPlayer npc5() {
+	public NPC npc5(Player player) {
 		Location loc = new Location(Bukkit.getWorld("world"), 3728, 140, 3146, 270, 0);
 		
-		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "모험가");
-		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
-		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
+		NPC npc = NPCLib.getInstance().generateNPC(player, "모험가", loc);
 		String[] name = getSkin("SkyQC");
-		if(name == null) {
-			System.out.println("모험가 확인 불가");
-		} else {
-			gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
-		}
+		npc.setSkin(name[0], name[1]);
+		npc.setCollidable(false);
+		npc.setFollowLookType(FollowLookType.PLAYER);
+		npc.setShowOnTabList(false);
+		npc.create();
+		npc.show();
+		
 		return npc;
 	}
 	
-	public EntityPlayer npc6() {
+	public NPC npc6(Player player) {
 		Location loc = new Location(Bukkit.getWorld("world"), -2246, 51, -2415, 90, 0);
 		
-		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "데히트라");
-		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
-		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
+		NPC npc = NPCLib.getInstance().generateNPC(player, "데히트라", loc);
 		String[] name = getSkin("SkyQC");
-		if(name == null) {
-			System.out.println("데히트라 확인 불가");
-		} else {
-			gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
-		}
+		npc.setSkin(name[0], name[1]);
+		npc.setCollidable(false);
+		npc.setFollowLookType(FollowLookType.PLAYER);
+		npc.setShowOnTabList(false);
+		npc.create();
+		npc.show();
+		
 		return npc;
 	}
 	
-	public EntityPlayer npc7() {
+	public NPC npc7(Player player) {
 		Location loc = new Location(Bukkit.getWorld("world"), -2250, 51, -2415, 270, 0);
 		
-		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "의문의 남성");
-		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
-		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
+		NPC npc = NPCLib.getInstance().generateNPC(player, "의문의 남성", loc);
 		String[] name = getSkin("SkyQC");
-		if(name == null) {
-			System.out.println("의문의 남성 확인 불가");
-		} else {
-			gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
-		}
+		npc.setSkin(name[0], name[1]);
+		npc.setCollidable(false);
+		npc.setFollowLookType(FollowLookType.PLAYER);
+		npc.setShowOnTabList(false);
+		npc.create();
+		npc.show();
+		
 		return npc;
 	}
 	
-	public EntityPlayer npc8() {
+	public NPC npc8(Player player) {
 		Location loc = new Location(Bukkit.getWorld("world"), 291, 55, 153, 90, 0);
 		
-		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "빨간모자 소녀");
-		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
-		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
+		NPC npc = NPCLib.getInstance().generateNPC(player, "빨간모자 소녀", loc);
 		String[] name = getSkin("_Blue__Apple_");
-		if(name == null) {
-			System.out.println("빨간모자 확인 불가");
-		} else {
-			gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
-		}
-		return npc;
-	}
-	
-	public EntityPlayer npc9() {
-		Location loc = new Location(Bukkit.getWorld("world"), 973.5, 64, 42.5, 0, 0);
+		npc.setSkin(name[0], name[1]);
+		npc.setCollidable(false);
+		npc.setFollowLookType(FollowLookType.PLAYER);
+		npc.setShowOnTabList(false);
+		npc.create();
+		npc.show();
 		
-		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "에일을 구원한 영웅");
-		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
-		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
-		String[] name = getSkin("why9196");
-		if(name == null) {
-			System.out.println("와이 확인 불가");
-		} else {
-			gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
-		}
 		return npc;
 	}
 	
-	public EntityPlayer npc10() {
+	public NPC npc9(Player player) {
+		Location loc = new Location(Bukkit.getWorld("world"), 973.5, 64, 42.5, 0, 0);
+		NPC npc = NPCLib.getInstance().generateNPC(player, "why", loc);
+		String[] name = getSkin("why9196");
+		npc.setText("에일을 구한 영웅");
+		npc.setSkin(name[0], name[1]);
+		npc.setCollidable(false);
+		npc.setFollowLookType(FollowLookType.PLAYER);
+		npc.setShowOnTabList(false);
+		npc.setItem(NPCSlot.HELMET, new ItemStack(Material.NETHERITE_HELMET));
+		npc.setItem(NPCSlot.CHESTPLATE, new ItemStack(Material.NETHERITE_CHESTPLATE));
+		npc.setItem(NPCSlot.LEGGINGS, new ItemStack(Material.NETHERITE_LEGGINGS));
+		npc.setItem(NPCSlot.BOOTS, new ItemStack(Material.NETHERITE_BOOTS));
+		npc.setItem(NPCSlot.MAINHAND, new ItemStack(Material.JUNGLE_LOG));
+		System.out.println(7);
+		npc.create();
+		System.out.println(8);
+		npc.show();
+		System.out.println(9);
+		npc.update();
+		System.out.println(10);
+		
+		return npc;
+	}
+	
+	public NPC npc10(Player player) {
 		Location loc = new Location(Bukkit.getWorld("world"), 151.5, 71, 1902.5, 0, 0);
 		
-		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "구경꾼");
-		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
-		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
+		NPC npc = NPCLib.getInstance().generateNPC(player, "구경꾼", loc);
 		String[] name = getSkin("JunletTridner");
-		if(name == null) {
-			System.out.println("준 확인 불가");
-		} else {
-			gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
-		}
+		npc.setSkin(name[0], name[1]);
+		npc.setCollidable(false);
+		npc.setFollowLookType(FollowLookType.PLAYER);
+		npc.setShowOnTabList(false);
+		npc.setItem(NPCSlot.HELMET, new ItemStack(Material.GOLDEN_HELMET));
+		npc.setItem(NPCSlot.CHESTPLATE, new ItemStack(Material.GOLDEN_CHESTPLATE));
+		npc.setItem(NPCSlot.LEGGINGS, new ItemStack(Material.GOLDEN_LEGGINGS));
+		npc.setItem(NPCSlot.BOOTS, new ItemStack(Material.GOLDEN_BOOTS));
+		npc.setItem(NPCSlot.MAINHAND, new ItemStack(Material.SPRUCE_PLANKS));
+		npc.create();
+		npc.show();
+		
 		return npc;
 	}
 	
-	public EntityPlayer npc11() {
+	public NPC npc11(Player player) {
 		Location loc = new Location(Bukkit.getWorld("world"), 150.5, 71, 1902.5, 0, 0);
 		
-		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "구경꾼");
-		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
-		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
+		NPC npc = NPCLib.getInstance().generateNPC(player, "구경꾼", loc);
 		String[] name = getSkin("SARASHINA_RUKA");
-		if(name == null) {
-			System.out.println("레나랑 확인 불가");
-		} else {
-			gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
-		}
+		npc.setSkin(name[0], name[1]);
+		npc.setCollidable(false);
+		npc.setFollowLookType(FollowLookType.PLAYER);
+		npc.setShowOnTabList(false);
+		npc.setItem(NPCSlot.HELMET, new ItemStack(Material.SKELETON_SKULL));
+		npc.setItem(NPCSlot.CHESTPLATE, new ItemStack(Material.GOLDEN_CHESTPLATE));
+		npc.setItem(NPCSlot.LEGGINGS, new ItemStack(Material.GOLDEN_LEGGINGS));
+		npc.setItem(NPCSlot.BOOTS, new ItemStack(Material.GOLDEN_BOOTS));
+		npc.setItem(NPCSlot.MAINHAND, new ItemStack(Material.GOLDEN_HOE));
+		npc.create();
+		npc.show();
+		
 		return npc;
 	}
 	
-	public EntityPlayer npc12() {
+	public NPC npc12(Player player) {
 		Location loc = new Location(Bukkit.getWorld("world"), 149.5, 71, 1902.5, 0, 0);
-		
-		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "구경꾼");
-		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
-		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
+
+		NPC npc = NPCLib.getInstance().generateNPC(player, "구경꾼", loc);
 		String[] name = getSkin("Cute_Camel");
-		if(name == null) {
-			System.out.println("레나랑 동생 확인 불가");
-		} else {
-			gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
-		}
+		npc.setSkin(name[0], name[1]);
+		npc.setCollidable(false);
+		npc.setFollowLookType(FollowLookType.PLAYER);
+		npc.setShowOnTabList(false);
+		npc.setItem(NPCSlot.HELMET, new ItemStack(Material.SKELETON_SKULL));
+		npc.setItem(NPCSlot.CHESTPLATE, new ItemStack(Material.CHAINMAIL_CHESTPLATE));
+		npc.setItem(NPCSlot.LEGGINGS, new ItemStack(Material.CHAINMAIL_LEGGINGS));
+		npc.setItem(NPCSlot.BOOTS, new ItemStack(Material.CHAINMAIL_BOOTS));
+		npc.setItem(NPCSlot.MAINHAND, new ItemStack(Material.IRON_HOE));
+		npc.create();
+		npc.show();
+		
 		return npc;
 	}
 	
-	public EntityPlayer npc13() {
+	public NPC npc13(Player player) {
 		Location loc = new Location(Bukkit.getWorld("world"), 155.5, 71, 1904.5, 0, 0);
-		
-		GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "구경꾼");
-		EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
-		npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
+
+		NPC npc = NPCLib.getInstance().generateNPC(player, "구경꾼", loc);
 		String[] name = getSkin("Joojak");
-		if(name == null) {
-			System.out.println("주작 확인 불가");
-		} else {
-			gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
-		}
+		npc.setSkin(name[0], name[1]);
+		npc.setCollidable(false);
+		npc.setFollowLookType(FollowLookType.PLAYER);
+		npc.setShowOnTabList(false);
+		npc.create();
+		npc.show();
+		
 		return npc;
 	}
 	
 	public void allTime(Player player) {
 		try {
-			EntityPlayer npc9 = npc9();
-			addEquipPacket1(player, npc9, Material.NETHERITE_HELMET, Material.NETHERITE_CHESTPLATE, Material.NETHERITE_LEGGINGS
-					, Material.NETHERITE_BOOTS, Material.JUNGLE_LOG, Material.AIR);
-			EntityPlayer npc10 = npc10();
-			addEquipPacket2(player, npc10, Material.GOLDEN_HELMET, Material.GOLDEN_CHESTPLATE, Material.GOLDEN_LEGGINGS
-					, Material.GOLDEN_BOOTS, Material.SPRUCE_PLANKS, Material.AIR);
-			EntityPlayer npc11 = npc11();
-			addEquipPacket2(player, npc11, Material.SKELETON_SKULL, Material.GOLDEN_CHESTPLATE, Material.GOLDEN_LEGGINGS
-					, Material.GOLDEN_BOOTS, Material.GOLDEN_HOE, Material.AIR);
-			EntityPlayer npc12 = npc12();
-			addEquipPacket2(player, npc12, Material.SKELETON_SKULL, Material.CHAINMAIL_CHESTPLATE, Material.CHAINMAIL_LEGGINGS
-					, Material.CHAINMAIL_BOOTS, Material.IRON_HOE, Material.AIR);
-			EntityPlayer npc13 = npc13();
-			addEquipPacket2(player, npc13, Material.AIR, Material.AIR, Material.AIR
-					, Material.AIR, Material.AIR, Material.AIR);
+			npc9(player);
+			npc10(player);
+			npc11(player);
+			npc12(player);
+			npc13(player);
 		} catch(Exception e) {
 			
 		}
@@ -278,68 +276,65 @@ public class NPCManager {
 	public void questNPC(Player player) {
 		try {
 			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===설원의 가희2===")) {
-				addNPCPacket(player, npc1());
+				npc1(player);
 	 		}
 			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===설원의 가희3===")) {
-				addNPCPacket(player, npc1());
+				npc1(player);
 	 		}
 			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===설원의 가희4===")) {
-				addNPCPacket(player, npc2());
-				removeNPCPacket(player, npc1());
+				npc2(player);
+				npc1(player).destroy();
 	 		}
 			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===설원의 가희5===")) {
-				addNPCPacket(player, npc2());
-				addNPCPacket(player, npc3());
+				npc2(player);
+				npc3(player);
 	 		}
 			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===설원의 가희6===")) {
-				addNPCPacket(player, npc2());
-				addNPCPacket(player, npc3());
+				npc2(player);
+				npc3(player);
 	 		}
 			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===설원의 가희7===")) {
-				addNPCPacket(player, npc2());
-				addNPCPacket(player, npc3());
-				addNPCPacket(player, npc4());
+				npc2(player);
+				npc3(player);
+				npc4(player);
 	 		}
 			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===카루 던전===")) {
-				addNPCPacket(player, npc5());
+				npc5(player);
 	 		}
 			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===새로운 만남===")) {
-				addNPCPacket(player, npc6());
-				addNPCPacket(player, npc7());
+				npc6(player);
+				npc7(player);
 	 		}
 			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===그대는 빨간모자===")) {
-				addNPCPacket(player, npc8());
+				npc8(player);
 	 		}
 			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===빨간모자 이야기1===")) {
-				addNPCPacket(player, npc8());
+				npc8(player);
 	 		}
 			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===또다시 빨간모자===")) {
-				addNPCPacket(player, npc8());
+				npc8(player);
 	 		}
 			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===빨간모자 이야기2===")) {
-				addNPCPacket(player, npc8());
+				npc8(player);
 	 		}
 			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===찾아온 불청객===")) {
 				Location loc = player.getLocation().clone().add(1,0,0);
 				loc.setYaw(90);
 				loc.setPitch(0);
 				
-				GameProfile gameProfile = new GameProfile(UUID.randomUUID(), "데히트라");
-				EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
-				npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
+				NPC npc = NPCLib.getInstance().generateNPC(player, "데히트라", loc);
 				String[] name = getSkin("SkyQC");
-				if(name == null) {
-					System.out.println("데히트라 확인 불가");
-				} else {
-					gameProfile.getProperties().put("textures", new Property("textures", name[0], name[1]));
-				}
-				
-				addNPCPacket(player, npc);
+				npc.setSkin(name[0], name[1]);
+				npc.setCollidable(false);
+				npc.setFollowLookType(FollowLookType.PLAYER);
+				npc.setShowOnTabList(false);
+				npc.create();
+				npc.show();
 				
 				new BukkitRunnable() {
 					@Override
 					public void run() {
-						removeNPCPacket(player, npc);
+						npc.destroy();
 					}
 				}.runTaskLater(Main.getPlugin(Main.class), 1250);
 	 		}
@@ -350,7 +345,7 @@ public class NPCManager {
 	
 	public void defineQuest(Player player, String str) {
 		if(str.equals("설원의 가희 의문의 소녀")) {
-			addNPCPacket(player, npc1());
+			npc1(player);
 		}
 	}
 	
@@ -377,156 +372,6 @@ public class NPCManager {
 			return null;
 		}
 		
-	}
-	
-	public void addNPCPacket(Player player, EntityPlayer npc) {
-		
-		PlayerConnection connection = ((CraftPlayer) player).getHandle().playerConnection;
-		
-		new BukkitRunnable() {
-			@Override
-			public void run() {
-				connection.sendPacket(new PacketPlayOutPlayerInfo(PacketPlayOutPlayerInfo.EnumPlayerInfoAction.ADD_PLAYER, npc));
-				connection.sendPacket(new PacketPlayOutNamedEntitySpawn(npc));
-				connection.sendPacket(new PacketPlayOutEntityHeadRotation(npc, (byte) (npc.yaw * 256 / 360)));
-			}
-		}.runTaskLater(Main.getPlugin(Main.class), 2);
-		
-		new BukkitRunnable() {
-			@Override
-			public void run() {
-				connection.sendPacket(new PacketPlayOutPlayerInfo(PacketPlayOutPlayerInfo.EnumPlayerInfoAction.REMOVE_PLAYER, npc));
-			}
-		}.runTaskLater(Main.getPlugin(Main.class), 20);
-
-		// connection.sendPacket(new PacketPlayOutPlayerInfo(PacketPlayOutPlayerInfo.EnumPlayerInfoAction.REMOVE_PLAYER, npc));
-	}
-	
-	public void addEquipPacket1(Player player, EntityPlayer npc, Material head, Material chest, Material legs, Material feet, Material main, Material off) {
-		PlayerConnection connection = ((CraftPlayer) player).getHandle().playerConnection;
-		
-		new BukkitRunnable() {
-			int time = 0;
-			
-			@Override
-			public void run() {
-				
-				if(time % 5 == 0) {
-					connection.sendPacket(new PacketPlayOutPlayerInfo(PacketPlayOutPlayerInfo.EnumPlayerInfoAction.ADD_PLAYER, npc));
-					connection.sendPacket(new PacketPlayOutNamedEntitySpawn(npc));
-					connection.sendPacket(new PacketPlayOutEntityHeadRotation(npc, (byte) (npc.yaw * 256 / 360)));
-				}
-				
-				if(time >= 80) {
-					this.cancel();
-				}
-				
-				time++;
-			}
-		}.runTaskLater(Main.getPlugin(Main.class), 2);
-		
-		new BukkitRunnable() {
-			@Override
-			public void run() {
-				List<Pair<EnumItemSlot, net.minecraft.server.v1_16_R3.ItemStack>> equipmentList = new ArrayList<>();
-				equipmentList.add(new Pair<>(EnumItemSlot.HEAD, CraftItemStack.asNMSCopy(new ItemStack(head))));
-				equipmentList.add(new Pair<>(EnumItemSlot.CHEST, CraftItemStack.asNMSCopy(new ItemStack(chest))));
-				equipmentList.add(new Pair<>(EnumItemSlot.LEGS, CraftItemStack.asNMSCopy(new ItemStack(legs))));
-				equipmentList.add(new Pair<>(EnumItemSlot.FEET, CraftItemStack.asNMSCopy(new ItemStack(feet))));
-				equipmentList.add(new Pair<>(EnumItemSlot.MAINHAND, CraftItemStack.asNMSCopy(new ItemStack(main))));
-				equipmentList.add(new Pair<>(EnumItemSlot.OFFHAND, CraftItemStack.asNMSCopy(new ItemStack(off))));
-				PacketPlayOutEntityEquipment entityEquipment = new PacketPlayOutEntityEquipment(npc.getId(), equipmentList);
-				PlayerConnection connection = ((CraftPlayer) player).getHandle().playerConnection;
-				connection.sendPacket(entityEquipment);
-			}
-		}.runTaskLater(Main.getPlugin(Main.class), 90);
-		
-		new BukkitRunnable() {
-			int time = 0;
-			
-			@Override
-			public void run() {
-				if(time % 10 == 0) {
-					// main arm swing
-					connection.sendPacket(new PacketPlayOutAnimation(npc, 0));
-				} else if(time % 103 == 0) {
-					// take damage
-					connection.sendPacket(new PacketPlayOutAnimation(npc, 1));
-				} else if(time % 127 == 0) {
-					// leave bed
-					connection.sendPacket(new PacketPlayOutAnimation(npc, 2));
-				} else if(time % 159 == 0) {
-					// off arm swing
-					connection.sendPacket(new PacketPlayOutAnimation(npc, 3));
-				} else if(time % 207 == 0) {
-					// crit
-					connection.sendPacket(new PacketPlayOutAnimation(npc, 4));
-				} else if(time % 251 == 0) {
-					// magic crit
-					connection.sendPacket(new PacketPlayOutAnimation(npc, 5));
-				}
-				time++;
-			}
-		}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
-
-		new BukkitRunnable() {
-			@Override
-			public void run() {
-				connection.sendPacket(new PacketPlayOutPlayerInfo(PacketPlayOutPlayerInfo.EnumPlayerInfoAction.REMOVE_PLAYER, npc));
-			}
-		}.runTaskLater(Main.getPlugin(Main.class), 100);
-	}
-	
-	public void addEquipPacket2(Player player, EntityPlayer npc, Material head, Material chest, Material legs, Material feet, Material main, Material off) {
-		PlayerConnection connection = ((CraftPlayer) player).getHandle().playerConnection;
-		
-		new BukkitRunnable() {
-			int time = 0;
-			
-			@Override
-			public void run() {
-				
-				if(time % 5 == 0) {
-					connection.sendPacket(new PacketPlayOutPlayerInfo(PacketPlayOutPlayerInfo.EnumPlayerInfoAction.ADD_PLAYER, npc));
-					connection.sendPacket(new PacketPlayOutNamedEntitySpawn(npc));
-					connection.sendPacket(new PacketPlayOutEntityHeadRotation(npc, (byte) (npc.yaw * 256 / 360)));
-				}
-				
-				if(time >= 80) {
-					this.cancel();
-				}
-				
-				time++;
-			}
-		}.runTaskLater(Main.getPlugin(Main.class), 2);
-		
-		new BukkitRunnable() {
-			@Override
-			public void run() {
-				List<Pair<EnumItemSlot, net.minecraft.server.v1_16_R3.ItemStack>> equipmentList = new ArrayList<>();
-				equipmentList.add(new Pair<>(EnumItemSlot.HEAD, CraftItemStack.asNMSCopy(new ItemStack(head))));
-				equipmentList.add(new Pair<>(EnumItemSlot.CHEST, CraftItemStack.asNMSCopy(new ItemStack(chest))));
-				equipmentList.add(new Pair<>(EnumItemSlot.LEGS, CraftItemStack.asNMSCopy(new ItemStack(legs))));
-				equipmentList.add(new Pair<>(EnumItemSlot.FEET, CraftItemStack.asNMSCopy(new ItemStack(feet))));
-				equipmentList.add(new Pair<>(EnumItemSlot.MAINHAND, CraftItemStack.asNMSCopy(new ItemStack(main))));
-				equipmentList.add(new Pair<>(EnumItemSlot.OFFHAND, CraftItemStack.asNMSCopy(new ItemStack(off))));
-				PacketPlayOutEntityEquipment entityEquipment = new PacketPlayOutEntityEquipment(npc.getId(), equipmentList);
-				PlayerConnection connection = ((CraftPlayer) player).getHandle().playerConnection;
-				connection.sendPacket(entityEquipment);
-			}
-		}.runTaskLater(Main.getPlugin(Main.class), 90);
-		
-		new BukkitRunnable() {
-			@Override
-			public void run() {
-				connection.sendPacket(new PacketPlayOutPlayerInfo(PacketPlayOutPlayerInfo.EnumPlayerInfoAction.REMOVE_PLAYER, npc));
-			}
-		}.runTaskLater(Main.getPlugin(Main.class), 100);
-	}
-	
-	public void removeNPCPacket(Player player, EntityPlayer npc) {
-		PlayerConnection connection = ((CraftPlayer) player).getHandle().playerConnection;
-		connection.sendPacket(new PacketPlayOutEntityDestroy(npc.getId()));
 	}
 	
 }

@@ -4,13 +4,9 @@ import java.io.File;
 import java.util.ArrayList;
 
 import org.bukkit.Bukkit;
-import org.bukkit.craftbukkit.v1_16_R3.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.scheduler.BukkitRunnable;
-
-import net.minecraft.server.v1_16_R3.PacketPlayOutAnimation;
-import net.minecraft.server.v1_16_R3.PlayerConnection;
 
 public class ScrollUseEvent {
 	
@@ -22,10 +18,10 @@ public class ScrollUseEvent {
 			return;
 		}
 		
-		for(Player all : Bukkit.getOnlinePlayers()) {
-			PlayerConnection connection = ((CraftPlayer) all).getHandle().playerConnection;
-			connection.sendPacket(new PacketPlayOutAnimation(((CraftPlayer) player).getHandle(), 0));
-		}
+//		for(Player all : Bukkit.getOnlinePlayers()) {
+//			PlayerConnection connection = ((CraftPlayer) all).getHandle().playerConnection;
+//			connection.sendPacket(new PacketPlayOutAnimation(((CraftPlayer) player).getHandle(), 0));
+//		}
 		
 		TPScroll tp = new TPScroll();
 		VilTPScroll vilTP = new VilTPScroll();

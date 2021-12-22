@@ -17,7 +17,6 @@ import org.bukkit.World;
 import org.bukkit.Particle.DustOptions;
 import org.bukkit.block.Block;
 import org.bukkit.block.Chest;
-import org.bukkit.craftbukkit.v1_16_R3.CraftWorld;
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Arrow;
 import org.bukkit.entity.CaveSpider;
@@ -41,8 +40,6 @@ import org.bukkit.potion.PotionEffectType;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.EulerAngle;
 import org.bukkit.util.Vector;
-
-import net.minecraft.server.v1_16_R3.WorldServer;
 
 public class PlayerHitDebuff {
 	
@@ -205,9 +202,7 @@ public class PlayerHitDebuff {
 				LivingEntity ent = (LivingEntity) mob;
 				ent.addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, 60, 1,true,true));
 				ent.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 60, 140,true,true));
-				CustomWither cw = new CustomWither(ent.getLocation());
-				WorldServer world = ((CraftWorld) player.getWorld()).getHandle();
-				world.addEntity(cw);
+				ent.getWorld().spawnEntity(ent.getLocation().clone().add(0,1,0), EntityType.WITHER);
 				player.getWorld().playEffect(mob.getLocation(), Effect.END_GATEWAY_SPAWN, 0);
 				player.sendMessage(ChatColor.RED + "요정왕이 소환 마법을 사용했습니다.");
 				sendMessage(player, ChatColor.RED + "요정왕이 소환 마법을 사용했습니다.");

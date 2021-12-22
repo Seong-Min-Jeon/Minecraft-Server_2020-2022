@@ -1,6 +1,7 @@
 name: MyPlugin
 main: testPack.Main
 version: 1.0
+depend: [NickAPI, TitleAPI, PlayerNPC]
 commands:
   killMe:
    description: Player kill command

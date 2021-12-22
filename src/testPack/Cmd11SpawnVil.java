@@ -17,9 +17,6 @@ import org.bukkit.block.CreatureSpawner;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.craftbukkit.v1_16_R3.CraftServer;
-import org.bukkit.craftbukkit.v1_16_R3.CraftWorld;
-import org.bukkit.craftbukkit.v1_16_R3.entity.CraftPlayer;
 import org.bukkit.entity.Chicken;
 import org.bukkit.entity.Cow;
 import org.bukkit.entity.Entity;
@@ -41,14 +38,9 @@ import com.google.gson.JsonParser;
 import com.mojang.authlib.GameProfile;
 import com.mojang.authlib.properties.Property;
 
-import net.minecraft.server.v1_16_R3.EntityPlayer;
-import net.minecraft.server.v1_16_R3.MinecraftServer;
-import net.minecraft.server.v1_16_R3.PacketPlayOutEntityHeadRotation;
-import net.minecraft.server.v1_16_R3.PacketPlayOutNamedEntitySpawn;
-import net.minecraft.server.v1_16_R3.PacketPlayOutPlayerInfo;
-import net.minecraft.server.v1_16_R3.PlayerConnection;
-import net.minecraft.server.v1_16_R3.PlayerInteractManager;
-import net.minecraft.server.v1_16_R3.WorldServer;
+import dev.sergiferry.playernpc.api.NPC;
+import dev.sergiferry.playernpc.api.NPC.FollowLookType;
+import dev.sergiferry.playernpc.api.NPCLib;
 
 public class Cmd11SpawnVil implements CommandExecutor {
 	
@@ -88,12 +80,12 @@ public class Cmd11SpawnVil implements CommandExecutor {
 					}
 				} else if(args[0].equalsIgnoreCase("Player")) {
 					try { 
-						MinecraftServer server = ((CraftServer) Bukkit.getServer()).getServer();
-						WorldServer world = ((CraftWorld) Bukkit.getWorld(player.getWorld().getName())).getHandle();
-						GameProfile gameProfile = new GameProfile(UUID.randomUUID(), ChatColor.GRAY + "NPC");
-						EntityPlayer npc = new EntityPlayer(server, world, gameProfile, new PlayerInteractManager(world));
-						npc.setLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
-						addNPCPacket(npc);
+						NPC npc = NPCLib.getInstance().generateNPC(player, "test", player.getLocation());
+//						npc.setSkin(player); 
+//						npc.setCollidable(false);
+//						npc.setFollowLookType(FollowLookType.PLAYER);
+						npc.create();
+						npc.show();
 					} catch(Exception e) {
 						player.sendMessage(ChatColor.RED + "잘못된 입력입니다만?");
 						return true;
@@ -192,39 +184,4 @@ public class Cmd11SpawnVil implements CommandExecutor {
 		return true;
 	}
 	
-	private String[] getSkin(Player player, String name) {
-		try {
-			URL url = new URL("https://api.mojang.com/users/profiles/minecraft/" + name);
-			InputStreamReader reader = new InputStreamReader(url.openStream());
-			String uuid = new JsonParser().parse(reader).getAsJsonObject().get("id").getAsString();
-			
-			URL url2 = new URL("https://sessionserver.mojang.com/session/minecraft/profile/" + uuid + "?unsigned=false");
-			InputStreamReader reader2 = new InputStreamReader(url2.openStream());
-			JsonObject property = new JsonParser().parse(reader2).getAsJsonObject().get("properties")
-					.getAsJsonArray().get(0).getAsJsonObject();
-			String texture = property.get("value").getAsString();
-			String signature = property.get("signature").getAsString();
-			return new String[] {texture, signature};
-		} catch(Exception e) {
-			EntityPlayer p = ((CraftPlayer) player).getHandle();
-			GameProfile profile = p.getProfile();
-			Property property = profile.getProperties().get("texture").iterator().next();
-			String texture = property.getValue();
-			String signature = property.getSignature();
-			return new String[] {texture, signature};
-		}
-		
-	}
-	
-	public void addNPCPacket(EntityPlayer npc) {
-		for(Player player : Bukkit.getOnlinePlayers()) {
-			PlayerConnection connection = ((CraftPlayer) player).getHandle().playerConnection;
-			connection.sendPacket(new PacketPlayOutPlayerInfo(PacketPlayOutPlayerInfo.EnumPlayerInfoAction.ADD_PLAYER, npc));
-			connection.sendPacket(new PacketPlayOutNamedEntitySpawn(npc));
-			connection.sendPacket(new PacketPlayOutEntityHeadRotation(npc, (byte) (npc.yaw * 256/360)));
-			
-			connection.sendPacket(new PacketPlayOutPlayerInfo(PacketPlayOutPlayerInfo.EnumPlayerInfoAction.REMOVE_PLAYER, npc));
-		}
-	}
-
 }
