@@ -16,6 +16,7 @@ import java.util.List;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.Chunk;
 import org.bukkit.Effect;
 import org.bukkit.GameMode;
 import org.bukkit.Location;
@@ -126,6 +127,7 @@ import org.bukkit.event.player.PlayerSwapHandItemsEvent;
 import org.bukkit.event.player.PlayerTeleportEvent;
 import org.bukkit.event.server.ServerCommandEvent;
 import org.bukkit.event.vehicle.VehicleExitEvent;
+import org.bukkit.event.world.ChunkLoadEvent;
 import org.bukkit.inventory.EntityEquipment;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.Inventory;
@@ -147,6 +149,10 @@ import com.connorlinfoot.titleapi.TitleAPI;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.nametagedit.plugin.NametagEdit;
+
+import dev.sergiferry.playernpc.api.NPC;
+import dev.sergiferry.playernpc.api.NPC.NPCPose;
+import dev.sergiferry.playernpc.api.events.NPCInteractEvent;
 
 import java.util.Random;
 
@@ -205,6 +211,7 @@ public class Main extends JavaPlugin implements Listener{
 		getCommand("velocity").setExecutor(new Cmd27velocity());
 		getCommand("target").setExecutor(new Cmd28target());
 		getCommand("surface").setExecutor(new Cmd29surface());
+		getCommand("setNick").setExecutor(new Cmd30setNick());
 		
 		new Cmd16class().setFolder(getDataFolder());
 		new Inheritance().setFolder(getDataFolder());
@@ -374,7 +381,7 @@ public class Main extends JavaPlugin implements Listener{
 		if(player.getDisplayName().equalsIgnoreCase("woolring")) { 
 			
 		} else {
-			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/908696979486441482/aile_texture_pack_43.zip");
+			player.setResourcePack("https://cdn.discordapp.com/attachments/557875773617340416/923835992559976458/aile_texture_pack_46.zip");
 		}
 		
 		//Message
@@ -681,9 +688,222 @@ public class Main extends JavaPlugin implements Listener{
 		master.setItemMeta(masterIm);
 		if(player.getDisplayName().equalsIgnoreCase("yumehama") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
 //		if(player.getDisplayName().equalsIgnoreCase("WoolRing") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
-
 		
 		
+		
+		
+		
+//		ItemStack var2 = new ItemStack(Material.MOSSY_STONE_BRICK_STAIRS);
+//		ItemMeta var2Im = var2.getItemMeta();
+//		var2Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,300");
+//		var2Im.setDisplayName(ChatColor.YELLOW + "화염의 파동");
+//		ArrayList<String> var2Lore = new ArrayList();
+//		var2Lore.add(ChatColor.GRAY + "레벨 제한: 300");
+//		var2Lore.add(ChatColor.GRAY + " ");
+//		var2Lore.add(ChatColor.GRAY + "크리스마스 섬 동굴의 특수한 광물로 제작된 장신구");
+//		var2Lore.add(ChatColor.GRAY + "차갑지만 뜨거운 기운을 발산해낸다.");
+//		var2Lore.add(ChatColor.GRAY + " ");
+//		var2Lore.add(ChatColor.BLUE + "-원거리 공격 데미지 5% 증가");
+//		var2Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var2Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var2Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var2Im.setUnbreakable(true);
+//		var2Im.setLore(var2Lore);
+//		var2.setItemMeta(var2Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var2);}
+//		
+//		ItemStack var3 = new ItemStack(Material.MOSSY_STONE_BRICK_STAIRS);
+//		ItemMeta var3Im = var3.getItemMeta();
+//		var3Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,400");
+//		var3Im.setDisplayName(ChatColor.LIGHT_PURPLE + "홍련의 파동");
+//		ArrayList<String> var3Lore = new ArrayList();
+//		var3Lore.add(ChatColor.GRAY + "레벨 제한: 400");
+//		var3Lore.add(ChatColor.GRAY + " ");
+//		var3Lore.add(ChatColor.GRAY + "크리스마스 섬 동굴의 특수한 광물로 제작된 장신구");
+//		var3Lore.add(ChatColor.GRAY + "영하의 온도로 인해 뜨겁게 느껴진다.");
+//		var3Lore.add(ChatColor.GRAY + " ");
+//		var3Lore.add(ChatColor.BLUE + "-원거리 공격 데미지 10% 증가");
+//		var3Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var3Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var3Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var3Im.setUnbreakable(true);
+//		var3Im.setLore(var3Lore);
+//		var3.setItemMeta(var3Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var3);}
+//		
+//		ItemStack var4 = new ItemStack(Material.MOSSY_STONE_BRICK_STAIRS);
+//		ItemMeta var4Im = var4.getItemMeta();
+//		var4Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,500");
+//		var4Im.setDisplayName(ChatColor.AQUA + "심연의 파동");
+//		ArrayList<String> var4Lore = new ArrayList();
+//		var4Lore.add(ChatColor.GRAY + "레벨 제한: 500");
+//		var4Lore.add(ChatColor.GRAY + " ");
+//		var4Lore.add(ChatColor.GRAY + "크리스마스 섬 동굴의 특수한 광물로 제작된 장신구");
+//		var4Lore.add(ChatColor.GRAY + "아무도 느끼지 못하는 어둠의 힘이 잠식되어있다.");
+//		var4Lore.add(ChatColor.GRAY + " ");
+//		var4Lore.add(ChatColor.BLUE + "-원거리 공격 데미지 15% 증가");
+//		var4Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var4Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var4Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var4Im.setUnbreakable(true);
+//		var4Im.setLore(var4Lore);
+//		var4.setItemMeta(var4Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var4);}
+//		
+//		ItemStack var5 = new ItemStack(Material.MOSSY_STONE_BRICK_STAIRS);
+//		ItemMeta var5Im = var5.getItemMeta();
+//		var5Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,600");
+//		var5Im.setDisplayName(ChatColor.DARK_RED + "맥스웰의 파동");
+//		ArrayList<String> var5Lore = new ArrayList();
+//		var5Lore.add(ChatColor.GRAY + "레벨 제한: 600");
+//		var5Lore.add(ChatColor.GRAY + " ");
+//		var5Lore.add(ChatColor.GRAY + "크리스마스 섬 동굴의 특수한 광물로 제작된 장신구");
+//		var5Lore.add(ChatColor.GRAY + "빛의 파동을 깨우친 자의 힘이 느껴진다.");
+//		var5Lore.add(ChatColor.GRAY + " ");
+//		var5Lore.add(ChatColor.BLUE + "-원거리 공격 데미지 20% 증가");
+//		var5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var5Im.setUnbreakable(true);
+//		var5Im.setLore(var5Lore);
+//		var5.setItemMeta(var5Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var5);}
+//		
+//		ItemStack var6 = new ItemStack(Material.MOSSY_STONE_BRICK_STAIRS);
+//		ItemMeta var6Im = var6.getItemMeta();
+//		var6Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,700");
+//		var6Im.setDisplayName(ChatColor.DARK_PURPLE + "살의의 파동");
+//		ArrayList<String> var6Lore = new ArrayList();
+//		var6Lore.add(ChatColor.GRAY + "레벨 제한: 700");
+//		var6Lore.add(ChatColor.GRAY + " ");
+//		var6Lore.add(ChatColor.GRAY + "크리스마스 섬 동굴의 특수한 광물로 제작된 장신구");
+//		var6Lore.add(ChatColor.GRAY + "어느 박사는 포보르의 힘을 파동으로 구현해냈고");
+//		var6Lore.add(ChatColor.GRAY + "아무도 모르게 사라지게 되었다.");
+//		var6Lore.add(ChatColor.GRAY + " ");
+//		var6Lore.add(ChatColor.BLUE + "-원거리 공격 데미지 30% 증가");
+//		var6Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var6Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var6Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var6Im.setUnbreakable(true);
+//		var6Im.setLore(var6Lore);
+//		var6.setItemMeta(var6Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var6);}
+		
+//		ItemStack var2 = new ItemStack(Material.MOSSY_STONE_BRICK_STAIRS);
+//		ItemMeta var2Im = var2.getItemMeta();
+//		var2Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,300");
+//		var2Im.setDisplayName(ChatColor.YELLOW + "불굴의 투지");
+//		ArrayList<String> var2Lore = new ArrayList();
+//		var2Lore.add(ChatColor.GRAY + "레벨 제한: 300");
+//		var2Lore.add(ChatColor.GRAY + " ");
+//		var2Lore.add(ChatColor.GRAY + "크리스마스 섬 동굴의 특수한 광물로 제작된 장신구");
+//		var2Lore.add(ChatColor.GRAY + "헤아릴 수 없는 광기와 투지가 느껴진다.");
+//		var2Lore.add(ChatColor.GRAY + " ");
+//		var2Lore.add(ChatColor.BLUE + "-근접 공격 데미지 5% 증가");
+//		var2Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var2Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var2Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var2Im.setUnbreakable(true);
+//		var2Im.setLore(var2Lore);
+//		var2.setItemMeta(var2Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var2);}
+//		
+//		ItemStack var3 = new ItemStack(Material.MOSSY_STONE_BRICK_STAIRS);
+//		ItemMeta var3Im = var3.getItemMeta();
+//		var3Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,400");
+//		var3Im.setDisplayName(ChatColor.LIGHT_PURPLE + "영원한 도전자");
+//		ArrayList<String> var3Lore = new ArrayList();
+//		var3Lore.add(ChatColor.GRAY + "레벨 제한: 400");
+//		var3Lore.add(ChatColor.GRAY + " ");
+//		var3Lore.add(ChatColor.GRAY + "크리스마스 섬 동굴의 특수한 광물로 제작된 장신구");
+//		var3Lore.add(ChatColor.GRAY + "그 힘은 끝없는 미래로부터 나온다.");
+//		var3Lore.add(ChatColor.GRAY + " ");
+//		var3Lore.add(ChatColor.BLUE + "-근접 공격 데미지 10% 증가");
+//		var3Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var3Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var3Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var3Im.setUnbreakable(true);
+//		var3Im.setLore(var3Lore);
+//		var3.setItemMeta(var3Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var3);}
+//		
+//		ItemStack var4 = new ItemStack(Material.MOSSY_STONE_BRICK_STAIRS);
+//		ItemMeta var4Im = var4.getItemMeta();
+//		var4Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,500");
+//		var4Im.setDisplayName(ChatColor.AQUA + "멸살의 권");
+//		ArrayList<String> var4Lore = new ArrayList();
+//		var4Lore.add(ChatColor.GRAY + "레벨 제한: 500");
+//		var4Lore.add(ChatColor.GRAY + " ");
+//		var4Lore.add(ChatColor.GRAY + "크리스마스 섬 동굴의 특수한 광물로 제작된 장신구");
+//		var4Lore.add(ChatColor.GRAY + "귀신도 멸한다는 악마의 힘이 깃들어있다.");
+//		var4Lore.add(ChatColor.GRAY + " ");
+//		var4Lore.add(ChatColor.BLUE + "-근접 공격 데미지 15% 증가");
+//		var4Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var4Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var4Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var4Im.setUnbreakable(true);
+//		var4Im.setLore(var4Lore);
+//		var4.setItemMeta(var4Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var4);}
+//		
+//		ItemStack var5 = new ItemStack(Material.MOSSY_STONE_BRICK_STAIRS);
+//		ItemMeta var5Im = var5.getItemMeta();
+//		var5Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,600");
+//		var5Im.setDisplayName(ChatColor.DARK_RED + "권의 극에 달한 자");
+//		ArrayList<String> var5Lore = new ArrayList();
+//		var5Lore.add(ChatColor.GRAY + "레벨 제한: 600");
+//		var5Lore.add(ChatColor.GRAY + " ");
+//		var5Lore.add(ChatColor.GRAY + "크리스마스 섬 동굴의 특수한 광물로 제작된 장신구");
+//		var5Lore.add(ChatColor.GRAY + "악마라고 불리는 자의 살의가 담겨있다.");
+//		var5Lore.add(ChatColor.GRAY + " ");
+//		var5Lore.add(ChatColor.BLUE + "-근접 공격 데미지 20% 증가");
+//		var5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var5Im.setUnbreakable(true);
+//		var5Im.setLore(var5Lore);
+//		var5.setItemMeta(var5Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var5);}
+//		
+//		ItemStack var6 = new ItemStack(Material.MOSSY_STONE_BRICK_STAIRS);
+//		ItemMeta var6Im = var6.getItemMeta();
+//		var6Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,700");
+//		var6Im.setDisplayName(ChatColor.DARK_PURPLE + "광기의 오니");
+//		ArrayList<String> var6Lore = new ArrayList();
+//		var6Lore.add(ChatColor.GRAY + "레벨 제한: 700");
+//		var6Lore.add(ChatColor.GRAY + " ");
+//		var6Lore.add(ChatColor.GRAY + "크리스마스 섬 동굴의 특수한 광물로 제작된 장신구");
+//		var6Lore.add(ChatColor.GRAY + "악마라고 불리는 자는 결국 포보르의 힘에 잠식되고");
+//		var6Lore.add(ChatColor.GRAY + "신을 꿰뚫을 귀신이 되었다.");
+//		var6Lore.add(ChatColor.GRAY + " ");
+//		var6Lore.add(ChatColor.BLUE + "-근접 공격 데미지 30% 증가");
+//		var6Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var6Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var6Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var6Im.setUnbreakable(true);
+//		var6Im.setLore(var6Lore);
+//		var6.setItemMeta(var6Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var6);}
+//		
+//		ItemStack var1 = new ItemStack(Material.STONE_STAIRS);
+//		ItemMeta var1Im = var1.getItemMeta();
+//		var1Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,100");
+//		var1Im.setDisplayName(ChatColor.GRAY + "버려진 크리스마스 검");
+//		var1Im.setCustomModelData(1);
+//		ArrayList<String> var1Lore = new ArrayList();
+//		var1Lore.add(ChatColor.GRAY + "레벨 제한: 100");
+//		var1Lore.add(ChatColor.GRAY + " ");
+//		var1Lore.add(ChatColor.GRAY + "크리스마스 벨을 형상화하여 만들어진 검");
+//		var1Lore.add(ChatColor.GRAY + "크리스마스 섬에서 진가를 발휘한다.");
+//		var1Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var1Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var1Im.addItemFlags(ItemFlag.HIDE_DYE);
+//		var1Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var1Im.setUnbreakable(true);
+//		var1Im.setLore(var1Lore);
+//		var1.setItemMeta(var1Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var1);}
+//		
 //		ItemStack var1 = new ItemStack(Material.CARVED_PUMPKIN);
 //		ItemMeta var1Im = var1.getItemMeta();
 //		var1Im.setLocalizedName("1031,1031,1031,1031,1031,1031,1031,1031,1031,1031,700");
@@ -3546,6 +3766,12 @@ public class Main extends JavaPlugin implements Listener{
 				event.setRespawnLocation(seedMine);
 				return;
 			}
+			//크리스마스 -2773 250 -1160  -2464 0 -812
+			if(loc.getX() <= -2464 && loc.getY() <= 250 && loc.getZ() <= -812 
+					&& loc.getX() >= -2773 && loc.getY() >= 0 && loc.getZ() >= -1160) {
+				event.setRespawnLocation(hamabe);
+				return;
+			}
 
 			int length1 = (int)(Math.pow(loc.getX()-wargunil.getX(), 2) + Math.pow(loc.getY()-wargunil.getY(), 2) + Math.pow(loc.getZ()-wargunil.getZ(), 2));
 			int length2 = (int)(Math.pow(loc.getX()-forgan.getX(), 2) + Math.pow(loc.getY()-forgan.getY(), 2) + Math.pow(loc.getZ()-forgan.getZ(), 2));
@@ -5921,6 +6147,17 @@ public class Main extends JavaPlugin implements Listener{
 				LimitLevel la = new LimitLevel();
 				if(la.limit(player, item) == false) {
 					player.sendMessage(ChatColor.RED + "아직 이 무기를 다루기에는 내 힘이 부족하다.");
+					
+					if(new Colosseum().colosseum(player)) {
+						player.sendMessage(ChatColor.RED + "땀 때문에 무기를 놓쳐버렸다.");
+						player.getInventory().setItemInMainHand(null);
+						player.getWorld().dropItem(player.getLocation(), item);
+					} else if(new SantaGimmick().santaGimmick(player)) {
+						player.sendMessage(ChatColor.RED + "눈 때문에 무기를 놓쳐버렸다.");
+						player.getInventory().setItemInMainHand(null);
+						player.getWorld().dropItem(player.getLocation(), item);
+					}
+					
 					event.setCancelled(true);
 					return;
 				}
@@ -6145,6 +6382,7 @@ public class Main extends JavaPlugin implements Listener{
 					}
 				}
 				//===========================================================================
+				// 데미지 추가
 				int increase = 0;
 				if(inheritance.getInheritance(player) == 23) {
 					increase += 5;
@@ -6268,6 +6506,7 @@ public class Main extends JavaPlugin implements Listener{
 					}
 				}
 				//===========================================================================
+				// 데미지 추가
 				int increase = 0;
 				if(inheritance.getInheritance(player) == 33) {
 					increase += 10;
@@ -6389,6 +6628,7 @@ public class Main extends JavaPlugin implements Listener{
 					}
 				}
 				//===========================================================================
+				// 데미지 추가
 				int increase = 0;
 				if(inheritance.getInheritance(player) == 33) {
 					increase += 10;
@@ -6624,6 +6864,47 @@ public class Main extends JavaPlugin implements Listener{
 					monster.removePotionEffect(PotionEffectType.HEAL);
 					
 					event.setDamage(1);
+					if(event.getCause() == DamageCause.FIRE_TICK || event.getCause() == DamageCause.FIRE) {
+						event.setDamage(0);
+					}
+					Entity mob = event.getEntity();
+					double damage = event.getFinalDamage();
+					new MobDeath(mob, damage);
+				}
+			} else if ((new SantaGimmick()).santaGimmick(event.getEntity())) {
+				if(event.getEntity() instanceof Player) {
+					event.setDamage(1);
+					Player player = (Player) event.getEntity();
+					if(player.getHealth()-2 > 0) {
+						player.setHealth(player.getHealth()-2);
+					} else {
+						player.setHealth(0);
+					}
+				} else if(event.getEntity() instanceof IronGolem) {
+					event.setDamage(999999999);
+				} else {
+					LivingEntity monster = (LivingEntity) event.getEntity();
+					monster.removePotionEffect(PotionEffectType.HARM);
+					monster.removePotionEffect(PotionEffectType.HEAL);
+					
+					if(Math.abs(event.getDamage() - 0.0031) < 0.00001) {
+						event.setDamage(120000);
+					} else if(Math.abs(event.getDamage() - 0.0032) < 0.00001) {
+						event.setDamage(150000);
+					} else if(Math.abs(event.getDamage() - 0.0033) < 0.00001) {
+						event.setDamage(200000);
+					} else if(Math.abs(event.getDamage() - 0.0034) < 0.00001) {
+						event.setDamage(300000);
+					} else if(Math.abs(event.getDamage() - 0.0035) < 0.00001) {
+						event.setDamage(400000);
+					} else if(Math.abs(event.getDamage() - 0.0036) < 0.00001) {
+						event.setDamage(500000);
+					} else if(Math.abs(event.getDamage() - 0.0037) < 0.00001) {
+						event.setDamage(800000);
+					} else {
+						event.setDamage(100000);
+					}
+					
 					if(event.getCause() == DamageCause.FIRE_TICK || event.getCause() == DamageCause.FIRE) {
 						event.setDamage(0);
 					}
@@ -11448,14 +11729,162 @@ public class Main extends JavaPlugin implements Listener{
 	}
 	
 	@EventHandler
+	public void onNPCInteract(NPCInteractEvent event){
+	    Player player = event.getPlayer();
+	    try {
+	    	int i = 0;
+			Inventory inv = player.getInventory();
+			for (int j = 0 ; j < 36 ; j++) {
+				if(inv.getItem(j) == null) {
+					i++;
+				}
+			}
+			if(i == 0) {
+				player.sendMessage(ChatColor.RED + "인벤토리에 빈칸이 없습니다.");
+				return;
+			}
+	    } catch(Exception e) {
+	    	
+	    }
+	    
+	    try {
+	    	QuestBoard cb = new QuestBoard();
+	    	NPC npc = event.getNpc();
+	    	NPCInteractEvent.ClickType clickType = event.getClickType();
+//	    	System.out.println(npc.isShown());
+//	    	System.out.println(clickType == NPCInteractEvent.ClickType.RIGHT_CLICK);
+//	    	System.out.println(npc.getText().get(0).equals("에일을 구한 영웅"));
+	 	    if(npc.isShown() && clickType == NPCInteractEvent.ClickType.RIGHT_CLICK) {
+	 	    	if(npc.getText().get(0).equals("의문의 소녀")) {
+	 	    		if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===설원의 가희3===")) {
+	 	    			player.sendMessage("의문의 소녀: ...");
+	 	    		}
+	 	    		if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===설원의 가희2===")) {
+	 	    			if(player.getWorld().getTime() >= 13000 && player.getWorld().getTime() <= 23000) {
+							int qNum = cb.getNum(player);
+							cb.eq1_1(player, qNum+1);
+						} else {
+							player.sendMessage("의문의 소녀: ...");
+						}
+	 	    		}
+	 	    	} else if(npc.getText().get(0).equals("기사")) {
+	 	    		if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===설원의 가희5===")) {
+	 	    			player.sendMessage("기사: 의장께서는 §e카루 던전§f에 계실 것이다.");
+	 	    		}
+	 	    		if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===설원의 가희4===")) {
+	 	    			int qNum = cb.getNum(player);
+						cb.eq1_3(player, qNum+1);	
+	 	    		}
+	 	    	} else if(npc.getText().get(0).equals("의장")) {
+	 	    		if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===설원의 가희6===")) {
+	 	    			int qNum = cb.getNum(player);
+						cb.eq1_5(player, qNum+1);
+	 	    		}
+	 	    		if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===설원의 가희5===")) {
+	 	    			boolean wear = false;
+						
+						if (player.getInventory().getHelmet() != null) {
+							if (player.getInventory().getChestplate() != null) {
+								if (player.getInventory().getLeggings() != null) {
+									if (player.getInventory().getBoots() != null) {
+										
+										if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "방한 헬멧")) {
+											if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "방한 갑옷")) {
+												if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "방한 각반")) {
+													if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "방한 신발")) {
+														wear = true;
+													}
+												}
+											}
+										}
+										if (player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "누군가의 방한 헬멧")) {
+											if (player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "누군가의 방한 갑옷")) {
+												if (player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "누군가의 방한 각반")) {
+													if (player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "누군가의 방한 신발")) {
+														wear = true;
+													}
+												}
+											}
+										}
+										
+									}
+								}
+							}
+						}
+						
+						if(player.getInventory().contains(Material.ORANGE_DYE)) {
+							int qNum = cb.getNum(player);
+							cb.eq1_4(player, qNum+1);
+							return;
+						}
+						
+						if(wear == true) {
+							player.getInventory().setHelmet(null);
+							player.getInventory().setChestplate(null);
+							player.getInventory().setLeggings(null);
+							player.getInventory().setBoots(null);
+							
+							int qNum = cb.getNum(player);
+							cb.eq1_4(player, qNum+1);
+						} else {
+							player.sendMessage("§7의장께서는 바빠보인다. 나중에 다시 오자.");
+						}
+	 	    		}
+	 	    	} else if(npc.getText().get(0).equals("빨간모자")) {
+	 	    		if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===그대는 빨간모자===")) {
+	 	    			int qNum = cb.getNum(player);
+						cb.mq33(player, qNum+1);
+	 	    		}
+	 	    		if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===또다시 빨간모자===")) {
+	 	    			int qNum = cb.getNum(player);
+						cb.mq34(player, qNum+1);
+	 	    		}
+	 	    	} else if(npc.getText().get(0).equals("에일을 구한 영웅")) {
+	 	    		player.sendMessage(ChatColor.WHITE + "에일을 구한 영웅: 알아서 뭐하게");
+	 	    	}
+	 	    } else if(npc.isShown() && clickType == NPCInteractEvent.ClickType.LEFT_CLICK) {
+	 	    	if(npc.getText().get(0).equals("의장")) {
+	 	    		player.sendMessage(ChatColor.WHITE + "의장: 허허.. 당신의 공격 따위 아프지 않다는 말일세.");
+	 	    		
+	 	    		int damage = 999999;
+	 	    		ArmorStand damageSign = (ArmorStand) player.getWorld().spawnEntity(npc.getLocation().add(0,0.8,0), EntityType.ARMOR_STAND);
+					damageSign.setVisible(false);
+					damageSign.setSmall(true);
+					damageSign.setCustomName(ChatColor.BOLD + "" + net.md_5.bungee.api.ChatColor.of("#ff0000") + Integer.toString(damage));
+					damageSign.setCustomNameVisible(true);
+					damageSign.setGravity(false);
+					damageSign.setRemoveWhenFarAway(true);
+					
+					new BukkitRunnable() {
+						int time = 0;
+						
+						@Override
+						public void run() {
+							time++;
+							damageSign.teleport(damageSign.getLocation().add(0,0.02,0));
+							
+							if(time >= 30) {
+								damageSign.remove();
+								this.cancel();
+							}
+						}
+					}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
+	 	    	}
+	 	    }
+	    } catch(Exception e) {
+	    	
+	    }
+	}
+	
+	@EventHandler
 	public void fishingEvent(PlayerFishEvent event) {
 		Player player = event.getPlayer();
-		event.setExpToDrop(0);
-		if(event.getCaught() != null) {
-			event.getCaught().remove();
-		} else {
-			return;
-		}
+//		event.setExpToDrop(0);
+//		if(event.getCaught() != null) {
+//			event.getCaught().remove();
+//		} else {
+//			return;
+//		}
 //		int num = rnd.nextInt(250);
 //		System.out.println(num);
 //		if(num == 0) {
@@ -11477,6 +11906,14 @@ public class Main extends JavaPlugin implements Listener{
 //			player.getInventory().addItem(item);
 //			player.sendMessage("꽝을 낚았다.");
 //		}
+		Chunk ch = player.getLocation().getChunk();
+		for(int x = 0 ; x < 16 ; x++) {
+			for(int y = 0 ; y < 63 ; y++) {
+				for(int z = 0 ; z < 16 ; z++) {
+					ch.getBlock(x, y-64, z).setType(Material.AIR);
+				}
+			}
+		}
 	}
 	
 	@EventHandler

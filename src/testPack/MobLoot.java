@@ -9193,32 +9193,92 @@ public class MobLoot {
 		}
 	}
 	
+	// 섬을 탈출하고 싶은 노예
 	public void mob373(Player player) {
-
+		int tmp = rnd.nextInt(20);
+		if(tmp == 0) {
+			Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+			Block wheat = chestLoc.getBlock();
+			Chest chest = (Chest) wheat.getState();
+			ItemStack weapon = chest.getInventory().getItem(2);
+			player.getInventory().addItem(weapon);
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+		}
 	}
 	
+	// 노예를 관리하는 노예
 	public void mob374(Player player) {
-
+		int tmp = rnd.nextInt(15);
+		if(tmp == 0) {
+			Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+			Block wheat = chestLoc.getBlock();
+			Chest chest = (Chest) wheat.getState();
+			ItemStack weapon = chest.getInventory().getItem(2);
+			player.getInventory().addItem(weapon);
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+		}
 	}
 	
+	// 마을을 꾸미고 있는 노예
 	public void mob375(Player player) {
-
+		int tmp = rnd.nextInt(10);
+		if(tmp == 0) {
+			Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+			Block wheat = chestLoc.getBlock();
+			Chest chest = (Chest) wheat.getState();
+			ItemStack weapon = chest.getInventory().getItem(2);
+			player.getInventory().addItem(weapon);
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+		}
 	}
 	
+	// 산타를 보좌하는 요정 노예
 	public void mob376(Player player) {
-
+		int tmp = rnd.nextInt(5);
+		if(tmp == 0) {
+			Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+			Block wheat = chestLoc.getBlock();
+			Chest chest = (Chest) wheat.getState();
+			ItemStack weapon = chest.getInventory().getItem(2);
+			player.getInventory().addItem(weapon);
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+		}
 	}
 	
+	// 살아남은 루돌프
 	public void mob377(Player player) {
-
+		int tmp = rnd.nextInt(2);
+		if(tmp == 0) {
+			Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+			Block wheat = chestLoc.getBlock();
+			Chest chest = (Chest) wheat.getState();
+			ItemStack weapon = chest.getInventory().getItem(2);
+			player.getInventory().addItem(weapon);
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+		}
 	}
 	
+	// 산타
 	public void mob378(Player player) {
-
+		Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+		Block wheat = chestLoc.getBlock();
+		Chest chest = (Chest) wheat.getState();
+		ItemStack weapon = chest.getInventory().getItem(3);
+		player.getInventory().addItem(weapon);
+		sendMessage(player, ChatColor.AQUA + "화려한 선물 상자" + ChatColor.WHITE + "를 획득했다.");
 	}
 	
+	// 반란을 계획중인 노예
 	public void mob379(Player player) {
-
+		int tmp = rnd.nextInt(5);
+		if(tmp == 0) {
+			Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+			Block wheat = chestLoc.getBlock();
+			Chest chest = (Chest) wheat.getState();
+			ItemStack weapon = chest.getInventory().getItem(2);
+			player.getInventory().addItem(weapon);
+			sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+		}
 	}
 	
 	public void mob380(Player player) {

@@ -1615,6 +1615,41 @@ public class MobDeath {
 				if (name.equalsIgnoreCase("시간" + ChatColor.YELLOW + " [Lv.1]")) {
 					mobloot.mob372(mob, lootPlayer);
 				}
+				// 섬을 탈출하고 싶은 노예
+				if (name.equalsIgnoreCase("섬을 탈출하고 싶은 노예" + ChatColor.YELLOW + " [Lv.??]")) {
+					mobloot.mob373(lootPlayer);
+					num = "0";
+				}
+				// 노예를 관리하는 노예
+				if (name.equalsIgnoreCase("노예를 관리하는 노예" + ChatColor.YELLOW + " [Lv.??]")) {
+					mobloot.mob374(lootPlayer);
+					num = "0";
+				}
+				// 마을을 꾸미고 있는 노예
+				if (name.equalsIgnoreCase("마을을 꾸미고 있는 노예" + ChatColor.YELLOW + " [Lv.??]")) {
+					mobloot.mob375(lootPlayer);
+					num = "0";
+				}
+				// 산타를 보좌하는 요정 노예
+				if (name.equalsIgnoreCase("산타를 보좌하는 요정 노예" + ChatColor.YELLOW + " [Lv.??]")) {
+					mobloot.mob376(lootPlayer);
+					num = "0";
+				}
+				// 살아남은 루돌프
+				if (name.equalsIgnoreCase("살아남은 루돌프" + ChatColor.YELLOW + " [Lv.??]")) {
+					mobloot.mob377(lootPlayer);
+					num = "0";
+				}
+				// 산타
+				if (name.equalsIgnoreCase("산타" + ChatColor.YELLOW + " [Lv.??]")) {
+					mobloot.mob378(lootPlayer);
+					num = "0";
+				}
+				// 반란을 계획중인 노예
+				if (name.equalsIgnoreCase("반란을 계획중인 노예" + ChatColor.YELLOW + " [Lv.??]")) {
+					mobloot.mob379(lootPlayer);
+					num = "0";
+				}
 				
 			} catch (Exception e) {
 

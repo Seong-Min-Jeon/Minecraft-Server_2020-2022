@@ -325,7 +325,8 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -8 ; z < 9 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
+											player.getWorld().spawnParticle(Particle.BLOCK_MARKER, loc2, 0, Material.BARRIER);
+//											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
 										}
 									}
 								}

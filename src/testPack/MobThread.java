@@ -619,6 +619,21 @@ public class MobThread implements Listener{
 							} else if(loc.getX() <= 454 && loc.getY() <= 40 && loc.getZ() <= -1574 
 									&& loc.getX() >= 411 && loc.getY() >= 5 && loc.getZ() >= -1682) {
 								iberumoa5(player, loc);
+							} else if(loc.getX() <= -2636 && loc.getY() <= 100 && loc.getZ() <= -901 
+									&& loc.getX() >= -2750 && loc.getY() >= 30 && loc.getZ() >= -1030) {
+								santa1(player, loc);
+							} else if(loc.getX() <= -2566 && loc.getY() <= 100 && loc.getZ() <= -1031 
+									&& loc.getX() >= -2694 && loc.getY() >= 30 && loc.getZ() >= -1100) {
+								santa2(player, loc);
+							} else if(loc.getX() <= -2475 && loc.getY() <= 120 && loc.getZ() <= -945 
+									&& loc.getX() >= -2565 && loc.getY() >= 80 && loc.getZ() >= -1086) {
+								santa3(player, loc);
+							} else if(loc.getX() <= -2543 && loc.getY() <= 103 && loc.getZ() <= -885 
+									&& loc.getX() >= -2589 && loc.getY() >= 90 && loc.getZ() >= -926) {
+								santa4(player, loc);
+							} else if(loc.getX() <= -2545 && loc.getY() <= 79 && loc.getZ() <= -903 
+									&& loc.getX() >= -2608 && loc.getY() >= 50 && loc.getZ() >= -998) {
+								santa5(player, loc);
 							}
 
 						}
@@ -1100,7 +1115,7 @@ public class MobThread implements Listener{
 			ItemStack headItem = chest.getInventory().getItem(1);
 			head.setHelmet(headItem);
 		} else if (num == 2) {
-			Skeleton mob = (Skeleton) loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
+			WitherSkeleton mob = (WitherSkeleton) loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
 			EntityEquipment head = mob.getEquipment();
 			ItemStack headItem = chest.getInventory().getItem(2);
 			head.setHelmet(headItem);
@@ -1129,7 +1144,7 @@ public class MobThread implements Listener{
 			ItemStack headItem = chest.getInventory().getItem(4);
 			head.setHelmet(headItem);
 		} else if (num == 2) {
-			Skeleton mob = (Skeleton) loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
+			WitherSkeleton mob = (WitherSkeleton) loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
 			EntityEquipment head = mob.getEquipment();
 			ItemStack headItem = chest.getInventory().getItem(5);
 			head.setHelmet(headItem);
@@ -1153,7 +1168,7 @@ public class MobThread implements Listener{
 			ItemStack headItem = chest.getInventory().getItem(6);
 			head.setHelmet(headItem);
 		} else if (num == 1) {
-			Skeleton mob = (Skeleton) loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
+			WitherSkeleton mob = (WitherSkeleton) loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
 			EntityEquipment head = mob.getEquipment();
 			ItemStack headItem = chest.getInventory().getItem(7);
 			head.setHelmet(headItem);
@@ -1182,7 +1197,7 @@ public class MobThread implements Listener{
 			ItemStack headItem = chest.getInventory().getItem(1);
 			head.setHelmet(headItem);
 		} else if (num == 2) {
-			Skeleton mob = (Skeleton) loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
+			WitherSkeleton mob = (WitherSkeleton) loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
 			EntityEquipment head = mob.getEquipment();
 			ItemStack headItem = chest.getInventory().getItem(2);
 			head.setHelmet(headItem);
@@ -1211,7 +1226,7 @@ public class MobThread implements Listener{
 			ItemStack headItem = chest.getInventory().getItem(4);
 			head.setHelmet(headItem);
 		} else if (num == 2) {
-			Skeleton mob = (Skeleton) loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
+			WitherSkeleton mob = (WitherSkeleton) loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
 			EntityEquipment head = mob.getEquipment();
 			ItemStack headItem = chest.getInventory().getItem(5);
 			head.setHelmet(headItem);
@@ -1235,7 +1250,7 @@ public class MobThread implements Listener{
 			ItemStack headItem = chest.getInventory().getItem(6);
 			head.setHelmet(headItem);
 		} else if (num == 1) {
-			Skeleton mob = (Skeleton) loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
+			WitherSkeleton mob = (WitherSkeleton) loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
 			EntityEquipment head = mob.getEquipment();
 			ItemStack headItem = chest.getInventory().getItem(7);
 			head.setHelmet(headItem);
@@ -3508,6 +3523,81 @@ public class MobThread implements Listener{
 		}
 		
 		loc.getWorld().spawnEntity(loc, EntityType.RABBIT);
+	}
+	
+	public void santa1(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= -2636 && loc.getY() <= 100 && loc.getZ() <= -901 
+				&& loc.getX() >= -2750 && loc.getY() >= 30 && loc.getZ() >= -1030)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.ZOMBIE);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.ZOMBIE);
+		} 
+	}
+	
+	public void santa2(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= -2566 && loc.getY() <= 100 && loc.getZ() <= -1031 
+				&& loc.getX() >= -2694 && loc.getY() >= 30 && loc.getZ() >= -1100)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.ZOMBIE);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		} 
+	}
+	
+	public void santa3(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= -2475 && loc.getY() <= 120 && loc.getZ() <= -945 
+				&& loc.getX() >= -2565 && loc.getY() >= 80 && loc.getZ() >= -1086)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.VINDICATOR);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.VINDICATOR);
+		} 
+	}
+	
+	public void santa4(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= -2543 && loc.getY() <= 103 && loc.getZ() <= -885 
+				&& loc.getX() >= -2589 && loc.getY() >= 90 && loc.getZ() >= -926)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.RAVAGER);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		} 
+	}
+	
+	public void santa5(Player player, Location loc) {
+		int num = rnd.nextInt(2);
+		loc = location(loc);
+		if (!(loc.getX() <= -2545 && loc.getY() <= 79 && loc.getZ() <= -903 
+				&& loc.getX() >= -2608 && loc.getY() >= 50 && loc.getZ() >= -998)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.ZOMBIE);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		} 
 	}
 	
 	public Location location(Location loc) {

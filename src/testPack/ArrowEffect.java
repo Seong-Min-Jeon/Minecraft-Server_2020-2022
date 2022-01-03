@@ -302,35 +302,35 @@ public class ArrowEffect {
 			
 			boolean bool = false;
 			if(mat == Material.DEAD_BRAIN_CORAL_BLOCK) {
-				if((new Colosseum()).colosseum(player)) {
+				if((new Colosseum()).colosseum(player) || new SantaGimmick().santaGimmick(player)) {
 					bool = reload(player, 3000);
 				} else {
 					bool = reload(player, 1000-speed1);
 				}
 			}
 			if(mat == Material.DEAD_BUBBLE_CORAL_BLOCK) {
-				if((new Colosseum()).colosseum(player)) {
+				if((new Colosseum()).colosseum(player) || new SantaGimmick().santaGimmick(player)) {
 					bool = reload(player, 3000);
 				} else {
 					bool = reload(player, 500-speed2);
 				}
 			}
 			if(mat == Material.DEAD_FIRE_CORAL_BLOCK) {
-				if((new Colosseum()).colosseum(player)) {
+				if((new Colosseum()).colosseum(player) || new SantaGimmick().santaGimmick(player)) {
 					bool = reload(player, 3000);
 				} else {
 					bool = reload(player, 200-speed3);
 				}
 			}
 			if(mat == Material.DEAD_HORN_CORAL_BLOCK) {
-				if((new Colosseum()).colosseum(player)) {
+				if((new Colosseum()).colosseum(player) || new SantaGimmick().santaGimmick(player)) {
 					bool = reload(player, 3000);
 				} else {
 					bool = reload(player, 80-speed4);
 				}
 			}
 			if(mat == Material.DEAD_TUBE_CORAL_BLOCK) {
-				if((new Colosseum()).colosseum(player)) {
+				if((new Colosseum()).colosseum(player) || new SantaGimmick().santaGimmick(player)) {
 					bool = reload(player, 3000);
 				} else {
 					bool = reload(player, 2000-speed5);
@@ -588,35 +588,35 @@ public class ArrowEffect {
 			
 			boolean bool = false;
 			if(mat == Material.BRAIN_CORAL_BLOCK) {
-				if((new Colosseum()).colosseum(player)) {
+				if((new Colosseum()).colosseum(player) || new SantaGimmick().santaGimmick(player)) {
 					bool = reload(player, 3000);
 				} else {
 					bool = reload(player, 80-speed1);
 				}
 			}
 			if(mat == Material.BUBBLE_CORAL_BLOCK) {
-				if((new Colosseum()).colosseum(player)) {
+				if((new Colosseum()).colosseum(player) || new SantaGimmick().santaGimmick(player)) {
 					bool = reload(player, 3000);
 				} else {
 					bool = reload(player, 2500-speed2);
 				}
 			}
 			if(mat == Material.FIRE_CORAL_BLOCK) {
-				if((new Colosseum()).colosseum(player)) {
+				if((new Colosseum()).colosseum(player) || new SantaGimmick().santaGimmick(player)) {
 					bool = reload(player, 3000);
 				} else {
 					bool = reload(player, 30-speed3);
 				}
 			}
 			if(mat == Material.HORN_CORAL_BLOCK) {
-				if((new Colosseum()).colosseum(player)) {
+				if((new Colosseum()).colosseum(player) || new SantaGimmick().santaGimmick(player)) {
 					bool = reload(player, 3000);
 				} else {
 					bool = reload(player, 1000-speed4);
 				}
 			}
 			if(mat == Material.TUBE_CORAL_BLOCK) {
-				if((new Colosseum()).colosseum(player)) {
+				if((new Colosseum()).colosseum(player) || new SantaGimmick().santaGimmick(player)) {
 					bool = reload(player, 3000);
 				} else {
 					bool = reload(player, 700-speed5);

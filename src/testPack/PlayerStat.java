@@ -1,6 +1,7 @@
 package testPack;
 
 import org.bukkit.ChatColor;
+import org.bukkit.Material;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 
@@ -8,109 +9,109 @@ public class PlayerStat {
 
 	public void viewStat(Player player) {
 		int lvl = player.getLevel();
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "본 파이터의 증표")) {
+		if(player.getInventory().getItemInMainHand().getType() == Material.RED_DYE) {
 			player.getWorld().playSound(player.getLocation(), Sound.UI_BUTTON_CLICK, 0.6f, 1.0f);
 			player.sendMessage(ChatColor.GREEN + "최대 체력: " + (20 + lvl*8) + " 현재 체력: " + (int)(player.getHealth()*((20 + lvl*8)/20.0)) + 
 					" 레벨: " + player.getLevel() + "(" + (int)(player.getExp()*1000)/10.0 + "%)"  + " 직업: 본 파이터");
 			viewInheritance(player);
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "기사의 증표")) {
+		if(player.getInventory().getItemInMainHand().getType() == Material.GREEN_DYE) {
 			player.getWorld().playSound(player.getLocation(), Sound.UI_BUTTON_CLICK, 0.6f, 1.0f);
 			player.sendMessage(ChatColor.GREEN + "최대 체력: " + (20 + lvl*5) + " 현재 체력: " + (int)(player.getHealth()*((20 + lvl*5)/20.0)) + 
 					" 레벨: " + player.getLevel() + "(" + (int)(player.getExp()*1000)/10.0 + "%)" + " 직업: 기사");
 			viewInheritance(player);
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "프리스트의 증표")) {
+		if(player.getInventory().getItemInMainHand().getType() == Material.LAPIS_LAZULI) {
 			player.getWorld().playSound(player.getLocation(), Sound.UI_BUTTON_CLICK, 0.6f, 1.0f);
 			player.sendMessage(ChatColor.GREEN + "최대 체력: " + (20 + lvl*8) + " 현재 체력: " + (int)(player.getHealth()*((20 + lvl*8)/20.0)) + 
 					" 레벨: " + player.getLevel() + "(" + (int)(player.getExp()*1000)/10.0 + "%)" + " 직업: 프리스트");
 			viewInheritance(player);
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "광전사의 증표")) {
+		if(player.getInventory().getItemInMainHand().getType() == Material.CYAN_DYE) {
 			player.getWorld().playSound(player.getLocation(), Sound.UI_BUTTON_CLICK, 0.6f, 1.0f);
 			player.sendMessage(ChatColor.GREEN + "최대 체력: " + (20 + lvl*2) + " 현재 체력: " + (int)(player.getHealth()*((20 + lvl*2)/20.0)) + 
 					" 레벨: " + player.getLevel() + "(" + (int)(player.getExp()*1000)/10.0 + "%)" + " 직업: 광전사");
 			viewInheritance(player);
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "도박사의 증표")) {
+		if(player.getInventory().getItemInMainHand().getType() == Material.LIGHT_GRAY_DYE) {
 			player.getWorld().playSound(player.getLocation(), Sound.UI_BUTTON_CLICK, 0.6f, 1.0f);
 			player.sendMessage(ChatColor.GREEN + "최대 체력: " + (20 + lvl*10) + " 현재 체력: " + (int)(player.getHealth()*((20 + lvl*10)/20.0)) + 
 					" 레벨: " + player.getLevel() + "(" + (int)(player.getExp()*1000)/10.0 + "%)" + " 직업: 도박사");
 			viewInheritance(player);
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "데빌의 증표")) {
+		if(player.getInventory().getItemInMainHand().getType() == Material.GRAY_DYE) {
 			player.getWorld().playSound(player.getLocation(), Sound.UI_BUTTON_CLICK, 0.6f, 1.0f);
 			player.sendMessage(ChatColor.GREEN + "최대 체력: " + (20 + lvl*20) + " 현재 체력: " + (int)(player.getHealth()*((20 + lvl*20)/20.0)) + 
 					" 레벨: " + player.getLevel() + "(" + (int)(player.getExp()*1000)/10.0 + "%)" + " 특성: 데빌");
 			viewInheritance(player);
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "엔젤의 증표")) {
+		if(player.getInventory().getItemInMainHand().getType() == Material.PINK_DYE) {
 			player.getWorld().playSound(player.getLocation(), Sound.UI_BUTTON_CLICK, 0.6f, 1.0f);
 			player.sendMessage(ChatColor.GREEN + "최대 체력: " + (20 + lvl*30) + " 현재 체력: " + (int)(player.getHealth()*((20 + lvl*30)/20.0)) + 
 					" 레벨: " + player.getLevel() + "(" + (int)(player.getExp()*1000)/10.0 + "%)" + " 특성: 엔젤");
 			viewInheritance(player);
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "대행자의 증표")) {
+		if(player.getInventory().getItemInMainHand().getType() == Material.LIME_DYE) {
 			player.getWorld().playSound(player.getLocation(), Sound.UI_BUTTON_CLICK, 0.6f, 1.0f);
 			player.sendMessage(ChatColor.GREEN + "최대 체력: " + (20 + lvl*20) + " 현재 체력: " + (int)(player.getHealth()*((20 + lvl*20)/20.0)) + 
 					" 레벨: " + player.getLevel() + "(" + (int)(player.getExp()*1000)/10.0 + "%)" + " 직업: 대행자");
 			viewInheritance(player);
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "그림자 무사의 증표")) {
+		if(player.getInventory().getItemInMainHand().getType() == Material.YELLOW_DYE) {
 			player.getWorld().playSound(player.getLocation(), Sound.UI_BUTTON_CLICK, 0.6f, 1.0f);
 			player.sendMessage(ChatColor.GREEN + "최대 체력: " + (20 + lvl*8) + " 현재 체력: " + (int)(player.getHealth()*((20 + lvl*8)/20.0)) + 
 					" 레벨: " + player.getLevel() + "(" + (int)(player.getExp()*1000)/10.0 + "%)" + " 직업: 그림자 무사");
 			viewInheritance(player);
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "버서커의 증표")) {
+		if(player.getInventory().getItemInMainHand().getType() == Material.LIGHT_BLUE_DYE) {
 			player.getWorld().playSound(player.getLocation(), Sound.UI_BUTTON_CLICK, 0.6f, 1.0f);
 			player.sendMessage(ChatColor.GREEN + "최대 체력: " + (20 + lvl*3) + " 현재 체력: " + (int)(player.getHealth()*((20 + lvl*3)/20.0)) + 
 					" 레벨: " + player.getLevel() + "(" + (int)(player.getExp()*1000)/10.0 + "%)" + " 직업: 버서커");
 			viewInheritance(player);
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "군인의 증표")) {
+		if(player.getInventory().getItemInMainHand().getType() == Material.MAGENTA_DYE) {
 			player.getWorld().playSound(player.getLocation(), Sound.UI_BUTTON_CLICK, 0.6f, 1.0f);
 			player.sendMessage(ChatColor.GREEN + "최대 체력: " + (20 + lvl*15) + " 현재 체력: " + (int)(player.getHealth()*((20 + lvl*15)/20.0)) + 
 					" 레벨: " + player.getLevel() + "(" + (int)(player.getExp()*1000)/10.0 + "%)" + " 직업: 군인");
 			viewInheritance(player);
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "그림 리퍼의 증표")) {
+		if(player.getInventory().getItemInMainHand().getType() == Material.ORANGE_DYE) {
 			player.getWorld().playSound(player.getLocation(), Sound.UI_BUTTON_CLICK, 0.6f, 1.0f);
 			player.sendMessage(ChatColor.GREEN + "최대 체력: " + (20 + lvl*10) + " 현재 체력: " + (int)(player.getHealth()*((20 + lvl*10)/20.0)) + 
 					" 레벨: " + player.getLevel() + "(" + (int)(player.getExp()*1000)/10.0 + "%)" + " 특성: 그림 리퍼");
 			viewInheritance(player);
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "마인의 증표")) {
+		if(player.getInventory().getItemInMainHand().getType() == Material.BLUE_DYE) {
 			player.getWorld().playSound(player.getLocation(), Sound.UI_BUTTON_CLICK, 0.6f, 1.0f);
 			player.sendMessage(ChatColor.GREEN + "최대 체력: " + (20 + lvl*50) + " 현재 체력: " + (int)(player.getHealth()*((20 + lvl*50)/20.0)) + 
 					" 레벨: " + player.getLevel() + "(" + (int)(player.getExp()*1000)/10.0 + "%)" + " 특성: 마인");
 			viewInheritance(player);
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "팔라딘의 증표")) {
+		if(player.getInventory().getItemInMainHand().getType() == Material.BROWN_DYE) {
 			player.getWorld().playSound(player.getLocation(), Sound.UI_BUTTON_CLICK, 0.6f, 1.0f);
 			player.sendMessage(ChatColor.GREEN + "최대 체력: " + (20 + lvl*99) + " 현재 체력: " + (int)(player.getHealth()*((20 + lvl*99)/20.0)) + 
 					" 레벨: " + player.getLevel() + "(" + (int)(player.getExp()*1000)/10.0 + "%)" + " 직업: 팔라딘");
 			viewInheritance(player);
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "용기사의 증표")) {
+		if(player.getInventory().getItemInMainHand().getType() == Material.BLACK_DYE) {
 			player.getWorld().playSound(player.getLocation(), Sound.UI_BUTTON_CLICK, 0.6f, 1.0f);
 			player.sendMessage(ChatColor.GREEN + "최대 체력: " + (20 + lvl*80) + " 현재 체력: " + (int)(player.getHealth()*((20 + lvl*80)/20.0)) + 
 					" 레벨: " + player.getLevel() + "(" + (int)(player.getExp()*1000)/10.0 + "%)" + " 직업: 용기사");
 			viewInheritance(player);
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "조커의 증표")) {
+		if(player.getInventory().getItemInMainHand().getType() == Material.INK_SAC) {
 			player.getWorld().playSound(player.getLocation(), Sound.UI_BUTTON_CLICK, 0.6f, 1.0f);
 			player.sendMessage(ChatColor.GREEN + "최대 체력: " + (20 + lvl*40) + " 현재 체력: " + (int)(player.getHealth()*((20 + lvl*40)/20.0)) + 
 					" 레벨: " + player.getLevel() + "(" + (int)(player.getExp()*1000)/10.0 + "%)" + " 특성: 조커");
 			viewInheritance(player);
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "아처의 증표")) {
+		if(player.getInventory().getItemInMainHand().getType() == Material.CLAY_BALL) {
 			player.getWorld().playSound(player.getLocation(), Sound.UI_BUTTON_CLICK, 0.6f, 1.0f);
 			player.sendMessage(ChatColor.GREEN + "최대 체력: " + (20 + lvl*10) + " 현재 체력: " + (int)(player.getHealth()*((20 + lvl*10)/20.0)) + 
 					" 레벨: " + player.getLevel() + "(" + (int)(player.getExp()*1000)/10.0 + "%)" + " 직업: 아처");
 			viewInheritance(player);
 		}
-		if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "파워레인저의 증표")) {
+		if(player.getInventory().getItemInMainHand().getType() == Material.GLOWSTONE_DUST) {
 			player.getWorld().playSound(player.getLocation(), Sound.UI_BUTTON_CLICK, 0.6f, 1.0f);
 			player.sendMessage(ChatColor.GREEN + "최대 체력: " + (20 + lvl*60) + " 현재 체력: " + (int)(player.getHealth()*((20 + lvl*60)/20.0)) + 
 					" 레벨: " + player.getLevel() + "(" + (int)(player.getExp()*1000)/10.0 + "%)" + " 직업: 파워레인저");
@@ -120,7 +121,9 @@ public class PlayerStat {
 	
 	public void viewInheritance(Player player) {
 		Inheritance inheritance = new Inheritance();
-		if(inheritance.getInheritance(player) == 1) {
+		if(inheritance.getInheritance(player) == 0) {
+			
+		} else if(inheritance.getInheritance(player) == 1) {
 			player.sendMessage(ChatColor.GREEN + "약쟁이의 계승자" + ": 포션 회복량 1.2배");
 		} else if(inheritance.getInheritance(player) == 2) {
 			player.sendMessage(ChatColor.GREEN + "마녀의 계승자" + ": 포션 회복량 1.5배");

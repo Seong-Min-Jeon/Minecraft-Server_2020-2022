@@ -81,11 +81,14 @@ public class Cmd11SpawnVil implements CommandExecutor {
 				} else if(args[0].equalsIgnoreCase("Player")) {
 					try { 
 						NPC npc = NPCLib.getInstance().generateNPC(player, "test", player.getLocation());
-//						npc.setSkin(player); 
-//						npc.setCollidable(false);
-//						npc.setFollowLookType(FollowLookType.PLAYER);
+						npc.setSkin(player); 
+						npc.setCollidable(false);
+						npc.setFollowLookType(FollowLookType.PLAYER);
+						npc.setCustomTabListName(" ");
+						npc.setShowOnTabList(false);
 						npc.create();
 						npc.show();
+						npc.update();
 					} catch(Exception e) {
 						player.sendMessage(ChatColor.RED + "잘못된 입력입니다만?");
 						return true;

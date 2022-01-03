@@ -39,6 +39,8 @@ public class TPScroll {
 		ticket14(player, itemArg, world);
 		ticket15(player, itemArg, world);
 		ticket16(player, itemArg, world);
+		ticket17(player, itemArg, world);
+		ticket18(player, itemArg, world);
 	}
 	
 	public void ticket0(Player player, ItemStack itemArg, World world) {
@@ -690,4 +692,101 @@ public class TPScroll {
 		}
 	}
 	
+	public void ticket17(Player player, ItemStack itemArg, World world) {
+		// 하마베->크리스마스  952 95 -40  938 45 -82
+		Location loc = player.getLocation();
+		if (loc.getX() <= 952 && loc.getY() <= 95 && loc.getZ() <= -40 && 
+				loc.getX() >= 938 && loc.getY() >= 45 && loc.getZ() >= -82) {
+			if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "크리스마스행 티켓")) {
+				itemArg.setAmount(itemArg.getAmount()-1);				
+				Location loc3 = new Location(world, 1779, 54, 2970, 270, 0);
+				taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+					int time = 0;
+					ThreadShip td = new ThreadShip(player.getUniqueId());
+
+					@Override
+					public void run() {
+						if (!td.hasID()) {
+							td.setID(taskID);
+						}
+						
+						if(!player.isValid()) {
+							player.teleport(new Location(player.getWorld(), 228, 85, 945));
+							td.endTask();
+							td.removeID();
+						}
+
+						if (time == 0) {
+							player.teleport(loc3);
+							player.getWorld().playSound(loc3, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);
+							msg.msg(player, "선장: 호오.. 크리스마스 섬을 가는건가?%선장: 나는 배 위에만 살아서 오늘 날짜도 모른다네.%"
+									+ "선장: 오늘이 크리스마스인 줄은 몰랐군.%선장: 이번에도 작은 배로 갈아타야하네.%"
+									+ "선장: 곧 도착하겠구만.%선장: 메리크리스마스라네.");
+						}
+
+						if (time >= 400) {
+							player.teleport(new Location(world, -2748, 53, -1049, 270, 0));
+							player.getWorld().playSound(loc3, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);
+							td.endTask();
+							td.removeID();
+							return;
+						}
+
+						time++;
+					}
+
+				}, 0, 1);
+			}
+		}
+	}
+	
+	public void ticket18(Player player, ItemStack itemArg, World world) {
+		// 티페라리->하마베  -2744 60 -1035  -2754 40 -1059
+		Location loc = player.getLocation();
+		if (loc.getX() <= -2744 && loc.getY() <= 60 && loc.getZ() <= -1035 && 
+				loc.getX() >= -2754 && loc.getY() >= 40 && loc.getZ() >= -1059) {
+			if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "하마베행 티켓 (크리스마스)")) {
+				itemArg.setAmount(itemArg.getAmount()-1);				
+				Location loc3 = new Location(world, 1779, 54, 2970, 270, 0);
+				taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+
+					int time = 0;
+					ThreadShip td = new ThreadShip(player.getUniqueId());
+
+					@Override
+					public void run() {
+						if (!td.hasID()) {
+							td.setID(taskID);
+						}
+						
+						if(!player.isValid()) {
+							player.teleport(new Location(player.getWorld(), 228, 85, 945));
+							td.endTask();
+							td.removeID();
+						}
+
+						if (time == 0) {
+							player.teleport(loc3);
+							player.getWorld().playSound(loc3, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);
+							msg.msg(player, "선장: 후우..%선장: 드디어 집으로 돌아갈 수 있겠구만.%"
+									+ "선장: 그래도 자네가 배를 이렇게 타주니 이 시국에도 돈을 버는구만.%선장: 매우 고맙게 생각하고 있다네.%"
+									+ "선장: 앞으로도 잘 부탁드리겠네.%선장: 곧 도착하겠구만.");
+						}
+
+						if (time >= 400) {
+							player.teleport(new Location(world, 954, 55, -57));
+							player.getWorld().playSound(loc3, Sound.ENTITY_PLAYER_SPLASH, 1.0f, 1.0f);
+							td.endTask();
+							td.removeID();
+							return;
+						}
+
+						time++;
+					}
+
+				}, 0, 1);
+			}
+		}
+	}
 }

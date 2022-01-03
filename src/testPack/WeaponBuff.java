@@ -26,13 +26,41 @@ public class WeaponBuff {
 					player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 600, 9));
 				}
 				if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "" + ChatColor.MAGIC + "신의 검")) {
-					mob.remove();				
+					mob.remove();
 				}
 				if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "" + ChatColor.MAGIC + "신의 검[범위 축소형]")) {
-					mob.remove();				
+					mob.remove();
 				}
 				if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "저주받은 검+")) {
 					player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 200, 0,true,true));				
+				}
+				
+				if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GRAY + "버려진 크리스마스 검")) {
+					mob.damage(0.0031);
+				}
+				
+				if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "크리스마스 검")) {
+					mob.damage(0.0032);
+				}
+
+				if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "빛나는 크리스마스 검")) {
+					mob.damage(0.0033);
+				}
+
+				if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "황금의 크리스마스 검")) {
+					mob.damage(0.0034);
+				}
+				
+				if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "영광의 크리스마스 검")) {
+					mob.damage(0.0035);
+				}
+				
+				if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "산타의 크리스마스 검")) {
+					mob.damage(0.0036);
+				}
+				
+				if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_PURPLE + "신의 크리스마스 검")) {
+					mob.damage(0.0037);
 				}
 				
 				//set

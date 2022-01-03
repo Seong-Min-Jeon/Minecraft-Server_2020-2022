@@ -342,17 +342,17 @@ public class RefreshServer {
 							
 							if(wear == false) {
 								allPlayer.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 600, 2,true,true));
-//								allPlayer.addPotionEffect(new PotionEffect(PotionEffectType.HARM, 600, 2,true,true));
-								allPlayer.setFreezeTicks(1);
+								allPlayer.addPotionEffect(new PotionEffect(PotionEffectType.HARM, 600, 2,true,true));
+								allPlayer.setFreezeTicks(90);
 								allPlayer.sendMessage(ChatColor.RED + "추워서 몸이 얼어붙는 것 같다.");
 							}
 							
 							if(allPlayer.isInWater()) {
 								allPlayer.removePotionEffect(PotionEffectType.SLOW);
-//								allPlayer.removePotionEffect(PotionEffectType.HARM);
+								allPlayer.removePotionEffect(PotionEffectType.HARM);
 								allPlayer.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 600, 4,true,true));
-//								allPlayer.addPotionEffect(new PotionEffect(PotionEffectType.HARM, 600, 8,true,true));
-								allPlayer.setFreezeTicks(1);
+								allPlayer.addPotionEffect(new PotionEffect(PotionEffectType.HARM, 600, 8,true,true));
+								allPlayer.setFreezeTicks(90);
 								allPlayer.sendMessage(ChatColor.RED + "극심한 추위로 몸이 얼고 있다.");
 							}
 							

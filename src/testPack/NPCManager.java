@@ -44,14 +44,17 @@ public class NPCManager {
 	public NPC npc1(Player player) {
 		Location loc = new Location(Bukkit.getWorld("world"), -2503, 53, 531, 0, 0);
 		
-		NPC npc = NPCLib.getInstance().generateNPC(player, "의문의 소녀", loc);
+		NPC npc = NPCLib.getInstance().generateNPC(player, "ice1", loc);
 		String[] name = getSkin("_Shirayuki");
+		npc.setText("의문의 소녀");
 		npc.setSkin(name[0], name[1]);
 		npc.setCollidable(false);
 		npc.setFollowLookType(FollowLookType.PLAYER);
+		npc.setCustomTabListName(" ");
 		npc.setShowOnTabList(false);
 		npc.create();
-		npc.show();
+		npc.show(); 
+		npc.update();
 		
 		return npc;
 	}
@@ -59,14 +62,17 @@ public class NPCManager {
 	public NPC npc2(Player player) {
 		Location loc = new Location(Bukkit.getWorld("world"), -2453, 84, 751, 0, 0);
 		
-		NPC npc = NPCLib.getInstance().generateNPC(player, "기사", loc);
+		NPC npc = NPCLib.getInstance().generateNPC(player, "knight", loc);
 		String[] name = getSkin("0GoblinSlayer0");
+		npc.setText("기사");
 		npc.setSkin(name[0], name[1]);
 		npc.setCollidable(false);
 		npc.setFollowLookType(FollowLookType.PLAYER);
+		npc.setCustomTabListName("  ");
 		npc.setShowOnTabList(false);
 		npc.create();
-		npc.show();
+		npc.show(); 
+		npc.update();
 		
 		return npc;
 	}
@@ -74,14 +80,17 @@ public class NPCManager {
 	public NPC npc3(Player player) {
 		Location loc = new Location(Bukkit.getWorld("world"), -2433, 28, 796, 180, 0);
 		
-		NPC npc = NPCLib.getInstance().generateNPC(player, "의장", loc);
+		NPC npc = NPCLib.getInstance().generateNPC(player, "like_cloth", loc);
 		String[] name = getSkin("7Voo");
+		npc.setText("의장");
 		npc.setSkin(name[0], name[1]);
 		npc.setCollidable(false);
 		npc.setFollowLookType(FollowLookType.PLAYER);
+		npc.setCustomTabListName("   ");
 		npc.setShowOnTabList(false);
 		npc.create();
-		npc.show();
+		npc.show(); 
+		npc.update();
 		
 		return npc;
 	}
@@ -89,14 +98,17 @@ public class NPCManager {
 	public NPC npc4(Player player) {
 		Location loc = new Location(Bukkit.getWorld("world"), 3728, 140, 3146, 270, 0);
 		
-		NPC npc = NPCLib.getInstance().generateNPC(player, "의문의 소녀", loc);
+		NPC npc = NPCLib.getInstance().generateNPC(player, "ice2", loc);
 		String[] name = getSkin("_Shirayuki");
+		npc.setText("의문의 소녀");
 		npc.setSkin(name[0], name[1]);
 		npc.setCollidable(false);
 		npc.setFollowLookType(FollowLookType.PLAYER);
+		npc.setCustomTabListName("    ");
 		npc.setShowOnTabList(false);
 		npc.create();
-		npc.show();
+		npc.show(); 
+		npc.update();
 		
 		return npc;
 	}
@@ -104,14 +116,17 @@ public class NPCManager {
 	public NPC npc5(Player player) {
 		Location loc = new Location(Bukkit.getWorld("world"), 3728, 140, 3146, 270, 0);
 		
-		NPC npc = NPCLib.getInstance().generateNPC(player, "모험가", loc);
+		NPC npc = NPCLib.getInstance().generateNPC(player, "traser_man", loc);
 		String[] name = getSkin("SkyQC");
+		npc.setText("모험가");
 		npc.setSkin(name[0], name[1]);
 		npc.setCollidable(false);
 		npc.setFollowLookType(FollowLookType.PLAYER);
+		npc.setCustomTabListName("     ");
 		npc.setShowOnTabList(false);
 		npc.create();
-		npc.show();
+		npc.show(); 
+		npc.update();
 		
 		return npc;
 	}
@@ -119,14 +134,17 @@ public class NPCManager {
 	public NPC npc6(Player player) {
 		Location loc = new Location(Bukkit.getWorld("world"), -2246, 51, -2415, 90, 0);
 		
-		NPC npc = NPCLib.getInstance().generateNPC(player, "데히트라", loc);
+		NPC npc = NPCLib.getInstance().generateNPC(player, "dehi1", loc);
 		String[] name = getSkin("SkyQC");
+		npc.setText("데히트라");
 		npc.setSkin(name[0], name[1]);
 		npc.setCollidable(false);
 		npc.setFollowLookType(FollowLookType.PLAYER);
+		npc.setCustomTabListName("      ");
 		npc.setShowOnTabList(false);
 		npc.create();
-		npc.show();
+		npc.show(); 
+		npc.update();
 		
 		return npc;
 	}
@@ -134,14 +152,17 @@ public class NPCManager {
 	public NPC npc7(Player player) {
 		Location loc = new Location(Bukkit.getWorld("world"), -2250, 51, -2415, 270, 0);
 		
-		NPC npc = NPCLib.getInstance().generateNPC(player, "의문의 남성", loc);
+		NPC npc = NPCLib.getInstance().generateNPC(player, "nazo_otoko", loc);
 		String[] name = getSkin("SkyQC");
+		npc.setText("의문의 남성");
 		npc.setSkin(name[0], name[1]);
 		npc.setCollidable(false);
 		npc.setFollowLookType(FollowLookType.PLAYER);
+		npc.setCustomTabListName("       ");
 		npc.setShowOnTabList(false);
 		npc.create();
-		npc.show();
+		npc.show(); 
+		npc.update();
 		
 		return npc;
 	}
@@ -149,14 +170,17 @@ public class NPCManager {
 	public NPC npc8(Player player) {
 		Location loc = new Location(Bukkit.getWorld("world"), 291, 55, 153, 90, 0);
 		
-		NPC npc = NPCLib.getInstance().generateNPC(player, "빨간모자 소녀", loc);
+		NPC npc = NPCLib.getInstance().generateNPC(player, "red_hood", loc);
 		String[] name = getSkin("_Blue__Apple_");
+		npc.setText("빨간모자 소녀");
 		npc.setSkin(name[0], name[1]);
 		npc.setCollidable(false);
 		npc.setFollowLookType(FollowLookType.PLAYER);
+		npc.setCustomTabListName("        ");
 		npc.setShowOnTabList(false);
 		npc.create();
-		npc.show();
+		npc.show(); 
+		npc.update();
 		
 		return npc;
 	}
@@ -169,19 +193,16 @@ public class NPCManager {
 		npc.setSkin(name[0], name[1]);
 		npc.setCollidable(false);
 		npc.setFollowLookType(FollowLookType.PLAYER);
+		npc.setCustomTabListName("         ");
 		npc.setShowOnTabList(false);
 		npc.setItem(NPCSlot.HELMET, new ItemStack(Material.NETHERITE_HELMET));
 		npc.setItem(NPCSlot.CHESTPLATE, new ItemStack(Material.NETHERITE_CHESTPLATE));
 		npc.setItem(NPCSlot.LEGGINGS, new ItemStack(Material.NETHERITE_LEGGINGS));
 		npc.setItem(NPCSlot.BOOTS, new ItemStack(Material.NETHERITE_BOOTS));
 		npc.setItem(NPCSlot.MAINHAND, new ItemStack(Material.JUNGLE_LOG));
-		System.out.println(7);
 		npc.create();
-		System.out.println(8);
 		npc.show();
-		System.out.println(9);
 		npc.update();
-		System.out.println(10);
 		
 		return npc;
 	}
@@ -189,11 +210,13 @@ public class NPCManager {
 	public NPC npc10(Player player) {
 		Location loc = new Location(Bukkit.getWorld("world"), 151.5, 71, 1902.5, 0, 0);
 		
-		NPC npc = NPCLib.getInstance().generateNPC(player, "구경꾼", loc);
+		NPC npc = NPCLib.getInstance().generateNPC(player, "gu1", loc);
 		String[] name = getSkin("JunletTridner");
+		npc.setText("구경꾼");
 		npc.setSkin(name[0], name[1]);
 		npc.setCollidable(false);
 		npc.setFollowLookType(FollowLookType.PLAYER);
+		npc.setCustomTabListName("          ");
 		npc.setShowOnTabList(false);
 		npc.setItem(NPCSlot.HELMET, new ItemStack(Material.GOLDEN_HELMET));
 		npc.setItem(NPCSlot.CHESTPLATE, new ItemStack(Material.GOLDEN_CHESTPLATE));
@@ -201,7 +224,8 @@ public class NPCManager {
 		npc.setItem(NPCSlot.BOOTS, new ItemStack(Material.GOLDEN_BOOTS));
 		npc.setItem(NPCSlot.MAINHAND, new ItemStack(Material.SPRUCE_PLANKS));
 		npc.create();
-		npc.show();
+		npc.show(); 
+		npc.update();
 		
 		return npc;
 	}
@@ -209,11 +233,13 @@ public class NPCManager {
 	public NPC npc11(Player player) {
 		Location loc = new Location(Bukkit.getWorld("world"), 150.5, 71, 1902.5, 0, 0);
 		
-		NPC npc = NPCLib.getInstance().generateNPC(player, "구경꾼", loc);
+		NPC npc = NPCLib.getInstance().generateNPC(player, "gu2", loc);
 		String[] name = getSkin("SARASHINA_RUKA");
+		npc.setText("구경꾼");
 		npc.setSkin(name[0], name[1]);
 		npc.setCollidable(false);
 		npc.setFollowLookType(FollowLookType.PLAYER);
+		npc.setCustomTabListName("           ");
 		npc.setShowOnTabList(false);
 		npc.setItem(NPCSlot.HELMET, new ItemStack(Material.SKELETON_SKULL));
 		npc.setItem(NPCSlot.CHESTPLATE, new ItemStack(Material.GOLDEN_CHESTPLATE));
@@ -221,7 +247,8 @@ public class NPCManager {
 		npc.setItem(NPCSlot.BOOTS, new ItemStack(Material.GOLDEN_BOOTS));
 		npc.setItem(NPCSlot.MAINHAND, new ItemStack(Material.GOLDEN_HOE));
 		npc.create();
-		npc.show();
+		npc.show(); 
+		npc.update();
 		
 		return npc;
 	}
@@ -229,11 +256,13 @@ public class NPCManager {
 	public NPC npc12(Player player) {
 		Location loc = new Location(Bukkit.getWorld("world"), 149.5, 71, 1902.5, 0, 0);
 
-		NPC npc = NPCLib.getInstance().generateNPC(player, "구경꾼", loc);
+		NPC npc = NPCLib.getInstance().generateNPC(player, "gu3", loc);
 		String[] name = getSkin("Cute_Camel");
+		npc.setText("구경꾼");
 		npc.setSkin(name[0], name[1]);
 		npc.setCollidable(false);
 		npc.setFollowLookType(FollowLookType.PLAYER);
+		npc.setCustomTabListName("            ");
 		npc.setShowOnTabList(false);
 		npc.setItem(NPCSlot.HELMET, new ItemStack(Material.SKELETON_SKULL));
 		npc.setItem(NPCSlot.CHESTPLATE, new ItemStack(Material.CHAINMAIL_CHESTPLATE));
@@ -241,7 +270,8 @@ public class NPCManager {
 		npc.setItem(NPCSlot.BOOTS, new ItemStack(Material.CHAINMAIL_BOOTS));
 		npc.setItem(NPCSlot.MAINHAND, new ItemStack(Material.IRON_HOE));
 		npc.create();
-		npc.show();
+		npc.show(); 
+		npc.update();
 		
 		return npc;
 	}
@@ -249,14 +279,17 @@ public class NPCManager {
 	public NPC npc13(Player player) {
 		Location loc = new Location(Bukkit.getWorld("world"), 155.5, 71, 1904.5, 0, 0);
 
-		NPC npc = NPCLib.getInstance().generateNPC(player, "구경꾼", loc);
-		String[] name = getSkin("Joojak");
+		NPC npc = NPCLib.getInstance().generateNPC(player, "gu4", loc);
+		String[] name = getSkin("             ");
+		npc.setText("구경꾼");
 		npc.setSkin(name[0], name[1]);
 		npc.setCollidable(false);
 		npc.setFollowLookType(FollowLookType.PLAYER);
+		npc.setCustomTabListName("13");
 		npc.setShowOnTabList(false);
 		npc.create();
-		npc.show();
+		npc.show(); 
+		npc.update();
 		
 		return npc;
 	}
@@ -322,14 +355,17 @@ public class NPCManager {
 				loc.setYaw(90);
 				loc.setPitch(0);
 				
-				NPC npc = NPCLib.getInstance().generateNPC(player, "데히트라", loc);
+				NPC npc = NPCLib.getInstance().generateNPC(player, "dehi2", loc);
 				String[] name = getSkin("SkyQC");
+				npc.setText("데히트라");
 				npc.setSkin(name[0], name[1]);
 				npc.setCollidable(false);
 				npc.setFollowLookType(FollowLookType.PLAYER);
+				npc.setCustomTabListName("                                     ");
 				npc.setShowOnTabList(false);
 				npc.create();
-				npc.show();
+				npc.show(); 
+				npc.update();
 				
 				new BukkitRunnable() {
 					@Override

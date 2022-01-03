@@ -90,4 +90,7 @@ commands:
   surface:
    description: <material>
    usage: /surface
+  setNick:
+   description: set player nick
+   usage: /setNick
 api-version: 1.18

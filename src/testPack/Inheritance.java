@@ -949,7 +949,13 @@ public class Inheritance {
     	// 계승자 이름 추가
 		try {
 			ItemMeta im = mo.getItemMeta();
-			im.setDisplayName(im.getDisplayName() + " " + str);
+			String name = "§" + im.getDisplayName().split("§")[0] + im.getDisplayName().split("§")[1];
+			Character c = name.charAt(name.length()-1);
+			if(c.toString().equals(" ")) {
+				im.setDisplayName(name + str);
+			} else {
+				im.setDisplayName(name + " " + str);
+			}
 			mo.setItemMeta(im);
 			player.getInventory().setItem(7, mo);
 		} catch (Exception e2) {
