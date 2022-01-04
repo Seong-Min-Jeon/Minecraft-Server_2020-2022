@@ -17,6 +17,7 @@ import org.bukkit.World;
 import org.bukkit.Particle.DustOptions;
 import org.bukkit.block.Block;
 import org.bukkit.block.Chest;
+import org.bukkit.block.data.BlockData;
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Arrow;
 import org.bukkit.entity.CaveSpider;
@@ -325,8 +326,8 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -8 ; z < 9 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.BLOCK_MARKER, loc2, 0, Material.BARRIER);
-//											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
+											BlockData mat = Material.BARRIER.createBlockData();
+											player.getWorld().spawnParticle(Particle.BLOCK_MARKER, loc2, 0, mat);
 										}
 									}
 								}
@@ -538,7 +539,8 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -15 ; z < 16 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
+											BlockData mat = Material.BARRIER.createBlockData();
+											player.getWorld().spawnParticle(Particle.BLOCK_MARKER, loc2, 0, mat);
 										}
 									}
 								}
@@ -639,7 +641,8 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -15 ; z < 16 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
+											BlockData mat = Material.BARRIER.createBlockData();
+											player.getWorld().spawnParticle(Particle.BLOCK_MARKER, loc2, 0, mat);
 										}
 									}
 								}
@@ -743,7 +746,8 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -15 ; z < 16 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
+											BlockData mat = Material.BARRIER.createBlockData();
+											player.getWorld().spawnParticle(Particle.BLOCK_MARKER, loc2, 0, mat);
 										}
 									}
 								}
@@ -1219,7 +1223,8 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -15 ; z < 16 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
+											BlockData mat = Material.BARRIER.createBlockData();
+											player.getWorld().spawnParticle(Particle.BLOCK_MARKER, loc2, 0, mat);
 										}
 									}
 								}
@@ -1347,7 +1352,8 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -8 ; z < 9 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
+											BlockData mat = Material.BARRIER.createBlockData();
+											player.getWorld().spawnParticle(Particle.BLOCK_MARKER, loc2, 0, mat);
 										}
 									}
 								}
@@ -1414,7 +1420,8 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -15 ; z < 16 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
+											BlockData mat = Material.BARRIER.createBlockData();
+											player.getWorld().spawnParticle(Particle.BLOCK_MARKER, loc2, 0, mat);
 										}
 									}
 								}
@@ -1518,7 +1525,8 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -15 ; z < 16 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
+											BlockData mat = Material.BARRIER.createBlockData();
+											player.getWorld().spawnParticle(Particle.BLOCK_MARKER, loc2, 0, mat);
 										}
 									}
 								}
@@ -1600,7 +1608,8 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -15 ; z < 16 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
+											BlockData mat = Material.BARRIER.createBlockData();
+											player.getWorld().spawnParticle(Particle.BLOCK_MARKER, loc2, 0, mat);
 										}
 									}
 								}
@@ -1689,7 +1698,8 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -5 ; z < 5 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
+											BlockData mat = Material.BARRIER.createBlockData();
+											player.getWorld().spawnParticle(Particle.BLOCK_MARKER, loc2, 0, mat);
 										}
 									}
 								}
@@ -1752,7 +1762,8 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -10 ; z < 10 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
+											BlockData mat = Material.BARRIER.createBlockData();
+											player.getWorld().spawnParticle(Particle.BLOCK_MARKER, loc2, 0, mat);
 										}
 									}
 								}
@@ -1921,7 +1932,8 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -10 ; z < 10 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
+											BlockData mat = Material.BARRIER.createBlockData();
+											player.getWorld().spawnParticle(Particle.BLOCK_MARKER, loc2, 0, mat);
 										}
 									}
 								}
@@ -2040,7 +2052,8 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -10 ; z < 10 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
+											BlockData mat = Material.BARRIER.createBlockData();
+											player.getWorld().spawnParticle(Particle.BLOCK_MARKER, loc2, 0, mat);
 										}
 									}
 								}
@@ -2107,7 +2120,8 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -10 ; z < 10 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
+											BlockData mat = Material.BARRIER.createBlockData();
+											player.getWorld().spawnParticle(Particle.BLOCK_MARKER, loc2, 0, mat);
 										}
 									}
 								}
@@ -2220,7 +2234,8 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -12 ; z < 13 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
+											BlockData mat = Material.BARRIER.createBlockData();
+											player.getWorld().spawnParticle(Particle.BLOCK_MARKER, loc2, 0, mat);
 										}
 									}
 								}
@@ -3204,7 +3219,8 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -12 ; z < 13 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
+											BlockData mat = Material.BARRIER.createBlockData();
+											player.getWorld().spawnParticle(Particle.BLOCK_MARKER, loc2, 0, mat);
 										}
 									}
 								}
@@ -3432,7 +3448,8 @@ public class PlayerHitDebuff {
 								for(int y = -1 ; y < 0 ; y++) {
 									for(int z = -8 ; z < 9 ; z++) {
 										Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-										player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
+										BlockData mat = Material.BARRIER.createBlockData();
+										player.getWorld().spawnParticle(Particle.BLOCK_MARKER, loc2, 0, mat);
 									}
 								}
 							}
@@ -3749,7 +3766,8 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -8 ; z < 9 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
+											BlockData mat = Material.BARRIER.createBlockData();
+											player.getWorld().spawnParticle(Particle.BLOCK_MARKER, loc2, 0, mat);
 										}
 									}
 								}
@@ -3820,7 +3838,8 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -8 ; z < 9 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
+											BlockData mat = Material.BARRIER.createBlockData();
+											player.getWorld().spawnParticle(Particle.BLOCK_MARKER, loc2, 0, mat);
 										}
 									}
 								}
@@ -4291,7 +4310,8 @@ public class PlayerHitDebuff {
 										for (int y = -1; y < 0; y++) {
 											for (int z = -2; z < 3; z++) {
 												Location loc2 = loc.clone().add(new Vector(x, y + 1.2, z));
-												player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
+												BlockData mat = Material.BARRIER.createBlockData();
+												player.getWorld().spawnParticle(Particle.BLOCK_MARKER, loc2, 0, mat);
 											}
 										}
 									}
@@ -4485,7 +4505,8 @@ public class PlayerHitDebuff {
 									for(int y = -1 ; y < 0 ; y++) {
 										for(int z = -4 ; z < 5 ; z++) {
 											Location loc2 = loc.clone().add(new Vector(x,y+1.2,z));
-											player.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc2, 0);
+											BlockData mat = Material.BARRIER.createBlockData();
+											player.getWorld().spawnParticle(Particle.BLOCK_MARKER, loc2, 0, mat);
 										}
 									}
 								}

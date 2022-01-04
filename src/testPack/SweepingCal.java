@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
+import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Particle;
@@ -92,7 +93,28 @@ public class SweepingCal {
 								if(sweepDam > damage) {
 									sweepDam = damage;
 								}
-								nearMob.damage(sweepDam);
+								
+								if(new SantaGimmick().santaGimmick(nearMob)) {
+									if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GRAY + "버려진 크리스마스 검")) {
+										nearMob.damage(0.0031);
+									} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "크리스마스 검")) {
+										nearMob.damage(0.0032);
+									} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "빛나는 크리스마스 검")) {
+										nearMob.damage(0.0033);
+									} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "황금의 크리스마스 검")) {
+										nearMob.damage(0.0034);
+									} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "영광의 크리스마스 검")) {
+										nearMob.damage(0.0035);
+									} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "산타의 크리스마스 검")) {
+										nearMob.damage(0.0036);
+									} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_PURPLE + "신의 크리스마스 검")) {
+										nearMob.damage(0.0037);
+									} else {
+										nearMob.damage(sweepDam);
+									}
+								} else {
+									nearMob.damage(sweepDam);
+								}
 								
 								try {
 									//===========================================================================

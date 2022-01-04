@@ -310,6 +310,116 @@ public class SpecialEffect {
 		}
 		return 0;
 	}
+	
+	public int a28(Player player) {
+		try {
+			if(player.getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "불굴의 투지")) {
+				return 5;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+	public int a29(Player player) {
+		try {
+			if(player.getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "영원한 도전자")) {
+				return 10;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+	public int a30(Player player) {
+		try {
+			if(player.getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "멸살의 권")) {
+				return 15;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+	public int a31(Player player) {
+		try {
+			if(player.getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "권의 극에 달한 자")) {
+				return 20;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+	public int a32(Player player) {
+		try {
+			if(player.getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_PURPLE + "광기의 오니")) {
+				return 30;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+	public int a33(Player player) {
+		try {
+			if(player.getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "화염의 파동")) {
+				return 5;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+	public int a34(Player player) {
+		try {
+			if(player.getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "홍련의 파동")) {
+				return 10;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+	public int a35(Player player) {
+		try {
+			if(player.getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "심연의 파동")) {
+				return 15;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+	public int a36(Player player) {
+		try {
+			if(player.getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "맥스웰의 파동")) {
+				return 20;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+	public int a37(Player player) {
+		try {
+			if(player.getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_PURPLE + "살의의 파동")) {
+				return 30;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
 
 	
 	// 전투 경험치 증가

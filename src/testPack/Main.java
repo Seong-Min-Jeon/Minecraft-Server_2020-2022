@@ -3664,6 +3664,12 @@ public class Main extends JavaPlugin implements Listener{
 				event.setRespawnLocation(forgan);
 				return;
 			}
+			// 광산 3481 31 3837 3603 5 3976
+			if (loc.getX() <= 3603 && loc.getY() <= 31 && loc.getZ() <= 3976 
+					&& loc.getX() >= 3481 && loc.getY() >= 5 && loc.getZ() >= 3837) {
+				event.setRespawnLocation(seedMine);
+				return;
+			}
 			//타락한 요정 왕국 3658 255 3591  3823 0 3287
 			if(loc.getX() <= 3823 && loc.getY() <= 255 && loc.getZ() <= 3591 
 					&& loc.getX() >= 3658 && loc.getY() >= 0 && loc.getZ() >= 3287) {
@@ -3760,13 +3766,7 @@ public class Main extends JavaPlugin implements Listener{
 				event.setRespawnLocation(hardLobby);
 				return;
 			}
-			//광산 3481 31 3837 3603 5 3976
-			if(loc.getX() <= 3603 && loc.getY() <= 31 && loc.getZ() <= 3976 
-					&& loc.getX() >= 3481 && loc.getY() >= 5 && loc.getZ() >= 3837) {
-				event.setRespawnLocation(seedMine);
-				return;
-			}
-			//크리스마스 -2773 250 -1160  -2464 0 -812
+			// 크리스마스 -2773 250 -1160  -2464 0 -812
 			if(loc.getX() <= -2464 && loc.getY() <= 250 && loc.getZ() <= -812 
 					&& loc.getX() >= -2773 && loc.getY() >= 0 && loc.getZ() >= -1160) {
 				event.setRespawnLocation(hamabe);
@@ -4769,6 +4769,60 @@ public class Main extends JavaPlugin implements Listener{
 			event.setCancelled(true);
 		}
 		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "아처의 증표")) {
+			event.setCancelled(true);
+		}
+		if(event.getItemDrop().getItemStack().getType() == Material.RED_DYE) {
+			event.setCancelled(true);
+		}
+		if(event.getItemDrop().getItemStack().getType() == Material.GREEN_DYE) {
+			event.setCancelled(true);
+		}
+		if(event.getItemDrop().getItemStack().getType() == Material.LAPIS_LAZULI) {
+			event.setCancelled(true);
+		}
+		if(event.getItemDrop().getItemStack().getType() == Material.CYAN_DYE) {
+			event.setCancelled(true);
+		}
+		if(event.getItemDrop().getItemStack().getType() == Material.LIGHT_GRAY_DYE) {
+			event.setCancelled(true);
+		}
+		if(event.getItemDrop().getItemStack().getType() == Material.GRAY_DYE) {
+			event.setCancelled(true);
+		}
+		if(event.getItemDrop().getItemStack().getType() == Material.PINK_DYE) {
+			event.setCancelled(true);
+		}
+		if(event.getItemDrop().getItemStack().getType() == Material.LIME_DYE) {
+			event.setCancelled(true);
+		}
+		if(event.getItemDrop().getItemStack().getType() == Material.YELLOW_DYE) {
+			event.setCancelled(true);
+		}
+		if(event.getItemDrop().getItemStack().getType() == Material.LIGHT_BLUE_DYE) {
+			event.setCancelled(true);
+		}
+		if(event.getItemDrop().getItemStack().getType() == Material.MAGENTA_DYE) {
+			event.setCancelled(true);
+		}
+		if(event.getItemDrop().getItemStack().getType() == Material.ORANGE_DYE) {
+			event.setCancelled(true);
+		}
+		if(event.getItemDrop().getItemStack().getType() == Material.BLUE_DYE) {
+			event.setCancelled(true);
+		}
+		if(event.getItemDrop().getItemStack().getType() == Material.BROWN_DYE) {
+			event.setCancelled(true);
+		}
+		if(event.getItemDrop().getItemStack().getType() == Material.BLACK_DYE) {
+			event.setCancelled(true);
+		}
+		if(event.getItemDrop().getItemStack().getType() == Material.INK_SAC) {
+			event.setCancelled(true);
+		}
+		if(event.getItemDrop().getItemStack().getType() == Material.CLAY_BALL) {
+			event.setCancelled(true);
+		}
+		if(event.getItemDrop().getItemStack().getType() == Material.GLOWSTONE_DUST) {
 			event.setCancelled(true);
 		}
 		if(event.getItemDrop().getItemStack().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.BLUE + "마나")) {
@@ -6339,8 +6393,10 @@ public class Main extends JavaPlugin implements Listener{
 				if(addHealthPercent > 0) {
 					int addHealth = (int) (event.getDamage() * addHealthPercent / 100); 
 
-					PotionRatioForVampire pr = new PotionRatioForVampire();
-					pr.calculation(player, addHealth);
+					if(!new SantaGimmick().santaGimmick(player)) {
+						PotionRatioForVampire pr = new PotionRatioForVampire();
+						pr.calculation(player, addHealth);
+					}
 					
 					event.setDamage(event.getDamage() * (100 - 10 * addHealthPercent) / 100);
 				}
@@ -6406,7 +6462,14 @@ public class Main extends JavaPlugin implements Listener{
 					increase += 50;
 				}
 				
+				increase += new SpecialEffect().a28(player);
+				increase += new SpecialEffect().a29(player);
+				increase += new SpecialEffect().a30(player);
+				increase += new SpecialEffect().a31(player);
+				increase += new SpecialEffect().a32(player);
+				
 				event.setDamage(event.getDamage() * (100 + increase) / 100);
+				//===========================================================================
 				
 				PlayerHitDebuff debuff = new PlayerHitDebuff();
 				debuff.playerHitDebuff(player, entity);
@@ -6468,8 +6531,10 @@ public class Main extends JavaPlugin implements Listener{
 				if(addHealthPercent > 0) {
 					int addHealth = (int) (event.getDamage() * addHealthPercent / 100); 
 
-					PotionRatioForVampire pr = new PotionRatioForVampire();
-					pr.calculation(player, addHealth);
+					if(!new SantaGimmick().santaGimmick(player)) {
+						PotionRatioForVampire pr = new PotionRatioForVampire();
+						pr.calculation(player, addHealth);
+					}
 				}
 				//===========================================================================
 				// 독뎀
@@ -6528,7 +6593,14 @@ public class Main extends JavaPlugin implements Listener{
 					increase += 50;
 				}
 				
+				increase += new SpecialEffect().a33(player);
+				increase += new SpecialEffect().a34(player);
+				increase += new SpecialEffect().a35(player);
+				increase += new SpecialEffect().a36(player);
+				increase += new SpecialEffect().a37(player);
+				
 				event.setDamage(event.getDamage() * (100 + increase) / 100);
+				//===========================================================================
 				
 				PlayerHitDebuff debuff = new PlayerHitDebuff();
 				debuff.playerHitDebuff(player, entity);
@@ -6590,8 +6662,10 @@ public class Main extends JavaPlugin implements Listener{
 				if(addHealthPercent > 0) {
 					int addHealth = (int) (event.getDamage() * addHealthPercent / 100); 
 
-					PotionRatioForVampire pr = new PotionRatioForVampire();
-					pr.calculation(player, addHealth);
+					if(!new SantaGimmick().santaGimmick(player)) {
+						PotionRatioForVampire pr = new PotionRatioForVampire();
+						pr.calculation(player, addHealth);
+					}
 				}
 				//===========================================================================
 				// 독뎀
@@ -6650,7 +6724,14 @@ public class Main extends JavaPlugin implements Listener{
 					increase += 50;
 				}
 				
+				increase += new SpecialEffect().a33(player);
+				increase += new SpecialEffect().a34(player);
+				increase += new SpecialEffect().a35(player);
+				increase += new SpecialEffect().a36(player);
+				increase += new SpecialEffect().a37(player);
+				
 				event.setDamage(event.getDamage() * (100 + increase) / 100);
+				//===========================================================================
 				
 				PlayerHitDebuff debuff = new PlayerHitDebuff();
 				debuff.playerHitDebuff(player, entity);
@@ -6672,7 +6753,7 @@ public class Main extends JavaPlugin implements Listener{
 		try {
 			if (event.getDamager() instanceof LivingEntity && !(event.getDamager() instanceof Player)) {
 				if (event.getEntity() instanceof Player) {
-					if(!(new Colosseum()).colosseum(event.getEntity())) {
+					if(!(new Colosseum()).colosseum(event.getEntity()) && !(new SantaGimmick()).santaGimmick(event.getEntity())) {
 						try {
 							DisableAttack da = new DisableAttack();
 							Player player = (Player) event.getEntity();
@@ -6686,7 +6767,7 @@ public class Main extends JavaPlugin implements Listener{
 						} catch (Exception e) {
 
 						}
-					}
+					} 
 				}
 			}
 		} catch (Exception e) {
@@ -6901,8 +6982,20 @@ public class Main extends JavaPlugin implements Listener{
 						event.setDamage(500000);
 					} else if(Math.abs(event.getDamage() - 0.0037) < 0.00001) {
 						event.setDamage(800000);
+					} else if(event.getDamage() < 100 && event.getDamage() > 0.5) {
+						event.setDamage(0);
 					} else {
-						event.setDamage(100000);
+						if(monster instanceof Mob) {
+							Mob mob = (Mob) monster;
+							if(mob.getTarget() instanceof Player) {
+								Player p = (Player) mob.getTarget();
+								if(p.getInventory().getItemInMainHand().getType() != Material.STONE_STAIRS) {
+									event.setDamage(100000);
+								} else {
+									event.setDamage(0);
+								}
+							}
+						}
 					}
 					
 					if(event.getCause() == DamageCause.FIRE_TICK || event.getCause() == DamageCause.FIRE) {
@@ -11751,9 +11844,6 @@ public class Main extends JavaPlugin implements Listener{
 	    	QuestBoard cb = new QuestBoard();
 	    	NPC npc = event.getNpc();
 	    	NPCInteractEvent.ClickType clickType = event.getClickType();
-//	    	System.out.println(npc.isShown());
-//	    	System.out.println(clickType == NPCInteractEvent.ClickType.RIGHT_CLICK);
-//	    	System.out.println(npc.getText().get(0).equals("에일을 구한 영웅"));
 	 	    if(npc.isShown() && clickType == NPCInteractEvent.ClickType.RIGHT_CLICK) {
 	 	    	if(npc.getText().get(0).equals("의문의 소녀")) {
 	 	    		if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===설원의 가희3===")) {

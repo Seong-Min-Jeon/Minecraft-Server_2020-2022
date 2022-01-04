@@ -78,9 +78,10 @@ public class NPCManager {
 	}
 	
 	public NPC npc3(Player player) {
+		System.out.println("의장등장");
 		Location loc = new Location(Bukkit.getWorld("world"), -2433, 28, 796, 180, 0);
 		
-		NPC npc = NPCLib.getInstance().generateNPC(player, "like_cloth", loc);
+		NPC npc = NPCLib.getInstance().generateNPC(player, "cloth", loc);
 		String[] name = getSkin("7Voo");
 		npc.setText("의장");
 		npc.setSkin(name[0], name[1]);
@@ -280,12 +281,12 @@ public class NPCManager {
 		Location loc = new Location(Bukkit.getWorld("world"), 155.5, 71, 1904.5, 0, 0);
 
 		NPC npc = NPCLib.getInstance().generateNPC(player, "gu4", loc);
-		String[] name = getSkin("             ");
+		String[] name = getSkin("joojak");
 		npc.setText("구경꾼");
 		npc.setSkin(name[0], name[1]);
 		npc.setCollidable(false);
 		npc.setFollowLookType(FollowLookType.PLAYER);
-		npc.setCustomTabListName("13");
+		npc.setCustomTabListName("             ");
 		npc.setShowOnTabList(false);
 		npc.create();
 		npc.show(); 
@@ -316,7 +317,7 @@ public class NPCManager {
 	 		}
 			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===설원의 가희4===")) {
 				npc2(player);
-				npc1(player).destroy();
+				npc1(player).hide();
 	 		}
 			if(qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===설원의 가희5===")) {
 				npc2(player);
