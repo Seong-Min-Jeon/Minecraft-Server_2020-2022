@@ -9195,89 +9195,636 @@ public class MobLoot {
 	
 	// 섬을 탈출하고 싶은 노예
 	public void mob373(Player player) {
-		int tmp = rnd.nextInt(20);
-		if(tmp == 0) {
-			Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
-			Block wheat = chestLoc.getBlock();
-			Chest chest = (Chest) wheat.getState();
-			ItemStack weapon = chest.getInventory().getItem(2);
-			player.getInventory().addItem(weapon);
-			sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+		try {
+			if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GRAY + "버려진 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 6) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 7) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "빛나는 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 8) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "황금의 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 9) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "영광의 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 10) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "산타의 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 12) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_PURPLE + "신의 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 15) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 5) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			}
+		} catch(Exception e) {
+			
 		}
 	}
 	
 	// 노예를 관리하는 노예
 	public void mob374(Player player) {
-		int tmp = rnd.nextInt(15);
-		if(tmp == 0) {
-			Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
-			Block wheat = chestLoc.getBlock();
-			Chest chest = (Chest) wheat.getState();
-			ItemStack weapon = chest.getInventory().getItem(2);
-			player.getInventory().addItem(weapon);
-			sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+		try {
+			if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GRAY + "버려진 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 8) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 9) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "빛나는 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 10) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "황금의 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 12) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "영광의 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 14) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "산타의 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 17) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_PURPLE + "신의 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 20) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 7) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			}
+		} catch(Exception e) {
+			
 		}
 	}
 	
 	// 마을을 꾸미고 있는 노예
 	public void mob375(Player player) {
-		int tmp = rnd.nextInt(10);
-		if(tmp == 0) {
-			Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
-			Block wheat = chestLoc.getBlock();
-			Chest chest = (Chest) wheat.getState();
-			ItemStack weapon = chest.getInventory().getItem(2);
-			player.getInventory().addItem(weapon);
-			sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+		try {
+			if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GRAY + "버려진 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 11) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 12) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "빛나는 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 13) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "황금의 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 15) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "영광의 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 17) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "산타의 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 20) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_PURPLE + "신의 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 23) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 10) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			}
+		} catch(Exception e) {
+			
 		}
 	}
 	
 	// 산타를 보좌하는 요정 노예
 	public void mob376(Player player) {
-		int tmp = rnd.nextInt(5);
-		if(tmp == 0) {
-			Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
-			Block wheat = chestLoc.getBlock();
-			Chest chest = (Chest) wheat.getState();
-			ItemStack weapon = chest.getInventory().getItem(2);
-			player.getInventory().addItem(weapon);
-			sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+		try {
+			if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GRAY + "버려진 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 22) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 24) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "빛나는 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 26) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "황금의 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 28) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "영광의 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 31) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "산타의 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 33) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_PURPLE + "신의 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 35) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 20) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			}
+		} catch(Exception e) {
+			
+		}
+		
+		int tmp2 = rnd.nextInt(40);
+		if(tmp2 == 0) {
+			Location loc = player.getLocation().add(0, 1, 0);
+			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
 		}
 	}
 	
 	// 살아남은 루돌프
 	public void mob377(Player player) {
-		int tmp = rnd.nextInt(2);
-		if(tmp == 0) {
-			Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
-			Block wheat = chestLoc.getBlock();
-			Chest chest = (Chest) wheat.getState();
-			ItemStack weapon = chest.getInventory().getItem(2);
-			player.getInventory().addItem(weapon);
-			sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+		try {
+			if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GRAY + "버려진 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 54) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 58) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "빛나는 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 62) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "황금의 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 68) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "영광의 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 74) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "산타의 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 80) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_PURPLE + "신의 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 90) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 50) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			}
+		} catch(Exception e) {
+			
+		}
+		
+		int tmp2 = rnd.nextInt(40);
+		if(tmp2 == 0) {
+			Location loc = player.getLocation().add(0, 1, 0);
+			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
 		}
 	}
 	
 	// 산타
 	public void mob378(Player player) {
-		Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
-		Block wheat = chestLoc.getBlock();
-		Chest chest = (Chest) wheat.getState();
-		ItemStack weapon = chest.getInventory().getItem(3);
-		player.getInventory().addItem(weapon);
-		sendMessage(player, ChatColor.AQUA + "화려한 선물 상자" + ChatColor.WHITE + "를 획득했다.");
+		try {
+			if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GRAY + "버려진 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 20) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(3);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.AQUA + "화려한 선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 25) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(3);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.AQUA + "화려한 선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "빛나는 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 30) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(3);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.AQUA + "화려한 선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "황금의 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 35) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(3);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.AQUA + "화려한 선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "영광의 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 40) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(3);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.AQUA + "화려한 선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "산타의 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 45) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(3);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.AQUA + "화려한 선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_PURPLE + "신의 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 50) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(3);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.AQUA + "화려한 선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 15) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(3);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.AQUA + "화려한 선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			}
+		} catch(Exception e) {
+			
+		}
 	}
 	
 	// 반란을 계획중인 노예
 	public void mob379(Player player) {
-		int tmp = rnd.nextInt(5);
-		if(tmp == 0) {
-			Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
-			Block wheat = chestLoc.getBlock();
-			Chest chest = (Chest) wheat.getState();
-			ItemStack weapon = chest.getInventory().getItem(2);
-			player.getInventory().addItem(weapon);
-			sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+		try {
+			if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GRAY + "버려진 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 22) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 24) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "빛나는 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 26) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "황금의 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 28) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "영광의 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 31) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "산타의 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 33) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_PURPLE + "신의 크리스마스 검")) {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 35) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			} else {
+				int tmp = rnd.nextInt(100);
+				if(tmp < 20) {
+					Location chestLoc = new Location(player.getWorld(), -1831, 92, 3036);
+					Block wheat = chestLoc.getBlock();
+					Chest chest = (Chest) wheat.getState();
+					ItemStack weapon = chest.getInventory().getItem(2);
+					player.getInventory().addItem(weapon);
+					sendMessage(player, ChatColor.LIGHT_PURPLE + "선물 상자" + ChatColor.WHITE + "를 획득했다.");
+				}
+			}
+		} catch(Exception e) {
+			
 		}
 	}
 	

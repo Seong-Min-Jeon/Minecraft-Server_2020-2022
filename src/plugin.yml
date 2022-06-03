@@ -93,4 +93,7 @@ commands:
   setNick:
    description: set player nick
    usage: /setNick
+  t:
+   description: teleport
+   usage: /t
 api-version: 1.18

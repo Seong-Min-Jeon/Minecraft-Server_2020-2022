@@ -38,6 +38,7 @@ public class Cmd30setNick implements CommandExecutor {
 
 			if(!player.isOp()) {
 				player.sendMessage("오피만 사용할 수 있는 명령어입니다.");
+				return true;
 			}
 			
 			if(cmd.getName().equalsIgnoreCase("setNick")) {

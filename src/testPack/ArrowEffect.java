@@ -212,6 +212,30 @@ public class ArrowEffect {
 							}
 						}
 					} 
+				} else if(im.getDisplayName().equals(ChatColor.AQUA + "빙검의 미라제이드")) {
+					if(player.getLevel() >= 500) {
+						if(checkMana(player, 6)) {
+							List<Entity> entitylist = player.getNearbyEntities(5, 5, 5);
+							for (Entity nearEntity : entitylist) {
+								if (nearEntity.getType() != EntityType.PLAYER) {
+									if (nearEntity instanceof LivingEntity) {
+										LivingEntity nearMob = (LivingEntity) nearEntity;
+										nearMob.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 80, 32700));
+									}
+								}
+							}
+							// ===============================================================
+							ParticleData pd = new ParticleData(player.getUniqueId());
+							if (pd.hasID()) {
+								pd.endTask();
+								pd.removeID();
+							}
+							ParticleEffect pe = new ParticleEffect(player);
+							pe.startES2();
+							// ================================================================
+							removeMana(player, 6);
+						}
+					} 
 				}
 				
 				if(bool) {

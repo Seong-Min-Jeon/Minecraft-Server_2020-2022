@@ -314,6 +314,15 @@ public class RefreshServer {
 								}
 							}
 							
+							if (allPlayer.getInventory().getHelmet() != null) {
+								if (allPlayer.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "루돌프의 눈물")) {
+									wear = true;
+								}
+								if (allPlayer.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "그녀석의 모자")) {
+									wear = true;
+								}
+							}
+							
 							if (allPlayer.getInventory().getItemInOffHand().getItemMeta() != null) {
 								try {
 									if(allPlayer.getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "가시고기의 눈물")) {

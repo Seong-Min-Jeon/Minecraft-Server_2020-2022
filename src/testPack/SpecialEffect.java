@@ -2607,6 +2607,17 @@ public class SpecialEffect {
 		return 0;
 	}
 	
+	public double h6(Player player) {
+		try {
+			if(player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "그녀석의 모자")) {
+				return 0.5;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
 	public int c1(Player player) {

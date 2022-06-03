@@ -163,7 +163,7 @@ public class Main extends JavaPlugin implements Listener{
 	// gamerule keepInventory true
 	// gamerule doImmediateRespawn true
 	// gamerule doLimitedCrafting true
-	// gamerule mobGriefing false 
+	// gamerule mobGriefing false
 	// gamerule doWeatherCycle false
 	// Damage_ALL, Damage_Undead, Damage_Arthropods, Impaling, Sweeping, Protection_Environment, Protection_Fire, Protection_Explosion, Protection_Projectile, Thorns, Level
 	
@@ -212,6 +212,7 @@ public class Main extends JavaPlugin implements Listener{
 		getCommand("target").setExecutor(new Cmd28target());
 		getCommand("surface").setExecutor(new Cmd29surface());
 		getCommand("setNick").setExecutor(new Cmd30setNick());
+		getCommand("t").setExecutor(new Cmd31tp());
 		
 		new Cmd16class().setFolder(getDataFolder());
 		new Inheritance().setFolder(getDataFolder());
@@ -389,8 +390,8 @@ public class Main extends JavaPlugin implements Listener{
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.DARK_RED + "'더 게임 종결자' 유메하마.");
 		} else if(player.getDisplayName().equalsIgnoreCase("WoolRing")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.GREEN + "'에일 최고의 대장장이' 울링.");
-		} else if(player.getDisplayName().equalsIgnoreCase("_nanoboost_")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.RED + "딱히 타이틀이 없는 나노부스트.");
+		} else if(player.getDisplayName().equalsIgnoreCase("NN_Tapejara")) {
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.RED + "나노부스트였던 타페야라");
 		} else if(player.getDisplayName().equalsIgnoreCase("why9196")) {
 			event.setJoinMessage("확률이 뭐죠? " + ChatColor.BLUE + "'0.0068% 돌파한' 와이.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Akilae3102")) {
@@ -691,8 +692,86 @@ public class Main extends JavaPlugin implements Listener{
 		
 		
 		
-		
-		
+//		ItemStack var2 = new ItemStack(Material.MUSIC_DISC_13);
+//		ItemMeta var2Im = var2.getItemMeta();
+//		var2Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,500");
+//		var2Im.setDisplayName(ChatColor.AQUA + "빙검의 미라제이드");
+//		ArrayList<String> var2Lore = new ArrayList();
+//		var2Lore.add(ChatColor.GRAY + "레벨 제한: 500");
+//		var2Lore.add(ChatColor.GRAY + " ");
+//		var2Lore.add(ChatColor.GRAY + "본래는 얼음으로 만들어진 검인 것으로 전해진다.");
+//		var2Lore.add(ChatColor.GRAY + "산타가 요정들을 세뇌하는 마법을 사용하는 순간");
+//		var2Lore.add(ChatColor.GRAY + "검의 핵이 자극받은 것을 시작으로 마력을 담게되어");
+//		var2Lore.add(ChatColor.GRAY + "결국에는 상대 움직임을 봉하는 스태프가 되었다.");
+//		var2Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var2Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var2Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var2Im.setUnbreakable(true);
+//		var2Im.setLore(var2Lore);
+//		var2.setItemMeta(var2Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var2);}
+//		
+//		ItemStack var3 = new ItemStack(Material.CARVED_PUMPKIN);
+//		ItemMeta var3Im = var3.getItemMeta();
+//		var3Im.setLocalizedName("-100,-100,-100,-100,-100,-100,-100,-100,-100,-100,400");
+//		var3Im.setDisplayName(ChatColor.LIGHT_PURPLE + "루돌프의 눈물");
+//		ArrayList<String> var3Lore = new ArrayList();
+//		var3Lore.add(ChatColor.GRAY + "레벨 제한: 400");
+//		var3Lore.add(ChatColor.GRAY + " ");
+//		var3Lore.add(ChatColor.GRAY + "생을 마친 루돌프가 남긴 유산");
+//		var3Lore.add(ChatColor.GRAY + "루돌프 특유의 털 구조로 인해 추위를 막아준다.");
+//		var3Lore.add(ChatColor.GRAY + "어째서 이름이 '루돌프의 눈물'로 지어졌는지는");
+//		var3Lore.add(ChatColor.GRAY + "아무도 알지 못한다.");
+//		var3Lore.add(ChatColor.GRAY + " ");
+//		var3Lore.add(ChatColor.BLUE + "-추위 면역");
+//		var3Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var3Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var3Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var3Im.setUnbreakable(true);
+//		var3Im.setLore(var3Lore);
+//		var3.setItemMeta(var3Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var3);}
+//		
+//		ItemStack var4 = new ItemStack(Material.CARVED_PUMPKIN);
+//		ItemMeta var4Im = var4.getItemMeta();
+//		var4Im.setLocalizedName("-100,-100,-100,-100,-100,-100,-100,-100,-100,-100,700");
+//		var4Im.setDisplayName(ChatColor.AQUA + "그녀석의 모자");
+//		ArrayList<String> var4Lore = new ArrayList();
+//		var4Lore.add(ChatColor.GRAY + "레벨 제한: 700");
+//		var4Lore.add(ChatColor.GRAY + " ");
+//		var4Lore.add(ChatColor.GRAY + "정체를 알 수 없는 빨간색 모자");
+//		var4Lore.add(ChatColor.GRAY + "모자 안쪽에 하얀 털뭉치가 보이는 것으로 보아");
+//		var4Lore.add(ChatColor.GRAY + "새 제품은 아닌 것 같다.");
+//		var4Lore.add(ChatColor.GRAY + " ");
+//		var4Lore.add(ChatColor.BLUE + "-추위 면역");
+//		var4Lore.add(ChatColor.BLUE + "-흡혈 0.5%");
+//		var4Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var4Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var4Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var4Im.setUnbreakable(true);
+//		var4Im.setLore(var4Lore);
+//		var4.setItemMeta(var4Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var4);}
+//		
+//		ItemStack var5 = new ItemStack(Material.STONE_STAIRS);
+//		ItemMeta var5Im = var5.getItemMeta();
+//		var5Im.setLocalizedName("5000,5000,5000,5000,5000,-2000,-2000,-2000,-2000,3000,700");
+//		var5Im.setDisplayName(ChatColor.AQUA + "크리스마스 기념품");
+//		ArrayList<String> var5Lore = new ArrayList();
+//		var5Lore.add(ChatColor.GRAY + "레벨 제한: 700");
+//		var5Lore.add(ChatColor.GRAY + " ");
+//		var5Lore.add(ChatColor.GRAY + "크리스마스의 여운을 오래 가져가고 싶어하는");
+//		var5Lore.add(ChatColor.GRAY + "사람들을 위해 제작된 특수한 검");
+//		var5Lore.add(ChatColor.GRAY + "크리스마스 섬 밖에서도 꽤나 쓸만한 성능을");
+//		var5Lore.add(ChatColor.GRAY + "준비했다고 한다.");
+//		var5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var5Im.setUnbreakable(true);
+//		var5Im.setLore(var5Lore);
+//		var5.setItemMeta(var5Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var5);}
+//		
 //		ItemStack var2 = new ItemStack(Material.MOSSY_STONE_BRICK_STAIRS);
 //		ItemMeta var2Im = var2.getItemMeta();
 //		var2Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,300");
@@ -6383,6 +6462,7 @@ public class Main extends JavaPlugin implements Listener{
 				addHealthPercent += new SpecialEffect().w10(player);
 				addHealthPercent += new SpecialEffect().s11(player);
 				addHealthPercent += new SpecialEffect().h5(player);
+				addHealthPercent += new SpecialEffect().h6(player);
 				
 				if(inheritance.getInheritance(player) == 15) {
 					addHealthPercent += 0.5;
@@ -6521,6 +6601,7 @@ public class Main extends JavaPlugin implements Listener{
 				addHealthPercent += new SpecialEffect().w10(player);
 				addHealthPercent += new SpecialEffect().s11(player);
 				addHealthPercent += new SpecialEffect().h5(player);
+				addHealthPercent += new SpecialEffect().h6(player);
 				
 				if(inheritance.getInheritance(player) == 15) {
 					addHealthPercent += 0.5;
@@ -6652,6 +6733,7 @@ public class Main extends JavaPlugin implements Listener{
 				addHealthPercent += new SpecialEffect().w10(player);
 				addHealthPercent += new SpecialEffect().s11(player);
 				addHealthPercent += new SpecialEffect().h5(player);
+				addHealthPercent += new SpecialEffect().h6(player);
 				
 				if(inheritance.getInheritance(player) == 15) {
 					addHealthPercent += 0.5;
@@ -7116,6 +7198,58 @@ public class Main extends JavaPlugin implements Listener{
 								}
 								
 								event.setDamage(damage);
+								
+								if(event.getCause() == DamageCause.FIRE) {
+									new BukkitRunnable() {
+										double dam = event.getDamage();
+										@Override
+										public void run() {
+											if(player.getAbsorptionAmount() > 0) {
+												if(player.getAbsorptionAmount() - dam / 60.0 > 0) {
+													player.setAbsorptionAmount(player.getAbsorptionAmount() - dam / 60.0);
+												} else {
+													player.setAbsorptionAmount(0);
+												}
+											} else {
+												if(player.getHealth() - dam / 60.0 > 0) {
+													player.setHealth(player.getHealth() - dam / 60.0);
+												} else {
+													player.setHealth(0);
+												}
+											}
+											this.cancel();
+										}
+									}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
+									
+									if(player.getFireTicks() == 0) {
+										player.setFireTicks(100);
+									}
+								} else {
+									new BukkitRunnable() {
+										double dam = event.getDamage();
+										@Override
+										public void run() {
+											if(player.getAbsorptionAmount() > 0) {
+												if(player.getAbsorptionAmount() - dam > 0) {
+													player.setAbsorptionAmount(player.getAbsorptionAmount() - dam);
+												} else {
+													player.setAbsorptionAmount(0);
+												}
+											} else {
+												if(player.getHealth() - dam > 0) {
+													player.setHealth(player.getHealth() - dam);
+												} else {
+													player.setHealth(0);
+												}
+											}
+											this.cancel();
+										}
+									}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
+								}
+								
+								event.setDamage(0);
+								event.setCancelled(true);
+
 							} else {
 								event.setDamage(9999999);
 							}
@@ -7188,6 +7322,31 @@ public class Main extends JavaPlugin implements Listener{
 									event.setCancelled(true);
 									return;
 								}
+								
+								new BukkitRunnable() {
+									double dam = event.getDamage();
+									@Override
+									public void run() {
+										if(player.getAbsorptionAmount() > 0) {
+											if(player.getAbsorptionAmount() - dam * 0.6 > 0) {
+												player.setAbsorptionAmount(player.getAbsorptionAmount() - dam * 0.6);
+											} else {
+												player.setAbsorptionAmount(0);
+											}
+										} else {
+											if(player.getHealth() - dam * 0.6 > 0) {
+												player.setHealth(player.getHealth() - dam * 0.6);
+											} else {
+												player.setHealth(0);
+											}
+										}
+										this.cancel();
+									}
+								}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
+								
+								event.setDamage(0);
+								event.setCancelled(true);
+								
 							} catch(Exception e) {
 								
 							}
@@ -7241,6 +7400,31 @@ public class Main extends JavaPlugin implements Listener{
 									event.setCancelled(true);
 									return;
 								}
+								
+								new BukkitRunnable() {
+									double dam = event.getDamage();
+									@Override
+									public void run() {
+										if(player.getAbsorptionAmount() > 0) {
+											if(player.getAbsorptionAmount() - dam * 0.6 > 0) {
+												player.setAbsorptionAmount(player.getAbsorptionAmount() - dam * 0.6);
+											} else {
+												player.setAbsorptionAmount(0);
+											}
+										} else {
+											if(player.getHealth() - dam * 0.6 > 0) {
+												player.setHealth(player.getHealth() - dam * 0.6);
+											} else {
+												player.setHealth(0);
+											}
+										}
+										this.cancel();
+									}
+								}.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
+								
+								event.setDamage(0);
+								event.setCancelled(true);
+								
 							} catch(Exception e) {
 								
 							}
@@ -10760,7 +10944,7 @@ public class Main extends JavaPlugin implements Listener{
 			event.setQuitMessage(ChatColor.DARK_RED + "'더 게임 종결자' 유메하마" + ChatColor.WHITE + "님이 로그아웃 하였습니다.");
 		} else if (player.getDisplayName().equalsIgnoreCase("WoolRing")) {
 			event.setQuitMessage(ChatColor.GREEN + "'전자기학 마스터인가요?' 울링" + ChatColor.WHITE + "님이 아뇨 도트인데요.");
-		} else if (player.getDisplayName().equalsIgnoreCase("_nanoboost_")) {
+		} else if (player.getDisplayName().equalsIgnoreCase("NN_Tapejara")) {
 			event.setQuitMessage(ChatColor.RED + "우리들 중에 미쳐 버린 사람이 나온다면 8할은 틀림 없이 그것 때문이에요.");
 		} else if(player.getDisplayName().equalsIgnoreCase("why9196")) {
 			event.setQuitMessage(ChatColor.BLUE + "??????????!?????");
@@ -11920,7 +12104,7 @@ public class Main extends JavaPlugin implements Listener{
 							player.sendMessage("§7의장께서는 바빠보인다. 나중에 다시 오자.");
 						}
 	 	    		}
-	 	    	} else if(npc.getText().get(0).equals("빨간모자")) {
+	 	    	} else if(npc.getText().get(0).equals("빨간모자 소녀")) {
 	 	    		if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===그대는 빨간모자===")) {
 	 	    			int qNum = cb.getNum(player);
 						cb.mq33(player, qNum+1);

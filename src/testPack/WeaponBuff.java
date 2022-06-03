@@ -36,31 +36,45 @@ public class WeaponBuff {
 				}
 				
 				if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GRAY + "버려진 크리스마스 검")) {
-					mob.damage(0.0031);
+					if(new SantaGimmick().santaGimmick(mob)) {
+						mob.damage(0.0031);
+					}
 				}
 				
 				if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "크리스마스 검")) {
-					mob.damage(0.0032);
+					if(new SantaGimmick().santaGimmick(mob)) {
+						mob.damage(0.0032);
+					}
 				}
 
 				if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "빛나는 크리스마스 검")) {
-					mob.damage(0.0033);
+					if(new SantaGimmick().santaGimmick(mob)) {
+						mob.damage(0.0033);
+					}
 				}
 
 				if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "황금의 크리스마스 검")) {
-					mob.damage(0.0034);
+					if(new SantaGimmick().santaGimmick(mob)) {
+						mob.damage(0.0034);
+					}
 				}
 				
 				if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "영광의 크리스마스 검")) {
-					mob.damage(0.0035);
+					if(new SantaGimmick().santaGimmick(mob)) {
+						mob.damage(0.0035);
+					}
 				}
 				
 				if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "산타의 크리스마스 검")) {
-					mob.damage(0.0036);
+					if(new SantaGimmick().santaGimmick(mob)) {
+						mob.damage(0.0036);
+					}
 				}
 				
 				if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_PURPLE + "신의 크리스마스 검")) {
-					mob.damage(0.0037);
+					if(new SantaGimmick().santaGimmick(mob)) {
+						mob.damage(0.0037);
+					}
 				}
 				
 				//set

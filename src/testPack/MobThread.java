@@ -2787,7 +2787,7 @@ public class MobThread implements Listener{
 			return;
 		}
 		
-		loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
 	}
 	
 	public void slimeDungeon5(Player player, Location loc) {

@@ -13,6 +13,7 @@ import org.bukkit.Particle;
 import org.bukkit.Sound;
 import org.bukkit.SoundCategory;
 import org.bukkit.World;
+import org.bukkit.block.data.BlockData;
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Arrow;
 import org.bukkit.entity.Entity;
@@ -14485,6 +14486,50 @@ public class ParticleEffect {
 		}, 0, 1);
 	}
 	
+	public void startES2() {
+		taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+			
+			int time = 0;
+			int size = 0;
+			double var = 0;
+			Location e1;
+			Location normal = player.getLocation();
+			World world = player.getWorld();
+			ParticleData pd = new ParticleData(player.getUniqueId());
+			BlockData mat = Material.BLUE_ICE.createBlockData();
+
+			@Override
+			public void run() {
+				if (!pd.hasID()) {
+					pd.setID(taskID);
+				}
+
+				if (time >= 20) {
+					pd.endTask();
+					pd.removeID();
+				}
+				
+				for(int i = 0 ; i < 16 ; i++) {
+					if(size % 2 == 0) {
+						e1 = normal.clone().add(Math.cos(var)*size, 0.5, Math.sin(var)*size);
+					} else {
+						e1 = normal.clone().add(Math.cos(var)*size, 0, Math.sin(var)*size);
+					}
+					world.spawnParticle(Particle.BLOCK_CRACK, e1, 0, mat);
+					
+					var += Math.PI / 8;
+				}
+				
+				if(size == 4) {
+					size = -1;
+				}
+				size++;
+
+				time++;
+			}
+
+		}, 0, 1);
+	}
 	
 ////몬스터 기술////	
 	
@@ -14556,6 +14601,7 @@ public class ParticleEffect {
 				player.getWorld().spawnParticle(Particle.SLIME, first, 10);
 				player.getWorld().spawnParticle(Particle.SLIME, second, 10);
 			}
+
 
 		}, 0, 1);
 	}
