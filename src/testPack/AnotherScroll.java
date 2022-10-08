@@ -1,5 +1,12 @@
 package testPack;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,7 +30,7 @@ public class AnotherScroll {
 	
 	private int taskID;
 
-	public void effect(Player player, ItemStack itemArg) {
+	public void effect(Player player, ItemStack itemArg, File folder) {
 		World world = player.getWorld();
 		questRemoveScroll(player, itemArg, world);
 		mapPaper(player, itemArg, world);
@@ -31,6 +38,9 @@ public class AnotherScroll {
 		hellsGate(player, itemArg, world);
 		reflectRemove(player, itemArg, world);
 		sweepingRemove(player, itemArg, world);
+		job1(player, itemArg, world, folder);
+		job2(player, itemArg, world, folder);
+		job3(player, itemArg, world, folder);
 	}
 	
 	public void questRemoveScroll(Player player, ItemStack itemArg, World world) {	
@@ -393,6 +403,147 @@ public class AnotherScroll {
 						}
 					}
 				}
+			}	
+		} catch(Exception e) {
+			
+		}
+	}
+	
+	public void job1(Player player, ItemStack itemArg, World world, File folder) {	
+		try {
+			if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_PURPLE + "*^$ 스크롤")) {
+				
+				try {
+					File dataFolder = folder;
+		            if(!dataFolder.exists()) {
+		                dataFolder.mkdir();
+		            } else {
+		            	File dir = new File(folder + "/" + player.getUniqueId().toString());
+		            	if(!dir.exists()) {
+		            		try{
+		            		    dir.mkdir(); 
+		            		} catch(Exception e2) {
+		            		    e2.getStackTrace();
+		            		}
+						}
+						File file = new File(dir, "available_character.dat");
+						try {
+							FileReader filereader = new FileReader(file);
+		    				BufferedReader bufReader = new BufferedReader(filereader);
+		    				String[] num = bufReader.readLine().split(" ");
+		    				num[13] = "1";
+		    				String str = "";
+		    				for(int j = 0 ; j < 17 ; j++) {
+		    					str += num[j] + " ";
+		    				}
+		    				str += num[17];
+							BufferedWriter fw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), "UTF-8"));
+			                fw.write(str);
+			                fw.close();
+			                bufReader.close();
+						} catch (IOException e2) {
+							e2.printStackTrace();
+						}
+					}
+				} catch (Exception e2) {
+					
+				}
+				player.sendMessage("[System] 마인 캐릭터를 생성할 수 있게 되었습니다.");
+				
+			}	
+		} catch(Exception e) {
+			
+		}
+	}
+	
+	public void job2(Player player, ItemStack itemArg, World world, File folder) {	
+		try {
+			if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_PURPLE + "#*$ 스크롤")) {
+				
+				try {
+					File dataFolder = folder;
+		            if(!dataFolder.exists()) {
+		                dataFolder.mkdir();
+		            } else {
+		            	File dir = new File(folder + "/" + player.getUniqueId().toString());
+		            	if(!dir.exists()) {
+		            		try{
+		            		    dir.mkdir(); 
+		            		} catch(Exception e2) {
+		            		    e2.getStackTrace();
+		            		}
+						}
+						File file = new File(dir, "available_character.dat");
+						try {
+							FileReader filereader = new FileReader(file);
+		    				BufferedReader bufReader = new BufferedReader(filereader);
+		    				String[] num = bufReader.readLine().split(" ");
+		    				num[14] = "1";
+		    				String str = "";
+		    				for(int j = 0 ; j < 17 ; j++) {
+		    					str += num[j] + " ";
+		    				}
+		    				str += num[17];
+							BufferedWriter fw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), "UTF-8"));
+			                fw.write(str);
+			                fw.close();
+			                bufReader.close();
+						} catch (IOException e2) {
+							e2.printStackTrace();
+						}
+					}
+				} catch (Exception e2) {
+					
+				}
+				player.sendMessage("[System] 팔라딘 캐릭터를 생성할 수 있게 되었습니다.");
+				
+			}	
+		} catch(Exception e) {
+			
+		}
+	}
+	
+	public void job3(Player player, ItemStack itemArg, World world, File folder) {	
+		try {
+			if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_PURPLE + "@&$ 스크롤")) {
+				
+				try {
+					File dataFolder = folder;
+		            if(!dataFolder.exists()) {
+		                dataFolder.mkdir();
+		            } else {
+		            	File dir = new File(folder + "/" + player.getUniqueId().toString());
+		            	if(!dir.exists()) {
+		            		try{
+		            		    dir.mkdir(); 
+		            		} catch(Exception e2) {
+		            		    e2.getStackTrace();
+		            		}
+						}
+						File file = new File(dir, "available_character.dat");
+						try {
+							FileReader filereader = new FileReader(file);
+		    				BufferedReader bufReader = new BufferedReader(filereader);
+		    				String[] num = bufReader.readLine().split(" ");
+		    				num[15] = "1";
+		    				String str = "";
+		    				for(int j = 0 ; j < 17 ; j++) {
+		    					str += num[j] + " ";
+		    				}
+		    				str += num[17];
+							BufferedWriter fw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), "UTF-8"));
+			                fw.write(str);
+			                fw.close();
+			                bufReader.close();
+						} catch (IOException e2) {
+							e2.printStackTrace();
+						}
+					}
+				} catch (Exception e2) {
+					
+				}
+				player.sendMessage("[System] 용기사 캐릭터를 생성할 수 있게 되었습니다.");
+				
 			}	
 		} catch(Exception e) {
 			

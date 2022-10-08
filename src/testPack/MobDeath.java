@@ -23,11 +23,11 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 public class MobDeath {
-
+	
 	Player player = null;
 	Cmd18ItemToggle it = new Cmd18ItemToggle();
 	Random rnd = new Random();
-	private static int multyChance = 0;
+	private static int multyChance = 10000;
 	private int taskID;
 	
 	// 메세지

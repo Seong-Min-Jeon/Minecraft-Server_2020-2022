@@ -5591,6 +5591,29 @@ public class QuestBoard {
 		player.setScoreboard(board);
 	}
 	
+	public void mq_last(Player player, int num) {
+		if(num>=1) {
+			player.setScoreboard (Bukkit.getScoreboardManager().getNewScoreboard());
+			player.getWorld().playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 2.0f);
+			msg.msg(player, "데히트라: 늦게 다니지 좀 마.%데히트라: 하나부터 열까지 다 널 위한 소리.%데히트라: 내 말 듣지 않는 너에게는 뻔한 잔소리.%데히트라: 크어억.%§7데히트라의 숨이 멎었다.%"
+					+ "§7이제 이 세상에 평화가 돌아올까..%§7아.. 아직도 포보르가 나오는 걸 보니..%§7데히트라가 거짓말을 한 거구나..%§7마왕이라더니..%§7그냥 평범하게 다시 살아가야겠네.");
+			return;
+		}
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		Objective obj = board.registerNewObjective("HubScoreboard-1", "dummy", ChatColor.GOLD + "메인퀘스트 마지막장");
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		Score score = obj.getScore(ChatColor.LIGHT_PURPLE + "===최후의 전투===");
+		score.setScore(3);
+		Score score2 = obj.getScore("데히트라를 해치우기");
+		score2.setScore(2);
+		Score score3 = obj.getScore("위치: ??,??,??");
+		score3.setScore(1);
+		Score score4 = obj.getScore("(" + num + "/1)");
+		score4.setScore(0);
+		player.setScoreboard(board);
+	}
+	
 	public int getNum(Player player) {
 		try {
 			ArrayList<String> list = new ArrayList<String>(player.getScoreboard().getEntries());

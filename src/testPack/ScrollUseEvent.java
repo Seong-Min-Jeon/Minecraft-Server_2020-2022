@@ -57,7 +57,7 @@ public class ScrollUseEvent {
 			//퀘스트 스크롤
 			qs.quest(player, item);
 			//기타 스크롤
-			as.effect(player, item);
+			as.effect(player, item, folder);
 			//아이템 파기 스크롤
 			ids.openInv(player, item);
 			//장비 제작 스크롤

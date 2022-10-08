@@ -172,7 +172,7 @@ public class Main extends JavaPlugin implements Listener{
 	
 	Cmd12EmeraldToggle et = new Cmd12EmeraldToggle();
 	Inheritance inheritance = new Inheritance();
-
+	
 	private int taskID;
 	Scoreboard board;
 	Team red;
@@ -3141,43 +3141,43 @@ public class Main extends JavaPlugin implements Listener{
 					player.sendMessage(ChatColor.LIGHT_PURPLE + "===========================");
 					if(player.getLevel()==100) {
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-						    allPlayer.sendMessage(player.getDisplayName() + "님이 조커 직책으로 100레벨을 달성했습니다!");
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 조커 특성으로 100레벨을 달성했습니다!");
 						}	
 					} else if(player.getLevel()==200) {
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-						    allPlayer.sendMessage(player.getDisplayName() + "님이 조커 직책으로 200레벨을 달성했습니다!");
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 조커 특성으로 200레벨을 달성했습니다!");
 						}	
 					} else if(player.getLevel()==300) {
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-						    allPlayer.sendMessage(player.getDisplayName() + "님이 조커 직책으로 300레벨을 달성했습니다!");
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 조커 특성으로 300레벨을 달성했습니다!");
 						}	
 					} else if(player.getLevel()==400) {
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-						    allPlayer.sendMessage(player.getDisplayName() + "님이 조커 직책으로 400레벨을 달성했습니다!");
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 조커 특성으로 400레벨을 달성했습니다!");
 						}	
 					} else if(player.getLevel()==500) {
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-						    allPlayer.sendMessage(player.getDisplayName() + "님이 조커 직책으로 500레벨을 달성했습니다!");
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 조커 특성으로 500레벨을 달성했습니다!");
 						}	
 					} else if(player.getLevel()==600) {
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-						    allPlayer.sendMessage(player.getDisplayName() + "님이 조커 직책으로 600레벨을 달성했습니다!");
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 조커 특성으로 600레벨을 달성했습니다!");
 						}	
 					} else if(player.getLevel()==700 && event.getOldLevel() == 699) {
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-						    allPlayer.sendMessage(player.getDisplayName() + "님이 조커 직책으로 700레벨을 달성했습니다!");
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 조커 특성으로 700레벨을 달성했습니다!");
 						}	
 					} else if(player.getLevel()==800 && event.getOldLevel() == 700) {
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-						    allPlayer.sendMessage(player.getDisplayName() + "님이 조커 직책으로 800레벨을 달성했습니다!");
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 조커 특성으로 800레벨을 달성했습니다!");
 						}	
 					} else if(player.getLevel()==900 && event.getOldLevel() == 800) {
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-						    allPlayer.sendMessage(player.getDisplayName() + "님이 조커 직책으로 900레벨을 달성했습니다!");
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 조커 특성으로 900레벨을 달성했습니다!");
 						}	
 					} else if(player.getLevel()==1000 && event.getOldLevel() == 900) {
 						for (Player allPlayer : Bukkit.getOnlinePlayers()) {
-						    allPlayer.sendMessage(player.getDisplayName() + "님이 조커 직책으로 1000레벨을 달성했습니다!");
+						    allPlayer.sendMessage(player.getDisplayName() + "님이 조커 특성으로 1000레벨을 달성했습니다!");
 						}	
 					}
 				}

@@ -125,7 +125,7 @@ public class MainQuest {
 		} else if(lvl == 900) {
 			
 		} else if(lvl == 1000) {
-			
+			main_last(player);
 		}
 	}
 	
@@ -1012,6 +1012,22 @@ public class MainQuest {
 		scrollLore.add(ChatColor.RED + "1. 해당 퀘스트 스크롤을 사용하면 세계의 문을");
 		scrollLore.add(ChatColor.RED + "열기 위한 메인 퀘스트를 순서대로 진행할 수 있습니다.");
 		scrollLore.add(ChatColor.RED + "2. 다음 메인 퀘스트 스크롤은 800레벨에 받을 수 있습니다.");
+		scrollIm.setLore(scrollLore);
+		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		scrollIm.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		scrollIm.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
+		scrollIm.setUnbreakable(true);
+		scroll.setItemMeta(scrollIm);		
+		player.getInventory().addItem(scroll);
+	}
+	
+	public void main_last(Player player) {
+		ItemStack scroll = new ItemStack(Material.GLOBE_BANNER_PATTERN);
+		ItemMeta scrollIm = scroll.getItemMeta();
+		scrollIm.setDisplayName(ChatColor.GOLD + "메인퀘스트 마지막장");
+		ArrayList<String> scrollLore = new ArrayList();
+		scrollLore.add(ChatColor.GRAY + "'최후의 전투' 퀘스트를 진행할 수 있다.");
 		scrollIm.setLore(scrollLore);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		scrollIm.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);

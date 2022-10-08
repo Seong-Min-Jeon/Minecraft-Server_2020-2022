@@ -23,7 +23,7 @@ public class ExpSystemByMob {
 
 	Cmd17ExpToggle et = new Cmd17ExpToggle();
 	Cmd8Party cp = new Cmd8Party();
-	private static int multyExp = 1;
+	private static int multyExp = 100;
 	Random rnd = new Random();
 	private int taskID;
 	
