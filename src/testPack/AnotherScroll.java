@@ -80,7 +80,6 @@ public class AnotherScroll {
 	public void levelUpScroll(Player player, ItemStack itemArg, World world) {	
 		try {
 			if (itemArg.getItemMeta().getDisplayName().substring(0,9).equalsIgnoreCase(ChatColor.DARK_RED + "레벨업 스크롤")) {
-				itemArg.setAmount(itemArg.getAmount()-1);
 				try {
 					String str = itemArg.getItemMeta().getDisplayName();
 					int lvl = Integer.parseInt(str.split("\\.")[1].split("\\]")[0]);
@@ -88,6 +87,7 @@ public class AnotherScroll {
 				} catch(Exception e) {
 					
 				}
+				itemArg.setAmount(itemArg.getAmount()-1);
 			}	
 		} catch(Exception e) {
 			
@@ -448,6 +448,7 @@ public class AnotherScroll {
 				} catch (Exception e2) {
 					
 				}
+				itemArg.setAmount(itemArg.getAmount()-1);
 				player.sendMessage("[System] 마인 캐릭터를 생성할 수 있게 되었습니다.");
 				
 			}	
@@ -495,6 +496,7 @@ public class AnotherScroll {
 				} catch (Exception e2) {
 					
 				}
+				itemArg.setAmount(itemArg.getAmount()-1);
 				player.sendMessage("[System] 팔라딘 캐릭터를 생성할 수 있게 되었습니다.");
 				
 			}	
@@ -542,6 +544,7 @@ public class AnotherScroll {
 				} catch (Exception e2) {
 					
 				}
+				itemArg.setAmount(itemArg.getAmount()-1);
 				player.sendMessage("[System] 용기사 캐릭터를 생성할 수 있게 되었습니다.");
 				
 			}	

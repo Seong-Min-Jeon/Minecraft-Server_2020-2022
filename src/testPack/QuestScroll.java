@@ -475,7 +475,7 @@ public class QuestScroll {
 	}
 	
 	public void q42(Player player, ItemStack itemArg, World world) {	
-		if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "퀘스트: 레드 플레이어")) {
+		if (itemArg.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "퀘스트: 레드 플레이어")) {
 			msg.msg(player, "§7포보르 입장에서 우리는 악마 그 이상의 존재이다.%§7인간들 중에서도 악마 사냥꾼이라고 불리는 자들이 있었으니,%"
 					+ "§7포보르들 중에서도 인간 사냥꾼이라고 불리는 자들이 있었다.");
 			QuestBoard qb = new QuestBoard();
@@ -1007,7 +1007,7 @@ public class QuestScroll {
 					+ "니세리나: 걔 내 부하야.%니세리나: 엄청 약하니까 너가 이길 거라구?%꼬마: 후엥.%"
 					+ "꼬마: 후에에에엥.%로미오: 우리의 땅을 지켜준 당신이라면 마왕을 이길 겁니다.%빨간모자: 내가 만든 약을 마시면 모든게 편해질거야!%"
 					+ "얼음 장인: 다음에 아란모어에 오면 나에게 꼭 오시게.%양털반지: 도트찍기 싫어어~%타페야라: 평지를 만들자.%아킬레: 그래서 대화 언제 끝나.%"
-					+ "준: 신화템 없이 가도 되나여.%히나: 그림리퍼로 깰 수 있나여.%와이: 마왕 너무 약한거 같은데?%유메하마: 패턴 보고 피하시면 잡아.");
+					+ "준: 신화템 없이 가도 되나여.%히나: 그림리퍼로 깰 수 있나여.%와이: 마왕 너무 약한거 같은데?%유메하마: 패턴 보고 피하시면 잡음.");
 			QuestBoard qb = new QuestBoard();
 			qb.mq_last(player, 0);
 		}	
