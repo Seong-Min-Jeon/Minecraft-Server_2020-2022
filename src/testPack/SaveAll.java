@@ -1271,6 +1271,10 @@ public class SaveAll {
 						int number = qb.getNum(player);
 						fw.write("mq52_5\n");
 						fw.write(Integer.toString(number));
+					} else if (qb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===최후의 전투===")) {
+						int number = qb.getNum(player);
+						fw.write("mq_last\n");
+						fw.write(Integer.toString(number));
 					}
 					fw.close();
 					bufReader.close();

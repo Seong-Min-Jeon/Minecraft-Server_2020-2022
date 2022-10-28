@@ -9828,16 +9828,37 @@ public class MobLoot {
 		}
 	}
 	
+	// 존재하면 안되는 존재
 	public void mob380(Player player) {
-
+		int num = 64;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 9100000);
 	}
 	
+	// 게임의 오류
 	public void mob381(Player player) {
-
+		int num = 64;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 9200000);
 	}
 	
+	// ^(!$@#!
 	public void mob382(Player player) {
-
+		int num = 64;
+		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
+		ItemMeta im = item.getItemMeta();
+		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
+		item.setItemMeta(im);
+		player.getInventory().addItem(item);
+		es.giveExp(player, 9300000);
 	}
 	
 	public void mob383(Player player) {

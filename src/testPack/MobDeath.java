@@ -1650,6 +1650,18 @@ public class MobDeath {
 					mobloot.mob379(lootPlayer);
 					num = "0";
 				}
+				// 존재하면 안되는 존재
+				if (name.equalsIgnoreCase("존재하면 안되는 존재" + ChatColor.YELLOW + " [Lv.1000]")) {
+					mobloot.mob380(lootPlayer);
+				}
+				// 게임의 오류
+				if (name.equalsIgnoreCase("게임의 오류" + ChatColor.YELLOW + " [Lv.1000]")) {
+					mobloot.mob381(lootPlayer);
+				}
+				// ^(!$@#!
+				if (name.equalsIgnoreCase("^(!$@#!" + ChatColor.YELLOW + " [Lv.1000]")) {
+					mobloot.mob382(lootPlayer);
+				}
 				
 			} catch (Exception e) {
 

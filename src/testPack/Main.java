@@ -2578,7 +2578,7 @@ public class Main extends JavaPlugin implements Listener{
 						    allPlayer.sendMessage(player.getDisplayName() + "님이 도박사 1000레벨을 달성했습니다!");
 						}	
 					}
-					if(player.getLevel()==900 && event.getOldLevel() == 800) {
+					if(player.getLevel()==700 && event.getOldLevel() == 699) {
 						if(player.getInventory().contains(Material.MAGENTA_DYE)) {
 							// 생성 가능 캐릭터 파일
 	    					try {
@@ -3231,7 +3231,7 @@ public class Main extends JavaPlugin implements Listener{
 						    allPlayer.sendMessage(player.getDisplayName() + "님이 아처 1000레벨을 달성했습니다!");
 						}	
 					}
-					if(player.getLevel()==900 && event.getOldLevel() == 800) {
+					if(player.getLevel()==700 && event.getOldLevel() == 699) {
 						if(player.getInventory().contains(Material.CLAY_BALL)) {
 							// 생성 가능 캐릭터 파일
 	    					try {

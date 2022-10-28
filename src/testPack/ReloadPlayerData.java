@@ -787,6 +787,9 @@ public class ReloadPlayerData {
 					} else if (quest.equals("mq52_5")) {
 						QuestBoard qb = new QuestBoard();
 						qb.mq52_5(player, Integer.parseInt(num));
+					} else if (quest.equals("mq_last")) {
+						QuestBoard qb = new QuestBoard();
+						qb.mq_last(player, Integer.parseInt(num));
 					}
 					
 					bufReader.close();
