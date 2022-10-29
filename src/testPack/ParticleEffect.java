@@ -11111,7 +11111,7 @@ public class ParticleEffect {
 					for (Entity nearEntity : entitylist) {
 						if (nearEntity instanceof Mob) {
 							LivingEntity ent = (LivingEntity) nearEntity;
-							ent.damage(player.getLevel()*300 + damNum*10);
+							ent.damage(Math.pow(player.getLevel(), 1.6) * 2 + damNum*10);
 						}
 					}
 				}
@@ -11800,7 +11800,7 @@ public class ParticleEffect {
 					for (Entity nearEntity : entitylist) {
 						if (nearEntity instanceof Mob) {
 							LivingEntity ent = (LivingEntity) nearEntity;
-							ent.damage(player.getLevel()*50 + damNum*10);
+							ent.damage(Math.pow(player.getLevel(), 1.8) * 2 + damNum*7);
 						}
 					}	
 					

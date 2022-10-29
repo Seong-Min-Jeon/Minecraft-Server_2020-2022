@@ -3600,7 +3600,7 @@ public class Skill {
 					for(Entity e : entity) {
 						if(e instanceof Mob) {
 							LivingEntity mob = (LivingEntity) e; 
-							mob.damage(player.getLevel()*10 + damNum*20);
+							mob.damage(Math.pow(player.getLevel(), 1.5) + damNum*20);
 							if(mob instanceof Monster) {
 								mob.setVelocity(new Vector(0,0.4,0));
 							}
@@ -3705,7 +3705,7 @@ public class Skill {
 							if(ent instanceof Monster) {
 								ent.setVelocity(new Vector(0, 1, 0));
 							}
-							ent.damage(player.getLevel()*50 + damNum * 80);
+							ent.damage(Math.pow(player.getLevel(), 1.65) + damNum * 15);
 						}
 					}	
 					
@@ -3817,7 +3817,7 @@ public class Skill {
 									if (nearEntity.getType() != EntityType.PLAYER) {
 										if (nearEntity instanceof LivingEntity) {
 											LivingEntity nearMob = (LivingEntity) nearEntity;
-											nearMob.damage(player.getLevel() * 100);
+											nearMob.damage(Math.pow(player.getLevel(), 1.8));
 										}
 									}
 								}
@@ -3881,7 +3881,7 @@ public class Skill {
 								if(ent instanceof Monster) {
 									ent.setVelocity(vec);
 								}
-								ent.damage(player.getLevel()*30 + damNum*50);
+								ent.damage(Math.pow(player.getLevel(), 1.9) + damNum*10);
 							}
 						}						
 					}
@@ -3969,7 +3969,7 @@ public class Skill {
 										nearPlayer.sendMessage(ChatColor.GREEN + player.getDisplayName() + "님의 토템으로 아군의 체력이 회복됩니다." + ChatColor.RED + " [+" + ChatColor.RED + player.getLevel() * 3 + ChatColor.RED + "]");
 									} else if(nearEntity instanceof Mob) {
 										Mob nearMob = (Mob) nearEntity;
-										nearMob.damage(player.getLevel() * 100);
+										nearMob.damage(Math.pow(player.getLevel(), 1.7));
 										if(nearMob instanceof Monster) {
 											nearMob.teleport(totem);
 										}
@@ -4027,7 +4027,7 @@ public class Skill {
 									if (nearEntity.getType() != EntityType.PLAYER) {
 										if (nearEntity instanceof LivingEntity) {
 											LivingEntity nearMob = (LivingEntity) nearEntity;
-											nearMob.damage(player.getLevel() * 500);
+											nearMob.damage(Math.pow(player.getLevel(), 1.8) * 2.5);
 										}
 									}
 								}
@@ -4175,7 +4175,7 @@ public class Skill {
 									if (nearEntity.getType() != EntityType.PLAYER) {
 										if (nearEntity instanceof LivingEntity) {
 											LivingEntity nearMob = (LivingEntity) nearEntity;
-											nearMob.damage(player.getLevel() * 200);
+											nearMob.damage(Math.pow(player.getLevel(), 1.95));
 										}
 									}
 								}
@@ -4509,13 +4509,13 @@ public class Skill {
 						        Vector arrowDir1 = new Vector(arrowDirX1, normal.getDirection().getY(), arrowDirZ1).multiply(3.0f);
 								Arrow arrow1 = player.launchProjectile(Arrow.class, arrowDir1);
 								arrow1.setShooter(player);
-								arrow1.setDamage(0.02);
+								arrow1.setDamage(0.06);
 								SpectralArrow sarrow1 = (SpectralArrow) arrow1.getWorld().spawnEntity(normal, EntityType.SPECTRAL_ARROW);
 								sarrow1.setVelocity(arrowDir1);
 								
 								Arrow arrow2 = player.launchProjectile(Arrow.class);
 								arrow2.setShooter(player);
-								arrow2.setDamage(0.02);
+								arrow2.setDamage(0.06);
 								arrow2.setVelocity(normal.getDirection().multiply(3.0f));
 								SpectralArrow sarrow2 = (SpectralArrow) arrow2.getWorld().spawnEntity(normal, EntityType.SPECTRAL_ARROW);
 								sarrow2.setVelocity(arrow2.getVelocity());
@@ -4527,7 +4527,7 @@ public class Skill {
 						        Vector arrowDir3 = new Vector(arrowDirX3, normal.getDirection().getY(), arrowDirZ3).multiply(3.0f);
 								Arrow arrow3 = player.launchProjectile(Arrow.class, arrowDir3);
 								arrow3.setShooter(player);
-								arrow3.setDamage(0.02);
+								arrow3.setDamage(0.06);
 								SpectralArrow sarrow3 = (SpectralArrow) arrow3.getWorld().spawnEntity(normal, EntityType.SPECTRAL_ARROW);
 								sarrow3.setVelocity(arrowDir3);
 								
@@ -4579,7 +4579,7 @@ public class Skill {
 									if (nearEntity.getType() != EntityType.PLAYER) {
 										if (nearEntity instanceof LivingEntity) {
 											LivingEntity nearMob = (LivingEntity) nearEntity;
-											nearMob.damage(player.getLevel()*30);
+											nearMob.damage(Math.pow(player.getLevel(), 1.9));
 										}
 									}
 								}
@@ -4654,7 +4654,7 @@ public class Skill {
 							for(Entity e : entity) {
 								if(e instanceof Mob) {
 									LivingEntity mob = (LivingEntity) e; 
-									mob.damage(player.getLevel());
+									mob.damage(Math.pow(player.getLevel(), 2));
 									if(mob instanceof Monster) {
 										mob.setVelocity(new Vector(0.3,1,0.3));
 									}

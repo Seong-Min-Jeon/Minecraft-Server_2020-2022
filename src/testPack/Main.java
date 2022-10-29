@@ -6007,10 +6007,13 @@ public class Main extends JavaPlugin implements Listener{
 						skillMul = 200;
 					}
 					if(arrow.getDamage() == 0.04) {
-						skillMul = 300;
+						skillMul = 600;
 					}
 					if(arrow.getDamage() == 0.05) {
 						skillMul = 2000;
+					}
+					if(arrow.getDamage() == 0.06) {
+						skillMul = 60;
 					}
 					if(arrow.getDamage() == 0.11) {
 						skillMul = 2 + (player.getLevel() / 50.0);
