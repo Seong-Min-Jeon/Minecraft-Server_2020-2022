@@ -391,21 +391,21 @@ public class Main extends JavaPlugin implements Listener{
 		} else if(player.getDisplayName().equalsIgnoreCase("WoolRing")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.GREEN + "'에일 최고의 대장장이' 울링.");
 		} else if(player.getDisplayName().equalsIgnoreCase("NN_Tapejara")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.RED + "나노부스트였던 타페야라");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.RED + "미친놈!");
 		} else if(player.getDisplayName().equalsIgnoreCase("why9196")) {
-			event.setJoinMessage("확률이 뭐죠? " + ChatColor.BLUE + "'0.0068% 돌파한' 와이.");
+			event.setJoinMessage("복무신조. 우리의 결의." + ChatColor.BLUE + "와이는 국가와 국민에 충성을 다하는 대한민국 육군이다.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Akilae3102")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.AQUA + "어쩌다 서버 1위를 유지하고 있는 아킬레.");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.AQUA + "초등학교 다니는 아킬레.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Espina_ID")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.BOLD + "'그저 군인' 에스피나.");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.BOLD + "병장 만기전역 에스피나.");
 		} else if(player.getDisplayName().equalsIgnoreCase("KangOSung")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.YELLOW + "캉캉캉캉캉!");
 		} else if(player.getDisplayName().equalsIgnoreCase("Illusion__")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.GOLD + "일류 건축가 릴륨.");
 		} else if(player.getDisplayName().equalsIgnoreCase("JunletTridner")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.GOLD + "'리롤과 반격에 진심인' Jun");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.GOLD + "이시즈티아라멘츠 오우너 Jun");
 		} else if(player.getDisplayName().equalsIgnoreCase("SARASHINA_RUKA")) {
-			event.setJoinMessage("그가 돌아왔다. " + ChatColor.YELLOW + "'스태프 마스터' 레나랑");
+			event.setJoinMessage("그가 돌아왔다. " + ChatColor.YELLOW + "최초의 4차 직업을 발견한 레나랑");
 		} else if(player.getDisplayName().equalsIgnoreCase("B1ath")) {
 			event.setJoinMessage("그가 돌아왔다. " + ChatColor.AQUA + "'시공의 숭배자' Blath");
 		} else if(player.getDisplayName().equalsIgnoreCase("Nam_Da")) {
@@ -691,7 +691,72 @@ public class Main extends JavaPlugin implements Listener{
 //		if(player.getDisplayName().equalsIgnoreCase("WoolRing") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
 		
 		
-		
+//		ItemStack var2 = new ItemStack(Material.MUSIC_DISC_MALL);
+//		ItemMeta var2Im = var2.getItemMeta();
+//		var2Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,1000");
+//		var2Im.setDisplayName(ChatColor.AQUA + "문 스태프");
+//		ArrayList<String> var2Lore = new ArrayList();
+//		var2Lore.add(ChatColor.GRAY + "레벨 제한: 1000");
+//		var2Lore.add(ChatColor.GRAY + " ");
+//		var2Lore.add(ChatColor.GRAY + "스켈리그의 문스톤으로 만들어진 신비한 스태프");
+//		var2Lore.add(ChatColor.GRAY + "스켈리그에서 구할 수 있었지만 패러독스의 영향으로");
+//		var2Lore.add(ChatColor.GRAY + "그 사실은 존재하지 않게되었다.");
+//		var2Lore.add(ChatColor.GRAY + "산타가 시간의 틈새에서 발견해 크리스마스 섬에서");
+//		var2Lore.add(ChatColor.GRAY + "판매하게 되었다고 한다.");
+//		var2Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var2Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var2Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var2Im.setUnbreakable(true);
+//		var2Im.setLore(var2Lore);
+//		var2.setItemMeta(var2Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var2);}
+//		
+//		ItemStack var4 = new ItemStack(Material.CARVED_PUMPKIN);
+//		ItemMeta var4Im = var4.getItemMeta();
+//		var4Im.setLocalizedName("20000,20000,20000,20000,10000,0,0,0,0,0,1000");
+//		var4Im.setDisplayName(ChatColor.DARK_RED + "희미한 유토피아의 얼티밋 데버스테이션 모자");
+//		ArrayList<String> var4Lore = new ArrayList();
+//		var4Lore.add(ChatColor.GRAY + "레벨 제한: 1000");
+//		var4Lore.add(ChatColor.GRAY + " ");
+//		var4Lore.add(ChatColor.GRAY + "자신의 한계를 뛰어넘어 신의 힘을 스스로 깨우친");
+//		var4Lore.add(ChatColor.GRAY + "영웅만이 진정한 효과를 얻을 수 있다는 모자");
+//		var4Lore.add(ChatColor.GRAY + "응축된 포보르의 힘이 특성을 강화시켜준다.");
+//		var4Lore.add(ChatColor.GRAY + " ");
+//		var4Lore.add(ChatColor.BLUE + "-원거리 공격 데미지 30% 증가");
+//		var4Lore.add(ChatColor.BLUE + "-근접 공격 데미지 30% 증가");
+//		var4Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var4Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var4Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var4Im.setUnbreakable(true);
+//		var4Im.setLore(var4Lore);
+//		var4.setItemMeta(var4Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var4);}
+//		
+//		ItemStack var5 = new ItemStack(Material.CHISELED_SANDSTONE);
+//		ItemMeta var5Im = var5.getItemMeta();
+//		var5Im.setLocalizedName("50000,0,0,0,50000,0,0,0,0,0,1000");
+//		var5Im.setDisplayName(ChatColor.DARK_RED + "신성한 데미리치 매시브 워리어 해머");
+//		ArrayList<String> var5Lore = new ArrayList();
+//		var5Lore.add(ChatColor.GRAY + "레벨 제한: 1000");
+//		var5Lore.add(ChatColor.GRAY + " ");
+//		var5Lore.add(ChatColor.GRAY + "육중한 광물 덩어리에 찬란하게 빛나는 얼음이");
+//		var5Lore.add(ChatColor.GRAY + "위협적으로 돋아나 있어 보는 이의 시선을");
+//		var5Lore.add(ChatColor.GRAY + "사로잡는 아이스 해머");
+//		var5Lore.add(ChatColor.GRAY + "어지간한 체격이 아니라면 이 거대하고 무거운");
+//		var5Lore.add(ChatColor.GRAY + "무기를 휘두르기는 커녕 들어올릴 수조차 없을");
+//		var5Lore.add(ChatColor.GRAY + "것만 같다.");
+//		var5Lore.add(ChatColor.GRAY + "긍지 높은 에일의 투신이라는 이름에 걸맞은");
+//		var5Lore.add(ChatColor.GRAY + "자격을 가진 자만이 진정한 힘을 발휘할 수 있다.");
+//		var4Lore.add(ChatColor.GRAY + " ");
+//		var4Lore.add(ChatColor.BLUE + "-근접 공격 데미지 30% 증가");
+//		var5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var5Im.setUnbreakable(true);
+//		var5Im.setLore(var5Lore);
+//		var5.setItemMeta(var5Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var5);}
+//		
 //		ItemStack var2 = new ItemStack(Material.MUSIC_DISC_13);
 //		ItemMeta var2Im = var2.getItemMeta();
 //		var2Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,500");
@@ -5929,7 +5994,7 @@ public class Main extends JavaPlugin implements Listener{
 					try {
 						if (player.getInventory().getItemInMainHand().getItemMeta() != null) {
 							try {
-								enchMul += Integer.parseInt(player.getInventory().getItemInMainHand().getItemMeta().getLocalizedName()) * 2;
+								enchMul += Integer.parseInt(player.getInventory().getItemInMainHand().getItemMeta().getLocalizedName()) * 5;
 							} catch(Exception e) {
 								
 							}
@@ -5940,7 +6005,7 @@ public class Main extends JavaPlugin implements Listener{
 					try {
 						if (player.getInventory().getHelmet() != null) {
 							String[] ench = player.getInventory().getHelmet().getItemMeta().getLocalizedName().split(",");
-							enchMul += Integer.parseInt(ench[0]);
+							enchMul += Integer.parseInt(ench[0]) / 5;
 						}
 					} catch(Exception e) {
 						
@@ -5948,7 +6013,7 @@ public class Main extends JavaPlugin implements Listener{
 					try {
 						if (player.getInventory().getChestplate() != null) {
 							String[] ench = player.getInventory().getChestplate().getItemMeta().getLocalizedName().split(",");
-							enchMul += Integer.parseInt(ench[0]);
+							enchMul += Integer.parseInt(ench[0]) / 5;
 						}
 					} catch(Exception e) {
 						
@@ -5956,7 +6021,7 @@ public class Main extends JavaPlugin implements Listener{
 					try {
 						if (player.getInventory().getLeggings() != null) {
 							String[] ench = player.getInventory().getLeggings().getItemMeta().getLocalizedName().split(",");
-							enchMul += Integer.parseInt(ench[0]);
+							enchMul += Integer.parseInt(ench[0]) / 5;
 						}
 					} catch(Exception e) {
 	
@@ -5964,13 +6029,13 @@ public class Main extends JavaPlugin implements Listener{
 					try {
 						if (player.getInventory().getBoots() != null) {
 							String[] ench = player.getInventory().getBoots().getItemMeta().getLocalizedName().split(",");
-							enchMul += Integer.parseInt(ench[0]);
+							enchMul += Integer.parseInt(ench[0]) / 5;
 						}
 					} catch(Exception e) {
 	
 					}
 					if(player.getInventory().contains(Material.GLOWSTONE_DUST)) {
-						jobMul = 44;
+						jobMul = 30;
 					}
 					if(player.getInventory().contains(Material.CLAY_BALL)) {
 						jobMul = 4;
@@ -6013,7 +6078,7 @@ public class Main extends JavaPlugin implements Listener{
 						skillMul = 2000;
 					}
 					if(arrow.getDamage() == 0.06) {
-						skillMul = 60;
+						skillMul = 20;
 					}
 					if(arrow.getDamage() == 0.11) {
 						skillMul = 2 + (player.getLevel() / 50.0);
@@ -6550,6 +6615,8 @@ public class Main extends JavaPlugin implements Listener{
 				increase += new SpecialEffect().a30(player);
 				increase += new SpecialEffect().a31(player);
 				increase += new SpecialEffect().a32(player);
+				increase += new SpecialEffect().h7(player);
+				increase += new SpecialEffect().w11(player);
 				
 				event.setDamage(event.getDamage() * (100 + increase) / 100);
 				//===========================================================================
@@ -6682,6 +6749,7 @@ public class Main extends JavaPlugin implements Listener{
 				increase += new SpecialEffect().a35(player);
 				increase += new SpecialEffect().a36(player);
 				increase += new SpecialEffect().a37(player);
+				increase += new SpecialEffect().h7(player);
 				
 				event.setDamage(event.getDamage() * (100 + increase) / 100);
 				//===========================================================================
@@ -6814,6 +6882,7 @@ public class Main extends JavaPlugin implements Listener{
 				increase += new SpecialEffect().a35(player);
 				increase += new SpecialEffect().a36(player);
 				increase += new SpecialEffect().a37(player);
+				increase += new SpecialEffect().h7(player);
 				
 				event.setDamage(event.getDamage() * (100 + increase) / 100);
 				//===========================================================================
@@ -10946,15 +11015,15 @@ public class Main extends JavaPlugin implements Listener{
 		if (player.getDisplayName().equalsIgnoreCase("yumehama")) {
 			event.setQuitMessage(ChatColor.DARK_RED + "'더 게임 종결자' 유메하마" + ChatColor.WHITE + "님이 로그아웃 하였습니다.");
 		} else if (player.getDisplayName().equalsIgnoreCase("WoolRing")) {
-			event.setQuitMessage(ChatColor.GREEN + "'전자기학 마스터인가요?' 울링" + ChatColor.WHITE + "님이 아뇨 도트인데요.");
+			event.setQuitMessage(ChatColor.GREEN + "'졸려요' 울링" + ChatColor.WHITE + "님이 출근하러 갑니다.");
 		} else if (player.getDisplayName().equalsIgnoreCase("NN_Tapejara")) {
-			event.setQuitMessage(ChatColor.RED + "우리들 중에 미쳐 버린 사람이 나온다면 8할은 틀림 없이 그것 때문이에요.");
+			event.setQuitMessage(ChatColor.RED + "" + ChatColor.BOLD + "[긴급] " + ChatColor.RED + "레이드 발생! (" + player.getLocation().getX() + ", " + player.getLocation().getY() + ", " + player.getLocation().getX() + ")");
 		} else if(player.getDisplayName().equalsIgnoreCase("why9196")) {
-			event.setQuitMessage(ChatColor.BLUE + "??????????!?????");
+			event.setQuitMessage(ChatColor.BLUE + "병장 와!이! 근무하러 가보겠습니다!");
 		} else if(player.getDisplayName().equalsIgnoreCase("Akilae3102")) {
 			event.setQuitMessage(ChatColor.AQUA + "아킬레가 세상을 떠났습니다.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Espina_ID")) {
-			event.setQuitMessage(ChatColor.BOLD + "'탈영병' 에스피나의 시간이 얼마 남지 않았습니다.");
+			event.setQuitMessage(ChatColor.BOLD + "노란빛 황금단 에스피나가 서버를 떠납니다.");
 		} else if(player.getDisplayName().equalsIgnoreCase("KangOSung")) {
 			event.setQuitMessage(ChatColor.BOLD + "'일이 생긴' 캉님이 급히 떠났습니다.");
 		} else if(player.getDisplayName().equalsIgnoreCase("Illusion__")) {

@@ -164,7 +164,7 @@ public class ArrowEffect {
 						}
 					} 
 				} else if(im.getDisplayName().equals(ChatColor.AQUA + "문 스태프")) {
-					if(player.getLevel() >= 560) {
+					if(player.getLevel() >= 1000) {
 						if(player.getHealth() - 10 < 0) {
 							player.setHealth(0);
 						} else {

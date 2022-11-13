@@ -2549,6 +2549,17 @@ public class SpecialEffect {
 		}
 		return 0;
 	}
+
+	public double w11(Player player) {
+		try {
+			if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "신성한 데미리치 매시브 워리어 해머")) {
+				return 30;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
 	
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
@@ -2611,6 +2622,17 @@ public class SpecialEffect {
 		try {
 			if(player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "그녀석의 모자")) {
 				return 0.5;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+	public double h7(Player player) {
+		try {
+			if(player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "희미한 유토피아의 얼티밋 데버스테이션 모자")) {
+				return 30;
 			}
 		} catch(Exception e) {
 			
