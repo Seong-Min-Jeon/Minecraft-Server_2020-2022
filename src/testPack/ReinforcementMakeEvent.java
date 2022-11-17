@@ -56,8 +56,8 @@ public class ReinforcementMakeEvent {
 					return false;
 				} else if(inv.getItem(1).getType()==Material.COAL || inv.getItem(1).getType()==Material.IRON_INGOT || inv.getItem(1).getType()==Material.GOLD_INGOT ||
             			inv.getItem(1).getType()==Material.DIAMOND || inv.getItem(1).getType()==Material.QUARTZ) {
-            		if(inv.getItem(1).getAmount() < 5) {
-            			player.sendMessage(ChatColor.WHITE + "광물은 5개 이상 넣어주세요.");
+            		if(inv.getItem(1).getAmount() < 1) {
+            			player.sendMessage(ChatColor.WHITE + "광물은 1개 이상 넣어주세요.");
             		} else {
             			ItemStack itemStack = inv.getItem(0);
             			ItemMeta item = itemStack.getItemMeta();
@@ -78,7 +78,7 @@ public class ReinforcementMakeEvent {
                 						} else {
                 							newMeta = rein.bowRein1(player, item, itemResource);
                 							itemStack.setItemMeta(newMeta);
-			                    			inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 5);
+			                    			inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
                 						}
             						} else if(lvl==2) {
             							if(!(itemResource.getDisplayName().equals(ChatColor.WHITE + "석영"))) {
@@ -87,7 +87,7 @@ public class ReinforcementMakeEvent {
                 						} else {
                 							newMeta = rein.bowRein2(player, item, itemResource);
                 							itemStack.setItemMeta(newMeta);
-			                    			inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 5);
+			                    			inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
                 						}
             						} else if(lvl==10) {
             							if(!(itemResource.getDisplayName().equals(ChatColor.YELLOW + "반듯한 석영"))) {
@@ -96,7 +96,7 @@ public class ReinforcementMakeEvent {
                 						} else {
                 							newMeta = rein.bowRein3(player, item, itemResource);
                 							itemStack.setItemMeta(newMeta);
-			                    			inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 5);
+			                    			inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
                 						}
             						} else if(lvl==50) {
             							if(!(itemResource.getDisplayName().equals(ChatColor.LIGHT_PURPLE + "매혹적인 석영"))) {
@@ -105,7 +105,7 @@ public class ReinforcementMakeEvent {
                 						} else {
                 							newMeta = rein.bowRein4(player, item, itemResource);
                 							itemStack.setItemMeta(newMeta);
-			                    			inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 5);
+			                    			inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
                 						}
             						} else if(lvl==300) {
             							if(!(itemResource.getDisplayName().equals(ChatColor.AQUA + "보석같은 석영"))) {
@@ -114,7 +114,7 @@ public class ReinforcementMakeEvent {
                 						} else {
                 							newMeta = rein.bowRein5(player, item, itemResource);
                 							itemStack.setItemMeta(newMeta);
-			                    			inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 5);
+			                    			inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
                 						}
             						} else if(lvl>=1000) {
             							if(!(itemResource.getDisplayName().equals(ChatColor.DARK_RED + "신의 힘이 담긴 석영"))) {
@@ -123,7 +123,7 @@ public class ReinforcementMakeEvent {
                 						} else {
                 							newMeta = rein.bowRein6(player, item, itemResource);
                 							itemStack.setItemMeta(newMeta);
-			                    			inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 5);
+			                    			inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
                 						}
             						}
             					}
@@ -163,7 +163,7 @@ public class ReinforcementMakeEvent {
             				}
             				if(newMeta != null) {
             					itemStack.setItemMeta(newMeta);
-                    			inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 5);
+                    			inv.getItem(1).setAmount(inv.getItem(1).getAmount() - 1);
             				} else {
             					player.sendMessage("잘못된 강화방법입니다.");
             					return false;

@@ -213,6 +213,20 @@ public class ChestOwner {
 				return;
 			}
 			closeInv(chestLoc.getBlock(), inv);
+		} else if(num == 14) {
+			Location chestLoc = new Location(player.getWorld(), 3782, 27, 3745);
+			if(inv == null) {
+				openInv(player, chestLoc.getBlock());
+				return;
+			}
+			closeInv(chestLoc.getBlock(), inv);
+		} else if(num == 15) {
+			Location chestLoc = new Location(player.getWorld(), 3782, 29, 3745);
+			if(inv == null) {
+				openInv(player, chestLoc.getBlock());
+				return;
+			}
+			closeInv(chestLoc.getBlock(), inv);
 		}
 		
 	}

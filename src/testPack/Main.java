@@ -689,8 +689,78 @@ public class Main extends JavaPlugin implements Listener{
 		master.setItemMeta(masterIm);
 		if(player.getDisplayName().equalsIgnoreCase("yumehama") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
 //		if(player.getDisplayName().equalsIgnoreCase("WoolRing") && !player.getInventory().contains(master)) {player.getInventory().addItem(master);}
+
 		
 		
+//		ItemStack var4 = new ItemStack(Material.LEATHER_CHESTPLATE);
+//		ItemMeta var4Im = var4.getItemMeta();
+//		var4Im.setLocalizedName("35000,15000,15000,15000,10000,0,0,0,0,0,1000");
+//		var4Im.setDisplayName(ChatColor.DARK_RED + "증발된 재난의 패러시우스 티라누스 갑옷");
+//		ArrayList<String> var4Lore = new ArrayList();
+//		var4Lore.add(ChatColor.GRAY + "레벨 제한: 1000");
+//		var4Lore.add(ChatColor.GRAY + " ");
+//		var4Lore.add(ChatColor.GRAY + "영겁의 시간 동안 응축된 거대한 힘의 파편을");
+//		var4Lore.add(ChatColor.GRAY + "소재로 만들어진 갑옷");
+//		var4Lore.add(ChatColor.GRAY + "어두운 기운을 끊임없이 발산하지만 그것을 덮을");
+//		var4Lore.add(ChatColor.GRAY + "정도의 매력적인 성능을 보여준다.");
+//		var4Lore.add(ChatColor.GRAY + "모든 속성의 연금술 방어가 대폭 상승한다.");
+//		var4Lore.add(ChatColor.GRAY + " ");
+//		var4Lore.add(ChatColor.BLUE + "-원거리 공격 데미지 30% 증가");
+//		var4Lore.add(ChatColor.BLUE + "-근접 공격 데미지 30% 증가");
+//		var4Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var4Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var4Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var4Im.setUnbreakable(true);
+//		var4Im.setLore(var4Lore);
+//		var4.setItemMeta(var4Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var4);}
+//		
+//		ItemStack var5 = new ItemStack(Material.LEATHER_LEGGINGS);
+//		ItemMeta var5Im = var5.getItemMeta();
+//		var5Im.setLocalizedName("20000,10000,10000,10000,40000,0,0,0,0,0,1000");
+//		var5Im.setDisplayName(ChatColor.DARK_RED + "축복받은 쾌속의 다운버스트 나이트브링어 각반");
+//		ArrayList<String> var5Lore = new ArrayList();
+//		var5Lore.add(ChatColor.GRAY + "레벨 제한: 1000");
+//		var5Lore.add(ChatColor.GRAY + " ");
+//		var5Lore.add(ChatColor.GRAY + "결정화된 혼돈의 물질과 아다만티움을 재료로");
+//		var5Lore.add(ChatColor.GRAY + "사용해 만든 각반");
+//		var5Lore.add(ChatColor.GRAY + "미세하지만 불길한 진동이 깊은 밤 지독한");
+//		var5Lore.add(ChatColor.GRAY + "한기처럼 몸을 감싼다.");
+//		var5Lore.add(ChatColor.GRAY + "다른 나이트브링어 장비와 함께라면 진정한");
+//		var5Lore.add(ChatColor.GRAY + "힘을 발산해 절대신과 동일한 힘을 낼 것이다.");
+//		var5Lore.add(ChatColor.GRAY + " ");
+//		var5Lore.add(ChatColor.BLUE + "-원거리 공격 데미지 30% 증가");
+//		var5Lore.add(ChatColor.BLUE + "-근접 공격 데미지 30% 증가");
+//		var5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var5Im.setUnbreakable(true);
+//		var5Im.setLore(var5Lore);
+//		var5.setItemMeta(var5Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var5);}
+//		
+//		ItemStack var6 = new ItemStack(Material.LEATHER_BOOTS);
+//		ItemMeta var6Im = var6.getItemMeta();
+//		var6Im.setLocalizedName("40000,10000,10000,10000,20000,0,0,0,0,0,1000");
+//		var6Im.setDisplayName(ChatColor.DARK_RED + "고독한 기르가쉬 레버넌트 인사이트 신발");
+//		ArrayList<String> var6Lore = new ArrayList();
+//		var6Lore.add(ChatColor.GRAY + "레벨 제한: 1000");
+//		var6Lore.add(ChatColor.GRAY + " ");
+//		var6Lore.add(ChatColor.GRAY + "공격 효율 상승에 설계 포커스를 맞춰 성능을");
+//		var6Lore.add(ChatColor.GRAY + "극대화한 신발");
+//		var6Lore.add(ChatColor.GRAY + "신발에 깃든 원혼의 영향으로 키어컬의 워로드와");
+//		var6Lore.add(ChatColor.GRAY + "함께라면 한계를 넘는 속도를 이끌어낼 수 있다.");
+//		var6Lore.add(ChatColor.GRAY + " ");
+//		var6Lore.add(ChatColor.BLUE + "-원거리 공격 데미지 30% 증가");
+//		var6Lore.add(ChatColor.BLUE + "-근접 공격 데미지 30% 증가");
+//		var6Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+//		var6Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+//		var6Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+//		var6Im.setUnbreakable(true);
+//		var6Im.setLore(var6Lore);
+//		var6.setItemMeta(var6Im);
+//		if(player.getDisplayName().equalsIgnoreCase("yumehama")) {player.getInventory().addItem(var6);}
+//		
 //		ItemStack var2 = new ItemStack(Material.MUSIC_DISC_MALL);
 //		ItemMeta var2Im = var2.getItemMeta();
 //		var2Im.setLocalizedName("0,0,0,0,0,0,0,0,0,0,1000");
@@ -747,8 +817,8 @@ public class Main extends JavaPlugin implements Listener{
 //		var5Lore.add(ChatColor.GRAY + "것만 같다.");
 //		var5Lore.add(ChatColor.GRAY + "긍지 높은 에일의 투신이라는 이름에 걸맞은");
 //		var5Lore.add(ChatColor.GRAY + "자격을 가진 자만이 진정한 힘을 발휘할 수 있다.");
-//		var4Lore.add(ChatColor.GRAY + " ");
-//		var4Lore.add(ChatColor.BLUE + "-근접 공격 데미지 30% 증가");
+//		var5Lore.add(ChatColor.GRAY + " ");
+//		var5Lore.add(ChatColor.BLUE + "-근접 공격 데미지 30% 증가");
 //		var5Im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 //		var5Im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 //		var5Im.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -6616,6 +6686,9 @@ public class Main extends JavaPlugin implements Listener{
 				increase += new SpecialEffect().a31(player);
 				increase += new SpecialEffect().a32(player);
 				increase += new SpecialEffect().h7(player);
+				increase += new SpecialEffect().c4(player);
+				increase += new SpecialEffect().l4(player);
+				increase += new SpecialEffect().b9(player);
 				increase += new SpecialEffect().w11(player);
 				
 				event.setDamage(event.getDamage() * (100 + increase) / 100);
@@ -6749,7 +6822,10 @@ public class Main extends JavaPlugin implements Listener{
 				increase += new SpecialEffect().a35(player);
 				increase += new SpecialEffect().a36(player);
 				increase += new SpecialEffect().a37(player);
-				increase += new SpecialEffect().h7(player);
+				increase += new SpecialEffect().h8(player);
+				increase += new SpecialEffect().c5(player);
+				increase += new SpecialEffect().l5(player);
+				increase += new SpecialEffect().b10(player);
 				
 				event.setDamage(event.getDamage() * (100 + increase) / 100);
 				//===========================================================================
@@ -6882,7 +6958,10 @@ public class Main extends JavaPlugin implements Listener{
 				increase += new SpecialEffect().a35(player);
 				increase += new SpecialEffect().a36(player);
 				increase += new SpecialEffect().a37(player);
-				increase += new SpecialEffect().h7(player);
+				increase += new SpecialEffect().h8(player);
+				increase += new SpecialEffect().c5(player);
+				increase += new SpecialEffect().l5(player);
+				increase += new SpecialEffect().b10(player);
 				
 				event.setDamage(event.getDamage() * (100 + increase) / 100);
 				//===========================================================================

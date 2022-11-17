@@ -2640,6 +2640,17 @@ public class SpecialEffect {
 		return 0;
 	}
 	
+	public double h8(Player player) {
+		try {
+			if(player.getInventory().getHelmet().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "희미한 유토피아의 얼티밋 데버스테이션 모자")) {
+				return 30;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
 	public int c1(Player player) {
@@ -2675,6 +2686,28 @@ public class SpecialEffect {
 		return 0;
 	}
 	
+	public int c4(Player player) {
+		try {
+			if(player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "증발된 재난의 패러시우스 티라누스 갑옷")) {
+				return 30;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+	public int c5(Player player) {
+		try {
+			if(player.getInventory().getChestplate().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "증발된 재난의 패러시우스 티라누스 갑옷")) {
+				return 30;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
 	public int l1(Player player) {
@@ -2703,6 +2736,28 @@ public class SpecialEffect {
 		try {
 			if(player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "럭키한 클로에의 각반")) {
 				return 10;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+	public int l4(Player player) {
+		try {
+			if(player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "축복받은 쾌속의 다운버스트 나이트브링어 각반")) {
+				return 30;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+	public int l5(Player player) {
+		try {
+			if(player.getInventory().getLeggings().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "축복받은 쾌속의 다운버스트 나이트브링어 각반")) {
+				return 30;
 			}
 		} catch(Exception e) {
 			
@@ -2799,6 +2854,30 @@ public class SpecialEffect {
 		}
 		return 0;
 	}
+	
+	public int b9(Player player) {
+		try {
+			if(player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "고독한 기르가쉬 레버넌트 인사이트 신발")) {
+				return 30;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+	public int b10(Player player) {
+		try {
+			if(player.getInventory().getBoots().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "고독한 기르가쉬 레버넌트 인사이트 신발")) {
+				return 30;
+			}
+		} catch(Exception e) {
+			
+		}
+		return 0;
+	}
+	
+	
 	
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
