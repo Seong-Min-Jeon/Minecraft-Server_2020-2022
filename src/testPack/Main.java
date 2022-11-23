@@ -6985,7 +6985,7 @@ public class Main extends JavaPlugin implements Listener{
 		// thorns
 		try {
 			if (event.getDamager() instanceof LivingEntity && !(event.getDamager() instanceof Player)) {
-				if (event.getEntity() instanceof Player) {
+				if (event.getEntity() instanceof Player && event.getEntity().getLocation().getY() >= 0) {
 					if(!(new Colosseum()).colosseum(event.getEntity()) && !(new SantaGimmick()).santaGimmick(event.getEntity())) {
 						try {
 							DisableAttack da = new DisableAttack();

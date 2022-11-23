@@ -97,6 +97,12 @@ public class MobLoot {
 		ItemStack item = new ItemStack(Material.EMERALD, num * multyEme);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 10);
+		
+		QuestBoard cb = new QuestBoard();
+		if(cb.getQuestName(player).equals(ChatColor.LIGHT_PURPLE + "===최후의 전투===")) {
+			int qNum = cb.getNum(player);
+			cb.mq_last(player, qNum+1);	
+		}
 	}
 
 	// 해안가 좀비
@@ -8980,12 +8986,6 @@ public class MobLoot {
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 4350000);
-		
-		int tmp2 = rnd.nextInt(40);
-		if(tmp2 == 0) {
-			Location loc = player.getLocation().add(0, 1, 0);
-			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
-		}
 	}
 	
 	// 동상에 걸린 돼지
@@ -9040,12 +9040,6 @@ public class MobLoot {
 			player.getInventory().addItem(var5);
 			sendMessage(player, ChatColor.AQUA + "심연의 포보르의 심장" + ChatColor.WHITE + "을 획득했다.");
 		}
-		
-		int tmp2 = rnd.nextInt(40);
-		if(tmp2 == 0) {
-			Location loc = player.getLocation().add(0, 1, 0);
-			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
-		}
 	}
 	
 	// 설원 거미
@@ -9057,15 +9051,9 @@ public class MobLoot {
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 4410000);
-		
-		int tmp2 = rnd.nextInt(40);
-		if(tmp2 == 0) {
-			Location loc = player.getLocation().add(0, 1, 0);
-			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
-		}
 	}
 	
-	// 어둠을 구원한 영웅 스켈레톤
+	// 어둠을 구원한 영웅
 	public void mob369(Player player) {
 		int num = rnd.nextInt(17) + 17;
 		ItemStack item = new ItemStack(Material.SCUTE, num * multyEme);
@@ -9127,7 +9115,7 @@ public class MobLoot {
 		im.setDisplayName(ChatColor.LIGHT_PURPLE + "에메랄드 주머니+");
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
-		es.giveExp(player, 4450000);
+		es.giveExp(player, 4400000);
 		
 		ItemStack var1 = new ItemStack(Material.POLISHED_BLACKSTONE_BRICKS);
 		ItemMeta var1im = var1.getItemMeta();
@@ -9837,6 +9825,12 @@ public class MobLoot {
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 9100000);
+		
+		int tmp2 = rnd.nextInt(40);
+		if(tmp2 == 0) {
+			Location loc = player.getLocation().add(0, 1, 0);
+			loc.getWorld().spawnEntity(loc, EntityType.ZOMBIE);
+		}
 	}
 	
 	// 게임의 오류
@@ -9848,6 +9842,12 @@ public class MobLoot {
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 9200000);
+		
+		int tmp2 = rnd.nextInt(40);
+		if(tmp2 == 0) {
+			Location loc = player.getLocation().add(0, 1, 0);
+			loc.getWorld().spawnEntity(loc, EntityType.ZOMBIE);
+		}
 	}
 	
 	// ^(!$@#!
@@ -9859,6 +9859,12 @@ public class MobLoot {
 		item.setItemMeta(im);
 		player.getInventory().addItem(item);
 		es.giveExp(player, 9300000);
+		
+		int tmp2 = rnd.nextInt(40);
+		if(tmp2 == 0) {
+			Location loc = player.getLocation().add(0, 1, 0);
+			loc.getWorld().spawnEntity(loc, EntityType.ZOMBIE);
+		}
 	}
 	
 	public void mob383(Player player) {

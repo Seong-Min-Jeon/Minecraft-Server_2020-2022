@@ -31,7 +31,8 @@ public class FantasyLife {
 	
 	public boolean fantasyLife(Player player, Block block, Location loc) {
 		if(wheat(player, block, loc) && coal(player, block, loc) && iron(player, block, loc) && gold(player, block, loc) &&
-				dia(player, block, loc) && eme(player, block, loc) && quartz(player, block, loc)) {
+				dia(player, block, loc) && eme(player, block, loc) && quartz(player, block, loc) && coal2(player, block, loc) && 
+				iron2(player, block, loc) && gold2(player, block, loc) && dia2(player, block, loc)) {
 			return true;
 		} 
 		return false;
@@ -536,6 +537,253 @@ public class FantasyLife {
 		}
 		return true;
 	}
+	
+	public boolean coal2(Player player, Block block, Location loc) {
+		// 석탄2이벤트
+		if (block.getType() == Material.DEEPSLATE_COAL_ORE) {
+			if (!(player.getInventory().getItemInMainHand().getType() == Material.AIR)) {
+				if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.GRAY + "낡은 곡괭이")) {
+					int num1 = rnd.nextInt(10);
+					if (num1 <= 2) {
+						ItemStack var1 = new ItemStack(Material.COAL_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.GRAY + "흠집이 생긴 석탄 광석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 1);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.GRAY + "흠집이 생긴 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+					} else {
+						if(player.getInventory().contains(Material.MAGENTA_DYE) || inheritance.getInheritance(player) == 80) {
+							ItemStack var1 = new ItemStack(Material.COAL_ORE);
+							ItemMeta var1Im = var1.getItemMeta();
+							var1Im.setDisplayName(ChatColor.GRAY + "흠집이 생긴 석탄 광석");
+							var1.setItemMeta(var1Im);
+							player.getInventory().addItem(var1);
+							//es.giveExp(player, 1);
+							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+							sendMessage(player, ChatColor.GRAY + "흠집이 생긴 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+						}
+					}
+					giveJewel(player, 11, 0);
+				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "평범한 곡괭이")) {
+					int num1 = rnd.nextInt(10);
+					if (num1 <= 2) {
+						ItemStack var1 = new ItemStack(Material.COAL_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.GRAY + "흠집이 생긴 석탄 광석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 1);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.GRAY + "흠집이 생긴 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+					} else if (num1 <= 5) {
+						ItemStack var1 = new ItemStack(Material.COAL_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.WHITE + "석탄 광석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 30000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.WHITE + "석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+					} else {
+						if(player.getInventory().contains(Material.MAGENTA_DYE) || inheritance.getInheritance(player) == 80) {
+							ItemStack var1 = new ItemStack(Material.COAL_ORE);
+							ItemMeta var1Im = var1.getItemMeta();
+							var1Im.setDisplayName(ChatColor.GRAY + "흠집이 생긴 석탄 광석");
+							var1.setItemMeta(var1Im);
+							player.getInventory().addItem(var1);
+							//es.giveExp(player, 1);
+							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+							sendMessage(player, ChatColor.GRAY + "흠집이 생긴 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+						}
+					}
+					giveJewel(player, 12, 0);
+				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "수제 곡괭이")) {
+					int num1 = rnd.nextInt(10);
+					if (num1 <= 2) {
+						ItemStack var1 = new ItemStack(Material.COAL_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.WHITE + "석탄 광석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 30000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.WHITE + "석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+					} else if (num1 <= 5) {
+						ItemStack var1 = new ItemStack(Material.COAL_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.YELLOW + "깨끗한 석탄 광석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 150000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.YELLOW + "깨끗한 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+					} else {
+						if(player.getInventory().contains(Material.MAGENTA_DYE) || inheritance.getInheritance(player) == 80) {
+							ItemStack var1 = new ItemStack(Material.COAL_ORE);
+							ItemMeta var1Im = var1.getItemMeta();
+							var1Im.setDisplayName(ChatColor.WHITE + "석탄 광석");
+							var1.setItemMeta(var1Im);
+							player.getInventory().addItem(var1);
+							//es.giveExp(player, 30000);
+							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+							sendMessage(player, ChatColor.WHITE + "석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+						}
+					}
+					giveJewel(player, 13, 0);
+				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "유명한 대장장이의 곡괭이")) {
+					int num1 = rnd.nextInt(10);
+					if (num1 <= 2) {
+						ItemStack var1 = new ItemStack(Material.COAL_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.YELLOW + "깨끗한 석탄 광석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 150000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.YELLOW + "깨끗한 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+					} else if (num1 <= 5) {
+						ItemStack var1 = new ItemStack(Material.COAL_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "순수도가 높은 석탄 광석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 5000000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.LIGHT_PURPLE + "순수도가 높은 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+					} else {
+						if(player.getInventory().contains(Material.MAGENTA_DYE) || inheritance.getInheritance(player) == 80) {
+							ItemStack var1 = new ItemStack(Material.COAL_ORE);
+							ItemMeta var1Im = var1.getItemMeta();
+							var1Im.setDisplayName(ChatColor.YELLOW + "깨끗한 석탄 광석");
+							var1.setItemMeta(var1Im);
+							player.getInventory().addItem(var1);
+							//es.giveExp(player, 150000);
+							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+							sendMessage(player, ChatColor.YELLOW + "깨끗한 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+						}
+					}
+					giveJewel(player, 14, 0);
+				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.AQUA + "마스터 대장장이의 곡괭이")) {
+					int num1 = rnd.nextInt(10);
+					if (num1 <= 2) {
+						ItemStack var1 = new ItemStack(Material.COAL_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "순수도가 높은 석탄 광석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 5000000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.LIGHT_PURPLE + "순수도가 높은 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+					} else if (num1 <= 5) {
+						ItemStack var1 = new ItemStack(Material.COAL_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.AQUA + "절대적인 석탄 광석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 8000000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.AQUA + "절대적인 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+					} else {
+						if(player.getInventory().contains(Material.MAGENTA_DYE) || inheritance.getInheritance(player) == 80) {
+							ItemStack var1 = new ItemStack(Material.COAL_ORE);
+							ItemMeta var1Im = var1.getItemMeta();
+							var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "순수도가 높은 석탄 광석");
+							var1.setItemMeta(var1Im);
+							player.getInventory().addItem(var1);
+							//es.giveExp(player, 5000000);
+							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+							sendMessage(player, ChatColor.LIGHT_PURPLE + "순수도가 높은 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+						}
+					}
+					giveJewel(player, 15, 0);
+				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "신의 곡괭이")) {
+					int num1 = rnd.nextInt(100);
+					if (num1 <= 20) {
+						ItemStack var1 = new ItemStack(Material.COAL_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.AQUA + "절대적인 석탄 광석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 8000000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.AQUA + "절대적인 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+					} else if (num1 <= 25) {
+						ItemStack var1 = new ItemStack(Material.COAL_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.DARK_RED + "신의 힘이 담긴 석탄 광석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 14000000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.DARK_RED + "신의 힘이 담긴 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+					} else {
+						if(player.getInventory().contains(Material.MAGENTA_DYE) || inheritance.getInheritance(player) == 80) {
+							ItemStack var1 = new ItemStack(Material.COAL_ORE);
+							ItemMeta var1Im = var1.getItemMeta();
+							var1Im.setDisplayName(ChatColor.AQUA + "절대적인 석탄 광석");
+							var1.setItemMeta(var1Im);
+							player.getInventory().addItem(var1);
+							//es.giveExp(player, 8000000);
+							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+							sendMessage(player, ChatColor.AQUA + "절대적인 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+						}
+					}
+					giveJewel(player, 16, 0);
+				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
+						.equals(ChatColor.DARK_PURPLE + "게브네의 곡괭이")) {
+					int num1 = rnd.nextInt(70);
+					if (num1 <= 20) {
+						ItemStack var1 = new ItemStack(Material.COAL_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.AQUA + "절대적인 석탄 광석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 8000000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.AQUA + "절대적인 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+					} else if (num1 <= 25) {
+						ItemStack var1 = new ItemStack(Material.COAL_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.DARK_RED + "신의 힘이 담긴 석탄 광석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 14000000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.DARK_RED + "신의 힘이 담긴 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+					} else {
+						if(player.getInventory().contains(Material.MAGENTA_DYE) || inheritance.getInheritance(player) == 80) {
+							ItemStack var1 = new ItemStack(Material.COAL_ORE);
+							ItemMeta var1Im = var1.getItemMeta();
+							var1Im.setDisplayName(ChatColor.AQUA + "절대적인 석탄 광석");
+							var1.setItemMeta(var1Im);
+							player.getInventory().addItem(var1);
+							//es.giveExp(player, 8000000);
+							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+							sendMessage(player, ChatColor.AQUA + "절대적인 석탄 광석" + ChatColor.WHITE + "을 획득했다.");
+						}
+					}
+					giveJewel(player, 17, 0);
+				} else {
+					player.sendMessage("곡괭이로 캘 수 있을 것 같다.");
+				}
+				player.getWorld().playSound(loc, Sound.BLOCK_STONE_BREAK, 0.3f, 1.0f);
+				
+				int num = rnd.nextInt(60);
+				if(num == 0) {
+					block.setType(Material.DEEPSLATE);
+					reload(Material.DEEPSLATE_COAL_ORE, block.getLocation());
+				}
+				
+				return false;
+			} else {
+				player.sendMessage("곡괭이로 캘 수 있을 것 같다.");
+				return false;
+			}
+		}
+		return true;
+	}
 
 	public boolean iron(Player player, Block block, Location loc) {
 		// 철이벤트
@@ -757,6 +1005,227 @@ public class FantasyLife {
 		}
 		return true;
 	}
+	
+	public boolean iron2(Player player, Block block, Location loc) {
+		// 철2이벤트
+		if (block.getType() == Material.DEEPSLATE_IRON_ORE) {
+			if (!(player.getInventory().getItemInMainHand().getType() == Material.AIR)) {
+				if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
+						.equals(ChatColor.GRAY + "낡은 곡괭이")) {
+					player.sendMessage(ChatColor.GRAY + "낡은 곡괭이" + ChatColor.WHITE + "로는 이 광물을 캘 수 없을 것 같다.");
+				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "평범한 곡괭이")) {
+					int num1 = rnd.nextInt(10);
+					if (num1 <= 1) {
+						ItemStack var1 = new ItemStack(Material.IRON_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.WHITE + "상태가 좋지 않은 철광석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 30000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.WHITE + "상태가 좋지 않은 철광석" + ChatColor.WHITE + "을 획득했다.");
+					} else {
+						if(player.getInventory().contains(Material.MAGENTA_DYE) || inheritance.getInheritance(player) == 80) {
+							ItemStack var1 = new ItemStack(Material.IRON_ORE);
+							ItemMeta var1Im = var1.getItemMeta();
+							var1Im.setDisplayName(ChatColor.WHITE + "상태가 좋지 않은 철광석");
+							var1.setItemMeta(var1Im);
+							player.getInventory().addItem(var1);
+							//es.giveExp(player, 30000);
+							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+							sendMessage(player, ChatColor.WHITE + "상태가 좋지 않은 철광석" + ChatColor.WHITE + "을 획득했다.");
+						}
+					}
+					giveJewel(player, 12, 1);
+				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
+						.equals(ChatColor.YELLOW + "수제 곡괭이")) {
+					int num1 = rnd.nextInt(10);
+					if (num1 <= 2) {
+						ItemStack var1 = new ItemStack(Material.IRON_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.WHITE + "상태가 좋지 않은 철광석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 30000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.WHITE + "상태가 좋지 않은 철광석" + ChatColor.WHITE + "을 획득했다.");
+					} else if (num1 <= 5) {
+						ItemStack var1 = new ItemStack(Material.IRON_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.YELLOW + "철광석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 150000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.YELLOW + "철광석" + ChatColor.WHITE + "을 획득했다.");
+					} else {
+						if(player.getInventory().contains(Material.MAGENTA_DYE) || inheritance.getInheritance(player) == 80) {
+							ItemStack var1 = new ItemStack(Material.IRON_ORE);
+							ItemMeta var1Im = var1.getItemMeta();
+							var1Im.setDisplayName(ChatColor.WHITE + "상태가 좋지 않은 철광석");
+							var1.setItemMeta(var1Im);
+							player.getInventory().addItem(var1);
+							//es.giveExp(player, 30000);
+							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+							sendMessage(player, ChatColor.WHITE + "상태가 좋지 않은 철광석" + ChatColor.WHITE + "을 획득했다.");
+						}
+					}
+					giveJewel(player, 13, 1);
+				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
+						.equals(ChatColor.LIGHT_PURPLE + "유명한 대장장이의 곡괭이")) {
+					int num1 = rnd.nextInt(10);
+					if (num1 <= 2) {
+						ItemStack var1 = new ItemStack(Material.IRON_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.YELLOW + "철광석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 150000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.YELLOW + "철광석" + ChatColor.WHITE + "을 획득했다.");
+					} else if (num1 <= 5) {
+						ItemStack var1 = new ItemStack(Material.IRON_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "빛이나는 철광석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 5000000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.LIGHT_PURPLE + "빛이나는 철광석" + ChatColor.WHITE + "을 획득했다.");
+					} else {
+						if(player.getInventory().contains(Material.MAGENTA_DYE) || inheritance.getInheritance(player) == 80) {
+							ItemStack var1 = new ItemStack(Material.IRON_ORE);
+							ItemMeta var1Im = var1.getItemMeta();
+							var1Im.setDisplayName(ChatColor.YELLOW + "철광석");
+							var1.setItemMeta(var1Im);
+							player.getInventory().addItem(var1);
+							//es.giveExp(player, 150000);
+							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+							sendMessage(player, ChatColor.YELLOW + "철광석" + ChatColor.WHITE + "을 획득했다.");
+						}
+					}
+					giveJewel(player, 14, 1);
+				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
+						.equals(ChatColor.AQUA + "마스터 대장장이의 곡괭이")) {
+					int num1 = rnd.nextInt(10);
+					if (num1 <= 2) {
+						ItemStack var1 = new ItemStack(Material.IRON_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "빛이나는 철광석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 5000000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.LIGHT_PURPLE + "빛이나는 철광석" + ChatColor.WHITE + "을 획득했다.");
+					} else if (num1 <= 5) {
+						ItemStack var1 = new ItemStack(Material.IRON_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.AQUA + "순백의 철광석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 8000000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.AQUA + "순백의 철광석" + ChatColor.WHITE + "을 획득했다.");
+					} else {
+						if(player.getInventory().contains(Material.MAGENTA_DYE) || inheritance.getInheritance(player) == 80) {
+							ItemStack var1 = new ItemStack(Material.IRON_ORE);
+							ItemMeta var1Im = var1.getItemMeta();
+							var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "빛이나는 철광석");
+							var1.setItemMeta(var1Im);
+							player.getInventory().addItem(var1);
+							//es.giveExp(player, 5000000);
+							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+							sendMessage(player, ChatColor.LIGHT_PURPLE + "빛이나는 철광석" + ChatColor.WHITE + "을 획득했다.");
+						}
+					}
+					giveJewel(player, 15, 1);
+				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
+						.equals(ChatColor.DARK_RED + "신의 곡괭이")) {
+					int num1 = rnd.nextInt(100);
+					if (num1 <= 20) {
+						ItemStack var1 = new ItemStack(Material.IRON_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.AQUA + "순백의 철광석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 8000000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.AQUA + "순백의 철광석" + ChatColor.WHITE + "을 획득했다.");
+					} else if (num1 <= 25) {
+						ItemStack var1 = new ItemStack(Material.IRON_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.DARK_RED + "신의 힘이 담긴 철광석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 14000000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.DARK_RED + "신의 힘이 담긴 철광석" + ChatColor.WHITE + "을 획득했다.");
+					} else {
+						if(player.getInventory().contains(Material.MAGENTA_DYE) || inheritance.getInheritance(player) == 80) {
+							ItemStack var1 = new ItemStack(Material.IRON_ORE);
+							ItemMeta var1Im = var1.getItemMeta();
+							var1Im.setDisplayName(ChatColor.AQUA + "순백의 철광석");
+							var1.setItemMeta(var1Im);
+							player.getInventory().addItem(var1);
+							//es.giveExp(player, 8000000);
+							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+							sendMessage(player, ChatColor.AQUA + "순백의 철광석" + ChatColor.WHITE + "을 획득했다.");
+						}
+					}
+					giveJewel(player, 16, 1);
+				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
+						.equals(ChatColor.DARK_PURPLE + "게브네의 곡괭이")) {
+					int num1 = rnd.nextInt(70);
+					if (num1 <= 20) {
+						ItemStack var1 = new ItemStack(Material.IRON_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.AQUA + "순백의 철광석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 8000000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.AQUA + "순백의 철광석" + ChatColor.WHITE + "을 획득했다.");
+					} else if (num1 <= 25) {
+						ItemStack var1 = new ItemStack(Material.IRON_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.DARK_RED + "신의 힘이 담긴 철광석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 14000000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.DARK_RED + "신의 힘이 담긴 철광석" + ChatColor.WHITE + "을 획득했다.");
+					} else {
+						if(player.getInventory().contains(Material.MAGENTA_DYE) || inheritance.getInheritance(player) == 80) {
+							ItemStack var1 = new ItemStack(Material.IRON_ORE);
+							ItemMeta var1Im = var1.getItemMeta();
+							var1Im.setDisplayName(ChatColor.AQUA + "순백의 철광석");
+							var1.setItemMeta(var1Im);
+							player.getInventory().addItem(var1);
+							//es.giveExp(player, 8000000);
+							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+							sendMessage(player, ChatColor.AQUA + "순백의 철광석" + ChatColor.WHITE + "을 획득했다.");
+						}
+					}
+					giveJewel(player, 17, 1);
+				} else {
+					player.sendMessage("곡괭이로 캘 수 있을 것 같다.");
+				}
+				player.getWorld().playSound(loc, Sound.BLOCK_STONE_BREAK, 0.3f, 1.0f);
+				
+				int num = rnd.nextInt(55);
+				if(num == 0) {
+					block.setType(Material.DEEPSLATE);
+					reload(Material.DEEPSLATE_IRON_ORE, block.getLocation());
+				}
+				
+				return false;
+			} else {
+				player.sendMessage("곡괭이로 캘 수 있을 것 같다.");
+				return false;
+			}
+		}
+		return true;
+	}
 
 	public boolean gold(Player player, Block block, Location loc) {
 		// 금이벤트
@@ -937,6 +1406,196 @@ public class FantasyLife {
 				if(num == 0) {
 					block.setType(Material.STONE);
 					reload(Material.GOLD_ORE, block.getLocation());
+				}
+				
+				return false;
+			} else {
+				player.sendMessage("곡괭이로 캘 수 있을 것 같다.");
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	public boolean gold2(Player player, Block block, Location loc) {
+		// 금2이벤트
+		if (block.getType() == Material.DEEPSLATE_GOLD_ORE) {
+			if (!(player.getInventory().getItemInMainHand().getType() == Material.AIR)) {
+				if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
+						.equals(ChatColor.GRAY + "낡은 곡괭이")) {
+					player.sendMessage(ChatColor.GRAY + "낡은 곡괭이" + ChatColor.WHITE + "로는 이 광물을 캘 수 없을 것 같다.");
+				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "평범한 곡괭이")) {
+					player.sendMessage("평범한 곡괭이로는 이 광물을 캘 수 없을 것 같다.");
+				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
+						.equals(ChatColor.YELLOW + "수제 곡괭이")) {
+					int num1 = rnd.nextInt(10);
+					if (num1 <= 1) {
+						ItemStack var1 = new ItemStack(Material.GOLD_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.YELLOW + "가치가 떨어진 금광석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 150000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.YELLOW + "가치가 떨어진 금광석" + ChatColor.WHITE + "을 획득했다.");
+					} else {
+						if(player.getInventory().contains(Material.MAGENTA_DYE) || inheritance.getInheritance(player) == 80) {
+							ItemStack var1 = new ItemStack(Material.GOLD_ORE);
+							ItemMeta var1Im = var1.getItemMeta();
+							var1Im.setDisplayName(ChatColor.YELLOW + "가치가 떨어진 금광석");
+							var1.setItemMeta(var1Im);
+							player.getInventory().addItem(var1);
+							//es.giveExp(player, 150000);
+							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+							sendMessage(player, ChatColor.YELLOW + "가치가 떨어진 금광석" + ChatColor.WHITE + "을 획득했다.");
+						}
+					}
+					giveJewel(player, 13, 2);
+				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
+						.equals(ChatColor.LIGHT_PURPLE + "유명한 대장장이의 곡괭이")) {
+					int num1 = rnd.nextInt(10);
+					if (num1 <= 2) {
+						ItemStack var1 = new ItemStack(Material.GOLD_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.YELLOW + "가치가 떨어진 금광석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 150000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.YELLOW + "가치가 떨어진 금광석" + ChatColor.WHITE + "을 획득했다.");
+					} else if (num1 <= 5) {
+						ItemStack var1 = new ItemStack(Material.GOLD_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "금광석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 5000000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.LIGHT_PURPLE + "금광석" + ChatColor.WHITE + "을 획득했다.");
+					} else {
+						if(player.getInventory().contains(Material.MAGENTA_DYE) || inheritance.getInheritance(player) == 80) {
+							ItemStack var1 = new ItemStack(Material.GOLD_ORE);
+							ItemMeta var1Im = var1.getItemMeta();
+							var1Im.setDisplayName(ChatColor.YELLOW + "가치가 떨어진 금광석");
+							var1.setItemMeta(var1Im);
+							player.getInventory().addItem(var1);
+							//es.giveExp(player, 150000);
+							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+							sendMessage(player, ChatColor.YELLOW + "가치가 떨어진 금광석" + ChatColor.WHITE + "을 획득했다.");
+						}
+					}
+					giveJewel(player, 14, 2);
+				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
+						.equals(ChatColor.AQUA + "마스터 대장장이의 곡괭이")) {
+					int num1 = rnd.nextInt(10);
+					if (num1 <= 2) {
+						ItemStack var1 = new ItemStack(Material.GOLD_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "금광석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 5000000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.LIGHT_PURPLE + "금광석" + ChatColor.WHITE + "을 획득했다.");
+					} else if (num1 <= 5) {
+						ItemStack var1 = new ItemStack(Material.GOLD_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.AQUA + "쉽게 녹지 않는 금광석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 8000000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.AQUA + "쉽게 녹지 않는 금광석" + ChatColor.WHITE + "을 획득했다.");
+					} else {
+						if(player.getInventory().contains(Material.MAGENTA_DYE) || inheritance.getInheritance(player) == 80) {
+							ItemStack var1 = new ItemStack(Material.GOLD_ORE);
+							ItemMeta var1Im = var1.getItemMeta();
+							var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "금광석");
+							var1.setItemMeta(var1Im);
+							player.getInventory().addItem(var1);
+							//es.giveExp(player, 5000000);
+							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+							sendMessage(player, ChatColor.LIGHT_PURPLE + "금광석" + ChatColor.WHITE + "을 획득했다.");
+						}
+					}
+					giveJewel(player, 15, 2);
+				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
+						.equals(ChatColor.DARK_RED + "신의 곡괭이")) {
+					int num1 = rnd.nextInt(100);
+					if (num1 <= 20) {
+						ItemStack var1 = new ItemStack(Material.GOLD_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.AQUA + "쉽게 녹지 않는 금광석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 8000000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.AQUA + "쉽게 녹지 않는 금광석" + ChatColor.WHITE + "을 획득했다.");
+					} else if (num1 <= 25) {
+						ItemStack var1 = new ItemStack(Material.GOLD_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.DARK_RED + "신의 힘이 담긴 금광석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 14000000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.DARK_RED + "신의 힘이 담긴 금광석" + ChatColor.WHITE + "을 획득했다.");
+					} else {
+						if(player.getInventory().contains(Material.MAGENTA_DYE) || inheritance.getInheritance(player) == 80) {
+							ItemStack var1 = new ItemStack(Material.GOLD_ORE);
+							ItemMeta var1Im = var1.getItemMeta();
+							var1Im.setDisplayName(ChatColor.AQUA + "쉽게 녹지 않는 금광석");
+							var1.setItemMeta(var1Im);
+							player.getInventory().addItem(var1);
+							//es.giveExp(player, 8000000);
+							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+							sendMessage(player, ChatColor.AQUA + "쉽게 녹지 않는 금광석" + ChatColor.WHITE + "을 획득했다.");
+						}
+					}
+					giveJewel(player, 16, 2);
+				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
+						.equals(ChatColor.DARK_PURPLE + "게브네의 곡괭이")) {
+					int num1 = rnd.nextInt(70);
+					if (num1 <= 20) {
+						ItemStack var1 = new ItemStack(Material.GOLD_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.AQUA + "쉽게 녹지 않는 금광석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 8000000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.AQUA + "쉽게 녹지 않는 금광석" + ChatColor.WHITE + "을 획득했다.");
+					} else if (num1 <= 25) {
+						ItemStack var1 = new ItemStack(Material.GOLD_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.DARK_RED + "신의 힘이 담긴 금광석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 14000000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.DARK_RED + "신의 힘이 담긴 금광석" + ChatColor.WHITE + "을 획득했다.");
+					} else {
+						if(player.getInventory().contains(Material.MAGENTA_DYE) || inheritance.getInheritance(player) == 80) {
+							ItemStack var1 = new ItemStack(Material.GOLD_ORE);
+							ItemMeta var1Im = var1.getItemMeta();
+							var1Im.setDisplayName(ChatColor.AQUA + "쉽게 녹지 않는 금광석");
+							var1.setItemMeta(var1Im);
+							player.getInventory().addItem(var1);
+							//es.giveExp(player, 8000000);
+							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+							sendMessage(player, ChatColor.AQUA + "쉽게 녹지 않는 금광석" + ChatColor.WHITE + "을 획득했다.");
+						}
+					}
+					giveJewel(player, 17, 2);
+				} else {
+					player.sendMessage("곡괭이로 캘 수 있을 것 같다.");
+				}
+				player.getWorld().playSound(loc, Sound.BLOCK_STONE_BREAK, 0.3f, 1.0f);
+				
+				int num = rnd.nextInt(45);
+				if(num == 0) {
+					block.setType(Material.DEEPSLATE);
+					reload(Material.DEEPSLATE_GOLD_ORE, block.getLocation());
 				}
 				
 				return false;
@@ -1132,6 +1791,201 @@ public class FantasyLife {
 				if(num == 0) {
 					block.setType(Material.STONE);
 					reload(Material.DIAMOND_ORE, block.getLocation());
+				}
+				
+				return false;
+			} else {
+				player.sendMessage("곡괭이로 캘 수 있을 것 같다.");
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	public boolean dia2(Player player, Block block, Location loc) {
+		// 다이아2이벤트
+		if (block.getType() == Material.DEEPSLATE_DIAMOND_ORE) {
+			if (!(player.getInventory().getItemInMainHand().getType() == Material.AIR)) {
+				if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
+						.equals(ChatColor.GRAY + "낡은 곡괭이")) {
+					player.sendMessage(ChatColor.GRAY + "낡은 곡괭이" + ChatColor.WHITE + "로는 이 광물을 캘 수 없을 것 같다.");
+				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.WHITE + "평범한 곡괭이")) {
+					player.sendMessage("평범한 곡괭이로는 이 광물을 캘 수 없을 것 같다.");
+				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
+						.equals(ChatColor.YELLOW + "수제 곡괭이")) {
+					player.sendMessage(ChatColor.YELLOW + "수제 곡괭이" + ChatColor.WHITE + "로는 이 광물을 캘 수 없을 것 같다.");
+				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
+						.equals(ChatColor.LIGHT_PURPLE + "유명한 대장장이의 곡괭이")) {
+					int num1 = rnd.nextInt(10);
+					if (num1 <= 1) {
+						ItemStack var1 = new ItemStack(Material.DIAMOND_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 5000000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
+					} else {
+						if(player.getInventory().contains(Material.MAGENTA_DYE) || inheritance.getInheritance(player) == 80) {
+							ItemStack var1 = new ItemStack(Material.DIAMOND_ORE);
+							ItemMeta var1Im = var1.getItemMeta();
+							var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석");
+							var1.setItemMeta(var1Im);
+							player.getInventory().addItem(var1);
+							//es.giveExp(player, 5000000);
+							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+							sendMessage(player, ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
+						}
+					}
+					giveJewel(player, 14, 3);
+				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
+						.equals(ChatColor.AQUA + "마스터 대장장이의 곡괭이")) {
+					int num1 = rnd.nextInt(10);
+					if (num1 <= 2) {
+						ItemStack var1 = new ItemStack(Material.DIAMOND_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 5000000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
+					} else if (num1 <= 5) {
+						ItemStack var1 = new ItemStack(Material.DIAMOND_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.AQUA + "다이아몬드 원석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 8000000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.AQUA + "다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
+					} else {
+						if(player.getInventory().contains(Material.MAGENTA_DYE) || inheritance.getInheritance(player) == 80) {
+							ItemStack var1 = new ItemStack(Material.DIAMOND_ORE);
+							ItemMeta var1Im = var1.getItemMeta();
+							var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석");
+							var1.setItemMeta(var1Im);
+							player.getInventory().addItem(var1);
+							//es.giveExp(player, 5000000);
+							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+							sendMessage(player, ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
+						}
+					}
+					giveJewel(player, 15, 3);
+				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
+						.equals(ChatColor.DARK_RED + "신의 곡괭이")) {
+					int num1 = rnd.nextInt(100);
+					if (num1 <= 4) {
+						ItemStack var1 = new ItemStack(Material.DIAMOND_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 5000000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
+					} else if (num1 <= 14) {
+						ItemStack var1 = new ItemStack(Material.DIAMOND_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.AQUA + "다이아몬드 원석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 8000000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.AQUA + "다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
+					} else if (num1 <= 29) {
+						ItemStack var1 = new ItemStack(Material.DIAMOND_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.AQUA + "빛나는 다이아몬드 원석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						player.giveExp(160);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.AQUA + "빛나는 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
+					} else if (num1 <= 34) {
+						ItemStack var1 = new ItemStack(Material.DIAMOND_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.DARK_RED + "신의 힘이 담긴 다이아몬드 원석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 14000000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.DARK_RED + "신의 힘이 담긴 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
+					} else {
+						if(player.getInventory().contains(Material.MAGENTA_DYE) || inheritance.getInheritance(player) == 80) {
+							ItemStack var1 = new ItemStack(Material.DIAMOND_ORE);
+							ItemMeta var1Im = var1.getItemMeta();
+							var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석");
+							var1.setItemMeta(var1Im);
+							player.getInventory().addItem(var1);
+							//es.giveExp(player, 5000000);
+							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+							sendMessage(player, ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
+						}
+					}
+					giveJewel(player, 16, 3);
+				} else if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName()
+						.equals(ChatColor.DARK_PURPLE + "게브네의 곡괭이")) {
+					int num1 = rnd.nextInt(70);
+					if (num1 <= 4) {
+						ItemStack var1 = new ItemStack(Material.DIAMOND_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 5000000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
+					} else if (num1 <= 14) {
+						ItemStack var1 = new ItemStack(Material.DIAMOND_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.AQUA + "다이아몬드 원석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 8000000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.AQUA + "다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
+					} else if (num1 <= 29) {
+						ItemStack var1 = new ItemStack(Material.DIAMOND_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.AQUA + "빛나는 다이아몬드 원석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						player.giveExp(160);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.AQUA + "빛나는 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
+					} else if (num1 <= 34) {
+						ItemStack var1 = new ItemStack(Material.DIAMOND_ORE);
+						ItemMeta var1Im = var1.getItemMeta();
+						var1Im.setDisplayName(ChatColor.DARK_RED + "신의 힘이 담긴 다이아몬드 원석");
+						var1.setItemMeta(var1Im);
+						player.getInventory().addItem(var1);
+						//es.giveExp(player, 14000000);
+						player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+						sendMessage(player, ChatColor.DARK_RED + "신의 힘이 담긴 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
+					} else {
+						if(player.getInventory().contains(Material.MAGENTA_DYE) || inheritance.getInheritance(player) == 80) {
+							ItemStack var1 = new ItemStack(Material.DIAMOND_ORE);
+							ItemMeta var1Im = var1.getItemMeta();
+							var1Im.setDisplayName(ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석");
+							var1.setItemMeta(var1Im);
+							player.getInventory().addItem(var1);
+							//es.giveExp(player, 5000000);
+							player.getWorld().playSound(loc, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3f, 1.0f);
+							sendMessage(player, ChatColor.LIGHT_PURPLE + "흠집이 난 다이아몬드 원석" + ChatColor.WHITE + "을 획득했다.");
+						}
+					}
+					giveJewel(player, 17, 3);
+				} else {
+					player.sendMessage("곡괭이로 캘 수 있을 것 같다.");
+				}
+				player.getWorld().playSound(loc, Sound.BLOCK_STONE_BREAK, 0.3f, 1.0f);
+				
+				int num = rnd.nextInt(40);
+				if(num == 0) {
+					block.setType(Material.DEEPSLATE);
+					reload(Material.DEEPSLATE_DIAMOND_ORE, block.getLocation());
 				}
 				
 				return false;
@@ -1465,6 +2319,11 @@ public class FantasyLife {
 			reduce = 100000;
 		} else if(inheritance.getInheritance(player) == 99) {
 			reduce = 150000;
+		}
+		
+		if(rank >= 10) {
+			rank -= 10;
+			reduce += 200000;
 		}
 		
 		int p = 1000000;

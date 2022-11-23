@@ -1600,7 +1600,7 @@ public class MobDeath {
 					mobloot.mob368(lootPlayer);
 				}
 				// 어둠을 구원한 영웅 스켈레톤
-				if (name.equalsIgnoreCase("어둠을 구원한 영웅 스켈레톤" + ChatColor.YELLOW + " [Lv.700]")) {
+				if (name.equalsIgnoreCase("어둠을 구원한 영웅" + ChatColor.YELLOW + " [Lv.1000]")) {
 					mobloot.mob369(lootPlayer);
 				}
 				// 인간 사냥꾼

@@ -637,6 +637,9 @@ public class MobThread implements Listener{
 							} else if(loc.getX() <= 357 && loc.getY() <= 200 && loc.getZ() <= -1302 
 									&& loc.getX() >= 98 && loc.getY() >= 5 && loc.getZ() >= -1699) {
 								lastIberumoa1(player, loc);
+							} else if(loc.getX() <= 1200 && loc.getY() <= -1 && loc.getZ() <= 600 
+									&& loc.getX() >= 700 && loc.getY() >= -100 && loc.getZ() >= 0) {
+								underground1(player, loc);
 							}
 
 						}
@@ -3617,6 +3620,23 @@ public class MobThread implements Listener{
 			loc.getWorld().spawnEntity(loc, EntityType.SLIME);
 		} else if (num == 2) {
 			loc.getWorld().spawnEntity(loc, EntityType.WITHER_SKELETON);
+		} 
+	}
+	
+	public void underground1(Player player, Location loc) {
+		int num = rnd.nextInt(6);
+		loc = location(loc);
+		if (!(loc.getX() <= 1200 && loc.getY() <= -1 && loc.getZ() <= 600 
+				&& loc.getX() >= 700 && loc.getY() >= -100 && loc.getZ() >= 0)) {
+			return;
+		}
+		
+		if (num == 0) {
+			loc.getWorld().spawnEntity(loc, EntityType.ZOMBIE);
+		} else if (num == 1) {
+			loc.getWorld().spawnEntity(loc, EntityType.SKELETON);
+		} else if (num == 2) {
+			loc.getWorld().spawnEntity(loc, EntityType.SPIDER);
 		} 
 	}
 	

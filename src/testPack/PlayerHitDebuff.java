@@ -155,6 +155,9 @@ public class PlayerHitDebuff {
 		mob100(player, mob);
 		mob101(player, mob);
 		mob102(player, mob);
+		mob103(player, mob);
+		mob104(player, mob);
+		mob105(player, mob);
 	}
 
 	// 시련의 형상
@@ -4462,9 +4465,9 @@ public class PlayerHitDebuff {
 		}
 	}
 	
-	// 어둠을 구원한 영웅 스켈레톤
+	// 어둠을 구원한 영웅
 	public void mob101(Player player, Entity mob) {
-		if(mob.getCustomName().substring(2).equalsIgnoreCase("어둠을 구원한 영웅 스켈레톤" + ChatColor.YELLOW + " [Lv.700]")) {
+		if(mob.getCustomName().substring(2).equalsIgnoreCase("어둠을 구원한 영웅" + ChatColor.YELLOW + " [Lv.1000]")) {
 			if(((LivingEntity) mob).getHealth() < (((LivingEntity) mob).getMaxHealth() / 2)) {
 				int num = rnd.nextInt(10);
 				if(num == 0) {
@@ -4527,7 +4530,7 @@ public class PlayerHitDebuff {
 								List<Entity> nearPlayer = mob.getNearbyEntities(4, 30, 4);
 								for(Entity p : nearPlayer) {
 									if(p instanceof Player) {
-										((Player) p).damage(10000);
+										((Player) p).damage(20000);
 										p.setFireTicks(200);
 									}
 								}
@@ -4565,16 +4568,43 @@ public class PlayerHitDebuff {
 		}
 	}
 	
+	// AFK
 	public void mob103(Player player, Entity mob) {
-
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("AFK" + ChatColor.YELLOW + " [Lv.1]")) {
+			player.removePotionEffect(PotionEffectType.ABSORPTION);
+			player.removePotionEffect(PotionEffectType.DAMAGE_RESISTANCE);
+			player.removePotionEffect(PotionEffectType.SPEED);
+			if(player.getHealth() <= 2) {
+				player.setHealth(0);
+			}
+			player.setHealth(player.getHealth() - 2);
+		}
 	}
 	
+	// 매크로 처리반
 	public void mob104(Player player, Entity mob) {
-
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("매크로 처리반" + ChatColor.YELLOW + " [Lv.1]")) {
+			player.removePotionEffect(PotionEffectType.ABSORPTION);
+			player.removePotionEffect(PotionEffectType.DAMAGE_RESISTANCE);
+			player.removePotionEffect(PotionEffectType.SPEED);
+			if(player.getHealth() <= 2) {
+				player.setHealth(0);
+			}
+			player.setHealth(player.getHealth() - 2);
+		}
 	}
 	
+	// 잠수부 킬러
 	public void mob105(Player player, Entity mob) {
-
+		if (mob.getCustomName().substring(2).equalsIgnoreCase("잠수부 킬러" + ChatColor.YELLOW + " [Lv.1]")) {
+			player.removePotionEffect(PotionEffectType.ABSORPTION);
+			player.removePotionEffect(PotionEffectType.DAMAGE_RESISTANCE);
+			player.removePotionEffect(PotionEffectType.SPEED);
+			if(player.getHealth() <= 2) {
+				player.setHealth(0);
+			}
+			player.setHealth(player.getHealth() - 2);
+		}
 	}
 	
 	public void mob106(Player player, Entity mob) {
